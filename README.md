@@ -1,281 +1,95 @@
-# Degrees of Lewdity 한국어 번역판
+# DoL-KR-Mod
 
-[Degrees of Lewdity](https://vrelnir.blogspot.com/)의 한국어 번역 프로젝트입니다.
+[Degrees of Lewdity](https://vrelnir.blogspot.com/) 한국어 번역판(0.5.12.13) 소스에 두 가지 모드를 더한 저장소입니다.
+한 번의 빌드로 네 가지 HTML을 만들고, 같은 저장소의 세이브 서버로 원격 저장을 운영합니다.
 
-이 저장소는 지금까지 제작된 한국어 번역본과 관련 작업물을 공개하고, 이후 다른 사람이 자유롭게 이어서 작업할 수 있도록 하기 위해 마련되었습니다.
+- **Herm NPC**: NPC가 자지와 보지를 모두 가질 수 있게 하는 설정 두 개를 추가합니다.
+- **원격 저장**: 브라우저 대신 세이브 서버에 저장해서 어느 기기에서 열어도 같은 세이브를 씁니다.
 
-## 프로젝트 유지보수 안내
+## 네 가지 빌드
 
-이 프로젝트의 기존 번역 작업 및 관리자는 **이 저장소 공개를 기점으로 정기적인 번역 및 유지보수를 종료합니다.**
+| 파일 | 내용 | 이런 분이 씁니다 |
+|---|---|---|
+| `DoL-KR 0.5.12.13.html` | 번역판 그대로 | 모드 없이 번역판만 |
+| `DoL-KR 0.5.12.13 remote.html` | 원격 저장 | 서버에 세이브를 두고 여러 기기에서 |
+| `DoL-KR 0.5.12.13 herm.html` | Herm NPC | 로컬 저장 + Herm 설정 |
+| `DoL-KR 0.5.12.13 herm-remote.html` | 둘 다 | 서버 운영자의 기본 선택 |
 
-이후 번역 추가, 오탈자 수정, 게임 버전 업데이트 대응 등의 작업은 별도의 관리자가 자율적으로 이어갈 수 있습니다.
+원본 빌드에도 Herm 코드는 들어 있지만 설정 화면에 보이지 않고, 불러온 세이브에 Herm 비율이 있어도 0으로 되돌립니다.
+`remote` 변형은 세이브 서버에서 열어야 동작합니다(파일을 직접 열면 저장이 실패합니다).
 
-저장소는 지금까지의 번역 작업과 관련 자료를 보존하고, 이후 다른 사람이 프로젝트를 이어갈 수 있도록 공개 상태로 유지합니다.
-
-프로젝트를 이어서 작업하고자 하는 경우 이 저장소를 자유롭게 Fork하여 수정 및 관리할 수 있습니다. 별도의 공동 관리 권한 부여나 프로젝트 이전은 전제로 하지 않습니다.
-
-> 기존 관리자는 이후 번역 업데이트, 오탈자 수정, 게임 버전 업데이트 대응, 버그 수정 등의 유지보수를 지속적으로 제공하지 않습니다.
-
-## 원작
-
-이 번역본은 Vrelnir가 제작한 **Degrees of Lewdity**를 기반으로 합니다.
-
-* 원작자: Vrelnir
-* 원작 사이트: https://vrelnir.blogspot.com/
-
-게임의 원작 및 원작자가 제공하는 자료에 관한 자세한 내용은 원작의 `README.md`와 `LICENSE` 파일을 참고해주세요.
-
-## 라이선스
-
-이 번역본은 원작에 적용된 **CC-BY-NC-SA** 라이선스에 따라 배포됩니다.
-
-이 번역본을 기반으로 한 2차 저작물은 해당 라이선스의 조건을 준수하는 경우 자유롭게 공유·배포하거나 수정하여 이용할 수 있습니다.
-
-### 라이선스 조건
-
-* **BY (저작자표시)**
-  원작과 번역본의 저작자 및 출처를 명시해야 합니다.
-
-* **NC (비영리)**
-  영리 목적으로 이용할 수 없습니다.
-
-* **SA (동일조건변경허락)**
-  이 번역본을 기반으로 수정하거나 제작한 2차 저작물에도 동일한 **CC-BY-NC-SA** 라이선스를 적용해야 합니다.
-
-자세한 라이선스 내용은 저장소에 포함된 `LICENSE` 파일을 참고해주세요.
-
-### 참고
-
-* [CC-BY-NC-SA 라이선스 한글 번역본](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.ko)
-* [CC-BY-NC-SA 라이선스 권리 한글 번역본](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko)
-
-## 번역 프로젝트 출처
-
-이 번역 프로젝트는 [아카라이브 DOL 채널](https://arca.live/b/dolgame)을 중심으로 진행되었습니다.
-
-기존 번역 및 수정 작업에는 여러 참여자가 관여했을 수 있으므로, 개별 번역문의 저작자와 기여 관계를 이 README에서 모두 특정하지 않습니다.
-
-번역본을 이용하거나 수정하여 배포하는 경우에는 가능한 한 이 저장소와 원작의 출처를 함께 표시해주세요.
-
-## 프로젝트를 이어가는 경우
-
-프로젝트를 이어서 관리하고자 하는 경우 이 저장소를 자유롭게 Fork하여 작업할 수 있습니다.
-
-예를 들어 다음과 같은 작업이 가능합니다.
-
-* 새로운 게임 버전에 맞춘 번역 업데이트
-* 기존 번역문의 오탈자 및 번역 오류 수정
-* 누락된 문자열의 추가 번역
-* 번역 품질 개선
-* 버그 및 호환성 문제 수정
-* 번역 작업에 필요한 도구 및 스크립트 개선
-
-Fork한 저장소를 별도의 프로젝트로 운영하거나, 수정된 번역본을 재배포하는 것도 가능합니다. 단, 수정 및 재배포 시에는 본 번역본과 원작에 적용되는 **CC-BY-NC-SA 라이선스 조건**을 준수해야 합니다.
-
-기존 관리자는 이후 파생 프로젝트의 관리나 유지보수에 관여하지 않습니다.
-
-## 이용 방법
-
-게임의 설치 및 실행 방법은 하기에 포함된 `README.md`를 참고해주세요.
-
-이 저장소의 파일은 원작 게임의 구조와 버전에 따라 달라질 수 있으므로, 사용 중인 게임 버전과 번역본의 대응 버전을 확인한 후 이용하는 것을 권장합니다.
-
-## 마지막으로
-
-이 저장소는 지금까지 진행된 한국어 번역 작업을 보존하고, 이후 다른 사람이 프로젝트를 이어갈 수 있도록 공개하는 것을 목적으로 합니다.
-
-기존 관리자는 이 시점 이후 프로젝트의 지속적인 유지보수나 업데이트를 담당하지 않습니다.
-
-프로젝트를 이어가고자 하는 분들은 자유롭게 저장소를 Fork하거나 수정하여 작업을 이어가실 수 있습니다. 단, 수정 및 재배포 시에는 본 저장소와 원작에 적용되는 라이선스 조건을 준수해주세요.
-
-아래로는 원문 `readme.md`가 이어집니다.
-
-
----
-
-# Degrees of Lewdity
-
-## Lexicon of Lewdity
-
-Looking to contribute to Degrees of Lewdity? Read the [Lexicon of Lewdity](https://gitgud.io/Vrelnir/degrees-of-lewdity/-/wikis/home).
-
-_Failure to do so can lead to your work being denied._
-
-## How to build
-
-### Changing the build version and type
-
-1. Open `01-config\sugarcubeConfig.js`.
-2. Edit the `window.StartConfig` object to the relevant config type.
-    - Normal Build - `enableImages` needs to be `true` and `enableLinkNumberify` needs to be `true`.
-    - Text Only Build - `enableImages` needs to be `false` and `enableLinkNumberify` needs to be `true`.
-    - Android Build - `enableImages` needs to be `true` and `enableLinkNumberify` needs to be `false`.
-3. `version` is optional between release versions but will be displayed on screen in several places and stored in the saves made.
-4. `debug` is optional and will only effect new games.
-
-### Compiling the html
-
-1. On Windows: Run `compile.bat` or `compile-watch.bat`.
-2. On Linux: Run `compile.sh`
-3. Open `Degrees of Lewdity VERSION.html`.
-
-### Build Android version (.apk)
-
-See [README in devTools/apkbuilder](devTools/apkbuilder/README-windows.txt)
-
-## Development
-
-### Prerequisites
-
--   Read [Coder's-Guide](https://gitgud.io/Vrelnir/degrees-of-lewdity/-/wikis/Programming/Coder's-Guide)
--   [Node.js 16 or later](https://nodejs.org/en/).
-
-### Optional Prerequisites
-
-1. Install [Tweego](http://www.motoslave.net/tweego/) and remember the path where it was installed.
-2. Add path to `tweego.exe` (e.g. `C:\Program Files\Twine\tweego-2.1.0-windows-x64`) to Windows `Path` environment variable.
-
-### Initial setup
-
-1. Install project dependencies:
-
-    ```bash
-    npm i
-    ```
-
-2. If you use Visual Studio Code:
-
-    1. Install [Twee 3 Language Tools extension](https://marketplace.visualstudio.com/items?itemName=cyrusfirheir.twee3-language-tools)
-    2. Install [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
-    3. Install [Stylelint extension](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
-    4. Install and configure [Code Spell Checker extension](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker):
-        1. Use "English - United Kingdom" and "English - United States" dictionaries
-        2. Enable spellchecking for`twee3-sugarcube-2`, `markdown`, `javascript` and other programming languages
-    5. Optionally enable fixing js/css on save. In `settings.json` set:
-
-        ```json
-        // This disables built-in formatting
-        "[javascript]": {
-          "editor.formatOnSave": false
-        },
-        "[css]": {
-          "editor.formatOnSave": false
-        },
-        // This enables running ESLint, Prettier, Stylelint formatting on file save
-        "editor.codeActionsOnSave": {
-          "source.fixAll.eslint": true,
-          "source.fixAll.stylelint": true
-        },
-
-        ```
-
-### Linting
-
-#### JavaScript
-
-JavaScript code linting is handled by [`ESLint`](https://eslint.org/).
-
-ESLint is [configured](./.eslintrc.cjs) to follow some of best practices ([ESLint Recommended Rules](https://eslint.org/docs/latest/rules/), [JavaScript Standard Style](https://standardjs.com/rules.html)) with formatting handled by Prettier (`eslint --fix` formats code with Prettier). You don't need to use `Prettier` VS Code extension to format `.js` files.
-
-To run ESLint for single file:
+## 빌드
 
 ```bash
-npx eslint "game/03-JavaScript/02-Helpers/Utils.js"
+./build.sh                         # dist/ 에 네 파일 생성 (버전은 version 파일)
+FORCE_VERSION=test ./build.sh      # 파일명의 버전 문자열만 바꿀 때
 ```
 
-or for all files inside `game` directory:
+tweego는 `devTools/tweego/`에 번들된 바이너리를 씁니다(Linux/macOS/Windows x64). 네 변형 중 하나라도 실패하면 0이 아닌 코드로 끝나고 `dist/`에 임시 파일을 남기지 않습니다.
+
+## 세이브 서버
 
 ```bash
-npx eslint "game/**"
+cd server
+docker compose up -d --build       # 8080 포트, 세이브는 server/saves/
+docker compose logs -f
 ```
 
-##### Resolving issues
+브라우저로 서버 주소(예: Tailscale 주소 `http://<host>:8080/`)를 열면 `dist/`의 HTML 목록이 뜹니다. 서버는 `dist/`의 HTML과 `img/`만 정적으로 내보내고, 세이브는 `/api/*`로만 다룹니다.
 
-Some issues are fixable and can be auto-fixed when you save a file (provided ESLint extension is configured to run fix on save) or by running `eslint --fix file_relative_path`
+선택 설정은 `server/.env`에 둡니다.
 
-If you find a rule that doesn't make sense for the project you can disable it inside `rules` section inside `.eslintrc.cjs`:
-
-```json
-rules: {
-  ...
-  // SugarCube extends native objects and we follow it
-  "no-extend-native": "off",
-  ...
-}
+```
+HOST_PORT=8080        # 호스트에서 열 포트
+SAVE_TOKEN=비밀번호    # 비워 두면 인증 없음 (Tailscale 등 네트워크에 맡김)
 ```
 
-Please discuss the reasons with the team before disabling the rule. Add a comment explaining why the rule was disabled
+`SAVE_TOKEN`을 두면 게임이 처음 서버에 붙을 때 비밀번호를 한 번 묻고 브라우저에 기억합니다.
 
-If ESLint reports a lot of issues for particular file and you cannot fix them all at once feel free to [disable particular rule](https://eslint.org/docs/latest/user-guide/configuring/rules#disabling-rules) for the file (there is quick actions menu when code with error is hovered):
+세이브는 `server/saves/slot-<번호>.json`(0번은 자동 저장)과 목록용 `details.json`입니다. **백업은 이 폴더를 잡으면 됩니다.** `details.json`은 서버가 시작할 때 다시 만들어집니다.
 
-```js
-/* eslint-disable camelcase -- TODO: Fix variables' names */
-...
-let demo_rainbow_colors = [
-...
-```
+알아둘 것:
 
-Add a TODO comment explaining that this will be fixed someday
+- 같은 슬롯에 두 기기가 동시에 저장하면 나중에 저장한 쪽이 남습니다.
+- 철인 모드 세이브는 게임이 별도 경로로 저장하므로 그 기기의 브라우저에만 남습니다.
+- 서버에 연결되지 않으면 저장/불러오기는 실패하고 게임 안에 오류가 표시됩니다. 오프라인 저장은 없습니다.
+- 세이브 메뉴의 "구형 저장소 사용" 버튼은 원격 변형에서 제거했습니다.
+- 옵션·설정을 바꾼 뒤 바로 저장하면 세이브에 안 들어갑니다(원본 엔진 동작). 다른 화면으로 한 번 이동한 뒤 저장하세요.
 
-##### Global variables
+## Herm NPC 설정
 
-ESLint may report an issue like `'myVariable' is not defined`. It means ESLint cannot figure out where the variable is defined. If you really meant to make variable global add the new variable to `.eslintrc.cjs` `globals` section inside corresponding group:
+- 설정 화면의 NPC 성별 항목에 "자지와 보지가 모두 있는 여성/남성의 비율" 슬라이더가 생깁니다.
+- 새로 생성되는 랜덤 NPC, 짐승, 네임드 NPC, 지속 NPC에 적용됩니다. 기존 "자지가 있는 여성의 비율" 등이 먼저 적용되고, "둘 다"는 남는 범위 안에서만 적용됩니다. 두 값의 합이 100을 넘으면 "둘 다"가 잘립니다.
+- "둘 다" 비율이 20 이상이면 양성 플레이어의 생식기를 본 NPC의 놀라는 반응이 사라집니다.
+- 기존 세이브에서도 설정은 보이지만, 이미 성별이 정해진 NPC는 바뀌지 않고 새로 만나는 NPC부터 적용됩니다.
+- 네임드 NPC 항목에서 생식기를 "양성"으로 직접 고를 수 있습니다(원본은 개발자 모드에서만 보이던 선택지). 설정 내보내기·가져오기도 이 값을 보존합니다.
 
-```json
-myVariable: "readonly"
-```
-
-If the variable is suppose to be writable set `myVariable: "writable"` instead.
-
-### CSS
-
-CSS linting is handled by [`Stylelint`](https://stylelint.io/).
-
-Stylelint is [configured](./stylelint.config.cjs) to follow [common conventions](https://github.com/stylelint/stylelint-config-standard) along with [rules for properties order](https://github.com/cahamilton/stylelint-config-property-sort-order-smacss) and formatting handled by Prettier (`stylelint --fix` formats code with Prettier). You don't need to use `Prettier` VS Code extension to format `.css` files.
-
-To run Stylelint for the file:
+## 개발
 
 ```bash
-npx stylelint "game/02-CSS/pillsInventory.css"
+python3 -m unittest discover -s tools/test -t .     # 빌드 비교 도구, 스토리 포맷 생성기
+(cd tools/test && node --test)                       # 원격 저장 모듈(remote-idb.js)
+(cd server && npm ci && npm test)                    # 세이브 서버
+python3 tools/make_remote_format.py --check          # sugarcube-2-remote 가 최신인지
 ```
 
-or for all CSS file inside `game` directory:
+구조:
 
-```bash
-npx stylelint "game/**/*.css"
-```
+- `game/` 번역 소스. Herm 규칙이 들어 있고, 설정 UI는 `setup.features?.herm`로 가립니다.
+- `features/herm-ui/features.js` Herm 빌드에만 포함되는 스위치 한 줄.
+- `devTools/tweego/storyFormats/sugarcube-2-remote/` 원격 저장용 스토리 포맷. `idb` 저장 모듈이 게임 소스가 아니라 SugarCube 번들 안에 있어서, `tools/make_remote_format.py`가 원본 포맷의 `source`에 `tools/remote-idb.js`를 입혀 만듭니다. `remote-idb.js`나 원본 `format.js`를 바꾸면 다시 생성해 커밋합니다.
+- `tools/verify_build.py A.html B.html [--allow ...] [--max-script-diff N]` 두 빌드를 passage 단위로 비교합니다.
+- `server/` Express 세이브 서버와 Docker 설정.
+- `docs/specs/`, `docs/plans/` 설계와 구현 계획. `docs/README-translation.md`는 번역판 원 저장소의 README 전문입니다.
 
-#### Resolving issues
+## 한국어 번역판 안내
 
-Some issues are fixable and can be auto-fixed when you save a file (provided Stylelint extension is configured to run fix on save) or by running `stylelint --fix file_relative_path`.
+이 저장소는 [Tareun34/DoL_KrTranslation](https://github.com/Tareun34/DoL_KrTranslation)(아카라이브 DOL 채널 중심으로 진행된 번역, 0.5.12.13)을 포크한 것입니다. 원 번역 관리자는 저장소 공개 시점에 정기 유지보수를 종료했고, 이후 수정은 이 포크에서 이어집니다. 번역판의 안내문과 원작의 영문 README 전문은 [`docs/README-translation.md`](docs/README-translation.md)에 그대로 있습니다.
 
-Sometimes all issues cannot be fixed within single "fix" run (e.g. properties order). Simply run fix command several time until all auto-fixable issues are resolved.
+## 크레딧과 라이선스
 
-If you find a rule that doesn't make sense for the project you can disable it inside `rules` section inside `stylelint.config.cjs`:
+- 원작: Vrelnir, [Degrees of Lewdity](https://vrelnir.blogspot.com/)
+- 한국어 번역: 아카라이브 DOL 채널 번역팀, 저장소 공개 Tareun34
+- 모드와 서버: 이 저장소
 
-```js
-rules: {
-  // Class and ID patterns disabled for now due to the large amounts of classes and IDs that break this rule
-  "selector-class-pattern": null,
-  "selector-id-pattern": null,
-  ...
-}
-```
-
-Please discuss the reasons with the team before disabling the rule. Add a comment explaining why the rule was disabled
-
-### Formatting
-
-Formatting CSS and other non-JavaScript file is handled by `Prettier`. Formatting rules are set in `.prettierrc.json`
-
-### Pre-commit hook
-
-On pre-commit [`lint-staged`](https://github.com/okonet/lint-staged) using [`husky`](https://typicode.github.io/husky) lints/formats `.js`, `.css` with ESLint, Stylelint and formats other supported files with Prettier.
-
-Pre-commit hook is the last quality gate to avoid "bad" code getting into the repository. It's better to make sure you aren't committing files with issues beforehand - you can run command `npm run lint-staged` when you've staged the files to check if there are issues.
-
-If for some reason you really want to commit the code that fails linting add `--no-verify` parameter to `commit` call
-
-```bash
-commit --no-verify
-```
+원작과 번역판에 적용된 **CC-BY-NC-SA** 라이선스를 그대로 따릅니다. 저작자 표시, 비영리, 동일 조건 변경 허락. 자세한 내용은 `LICENSE`를 참고하세요.
