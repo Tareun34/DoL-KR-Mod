@@ -25,7 +25,7 @@
 FORCE_VERSION=test ./build.sh      # 파일명의 버전 문자열만 바꿀 때
 ```
 
-tweego는 `devTools/tweego/`에 번들된 바이너리를 씁니다(Linux/macOS/Windows x64). 네 변형 중 하나라도 실패하면 0이 아닌 코드로 끝나고 `dist/`에 임시 파일을 남기지 않습니다.
+tweego는 `devTools/tweego/`에 번들된 바이너리를 씁니다(Linux x64/x86, macOS Intel/Apple Silicon, Windows x64/x86). PATH에 `tweego`가 있으면 그것을 우선 씁니다. 네 변형은 `dist/.build/`에 먼저 만들어지고 전부 성공했을 때만 `dist/`로 한꺼번에 교체되므로, 하나라도 실패하면 0이 아닌 코드로 끝나고 기존 `dist/` 파일은 그대로 남습니다.
 
 ## 세이브 서버
 
