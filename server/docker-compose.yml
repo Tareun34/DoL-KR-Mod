@@ -1,0 +1,13 @@
+name: dol-kr-mod
+services:
+  dol-save:
+    build: .
+    ports:
+      - "${HOST_PORT:-8080}:8080"
+    volumes:
+      - ./saves:/data
+      - ../dist:/game/dist:ro
+      - ../img:/game/img:ro
+    environment:
+      SAVE_TOKEN: "${SAVE_TOKEN:-}"
+    restart: unless-stopped
