@@ -89,6 +89,7 @@ DoL-KR-Mod/
   - `game/03-JavaScript/save.js` 등 `settingsObjects` 정의 (female/male 항목, npc gender "h")
   - `Widgets NPCs` passage (생식기 반응 억제)
 - **UI 노출만 스위치로 감싼다.** 슬라이더 2개는 `<<if setup.features?.herm>>`로 감싼다. 네임드 "양성" 라디오는 원본이 `$debug is 1`로 가리고 있었으므로 `$debug is 1 or setup.features?.herm`로 감싸 원본 동작을 보존한다. 나머지(생성 분기, 기본값, settingsObjects, preset case, 반응 억제)는 모든 빌드에 들어간다. 비율이 0이면 원본과 동일 동작이고, settingsObjects에 키가 있어도 내보내기/가져오기 값이 0일 뿐이다.
+  - **정정(2026-11-09 리뷰)**: 이 전제는 불완전했다. settingsObjects 항목에 `randomize: "encounter"`가 있으면 원본 빌드의 "조우 무작위"가 비율을 뽑고, 가져오기/프리셋 미리보기도 값을 받아들인다. 그래서 Herm 빌드가 아니면 `randomize`를 끄고, `importSettingsData`에서 두 키를 버리고, `presetConfirm`에서 알 수 없는 설정으로 표시한다. `tools/test/test_herm_gating.py`가 이 게이팅을 고정한다.
 - `features/herm-ui/features.js`는 `setup.features = Object.assign(setup.features || {}, { herm: true });` 한 줄이다. 로드 순서에 기대지 않도록 twee 쪽은 옵셔널 체이닝으로 읽는다.
 - 반응 억제 조건은 기존 결정 유지: `$crossdressing is 2`이고 플레이어 외견 성별에 해당하는 Herm 비율이 20 이상이면 억제. 외견 불일치(`$crossdressing is 1`) 분기는 넣지 않는다.
 

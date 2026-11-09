@@ -271,12 +271,17 @@
 							<</if>>
 							번호 키를 통한 링크 네비게이션: <span class="green"><<print (_altValue2 isnot undefined ? _altValue2 : $_value) is false ? "비활성화됨" : "활성화됨">></span>
 						<<case "maleChance" "maleChanceMale" "maleChanceFemale" "femaleNPCPenisChance" "maleNPCVaginaChance" "femaleNPCHermChance" "maleNPCHermChance" "maleVictimChance" "npcVirginChanceStudent" "npcVirginChanceAdult" "straponChance" "darkSkinChance" "beastMaleChance" "beastMaleChanceMale" "beastMaleChanceFemale" "monsterChance">>
-							<<set _object to _validatorObject["settings"][$_label]>>
-							<<if _object isnot undefined>>
-								<<set _valid to validateValue(_object, $_value)>>
+							<<if ($_label is "femaleNPCHermChance" or $_label is "maleNPCHermChance") and !setup.features?.herm>>
+								/* Herm 빌드가 아니면 알 수 없는 설정으로 취급한다 (_valid 를 두지 않아 아래 안내문이 붙는다) */
+								<<print $_label + ":">> <span class="green"><<print (_altValue2 isnot undefined ? _altValue2 : $_value) + "%">></span>
+							<<else>>
+								<<set _object to _validatorObject["settings"][$_label]>>
+								<<if _object isnot undefined>>
+									<<set _valid to validateValue(_object, $_value)>>
+								<</if>>
+								<<set _displayName to _validatorObject["settings"][$_label]["displayName"]>>
+								<<print _displayName>> <span class="green"><<print (_altValue2 isnot undefined ? _altValue2 : $_value) + "%">></span>
 							<</if>>
-							<<set _displayName to _validatorObject["settings"][$_label]["displayName"]>>
-							<<print _displayName>> <span class="green"><<print (_altValue2 isnot undefined ? _altValue2 : $_value) + "%">></span>
 						<<case "eyeselect" "hairselect" "awareselect" "background" "gamemode">>
 							<<set _object to _validatorObject[$_label]>>
 							<<if _object isnot undefined>>

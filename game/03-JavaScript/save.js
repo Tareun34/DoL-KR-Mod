@@ -715,6 +715,11 @@ function importSettingsData(data) {
 	if (overrides.general != null) {
 		overrides.general = settingsConvert(false, "general", overrides.general);
 	}
+	if (overrides.general?.settings && !setup.features?.herm) {
+		// Herm 빌드가 아니면 가져오기로도 양성 비율이 0에서 벗어나지 않게 한다.
+		delete overrides.general.settings.femaleNPCHermChance;
+		delete overrides.general.settings.maleNPCHermChance;
+	}
 
 	/**
 	 * @param {object} source
@@ -1279,11 +1284,11 @@ function settingsObjects(type) {
 						randomize: "encounter",
 					},
 					maleNPCVaginaChance: { min: 0, max: 100, decimals: 0, displayName: "보지를 가진 남성 비율:", randomize: "encounter" },
-					maleNPCHermChance: { min: 0, max: 100, decimals: 0, displayName: "자지와 보지를 모두 가진 남성 비율:", randomize: "encounter" },
+					maleNPCHermChance: { min: 0, max: 100, decimals: 0, displayName: "자지와 보지를 모두 가진 남성 비율:", randomize: setup.features?.herm ? "encounter" : undefined },
 					maleVictimChance: { min: 0, max: 100, decimals: 0, displayName: "다른 피해자 중 남성 비율:", randomize: "encounter" },
 					maleChance: { min: 0, max: 100, decimals: 0, displayName: "당신에게 끌리는 사람 중 남성 비율:", randomize: "encounter" },
 					femaleNPCPenisChance: { min: 0, max: 100, decimals: 0, displayName: "자지를 가진 여성 비율:", randomize: "encounter" },
-					femaleNPCHermChance: { min: 0, max: 100, decimals: 0, displayName: "자지와 보지를 모두 가진 여성 비율:", randomize: "encounter" },
+					femaleNPCHermChance: { min: 0, max: 100, decimals: 0, displayName: "자지와 보지를 모두 가진 여성 비율:", randomize: setup.features?.herm ? "encounter" : undefined },
 					straponChance: { min: 0, max: 100, decimals: 0, displayName: "페니스 밴드를 가진 여성 비율:", randomize: "encounter" },
 					plantsEnabled: { bool: true, displayName: "인간형 식물:" },
 					playerPregnancyEggLayingEnabled: { bool: true, displayName: "플레이어 산란:" },
