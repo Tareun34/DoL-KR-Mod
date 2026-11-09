@@ -664,25 +664,25 @@
 	<<else>>
 		<<rng>>
 		<<if $NPCList[_n].pronoun is "m">>
-			<<if $rng lte $settings.maleNPCVaginaChance and $debugEnableHerms is 1>>
+			<<if $rng lte $settings.maleNPCVaginaChance>>
+				<<set $NPCList[_n].vagina to "clothed">>
+				<<set $NPCList[_n].gender to "f">>
+			<<elseif $rng lte $settings.maleNPCVaginaChance + ($settings.maleNPCHermChance || 0)>>
 				<<set $NPCList[_n].penis to "clothed">>
 				<<set $NPCList[_n].vagina to "clothed">>
 				<<set $NPCList[_n].gender to "h">>
-			<<elseif $rng lte $settings.maleNPCVaginaChance>>
-				<<set $NPCList[_n].vagina to "clothed">>
-				<<set $NPCList[_n].gender to "f">>
 			<<else>>
 				<<set $NPCList[_n].penis to "clothed">>
 				<<set $NPCList[_n].gender to "m">>
 			<</if>>
 		<<elseif $NPCList[_n].pronoun is "f">>
-			<<if $rng lte $settings.femaleNPCPenisChance and $debugEnableHerms is 1>>
+			<<if $rng lte $settings.femaleNPCPenisChance>>
+				<<set $NPCList[_n].penis to "clothed">>
+				<<set $NPCList[_n].gender to "m">>
+			<<elseif $rng lte $settings.femaleNPCPenisChance + ($settings.femaleNPCHermChance || 0)>>
 				<<set $NPCList[_n].vagina to "clothed">>
 				<<set $NPCList[_n].penis to "clothed">>
 				<<set $NPCList[_n].gender to "h">>
-			<<elseif $rng lte $settings.femaleNPCPenisChance>>
-				<<set $NPCList[_n].penis to "clothed">>
-				<<set $NPCList[_n].gender to "m">>
 			<<else>>
 				<<set $NPCList[_n].vagina to "clothed">>
 				<<set $NPCList[_n].gender to "f">>

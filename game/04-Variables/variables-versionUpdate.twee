@@ -6609,6 +6609,15 @@
 	<<set $options.combatLightTFColor ??= 0.2>>
 	<<unset $options.lightCombat>>
 
+	<!-- Herm NPCs: Herm 빌드는 빠진 설정만 채우고, 그 외 빌드는 항상 0으로 되돌린다 -->
+	<<if setup.features?.herm>>
+		<<set $settings.femaleNPCHermChance ??= 0>>
+		<<set $settings.maleNPCHermChance ??= 0>>
+	<<else>>
+		<<set $settings.femaleNPCHermChance to 0>>
+		<<set $settings.maleNPCHermChance to 0>>
+	<</if>>
+
 	<!-- 0.5.6.8  Fix for very old saves with beastMaleChance never defined -->
 	<<if $settings.maleChanceMale is undefined>>
 		<<set $settings.maleChanceMale to 50>>

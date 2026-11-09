@@ -984,7 +984,15 @@
 		<<if $NPCList[0].teen is 1 and $location is "school" and !($npc.length is 1 and (["Kylar","Sydney"].includes($npc[0])))>>
 			<<schoolrep_naked>>
 		<</if>>
+		<<set _noReaction to false>>
 		<<if $genitalReactionDisable>>
+			<<set _noReaction to true>>
+		<<elseif $crossdressing is 2>>
+			<<if ($player.gender_appearance is "m" ? ($settings.maleNPCHermChance || 0) : ($settings.femaleNPCHermChance || 0)) gte 20>>
+				<<set _noReaction to true>>
+			<</if>>
+		<</if>>
+		<<if _noReaction>>
 			<!-- No reaction -->
 		<<elseif $crossdressing is 2>> <!-- Herm PC -->
 			<<if $npc.length is 1 and (["Kylar","Sydney","Gwylan","Avery"].includes($npc[0]))>>

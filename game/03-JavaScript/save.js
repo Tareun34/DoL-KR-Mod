@@ -1279,9 +1279,11 @@ function settingsObjects(type) {
 						randomize: "encounter",
 					},
 					maleNPCVaginaChance: { min: 0, max: 100, decimals: 0, displayName: "보지를 가진 남성 비율:", randomize: "encounter" },
+					maleNPCHermChance: { min: 0, max: 100, decimals: 0, displayName: "자지와 보지를 모두 가진 남성 비율:", randomize: "encounter" },
 					maleVictimChance: { min: 0, max: 100, decimals: 0, displayName: "다른 피해자 중 남성 비율:", randomize: "encounter" },
 					maleChance: { min: 0, max: 100, decimals: 0, displayName: "당신에게 끌리는 사람 중 남성 비율:", randomize: "encounter" },
 					femaleNPCPenisChance: { min: 0, max: 100, decimals: 0, displayName: "자지를 가진 여성 비율:", randomize: "encounter" },
+					femaleNPCHermChance: { min: 0, max: 100, decimals: 0, displayName: "자지와 보지를 모두 가진 여성 비율:", randomize: "encounter" },
 					straponChance: { min: 0, max: 100, decimals: 0, displayName: "페니스 밴드를 가진 여성 비율:", randomize: "encounter" },
 					plantsEnabled: { bool: true, displayName: "인간형 식물:" },
 					playerPregnancyEggLayingEnabled: { bool: true, displayName: "플레이어 산란:" },
@@ -1471,7 +1473,7 @@ function settingsObjects(type) {
 		case "npc":
 			result = {
 				pronoun: { strings: ["m", "f"], displayName: "대명사: ", textMap: { none: "해당 없음", m: "남성", f: "여성" } },
-				gender: { strings: ["m", "f"], displayName: "성기: ", textMap: { none: "해당 없음", m: "자지", f: "보지" } },
+				gender: { strings: ["m", "f", "h"], displayName: "성기: ", textMap: { none: "해당 없음", m: "자지", f: "보지", h: "양성" } },
 				skincolour: {
 					strings: ["white", "black", "ghost"],
 					displayName: "피부색: ",

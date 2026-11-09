@@ -104,17 +104,22 @@
 			<</if>>
 			<!-- Set Gender -->
 			<<if $per_npc[$_i].gender is "none" or _args[0] is "genders">>
+				<<set _hermRoll to random(0, 99)>>
 				<<if $per_npc[$_i].pronoun is "m">>
-					<<if random(0, 99) gte $settings.maleNPCVaginaChance>>
-						<<set $per_npc[$_i].gender to "m">>
-					<<else>>
+					<<if _hermRoll lt $settings.maleNPCVaginaChance>>
 						<<set $per_npc[$_i].gender to "f">>
+					<<elseif _hermRoll lt $settings.maleNPCVaginaChance + ($settings.maleNPCHermChance || 0)>>
+						<<set $per_npc[$_i].gender to "h">>
+					<<else>>
+						<<set $per_npc[$_i].gender to "m">>
 					<</if>>
 				<<elseif $per_npc[$_i].pronoun is "f">>
-					<<if random(0, 99) gte $settings.femaleNPCPenisChance>>
-						<<set $per_npc[$_i].gender to "f">>
-					<<else>>
+					<<if _hermRoll lt $settings.femaleNPCPenisChance>>
 						<<set $per_npc[$_i].gender to "m">>
+					<<elseif _hermRoll lt $settings.femaleNPCPenisChance + ($settings.femaleNPCHermChance || 0)>>
+						<<set $per_npc[$_i].gender to "h">>
+					<<else>>
+						<<set $per_npc[$_i].gender to "f">>
 					<</if>>
 				<</if>>
 			<</if>>

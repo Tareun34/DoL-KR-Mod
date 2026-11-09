@@ -1554,10 +1554,26 @@
 				<span class="gold">자지가 있는 여성의 비율:</span>
 				<<numberslider "$settings.femaleNPCPenisChance" $settings.femaleNPCPenisChance 0 100 1>>
 			</div>
+			<<if setup.features?.herm>>
+			<div class="settingsToggleItem numberslider-inline">
+				<span class="gold">자지와 보지가 모두 있는 여성의 비율:
+				<mouse class="tooltip linkBlue">(?)<span>"자지가 있는 여성의 비율"이 먼저 적용되고, 이 값은 남는 범위 안에서만 적용됩니다. 두 값의 합이 100을 넘으면 이 값이 잘립니다. 새로 생성되는 NPC부터 적용됩니다.</span></mouse>
+				</span>
+				<<numberslider "$settings.femaleNPCHermChance" `$settings.femaleNPCHermChance || 0` 0 100 1>>
+			</div>
+			<</if>>
 			<div class="settingsToggleItem numberslider-inline">
 				<span class="gold">보지가 있는 남성의 비율:</span>
 				<<numberslider "$settings.maleNPCVaginaChance" $settings.maleNPCVaginaChance 0 100 1>>
 			</div>
+			<<if setup.features?.herm>>
+			<div class="settingsToggleItem numberslider-inline">
+				<span class="gold">자지와 보지가 모두 있는 남성의 비율:
+				<mouse class="tooltip linkBlue">(?)<span>"보지가 있는 남성의 비율"이 먼저 적용되고, 이 값은 남는 범위 안에서만 적용됩니다. 두 값의 합이 100을 넘으면 이 값이 잘립니다. 새로 생성되는 NPC부터 적용됩니다.</span></mouse>
+				</span>
+				<<numberslider "$settings.maleNPCHermChance" `$settings.maleNPCHermChance || 0` 0 100 1>>
+			</div>
+			<</if>>
 			<div class="settingsToggleItemWide numberslider-inline">
 				<span class="gold">페니스 밴드를 한 여성의 비율:</span>
 				<<numberslider "$settings.straponChance" $settings.straponChance 0 100 1>>
@@ -2679,7 +2695,7 @@
 			<span data-target="npcname-pregnancy" data-disabledif="getActivePregnancies(V.NPCName[T.npcId].nam).length">
 				<label><<radiobutton "$NPCName[_npcId].gender" "f" autocheck>> 보지</label> |
 				<label><<radiobutton "$NPCName[_npcId].gender" "m" autocheck>> 자지</label>
-				<<if $debug is 1>>| <label><<radiobutton "$NPCName[_npcId].gender" "h" autocheck>> 양성</label><</if>>
+				<<if $debug is 1 or setup.features?.herm>>| <label><<radiobutton "$NPCName[_npcId].gender" "h" autocheck>> 양성</label><</if>>
 			</span>
 		</div>
 		<div class="settingsToggleItem">

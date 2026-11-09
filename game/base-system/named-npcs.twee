@@ -263,17 +263,22 @@ Zohar
 			<<set $NPCName[_i].gender to "f">>
 		<</if>>
 	<<elseif !$NPCName[_i].gender or $NPCName[_i].gender is "none" or _args[1] is "genders">>
+		<<set _hermRoll to random(0, 99)>>
 		<<if $NPCName[_i].pronoun is "m">>
-			<<if random(0, 99) gte $settings.maleNPCVaginaChance>>
-				<<set $NPCName[_i].gender to "m">>
-			<<else>>
+			<<if _hermRoll lt $settings.maleNPCVaginaChance>>
 				<<set $NPCName[_i].gender to "f">>
+			<<elseif _hermRoll lt $settings.maleNPCVaginaChance + ($settings.maleNPCHermChance || 0)>>
+				<<set $NPCName[_i].gender to "h">>
+			<<else>>
+				<<set $NPCName[_i].gender to "m">>
 			<</if>>
 		<<elseif $NPCName[_i].pronoun is "f">>
-			<<if random(0, 99) gte $settings.femaleNPCPenisChance>>
-				<<set $NPCName[_i].gender to "f">>
-			<<else>>
+			<<if _hermRoll lt $settings.femaleNPCPenisChance>>
 				<<set $NPCName[_i].gender to "m">>
+			<<elseif _hermRoll lt $settings.femaleNPCPenisChance + ($settings.femaleNPCHermChance || 0)>>
+				<<set $NPCName[_i].gender to "h">>
+			<<else>>
+				<<set $NPCName[_i].gender to "f">>
 			<</if>>
 		<</if>>
 	<</if>>

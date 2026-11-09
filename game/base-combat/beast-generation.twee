@@ -297,19 +297,19 @@
 
 		<<rng>>
 		<<if $NPCList[_n].gender is "m">>
-			<<if $rng lte $settings.maleNPCVaginaChance and $debugEnableHerms>>
-				<<set $NPCList[_n].penis to 0>>
+			<<if $rng lte $settings.maleNPCVaginaChance>>
 				<<set $NPCList[_n].vagina to 0>>
-			<<elseif $rng lte $settings.maleNPCVaginaChance>>
+			<<elseif $rng lte $settings.maleNPCVaginaChance + ($settings.maleNPCHermChance || 0)>>
+				<<set $NPCList[_n].penis to 0>>
 				<<set $NPCList[_n].vagina to 0>>
 			<<else>>
 				<<set $NPCList[_n].penis to 0>>
 			<</if>>
 		<<elseif $NPCList[_n].gender is "f">>
-			<<if $rng lte $settings.femaleNPCPenisChance and $debugEnableHerms>>
-				<<set $NPCList[_n].vagina to 0>>
+			<<if $rng lte $settings.femaleNPCPenisChance>>
 				<<set $NPCList[_n].penis to 0>>
-			<<elseif $rng lte $settings.femaleNPCPenisChance>>
+			<<elseif $rng lte $settings.femaleNPCPenisChance + ($settings.femaleNPCHermChance || 0)>>
+				<<set $NPCList[_n].vagina to 0>>
 				<<set $NPCList[_n].penis to 0>>
 			<<else>>
 				<<set $NPCList[_n].vagina to 0>>

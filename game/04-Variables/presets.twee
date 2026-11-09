@@ -270,7 +270,7 @@
 								<<set _valid to validateValue(_object, $_value)>>
 							<</if>>
 							번호 키를 통한 링크 네비게이션: <span class="green"><<print (_altValue2 isnot undefined ? _altValue2 : $_value) is false ? "비활성화됨" : "활성화됨">></span>
-						<<case "maleChance" "maleChanceMale" "maleChanceFemale" "femaleNPCPenisChance" "maleNPCVaginaChance" "maleVictimChance" "npcVirginChanceStudent" "npcVirginChanceAdult" "straponChance" "darkSkinChance" "beastMaleChance" "beastMaleChanceMale" "beastMaleChanceFemale" "monsterChance">>
+						<<case "maleChance" "maleChanceMale" "maleChanceFemale" "femaleNPCPenisChance" "maleNPCVaginaChance" "femaleNPCHermChance" "maleNPCHermChance" "maleVictimChance" "npcVirginChanceStudent" "npcVirginChanceAdult" "straponChance" "darkSkinChance" "beastMaleChance" "beastMaleChanceMale" "beastMaleChanceFemale" "monsterChance">>
 							<<set _object to _validatorObject["settings"][$_label]>>
 							<<if _object isnot undefined>>
 								<<set _valid to validateValue(_object, $_value)>>
