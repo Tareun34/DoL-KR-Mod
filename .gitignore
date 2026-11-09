@@ -1,0 +1,8 @@
+dist/
+/*.html
+.DS_Store
+__pycache__/
+.eslintcache
+server/node_modules/
+server/saves/
+server/.env
