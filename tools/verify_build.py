@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Compare two compiled Degrees of Lewdity HTML builds passage by passage.
 
-Usage: verify_build.py A.html B.html [--allow NAME ...] [--max-script-diff N]
+Usage: verify_build.py A.html B.html [--allow NAME ...] [--max-script-diff N] [--names-only]
 
 Exit code 0 when: no passage exists on one side only, every changed passage
 is in --allow, and the non-passage part (scripts, styles, story data)
@@ -60,6 +60,7 @@ def main(argv=None):
     parser.add_argument("--allow", nargs="*", default=[], help="passages that may differ")
     parser.add_argument("--max-script-diff", type=int, default=0, help="allowed +/- lines outside passages")
     parser.add_argument("--show", type=int, default=40, help="script diff lines to print")
+    parser.add_argument("--names-only", action="store_true", help="compare passage name sets only; ignore bodies and scripts")
     args = parser.parse_args(argv)
 
     with open(args.a, encoding="utf-8", newline="") as f:
@@ -71,11 +72,14 @@ def main(argv=None):
     allow = set(args.allow)
     unexpected = [n for n in r.changed if n not in allow]
     diff_lines = r.script_diff_lines()
-    ok = not r.only_a and not r.only_b and not unexpected and len(diff_lines) <= args.max_script_diff
+    if args.names_only:
+        ok = not r.only_a and not r.only_b
+    else:
+        ok = not r.only_a and not r.only_b and not unexpected and len(diff_lines) <= args.max_script_diff
 
-    print("passages: A=%d B=%d only_a=%d only_b=%d changed=%d (unexpected %d); script diff lines=%d (max %d) -> %s"
+    print("passages: A=%d B=%d only_a=%d only_b=%d changed=%d (unexpected %d); script diff lines=%d (max %d) -> %s%s"
           % (len(passages(a)), len(passages(b)), len(r.only_a), len(r.only_b), len(r.changed), len(unexpected),
-             len(diff_lines), args.max_script_diff, "OK" if ok else "FAIL"))
+             len(diff_lines), args.max_script_diff, "OK" if ok else "FAIL", " (names only)" if args.names_only else ""))
     for n in r.only_a:
         print("  only in A: %s" % n)
     for n in r.only_b:

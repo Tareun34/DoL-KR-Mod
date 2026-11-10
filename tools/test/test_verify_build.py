@@ -86,6 +86,14 @@ class CliTests(unittest.TestCase):
         self.assertEqual(self.run_cli(a, b).returncode, 1)
         self.assertEqual(self.run_cli(a, b, "--max-script-diff", "1").returncode, 0)
 
+    def test_names_only_ignores_bodies_and_scripts(self):
+        a = html([passage("A", "one"), passage("B", "two", 2)], head="<script>var a = 1;</script>")
+        b = html([passage("A", "ONE"), passage("B", "TWO", 2)], head="<script>var a = 2;</script>")
+        self.assertEqual(self.run_cli(a, b).returncode, 1)
+        self.assertEqual(self.run_cli(a, b, "--names-only").returncode, 0)
+        c = html([passage("A", "one"), passage("C", "x", 2)])
+        self.assertEqual(self.run_cli(a, c, "--names-only").returncode, 1)
+
 
 if __name__ == "__main__":
     unittest.main()
