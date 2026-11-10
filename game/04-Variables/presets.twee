@@ -76,6 +76,7 @@
 		<span class="gold"><<= _args[0]>>:</span>
 		<ul>
 			<<for _key, _value range _args[1]>>
+				<<if !setup.features?.herm and (_key is "femaleNPCHermChance" or _key is "maleNPCHermChance")>><<continue>><</if>>
 				<<if typeof _value isnot "object">>
 					<li><<= settingNameFromVarName(_key)>>: <span class="green"><<= settingValueNameFromValue(_key, _value)>></span></li>
 				<</if>>

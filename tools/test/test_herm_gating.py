@@ -69,6 +69,12 @@ class HermGatingTests(unittest.TestCase):
         for key in ("femaleNPCHermChance", "maleNPCHermChance"):
             self.assertRegex(body, re.compile(r'case "%s":\s*return setup\.features\?\.herm \? "[^"]+" : varName;' % key))
 
+    def test_preset_preview_skips_herm_chances_outside_herm_builds(self):
+        presets = read("game/04-Variables/presets.twee")
+        widget = presets[presets.index('<<widget "settingsPreviewGroup">>'):]
+        widget = widget[:widget.index("<</widget>>")]
+        self.assertIn('<<if !setup.features?.herm and (_key is "femaleNPCHermChance" or _key is "maleNPCHermChance")>><<continue>><</if>>', widget)
+
     def test_settings_ui_sliders_are_gated(self):
         settings = read("game/base-system/settings.twee")
         for key in ("femaleNPCHermChance", "maleNPCHermChance"):
