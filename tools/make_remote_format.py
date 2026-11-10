@@ -199,7 +199,11 @@ def main(argv=None):
     args = parser.parse_args(argv)
 
     try:
-        expected_source = patch_html(decode_format(_read(args.src))["source"], _read(args.fragment))
+        meta = decode_format(_read(args.src))
+        expected_source = patch_html(meta["source"], _read(args.fragment))
+    except OSError as err:
+        print("cannot read %s: %s" % (err.filename, err.strerror), file=sys.stderr)
+        return 1
     except PatchError as err:
         print(str(err), file=sys.stderr)
         return 1
@@ -215,7 +219,6 @@ def main(argv=None):
         print("stale: %s (run: python3 tools/make_remote_format.py)" % args.out, file=sys.stderr)
         return 1
 
-    meta = decode_format(_read(args.src))
     meta["source"] = expected_source
     os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
     tmp = args.out + ".tmp"

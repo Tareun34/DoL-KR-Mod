@@ -5,6 +5,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest import mock
 
 from tools import make_remote_format as mrf
 
@@ -163,6 +164,33 @@ class CliTests(unittest.TestCase):
             self.assertEqual(f.read(), FORMAT)
         res = self.run_cli("--check")
         self.assertEqual(res.returncode, 0, res.stdout + res.stderr)
+
+    def test_missing_src_reports_without_traceback(self):
+        os.remove(self.src)
+        res = self.run_cli()
+        self.assertEqual(res.returncode, 1)
+        self.assertNotIn("Traceback", res.stderr)
+        self.assertIn(self.src, res.stderr)
+
+    def test_missing_fragment_reports_without_traceback(self):
+        os.remove(self.fragment)
+        res = self.run_cli("--check")
+        self.assertEqual(res.returncode, 1)
+        self.assertNotIn("Traceback", res.stderr)
+        self.assertIn(self.fragment, res.stderr)
+
+    def test_main_reads_src_once(self):
+        calls = []
+        orig = mrf._read
+
+        def counting(path):
+            calls.append(path)
+            return orig(path)
+
+        with mock.patch.object(mrf, "_read", counting), mock.patch("sys.stdout"):
+            rc = mrf.main(["--src", self.src, "--fragment", self.fragment, "--out", self.out])
+        self.assertEqual(rc, 0)
+        self.assertEqual(calls.count(self.src), 1, calls)
 
 
 if __name__ == "__main__":
