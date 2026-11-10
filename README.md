@@ -1,6 +1,6 @@
 # DoL-KR-Mod
 
-[Degrees of Lewdity](https://vrelnir.blogspot.com/) 한국어 번역판(0.5.12.13) 소스에 두 가지 모드를 더한 저장소입니다.
+[Degrees of Lewdity](https://vrelnir.blogspot.com/) 한국어 번역판 소스(번역은 0.5.12.13 기준)에 영문 0.5.13.8을 병합하고 두 가지 모드를 더한 저장소입니다.
 한 번의 빌드로 네 가지 HTML을 만들고, 같은 저장소의 세이브 서버로 원격 저장을 운영합니다.
 
 - **Herm NPC**: NPC가 자지와 보지를 모두 가질 수 있게 하는 설정 두 개를 추가합니다.
@@ -10,13 +10,21 @@
 
 | 파일 | 내용 | 이런 분이 씁니다 |
 |---|---|---|
-| `DoL-KR 0.5.12.13.html` | 번역판 그대로 | 모드 없이 번역판만 |
-| `DoL-KR 0.5.12.13 remote.html` | 원격 저장 | 서버에 세이브를 두고 여러 기기에서 |
-| `DoL-KR 0.5.12.13 herm.html` | Herm NPC | 로컬 저장 + Herm 설정 |
-| `DoL-KR 0.5.12.13 herm-remote.html` | 둘 다 | 서버 운영자의 기본 선택 |
+| `DoL-KR 0.5.13.8.html` | 번역판 그대로 | 모드 없이 번역판만 |
+| `DoL-KR 0.5.13.8 remote.html` | 원격 저장 | 서버에 세이브를 두고 여러 기기에서 |
+| `DoL-KR 0.5.13.8 herm.html` | Herm NPC | 로컬 저장 + Herm 설정 |
+| `DoL-KR 0.5.13.8 herm-remote.html` | 둘 다 | 서버 운영자의 기본 선택 |
 
 원본 빌드에도 Herm 코드는 들어 있지만 설정 화면에 보이지 않고, 불러온 세이브에 Herm 비율이 있어도 0으로 되돌립니다.
 `remote` 변형은 세이브 서버에서 열어야 동작합니다(파일을 직접 열면 저장이 실패합니다).
+
+## 영문 0.5.13.8 추종 상태
+
+2026-11-10에 영문 0.5.13.8(태그 `0.5.13.8`)을 파일 단위 3-way 병합으로 받아들였습니다(`docs/specs/2026-11-10-upstream-0.5.13.8-design.md`). 코드·이미지·구조는 영문 0.5.13.8과 같고, 영문이 손대지 않은 자리의 번역은 그대로입니다. 영문이 고친 문장과 새로 추가된 콘텐츠는 **아직 영어**라서 게임은 한영 혼재 상태입니다.
+
+- 남은 번역 작업량은 [`translation/STATUS.md`](translation/STATUS.md)에 있습니다. 자리별 기록(옛 한글·옛 영문·새 영문)은 `translation/pending/`에 원본 경로를 따라 JSON으로 들어 있고, 새 영문이 파일에서 사라지면 자동으로 완료로 셉니다. 2단계(번역)는 별도 설계로 진행합니다.
+- `dist/`에 남아 있는 `DoL-KR 0.5.12.13 *.html` 네 개는 **보관용**입니다. 영문이 이미지 19개의 경로를 바꿨고 `img/`는 하나뿐이라 옛 빌드는 홍조·스토킹 아이콘 등 일부 이미지가 깨집니다. 0.5.13.8에서 저장한 세이브는 0.5.12.13에서 열리지 않을 수 있습니다.
+- 빌드 검증 기준: 원본 변형과 영문 0.5.13.8 빌드의 패시지 이름 집합이 같습니다(허용 목록 없음, 16,455개). Herm 변형과 원본 변형은 패시지 차이가 없고 스크립트 차이는 `features/herm-ui/features.js` 3줄뿐입니다. 원본과 원격 변형은 `idb` 모듈 교체분만 다릅니다.
 
 ## 빌드
 
@@ -63,6 +71,7 @@ SAVE_TOKEN=비밀번호    # 비워 두면 인증 없음 (Tailscale 등 네트�
 - "둘 다" 비율이 20 이상이면 양성 플레이어의 생식기를 본 NPC의 놀라는 반응이 사라집니다.
 - 기존 세이브에서도 설정은 보이지만, 이미 성별이 정해진 NPC는 바뀌지 않고 새로 만나는 NPC부터 적용됩니다.
 - 네임드 NPC 항목에서 생식기를 "양성"으로 직접 고를 수 있습니다(원본은 개발자 모드에서만 보이던 선택지). 설정 내보내기·가져오기도 이 값을 보존합니다.
+- Herm 빌드가 아니면 두 비율은 가져오기·내보내기·"조우 무작위"에서 제외되고, 가져오기 미리보기에는 변수 이름 그대로 표시됩니다.
 - Herm 세이브를 Herm이 아닌 빌드에서 열면, 이미 "양성"인 네임드 NPC에는 그 선택지가 그대로 보입니다. 다른 값으로 바꾸면 선택지는 사라집니다.
 
 ## 개발
@@ -72,14 +81,27 @@ python3 -m unittest discover -s tools/test -t .     # 빌드 비교 도구, 스�
 (cd tools/test && node --test)                       # 원격 저장 모듈(remote-idb.js)
 (cd server && npm ci && npm test)                    # 세이브 서버
 python3 tools/make_remote_format.py --check          # sugarcube-2-remote 가 최신인지
+python3 tools/check_kr_symbols.py check --root . --snapshot translation/kr-symbols.json   # 한글판 전용 정의 유실 점검
+python3 tools/translation_status.py --root . --tag 0.5.13.8 --out translation/STATUS.md  # 번역 상태 갱신
 ```
+
+다음 영문 버전을 병합할 때(예: 0.5.13.9):
+
+1. 영문 저장소에서 해당 태그의 worktree를 만들고, 그 안에서 `FORCE_VERSION=<태그> ./compile.sh`로 비교용 HTML을 저장소 밖에 만들어 둡니다.
+2. `python3 tools/check_kr_symbols.py snapshot --ours . --base <현재 기준 영문 트리> --out translation/kr-symbols.json` 으로 한글판 전용 정의를 다시 찍습니다.
+3. `python3 tools/merge_upstream.py --base <현재 기준 영문 트리> --new <새 영문 트리> --ours .` 를 실행하고 결과를 단독 커밋으로 남깁니다. 기준 트리는 **직전에 병합한 영문 버전**입니다.
+4. `check_kr_symbols.py check`가 0건이 될 때까지 밀려난 정의를 `translation/pending`의 `old_kr`에서 되살립니다.
+5. Herm 규칙(`docs/specs/2026-10-30-herm-npcs-design.md`)을 다시 점검합니다. `tools/test/test_herm_gating.py`가 실패하면 빠진 규칙이 있는 것입니다.
+6. `./build.sh` 후 `tools/verify_build.py <영문 HTML> "dist/DoL-KR <태그>.html" --names-only` 와 위의 Herm·원격 비교를 통과시킵니다.
 
 구조:
 
 - `game/` 번역 소스. Herm 규칙이 들어 있고, 설정 UI는 `setup.features?.herm`로 가립니다.
 - `features/herm-ui/features.js` Herm 빌드에만 포함되는 스위치 한 줄.
 - `devTools/tweego/storyFormats/sugarcube-2-remote/` 원격 저장용 스토리 포맷. `idb` 저장 모듈이 게임 소스가 아니라 SugarCube 번들 안에 있어서, `tools/make_remote_format.py`가 원본 포맷의 `source`에 `tools/remote-idb.js`를 입혀 만듭니다. `remote-idb.js`나 원본 `format.js`를 바꾸면 다시 생성해 커밋합니다.
-- `tools/verify_build.py A.html B.html [--allow ...] [--max-script-diff N]` 두 빌드를 passage 단위로 비교합니다.
+- `tools/verify_build.py A.html B.html [--allow ...] [--max-script-diff N] [--names-only]` 두 빌드를 passage 단위로 비교합니다.
+- `tools/merge_upstream.py` 영문 새 버전을 파일 단위 3-way로 병합하고 `translation/pending/`에 기록을 남깁니다. `tools/translation_status.py`가 그 기록으로 `translation/STATUS.md`를 만들고, `tools/check_kr_symbols.py`가 한글판 전용 정의의 유실을 잡습니다.
+- `translation/` 번역 작업 목록(`pending/`, `STATUS.md`)과 한글판 전용 정의 스냅샷(`kr-symbols.json`).
 - `server/` Express 세이브 서버와 Docker 설정.
 - `docs/specs/`, `docs/plans/` 설계와 구현 계획. `docs/README-translation.md`는 번역판 원 저장소의 README 전문입니다.
 
