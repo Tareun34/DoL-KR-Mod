@@ -1,27 +1,27 @@
 # 번역 상태
 
-생성: 2026-11-10 07:25 · 대상: 영문 0.5.13.8
+생성: 2026-11-10 07:49 · 대상: 영문 0.5.13.8
 
-`translation/pending/`의 기록을 현재 파일과 대조한 결과. 충돌·새 영문은 해당 영문이 파일에서 사라지면 완료로 센다. 새 파일과 삭제된 번역은 2단계가 판정한다.
+`translation/pending/`의 기록을 현재 파일과 대조한 결과. 충돌·새 영문은 해당 영문이 파일에서 사라지면 완료로 센다. 새 파일과 삭제된 번역은 2단계가 판정한다. '코드만'은 영문 산문이 없는 기록(변수 이름 변경, 매크로 등)으로 번역 대상이 아니다.
 
-| 디렉터리 | 충돌(완료/전체) | 새 영문(완료/전체) | 새 파일 | 삭제된 번역 |
-|---|---|---|---|---|
-| 합계 | 92/3344 | 2/2214 | 27 | 0 |
-| game/01-config | 0/2 | 0/3 | 0 | 0 |
-| game/03-JavaScript | 3/14 | 2/127 | 4 | 0 |
-| game/04-Variables | 1/196 | 0/80 | 0 | 0 |
-| game/base-clothing | 0/9 | 0/55 | 0 | 0 |
-| game/base-combat | 29/1221 | 0/562 | 10 | 0 |
-| game/base-debug | 0/6 | 0/21 | 1 | 0 |
-| game/base-system | 11/267 | 0/291 | 0 | 0 |
-| game/flavour-text-generators | 0/5 | 0/4 | 0 | 0 |
-| game/overworld-forest | 5/218 | 0/100 | 0 | 0 |
-| game/overworld-plains | 3/204 | 0/104 | 0 | 0 |
-| game/overworld-town | 13/965 | 0/728 | 1 | 0 |
-| game/overworld-underground | 27/152 | 0/23 | 10 | 0 |
-| game/special-dance | 0/44 | 0/21 | 0 | 0 |
-| game/special-exhibition | 0/3 | 0/6 | 0 | 0 |
-| game/special-fishing | 0/26 | 0/83 | 0 | 0 |
-| game/special-masturbation | 0/8 | 0/3 | 0 | 0 |
-| game/special-templates | 0/4 | 0/3 | 0 | 0 |
-| modules/css | 0/0 | 0/0 | 1 | 0 |
+| 디렉터리 | 충돌(완료/전체) | 새 영문(완료/전체) | 새 파일 | 삭제된 번역 | 코드만 |
+|---|---|---|---|---|---|
+| 합계 | 1/2547 | 3/371 | 27 | 0 | 3160 |
+| game/01-config | 0/2 | 0/1 | 0 | 0 | 2 |
+| game/03-JavaScript | 1/8 | 3/80 | 4 | 0 | 60 |
+| game/04-Variables | 0/125 | 0/38 | 0 | 0 | 121 |
+| game/base-clothing | 0/7 | 0/13 | 0 | 0 | 44 |
+| game/base-combat | 0/1068 | 0/62 | 10 | 0 | 996 |
+| game/base-debug | 0/4 | 0/5 | 1 | 0 | 18 |
+| game/base-system | 0/179 | 0/32 | 0 | 0 | 358 |
+| game/flavour-text-generators | 0/5 | 0/0 | 0 | 0 | 4 |
+| game/overworld-forest | 0/146 | 0/8 | 0 | 0 | 148 |
+| game/overworld-plains | 0/150 | 0/8 | 0 | 0 | 146 |
+| game/overworld-town | 0/692 | 0/86 | 1 | 0 | 1029 |
+| game/overworld-underground | 0/81 | 0/26 | 10 | 0 | 131 |
+| game/special-dance | 0/42 | 0/0 | 0 | 0 | 19 |
+| game/special-exhibition | 0/2 | 0/0 | 0 | 0 | 7 |
+| game/special-fishing | 0/24 | 0/8 | 0 | 0 | 74 |
+| game/special-masturbation | 0/8 | 0/3 | 0 | 0 | 0 |
+| game/special-templates | 0/4 | 0/1 | 0 | 0 | 3 |
+| modules/css | 0/0 | 0/0 | 1 | 0 | 0 |

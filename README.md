@@ -22,7 +22,7 @@
 
 2026-11-10에 영문 0.5.13.8(태그 `0.5.13.8`)을 파일 단위 3-way 병합으로 받아들였습니다(`docs/specs/2026-11-10-upstream-0.5.13.8-design.md`). 코드·이미지·구조는 영문 0.5.13.8과 같고, 영문이 손대지 않은 자리의 번역은 그대로입니다. 영문이 고친 문장과 새로 추가된 콘텐츠는 **아직 영어**라서 게임은 한영 혼재 상태입니다.
 
-- 남은 번역 작업량은 [`translation/STATUS.md`](translation/STATUS.md)에 있습니다. 자리별 기록(옛 한글·옛 영문·새 영문)은 `translation/pending/`에 원본 경로를 따라 JSON으로 들어 있고, 새 영문이 파일에서 사라지면 자동으로 완료로 셉니다. 2단계(번역)는 별도 설계로 진행합니다.
+- 남은 번역 작업량은 [`translation/STATUS.md`](translation/STATUS.md)에 있습니다. 자리별 기록(옛 한글·옛 영문·새 영문)은 `translation/pending/`에 원본 경로를 따라 JSON으로 들어 있고, 새 영문이 파일에서 사라지면 자동으로 완료로 셉니다. 영문 산문이 없는 기록(변수 이름 변경 등)은 '코드만' 열로 따로 세며 번역 대상이 아닙니다. 완료 판정은 문자열 일치에 기대는 근사치라, 같은 문장이 파일에 여러 번 있으면 완료가 늦게 잡히고 덩어리 안의 코드 한 줄만 바뀌어도 완료로 잡힐 수 있습니다. 2단계(번역)는 별도 설계로 진행하며 이 판정도 거기서 다듬습니다.
 - `dist/`에 남아 있는 `DoL-KR 0.5.12.13 *.html` 네 개는 **보관용**입니다. 영문이 이미지 19개의 경로를 바꿨고 `img/`는 하나뿐이라 옛 빌드는 홍조·스토킹 아이콘 등 일부 이미지가 깨집니다. 0.5.13.8에서 저장한 세이브는 0.5.12.13에서 열리지 않을 수 있습니다.
 - 빌드 검증 기준: 원본 변형과 영문 0.5.13.8 빌드의 패시지 이름 집합이 같습니다(허용 목록 없음, 16,455개). Herm 변형과 원본 변형은 패시지 차이가 없고 스크립트 차이는 `features/herm-ui/features.js` 3줄뿐입니다. 원본과 원격 변형은 `idb` 모듈 교체분만 다릅니다.
 
@@ -89,7 +89,7 @@ python3 tools/translation_status.py --root . --tag 0.5.13.8 --out translation/ST
 
 1. 영문 저장소에서 해당 태그의 worktree를 만들고, 그 안에서 `FORCE_VERSION=<태그> ./compile.sh`로 비교용 HTML을 저장소 밖에 만들어 둡니다.
 2. `python3 tools/check_kr_symbols.py snapshot --ours . --base <현재 기준 영문 트리> --out translation/kr-symbols.json` 으로 한글판 전용 정의를 다시 찍습니다.
-3. `python3 tools/merge_upstream.py --base <현재 기준 영문 트리> --new <새 영문 트리> --ours .` 를 실행하고 결과를 단독 커밋으로 남깁니다. 기준 트리는 **직전에 병합한 영문 버전**입니다.
+3. `python3 tools/merge_upstream.py --base <현재 기준 영문 트리> --new <새 영문 트리> --ours .` 를 실행하고 결과를 단독 커밋으로 남깁니다. 기준 트리는 **직전에 병합한 영문 버전**입니다. 보고서의 `unrecorded_new_lines`가 0이 아니면 도구가 1로 끝나며 기록이 불완전한 것이니 먼저 원인을 봅니다. 기존 `translation/pending` 기록 중 아직 번역되지 않은 것은 보존되고 새 기록이 뒤에 붙습니다. 기록만 다시 만들고 싶으면 옛 소스를 임시 디렉터리에 꺼내 `--ours <임시> --skip-img`로 돌린 뒤 `translation/pending/`만 가져옵니다.
 4. `check_kr_symbols.py check`가 0건이 될 때까지 밀려난 정의를 `translation/pending`의 `old_kr`에서 되살립니다.
 5. Herm 규칙(`docs/specs/2026-10-30-herm-npcs-design.md`)을 다시 점검합니다. `tools/test/test_herm_gating.py`가 실패하면 빠진 규칙이 있는 것입니다.
 6. `./build.sh` 후 `tools/verify_build.py <영문 HTML> "dist/DoL-KR <태그>.html" --names-only` 와 위의 Herm·원격 비교를 통과시킵니다.

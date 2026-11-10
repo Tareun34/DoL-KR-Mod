@@ -10,6 +10,7 @@ text no longer appears verbatim in the file (see is_done).
 import argparse
 import json
 import os
+import re
 import sys
 from datetime import datetime
 
@@ -31,8 +32,19 @@ def is_done(record, file_lines):
     return not any(hay[i:i + n] == needle for i in range(len(hay) - n + 1))
 
 
+_CODE_RE = re.compile(r"<<.*?>>|<[^<>]*>|/\*.*?\*/|[$_][A-Za-z_]\w*")
+_PROSE_RE = re.compile(r"[A-Za-z]{2,}[,.;:!?']*\s+[A-Za-z]{2,}")
+
+
+def has_prose(lines):
+    """True if the lines contain translatable text: two or more Latin words separated by spaces,
+    outside macros, tags, comments and variables. A heuristic; code with spaced identifiers may pass."""
+    return any(_PROSE_RE.search(_CODE_RE.sub(" ", l)) for l in lines)
+
+
 def _empty():
-    return {"conflict": 0, "conflict_done": 0, "merged-new-text": 0, "merged-new-text_done": 0, "new-file": 0, "deleted-translated": 0}
+    return {"conflict": 0, "conflict_done": 0, "merged-new-text": 0, "merged-new-text_done": 0, "new-file": 0,
+            "deleted-translated": 0, "code_only": 0}
 
 
 def _group(rel):
@@ -66,6 +78,9 @@ def summarize(root):
             kind = r.get("kind")
             if kind not in KINDS:
                 continue
+            if kind in ("conflict", "merged-new-text") and not has_prose(r.get("new_en", [])):
+                row["code_only"] += 1
+                continue
             row[kind] += 1
             if kind in ("conflict", "merged-new-text") and is_done(r, lines):
                 row[kind + "_done"] += 1
@@ -78,12 +93,13 @@ def render(summary, tag, now):
         for k in total:
             total[k] += row[k]
     out = ["# 번역 상태", "", "생성: %s · 대상: 영문 %s" % (now, tag), "",
-           "`translation/pending/`의 기록을 현재 파일과 대조한 결과. 충돌·새 영문은 해당 영문이 파일에서 사라지면 완료로 센다. 새 파일과 삭제된 번역은 2단계가 판정한다.", "",
-           "| 디렉터리 | 충돌(완료/전체) | 새 영문(완료/전체) | 새 파일 | 삭제된 번역 |", "|---|---|---|---|---|"]
+           "`translation/pending/`의 기록을 현재 파일과 대조한 결과. 충돌·새 영문은 해당 영문이 파일에서 사라지면 완료로 센다. "
+           "새 파일과 삭제된 번역은 2단계가 판정한다. '코드만'은 영문 산문이 없는 기록(변수 이름 변경, 매크로 등)으로 번역 대상이 아니다.", "",
+           "| 디렉터리 | 충돌(완료/전체) | 새 영문(완료/전체) | 새 파일 | 삭제된 번역 | 코드만 |", "|---|---|---|---|---|---|"]
 
     def line(name, row):
-        return "| %s | %d/%d | %d/%d | %d | %d |" % (name, row["conflict_done"], row["conflict"], row["merged-new-text_done"],
-                                                    row["merged-new-text"], row["new-file"], row["deleted-translated"])
+        return "| %s | %d/%d | %d/%d | %d | %d | %d |" % (name, row["conflict_done"], row["conflict"], row["merged-new-text_done"],
+                                                         row["merged-new-text"], row["new-file"], row["deleted-translated"], row["code_only"])
 
     out.append(line("합계", total))
     for name in sorted(summary):

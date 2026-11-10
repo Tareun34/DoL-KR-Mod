@@ -43,23 +43,48 @@ class IsDoneTests(unittest.TestCase):
 class SummarizeRenderTests(unittest.TestCase):
     def test_summary_groups_by_two_level_dir_and_counts_done(self):
         root = make_tree(self, {
-            "game/base-combat/a.twee": "Hello\n번역됨\n",
-            "translation/pending/game/base-combat/a.twee.json": json.dumps([rec("conflict", ["Hello"]), rec("merged-new-text", ["Bye"])]),
+            "game/base-combat/a.twee": "Hello there\n번역됨\n",
+            "translation/pending/game/base-combat/a.twee.json": json.dumps([rec("conflict", ["Hello there"]), rec("merged-new-text", ["Bye now"])]),
             "translation/pending/game/overworld-town/n.twee.json": json.dumps([rec("new-file")]),
         })
         s = ts.summarize(root)
         self.assertEqual(s["game/base-combat"], {"conflict": 1, "conflict_done": 0, "merged-new-text": 1, "merged-new-text_done": 1,
-                                                 "new-file": 0, "deleted-translated": 0})
+                                                 "new-file": 0, "deleted-translated": 0, "code_only": 0})
         self.assertEqual(s["game/overworld-town"]["new-file"], 1)
         md = ts.render(s, "0.5.13.8", "2026-11-10 12:00")
         self.assertIn("대상: 영문 0.5.13.8", md)
-        self.assertIn("| game/base-combat | 0/1 | 1/1 | 0 | 0 |", md)
+        self.assertIn("| game/base-combat | 0/1 | 1/1 | 0 | 0 | 0 |", md)
 
     def test_render_has_totals_line(self):
-        s = {"game/x": {"conflict": 2, "conflict_done": 1, "merged-new-text": 3, "merged-new-text_done": 0, "new-file": 1, "deleted-translated": 0},
-             "game/y": {"conflict": 1, "conflict_done": 1, "merged-new-text": 0, "merged-new-text_done": 0, "new-file": 0, "deleted-translated": 1}}
+        s = {"game/x": {"conflict": 2, "conflict_done": 1, "merged-new-text": 3, "merged-new-text_done": 0, "new-file": 1, "deleted-translated": 0, "code_only": 0},
+             "game/y": {"conflict": 1, "conflict_done": 1, "merged-new-text": 0, "merged-new-text_done": 0, "new-file": 0, "deleted-translated": 1, "code_only": 0}}
         md = ts.render(s, "0.5.13.8", "now")
-        self.assertIn("| 합계 | 2/3 | 0/3 | 1 | 1 |", md)
+        self.assertIn("| 합계 | 2/3 | 0/3 | 1 | 1 | 0 |", md)
+
+
+class ProseTests(unittest.TestCase):
+    def test_has_prose_detects_latin_words_outside_code(self):
+        self.assertTrue(ts.has_prose(["<<He>> rubs your glans."]))
+        self.assertTrue(ts.has_prose(['<span class="green">Imported Settings</span>']))
+        self.assertFalse(ts.has_prose(["<<set $speechSpank to 1>>", "<</if>>", "V.settings.maleChance = random(0, 100);"]))
+        self.assertFalse(ts.has_prose(["\t<<if $rng gte 21 or $novaginal is 1>>"]))
+        self.assertFalse(ts.has_prose([]))
+
+    def test_summary_separates_prose_from_code_only(self):
+        root = make_tree(self, {
+            "game/x/a.twee": "Hello there friend\n<<set $a to 1>>\n",
+            "translation/pending/game/x/a.twee.json": json.dumps([
+                rec("conflict", ["Hello there friend"]),
+                rec("conflict", ["<<set $a to 1>>"]),
+                rec("merged-new-text", ["<<set $b to 2>>"]),
+            ]),
+        })
+        s = ts.summarize(root)
+        self.assertEqual(s["game/x"]["conflict"], 1)
+        self.assertEqual(s["game/x"]["merged-new-text"], 0)
+        self.assertEqual(s["game/x"]["code_only"], 2)
+        md = ts.render(s, "0.5.13.8", "now")
+        self.assertIn("| game/x | 0/1 | 0/0 | 0 | 0 | 2 |", md)
 
 
 if __name__ == "__main__":
