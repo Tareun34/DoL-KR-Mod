@@ -1054,5 +1054,221 @@
    "\t\t\t<</addSpeechLine>>"
   ],
   "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $speechPlead>>",
+   "\t\t<<if $enemyanger lte 60>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<else>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>",
+   "\t<</if>>",
+   "\t<<if $speechMoan>>",
+   "\t\t<<if $enemyanger lte 60>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<else>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>",
+   "\t<</if>>",
+   "\t<<if $speechDemand>>",
+   "\t\t<<if $enemyanger lte 60>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<else>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>",
+   "\t<</if>>",
+   "\t<<if $speechScreamForHelp>>",
+   "\t\t<<if $enemyanger lte 60>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<else>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $enemyanger lte 60>>"
+  ],
+  "context": "\t<<if $speechStruggle>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<else>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>",
+   "\t<</if>>",
+   "\t<<if $speechSpank>>",
+   "\t\t<<if $enemyanger lte 60>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<else>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>",
+   "\t\t<<if $player.breastsize gte 6 or $player.penissize gte 4>>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<print $_stringsPre>>\"Cows fetch a high price these days, you know.\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<</if>>",
+   "\t\t<<if $athletics gte 750 or $physique gte $physiquesize * 0.75>>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<print $_stringsPre>>\"You're strong. Good. Some people pay for the fight.\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<</if>>",
+   "\t\t<<addSpeechLine \"idle\">>",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"Just relax. I'll handle everything like always.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"You were always the best looking little <<print [\"bastard\",\"shit\",\"<<bitch>>\"][random(0,2)]>>.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"It's easier this way. Trust me.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"Stay still.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"You're learning. Good.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"Keep still. I'm almost done with you.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"Hold still. You're wasting both our time.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"You've always been the most difficult one. I hope you know that.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<<else>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>",
+   "\t\t<<addSpeechLine \"idle\">>",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"Why do you shits have to make it harder on yourselves?\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"I told you to hold still.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"You're making it harder on both of us.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"You chose this.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"Are you going to listen to me now?\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"I have someone willing to pay big for you.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"You're coming with me, and that's that.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"You owe me for the inconvenience.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"Keep fighting. See where it gets you.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"You're costing me money every time you move.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"This would be over already if you'd just behave.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"Stop squirming, you're not going anywhere.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"Every second you fight me is a second you owe me.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<speechSay>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
  }
 ]

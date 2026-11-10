@@ -21,6 +21,6 @@
   "new_en": [
    ""
   ],
-  "context": "<<set $daily.fishing ??= {}>>"
+  "context": "\t\t\t<<unset $fishing.baitShopAmbient>>"
  }
 ]

@@ -417,13 +417,21 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t\t<<link [[Spit in the eggs (2:00)|Forest Cabin Spit]]>><<npcincr Eden trust -10>><<def 1>><<pass 2 hours>><</link>><<ltrust>><<lstockholm>>"
+   "\t\t<<link [[Refuse (2:00)|Cabin Bath Refuse]]>><<pass 2 hours>><<npcincr Eden trust -10>><<def 1>><</link>><<ltrust>><<lstockholm>>"
   ],
   "old_kr": [],
   "new_en": [
-   "\t\t<<link [[Shove the food away (2:00)|Forest Cabin Spit]]>><<npcincr Eden trust -10>><<def 1>><<pass 2 hours>><</link>><<ltrust>><<lstockholm>>"
+   "\t<<elseif Time.hour lte 20>>",
+   "\t\tEden wraps your leash around a chair while <<he>> prepares dinner. Shortly after, <<he>> places a plate of meat and mushrooms on the table to share.",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<link [[Eat with Eden (2:00)|Forest Cabin Dinner]]>><<npcincr Eden trust 10>><<sub 1>><<pass 2 hours>><</link>><<gtrust>><<gstockholm>>",
+   "\t\t<br>",
+   "\t\t<<link [[Shove the food away (2:00)|Forest Cabin Spit]]>><<npcincr Eden trust -10>><<def 1>><<pass 2 hours>><</link>><<ltrust>><<lstockholm>>",
+   "\t\t<br>",
+   ""
   ],
-  "context": "\t\t<br>"
+  "context": ""
  },
  {
   "kind": "merged-new-text",
@@ -438,12 +446,21 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [
-   "You prepare the food and place it on the table in front of <<him>>. <<He>> takes a bite, then smiles and pats your head. <<He>> shares some with you and you eat together. Eden talks a lot about the minutiae of life here, pausing to allow you a response. You nod each time, which seems enough to satisfy <<him>>."
-  ],
+  "old_en": [],
   "old_kr": [],
   "new_en": [
-   "You eat the food alongside Eden. <<He>> doesn't start any conversations, and anything you start dies quickly. Eden allows you to have your fill before eating the rest, leaving the plate empty."
+   ":: Forest Cabin Dinner",
+   "<<set $outside to 0>><<set $location to \"cabin\">><<effects>><<wearProp `either(\"steak\", \"honeyed pork\", \"mushroom\")`>><<canvas-model-override \"mouth\" \"chew\">>",
+   "",
+   "You eat the food alongside Eden. <<He>> doesn't start any conversations, and anything you start dies quickly. Eden allows you to have your fill before eating the rest, leaving the plate empty.",
+   "<br><br>",
+   "",
+   "<<He>> stands when <<he>> finishes, and heads towards the fireplace.",
+   "<br><br>",
+   "",
+   "<<link [[Next|Forest Cabin]]>><<endevent>><</link>>",
+   "<br>",
+   ""
   ],
   "context": ""
  }

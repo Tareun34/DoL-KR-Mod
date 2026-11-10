@@ -346,116 +346,198 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t\tdifficulty: 1,"
+   "\t\talt: \"Degree in Lewdity\",",
+   "\t\taltCond: \"random(100) is 100\","
   ],
   "old_kr": [],
   "new_en": [
-   "\t\tdifficulty: 2,"
+   "\t\taltTitle: \"Degree in Lewdity\",",
+   "\t\taltTitleCond: \"random(100) is 100\","
   ],
-  "context": "\t\tdesc: \"150일 차에 도달하기.\","
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t\tdifficulty: 2,"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t\tdifficulty: 3,"
-  ],
-  "context": "\t\tdesc: \"기절하지 않고 150일 차에 도달하기.\","
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t\tdifficulty: 3,"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t\tdifficulty: 4,"
-  ],
-  "context": "\t\tdesc: \"'희망 없는 굴레' 이야기의 모든 결말을 들었습니다.\","
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t\tdifficulty: 1,"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t\tdifficulty: 2,"
-  ],
-  "context": "\t\tdesc: \"육체적 결합을 통해 그윌란이 숲을 정화하는 것을 도왔습니다.\","
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t\tdifficulty: 1,"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t\tdifficulty: 2,"
-  ],
-  "context": "\t\tdesc: \"에덴의 최악의 악몽을 목격했습니다.\","
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t\tdifficulty: 2,"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t\tdifficulty: 3,"
-  ],
-  "context": "\t\tdesc: \"모든 특별한 특성 획득하기.\","
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t\tdifficulty: 3,"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t\tdifficulty: 4,"
-  ],
-  "context": "\t\tdesc: \"처녀 상태에서 자연 분만을 했습니다.\","
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t\tdifficulty: 2,"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t\tdifficulty: 3,"
-  ],
-  "context": "\t\tdesc: \"그가 절정에 달하게 만들기.\","
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t\tdifficulty: 4,"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t\tdifficulty: 3,"
-  ],
-  "context": "\t\tdesc: \"그가 절정에 달하게 만들기.\","
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t\tdifficulty: 3,"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t\tdifficulty: 2,"
-  ],
-  "context": "\t\tdesc: \"누군가를 형틀에 보내기.\","
+  "context": "\t\tfilter: [\"All\", \"Stats\"],"
  },
  {
   "kind": "merged-new-text",
   "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\taltDesc: \"You gave your virginity to <<nnpc_him 'Robin'>>.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Social\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\taltDesc: \"You gave your virginity to <<nnpc_him 'Whitney'>>.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Social\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\taltDesc: \"You gave your virginity to <<nnpc_him 'Kylar'>>.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Social\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\taltDesc: \"You gave your virginity to <<nnpc_him 'Eden'>>.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Social\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\taltDesc: \"You gave your virginity to <<nnpc_him 'Avery'>>.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Social\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\taltDesc: \"You gave your virginity to <<nnpc_him 'Leighton'>>.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Social\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\taltDesc: \"You gave your virginity to <<nnpc_him 'Alex'>>.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Social\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\taltDesc: \"You gave your virginity to <<nnpc_him 'Wren'>>.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Social\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\taltDesc: \"You gave your virginity to <<if resolveIfNamedBeastIsMonster('blackwolf')>><<nnpc_him 'Black Wolf'>><<else>>it<</if>>.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Social\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\taltDesc: \"<<nnpc_He 'Sydney'>> gave <<nnpc_his 'Sydney'>> virginity to you.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Social\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\taltDesc: \"You gave your virginity to <<nnpc_him 'Harper'>>.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Social\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\taltDesc: \"You gave your virginity to <<nnpc_him 'Morgan'>>.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Social\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\taltDesc: \"You gave your virginity to <<nnpc_him 'Gwylan'>>.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Social\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\taltDesc: \"Convince Mason to share something <<nnpc_he 'Mason'>>'d rather not.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Social\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\thint: \"Hint: Discover the secret of Kylar's manor.\","
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tfilter: [\"All\", \"Social\"],",
+   "\t},",
+   "\t\"Sancta Vexatio\": {",
+   "\t\ttitle: \"Sancta Vexatio\",",
+   "\t\tdesc: \"Sancta Vexatio.\",",
+   "\t\tdifficulty: 1,",
+   "\t\tseries: \"\",",
+   "\t\thint: \"Hint: Discover the temple's spite.\","
+  ],
+  "context": "\t\thint: \"힌트: 카일라 저택의 비밀을 발견하세요.\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\thint: \"Hint: Many forms of existence.\","
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tpregnancyLockable: true,",
+   "\t},",
+   "\t\"Pregnant Pause\": {",
+   "\t\ttitle: \"Pregnant Pause\",",
+   "\t\tdesc: \"Interrupted Bailey's rent confrontation by going into labour.\",",
+   "\t\tdifficulty: 2,",
+   "\t\tseries: \"\",",
+   "\t\tfilter: [\"All\", \"Pregnancy\"],",
+   "\t\thint: \"Hint: Give your caretaker a 'happy' little surprise.\","
+  ],
+  "context": "\t\thint: \"힌트: 다양한 형태의 존재.\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\thint: \"Hint: Wiped clean and got away with it.\","
+  ],
   "old_kr": [],
   "new_en": [
    "\t\"Thugged It Out\": {",
@@ -473,7 +555,8 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t\tseries: \"\","
+   "\t\ttitle: \"Down Below\",",
+   "\t\tdesc: \"Escaped slavery in the mines.\","
   ],
   "old_kr": [],
   "new_en": [
@@ -483,7 +566,10 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "\t\ttitle: \"Down Below\",",
+   "\t\tdesc: \"Escaped slavery in the mines.\","
+  ],
   "old_kr": [],
   "new_en": [
    "\t\tsoftLockable: true,",
@@ -509,7 +595,11 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "\t\"Safe Trail\": {",
+   "\t\ttitle: \"Safe Trail\",",
+   "\t\tdesc: \"Restored the road through the forest.\","
+  ],
   "old_kr": [],
   "new_en": [
    "\t\tsoftLockable: true,",

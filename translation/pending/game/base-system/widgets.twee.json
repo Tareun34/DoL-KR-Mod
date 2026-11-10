@@ -993,7 +993,7 @@
    "\t\t\t\t\t</span>",
    "\t\t\t\t<</if>>"
   ],
-  "context": "\t\t<<if $options.images>>"
+  "context": "\t\t<<else>>"
  },
  {
   "kind": "merged-new-text",
@@ -1004,7 +1004,7 @@
   "new_en": [
    "\t\t\t</div>"
   ],
-  "context": "\t\t\t\t<span class=\"relation-stat-percent black\">_config.progress<small>%</small></span>"
+  "context": "\t\t\t\t<div @class=\"'progress-bar ' + _config.color + 'bar'\"></div>"
  },
  {
   "kind": "merged-new-text",

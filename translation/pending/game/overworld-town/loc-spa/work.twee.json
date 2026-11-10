@@ -12,14 +12,5 @@
    "\t\t\t<<link [[Accept|Spa Oral Start]]>><<set $desperateaction to 1>><</link>><<promiscuous4>>"
   ],
   "context": "\t\t<<elseif $uncomfortable.prostituting is false>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [],
-  "old_kr": [],
-  "new_en": [
-   "\t\t\t<<set _desperateaction to 1>>"
-  ],
-  "context": "\t\t<<elseif $uncomfortable.prostituting is false>>"
  }
 ]

@@ -152,7 +152,7 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>"
+   "\t<<if ($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>"
   ],
   "old_kr": [],
   "new_en": [

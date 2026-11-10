@@ -2899,6 +2899,17 @@
  {
   "kind": "merged-new-text",
   "old_en": [
+   "\t\t<<set $speechanus to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $speechAnus to 1>>"
+  ],
+  "context": "\t\t<<neutral 15 _n>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
    "\t\t<<neutral 20 \"genitals\" _n>><<set $speechvagina to 1>>"
   ],
   "old_kr": [],
@@ -2906,6 +2917,28 @@
    "\t\t<<neutral 20 \"genitals\" _n>><<set $speechVagina to 1>>"
   ],
   "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $speechpenis to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $speechPenis to 1>>"
+  ],
+  "context": "\t\t<<neutral 15 \"genitals\" _n>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $speechpenis to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $speechPenis to 1>>"
+  ],
+  "context": "\t\t<<neutral 15 \"genitals\" _n>>"
  },
  {
   "kind": "merged-new-text",
@@ -3438,6 +3471,83 @@
  {
   "kind": "merged-new-text",
   "old_en": [
+   "\t\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $speechanusentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $speechAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<sex 30 \"anal\" _n>><<bruise anus>><<violence 1>><<set $speechanuspenetrated to 1>><<pain _pain>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<sex 30 \"anal\" _n>><<bruise anus>><<violence 1>><<set $speechAnusPenetrated to 1>><<pain _pain>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<sex 30 \"anal\" _n>><<bruise anus>><<violence 1>><<set $speechanuspenetrated to 1>><<pain _pain>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<sex 30 \"anal\" _n>><<bruise anus>><<violence 1>><<set $speechAnusPenetrated to 1>><<pain _pain>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<sex 30 \"anal\" _n>><<violence 1>><<set $speechanuspenetrated to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<sex 30 \"anal\" _n>><<violence 1>><<set $speechAnusPenetrated to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<sex 100 \"anal\" _n>><<takeVirginity $NPCList[_n].fullDescription \"anal\">><<violence 50>><<set $speechanusvirgin to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<sex 100 \"anal\" _n>><<takeVirginity $NPCList[_n].fullDescription \"anal\">><<violence 50>><<set $speechAnusVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<sex 30 \"anal\" _n>><<violence 1>><<set $speechanuspenetrated to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<sex 30 \"anal\" _n>><<violence 1>><<set $speechAnusPenetrated to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<sex 100 \"anal\" _n>><<violence 50>><<set $speechanusvirgin to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<sex 100 \"anal\" _n>><<violence 50>><<set $speechAnusVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
    "\t\t\t\t\t\t\t\t\t\t<<sex 10 \"anal\" _n>><<set $speechanusentrance to 1>>"
   ],
   "old_kr": [],
@@ -3445,6 +3555,28 @@
    "\t\t\t\t\t\t\t\t\t\t<<sex 10 \"anal\" _n>><<set $speechAnusEntrance to 1>>"
   ],
   "context": "\t\t\t\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\t\t<<if $anusstate isnot \"doublepenetrated\">><<set $anusstate to \"doubleimminent\">><</if>><<set $speechanusimminent to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\t\t<<if $anusstate isnot \"doublepenetrated\">><<set $anusstate to \"doubleimminent\">><</if>><<set $speechAnusImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t\t\t\t<<sex 10 \"anal\" _n>><<set $NPCList[_n].penis to \"anusimminentdouble\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t<<if $anusstate isnot \"doublepenetrated\">><<set $anusstate to \"doubleimminent\">><</if>><<set $speechanusimminent to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t<<if $anusstate isnot \"doublepenetrated\">><<set $anusstate to \"doubleimminent\">><</if>><<set $speechAnusImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t\t<<sex 20 \"anal\" _n>><<set $NPCList[_n].penis to \"anusimminentdouble\">>"
  },
  {
   "kind": "merged-new-text",

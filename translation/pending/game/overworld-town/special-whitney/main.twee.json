@@ -538,13 +538,35 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t<<whitneyoptions>>"
+   "\t\t<<whitneyexit>>"
   ],
   "old_kr": [],
   "new_en": [
-   "\t<<whitneyOptions>>"
+   "\t\t<<whitneyExit>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyExit>>"
   ],
   "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $worn.neck.name is \"love locket\" and isLoveInterest(\"Whitney\") and C.npc.Whitney.love gte 10 and $rng gte 91 and !$daily.whitney.lovelocket>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $worn.neck.name is \"love locket\" and isPossibleLoveInterest(\"Whitney\") and C.npc.Whitney.love gte 10 and $rng gte 91 and !$daily.whitney.lovelocket>>"
+  ],
+  "context": "<<set _whitney to statusCheck(\"Whitney\")>>"
  },
  {
   "kind": "merged-new-text",
@@ -560,6 +582,532 @@
  {
   "kind": "merged-new-text",
   "old_en": [
+   "\t\t\t\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<whitneyExit>>"
+  ],
+  "context": "\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyOptions>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyOptions>>"
+  ],
+  "context": "\t<<neckon>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<<neckon>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<<neckon>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<<neckon>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<<neckon>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<<neckon>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<<neckon>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<<neckon>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<<neckon>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<<neckon>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<<neckon>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<<neckon>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyOptions>>"
+  ],
+  "context": "\t<<neckon>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<promiscuity1>>"
+  ],
+  "context": "\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<<neckon>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<<promiscuity1>><<set _whitney_attention to 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<whitneyExit>>"
+  ],
+  "context": "\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t\t<<pass 5>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if !$genderknown.includes(\"Whitney\") and (($player.penisExist and $player.vaginaExist) or ($player.gender_appearance is \"m\" and $player.sex isnot \"m\") or ($player.gender_appearance is \"f\" and $player.sex isnot \"f\"))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if !$genderknown.includes(\"Whitney\") and (($player.penisExist and $player.vaginaExist) or ($player.gender_appearance is \"m\" and $player.sex isnot \"m\") or ($player.gender_appearance is \"f\" and $player.sex isnot \"f\")) and $settings.nudeGenderPerception !== 0>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<whitneyExit>>"
+  ],
+  "context": "\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyOptions>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyExit>>"
+  ],
+  "context": "\t<<set $whitneyRescueTimer to 7>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyExit>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyOptions>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyExit>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyExit>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyExit>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyExit>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyOptions>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyOptions>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyOptions>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyOptions>>"
+  ],
+  "context": "\t<<npc Whitney>><<person1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyoptionsleave>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyOptionsLeave>>"
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
    "<<whitneyoptions>>"
   ],
   "old_kr": [],
@@ -581,11 +1129,35 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
   "old_kr": [],
   "new_en": [
-   "\t<br><br>"
+   "<<whitneyOptions>>"
   ],
-  "context": "\t음식이 나온다. 휘트니와 당신에게는 튀김옷을 입힌 해덕, <<person1>><<his>> <<person2>><<uncle>>에게는 대구가 놓인다."
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
  }
 ]

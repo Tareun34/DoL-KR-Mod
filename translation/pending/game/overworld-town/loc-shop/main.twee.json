@@ -121,9 +121,7 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [
-   "<<if $worn.under_upper.name isnot \"naked\" and $worn.under_upper.outfitPrimary and $worn.under_upper.outfitPrimary.under_lower isnot $worn.under_lower.name>>"
-  ],
+  "old_en": [],
   "old_kr": [],
   "new_en": [
    "<<outfitChecks>>",
@@ -133,9 +131,7 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [
-   "\t<<underruined>>"
-  ],
+  "old_en": [],
   "old_kr": [],
   "new_en": [
    "\t<<underlowerruined>>"

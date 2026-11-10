@@ -1023,6 +1023,148 @@
  {
   "kind": "merged-new-text",
   "old_en": [
+   "\t\t\t\t<<case \"vagina\" \"vaginaimminent\" \"vaginaentrance\" \"anus\" \"anusentrance\" \"anusimminent\" \"thighs\">>",
+   "\t\t\t\t\t<<He>> shakes as <<he>> cums, wiping <<his>> $NPCList[_nn].penisdesc off on your ass.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case \"mouth\">>",
+   "\t\t\t\t\t<<He>> cums loudly, grinding <<his>> $NPCList[_nn].penisdesc against <<his>> own crotch with <<his>> hand as <<he>> cums.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case \"mouthentrance\" \"mouthimminent\" \"chest\" \"lefthand\" \"righthand\">>",
+   "\t\t\t\t\t<<He>> cums silently, mouth agape, rubbing <<his>> $NPCList[_nn].penisdesc against your cheek.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>> moans as <<he>> cums, rubbing <<his>> clit with the base of <<his>> $NPCList[_nn].penisdesc.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t\t\t<<He>> shakes as <<he>> cums, wiping <<his>> $NPCList[_nn].penisdesc off on your ass."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<case \"vagina\" \"vaginaimminent\" \"vaginaentrance\" \"anus\" \"anusentrance\" \"anusimminent\" \"thighs\">>",
+   "\t\t\t\t\t<<He>> shakes as <<he>> cums, wiping <<his>> $NPCList[_nn].penisdesc off on your ass.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case \"mouth\">>",
+   "\t\t\t\t\t<<He>> cums loudly, grinding <<his>> $NPCList[_nn].penisdesc against <<his>> own crotch with <<his>> hand as <<he>> cums.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case \"mouthentrance\" \"mouthimminent\" \"chest\" \"lefthand\" \"righthand\">>",
+   "\t\t\t\t\t<<He>> cums silently, mouth agape, rubbing <<his>> $NPCList[_nn].penisdesc against your cheek.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>> moans as <<he>> cums, rubbing <<his>> clit with the base of <<his>> $NPCList[_nn].penisdesc.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t\t\t<<He>> cums loudly, grinding <<his>> $NPCList[_nn].penisdesc against <<his>> own crotch with <<his>> hand as <<he>> cums."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<case \"vagina\" \"vaginaimminent\" \"vaginaentrance\" \"anus\" \"anusentrance\" \"anusimminent\" \"thighs\">>",
+   "\t\t\t\t\t<<He>> shakes as <<he>> cums, wiping <<his>> $NPCList[_nn].penisdesc off on your ass.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case \"mouth\">>",
+   "\t\t\t\t\t<<He>> cums loudly, grinding <<his>> $NPCList[_nn].penisdesc against <<his>> own crotch with <<his>> hand as <<he>> cums.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case \"mouthentrance\" \"mouthimminent\" \"chest\" \"lefthand\" \"righthand\">>",
+   "\t\t\t\t\t<<He>> cums silently, mouth agape, rubbing <<his>> $NPCList[_nn].penisdesc against your cheek.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>> moans as <<he>> cums, rubbing <<his>> clit with the base of <<his>> $NPCList[_nn].penisdesc.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t\t\t<<He>> cums silently, mouth agape, rubbing <<his>> $NPCList[_nn].penisdesc against your cheek."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> cums before <<he>> can penetrate your <<pussy>>, ejaculating on the outside. Semen coats your outer lips and tummy; <span class=\"red\"><<he>> slaps you across the ass hard in anger</span> as you jerk in the restraints.",
+   "\t\t\t\t\t<<gstress>><<gtrauma>><<gpain>><<violence 6>><<bruise bottom>><<hitstat>>",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> ejaculates onto your <<pussy>> before <<he>> can penetrate you, sending white streams of semen running down your cunt; <<he>> groans in disappointment.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> moans and strokes <<his>> $NPCList[_nn].penisdesc as <<he>> cums, sending thick ropes of semen onto your <<pussy>> and ass. \"You must be so embarrassed to be seen in public with cum dripping down your legs.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t<<bottomejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> cums before <<he>> can penetrate your <<pussy>>, ejaculating on the outside. Semen coats your outer lips and tummy; <span class=\"red\"><<he>> slaps you across the ass hard in anger</span> as you jerk in the restraints.",
+   "\t\t\t\t\t<<gstress>><<gtrauma>><<gpain>><<violence 6>><<bruise bottom>><<hitstat>>",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> ejaculates onto your <<pussy>> before <<he>> can penetrate you, sending white streams of semen running down your cunt; <<he>> groans in disappointment.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> moans and strokes <<his>> $NPCList[_nn].penisdesc as <<he>> cums, sending thick ropes of semen onto your <<pussy>> and ass. \"You must be so embarrassed to be seen in public with cum dripping down your legs.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t<<bottomejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t<<case 4 5 6>>"
+  ],
+  "context": "\t\t\t\t\t\t<<gstress>><<gtrauma>><<gpain>><<violence 6>><<bruise bottom>><<hitstat>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> cums before <<he>> can penetrate your <<pussy>>, ejaculating on the outside. Semen coats your outer lips and tummy; <span class=\"red\"><<he>> slaps you across the ass hard in anger</span> as you jerk in the restraints.",
+   "\t\t\t\t\t<<gstress>><<gtrauma>><<gpain>><<violence 6>><<bruise bottom>><<hitstat>>",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> ejaculates onto your <<pussy>> before <<he>> can penetrate you, sending white streams of semen running down your cunt; <<he>> groans in disappointment.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> moans and strokes <<his>> $NPCList[_nn].penisdesc as <<he>> cums, sending thick ropes of semen onto your <<pussy>> and ass. \"You must be so embarrassed to be seen in public with cum dripping down your legs.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t<<bottomejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t<<case 7>>"
+  ],
+  "context": "\t\t\t\t\t\t<<He>> ejaculates onto your <<pussy>> before <<he>> can penetrate you, sending white streams of semen running down your cunt; <<he>> groans in disappointment."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
    "\t\t\t\t\t<<vaginalejacstat>><<set $hygiene += 500>><<bodyliquid \"vagina\" \"semen\">>"
   ],
   "old_kr": [],
@@ -1061,6 +1203,103 @@
    "\t\t\t\t\t\t<</switch>>"
   ],
   "context": "\t\t\t\t\t\t<<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"semen\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> cums before <<he>> can penetrate your ass, ejaculating on the outside. Semen coats your <<bottom>> and drips down your crack; <span class=\"red\"><<he>> smacks your ass angrily.</span>",
+   "\t\t\t\t\t<<gstress>><<gtrauma>><<gpain>><<violence 6>><<bruise bottom>><<hitstat>>",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> strokes <<his>> $NPCList[_nn].penisdesc and ejaculates onto your <<bottom>> before <<he>> can penetrate you, sending white streams of semen running down your crack; <<he>> seems disappointed.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> moans and strokes <<his>> $NPCList[_nn].penisdesc as <<he>> cums, sending thick ropes of semen onto your <<bottom>> and crotch. \"I bet you feel like a disgusting pig.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"bottom\" \"semen\" 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> cums before <<he>> can penetrate your ass, ejaculating on the outside. Semen coats your <<bottom>> and drips down your crack; <span class=\"red\"><<he>> smacks your ass angrily.</span>",
+   "\t\t\t\t\t<<gstress>><<gtrauma>><<gpain>><<violence 6>><<bruise bottom>><<hitstat>>",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> strokes <<his>> $NPCList[_nn].penisdesc and ejaculates onto your <<bottom>> before <<he>> can penetrate you, sending white streams of semen running down your crack; <<he>> seems disappointed.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> moans and strokes <<his>> $NPCList[_nn].penisdesc as <<he>> cums, sending thick ropes of semen onto your <<bottom>> and crotch. \"I bet you feel like a disgusting pig.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"bottom\" \"semen\" 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t\t<<case 4 5 6>>"
+  ],
+  "context": "\t\t\t\t\t\t<<gstress>><<gtrauma>><<gpain>><<violence 6>><<bruise bottom>><<hitstat>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> cums before <<he>> can penetrate your ass, ejaculating on the outside. Semen coats your <<bottom>> and drips down your crack; <span class=\"red\"><<he>> smacks your ass angrily.</span>",
+   "\t\t\t\t\t<<gstress>><<gtrauma>><<gpain>><<violence 6>><<bruise bottom>><<hitstat>>",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> strokes <<his>> $NPCList[_nn].penisdesc and ejaculates onto your <<bottom>> before <<he>> can penetrate you, sending white streams of semen running down your crack; <<he>> seems disappointed.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> moans and strokes <<his>> $NPCList[_nn].penisdesc as <<he>> cums, sending thick ropes of semen onto your <<bottom>> and crotch. \"I bet you feel like a disgusting pig.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"bottom\" \"semen\" 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t\t<<case 7>>"
+  ],
+  "context": "\t\t\t\t\t\t<<He>> strokes <<his>> $NPCList[_nn].penisdesc and ejaculates onto your <<bottom>> before <<he>> can penetrate you, sending white streams of semen running down your crack; <<he>> seems disappointed."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> cums before <<he>> can penetrate your ass, ejaculating on the outside. Semen coats your <<bottom>> and drips down your crack; <span class=\"red\"><<he>> smacks your ass angrily.</span>",
+   "\t\t\t\t\t<<gstress>><<gtrauma>><<gpain>><<violence 6>><<bruise bottom>><<hitstat>>",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> strokes <<his>> $NPCList[_nn].penisdesc and ejaculates onto your <<bottom>> before <<he>> can penetrate you, sending white streams of semen running down your crack; <<he>> seems disappointed.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> moans and strokes <<his>> $NPCList[_nn].penisdesc as <<he>> cums, sending thick ropes of semen onto your <<bottom>> and crotch. \"I bet you feel like a disgusting pig.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"bottom\" \"semen\" 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"bottom\" \"semen\" 2>>"
+  ],
+  "context": "\t\t\t\t\t\t<<He>> moans and strokes <<his>> $NPCList[_nn].penisdesc as <<he>> cums, sending thick ropes of semen onto your <<bottom>> and crotch. \"I bet you feel like a disgusting pig.\""
  },
  {
   "kind": "merged-new-text",

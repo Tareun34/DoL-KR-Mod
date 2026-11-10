@@ -138,11 +138,11 @@
   "old_en": [],
   "old_kr": [],
   "new_en": [
+   "",
    "<<if $phase is \"in\">>",
    "\t<<water>><<waterbr 2>>",
-   "<</if>>",
-   ""
+   "<</if>>"
   ],
-  "context": ""
+  "context": "<<effects>>"
  }
 ]

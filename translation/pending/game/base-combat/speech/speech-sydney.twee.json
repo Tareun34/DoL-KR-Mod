@@ -3614,6 +3614,76 @@
  {
   "kind": "merged-new-text",
   "old_en": [
+   "\t\t<<elseif $speechanus is 1 or $speechbottom is 1>>",
+   "\t\t\t<<set $sydneyComments.fondle to 3>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<switch _sydneyStatus>>"
+  ],
+  "context": "\t\t<<addSpeechLine \"apologise\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<elseif $speechanus is 1 or $speechbottom is 1>>",
+   "\t\t\t<<set $sydneyComments.fondle to 3>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>"
+  ],
+  "context": "\t\t\t\t\t<<He>> looks confused. \"Why are you sorry? Everything's okay, I promise.\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<elseif $speechanus is 1 or $speechbottom is 1>>",
+   "\t\t\t<<set $sydneyComments.fondle to 3>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</switch>>",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechPlayerHits>>",
+   "\t\t<<addSpeechLine \"playerHits\">>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>> speaks. \"Maybe we should stick something bigger in there.\"`,",
+   "\t\t\t\t\t\t`<<He>> speaks. \"Just relax, and let me take care of this.\"`,",
+   "\t\t\t\t\t\t`<<He>> giggles. \"Make sure to keep it down!\"`",
+   "\t\t\t\t\t)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t\t<<He>> laughs. \"I love it when you're rough!\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>> speaks. \"Maybe we should stick something bigger in there.\"`,",
+   "\t\t\t\t\t\t`<<He>> speaks. \"Just relax, and let me take care of this.\"`,",
+   "\t\t\t\t\t\t`<<He>> giggles. \"Make sure to keep it down!\"`",
+   "\t\t\t\t\t)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t\t<<He>> winces. \"Ow! Haha, harder!\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
    "\t\t\t\t\t<<print either(",
    "\t\t\t\t\t\t`<<He>> speaks. \"I never would have learned things like this, if not for you.\"`,",
    "\t\t\t\t\t\t`<<He>> speaks. \"I think I'm getting the hang of this!\"`,",
@@ -3631,6 +3701,1784 @@
    "\t\t\t\t\t<</if>>"
   ],
   "context": "\t\t\t\t<<default>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if !$sydneyUniqueComments.includes(\"hide\") and ($speechCoverFace or $speechCoverPenis or $speechCoverVagina)>>",
+   "\t\t<<addSpeechLine \"cover\">>",
+   "\t\t\t<<set $sydneyUniqueComments.pushUnique(\"hide\")>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<He>> notices your attempts to cover yourself. \"A-are you nervous? That's okay, I am too.\"",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>"
+  ],
+  "context": "\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<default>>"
+  ],
+  "context": "\t\t\t\t\t<<He>> notices your attempts to cover yourself. \"Remember when I was the apprehensive one? How things have changed.\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</switch>>"
+  ],
+  "context": "\t\t\t\t\t<<He>> notices your attempts to cover yourself. \"It's okay, I don't mind seeing you like this anymore. We can both trust each other, right?\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t<<if $speechNPCVaginaPenetrated>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<if $speechNPCVaginaPenetrated>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<if $rng gte 81 and $settings.pregnancySpeechEnabled>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t\t<<default>>",
+   "\t\t\t<<if $speechNPCVaginaPenetrated>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t<</switch>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t<<if $speechNPCAnusPenetrated>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<if $speechNPCAnusPenetrated>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t\t<<default>>",
+   "\t\t\t<<if $speechNPCAnusPenetrated>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t<</switch>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t<<if $speechVaginaPenetrated>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<if $speechVaginaPenetrated>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<if $rng gte 81 and $settings.pregnancySpeechEnabled>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t\t<<default>>",
+   "\t\t\t<<if $speechVaginaPenetrated>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t<</switch>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t<<if $speechAnusPenetrated>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<if $settings.pregnancySpeechEnabled and !$player.vaginaExist and _sydney.gender is \"m\" and knowsAboutAnyPregnancy(\"pc\",\"Sydney\")>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<if $speechAnusPenetrated>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<if $rng gte 81 and $settings.pregnancySpeechEnabled and !$player.vaginaExist and _sydney.gender is \"m\" and knowsAboutAnyPregnancy(\"pc\",\"Sydney\")>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t\t<<default>>",
+   "\t\t\t<<if $speechAnusPenetrated>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t<</switch>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t<<if $speechMouthPenetrated>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<if $speechMouthPenetrated>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t\t<<default>>",
+   "\t\t\t<<if $speechMouthPenetrated>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t\t<<default>>",
+   "\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t<<if $speechMouthNPCVagina or $speechAnalLick or $speechAnalKiss or $speechMouthNPCAnus or $speechChoke or $speechFaceSit>>",
+   "\t\t\t\t\t<<addSpeechLine \"oral\">>",
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"I think I'm... getting close...!\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t<<if $speechMouthNPCVagina or $speechAnalLick or $speechAnalKiss or $speechMouthNPCAnus or $speechChoke or $speechFaceSit>>",
+   "\t\t\t\t\t<<addSpeechLine \"oral\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"You can breathe, right? I'm not hurting you?\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<if $speechMouthNPCVagina or $speechAnalLick or $speechAnalKiss or $speechMouthNPCAnus or $speechChoke or $speechFaceSit>>",
+   "\t\t\t\t\t<<addSpeechLine \"oral\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Your tongue is so warm.\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t<</switch>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t<<if $speechTrib or $speechTribEntrance>>",
+   "\t\t\t\t\t<<addSpeechLine \"trib\">>",
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"If... if you... I'm going to...\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t<<if $speechTrib or $speechTribEntrance>>",
+   "\t\t\t\t\t<<addSpeechLine \"trib\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"This... still feels so wrong... but...\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<if $speechTrib or $speechTribEntrance>>",
+   "\t\t\t\t\t<<addSpeechLine \"trib\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"We're... really touching down there...\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t<<if $speechTrib or $speechTribEntrance>>",
+   "\t\t\t\t\t<<addSpeechLine \"trib\">>",
+   "\t\t\t\t\t\t<<He>> moans. \"I'm almost there! Are you ready?\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t<<if $speechTrib or $speechTribEntrance>>",
+   "\t\t\t\t\t<<addSpeechLine \"trib\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Are you sure this feels good for you?\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<if $speechTrib or $speechTribEntrance>>",
+   "\t\t\t\t\t<<addSpeechLine \"trib\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I love being this close together.\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t\t<<default>>",
+   "\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t<<if $speechTrib or $speechTribEntrance>>",
+   "\t\t\t\t\t<<addSpeechLine \"trib\">>",
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"I think I'm... getting close...!\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t<<if $speechTrib or $speechTribEntrance>>",
+   "\t\t\t\t\t<<addSpeechLine \"trib\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"We're still pure, right? This doesn't count?\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<if $speechTrib or $speechTribEntrance>>",
+   "\t\t\t\t\t<<addSpeechLine \"trib\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I'm getting used to this feeling.\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t<</switch>>",
+   "\t<<if !_sydneyChastity>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t<<if _sydneyVirgin>>",
+   "\t\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t<<if _sydneyVirgin>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<</if>>",
+   "\t\t<</switch>>",
+   "\t<</if>>",
+   "\t<<if !_sydney.chastity.anus.includes(\"shield\")>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t<<if _sydney.virginity.anal is true>>",
+   "\t\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t<</switch>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechvaginaflaunt is 1 and $sydneyComments.flaunt is 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`<<He>> covers <<his>> blush. \"D-don't just stare at it...\"`,",
+   "\t\t\t\t\t`<<He>> giggles. \"You're looking at me funny...\"`,",
+   "\t\t\t\t\t`<<He>> whispers. \"N-no one else has ever seen me like this before...\"`",
+   "\t\t\t\t)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`<<He>> speaks. \"You're staring. At least let me look at yours, too...\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"What are you going to do?\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"W...well? Don't just stand there...\"`",
+   "\t\t\t\t)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t<</switch>>",
+   "\t<<else>> <!-- sydney is not a herm -->",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\">>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`<<He>> speaks. \"You're staring. At least let me look at yours, too...\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"What are you going to do?\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"W...well? Don't just stand there...\"`",
+   "\t\t\t\t)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`<<He>> speaks. \"You're staring. At least let me look at yours, too...\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"What are you going to do?\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"W...well? Don't just stand there...\"`",
+   "\t\t\t\t)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<default>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`<<He>> speaks. \"You're staring. At least let me look at yours, too...\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"What are you going to do?\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"W...well? Don't just stand there...\"`",
+   "\t\t\t\t)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t<</switch>>",
+   "\t<</if>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t<<if $speechVagina or $speechClit>>",
+   "\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"Am... am I doing this right?\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> giggles. \"It's getting wetter!\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"I'm... not being too rough, am I?\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<if $speechVagina or $speechClit>>",
+   "\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"I'll stick my fingers in your mouth after this, so you can taste yourself.\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"Just relax, and let me take care of this.\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> giggles. \"Make sure to keep it down!\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>",
+   "\t\t<<default>>",
+   "\t\t\t<<if $speechVagina or $speechClit>>",
+   "\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"I never would have learned things like this, if not for you.\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"I think I'm getting the hang of this!\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"How deep should I go?\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>",
+   "\t<</switch>>",
+   "\t<<if playerHasStrapon()>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\">>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`<<He>> speaks. \"You're staring. At least let me look at yours, too...\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"What are you going to do?\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"W...well? Don't just stand there...\"`",
+   "\t\t\t\t)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`<<He>> speaks. \"You're staring. At least let me look at yours, too...\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"What are you going to do?\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"W...well? Don't just stand there...\"`",
+   "\t\t\t\t)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<default>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $rng gte 96 and !$sydneyUniqueComments.includes(\"clothes\")>>",
+   "\t\t\t<<set $sydneyUniqueComments.pushUnique(\"clothes\")>>",
+   "\t\t\t<<if $worn.upper.name is \"nun's habit\" or $worn.upper.name is \"monk's habit\">>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>> runs <<his>> hands over your $worn.upper.name. <<He>> almost seems nostalgic. <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> looks over your $worn.upper.name. \"Does... wearing that make this all okay?\" <<npcincr Sydney purity 2>><<gspurity>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\">>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<elseif $worn.neck.name is \"holy pendant\" or $worn.neck.name is \"stone pendant\">>",
+   "\t\t\t\t<<set $sydneySeen.pushUnique(\"holy pendant\")>>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>> stares at your $worn.neck.name. <<He>> almost seems nostalgic. <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> looks over your $worn.neck.name. \"Does... wearing that make this all okay?\" <<npcincr Sydney purity 2>><<gspurity>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<elseif $worn.neck.name is \"dark pendant\">>",
+   "\t\t\t\t<<set $sydneySeen.pushUnique(\"dark pendant\")>>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>> stares at your $worn.neck.name. <<He>> seems to get lost in it for a moment. <<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> looks over your $worn.neck.name. \"It's... so pretty, but also a little unsettling...\" <<npcincr Sydney purity -2>><<lspurity>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<default>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<elseif $location is \"school\" and $exposed lte 0 and !wearingSchoolOutfit()>>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>> looks over your clothes and giggles. \"That's not proper school uniform. Don't worry, I can help you take it off.\" <<set $combatgoal to \"strip\">>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> looks over your clothes. \"Y-you should really adhere to the dress code, before you get in trouble...\"",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $worn.lower.name is \"naked\" and playerHasStrapon()>>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>> looks over your <<penisSimple>> and giggles. \"Oh, these toys are fun.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> looks over your <<penisSimple>> and blushes. \"<<nnpc_Mum \"Sirris\">>'s always talking about these.\"",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $exposed gte 1>>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>> looks over your body and giggles. \"You look even better all exposed like this.\" <<npcincr Sydney lust 1>><<glust>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> shyly looks over your exposed body. \"Y-you're... you look... uhm...\" <<He>> looks away for a moment. \"You look good.\" <<npcincr Sydney lust 1>><<npcincr Sydney purity -2>><<gslust>><<lspurity>>",
+   "\t\t\t\t<</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</switch>>",
+   "\t<</if>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t<<if $speechAnus or $speechBottom>>",
+   "\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"Am... am I doing this right?\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> giggles. \"I didn't know this spot could make someone feel good!\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"I'm... not being too rough, am I?\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<if $speechAnus or $speechBottom>>",
+   "\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"Maybe we should stick something bigger in there.\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"Just relax, and let me take care of this.\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> giggles. \"Make sure to keep it down!\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>",
+   "\t\t<<default>>",
+   "\t\t\t<<if $speechAnus or $speechBottom>>",
+   "\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"I never would have learned things like this, if not for you.\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"I think I'm getting the hang of this!\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"How deep should I go?\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>",
+   "\t<</switch>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t<<if $speechVaginaFlaunt>>",
+   "\t\t\t\t<<addSpeechLine \"vaginaFlaunt\">>",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> covers <<his>> blush. \"D-don't just stare at it...\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> giggles. \"You're looking at me funny...\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> whispers. \"N-no one else has ever seen me like this before...\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<if $speechVaginaFlaunt>>",
+   "\t\t\t\t<<addSpeechLine \"vaginaFlaunt\">>",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> uses two fingers to spread <<his>> lips. \"Enjoying the view?\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"Yeah, I know, it looks perfect doesn't it?\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> giggles. \"It's all yours.\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>",
+   "\t\t<<default>>",
+   "\t\t\t<<if $speechVaginaFlaunt>>",
+   "\t\t\t\t<<addSpeechLine \"vaginaFlaunt\">>",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"You're staring. At least let me look at yours, too...\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"What are you going to do?\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"W...well? Don't just stand there...\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>",
+   "\t<</switch>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t<<if $speechNPCChastity>>",
+   "\t\t\t\t<<addSpeechLine \"chastity\">>",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"Sorry about the belt, but I really need to stay safe...\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"Please don't hurt yourself trying to mess with my belt.\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"Th... the belt's not going to make you stop loving me, is it?\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<if $speechNPCChastity>>",
+   "\t\t\t\t<<addSpeechLine \"chastity\">>",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"I want this thing off, but I know it's for my own good.\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"Don't hurt yourself against the belt, it's a finger pincher.\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> speaks. \"I hope the belt's not a dealbreaker.\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>",
+   "\t<</switch>>",
+   ""
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<else>>",
+   "\t\t\t<<set _noNameComment to true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $sydneyComments>>",
+   "\t\t<<set _keys to Object.keys($sydneyComments)>>",
+   "\t\t<<for $_i to 0; $_i lt _keys.length; $_i++>>",
+   "\t\t\t<<if $sydneyComments[_keys[$_i]] gt 0>>",
+   "\t\t\t\t<<set $sydneyComments[_keys[$_i]]-->>",
+   "\t\t\t<</if>>",
+   "\t\t<</for>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<He>> murmurs. \"Sorry, I don't really know what I'm doing...\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<He>> speaks. \"We sure know how to have fun.\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<<default>>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\"I used to get so nervous about this kind of thing...\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t<</switch>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<He>> speaks. \"This is... so sinful...\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<He>> speaks. \"You've opened my eyes, being a sinner is too much fun!\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<<default>>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<He>> speaks. \"I was always taught that this was sinful, but...\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t<</switch>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<He>> murmurs. \"N...not too rough, please...\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<He>> speaks. \"I can handle anything you have for me. Come on, show me what you've got!\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<<default>>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<He>> speaks. \"I... you can be a little rough, if you want...\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t<</switch>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<He>> takes a deep breath. \"I... I can do this.\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<He>> speaks. \"Think you can keep up?\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<<default>>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<He>> speaks. \"I think I can keep pace with you, now.\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t<</switch>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<He>> takes a deep breath. \"We... need to stay quiet...\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<He>> giggles. \"Shh!\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<<default>>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<He>> speaks. \"Let's try not to get caught...\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t<</switch>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<He>> looks upwards. \"Forgive me...\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<He>> giggles. \"Looks like I'm due for some discipline. Maybe you can punish me?\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<<default>>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<He>> giggles. \"I've sinned... is this my punishment?\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t<</switch>>",
+   "\t<<if $location is \"temple\">>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\">>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $sydneyComments>>",
+   "\t\t<<set _keys to Object.keys($sydneyComments)>>",
+   "\t\t<<for $_i to 0; $_i lt _keys.length; $_i++>>",
+   "\t\t\t<<if $sydneyComments[_keys[$_i]] gt 0>>",
+   "\t\t\t\t<<set $sydneyComments[_keys[$_i]]-->>",
+   "\t\t\t<</if>>",
+   "\t\t<</for>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>"
+  ],
+  "context": "\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $sydneyComments>>",
+   "\t\t<<set _keys to Object.keys($sydneyComments)>>",
+   "\t\t<<for $_i to 0; $_i lt _keys.length; $_i++>>",
+   "\t\t\t<<if $sydneyComments[_keys[$_i]] gt 0>>",
+   "\t\t\t\t<<set $sydneyComments[_keys[$_i]]-->>",
+   "\t\t\t<</if>>",
+   "\t\t<</for>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<default>>"
+  ],
+  "context": "\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $sydneyComments>>",
+   "\t\t<<set _keys to Object.keys($sydneyComments)>>",
+   "\t\t<<for $_i to 0; $_i lt _keys.length; $_i++>>",
+   "\t\t\t<<if $sydneyComments[_keys[$_i]] gt 0>>",
+   "\t\t\t\t<<set $sydneyComments[_keys[$_i]]-->>",
+   "\t\t\t<</if>>",
+   "\t\t<</for>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</switch>>",
+   "\t<<else>>"
+  ],
+  "context": "\t\t\t\t<</addSpeechLine>>"
  },
  {
   "kind": "merged-new-text",

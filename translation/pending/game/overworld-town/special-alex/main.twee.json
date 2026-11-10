@@ -266,95 +266,7 @@
   "new_en": [
    ""
   ],
-  "context": "<<effects>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
   "context": "\t<br><br>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "<</if>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "<br><br>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "<br><br>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "<</if>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": ""
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "<<effects>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "<br><br>"
  },
  {
   "kind": "merged-new-text",
@@ -365,6 +277,6 @@
   "new_en": [
    "<<effects>>"
   ],
-  "context": ":: Street Alex Well Busy"
+  "context": ":: Street Alex Cafe Whitney Intro Affection 2"
  }
 ]

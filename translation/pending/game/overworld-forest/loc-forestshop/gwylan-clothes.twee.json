@@ -134,16 +134,5 @@
    ""
   ],
   "context": ""
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "<<if $wrenHeist or $wrenSeen?.includes(\"heist\") and !$gwylanTalked.includes(\"heist_wren\")>>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "<<if ($wrenHeist or $wrenSeen?.includes(\"heist\")) and !$gwylanTalked.includes(\"heist_wren\")>>"
-  ],
-  "context": "<</if>>"
  }
 ]

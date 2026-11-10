@@ -4326,7 +4326,24 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "\t\t\t\t<<He>> continues to bombard you with similar questions. \"Is it your own child, or someone else's?\"",
+   "\t\t\t\t<<famepregnancy 1>>",
+   "\t\t\t<<elseif playerBellyVisible() and $settings.pregnancySpeechEnabled>>",
+   "\t\t\t\t\"Such a shot! Cum bubbling out of your asshole and running down over that perfect virgin pussy.\" <<He>> looks up at you in awe. \"You are a virgin, right? Looks untouched. Unlike your ass...\" <<He>> stops and looks at your belly. \"Wait.\" <<He>> pauses. \"You got pregnant? While still being a virgin? How is that even possible?\"",
+   "\t\t\t\t<<famepregnancy 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\"Is this turning you on?\""
+  ],
   "old_kr": [],
   "new_en": [
    "\t\t\t\"Wow,\" <<he>> says. \"So hairy!"
@@ -4349,7 +4366,7 @@
   "new_en": [
    "\t<br>"
   ],
-  "context": "<<elseif $phase is 4>>"
+  "context": "\t<</if>>"
  },
  {
   "kind": "merged-new-text",
@@ -4364,10 +4381,7 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t\tThe <<person2>><<person>> grabs you by the pussy and slides a finger inside. \"Confirmed.\"",
-   "\t\t<br>",
-   "\t\t\"A clever deception. I wonder if any girls matching this description are sought in connection with crimes in this area,\" <<person1>><<person>> says.",
-   "\t\t<br>"
+   "\t\tThe <<person2>><<person>> grabs you by the pussy and slides a finger inside. \"Confirmed.\""
   ],
   "old_kr": [],
   "new_en": [
@@ -4387,35 +4401,6 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
-  "old_kr": [],
-  "new_en": [
-   "<br>"
-  ],
-  "context": "<</if>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [],
-  "old_kr": [],
-  "new_en": [
-   "<br>"
-  ],
-  "context": "\"Continue the search,\" the <<person2>><<person>> instructs."
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t\t<<if $worn.under_upper.name isnot \"naked\">>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t<<if $worn.under_upper.name isnot \"naked\">>"
-  ],
-  "context": "\t<<upperruined>><<overupperruined>>"
- },
- {
-  "kind": "merged-new-text",
   "old_en": [
    ":: Street Dog Growl"
   ],
@@ -4427,15 +4412,112 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
    "",
-   ":: Street Dog Hiss"
+   "\tYou turn and continue your journey.",
+   "\t<br><br>",
+   ""
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Street Dog Growl 2"
   ],
   "old_kr": [],
   "new_en": [
-   ":: Street Dog Ignore"
+   "",
+   "\tAfter a long moment of silence, you let out an incredibly loud, high-pitched scream. They both jump and scramble away. You turn and continue your journey.",
+   "\t<br><br>",
+   "",
+   "\t<<destinationeventend>>",
+   "<<case 3>>",
+   "\tYou screech at the <<beasttype>>. <<bHis 0>> fur stands on end, and <<bhe 0>> flees behind <<bhis 0>> master's legs.",
+   "\t<br><br>",
+   ""
   ],
-  "context": "<<destinationeventend>>"
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<effects>>",
+   ""
+  ],
+  "context": ":: Street Dog TF React Growl 2"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<destinationeventend>>",
+   "",
+   ":: Street Dog Alley TF React",
+   "<<effects>>",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "당신은 몸을 돌려 여정을 계속한다."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "You feel your hair stand on end as you hiss. The <<beasttype>> steps back in alarm. <<bHis 0>> master gives you a strange look, and tugs the leash."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<destinationeventend>>",
+   "",
+   ":: Street Stray TF React",
+   "<<effects>>",
+   ""
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<br><br>",
+   "",
+   "You turn and continue your journey.",
+   "<br><br>",
+   ""
+  ],
+  "context": "<</switch>>"
  },
  {
   "kind": "merged-new-text",

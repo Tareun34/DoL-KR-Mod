@@ -69,7 +69,9 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "Tulips grow in great patches near the riverbank."
+  ],
   "old_kr": [],
   "new_en": [
    "",

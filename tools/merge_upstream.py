@@ -107,36 +107,70 @@ def _resolve_conflicts(merged):
     return result, records, ranges
 
 
-def _find_subsequence(haystack, needle, ranges, start=0):
-    """Index of `needle` in `haystack` at or after `start`, outside `ranges`; -1 if none."""
-    n = len(needle)
-    for k in range(start, len(haystack) - n + 1):
-        if haystack[k:k + n] == needle and not any(a < k + n and k < b for a, b in ranges):
-            return k
-    return -1
+def _in_ranges(pos, ranges):
+    return any(a <= pos < b for a, b in ranges)
 
 
-def _new_text_records(base, new, result_lines, ranges):
-    base_lines, new_lines = base.splitlines(), new.splitlines()
-    result_stripped = [_strip_nl(l) for l in result_lines]
+def _new_text_records(ours, base, result_lines, ranges):
+    """Records for text that the merge brought in from NEW outside conflict blocks.
+
+    A result line that differs from OURS came from NEW (the merge only ever adds
+    NEW's changes to OURS), so the insert/replace opcodes of OURS→result, minus
+    the conflict blocks, are exactly the cleanly merged new text. old_en is the
+    BASE text at the same place (BASE→result alignment).
+    """
+    ours_lines, base_lines = ours.splitlines(), base.splitlines()
+    res = [_strip_nl(l) for l in result_lines]
+
+    base_ops = difflib.SequenceMatcher(None, base_lines, res, autojunk=False).get_opcodes()
+
+    def old_en_for(pos):
+        for tag, i1, i2, j1, j2 in base_ops:
+            if j1 <= pos < j2:
+                return base_lines[i1:i2] if tag == "replace" else []
+        return []
+
     records = []
-    cursor = 0
-    sm = difflib.SequenceMatcher(None, base_lines, new_lines, autojunk=False)
-    for tag, i1, i2, j1, j2 in sm.get_opcodes():
+    covered = set()
+    for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(None, ours_lines, res, autojunk=False).get_opcodes():
         if tag not in ("insert", "replace"):
             continue
-        seg = new_lines[j1:j2]
-        pos = _find_subsequence(result_stripped, seg, ranges, cursor)
-        if pos < 0:
-            continue
-        cursor = pos + len(seg)
-        context = result_stripped[pos - 1] if pos > 0 else ""
-        records.append(Pending("merged-new-text", old_en=base_lines[i1:i2], old_kr=[], new_en=seg, context=context))
-    return records
+        run = []
+
+        def flush():
+            if run:
+                records.append(Pending("merged-new-text", old_en=old_en_for(run[0]), old_kr=[],
+                                       new_en=[res[p] for p in run], context=res[run[0] - 1] if run[0] > 0 else ""))
+                covered.update(run)
+
+        for pos in range(j1, j2):
+            if _in_ranges(pos, ranges):
+                flush()
+                run = []
+                continue
+            run.append(pos)
+        flush()
+    for a, b in ranges:
+        covered.update(range(a, b))
+    return records, covered
 
 
-def merge_text(ours, base, new):
-    """Three-way merge; conflicts take NEW. Returns (merged_text, [Pending])."""
+def _uncovered(ours, base, new, res, covered):
+    """Diagnostic, expected 0: texts that NEW added/changed and the merge introduced into the result
+    (more copies than OURS had) but that sit at no covered position."""
+    from collections import Counter
+    base_lines, new_lines = base.splitlines(), new.splitlines()
+    introduced = Counter(res) - Counter(ours.splitlines())
+    covered_texts = {res[p] for p in covered}
+    changed_texts = set()
+    for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(None, base_lines, new_lines, autojunk=False).get_opcodes():
+        if tag in ("insert", "replace"):
+            changed_texts.update(new_lines[j1:j2])
+    return sum(1 for t in changed_texts if introduced[t] > 0 and t not in covered_texts)
+
+
+def merge_text_ex(ours, base, new):
+    """Three-way merge; conflicts take NEW. Returns (merged_text, [Pending], uncovered_new_lines)."""
     if ours == base:
         merged = new
     elif base == new:
@@ -145,11 +179,20 @@ def merge_text(ours, base, new):
         merged = _git_merge_file(ours, base, new)
     result_lines, conflicts, ranges = _resolve_conflicts(merged)
     if ours == base or base == new:
-        return "".join(result_lines), []
-    new_text = _new_text_records(base, new, result_lines, ranges)
-    # keep records in file order: conflicts and new-text interleaved by position is not
-    # needed by consumers; conflicts first, then new text, each in file order.
-    return "".join(result_lines), conflicts + new_text
+        return "".join(result_lines), [], 0
+    new_text, covered = _new_text_records(ours, base, result_lines, ranges)
+    uncovered = _uncovered(ours, base, new, [_strip_nl(l) for l in result_lines], covered)
+    return "".join(result_lines), conflicts + new_text, uncovered
+
+
+def uncovered_new_lines(ours, base, new):
+    return merge_text_ex(ours, base, new)[2]
+
+
+def merge_text(ours, base, new):
+    """Three-way merge; conflicts take NEW. Returns (merged_text, [Pending])."""
+    text, records, _ = merge_text_ex(ours, base, new)
+    return text, records
 
 
 TEXT_DIRS = ("game", "modules", "types")
@@ -207,11 +250,11 @@ def _lines(data):
 
 
 def merge_file(rel, base, new, ours, record=True):
-    """Apply the file rules to one path; update OURS; return (rule, [Pending])."""
+    """Apply the file rules to one path; update OURS; return (rule, [Pending], uncovered_new_lines)."""
     b, n, o = (_read_bytes(os.path.join(root, rel)) for root in (base, new, ours))
     ours_path = os.path.join(ours, rel)
     rule = classify(b is not None, n is not None, o == b, b == n)
-    records = []
+    records, uncovered = [], 0
     if rule == "new-file":
         _write_bytes(ours_path, n)
         if record:
@@ -231,11 +274,11 @@ def merge_file(rel, base, new, ours, record=True):
             _write_bytes(ours_path, n)
             rule = "take-new"
         else:
-            merged, recs = merge_text(o.decode("utf-8"), b.decode("utf-8"), n.decode("utf-8"))
+            merged, recs, uncovered = merge_text_ex(o.decode("utf-8"), b.decode("utf-8"), n.decode("utf-8"))
             _write_bytes(ours_path, merged.encode("utf-8"))
             if record:
                 records.extend(recs)
-    return rule, records
+    return rule, records, uncovered
 
 
 def _walk_files(root, top):
@@ -267,27 +310,52 @@ def sync_images(new, ours):
     return counts
 
 
+def _is_done(record, file_lines):
+    try:
+        from tools.translation_status import is_done
+    except ImportError:  # run as a script from tools/
+        from translation_status import is_done
+    return is_done(record, file_lines)
+
+
 def write_pending(ours, rel, records):
-    if not records:
-        return
+    """Write records for rel, keeping earlier records that are still pending against the merged file."""
     path = os.path.join(ours, PENDING_DIR, rel + ".json")
+    new_dicts = [r.to_dict() for r in records]
+    kept = []
+    if os.path.isfile(path):
+        with open(path, encoding="utf-8") as f:
+            existing = json.load(f)
+        src = os.path.join(ours, rel)
+        file_lines = None
+        if os.path.isfile(src):
+            with open(src, encoding="utf-8", errors="replace") as f:
+                file_lines = f.read().splitlines()
+        seen = {(d["kind"], tuple(d["new_en"])) for d in new_dicts}
+        kept = [d for d in existing if not _is_done(d, file_lines) and (d["kind"], tuple(d["new_en"])) not in seen]
+    out = kept + new_dicts
+    if not out:
+        if os.path.isfile(path):
+            _remove(path)
+        return
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
-        json.dump([r.to_dict() for r in records], f, ensure_ascii=False, indent=1)
+        json.dump(out, f, ensure_ascii=False, indent=1)
         f.write("\n")
 
 
-def merge_tree(base, new, ours):
+def merge_tree(base, new, ours, skip_img=False):
     report = {"files": {k: 0 for k in ("new-file", "delete", "take-new", "keep-ours", "merge")},
               "single_files": {}, "conflict_files": 0, "conflict_hunks": 0, "merged_new_text": 0,
-              "deleted_translated": 0, "img": {}}
+              "deleted_translated": 0, "unrecorded_new_lines": 0, "img": {}}
     rels = set()
     for top in TEXT_DIRS:
         rels |= _walk_files(base, top) | _walk_files(new, top)
     rels = {r for r in rels if not r.startswith(SKIP_PREFIXES)}
     for rel in sorted(rels):
-        rule, records = merge_file(rel, base, new, ours)
+        rule, records, uncovered = merge_file(rel, base, new, ours)
         report["files"][rule] += 1
+        report["unrecorded_new_lines"] += uncovered
         conflicts = [r for r in records if r.kind == "conflict"]
         if conflicts:
             report["conflict_files"] += 1
@@ -297,9 +365,9 @@ def merge_tree(base, new, ours):
         write_pending(ours, rel, records)
     for rel in SINGLE_FILES:
         if os.path.isfile(os.path.join(base, rel)) or os.path.isfile(os.path.join(new, rel)):
-            rule, _ = merge_file(rel, base, new, ours, record=False)
+            rule, _, _ = merge_file(rel, base, new, ours, record=False)
             report["single_files"][rule] = report["single_files"].get(rule, 0) + 1
-    report["img"] = sync_images(new, ours)
+    report["img"] = {} if skip_img else sync_images(new, ours)
     return report
 
 
@@ -312,6 +380,7 @@ def format_report(report):
     lines.append("conflict_hunks   %6d" % report["conflict_hunks"])
     lines.append("merged_new_text  %6d" % report["merged_new_text"])
     lines.append("deleted_translated %4d" % report["deleted_translated"])
+    lines.append("unrecorded_new_lines %2d" % report["unrecorded_new_lines"])
     lines.append("img: added %d removed %d updated %d" % (report["img"].get("added", 0), report["img"].get("removed", 0), report["img"].get("updated", 0)))
     return "\n".join(lines)
 
@@ -322,17 +391,21 @@ def main(argv=None):
     parser.add_argument("--new", required=True)
     parser.add_argument("--ours", required=True)
     parser.add_argument("--report-json")
+    parser.add_argument("--skip-img", action="store_true", help="do not sync img/ (records-only runs)")
     args = parser.parse_args(argv)
     for name in ("base", "new", "ours"):
         if not os.path.isdir(getattr(args, name)):
             print("not a directory: %s" % getattr(args, name), file=sys.stderr)
             return 2
-    report = merge_tree(args.base, args.new, args.ours)
+    report = merge_tree(args.base, args.new, args.ours, skip_img=args.skip_img)
     print(format_report(report))
     if args.report_json:
         with open(args.report_json, "w", encoding="utf-8") as f:
             json.dump(report, f, indent=1)
             f.write("\n")
+    if report["unrecorded_new_lines"]:
+        print("%d new lines could not be located for recording; translation/pending is incomplete" % report["unrecorded_new_lines"], file=sys.stderr)
+        return 1
     return 0
 
 

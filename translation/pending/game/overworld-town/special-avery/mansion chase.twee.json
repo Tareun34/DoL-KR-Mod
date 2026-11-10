@@ -14,7 +14,9 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "<span class=\"green\">You're safe, for now.</span>"
+  ],
   "old_kr": [],
   "new_en": [
    "<br><br>",

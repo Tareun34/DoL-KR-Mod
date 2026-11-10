@@ -1705,12 +1705,318 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t\t\t][random(0,9)]>>"
+   "\t\t<<if $robinSeen.includes(\"ubMetal\")>>",
+   "\t\t\t<<addinlineevent \"robin_speech_metal\">>",
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`\"Take your time...\" <<he>> <<= either(\"smiles warmly\",\"whispers\",\"murmurs\")>>. \"We don't have to put on a show anymore.\"`,",
+   "\t\t\t\t\t`\"You don't have to rush...\" <<he>> <<= either(\"smiles warmly\",\"whispers\",\"murmurs\")>>. \"No one is forcing you to perform.\"`",
+   "\t\t\t\t)>>",
+   "\t\t\t\t<<robinMemoryHeal \"healedUbMetal\">>",
+   "\t\t\t<</addinlineevent>>",
+   "\t\t<</if>>",
+   "\t\t<<if $robinSeen.includes(\"ubDouble\") and (C.npc.Robin.virginity.anal is \"player\" or C.npc.Robin.virginity.vaginal is \"player\" or C.npc.Robin.virginity.penile is \"player\" or C.npc.Robin.dom gte 70)>>",
+   "\t\t\t<<addinlineevent \"robin_speech_double\">>",
+   "\t\t\t\t<<if C.npc.Robin.virginity.anal is \"player\" or C.npc.Robin.virginity.vaginal is \"player\" or C.npc.Robin.virginity.penile is \"player\">>",
+   "\t\t\t\t\t\"I'm so glad I gave my virginity to you before those creeps could take it.\" <<He>> smiles.",
+   "\t\t\t\t<<elseif C.npc.Robin.dom gte 70>>",
+   "\t\t\t\t\t\"Those people are nothing compared to you... to what we have, and what we're sharing right now.\" <<He>> smiles.",
+   "\t\t\t\t<</if>>",
+   "\t\t\t\t<<robinMemoryHeal \"healedUbDouble\">>",
+   "\t\t\t<</addinlineevent>>",
+   "\t\t<</if>>",
+   "\t\t<<if $robinSeen.includes(\"ubMachine\") and (!$robinSeen.includes(\"ubMachineRobinBegged\") or C.npc.Robin.trauma gte 60)>>",
+   "\t\t\t<<addinlineevent \"robin_speech_machine\">>",
+   "\t\t\t\t<<if $robinSeen.includes(\"ubMachineRobinBegged\")>>",
+   "\t\t\t\t\t\"I'm sorry for what I said back then,\" <<he>> whispers. \"I hope you've forgiven me...\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t\"You held back for me back then,\" <<he>> heaves. \"I'll make it up to you tenfold.\"",
+   "\t\t\t\t<</if>>",
+   "\t\t\t\t<<robinMemoryHeal \"healedUbMachine\">>",
+   "\t\t\t<</addinlineevent>>",
+   "\t\t<</if>>",
+   "\t\t<<if $robinSeen.includes(\"ubEscapeAlone\")>>",
+   "\t\t\t<<addinlineevent \"robin_speech_escape_alone\">>",
+   "\t\t\t\t\"My hero...\" <<he>> <<= either(\"whispers\",\"sobs\",\"heaves\")>>. \"They can't keep us apart anymore.\"",
+   "\t\t\t\t<<robinMemoryHeal \"healedUbEscape\">>",
+   "\t\t\t<</addinlineevent>>",
+   "\t\t<</if>>",
+   "\t\t<<if $robinSeen.includes(\"ubEscapeTogether\")>>",
+   "\t\t\t<<addinlineevent \"robin_speech_escape_together\">>",
+   "\t\t\t\t<<if $robinSeen.includes(\"ubHuntEscape\")>>",
+   "\t\t\t\t\t\"My hero...\" Robin's voice trembles. \"You came back and saved me. Let me make you feel just as cherished.\"",
+   "\t\t\t\t<<elseif $robinSeen.includes(\"ubMetalEscape\")>>",
+   "\t\t\t\t\t\"They can't keep us there anymore,\" <<he>> whispers. \"I'll come with you wherever you go.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t\"I'm so glad we made it out of that horrible place,\" <<he>> whispers. <<if C.npc.Robin.dom gte 70>>\"I won't let Bailey take us again.\"<<else>>\"I never want to go back.\"<</if>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t\t<<robinMemoryHeal \"healedUbEscape\">>",
+   "\t\t\t<</addinlineevent>>",
+   "\t\t<</if>>",
+   "\t\t<<if _eventpool.length gt 0>>",
+   "\t\t\t<<set _robinMemory to true>>",
+   "\t\t<</if>>",
+   "\t<</if>>",
+   "",
+   "\t<<if $robinmist>>",
+   "\t\t<<if $speechhit is 1>>"
   ],
   "old_kr": [],
   "new_en": [
+   "\t\t\t<br><br>"
+  ],
+  "context": "\t\t<<addSpeechLine \"idle\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<grtrauma>>",
+   "\t\t<</addSpeechLine>>",
+   "\t\t<<speechSay>>",
+   "\t<<elseif $robinMetal>>"
+  ],
+  "context": "\t\t\t)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechapologiseno is 1>>",
+   "\t\t<<if C.npc.Robin.dom gte 70>>",
+   "\t\t\t<<if $panicviolenceRecent>>",
+   "\t\t\t\t\"Don't worry, I can handle this,\" <<he>> reassures you."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechapologiseno is 1>>",
+   "\t\t<<if C.npc.Robin.dom gte 70>>",
+   "\t\t\t<<if $panicviolenceRecent>>",
+   "\t\t\t\t\"Don't worry, I can handle this,\" <<he>> reassures you."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechaskrough is 1>>",
+   "\t\t<<if C.npc.Robin.dom gte 70>>",
+   "\t\t\t<<print either(",
+   "\t\t\t\t`\"Since you really want this, I guess I'll have to show you what I've got!\"`,",
+   "\t\t\t\t`\"Alright. Just let me know if it's too much, okay?\" <<He>> smiles at you.`",
+   "\t\t\t)>>",
+   "\t\t<<elseif C.npc.Robin.dom lte 30>>",
+   "\t\t\t<<print either(",
+   "\t\t\t\t`<<His>> eyes widen. \"W-why would you want that?\"`,",
+   "\t\t\t\t`<<He>> looks uncertain. \"I don't want to hurt you...\"`",
+   "\t\t\t)>>",
+   "\t\t<<else>>",
+   "\t\t\t<<print either(",
+   "\t\t\t\t`<<He>> speaks. \"You want me to be rougher? I'm sorry, I'm already being as rough as I can.\"`,",
+   "\t\t\t\t`\"You really sure? I mean I can certainly try, but...\" <<He>> gives you a hesitant look.`",
    "\t\t\t)>>"
   ],
-  "context": "\t\t\t\t`\"<<if $robinromance is 1>>They're using me against you,\" Robin sobs.<<else>>\"You're my friend,\" Robin sobs. \"I don't want to do this...\"<</if>>`"
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechaskrough is 1>>",
+   "\t\t<<if C.npc.Robin.dom gte 70>>",
+   "\t\t\t<<print either(",
+   "\t\t\t\t`\"Since you really want this, I guess I'll have to show you what I've got!\"`,",
+   "\t\t\t\t`\"Alright. Just let me know if it's too much, okay?\" <<He>> smiles at you.`",
+   "\t\t\t)>>",
+   "\t\t<<elseif C.npc.Robin.dom lte 30>>",
+   "\t\t\t<<print either(",
+   "\t\t\t\t`<<His>> eyes widen. \"W-why would you want that?\"`,",
+   "\t\t\t\t`<<He>> looks uncertain. \"I don't want to hurt you...\"`",
+   "\t\t\t)>>",
+   "\t\t<<else>>",
+   "\t\t\t<<print either(",
+   "\t\t\t\t`<<He>> speaks. \"You want me to be rougher? I'm sorry, I'm already being as rough as I can.\"`,",
+   "\t\t\t\t`\"You really sure? I mean I can certainly try, but...\" <<He>> gives you a hesitant look.`",
+   "\t\t\t)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechmoan is 1>>",
+   "\t\t<<if isLoveInterest(\"Robin\") and ($speechspecialdialogue is \"robin_moan_dom\" or $speechspecialdialogue is \"robin_moan_default\")>>",
+   "\t\t\t<<switch $speechspecialdialogue>>",
+   "\t\t\t\t<<case \"robin_moan_dom\">>",
+   "\t\t\t\t\t<<if C.npc.Robin.trauma gte 20>>",
+   "\t\t\t\t\t\t<<He>> heaves. \"Because you're the only one that matters to me.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechmoan is 1>>",
+   "\t\t<<if isLoveInterest(\"Robin\") and ($speechspecialdialogue is \"robin_moan_dom\" or $speechspecialdialogue is \"robin_moan_default\")>>",
+   "\t\t\t<<switch $speechspecialdialogue>>",
+   "\t\t\t\t<<case \"robin_moan_dom\">>",
+   "\t\t\t\t\t<<if C.npc.Robin.trauma gte 20>>",
+   "\t\t\t\t\t\t<<He>> heaves. \"Because you're the only one that matters to me.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechmoan is 1>>",
+   "\t\t<<if isLoveInterest(\"Robin\") and ($speechspecialdialogue is \"robin_moan_dom\" or $speechspecialdialogue is \"robin_moan_default\")>>",
+   "\t\t\t<<switch $speechspecialdialogue>>",
+   "\t\t\t\t<<case \"robin_moan_dom\">>",
+   "\t\t\t\t\t<<if C.npc.Robin.trauma gte 20>>",
+   "\t\t\t\t\t\t<<He>> heaves. \"Because you're the only one that matters to me.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechmoan is 1>>",
+   "\t\t<<if isLoveInterest(\"Robin\") and ($speechspecialdialogue is \"robin_moan_dom\" or $speechspecialdialogue is \"robin_moan_default\")>>",
+   "\t\t\t<<switch $speechspecialdialogue>>",
+   "\t\t\t\t<<case \"robin_moan_dom\">>",
+   "\t\t\t\t\t<<if C.npc.Robin.trauma gte 20>>",
+   "\t\t\t\t\t\t<<He>> heaves. \"Because you're the only one that matters to me.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</if>>",
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechvaginavagina is 1 and C.npc.Robin.dom gte 70 and $fame.sex gte 600>>",
+   "\t\t\"So... where would you rank mine?\" <<He>> smiles.",
+   "\t<<elseif $speechanallick is 1 and C.npc.Robin.dom lte 30>>",
+   "\t\t<<print either(",
+   "\t\t\t`\"It feels a bit ticklish!\" <<He>> <<= either(\"giggles\", \"smiles\", \"chuckles\")>>.`,",
+   "\t\t\t`\"This feels a bit naughty,\" <<he>> <<= either(\"gasps\", \"says in surprise\")>>.`",
+   "\t\t)>>",
+   "\t<<else>>",
+   "\t\t<<set _noNameComment to true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<rng>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechvaginavagina is 1 and C.npc.Robin.dom gte 70 and $fame.sex gte 600>>",
+   "\t\t\"So... where would you rank mine?\" <<He>> smiles.",
+   "\t<<elseif $speechanallick is 1 and C.npc.Robin.dom lte 30>>",
+   "\t\t<<print either(",
+   "\t\t\t`\"It feels a bit ticklish!\" <<He>> <<= either(\"giggles\", \"smiles\", \"chuckles\")>>.`,",
+   "\t\t\t`\"This feels a bit naughty,\" <<he>> <<= either(\"gasps\", \"says in surprise\")>>.`",
+   "\t\t)>>",
+   "\t<<else>>",
+   "\t\t<<set _noNameComment to true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechvaginavagina is 1 and C.npc.Robin.dom gte 70 and $fame.sex gte 600>>",
+   "\t\t\"So... where would you rank mine?\" <<He>> smiles.",
+   "\t<<elseif $speechanallick is 1 and C.npc.Robin.dom lte 30>>",
+   "\t\t<<print either(",
+   "\t\t\t`\"It feels a bit ticklish!\" <<He>> <<= either(\"giggles\", \"smiles\", \"chuckles\")>>.`,",
+   "\t\t\t`\"This feels a bit naughty,\" <<he>> <<= either(\"gasps\", \"says in surprise\")>>.`",
+   "\t\t)>>",
+   "\t<<else>>",
+   "\t\t<<set _noNameComment to true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechvaginavagina is 1 and C.npc.Robin.dom gte 70 and $fame.sex gte 600>>",
+   "\t\t\"So... where would you rank mine?\" <<He>> smiles.",
+   "\t<<elseif $speechanallick is 1 and C.npc.Robin.dom lte 30>>",
+   "\t\t<<print either(",
+   "\t\t\t`\"It feels a bit ticklish!\" <<He>> <<= either(\"giggles\", \"smiles\", \"chuckles\")>>.`,",
+   "\t\t\t`\"This feels a bit naughty,\" <<he>> <<= either(\"gasps\", \"says in surprise\")>>.`",
+   "\t\t)>>",
+   "\t<<else>>",
+   "\t\t<<set _noNameComment to true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechvaginavagina is 1 and C.npc.Robin.dom gte 70 and $fame.sex gte 600>>",
+   "\t\t\"So... where would you rank mine?\" <<He>> smiles.",
+   "\t<<elseif $speechanallick is 1 and C.npc.Robin.dom lte 30>>",
+   "\t\t<<print either(",
+   "\t\t\t`\"It feels a bit ticklish!\" <<He>> <<= either(\"giggles\", \"smiles\", \"chuckles\")>>.`,",
+   "\t\t\t`\"This feels a bit naughty,\" <<he>> <<= either(\"gasps\", \"says in surprise\")>>.`",
+   "\t\t)>>",
+   "\t<<else>>",
+   "\t\t<<set _noNameComment to true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</if>>",
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
  }
 ]

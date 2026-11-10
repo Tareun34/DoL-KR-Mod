@@ -27,16 +27,5 @@
    "\t\t\t<<link [[Wake up|Office Supply Molest]]>><<set $molestationstart to 2>><<endevent>><</link>>"
   ],
   "context": "\t\t<<if $rng gte 81>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t<br>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t<br><br>"
-  ],
-  "context": "<<if $stress gte $stressmax>>"
  }
 ]

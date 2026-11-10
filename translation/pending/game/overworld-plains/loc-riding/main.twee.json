@@ -100,12 +100,12 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t\t<<if $rng gte 81 and $settings.horsesEnabled>>"
+   "\t\t\t<<if $steed isnot \"mare\" and $steed isnot \"stallion\" or $settings.bestialityEnabled>>"
   ],
   "old_kr": [],
   "new_en": [
-   "\t\t<<if $rng gte 81>>"
+   "\t\t\t<<if beastSexEnabledForType(\"horse\", $steed isnot \"mare\" and $steed isnot \"stallion\")>>"
   ],
-  "context": "\t<<else>>"
+  "context": "\t\t\t<!-- Modified for Monster People -->"
  }
 ]

@@ -93,9 +93,7 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [
-   "\t<<if $settings.bestialityEnabled>>"
-  ],
+  "old_en": [],
   "old_kr": [],
   "new_en": [
    "\t<<if animalSexEnabledForType(\"fox\")>>"
@@ -104,9 +102,7 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [
-   "\t\t\t<<if $settings.bestialityEnabled>>"
-  ],
+  "old_en": [],
   "old_kr": [],
   "new_en": [
    "\t\t\t<<if animalSexEnabledForType(\"fox\")>>"

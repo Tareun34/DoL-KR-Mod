@@ -109,17 +109,15 @@
   ],
   "old_kr": [],
   "new_en": [
-   "\t\t\twidgets: [",
    "\t\t\t\t() => {",
    "\t\t\t\t\tC.beastSettingTypes.forEach(type => {",
    "\t\t\t\t\t\tV.settings.beastSettings[type].maleChance = 100;",
    "\t\t\t\t\t\tV.settings.beastSettings[type].maleChanceMale = 100;",
    "\t\t\t\t\t\tV.settings.beastSettings[type].maleChanceFemale = 100;",
    "\t\t\t\t\t});",
-   "\t\t\t\t},",
-   "\t\t\t],"
+   "\t\t\t\t},"
   ],
-  "context": "\t\t\tlink: [`Make all beasts male`, stayOnPassageFn],"
+  "context": "\t\t\twidgets: ["
  },
  {
   "kind": "merged-new-text",

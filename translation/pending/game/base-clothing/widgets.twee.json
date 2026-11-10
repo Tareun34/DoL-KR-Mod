@@ -41,7 +41,7 @@
   "new_en": [
    "\t<</if>>"
   ],
-  "context": "\t\t<<set $store[$_slot].delete($_item)>>"
+  "context": "\t\t<<set _swim_strip_check.pushUnique(\"legs\")>>"
  },
  {
   "kind": "merged-new-text",
@@ -52,6 +52,6 @@
   "new_en": [
    ""
   ],
-  "context": "<</widget>>"
+  "context": "\t<</if>>"
  }
 ]

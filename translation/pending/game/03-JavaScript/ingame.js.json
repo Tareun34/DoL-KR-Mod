@@ -151,7 +151,7 @@
   "new_en": [
    "// Used to determine whether Robin should automatically water them"
   ],
-  "context": "// Returns true if one or more orphanage plots have been planted"
+  "context": "// Returns true if all orphanage plots have been watered"
  },
  {
   "kind": "merged-new-text",

@@ -103,7 +103,8 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<whitneyoptions>>"
+   "<<whitneyoptions>>",
+   ""
   ],
   "old_kr": [],
   "new_en": [
@@ -114,7 +115,8 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<whitneyoptions>>"
+   "<<whitneyoptions>>",
+   ""
   ],
   "old_kr": [],
   "new_en": [
@@ -279,7 +281,8 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<whitneyoptions>>"
+   "<<whitneyoptions>>",
+   ""
   ],
   "old_kr": [],
   "new_en": [
@@ -400,7 +403,107 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<whitneyoptions>>"
+   "\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyExit>>"
+  ],
+  "context": "\t<<endcombat>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyOptions>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyExit>>"
+  ],
+  "context": "\t<<endcombat>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyExit>>"
+  ],
+  "context": "\t\t<<endcombat>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyExit>>"
+  ],
+  "context": "\t\t<<endcombat>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t<<npc Whitney>><<person1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyOptions>>"
+  ],
+  "context": "\t<<npc Whitney>><<person1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>",
+   ""
   ],
   "old_kr": [],
   "new_en": [
@@ -411,7 +514,8 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<whitneyoptions>>"
+   "<<whitneyoptions>>",
+   ""
   ],
   "old_kr": [],
   "new_en": [
@@ -477,7 +581,8 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<whitneyoptions>>"
+   "<<whitneyoptions>>",
+   ""
   ],
   "old_kr": [],
   "new_en": [
@@ -521,7 +626,113 @@
  {
   "kind": "merged-new-text",
   "old_en": [
+   "<<whitneyoptions>>",
+   "",
+   "",
+   ""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
    "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>",
+   ""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>",
+   ""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>",
+   ""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>",
+   ""
   ],
   "old_kr": [],
   "new_en": [
@@ -576,106 +787,8 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<whitneyoptions>>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "<<whitneyOptions>>"
-  ],
-  "context": ""
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "<<whitneyoptions>>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "<<whitneyOptions>>"
-  ],
-  "context": ""
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "<<whitneyoptions>>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "<<whitneyOptions>>"
-  ],
-  "context": ""
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "<<whitneyoptions>>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "<<whitneyOptions>>"
-  ],
-  "context": ""
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "<<whitneyoptions>>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "<<whitneyOptions>>"
-  ],
-  "context": ""
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "<<whitneyoptions>>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "<<whitneyOptions>>"
-  ],
-  "context": ""
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "<<whitneyoptions>>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "<<whitneyOptions>>"
-  ],
-  "context": ""
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "<<whitneyoptions>>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "<<whitneyOptions>>"
-  ],
-  "context": ""
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "<<whitneyoptions>>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "<<whitneyOptions>>"
-  ],
-  "context": ""
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "<<whitneyoptions>>"
+   "<<whitneyoptions>>",
+   ""
   ],
   "old_kr": [],
   "new_en": [

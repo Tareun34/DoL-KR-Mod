@@ -36,7 +36,9 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "\t<<skill_difficulty currentSkillValue('housekeeping') \"Housekeeping\" _args[0] _args[1] _args[2]>>"
+  ],
   "old_kr": [],
   "new_en": [
    "<<widget \"pickaxedifficulty\">>",

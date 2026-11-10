@@ -228,13 +228,11 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [
-   "\t\t<<if $tiredness gte (C.tiredness.max / 5) * 3>>"
-  ],
+  "old_en": [],
   "old_kr": [],
   "new_en": [
    "\t<<if $tiredness gte (C.tiredness.max / 5) * 3>>"
   ],
-  "context": "\t/* Tiredness */"
+  "context": "\t<</if>>"
  }
 ]

@@ -992,6 +992,58 @@
  },
  {
   "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set _policeEvidenceConfig = { currentValue : crimeSumHistory(), secondaryValue : crimeSumCurrent(), states : ["
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t]}>>"
+  ],
+  "context": "\t\t\t\t\t{ requiredValue: 5,\tcolor: 'red',\t\tdescription: 'Everyone at school has heard of your unique genitalia, including the teachers.'}"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set _policeEvidenceConfig = { currentValue : crimeSumHistory(), secondaryValue : crimeSumCurrent(), states : ["
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t{ requiredValue: -100,\tcolor: 'green',\tdescription: 'kind.'},",
+   "\t\t\t\t\t\t{ requiredValue: -40,\tcolor: 'green',\tdescription: 'friendly.'},",
+   "\t\t\t\t\t\t{ requiredValue: -10,\tcolor: 'green',\tdescription: 'hopeful.'},",
+   "\t\t\t\t\t\t{ requiredValue: 10,\tcolor: 'green',\tdescription: 'idealistic.'},",
+   "\t\t\t\t\t\t{ requiredValue: 40,\tcolor: 'def',\tdescription: 'revolutionary.'},"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t]},"
+  ],
+  "context": "\t\t\t\t\t\t{ requiredValue: 80,\tcolor: 'def',\tdescription: 'defiant.'},"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t{ requiredValue: -100,\tcolor: 'green',\tdescription: 'kind.'},",
+   "\t\t\t\t\t\t{ requiredValue: -40,\tcolor: 'green',\tdescription: 'friendly.'},",
+   "\t\t\t\t\t\t{ requiredValue: -10,\tcolor: 'green',\tdescription: 'hopeful.'},",
+   "\t\t\t\t\t\t{ requiredValue: 10,\tcolor: 'green',\tdescription: 'idealistic.'},",
+   "\t\t\t\t\t\t{ requiredValue: 40,\tcolor: 'def',\tdescription: 'revolutionary.'},"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t]},"
+  ],
+  "context": "\t\t\t\t\t\t{ requiredValue: 80,\tcolor: 'def',\tdescription: 'mutinous.'},"
+ },
+ {
+  "kind": "merged-new-text",
   "old_en": [],
   "old_kr": [],
   "new_en": [

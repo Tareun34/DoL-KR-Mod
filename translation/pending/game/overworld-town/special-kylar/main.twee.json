@@ -524,15 +524,6 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
-  "old_kr": [],
-  "new_en": [
-   "<<endevent>>"
-  ],
-  "context": "<<set $outside to 0>><<set $location to \"home\">><<effects>>"
- },
- {
-  "kind": "merged-new-text",
   "old_en": [
    "<<kylaroptions>>"
   ],
@@ -1069,7 +1060,8 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<kylaroptions>>"
+   "<<kylaroptions>>",
+   ""
   ],
   "old_kr": [],
   "new_en": [

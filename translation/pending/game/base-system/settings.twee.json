@@ -1510,17 +1510,6 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<br>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t\t\t\t<br>"
-  ],
-  "context": "\t\t\t\t<span class=\"gold\">사이드바 미리보기:</span><br> <label>옷 숨기기 <<checkbox \"_showClothes\" true false autocheck>></label> | <label>속옷 숨기기 <<checkbox \"_showUnderwear\" true false autocheck>></label><<if $player.sex isnot \"f\">> | <label>이완된 자지 <<checkbox \"_flaccidPenis\" false true autocheck>></label><</if>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
    "\t\t\t\t<<if $debug is 1>>"
   ],
   "old_kr": [],
@@ -1822,6 +1811,41 @@
    "\t\t<<updatePersistentNPCs>>"
   ],
   "context": "\t\t<</for>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<else>>"
+  ],
+  "context": "\t\t<<updatePersistentNPCs>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>",
+   "\t<</for>>",
+   "\t<<if $_value isnot \"h\" and $passage isnot \"Start\" and $per_npc and Object.keys($per_npc).length gt 0>>",
+   "\t\t<<for $_i range Object.keys($per_npc)>>",
+   "\t\t\t<<if $per_npc[$_i].pronoun is $_pronounFilter>>",
+   "\t\t\t\t<<set $per_npc[$_i].gender to $_value>>",
+   "\t\t\t<</if>>",
+   "\t\t<</for>>",
+   "\t<</if>>"
+  ],
+  "context": "\t\t\t<<set $NPCName[$_i].gender to $_value>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<</widget>>"
  },
  {
   "kind": "merged-new-text",

@@ -318,6 +318,50 @@
  {
   "kind": "merged-new-text",
   "old_en": [
+   "\t<<if ($speechpenisvirgin is 1 and $player.virginity.penile is \"Kylar\") or ($speechvaginavirgin is 1 and $player.virginity.vaginal is \"Kylar\")>>",
+   "\t\t<<He>> gasps. \"You were a virgin too,\" <<he>> says. \"We were meant for each other.\"",
+   "\t<<elseif $speechanusvirgin is 1 and $player.virginity.anal is \"Kylar\">>",
+   "\t\t<<if $player.vaginaExist and $settings.pregnancySpeechEnabled>>",
+   "\t\t\t<<He>> gasps. \"We can't make babies this way, but I just couldn't resist you.\"",
+   "\t\t<<elseif !$player.vaginaExist and _kylar.gender is \"m\" and knowsAboutAnyPregnancy(\"pc\",\"Kylar\") and $settings.pregnancySpeechEnabled>>",
+   "\t\t\t<<He>> gasps. \"Is this how you got pregnant before? But you were still a virgin!\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if _loveInterest is \"Black Wolf\" or _loveInterest is \"Great Hawk\">>"
+  ],
+  "context": "\t<<if $speechLINameDrop>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if !$player.penisExist and $NPCList[0].vagina isnot \"none\" and random(0,2) isnot 0>>"
+  ],
+  "context": "\t<<if $speechNoticeSexToy>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<elseif $player.penisExist or $NPCList[0].penis isnot \"none\" and random(0,2) isnot 0>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
    "\t\t<<npcincr Kylar rage 10>><<ggksuspicion>>",
    "\t<<elseif $speechsextoy is 1>>",
    "\t\t<<set $speechsextoy to 0>>",

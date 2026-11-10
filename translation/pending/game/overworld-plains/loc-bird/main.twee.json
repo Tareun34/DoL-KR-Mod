@@ -82,23 +82,12 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t\t<br><br>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t\t<br>"
-  ],
-  "context": "\t\t<span class=\"red\"><<bhis>> 탓이 아니다. <<bHe>>【은는】 그저 짝을 원할 뿐이다."
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
    "\t\t\t<br><br>"
   ],
   "old_kr": [],
   "new_en": [
    "\t\t\t<br>"
   ],
-  "context": "\t\t\t<<birdicon \"firepit\">><<link [[모닥불을 살펴본다|Bird Tower Firepit]]>><</link>><<if getBirdBurnTime()>> | <span class=\"orange\"><<firepitTime>></span><</if>>"
+  "context": "\t\t<<else>>"
  }
 ]

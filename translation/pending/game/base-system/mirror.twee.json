@@ -97,7 +97,10 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "\t\t\t<<run _increaseAllure.push(`Alluring shoes ${\"+\".repeat(Math.floor($worn.feet.reveal / 200))}`)>>",
+   "\t\t\t<<run _increaseAttractive.push(`Attractive shoes ${\"+\".repeat(Math.floor($worn.feet.reveal / 200))}`)>>"
+  ],
   "old_kr": [],
   "new_en": [
    "\t\t<<if $rentThug and isBaileyLookingForPlayer()>>",

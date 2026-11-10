@@ -424,6 +424,36 @@
  {
   "kind": "merged-new-text",
   "old_en": [
+   "\t\t\t<<if $avery_mansion>>/* Is Avery paying for the PC? */",
+   "\t\t\t\t<<if $avery_mansion.rage.assess gte 9 or C.npc.Avery.state is \"dismissed\">>",
+   "\t\t\t\t\t<<set _avery_pay to false>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<set _avery_pay to true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t\tBailey will try to visit you again on <<rentday>> and wants <<printmoney $rentMoney>><<babyRentDisplay \" plus \" \" for not looking after your children\" \"gold\">>."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $avery_mansion>>/* Is Avery paying for the PC? */",
+   "\t\t\t\t<<if $avery_mansion.rage.assess gte 9 or C.npc.Avery.state is \"dismissed\">>",
+   "\t\t\t\t\t<<set _avery_pay to false>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<set _avery_pay to true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t\tBailey is looking for you and wants <<printmoney $rentMoney>><<babyRentDisplay \" plus \" \" for not looking after your children\" \"gold\">>."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
    "\t\t\t<<else>>",
    "\t\t\t\t<<set _avery_pay to false>>",
    "\t\t\t<</if>>",

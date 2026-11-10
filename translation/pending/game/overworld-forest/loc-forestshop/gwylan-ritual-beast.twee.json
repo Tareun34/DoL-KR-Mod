@@ -271,6 +271,15 @@
  },
  {
   "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $beastRitual.lure to \"wolf\">>"
+  ],
+  "context": "\t\t<<elseif beastSexEnabledForType(\"wolf\")>>"
+ },
+ {
+  "kind": "merged-new-text",
   "old_en": [
    "\t\t<<if playerHeatMinArousal() gte 1 and _gwylanLovePercent gte 50>>"
   ],
@@ -314,15 +323,6 @@
    "\t<<set $speechBanish to 0>>"
   ],
   "context": ""
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [],
-  "old_kr": [],
-  "new_en": [
-   "\t<br><br>"
-  ],
-  "context": "\t<<his>> 덩굴이 당신과 그윌란에게서 물러나자, <<persons>> 눈에 초점이 돌아온다. <<gwylanPurgeEffect>>"
  },
  {
   "kind": "merged-new-text",

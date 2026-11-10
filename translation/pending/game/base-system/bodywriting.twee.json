@@ -432,7 +432,10 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "\t<<if _admireNothing>>",
+   "\t<<elseif setup.bodyliquid.combined(_args[0]) gte 4>>"
+  ],
   "old_kr": [],
   "new_en": [
    "\t\t\t\t\t/* Disabled until the source of body fluids is tracked - Avery may be the one who came on the PC."
@@ -441,7 +444,10 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "\t<<if _admireNothing>>",
+   "\t<<elseif setup.bodyliquid.combined(_args[0]) gte 4>>"
+  ],
   "old_kr": [],
   "new_en": [
    "\t\t\t\t\t*/"

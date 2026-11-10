@@ -170,21 +170,5 @@
    "\tYou hear people laughing and dancing. It's comforting. <<lstress>><<stress -4>><<ltrauma>><<trauma -2>>"
   ],
   "context": "<<else>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t\t\t<</if>>",
-   "\t\t\t<br>",
-   "\t\t\t<<link [[Don't buy anything|Farmland]]>><<endevent>><<set $eventskip to 1>><</link>>",
-   "\t\t\t<br>",
-   "\t\t<</addinlineevent>>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t\t\t<</addinlineevent>>",
-   "\t\t<</if>>"
-  ],
-  "context": "\t\t\t\t<br>"
  }
 ]

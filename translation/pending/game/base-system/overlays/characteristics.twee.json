@@ -93,6 +93,6 @@
   "new_en": [
    "\t\t\t<</if>>"
   ],
-  "context": "\t\t\t\t<<characteristic-box _corruptionConfig>>"
+  "context": "\t\t\t\t<<characteristic-box _hiddenConfig>>"
  }
 ]

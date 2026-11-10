@@ -113,16 +113,7 @@
   "new_en": [
    "\t\t\t<label>"
   ],
-  "context": "\t\t<div class=\"settingsToggleItem\">"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [],
-  "old_kr": [],
-  "new_en": [
-   "\t\t\t</label>"
-  ],
-  "context": "\t\t\t\t메뉴에서 플레이어의 알몸 숨기기"
+  "context": "\t\t\t<br>"
  },
  {
   "kind": "merged-new-text",
@@ -131,16 +122,7 @@
   "new_en": [
    "\t\t\t<label>"
   ],
-  "context": "\t\t<div class=\"settingsToggleItem\">"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [],
-  "old_kr": [],
-  "new_en": [
-   "\t\t\t</label>"
-  ],
-  "context": "\t\t\t\t의류 교체 경고 활성화"
+  "context": "\t\t\t<br>"
  },
  {
   "kind": "merged-new-text",
@@ -149,16 +131,7 @@
   "new_en": [
    "\t\t\t<label>"
   ],
-  "context": "\t\t<div class=\"settingsToggleItem\">"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [],
-  "old_kr": [],
-  "new_en": [
-   "\t\t\t</label>"
-  ],
-  "context": "\t\t\t\t전투 중 스크롤 위치 복구"
+  "context": "\t\t\t<br>"
  },
  {
   "kind": "merged-new-text",
@@ -173,7 +146,10 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "\t\t\t<input type=\"button\" value=\"Set\" onclick='zoom()'/>",
+   "\t\t\t<input type=\"button\" value=\"Reset\" onclick='zoom(100)'/>"
+  ],
   "old_kr": [],
   "new_en": [
    "\t\t</div>",

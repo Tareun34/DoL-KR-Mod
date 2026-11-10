@@ -49,6 +49,22 @@ class MergeTextTests(unittest.TestCase):
         out, _ = mu.merge_text(ours, base, new)
         self.assertEqual(out, "가\nb\nc2")
 
+    def test_insert_between_conflict_and_duplicate_text_is_recorded(self):
+        # hunk 1 (a→A) is absorbed by a conflict; the same text "A" appears again later (e→A).
+        # The insertion i1,i2 between them must still be recorded, and no record may point at the wrong "A".
+        base = "a\nb\nc\nd\ne\n"; ours = "가\nb\nc\nd\ne\n"; new = "A\nb\ni1\ni2\nc\nd\nA\n"
+        out, recs = mu.merge_text(ours, base, new)
+        self.assertEqual(out, "A\nb\ni1\ni2\nc\nd\nA\n")
+        self.assertEqual([(r.kind, r.old_en, r.new_en, r.context) for r in recs], [
+            ("conflict", ["a"], ["A"], ""),
+            ("merged-new-text", [], ["i1", "i2"], "b"),
+            ("merged-new-text", ["e"], ["A"], "d"),
+        ])
+
+    def test_every_new_line_is_covered(self):
+        base = "a\nb\nc\n"; ours = "가\nb\nc\n"; new = "A\nb\nx\nC\n"
+        self.assertEqual(mu.uncovered_new_lines(ours, base, new), 0)
+
     def test_identical_inputs_produce_no_records(self):
         out, recs = mu.merge_text("x\n", "x\n", "x\n")
         self.assertEqual((out, recs), ("x\n", []))
@@ -132,6 +148,25 @@ class TreeTests(unittest.TestCase):
         with open(os.path.join(p, "game/a.twee.json"), encoding="utf-8") as f:
             rec = json.load(f)
         self.assertEqual(rec, [{"kind": "merged-new-text", "old_en": ["c"], "old_kr": [], "new_en": ["C"], "context": "b"}])
+
+
+    def test_rerun_keeps_pending_records_still_present(self):
+        p = os.path.join(self.ours, "translation/pending/game/a.twee.json")
+        os.makedirs(os.path.dirname(p))
+        with open(p, "w", encoding="utf-8") as f:
+            json.dump([
+                {"kind": "conflict", "old_en": ["old"], "old_kr": ["옛"], "new_en": ["b"], "context": "가"},      # still in file → keep
+                {"kind": "conflict", "old_en": ["x"], "old_kr": ["엑"], "new_en": ["zzz"], "context": ""},      # gone → drop
+                {"kind": "merged-new-text", "old_en": ["c"], "old_kr": [], "new_en": ["C"], "context": "b"},   # duplicate of new record → once
+            ], f)
+        mu.merge_tree(self.base, self.new, self.ours)
+        with open(p, encoding="utf-8") as f:
+            recs = json.load(f)
+        self.assertEqual([(r["kind"], r["new_en"]) for r in recs], [("conflict", ["b"]), ("merged-new-text", ["C"])])
+
+    def test_report_counts_uncovered_new_lines(self):
+        rep = mu.merge_tree(self.base, self.new, self.ours)
+        self.assertEqual(rep["unrecorded_new_lines"], 0)
 
 
 class CliTreeTests(TreeTests):

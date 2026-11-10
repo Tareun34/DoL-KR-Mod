@@ -204,6 +204,17 @@
  },
  {
   "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<else>>",
+   "\t\t\t<<avery_mansion_rage_party \"normal\">>",
+   "\t\t\t<<avery_mansion_end_links>>"
+  ],
+  "context": "\t\t\t<<avery_mansion_dom_events>>"
+ },
+ {
+  "kind": "merged-new-text",
   "old_en": [
    "\t\t<<if $debug is 1>>"
   ],

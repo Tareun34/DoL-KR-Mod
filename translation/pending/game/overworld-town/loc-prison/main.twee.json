@@ -76,17 +76,6 @@
   "new_en": [
    "\t\t<br>"
   ],
-  "context": "\t\t<<furnitureicon \"poster\">><<link [[포스터를 조사한다|Prison Poster]]>><<set $prison.tunnel to 1>><</link>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t\t<br><br>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t\t<br>"
-  ],
-  "context": "\t\t<<furnitureicon \"poster\">><<link [[포스터 뒤 벽을 시험해 본다|Prison Poster 2]]>><<set $prison.tunnel to 2>><</link>>"
+  "context": "\t<<else>>"
  }
 ]

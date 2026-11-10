@@ -79,28 +79,6 @@
   "new_en": [
    ""
   ],
-  "context": "<<run initFishingPier()>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "<br><br>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "<<fishingRodIcon>><<link [[낚시하기|Fishing Pier Wait]]>><</link>> */"
+  "context": "\t<br><br>"
  }
 ]

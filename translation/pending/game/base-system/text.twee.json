@@ -216,18 +216,82 @@
  },
  {
   "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"Bitch\">><<silently>>",
+   "\t<<bitch>><<capitalise>>",
+   "<</silently>>_text_output<</widget>>",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
   "old_en": [
-   "\t<<elseif $options.debugdisable is \"f\">>",
-   "\t\t<<set _text_output to \"ERROR - $$player.breastsize is not a number: $player.breastsize\">>",
-   "\t<</if>>",
-   "<</silently>><<if !_breastSensitivityDescribed or _args[0]>><<breastsensitivity>><</if>><<print _text_output>><</widget>>"
+   "\t<<if !isNaN(_args[0]) and $NPCList[_args[0]] and $NPCList[_args[0]].clothes and $NPCList[_args[0]].clothes.set>>"
   ],
   "old_kr": [],
   "new_en": [
-   "\t<</silently>>",
+   "\t<<if !isNaN(_args[0]) and $NPCList[_args[0]]?.clothes?.set>>"
+  ],
+  "context": "<<widget \"wallet\">><<silently>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $_bperson to ($farm_work[_args[0]].monster_roll is true and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $_bperson to $farm_work[_args[0]].monster>>"
+  ],
+  "context": "\t<<set $_bgender to _args[1] ? _args[1] : $farm_work[_args[0]].gender_plural>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $_bperson to ($farm_work[_args[0]].monster_roll is true and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $_bperson to $farm_work[_args[0]].monster>>"
+  ],
+  "context": "<<widget \"farm_text_neutral\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $_bperson to ($farm_work[_args[0]].monster_roll is true and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $_bperson to $farm_work[_args[0]].monster>>"
+  ],
+  "context": "\t<<set $_bgender to _args[1] ? _args[1] : $farm_work[_args[0]].gender>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set _text_output to \"Its\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "<<widget \"farm_himself\">>",
+   "\t<<set $_bgender to _args[1] ? _args[1] : $farm_work[_args[0]].gender>>",
+   "\t<<if $farm_work[_args[0]].monster>>",
+   "\t\t<<if $_bgender is \"m\">>",
+   "\t\t\t<<set _text_output to \"himself\">>",
+   "\t\t<<else>>",
+   "\t\t\t<<set _text_output to \"herself\">>",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\t<<set _text_output to \"itself\">>",
+   "\t<</if>>",
    "\t<<print _text_output>>",
    "<</widget>>"
   ],
-  "context": "\t<</if>>"
+  "context": "<</silently>>_text_output<</widget>>"
  }
 ]

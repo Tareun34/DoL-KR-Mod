@@ -48,29 +48,7 @@
   "new_en": [
    "<<set $outside to 0>><<effects>>"
   ],
-  "context": ":: Domus Window Couple Sex Finish"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "<<effects>>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "<<set $outside to 0>><<effects>>"
-  ],
   "context": ":: Domus Window Bound Seduce"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "<<effects>>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "<<set $outside to 0>><<effects>>"
-  ],
-  "context": ":: Domus Window Bound Seduce Sex Finish"
  },
  {
   "kind": "merged-new-text",
@@ -85,6 +63,15 @@
  },
  {
   "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<set $outside to 0>><<effects>>"
+  ],
+  "context": ":: Domus Window Curtain"
+ },
+ {
+  "kind": "merged-new-text",
   "old_en": [
    "<<effects>>"
   ],
@@ -92,6 +79,18 @@
   "new_en": [
    "<<set $outside to 0>><<effects>>"
   ],
-  "context": ":: Domus Window Curtain"
+  "context": ":: Domus Window Orphan"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<effects>>",
+   ""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set $outside to 0>><<effects>>"
+  ],
+  "context": ":: Domus Window Ladder Seduce"
  }
 ]

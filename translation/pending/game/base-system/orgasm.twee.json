@@ -141,6 +141,61 @@
  {
   "kind": "merged-new-text",
   "old_en": [
+   "\t\t\t\t\t\t\t<<set $speechmilk to 3>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<set $speechLactate to 3>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<milkvolume 1>><<set $enemyanger += 10>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<set $speechmilk to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<set $speechLactate to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<breastfeed 8>><<milkvolume 1>><<sex 2 \"breast\" $_i>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<set $speechmilk to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<set $speechLactate to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<<breastfeed 4>><<milkvolume 1>><<sex 2 \"breast\" $_i>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<set $speechmilk to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<set $speechLactate to 2>>"
+  ],
+  "context": "\t\t\t\t\t\t<<breastfeed 8>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<set $speechmilk to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<set $speechLactate to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<<breastfeed 3>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
    "\t\t\t<<if $combat is 1>><<set $speechmilk to 1>><</if>>"
   ],
   "old_kr": [],
@@ -148,50 +203,6 @@
    "\t\t\t<<if $combat is 1>><<set $speechLactate to 1>><</if>>"
   ],
   "context": "\t\t\t<</if>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "\t<</if>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "\t<</if>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "\t<</if>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "\t<</if>>"
  },
  {
   "kind": "merged-new-text",

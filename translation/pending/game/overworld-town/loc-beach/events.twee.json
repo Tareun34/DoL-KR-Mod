@@ -18,17 +18,6 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   " \t<br><br>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t<br><br>"
-  ],
-  "context": "\t\"멍청한 걸레년.\" <<He>>【은는】 당신을 모래 위에 내팽개친다."
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
    "\t<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>"
   ],
   "old_kr": [],

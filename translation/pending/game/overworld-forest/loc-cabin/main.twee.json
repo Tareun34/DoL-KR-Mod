@@ -31,23 +31,12 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t\t<br><br>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t\t<br>"
-  ],
-  "context": "\t\t<<He>>【은는】 하품하며 다시 잠들려 하지만, <<his>> 눈이 번쩍 뜨인다. 마치 무언가 깨달은 것처럼."
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
    "\t\t\t<br><br>"
   ],
   "old_kr": [],
   "new_en": [
    "\t\t\t<br>"
   ],
-  "context": "\t\t\t<<bedicon \"eden\">><<link [[에덴과 함께 간다|Eden Cabin Bed]]>><<npcincr Eden love 1>><<npcincr Eden dom 1>><</link>><<glove>><<gdom>>"
+  "context": "\t\t<<else>>"
  }
 ]

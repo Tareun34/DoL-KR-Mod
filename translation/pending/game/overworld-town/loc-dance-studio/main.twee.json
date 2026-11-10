@@ -61,6 +61,28 @@
  },
  {
   "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<if hasSexStat(\"exhibitionism\", 5)>>"
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<br>",
+   "<<else>>",
+   "\t<<insufficientStat \"exhibitionism\" \"to take the class while exposed\">><br>",
+   "<</if>>",
+   "<<getouticon>><<link [[Leave|Dance Studio]]>><</link>>"
+  ],
+  "context": "\t<<getinicon>><<link [[Go naked|Yoga Classes Enter]]>><<strip>><<set $danceStudio.nudeYoga to 1>><</link>><<exhibitionist5>>"
+ },
+ {
+  "kind": "merged-new-text",
   "old_en": [
    "<<set $danceStudio.stage to 0>>"
   ],

@@ -66,17 +66,6 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t\t<br><br>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t\t<br>"
-  ],
-  "context": "\t\t<<undobindingsicon>><<link [[결박을 끊는다|Wolf Cave Unbind]]>><</link>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
    "\t\t\t<<if !_eggEvent>><br><br><</if>>"
   ],
   "old_kr": [],

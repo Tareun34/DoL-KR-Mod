@@ -2621,6 +2621,453 @@
  {
   "kind": "merged-new-text",
   "old_en": [
+   "\t\t\t<<switch random(1,10)>>",
+   "\t\t\t\t<<case 1>>",
+   "\t\t\t\t\t<<He>> growls. \"You can't have <<phim>>.\"",
+   "\t\t\t\t<<case 2>>",
+   "\t\t\t\t\t<<He>> growls. \"You're stronger than it. I know you are.\"",
+   "\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t<<He>> demands. \"Begone!\"",
+   "\t\t\t\t<<case 4>>",
+   "\t\t\t\t\t<<He>> speaks. \"Come back to me, <<pcpetname 'Gwylan' 'name'>>.\"",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>> speaks. \"Don't leave me.\"",
+   "\t\t\t\t<<case 6>>",
+   "\t\t\t\t\t<<He>> speaks. \"Return to your shackles.\"",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> breathes heavily, trying to stay focused. \"Why <<phim>>?\"",
+   "\t\t\t\t<<case 8>>",
+   "\t\t\t\t\t<<He>> tries to hold you still. \"Just fight it.\"",
+   "\t\t\t\t<<case 9>>",
+   "\t\t\t\t\t<<He>> speaks. \"Release <<phim>> at once.\"",
+   "\t\t\t\t<<case 10>>",
+   "\t\t\t\t\t<<He>> speaks. \"This won't bring you peace.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $abomination is 1>>"
+  ],
+  "context": "\t\t\t)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<switch random(1,10)>>",
+   "\t\t\t\t<<case 1>>",
+   "\t\t\t\t\t<<He>> growls. \"You can't have <<phim>>.\"",
+   "\t\t\t\t<<case 2>>",
+   "\t\t\t\t\t<<He>> growls. \"You're stronger than it. I know you are.\"",
+   "\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t<<He>> demands. \"Begone!\"",
+   "\t\t\t\t<<case 4>>",
+   "\t\t\t\t\t<<He>> speaks. \"Come back to me, <<pcpetname 'Gwylan' 'name'>>.\"",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>> speaks. \"Don't leave me.\"",
+   "\t\t\t\t<<case 6>>",
+   "\t\t\t\t\t<<He>> speaks. \"Return to your shackles.\"",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> breathes heavily, trying to stay focused. \"Why <<phim>>?\"",
+   "\t\t\t\t<<case 8>>",
+   "\t\t\t\t\t<<He>> tries to hold you still. \"Just fight it.\"",
+   "\t\t\t\t<<case 9>>",
+   "\t\t\t\t\t<<He>> speaks. \"Release <<phim>> at once.\"",
+   "\t\t\t\t<<case 10>>",
+   "\t\t\t\t\t<<He>> speaks. \"This won't bring you peace.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<switch random(1,10)>>",
+   "\t\t\t\t<<case 1>>",
+   "\t\t\t\t\t<<He>> growls. \"You can't have <<phim>>.\"",
+   "\t\t\t\t<<case 2>>",
+   "\t\t\t\t\t<<He>> growls. \"You're stronger than it. I know you are.\"",
+   "\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t<<He>> demands. \"Begone!\"",
+   "\t\t\t\t<<case 4>>",
+   "\t\t\t\t\t<<He>> speaks. \"Come back to me, <<pcpetname 'Gwylan' 'name'>>.\"",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>> speaks. \"Don't leave me.\"",
+   "\t\t\t\t<<case 6>>",
+   "\t\t\t\t\t<<He>> speaks. \"Return to your shackles.\"",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> breathes heavily, trying to stay focused. \"Why <<phim>>?\"",
+   "\t\t\t\t<<case 8>>",
+   "\t\t\t\t\t<<He>> tries to hold you still. \"Just fight it.\"",
+   "\t\t\t\t<<case 9>>",
+   "\t\t\t\t\t<<He>> speaks. \"Release <<phim>> at once.\"",
+   "\t\t\t\t<<case 10>>",
+   "\t\t\t\t\t<<He>> speaks. \"This won't bring you peace.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<switch random(1,10)>>",
+   "\t\t\t\t<<case 1>>",
+   "\t\t\t\t\t<<He>> growls. \"You can't have <<phim>>.\"",
+   "\t\t\t\t<<case 2>>",
+   "\t\t\t\t\t<<He>> growls. \"You're stronger than it. I know you are.\"",
+   "\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t<<He>> demands. \"Begone!\"",
+   "\t\t\t\t<<case 4>>",
+   "\t\t\t\t\t<<He>> speaks. \"Come back to me, <<pcpetname 'Gwylan' 'name'>>.\"",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>> speaks. \"Don't leave me.\"",
+   "\t\t\t\t<<case 6>>",
+   "\t\t\t\t\t<<He>> speaks. \"Return to your shackles.\"",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> breathes heavily, trying to stay focused. \"Why <<phim>>?\"",
+   "\t\t\t\t<<case 8>>",
+   "\t\t\t\t\t<<He>> tries to hold you still. \"Just fight it.\"",
+   "\t\t\t\t<<case 9>>",
+   "\t\t\t\t\t<<He>> speaks. \"Release <<phim>> at once.\"",
+   "\t\t\t\t<<case 10>>",
+   "\t\t\t\t\t<<He>> speaks. \"This won't bring you peace.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<<He>> briefly leans forward, placing a kiss on your forehead."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<switch random(1,10)>>",
+   "\t\t\t\t<<case 1>>",
+   "\t\t\t\t\t<<He>> growls. \"You can't have <<phim>>.\"",
+   "\t\t\t\t<<case 2>>",
+   "\t\t\t\t\t<<He>> growls. \"You're stronger than it. I know you are.\"",
+   "\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t<<He>> demands. \"Begone!\"",
+   "\t\t\t\t<<case 4>>",
+   "\t\t\t\t\t<<He>> speaks. \"Come back to me, <<pcpetname 'Gwylan' 'name'>>.\"",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>> speaks. \"Don't leave me.\"",
+   "\t\t\t\t<<case 6>>",
+   "\t\t\t\t\t<<He>> speaks. \"Return to your shackles.\"",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> breathes heavily, trying to stay focused. \"Why <<phim>>?\"",
+   "\t\t\t\t<<case 8>>",
+   "\t\t\t\t\t<<He>> tries to hold you still. \"Just fight it.\"",
+   "\t\t\t\t<<case 9>>",
+   "\t\t\t\t\t<<He>> speaks. \"Release <<phim>> at once.\"",
+   "\t\t\t\t<<case 10>>",
+   "\t\t\t\t\t<<He>> speaks. \"This won't bring you peace.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<He>> places a kiss on your cheek before getting back on all fours."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<switch random(1,10)>>",
+   "\t\t\t\t<<case 1>>",
+   "\t\t\t\t\t<<He>> growls. \"You can't have <<phim>>.\"",
+   "\t\t\t\t<<case 2>>",
+   "\t\t\t\t\t<<He>> growls. \"You're stronger than it. I know you are.\"",
+   "\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t<<He>> demands. \"Begone!\"",
+   "\t\t\t\t<<case 4>>",
+   "\t\t\t\t\t<<He>> speaks. \"Come back to me, <<pcpetname 'Gwylan' 'name'>>.\"",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>> speaks. \"Don't leave me.\"",
+   "\t\t\t\t<<case 6>>",
+   "\t\t\t\t\t<<He>> speaks. \"Return to your shackles.\"",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> breathes heavily, trying to stay focused. \"Why <<phim>>?\"",
+   "\t\t\t\t<<case 8>>",
+   "\t\t\t\t\t<<He>> tries to hold you still. \"Just fight it.\"",
+   "\t\t\t\t<<case 9>>",
+   "\t\t\t\t\t<<He>> speaks. \"Release <<phim>> at once.\"",
+   "\t\t\t\t<<case 10>>",
+   "\t\t\t\t\t<<He>> speaks. \"This won't bring you peace.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<<He>> tilts <<his>> head. \"We're alike in many ways, aren't we?\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<switch random(1,10)>>",
+   "\t\t\t\t<<case 1>>",
+   "\t\t\t\t\t<<He>> growls. \"You can't have <<phim>>.\"",
+   "\t\t\t\t<<case 2>>",
+   "\t\t\t\t\t<<He>> growls. \"You're stronger than it. I know you are.\"",
+   "\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t<<He>> demands. \"Begone!\"",
+   "\t\t\t\t<<case 4>>",
+   "\t\t\t\t\t<<He>> speaks. \"Come back to me, <<pcpetname 'Gwylan' 'name'>>.\"",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>> speaks. \"Don't leave me.\"",
+   "\t\t\t\t<<case 6>>",
+   "\t\t\t\t\t<<He>> speaks. \"Return to your shackles.\"",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> breathes heavily, trying to stay focused. \"Why <<phim>>?\"",
+   "\t\t\t\t<<case 8>>",
+   "\t\t\t\t\t<<He>> tries to hold you still. \"Just fight it.\"",
+   "\t\t\t\t<<case 9>>",
+   "\t\t\t\t\t<<He>> speaks. \"Release <<phim>> at once.\"",
+   "\t\t\t\t<<case 10>>",
+   "\t\t\t\t\t<<He>> speaks. \"This won't bring you peace.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<He>> tilts <<his>> head. \"Oh, wow! I've never seen a rebis in person before. You're full of surprises.\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $abomination is 1>>",
+   "\t\t<<switch random(1,10)>>",
+   "\t\t\t<<case 1>>",
+   "\t\t\t\t<<He>> giggles. \"You awoke this beast and you must sate it.\"",
+   "\t\t\t<<case 2>>",
+   "\t\t\t\t<<He>> breathes heavily. \"Energy like this cannot be destroyed. It has to be spent.\"",
+   "\t\t\t<<case 3>>",
+   "\t\t\t\t<<He>> lets out a soft moan. \"I can't help it. I need you.\"",
+   "\t\t\t<<case 4>>",
+   "\t\t\t\t<<His>> eyes <span class=\"witch\">glow</span> with lust.",
+   "\t\t\t<<case 5>>",
+   "\t\t\t\t<<He>> giggles. \"Admit it, <<pcpetname \"Gwylan\">>. You want to be ravished.\"",
+   "\t\t\t<<case 6>>",
+   "\t\t\t\t<<He>> says nothing, driven to madness by need.",
+   "\t\t\t<<case 7>>",
+   "\t\t\t\t\"You started this,\" <<he>> says. \"You can't back away now.\"",
+   "\t\t\t<<case 8>>",
+   "\t\t\t\t\"Don't leave me,\" <<he>> cries out.",
+   "\t\t\t<<case 9>>",
+   "\t\t\t\t\"I'm sorry,\" <<he>> whimpers.",
+   "\t\t\t<<case 10>>",
+   "\t\t\t\t<<He>> breathes heavily. \"You look so delicious, <<pcpetname \"Gwylan\">>. Let me taste you.\"",
+   "\t\t<</switch>>",
+   "\t<<elseif $speechNPCPenisVirgin is 1 or $speechNPCVaginaVirgin is 1>>",
+   "\t\t<<if $speechpenisvirgin is 1 or $speechvaginavirgin is 1 or $speechanusvirgin is 1>>",
+   "\t\t\t<<He>> winces. \"Oh my. I never quite get used to losing my virginity all over again.\" <<He>> giggles. \"Thank you for going through it with me. You'll be my last first time.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<<He>> looks at your <<print _sexToy>> and smiles. \"I'm sure I have something laying around too.\" <<He>> reaches off to the side, and <<his>> hands find a ?gwylanItem. <<He>> seems to think about it for a moment, before tossing it back into the gloom."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $abomination is 1>>",
+   "\t\t<<switch random(1,10)>>",
+   "\t\t\t<<case 1>>",
+   "\t\t\t\t<<He>> giggles. \"You awoke this beast and you must sate it.\"",
+   "\t\t\t<<case 2>>",
+   "\t\t\t\t<<He>> breathes heavily. \"Energy like this cannot be destroyed. It has to be spent.\"",
+   "\t\t\t<<case 3>>",
+   "\t\t\t\t<<He>> lets out a soft moan. \"I can't help it. I need you.\"",
+   "\t\t\t<<case 4>>",
+   "\t\t\t\t<<His>> eyes <span class=\"witch\">glow</span> with lust.",
+   "\t\t\t<<case 5>>",
+   "\t\t\t\t<<He>> giggles. \"Admit it, <<pcpetname \"Gwylan\">>. You want to be ravished.\"",
+   "\t\t\t<<case 6>>",
+   "\t\t\t\t<<He>> says nothing, driven to madness by need.",
+   "\t\t\t<<case 7>>",
+   "\t\t\t\t\"You started this,\" <<he>> says. \"You can't back away now.\"",
+   "\t\t\t<<case 8>>",
+   "\t\t\t\t\"Don't leave me,\" <<he>> cries out.",
+   "\t\t\t<<case 9>>",
+   "\t\t\t\t\"I'm sorry,\" <<he>> whimpers.",
+   "\t\t\t<<case 10>>",
+   "\t\t\t\t<<He>> breathes heavily. \"You look so delicious, <<pcpetname \"Gwylan\">>. Let me taste you.\"",
+   "\t\t<</switch>>",
+   "\t<<elseif $speechNPCPenisVirgin is 1 or $speechNPCVaginaVirgin is 1>>",
+   "\t\t<<if $speechpenisvirgin is 1 or $speechvaginavirgin is 1 or $speechanusvirgin is 1>>",
+   "\t\t\t<<He>> winces. \"Oh my. I never quite get used to losing my virginity all over again.\" <<He>> giggles. \"Thank you for going through it with me. You'll be my last first time.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<He>> looks at your <<print _sexToy>> and smiles. \"Someone came with a plan. Think you'll cum with a plan, too?\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $abomination is 1>>",
+   "\t\t<<switch random(1,10)>>",
+   "\t\t\t<<case 1>>",
+   "\t\t\t\t<<He>> giggles. \"You awoke this beast and you must sate it.\"",
+   "\t\t\t<<case 2>>",
+   "\t\t\t\t<<He>> breathes heavily. \"Energy like this cannot be destroyed. It has to be spent.\"",
+   "\t\t\t<<case 3>>",
+   "\t\t\t\t<<He>> lets out a soft moan. \"I can't help it. I need you.\"",
+   "\t\t\t<<case 4>>",
+   "\t\t\t\t<<His>> eyes <span class=\"witch\">glow</span> with lust.",
+   "\t\t\t<<case 5>>",
+   "\t\t\t\t<<He>> giggles. \"Admit it, <<pcpetname \"Gwylan\">>. You want to be ravished.\"",
+   "\t\t\t<<case 6>>",
+   "\t\t\t\t<<He>> says nothing, driven to madness by need.",
+   "\t\t\t<<case 7>>",
+   "\t\t\t\t\"You started this,\" <<he>> says. \"You can't back away now.\"",
+   "\t\t\t<<case 8>>",
+   "\t\t\t\t\"Don't leave me,\" <<he>> cries out.",
+   "\t\t\t<<case 9>>",
+   "\t\t\t\t\"I'm sorry,\" <<he>> whimpers.",
+   "\t\t\t<<case 10>>",
+   "\t\t\t\t<<He>> breathes heavily. \"You look so delicious, <<pcpetname \"Gwylan\">>. Let me taste you.\"",
+   "\t\t<</switch>>",
+   "\t<<elseif $speechNPCPenisVirgin is 1 or $speechNPCVaginaVirgin is 1>>",
+   "\t\t<<if $speechpenisvirgin is 1 or $speechvaginavirgin is 1 or $speechanusvirgin is 1>>",
+   "\t\t\t<<He>> winces. \"Oh my. I never quite get used to losing my virginity all over again.\" <<He>> giggles. \"Thank you for going through it with me. You'll be my last first time.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<<He>> watches you climax with delight. \"Don't feel ashamed, I have magic hands.\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $abomination is 1>>",
+   "\t\t<<switch random(1,10)>>",
+   "\t\t\t<<case 1>>",
+   "\t\t\t\t<<He>> giggles. \"You awoke this beast and you must sate it.\"",
+   "\t\t\t<<case 2>>",
+   "\t\t\t\t<<He>> breathes heavily. \"Energy like this cannot be destroyed. It has to be spent.\"",
+   "\t\t\t<<case 3>>",
+   "\t\t\t\t<<He>> lets out a soft moan. \"I can't help it. I need you.\"",
+   "\t\t\t<<case 4>>",
+   "\t\t\t\t<<His>> eyes <span class=\"witch\">glow</span> with lust.",
+   "\t\t\t<<case 5>>",
+   "\t\t\t\t<<He>> giggles. \"Admit it, <<pcpetname \"Gwylan\">>. You want to be ravished.\"",
+   "\t\t\t<<case 6>>",
+   "\t\t\t\t<<He>> says nothing, driven to madness by need.",
+   "\t\t\t<<case 7>>",
+   "\t\t\t\t\"You started this,\" <<he>> says. \"You can't back away now.\"",
+   "\t\t\t<<case 8>>",
+   "\t\t\t\t\"Don't leave me,\" <<he>> cries out.",
+   "\t\t\t<<case 9>>",
+   "\t\t\t\t\"I'm sorry,\" <<he>> whimpers.",
+   "\t\t\t<<case 10>>",
+   "\t\t\t\t<<He>> breathes heavily. \"You look so delicious, <<pcpetname \"Gwylan\">>. Let me taste you.\"",
+   "\t\t<</switch>>",
+   "\t<<elseif $speechNPCPenisVirgin is 1 or $speechNPCVaginaVirgin is 1>>",
+   "\t\t<<if $speechpenisvirgin is 1 or $speechvaginavirgin is 1 or $speechanusvirgin is 1>>",
+   "\t\t\t<<He>> winces. \"Oh my. I never quite get used to losing my virginity all over again.\" <<He>> giggles. \"Thank you for going through it with me. You'll be my last first time.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $abomination is 1>>",
+   "\t\t<<switch random(1,10)>>",
+   "\t\t\t<<case 1>>",
+   "\t\t\t\t<<He>> giggles. \"You awoke this beast and you must sate it.\"",
+   "\t\t\t<<case 2>>",
+   "\t\t\t\t<<He>> breathes heavily. \"Energy like this cannot be destroyed. It has to be spent.\"",
+   "\t\t\t<<case 3>>",
+   "\t\t\t\t<<He>> lets out a soft moan. \"I can't help it. I need you.\"",
+   "\t\t\t<<case 4>>",
+   "\t\t\t\t<<His>> eyes <span class=\"witch\">glow</span> with lust.",
+   "\t\t\t<<case 5>>",
+   "\t\t\t\t<<He>> giggles. \"Admit it, <<pcpetname \"Gwylan\">>. You want to be ravished.\"",
+   "\t\t\t<<case 6>>",
+   "\t\t\t\t<<He>> says nothing, driven to madness by need.",
+   "\t\t\t<<case 7>>",
+   "\t\t\t\t\"You started this,\" <<he>> says. \"You can't back away now.\"",
+   "\t\t\t<<case 8>>",
+   "\t\t\t\t\"Don't leave me,\" <<he>> cries out.",
+   "\t\t\t<<case 9>>",
+   "\t\t\t\t\"I'm sorry,\" <<he>> whimpers.",
+   "\t\t\t<<case 10>>",
+   "\t\t\t\t<<He>> breathes heavily. \"You look so delicious, <<pcpetname \"Gwylan\">>. Let me taste you.\"",
+   "\t\t<</switch>>",
+   "\t<<elseif $speechNPCPenisVirgin is 1 or $speechNPCVaginaVirgin is 1>>",
+   "\t\t<<if $speechpenisvirgin is 1 or $speechvaginavirgin is 1 or $speechanusvirgin is 1>>",
+   "\t\t\t<<He>> winces. \"Oh my. I never quite get used to losing my virginity all over again.\" <<He>> giggles. \"Thank you for going through it with me. You'll be my last first time.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<<gwylanRequestEnd \"silent\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $abomination is 1>>",
+   "\t\t<<switch random(1,10)>>",
+   "\t\t\t<<case 1>>",
+   "\t\t\t\t<<He>> giggles. \"You awoke this beast and you must sate it.\"",
+   "\t\t\t<<case 2>>",
+   "\t\t\t\t<<He>> breathes heavily. \"Energy like this cannot be destroyed. It has to be spent.\"",
+   "\t\t\t<<case 3>>",
+   "\t\t\t\t<<He>> lets out a soft moan. \"I can't help it. I need you.\"",
+   "\t\t\t<<case 4>>",
+   "\t\t\t\t<<His>> eyes <span class=\"witch\">glow</span> with lust.",
+   "\t\t\t<<case 5>>",
+   "\t\t\t\t<<He>> giggles. \"Admit it, <<pcpetname \"Gwylan\">>. You want to be ravished.\"",
+   "\t\t\t<<case 6>>",
+   "\t\t\t\t<<He>> says nothing, driven to madness by need.",
+   "\t\t\t<<case 7>>",
+   "\t\t\t\t\"You started this,\" <<he>> says. \"You can't back away now.\"",
+   "\t\t\t<<case 8>>",
+   "\t\t\t\t\"Don't leave me,\" <<he>> cries out.",
+   "\t\t\t<<case 9>>",
+   "\t\t\t\t\"I'm sorry,\" <<he>> whimpers.",
+   "\t\t\t<<case 10>>",
+   "\t\t\t\t<<He>> breathes heavily. \"You look so delicious, <<pcpetname \"Gwylan\">>. Let me taste you.\"",
+   "\t\t<</switch>>",
+   "\t<<elseif $speechNPCPenisVirgin is 1 or $speechNPCVaginaVirgin is 1>>",
+   "\t\t<<if $speechpenisvirgin is 1 or $speechvaginavirgin is 1 or $speechanusvirgin is 1>>",
+   "\t\t\t<<He>> winces. \"Oh my. I never quite get used to losing my virginity all over again.\" <<He>> giggles. \"Thank you for going through it with me. You'll be my last first time.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<</if>>",
+   "\t\t<<if $speechMoan is 1>>",
+   "\t\t\t<<if $speechSpank>>",
+   "\t\t\t\t<<addSpeechLine \"spank\">>",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> smirks. \"Oh, you like that?\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> giggles. \"<<pcPetname 'Gwylan' 'bad'>>.\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<He>> giggles. \"Your voice is so sweet in between the pain. Sing for me again.\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<gwylanRequestEnd \"skip\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
    "\t\t\t<<He>> winces. \"Oh my. I never quite get used to losing my virginity all over again.\" <<He>> giggles. \"I'm glad I could give you something in return. You'll be my last first time.\""
   ],
   "old_kr": [],
@@ -2659,6 +3106,533 @@
  {
   "kind": "merged-new-text",
   "old_en": [
+   "\t<<elseif $speechpenisvirgin is 1 or $speechvaginavirgin is 1>>",
+   "\t\t<<if $fallenangel gte 2>>",
+   "\t\t\t<<if $transformationParts.fallenAngel.halo isnot \"hidden\">>",
+   "\t\t\t\t<<He>> frowns, <<his>> face no longer illuminated by your halo. \"Is this really what you wanted?\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $speechApologiseRejected>>",
+   "\t\t\t<<addSpeechLine \"apologise\">>",
+   "\t\t\t\t<<He>> giggles. \"Good. Beg more.\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<</if>>",
+   "\t\t<<if $speechApologiseUnforgiving>>",
+   "\t\t\t<<addSpeechLine \"apologise\">>",
+   "\t\t\t\t<<He>> scowls. \"It will take more than an apology, <<pcpetname 'Gwylan'>>.\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<</if>>",
+   "\t\t<<if !$gwylanUniqueComments.includes(\"chastity\") and $speechChastity>>",
+   "\t\t\t<<addSpeechLine \"chastity\">>",
+   "\t\t\t\t<<set $gwylanUniqueComments.pushUnique(\"chastity\")>>",
+   "\t\t\t\t\t<<if $worn.genitals.name is \"chastity parasite\">>",
+   "\t\t\t\t\t\t\"I can work with this, I suppose. I'll need to clean myself up afterwards.\"",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\"Troublesome device. If only I had my tools on hand.\"",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<</if>>",
+   "\t\t<<if !$gwylanUniqueComments.includes(\"hide\") and ($speechCoverFace or $speechCoverPenis or $speechCoverVagina)>>",
+   "\t\t\t<<addSpeechLine \"cover\">>",
+   "\t\t\t\t<<set $gwylanUniqueComments.pushUnique(\"hide\")>>",
+   "\t\t\t\t<<He>> giggles. \"Aww, are you shy?\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<</if>>",
+   "\t\t<<if !$gwylanUniqueComments.includes(\"hair\") and $speechHair>>",
+   "\t\t\t<<addSpeechLine \"hair\">>",
+   "\t\t\t\t<<set $gwylanUniqueComments.pushUnique(\"hair\")>>",
+   "\t\t\t\t<<He>> speaks. \"I'd like to brush your hair.\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<</if>>",
+   "\t\t<<if $settings.pregnancySpeechEnabled and !$gwylanUniqueComments.includes(\"pregnant\") and $speechPregnant>>",
+   "\t\t\t<<addSpeechLine \"pregnant\">>",
+   "\t\t\t\t<<set $gwylanUniqueComments.pushUnique(\"pregnant\")>>",
+   "\t\t\t\t<<He>> giggles. \"What a lovely blessing. It must be nice.\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<</if>>",
+   "\t\t<<if $speechScreamForHelp>>",
+   "\t\t\t<<addSpeechLine \"screamForHelp\">>",
+   "\t\t\t\t<<He>> giggles. \"Be silent, <<pcpetname 'Gwylan'>>. There's no reason to scream.\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<</if>>",
+   "\t\t<<if $speechChokedWheeze>>",
+   "\t\t\t<<addSpeechLine \"choked\">>",
+   "\t\t\t\t<<He>> giggles. \"Shhhh. Don't try to speak.\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<</if>>",
+   "\t\t<<if !$gwylanUniqueComments.includes(\"big_pp\") and $speechPenisBig>>",
+   "\t\t\t<<addSpeechLine \"penisSize\">>",
+   "\t\t\t\t<<set $gwylanUniqueComments.pushUnique(\"big_pp\")>>",
+   "\t\t\t\t<<He>> puts <<his>> hand to <<his>> lips. \"It's quite large, but I can handle it.\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<</if>>",
+   "\t\t<<if $speechVaginaEscape>>",
+   "\t\t\t<<addSpeechLine \"escape\">>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechpenisvirgin is 1 or $speechvaginavirgin is 1>>",
+   "\t\t<<if $fallenangel gte 2>>",
+   "\t\t\t<<if $transformationParts.fallenAngel.halo isnot \"hidden\">>",
+   "\t\t\t\t<<He>> frowns, <<his>> face no longer illuminated by your halo. \"Is this really what you wanted?\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<<He>> huffs. \"Get back here, I'm not done.\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechpenisvirgin is 1 or $speechvaginavirgin is 1>>",
+   "\t\t<<if $fallenangel gte 2>>",
+   "\t\t\t<<if $transformationParts.fallenAngel.halo isnot \"hidden\">>",
+   "\t\t\t\t<<He>> frowns, <<his>> face no longer illuminated by your halo. \"Is this really what you wanted?\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<</if>>",
+   "\t\t<<if $speechNPCVaginaEscape>>",
+   "\t\t\t<<addSpeechLine \"escape\">>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t\t<<He>> giggles. \"Is it too much?\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechpenisvirgin is 1 or $speechvaginavirgin is 1>>",
+   "\t\t<<if $fallenangel gte 2>>",
+   "\t\t\t<<if $transformationParts.fallenAngel.halo isnot \"hidden\">>",
+   "\t\t\t\t<<He>> frowns, <<his>> face no longer illuminated by your halo. \"Is this really what you wanted?\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<<He>> huffs. \"Put it back in.\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechpenisvirgin is 1 or $speechvaginavirgin is 1>>",
+   "\t\t<<if $fallenangel gte 2>>",
+   "\t\t\t<<if $transformationParts.fallenAngel.halo isnot \"hidden\">>",
+   "\t\t\t\t<<He>> frowns, <<his>> face no longer illuminated by your halo. \"Is this really what you wanted?\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<He>> giggles. \"Get back in there, silly <<girl>>.\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechpenisvirgin is 1 or $speechvaginavirgin is 1>>",
+   "\t\t<<if $fallenangel gte 2>>",
+   "\t\t\t<<if $transformationParts.fallenAngel.halo isnot \"hidden\">>",
+   "\t\t\t\t<<He>> frowns, <<his>> face no longer illuminated by your halo. \"Is this really what you wanted?\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechpenisvirgin is 1 or $speechvaginavirgin is 1>>",
+   "\t\t<<if $fallenangel gte 2>>",
+   "\t\t\t<<if $transformationParts.fallenAngel.halo isnot \"hidden\">>",
+   "\t\t\t\t<<He>> frowns, <<his>> face no longer illuminated by your halo. \"Is this really what you wanted?\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif !$gwylanUniqueComments.includes(\"demand\")>>",
+   "\t\t\t\t<<addSpeechLine \"demand\">>",
+   "\t\t\t\t\t<<set $gwylanUniqueComments.pushUnique(\"demand\")>>",
+   "\t\t\t\t\t<<He>> giggles. \"Hold that brave face, dear. I want to remember it.\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechpenisvirgin is 1 or $speechvaginavirgin is 1>>",
+   "\t\t<<if $fallenangel gte 2>>",
+   "\t\t\t<<if $transformationParts.fallenAngel.halo isnot \"hidden\">>",
+   "\t\t\t\t<<He>> frowns, <<his>> face no longer illuminated by your halo. \"Is this really what you wanted?\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<<He>> pants through the arousal and pain. \"N-<<pcpetname 'Gwylan' 'naughty'>>!\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechpenisvirgin is 1 or $speechvaginavirgin is 1>>",
+   "\t\t<<if $fallenangel gte 2>>",
+   "\t\t\t<<if $transformationParts.fallenAngel.halo isnot \"hidden\">>",
+   "\t\t\t\t<<He>> frowns, <<his>> face no longer illuminated by your halo. \"Is this really what you wanted?\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<He>> winces. \"Ouch! Oh, <<pcpetname 'Gwylan' 'bad'>>.\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechpenisvirgin is 1 or $speechvaginavirgin is 1>>",
+   "\t\t<<if $fallenangel gte 2>>",
+   "\t\t\t<<if $transformationParts.fallenAngel.halo isnot \"hidden\">>",
+   "\t\t\t\t<<He>> frowns, <<his>> face no longer illuminated by your halo. \"Is this really what you wanted?\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechpenisvirgin is 1 or $speechvaginavirgin is 1>>",
+   "\t\t<<if $fallenangel gte 2>>",
+   "\t\t\t<<if $transformationParts.fallenAngel.halo isnot \"hidden\">>",
+   "\t\t\t\t<<He>> frowns, <<his>> face no longer illuminated by your halo. \"Is this really what you wanted?\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $position is \"missionary\">>",
+   "\t\t\t<<He>> briefly leans forward, placing a kiss on your forehead.",
+   "\t\t<<else>>",
+   "\t\t\t<<He>> places a kiss on your cheek before getting back on all fours."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $position is \"missionary\">>",
+   "\t\t\t<<He>> briefly leans forward, placing a kiss on your forehead.",
+   "\t\t<<else>>",
+   "\t\t\t<<He>> places a kiss on your cheek before getting back on all fours."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\"I'll remember this gift you've given me.\"",
+   "\t<<elseif $speechanusvirgin is 1>>",
+   "\t\t\"You're an adventurous one. Thank you for trusting me.\"",
+   "\t<<elseif $speechmouthvirgin is 1>>",
+   "\t\t\"Shhh, you're doing great. Relax your jaw.\"",
+   "\t<<elseif $speechNPCKissVirgin is 1>>",
+   "\t\t<<He>> gazes at you lovingly. \"Look at how far we've come, now I'm the one eager to kiss.\" <<He>> giggles.",
+   "\t<<elseif $speechhermaroused is 1>>",
+   "\t\t<<if _gwylan.gender is \"h\">>",
+   "\t\t\t<<He>> tilts <<his>> head. \"We're alike in many ways, aren't we?\"",
+   "\t\t<<else>>",
+   "\t\t\t<<He>> tilts <<his>> head. \"Oh, wow! I've never seen a rebis in person before. You're full of surprises.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\"I'll remember this gift you've given me.\"",
+   "\t<<elseif $speechanusvirgin is 1>>",
+   "\t\t\"You're an adventurous one. Thank you for trusting me.\"",
+   "\t<<elseif $speechmouthvirgin is 1>>",
+   "\t\t\"Shhh, you're doing great. Relax your jaw.\"",
+   "\t<<elseif $speechNPCKissVirgin is 1>>",
+   "\t\t<<He>> gazes at you lovingly. \"Look at how far we've come, now I'm the one eager to kiss.\" <<He>> giggles.",
+   "\t<<elseif $speechhermaroused is 1>>",
+   "\t\t<<if _gwylan.gender is \"h\">>",
+   "\t\t\t<<He>> tilts <<his>> head. \"We're alike in many ways, aren't we?\"",
+   "\t\t<<else>>",
+   "\t\t\t<<He>> tilts <<his>> head. \"Oh, wow! I've never seen a rebis in person before. You're full of surprises.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\"I'll remember this gift you've given me.\"",
+   "\t<<elseif $speechanusvirgin is 1>>",
+   "\t\t\"You're an adventurous one. Thank you for trusting me.\"",
+   "\t<<elseif $speechmouthvirgin is 1>>",
+   "\t\t\"Shhh, you're doing great. Relax your jaw.\"",
+   "\t<<elseif $speechNPCKissVirgin is 1>>",
+   "\t\t<<He>> gazes at you lovingly. \"Look at how far we've come, now I'm the one eager to kiss.\" <<He>> giggles.",
+   "\t<<elseif $speechhermaroused is 1>>",
+   "\t\t<<if _gwylan.gender is \"h\">>",
+   "\t\t\t<<He>> tilts <<his>> head. \"We're alike in many ways, aren't we?\"",
+   "\t\t<<else>>",
+   "\t\t\t<<He>> tilts <<his>> head. \"Oh, wow! I've never seen a rebis in person before. You're full of surprises.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\"I'll remember this gift you've given me.\"",
+   "\t<<elseif $speechanusvirgin is 1>>",
+   "\t\t\"You're an adventurous one. Thank you for trusting me.\"",
+   "\t<<elseif $speechmouthvirgin is 1>>",
+   "\t\t\"Shhh, you're doing great. Relax your jaw.\"",
+   "\t<<elseif $speechNPCKissVirgin is 1>>",
+   "\t\t<<He>> gazes at you lovingly. \"Look at how far we've come, now I'm the one eager to kiss.\" <<He>> giggles.",
+   "\t<<elseif $speechhermaroused is 1>>",
+   "\t\t<<if _gwylan.gender is \"h\">>",
+   "\t\t\t<<He>> tilts <<his>> head. \"We're alike in many ways, aren't we?\"",
+   "\t\t<<else>>",
+   "\t\t\t<<He>> tilts <<his>> head. \"Oh, wow! I've never seen a rebis in person before. You're full of surprises.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<case \"Kylar\">>",
+   "\t\t\t\t<<if $gwylanSeen.includesAny(\"kylar_parents\", \"kylar_kidnapped\")>>",
+   "\t\t\t\t\t<<He>> tilts <<his>> head. \"Fascinating that you call out for <<nnpc_him \"Kylar\">>, despite everything you've told me about <<nnpc_him \"Kylar\">>.\"",
+   "\t\t\t\t<<elseif $gwylanSeen.includes(\"romance\")>>",
+   "\t\t\t\t\t<<He>> tilts <<his>> head. \"You're welcome to play around with whomever you like, but you will return to me in the end. You promised.\" <<npcincr Gwylan dom -2>><<lyearning>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<case \"Kylar\">>",
+   "\t\t\t\t<<if $gwylanSeen.includesAny(\"kylar_parents\", \"kylar_kidnapped\")>>",
+   "\t\t\t\t\t<<He>> tilts <<his>> head. \"Fascinating that you call out for <<nnpc_him \"Kylar\">>, despite everything you've told me about <<nnpc_him \"Kylar\">>.\"",
+   "\t\t\t\t<<elseif $gwylanSeen.includes(\"romance\")>>",
+   "\t\t\t\t\t<<He>> tilts <<his>> head. \"You're welcome to play around with whomever you like, but you will return to me in the end. You promised.\" <<npcincr Gwylan dom -2>><<lyearning>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<default>>",
+   "\t\t\t\t<<if $gwylanSeen.includes(\"romance\")>>",
+   "\t\t\t\t\t<<He>> tilts <<his>> head. \"You're welcome to play around with whomever you like, but you will return to me in the end. You promised.\" <<npcincr Gwylan dom -2>><<lyearning>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> giggles. \"Shhh. No need to invoke more names. It's just us.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<default>>",
+   "\t\t\t\t<<if $gwylanSeen.includes(\"romance\")>>",
+   "\t\t\t\t\t<<He>> tilts <<his>> head. \"You're welcome to play around with whomever you like, but you will return to me in the end. You promised.\" <<npcincr Gwylan dom -2>><<lyearning>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> giggles. \"Shhh. No need to invoke more names. It's just us.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</if>>",
+   "\t\t<</if>>",
+   "\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t\t\t<</addSpeechLine>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<default>>",
+   "\t\t\t\t<<if $gwylanSeen.includes(\"romance\")>>",
+   "\t\t\t\t\t<<He>> tilts <<his>> head. \"You're welcome to play around with whomever you like, but you will return to me in the end. You promised.\" <<npcincr Gwylan dom -2>><<lyearning>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> giggles. \"Shhh. No need to invoke more names. It's just us.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t<<if $cat gte 6>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechgenitals is 1 and $worn.genitals.type.includesAll(\"chastity\", \"hidden\") and !$gwylanUniqueComments.includes(\"chastity\")>>",
+   "\t\t<<He>> grumbles in irritation upon seeing your <<printChastity>>.",
+   "\t\t<<set $gwylanUniqueComments.pushUnique(\"chastity\")>>",
+   "\t<<elseif $speechgenitals is 1 and !playerChastity() and $gwylan.request.event is \"chastity\">>",
+   "\t\t<<He>> smiles in satisfaction upon seeing your <<genitals>> exposed. \"Excellent. No more obstructions.\" <<He>> pats you on the head. \"<<pcPetname 'Gwylan' 'good'>>.\" <<trauma -1>><<ltrauma>>",
+   "\t\t<<if $gwylan.request.command>>",
+   "\t\t\t<<gwylanRequestEnd \"silent\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechgenitals is 1 and $worn.genitals.type.includesAll(\"chastity\", \"hidden\") and !$gwylanUniqueComments.includes(\"chastity\")>>",
+   "\t\t<<He>> grumbles in irritation upon seeing your <<printChastity>>.",
+   "\t\t<<set $gwylanUniqueComments.pushUnique(\"chastity\")>>",
+   "\t<<elseif $speechgenitals is 1 and !playerChastity() and $gwylan.request.event is \"chastity\">>",
+   "\t\t<<He>> smiles in satisfaction upon seeing your <<genitals>> exposed. \"Excellent. No more obstructions.\" <<He>> pats you on the head. \"<<pcPetname 'Gwylan' 'good'>>.\" <<trauma -1>><<ltrauma>>",
+   "\t\t<<if $gwylan.request.command>>",
+   "\t\t\t<<gwylanRequestEnd \"silent\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechpenispenetrated is 1 and $gwylanComments.penetrated is 0>>",
+   "\t\t<<set $gwylanComments.penetrated to 3>>",
+   "\t\t<<if $arousal gte ($arousalmax / 5) * 4>>",
+   "\t\t\t<<if _gwylanStatus.includes(\"wantsPregnancy\") and $settings.pregnancySpeechEnabled and !npcIsPregnant(\"Gwylan\")>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>> whines and pants with each thrust. Fluids drool from <<his>> <<npcVagina>>. \"Plant your seed in me. Breed me, <<pcpetname 'Gwylan'>>. I need it.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> shivers as <<he>> notices your arousal. \"I want you to breed me. Give me everything.\"",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif _gwylanStatus.includes(\"heat\")>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>> whines and pants with each thrust. Fluids drool from <<his>> <<npcVagina>>. \"F-finish inside. I need it.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> shivers as <<he>> notices your arousal. \"You better not pull out.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $speechVaginaImminent is 1 or $speechVaginaEntrance is 1>>",
+   "\t\t\t<<if $novaginal and $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechchastity is 1 and !$gwylanUniqueComments.includes(\"chastity\")>>",
+   "\t\t<<set $gwylanUniqueComments.pushUnique(\"chastity\")>>",
+   "\t\t\t<<if $worn.genitals.name is \"chastity parasite\">>",
+   "\t\t\t\t\"I can work with this, I suppose. I'll need to clean myself up afterwards.\"",
+   "\t\t\t<<else>>",
+   "\t\t\t\t\"Troublesome device. If only I had my tools on hand.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $novaginal and $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif ($speechcoverface + $speechcoverpenis + $speechcovervagina) gte 1 and !$gwylanUniqueComments.includes(\"hide\")>>",
+   "\t\t<<set $gwylanUniqueComments.pushUnique(\"hide\")>>",
+   "\t\t<<He>> giggles. \"Aww, are you shy?\"",
+   "\t<<elseif $speechhair is 1 and !$gwylanUniqueComments.includes(\"hair\")>>",
+   "\t\t<<set $gwylanUniqueComments.pushUnique(\"hair\")>>",
+   "\t\t<<He>> speaks. \"I'd like to brush your hair.\"",
+   "\t<<elseif ($speechhandjobpenis + $speechhandjobvagina + $speechcheeks + $speechthigh + $speechfeet + $speechchestrub + $speechbreastrub) gte 1 and $gwylanComments.touch is 0>>",
+   "\t\t<<set $gwylanComments.touch to 4>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<else>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif ($speechcoverface + $speechcoverpenis + $speechcovervagina) gte 1 and !$gwylanUniqueComments.includes(\"hide\")>>",
+   "\t\t<<set $gwylanUniqueComments.pushUnique(\"hide\")>>",
+   "\t\t<<He>> giggles. \"Aww, are you shy?\"",
+   "\t<<elseif $speechhair is 1 and !$gwylanUniqueComments.includes(\"hair\")>>",
+   "\t\t<<set $gwylanUniqueComments.pushUnique(\"hair\")>>",
+   "\t\t<<He>> speaks. \"I'd like to brush your hair.\"",
+   "\t<<elseif ($speechhandjobpenis + $speechhandjobvagina + $speechcheeks + $speechthigh + $speechfeet + $speechchestrub + $speechbreastrub) gte 1 and $gwylanComments.touch is 0>>",
+   "\t\t<<set $gwylanComments.touch to 4>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
    "\t\t\t\t\t<<addinlineevent \"gwylan_speech_clothes_special\" 4>>"
   ],
   "old_kr": [],
@@ -2677,6 +3651,18 @@
    "\t\t\t\t\t<</addSpeechLine>>"
   ],
   "context": "\t\t\t\t\t\t)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</addinlineevent>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<</addSpeechLine>>"
  },
  {
   "kind": "merged-new-text",

@@ -29,7 +29,9 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "\t\t<<link [[Strip|Danube Challenge Strip]]>><<set $phase to 0>><</link>><<exhibitionist3>>"
+  ],
   "old_kr": [],
   "new_en": [
    "\t<<elseif $uncomfortable.prostituting is false>>",
@@ -41,7 +43,9 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "\t\t<<link [[Strip|Danube Challenge 2]]>><</link>><<exhibitionist3>>"
+  ],
   "old_kr": [],
   "new_en": [
    "\t\t<br>",

@@ -16,10 +16,19 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<set $outside to 0>><<set $location to \"temple\">><<temple_effects>><<effects>>"
+   ":: Temple Library"
   ],
   "old_kr": [],
   "new_en": [
+   "<<if $temple_scriptorium_known is undefined or $temple_scriptorium_known lt 2>>",
+   "\t<<set $temple_scriptorium_known to 2>>",
+   "<</if>>",
+   "<<generate1>>",
+   "You are in the temple scriptorium. Tall shelves disappear into the dark above, laden with scrolls. A <<person1>><<person>> pushes a wooden ladder in eerie silence.",
+   "<br><br>",
+   "<<endevent>>",
+   "<<temple_scriptorium_options>>",
+   "",
    "<<temple_scriptorium_leave_options>>",
    "",
    ":: Temple Scriptorium Sneak",
@@ -976,6 +985,6 @@
    "\t<br>",
    "<</if>>"
   ],
-  "context": ""
+  "context": "<<set $outside to 0>><<set $location to \"temple\">><<temple_effects>><<effects>>"
  }
 ]

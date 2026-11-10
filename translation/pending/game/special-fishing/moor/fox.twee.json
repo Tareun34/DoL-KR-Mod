@@ -46,16 +46,5 @@
    "\tAs you toss the $fishingHookedFish.type back, the <<beasttype>>'s eyes follow it into the water. <<bHe>> snaps <<bhis>> gaze to you, ears flat. <<bHe>> snarls, then throws <<bhimself>> at you."
   ],
   "context": "<<loadNPC 0 \"moor_fishing_fox\">>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "<<set $daily.fishing.fishingMoor.fox.closeness to 0>>"
  }
 ]

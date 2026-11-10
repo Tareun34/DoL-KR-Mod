@@ -1153,9 +1153,7 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [
-   "\t<<if $babyIntros and $babyIntros.Bailey and $babyIntros.Bailey.length gt 0>>"
-  ],
+  "old_en": [],
   "old_kr": [],
   "new_en": [
    "\t<<if $babyIntros?.Bailey?.length gt 0>>"
@@ -1164,20 +1162,7 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [
-   "\t<<if $money gte $rentmoney + ($babyRent or 0)>>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t<<if $money gte $rentMoney + ($babyRent or 0)>>"
-  ],
-  "context": "\t<<babyRent>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t\t<<if $baileyseduced isnot 1>>"
-  ],
+  "old_en": [],
   "old_kr": [],
   "new_en": [
    "\t\t<<if $baileyseduced isnot 1 and !isPregnancyEnding()>>"
@@ -1195,6 +1180,92 @@
    "\t\t<</if>>"
   ],
   "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if isPregnancyEnding()>><<set $rentPregInterruption to \"broke\">><</if>><<person1>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !isPregnancyEnding()>><<set $rentTime to 7>><</if>>",
+   "<</widget>>",
+   "",
+   "<<widget \"thugrentdue\">>",
+   "\t<<set $phase2 to \"thug\">><<set $baileyRefusedToPay to 0>>",
+   "\t<<npc Bailey>><<loadNPC 1 \"rent_thug\">><<person1>>",
+   "\t\"I see you've finally found your way back. Though it seems you needed some assistance,\" <<he>> sneers. ",
+   "\t<<if $baileydefeatedchain gte 3 or $rentTime lte -7 or $rentThug.anger gte 4>>",
+   "\t\t<<generate3>><<generate4>>",
+   "\t\t<<He>> is flanked on both sides by a <<person3>><<person>> and <<person4>><<person>>.",
+   "\t<<elseif $baileydefeatedchain gte 1 or $rentTime lte -3 or $rentThug.anger gte 2>>",
+   "\t\t<<generate3>>",
+   "\t\tWith <<him>> is a <<person3>><<person>>.",
+   "\t<</if>>",
+   "\t<br><br>",
+   "\t<<if $worn.face.type.includes(\"gag\")>>",
+   "\t\t\"Looks like you had some difficulties returning,\" Bailey says while looking at your gag. \"A good tool to keep a brat in check,\" <<person1>><<he>> snidely remarks, \"but it's not needed anymore.\" <<He>> snaps <<his>> fingers, and the <<person2>><<person>> removes it from your mouth.<<person1>>",
+   "\t\t<<set $worn.face.type.push(\"broken\")>><<faceruined>>",
+   "\t<<else>>",
+   "\t\t<<person1>><<He>> looks at you coldly. \"You better not keep me waiting next time, unless you want another rough escort back.",
+   "\t<</if>>",
+   "\t<br><br>",
+   "",
+   "\t\"Now then, you've had more than enough time to scrounge up what you owe,\" Bailey says. \"So pay up.\"",
+   "\t<br><br>",
+   "",
+   "\t<<if $babyIntros and $babyIntros.Bailey and $babyIntros.Bailey.length gt 0>>",
+   "\t\t<<set _homeBabyRent to true>>",
+   "\t\t<<homeBabyIntro>>",
+   "\t<</if>>",
+   "\t<<babyRent>>",
+   "\t<<if $money gte $rentMoney + ($babyRent or 0)>>",
+   "\t\t<<link [[Pay|Rent Pay]]>><</link>>",
+   "\t\t<br>",
+   "\t\t<<link [[Refuse|Rent Refuse]]>><<def 1>><</link>>",
+   "\t\t<br>",
+   "\t\t<<if $baileyseduced isnot 1 and !isPregnancyEnding()>>",
+   "\t\t\t<<if hasSexStat(\"promiscuity\", 2)>>",
+   "\t\t\t\t<<link [[Seduce|Rent Seduce]]>><<set $phase to ($_rentSeduce ? 1 : 0)>><<trauma 3>><</link>><<promiscuous2>><<gtrauma>>",
+   "\t\t\t\t<br>",
+   "\t\t\t<<elseif $uncomfortable.prostituting is false>>",
+   "\t\t\t\t<<set _desperateaction to 1>>",
+   "\t\t\t\t<<link [[Seduce|Rent Seduce]]>><<set $phase to ($_rentSeduce ? 1 : 0)>><<trauma 12>><<set $desperateaction to _desperateaction>><</link>><<promiscuous2>><<ggtrauma>>",
+   "\t\t\t\t<br>",
+   "\t\t\t<</if>>",
+   "\t\t<</if>>",
+   "\t\t<<if isPregnancyEnding()>>",
+   "\t\t\t<<link [[Tell <<him>> your waters have broken|Rent Pregnant]]>><<set $rentPregInterruption to \"told\">><</link>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\t<<if isPregnancyEnding()>><<set $rentPregInterruption to \"broke\">><</if>>",
+   "\t\t<<if $speech_attitude is \"bratty\">>",
+   "\t\t\tYou stare <<him>> down defiantly. \"Well, guess what? I still don't have enough money for you. Deal with it,\" you scoff.",
+   "\t\t<<elseif $speech_attitude is \"meek\">>",
+   "\t\t\tYou know you don't have enough money, but admitting that in this situation is too much for you. You look down at your feet shamefully.",
+   "\t\t<<else>>",
+   "\t\t\t\"I... couldn't make enough money,\" you cautiously admit, afraid of how <<he>> will react.",
+   "\t\t<</if>>",
+   "\t\t<br><br>",
+   "",
+   "\t\tFor a moment, Bailey stares at you with cold indifference before speaking again.",
+   "\t\t<<if $phase is \"willing\">>",
+   "\t\t\t<<rentnopay true>>",
+   "\t\t<<else>>",
+   "\t\t\t<<rentnopay>>",
+   "\t\t<</if>>",
+   "\t<</if>>",
+   "\t<<if !isPregnancyEnding()>><<set $rentTime to 7>><</if>>"
+  ],
+  "context": "\t<</if>>"
  },
  {
   "kind": "merged-new-text",
@@ -1222,7 +1293,9 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "\t\t\tThe <<person2>><<person>> cracks <<his>> knuckles, and the <<person3>><<person>> grins darkly, bringing Robin in with <<him>>."
+  ],
   "old_kr": [],
   "new_en": [
    "\t<br><br>"
@@ -1232,7 +1305,7 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t<br><br>"
+   "\t\t\tThe <<person2>><<person>> cracks <<his>> knuckles, and the <<person3>><<person>> grins darkly, bringing Robin in with <<him>>."
   ],
   "old_kr": [],
   "new_en": [
@@ -1243,7 +1316,7 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t<<if $babyIntros and $babyIntros.Bailey and $babyIntros.Bailey.length gt 0>>"
+   "\t\t\tThe <<person2>><<person>> cracks <<his>> knuckles, and the <<person3>><<person>> grins darkly, bringing Robin in with <<him>>."
   ],
   "old_kr": [],
   "new_en": [
@@ -1254,7 +1327,7 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t<<if $money gte $rentmoney + ($babyRent or 0)>>"
+   "\t\t\tThe <<person2>><<person>> cracks <<his>> knuckles, and the <<person3>><<person>> grins darkly, bringing Robin in with <<him>>."
   ],
   "old_kr": [],
   "new_en": [
@@ -1264,7 +1337,9 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "\t\t\tThe <<person2>><<person>> cracks <<his>> knuckles, and the <<person3>><<person>> grins darkly, bringing Robin in with <<him>>."
+  ],
   "old_kr": [],
   "new_en": [
    "\t\t<<if isPregnancyEnding()>>",
@@ -1288,6 +1363,33 @@
    "\t\t\tYou know you don't have enough money, but admitting that in this situation is too much for you. You look at Robin and shake your head apologetically."
   ],
   "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\"I don't have it,\" you say, afraid of what's to come for the both of you.",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\tRobin looks terrified."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\"I... couldn't make enough money,\" you shamefully admit. \"Punish me however you want, just don't hurt Robin.\"",
+   "\t\t<</if>>",
+   "\t\t<br><br>",
+   "",
+   "\t\tFor a moment, Bailey stares at you with cold indifference before speaking again.",
+   "\t\t<br><br>",
+   "",
+   "\t\t\"Oh well,\" <<he>> says, now smiling. \"I've already made arrangements. I don't know what they intend for you two, and frankly I don't care.\"",
+   "\t\t<<He>> produces a hood and length of rope. \"Hold still.\"",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<if isPregnancyEnding()>>",
+   "\t\t\t<<set $phase to 1>><<set $rentPregInterruption to \"broke\">><<include \"Rent Pregnant\">>",
+   "\t\t<<else>>"
+  ],
+  "context": "\t\t<<else>>"
  },
  {
   "kind": "merged-new-text",
@@ -1320,6 +1422,20 @@
    "\t<<if $robinpaid is 1 and $bus is \"home\" and $robinfirstrentfight isnot 1 and !isPregnancyEnding() and ($baileydefeatedchain gte 3 or $rentTime lte -14 or $rentThug?.anger gte 4)>>"
   ],
   "context": "<<widget \"rentnopay\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<link [[Submit|Rent Intro]]>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t\t<<if $bus is \"hospital\">>",
+   "\t\t\t<<link [[Fight|Rent Hospital Fight]]>><<set $fightstart to 1>><</link>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<else>>"
+  ],
+  "context": "\t\t\t<<set $phase to 1>><<include \"Rent Pregnant\">>"
  },
  {
   "kind": "merged-new-text",
@@ -1409,6 +1525,46 @@
  },
  {
   "kind": "merged-new-text",
+  "old_en": [
+   "<<if $bus is \"hospital\">>",
+   "\t<<if crimeSumCurrent() gte 1000>>",
+   "\t\t<<link [[Next|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>",
+   "\t\t<br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<else>>"
+  ],
+  "context": "\t<<link [[Next|Orphanage]]>><<endevent>><</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<link [[Next|Hospital front]]>><<pass 10>><<endevent>><</link>>",
+   "\t\t<br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<link [[Next|Hospital front]]>><<pass 10>><<endevent>><</link>>",
+   "\t\t<br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\t\t<</if>>",
+   "\t\t<<link [[Next|Bedroom]]>><<endevent>><</link>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
   "old_en": [],
   "old_kr": [],
   "new_en": [
@@ -1437,6 +1593,50 @@
    "<<endevent \"phaseless\">>"
   ],
   "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $companion to \"Robinrent\">>",
+   "\t<<if crimeSumCurrent() gte 1000>>",
+   "\t\t<<link [[Next|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t<<else>>",
+   "\t\t<<link [[Next|Hospital front]]>><<pass 10>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t<</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tAfter a brief hug, <<he>> walks back to <<his>> room. \"If you need anything, just let me know.\"",
+   "\t<br><br>",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $inRobinsRoom>>",
+   "\t\t<<He>> sits down on <<his>> bed. \"That was scary.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\tRobin hugs you softly after Bailey leaves. \"I'm so sorry,\" <<he>> says."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tAfter a moment to make sure Robin is okay, you leave the room and go back to the main hall.",
+   "\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<else>>"
+  ],
+  "context": "\t\t<</if>>"
  },
  {
   "kind": "merged-new-text",
@@ -1477,6 +1677,31 @@
    "<</if>>"
   ],
   "context": ":: Rent Refuse Robin"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"The money isn't yours,\" you say. \"Punish me however you want but leave <<nnpc_him \"Robin\">> out of this.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<link [[Submit|Rent Intro]]>><<set $phase to 1>><<endevent \"phaseless\">><</link>>",
+   "<br>",
+   "<<if $bus is \"hospital\">>",
+   "\t<<link [[Fight|Rent Hospital Fight Robin]]>><<set $fightstart to 1>><</link>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<else>>"
+  ],
+  "context": "\t<<set $phase to 1>><<set $rentPregInterruption to \"refused\">><<include \"Rent Pregnant\">>"
  },
  {
   "kind": "merged-new-text",
@@ -1705,7 +1930,9 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "\t<<link [[Next|Orphanage]]>><</link>>"
+  ],
   "old_kr": [],
   "new_en": [
    ":: Thug Rent",

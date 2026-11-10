@@ -53,7 +53,9 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "\t\t<<templeicon \"pray\">><<link [[Pray|Temple Pray]]>><<set $eventskip to 1>><<set $phase to 1>><</link>>"
+  ],
   "old_kr": [],
   "new_en": [
    "\t\t<br>",

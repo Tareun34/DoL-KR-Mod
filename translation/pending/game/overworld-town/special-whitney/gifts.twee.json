@@ -57,7 +57,31 @@
  {
   "kind": "merged-new-text",
   "old_en": [
+   "<<whitneyoptions>>",
+   ""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
    "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>",
+   ""
   ],
   "old_kr": [],
   "new_en": [
@@ -90,29 +114,8 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<whitneyoptions>>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "<<whitneyOptions>>"
-  ],
-  "context": ""
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "<<whitneyoptions>>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "<<whitneyOptions>>"
-  ],
-  "context": ""
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "<<whitneyoptions>>"
+   "<<whitneyoptions>>",
+   ""
   ],
   "old_kr": [],
   "new_en": [

@@ -1435,7 +1435,52 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<widget \"streetstray\">>"
+   "<<widget \"streetstray\">>",
+   "\t<<beastNEWinit 1 dog>>",
+   "\t<<if $stray_happiness gte 80>>",
+   "\t\tA <<beasttype>> emerges from beneath a skip. <<bHis>> tail wags at the sight of you.",
+   "\t\t<<if $monster is 1>>",
+   "\t\t\t\"I know you,\" <<bhe>> says. \"Friends say you nice.\"",
+   "\t\t<</if>>",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<link [[Pet|Street Stray Pet]]>><<stress -6>><</link>><<lstress>>",
+   "\t\t<br>",
+   "\t\t<<link [[Ignore|Street Stray Ignore]]>><</link>>",
+   "\t\t<br>",
+   "\t<<elseif $stray_happiness gte 20>>",
+   "\t\tYou see a pair of eyes follow you from beneath a skip. It looks like a <<beasttype>>, but <<bhe>> retreats at your glance.",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<destinationeventend>>",
+   "\t<<else>>",
+   "\t\tA <<beasttype>> emerges from beneath a skip, teeth bared.",
+   "\t\t/*cult*/",
+   "\t\t<<if $hallucinations gte 1 and $controlled isnot 1>>",
+   "\t\t\t<span class=\"pink\"><<bHis>> eyes glimmer with unholy light.</span>",
+   "\t\t\t<<if $monster is 1>>",
+   "\t\t\t\t\"Masters command,\" <<bhe>> says. \"I obey.\"",
+   "\t\t\t<</if>>",
+   "\t\t<</if>>",
+   "\t\t<br><br>",
+   "\t\t<<if $settings.bestialityEnabled or $monster is 1>>",
+   "\t\t\t<<link [[Next|Street Stray Rape]]>><<set $molestationstart to 1>><</link>>",
+   "\t\t\t<br>",
+   "\t\t<<else>>",
+   "\t\t\tYou turn and run, the <<beasttype>> snapping at your heels. You manage to escape, dishevelled.<<beastescape>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<destinationeventend>>",
+   "\t\t<</if>>",
+   "\t<</if>>",
+   "<</widget>>",
+   "",
+   "<<widget \"streetdog\">>",
+   "\t<<beastNEWinit 1 dog>><<generate2>><<person2>>",
+   "\tYou pass a <<person>> holding a <<beasttype>> on a lead. The <<beasttype>> stops to look at you.",
+   "\t<<if $monster is 1>>",
+   "\t\t\"Friend?\"",
+   "\t<</if>>"
   ],
   "old_kr": [],
   "new_en": [
@@ -1656,7 +1701,7 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<widget \"streetdog\">>"
+   "\t\t<<link [[Next|Street Stalk]]>><<set $molestationstart to 1>><</link>>"
   ],
   "old_kr": [],
   "new_en": [
@@ -1667,7 +1712,7 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<widget \"streetoffer\">>"
+   "\t\t<<link [[Next|Street Stalk]]>><<set $molestationstart to 1>><</link>>"
   ],
   "old_kr": [],
   "new_en": [
@@ -1678,7 +1723,7 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<widget \"streetfriendly1\">>"
+   "\t\t<<link [[Next|Street Stalk]]>><<set $molestationstart to 1>><</link>>"
   ],
   "old_kr": [],
   "new_en": [
@@ -1689,7 +1734,7 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<widget \"streetfootbridge\">>"
+   "\t\t<<link [[Next|Street Stalk]]>><<set $molestationstart to 1>><</link>>"
   ],
   "old_kr": [],
   "new_en": [
@@ -1700,7 +1745,7 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<widget \"streetvan\">>"
+   "\t\t<<link [[Next|Street Stalk]]>><<set $molestationstart to 1>><</link>>"
   ],
   "old_kr": [],
   "new_en": [
@@ -1711,7 +1756,7 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<widget \"streetbullies\">>"
+   "\t\t<<link [[Next|Street Stalk]]>><<set $molestationstart to 1>><</link>>"
   ],
   "old_kr": [],
   "new_en": [
@@ -1722,7 +1767,7 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<widget \"streetrocks\">>"
+   "\t\t<<link [[Next|Street Stalk]]>><<set $molestationstart to 1>><</link>>"
   ],
   "old_kr": [],
   "new_en": [
@@ -1733,7 +1778,7 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<widget \"streetex1\">>"
+   "\t\t<<link [[Next|Street Stalk]]>><<set $molestationstart to 1>><</link>>"
   ],
   "old_kr": [],
   "new_en": [
@@ -1744,7 +1789,7 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "<<widget \"streetex4\">>"
+   "\t\t<<link [[Next|Street Stalk]]>><<set $molestationstart to 1>><</link>>"
   ],
   "old_kr": [],
   "new_en": [
@@ -1795,6 +1840,39 @@
    "\t\t<<if _cumBalloon is 1>>"
   ],
   "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $NPCList[0].monster is \"monster\">>",
+   "\t\t\tthat split <<bhis>> messy hair. <<bHe>> flashes a sharp-toothed, menacing grin before leaping toward you.",
+   "\t\t<<else>>",
+   "\t\t\tatop a hairless, scaled head. It opens its colossal maw and leaps toward you.",
+   "\t\t<</if>>",
+   "\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<else>>"
+  ],
+  "context": "\t\tthat split <<bhis>> messy hair. <<bHe>> flashes a sharp-toothed, menacing grin before leaping toward you."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $NPCList[0].monster is \"monster\">>",
+   "\t\t\tthat split <<bhis>> messy hair. <<bHe>> flashes a sharp-toothed, menacing grin before leaping toward you.",
+   "\t\t<<else>>",
+   "\t\t\tatop a hairless, scaled head. It opens its colossal maw and leaps toward you.",
+   "\t\t<</if>>",
+   "\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<</if>>",
+   "\t<br><br>"
+  ],
+  "context": "\t\tatop a hairless, scaled head. It opens its colossal maw and leaps toward you."
  },
  {
   "kind": "merged-new-text",
@@ -1915,6 +1993,84 @@
    "\t\t\t<br><br>"
   ],
   "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif _kylarStatus.includesAll(\"Love\",\"Lust\")>>",
+   "\t\t<<set $kylarwatchedtimer to 0>><<rngWraith 2 \"night\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<br>"
+  ],
+  "context": "\t\t\t<<link [[Chase|Street Kylar Chase]]>><<fameexhibitionism 10>><<trauma 6>><<stress 6>><</link>><<athleticsdifficulty 1 600>><<gtrauma>><<gstress>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif _kylarStatus.includesAll(\"Love\",\"Lust\")>>",
+   "\t\t<<set $kylarwatchedtimer to 0>><<rngWraith 2 \"night\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<br>"
+  ],
+  "context": "\t\t\t<<link [[Hide|Street Kylar Hide]]>><</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetsexfame\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\t<<npc Kylar>><<person1>>Something tugs your arm. It's Kylar. \"H-hi,\" <<he>> gulps. <<He>> tries to pull you toward a dark alley. \"We need privacy. I need you to do things to me.\"",
+   "\t<br><br>",
+   "\t<<if $wraith.state and _wraithEvent and ([\"haunt\", \"despair\"].includes($wraith.state) or [\"dead\",\"sold\"].includes($wraith.offspring))>>",
+   "\t\t<<set $wraith.mimic to \"Kylar\">><<set $wraith.exit to \"town\">>",
+   "\t\t<<link [[Go with Kylar|Wraith Mimic Fight]]>><<set $sexstart to 1>><</link>><<promiscuous1>><<gglove>><<llksuspicion>>",
+   "\t\t<br>",
+   "\t\t<<link [[Refuse|Wraith Mimic Kylar]]>><</link>><<lllove>><<gggksuspicion>>",
+   "\t<<else>>",
+   "\t\t<<link [[Go with Kylar|Street Kylar Sex]]>><<set $sexstart to 1>><<npcincr Kylar love 5>><<npcincr Kylar rage -10>><</link>><<promiscuous1>><<gglove>><<llksuspicion>>",
+   "\t\t<br>",
+   "\t\t<<link [[Refuse|Street Kylar Refuse]]>><<npcincr Kylar love -5>><<npcincr Kylar rage 20>><</link>><<lllove>><<gggksuspicion>>",
+   "\t<</if>>",
+   "\t<br><br>",
+   "<</widget>>",
+   ""
+  ],
+  "context": "\t<<set $kylarwatchedtimer to 0>><<rngWraith 2 \"night\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetsexfame\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "",
+   "\tAs you are walking, you see the reflection of a small figure behind you in a window. You quickly turn around, but there's nobody there.",
+   "\t<br><br>",
+   "\t<span class=\"purple\">You are being followed.</span>",
+   "\t<br><br>",
+   "\t<<link [[Next|Street Kylar Stalk]]>><<set $molestationstart to 1>><</link>>",
+   "<</widget>>",
+   "",
+   "<<widget \"kylarWatchStaring\">>",
+   "\t<<npc Kylar>><<person1>>You see Kylar staring at you from across the road. A bus passes between you. By the time it leaves, <<hes>> gone.",
+   "\t<<gstress>><<stress 6>>",
+   "\t<br><br>",
+   "",
+   "\t<<destinationeventend>>",
+   "<</widget>>",
+   "",
+   "<<widget \"streetSexFame\">>"
+  ],
+  "context": "\t<<set $NPCList[0].skills to {athletics: random(750, 1500), security: random(750, 1500)}>>"
  },
  {
   "kind": "merged-new-text",
@@ -2803,34 +2959,34 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [
-   "\t\t\t"
-  ],
+  "old_en": [],
   "old_kr": [],
   "new_en": [
-   ""
-  ],
-  "context": "\t<br><br>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t\t\t<br>\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t\t\t<br>"
-  ],
-  "context": "\t\t\t<<link [[Visit a cafe with Alex (0:30)|Street Alex Cafe]]>><<set $phase to 0>><<pass 30>><<npcincr Alex love 1>><<stress -6>><</link>><<glove>><<lstress>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
+   "",
+   "<<widget \"starfishmusician\">>",
+   "\t<<set $daily.starfishmusician to 1>><<generate1>><<person1>>",
+   "",
+   "\tTourists mill around you as you make your way along the promenade. ",
+   "\t<br>",
+   "\tAbove the noise of the crowd, you catch the sound of music nearby.",
+   "\t<br><br>",
+   "",
+   "\tA <<person>> sits on a bench, quietly playing <<his>> guitar beneath the salt wind rolling in from the ocean.",
+   "\t<br><br>",
+   "",
+   "\tYou slow down without meaning to. <<He>> catches your eye and smiles.",
+   "\t<br><br>",
+   "",
+   "\t\"Feel free to stay a while,\" <<he>> says.",
+   "\t<br><br>",
+   "",
+   "\t<<link [[Listen quietly|Starfish Musician]]>><<set $phase to 1>><</link>>",
+   "\t<br>",
+   "\t<<link [[Sing along|Starfish Musician]]>><<set $phase to 2>><</link>>",
+   "\t<br>",
+   "\t<<link [[Keep walking|Starfish Musician]]>><<set $phase to 0>><</link>>",
+   "\t<br>",
+   "<</widget>>"
   ],
   "context": "<</widget>>"
  }

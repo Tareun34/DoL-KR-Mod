@@ -1845,6 +1845,18 @@
  },
  {
   "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t\"Even though you're doing such a horrible thing, don't worry,\" you say. \"I forgive you.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t\t<<pc-line-whitney-forgive>>"
+ },
+ {
+  "kind": "merged-new-text",
   "old_en": [],
   "old_kr": [],
   "new_en": [
@@ -1931,6 +1943,102 @@
    "\t\t\t<<speechSay>>"
   ],
   "context": "\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<case 0>> \"I bet the thought of entering my ass is driving you mad,\"",
+   "\t\t\t\t\t<<case 1>> \"I'm not sure you're big enough,\"",
+   "\t\t\t\t\t<<case 2>> \"What are you waiting for?\"",
+   "\t\t\t\t\t<<case 3>> \"I bet you cum before you get it in,\"",
+   "\t\t\t\t\t<<case 4>> \"Do you even know how to use that thing?\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<case 4>> \"Your pussy looks weird,\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<case 0>> \"I bet the thought of entering my ass is driving you mad,\"",
+   "\t\t\t\t\t<<case 1>> \"I'm not sure you're big enough,\"",
+   "\t\t\t\t\t<<case 2>> \"What are you waiting for?\"",
+   "\t\t\t\t\t<<case 3>> \"I bet you cum before you get it in,\"",
+   "\t\t\t\t\t<<case 4>> \"Do you even know how to use that thing?\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<case 0>> \"I bet the thought of entering my ass is driving you mad,\"",
+   "\t\t\t\t\t<<case 1>> \"I'm not sure you're big enough,\"",
+   "\t\t\t\t\t<<case 2>> \"What are you waiting for?\"",
+   "\t\t\t\t\t<<case 3>> \"I bet you cum before you get it in,\"",
+   "\t\t\t\t\t<<case 4>> \"Do you even know how to use that thing?\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<case 4>> \"You're bad at this,\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<case 0>> \"I bet the thought of entering my ass is driving you mad,\"",
+   "\t\t\t\t\t<<case 1>> \"I'm not sure you're big enough,\"",
+   "\t\t\t\t\t<<case 2>> \"What are you waiting for?\"",
+   "\t\t\t\t\t<<case 3>> \"I bet you cum before you get it in,\"",
+   "\t\t\t\t\t<<case 4>> \"Do you even know how to use that thing?\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<case 0>> \"I bet the thought of entering my ass is driving you mad,\"",
+   "\t\t\t\t\t<<case 1>> \"I'm not sure you're big enough,\"",
+   "\t\t\t\t\t<<case 2>> \"What are you waiting for?\"",
+   "\t\t\t\t\t<<case 3>> \"I bet you cum before you get it in,\"",
+   "\t\t\t\t\t<<case 4>> \"Do you even know how to use that thing?\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<case 4>> \"Is that all you've got?\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<case 0>> \"I bet the thought of entering my ass is driving you mad,\"",
+   "\t\t\t\t\t<<case 1>> \"I'm not sure you're big enough,\"",
+   "\t\t\t\t\t<<case 2>> \"What are you waiting for?\"",
+   "\t\t\t\t\t<<case 3>> \"I bet you cum before you get it in,\"",
+   "\t\t\t\t\t<<case 4>> \"Do you even know how to use that thing?\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
  },
  {
   "kind": "merged-new-text",

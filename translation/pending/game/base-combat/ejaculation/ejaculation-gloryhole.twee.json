@@ -1883,6 +1883,17 @@
  {
   "kind": "merged-new-text",
   "old_en": [
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"face\" \"goo\" 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<elseif $NPCList[0].vagina is \"penis\">>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
    "\t\t\t<!-- Special case male PC with female NPC -->"
   ],
   "old_kr": [],
@@ -1913,6 +1924,72 @@
    "\t\t\t<<if $consensual is 1>>"
   ],
   "context": "\t\t<<if $NPCList[0].penisdesc.includes(\"strap-on\")>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t\t<<He>> cums quietly, rubbing <<his>> $NPCList[0].penisdesc along your back."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</switch>>",
+   "",
+   "\t\t\t\t<!-- Start Non-consensual Strap-on -->",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $NPCList[0].penis>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> groans as <<he>> ejaculates onto your <<pussy>>. You feel semen coating your outer lips and pooling around your knees."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<elseif $NPCList[0].penis is \"vaginaimminent\">>"
+  ],
+  "context": "\t\t\t\t\t\t<<bottomejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> groans as <<he>> ejaculates onto your <<pussy>>. You feel semen coating your outer lips and pooling around your knees."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t\t<<He>> moans as <<he>> ejaculates onto your $worn.genitals.name."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> shakes as <<he>> cums, withdrawing <<his>> cock from your cheeks and ejaculating onto your ass."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<elseif $NPCList[0].penis is \"anusimminent\">>"
+  ],
+  "context": "\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"bottom\" \"semen\" 2>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> groans as you fuck <<his>> ass."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</switch>>"
+  ],
+  "context": "\t\t\t\t\t\t<br><br>"
  },
  {
   "kind": "merged-new-text",

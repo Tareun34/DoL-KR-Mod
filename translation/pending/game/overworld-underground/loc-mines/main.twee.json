@@ -2975,152 +2975,852 @@
   ],
   "old_kr": [],
   "new_en": [
-   "\"From now on you will be given a job every day,\" <<he>> says, pulling you through the tunnels. \"If you resist, you will be punished. You try to escape, you'll get punished. Trust me, you do not want to be punished.\""
-  ],
-  "context": ""
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   ":: Mines Guards Dig",
-   "<<effects>>",
-   "<<if $mines_guards_dig gte 1>><<wearProp \"pickaxe\">><</if>>",
-   "<<if $mines_guards_dig gte 20>>",
-   "\tYou return to the hidden tunnel, lift the pickaxe, and dig into the wall for as long as you dare."
-  ],
-  "old_kr": [],
-  "new_en": [
+   "\"From now on you will be given a job every day,\" <<he>> says, pulling you through the tunnels. \"If you resist, you will be punished. You try to escape, you'll get punished. Trust me, you do not want to be punished.\"",
+   "",
    "<<if Time.hour lte 5 or Time.hour gte 21>>",
-   "\t<<He>> pulls you to another metal gate, the guard in front of it opens it up. The <<person>> pushes you through. The gate slams and locks behind you."
-  ],
-  "context": ""
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t<span class=\"red\">A trickle of water pierces the stone.</span> Then another, and another. You step back. The wall trembles. You turn and run."
-  ],
-  "old_kr": [],
-  "new_en": [
+   "\t<<He>> pulls you to another metal gate, the guard in front of it opens it up. The <<person>> pushes you through. The gate slams and locks behind you.",
+   "\t<br><br>",
    "\t<<link [[Next|Mine Night]]>><</link>>",
    "<<else>>",
-   "\t<<He>> pulls you into a cave with a bunch of other people."
-  ],
-  "context": "\t<br><br>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\tA great torrent bursts into the tunnel behind you. You clamber up a tall rock, just in time. You sit and watch the water rush by. Their voices are almost swallowed by the river, but you hear the guards screaming.",
+   "\t<<He>> pulls you into a cave with a bunch of other people.",
    "\t<br><br>",
-   "",
-   "\t<<link [[Escape|Mines Guards Escape]]>><</link>>",
-   "\t<br>",
-   "<<elseif $mines_guards_dig gte 15>>",
-   "\tYou return to the hidden tunnel, lift the pickaxe, and dig into the wall for as long as you dare.",
-   "\t<br><br>",
-   "\t<span class=\"teal\">You hear rushing water through the stone.</span> There's something up ahead.",
-   "\t<br><br>",
-   "\t<<link [[Next|Mines Guards]]>><<endevent>><</link>>",
-   "\t<br>",
-   "<<elseif $mines_guards_dig gte 10>>",
-   "\tYou return to the hidden tunnel, lift the pickaxe, and dig into the wall for as long as you dare.",
-   "\t<br><br>",
-   "\t<span class=\"lblue\">The wall is softer here.</span> There's a lot of sandstone. You make good progress.",
-   "\t<br><br>",
-   "\t<<link [[Next|Mines Guards]]>><<endevent>><</link>>",
-   "\t<br>",
-   "<<elseif $mines_guards_dig gte 5>>",
-   "\tYou return to the hidden tunnel, lift the pickaxe, and dig into the wall for as long as you dare.",
-   "\t<br><br>",
-   "\t<span class=\"blue\">The tunnel is a bit longer than you found it,</span> but you've no idea how far you have left.",
-   "\t<br><br>",
-   "\t<<link [[Next|Mines Guards]]>><<endevent>><</link>>",
-   "\t<br>",
-   "<<elseif $mines_guards_dig gte 1>>",
-   "\tYou return to the hidden tunnel, lift the pickaxe, and chip away at the wall. It's slow going. You hope whoever started this tunnel went in this direction for a reason.",
-   "\t<br><br>",
-   "\t<span class=\"purple\">The tunnel isn't much longer than you found it, </span>but you don't want to risk digging too long. They've overlooked this tunnel for now, but a dedicated search would find it, and you, fast.",
-   "\t<br><br>",
-   "\t<<link [[Next|Mines Guards]]>><<endevent>><</link>>",
-   "\t<br>",
-   "<<else>>",
-   "\tYou search the adjoining tunnels. Some are short, more like rooms, but others stretch some distance before winding back in on themselves.",
-   "\t<br><br>",
-   "\tYou're searching the last, a deserted corridor, when you notice a gap in the wall. You squeeze through, and find a hidden passage leading to a dead end. A pickaxe lies against the wall. It looks like someone already started digging here, but was interrupted.",
-   "\t<br><br>",
-   "\t<<link [[Next|Mines Guards]]>><<endevent>><</link>>",
-   "\t<br>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t<<link [[Next|Mine Job Intro]]>><</link>>"
-  ],
-  "context": "\t<br><br>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "<<set $mines_guards_dig += 1>>",
-   "",
-   "",
-   ":: Mines Guards Escape",
-   "<<effects>><<earnFeat \"Down Below\">>",
-   "<<badEndTrackingEnd \"Mines\" { reason: \"minesEscapedDrain\" }>>",
-   "",
-   "The water diminishes, until it's a gentle stream. The shouting hasn't stopped, and it won't be long until someone arrives to investigate the source of the noise.",
-   "<br><br>",
-   "You return to the tunnel you were digging. <span class=\"green\">It now opens onto the storm drains.</span> You step through the gap before you're caught.",
-   "<br><br>",
-   "",
-   "<<link [[Next|Residential Drain]]>><<mines_end>><<set $eventskip to 1>><</link>>",
-   "<br>",
-   "",
-   "",
-   ":: Mines",
-   "<<effects>>",
-   "",
-   "<<mines_crystals>>",
-   "<br><br>",
-   "",
-   "<<if $stress gte $stressmax>>",
-   "\t<<passout_mines>>",
-   "<<else>>",
-   "",
-   "\t<<link [[Sleeping Quarters (0:01)|Mines Sleeping Quarters]]>><<pass 1>><</link>>",
-   "\t<br>",
-   "\t<<link [[Canteen (0:01)|Mines Canteen]]>><<pass 1>><</link>>",
-   "\t<br>",
+   "\t<<link [[Next|Mine Job Intro]]>><</link>>",
    "<</if>>",
+   "<<endevent>>",
    "",
    "",
-   ":: Mines Sleeping Quarters",
-   "<<effects>>",
-   "",
-   "",
-   ":: Mines Canteen",
-   "<<effects>>"
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Mines Passout"
   ],
   "old_kr": [],
   "new_en": [
-   "<<endevent>>"
+   ""
+  ],
+  "context": "<<effects>><<set $mine.intro to 1>><<set $outside to 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Mines Passout"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<br><br>"
+  ],
+  "context": "You approach the metal door leading to the mines. It's covered in police tape. You look around to make sure nobody is watching, then tear it off. You take a deep breath, pull open the door, and walk through. <<stress 2>><<gstress>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Mines Passout"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<br><br>",
+   "<<endevent>>",
+   "<<link [[Next|Mine]]>><</link>>",
+   "",
+   "",
+   ""
+  ],
+  "context": "You're hit by a familiar stale air as you walk down the staircase."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Mines Passout"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<effects>><<set $outside to 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Mines Passout"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "You're in the mines. It's silent."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Mines Passout"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "<br><br>"
   ],
   "context": "<</if>>"
  },
  {
   "kind": "merged-new-text",
   "old_en": [
-   "A <<person>> peers at you over the rim. \"Just in time,\" <<he>> says. The container comes to a halt, and <<he>> grasps your shoulders. \"Wanted some privacy with the public whore.\" Now higher, you can see more of your surroundings. You were lying in a mine cart, on a track in some forgotten corner of the mines. The only light comes from a lamp at the <<persons>> hip.",
-   "<br><br>",
+   ":: Mines Passout"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<icon \"get-out.png\">><<link [[Leave|Barb Street]]>><<set $outside to 1>><</link>>"
+  ],
+  "context": "<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Mines Passout"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ":: Mine Explore"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<set _relativeWeight to 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $enemyhealth lte 0>>",
+   "\t<<He>> falls away from you, colliding with the minecart and pushing it into motion. It runs down an incline, disappearing in the dark.",
+   "\t<br><br>",
+   "\t\"Look what you made me do,\" <<he>> says, <span class=\"teal\">tearing the ballgag from your face.</span> \"You'll be sorry. Wait here.\" <<He>> walks after the cart.",
+   "\t<br><br>",
+   "\t<<tearful>> you steady yourself against the wall.",
+   "\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $enemyhealth lte 0>>",
+   "\t<<He>> falls away from you, colliding with the minecart and pushing it into motion. It runs down an incline, disappearing in the dark.",
+   "\t<br><br>",
+   "\t\"Look what you made me do,\" <<he>> says, <span class=\"teal\">tearing the ballgag from your face.</span> \"You'll be sorry. Wait here.\" <<He>> walks after the cart.",
+   "\t<br><br>",
+   "\t<<tearful>> you steady yourself against the wall.",
+   "\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t\tYou turn to look, but nothing's there. You turn to continue, only to see a shape standing in front of you. It lunges, inhuman arms grabbing your body."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $enemyhealth lte 0>>",
+   "\t<<He>> falls away from you, colliding with the minecart and pushing it into motion. It runs down an incline, disappearing in the dark.",
+   "\t<br><br>",
+   "\t\"Look what you made me do,\" <<he>> says, <span class=\"teal\">tearing the ballgag from your face.</span> \"You'll be sorry. Wait here.\" <<He>> walks after the cart.",
+   "\t<br><br>",
+   "\t<<tearful>> you steady yourself against the wall.",
+   "\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t\tYou don't find anything of note."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $enemyhealth lte 0>>",
+   "\t<<He>> falls away from you, colliding with the minecart and pushing it into motion. It runs down an incline, disappearing in the dark.",
+   "\t<br><br>",
+   "\t\"Look what you made me do,\" <<he>> says, <span class=\"teal\">tearing the ballgag from your face.</span> \"You'll be sorry. Wait here.\" <<He>> walks after the cart.",
+   "\t<br><br>",
+   "\t<<tearful>> you steady yourself against the wall.",
+   "\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<</addinlineevent>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $enemyhealth lte 0>>",
+   "\t<<He>> falls away from you, colliding with the minecart and pushing it into motion. It runs down an incline, disappearing in the dark.",
+   "\t<br><br>",
+   "\t\"Look what you made me do,\" <<he>> says, <span class=\"teal\">tearing the ballgag from your face.</span> \"You'll be sorry. Wait here.\" <<He>> walks after the cart.",
+   "\t<br><br>",
+   "\t<<tearful>> you steady yourself against the wall.",
+   "\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t\tYou find something shiny embedded in the wall of a tunnel."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $enemyhealth lte 0>>",
+   "\t<<He>> falls away from you, colliding with the minecart and pushing it into motion. It runs down an incline, disappearing in the dark.",
+   "\t<br><br>",
+   "\t\"Look what you made me do,\" <<he>> says, <span class=\"teal\">tearing the ballgag from your face.</span> \"You'll be sorry. Wait here.\" <<He>> walks after the cart.",
+   "\t<br><br>",
+   "\t<<tearful>> you steady yourself against the wall.",
+   "\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br>"
+  ],
+  "context": "\t\t<<icon \"pickaxe.png\">><<link [[Attempt to mine it (0:30)|Mine Gem]]>><<pass 30>><<tiredness 10>><<set $phase to _gem>><</link>><<pickaxedifficulty _gem_diff_min _gem_diff_max>><<ggtiredness>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $enemyhealth lte 0>>",
+   "\t<<He>> falls away from you, colliding with the minecart and pushing it into motion. It runs down an incline, disappearing in the dark.",
+   "\t<br><br>",
+   "\t\"Look what you made me do,\" <<he>> says, <span class=\"teal\">tearing the ballgag from your face.</span> \"You'll be sorry. Wait here.\" <<He>> walks after the cart.",
+   "\t<br><br>",
+   "\t<<tearful>> you steady yourself against the wall.",
+   "\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br>",
+   "\t\t<<mine_links>>",
+   "\t<</addinlineevent>>",
    "",
-   "<<He>> pulls you from the cart. While you're still unsteady from the movement, <<he>> trips you up and pushes <<himself>> atop you.",
-   "<br><br>",
+   "\t<<if !$mine.tunnel.intro>>",
+   "\t\t<<addinlineevent \"collapsed\">>",
+   "\t\t\tAs you're exploring, you come across a steep decline. It's covered in mud. You step onto it before <span class=\"red\">you slip on the mud and slide down the tunnel.</span> ",
+   "\t\t\tYou reach the bottom and land on hard rock. <<pain 10>><<ggpain>>",
+   "\t\t\t<br><br>",
+   "\t\t\t<<link [[Recover|Mine Collapse Intro]]>><</link>>",
+   "\t\t<</addinlineevent>>",
+   "\t<</if>>"
+  ],
+  "context": "\t\t<<ind>><<link [[Take it|Mine Antique]]>><</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
    "",
-   "<<link [[Next|Mines Passout Rape]]>><<set $molestationstart to 1>><</link>>",
+   "",
+   "",
+   ":: Mine Gem",
+   "<<effects>><<wearProp \"pickaxe\">>",
+   ""
+  ],
+  "context": "<<runeventpool>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<br><br>",
+   "<<mine_links>>",
+   "",
+   "",
+   "",
+   ":: Mine Antique"
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<set $antiquemoney += 75>>",
+   "<<set _antique to `antique${$phase}`>>",
+   "<<museumAntiqueStatus _antique \"found\">>"
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Mines Passout Tentacles"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<br><br>",
+   "<<mine_links>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Mines Passout Tentacles"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ":: Mine Tentacle"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Mines Passout Tentacles Finish"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "",
+   ":: Mine Tentacle Finish"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "The tentacles slink into the dark, and the eyes fade."
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "The tentacles retreat back into the darkness. <<tearful>> you run until you reach a better-lit tunnel."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<mine_links>>"
+  ],
+  "context": "<<endcombat>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Mines Passout Warn"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "",
+   ":: Mine Slime"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $speech_attitude is \"meek\">>",
+   "\t\"St-stop,\" you hiss. \"There's something over there. Something dangerous.\"",
+   "<<elseif $speech_attitude is \"bratty\">>",
+   "\t\"Keep going,\" you hiss. \"If you want to end up as some monster's lunch.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<<set $combat to 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $speech_attitude is \"meek\">>",
+   "\t\"St-stop,\" you hiss. \"There's something over there. Something dangerous.\"",
+   "<<elseif $speech_attitude is \"bratty\">>",
+   "\t\"Keep going,\" you hiss. \"If you want to end up as some monster's lunch.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<<set $enemytype to \"swarm\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $speech_attitude is \"meek\">>",
+   "\t\"St-stop,\" you hiss. \"There's something over there. Something dangerous.\"",
+   "<<elseif $speech_attitude is \"bratty\">>",
+   "\t\"Keep going,\" you hiss. \"If you want to end up as some monster's lunch.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $speech_attitude is \"meek\">>",
+   "\t\"St-stop,\" you hiss. \"There's something over there. Something dangerous.\"",
+   "<<elseif $speech_attitude is \"bratty\">>",
+   "\t\"Keep going,\" you hiss. \"If you want to end up as some monster's lunch.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<swarmeffects>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $speech_attitude is \"meek\">>",
+   "\t\"St-stop,\" you hiss. \"There's something over there. Something dangerous.\"",
+   "<<elseif $speech_attitude is \"bratty\">>",
+   "\t\"Keep going,\" you hiss. \"If you want to end up as some monster's lunch.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "<<swarmactions>>",
+   "",
+   "<<if $timer lte 0>>",
+   "\t<span id=\"next\"><<link [[Next|Mine Slime Finish]]>><</link>></span><<nexttext>>"
+  ],
+  "context": "<<swarm>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<span id=\"next\"><<link [[Next|Mine Slime]]>><</link>></span><<nexttext>>",
+   "<</if>>",
+   "",
+   "",
+   "",
+   ":: Mine Slime Finish",
+   "<<effects>>",
+   ""
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "<br><br>",
+   "<<clotheson>>",
+   "<<endcombat>>",
+   "<<mine_links>>",
+   "",
+   "",
+   ""
+  ],
+  "context": "The slimes retreat. <<tearful>> you run until you reach a drier cave."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<br><br>",
+   "<<link [[Next|Mine Collapse]]>><</link>>",
+   "",
+   "",
+   "",
+   ":: Mine Collapse",
+   "<<effects>>",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<else>>"
+  ],
+  "context": "\t<span class=\"blue\">There's still plenty of rock left.</span>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<</if>>",
+   "",
+   "<<if $arousal gte $arousalmax>>",
+   "\t<<mine_orgasm>>",
+   "<</if>>",
+   "",
+   "<br><br>"
+  ],
+  "context": "\t<span class=\"blue\">You can see more tunnel behind the rocks.</span>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
    "<br>",
+   "<<icon \"get-out.png\">><<link [[Leave|Mine]]>><</link>>",
+   ""
+  ],
+  "context": "<<icon \"rubble.png\">><<link [[Clear the rocks (1:00)|Mine Clear]]>><<pass 60>><<tiredness 20>><</link>><<gggtiredness>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
    "",
-   ":: Mines Passout Rape",
+   ":: Mine Clear",
+   "<<effects>>",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<else>>"
+  ],
+  "context": "\t<span class=\"blue\">You can see more tunnel behind the rocks.</span>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<</if>>",
+   ""
+  ],
+  "context": "\t<span class=\"green\">There's a big enough gap to go through.</span>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<</if>>",
+   ""
+  ],
+  "context": "\t<<exit>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>"
+  ],
+  "context": "<<if $mine.tunnel.collapse lte 10>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br>",
+   "\t<<icon \"get-out.png\">><<link [[Leave|Mine]]>><</link>>",
+   "<<else>>",
+   "\t<br><br>"
+  ],
+  "context": "\t<<icon \"rubble.png\">><<link [[Clear the rocks (1:00)|Mine Clear]]>><<pass 60>><<tiredness 20>><</link>><<gggtiredness>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<</if>>",
    "",
+   "",
+   "",
+   ":: Mine Flood",
+   "<<effects>>",
+   ""
+  ],
+  "context": "\t<<link [[Go in|Mine Flood]]>><</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "<<if isPregnancyEnding()>>",
+   "\t<<mine_pregnancy>>",
+   "\t<<exit>>",
+   "<<elseif $stress gte $stressmax>>",
+   "\t<<mine_passout>>",
+   "\t<<exit>>",
+   "<</if>>",
+   ""
+  ],
+  "context": "You follow the tunnel and reach a pool of water. <span class=\"blue\">A section of the tunnel is flooded.</span> It leads even further down."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<</if>>",
+   ""
+  ],
+  "context": "\t<<mine_orgasm>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<br>",
+   "<<icon \"get-out.png\">><<link [[Leave|Mine]]>><</link>>",
+   "",
+   ""
+  ],
+  "context": "<<icon \"actions/dive.png\">><<link [[Try to swim through|Mine Swim]]>><</link>><<swimmingdifficulty 700 1000>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>"
+  ],
+  "context": "\t<span class=\"green\">You continue, until you reach an incline and an unflooded section of tunnel.</span>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<else>>"
+  ],
+  "context": "\t<<link [[Follow the tunnel|Mine Diamond]]>><</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>"
+  ],
+  "context": "\t<<passout>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<</if>>",
+   ""
+  ],
+  "context": "\t<<link [[Follow the tunnel|Mine Swim Fail]]>><</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<br><br>"
+  ],
+  "context": "You awaken with a gasp. You cough up water onto the ground."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<br><br>",
+   "<<link [[Next|Mine]]>><</link>>",
+   "",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<effects>>",
+   "",
+   "As you walk down the dark tunnel, you notice a trail of torn clothing. The scraps lead to a crack in the tunnel wall, just large enough to fit in. You take a look inside and see something shining in the center of a cave.",
+   "<br><br>",
+   "You squeeze through the small gap. You shudder as you step onto the soft ground. You look around and see that the cave is covered with a fleshy substance. <<stress 10>><<ggstress>>",
+   "<br><br>",
+   "You approach the center of the cave, wet sounds accompany you. As you get close, you realize it's a <span class=\"lewd\">purple diamond</span> sitting on a pedestal in the center of the cave. As you peer at it, you realize just how beautiful it is. You can't bear to look away.",
+   "<br><br>",
+   "<!-- Duplicate links are intentional -->",
+   "<span class=\"wraith\"><<link [[Take it|Mine Diamond Take]]>><</link>></span>",
+   "<br>",
+   "<span class=\"wraith\"><<link [[Take it|Mine Diamond Take]]>><</link>></span>",
+   "",
+   ""
+  ],
+  "context": ":: Mine Diamond"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<link [[Run|Mine Diamond Escape]]>><</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<effects>>",
+   ""
+  ],
+  "context": ":: Mine Diamond Escape"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<br><br>"
+  ],
+  "context": "You run as fast as you can through the tunnel. The incline gets steeper and steeper. <span class=\"red\">Another loud roar echoes from behind. It's louder than the last.</span>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<br><br>"
+  ],
+  "context": "The tunnel levels out. You glimpse light in the tunnel ahead, just as <span class=\"red\">yet another loud roar echoes.</span>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<br><br>",
+   "<<link [[Next|Mine]]>><<endevent>><</link>>",
+   "",
+   "",
+   ""
+  ],
+  "context": "You make it to a small cave, and drop to the ground, trying to cover yourself. The rumbling stops. You look back to see the tunnel has caved in, as though it never existed to begin with. You look around. <span class=\"green\">You're back at the entrance.</span>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
    "<<if $molestationstart is 1>>",
    "\t<<set $molestationstart to 0>>",
    "\t<<controlloss>>",
@@ -3128,18 +3828,76 @@
    "\t<<neutral 1>>",
    "\t<<molested>>",
    "\t<<maninit>>",
-   "\t<<enable_rescue>>"
+   "\t<<npcexpose>>",
+   "\t<<set $speechDisable to 1>>",
+   "\t<<set $noBodyWriting to 1>>",
+   "<</if>>",
+   "",
+   "<<effects>>",
+   "<<effectsman>>",
+   "<<man>>",
+   "<<stateman>>",
+   "<br><br>",
+   "<<actionsman>>",
+   "",
+   "<<if _combatend>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
   ],
   "old_kr": [],
   "new_en": [
-   "<<if isPregnancyEnding()>>",
-   "\t<<mine_pregnancy>>",
-   "\t<<exit>>",
-   "<<elseif $stress gte $stressmax>>",
-   "\t<<mine_passout>>",
-   "\t<<exit>>"
+   "<<else>>"
   ],
-  "context": ""
+  "context": "\t<span id=\"next\"><<link [[Next|Mine Creature Rape Finish]]>><</link>></span><<nexttext>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<</if>>",
+   "",
+   "",
+   "",
+   ":: Mine Creature Rape Finish",
+   "<<effects>>",
+   "",
+   "<<if $enemyarousal gte $enemyarousalmax>>",
+   "\t<<ejaculation>>"
+  ],
+  "context": "\t<span id=\"next\"><<link [[Next|Mine Creature Rape]]>><</link>></span><<nexttext>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\"You'd better get back,\" you hiss. \"We're not alone. There's something over there.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<elseif $enemyhealth lte 0>>"
+  ],
+  "context": "\tThe <<person>> growls and runs into the darkness."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "",
+   "The <<person>> stops and turns towards you, bemusement on <<his>> face. \"There's no—\" <span class=\"red\">A growl reverberates through the tunnel.</span> Even <<he>> heard that. <<He>> freezes for just a moment before breaking into a run. You join <<him>>.",
+   "<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<tearful>> you run until you reach a lit-up tunnel.",
+   "<<clotheson>>"
+  ],
+  "context": "<br><br>"
  },
  {
   "kind": "merged-new-text",
@@ -3151,6 +3909,56 @@
    ":: Mine Struggle"
   ],
   "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "You run for several minutes, until you're certain you're safe. You haven't heard the monster for a long time.",
+   "<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<effects>>",
+   "<<if $struggle_start is 1>>",
+   "\t<<struggle_init>>",
+   "\t<<set $struggle.creature to \"lurker\">>",
+   "\t<<struggle_creatures 3 4>>",
+   "\t<<set $combat to 1>>",
+   "\t<<controlloss>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "You run for several minutes, until you're certain you're safe. You haven't heard the monster for a long time.",
+   "<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<</if>>"
+  ],
+  "context": "\t<<unset $struggle_start>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\"Why are you stopping?\" the <<person>> asks, slowing a little ahead of you.",
+   "<br>",
+   "\"We should be safe now,\" you reply.",
+   "<br>",
+   "<<He>> leans against the wall, and shuts <<his>> eyes. \"You might have saved me,\" <<he>> says. \"How can I ever repay you?\"",
+   "<br>",
+   "<<if $speech_attitude is \"meek\">>",
+   "\t\"Y-you could help me escape,\" you say.",
+   "<<elseif $speech_attitude is \"bratty\">>",
+   "\t\"Show me the exit,\" you say, \"and I'll consider us even.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<struggle>>"
  },
  {
   "kind": "merged-new-text",

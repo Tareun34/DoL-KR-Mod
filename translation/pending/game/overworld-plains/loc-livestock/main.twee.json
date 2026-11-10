@@ -309,25 +309,7 @@
   "new_en": [
    "<br>"
   ],
-  "context": "<<link [[다음|Livestock Cell]]>><<endevent>><</link>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [],
-  "old_kr": [],
-  "new_en": [
-   "\t\t\t<br><br>"
-  ],
-  "context": "\t\t\t당신의 배를 보고 문지르며, <<he>>【은는】 말을 잇는다. \"너처럼 다른 가축들도 임신시키도록 더 노력해야겠어.\""
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [],
-  "old_kr": [],
-  "new_en": [
-   "\t\t\t<br><br>"
-  ],
-  "context": "\t\t\t당신의 배를 보고 문지르며, <<he>>【은는】 말을 잇는다. \"이 속도라면, 네가 농장의 자랑이 될 때까지 그리 오래 걸리지 않겠어.\""
+  "context": "<<wakingEffects true>>"
  },
  {
   "kind": "merged-new-text",

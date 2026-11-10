@@ -103,9 +103,7 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [
-   "<<location \"mines\">><<effects>>"
-  ],
+  "old_en": [],
   "old_kr": [],
   "new_en": [
    "<<location \"mines\">><<set $outside to 0>><<effects>>"

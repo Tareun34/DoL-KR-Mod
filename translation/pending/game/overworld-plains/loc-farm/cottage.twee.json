@@ -147,7 +147,7 @@
   "new_en": [
    "\t\t<br><br>"
   ],
-  "context": "\t\t<</if>>"
+  "context": "\t<<elseif _sleepinterrupt>>"
  },
  {
   "kind": "merged-new-text",

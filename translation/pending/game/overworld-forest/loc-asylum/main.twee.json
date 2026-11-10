@@ -70,24 +70,13 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t<br><br>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t<br>"
-  ],
-  "context": "\t<<link [[다음|Asylum Cell]]>><</link>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
    "\t\t<br><br>"
   ],
   "old_kr": [],
   "new_en": [
    "\t\t<br>"
   ],
-  "context": "\t\t옷이 들어있는 푹신한 벽장이 벽에서 튀어나와 있지만, 팔이 묶여 있어 닿을 수 없다."
+  "context": "\t<<else>>"
  },
  {
   "kind": "merged-new-text",
@@ -98,7 +87,7 @@
   "new_en": [
    ""
   ],
-  "context": "<</if>>"
+  "context": "\t\t<br>"
  },
  {
   "kind": "merged-new-text",
@@ -109,6 +98,6 @@
   "new_en": [
    ""
   ],
-  "context": "<br>"
+  "context": "\t\t<</if>>"
  }
 ]

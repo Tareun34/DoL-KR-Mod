@@ -19,6 +19,6 @@
   "new_en": [
    ""
   ],
-  "context": "\t<br><br>"
+  "context": "\t<<set $enemyarousalmax to 1000>>"
  }
 ]

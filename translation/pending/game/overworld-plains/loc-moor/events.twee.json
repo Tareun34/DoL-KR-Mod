@@ -176,7 +176,7 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+   "\t<<if $settings.bestialityEnabled or $monster is 1>>"
   ],
   "old_kr": [],
   "new_en": [

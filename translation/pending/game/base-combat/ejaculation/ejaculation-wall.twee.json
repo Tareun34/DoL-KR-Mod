@@ -1629,5 +1629,191 @@
    "\t\t\t\t<!-- Special case male PC with female NPC -->"
   ],
   "context": "\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<case \"mouth\">>",
+   "\t\t\t\t<<He>> cums loudly, shoving <<his>> $NPCList[_nn].penisdesc deep into your throat, making you gag. Tears stream down your face."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</switch>>"
+  ],
+  "context": "\t\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<case \"mouthentrance\" \"mouthimminent\" \"chest\" \"lefthand\" \"righthand\">>",
+   "\t\t\t\t<<switch random(1, 3)>>",
+   "\t\t\t\t<<case 1>>",
+   "\t\t\t\t\t<<He>> shakes as <<he>> cums, slapping you across the face with <<his>> $NPCList[_nn].penisdesc.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 2>>",
+   "\t\t\t\t\t<<He>> cums loudly, then laughs, wiping <<his>> $NPCList[_nn].penisdesc of on your hair.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t<<He>> cums silently, mouth agape, rubbing <<his>> $NPCList[_nn].penisdesc against your cheek.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<elseif $NPCList[_nn].penis is \"thighs\">>",
+   "\t\t\t\t<<switch random(1, 7)>>"
+  ],
+  "context": "\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<</switch>>",
+   "\t\t<<else>><!-- Consensual strap-on case -->",
+   "\t\t\t<<switch $NPCList[_nn].penis>>",
+   "\t\t\t<<case \"vagina\" \"vaginaimminent\" \"vaginaentrance\" \"anus\" \"anusentrance\" \"anusimminent\" \"thighs\">>",
+   "\t\t\t\t<<He>> shakes as <<he>> cums, wiping <<his>> $NPCList[_nn].penisdesc off on your ass."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<elseif $NPCList[_nn].penis is \"vaginaentrance\">>",
+   "\t\t\t\t<<switch random(1, 7)>>"
+  ],
+  "context": "\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<</switch>>",
+   "\t\t<<else>><!-- Consensual strap-on case -->",
+   "\t\t\t<<switch $NPCList[_nn].penis>>",
+   "\t\t\t<<case \"vagina\" \"vaginaimminent\" \"vaginaentrance\" \"anus\" \"anusentrance\" \"anusimminent\" \"thighs\">>",
+   "\t\t\t\t<<He>> shakes as <<he>> cums, wiping <<his>> $NPCList[_nn].penisdesc off on your ass."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</switch>>"
+  ],
+  "context": "\t\t\t\t\t\t<<bottomejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<</switch>>",
+   "\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"semen\">>",
+   "\t\t<<elseif $NPCList[_nn].penis is \"mouthimminent\">>",
+   "\t\t\t<<switch random(1, 7)>>",
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> grips hair at the top of your head, ejaculating onto your lips as you barely brush against the tip of <<his>> penis.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> brushes <<his>> $NPCList[_nn].penisdesc against your face, causing <<him>> to ejaculate early. Cum drips down your lips and chin; frustrated, <<he>> wipes the cum off your face and shoves it in your mouth.",
+   "\t\t\t\t\t<<cumswallow `$NPCList[_nn].type` null `npcSemenMod($NPCList[_nn].penissize)`>>",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> grasps your head but in <<his>> excitement cums before <<he>> can enter your mouth. Thick ropes of cum cover your cheeks, chin, and into your waiting mouth. <<He>> looks frustrated.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<oralejacstat>><<cumswallow `$NPCList[_nn].type` null `npcSemenMod($NPCList[_nn].penissize)`>>",
+   "\t\t\t<</switch>>",
+   "\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"semen\">>",
+   "\t\t<<elseif $NPCList[_nn].penis is \"mouth\">>",
+   "\t\t\t<<switch random(1, 7)>>",
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> grabs you under the chin with one hand and by your hair with the other, shoving <<his>> $NPCList[_nn].penisdesc down your throat as <<he>> cums. You gag and retch as unwanted semen streams down your throat, forcing you to swallow.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> grabs your hair as <<he>> mashes <<his>> $NPCList[_nn].penisdesc into your mouth, ejaculating with a moan. You gag as cum fills your mouth and drips down your chin.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> grasps your hair by the temples, wildly thrusting <<his>> $NPCList[_nn].penisdesc down your throat as <<he>> cums. <span class=\"pink\">You whimper as semen streams down your throat,</span> fills your mouth and covers your face as <<he>> flails. \"I bet you enjoy being tied up and face fucked.\"",
+   "\t\t\t\t\t<<faceejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"semen\">>",
+   "\t\t\t\t\t<<gstress>><<gtrauma>><<gpain>><<violence 3>><<bruise neck>><<hitstat>>",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t<</switch>>",
+   "\t\t\t<<oralejacstat>><<ejacstat>><<cumswallow `$NPCList[_nn].type` null `npcSemenMod($NPCList[_nn].penissize)`>>",
+   "\t\t<<elseif $NPCList[_nn].penis is \"feet\">>",
+   "\t\t\t<<switch random(1, 7)>>",
+   "\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t<<He>> pushes your feet together and groans as <<he>> cums. Ejaculate covers your feet."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<He>> groans as <<he>> works <<his>> shaft and, giving <<his>> $NPCList[_nn].penisdesc a final squeeze, ejaculates on you. \"What a lovely cum dumpster you are.\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<</switch>>",
+   "\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"semen\">>",
+   "\t\t<<elseif $NPCList[_nn].penis is \"mouthimminent\">>",
+   "\t\t\t<<switch random(1, 7)>>",
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> grips hair at the top of your head, ejaculating onto your lips as you barely brush against the tip of <<his>> penis.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> brushes <<his>> $NPCList[_nn].penisdesc against your face, causing <<him>> to ejaculate early. Cum drips down your lips and chin; frustrated, <<he>> wipes the cum off your face and shoves it in your mouth.",
+   "\t\t\t\t\t<<cumswallow `$NPCList[_nn].type` null `npcSemenMod($NPCList[_nn].penissize)`>>",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> grasps your head but in <<his>> excitement cums before <<he>> can enter your mouth. Thick ropes of cum cover your cheeks, chin, and into your waiting mouth. <<He>> looks frustrated.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<oralejacstat>><<cumswallow `$NPCList[_nn].type` null `npcSemenMod($NPCList[_nn].penissize)`>>",
+   "\t\t\t<</switch>>",
+   "\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"semen\">>",
+   "\t\t<<elseif $NPCList[_nn].penis is \"mouth\">>",
+   "\t\t\t<<switch random(1, 7)>>",
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> grabs you under the chin with one hand and by your hair with the other, shoving <<his>> $NPCList[_nn].penisdesc down your throat as <<he>> cums. You gag and retch as unwanted semen streams down your throat, forcing you to swallow.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> grabs your hair as <<he>> mashes <<his>> $NPCList[_nn].penisdesc into your mouth, ejaculating with a moan. You gag as cum fills your mouth and drips down your chin.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> grasps your hair by the temples, wildly thrusting <<his>> $NPCList[_nn].penisdesc down your throat as <<he>> cums. <span class=\"pink\">You whimper as semen streams down your throat,</span> fills your mouth and covers your face as <<he>> flails. \"I bet you enjoy being tied up and face fucked.\"",
+   "\t\t\t\t\t<<faceejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"semen\">>",
+   "\t\t\t\t\t<<gstress>><<gtrauma>><<gpain>><<violence 3>><<bruise neck>><<hitstat>>",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t<</switch>>",
+   "\t\t\t<<oralejacstat>><<ejacstat>><<cumswallow `$NPCList[_nn].type` null `npcSemenMod($NPCList[_nn].penissize)`>>",
+   "\t\t<<elseif $NPCList[_nn].penis is \"feet\">>",
+   "\t\t\t<<switch random(1, 7)>>",
+   "\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t<<He>> pushes your feet together and groans as <<he>> cums. Ejaculate covers your feet."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<chestejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"chest\" \"semen\">>",
+   "\t\t\t\t\t\t\t<<tummyejacstat>><<set $hygiene += 500>><<bodyliquid \"tummy\" \"semen\">>",
+   "\t\t\t\t\t<</switch>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<He>> moans and rubs <<his>> cock wildly, sending cum flying all over you and the wall. <<He>> wipes <<his>> penis clean on your body."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"semen\">>",
+   "\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t<<He>> quietly cums on your feet, slickening them with semen."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</switch>>"
+  ],
+  "context": "\t\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"semen\">>",
+   "\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t<<He>> quietly cums on your feet, slickening them with semen."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<</switch>>"
+  ],
+  "context": "\t\t\t\t\t\t<br><br>"
  }
 ]

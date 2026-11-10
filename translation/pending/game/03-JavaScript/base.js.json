@@ -8,7 +8,7 @@
   "new_en": [
    " *"
   ],
-  "context": " * The variable \"output\" is also exposed (unlike <<run>>, <<set>>)"
+  "context": " * Returns an optional wetness prefix for the article of clothing."
  },
  {
   "kind": "merged-new-text",

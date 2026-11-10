@@ -264,5 +264,35 @@
    "\t\t\t\t<<He>> <<= either(\"smiles\",\"<<laughs>>\")>>. \"Is that how you feel? How adorable.\""
   ],
   "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<elseif C.npc.Avery.rage gte 20>>"
+  ],
+  "context": "\t\t\t\t<<He>> scoffs. \"Is that so? Going by your behaviour of late, I find it difficult to believe.\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t<<He>> smirks. \"I know. But even so, as long as you behave, the money will keep coming, <<pcpetname \"Avery\">>.\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</if>>",
+   "\t\t<</addPairedSpeechLine>>",
+   "\t<</if>>",
+   "<</widget>>"
+  ],
+  "context": "\t\t\t\t<<He>> <<= either(\"smiles\",\"<<laughs>>\")>>. \"Is that how you feel? How adorable.\""
  }
 ]

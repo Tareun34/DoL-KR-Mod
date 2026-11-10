@@ -74,6 +74,17 @@
  {
   "kind": "merged-new-text",
   "old_en": [
+   "\t\t<<elseif isCrossdressing()>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<elseif isCrossdressing() and $settings.nudeGenderPerception !== 0>>"
+  ],
+  "context": "\t\t\t<<endevent>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
    "\t\t<<elseif $player.penisExist and $player.vaginaExist>>"
   ],
   "old_kr": [],

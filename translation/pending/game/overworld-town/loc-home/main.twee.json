@@ -581,7 +581,9 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "\t<<link [[Get angry|Bedroom Kylar Creep]]>><<set $phase to 3>><<npcincr Kylar rage 2>><<npcincr Kylar love -1>><<stress -6>><</link>><<lstress>><<llove>><<gksuspicion>>"
+  ],
   "old_kr": [],
   "new_en": [
    "<<elseif $location is \"home\" and _kylarWake is 3>>",
@@ -612,13 +614,24 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t\t\t\t\t<br><br>"
+   "\t\t\t\t<br><br>"
   ],
   "old_kr": [],
   "new_en": [
-   "\t\t\t\t\t<br>"
+   "\t\t\t\t<br>"
   ],
-  "context": "\t\t\t\t\t<<link [[다음|Robin Bed Egg Laying]]>><</link>>"
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $renttime lte 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $rentTime lte 0>>"
+  ],
+  "context": "\t\t<br><br>"
  },
  {
   "kind": "merged-new-text",
@@ -629,40 +642,134 @@
   "new_en": [
    "\t\t\t\t<br>"
   ],
-  "context": "\t\t\t<<if hasSexStat(\"promiscuity\", 2)>>"
+  "context": "\t\t\t<<else>>"
  },
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t\t\t\t<br><br>"
+   "\t<<if $renttime gte 1>> <!-- If Rent is not due -->"
   ],
   "old_kr": [],
   "new_en": [
-   "\t\t\t\t<br>"
+   "\t<<if $rentTime gte 1>> <!-- If Rent is not due -->"
   ],
-  "context": "\t\t\t\t<<link [[목욕을 도와달라고 부탁한다|Bath Robin Help]]>><<npcincr Robin lust 1>><<npcincr Robin love 1>><<stress -6>><</link>><<promiscuous2>><<glust>><<glove>><<lstress>>"
+  "context": "\t<<npc Robin>><<person1>>"
  },
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t\t\t\t<br><br>"
+   "\t<<if $renttime lte 0>>"
   ],
   "old_kr": [],
   "new_en": [
-   "\t\t\t\t<br>"
+   "\t<<if $rentTime lte 0>>"
   ],
-  "context": "\t\t\t\t<<link [[`${[\"Black Wolf\", \"Great Hawk\"].includes(_npc) ? \"그 \" : \"\"}${window.KR.gatPersonNameDictKR(_npc)}의 사진으로 교체한다`|Mirror Locket 2]]>><<set $carried.neck.photo to _npc>><</link>>"
+  "context": "\t<<endevent \"phaseless\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $robinfirstrentfight and ($baileypaychain lt 2 or $rentTime lte -1) and _robinAtOrphanage>>"
+  ],
+  "context": "\t\t<<endevent>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $babyIntros?.Bailey?.length gt 0>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<</if>>",
+   "<<elseif isBaileyLookingForPlayer() and $rentTime lte -21 and !$bailey_confiscation>> /* Bailey Confiscation System */",
+   "\t<<set $bus to \"home\">>",
+   "\t<<baileyRentConfiscation>>",
+   "<<elseif isRentDue() or isBaileyLookingForPlayer()>>",
+   "\t<<set $bus to \"home\">>",
+   "\tA hand rests on your shoulder from behind. <span class=\"red\">It's Bailey.</span>",
+   "\t<<if $robinfirstrentfight and ($baileypaychain lt 2 or $rentTime lte -1) and _robinAtOrphanage>>",
+   "\t\t<<rentduerobin 0>>",
+   "\t<<else>>",
+   "\t\t<<rentdue 0>>",
+   "\t<</if>>",
+   "<<elseif $rng gte 61 and $worn.upper.name is \"large towel\" and $worn.upper.set is $worn.lower.set and !$daily.orphanageflash and Time.hour lt 22 and Time.hour gte 6>>",
+   "\t<<set $daily.orphanageflash to 1>>",
+   "\tAs you walk down the hallway, a door opens up. A <<generatey1>><<person1>><<person>> leaves <<his>> room.",
+   "\t<br><br>",
+   "\t\"Oh. Huh, hi,\" <<he>> says upon noticing you, clearly flustered by your state of dress.",
+   "\t<br><br>",
+   "\tYou nod in response, and can't help noticing how <<he>> seems to avoid looking at you.",
+   "\t<br><br>",
+   "\t<<if hasSexStat(\"exhibitionism\", 5)>>",
+   "\t\t<<link [[Tease|Hallway Flashing 1]]>><</link>><<exhibitionist5>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<link [[Keep walking|Orphanage]]>><<endevent>><</link>>",
+   "\t<br>",
+   "<<elseif $exposed gte 1 and Time.hour lt 22 and Time.hour gte 6>>",
+   "\tYou can't bear the thought of someone catching you like this. You hasten to your bedroom.",
+   "\t<br><br>",
+   "",
+   "\t<<if dangerEvent()>>",
+   "\t\tA door swings open up ahead, and a <<generatey1>><<person1>><<person>> steps out. <<covered>> <<He>> doesn't notice you.",
+   "\t\t<br><br>",
+   "\t\t<<link [[Hide|Orphanage Hide]]>><<stress 6>><</link>><<gstress>>",
+   "\t\t<br>",
+   "\t\t<<if hasSexStat(\"exhibitionism\", 4)>>",
+   "\t\t\t<<link [[Flaunt|Orphanage Flaunt]]>><</link>><<exhibitionist4>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\t<<bedroomEntryEvent \"forced\">>"
+  ],
+  "context": "\t\t<br>"
  },
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t\t\t\t<br><br>"
+   "\t<<if StartConfig.sneaky>>"
   ],
   "old_kr": [],
   "new_en": [
-   "\t\t\t\t<br>"
+   "\t<<if StartConfig.sneaky or $debug>>"
   ],
-  "context": "\t\t\t\t<<link [[`${[\"Black Wolf\", \"Great Hawk\"].includes(_npc) ? \"그 \" : \"\"}${window.KR.gatPersonNameDictKR(_npc)}의 사진을 넣는다`|Mirror Locket 2]]>><<set $carried.neck.photo to _npc>><</link>>"
+  "context": "<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<photographystudioicon>><<link [[Approach and ask about Niki|Orphanage Sneaky Niki]]>><</link>> <i>Sneaky update: Enable Niki's photo studio</i>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br>",
+   "\t\t<<icon \"jack-o-lantern.png\">><<link [[Approach and ask about Halloween|Orphanage Sneaky Halloween]]>><</link>> <i>Sneaky update: Teleport to Halloween</i>"
+  ],
+  "context": "\t\t<<photographystudioicon>><<link [[다가가서 니키에 대해 묻는다|Orphanage Sneaky Niki]]>><</link>> <i>몰래 업데이트: 니키의 사진관 활성화</i>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<set $rentmoney to 10000>><<rentmod>>",
+   "<<set $renttime to 7>><<set $rentday to Time.weekDay>>",
+   "<<set $rentstage to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set $rentMoney to 10000>><<rentmod>>",
+   "<<set $rentTime to 7>>",
+   "<<set $rentStage to 1>>"
+  ],
+  "context": "<<set $outside to 0>><<set $location to \"home\">><<effects>>"
  },
  {
   "kind": "merged-new-text",
@@ -696,7 +803,9 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "<</link>> <i>Avery will invite you on the street, on Saturday.</i>"
+  ],
   "old_kr": [],
   "new_en": [
    "<br>",

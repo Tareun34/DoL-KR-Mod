@@ -176,17 +176,6 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t<br><br>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t<br>"
-  ],
-  "context": "\t<<pound_punishment_links>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
    "\t\t<br><br>"
   ],
   "old_kr": [],

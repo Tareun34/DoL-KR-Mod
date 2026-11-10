@@ -485,7 +485,22 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "\t\t\t\t\t\t\t<<elseif $player.penissize is 3>>",
+   "\t\t\t\t\t\t\t\t<<if $rng gte 76>>",
+   "\t\t\t\t\t\t\t\t\t\"<<pHer>> penis is so small!\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 1>><<ginsecurity \"penis_small\">>",
+   "\t\t\t\t\t\t\t\t<<elseif $rng gte 51>>",
+   "\t\t\t\t\t\t\t\t\t\"What's it like having your <<penis>> out in front of all these strangers?\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 1>><<ginsecurity \"penis_small\">>",
+   "\t\t\t\t\t\t\t\t<<elseif $rng gte 26>>",
+   "\t\t\t\t\t\t\t\t\t\"You've such a cute <<penis>>, I want to taste it.\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 1>><<ginsecurity \"penis_small\">>",
+   "\t\t\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t\t\t\"I bet you love having your <<penis>> ogled.\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 1>><<ginsecurity \"penis_small\">>",
+   "\t\t\t\t\t\t\t\t<</if>>"
+  ],
   "old_kr": [],
   "new_en": [
    "\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 1>><<ginsecurity \"penis_small\">>"

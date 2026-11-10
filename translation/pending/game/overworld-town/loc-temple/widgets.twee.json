@@ -865,9 +865,7 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [
-   "\t<<elseif $rng gte 81>>"
-  ],
+  "old_en": [],
   "old_kr": [],
   "new_en": [
    "\t<</addinlineevent>>",
@@ -878,12 +876,7 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [
-   "\t\t\t<<gtrauma>><<trauma 6>>",
-   "\t\t<</if>>",
-   "\t\t<br><br>",
-   "\t\t<<endevent>>"
-  ],
+  "old_en": [],
   "old_kr": [],
   "new_en": [
    "\t\t\t<br><br>",

@@ -392,6 +392,30 @@
  {
   "kind": "merged-new-text",
   "old_en": [
+   "\t\t<<heelsicon \"hobble\">><<link [[Hobble in heels (0:30)|Forest]]>><<set $forestmod to 3>><<set $forest -= 5>><<pass 30>><<set $forestmove to \"hobble\">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<gharass>>",
+   "\t\t<<if $town_projects.road gte 4 and $forest lte 25 and $forest gte 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<else>>"
+  ],
+  "context": "\t\t<<heelsicon \"hobble\">><<link [[Hobble towards town (0:30)|Forest]]>><<set $forestmod to 3>><<set $forest -= 5>><<pass 30>><<set $forestmove to \"hobble\">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<gharass>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<heelsicon \"hobble\">><<link [[Hobble in heels (0:30)|Forest]]>><<set $forestmod to 3>><<set $forest -= 5>><<pass 30>><<set $forestmove to \"hobble\">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<gharass>>",
+   "\t\t<<if $town_projects.road gte 4 and $forest lte 25 and $forest gte 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $nextPassageCheck is \"Forest Blood Less Deep\">>"
+  ],
+  "context": "\t\t<<forestTravelIcon \"town\">><<link `'Go towards town (<span class=\"travelTime\">' + _travelTimeString + '</span>)'` \"Forest\">><<forestTravel \"town\">><</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
    "\t\t<<if $settings.voreEnabled and $settings.bestialityEnabled>>"
   ],
   "old_kr": [],

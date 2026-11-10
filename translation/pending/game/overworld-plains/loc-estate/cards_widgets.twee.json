@@ -97,11 +97,14 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   ""
+  ],
   "old_kr": [],
   "new_en": [
+   "\t\t\"Where were we?\" Wren says.",
    "\t\t<<estate_cards_bet>>"
   ],
-  "context": "\t\t\"Where were we?\" Wren says."
+  "context": "\t<<else>>"
  }
 ]

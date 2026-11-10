@@ -257,7 +257,16 @@
   "new_en": [
    ""
   ],
-  "context": "<<effects>><<avery_mansion>>"
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<br><br>"
  },
  {
   "kind": "merged-new-text",

@@ -190,17 +190,6 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t<<npc Winter>><<person1>>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t<<person1>>"
-  ],
-  "context": "\t<br><br>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
    "<<money `($antiquemoney * 100)` \"museumAntique\">><<set $antiquemoneyhistory += $antiquemoney>><<set $antiquemoney to 0>>"
   ],
   "old_kr": [],

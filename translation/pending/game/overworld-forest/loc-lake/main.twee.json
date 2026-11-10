@@ -75,16 +75,5 @@
    "\t\t<<lakeicon \"dock\">><<link [[Swim to dock (0:02)|Lake Dock]]>><<pass 2>><</link>>"
   ],
   "context": "\t<<if $exposed gte 1 and $laketeenspresent is 1>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "<<exposure>>"
  }
 ]

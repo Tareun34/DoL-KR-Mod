@@ -367,7 +367,7 @@
   "new_en": [
    ""
   ],
-  "context": "<<effects>>"
+  "context": "\t\t<br>"
  },
  {
   "kind": "merged-new-text",
@@ -378,7 +378,7 @@
   "new_en": [
    ""
   ],
-  "context": "<br><br>"
+  "context": "\t\t<br>"
  },
  {
   "kind": "merged-new-text",
@@ -393,167 +393,11 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "<</if>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t<br><br> "
-  ],
+  "old_en": [],
   "old_kr": [],
   "new_en": [
    "\t<br><br>"
   ],
-  "context": "\t당신은 낡은 방 중 하나를 탐색한다. 저 멀리 구석에 있는 물건을 제외하면 비어 있다. 그것은 당신과 같은 높이이며 시트로 덮여 있다."
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t<br><br> "
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t<br><br>"
-  ],
-  "context": "\t한쪽 경첩에 비스듬히 매달려 있는 사무실 문을 발견한다. 당신은 그 안으로 들어간다."
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "\t<br><br>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "\t<br><br>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "<</if>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "<<effects>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t<</if>> "
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t<</if>>"
-  ],
-  "context": "\t\t거울 너머로 한 <<person>>【이가】 다른 사람들을 양옆에 거느린 채 당신을 기다리고 있다. 그들은 기대에 찬 표정으로 지켜본다."
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "<br><br>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t<br><br> "
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t<br><br>"
-  ],
-  "context": "\t기이하긴 해도, 당신은 정신병원에 있으며 그 사실을 잊는 것은 위험할 수 있다. 그 생각과 함께, <span class=\"green\">당신은 거울 방으로 돌아오지만,</span> 여전히 관객들이 기다리고 있는 장면이 눈앞에 펼쳐진다."
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "\t<br><br>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "\t<br><br>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "<</if>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "<<effects>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
-   "\t"
-  ],
-  "old_kr": [],
-  "new_en": [
-   ""
-  ],
-  "context": "<br><br>"
+  "context": "\tYou swim back to the garden, climb onto the shore, dry yourself, dress, and enter the asylum."
  }
 ]

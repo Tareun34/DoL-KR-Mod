@@ -55,24 +55,13 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t\t<br><br>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t\t<br>"
-  ],
-  "context": "\t<<if isLoveInterest(\"Avery\") and !$daily.avery.talk.flirt and $avery_pool isnot \"swim\">>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
    "\t\t\t<br><br>"
   ],
   "old_kr": [],
   "new_en": [
    "\t\t\t<br>"
   ],
-  "context": "\t\t<<if !$avery_mansion.study_unlocked>>"
+  "context": "\t\t<<else>>"
  },
  {
   "kind": "merged-new-text",

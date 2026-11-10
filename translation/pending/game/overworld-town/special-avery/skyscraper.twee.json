@@ -17,9 +17,7 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [
-   "<<set $location to \"avery_skyscraper\">><<effects>>"
-  ],
+  "old_en": [],
   "old_kr": [],
   "new_en": [
    "<<set $location to \"avery_skyscraper\">><<effects>><<seenPassage>>"

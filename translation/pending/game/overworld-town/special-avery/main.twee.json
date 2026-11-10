@@ -2155,17 +2155,6 @@
  {
   "kind": "merged-new-text",
   "old_en": [
-   "\t<br><br>"
-  ],
-  "old_kr": [],
-  "new_en": [
-   "\t<br>"
-  ],
-  "context": "\t<<link [[예|Avery Valentines Invite Street End]]>><<set $phase to 1>><<set $avery_valentines.invite to true>><</link>>"
- },
- {
-  "kind": "merged-new-text",
-  "old_en": [
    "<<money `((C.npc.Avery.love * 10 + $endear * 10 + 10) * 100)` \"avery\">>"
   ],
   "old_kr": [],
@@ -2245,6 +2234,55 @@
   "old_en": [],
   "old_kr": [],
   "new_en": [
+   "<br><br>",
+   "<<if $averySeen.includes(\"office\")>>",
+   "\t<<if $avery_fate is \"ascended\">>",
+   "\t\t<<link [[The office on Elk Street|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to \"office\">><</link>>",
+   "\t\t<br>",
+   "\t<<else>>",
+   "\t\t<<link [[The office on High Street|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to \"office\">><</link>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "<</if>>",
+   "<<if $chef_avery>>",
+   "\t<<link [[The cafe|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to \"cafe\">><</link>>",
+   "\t<br>",
+   "<</if>>",
+   "<<if $photo_known>>",
+   "\t<<link [[The photo studio|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to \"photo studio\">><</link>>",
+   "\t<br>",
+   "<</if>>",
+   "<<if $avery_mansion>>",
+   "\t<<link [[The mansion|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to \"mansion\">><</link>>",
+   "\t<br>",
+   "<</if>>",
+   "<<link [[The orphanage|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to \"orphanage\">><</link>>",
+   "<br>",
+   "<<if $officejobintro is 1 or $photo_known is 1 or $cafe_avery>>",
+   "\t<<link [[Let Avery decide|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to \"Avery\">><</link>><<if $avery_mansion>><<gdom>><</if>>",
+   "\t<br>",
+   "<</if>>"
+  ],
+  "context": "\"Where shall I have you dropped off?\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\"I'm on my way to meet an important client near Danube Street, so I got permission to use the company heli. The meeting is very important, but I thought I'd make some time for you. I hope you know to appreciate the gesture.\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<span class=\"blue\">You can't bring yourself to drink while you know you're with child.</span>"
+  ],
+  "old_kr": [],
+  "new_en": [
    "\t\t<<link [[Refuse|Avery Helicopter Refuse]]>><</link>>",
    "\t\t<br>"
   ],
@@ -2261,6 +2299,134 @@
    "<<wearProp \"champagne\">>"
   ],
   "context": ":: Avery Helicopter Drink"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if C.npc.Avery.rage gte 60 and !playerIsPregnant() and !playerAwareTheyArePregnant() and $averyragerevealed is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>"
+  ],
+  "context": "\t<<He>> pushes the glass into your hands. \"Now, drink.\" <<garage>><<npcincr Avery rage 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if C.npc.Avery.rage gte 60 and !playerIsPregnant() and !playerAwareTheyArePregnant() and $averyragerevealed is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if C.npc.Avery.rage gte 60 and !playerIsPregnant() and !playerAwareTheyArePregnant() and $averyragerevealed is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>",
+   "\t<<link [[Next|Avery Helicopter 2]]>><</link>>",
+   "<</if>>"
+  ],
+  "context": "\t<<He>> puts your glass aside and starts sipping on <<his>> own.<<if $averyragerevealed gte 1>> <<He>> seems somewhat <<= C.npc.Avery.rage gte 40 ? \"irritated\" : \"put out\">>.<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tAvery frowns."
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "As you look outside the window, you see the endless waves of the sea spreading beneath, glittering in the light of day.",
+   "<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>"
+  ],
+  "context": "\t<<person1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "As you look outside the window, you see the endless waves of the sea spreading beneath, glittering in the light of day.",
+   "<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br>"
+  ],
+  "context": "\t<<link [[Encourage Avery's gossiping (curious)|Avery Helicopter Gossip]]>><<set $phase to 1>><</link>><<glove>><<lstress>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "As you look outside the window, you see the endless waves of the sea spreading beneath, glittering in the light of day.",
+   "<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>"
+  ],
+  "context": "\tyou watch outside the window. Partway through the ride, the helicopter suddenly starts to shake, startling both you and Avery. <<gstress>><<stress 3>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "As you look outside the window, you see the endless waves of the sea spreading beneath, glittering in the light of day.",
+   "<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>",
+   "\t\"Enjoying the view?\"",
+   "\t<<if (random(1,2) is 1 and C.npc.Avery.lust gte 20) or C.npc.Avery.lust gte 60>>",
+   "\t\tYou feel a hand slide onto your thigh, and you turn to look at Avery. <<He>> smiles <<= C.npc.Avery.lust gte 60 ? \"seductively\" : \"slyly\">>. \"So am I.\"",
+   "\t\t<br><br>",
+   "\t\tAvery's eyes are locked onto you, rather than either of the windows.<<if isLoveInterest(\"Avery\") or $averyromance>> Your heart skips a beat. <<lstress>><<stress -3>><</if>>",
+   "\t\t<br><br>",
+   "\t\t\"This is what I can give you, <<pcpetname \"Avery\">>,\" <<he>>",
+   "\t\t<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 60>>",
+   "\t\t\tpurrs<<if C.npc.Avery.rage gte 80>> dangerously<</if>>. \"What I'm capable of. You'd do best not to forget that it's just as easy for me to take it away as it is to give it to you. And if you don't wish to lose it...\" <<His>> hand lifts to cup your chin instead. \"Prove it. Spread your legs for me.\"",
+   "\t\t<<elseif $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>>",
+   "\t\t\tmurmurs. \"What I'm capable of. As long as you ask nicely, you can have just about anything you'd like. But that requires obedience on your part as much as willingness on mine.\" <<His>> hand lifts to cup your chin instead. \"So let's start with you spreading your legs for me, hm?\"",
+   "\t\t<<else>>",
+   "\t\t\t<<= either(\"murmurs\",\"purrs\",\"whispers\")>>. \"This is what I'm capable of. And I can give you just about anything that you'd like, so long as you keep being good. You want to be good for me, don't you?\" <<His>> hand lifts to cup your chin instead.",
+   "\t\t\t<<if $averyragerevealed gte 1>>",
+   "\t\t\t\t\"I'd like you to prove it. Let's start with you spreading your legs for me.\"",
+   "\t\t\t<<else>>",
+   "\t\t\t\t\"So, why don't we start with this? Spread your legs for me.\"",
+   "\t\t\t<</if>>",
+   "\t\t<</if>>",
+   "\t\t<br><br>",
+   "\t\t<<link [[Spread your legs|Avery Helicopter View Lewd]]>><<set $phase to 1>><</link>><<glove>><<if $avery_mansion>><<gdom>><</if>>",
+   "\t\t<br>",
+   "\t\t<<link [[Refuse|Avery Helicopter View Lewd]]>><<set $phase to 2>><</link>><<garage>><<if $avery_mansion>><<ldom>><</if>>",
+   "\t<<else>>",
+   "\t\t<br><br>",
+   "\t\tYou look over at Avery. <<Hes>> smiling at you<<if $averyragereveled gte 1 and C.npc.Avery.rage gte 20>>, though the smile doesn't reach <<his>> eyes<</if>>. \"Marvelous, isn't it? This is what I can give you, <<pcpetname \"Avery\">>,\" <<he>>",
+   "\t\t<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 60>>",
+   "\t\t\tpurrs<<if C.npc.Avery.rage gte 80>> dangerously<</if>>. \"What I'm capable of. You'd do best not to forget that it's just as easy for me to take it away as it is to give it to you. And if you don't wish to lose it...\" <<He>> takes your chin between <<his>> fingers. \"Then you'll prove it to me going forward. Won't you?\"",
+   "\t\t<<elseif $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>>",
+   "\t\t\tmurmurs. \"What I'm capable of. As long as you ask nicely, you can have just about anything you'd like. But that requires obedience on your part as much as willingness on mine.\" <<He>> takes your chin between <<his>> fingers. \"I hope you won't disappoint going forward.\"",
+   "\t\t<<else>>",
+   "\t\t\t<<= either(\"murmurs\",\"purrs\",\"whispers\")>>. \"This is what I'm capable of. And I can give you just about anything that you'd like, so long as you keep being good. You want to be good for me, don't you?\" <<He>> takes your chin between <<his>> fingers. \"Nod your head for me.\"",
+   "\t\t<</if>>",
+   "\t\t<br><br>"
+  ],
+  "context": "\tyou look outside the window. You see the town below you, and the glittering ocean in the distance. It's a relaxing sight. <<lstress>><<stress -6>><<ltrauma>><<trauma -6>>"
  },
  {
   "kind": "merged-new-text",
@@ -2307,6 +2473,64 @@
  },
  {
   "kind": "merged-new-text",
+  "old_en": [
+   "Avery's face darkens."
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Avery's face darkens."
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Avery's face darkens."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "",
+   ":: Avery Helicopter View Lewd Refuse",
+   "<<effects>>",
+   ""
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Avery's face darkens."
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Avery's face darkens."
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "merged-new-text",
   "old_en": [],
   "old_kr": [],
   "new_en": [
@@ -2327,13 +2551,146 @@
  },
  {
   "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $molestationstart is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $position to \"missionary\">>",
+   "",
+   "<</if>>",
+   "",
+   "<<effects>>",
+   "<<effectsman>>",
+   "<<man>>",
+   "<<stateman>>",
+   "<br><br>",
+   "<<actionsman>>",
+   "<<if _combatend>>",
+   "\t<span id=\"next\"><<link [[다음|Avery Helicopter Sex End]]>><</link>></span><<nexttext>>",
+   "<<else>>",
+   "\t<span id=\"next\"><<link [[다음|Avery Helicopter Sex]]>><</link>></span><<nexttext>>",
+   "<</if>>",
+   "",
+   ":: Avery Helicopter Sex End",
+   "<<effects>>",
+   "",
+   "<<if $enemyarousal gte $enemyarousalmax>>",
+   "\t<<set _end to \"good\">>",
+   "\t<<ejaculation>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $molestationstart is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t\t<<He>> seems to notice your state, and <<= either(\"a smirk\",\"a sly smile\",\"an impish smile\")>> curls on <<his>> lips. \"Poor <<pcpetname \"Avery\" \"my\">>. Shall I lend you a hand?\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $molestationstart is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $molestationstart is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t\t<<He>> suddenly yanks you to your feet. You're shoved against one of the helicopter doors, and one hand comes up to grip your shoulder tightly."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $molestationstart is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t\t\"You enjoy making trouble for me, don't you?\" <<He>> gives you an imperious glare. \"Acting like a feral animal? If you think you'll just get away with it this time, you're stupider than I realised.\" <<garage>><<npcincr Avery rage -1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $molestationstart is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>",
+   "\t\t<<if $averySeen.includes(\"helicopter_ascended_threat\")>>",
+   "\t\t\t<<if (currentSkillValue('willpower')/10) gte random(1,80) and $trauma lt ($traumamax*3)/4>>",
+   "\t\t\t\t<<link [[Check the door lock|Avery Helicopter Threat End]]>><<set $phase to 1>><</link>>",
+   "\t\t\t<</if>>",
+   "\t\t<<else>>",
+   "\t\t\t<<if (currentSkillValue('willpower')/10) gte random(1,40) and $trauma lt ($traumamax/2)>>",
+   "\t\t\t\t<<link [[Check the door lock|Avery Helicopter Threat End]]>><<set $phase to 1>><</link>>",
+   "\t\t\t<</if>>",
+   "\t\t<</if>>",
+   "\t\t<br>",
+   "\t\t<<link [[Push|Avery Helicopter Threat End]]>><<set $phase to 4>><</link>>",
+   "\t\t<br>",
+   "\t\t<<link [[Plead|Avery Helicopter Threat End]]>><<set $phase to 3>><</link>>",
+   "\t\t<br>",
+   "\t\t<<link [[Trust Avery|Avery Helicopter Threat End]]>><<set $phase to 2>><</link>>",
+   "\t\t<br>",
+   "\t<<else>>",
+   "\t\tEventually Avery drops <<his>> hand. \"You're lucky that I don't have the time to discipline you for that, <<girl>>,\" <<he>> <<= either(\"hisses\",\"snarls\")>>. \"But don't think I'll be forgiving you for it.\" <<garage>><<npcincr Avery rage -1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>",
+   "\t<</if>>",
+   "<<else>> /* Asked to stop */",
+   "\t<<set _end to \"mid\">>",
+   "\tAvery pauses, sighs, and finally pulls away.",
+   "\t<<if $avery_fate is \"saved\">>",
+   "\t\t\"If you insist, <<pcpetname \"Avery\">>,\"",
+   "\t<<elseif $averyragerevealed gte 1 and C.npc.Avery.rage gte 60>>",
+   "\t\t\"Fine. Fucking tease...\"",
+   "\t<<elseif $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>>",
+   "\t\t\"You know how to kill the mood,\"",
+   "\t<<else>>",
+   "\t\t\"If you didn't want it, you could have said so at the start,\"",
+   "\t<</if>>",
+   "\t<<he>> says. <<glust>><<npcincr Avery lust 5>>",
+   "<</if>>",
+   "<br><br>",
+   ""
+  ],
+  "context": "\t\tAvery's free hand moves to rest on the door handle. <<He>> barely grips it, but the message is clear. Your already racing heart thuds painfully. <<ggstress>><<stress 9>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $molestationstart is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
   "old_en": [],
   "old_kr": [],
   "new_en": [
    "",
    "\t<<set $position to \"missionary\">>"
   ],
-  "context": "\t<<set $enemytrust += 100>>"
+  "context": "\t<<maninit>>"
  },
  {
   "kind": "merged-new-text",
@@ -2345,6 +2702,18 @@
    ":: Avery Helicopter Rape End"
   ],
   "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $phase is 0>>",
+   "\t\tAvery moves back and fixes <<his>> clothing."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<elseif $enemyhealth lte 0>>"
+  ],
+  "context": "\t<<He>> pulls away from you altogether, fixing <<his>> clothing and buckling <<himself>> back in. <<tearful>> you do the same."
  },
  {
   "kind": "merged-new-text",
@@ -2584,6 +2953,191 @@
    ":: Avery Helicopter Threat End"
   ],
   "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Avery frowns. \"I must be imagining things! You ungrateful little whore, you owe it all to me! You're nothing without me! Nothing! You're my property, do you understand? I'll take what is rightfully mine!\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t\tYou look down. The light above the door handle is red. The door is still locked. <<lstress>><<stress -6>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Avery frowns. \"I must be imagining things! You ungrateful little whore, you owe it all to me! You're nothing without me! Nothing! You're my property, do you understand? I'll take what is rightfully mine!\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t\tAvery notices the moment you realise that, and <<= either(\"sighs\",\"scoffs\",\"rolls <<his>> eyes\",\"clicks <<his>> tongue\")>> as <<he>> pulls you away from the door and shoves you back into your seat. <<gpain>><<pain 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Avery frowns. \"I must be imagining things! You ungrateful little whore, you owe it all to me! You're nothing without me! Nothing! You're my property, do you understand? I'll take what is rightfully mine!\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t\tYou take a breath and try to calm yourself. After all, Avery still <<= $averyromance ? \"wants you around\" : \"has a use for you\">>, doesn't <<he>>?"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Avery frowns. \"I must be imagining things! You ungrateful little whore, you owe it all to me! You're nothing without me! Nothing! You're my property, do you understand? I'll take what is rightfully mine!\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t\tAfter a pause, the cold fury on Avery's face fades. <<His>> lips purse and <<he>> raises an eyebrow. \"...You seem rather placid, considering the circumstances,\" <<he>> says, voice low."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Avery frowns. \"I must be imagining things! You ungrateful little whore, you owe it all to me! You're nothing without me! Nothing! You're my property, do you understand? I'll take what is rightfully mine!\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Avery frowns. \"I must be imagining things! You ungrateful little whore, you owe it all to me! You're nothing without me! Nothing! You're my property, do you understand? I'll take what is rightfully mine!\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t\t<<His>> face goes blank. Then <<he>> scoffs. \"Do you? Then I can only assume that you've been trying to anger me on purpose.\" <<He>> <<= either(\"sighs\",\"shakes <<his>> head\",\"rolls <<his>> eyes\",\"clicks <<his>> tongue\")>>. \"No matter.\" <<He>> pulls you away from the door, shoves you back into your seat, and sits back down <<himself>>. <<gpain>><<pain 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Avery frowns. \"I must be imagining things! You ungrateful little whore, you owe it all to me! You're nothing without me! Nothing! You're my property, do you understand? I'll take what is rightfully mine!\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t\tBoth of you buckle yourselves back in. You're relieved your trust was well-founded. <<lstress>><<stress -3>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Avery frowns. \"I must be imagining things! You ungrateful little whore, you owe it all to me! You're nothing without me! Nothing! You're my property, do you understand? I'll take what is rightfully mine!\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t\tYou shove Avery away as hard as you can."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Avery frowns. \"I must be imagining things! You ungrateful little whore, you owe it all to me! You're nothing without me! Nothing! You're my property, do you understand? I'll take what is rightfully mine!\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Avery frowns. \"I must be imagining things! You ungrateful little whore, you owe it all to me! You're nothing without me! Nothing! You're my property, do you understand? I'll take what is rightfully mine!\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<</if>>"
+  ],
+  "context": "\t\tTo your surprise, <<he>> <<laughs>>. It's not a pleasant one. But <<he>> lets go of you and the handle. You sit down and buckle yourself back in before <<he>> changes <<his>> mind."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Avery frowns. \"I must be imagining things! You ungrateful little whore, you owe it all to me! You're nothing without me! Nothing! You're my property, do you understand? I'll take what is rightfully mine!\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>"
+  ],
+  "context": "\tAvery smirks at you as <<he>> does the same, though much more leisurely. <<gdom>><<npcincr Avery dom 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Avery frowns. \"I must be imagining things! You ungrateful little whore, you owe it all to me! You're nothing without me! Nothing! You're my property, do you understand? I'll take what is rightfully mine!\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>"
+  ],
+  "context": "\t\"You look frightened, <<pcpetname \"Avery\">>,\" <<he>> coos, <<his>> smirk widening. \"What for?\" <<He>> affects a look of surprise. \"Don't tell me you were actually afraid I was going to open the door?\" <<He>> scoffs a laugh. \"It wouldn't have opened even if I tried.\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Avery frowns. \"I must be imagining things! You ungrateful little whore, you owe it all to me! You're nothing without me! Nothing! You're my property, do you understand? I'll take what is rightfully mine!\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<</if>>"
+  ],
+  "context": "\t<<He>> gestures to a light just above the door handle. It's glowing red, indicating that it's locked. You feel <<= $speech_attitude is \"bratty\" ? \"stupid\" : \"embarrassed\">> for having been scared."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<br><br>"
+  ],
+  "context": "The helicopter slows and eventually stops over the $avery_helicopter.destination. Avery hums<<if _end is \"good\">> with disappointment,<</if>> and gives you a pat on the thigh."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<br><br>"
+  ],
+  "context": "<</if>>\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<br><br>",
+   "<<if $avery_helicopter.destination is \"office\">>",
+   "\t<<if $avery_fate is \"ascended\">>",
+   "\t\t<<link [[Next|Elk Street]]>><<endevent>><<set $eventskip to 1>><</link>>",
+   "\t<<else>>",
+   "\t\t<<link [[Next|High Street]]>><<endevent>><<set $eventskip to 1>><</link>>",
+   "\t<</if>>",
+   "<<elseif $avery_helicopter.destination is \"cafe\">>",
+   "\t<<link [[Next|Cliff Street]]>><<endevent>><<set $eventskip to 1>><</link>>",
+   "<<elseif $avery_helicopter.destination is \"photo studio\">>",
+   "\t<<link [[Next|Nightingale Street]]>><<endevent>><<set $eventskip to 1>><</link>>",
+   "<<elseif $avery_helicopter.destination is \"mansion\">>",
+   "\t<<link [[Next|Mansion Garden]]>><<endevent>><<set $eventskip to 1>><</link>>",
+   "<<else>>",
+   "\t<<link [[Next|Domus Street]]>><<endevent>><<set $eventskip to 1>><</link>>",
+   "<</if>>"
+  ],
+  "context": "You<<if _end is \"mid\">> say goodbye to Avery, and<</if>> start climbing down. When you make it down and step away from the ladder, it starts automatically coiling back up, and the helicopter flies away."
  },
  {
   "kind": "merged-new-text",

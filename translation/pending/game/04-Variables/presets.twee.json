@@ -929,13 +929,23 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [
-   "\t<</if>>"
-  ],
+  "old_en": [],
   "old_kr": [],
   "new_en": [
-   "\t</div>"
+   ""
   ],
-  "context": "\t\t</ul>"
+  "context": "<</widget>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</for>>",
+   "\t\t</ul>",
+   "\t</div>",
+   "<</widget>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
  }
 ]

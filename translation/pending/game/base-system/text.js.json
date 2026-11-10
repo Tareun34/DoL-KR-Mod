@@ -535,7 +535,11 @@
  },
  {
   "kind": "merged-new-text",
-  "old_en": [],
+  "old_en": [
+   "statDisplay.create(\"gtanned\", () => statDisplay.statChange(\"Tanned\", 1, \"green\"));",
+   "statDisplay.create(\"ggtanned\", () => statDisplay.statChange(\"Tanned\", 2, \"green\"));",
+   "statDisplay.create(\"gggtanned\", () => statDisplay.statChange(\"Tanned\", 3, \"green\"));"
+  ],
   "old_kr": [],
   "new_en": [
    "",
