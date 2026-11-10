@@ -46,7 +46,11 @@ class HermGatingTests(unittest.TestCase):
             before = settings[:i]
             self.assertLess(before.rfind("<<if setup.features?.herm>>"), i)
             self.assertGreater(before.rfind("<<if setup.features?.herm>>"), before.rfind("<</if>>"), key)
-        self.assertIn('<<if $debug is 1 or setup.features?.herm>>| <label><<radiobutton "$NPCName[_npcId].gender" "h"', settings)
+        self.assertIn(
+            '<<if $debug is 1 or setup.features?.herm or $NPCName[_npcId].gender is "h">>'
+            '| <label><<radiobutton "$NPCName[_npcId].gender" "h"',
+            settings,
+        )
 
     def test_version_update_resets_outside_herm_builds(self):
         vu = read("game/04-Variables/variables-versionUpdate.twee")

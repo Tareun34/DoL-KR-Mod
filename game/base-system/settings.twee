@@ -2695,7 +2695,7 @@
 			<span data-target="npcname-pregnancy" data-disabledif="getActivePregnancies(V.NPCName[T.npcId].nam).length">
 				<label><<radiobutton "$NPCName[_npcId].gender" "f" autocheck>> 보지</label> |
 				<label><<radiobutton "$NPCName[_npcId].gender" "m" autocheck>> 자지</label>
-				<<if $debug is 1 or setup.features?.herm>>| <label><<radiobutton "$NPCName[_npcId].gender" "h" autocheck>> 양성</label><</if>>
+				<<if $debug is 1 or setup.features?.herm or $NPCName[_npcId].gender is "h">>| <label><<radiobutton "$NPCName[_npcId].gender" "h" autocheck>> 양성</label><</if>>
 			</span>
 		</div>
 		<div class="settingsToggleItem">
