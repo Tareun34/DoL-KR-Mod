@@ -18,7 +18,7 @@
 휘트니는 생각에 깊이 잠겨 있어 당신의 망설임을 눈치채지 못한다.
 <br><br>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Gifts
 <<effects>>
@@ -100,13 +100,13 @@
 	<<He>>【은는】 한입 한입 음미하며, 매운맛에 눈에 눈물이 맺히는데도 속도를 전혀 늦추지 않는다. 다 먹어 치운 뒤 <<he>>【이가】 당신의 등을 툭 친다. "요리 솜씨 죽이네, 걸레 새끼."<<glove>><<npcincr Whitney love 1>>
 	<br><br>
 
-	<<whitneyoptions>>
+	<<whitneyOptions>>
 <<elseif setup.foodstuff[$gift].food.tags.includes("drink")>>
 	당신은 <<recipe_name $gift>>【을를】 내민다. 휘트니는 그것을 받아 빛에 비춰 든다. "아, 그래," <<he>>【은는】 가짜 상류층 억양을 흉내 낸다. "참으로 훌륭한 빈티지로군." <<He>>【은는】 한 모금 들이켠다.
 	<br><br>
 	"고맙다, 걸레야." 억양은 이미 사라졌다. <<He>>【은는】 또 한 모금 마신다. "존나 시원하네. 딱 필요했던 거야."<<glove>><<npcincr Whitney love 1>>
 	<br><br>
-	<<whitneyoptions>>
+	<<whitneyOptions>>
 <<elseif $gift is "valentines_chocolate" and $valentines>>
 	<<earnFeat "Be My Valentine">>
 	당신은 밸런타인 초콜릿을 내민다. 휘트니가 히죽 웃는다. "오호, 나보고 네 밸런타인이 되어 달라고?" <<He>>【이가】 상자를 낚아채 뚜껑을 열고 안의 초콜릿을 살펴본다. "우리 걸레가 모양새 내는 솜씨는 제법인데, 맛은 어떨까?"<<gglove>><<npcincr Whitney love 3>>
@@ -171,7 +171,7 @@
 	<<He>>【은는】 음식을 게걸스럽게 먹어 치운 뒤, 만족스러운 미소를 지으며 눈을 감고 뒤로 기댄다. "잘 먹었다, 걸레야."<<glove>><<npcincr Whitney love 1>>
 	<br><br>
 
-	<<whitneyoptions>>
+	<<whitneyOptions>>
 <</if>>
 
 :: Whitney Gifts Valentines Allow
@@ -196,7 +196,7 @@
 마침내 다 먹은 휘트니가 만족스러운 미소를 지으며 뒤로 기댄다. "최고 점수야, <<slut>>."
 <br><br>
 <<clotheson>>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Gifts Valentines Refuse
 <<effects>>
@@ -206,7 +206,7 @@
 "내가 기분 좋은 걸 다행으로 알아," 휘트니가 <<his>> 엄지손가락으로 또 다른 초콜릿을 <<his>> 입에 튕겨 넣으며 말한다.
 <br><br>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Gifts Pizza Eat
 <<effects>>
@@ -217,7 +217,7 @@
 "레스토랑 피자보다 낫네," <<he>>【이가】 말한다. "네가 만들어서 그런가." <<He>>【이가】 당신 쪽을 쳐다보는 순간, 길게 늘어진 치즈 한 가닥이 당신 턱으로 흘러내린다. 휘트니가 달려들어 당신 얼굴을 핥아 깨끗하게 만든다.
 <br><br>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Gifts Pizza Refuse
 <<effects>>
@@ -225,7 +225,7 @@
 "마음대로 해," 휘트니가 다른 조각을 집으며 말한다. "난 그냥 체육관에서 더 오래 운동하면 돼."
 <br><br>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Gifts Vindaloo Eat
 <<effects>>
@@ -254,7 +254,7 @@
 	<br><br>
 <</if>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Gifts Vindaloo Spit
 <<effects>>
@@ -268,7 +268,7 @@
 <<He>>【은는】 만족스러운 미소를 지으며 뒤로 기댄다.
 <br><br>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Gifts Vindaloo Refuse
 <<effects>>
@@ -282,7 +282,7 @@
 <<He>>【은는】 만족스러운 미소를 지으며 뒤로 기댄다.
 <br><br>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Gifts Flapjack Refuse
 <<effects>>
@@ -306,7 +306,7 @@
 <<endevent>>
 <<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Gifts Flapjack Nibble
 <<effects>>
@@ -334,7 +334,7 @@
 <<endevent>>
 <<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Gifts Flapjack Laugh
 <<effects>>
@@ -348,7 +348,7 @@
 <<endevent>>
 <<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Gifts Flapjack Bite
 <<effects>>
@@ -362,7 +362,7 @@
 <<endevent>>
 <<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Gifts Flapjack Scoff
 <<effects>>
@@ -376,7 +376,7 @@
 <<endevent>>
 <<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Gifts Belgian Necessary
 <<effects>>
@@ -396,7 +396,7 @@
 <</if>>
 <br><br>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Gifts Belgian Friends
 <<effects>>
@@ -416,4 +416,4 @@
 <</if>>
 <br><br>
 
-<<whitneyoptions>>
+<<whitneyOptions>>

@@ -1284,7 +1284,7 @@
 	<<set $sexstart to 0>>
 	<<consensual>>
 	<<set $consensual to 1>>
-	<<set $speechdisable to 1>>
+	<<set $speechDisable to 1>>
 	<<neutral 1>>
 	<<maninit>>
 	<<npcgloryhole>>
@@ -1714,7 +1714,7 @@
 		`"절 용서해 주십시오, <<sister>>님. 전 동네 <<print either("스파","시장","카페","오락실","술집")>>에서 주인 없이 방치된 돈을 훔치고 말았습니다."`,
 		`"절 용서해 주십시오, <<sister>>님, 저는 <<print either("이웃","친구","직장 동료")>>의 물건을 훔쳤습니다. 저... 그 사람들보다 제가 더 좋은 걸 가질 자격이 있다고 생각했거든요. 정말 질투에 눈이 멀었었나 봅니다."`,
 	]>>
-	<<if $settings.bestialityEnabled>>
+	<<if animalSexEnabledForType("cat") or animalSexEnabledForType("dog")>>
 		<<set _sinPoolRepent.push(
 			`"절 용서해 주십시오, <<sister>>님, 저는... 제 <<print either("","친구의","이웃의")>> <<print either("개","고양이")>>에게 불순한 생각을 품고야 말았습니다."`,
 			`"절 용서해 주십시오, <<sister>>님, 저는 죄를 지었습니다. 전 짐승과 살을 섞는 짓거리를 저지르고 말았습니다."`,
@@ -3191,7 +3191,7 @@
 		<<set $timer to 0>><<set $sydneyConfession.State to "exposed">>
 		<br><br>
 
-		<<link [[다음|Temple Confess Sydney Sex]]>><<set $speechdisable to 0>><</link>>
+		<<link [[Next|Temple Confess Sydney Sex]]>><<set $speechDisable to 0>><</link>>
 		<br>
 	<<else>>
 		<<set _sydtext to "Sydney">>
@@ -3326,7 +3326,7 @@
 	<</switch>>
 	<br><br>
 
-	<<link [[다음|Temple Confess Sydney Sex]]>><<set $speechdisable to 0>><</link>>
+	<<link [[Next|Temple Confess Sydney Sex]]>><<set $speechDisable to 0>><</link>>
 	<br>
 <<else>>
 	<<set $enemyanger to -10>>
@@ -3356,8 +3356,8 @@
 		<<set $sydneyConfession.Attendant to either("sinner_1", "sinner_2", "sinner_3")>>
 		<<set $sydneyConfession.Pronoun to ($rng lte maleChance() ? "m" : "f")>>
 		<<set $sydneyConfession.State to "present">>
-		<<set $speechdisable to 1>>
-		<span class="red">건너편 문이 열린다.</span> 두 사람은 얼어붙고, 시드니는 <<his>> 입을 틀어막는다.
+		<<set $speechDisable to 1>>
+		<span class="red">The other door opens.</span> You both freeze, and Sydney covers <<his>> mouth.
 		<br><br>
 		<<set _sydtext to "Sydney">>
 		<<if _neckused>>
@@ -3427,9 +3427,9 @@
 		<br><br>
 	<<elseif $timer is 2>>
 		<<if $sydneyConfession.Sound gte 3>>
-			<span class="red">당신이 무슨 짓을 하고 있는지 깨달은 <<if $sydneyConfession.Pronoun is "m">>그는<<else>>그녀는<</if>> 경악하며 숨을 들이켠다.</span> "망할 변태 새끼들!"
-			<<if $sydneyConfession.Pronoun is "m">>그는<<else>>그녀는<</if>> 고해소를 뛰쳐나간다. <<grace -4>><<llgrace>>
-			<<set $timer to 0>><<set $sydneyConfession.State to "exposed">><<set $speechdisable to 0>>
+			<span class="red"><<if $sydneyConfession.Pronoun is "m">>He<<else>>She<</if>> gasps in indignation, realising what you're doing.</span> "Fucking perverts!"
+			<<if $sydneyConfession.Pronoun is "m">>He<<else>>She<</if>> flees the confessional. <<grace -4>><<llgrace>>
+			<<set $timer to 0>><<set $sydneyConfession.State to "exposed">><<set $speechDisable to 0>>
 		<<else>>
 			고해자가 말을 잇는다.
 			<<switch $sydneyConfession.Attendant>>
@@ -3451,9 +3451,9 @@
 	<<elseif $timer is 1>>
 		<<set $timer to 0>>
 		<<if $sydneyConfession.Sound gte 3>>
-			<span class="red">당신이 무슨 짓을 하고 있는지 깨달은 <<if $sydneyConfession.Pronoun is "m">>그는<<else>>그녀는<</if>> 경악하며 숨을 들이켠다.</span> "망할 변태 새끼들!"
-			<<if $sydneyConfession.Pronoun is "m">>그는<<else>>그녀는<</if>> 고해소를 뛰쳐나간다. <<grace -4>><<llgrace>>
-			<<set $timer to 0>><<set $sydneyConfession.State to "exposed">><<set $speechdisable to 0>>
+			<span class="red"><<if $sydneyConfession.Pronoun is "m">>He<<else>>She<</if>> gasps in indignation, realising what you're doing.</span> "Fucking perverts!"
+			<<if $sydneyConfession.Pronoun is "m">>He<<else>>She<</if>> flees the confessional. <<grace -4>><<llgrace>>
+			<<set $timer to 0>><<set $sydneyConfession.State to "exposed">><<set $speechDisable to 0>>
 		<<else>>
 			고해자가 말을 잇는다.
 			<<switch $sydneyConfession.Attendant>>
@@ -3847,7 +3847,7 @@
 	<<set $sexstart to 0>>
 	<<consensual>>
 	<<set $consensual to 1>>
-	<<set $speechdisable to 1>>
+	<<set $speechDisable to 1>>
 	<<neutral 1>>
 	<<maninit>>
 	<<npcgloryhole>>

@@ -1,0 +1,19 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $mine?.bailey>>",
+   "\t\t\t<<if $mine.intro>>",
+   "\t\t\t\t<<icon \"pickaxe.png\">><<link [[Mine (0:02)|Mine]]>><<pass 2>><<location \"mines\">><<set $outside to 0>><</link>>",
+   "\t\t\t\t<br>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<icon \"pickaxe.png\">><<link [[Mine (0:02)|Mine Return]]>><<pass 2>><<location \"mines\">><<set $outside to 0>><</link>>",
+   "\t\t\t\t<br>",
+   "\t\t\t<</if>>",
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t<</if>>"
+ }
+]

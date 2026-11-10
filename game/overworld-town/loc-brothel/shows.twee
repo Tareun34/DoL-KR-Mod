@@ -39,7 +39,7 @@
 	<<endevent>>
 
 	/* guarantees pig will be generated as a monster - regardless of monsterChance - if monsterpeople are possible and beasts are disabled; otherwise generated as usual */
-	<<if !$settings.bestialityEnabled and $settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)>>
+	<<if !animalSexEnabledForType("pig") and monsterCanAppearForType("pig")>>
 		<<if maleChance() gte random(1, 100)>>
 			<<if $settings.maleNPCVaginaChance gte random(1, 100)>>
 				<<beastNEWinit 1 pig m vagina monster>>
@@ -54,12 +54,12 @@
 			<</if>>
 		<</if>>
 	<<else>>
-		<<beastNEWinit 1 pig>>
+		<<generateBeastVictim 1 pig>>
 	<</if>>
 
 	/* defaults to gangbang show if the player changed their beast settings, or has lost hallucinations since accepting the job */
-	<<if $settings.bestialityEnabled or $monster is 1>>
-		브라이어가 당신을 돌아본다. "모든 준비가 끝났어. 이제 주인공만 기다리면 돼." <<nnpc_him "Briar">> 옆에 있는 우리가 흔들린다. "짐승이 좀 흥분했지만, 네가 잘 다룰 수 있을 거라 믿어." 당신은 무대 위로 걸어간다. 당신 위로 하얀 조명 하나가 켜지자, 어두운 방 안의 소음이 잦아든다. 무대 가장자리 너머는 보이지 않지만, 당신을 향한 시선들은 느껴진다.
+	<<if beastSexEnabledForType("pig", $monster is 1)>>
+		Briar turns to you. "We're all set and ready. Just waiting for the star." The cage beside <<nnpc_him "Briar">> shakes. "The beast is a bit worked up, but I'm sure you can handle <<bhim>>." You walk onto the stage. A single white light turns on above you, and the din of the dark room falls quiet. You can't see beyond the edge of the stage, but you can feel the eyes on you.
 		<br><br>
 
 		"<<Ladies_gentlemen>>!" 브라이어의 목소리가 방 전체에 울려 퍼진다. "오늘 여러분을 위해 특별한 쇼를 준비했습니다. 숲에서 길을 잃고 굶주린 짐승에게 공격당하는 <<girl>>의 이야기입니다!" 우리가 열리는 소리가 들리고, <<beasttype>>【이가】 무대 위로 걸어 나온다. <<bhis>> 목에는 목줄이 달려 무대 뒤편까지 늘어져 있다. 당신에게 닿을 만큼 충분히 길다. 관객들은 <<bhim>>에게 환호한다.
@@ -106,8 +106,8 @@
 	<<legbind>>
 	<<person1>>
 	<br><br>
-	그들은 당신을 단상 위로 이끌고 당신의 손과 발을 금속 고리에 묶는다. 잠시 후, 그들은 당신 주위에 네 개의 투명한 벽을 세워 고정시킨다.
-	당신은 무력하게 묶인 채 갇히게 된다.
+	They lead you onto a platform and bind your hands and feet to a metal ring. Not a moment later, they place four transparent walls around you and fix them in place,
+	leaving you helplessly bound and trapped.
 	<br><br>
 	"<<Ladies_gentlemen>>!" 브라이어가 관객들에게 알린다. "기어 다니는 것들에 쉽게 겁을 먹는 분이 계시다면, 방을 나가시는 것을 강력히 권고합니다."
 	<br><br>

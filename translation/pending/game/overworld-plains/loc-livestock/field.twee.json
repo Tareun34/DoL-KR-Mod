@@ -1,0 +1,163 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>",
+   "\t\t<<livestock_cows \"cap\">> roam across the snow in search of fresh grass, staying well away from the electric perimeter fence despite the grass growing thick beside it."
+  ],
+  "old_kr": [
+   "\t<<if ($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>",
+   "\t\t<<livestock_cows \"cap\">> 눈밭을 돌아다니며 신선한 풀을 찾고 있다. 전기 울타리 옆에 풀이 무성하게 자라 있음에도 불구하고, 그 근처에는 얼씬도 하지 않는다."
+  ],
+  "new_en": [
+   "\t<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>",
+   "\t\t<<livestock_cows \"cap\">> roam across the snow in search of fresh grass, staying well away from the electric perimeter fence despite the grass growing thick beside it."
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>",
+   "\t\t<<livestock_cows \"cap\">> munch on grass, staying well away from the electric perimeter fence despite the grass growing thick beside it."
+  ],
+  "old_kr": [
+   "\t<<if ($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>",
+   "\t\t<<livestock_cows \"cap\">> 풀을 우적우적 씹고 있다. 전기 울타리 옆에 풀이 무성하게 자라 있음에도 불구하고, 그 근처에는 얼씬도 하지 않는다."
+  ],
+  "new_en": [
+   "\t<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>",
+   "\t\t<<livestock_cows \"cap\">> munch on grass, staying well away from the electric perimeter fence despite the grass growing thick beside it."
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou feel faint. <span class=\"red\">You're starving.</span> Even the thought of grass is appetising.",
+   "\t\t<<gggstress>><<stress 36>>/*<<physique_loss 36>><<willpower 12>>*/"
+  ],
+  "old_kr": [
+   "\t\t정신이 아득해진다. <span class=\"red\">굶주리고 있다.</span> 풀이라도 뜯어먹고 싶다는 생각마저 든다.",
+   "\t\t<<gggstress>><<stress 36>>/*<<physique_loss 36>><<willpower 12>>*/"
+  ],
+  "new_en": [
+   "\t\tYou feel faint. <span class=\"red\">You're starving.</span> Even the thought of grass is appetising.",
+   "\t\t<<gggstress>><<stress 36>>/*<<physique -36>><<willpower 12>>*/"
+  ],
+  "context": "\t<<if $hunger gte 2000>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\tThey look like horses from a distance, but up close you see they have the heads and torsos of"
+  ],
+  "old_kr": [
+   "<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t멀리서는 말처럼 보이지만, 가까이 다가가자 머리와 몸통이"
+  ],
+  "new_en": [
+   "<<if monsterCanAppearForType(\"horse\")>>",
+   "\tThey look like horses from a distance, but up close you see they have the heads and torsos of"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t\t<span class=\"green\">A few nod in greeting as you approach.</span>"
+  ],
+  "old_kr": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t\t<span class=\"green\">당신이 다가가자 몇몇이 고개를 끄덕이며 인사한다.</span>"
+  ],
+  "new_en": [
+   "\t<<if monsterCanAppearForType(\"horse\")>>",
+   "\t\t<span class=\"green\">A few nod in greeting as you approach.</span>"
+  ],
+  "context": "<<if $livestock.horse.reputation gte 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t\tThey watch as you approach. Some look amused."
+  ],
+  "old_kr": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t\t당신이 다가가는 것을 지켜본다. 몇몇은 재미있어하는 것 같다."
+  ],
+  "new_en": [
+   "\t<<if monsterCanAppearForType(\"horse\")>>",
+   "\t\tThey watch as you approach. Some look amused."
+  ],
+  "context": "<<elseif $livestock.horse.reputation gte 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if random(1,2) is 1 and $awareness gte 200 and $daily.livestock.horses_satisfied lt 6 and $settings.horsesEnabled and ($settings.bestialityEnabled or $monster is 1)>>",
+   "\t\tOne <<beasttype>> in the back seems agitated. <<bHe>> stomps at the others, and is"
+  ],
+  "old_kr": [
+   "\t<<if random(1,2) is 1 and $awareness gte 200 and $daily.livestock.horses_satisfied lt 6 and $settings.horsesEnabled and ($settings.bestialityEnabled or $monster is 1)>>",
+   "\t\t뒤쪽에 있는 <<beasttype>> 한 마리가 안절부절못하는 것 같다. <<bHe>>【은는】 다른 이들을 향해 발을 구르며,"
+  ],
+  "new_en": [
+   "\t<<if random(1,2) is 1 and $awareness gte 200 and $daily.livestock.horses_satisfied lt 6 and beastSexEnabledForType(\"horse\", $monster is 1)>>",
+   "\t\tOne <<beasttype>> in the back seems agitated. <<bHe>> stomps at the others, and is"
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $daily.livestock.horses_satisfied lt 6 and $settings.horsesEnabled and ($settings.bestialityEnabled or $monster is 1)>>",
+   "\t\t\tOne <<beasttype>> seems frustrated even as you brush <<bhim>>. <<bHe>> keeps stomping at you, and is"
+  ],
+  "old_kr": [
+   "\t\t<<if $daily.livestock.horses_satisfied lt 6 and $settings.horsesEnabled and ($settings.bestialityEnabled or $monster is 1)>>",
+   "\t\t\t<<beasttype>> 한 마리는 당신이 <<bhim>> 빗질해주는 와중에도 불만스러워 보인다. <<bHe>>【은는】 계속해서 당신을 향해 발을 구르며,"
+  ],
+  "new_en": [
+   "\t\t<<if $daily.livestock.horses_satisfied lt 6 and beastSexEnabledForType(\"horse\", $monster is 1)>>",
+   "\t\t\tOne <<beasttype>> seems frustrated even as you brush <<bhim>>. <<bHe>> keeps stomping at you, and is"
+  ],
+  "context": "\t\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if ($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>"
+  ],
+  "context": "\t\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if monsterCanAppearForType(\"horse\")>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if monsterCanAppearForType(\"horse\")>>"
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ }
+]

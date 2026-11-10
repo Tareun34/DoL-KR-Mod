@@ -1,0 +1,84 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<span class=\"red\">You can't earn feats as you have enabled cheats at some point.</span>",
+   "\t<<elseif $debug is 1>>",
+   "\t\t<span class=\"red\">Feats are disabled during debug mode.</span>"
+  ],
+  "old_kr": [
+   "\t\t<span class=\"red\">플레이 도중 치트를 사용한 기록이 있어 업적을 달성할 수 없습니다.</span>",
+   "\t<<elseif $debug is 1>>",
+   "\t\t<span class=\"red\">디버그 모드 중에는 업적을 달성할 수 없습니다.</span>"
+  ],
+  "new_en": [
+   "\t\t<span class=\"red\">You can't earn feats as you have enabled cheats at some point.</span>",
+   "\t<<elseif $debug>>",
+   "\t\t<span class=\"red\">Feats are disabled during debug mode.</span>"
+  ],
+  "context": "\t<<if $feats.locked>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<input type=\"checkbox\" checked name=\"showNew\" onchange=\"V.feats.shownew = this.checked; Wikifier.wikifyEval('<<replace #featsList>><<featsList>><</replace>>')\" /> Show New |"
+  ],
+  "old_kr": [
+   "\t<input type=\"checkbox\" checked name=\"showNew\" onchange=\"V.feats.shownew = this.checked; Wikifier.wikifyEval('<<replace #featsList>><<featsList>><</replace>>')\" /> 신규 표시 |"
+  ],
+  "new_en": [
+   "\t<label><input type=\"checkbox\" checked name=\"showNew\" onchange=\"V.feats.shownew = this.checked; Wikifier.wikifyEval('<<replace #featsList>><<featsList>><</replace>>')\" /> Show New</label> |"
+  ],
+  "context": "\t<<set $feats.shownew to true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<input type=\"checkbox\" checked name=\"showOld\" onchange=\"V.feats.showold = this.checked; Wikifier.wikifyEval('<<replace #featsList>><<featsList>><</replace>>')\" /> Show Old |"
+  ],
+  "old_kr": [
+   "\t<input type=\"checkbox\" checked name=\"showOld\" onchange=\"V.feats.showold = this.checked; Wikifier.wikifyEval('<<replace #featsList>><<featsList>><</replace>>')\" /> 기존 표시 |"
+  ],
+  "new_en": [
+   "\t<label><input type=\"checkbox\" checked name=\"showOld\" onchange=\"V.feats.showold = this.checked; Wikifier.wikifyEval('<<replace #featsList>><<featsList>><</replace>>')\" /> Show Old</label> |"
+  ],
+  "context": "\t<<set $feats.showold to true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<input type=\"checkbox\" checked name=\"showMissing\" onchange=\"V.feats.showmissing = this.checked; Wikifier.wikifyEval('<<replace #featsList>><<featsList>><</replace>>')\" /> Show Missing"
+  ],
+  "old_kr": [
+   "\t<input type=\"checkbox\" checked name=\"showMissing\" onchange=\"V.feats.showmissing = this.checked; Wikifier.wikifyEval('<<replace #featsList>><<featsList>><</replace>>')\" /> 미달성 표시"
+  ],
+  "new_en": [
+   "\t<label><input type=\"checkbox\" checked name=\"showMissing\" onchange=\"V.feats.showmissing = this.checked; Wikifier.wikifyEval('<<replace #featsList>><<featsList>><</replace>>')\" /> Show Missing</label>"
+  ],
+  "context": "\t<<set $feats.showmissing to true>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<span @class=\"'title' + _titleColor\"><<print (Scripting.evalTwineScript(_setup.altCond ?? \"false\") && _feat.owned is 2) ? _setup.alt : _setup.title>></span>",
+   "\t\t\t\t\t<span class=\"text\"><<print _setup.desc>></span>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<span @class=\"'title' + _titleColor\"><<print (Scripting.evalTwineScript(_setup.altTitleCond ?? \"false\") && _feat.owned is 2) ? _setup.altTitle : _setup.title>></span>",
+   "\t\t\t\t\t<span class=\"text\"><<print (Scripting.evalTwineScript(_setup.altDescCond ?? \"false\") && _feat.owned is 2) ? _setup.altDesc : _setup.desc>></span>"
+  ],
+  "context": "\t\t\t\t<<if _feat.owned gt 0 or _setup.hint is undefined>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if _args[0] and $feats.locked is false and $cheatsEnabled is false and $debug is 0 and $gamemode isnot \"soft\" and $settings.allureModifier gte 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if _args[0] and $feats.locked is false and $cheatsEnabled is false and !$debug and $gamemode isnot \"soft\" and $settings.allureModifier gte 1>>"
+  ],
+  "context": "<<widget \"displayFeatFake\">>"
+ }
+]

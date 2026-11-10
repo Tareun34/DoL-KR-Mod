@@ -1,0 +1,209 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<beastNEWinit 1 dog>>One <<beasttype>> takes offence, and nips at you as you try to eat."
+  ],
+  "old_kr": [
+   "\t<<beastNEWinit 1 dog>>한 <<beasttype>>【이가】 기분 나빠하며, 당신이 먹으려고 할 때 당신을 깨문다."
+  ],
+  "new_en": [
+   "\t<<generateBeastVictim 1 dog>>One <<beasttype>> takes offence, and nips at you as you try to eat."
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<beastNEWinit 6 dog>>",
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\tYou feel a nose prod you from behind."
+  ],
+  "old_kr": [
+   "<<beastNEWinit 6 dog>>",
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t뒤에서 코가 당신을 쿡 찌르는 것이 느껴진다."
+  ],
+  "new_en": [
+   "<<generateBeastVictim 6 dog>>",
+   "<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\tYou feel a nose prod you from behind."
+  ],
+  "context": "<<endcombat>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<br><br>",
+   "\tYou slept soundly, but now feel a little rough."
+  ],
+  "old_kr": [
+   "\t<br><br>",
+   "\t푹 잤지만, 지금은 몸이 좀 찌뿌둥하다."
+  ],
+  "new_en": [
+   "\t<br>",
+   "\tYou slept soundly, but now feel a little rough."
+  ],
+  "context": "<<if [\"dryheaving\",\"nausea\"].includes(_wakingEffect)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<beastNEWinit 4 dog>>",
+   "You crawl towards the obstacle course as fast as your posture will allow. The first up is the slalom. The <<pound_text>> weave between them without difficulty."
+  ],
+  "old_kr": [
+   "<<beastNEWinit 4 dog>>당신은 자세가 허락하는 한 가장 빨리 장애물 코스를 향해 기어간다. 첫 번째는 슬라럼이다. <<pound_text>>은 어려움 없이 그 사이를 헤쳐 나간다."
+  ],
+  "new_en": [
+   "<<generateBeastVictim 4 dog>>",
+   "You crawl towards the obstacle course as fast as your posture will allow. The first up is the slalom. The <<pound_text>> weave between them without difficulty."
+  ],
+  "context": "<<endevent>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $player.penisExist and $player.vaginaExist and playerChastity(\"cage\")>>",
+   "\t\tand the <<person>> takes your caged <<penis>> between <<his>> fingers. \"Aha, there's a pussy here as well. How unique!\""
+  ],
+  "old_kr": [
+   "\t<<if $player.penisExist and $player.vaginaExist and playerChastity(\"cage\")>>",
+   "\t\t그러자 <<person>>【이가】 당신의 정조대에 갇힌 <<penis>>【을를】 <<his>> 손가락 사이에 잡는다. \"아하, 여기 보지도 있군. 정말 독특하네!\""
+  ],
+  "new_en": [
+   "\t<<if $player.penisExist and $player.vaginaExist and playerChastity(\"cage\") and $settings.nudeGenderPerception !== 0>>",
+   "\t\tand the <<person>> takes your caged <<penis>> between <<his>> fingers. \"Aha, there's a pussy here as well. How unique!\""
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $player.penisExist and $player.vaginaExist>>",
+   "\t\tand the <<person>> takes your <<penis>> between <<his>> fingers. \"Aha, there's a pussy here as well. How unique!\""
+  ],
+  "old_kr": [
+   "\t<<elseif $player.penisExist and $player.vaginaExist>>",
+   "\t\t그러자 <<person>>【이가】 당신의 <<penis>>【을를】 <<his>> 손가락 사이에 잡는다. \"아하, 여기 보지도 있군. 정말 독특하네!\""
+  ],
+  "new_en": [
+   "\t<<elseif $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>",
+   "\t\tand the <<person>> takes your <<penis>> between <<his>> fingers. \"Aha, there's a pussy here as well. How unique!\""
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $settings.monsterChance gte 100 or $settings.bestialityEnabled>>",
+   "\t<<link [[Leash them and open all the cages|Pound Abduction Gwylan Rescue 5]]>><<set $phase2 to 3>><</link>>"
+  ],
+  "old_kr": [
+   "<<if $settings.monsterChance gte 100 or $settings.bestialityEnabled>>",
+   "\t<<link [[목줄을 채우고 모든 우리를 연다|Pound Abduction Gwylan Rescue 5]]>><<set $phase2 to 3>><</link>>"
+  ],
+  "new_en": [
+   "<<if beastSexEnabledForType(\"dog\", victimsAlwaysMonsterForType(\"dog\") or (monsterChanceForType(\"dog\") gte 100 and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType(\"dog\"))))>>",
+   "\t<<link [[Leash them and open all the cages|Pound Abduction Gwylan Rescue 5]]>><<set $phase2 to 3>><</link>>"
+  ],
+  "context": "<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tGwylan flicks open the lock on each cage as you pass.",
+   "\tMany of the <<pound_text>> follow you out, but some curiously sniff the half-unconscious staff members. <<if $settings.monsterChance gte 100 or $settings.bestialityEnabled>><span class=\"lewd\">Some begin to mount them.</span><</if>>"
+  ],
+  "old_kr": [
+   "\t그윌란은 당신이 지나갈 때마다 각 우리의 자물쇠를 휙 열어준다.",
+   "\t많은 <<pound_text>>【이가】 당신을 따라 나오지만, 몇몇은 반쯤 정신을 잃은 직원들의 냄새를 호기심에 맡는다. <<if $settings.monsterChance gte 100 or $settings.bestialityEnabled>><span class=\"lewd\">몇몇은 그들 위에 올라타기 시작한다.</span><</if>>"
+  ],
+  "new_en": [
+   "\tGwylan flicks open the lock on each cage as you pass.",
+   "\tMany of the <<pound_text>> follow you out, but some curiously sniff the half-unconscious staff members. <<if beastSexEnabledForType(\"dog\", monsterChanceForType(\"dog\") gte 100 and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType(\"dog\")))>><span class=\"lewd\">Some begin to mount them.</span><</if>>"
+  ],
+  "context": "<<if $phase2 is 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<beastNEWinit 1 dog>>",
+   "<<if $rng gte 67 and ($settings.bestialityEnabled or $monster is 1)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<generateBeastVictim 1 dog>>",
+   "<<if $rng gte 67 and beastSexEnabledForType(\"dog\", $monster is 1)>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<bindtemp>>"
+  ],
+  "context": "\t<<maninit>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $position to \"wall\">>",
+   "\t<<set $walltype to \"pillory\">>",
+   "\t<<set $head to \"grappled\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<bindtemp>>"
+  ],
+  "context": "\t<<beastTrainGenerate>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "<<set $position to \"wall\">>",
+   "<<set $walltype to \"pillory\">>",
+   "<<set $head to \"grappled\">>"
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br>"
+  ],
+  "context": "\t<<pound_punishment_links>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if ($settings.bestialityEnabled or $settings.monsterChance gte 1) and $settings.pregnancySpeechEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if beastSexEnabledForType(\"dog\") and $settings.pregnancySpeechEnabled>>"
+  ],
+  "context": "<br>"
+ }
+]

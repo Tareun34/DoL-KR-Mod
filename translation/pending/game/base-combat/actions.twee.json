@@ -1,0 +1,13 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $debug is 1 and $combatDemoDebugText isnot 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $debug and $combatDemoDebugText isnot 0>>"
+  ],
+  "context": ""
+ }
+]

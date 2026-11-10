@@ -4,8 +4,8 @@
 당신은 양복점에 있다. 다양한 색상의 천이 옷걸이에 걸려 있다.
 <br><br>
 
-<<if $sewingKit isnot 1 and $debug is 1>>
-	가게 진열장에 새로운 재봉틀이 판매용으로 나온 것 같다.
+<<if $sewingKit isnot 1 and $debug>>
+	Looks like the shop has a new machine for sale in the display.
 	<br><br>
 <</if>>
 <<if $sewingBought is 1>>
@@ -66,8 +66,8 @@
 			<br><br>
 
 			<<if Time.hour isnot $closinghour and !$weekly.theft.tailor>>
-			<<shopicon "register">><<link [[금전 등록기를 살펴본다|Tailor Register]]>><</link>>
-			<br>
+				<<shopicon "register">><<link [[Examine the cash register|Tailor Register]]>><</link>>
+				<br>
 			<</if>>
 
 		<<elseif $exposed gte 1>>
@@ -200,8 +200,8 @@
 			<</if>>
 			<br><br>
 
-			<<if $sewingKit isnot 1 and $debug is 1>>
-				<<ind>><<link [[진열장으로 다가간다|Tailor Shop Sewing Machine]]>><</link>>
+			<<if $sewingKit isnot 1 and $debug>>
+				<<ind>><<link [[Approach the display cabinet|Tailor Shop Sewing Machine]]>><</link>>
 				<br><br>
 			<</if>>
 		<</if>>
@@ -258,27 +258,27 @@
 
 :: Tailor Shop Sewing Machine
 <<effects>>
-	진열장으로 다가가자 재봉틀이 놓여 있다. 진열장 옆에 광고 포스터가 걸려 있고, 이렇게 적혀 있다.
+You approach the display, inside it lies a sewing machine. An advertisement poster hangs beside the display, it reads:
 
-	<br><br>
-	재봉의 신-9000 <sup>tm</sup>
-	<br><br>
-	- 개가 속옷을 물어뜯었나요? <span class="pink">~촉수~</span>가 옷을 찢었나요? 문제없습니다!
-	<br><br>
-	- 1분 만에 어떤 옷이든 고칠 수 있습니다!
-	<br><br>
-	- <span class="green">기술</span>이 필요 없습니다! 베일리조차도 사용할 수 있습니다!
-	<br><br>
-	- 평생 쓸 수 있는 수선용 천을 제공합니다!
-	<br><br>
-	- 단돈 <span class ="gold">£1000.00!</span>
-	<br><br>
+<br><br>
+THE SEWINATOR-9000 <sup>tm</sup>
+<br><br>
+- Dog Chewed Your Undies? <span class="pink">~Tentacles~</span> Tore Your Clothes? No Problem!
+<br><br>
+- Can Fix Any Piece of Clothing in One minute!
+<br><br>
+- Requires <span class="green">No Skill</span>! Even Bailey Could Use It!
+<br><br>
+- Comes With a Lifetime Supply of Cloth For Repairs!
+<br><br>
+- Only <span class ="gold">£1000.00!</span>
+<br><br>
 
-	<<if $money gte 100000>>
-		<<link [[재봉틀 구매 - 방에서 옷 수선하기! £1000|Tailor Shop]]>><<money -100000 "tailor">><<set $sewingKit to 1>><<set $sewingBought to 1>><<endevent>><</link>>
-		<br>
-	<</if>>
-	<<link [[돌아가기|Tailor Shop]]>><<endevent>><</link>>
+<<if $money gte 100000>>
+	<<link [[Purchase sewing machine - Repair your clothes in your room! £1000|Tailor Shop]]>><<money -100000 "tailor">><<set $sewingKit to 1>><<set $sewingBought to 1>><<endevent>><</link>>
+	<br>
+<</if>>
+<<link [[Go back|Tailor Shop]]>><<endevent>><</link>>
 
 :: Tailor Monthly Discard
 "알겠습니다, <<if $player.gender_appearance is "m">>손님<<else>>사모님<</if>>. 상자를 배달해 드리겠습니다. 팔 준비가 되시면 상자를 채워주세요. 단, 어떤 품목도 반품은 안 된다는 점을 명심해 주세요. 수선해서 되팔 수 있는 품목만 취급합니다."
@@ -348,17 +348,17 @@
 <<link [[다음|Tailor Shop]]>><<endevent>><</link>>
 
 :: Fix Outfit
-	<<if $exposed gte 1>>
-		재단사가 필요한 수선을 하는 동안 당신은 계속 숨어 있는다. 영원할 것 같은 시간이 지난 후, <<he>>【이가】 당신의 <<print $outfitRepair.name>>【을를】 돌려주고 당신은 옷을 입는다.
-		<br><br>
-	<<else>>
-		가게를 서성거리자 재단사가 몇 가지 사소한 조정을 위해 당신을 부른다.
-		그러자 당신의 <<print $outfitRepair.name>>【은는】 새것처럼 깨끗해진다.
-		<br><br>
-	<</if>>
+<<if $exposed gte 1>>
+	You continue to hide while the tailor makes the needed repairs. After what feels like an eternity, <<he>> passes you back your <<print $outfitRepair.name>> and you slip it on.
+	<br><br>
+<<else>>
+	You loiter around the shop until the tailor calls you over for a few minor adjustments.
+	Just like that, your <<print $outfitRepair.name>> is as good as new.
+	<br><br>
+<</if>>
 
-	<<set $worn[$outfitRepair.wornHalf].integrity = clothingData($outfitRepair.wornHalf,$worn[$outfitRepair.wornHalf],'integrity_max')>>
-	<<set makeMissingOutfit($outfitRepair)>>
-	<<unset $outfitRepair>>
+<<set $worn[$outfitRepair.wornHalf].integrity = clothingData($outfitRepair.wornHalf,$worn[$outfitRepair.wornHalf],'integrity_max')>>
+<<set makeMissingOutfit($outfitRepair)>>
+<<unset $outfitRepair>>
 
 <<link [[돌아가기|Tailor Shop]]>><<endevent>><</link>>

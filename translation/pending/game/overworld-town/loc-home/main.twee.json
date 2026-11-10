@@ -1,0 +1,1148 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<set $outside to 0>><<set $location to \"home\">><<home_effects>><<effects>><<getTarget true>>",
+   "You are in your bedroom."
+  ],
+  "old_kr": [
+   "<<set $outside to 0>><<set $location to \"home\">><<home_effects>><<effects>><<getTarget true>>",
+   "당신은 고아원의 침실에 있다."
+  ],
+  "new_en": [
+   "<<set $outside to 0>><<set $location to \"home\">><<set $bus to \"home\">><<home_effects>><<effects>><<getTarget true>>",
+   "You are in your bedroom."
+  ],
+  "context": "<<bedclotheson \"bed\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $debug is 1>>",
+   "\t<<link [[Turn off debug mode|Bedroom]]>><<set $debug to 0>><</link>>"
+  ],
+  "old_kr": [
+   "<<if $debug is 1>>",
+   "\t<<link [[디버그 모드 끄기|Bedroom]]>><<set $debug to 0>><</link>>"
+  ],
+  "new_en": [
+   "<<if $debug>>",
+   "\t<<link [[Turn off debug mode|Bedroom]]>><<set $debug to 0>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<bedicon>><<link [[Bedroom (0:01)|Bedroom]]>><<pass 1>><</link>>"
+  ],
+  "old_kr": [
+   "<<bedicon>><<link [[침실 (0:01)|Bedroom]]>><<pass 1>><</link>>"
+  ],
+  "new_en": [
+   "<<bedroomEntryEvent>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<elseif $location is \"home\" and $wraith and $wraith.nightmare is 2 and Time.isBloodMoon()>>",
+   "\tYou dream of a beautiful figure, cloaked in white, standing under the red moon. It has its arms spread out to you in a welcoming gesture. You can feel its gaze boring into your mind as you step closer."
+  ],
+  "old_kr": [
+   "<<elseif $location is \"home\" and $wraith and $wraith.nightmare is 2 and Time.isBloodMoon()>>",
+   "\t붉은 달 아래 서 있는, 하얀 옷을 걸친 아름다운 형상의 꿈을 꾼다. 그것은 환영하는 몸짓으로 당신에게 팔을 벌리고 있다. 당신이 가까이 다가갈수록, 그 시선이 당신의 마음을 꿰뚫는 것이 느껴진다."
+  ],
+  "new_en": [
+   "<<elseif $location is \"home\" and $wraith?.nightmare is 2 and Time.isBloodMoon()>>",
+   "\tYou dream of a beautiful figure, cloaked in white, standing under the red moon. It has its arms spread out to you in a welcoming gesture. You can feel its gaze boring into your mind as you step closer."
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $submissive lte 500>>",
+   "\t\t<<link [[Kick <<him>>|Bedroom Kylar Wake]]>><<set $phase to 3>><<def 3>><</link>><<defianttext>>"
+  ],
+  "old_kr": [
+   "\t<<if $submissive lte 500>>",
+   "\t\t<<link [[<<him>>【을를】 걷어찬다|Bedroom Kylar Wake]]>><<set $phase to 3>><<def 3>><</link>><<defianttext>>"
+  ],
+  "new_en": [
+   "\t<<if displayDefiantOption(500)>>",
+   "\t\t<<link [[Kick <<him>>|Bedroom Kylar Wake]]>><<set $phase to 3>><<def 3>><<wolfDefiant 500>><</link>><<defianttext 500>>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\tAfter sleeping soundly, you"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t푹 자고 난 후, 당신은"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<br>",
+   "\t\t\t\t\tAfter sleeping soundly, you"
+  ],
+  "context": "\t\t\t\t<<if _wakingEffect isnot undefined>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<br><br>",
+   "\t\t\t\tYou slept soundly, but now feel a little rough."
+  ],
+  "old_kr": [
+   "\t\t\t\t<br><br>",
+   "\t\t\t\t푹 잤지만, 지금은 몸이 좀 찌뿌둥하다."
+  ],
+  "new_en": [
+   "\t\t\t\t<br>",
+   "\t\t\t\tYou slept soundly, but now feel a little rough."
+  ],
+  "context": "\t\t\t<<if [\"dryheaving\",\"nausea\"].includes(_wakingEffect)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<link [[Next|Kylar Orphanage Cuddle]]>><<set $kylarbed to 0>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<link [[다음|Kylar Orphanage Cuddle]]>><<set $kylarbed to 0>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t<<link [[Next|Kylar Orphanage Cuddle]]>><<unset $kylarbed>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<link [[Next|Kylar Orphanage Cuddle]]>><<set $kylarbed to 0>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<link [[다음|Kylar Orphanage Cuddle]]>><<set $kylarbed to 0>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t<<link [[Next|Kylar Orphanage Cuddle]]>><<unset $kylarbed>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<link [[Defend Kylar|Kylar Orphanage Sleep Defend]]>><<set $kylarbed to 0>><<status -10>><<npcincr Kylar love 1>><</link>><<llcool>><<glove>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<link [[카일라를 변호한다|Kylar Orphanage Sleep Defend]]>><<set $kylarbed to 0>><<status -10>><<npcincr Kylar love 1>><</link>><<llcool>><<glove>>"
+  ],
+  "new_en": [
+   "\t\t\t<<link [[Defend Kylar|Kylar Orphanage Sleep Defend]]>><<unset $kylarbed>><<status -10>><<npcincr Kylar love 1>><</link>><<llcool>><<glove>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<link [[Berate Kylar|Kylar Orphanage Sleep Berate]]>><<set $kylarbed to 0>><<npcincr Kylar love -3>><</link>><<lllove>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<link [[카일라를 꾸짖는다|Kylar Orphanage Sleep Berate]]>><<set $kylarbed to 0>><<npcincr Kylar love -3>><</link>><<lllove>>"
+  ],
+  "new_en": [
+   "\t\t\t<<link [[Berate Kylar|Kylar Orphanage Sleep Berate]]>><<unset $kylarbed>><<npcincr Kylar love -3>><</link>><<lllove>>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<link [[Slam the door|Kylar Orphanage Slam]]>><<set $kylarbed to 0>><<npcincr Kylar love 1>><<npcincr Kylar lust 1>><<if $submissive gt 500 and $wolfgirl gte 6>><<wolfDefiant 500>><</if>><</link>><<glove>><<glust>><<if $syndromekylar gte 1>><<stockholmTrait \"Kylar\">><<else>><<defianttext 500>><</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<link [[문을 세게 닫는다|Kylar Orphanage Slam]]>><<set $kylarbed to 0>><<npcincr Kylar love 1>><<npcincr Kylar lust 1>><<if $submissive gt 500 and $wolfgirl gte 6>><<wolfDefiant 500>><</if>><</link>><<glove>><<glust>><<if $syndromekylar gte 1>><<stockholmTrait \"Kylar\">><<else>><<defianttext 500>><</if>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<link [[Slam the door|Kylar Orphanage Slam]]>><<unset $kylarbed>><<npcincr Kylar love 1>><<npcincr Kylar lust 1>><<if $submissive gt 500 and $wolfgirl gte 6>><<wolfDefiant 500>><</if>><</link>><<glove>><<glust>><<if $syndromekylar gte 1>><<stockholmTrait \"Kylar\">><<else>><<defianttext 500>><</if>>"
+  ],
+  "context": "\t\t\t<<if displayDefiantOption(500) or $syndromekylar gte 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<link [[Next|Kylar Orphanage Cuddle]]>><<set $kylarbed to 0>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<link [[다음|Kylar Orphanage Cuddle]]>><<set $kylarbed to 0>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t<<link [[Next|Kylar Orphanage Cuddle]]>><<unset $kylarbed>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<getouticon>><<link [[Get out of bed|Bedroom]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<getouticon>><<link [[침대에서 나온다|Bedroom]]>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t<<getouticon>><<link [[Get out of bed|Bedroom]]>><<endevent>><</link>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<elseif $location is \"home\" and $wraith and $wraith.nightmare is 2 and Time.isBloodMoon()>>",
+   "\tYou dream of a beautiful figure, cloaked in white, standing under the red moon. It has its arms spread out to you in a welcoming gesture. You can feel its gaze boring into your mind as you step closer."
+  ],
+  "old_kr": [
+   "<<elseif $location is \"home\" and $wraith and $wraith.nightmare is 2 and Time.isBloodMoon()>>",
+   "\t붉은 달 아래 서 있는, 하얀 옷을 걸친 아름다운 형상의 꿈을 꾼다. 그것은 당신을 환영하는 듯 두 팔을 벌리고 있다. 당신이 다가갈수록, 그 시선이 마음속을 꿰뚫는 것이 느껴진다."
+  ],
+  "new_en": [
+   "<<elseif $location is \"home\" and $wraith?.nightmare is 2 and Time.isBloodMoon()>>",
+   "\tYou dream of a beautiful figure, cloaked in white, standing under the red moon. It has its arms spread out to you in a welcoming gesture. You can feel its gaze boring into your mind as you step closer."
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\tAfter sleeping soundly, you"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t푹 자고 난 후, 당신은"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<br>",
+   "\t\t\t\t\tAfter sleeping soundly, you"
+  ],
+  "context": "\t\t\t\t<<if _wakingEffect isnot undefined>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<br><br>",
+   "\t\t\t\tYou slept soundly, but now feel a little rough."
+  ],
+  "old_kr": [
+   "\t\t\t\t<br><br>",
+   "\t\t\t\t푹 잤지만, 지금은 몸이 좀 찌뿌둥하다."
+  ],
+  "new_en": [
+   "\t\t\t\t<br>",
+   "\t\t\t\tYou slept soundly, but now feel a little rough."
+  ],
+  "context": "\t\t\t<<if [\"dryheaving\",\"nausea\"].includes(_wakingEffect)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<elseif $rng gte 61 and $worn.upper.name is \"large towel\" and $worn.upper.set is $worn.lower.set and !$daily.orphanageflash and Time.hour lt 22 and Time.hour gte 6>>",
+   "\t<<set $daily.orphanageflash to 1>>",
+   "\tAs you walk down the hallway, a door opens up. A <<generatey1>><<person1>><<person>> leaves <<his>> room.",
+   "\t<br><br>",
+   "\t\"Oh. Huh, hi,\" <<he>> says upon noticing you, clearly flustered by your state of dress.",
+   "\t<br><br>",
+   "\tYou nod in response, and can't help noticing how <<he>> seems to avoid looking at you.",
+   "\t<br><br>",
+   "\t<<if hasSexStat(\"exhibitionism\", 5)>>",
+   "\t\t<<link [[Tease|Hallway Flashing 1]]>><</link>><<exhibitionist5>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<link [[Keep walking|Orphanage]]>><<endevent>><</link>>",
+   "\t<br>",
+   "<<elseif $exposed gte 1 and Time.hour lt 22 and Time.hour gte 6>>",
+   "\tYou can't bear the thought of someone catching you like this. You hasten to your bedroom.",
+   "\t<br><br>",
+   "",
+   "\t<<if dangerEvent()>>",
+   "\t\tA door swings open up ahead, and a <<generatey1>><<person1>><<person>> steps out. <<covered>> <<He>> doesn't notice you.",
+   "\t\t<br><br>",
+   "\t\t<<link [[Hide|Orphanage Hide]]>><<stress 6>><</link>><<gstress>>",
+   "\t\t<br>",
+   "\t\t<<if hasSexStat(\"exhibitionism\", 4)>>",
+   "\t\t\t<<link [[Flaunt|Orphanage Flaunt]]>><</link>><<exhibitionist4>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\t<<link [[Next|Bedroom]]>><</link>>",
+   "\t<</if>>"
+  ],
+  "old_kr": [
+   "<<elseif $rng gte 61 and $worn.upper.name is \"large towel\" and $worn.upper.set is $worn.lower.set and !$daily.orphanageflash and Time.hour lt 22 and Time.hour gte 6>>",
+   "\t<<set $daily.orphanageflash to 1>>",
+   "\t복도를 걷고 있는데 문이 열린다. <<generatey1>><<person1>><<person>>【이가】 <<his>> 방에서 나온다.",
+   "\t<br><br>",
+   "\t\"어. 어, 안녕,\" 당신을 발견한 <<he>>【이가】 당신의 옷차림에 당황한 기색을 띠며 말한다.",
+   "\t<br><br>",
+   "\t당신은 고개를 끄덕여 보지만, <<he>>【이가】 어떻게든 당신을 보지 않으려고 애쓰는 것을 눈치챌 수밖에 없다.",
+   "\t<br><br>",
+   "\t<<if hasSexStat(\"exhibitionism\", 5)>>",
+   "\t\t<<link [[유혹한다|Hallway Flashing 1]]>><</link>><<exhibitionist5>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<link [[계속 걷는다|Orphanage]]>><<endevent>><</link>>",
+   "\t<br>",
+   "<<elseif $exposed gte 1 and Time.hour lt 22 and Time.hour gte 6>>",
+   "\t이런 모습으로 누군가에게 들키는 것은 상상도 할 수 없다. 서둘러 침실로 향한다.",
+   "\t<br><br>",
+   "",
+   "\t<<if dangerEvent()>>",
+   "\t\t앞쪽에서 문이 벌컥 열리며 <<generatey1>><<person1>><<person>>【이가】 걸어 나온다. <<covered>> <<He>>【은는】 당신을 눈치채지 못했다.",
+   "\t\t<br><br>",
+   "\t\t<<link [[숨는다|Orphanage Hide]]>><<stress 6>><</link>><<gstress>>",
+   "\t\t<br>",
+   "\t\t<<if hasSexStat(\"exhibitionism\", 4)>>",
+   "\t\t\t<<link [[과시한다|Orphanage Flaunt]]>><</link>><<exhibitionist4>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\t<<link [[다음|Bedroom]]>><</link>>",
+   "\t<</if>>"
+  ],
+  "new_en": [],
+  "context": "\t<<passouthome>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $renttime lte 0>>",
+   "\t\t\"Pay your dues next time so we won't have to go through this again. Speaking of which...\" <<He>> holds out <<his>> hand."
+  ],
+  "old_kr": [
+   "\t<<if $renttime lte 0>>",
+   "\t\t\"다음엔 제때 내라고. 그래야 이런 번거로운 짓을 안 할 테니까. 말이 나온 김에...\" <<He>>【은는】 손을 내민다."
+  ],
+  "new_en": [
+   "\t<<if isRentDue() or isBaileyLookingForPlayer()>>",
+   "\t\t\"Pay your dues next time so we won't have to go through this again. Speaking of which...\" <<He>> holds out <<his>> hand."
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<elseif $renttime lte -21 and !$bailey_confiscation>> /* Bailey Confiscation System */",
+   "\t<<set $bus to \"home\">>",
+   "\t<<baileyRentConfiscation>>",
+   "<<elseif $renttime lte 0>>",
+   "\t<<set $bus to \"home\">>",
+   "\tA hand rests on your shoulder from behind. <span class=\"red\">It's Bailey.</span>",
+   "\t<<if $robinfirstrentfight and ($baileypaychain lt 2 or $renttime lte -1) and _robinAtOrphanage>>",
+   "\t\t<<rentduerobin 0>>",
+   "\t<<else>>",
+   "\t\t<<rentdue 0>>",
+   "\t<</if>>",
+   "<<elseif $babyIntros and $babyIntros.Bailey and $babyIntros.Bailey.length gt 0>>"
+  ],
+  "old_kr": [
+   "<<elseif $renttime lte -21 and !$bailey_confiscation>> /* Bailey Confiscation System */",
+   "\t<<set $bus to \"home\">>",
+   "\t<<baileyRentConfiscation>>",
+   "<<elseif $renttime lte 0>>",
+   "\t<<set $bus to \"home\">>",
+   "\t등 뒤에서 어깨 위로 손이 얹혀진다. <span class=\"red\">베일리다.</span>",
+   "\t<<if $robinfirstrentfight and ($baileypaychain lt 2 or $renttime lte -1) and _robinAtOrphanage>>",
+   "\t\t<<rentduerobin 0>>",
+   "\t<<else>>",
+   "\t\t<<rentdue 0>>",
+   "\t<</if>>",
+   "<<elseif $babyIntros and $babyIntros.Bailey and $babyIntros.Bailey.length gt 0>>"
+  ],
+  "new_en": [
+   "<<elseif $babyIntros?.Bailey?.length gt 0>>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou spot a present laid under the tree with your name on it. It's from Robin."
+  ],
+  "old_kr": [
+   "\t트리 아래에 당신의 이름이 적힌 선물이 놓인 것이 보인다. 로빈이 준 것이다."
+  ],
+  "new_en": [
+   "\t<<wearProp \"choc chip cookie gift\">><<canvas-model-override \"mouth\" \"chew\">>",
+   "\tYou spot a present laid under the tree with your name on it. It's from Robin."
+  ],
+  "context": "\t<<set $christmas_robin_gift_received to true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<link [[Ignore|Orphanage]]>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<link [[무시한다|Orphanage]]>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "\t<<link [[Ignore|Orphanage]]>><<endevent>><</link>>",
+   "<<elseif $mine?.freed and !$mine?.bailey>>",
+   "\t<<set $mine.bailey to 1>>",
+   "\t<<npc \"Bailey\">><<generate2>><<person1>>",
+   "\tYou hear Bailey, and an unfamiliar <<person2>><<personsimple>>'s voice, talking around the next corner. ",
+   "\t<br><br>",
+   "\t\"Are you sure you don't know anything?\" the <<person2>><<personsimple>> asks.<<person1>> ",
+   "\t<br>",
+   "\t\"I'm sure,\" Bailey replies. \"I have nothing to do with that place.\"",
+   "\t<br>",
+   "\t\"The people behind it were involved in tax evasion. Any information you give could be very helpful.\" ",
+   "\t<br>",
+   "\t\"I told you,\" Bailey says. \"I don't know anything. Leave before you scare someone.\"",
+   "\t<br><br>",
+   "\tA moment later, <<he>> and a <<person2>><<person>> wearing a police uniform emerge from behind the corner. Bailey glances at you as they pass. <<glove \"Bailey\">><<npcincr Bailey love 1>>",
+   "\t<br><br>",
+   "\t<span class=\"blue\">The gems and crystals found in the mines are quite valuable, and the mines are probably empty now. You could go back.</span>",
+   "\t<br><br>",
+   "\t<<endevent>>",
+   "\t<<link [[Next|Orphanage]]>><</link>>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $pubfame and $pubfame.intro lte 2 and $pub_hack_job lte 3>>",
+   "\t\t<<investigateicon>><<link [[Find hacker (0:10)|Orphanage Hacker]]>><<pass 10>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<elseif $pubfame and $pubfame.intro lte 2 and $pub_hack_job lte 3>>",
+   "\t\t<<investigateicon>><<link [[해커를 찾는다 (0:10)|Orphanage Hacker]]>><<pass 10>><</link>>"
+  ],
+  "new_en": [
+   "\t<<elseif $pubfame?.intro lte 2 and $pub_hack_job lte 3>>",
+   "\t\t<<investigateicon>><<link [[Find hacker (0:10)|Orphanage Hacker]]>><<pass 10>><</link>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if Time.hour gte 18 and Time.hour lte 20 and _robin.trauma gte 40 and $robinmissing is 0 and !$robinTraumaVisit>>",
+   "\t\t<<bedicon>><<link [[Bedroom (0:01)|Robin Trauma Visit]]>><<set $phase to 0>><<pass 1>><</link>>",
+   "\t\t<br>",
+   "\t<<elseif $kylar.timer.home gte 100 and $kylar.home is undefined>>",
+   "\t\t<<bedicon>><<link [[Bedroom (0:01)|Kylar Bedroom 1]]>><<pass 1>><<set $kylar.timer.home to 0>><<set $kylar.home to 0>><</link>>",
+   "\t\t<br>",
+   "\t<<elseif $kylar.timer.home gte 100 and $kylar.home is 0 and C.npc.Kylar.state is \"active\">>",
+   "\t\t<<bedicon>><<link [[Bedroom (0:01)|Kylar Bedroom 2]]>><<pass 1>><<set $kylar.timer.home to 0>><<set $kylar.home to 1>><</link>>",
+   "\t\t<br>",
+   "\t<<else>>",
+   "\t\t<<bedicon>><<link [[Bedroom (0:01)|Bedroom]]>><<pass 1>><</link>>",
+   "\t\t<br>",
+   "\t<</if>>"
+  ],
+  "old_kr": [
+   "\t<<if Time.hour gte 18 and Time.hour lte 20 and _robin.trauma gte 40 and $robinmissing is 0 and !$robinTraumaVisit>>",
+   "\t\t<<bedicon>><<link [[침실 (0:01)|Robin Trauma Visit]]>><<set $phase to 0>><<pass 1>><</link>>",
+   "\t\t<br>",
+   "\t<<elseif $kylar.timer.home gte 100 and $kylar.home is undefined>>",
+   "\t\t<<bedicon>><<link [[침실 (0:01)|Kylar Bedroom 1]]>><<pass 1>><<set $kylar.timer.home to 0>><<set $kylar.home to 0>><</link>>",
+   "\t\t<br>",
+   "\t<<elseif $kylar.timer.home gte 100 and $kylar.home is 0 and C.npc.Kylar.state is \"active\">>",
+   "\t\t<<bedicon>><<link [[침실 (0:01)|Kylar Bedroom 2]]>><<pass 1>><<set $kylar.timer.home to 0>><<set $kylar.home to 1>><</link>>",
+   "\t\t<br>",
+   "\t<<else>>",
+   "\t\t<<bedicon>><<link [[침실 (0:01)|Bedroom]]>><<pass 1>><</link>>",
+   "\t\t<br>",
+   "\t<</if>>"
+  ],
+  "new_en": [
+   "\t<<bedroomEntryEvent>>",
+   "\t<br>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Wanting to avoid any jealousy, you throw open the door and stride into the hallway. The small crowd parts to let you through. You take your time, and pretend to be on a catwalk. Their eyes are locked onto your <<lewdness>>. The hallway isn't wide enough for three people, so you rub against everyone as you move. "
+  ],
+  "old_kr": [
+   "어떤 질투도 피하고 싶어서, 당신은 문을 활짝 열고 복도로 나선다. 작은 무리가 당신이 지나가도록 길을 터준다. 당신은 천천히, 마치 캣워크를 걷는 것처럼 행동한다. 그들의 시선은 당신의 <<lewdness>> 모습에 고정되어 있다. 복도는 세 사람이 서기에는 좁아서, 당신은 움직이면서 모두와 몸을 스친다."
+  ],
+  "new_en": [
+   "Wanting to avoid any jealousy, you throw open the door and stride into the hallway. The small crowd parts to let you through. You take your time, and pretend to be on a catwalk. Their eyes are locked onto your <<lewdness>>. The hallway isn't wide enough for three people, so you rub against everyone as you move."
+  ],
+  "context": "<<fameexhibitionism 20>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<He>> lifts an envelope from <<his>> desk and thumbs through the contents. You glimpse your name. <<He>> smiles as <<he>> hides your identification documents in <<his>> jacket. \"<<printmoney $rentmoney \"pink\">> should do. To start with. I don't care how you get it. Knock on doors and ask for work. Rent yourself as a footstool. Steal it even. Just have it a week from now. Or I'll find a way to <span class=\"red\">extract value</span> from you.\""
+  ],
+  "old_kr": [
+   "<<He>>【은는】 <<his>> 책상에서 봉투를 들어 내용물을 훑어본다. 당신의 이름이 언뜻 보인다. <<He>>【은는】 <<his>> 재킷에 당신의 신분증을 숨기며 미소 짓는다. \"<<printmoney $rentmoney \"pink\">> 정도면 될 거야. 시작으로는 말이지. 어떻게 구하든 상관없어. 문을 두드리고 일을 구하든. 발판으로 몸을 빌려주든. 심지어 훔치든. 일주일 안에 가져와. 그렇지 않으면 내가 <span class=\"red\">가치를 추출할</span> 방법을 찾을 테니 너에게서.\""
+  ],
+  "new_en": [
+   "<<He>> lifts an envelope from <<his>> desk and thumbs through the contents. You glimpse your name. <<He>> smiles as <<he>> hides your identification documents in <<his>> jacket. \"<<printmoney $rentMoney \"pink\">> should do. To start with. I don't care how you get it. Knock on doors and ask for work. Rent yourself as a footstool. Steal it even. Just have it a week from now. Or I'll find a way to <span class=\"red\">extract value</span> from you.\""
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "",
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t<<link [[Spread your legs|Nude Oral]]>><<trauma -6>><<stress -12>><<arousal 600>><</link>><<ltrauma>><<lstress>><<garousal>><<deviant1>>"
+  ],
+  "old_kr": [
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t<<link [[다리를 벌린다|Nude Oral]]>><<trauma -6>><<stress -12>><<arousal 600>><</link>><<ltrauma>><<lstress>><<garousal>><<deviant1>>"
+  ],
+  "new_en": [
+   "",
+   "<<if beastSexEnabledForType(\"cat\", $monster is 1)>>",
+   "\t<<link [[Spread your legs|Nude Oral]]>><<trauma -6>><<stress -12>><<arousal 600>><</link>><<ltrauma>><<lstress>><<garousal>><<deviant1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $pub_hack_job is 1 or $pubfame and $pubfame.intro is 1>>",
+   "\tThe orphans sometimes move rooms. After a few failed attempts you find the right door."
+  ],
+  "old_kr": [
+   "<<if $pub_hack_job is 1 or $pubfame and $pubfame.intro is 1>>",
+   "\t고아들은 가끔 방을 옮긴다. 몇 번의 실패 끝에 당신은 맞는 문을 찾는다."
+  ],
+  "new_en": [
+   "<<if $pub_hack_job is 1 or $pubfame?.intro is 1>>",
+   "\tThe orphans sometimes move rooms. After a few failed attempts you find the right door."
+  ],
+  "context": "<<generateMickey>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Strip (0:02)|Orphanage Hacker Strip]]>><<stress 1>><<pass 2>><<if $pubfame and $pubfame.intro lte 2>><<set $pubfame.intro to 3>><</if>><<if $pub_hack_job lte 2>><<set $pub_hack_job to 3>><</if>><<undress \"mickey\">><</link>><<gstress>>"
+  ],
+  "old_kr": [
+   "<<link [[옷을 벗는다 (0:02)|Orphanage Hacker Strip]]>><<stress 1>><<pass 2>><<if $pubfame and $pubfame.intro lte 2>><<set $pubfame.intro to 3>><</if>><<if $pub_hack_job lte 2>><<set $pub_hack_job to 3>><</if>><<undress \"mickey\">><</link>><<gstress>>"
+  ],
+  "new_en": [
+   "<<link [[Strip (0:02)|Orphanage Hacker Strip]]>><<stress 1>><<pass 2>><<if $pubfame?.intro lte 2>><<set $pubfame.intro to 3>><</if>><<if $pub_hack_job lte 2>><<set $pub_hack_job to 3>><</if>><<undress \"mickey\">><</link>><<gstress>>"
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Refuse|Orphanage Hacker Strip Refuse]]>><<if $pubfame and $pubfame.intro lte 2>><<set $pubfame.intro to 2>><</if>><<if $pub_hack_job lte 2>><<set $pub_hack_job to 2>><</if>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[거절한다|Orphanage Hacker Strip Refuse]]>><<if $pubfame and $pubfame.intro lte 2>><<set $pubfame.intro to 2>><</if>><<if $pub_hack_job lte 2>><<set $pub_hack_job to 2>><</if>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Refuse|Orphanage Hacker Strip Refuse]]>><<if $pubfame?.intro lte 2>><<set $pubfame.intro to 2>><</if>><<if $pub_hack_job lte 2>><<set $pub_hack_job to 2>><</if>><</link>>"
+  ],
+  "context": "<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Walk away and consider calling the police|Orphanage]]>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[떠나서 경찰에 신고할지 고민한다|Orphanage]]>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Mines (Mining Helmet)|Orphanage Sneaky Bad Ends 2]]>><<endevent>><<set $phase to \"mine\">><</link>>",
+   "<br>",
+   "<<link [[Walk away and consider calling the police|Orphanage]]>><<endevent>><</link>>"
+  ],
+  "context": "<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $renttime lte 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $rentTime lte 0>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<elseif $location is \"home\" and _kylarWake is 3>>",
+   "\t<<npc \"Kylar\">><<person1>>",
+   "\t<<run statusCheck(\"Kylar\")>>",
+   "",
+   "\tYou wake up to air streaming in through your open window.",
+   "\t<br><br>",
+   "",
+   "\tYou move to sit up, but stop once you see a figure in front of your wardrobe. They rummage through your things, and place something in their hand.",
+   "\t<br><br>",
+   "",
+   "\tUpon inching closer, you identify the intruder and their item of choice.",
+   "\t<br><br>",
+   "",
+   "\tIt's Kylar, with your locket open in <<his>> hand.",
+   "\t<br><br>",
+   "",
+   "\t<<link [[Watch <<him>>|Bedroom Kylar Locket]]>><<set $phase to 1>><</link>>",
+   "\t<br>",
+   "\t<<link [[Stop <<him>>|Bedroom Kylar Locket]]>><<set $phase to 2>><</link>>",
+   "\t<br>",
+   "\t<<link [[Go back to sleep|Bedroom Kylar Locket]]>><<set $phase to 3>><</link>>",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<br>"
+  ],
+  "context": "\t\t\t\t\t<<link [[다음|Robin Bed Egg Laying]]>><</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<br>"
+  ],
+  "context": "\t\t\t<<if hasSexStat(\"promiscuity\", 2)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<br>"
+  ],
+  "context": "\t\t\t\t<<link [[목욕을 도와달라고 부탁한다|Bath Robin Help]]>><<npcincr Robin lust 1>><<npcincr Robin love 1>><<stress -6>><</link>><<promiscuous2>><<glust>><<glove>><<lstress>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<br>"
+  ],
+  "context": "\t\t\t\t<<link [[`${[\"Black Wolf\", \"Great Hawk\"].includes(_npc) ? \"그 \" : \"\"}${window.KR.gatPersonNameDictKR(_npc)}의 사진으로 교체한다`|Mirror Locket 2]]>><<set $carried.neck.photo to _npc>><</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<br>"
+  ],
+  "context": "\t\t\t\t<<link [[`${[\"Black Wolf\", \"Great Hawk\"].includes(_npc) ? \"그 \" : \"\"}${window.KR.gatPersonNameDictKR(_npc)}의 사진을 넣는다`|Mirror Locket 2]]>><<set $carried.neck.photo to _npc>><</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $renttime lte 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $rentTime lte 0>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\t<<case \"mine\">>",
+   "\t\t\"Yeesh, it's quite dark down there. Here, take these,\" she hands you a bottle. \"Those are Vitamin D suppositories, take one twice a day.\"",
+   "\t\t<br><br>",
+   "",
+   "\t\tA masked person walks up to you and hands the girl a wad of cash. \"Nice, this'll help fund my own game. Toodles.\" She walks away as the person puts a bag over your head.",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<link [[Next|Flats Auction]]>><<endevent>><</link>>",
+   "\t\t<br>",
+   ""
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<br>",
+   "",
+   ":: Orphanage Sneaky Halloween",
+   "<<effects>>",
+   "",
+   "The girl smiles at you as you approach.",
+   "<br><br>",
+   "\"Hello! Would you like to test Hallloween? I can turn the clock and put you in October. I hear there's a pumpkin carving competition in the park.\"",
+   "<br><br>",
+   "",
+   "<<link [[Time travel to the 21st of October and enable Kylar if you haven't already (will free them if they're in prison)|Park]]>>",
+   "\t<<npc Kylar>><<person1>><<endevent>><<set C.npc.Kylar.state to \"active\">>",
+   "\t<<run Time.timeTravel(new DateTime(2022, 10, 21, 15))>>",
+   "\t<<set $halloween to 1>>",
+   "\t<<set $halloweenClothesMessage to 1>>",
+   "\t<<set $eventskip to 1>>",
+   "<</link>>",
+   "<br>",
+   "<<link [[Time travel to the 21st of October without affecting Kylar|Park]]>>",
+   "\t<<run Time.timeTravel(new DateTime(2022, 10, 21, 15))>>",
+   "\t<<set $halloween to 1>>",
+   "\t<<set $halloweenClothesMessage to 1>>",
+   "\t<<set $eventskip to 1>>",
+   "<</link>>",
+   "<br>",
+   "<<link [[Decline|Orphanage]]>><</link>>"
+  ],
+  "context": "<</link>> <i>에이버리는 토요일에 거리에서 당신을 초대할 것이다.</i>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "",
+   ":: Bedroom Kylar Locket",
+   "<<effects>>",
+   "<<run statusCheck(\"Kylar\")>>",
+   "<<set _locket to $wardrobe.neck.find(item => item.name is \"love locket\")>>",
+   "<<set _locketRival to _locket.photo and _locket.photo isnot \"Kylar\">>",
+   "",
+   "<<if $phase is 1>> /* Watch */",
+   "\t<<if !_locket.photo>>",
+   "\t\tKylar opens your locket, and stills once <<he>> sees nothing inside.",
+   "\t\t<br><br>",
+   "",
+   "\t\t\"It's just a necklace,\" you then hear <<him>> whisper as <<he>> inspects your locket. \"Yes. With no one inside. Not even...\"",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<if _kylarStatus.includes(\"Rage\")>>",
+   "\t\t\t<<set $kylarLocket to \"added\">><<set _locket.photo to \"Kylar\">>",
+   "\t\t\t<<He>> holds up your locket, before hastily pulling something out of <<his>> pocket.",
+   "\t\t\t<<if hasSharpSenses(\"sight\") is \"sharp eyes\">>",
+   "\t\t\t\tIt's a drawing of you and Kylar together. <<He>> rips out <<his>> self-portrait and jams it into the locket frame.",
+   "\t\t\t<<else>>",
+   "\t\t\t\tIt seems to be a piece of paper, but you can't tell what is on it. <<He>> rips out a piece from it and places it in the locket frame.",
+   "\t\t\t<</if>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t\"There we go,\" Kylar giggles to <<himself>>. \"Now everyone who sees this can know who you really love.\"",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\tIt's not long before <<he>> then turns around and walks to stand beside your bed. You keep your eyes closed, but the sensation of steel against your cheek almost forces them open. <<stress 12>><<ggstress>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t\"Good night, my gaoler.\"",
+   "\t\t<<elseif _kylarStatus.includes(\"Love\")>>",
+   "\t\t\t<<set $kylarLocket to \"added\">><<set _locket.photo to \"Kylar\">>",
+   "\t\t\t<<He>> holds up your locket, before pulling something out of <<his>> pocket.",
+   "\t\t\t<<if hasSharpSenses(\"sight\") is \"sharp eyes\">>",
+   "\t\t\t\tIt's a drawing of you and Kylar together. <<He>> tears out <<his>> self-portrait and places it into the locket frame.",
+   "\t\t\t<<else>>",
+   "\t\t\t\tIt seems to be a piece of paper, but you can't tell what is on it. <<He>> tears out a piece from it and places it in the locket frame.",
+   "\t\t\t<</if>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t\"There we go,\" Kylar whispers. \"I fixed it, my love. Aren't you proud of me?\"",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\tIt's not long before <<he>> then turns around and walks to stand beside your bed. A wet kiss soon lands on your cheek.",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t\"Good night, my love.\"",
+   "\t\t<<else>>",
+   "\t\t\t<<set $kylarLocket to \"took\">><<set $kylarSeen.pushUnique(\"locketStolen\")>><<run $wardrobe.neck.delete(_locket)>>",
+   "\t\t\t<<He>> holds up your locket, before putting it away in <<his>> pocket.",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\tSeemingly done, Kylar makes <<his>> way out.",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\t<<switch _locket.photo>>",
+   "\t\t<<case \"Kylar\">>",
+   "\t\t\t<<set $kylarLocket to \"self\">>",
+   "\t\t\tKylar opens your locket. The gasp that comes out of <<him>> is loud enough to wake you and the rest of the orphanage.",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t\"Ah,\" you hear <<him>> stammer. \"No... Is that...? Oh, my love, you really—!\"",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<He>> turns to you. In the light, you see how <<his>> eyes have begun to well up with tears.",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<if _kylarStatus.includes(\"Rage\")>>",
+   "\t\t\t\t\"I can't believe it. I knew <<pshe>> still loves me. I knew it, I knew it, I...\"",
+   "\t\t\t<<else>>",
+   "\t\t\t\t\"I can't believe it! Haha! I'm so happy. So...\"",
+   "\t\t\t<</if>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\tYou watch as Kylar puts the locket back into your closet, and steps forward to caress your hand.",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t\"You're so sweet,\" <<he>> whispers to you. \"Oh, you're so sappy, my love. Thank you.\" <<npcincr Kylar rage -10>><<lllksuspicion>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\tAfter a long moment of admiration, Kylar makes <<his>> way out.",
+   "\t\t<<case \"Sydney\">>",
+   "\t\t\t<<set $kylarLocket to \"other\">><<set $kylarSeen.pushUnique(\"locketStolen\")>><<run $wardrobe.neck.delete(_locket)>>",
+   "\t\t\tKylar opens your locket, and makes a noise of contempt at the sight of Sydney.",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t\"You? Why you? Why do you keep...\" you then hear <<him>> whisper as <<he>> inspects your locket. \"I hate this.\"",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\tYou watch as <<he>> keeps the locket close, and pockets it soon after. <<npcincr Kylar rage 3>><<ggksuspicion>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<if _kylarStatus.includes(\"Rage\")>>",
+   "\t\t\t\t\"Sydney... Sydney, Sydney, <i>Sydney.</i>\"",
+   "\t\t\t\t<br><br>",
+   "\t\t\t<<elseif _kylarStatus.includes(\"Love\")>>",
+   "\t\t\t\t\"Surely... no. No, no, no.\"",
+   "\t\t\t\t<br><br>",
+   "\t\t\t<</if>>",
+   "",
+   "\t\t\tDisgruntled, Kylar makes <<his>> way out.",
+   "\t\t<<case \"Robin\">>",
+   "\t\t\t<<set $kylarLocket to \"other\">><<set $kylarSeen.pushUnique(\"locketStolen\")>><<run $wardrobe.neck.delete(_locket)>>",
+   "\t\t\tKylar opens your locket, and makes a noise of contempt at the sight of Robin.",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t\"Of course I have to worry about you too,\" you then hear <<him>> grumble as <<he>> inspects your locket. \"If only I could have lived with <<phim>>, too...\"",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\tYou watch as <<he>> keeps the locket close, and pockets it soon after. <<npcincr Kylar rage 3>><<ggksuspicion>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<if _kylarStatus.includes(\"Rage\")>>",
+   "\t\t\t\t\"You have no idea just how lucky you are...\"",
+   "\t\t\t\t<br><br>",
+   "\t\t\t<<elseif _kylarStatus.includes(\"Love\")>>",
+   "\t\t\t\t\"It's not fair at all. Not one bit.\"",
+   "\t\t\t\t<br><br>",
+   "\t\t\t<</if>>",
+   "",
+   "\t\t\tDisgruntled, Kylar makes <<his>> way out.",
+   "\t\t<<case \"Whitney\">>",
+   "\t\t\t<<set $kylarLocket to \"other\">><<set $kylarSeen.pushUnique(\"locketStolen\")>><<run $wardrobe.neck.delete(_locket)>>",
+   "\t\t\tKylar opens your locket, and makes a noise of contempt at the sight of Whitney.",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t\"You? What does <<pshe>> see in you?\" you then hear <<him>> grumble as <<he>> inspects your locket. \"What does <i>anyone</i> see in you? You...\"",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\tYou watch as <<he>> keeps the locket close, and pockets it soon after. <<npcincr Kylar rage 3>><<ggksuspicion>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<if _kylarStatus.includes(\"Rage\")>>",
+   "\t\t\t\t\"Stupid Whitney. Stupid Whitney...!\"",
+   "\t\t\t\t<br><br>",
+   "\t\t\t<<elseif _kylarStatus.includes(\"Love\")>>",
+   "\t\t\t\t\"Surely <<pshes>> just forced to... ugh.\"",
+   "\t\t\t\t<br><br>",
+   "\t\t\t<</if>>",
+   "",
+   "\t\t\tDisgruntled, Kylar makes <<his>> way out.",
+   "\t\t<<case \"Eden\">>",
+   "\t\t\t<<set $kylarLocket to \"other\">><<set $kylarSeen.pushUnique(\"locketStolen\")>><<run $wardrobe.neck.delete(_locket)>>",
+   "\t\t\tKylar opens your locket, and makes a noise of surprise at the sight of Eden.",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t\"Oh. You seem scary,\" you then hear <<him>> mutter as <<he>> inspects your locket. \"It's okay. I can be scarier than you. So much scarier...\"",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\tYou watch as <<he>> keeps the locket close, and pockets it soon after. <<npcincr Kylar rage 1>><<gksuspicion>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<if _kylarStatus.includes(\"Rage\")>>",
+   "\t\t\t\t\"So many sluts and perverts, all after my love...\"",
+   "\t\t\t\t<br><br>",
+   "\t\t\t<<elseif _kylarStatus.includes(\"Love\")>>",
+   "\t\t\t\t\"There. One less thing to worry about.\"",
+   "\t\t\t\t<br><br>",
+   "\t\t\t<</if>>",
+   "",
+   "\t\t\tSeemingly done, Kylar makes <<his>> way out.",
+   "\t\t<<case \"Avery\">>",
+   "\t\t\t<<set $kylarLocket to \"other\">><<set $kylarSeen.pushUnique(\"locketStolen\")>><<run $wardrobe.neck.delete(_locket)>>",
+   "\t\t\tKylar opens your locket, and makes a noise of surprise at the sight of Avery.",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<if $averySeen.includes(\"schoolDropOff\")>>",
+   "\t\t\t\t\"Isn't this...\" you then hear <<him>> mutter as <<he>> inspects your locket. \"I thought you were— Who <i>are</i> you?\"",
+   "\t\t\t<<else>>",
+   "\t\t\t\t\"Oh,\" you then hear <<him>> mutter as <<he>> inspects your locket. \"Another person to worry about...\"",
+   "\t\t\t<</if>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\tYou watch as <<he>> keeps the locket close, and pockets it soon after. <<npcincr Kylar rage 1>><<gksuspicion>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<if _kylarStatus.includes(\"Rage\")>>",
+   "\t\t\t\t\"So many sluts and perverts, all after my love...\"",
+   "\t\t\t\t<br><br>",
+   "\t\t\t<<elseif _kylarStatus.includes(\"Love\")>>",
+   "\t\t\t\t\"There. One less thing to worry about.\"",
+   "\t\t\t\t<br><br>",
+   "\t\t\t<</if>>",
+   "",
+   "\t\t\tSeemingly done, Kylar makes <<his>> way out.",
+   "\t\t<<case \"Alex\">>",
+   "\t\t\t<<set $kylarLocket to \"other\">><<set $kylarSeen.pushUnique(\"locketStolen\")>><<run $wardrobe.neck.delete(_locket)>>",
+   "\t\t\tKylar opens your locket, and makes a noise of surprise at the sight of Alex.",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t\"Whoever you are,\" you then hear <<him>> mutter as <<he>> inspects your locket. \"I won't let you take my love away...!\"",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\tYou watch as <<he>> keeps the locket close, and pockets it soon after. <<npcincr Kylar rage 1>><<gksuspicion>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<if _kylarStatus.includes(\"Rage\")>>",
+   "\t\t\t\t\"So many sluts and perverts, all after my love...\"",
+   "\t\t\t\t<br><br>",
+   "\t\t\t<<elseif _kylarStatus.includes(\"Love\")>>",
+   "\t\t\t\t\"There. One less thing to worry about.\"",
+   "\t\t\t\t<br><br>",
+   "\t\t\t<</if>>",
+   "",
+   "\t\t\tSeemingly done, Kylar makes <<his>> way out.",
+   "\t\t<<case \"Black Wolf\">>",
+   "\t\t\t<<set $kylarLocket to \"other\">><<set $kylarSeen.pushUnique(\"locketStolen\")>><<run $wardrobe.neck.delete(_locket)>>",
+   "\t\t\tKylar opens your locket, and makes a noise of surprise at the sight of the Black Wolf.",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t\"W-what?\" you then hear <<him>> stutter as <<he>> inspects your locket. \"Why would a wolf be in <<pher>> love locket?\"",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\tYou watch as <<he>> keeps the locket close, and pockets it soon after. <<npcincr Kylar love -1>><<llove>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<if _kylarStatus.includes(\"Rage\")>>",
+   "\t\t\t\t\"Animals? <i>Animals?</i> No...\"",
+   "\t\t\t\t<br><br>",
+   "\t\t\t<<elseif _kylarStatus.includes(\"Love\")>>",
+   "\t\t\t\t\"I-I must be mistaken. Am I?\"",
+   "\t\t\t\t<br><br>",
+   "\t\t\t<</if>>",
+   "",
+   "\t\t\tSeemingly done, Kylar makes <<his>> way out.",
+   "\t\t<<case \"Great Hawk\">>",
+   "\t\t\t<<set $kylarLocket to \"other\">><<set $kylarSeen.pushUnique(\"locketStolen\")>><<run $wardrobe.neck.delete(_locket)>>",
+   "\t\t\tKylar opens your locket, and makes a noise of surprise at the sight of the Great Hawk.",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t\"W-what?\" you then hear <<him>> stutter as <<he>> inspects your locket. \"What is this?\"",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\tYou watch as <<he>> keeps the locket close, and pockets it soon after. <<npcincr Kylar love -1>><<llove>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<if _kylarStatus.includes(\"Rage\")>>",
+   "\t\t\t\t\"Animals? <i>Animals?</i> No...\"",
+   "\t\t\t\t<br><br>",
+   "\t\t\t<<elseif _kylarStatus.includes(\"Love\")>>",
+   "\t\t\t\t\"I-I must be mistaken. Am I?\"",
+   "\t\t\t\t<br><br>",
+   "\t\t\t<</if>>",
+   "",
+   "\t\t\tSeemingly done, Kylar makes <<his>> way out.",
+   "\t\t<<case \"Gwylan\">>",
+   "\t\t\t<<if $gwylan?.timer?.nobody gte Time.date.timeStamp>>",
+   "\t\t\t\t<<set $kylarLocket to \"other\">><<set $kylarSeen.pushUnique(\"locketStolen\")>><<run $wardrobe.neck.delete(_locket)>>",
+   "\t\t\t\tKylar opens your locket.",
+   "\t\t\t\t<br><br>",
+   "",
+   "\t\t\t\t\"Who—\"",
+   "\t\t\t\t<br><br>",
+   "",
+   "\t\t\t\t\"What?\" you hear <<him>> stammer as <<he>> inspects your locket. \"Why is this photo so weird? Who gave you this cursed photo, my love?\"",
+   "\t\t\t\t<br><br>",
+   "",
+   "\t\t\t\tYou watch as <<he>> slowly keeps the locket close, and pockets it soon after. <<npcincr Kylar love -1>><<llove>>",
+   "\t\t\t\t<br><br>",
+   "",
+   "\t\t\t\t\"It's okay. I can just get rid of this... picture. I can...\"",
+   "\t\t\t\t<br><br>",
+   "",
+   "\t\t\t\tHesitantly, Kylar makes <<his>> way out.",
+   "\t\t\t<<elseif $hypnosis_traits.devotion gte 4>>",
+   "\t\t\t\t<<set $kylarLocket to \"other\">>",
+   "\t\t\t\tKylar opens your locket.",
+   "\t\t\t\t<br><br>",
+   "",
+   "\t\t\t\t\"Who— ugh!\"",
+   "\t\t\t\t<br><br>",
+   "",
+   "\t\t\t\tYou watch as Kylar gags and tosses the locket back inside your closet. <<He>> stumbles back, eyes shaking. <<npcincr Kylar rage 3>><<ggksuspicion>>",
+   "\t\t\t\t<br><br>",
+   "",
+   "\t\t\t\t<<if _kylarStatus.includes(\"Rage\")>>",
+   "\t\t\t\t\t\"My head... did <<pshe>> rig this thing somehow? How? <i>How?</i>\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t\"W-what? How...? I feel sick.\"",
+   "\t\t\t\t<</if>>",
+   "\t\t\t\t<br><br>",
+   "",
+   "\t\t\t\tDisgruntled, Kylar makes <<his>> way out.",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set $kylarLocket to \"other\">><<set $kylarSeen.pushUnique(\"locketStolen\")>><<run $wardrobe.neck.delete(_locket)>>",
+   "\t\t\t\tKylar opens your locket, and makes a noise of amusement at the sight of Gwylan's blurry picture.",
+   "\t\t\t\t<br><br>",
+   "",
+   "\t\t\t\t\"Hehe,\" you then hear <<him>> giggling as <<he>> inspects your locket. \"And who are you? <<pShe>> didn't even try to keep you in frame...\"",
+   "\t\t\t\t<br><br>",
+   "",
+   "\t\t\t\tYou watch as <<he>> keeps the locket close, and pockets it soon after.",
+   "\t\t\t\t<br><br>",
+   "",
+   "\t\t\t\t<<if _kylarStatus.includes(\"Rage\")>>",
+   "\t\t\t\t\t\"Hehe... heh!\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<elseif _kylarStatus.includes(\"Love\")>>",
+   "\t\t\t\t\t\"Oh, my love. We'll take so much better photos together soon.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<</if>>",
+   "",
+   "\t\t\t\tSeemingly done, Kylar makes <<his>> way out.",
+   "\t\t\t<</if>>",
+   "\t\t<<default>>",
+   "\t\t\t<<set $kylarLocket to \"other\">>",
+   "\t\t\t\"Don't worry,\" you then hear <<him>> mutter as <<he>> inspects your locket. \"I'll get everyone out of the way soon...\"",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\tKylar makes <<his>> way out.",
+   "\t\t<</switch>>",
+   "\t<</if>>",
+   "\t<br><br>",
+   "",
+   "\t<<link [[Next|Bed]]>><<endevent>><</link>>",
+   "",
+   "<<elseif $phase is 2>> /* Stop */",
+   "\t<<set $kylarLocket to \"confronted\">>",
+   "\tYou sit up.",
+   "\t<br><br>",
+   "",
+   "\t<<if $speech_attitude is \"meek\">>",
+   "\t\t\"Can you please stop going through my things?!\" you then cry out.",
+   "\t<<elseif $speech_attitude is \"bratty\">>",
+   "\t\t\"Hey! Get out of here, dammit!\" you then shout.",
+   "\t<<else>>",
+   "\t\t\"Hey! Don't go through my things!\" you then scold.",
+   "\t<</if>>",
+   "\t<br><br>",
+   "",
+   "\t<<if _kylarStatus.includes(\"Rage\")>>",
+   "\t\t\"Hello, my love,\" Kylar whispers as <<he>> turns to face you. The locket still hangs on <<his>> wrist. \"Did I wake you?\"",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<if $speech_attitude is \"meek\">>",
+   "\t\t\t\"Well... yes,\" you say. \"Why do you have my locket?\"",
+   "\t\t<<elseif $speech_attitude is \"bratty\">>",
+   "\t\t\t\"I don't know. Did you?\" you spit. \"Tell me why you have my locket.\"",
+   "\t\t<<else>>",
+   "\t\t\t\"You did,\" you say. \"Why are you holding my locket?\"",
+   "\t\t<</if>>",
+   "\t\t<br><br>",
+   "",
+   "\t\t\"Your locket,\" <<he>> echoes. \"Your love locket? I just wanted to see if I was in your love locket, that's all.\"",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<if _locket.photo is \"Kylar\">>",
+   "\t\t\tYou visibly relax, but not even that placates <<him>>.",
+   "\t\t<<else>>",
+   "\t\t\tYou don't need to say much to aggravate <<him>>. It seems that <<he>> already knows.",
+   "\t\t<</if>>",
+   "\t\t<br><br>",
+   "",
+   "\t\tKylar stares at you. After a while, <<he>> puts the locket back in your closet.",
+   "\t\t<br><br>",
+   "",
+   "\t\t\"I never want to be angry at you,\" <<he>> whispers. \"But sometimes...\"",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<He>> steps closer to the light, allowing a flash of steel in <<his>> pocket to shine. <<stress 12>><<ggstress>>",
+   "\t\t<br><br>",
+   "",
+   "\t\t\"I love you,\" Kylar suddenly says. \"Remember that.\"",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<He>> walks to the window and leaves you to stare at where <<he>> stood. <<if _locketRival>><<npcincr Kylar rage 10>><<gggksuspicion>><</if>>",
+   "\t<<elseif _kylarStatus.includes(\"Love\")>>",
+   "\t\t\"M-my love!\" Kylar stammers as <<he>> turns to face you. The locket still hangs on <<his>> wrist. \"Please don't be angry. I just...\"",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<if $speech_attitude is \"meek\">>",
+   "\t\t\t\"Kylar, you scared me. Please don't just break in and touch my things.\"",
+   "\t\t<<elseif $speech_attitude is \"bratty\">>",
+   "\t\t\t\"Save it! Who said you can just break in and mess with my stuff whenever?!\"",
+   "\t\t<<else>>",
+   "\t\t\t\"Kylar, you shouldn't have broken in here and gone through my stuff.\"",
+   "\t\t<</if>>",
+   "\t\t<br><br>",
+   "",
+   "\t\t\"I know, I'm sorry! I just... oh...\"",
+   "\t\t<br><br>",
+   "",
+   "\t\tDropping the locket, <<he>> sprints to the window and flees. <<npcincr Kylar love -3>><<lllove>>",
+   "\t<<else>>",
+   "\t\t<<set $kylarSeen.pushUnique(\"locketStolen\")>><<run $wardrobe.neck.delete(_locket)>>",
+   "\t\tWithout turning to you, <<he>> sprints to the window and makes <<his>> way out. <span class=\"red\"><<He>> doesn't leave your locket behind.</span>",
+   "\t<</if>>",
+   "\t<br><br>",
+   "",
+   "\t<<link [[Next|Bed]]>><<endevent>><</link>>",
+   "",
+   "<<else>> /* Go back to sleep */",
+   "\t<<set $kylarSeen.pushUnique(\"locketStolen\")>><<run $wardrobe.neck.delete(_locket)>>",
+   "\tYou try not to pay too much mind to",
+   "\t<<if _kylarStatus.includes(\"Rage\")>>",
+   "\t\tKylar's incessant murmuring. <<stress 6>><<gstress>><<if _locketRival>><<npcincr Kylar rage 3>><<ggksuspicion>><</if>>",
+   "\t<<else>>",
+   "\t\tKylar shuffling about. <<stress 6>><<gstress>><<if _locketRival>><<npcincr Kylar rage 1>><<gksuspicion>><</if>>",
+   "\t<</if>>",
+   "\t<br><br>",
+   "",
+   "\tYour sleep remains undisturbed. <span class=\"red\">However, you doubt that your locket will still be there when you wake.</span>",
+   "\t<br><br>",
+   "",
+   "\t<<link [[Next|Bed]]>><<endevent>><</link>>",
+   "<</if>>"
+  ],
+  "context": "<br>"
+ }
+]

@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<generatey1>><<person1>>A <<person>> answers the door. <<He>> looks shocked, then grins. \"I know you from school,\" <<he>> says.",
+   "\t\t\t<<if $player.penisExist and $player.vaginaExist and !playerChastity(\"hidden\")>>"
+  ],
+  "old_kr": [
+   "\t\t<<generatey1>><<person1>>한 <<person>>【이가】 문을 연다. <<He>>【은는】 충격을 받았다가, 이내 미소를 짓는다. \"학교에서 본 적 있어,\" <<he>>【이가】 말한다.",
+   "\t\t\t<<if $player.penisExist and $player.vaginaExist and !playerChastity(\"hidden\")>>"
+  ],
+  "new_en": [
+   "\t\t<<generatey1>><<person1>>A <<person>> answers the door. <<He>> looks shocked, then grins. \"I know you from school,\" <<he>> says.",
+   "\t\t\t<<if $player.penisExist and $player.vaginaExist and !playerChastity(\"hidden\") and $settings.nudeGenderPerception !== 0>>"
+  ],
+  "context": "\t<<addinlineevent \"nude_school\">>"
+ }
+]

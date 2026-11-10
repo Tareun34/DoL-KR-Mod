@@ -77,8 +77,8 @@
 	<</if>>
 
 	<<if _foxLunges>>
-		<<link [[여우에게 물고기를 던진다|Fishing Moor Fox Angry Feed]]>><<endevent>><</link>>
-		<<if $settings.bestialityEnabled>>
+		<<link [[Throw the fish at the fox|Fishing Moor Fox Angry Feed]]>><<endevent>><</link>>
+		<<if animalSexEnabledForType("fox")>>
 			<br>
 			<<link [[물고기를 꼭 쥐고 있는다|Fishing Moor Fox Molestation]]>><<set $molestationstart to 1>><<set $fishingMoorFoxPhase to 1>><<endevent>><</link>>
 		<</if>>
@@ -236,7 +236,7 @@
 		<<case 1>>
 			<<person1>><<personsimple>>【은는】 당신의 어깨를 한 번 툭 친다. "아, 운이 없었네."
 		<<case 2>>
-			<<person2>><<personsimple>>【은는】 안타까운 듯 혀를 찬다. "거의 다 잡았었는데." 
+			The <<person2>><<personsimple>> clicks <<his>> tongue sympathetically. "Nearly had it."
 		<<case 3>>
 			<<person1>><<personsimple>>【은는】 얼굴을 찡그린다. "안타깝네. 거의 잡았었는데."
 	<</switch>>

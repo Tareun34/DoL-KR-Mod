@@ -1,0 +1,63 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou came <<number _masturbationorgasm>> times. You're quite the trooper."
+  ],
+  "old_kr": [
+   "\t\t\t당신은 <<number _masturbationorgasm>>번 절정에 도달했다. 제법 끈기가 대단하다."
+  ],
+  "new_en": [
+   "\t\t\tYou came <<number _masturbationorgasm>> times. You're quite the trouper."
+  ],
+  "context": "\t\t<<elseif _masturbationorgasm lte 15>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $masturbation_milk gt 0>><<set $_liquids.push(\"milk\")>><</if>>",
+   "\t\t\t<<if $masturbation_semen gt 0>><<set $_liquids.push(\"semen\")>><</if>>",
+   "\t\t\t<<if $masturbation_vaginaFluid gt 0>><<set $_liquids.push(\"lewd fluids\")>><</if>>",
+   "\t\t\t<span class=\"gold\">You gathered <<print ($masturbation_fluid).toFixed(1)>> mL of <<print $_liquids.formatList({\"useOxfordComma\":true})>>.</span>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $masturbation_milk gt 0>><<set $_liquids.push(\"모유\")>><</if>>",
+   "\t\t\t<<if $masturbation_semen gt 0>><<set $_liquids.push(\"정액\")>><</if>>",
+   "\t\t\t<<if $masturbation_vaginaFluid gt 0>><<set $_liquids.push(\"음탕한 체액\")>><</if>>",
+   "\t\t\t<span class=\"gold\">당신은 <<print ($masturbation_fluid).toFixed(1)>> mL의 <<print formatList($_liquids, \"그리고\", true)>>【을를】 모았다.</span>"
+  ],
+  "new_en": [
+   "\t\t\t<<if $masturbation_milk gt 0>><<set $_liquids.push(\"milk\")>><</if>>",
+   "\t\t\t<<if $masturbation_semen gt 0>><<set $_liquids.push(\"semen\")>><</if>>",
+   "\t\t\t<<if $masturbation_vaginaFluid gt 0>><<set $_liquids.push(\"lewd fluids\")>><</if>>",
+   "\t\t\t<span class=\"gold\">You gathered <<print ($masturbation_fluid).toLocaleString(\"en-GB\", {minimumFractionDigits: 1})>> mL of <<print $_liquids.formatList({\"useOxfordComma\":true})>>.</span>"
+  ],
+  "context": "\t\t\t<<set $_liquids to []>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<span class=\"gold\">You bottled <<print ($bottledMilk).toFixed(1)>> mL of breast milk.</span>"
+  ],
+  "old_kr": [
+   "\t\t<span class=\"gold\">모유 <<print ($bottledMilk).toFixed(1)>>mL를 병에 담았다.</span>"
+  ],
+  "new_en": [
+   "\t\t<span class=\"gold\">You bottled <<print ($bottledMilk).toLocaleString(\"en-GB\", {minimumFractionDigits: 1})>> mL of breast milk.</span>"
+  ],
+  "context": "\t<<elseif $bottledMilk>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou've gathered <<print ($masturbation_fluid).toFixed(1)>> mL of fluid."
+  ],
+  "old_kr": [
+   "\t당신은 체액을 <<print ($masturbation_fluid).toFixed(1)>> mL 모았다."
+  ],
+  "new_en": [
+   "\tYou've gathered <<print ($masturbation_fluid).toLocaleString(\"en-GB\", {minimumFractionDigits: 1})>> mL of fluid."
+  ],
+  "context": "\t<<masturbationbowlimage>>"
+ }
+]

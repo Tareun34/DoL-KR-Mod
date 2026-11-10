@@ -1,0 +1,193 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You pour drinks into four glasses.",
+   "<br>",
+   "<<for _target range _targets>>",
+   "\t<br>",
+   "\tYou pour <<avery_cards_drink_text _target.toLowerCase()>> for <<= _target>>.",
+   "\t<br>",
+   "<</for>>",
+   "<br>"
+  ],
+  "old_kr": [
+   "당신은 네 개의 잔에 술을 따른다.",
+   "<br>",
+   "<<for _target range _targets>>",
+   "\t<br>",
+   "\t<<set _drink_en to $avery_cards.drink[_target.toLowerCase()]>>",
+   "\t<<switch _drink_en>>",
+   "\t\t<<case \"whisky\">><<set _drink_ko to \"위스키\">>",
+   "\t\t<<case \"brandy\">><<set _drink_ko to \"브랜디\">>",
+   "\t\t<<case \"gin\">><<set _drink_ko to \"진\">>",
+   "\t\t<<case \"vodka\">><<set _drink_ko to \"보드카\">>",
+   "\t\t<<default>><<set _drink_ko to \"술\">>",
+   "\t<</switch>>",
+   "\t당신은 <<= window.KR.gatPersonNameDictKR(_target)>>에게 _drink_ko【을를】 따라준다.",
+   "\t<br>",
+   "<</for>>",
+   "<br>"
+  ],
+  "new_en": [
+   "You pour drinks into four glasses:",
+   "<<print formatList(",
+   "\t_targets.map(t => `${V.avery_cards.drink[t.toLowerCase()]} for ${t}`)",
+   ")>>.",
+   "<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<set $bus to \"avery_garage\">>",
+   "\t<<money `((C.npc.Avery.love * 10 + $endear * 10 + 10) * 100)` \"avery\">>"
+  ],
+  "old_kr": [
+   "    <<set $bus to \"avery_garage\">>",
+   "    <<money `((C.npc.Avery.love * 10 + $endear * 10 + 10) * 100)` \"avery\">>"
+  ],
+  "new_en": [
+   "\t<<set $bus to \"avery_garage\">>",
+   "\t<<money `averyPayout()` \"avery\">>"
+  ],
+  "context": "<<if $avery_mansion>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tAvery pulls up to the mansion and into the garage. <<He>> hands you <span class=\"gold\">£<<print (C.npc.Avery.love * 10 + $endear * 10 + 10)>></span>, then leans over and kisses your cheek. \"You can keep the mask. Consider it a souvenir.\"",
+   "\t<br><br>"
+  ],
+  "old_kr": [
+   "    에이버리는 대저택의 차고에 차를 세운다. <<He>>【은는】 당신에게 <span class=\"gold\">£<<print (C.npc.Avery.love * 10 + $endear * 10 + 10)>></span>을 쥐여주고는, 몸을 기울여 당신의 뺨에 입을 맞춘다. \"그 가면은 가져도 좋습니다. 기념품으로 생각하시죠.\"",
+   "    <br><br>"
+  ],
+  "new_en": [
+   "\tAvery pulls up to the mansion and into the garage. <<He>> hands you <<printmoney `averyPayout()`>>, then leans over and kisses your cheek. \"You can keep the mask. Consider it a souvenir.\"",
+   "\t<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<set $bus to \"domus\">>",
+   "\t<<money `((C.npc.Avery.love * 10 + $endear * 10 + 10) * 100)` \"avery\">>"
+  ],
+  "old_kr": [
+   "    <<set $bus to \"domus\">>",
+   "    <<money `((C.npc.Avery.love * 10 + $endear * 10 + 10) * 100)` \"avery\">>"
+  ],
+  "new_en": [
+   "\t<<set $bus to \"domus\">>",
+   "\t<<money `averyPayout()` \"avery\">>"
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tAvery pulls up outside the orphanage. <<He>> hands you <span class=\"gold\">£<<print (C.npc.Avery.love * 10 + $endear * 10 + 10)>></span>, kisses your cheek, and leans over to open your door. \"Give Bailey my regards,\" <<he>> says. \"And my condolences for <<nnpc_his \"Bailey\">> loss.\" <<He>> winks. \"You can keep the mask. Consider it a souvenir.\"",
+   "\t<br><br>"
+  ],
+  "old_kr": [
+   "    에이버리가 고아원 밖에 차를 세운다. <<He>>【은는】 당신에게 <span class=\"gold\">£<<print (C.npc.Avery.love * 10 + $endear * 10 + 10)>></span>을 쥐여주고 당신의 뺨에 입을 맞춘 뒤, 몸을 기울여 문을 열어준다. \"베일리에게 안부 전해주시죠,\" <<he>>【이가】 말한다. \"그리고 <<nnpc_his \"Bailey\">> 손실에 대한 유감도 함께.\" <<He>>【은는】 윙크를 보낸다. \"그 가면은 가져도 좋습니다. 기념품으로 생각하시죠.\"",
+   "    <br><br>"
+  ],
+  "new_en": [
+   "\tAvery pulls up outside the orphanage. <<He>> hands you <<printmoney `averyPayout()`>>, kisses your cheek, and leans over to open your door. \"Give Bailey my regards,\" <<he>> says. \"And my condolences for <<nnpc_his \"Bailey\">> loss.\" <<He>> winks. \"You can keep the mask. Consider it a souvenir.\"",
+   "\t<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Avery doesn't speak to Bailey, but stops in front of you. \"Thank you for accompanying me,\" Avery says through gritted teeth. \"I'm sure your caretaker will see you home safe. Here, I spared a little something for your trouble.\" <<person1>><<He>> hands you <span class=\"gold\">£<<print (C.npc.Avery.love * 10 + $endear * 10 + 10)>></span>."
+  ],
+  "old_kr": [
+   "에이버리는 베일리에게 말하지 않고 당신 앞에 멈춰 선다. \"동행해 줘서 고맙군.\" 에이버리가 이를 악물고 말한다. \"네 보호자가 집까지 안전하게 데려다주겠지. 자, 수고비로 조금 남겨 뒀어.\" <<person1>><<He>>【은는】 당신에게 <span class=\"gold\">£<<print (C.npc.Avery.love * 10 + $endear * 10 + 10)>></span>【을를】 건넨다."
+  ],
+  "new_en": [
+   "Avery doesn't speak to Bailey, but stops in front of you. \"Thank you for accompanying me,\" Avery says through gritted teeth. \"I'm sure your caretaker will see you home safe. Here, I spared a little something for your trouble.\" <<person1>><<He>> hands you <<printmoney `averyPayout()`>>."
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\"Thank you for joining me this evening,\" <<he>> says, reaching to a pocket. <<He>> produces more notes, and hands you <span class=\"gold\">£<<print (C.npc.Avery.love * 10 + $endear * 10 + 10)>></span>."
+  ],
+  "old_kr": [
+   "\"오늘 저녁 함께해 줘서 고맙군.\" <<he>>【이가】 주머니로 손을 뻗으며 말한다. <<He>>【은는】 지폐를 더 꺼내 당신에게 <span class=\"gold\">£<<print (C.npc.Avery.love * 10 + $endear * 10 + 10)>></span>【을를】 건넨다."
+  ],
+  "new_en": [
+   "\"Thank you for joining me this evening,\" <<he>> says, reaching to a pocket. <<He>> produces more notes, and hands you <<printmoney `averyPayout()`>>."
+  ],
+  "context": "<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\"Thank you for accompanying me,\" <<he>> says through gritted teeth. \"A little something for your trouble.\" <<He>> glances at Quinn. \"For medical bills, maybe.\" <<He>> hands you <span class=\"gold\">£<<print (C.npc.Avery.love * 10 + $endear * 10 + 10)>></span>."
+  ],
+  "old_kr": [
+   "\"동행해줘서 고맙습니다,\" <<he>>【이가】 이를 악문 채 말한다. \"수고비로 조금 드리죠.\" <<He>>【은는】 퀸을 힐끗 본다. \"의료비로 쓰게 될지도 모르고요.\" <<He>>【은는】 당신에게 <span class=\"gold\">£<<print (C.npc.Avery.love * 10 + $endear * 10 + 10)>></span>를 건넨다."
+  ],
+  "new_en": [
+   "\"Thank you for accompanying me,\" <<he>> says through gritted teeth. \"A little something for your trouble.\" <<He>> glances at Quinn. \"For medical bills, maybe.\" <<He>> hands you <<printmoney `averyPayout()`>>."
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou grasp the two halves of the gate, and try to force them apart, <span class=\"red\">but to no avail.</span> The <<beastsplural>> are soon upon you.",
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [
+   "\t당신은 대문의 양쪽을 붙잡고 억지로 벌려보려 하지만, <span class=\"red\">아무 소용이 없다.</span> 곧 <<beastsplural>>【이가】 당신에게 들이닥친다.",
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "new_en": [
+   "\tYou grasp the two halves of the gate, and try to force them apart, <span class=\"red\">but to no avail.</span> The <<beastsplural>> are soon upon you.",
+   "\t<<if beastSexEnabledForType(\"dog\", $monster is 1)>>"
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<money `((C.npc.Avery.love * 10 + $endear * 10 + 10) * 100)` \"avery\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<money `averyPayout()` \"avery\">>"
+  ],
+  "context": "<<averyscore>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<money `((C.npc.Avery.love * 10 + $endear * 10 + 10) * 100)` \"avery\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<money `averyPayout()` \"avery\">>"
+  ],
+  "context": "<<averyscore>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<money `((C.npc.Avery.love * 10 + $endear * 10 + 10) * 100)` \"avery\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<money `averyPayout()` \"avery\">>"
+  ],
+  "context": "<<averyscore>>"
+ }
+]

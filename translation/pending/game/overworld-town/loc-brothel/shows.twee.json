@@ -1,0 +1,56 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled or $monster is 1>>",
+   "\t\tBriar turns to you. \"We're all set and ready. Just waiting for the star.\" The cage beside <<nnpc_him \"Briar\">> shakes. \"The beast is a bit worked up, but I'm sure you can handle <<bhim>>.\" You walk onto the stage. A single white light turns on above you, and the din of the dark room falls quiet. You can't see beyond the edge of the stage, but you can feel the eyes on you."
+  ],
+  "old_kr": [
+   "\t<<if $settings.bestialityEnabled or $monster is 1>>",
+   "\t\t브라이어가 당신을 돌아본다. \"모든 준비가 끝났어. 이제 주인공만 기다리면 돼.\" <<nnpc_him \"Briar\">> 옆에 있는 우리가 흔들린다. \"짐승이 좀 흥분했지만, 네가 잘 다룰 수 있을 거라 믿어.\" 당신은 무대 위로 걸어간다. 당신 위로 하얀 조명 하나가 켜지자, 어두운 방 안의 소음이 잦아든다. 무대 가장자리 너머는 보이지 않지만, 당신을 향한 시선들은 느껴진다."
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"pig\", $monster is 1)>>",
+   "\t\tBriar turns to you. \"We're all set and ready. Just waiting for the star.\" The cage beside <<nnpc_him \"Briar\">> shakes. \"The beast is a bit worked up, but I'm sure you can handle <<bhim>>.\" You walk onto the stage. A single white light turns on above you, and the din of the dark room falls quiet. You can't see beyond the edge of the stage, but you can feel the eyes on you."
+  ],
+  "context": "\t/* defaults to gangbang show if the player changed their beast settings, or has lost hallucinations since accepting the job */"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tThey lead you onto a platform and bind your hands and feet to a metal ring. Not a moment later, place four transparent walls around you and fix them in place,",
+   "\tleaving you helplessly bound and trapped."
+  ],
+  "old_kr": [
+   "\t그들은 당신을 단상 위로 이끌고 당신의 손과 발을 금속 고리에 묶는다. 잠시 후, 그들은 당신 주위에 네 개의 투명한 벽을 세워 고정시킨다.",
+   "\t당신은 무력하게 묶인 채 갇히게 된다."
+  ],
+  "new_en": [
+   "\tThey lead you onto a platform and bind your hands and feet to a metal ring. Not a moment later, they place four transparent walls around you and fix them in place,",
+   "\tleaving you helplessly bound and trapped."
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$settings.bestialityEnabled and $settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !animalSexEnabledForType(\"pig\") and monsterCanAppearForType(\"pig\")>>"
+  ],
+  "context": "\t/* guarantees pig will be generated as a monster - regardless of monsterChance - if monsterpeople are possible and beasts are disabled; otherwise generated as usual */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<beastNEWinit 1 pig>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<generateBeastVictim 1 pig>>"
+  ],
+  "context": "\t<<else>>"
+ }
+]

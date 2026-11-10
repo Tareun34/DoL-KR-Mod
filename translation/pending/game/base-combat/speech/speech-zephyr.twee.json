@@ -1,0 +1,59 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechnamedrop is 1>>",
+   "\t\t<<set $speechnamedrop to 0>>",
+   "\t\t<<switch _loveInterest>>",
+   "\t\t\t<<case \"Gwylan\">>",
+   "\t\t\t\t<<He>> speaks. \"Hah! How's little seabird doing?\"",
+   "\t\t\t<<case \"Black Wolf\" \"Great Hawk\">>",
+   "\t\t\t\t<<He>> chortles. \"Oh, you're full of tales.\"",
+   "\t\t\t<<default>>",
+   "\t\t\t\t<<He>> smirks. \"A lover on land or a heart at sea, pick one.\"",
+   "\t\t<</switch>>"
+  ],
+  "old_kr": [
+   "\t<<elseif $speechnamedrop is 1>>",
+   "\t\t<<set $speechnamedrop to 0>>",
+   "\t\t<<switch _loveInterest>>",
+   "\t\t\t<<case \"Gwylan\">>",
+   "\t\t\t\t<<He>>【이가】 말한다. \"하! 꼬맹이 갈매기는 어때?\"",
+   "\t\t\t<<case \"Black Wolf\" \"Great Hawk\">>",
+   "\t\t\t\t<<He>>【이가】 껄껄 웃는다. \"오, 흥미로운 얘기가 잔뜩 있군 그래.\"",
+   "\t\t\t<<default>>",
+   "\t\t\t\t<<He>>【이가】 피식 웃는다. \"육지의 애인이냐, 바다의 심장이냐. 하나만 골라.\"",
+   "\t\t<</switch>>"
+  ],
+  "new_en": [],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set _noNameComment to true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<speechPool \"Zephyr\">>",
+   "\t\t<<if $speechLINameDrop>>",
+   "\t\t\t<<switch _loveInterest>>",
+   "\t\t\t\t<<case \"Gwylan\">>",
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Hah! How's little seabird doing?\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<<case \"Black Wolf\" \"Great Hawk\">>",
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t\t<<He>> chortles. \"Oh, you're full of tales.\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t\t<<He>> smirks. \"A lover on land or a heart at sea, pick one.\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</switch>>",
+   "\t\t<</if>>",
+   "\t\t<<speechSay>>"
+  ],
+  "context": "\t<<else>>"
+ }
+]

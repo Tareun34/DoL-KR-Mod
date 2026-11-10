@@ -1,0 +1,24 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if animalSexEnabledForType(\"bear\")>>"
+  ],
+  "context": "<<beastNEWinit 1 bear>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<br><br>"
+ }
+]

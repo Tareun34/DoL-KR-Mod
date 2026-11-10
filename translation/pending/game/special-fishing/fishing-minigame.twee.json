@@ -1,0 +1,30 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if V.debug === 1>>",
+   "\t\t(Debug) | Stamina: $fishingMinigame.fishStamina / $fishingMinigame.maxStamina",
+   "\t\t| Distance: $fishingMinigame.fishDistance",
+   "\t\t| ArmFatigue: $fishingMinigame.armFatigue",
+   "\t\t| Escape timer: $fishingMinigame.fishEscapeTimer",
+   "\t\t| Behaviour: $fishingMinigame.behavior"
+  ],
+  "old_kr": [
+   "\t<<if V.debug === 1>>",
+   "\t\t(디버그) | 체력: $fishingMinigame.fishStamina / $fishingMinigame.maxStamina",
+   "\t\t| 거리: $fishingMinigame.fishDistance",
+   "\t\t| 팔 피로도: $fishingMinigame.armFatigue",
+   "\t\t| 도망 타이머: $fishingMinigame.fishEscapeTimer",
+   "\t\t| 행동 양식: $fishingMinigame.behavior"
+  ],
+  "new_en": [
+   "\t<<if V.debug>>",
+   "\t\t(Debug) | Stamina: $fishingMinigame.fishStamina / $fishingMinigame.maxStamina",
+   "\t\t| Distance: $fishingMinigame.fishDistance",
+   "\t\t| ArmFatigue: $fishingMinigame.armFatigue",
+   "\t\t| Escape timer: $fishingMinigame.fishEscapeTimer",
+   "\t\t| Behaviour: $fishingMinigame.behavior"
+  ],
+  "context": "<<widget \"debugFishingMinigameInfo\">>"
+ }
+]

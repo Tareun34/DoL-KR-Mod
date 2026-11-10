@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou jump. <<covered>>."
+  ],
+  "old_kr": [
+   "\t당신은 깜짝 놀란다. <<covered>>."
+  ],
+  "new_en": [
+   "\tYou jump. <<covered>>"
+  ],
+  "context": "\t<br>"
+ }
+]

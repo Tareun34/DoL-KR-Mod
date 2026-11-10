@@ -1,0 +1,2837 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Ignore|Street Stray Ignore]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[무시한다|Street Stray Ignore]]>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<if $wolfgirl gte 6>>",
+   "\t\t\t<<link [[Growl|Street Stray TF React]]>><<set $phase to 0>><<stress -6>><<transform wolf 1>><</link>><<wolfgirl>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if $cat gte 6>>",
+   "\t\t\t<<link [[Hiss|Street Stray TF React]]>><<set $phase to 1>><<def 1>><<transform cat 1>><</link>><<cat>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if $fox gte 6>>",
+   "\t\t\t<<link [[Yip|Street Stray TF React]]>><<set $phase to 2>><<transform fox 1>><</link>><<fox>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if $harpy gte 6>>",
+   "\t\t\t<<link [[Screech|Street Stray TF React]]>><<set $phase to 3>><<transform bird 1>><</link>><<harpy>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<link [[Ignore|Street Stray Ignore]]>><</link>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $settings.bestialityEnabled or $monster is 1>>",
+   "\t\t\t<<link [[Next|Street Stray Rape]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $settings.bestialityEnabled or $monster is 1>>",
+   "\t\t\t<<link [[다음|Street Stray Rape]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\t\t<<link [[Next|Street Stray Rape]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Growl|Street Dog Growl]]>><<stress -6>><<transform wolf 1>><</link>><<wolfgirl>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[으르렁거린다|Street Dog Growl]]>><<stress -6>><<transform wolf 1>><</link>><<wolfgirl>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Growl|Street Dog TF React]]>><<set $phase to 0>><<stress -6>><<transform wolf 1>><</link>><<wolfgirl>>"
+  ],
+  "context": "\t<<if $wolfgirl gte 6>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Hiss|Street Dog Hiss]]>><<def 1>><<transform cat 1>><</link>><<cat>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[하악질한다|Street Dog Hiss]]>><<def 1>><<transform cat 1>><</link>><<cat>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Hiss|Street Dog TF React]]>><<set $phase to 1>><<def 1>><<transform cat 1>><</link>><<cat>>"
+  ],
+  "context": "\t<<if $cat gte 6>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Yip|Street Dog Yipp]]>><<transform fox 1>><</link>><<fox>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[깽깽 짖는다|Street Dog Yipp]]>><<transform fox 1>><</link>><<fox>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Yip|Street Dog TF React]]>><<set $phase to 2>><<transform fox 1>><</link>><<fox>>"
+  ],
+  "context": "\t<<if $fox gte 6>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Screech|Street Dog Screech]]>><<transform bird 1>><</link>><<harpy>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[꽥 소리친다|Street Dog Screech]]>><<transform bird 1>><</link>><<harpy>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Screech|Street Dog TF React]]>><<set $phase to 3>><<transform bird 1>><</link>><<harpy>>"
+  ],
+  "context": "\t<<if $harpy gte 6>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"streetwanted\">>",
+   "\tYou walk by a poster. It's a picture of you, with \"Wanted\" written beneath your likeness."
+  ],
+  "old_kr": [
+   "<<widget \"streetwanted\">>",
+   "\t포스터 앞을 지나친다. 당신의 사진이 있고, 그 아래에 \"수배 중\"이라고 적혀 있다."
+  ],
+  "new_en": [
+   "<<widget \"streetWanted\">>",
+   "\tYou walk by a poster. It's a picture of you, with \"Wanted\" written beneath your likeness."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"streetbottomgrope\">>",
+   "\tYou round a corner, and almost walk right into a <<generate1>><<person1>><<person>>."
+  ],
+  "old_kr": [
+   "<<widget \"streetbottomgrope\">>",
+   "\t모퉁이를 돌다, 당신은 한 <<generate1>><<person1>><<person>>【와과】 정면으로 부딪힐 뻔한다."
+  ],
+  "new_en": [
+   "<<widget \"streetBottomGrope\">>",
+   "\tYou round a corner, and almost walk right into a <<generate1>><<person1>><<person>>."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"streetlurker\">>",
+   "\tYou feel a terrible sense of unease."
+  ],
+  "old_kr": [
+   "<<widget \"streetlurker\">>",
+   "\t당신은 끔찍한 불안감을 느낀다."
+  ],
+  "new_en": [
+   "<<widget \"streetLurker\">>",
+   "\tYou feel a terrible sense of unease."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"streetbodywriting\">>",
+   "\t<<generate1>><<person1>>You catch a <<person>> staring at the <<tattoo _bodypart>> on your <<bodypart _bodypart>>."
+  ],
+  "old_kr": [
+   "<<widget \"streetbodywriting\">>",
+   "\t<<generate1>><<person1>>당신은 <<person>>【이가】 당신의 <<bodypart _bodypart>>에 쓰인 <<tattoo _bodypart>>【을를】 빤히 쳐다보고 있는 것을 발견한다."
+  ],
+  "new_en": [
+   "<<widget \"streetBodywriting\">>",
+   "\t<<generate1>><<person1>>You catch a <<person>> staring at the <<tattoo _bodypart>> on your <<bodypart _bodypart>>."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"streetwhorebodywriting\">>",
+   "\t<<generate1>><<person1>>A <<person>> walks up to you. \"You a whore, aye?\" <<he>> says, looking at the <<tattoo _bodypart>> on your <<bodypart _bodypart>>."
+  ],
+  "old_kr": [
+   "<<widget \"streetwhorebodywriting\">>",
+   "\t<<generate1>><<person1>>어떤 <<person>>【이가】 당신에게 다가온다. \"너 창녀지, 어?\" 당신의 <<bodypart _bodypart>>에 새겨진 <<tattoo _bodypart>>【을를】 보며 <<he>>【이가】 묻는다."
+  ],
+  "new_en": [
+   "<<widget \"streetWhoreBodywriting\">>",
+   "\t<<generate1>><<person1>>A <<person>> walks up to you. \"You a whore, aye?\" <<he>> says, looking at the <<tattoo _bodypart>> on your <<bodypart _bodypart>>."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"streetcriminalbodywriting\">>",
+   "\tA <<generate1>><<person1>><<person>> looks at the <<tattoo _bodypart>> on your <<bodypart _bodypart>>, and spits at your feet. \"They should lock up scum like you,\" <<he>> says. \"And throw away the key.\"<<gstress>><<stress 6>>"
+  ],
+  "old_kr": [
+   "<<widget \"streetcriminalbodywriting\">>",
+   "\t한 <<generate1>><<person1>><<person>>【이가】 당신의 <<bodypart _bodypart>>에 있는 <<tattoo _bodypart>>【을를】 보더니, 당신의 발치에 침을 뱉는다. \"너 같은 쓰레기는 감옥에 가둬야 해.\" <<he>>【이가】 말한다. \"그리고 열쇠는 던져버려야지.\"<<gstress>><<stress 6>>"
+  ],
+  "new_en": [
+   "<<widget \"streetCriminalBodywriting\">>",
+   "\tA <<generate1>><<person1>><<person>> looks at the <<tattoo _bodypart>> on your <<bodypart _bodypart>>, and spits at your feet. \"They should lock up scum like you,\" <<he>> says. \"And throw away the key.\"<<gstress>><<stress 6>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"streetbox\">>",
+   "\tYou see a box fall out the back of a van. No one else pays it any attention."
+  ],
+  "old_kr": [
+   "<<widget \"streetbox\">>",
+   "\t밴의 뒤쪽에서 상자가 하나 떨어지는 것이 보인다. 다른 사람들은 아무도 그것에 신경 쓰지 않는다."
+  ],
+  "new_en": [
+   "<<widget \"streetBox\">>",
+   "\tYou see a box fall out the back of a van. No one else pays it any attention."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"streetex2\">>",
+   "\t<<generate1>><<person1>>You move from shadow to shadow, dashing through patches of light as quickly as your legs will carry you."
+  ],
+  "old_kr": [
+   "<<widget \"streetex2\">>",
+   "\t<<generate1>><<person1>>당신은 그림자에서 그림자로 이동하며, 다리가 허락하는 한 빠르게 빛이 드는 곳을 질주한다."
+  ],
+  "new_en": [
+   "<<widget \"streetExposedNightTrip\">>",
+   "\t<<generate1>><<person1>>You move from shadow to shadow, dashing through patches of light as quickly as your legs will carry you."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"streetex3\">>",
+   "\tYou move from shadow to shadow, dashing through patches of light as quickly as your legs will carry you."
+  ],
+  "old_kr": [
+   "<<widget \"streetex3\">>",
+   "\t당신은 그림자에서 그림자로 이동하며, 다리가 허락하는 한 가장 빠르게 빛이 드는 곳을 질주한다."
+  ],
+  "new_en": [
+   "<<widget \"streetExposedNightDog\">>",
+   "\tYou move from shadow to shadow, dashing through patches of light as quickly as your legs will carry you."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t<<link [[Run|StreetEx3]]>><<set $phase to 0>><</link>><<athleticsdifficulty 1 600>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t<<link [[달아난다|StreetEx3]]>><<set $phase to 0>><</link>><<athleticsdifficulty 1 600>>"
+  ],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\t\t<<link [[Run|StreetEx3]]>><<set $phase to 0>><</link>><<athleticsdifficulty 1 600>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"streetex5\">>",
+   "\tYou hear voices up ahead, and take cover down a stairwell leading to a basement."
+  ],
+  "old_kr": [
+   "<<widget \"streetex5\">>",
+   "\t당신은 저 앞쪽에서 말소리가 들리자 지하실로 이어지는 계단 아래로 숨어든다."
+  ],
+  "new_en": [
+   "<<widget \"streetExposedNightStairwell\">>",
+   "\tYou hear voices up ahead, and take cover down a stairwell leading to a basement."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<link [[Ignore|Street Follow Ignore]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<link [[무시한다|Street Follow Ignore]]>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if $wolfgirl gte 6>>",
+   "\t\t<<link [[Growl|Street Dog Alley TF React]]>><<set $phase to 0>><<stress -6>><<transform wolf 1>><</link>><<wolfgirl>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<if $cat gte 6>>",
+   "\t\t<<link [[Hiss|Street Dog Alley TF React]]>><<set $phase to 1>><<def 1>><<transform cat 1>><</link>><<cat>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<if $fox gte 6>>",
+   "\t\t<<link [[Yip|Street Dog Alley TF React]]>><<set $phase to 2>><<transform fox 1>><</link>><<fox>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<if $harpy gte 6>>",
+   "\t\t<<link [[Screech|Street Dog Alley TF React]]>><<set $phase to 3>><<transform bird 1>><</link>><<harpy>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<link [[Ignore|Street Follow Ignore]]>><</link>>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tThe water balloon hits the <<person>> in the back of the head, soaking <<him>> and the occupants of the car<<if $cumballoon is 1>> <span class=\"lewd\">in cum</span><</if>>. They continue to race away."
+  ],
+  "old_kr": [
+   "\t\t\t물풍선이 <<person>>의 뒤통수에 적중하고, <<him>>【와과】 차에 타고 있던 사람들을 <<if $cumballoon is 1>><span class=\"lewd\">정액으로</span><<else>>물로<</if>> 흠뻑 적신다. 그들은 그대로 멀리 질주한다."
+  ],
+  "new_en": [
+   "\t\t\tThe water balloon hits the <<person>> in the back of the head, soaking <<him>> and the occupants of the car<<if _cumBalloon is 1>> <span class=\"lewd\">in cum</span><</if>>. They continue to race away."
+  ],
+  "context": "\t\t<<case 1 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou pick it up. It's a wallet. You decide to keep the <<moneyGain $_carcash>> inside."
+  ],
+  "old_kr": [
+   "\t\t\t당신은 그것을 줍는다. 지갑이다. 당신은 안에 든 <<moneyGain $_carcash>>【을를】 챙기기로 한다."
+  ],
+  "new_en": [
+   "\t\t\tYou pick it up. It's a wallet. You decide to keep the <<moneyGain $_carCash>> inside."
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if ($rng % 3) is 0>>A <<person>> behind you is not so lucky. <<He>> is completely soaked <<if $cumballoon is 1>><span class=\"lewd\">in cum</span> <</if>>and some of <<his>> clothes turn translucent, exposing <<him>>. There is a loud cheer from the car."
+  ],
+  "old_kr": [
+   "\t\t<<if ($rng % 3) is 0>>당신 뒤에 있던 <<person>>【은는】 운이 좋지 않았다. <<He>>【은는】 완전히 젖어버렸고, <<if $cumballoon is 1>><span class=\"lewd\">정액이 묻은 </span><</if>><<his>> 옷의 일부가 반투명해지며 <<him>>의 살결이 드러낸다. 차에서 큰 환호성이 들려온다."
+  ],
+  "new_en": [
+   "\t\t<<if ($rng % 3) is 0>>A <<person>> behind you is not so lucky. <<He>> is completely soaked <<if _cumBalloon is 1>><span class=\"lewd\">in cum</span> <</if>>and some of <<his>> clothes turn translucent, exposing <<him>>. There is a loud cheer from the car."
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $cumballoon is 1>>Droplets of cum fly off <<his>> body as <<he>> runs.<</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $cumballoon is 1>>달아나는 <<his>> 몸에서 정액 방울이 튀어 오른다.<</if>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if _cumBalloon is 1>>Droplets of cum fly off <<his>> body as <<he>> runs.<</if>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tThe water-balloon <span class = \"red\">hits you centre-chest and explodes, soaking your upper body<<if $cumballoon is 1>> <span class=\"lewd\">in cum</span><</if>>.</span>"
+  ],
+  "old_kr": [
+   "\t\t물풍선이 <span class = \"red\">가슴 정중앙에 명중해 터지며, 상체가 흠뻑 젖는다<<if $cumballoon is 1>> <span class=\"lewd\">정액으로</span><</if>>.</span>"
+  ],
+  "new_en": [
+   "\t\tThe water-balloon <span class = \"red\">hits you centre-chest and explodes, soaking your upper body<<if _cumBalloon is 1>> <span class=\"lewd\">in cum</span><</if>>.</span>"
+  ],
+  "context": "\t<<elseif $player.gender_appearance is \"f\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tThe water-balloon <span class = \"red\">smacks into your groin and explodes, soaking your lower body<<if $cumballoon is 1>> <span class=\"lewd\">in cum</span><</if>>.</span>"
+  ],
+  "old_kr": [
+   "\t\t물풍선이 <span class = \"red\">당신의 사타구니를 강타하고 터지며, 당신의 하반신을<<if $cumballoon is 1>> <span class=\"lewd\">정액으로</span><</if>> 흠뻑 적신다.</span>"
+  ],
+  "new_en": [
+   "\t\tThe water-balloon <span class = \"red\">smacks into your groin and explodes, soaking your lower body<<if _cumBalloon is 1>> <span class=\"lewd\">in cum</span><</if>>.</span>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\tYour journey is interrupted by a savage growl emerging from the darkness. You turn to avoid it, only to face a pair of glowing eyes. You're surrounded."
+  ],
+  "old_kr": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t어둠 속에서 울려 퍼진 짐승의 포악한 으르렁거리는 소리에 발걸음이 멈춘다. 소리를 피해 고개를 돌려보니, 번뜩이는 두 눈동자가 당신을 쳐다보고 있다. 당신은 포위되었다."
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\tYour journey is interrupted by a savage growl emerging from the darkness. You turn to avoid it, only to face a pair of glowing eyes. You're surrounded."
+  ],
+  "context": "\t<<beastNEWinit 3 dog>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $NPCList[0].monster is \"monster\" or $settings.bestialityEnabled>>",
+   "\t\tYou hear something land behind you, followed by a low growl. You turn to face a pair of glowing yellow eyes. <<bHe>> steps into the light of a streetlamp, revealing a pair of horns",
+   "",
+   "\t\t<<if $NPCList[0].monster is \"monster\">>",
+   "\t\t\tthat split <<bhis>> messy hair. <<bHe>> flashes a sharp-toothed, menacing grin before leaping toward you.",
+   "\t\t<<else>>",
+   "\t\t\tatop a hairless, scaled head. It opens its colossal maw and leaps toward you.",
+   "\t\t<</if>>",
+   "\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t<<if $NPCList[0].monster is \"monster\" or $settings.bestialityEnabled>>",
+   "\t\t등 뒤에서 무언가 바닥에 착지하는 소리에 이어 낮은 으르렁거림이 들려온다. 몸을 돌리자 번뜩이는 노란 눈동자와 마주친다. <<bHe>> 가로등 불빛 아래로 걸어 나오자 한 쌍의 뿔이 드러난다",
+   "",
+   "\t\t<<if $NPCList[0].monster is \"monster\">>",
+   "\t\t\t그 뿔이 <<bhis>> 지저분한 머리카락을 뚫고 솟아 있다. <<bHe>> 당신을 향해 도약하기 직전, 날카로운 이빨을 드러내며 섬뜩한 미소를 짓는다.",
+   "\t\t<<else>>",
+   "\t\t\t털 없이 비늘로 덮인 머리통 위로 말이다. 그것이 거대한 아가리를 쩍 벌리며 당신을 향해 도약한다.",
+   "\t\t<</if>>",
+   "\t\t<br><br>"
+  ],
+  "new_en": [
+   "\tYou hear something land behind you, followed by a low growl. You turn to face a pair of glowing yellow eyes. <<bHe>> steps into the light of a streetlamp, revealing a pair of horns"
+  ],
+  "context": "\t<<npc \"Night Monster\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Stand your ground|Street Monster]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>>",
+   "\t\t<br>",
+   "\t\t<<link [[Run|Street Monster Run]]>><<set $phase to 1>><</link>><<athleticsdifficulty 400 1400>>",
+   "\t\t<br>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[물러서지 않는다|Street Monster]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>>",
+   "\t\t<br>",
+   "\t\t<<link [[도망친다|Street Monster Run]]>><<set $phase to 1>><</link>><<athleticsdifficulty 400 1400>>",
+   "\t\t<br>"
+  ],
+  "new_en": [
+   "\t<<if $NPCList[0].monster is \"monster\">>",
+   "\t\tthat split <<bhis>> messy hair. <<bHe>> flashes a sharp-toothed, menacing grin before leaping toward you."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou hear something land behind you, followed by a low growl. You run in a panic, until you trip and fall. Nothing follows.<<beastescape>>",
+   "\t\t<br><br>",
+   "\t\t<<destinationeventend>>"
+  ],
+  "old_kr": [
+   "\t\t등 뒤에서 무언가 바닥에 착지하는 소리에 이어 낮은 으르렁거림이 들려온다. 공포에 질려 미친 듯이 도망치다 결국 발이 걸려 넘어진다. 아무것도 뒤쫓아오지 않는다.<<beastescape>>",
+   "\t\t<br><br>",
+   "\t\t<<destinationeventend>>"
+  ],
+  "new_en": [
+   "\t\tatop a hairless, scaled head. It opens its colossal maw and leaps toward you."
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"streetexday1\">>",
+   "\tThere are too many people around. You're sure to be seen."
+  ],
+  "old_kr": [
+   "<<widget \"streetexday1\">>",
+   "\t주변에 사람이 너무 많다. 틀림없이 들킬 것이다."
+  ],
+  "new_en": [
+   "<<widget \"streetExposedDayCrowded\">>",
+   "\tThere are too many people around. You're sure to be seen."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"streetexday2\">>",
+   "\tYou take cover in a bus shelter, just as a bus rounds the corner. It slows down as it approaches."
+  ],
+  "old_kr": [
+   "<<widget \"streetexday2\">>",
+   "\t버스가 모퉁이를 돌아올 때, 당신은 버스 정류장 안에 몸을 숨긴다. 버스는 이쪽으로 다가오며 속도를 늦춘다."
+  ],
+  "new_en": [
+   "<<widget \"streetExposedDayBusShelter\">>",
+   "\tYou take cover in a bus shelter, just as a bus rounds the corner. It slows down as it approaches."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"streetedenangry\">>",
+   "\tYou see Eden across the road.<<npc Eden>><<person1>> <<Hes>> stopping people on the street and showing them a crudely drawn picture of you. People seem afraid of <<him>>, but if <<he>> notices <<he>> doesn't care."
+  ],
+  "old_kr": [
+   "<<widget \"streetedenangry\">>",
+   "\t길 건너편에 에덴이 보인다.<<npc Eden>><<person1>> <<Hes>> 거리를 지나가는 사람들을 멈춰 세우고 조잡하게 그려진 당신의 몽타주를 보여주고 있다. 사람들은 <<him>>【을를】 두려워하는 눈치지만, 설령 그걸 눈치챘더라도 <<he>>【은는】 신경도 쓰지 않는다."
+  ],
+  "new_en": [
+   "<<widget \"streetEdenAngry\">>",
+   "\tYou see Eden across the road.<<npc Eden>><<person1>> <<Hes>> stopping people on the street and showing them a crudely drawn picture of you. People seem afraid of <<him>>, but if <<he>> notices <<he>> doesn't care."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"streetfamerape\">>",
+   "\t<<generate1>><<generate2>>A hooded figure moves from the shadows and blocks your path ahead. You turn and see another approaching from behind."
+  ],
+  "old_kr": [
+   "<<widget \"streetfamerape\">>",
+   "\t<<generate1>><<generate2>>어둠 속에서 후드를 쓴 인물이 나타나 당신의 앞길을 막아선다. 뒤를 돌아보니 또 다른 인물이 다가오고 있다."
+  ],
+  "new_en": [
+   "<<widget \"streetFameRape\">>",
+   "\t<<generate1>><<generate2>>A hooded figure moves from the shadows and blocks your path ahead. You turn and see another approaching from behind."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"streetheeltrip\">>",
+   "\tYou stumble in your heels and fall forwards. As your face approaches the ground, you realise you may be able to save yourself."
+  ],
+  "old_kr": [
+   "<<widget \"streetheeltrip\">>",
+   "\t당신은 힐을 신은 채 발을 헛디뎌 앞으로 넘어진다. 얼굴이 바닥에 가까워지는 찰나, 몸을 추스를 수도 있을 거란 생각이 든다."
+  ],
+  "new_en": [
+   "<<widget \"streetHeelTrip\">>",
+   "\tYou stumble in your heels and fall forwards. As your face approaches the ground, you realise you may be able to save yourself."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<span class=\"red\">A sharp pain pricks your neck.</span> You raise a weak hand, and feel a dart sticking from your flesh. You black out.",
+   "\t\t<br><br>",
+   "\t\t<<link [[Next|Kylar Abduction Intro]]>><<endevent>><<unset $kylar_mad>><<badEndTracking \"Kylar Abduction\" { reason: \"kylarAbduction\" }>><</link>>",
+   "\t\t<br>",
+   "\t<<elseif $dangerevent gte 81>>",
+   "\t\t<<set $kylarwatchedtimer -= 1>>"
+  ],
+  "old_kr": [
+   "\t\t<span class=\"red\">목에 날카로운 고통이 느껴진다.</span> 힘 빠진 손을 들어 올려 더듬어보니, 살에 다트가 꽂혀 있다. 당신은 의식을 잃는다.",
+   "\t\t<br><br>",
+   "\t\t<<link [[다음|Kylar Abduction Intro]]>><<endevent>><<unset $kylar_mad>><<badEndTracking \"Kylar Abduction\" { reason: \"kylarAbduction\" }>><</link>>",
+   "\t\t<br>",
+   "\t<<elseif $dangerevent gte 81>>",
+   "\t\t<<set $kylarwatchedtimer -= 1>>"
+  ],
+  "new_en": [
+   "<<widget \"kylarStreetAbduction\">>",
+   "\t<<npc Kylar>><<person1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<generate1>><<person1>>You hear a <<person>> behind you. <<catcall>> Before you can respond, a pair of intruding hands grasp you, but only for a moment. <<He>> winces and clutches <<his>> neck. <<He>> pulls out a small dart, looks at it, and collapses.",
+   "\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t<<generate1>><<person1>>뒤에서 어떤 <<person>>【이가】 내는 소리가 들린다. <<catcall>> 당신이 대응하기도 전에 불쑥 나타난 손길이 당신을 붙잡지만, 아주 잠시뿐이다. <<he>>【은는】 움찔하며 자신의 목을 꽉 쥔다. <<he>>【은는】 작은 다트 하나를 뽑아내 그것을 쳐다보더니 쓰러진다.",
+   "\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t<span class=\"red\">A sharp pain pricks your neck.</span> You raise a weak hand, and feel a dart sticking from your flesh. You black out.",
+   "\t<br><br>",
+   "\t<<link [[Next|Kylar Abduction Intro]]>><<endevent>><<unset $kylar_mad>><<badEndTracking \"Kylar Abduction\" { reason: \"kylarAbduction\" }>><</link>>",
+   "\t<br>",
+   "<</widget>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Rob|Street Kylar Rob]]>><</link>><<crime \"petty\">>",
+   "\t\t<br>",
+   "\t\t<<link [[Get help (0:10)|Street Kylar Help]]>><<pass 10>><<famegood 2>><</link>>",
+   "\t\t<br>",
+   "\t\t<<link [[Leave|Street Kylar Leave]]>><</link>>",
+   "\t\t<br>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[강탈한다|Street Kylar Rob]]>><</link>><<crime \"petty\">>",
+   "\t\t<br>",
+   "\t\t<<link [[도움을 구한다 (0:10)|Street Kylar Help]]>><<pass 10>><<famegood 2>><</link>>",
+   "\t\t<br>",
+   "\t\t<<link [[떠난다|Street Kylar Leave]]>><</link>>",
+   "\t\t<br>"
+  ],
+  "new_en": [
+   "<<widget \"kylarWatchDart\">>",
+   "\t<<set $kylarwatchedtimer -= 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<generate1>><<person1>>You catch a <<person>> checking you out. <<He>> winks.",
+   "\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t<<generate1>><<person1>>당신은 어떤 <<person>>【이가】 당신을 훑어보고 있는 것을 발견한다. <<he>>【이가】 윙크를 보낸다.",
+   "\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t<<link [[Rob|Street Kylar Rob]]>><</link>><<crime \"petty\">>",
+   "\t<br>",
+   "\t<<link [[Get help (0:10)|Street Kylar Help]]>><<pass 10>><<famegood 2>><</link>>",
+   "\t<br>",
+   "\t<<link [[Leave|Street Kylar Leave]]>><</link>>",
+   "\t<br>",
+   "<</widget>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Wink back|Street Kylar Wink]]>><<npcincr Kylar rage 5>><</link>><<promiscuous1>><<gksuspicion>>",
+   "\t\t<br>",
+   "\t\t<<link [[Ignore|Street Kylar Ignore]]>><</link>>",
+   "\t\t<br>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[윙크로 답한다|Street Kylar Wink]]>><<npcincr Kylar rage 5>><</link>><<promiscuous1>><<gksuspicion>>",
+   "\t\t<br>",
+   "\t\t<<link [[무시한다|Street Kylar Ignore]]>><</link>>",
+   "\t\t<br>"
+  ],
+  "new_en": [
+   "<<widget \"kylarWatchWink\">>",
+   "\t<<set $kylarwatchedtimer -= 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $dangerevent gte 41>>",
+   "\t\t<<set $kylarwatchedtimer -= 1>>",
+   "",
+   "\t\t<<if $worn.over_lower.name isnot \"naked\">>",
+   "\t\t\tYou feel a tug on your $worn.over_lower.name,",
+   "\t\t\t<<set $lowercoloursaved to $worn.over_lower.colour>><<set $worn.over_lower.integrity -= 30>>",
+   "\t\t\t<<if $worn.over_lower.integrity lte 0>>",
+   "\t\t\t\t<<set _name to clone($worn.lower.name)>>",
+   "\t\t\t\t<<overlowerruined>><<exposure>>",
+   "\t\t\t\t<<if $exposed gte 1>>",
+   "\t\t\t\t\tthen a tear as it is torn from your body by an invisible force. <<covered>> The fabric flies away from you.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t<<elseif $dangerevent gte 41>>",
+   "\t\t<<set $kylarwatchedtimer -= 1>>",
+   "",
+   "\t\t<<if $worn.over_lower.name isnot \"naked\">>",
+   "\t\t\t당신은 누군가 $worn.over_lower.name【을를】 잡아당기는 것을 느낀다,",
+   "\t\t\t<<set $lowercoloursaved to $worn.over_lower.colour>><<set $worn.over_lower.integrity -= 30>>",
+   "\t\t\t<<if $worn.over_lower.integrity lte 0>>",
+   "\t\t\t\t<<set _name to clone($worn.lower.name)>>",
+   "\t\t\t\t<<overlowerruined>><<exposure>>",
+   "\t\t\t\t<<if $exposed gte 1>>",
+   "\t\t\t\t\t그러다 보이지 않는 힘에 의해 옷이 갈갈이 찢어지며 당신의 몸에서 떨어져 나간다. <<covered>> 천 조각들이 멀리 흩날린다.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t<<generate1>><<person1>>You catch a <<person>> checking you out. <<He>> winks.",
+   "\t<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<link [[Chase|Street Kylar Chase]]>><<fameexhibitionism 10>><<trauma 6>><<stress 6>><</link>><<athleticsdifficulty 1 600>><<gtrauma>><<gstress>>",
+   "\t\t\t\t\t<br>",
+   "\t\t\t\t\t<<link [[Hide|Street Kylar Hide]]>><</link>>",
+   "\t\t\t\t\t<br>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\tthen a tear as your _name is torn off by an invisible force. It flies through the air and disappears into an open window.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<link [[쫓아간다|Street Kylar Chase]]>><<fameexhibitionism 10>><<trauma 6>><<stress 6>><</link>><<athleticsdifficulty 1 600>><<gtrauma>><<gstress>>",
+   "\t\t\t\t\t<br>",
+   "\t\t\t\t\t<<link [[숨는다|Street Kylar Hide]]>><</link>>",
+   "\t\t\t\t\t<br>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t그러다 보이지 않는 힘에 의해 _name【이가】 찢어져 나간다. 그 옷가지는 허공을 날아가 열린 창문 속으로 사라진다.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t<<link [[Wink back|Street Kylar Wink]]>><<npcincr Kylar rage 5>><</link>><<promiscuous1>><<gksuspicion>>",
+   "\t<br>",
+   "\t<<link [[Ignore|Street Kylar Ignore]]>><</link>>",
+   "\t<br>",
+   "<</widget>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<destinationeventend>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\tthen a tear as a piece of fabric is torn off by an invisible force. It flies through the air and disappears into an open window.",
+   "\t\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<destinationeventend>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t그러다 보이지 않는 힘에 의해 천 조각 하나가 찢겨 나간다. 허공을 흩날리며 열린 창문 속으로 사라져 버린다.",
+   "\t\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "<<widget \"kylarWatchClothingTear\">>",
+   "\t<<set $kylarwatchedtimer -= 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<destinationeventend>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $worn.lower.name isnot \"naked\">>",
+   "\t\t\tYou feel a tug on your $worn.lower.name,",
+   "\t\t\t<<set $lowercoloursaved to $worn.lower.colour>><<set $worn.lower.integrity -= 30>>",
+   "\t\t\t<<if $worn.lower.integrity lte 0>>",
+   "\t\t\t\t<<lowerruined>><<exposure>>",
+   "\t\t\t\tthen a tear as it is torn from your body by an invisible force. <<covered>> The fabric flies away from you."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<destinationeventend>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $worn.lower.name isnot \"naked\">>",
+   "\t\t\t당신은 누군가 $worn.lower.name【을를】 잡아당기는 것을 느낀다,",
+   "\t\t\t<<set $lowercoloursaved to $worn.lower.colour>><<set $worn.lower.integrity -= 30>>",
+   "\t\t\t<<if $worn.lower.integrity lte 0>>",
+   "\t\t\t\t<<lowerruined>><<exposure>>",
+   "\t\t\t\t그러다 보이지 않는 힘에 의해 옷이 갈갈이 찢어지며 당신의 몸에서 떨어져 나간다. <<covered>> 천 조각들이 멀리 흩날린다."
+  ],
+  "new_en": [
+   "\t<<if $worn.over_lower.name isnot \"naked\">>",
+   "\t\tYou feel a tug on your $worn.over_lower.name,",
+   "\t\t<<set $lowercoloursaved to $worn.over_lower.colour>><<set $worn.over_lower.integrity -= 30>>",
+   "\t\t<<if $worn.over_lower.integrity lte 0>>",
+   "\t\t\t<<set _name to clone($worn.lower.name)>>",
+   "\t\t\t<<overlowerruined>><<exposure>>",
+   "\t\t\t<<if $exposed gte 1>>",
+   "\t\t\t\tthen a tear as it is torn from your body by an invisible force. <<covered>> The fabric flies away from you."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\tthen a tear as a piece of fabric is torn off by an invisible force. It flies through the air and disappears into an open window."
+  ],
+  "old_kr": [
+   "\t\t\t\t그러다 보이지 않는 힘에 의해 천 조각 하나가 찢겨 나간다. 허공을 흩날리며 열린 창문 속으로 사라져 버린다."
+  ],
+  "new_en": [
+   "\t\t\t\tthen a tear as your _name is torn off by an invisible force. It flies through the air and disappears into an open window."
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif _kylarStatus.includesAll(\"Love\",\"Lust\")>>",
+   "\t\t<<set $kylarwatchedtimer to 0>><<rngWraith 2 \"night\">>",
+   "",
+   "\t\t<<npc Kylar>><<person1>>Something tugs your arm. It's Kylar. \"H-hi,\" <<he>> gulps. <<He>> tries to pull you toward a dark alley. \"We need privacy. I need you to do things to me.\"",
+   "\t\t<br><br>",
+   "\t\t<<if $wraith.state and _wraithEvent and ([\"haunt\", \"despair\"].includes($wraith.state) or [\"dead\",\"sold\"].includes($wraith.offspring))>>",
+   "\t\t\t<<set $wraith.mimic to \"Kylar\">><<set $wraith.exit to \"town\">>",
+   "\t\t\t<<link [[Go with Kylar|Wraith Mimic Fight]]>><<set $sexstart to 1>><</link>><<promiscuous1>><<gglove>><<llksuspicion>>"
+  ],
+  "old_kr": [
+   "\t<<elseif _kylarStatus.includesAll(\"Love\",\"Lust\")>>",
+   "\t\t<<set $kylarwatchedtimer to 0>><<rngWraith 2 \"night\">>",
+   "",
+   "\t\t<<npc Kylar>><<person1>>무언가 당신의 팔을 끌어당긴다. 카일라다. \"안-안녕,\" <<he>>【이가】 침을 삼킨다. <<he>>【은는】 당신을 어두운 골목으로 끌고 가려고 한다. \"우리 둘만의 시간이 필요해. 나한테 그런 짓들 좀 해줘.\"",
+   "\t\t<br><br>",
+   "\t\t<<if $wraith.state and _wraithEvent and ([\"haunt\", \"despair\"].includes($wraith.state) or [\"dead\",\"sold\"].includes($wraith.offspring))>>",
+   "\t\t\t<<set $wraith.mimic to \"Kylar\">><<set $wraith.exit to \"town\">>",
+   "\t\t\t<<link [[카일라와 함께 간다|Wraith Mimic Fight]]>><<set $sexstart to 1>><</link>><<promiscuous1>><<gglove>><<llksuspicion>>"
+  ],
+  "new_en": [
+   "\t\t\t<<link [[Chase|Street Kylar Chase]]>><<fameexhibitionism 10>><<trauma 6>><<stress 6>><</link>><<athleticsdifficulty 1 600>><<gtrauma>><<gstress>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<link [[Refuse|Wraith Mimic Kylar]]>><</link>><<lllove>><<gggksuspicion>>",
+   "\t\t<<else>>",
+   "\t\t\t<<link [[Go with Kylar|Street Kylar Sex]]>><<set $sexstart to 1>><<npcincr Kylar love 5>><<npcincr Kylar rage -10>><</link>><<promiscuous1>><<gglove>><<llksuspicion>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<link [[거절한다|Wraith Mimic Kylar]]>><</link>><<lllove>><<gggksuspicion>>",
+   "\t\t<<else>>",
+   "\t\t\t<<link [[카일라와 함께 간다|Street Kylar Sex]]>><<set $sexstart to 1>><<npcincr Kylar love 5>><<npcincr Kylar rage -10>><</link>><<promiscuous1>><<gglove>><<llksuspicion>>"
+  ],
+  "new_en": [
+   "\t\t\t<<link [[Hide|Street Kylar Hide]]>><</link>>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<link [[Refuse|Street Kylar Refuse]]>><<npcincr Kylar love -5>><<npcincr Kylar rage 20>><</link>><<lllove>><<gggksuspicion>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<link [[거절한다|Street Kylar Refuse]]>><<npcincr Kylar love -5>><<npcincr Kylar rage 20>><</link>><<lllove>><<gggksuspicion>>"
+  ],
+  "new_en": [
+   "\t\t<<else>>",
+   "\t\t\tthen a tear as a piece of fabric is torn off by an invisible force. It flies through the air and disappears into an open window.",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<destinationeventend>>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<br><br>",
+   "",
+   "\t<<elseif isPossibleLoveInterest(\"Kylar\") and C.npc.Kylar.lust gte 25>>",
+   "\t\t<<set $kylarwatchedtimer to 0>>",
+   "\t\t<<npc Kylar>><<person1>>",
+   "\t\t<<set $NPCList[0].skills to {athletics: random(750, 1500), security: random(750, 1500)}>>"
+  ],
+  "old_kr": [
+   "\t\t<br><br>",
+   "\t<<elseif isPossibleLoveInterest(\"Kylar\") and C.npc.Kylar.lust gte 25>>",
+   "\t\t<<set $kylarwatchedtimer to 0>>",
+   "\t\t<<npc Kylar>><<person1>>",
+   "\t\t<<set $NPCList[0].skills to {athletics: random(750, 1500), security: random(750, 1500)}>>"
+  ],
+  "new_en": [
+   "\t<<else>>",
+   "\t\t<<destinationeventend>>",
+   "\t<</if>>",
+   "<</widget>>",
+   "",
+   "<<widget \"kylarWatchStalkSex\">>",
+   "\t<<set $kylarwatchedtimer to 0>><<rngWraith 2 \"night\">>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tAs you are walking, you see the reflection of a small figure behind you in a window. You quickly turn around, but there's nobody there.",
+   "\t\t<br><br>",
+   "\t\t<span class=\"purple\">You are being followed.</span>",
+   "\t\t<br><br>",
+   "\t\t<<link [[Next|Street Kylar Stalk]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t길을 걷고 있는데, 유리창에 작은 형체가 반사되는 것을 보았다. 재빨리 뒤돌아보지만 아무도 없다.",
+   "\t\t<br><br>",
+   "\t\t<span class=\"purple\">누군가 당신을 미행하고 있다.</span>",
+   "\t\t<br><br>",
+   "\t\t<<link [[다음|Street Kylar Stalk]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "<<widget \"kylarWatchStalkMolestation\">>",
+   "\t<<set $kylarwatchedtimer to 0>>",
+   "\t<<npc Kylar>><<person1>>",
+   "\t<<set $NPCList[0].skills to {athletics: random(750, 1500), security: random(750, 1500)}>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<else>>",
+   "\t\t<<npc Kylar>><<person1>>You see Kylar staring at you from across the road. A bus passes between you. By the time it leaves, <<hes>> gone.",
+   "\t\t<<gstress>><<stress 6>>",
+   "\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t<<else>>",
+   "\t\t<<npc Kylar>><<person1>>길 건너편에서 카일라가 당신을 응시하고 있는 것이 보인다. 당신들 사이로 버스가 한 대 지나간다. 버스가 떠날 때쯤엔 <<hes>> 이미 사라지고 없다.",
+   "\t\t<<gstress>><<stress 6>>",
+   "\t\t<br><br>"
+  ],
+  "new_en": [],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"famesalute\">>",
+   "\t<<print either(\"flash a V-sign\",",
+   "\t\"blow a kiss\",",
+   "\t\"wave\",",
+   "\t\"make a small bow\",",
+   "\t\"wink\")>>"
+  ],
+  "old_kr": [
+   "<<widget \"famesalute\">>",
+   "    <<print either(\"손가락으로 브이를 그린다\",",
+   "    \"키스를 날린다\",",
+   "    \"손을 흔든다\",",
+   "    \"작게 절한다\",",
+   "    \"윙크를 한다\")>>"
+  ],
+  "new_en": [
+   "<<widget \"fameSalute\">>",
+   "\t<<print either(\"flash a V-sign\",",
+   "\t\"blow a kiss\",",
+   "\t\"wave\",",
+   "\t\"make a small bow\",",
+   "\t\"wink\")>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"sayexhibproud\">>",
+   "\t<<print either(\"I'm proud of my body.\",",
+   "\t\"I'm pleased you like my body.\",",
+   "\t\"I think my body deserves to be seen.\",",
+   "\t\"I love to show off my body.\",",
+   "\t\"Being seen naked turns me on.\",",
+   "\t\"Exposing my body arouses me.\",",
+   "\t\"I look good nude, don't you think?\",",
+   "\t\"I feel great about my body.\")>>"
+  ],
+  "old_kr": [
+   "<<widget \"sayexhibproud\">>",
+   "    <<print either(\"내 몸이 자랑스러워.\",",
+   "    \"제 몸이 마음에 드신다니 기쁘네요.\",",
+   "    \"제 몸은 보여질 자격이 있다고 생각해요.\",",
+   "    \"제 몸을 과시하는 걸 좋아해요.\",",
+   "    \"벌거벗은 채로 보여지는 게 흥분돼요.\",",
+   "    \"몸을 노출하면 흥분돼요.\",",
+   "    \"벌거벗은 모습이 꽤 멋지지 않아?\",",
+   "    \"내 몸이 정말 마음에 들어.\")>>"
+  ],
+  "new_en": [
+   "<<widget \"sayExhibProud\">>",
+   "\t<<print either(\"I'm proud of my body.\",",
+   "\t\"I'm pleased you like my body.\",",
+   "\t\"I think my body deserves to be seen.\",",
+   "\t\"I love to show off my body.\",",
+   "\t\"Being seen naked turns me on.\",",
+   "\t\"Exposing my body arouses me.\",",
+   "\t\"I look good nude, don't you think?\",",
+   "\t\"I feel great about my body.\")>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\t\t<<generate2>><<generate3>><<person2>>A <<person>> and <<person3>><<person>> approach you."
+  ],
+  "old_kr": [
+   "\t\t<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\t\t<<generate2>><<generate3>><<person2>><<person>>【와과】 <<person3>><<person>>【이가】 당신에게 다가온다."
+  ],
+  "new_en": [
+   "\t\t<<if $rng gte 51 and beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\t\t<<generate2>><<generate3>><<person2>>A <<person>> and <<person3>><<person>> approach you."
+  ],
+  "context": "\t\t<<beastNEWinit 1 dog>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"nightingalequick\">>",
+   "\t<<nightingaleicon>><<link [[Nightingale Street|Nightingale Street]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<widget \"nightingalequick\">>",
+   "\t<<nightingaleicon>><<link [[나이팅게일 가|Nightingale Street]]>><</link>>"
+  ],
+  "new_en": [
+   "<<widget \"nightingaleQuick\">>",
+   "\t<<nightingaleicon>><<link [[Nightingale Street|Nightingale Street]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"lakequick\">>",
+   "\t<<lakeicon>><<link [[Lake|Lake Bus]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<widget \"lakequick\">>",
+   "\t<<lakeicon>><<link [[호수|Lake Bus]]>><</link>>"
+  ],
+  "new_en": [
+   "<<widget \"lakeQuick\">>",
+   "\t<<lakeicon>><<link [[Lake|Lake Bus]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"domusquick\">>",
+   "\t<<domusicon>><<link [[Domus Street|Domus Street]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<widget \"domusquick\">>",
+   "\t<<domusicon>><<link [[도무스 가|Domus Street]]>><</link>>"
+  ],
+  "new_en": [
+   "<<widget \"domusQuick\">>",
+   "\t<<domusicon>><<link [[Domus Street|Domus Street]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"danubequick\">>",
+   "\t<<danubeicon>><<link [[Danube Street|Danube Street]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<widget \"danubequick\">>",
+   "\t<<danubeicon>><<link [[다뉴브 가|Danube Street]]>><</link>>"
+  ],
+  "new_en": [
+   "<<widget \"danubeQuick\">>",
+   "\t<<danubeicon>><<link [[Danube Street|Danube Street]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"wolfquick\">>",
+   "\t<<wolficon>><<link [[Wolf Street|Wolf Street]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<widget \"wolfquick\">>",
+   "\t<<wolficon>><<link [[울프 가|Wolf Street]]>><</link>>"
+  ],
+  "new_en": [
+   "<<widget \"wolfQuick\">>",
+   "\t<<wolficon>><<link [[Wolf Street|Wolf Street]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"elkquick\">>",
+   "\t<<elkicon>><<link [[Elk Street|Elk Street]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<widget \"elkquick\">>",
+   "\t<<elkicon>><<link [[엘크 가|Elk Street]]>><</link>>"
+  ],
+  "new_en": [
+   "<<widget \"elkQuick\">>",
+   "\t<<elkicon>><<link [[Elk Street|Elk Street]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"harvestquick\">>",
+   "\t<<harvesticon>><<link [[Harvest Street|Harvest Street]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<widget \"harvestquick\">>",
+   "\t<<harvesticon>><<link [[하비스트 가|Harvest Street]]>><</link>>"
+  ],
+  "new_en": [
+   "<<widget \"harvestQuick\">>",
+   "\t<<harvesticon>><<link [[Harvest Street|Harvest Street]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"merquick\">>",
+   "\t<<mericon>><<link [[Mer Street|Mer Street]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<widget \"merquick\">>",
+   "\t<<mericon>><<link [[메르 가|Mer Street]]>><</link>>"
+  ],
+  "new_en": [
+   "<<widget \"merQuick\">>",
+   "\t<<mericon>><<link [[Mer Street|Mer Street]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"starfishquick\">>",
+   "\t<<starfishicon>><<link [[Starfish Street|Starfish Street]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<widget \"starfishquick\">>",
+   "\t<<starfishicon>><<link [[스타피시 가|Starfish Street]]>><</link>>"
+  ],
+  "new_en": [
+   "<<widget \"starfishQuick\">>",
+   "\t<<starfishicon>><<link [[Starfish Street|Starfish Street]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"cliffquick\">>",
+   "\t<<clifficon>><<link [[Cliff Street|Cliff Street]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<widget \"cliffquick\">>",
+   "\t<<clifficon>><<link [[클리프 가|Cliff Street]]>><</link>>"
+  ],
+  "new_en": [
+   "<<widget \"cliffQuick\">>",
+   "\t<<clifficon>><<link [[Cliff Street|Cliff Street]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"barbquick\">>",
+   "\t<<barbicon>><<link [[Barb Street|Barb Street]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<widget \"barbquick\">>",
+   "\t<<barbicon>><<link [[바브 가|Barb Street]]>><</link>>"
+  ],
+  "new_en": [
+   "<<widget \"barbQuick\">>",
+   "\t<<barbicon>><<link [[Barb Street|Barb Street]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"connudatusquick\">>",
+   "\t<<connudatusicon>><<link [[Connudatus Street|Connudatus Street]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<widget \"connudatusquick\">>",
+   "\t<<connudatusicon>><<link [[콘누다투스 가|Connudatus Street]]>><</link>>"
+  ],
+  "new_en": [
+   "<<widget \"connudatusQuick\">>",
+   "\t<<connudatusicon>><<link [[Connudatus Street|Connudatus Street]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<elseif $earSlime.forcedDressing and $earSlime.forcedDressing.days gt 0 and setup.clothes.upper[38].gender isnot $earSlime.forcedDressing.type and setup.clothes.upper[38].gender isnot 'n'>>",
+   "\t\t\t\t\t\t<span class=\"red\">The slime in your ear refuses to allow you to try on or buy the gingham dress as it is only permitting more <<print $earSlime.forcedDressing.type is \"f\" ? \"feminine\" : \"masculine\">> clothing.</span>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<elseif $earSlime.forcedDressing and $earSlime.forcedDressing.days gt 0 and setup.clothes.upper[38].gender isnot $earSlime.forcedDressing.type and setup.clothes.upper[38].gender isnot 'n'>>",
+   "\t\t\t\t\t\t<span class=\"red\">귀에 있는 슬라임이 당신에게 더 <<print $earSlime.forcedDressing.type is \"f\" ? \"여성스러운\" : \"남성스러운\">> 옷만 허용하므로, 깅엄 드레스를 입어보거나 사는 것을 거부한다.</span>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<elseif $earSlime.forcedDressing?.days gt 0 and setup.clothes.upper[38].gender isnot $earSlime.forcedDressing.type and setup.clothes.upper[38].gender isnot 'n'>>",
+   "\t\t\t\t\t\t<span class=\"red\">The slime in your ear refuses to allow you to try on or buy the gingham dress as it is only permitting more <<print $earSlime.forcedDressing.type is \"f\" ? \"feminine\" : \"masculine\">> clothing.</span>"
+  ],
+  "context": "\t\t\t\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<elseif $earSlime.forcedDressing and $earSlime.forcedDressing.days gt 0 and setup.clothes.upper[33].gender isnot $earSlime.forcedDressing.type and setup.clothes.upper[38].gender isnot 'n'>>",
+   "\t\t\t\t\t\t<span class=\"red\">The slime in your ear refuses to allow you to try on or buy the checkered shirt as it is only permitting more <<print $earSlime.forcedDressing.type is \"f\" ? \"feminine\" : \"masculine\">> clothing.</span>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<elseif $earSlime.forcedDressing and $earSlime.forcedDressing.days gt 0 and setup.clothes.upper[33].gender isnot $earSlime.forcedDressing.type and setup.clothes.upper[38].gender isnot 'n'>>",
+   "\t\t\t\t\t\t<span class=\"red\">귀에 있는 슬라임이 당신에게 더 <<print $earSlime.forcedDressing.type is \"f\" ? \"여성스러운\" : \"남성스러운\">> 옷만 허용하므로, 체크무늬 셔츠를 입어보거나 사는 것을 거부한다.</span>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<elseif $earSlime.forcedDressing?.days gt 0 and setup.clothes.upper[33].gender isnot $earSlime.forcedDressing.type and setup.clothes.upper[38].gender isnot 'n'>>",
+   "\t\t\t\t\t\t<span class=\"red\">The slime in your ear refuses to allow you to try on or buy the checkered shirt as it is only permitting more <<print $earSlime.forcedDressing.type is \"f\" ? \"feminine\" : \"masculine\">> clothing.</span>"
+  ],
+  "context": "\t\t\t\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"highquick\">>",
+   "\t<<highicon>><<link [[High Street|High Street]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<widget \"highquick\">>",
+   "\t<<highicon>><<link [[하이 가|High Street]]>><</link>>"
+  ],
+  "new_en": [
+   "<<widget \"highQuick\">>",
+   "\t<<highicon>><<link [[High Street|High Street]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"oxfordquick\">>",
+   "\t<<oxfordicon>><<link [[Oxford Street|Oxford Street]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<widget \"oxfordquick\">>",
+   "\t<<oxfordicon>><<link [[옥스포드 가|Oxford Street]]>><</link>>"
+  ],
+  "new_en": [
+   "<<widget \"oxfordQuick\">>",
+   "\t<<oxfordicon>><<link [[Oxford Street|Oxford Street]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"street_alley_detour\">>",
+   "\tYou walk along the street when you see the familiar blue flashing lights of the police up ahead. As you approach, you find the intersection <span class=\"purple\">blocked by a car wreck</span> still in the process of being cleaned up. The crosswalk has been closed in the meantime."
+  ],
+  "old_kr": [
+   "<<widget \"street_alley_detour\">>",
+   "\t당신이 거리를 걷고 있는데, 저 앞 경찰차에서 뿜어져 나오는 익숙한 푸른 섬광이 보인다. 가까이 다가가자 교차로가 <span class=\"purple\">부서진 차로 인해 막혀</span> 아직 치워지는 중이다. 횡단보도는 당분간 폐쇄되어 있다."
+  ],
+  "new_en": [
+   "<<widget \"streetAlleyDetour\">>",
+   "\tYou walk along the street when you see the familiar blue flashing lights of the police up ahead. As you approach, you find the intersection <span class=\"purple\">blocked by a car wreck</span> still in the process of being cleaned up. The crosswalk has been closed in the meantime."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"streetcardboardbox\">>",
+   "\tYou see a large empty cardboard box. Looks like someone recently moved in a large appliance."
+  ],
+  "old_kr": [
+   "<<widget \"streetcardboardbox\">>",
+   "\t커다란 빈 골판지 상자가 보인다. 누군가 최근에 큰 가전제품을 옮긴 모양이다."
+  ],
+  "new_en": [
+   "<<widget \"streetCardboardBox\">>",
+   "\tYou see a large empty cardboard box. Looks like someone recently moved in a large appliance."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "",
+   "<<widget \"streetlonghair\">>",
+   "\tA powerful gust of wind picks up, sending your hair into disarray. You try to disentangle it, but end up tripping over yourself.",
+   "\t<br><br>"
+  ],
+  "old_kr": [
+   "<<widget \"streetlonghair\">>",
+   "    강한 돌풍이 불어와 당신의 머리카락을 헝클어뜨린다. 엉킨 머리카락을 정리하려다 그만 자기 발에 걸려 비틀거린다.",
+   "    <br><br>"
+  ],
+  "new_en": [
+   "",
+   "<<widget \"streetLongHair\">>",
+   "\tA powerful gust of wind picks up, sending your hair into disarray. You try to disentangle it, but end up tripping over yourself.",
+   "\t<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<generate1>><<person1>>",
+   "\t<<unset $photo_high_caught>>",
+   "\t\"Well if it isn't <<overworld_nickname>>,\" a <<person>> says as <<he>> approaches you. <<He>> turns <<his>> phone, and shows you a picture of yourself, exposed in the middle of the High Street. Looks like it was taken when you lost your kaiju costume.",
+   "\t<br><br>",
+   "\t\"You're gonna do me a little favour. Do it well and I won't post this on the internet for all to see.\" <<He>> gestures at a nearby alley.<<gstress>>",
+   "\t<br><br>",
+   "",
+   "\t<<link [[Do what <<he>> wants|Street Photo High Alley]]>><<trauma 6>><<stress 6>><</link>><<gtrauma>><<gstress>>",
+   "\t<br>",
+   "\t<<link [[Refuse|Street Photo High Alley Refuse]]>><<fameexhibitionism 5 \"pic\">><</link>>",
+   "\t<br>",
+   "\t<<if hasSexStat(\"exhibitionism\", 5)>>",
+   "\t\t<<link [[Laugh|Street Photo High Laugh]]>><</link>><<exhibitionist5>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<if $submissive lte 500>>",
+   "\t\t<<link [[Smash <<his>> phone|Street Photo High Smash]]>><<def 1>><<stress -6>><<crimeUp 200 \"destruction\">><</link>><<defianttext>><<crime \"destruction\">><<lstress>>",
+   "\t\t<br>",
+   "\t<</if>>"
+  ],
+  "old_kr": [
+   "    <<generate1>><<person1>>",
+   "    <<unset $photo_high_caught>>",
+   "    \"이게 누구야, <<overworld_nickname>> 아니야.\" 당신에게 다가오며 <<person>>【이가】 말한다. <<He>>【은는】 <<his>> 폰을 돌려, 하이 스트리트 한복판에서 노출하고 있는 당신의 사진을 보여준다. 당신이 괴수 의상을 잃어버렸을 때 찍힌 모양이다.",
+   "    <br><br>",
+   "    \"내 부탁 하나 들어줘야겠어. 잘 해내면 이걸 인터넷에 올려서 모두가 보게 하진 않지.\" <<He>>【은는】 근처 골목을 가리킨다.<<gstress>>",
+   "    <br><br>",
+   "",
+   "    <<link [[<<he>>【이가】 원하는 대로 한다|Street Photo High Alley]]>><<trauma 6>><<stress 6>><</link>><<gtrauma>><<gstress>>",
+   "    <br>",
+   "    <<link [[거절한다|Street Photo High Alley Refuse]]>><<fameexhibitionism 5 \"pic\">><</link>>",
+   "    <br>",
+   "    <<if hasSexStat(\"exhibitionism\", 5)>>",
+   "        <<link [[비웃는다|Street Photo High Laugh]]>><</link>><<exhibitionist5>>",
+   "        <br>",
+   "    <</if>>",
+   "    <<if $submissive lte 500>>",
+   "        <<link [[<<his>> 폰을 박살 낸다|Street Photo High Smash]]>><<def 1>><<stress -6>><<crimeUp 200 \"destruction\">><</link>><<defianttext>><<crime \"destruction\">><<lstress>>",
+   "        <br>",
+   "    <</if>>"
+  ],
+  "new_en": [
+   "\t<<generate1>><<person1>>",
+   "\t<<unset $photo_high_caught>>",
+   "\t\"Well if it isn't <<overworld_nickname>>,\" a <<person>> says as <<he>> approaches you. <<He>> turns <<his>> phone, and shows you a picture of yourself, exposed in the middle of the High Street. Looks like it was taken when you lost your kaiju costume.",
+   "\t<br><br>",
+   "\t\"You're gonna do me a little favour. Do it well and I won't post this on the internet for all to see.\" <<He>> gestures at a nearby alley.<<gstress>>",
+   "\t<br><br>",
+   "",
+   "\t<<link [[Do what <<he>> wants|Street Photo High Alley]]>><<trauma 6>><<stress 6>><</link>><<gtrauma>><<gstress>>",
+   "\t<br>",
+   "\t<<link [[Refuse|Street Photo High Alley Refuse]]>><<fameexhibitionism 5 \"pic\">><</link>>",
+   "\t<br>",
+   "\t<<if hasSexStat(\"exhibitionism\", 5)>>",
+   "\t\t<<link [[Laugh|Street Photo High Laugh]]>><</link>><<exhibitionist5>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<if displayDefiantOption(500)>>",
+   "\t\t<<link [[Smash <<his>> phone|Street Photo High Smash]]>><<def 1>><<stress -6>><<crimeUp 200 \"destruction\">><<wolfDefiant 500>><</link>><<defianttext 500>><<crime \"destruction\">><<lstress>>",
+   "\t\t<br>",
+   "\t<</if>>"
+  ],
+  "context": "<<widget \"streetPhotoHighCaught\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou see a familiar face in the crowd. <span class=\"blue\">It's Alex.</span>"
+  ],
+  "old_kr": [
+   "\t인파 속에서 낯익은 얼굴이 보인다. <span class=\"blue\">알렉스다.</span>"
+  ],
+  "new_en": [
+   "\t<<set $daily.alexStreetEvent to true>>",
+   "\tYou see a familiar face in the crowd. <span class=\"blue\">It's Alex.</span>"
+  ],
+  "context": "\t<<npc Alex>><<person1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t",
+   "\t\t\t<<link [[Visit a cafe with Alex (0:30)|Street Alex Cafe]]>><<set $phase to 0>><<pass 30>><<npcincr Alex love 1>><<stress -6>><</link>><<glove>><<lstress>>"
+  ],
+  "old_kr": [
+   "\t\t\t",
+   "\t\t\t<<link [[알렉스와 함께 카페에 간다 (0:30)|Street Alex Cafe]]>><<set $phase to 0>><<pass 30>><<npcincr Alex love 1>><<stress -6>><</link>><<glove>><<lstress>>"
+  ],
+  "new_en": [
+   "",
+   "\t\t\t<<link [[Visit a cafe with Alex (0:30)|Street Alex Cafe]]>><<set $phase to 0>><<pass 30>><<npcincr Alex love 1>><<stress -6>><</link>><<glove>><<lstress>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<link [[Ignore|Street Alex Ignore]]>><<npcincr Alex love -1>><</link>><<llove>>",
+   "\t\t\t<br>\t"
+  ],
+  "old_kr": [
+   "\t\t\t<<link [[무시한다|Street Alex Ignore]]>><<npcincr Alex love -1>><</link>><<llove>>",
+   "\t\t\t<br>\t"
+  ],
+  "new_en": [
+   "\t\t\t<<link [[Ignore|Street Alex Ignore]]>><<npcincr Alex love -1>><</link>><<llove>>",
+   "\t\t\t<br>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t",
+   "\t\t<<link [[Ask if <<he>> wants to grab a bite to eat (0:30)|Street Alex Cafe]]>><<set $phase to 1>><<pass 30>><<npcincr Alex love 1>><<stress -6>><</link>><<glove>><<lstress>>"
+  ],
+  "old_kr": [
+   "\t\t",
+   "\t\t<<link [[뭐라도 간단히 먹으러 가겠냐고 묻는다 (0:30)|Street Alex Cafe]]>><<set $phase to 1>><<pass 30>><<npcincr Alex love 1>><<stress -6>><</link>><<glove>><<lstress>>"
+  ],
+  "new_en": [
+   "",
+   "\t\t<<link [[Ask if <<he>> wants to grab a bite to eat (0:30)|Street Alex Cafe]]>><<set $phase to 1>><<pass 30>><<npcincr Alex love 1>><<stress -6>><</link>><<glove>><<lstress>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetstray\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"thugRentIntro\">>",
+   "\t<<generate1>><<generate2>>",
+   "\tYou notice a <<person1>><<person>> has been following you for a while. No matter what direction you go, <<he>> seems to always be going the same way. ",
+   "\t<br><br>",
+   "\t<<link [[Try to lose <<him>>|Thug Rent Intro 2]]>><<set $phase to 0>><</link>>",
+   "\t<br>",
+   "\t<<link [[Ignore <<him>>|Thug Rent Intro 2]]>><<set $phase to 1>><</link>>",
+   "\t<br>",
+   "<</widget>>",
+   "",
+   "<<widget \"thugWander\">>",
+   "\t<<generate1>>",
+   "\tYou notice that a <<person1>><<person>> seems to be discreetly scanning the people on the street with <<his>> eyes. <span class=\"blue\"><<He>> could be one of Bailey's goons, searching for you.</span>",
+   "\t<br><br>",
+   "\t<<link [[Take a detour (0:15)|Thug Wander Detour]]>><<pass 15>><</link>>",
+   "\t<br>",
+   "\t<<link [[Keep walking|Thug Wander Walk]]>><</link>>",
+   "\t<br>",
+   "<</widget>>",
+   "",
+   "<<widget \"thugPatrol\">>",
+   "\t<<generate1>>",
+   "\tYou notice a <<person1>><<person>> some distance away staring at you. It looks like <<hes>> sizing you up. It's unclear what <<his>> intentions are, but avoiding <<him>> would be the safest option.",
+   "\t<br><br>",
+   "\t<<link [[Run away (0:10)|Thug Patrol Run]]>><<pass 10>><</link>>",
+   "\t<br>",
+   "\t<<link [[Keep going|Thug Patrol Walk]]>><</link>>",
+   "\t<br>",
+   "\t<<link [[Discreetly ditch <<him>> (0:05)|Thug Patrol Ditch]]>><</link>><<if Time.dayState is \"night\">><<set $skulduggerydifficulty to (400 + random(0, 700))>><<else>><<set $skulduggerydifficulty to (400 + random(0, 500))>><</if>><<skulduggerydifficulty>>",
+   "\t<br>",
+   "<</widget>>",
+   "",
+   "<<widget \"thugExhibition\">>",
+   "\t<<generate1>><<generate2>>",
+   "\tYou notice a <<person2>><<person>> ahead of you walking with <<his>> phone raised up. <<Hes>> constantly glancing over at it while scanning <<his>> surroundings.",
+   "\t<span class=\"blue\">You think <<he>> might be one of Bailey's goons looking for you.</span> While your attention is focused on <<him>>, somebody walks up behind you and grabs your butt.<<stress 5>><<gstress>>",
+   "\t<br><br>",
+   "\tYou look behind you to see a <<person1>><<person>> shamelessly groping you. \"Damn <<girl>>, you've got a great ass,\" <<he>> says.",
+   "\tYou're reluctant to immediately push <<him>> away since that would likely draw the <<person2>><<persons>> attention. Unfortunately, your lack of resistance only encourages the <<person1>><<person>> to grow bolder as <<he>> pinches your ass again.",
+   "\t<br><br>",
+   "\tIt's clear <<he>> won't stop molesting you unless you do something. But at the same time, the <<person2>><<person>> would notice if you were to cause a scene right now.",
+   "\tYou could ensure <<he>> doesn't see you by hiding in a nearby alley, but the <<person1>><<person>> would likely follow you.",
+   "\t<br><br>",
+   "\t<<link [[Hide|Thug Exhibition Alley]]>><</link>>",
+   "\t<br>",
+   "\t<<link [[Remain still|Thug Exhibition Endure]]>><</link>><<willpowerdifficulty 1 700>>",
+   "\t<br>",
+   "\t<<link [[Push <<him>> away|Thug Exhibition Resist]]>><</link>>",
+   "\t<br>",
+   "<</widget>>",
+   "",
+   "<<widget \"thugHound\">>",
+   "\t<<beastNEWinit 1 dog>><<generate2>><<generate3>>",
+   "\tYou notice a <<person2>><<person>> and <<person3>><<person>> with an agitated-looking <<person1>><<beasttype>> walking towards you. ",
+   "\tThe <<beasttype>> lifts <<bhis>> nose in the air and starts barking at you.<<if $monster is 1>> \"You! I found you!\" <<bhe>> yells.<</if>>",
+   "\t<br><br>",
+   "\t\"Is that <<phim>>?\" the <<person2>><<person>> asks <<his>> friend.",
+   "\t<br>",
+   "\t\"I'd say so. Hey, <<girl>>! You've been a real pain in the ass to track down. But it's time to return home now!\"",
+   "\t<br><br>",
+   "\t<span class=\"blue\">You deduce they must be more of Bailey's goons.</span>",
+   "\t<br><br>",
+   "\t<<link [[Comply|Thug Hound Comply]]>><<pass 5>><</link>>",
+   "\t<br>",
+   "\t<<link [[Turn and run|Thug Hound Run]]>><</link>>",
+   "\t<br>",
+   "<</widget>>",
+   "",
+   "<<widget \"thugPersistent\">>",
+   "\t<<generate1>><<generate2>><<set $skulduggerydifficulty to 800>><<skulduggerycheck \"silent\">>",
+   "\t<<if $skulduggerysuccess>>",
+   "\t\t<span class=\"blue\">You've been feeling like somebody is watching you for a while.</span> You look back, but don't see anyone suspicious. Despite that, the feeling keeps lingering.",
+   "\t\t<br><br>",
+   "\t\tWhen you next turn the corner of a building, you decide to stop and wait for a bit. You peek back and are able to notice a <<person1>><<person>> and <<person2>><<person>> some distance away speedwalking your way. Their appearance isn't outright alarming, but their mannerisms suggest they aren't just ordinary people.",
+   "\t\t<br><br>",
+   "\t\tIf they really have been following you, it's unlikely they have good intentions. You should try to shake them off your trail somehow.",
+   "\t\t<br><br>",
+   "\t\t<<link [[Hide in an alley (0:02)|Thug Persistent Hide]]>><<pass 2>><</link>>",
+   "\t\t<br>",
+   "\t\t<<link [[Run away quickly|Thug Persistent Run]]>><<tiredness 5>><</link>><<gtiredness>>",
+   "\t\t<br>",
+   "\t\t<<set $skulduggerydifficulty to (500 + random(0, 650))>>",
+   "\t\t<<link [[Try to slip past them|Thug Persistent Slip]]>><</link>><<skulduggerydifficulty>>",
+   "\t<<else>>",
+   "\t\tYou're walking along as usual, when you suddenly bump into a <<person1>><<person>>. \"Hey! Watch where you're going,\" <<he>> says. You could have sworn you were paying attention to your surroundings, yet <<he>> has come out of seemingly nowhere.",
+   "\t\t<br><br>",
+   "\t\tYou apologise and try to move past <<him>>, but <<he>> grabs your arm. \"Oh no, I don't think so <<girl>>. You need to apologise properly,\" <<he>> says.",
+   "\t\t<br><br>",
+   "\t\tYou try to wrestle your arm free, but you suddenly feel another hand grasping your shoulders from behind. \"You're not going anywhere, brat,\" the newly arrived <<person2>><<person>> says. \"We've got some business with you.\"",
+   "\t\t<br><br>",
+   "\t\t\"You've been evading us for long enough,\" the <<person1>><<person>> says. You tell <<him>> you don't know who <<he>> is or what <<he>> is talking about. \"Yeah? Well, do the words 'orphanage' and 'owe' remind you of anything?\" the <<person2>><<person>> says mockingly.",
+   "\t\t<br><br>",
+   "\t\tIt does remind you of something. And it makes your current situation pretty clear. <span class=\"blue\">They must be Bailey's goons, sent to bring you back.</span>",
+   "\t\t<br><br>",
+   "\t\t\"Judging by that look on your face, you know exactly what we are talking about. Now don't resist, you're coming with us.\"",
+   "\t\t<br><br>",
+   "\t\t<<link [[Resist|Thug Persistent Fight]]>><<set $fightstart to 1>><</link>>",
+   "\t\t<br>",
+   "\t\t<<link [[Comply|Thug Persistent Comply]]>><</link>>",
+   "\t<</if>>",
+   "\t<br>",
+   "<</widget>>",
+   "",
+   "<<widget \"thugAmbush\">>",
+   "\t<<generate1>><<generate2>>",
+   "\t<<if $exposed gte 2>>",
+   "\t\tAlready on edge and frightened of being caught naked, you jump as you hear a voice behind you.",
+   "\t\t<br><br>",
+   "\t\t\"Look what I found, a helpless slut, naked and cold on the street instead of at home,\" says a <<person1>><<person>>, stepping out from the shadows.",
+   "\t\t<br><br>",
+   "\t\tYou attempt to flee but run into a <<person2>><<person>> who promptly grabs your wrist.",
+   "\t\t\"Not just any slut, it's that Bailey brat we've been looking for. Must be our lucky day <<pshe>> is already dressed for the occasion,\" <<he>> laughs.<<stress 8>><<gstress>>",
+   "\t\t<br><br>",
+   "\t\t<<if $rentThug.anger is 3>>",
+   "\t\t\t<<generate3>>",
+   "\t\t\tOne more <<person3>><<person>> approaches.",
+   "\t\t<<elseif $rentThug.anger is 4>>",
+   "\t\t\t<<generate3>><<generate4>>",
+   "\t\t\tTwo more approach.",
+   "\t\t<<elseif $rentThug.anger is 5>>",
+   "\t\t\t<<generate3>><<generate4>><<generate5>>",
+   "\t\t\tThree more approach.",
+   "\t\t<</if>>",
+   "\t\tYour heart sinks as you realise just who they are. <span class=\"blue\">Bailey's thugs,</span> and they must have been waiting for you.",
+   "\t\t<br><br>",
+   "\t\tThe <<person1>><<person>> laughs in turn, \"Well if <<pshes>> that eager to get started, I see no harm in an early show.\"",
+   "\t\t<br><br>",
+   "\t\t<<link [[Next|Thug Ambush Fight]]>><<set $molestationstart to 1>><</link>>",
+   "\t<<else>>",
+   "\t\tAs you walk along the street, you hear a voice behind you. A <<person1>><<person>> steps out from an alley and leers, \"Are you the one <<nnpc_he \"Bailey\">> was talking about?\"",
+   "\t\t<br><br>",
+   "\t\tYou don't know who <<hes>> referring to, and you don't wish to find out. You turn to flee but run into a <<person2>><<person>> who promptly grabs your wrist. ",
+   "\t\t\"You know, I think <<pshe>> is,\" <<he>> says with a sinister grin. \"And right where Bailey said <<pshe>> would be too.\"",
+   "\t\t<br><br>",
+   "\t\t<<if $rentThug.anger is 3>>",
+   "\t\t\t<<generate3>>",
+   "\t\t\tOne more <<person3>><<person>> approaches.",
+   "\t\t<<elseif $rentThug.anger is 4>>",
+   "\t\t\t<<generate3>><<generate4>>",
+   "\t\t\tTwo more approach.",
+   "\t\t<<elseif $rentThug.anger is 5>>",
+   "\t\t\t<<generate3>><<generate4>><<generate5>>",
+   "\t\t\tThree more approach.",
+   "\t\t<</if>>",
+   "\t\tYour heart sinks as you realise just who they are. <span class=\"blue\">Bailey's thugs,</span> and they must have been waiting for you.",
+   "\t\t<br><br>",
+   "\t\t\"Why don't you be a good <<girl>> and come with us,\" the <<person1>><<person>> says, stepping closer.",
+   "\t\t<br><br>",
+   "\t\t<<link [[Resist|Thug Ambush Fight]]>><<set $fightstart to 1>><</link>>",
+   "\t\t<br>",
+   "\t\t<<link [[Comply|Thug Ambush Comply]]>><</link>>",
+   "\t<</if>>",
+   "\t<br>",
+   "<</widget>>",
+   "",
+   "<<widget \"thugStalk\">>",
+   "\tYou hear footsteps behind you. <span class=\"blue\">You feel followed.</span>",
+   "\t<br><br>",
+   "\t<<rngWraith 2 \"noBlood\">>",
+   "\t<<if _wraithEvent and $wraithIntro and $rng gte 51>>",
+   "\t\t<<generateWraith 1 true>><<person1>>",
+   "\t\t<<set $NPCList[0].skills to {athletics: random(300,500) + C.npc[\"Ivory Wraith\"].lust * 25, security: random(300,500) + C.npc[\"Ivory Wraith\"].lust * 25}>>",
+   "\t\t<<set $combatgoal to \"confront\">>",
+   "\t\t<<link [[Next|Wraith Stalk]]>><<set $molestationstart to 1>><</link>>",
+   "\t<<else>>",
+   "\t\t<<generate1>><<person1>>",
+   "\t\t<<set $NPCList[0].skills to {athletics: random(500,700) + $rentThug.anger * 100, security: random(500,700) + $rentThug.anger * 100}>>",
+   "\t\t<<link [[Next|Thug Stalk]]>><<set $molestationstart to 1>><</link>>",
+   "\t<</if>>",
+   "\t<br>",
+   "<</widget>>",
+   "",
+   "<<widget \"thugStalkDuo\">>",
+   "\t<<generate1>><<generate2>><<person1>>You hear footsteps behind you, from more than one person. <span class=\"blue\">You feel followed.</span>",
+   "\t<br><br>",
+   "\t<<set $NPCList[0].skills to {athletics: random(500,700) + $rentThug.anger * 100, security: random(500,700) + $rentThug.anger * 100}>>",
+   "\t<<set $NPCList[1].skills to {athletics: random(500,700) + $rentThug.anger * 100, security: random(500,700) + $rentThug.anger * 100}>>",
+   "\t<<link [[Next|Thug Stalk Duo]]>><<set $molestationstart to 1>><</link>>",
+   "\t<br>",
+   "<</widget>>",
+   "",
+   "<<widget \"thugConfront\">>",
+   "\t<<generate1>><<generate2>><<generate3>><<generate4>><<set $NPCList[0].traits.push(\"unforgiving\")>>",
+   "\tYou're walking along as usual, minding your own business. All of a sudden, <span class=\"purple\">a van swerves to a stop right in front of you!</span> From the back step out a <<person1>><<person>> and a <<person2>><<person>>.",
+   "\t<br><br>",
+   "\tYou're considering running away right now, but before you can do that, <span class=\"pink\">another van screeches to a halt behind you!</span> Two people also appear from it, a <<person3>><<person>> and a <<person4>><<person>>.",
+   "\t<br><br>",
+   "\tThey quickly surround you. \"We've finally got you cornered, brat!\" the <<person1>><<person>> says. <span class=\"red\">\"You've made a real fool of us, I can't remember there being any other 'delivery' that's been harder to complete than you!\"</span>",
+   "\t<br><br>",
+   "\t\"Which is why we've had to resort to this,\" the <<person2>><<person>> says. \"Don't try begging for mercy now, because there's nothing that could save you from the world of pain we are about to put you in!\"",
+   "\t<br><br>",
+   "\t<<link [[Protest|Thug Confrontation Fight]]>><<def 2>><<set $fightstart to 1>><</link>>",
+   "\t<br>",
+   "\t<<link [[Plead|Thug Confrontation Fight]]>><<sub 2>><<set $fightstart to 1>><</link>>",
+   "\t<br>",
+   "<</widget>>",
+   "",
+   "<<widget \"thugTrapCar\">>",
+   "\t<<generate1>><<generate2>>",
+   "\tAs you're walking down the street, a car with tinted windows pulls up beside you. The rear window rolls down, revealing a <<person1>><<person>>.",
+   "\t<<He>> stares at you silently. \"It's <<phim>>,\" <<he>> suddenly says. <span class=\"red\">\"You're coming with us, back home.\"</span>",
+   "\t<br><br>",
+   "\tThe car door starts opening. You only have a second to make a decision.",
+   "\t<br><br>",
+   "\t<<link [[Run|Thug Trap Car Run]]>><</link>>",
+   "\t<br>",
+   "\t<<link [[Comply|Thug Trap Car Comply]]>><</link>>",
+   "\t<br>",
+   "<</widget>>",
+   "",
+   "<<widget \"streetStray\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetdog\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetDog\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetoffer\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetOffer\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetfriendly1\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetFriendly1\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetfootbridge\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetFootbridge\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetvan\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetVan\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetbullies\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetBullies\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetrocks\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetRocks\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetex1\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetExposedNightFootsteps\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetex4\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetExposedNightWitnessAssault\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $cumballoon to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set _cumBalloon to 1>>"
+  ],
+  "context": "\t<<if $world_corruption_soft gte random(1, 200) and ((maleChance() gte 1 and $settings.maleNPCVaginaChance lte 99) or (maleChance() lte 99 and $settings.femaleNPCPenisChance gte 1))>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $_carcash to random(50, 100)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $_carCash to random(50, 100)>>"
+  ],
+  "context": "\t\t<<default>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $cumballoon is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if _cumBalloon is 1>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $cumballoon is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if _cumBalloon is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<link [[Stand your ground|Street Monster]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>>",
+   "\t\t<br>",
+   "\t\t<<link [[Run|Street Monster Run]]>><<set $phase to 1>><</link>><<athleticsdifficulty 400 1400>>",
+   "\t\t<br>",
+   "\t<<else>>",
+   "\t\tYou hear something land behind you, followed by a low growl. You run in a panic, until you trip and fall. Nothing follows.<<beastescape>>",
+   "\t\t<br><br>",
+   "\t\t<<destinationeventend>>",
+   "\t<</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<link [[Stand your ground|Street Monster]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>>",
+   "\t<br>",
+   "\t<<link [[Run|Street Monster Run]]>><<set $phase to 1>><</link>><<athleticsdifficulty 400 1400>>",
+   "\t<br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetedenrage\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetEdenRage\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetedenworried\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetEdenWorried\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streettentacle\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetTentacle\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<npc Kylar>><<person1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<kylarStreetAbduction>>",
+   "\t<<else>>",
+   "\t\t<<cleareventpool>>",
+   "\t\t<<addevent \"kylarWatchDart\" 1>>",
+   "\t\t<<addevent \"kylarWatchWink\" 1>>",
+   "\t\t<<addevent \"kylarWatchClothingTear\" 1>>",
+   "\t\t<<if _kylarStatus.includesAll(\"Love\", \"Lust\")>>",
+   "\t\t\t<<addevent \"kylarWatchStalkSex\" 2>>",
+   "\t\t<<elseif isPossibleLoveInterest(\"Kylar\") and C.npc.Kylar.lust gte 25>>",
+   "\t\t\t<<addevent \"kylarWatchStalkMolestation\" 2>>",
+   "\t\t<<else>>",
+   "\t\t\t<<addevent \"kylarWatchStaring\" 2>>",
+   "\t\t<</if>>",
+   "\t\t<<runeventpool>>",
+   "\t<</if>>",
+   "<</widget>>"
+  ],
+  "context": "\t<<if _kylarStatus.includes(\"Love\") and $kylar_mad is 1 and $syndromekylar isnot 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $dangerevent gte 61>>",
+   "\t\t<<set $kylarwatchedtimer -= 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<generate1>><<person1>>You hear a <<person>> behind you. <<catcall>> Before you can respond, a pair of intruding hands grasp you, but only for a moment. <<He>> winces and clutches <<his>> neck. <<He>> pulls out a small dart, looks at it, and collapses.",
+   "\t<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tthen a tear as a piece of fabric is torn off by an invisible force. It flies through the air and disappears into an open window.",
+   "\t\t\t<br><br>",
+   ""
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $worn.lower.name isnot \"naked\">>",
+   "\t\tYou feel a tug on your $worn.lower.name,",
+   "\t\t<<set $lowercoloursaved to $worn.lower.colour>><<set $worn.lower.integrity -= 30>>",
+   "\t\t<<if $worn.lower.integrity lte 0>>",
+   "\t\t\t<<lowerruined>><<exposure>>",
+   "\t\t\tthen a tear as it is torn from your body by an invisible force. <<covered>> The fabric flies away from you.",
+   "\t\t\t<br><br>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetprostitutionfame\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetProstitutionFame\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetrapefame\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetRapeFame\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetbestialityfame\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetBestialityFame\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetpregnancyfame\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetPregnancyFame\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetexhibitionismfame\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetExhibitionismFame\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetcollared\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetCollared\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetbound\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetBound\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetlowertowel\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetLowerTowel\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetuppertowel\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetUpperTowel\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetexoffer\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetExhibitionismOffer\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetexoffer2\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetExhibitionismOffer2\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetexoffer3\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetExhibitionismOffer3\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetexoffer4\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetExhibitionismOffer4\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetexshow\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetExhibitionismShow\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetkidnap\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetKidnap\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetorphancookie\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetOrphanCookie\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetmodelshow\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetModelShow\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetnpcflash\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetNPCFlash\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetabstinence\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetAbstinence\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetMilking\">>",
+   "\t<<generate1>><<generatep2>><<person1>>",
+   "\tYou stand at a crosswalk. Your sore breasts throb from being full. You try to rub them to relieve some pain. <<pain 1>><<gpain>>",
+   "\t<br><br>",
+   "",
+   "\tA <<person>> steps forward next to you. \"I recognise that look,\" <<he>> says. \"I can give you a hand if you like.\" <<He>> nods toward the hand on your breast and motions toward a nearby alley.",
+   "\t<br><br>",
+   "",
+   "\t<<if hasSexStat(\"promiscuity\", 3)>>",
+   "\t\t<<link [[Accept|Street Milking Start]]>><</link>><<promiscuous3>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<link [[Refuse|Street Milking Refuse]]>><</link>>",
+   "<</widget>>",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"compoundoptions\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"compoundOptions\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"residentialex1\" 1>>",
+   "\t\t\t\t<<addevent \"residentialex2\" 1>>",
+   "\t\t\t\t<<addevent \"residentialex3\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"residentialExposedDumpsterAmbush\" 1>>",
+   "\t\t\t\t<<addevent \"residentialExposedDumpsterDog\" 1>>",
+   "\t\t\t\t<<addevent \"residentialExposedFootball\" 1>>"
+  ],
+  "context": "\t\t\t<<if $bus is \"residential\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"commercialex1\" 1>>",
+   "\t\t\t\t<<addevent \"commercialex2\" 1>>",
+   "\t\t\t\t<<addevent \"commercialex3\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"commercialExposedDoorCollision\" 1>>",
+   "\t\t\t\t<<addevent \"commercialExposedMannequin\" 1>>",
+   "\t\t\t\t<<addevent \"commercialExposedCardboardBox\" 1>>"
+  ],
+  "context": "\t\t\t<<elseif $bus is \"commercial\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"industrialex1\" 1>>",
+   "\t\t\t\t<<addevent \"industrialex2\" 1>>",
+   "\t\t\t\t<<addevent \"industrialex3\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"industrialExposedPipeAttack\" 1>>",
+   "\t\t\t\t<<addevent \"industrialExposedDeadEnd\" 1>>",
+   "\t\t\t\t<<addevent \"industrialExposedVanBarrel\" 1>>"
+  ],
+  "context": "\t\t\t<<elseif $bus is \"industrial\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"parkex1\" 1>>",
+   "\t\t\t\t<<addevent \"parkex2\" 1>>",
+   "\t\t\t\t<<addevent \"parkex3\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"parkExposedAmbush\" 1>>",
+   "\t\t\t\t<<addevent \"parkExposedDog\" 1>>",
+   "\t\t\t\t<<addevent \"parkExposedBridge\" 1>>"
+  ],
+  "context": "\t\t\t<<elseif $bus is \"park\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<addevent \"streetex1\" 2>>",
+   "\t\t\t\t\t<<addevent \"streetex2\" 1>>",
+   "\t\t\t\t\t<<addevent \"streetex3\" 1>>",
+   "\t\t\t\t\t<<addevent \"streetex4\" 1>>",
+   "\t\t\t\t\t<<addevent \"streetex5\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<addevent \"streetExposedNightFootsteps\" 2>>",
+   "\t\t\t\t\t<<addevent \"streetExposedNightTrip\" 1>>",
+   "\t\t\t\t\t<<addevent \"streetExposedNightDog\" 1>>",
+   "\t\t\t\t\t<<addevent \"streetExposedNightWitnessAssault\" 1>>",
+   "\t\t\t\t\t<<addevent \"streetExposedNightStairwell\" 1>>"
+  ],
+  "context": "\t\t\t\t<<if Time.dayState is \"night\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<addevent \"streetexday1\" 1>>",
+   "\t\t\t\t\t<<addevent \"streetexday2\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<addevent \"streetExposedDayCrowded\" 1>>",
+   "\t\t\t\t\t<<addevent \"streetExposedDayBusShelter\" 1>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetcardboardbox\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetCardboardBox\" 1>>"
+  ],
+  "context": "\t\t\t<<if $location is \"alley\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetchestgroper\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetChestGroper\" 1>>",
+   "\t\t\t<</if>>",
+   "",
+   "\t\t\t<<if $rentThug and isBaileyLookingForPlayer() and $location isnot \"alley\" and $bus isnot \"park\">>",
+   "\t\t\t\t<<set _thugMult to ($rentThug.anger + 1) / (Time.dayState is \"night\" ? 4 : 2)>>",
+   "\t\t\t\t<<addevent \"thugAmbush\" `0.25 * _thugMult`>>"
+  ],
+  "context": "\t\t\t<<if _topless>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $farm_stage gte 2 and Time.hour gte 6 and Time.hour lte 20>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $farm_stage gte 2 and Time.hour gte 6 and Time.hour lte 20 and !$daily.alexStreetEvent>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</if>>",
+   "",
+   "\t\t\t<<if isBaileyLookingForPlayer() and $location isnot \"alley\" and $bus isnot \"park\">>",
+   "\t\t\t\t<<if !$rentThug>>",
+   "\t\t\t\t\t<<addevent \"thugRentIntro\" 10>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<set _thugMult to ($rentThug.anger + 1) / (Time.dayState is \"night\" ? 4 : 2)>>",
+   "\t\t\t\t\t<<if $rentThug.traps.find(trap => trap.location === $bus)>>",
+   "\t\t\t\t\t\t<<addevent \"thugTrapCar\" `5 * _thugMult`>>",
+   "\t\t\t\t\t\t<<addevent \"thugPersistent\" `5 * _thugMult`>>",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t<<if $rentThug.anger lte 2>>",
+   "\t\t\t\t\t\t<<addevent \"thugWander\" `1 * _thugMult`>>",
+   "\t\t\t\t\t\t<<addevent \"thugStalk\" `0.5 * _thugMult`>>",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t<<if $rentThug.anger is 2>>",
+   "\t\t\t\t\t\t<<addevent \"thugPatrol\" `0.5 * _thugMult`>>",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t<<if $rentThug.anger gte 3>>",
+   "\t\t\t\t\t\t<<addevent \"thugPatrol\" `1 * _thugMult`>>",
+   "\t\t\t\t\t\t<<addevent \"thugPersistent\" `1 * _thugMult`>>",
+   "\t\t\t\t\t\t<<addevent \"thugHound\" `1 * _thugMult`>>",
+   "\t\t\t\t\t\t<<addevent \"thugStalkDuo\" `0.5 * _thugMult`>>",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t<<if $rentThug.anger is 5>>",
+   "\t\t\t\t\t\t<<addevent \"thugConfront\" `1 * _thugMult`>>",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t<<addevent \"thugExhibition\" `0.5 * _thugMult`>>",
+   "\t\t\t\t\t<<addevent \"thugAmbush\" `0.5 * _thugMult`>>",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<<addevent \"streetAlex1\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<addevent \"streetbottomgrope\" 1>>",
+   "\t\t\t<<addevent \"streetexshow\" 0.5>>",
+   "\t\t\t<<addevent \"streetfamerape\" 1>>",
+   "\t\t\t<<addevent \"streetmodelshow\" 0.5>>",
+   "\t\t\t<<addevent \"streetnpcflash\" 0.5>>",
+   "\t\t\t<<addevent \"streetrocks\" 0.5>>",
+   "\t\t\t<<addevent \"streetvan\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<addevent \"streetBottomGrope\" 1>>",
+   "\t\t\t<<addevent \"streetExhibitionismShow\" 0.5>>",
+   "\t\t\t<<addevent \"streetFameRape\" 1>>",
+   "\t\t\t<<addevent \"streetModelShow\" 0.5>>",
+   "\t\t\t<<addevent \"streetNPCFlash\" 0.5>>",
+   "\t\t\t<<addevent \"streetRocks\" 0.5>>",
+   "\t\t\t<<addevent \"streetVan\" 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetbox\" 1>>",
+   "\t\t\t\t<<addevent \"streetlurker\" 0.2>>",
+   "\t\t\t\t<<addevent \"streetkidnap\" 0.5>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetBox\" 1>>",
+   "\t\t\t\t<<addevent \"streetLurker\" 0.2>>",
+   "\t\t\t\t<<addevent \"streetKidnap\" 0.5>>"
+  ],
+  "context": "\t\t\t\t<<addevent \"streetProstitutionProposition\" 0.5>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetbox\" 0.5>>",
+   "\t\t\t\t<<addevent \"streetbullies\" 1>>",
+   "\t\t\t\t<<addevent \"streetdog\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetBox\" 0.5>>",
+   "\t\t\t\t<<addevent \"streetBullies\" 1>>",
+   "\t\t\t\t<<addevent \"streetDog\" 1>>"
+  ],
+  "context": "\t\t\t\t<<addevent \"streetProstitutionProposition\" 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetfriendly1\" 1>>",
+   "\t\t\t\t<<addevent \"streetstray\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetFriendly1\" 1>>",
+   "\t\t\t\t<<addevent \"streetStray\" 1>>"
+  ],
+  "context": "\t\t\t\t<<addevent \"streetFollowDogAlley\" 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<addevent \"streetbodywriting\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<addevent \"streetBodywriting\" 1>>"
+  ],
+  "context": "\t\t\t\t<<if _bodywriting_exposed is 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<addevent \"streetwhorebodywriting\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<addevent \"streetWhoreBodywriting\" 1>>"
+  ],
+  "context": "\t\t\t\t\t<<if $skin[_bodypart].special is \"prostitution\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<addevent \"streetcriminalbodywriting\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<addevent \"streetCriminalBodywriting\" 1>>"
+  ],
+  "context": "\t\t\t\t\t<<if $skin[_bodypart].special is \"criminal\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<addevent \"streetorphancookie\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<addevent \"streetOrphanCookie\" 1>>"
+  ],
+  "context": "\t\t\t\t<<if $bus is \"domus\" or $bus is \"danube\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<addevent \"streetabstinence\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<addevent \"streetAbstinence\" 1>>"
+  ],
+  "context": "\t\t\t\t<<if $settings.condomLevel gte 1 and [\"wolf\", \"nightingale\", \"cliff\", \"starfish\", \"high\"].includes($bus) and Time.days gte 4>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<addevent \"streetfootbridge\" 1>>",
+   "\t\t\t\t\t<<addevent \"streetcrossing\" 1>>",
+   "\t\t\t\t\t<<addevent \"street_alley_detour\" 0.5>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<addevent \"streetFootbridge\" 1>>",
+   "\t\t\t\t\t<<addevent \"streetCrossing\" 1>>",
+   "\t\t\t\t\t<<addevent \"streetAlleyDetour\" 0.5>>"
+  ],
+  "context": "\t\t\t\t<<if $location isnot \"alley\" and $bus isnot \"park\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<addevent \"streettfpicture\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<addevent \"streetTFPicture\" 1>>"
+  ],
+  "context": "\t\t\t\t<<if getTransformParts([\"ears\", \"wings\", \"tail\"])>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<addevent \"streetlonghair\" .7>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<addevent \"streetLongHair\" .7>>"
+  ],
+  "context": "\t\t\t\t<<if $hairlength gte 1000>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetheeltrip\" 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetHeelTrip\" 2>>"
+  ],
+  "context": "\t\t\t<<if $worn.feet.type.includes(\"heels\") and currentSkillValue(\"feetskill\") lt $worn.feet.reveal>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<addevent \"streetexoffer\" 0.9>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<addevent \"streetExhibitionismOffer\" 0.9>>"
+  ],
+  "context": "\t\t\t\t<<if !$exhibitionismrunon and Time.days gte 8>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<addevent \"streetexoffer2\" 0.9>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<addevent \"streetExhibitionismOffer2\" 0.9>>"
+  ],
+  "context": "\t\t\t\t<<elseif $exhibitionismrunon is 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<addevent \"streetexoffer3\" 0.9>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<addevent \"streetExhibitionismOffer3\" 0.9>>"
+  ],
+  "context": "\t\t\t\t<<elseif $exhibitionismrunon is 2>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<addevent \"streetexoffer4\" 0.9>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<addevent \"streetExhibitionismOffer4\" 0.9>>"
+  ],
+  "context": "\t\t\t\t<<elseif $exhibitionismrunon is 3>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streettentacle\" 0.9>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetTentacle\" 0.9>>"
+  ],
+  "context": "\t\t\t<<if $hallucinations gte 2 and $settings.tentaclesEnabled>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetsexfame\" 0.9>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetSexFame\" 0.9>>"
+  ],
+  "context": "\t\t\t<<if $fame.sex gte random(1, 1000)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetprostitutionfame\" 0.9>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetProstitutionFame\" 0.9>>"
+  ],
+  "context": "\t\t\t<<if $fame.prostitution gte random(1, 1000)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetrapefame\" 0.9>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetRapeFame\" 0.9>>"
+  ],
+  "context": "\t\t\t<<if $fame.rape gte random(1, 1000)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetbestialityfame\" 0.9>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetBestialityFame\" 0.9>>"
+  ],
+  "context": "\t\t\t<<if $fame.bestiality gte random(1, 1000)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetpregnancyfame\" 0.9>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetPregnancyFame\" 0.9>>"
+  ],
+  "context": "\t\t\t<<if $fame.pregnancy gte random(1, 1000)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetexhibitionismfame\" 0.9>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetExhibitionismFame\" 0.9>>"
+  ],
+  "context": "\t\t\t<<if $fame.exhibitionism gte random(1, 1000)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetedenrage\" 0.9>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetEdenRage\" 0.9>>"
+  ],
+  "context": "\t\t\t<<if (edenFreedomStatus() gte 2 or ($edenescape and Time.dayState is \"night\")) and ($edenragerespite lte 0 || $edenragerespite is undefined)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<addevent \"streetedenworried\" 0.9>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<addevent \"streetEdenWorried\" 0.9>>"
+  ],
+  "context": "\t\t\t\t<<if $edenfreedom gte 2 and C.npc.Eden.love gte 60>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<addevent \"streetedenangry\" 0.9>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<addevent \"streetEdenAngry\" 0.9>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetcollared\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetCollared\" 1>>"
+  ],
+  "context": "\t\t\t<<if $worn.neck.collared is 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetbound\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetBound\" 1>>"
+  ],
+  "context": "\t\t\t<<if pcAreArmsBound(\"any\")>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetlowertowel\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetLowerTowel\" 1>>"
+  ],
+  "context": "\t\t\t<<if $worn.lower.name is \"towel\" or $worn.lower.name is \"large towel bottom\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetuppertowel\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetUpperTowel\" 1>>"
+  ],
+  "context": "\t\t\t<<if $worn.upper.name is \"towel\" or $worn.upper.name is \"large towel\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetwanted\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetWanted\" 1>>"
+  ],
+  "context": "\t\t\t<<if crimeSumCurrent() gte 5000>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetcardboardbox\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetCardboardBox\" 1>>"
+  ],
+  "context": "\t\t\t<<if $location is \"alley\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<addevent \"streetchestgroper\" 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<addevent \"streetChestGroper\" 1>>"
+  ],
+  "context": "\t\t\t<<if _topless>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</if>>",
+   "",
+   "\t\t\t<<if $bus is \"starfish\" and Time.dayState is \"day\" and !Weather.isOvercast and !$daily.starfishmusician>>",
+   "\t\t\t\t<<addevent \"starfishmusician\" 1>>",
+   "\t\t\t<</if>>",
+   "",
+   "\t\t\t/* Streets with a nearby alley, per streetAlleyDetour; the scene leaves the PC there */",
+   "\t\t\t<<if $lactating and $settings.breastFeedingEnabled and $milkFullPain gt 200 and $location isnot \"alley\" and [\"domus\", \"danube\", \"barb\", \"connudatus\", \"cliff\", \"high\", \"wolf\", \"oxford\", \"mer\", \"elk\", \"harvest\"].includes($bus)>>",
+   "\t\t\t\t<<addevent \"streetMilking\" 1>>"
+  ],
+  "context": "\t\t\t\t<<addevent \"starfishperformer\" 1.2>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<rng>>",
+   "\t<<if $bus is \"barb\" and $mine?.freed isnot 1 and $rng gte 80>>",
+   "\t\tYou feel a rumble from below.",
+   "\t<</if>>",
+   "\t<<rng>>"
+  ],
+  "context": "<<widget \"streeteffects\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<elseif $kylar and $kylar.timer.street gte ($rng + 65) and C.npc.Kylar.state is \"active\" and $kylarwatched isnot 1 and $exposed lte 0 and _kylarLocation.area isnot $location>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<elseif $kylar?.timer.street gte ($rng + 65) and C.npc.Kylar.state is \"active\" and $kylarwatched isnot 1 and $exposed lte 0 and _kylarLocation.area isnot $location>>"
+  ],
+  "context": "\t\t\t<<wHunt \"town\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetchestgroper\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetChestGroper\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streetcrossing\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetCrossing\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"streettfpicture\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"streetTFPicture\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<br>\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<br>"
+  ],
+  "context": "\t\t\t<<link [[Visit a cafe with Alex (0:30)|Street Alex Cafe]]>><<set $phase to 0>><<pass 30>><<npcincr Alex love 1>><<stress -6>><</link>><<glove>><<lstress>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<</widget>>"
+ }
+]

@@ -1,0 +1,104 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<br><br>",
+   "\t\tYou slept soundly, but now feel a little rough."
+  ],
+  "old_kr": [
+   "\t\t<br><br>",
+   "\t\t푹 잤지만, 지금은 몸이 좀 좋지 않다."
+  ],
+  "new_en": [
+   "\t\t<br>",
+   "\t\tYou slept soundly, but now feel a little rough."
+  ],
+  "context": "\t<<if [\"dryheaving\",\"nausea\"].includes(_wakingEffect)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $settings.bestialityEnabled or $monster is 1>>",
+   "\t<<link [[Rub lewdly|Bird Tower Groom Lewd]]>><<npcincr \"Great Hawk\" love 1>><</link>><<deviant1>><<glove>>",
+   "\t<br>",
+   "<</if>>",
+   "<<link [[Stay on the perch|Bird Tower Perch]]>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "<<if $settings.bestialityEnabled or $monster is 1>>",
+   "\t<<link [[음란하게 문지른다|Bird Tower Groom Lewd]]>><<npcincr \"Great Hawk\" love 1>><</link>><<deviant1>><<glove>>",
+   "\t<br>",
+   "<</if>>",
+   "<<link [[횃대에 머무른다|Bird Tower Perch]]>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Rub lewdly|Bird Tower Groom Lewd]]>><<npcincr \"Great Hawk\" love 1>><</link>><<deviant1>><<glove>>",
+   "<br>",
+   "<<link [[Stay on the perch|Bird Tower Perch]]>><<endevent>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tRemy Estate. Knowing the kind of business they do, you're sure they would have something special.",
+   "\t<<if $estate and $estate.chaos>>",
+   "\t\tYou're no stranger to causing trouble for Remy, but the mere thought of stealing something from the estate with <<your_bird_text>> fills you with adrenaline."
+  ],
+  "old_kr": [
+   "\t레미의 저택으로 향한다. 그들이 어떤 사업을 하는지 알기에, 분명 특별한 무언가를 가지고 있을 거라고 확신한다.",
+   "\t<<if $estate and $estate.chaos>>",
+   "\t\t당신은 레미에게 문제를 일으키는 것이 낯설지 않지만, <<your_bird_text>>【와과】 함께 저택에서 무언가를 훔친다는 생각만으로도 아드레날린이 솟구친다."
+  ],
+  "new_en": [
+   "\tRemy Estate. Knowing the kind of business they do, you're sure they would have something special.",
+   "\t<<if $estate?.chaos>>",
+   "\t\tYou're no stranger to causing trouble for Remy, but the mere thought of stealing something from the estate with <<your_bird_text>> fills you with adrenaline."
+  ],
+  "context": "<<if $remySeen?.includesAny(\"farm\",\"livestock\",\"manor\") or $livestock.intro isnot undefined>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechdisable to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechDisable to 1>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechdisable to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechDisable to 1>>"
+  ],
+  "context": "\t<<set $molestationstart to 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br>"
+  ],
+  "context": "\t\t<span class=\"red\"><<bhis>> 탓이 아니다. <<bHe>>【은는】 그저 짝을 원할 뿐이다."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<br>"
+  ],
+  "context": "\t\t\t<<birdicon \"firepit\">><<link [[모닥불을 살펴본다|Bird Tower Firepit]]>><</link>><<if getBirdBurnTime()>> | <span class=\"orange\"><<firepitTime>></span><</if>>"
+ }
+]

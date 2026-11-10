@@ -197,7 +197,7 @@
 				<<settextcolorfromfemininity _x.femininity>>
 				<span @class="_text_color">
 					_x.factor
-					<<if $debug is 1>>
+					<<if $debug>>
 						_x.femininity
 					<<else>>
 						<<print "+".repeat(
@@ -209,7 +209,7 @@
 				</span>
 				<br>
 			<</for>>
-			<<if $debug is 1>>
+			<<if $debug>>
 				<<settextcolorfromfemininity $player.femininity>>
 				전체 여성성: <span @class="_text_color">$player.femininity</span>
 				<br>
@@ -353,6 +353,9 @@
 			<<run _increaseAllure.push(`선정적인 신발 ${"+".repeat(Math.floor($worn.feet.reveal / 200))}`)>>
 			<<run _increaseAttractive.push(`매력적인 신발 ${"+".repeat(Math.floor($worn.feet.reveal / 200))}`)>>
 		<</if>>
+		<<if $rentThug and isBaileyLookingForPlayer()>>
+			<<run _increaseAllure.push(`Hunted by Bailey's thugs${$rentThug.anger gte 1 ? " " + "+".repeat($rentThug.anger) : ""}`)>>
+		<</if>>
 		<<if Weather.dayState is "night">>
 			<<run _increaseAllure.push("밤")>>
 		<</if>>
@@ -391,13 +394,13 @@
 			{ threshold: 30, class: "pink", label: "무명" }
 		]>>
 		<<set _neg = [
-			{ type: "sex", name: "걸레" },
-			{ type: "prostitution", name: "창녀" },
-			{ type: "rape", name: "육변기" },
-			{ type: "bestiality", name: $settings.bestialityEnabled ? "암캐" : "괴물박이" },
-			{ type: "exhibitionism", name: "노출광" },
-			{ type: "pregnancy", name: $fame.pregnancy gte 1000 ? "번식모" : ($fame.pregnancy gte 400 ? "번식용" : "어미") },
-			{ type: "impreg", name: $fame.impreg gte 1000 ? "만인의 아버지" : ($fame.impreg gte 400 ? "씨내리" : "수정자") },
+			{ type: "sex", name: "slut" },
+			{ type: "prostitution", name: "whore" },
+			{ type: "rape", name: "fucktoy" },
+			{ type: "bestiality", name: isBestialityOnForAnyCreature() ? "bitch" : "monster fucker" },
+			{ type: "exhibitionism", name: "flaunter" },
+			{ type: "pregnancy", name: $fame.pregnancy gte 1000 ? "broodmother" : ($fame.pregnancy gte 400 ? "breeder" : "mother") },
+			{ type: "impreg", name: $fame.impreg gte 1000 ? "allfather" : ($fame.impreg gte 400 ? "sire" : "inseminator") },
 		]>>
 		<<set _pos = [
 			{ type: "scrap", name: "싸움꾼" },
@@ -667,6 +670,21 @@
 			<</if>>
 
 		</div>
+		<div id="visualsFreckles" class="settingsToggleItemWide">
+			<span class="gold bold">Freckles:</span>
+			<br>
+			Face: <label>Disabled <<radiobutton "$player.skin.faceFreckles" false autocheck>></label>
+			| <label>Enabled <<radiobutton "$player.skin.faceFreckles" true autocheck>></label>
+			<br>
+			Body: <label>Disabled <<radiobutton "$player.skin.bodyFreckles" "none" autocheck>></label>
+			| <label>Upper body <<radiobutton "$player.skin.bodyFreckles" "upper" autocheck>></label>
+			| <label>Full body <<radiobutton "$player.skin.bodyFreckles" "full" autocheck>></label>
+		</div>
+		<<run $(() => {
+			$('#visualsFreckles input[type="radio"]').on("change", () => {
+				Wikifier.wikifyEval('<<updatesidebarimg true>>');
+			});
+		})>>
 	</div>
 	<hr>
 	<div class="settingsGrid">
@@ -769,12 +787,27 @@
 			</div>
 		<</if>>
 
-		<div id="visualsFaceVariants" @class="setup.faceStyleOptions.length gt 1 ? 'settingsToggleItem' : 'settingsToggleItemWide'">
-			<span class="gold bold">인상:</span>
+		<div id="visualsFaceVariants" class="settingsToggleItem">
+			<span class="gold bold">Demeanour:</span>
 			<br>
 			<div id="visualsFaceVariantRadios">
 				<<faceVariantOptions>>
 			</div>
+		</div>
+
+		<div class="settingsToggleItem">
+			<span class="gold bold">Default expression:</span>
+			<br>
+			Your default facial expression is:
+			<<listbox "$defaultSidebarMouth" autoselect>>
+				<<option "Smile" "smile">>
+				<<option "Neutral" "neutral">>
+			<</listbox>>
+			<<run $(() => {
+				$("#listbox-defaultsidebarmouth").on("change", () => {
+					Wikifier.wikifyEval('<<updatesidebarimg true>>');
+				});
+			})>>
 		</div>
 	</div>
 <</widget>>
@@ -1092,7 +1125,7 @@
 		<<set _bodyWritingOptions["Love Interests"]["그윌란의 제자"] to "gwylans_apprentice">>
 		<<set _bodyWritingOptions["Love Interests"]["영원한 갈망"] to "forever_yearning">>
 	<</if>>
-	<<if $debug is 1>>
+	<<if $debug>>
 		<<set _bodyWritingOptions["Debug"] to setup.bodywriting>>
 		<<set _debugBodywritingOptionsKeys to Object.keys(setup.bodywriting)>>
 		<<link [[몸을 씻는다|$passage]]>>
@@ -1170,19 +1203,8 @@
 				<<set _bodyPartOptions[_text_output.toUpperFirst()] to _label>>
 			<</if>>
 		<</for>>
-
-		<<set _listBoxOptions to {}>>
-		<<for _k, _v range _bodyWritingOptions[$bodywritingSet]>>
-			<<if $bodywritingSet is "Debug">>
-				<<set _label to (_v.writingKr ? _v.writingKr : _k)>>
-				<<set _listBoxOptions[_label] to _v>>
-			<<else>>
-				<<set _listBoxOptions[_k] to _v>>
-			<</if>>
-		<</for>>
-
-		<<if $debug is 1>>
-			적을 내용:
+		<<if $debug>>
+			Write
 			<<listbox "_bodyWritingDebugSelected">>
 				<<optionsfrom _listBoxOptions>>
 			<</listbox>>
@@ -1648,7 +1670,8 @@
 						<<set _modeloptions.tanningEnabled to false>>
 						<<set _modeloptions.skin_type = Skin.color.natural>>
 						<<set _modeloptions.skin_tone = Skin.color.tan>>
-						<<set _modeloptions.freckles = $player.freckles == true and $makeup.concealer != 1>>
+						<<set _modeloptions.freckles = $player.skin.faceFreckles == true and $makeup.concealer != 1>>
+						<<set _modeloptions.bodyFreckles to $player.skin.bodyFreckles>>
 						<<set _modeloptions.mouth to 'neutral'>>
 						<<set _modeloptions.facevariant = $facevariant>>
 						<<set _modeloptions.left_eye = $makeup.eyelenses.left != 0 ? $makeup.eyelenses.left : $leftEyeColour>>
@@ -1982,7 +2005,7 @@
 				당신은 아무 화장도 하지 않았다.
 			<</if>>
 
-			<<if _ownsMakeup or _makeup.length gt 0 or $player.freckles == true>>
+			<<if _ownsMakeup or _makeup.length gt 0 or $player.skin.faceFreckles == true>>
 				<br><br>
 				메이크업:
 			<</if>>
@@ -2031,7 +2054,7 @@
 				<</link>>
 			<</if>>
 			/* CONCEALER */
-			<<if $player.freckles == true>>
+			<<if $player.skin.faceFreckles == true>>
 				<<if _ownsMakeup>>|<</if>>
 				<<if $makeup.concealer == 0>>
 					<<link "컨실러로 주근깨를 가린다">>

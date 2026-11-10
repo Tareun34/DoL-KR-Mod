@@ -1,0 +1,65 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<set _dogEnabled to ($monster is 1 or $settings.bestialityEnabled) ? 1 : 0>>",
+   "\t<<set _plantsEnabled to ($settings.tentaclesEnabled and ($hallucinations gte 2 or $backgroundTraits.includes(\"plantlover\"))) ? 1 : 0>>",
+   "\t<<set _available_events to _plantsEnabled+_dogEnabled>>",
+   "\t<<set $phase to random(1,3-_available_events) === 1 ? 1 : -2>>",
+   "\t/*"
+  ],
+  "old_kr": [
+   "   <<set _dogEnabled to ($monster is 1 or $settings.bestialityEnabled) ? 1 : 0>>",
+   "   <<set _plantsEnabled to ($settings.tentaclesEnabled and ($hallucinations gte 2 or $backgroundTraits.includes(\"plantlover\"))) ? 1 : 0>>",
+   "   <<set _available_events to _plantsEnabled+_dogEnabled>>",
+   "   <<set $phase to random(1,3-_available_events) === 1 ? 1 : -2>>",
+   "   /*"
+  ],
+  "new_en": [
+   "\t<<set _dogEnabled to beastSexEnabledForType(\"dog\", $monster is 1) ? 1 : 0>>",
+   "\t<<set _plantsEnabled to ($settings.tentaclesEnabled and ($hallucinations gte 2 or $backgroundTraits.includes(\"plantlover\"))) ? 1 : 0>>",
+   "\t<<set _available_events to _plantsEnabled+_dogEnabled>>",
+   "\t<<set $phase to random(1,3-_available_events) === 1 ? 1 : -2>>",
+   "\t/*"
+  ],
+  "context": "\t-->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if ($monster is 1 or $settings.bestialityEnabled) and dangerEvent(0.5,6000)>>",
+   "\t<<link [[Next|Danube Catperson Accept 2]]>><<set $danubecathappiness to 0>><</link>>"
+  ],
+  "old_kr": [
+   "<<if ($monster is 1 or $settings.bestialityEnabled) and dangerEvent(0.5,6000)>>",
+   "\t<<link [[다음|Danube Catperson Accept 2]]>><<set $danubecathappiness to 0>><</link>>"
+  ],
+  "new_en": [
+   "<<if beastSexEnabledForType(\"cat\", $monster is 1) and dangerEvent(0.5,6000)>>",
+   "\t<<link [[Next|Danube Catperson Accept 2]]>><<set $danubecathappiness to 0>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $settings.bestialityEnabled or $monster is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if beastSexEnabledForType(\"cat\", $monster is 1)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $settings.bestialityEnabled or $monster is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if beastSexEnabledForType(\"cat\", $monster is 1)>>"
+  ],
+  "context": "<br><br>"
+ }
+]

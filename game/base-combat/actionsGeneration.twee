@@ -239,7 +239,7 @@
 			<</if>>
 		<<case "penis">>
 			<<set _leftOptions to "penis">>
-			<span @class="($lastOptions.left isnot _leftOptions or _leftGold is true ?'gold':'')"><<selectNpcWithPartInPosition "penis" "leftarm">><<set $lefttarget to $index>>당신의 왼손은 <<if $NPCList[$index] and $NPCList[$index].chastity.penis.includes("chastity")>>애태우듯<<else>>쥔 채<</if>> <<personselect $index>><<combatpersons>>의 <<= window.KR.getPenisDescKr($NPCList[$index].penisdesc)>><<if $NPCList[$index].chastity.penis.includes("chastity")>>【을를】 <<his>> $NPCList[$index].chastity.penis 너머로<</if>> 만지고 있다.</span>
+			<span @class="($lastOptions.left isnot _leftOptions or _leftGold is true ?'gold':'')"><<selectNpcWithPartInPosition "penis" "leftarm">><<set $lefttarget to $index>>Your left hand is <<if $NPCList[$index]?.chastity.penis.includes("chastity")>>teasing<<else>>holding<</if>> <<personselect $index>><<combatpersons>> $NPCList[$index].penisdesc<<if $NPCList[$index].chastity.penis.includes("chastity")>> through <<his>> $NPCList[$index].chastity.penis<</if>>.</span>
 		<<case "grappled">>
 			<<if $orgasmdown gte 1>>
 				<<set _leftOptions to "bothBound">>
@@ -1269,14 +1269,23 @@
 		<<case "noanal">><<if !$gloryhole and $gamemode isnot "soft">><<seductiondifficulty>><</if>>
 		<<case "noupper">><<if !$gloryhole and $gamemode isnot "soft">><<seductiondifficulty>><</if>>
 		<<case "mock">>
-			<<listbox "$mockaction">>
-                <<option "도덕" "ethics" `$mockaction is "ethics" ? "selected" : ""`>>
-                <<option "외모" "looks" `$mockaction is "looks" ? "selected" : ""`>>
-                <<option "힘" "weak" `$mockaction is "weak" ? "selected" : ""`>>
-                <<option "기술" "skill" `$mockaction is "skill" ? "selected" : ""`>>
-                <<option "자지" "penis" `$mockaction is "penis" ? "selected" : ""`>>
-                <<option "보지" "vagina" `$mockaction is "vagina" ? "selected" : ""`>>
-            <</listbox>>
+			<<set _mockItems to {
+				ethics: "ethics",
+				looks: "looks",
+				strength: "weak",
+				skill: "skill",
+			}>>
+
+			<<if $NPCList[$mouthtarget].penis isnot "none">>
+				<<set _mockItems.penis to "penis">>
+			<</if>>
+			<<if $NPCList[$mouthtarget].vagina isnot "none">>
+				<<set _mockItems.pussy to "vagina">>
+			<</if>>
+
+			<<listbox "$mockaction" autoselect>>
+				<<optionsfrom _mockItems>>
+			<</listbox>>
 			<<run $(() => { $('#listbox-mockaction').on('change', () => $('#listbox-mockaction').parent().click()) })>>
 		<<case "ask">>
 			<<switch $askAction>>
@@ -2699,7 +2708,7 @@
 				<</if>>
 			<</if>>
 		<</if>>
-		<<if $swarm and $swarm.name>>
+		<<if $swarm?.name>>
 			<<set _swarmsteady to $swarm["steady"].toUpperFirst()>>
 			<<set _swarmamounts to $swarm.amount>>
 		<</if>>

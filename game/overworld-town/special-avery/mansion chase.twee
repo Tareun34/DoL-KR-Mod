@@ -206,6 +206,11 @@
 <span class="green">지금은 안전하다.</span>
 <br><br>
 
+<<if $transformationParts.traits.chase isnot "disabled">>
+	Your heart races. <span class="green">The thrill of the chase invigorates you.</span> <<lstress>><<garousal>><<stress -8>><<arousal 200>><<transform fox 1>>
+<</if>>
+<br><br>
+
 <<set $avery_mansion.away_timer to 7>>
 <<set $avery_mansion.schedule to "away">>
 <<endevent>>
@@ -578,7 +583,7 @@
 			<br>
 		<</if>>
 	<<else>>
-		<<his>> 발소리가 들린다. <<He>>【은는】 방 한가운데로 걸어와 잠시 멈춘 뒤, <span class="green">다음 방으로 계속 간다.</span>
+		You hear <<his>> footsteps. <<He>> walks into the centre of the room, pauses a moment, <span class="green">then continues on to the next.</span>
 		<br><br>
 
 		주변이 조용해지자, 몸이 떨리기 시작할 때쯤 냉동고에서 나온다.

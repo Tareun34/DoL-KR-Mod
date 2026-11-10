@@ -63,47 +63,55 @@
 	<<museumAntiqueStatus "antiquegolddagger" "talk">>
 	<<museumAntiqueStatus "antiquegoldamulet" "talk">>
 	<<museumAntiqueStatus "antiquegoldmask" "talk">>
+	<<museumAntiqueStatus "antiquelantern" "talk">>
+	<<museumAntiqueStatus "antiqueshovelhandle" "talk">>
+	<<museumAntiqueStatus "antiquerustypickaxe" "talk">>
+	<<museumAntiqueStatus "antiquepurplediamond" "talk">>
 <</widget>>
 
 <<widget "museumtalk">>
-    <<museumAntiqueText>><<museumPaintingText>>
-    /* Prevent having to "sell" a worn chastity belt for £0 */
-    <<if $museumAntiques.antiques.antiquegoldchastitybelt is "found" and $worn.genitals.origin is "Underwater Temple" and $gold_chastity_held isnot true>>
-        <<museumAntiqueStatus "antiquegoldchastitybelt" "talk">>
-    <</if>>
-    <<for _labelM, _valueM range $museumAntiques.antiques>>
-        <<capture _labelM, _museumAntiqueText[_labelM].key>>
-            <<set _antique to _museumAntiqueText[_labelM].name.toLowerCase()>>
-            <<if $museumAntiques.antiques[_labelM] is "talk">>
-                <<icon _museumAntiqueText[_labelM].icon>>
-                <<link [[_antique에 대해 물어본다|`Museum `+ _museumAntiqueText[_labelM].key]]>><<set $museumAntiques.antiques[_labelM] to "museum">><<set $museumAntiques.museumCount++>><<npcincr Winter love 1>><</link>><<glove "Winter" "simple">>
-                <br>
-            <</if>>
-        <</capture>>
-    <</for>>
-    <<if !$daily.winterStoryTime>>
-        <<if $bleedingWardCheckpoint and $museumAntiques.paintings.paintingward is "museum">>
-            <<icon _museumPaintingText.paintingward.icon>><<link [[윈터에게 중단했던 '피 흘리는 병동' 이야기를 마저 들려달라고 부탁한다 (0:15)|Bleeding Ward Resume]]>><<set $daily.winterStoryTime to true>><</link>>
-            <br>
-        <</if>>
-        <<for _labelP, _valueP range $museumAntiques.paintings>>
-            <<capture _labelP, _museumPaintingText[_labelP].key>>
-                <<if $museumAntiques.paintings[_labelP] is "talk">>
-                    <<set _painting to _museumPaintingText[_labelP].journalName.toLowerCase()>>
-                    <<icon _museumPaintingText[_labelP].icon>>
-                    <<link [[`_painting【을를】 물어본다 (0:30)`|`Museum `+ _museumPaintingText[_labelP].key + ` Story`]]>><<set $daily.winterStoryTime to true>><<npcincr Winter love 3>><</link>><<gglove "Winter" "simple">>
-                    <<if _labelP is "paintingsnake">><<note "긴 이야기가 될 것입니다..." "red">> | <span class="red tooltip-anchor" tooltip="<span class='red'>이 장면에는 신체 훼손을 포함해 다른 곳에서는 볼 수 없는 불쾌한 콘텐츠가 포함되어 있습니다. 이는 어떤 토글이나 설정으로도 막을 수 없습니다. 경고했습니다.</span>\"><i>(!콘텐츠 경고!)</i></span><</if>> <!-- Appears even with blind stats enabled. Intentional -->
-                    <br>
-                <<elseif $museumAntiques.paintings[_labelP] is "museum">>
-                    <<set _painting to "'" + _museumPaintingText[_labelP].name + "'">>
-                    <<icon _museumPaintingText[_labelP].icon>>
-                    <<link [[`윈터에게 _painting 이야기를 다시 들려달라고 부탁한다 (0:30)`|`Museum `+ _museumPaintingText[_labelP].key + ` Story`]]>><<set $daily.winterStoryTime to true>><</link>>
-                    <<if _labelP is "paintingsnake">><<note "긴 이야기가 될 것입니다..." "red">> | <span class="red tooltip-anchor" tooltip="<span class='red'>이 장면에는 신체 훼손을 포함해 다른 곳에서는 볼 수 없는 불쾌한 콘텐츠가 포함되어 있습니다. 이는 어떤 토글이나 설정으로도 막을 수 없습니다. 경고했습니다.</span>\"><i>(!콘텐츠 경고!)</i></span><</if>> <!-- Appears even with blind stats enabled. Intentional -->
-                    <br>
-                <</if>>
-            <</capture>>
-        <</for>>
-    <</if>>
+	<<museumAntiqueText>><<museumPaintingText>>
+	/* Prevent having to "sell" a worn chastity belt for £0 */
+	<<if $museumAntiques.antiques.antiquegoldchastitybelt is "found" and $worn.genitals.origin is "Underwater Temple" and $gold_chastity_held isnot true>>
+		<<museumAntiqueStatus "antiquegoldchastitybelt" "talk">>
+	<</if>>
+	<<for _labelM, _valueM range $museumAntiques.antiques>>
+		<<capture _labelM, _museumAntiqueText[_labelM].name>>
+			<<set _antique to _museumAntiqueText[_labelM].name.toLowerCase()>>
+			<<if $museumAntiques.antiques[_labelM] is "talk">>
+				<<icon _museumAntiqueText[_labelM].icon>>
+				<<link [[`Ask about the _antique`|`Museum `+ _museumAntiqueText[_labelM].name]]>><<set $museumAntiques.antiques[_labelM] to "museum">><<set $museumAntiques.museumCount++>><<npcincr Winter love 1>><</link>><<glove "Winter" "simple">>
+				<br>
+			<</if>>
+		<</capture>>
+	<</for>>
+	<<if !$daily.winterStoryTime>>
+		<<if $bleedingWardCheckpoint and $museumAntiques.paintings.paintingward is "museum">>
+			<<icon _museumPaintingText.paintingward.icon>><<link [[Ask Winter to tell you the 'Bleeding Ward' story from where you left off (0:15)|Bleeding Ward Resume]]>><<set $daily.winterStoryTime to true>><</link>>
+			<br>
+		<</if>>
+		<<if $museumAntiques.paintings.paintingward is "museum" and !$bleedingWardCheckpoint and !$breedingWard and !$daily.breedingWard>>
+			<<icon _museumPaintingText.paintingward.icon>><<link[[Contemplate the 'Bleeding Ward' story again|Museum Breeding Ward]]>><</link>>
+			<br>
+		<</if>>
+		<<for _labelP, _valueP range $museumAntiques.paintings>>
+			<<capture _labelP, _museumPaintingText[_labelP].name>>
+				<<if $museumAntiques.paintings[_labelP] is "talk">>
+					<<set _painting to _museumPaintingText[_labelP].journalName.toLowerCase()>>
+					<<icon _museumPaintingText[_labelP].icon>>
+					<<link [[`Ask about the _painting (0:30)`|`Museum `+ _museumPaintingText[_labelP].name + ` Story`]]>><<set $daily.winterStoryTime to true>><<npcincr Winter love 3>><</link>><<gglove "Winter" "simple">>
+					<<if _labelP is "paintingsnake">><<note "This may be a long story..." "red">> | <span class="red tooltip-anchor" tooltip="<span class='red'>This scene contains disturbing content not found elsewhere, including bodily mutilation. It is not prevented by any toggles or settings. You have been warned.</span>"><i>(!Content Warning!)</i></span><</if>> <!-- Appears even with blind stats enabled. Intentional -->
+					<br>
+				<<elseif $museumAntiques.paintings[_labelP] is "museum">>
+					<<set _painting to "'" + _museumPaintingText[_labelP].name + "'">>
+					<<icon _museumPaintingText[_labelP].icon>>
+					<<link [[`Ask Winter to tell you the _painting story again (0:30)`|`Museum `+ _museumPaintingText[_labelP].name + ` Story`]]>><<set $daily.winterStoryTime to true>><</link>>
+					<<if _labelP is "paintingsnake">><<note "This may be a long story..." "red">> | <span class="red tooltip-anchor" tooltip="<span class='red'>This scene contains disturbing content not found elsewhere, including bodily mutilation. It is not prevented by any toggles or settings. You have been warned.</span>"><i>(!Content Warning!)</i></span><</if>> <!-- Appears even with blind stats enabled. Intentional -->
+					<br>
+				<</if>>
+			<</capture>>
+		<</for>>
+	<</if>>
 <</widget>>
 
 :: Museum Lock
@@ -139,6 +147,7 @@
 	<<link [[유혹적으로 대답한다|Museum Intro]]>><<set $phase to 2>><<npcincr Winter love -1>><</link>><<promiscuous1>><<llove>>
 	<br>
 <<elseif $bell_timer lte 0 and $passagePrev is "Oxford Street">>
+	<<npc Winter>><<generate2>><<person2>>
 	<<unset $bell_timer>>
 	<<if $worn.feet.type.includes("shackle")>>
 		당신이 문을 열자 두건을 쓴 인물이 난입한다. 당신은 $worn.feet.name에 걸려 넘어지고, 둘은 함께 바닥으로 굴러떨어진다. 그 인물은 벌떡 일어서지만 고통에 찬 비명을 지르더니, 다리를 절며 서둘러 달아난다. 당신이 정신을 차렸을 때, 그 인물은 이미 사라지고 없었다.
@@ -146,8 +155,8 @@
 		당신이 문을 열자 두건을 쓴 인물이 난입해, 당신을 거의 보도블록으로 넘어뜨릴 뻔한다. 당신이 정신을 차렸을 때, 그 인물은 이미 사라지고 없었다.
 	<</if>>
 	<br><br>
-	<<npc Winter>><<person1>>
-	당신은 박물관에 들어서자, <span class="red">바닥에 쓰러져 있는 윈터를 발견한다.</span> <<His>> 눈은 감겨 있다. 받침대에서 떨어진 골동품들이 바닥에 널브러져 있다. 가죽 지도는 여전히 벽에 걸려 있지만, 크게 찢어져 있다.
+	<<person1>>
+	You enter the museum, <span class="red">and find Winter lying on the ground.</span> <<His>> eyes are shut. Antiques litter the floor, knocked from pedestals. The leather map still rests on the wall, but a great tear runs through it.
 	<br><br>
 
 	당신이 다가가자 윈터가 기침을 한다. "예의라고는 없군요." <<he>>【이가】 간신히 말하며 <<his>> 눈을 뜬다. "괜찮을 겁니다. 그냥 늙어서 그런 겁니다. 당신이 오는 소리를 듣고 놈들이 놀란 겁니다. 종을 움켜쥐고 달아났습니다. 더 많은 걸 원했던 것 같습니다만."
@@ -396,9 +405,8 @@
 :: Museum Attack 2
 <<effects>>
 
-<<endevent>>
-<<generate1>><<person1>>
-당신은 옥스포드 가로 뛰쳐나가, 마침 후드 쓴 인물이 모퉁이를 돌아 달려가는 것을 본다. 당신은 추격한다,
+<<person2>>
+You run out onto Oxford Street, just in time to see the hooded figure rush around the corner. You give chase,
 
 <<if $athleticsSuccess>>
 	<<set $outside to 1>><<set $location to "alley">><<set $bus to "industrial">>
@@ -688,7 +696,7 @@
 <<He>>【은는】 물건들을 뒷방으로 가져간다.
 <br><br>
 
-<<money `($antiquemoney * 100)` "museumAntique">><<set $antiquemoneyhistory += $antiquemoney>><<set $antiquemoney to 0>>
+<<money `($antiquemoney * 100)` "museumAntique">><<set $antiquemoneyhistory += $antiquemoney>><<set $antiquemoney to 0>><<set $gold_chastity_count to 0>>
 
 <<link [[다음|Museum]]>><<endevent>><</link>>
 <br>
@@ -1422,3 +1430,49 @@
 
 <<link [[다음|Museum]]>><<endevent>><</link>>
 <br>
+
+:: Museum Shovel Handle
+<<effects>>
+
+<<museumClearHint "antiqueshovelhandle">>
+<<npc Winter>><<person1>>
+
+Winter touches the handle gingerly. "This is barely being held together. Decades of water damage has almost destroyed this piece," <<he>> says.
+<br><br>
+<<link [[Next|Museum]]>><<endevent>><</link>>
+
+:: Museum Lantern
+<<effects>>
+
+<<museumClearHint "antiquelantern">>
+<<npc Winter>><<person1>>
+
+Winter holds the lantern. "This design was common in the 1930s," <<he>> says. "Built to last. I wouldn't be surprised if it still worked."
+<br><br>
+<<link [[Next|Museum]]>><<endevent>><</link>>
+
+:: Museum Rusty Pickaxe
+<<effects>>
+
+<<museumClearHint "antiquerustypickaxe">>
+<<npc Winter>><<person1>>
+
+Winter grips the handle. "These were commonly used in the nearby mines," <<he>> says.
+<<if !$mine.diamond_talk>>
+	"You haven't been going there, have you?"
+<</if>>
+<br><br>
+<<link [[Next|Museum]]>><<endevent>><</link>>
+
+:: Museum Purple Diamond
+<<effects>>
+
+<<museumClearHint "antiquepurplediamond">>
+<<npc Winter>><<person1>>
+<<set $mine.diamond_talk to 1>>
+
+Winter stares at the diamond, enraptured. You grab <<his>> shoulder and shake <<him>>. It seems to snap <<him>> out of it. "Sorry, I don't know what got into me," <<he>> says looking embarrassed. "Where did you even find this?"
+<br><br>
+You tell <<him>> about how you cleared a collapsed section of the mines and swam through a flooded tunnel, ending with the strange room you found it in. <<He>> listens intently. "You went in the mines! You shouldn't go back there, the mines are extremely dangerous. They were shut down for a reason."
+<br><br>
+<<link [[Next|Museum]]>><<endevent>><</link>>

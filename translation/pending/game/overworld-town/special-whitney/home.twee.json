@@ -1,0 +1,697 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if [3,6,7].includes(Time.weekDay)>>",
+   "\t\t\t\"It's my slut,\" <<he>> shouts over <<his>> shoulder, before looking back at you, and opening the door all the way. \"Glad you could join us.\""
+  ],
+  "old_kr": [
+   "\t\t<<if [3,6,7].includes(Time.weekDay)>>",
+   "\t\t\t\"내 걸레 왔네,\" <<he>>【은는】 어깨너머로 소리친 뒤, 다시 당신을 보고 문을 활짝 연다. \"와줘서 좋네.\""
+  ],
+  "new_en": [
+   "\t\t<<if whitneyHasFriendsOver()>>",
+   "\t\t\t\"It's my slut,\" <<he>> shouts over <<his>> shoulder, before looking back at you, and opening the door all the way. \"Glad you could join us.\""
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<whitneyoptions>>",
+   "",
+   ""
+  ],
+  "old_kr": [
+   "<<whitneyoptions>>"
+  ],
+  "new_en": [
+   "<<whitneyOptions>>",
+   "",
+   ""
+  ],
+  "context": "<<person1>><<clearsinglenpc 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"Did you get lost?\" <<He>> shrugs. \"You know where to find me.\" <<he>> shuts the door."
+  ],
+  "old_kr": [
+   "\t\"길 잃었냐?\" <<He>>【은는】 어깨를 으쓱한다. \"어디서 날 찾을지 알잖아.\" <<he>>【은는】 문을 닫는다."
+  ],
+  "new_en": [
+   "\t\"Did you get lost?\" <<He>> shrugs. \"You know where to find me.\" <<He>> shuts the door."
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<whitneyoptions>>",
+   "\t<<else>>"
+  ],
+  "old_kr": [
+   "\t\t<<whitneyoptions>>",
+   " \t<<else>>"
+  ],
+  "new_en": [
+   "\t\t<<whitneyOptions>>",
+   "\t<<else>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tGood thing you're not aiming for the net. You hurl at the ball at <<his>> face. <span class=\"green\">It hits its mark, bouncing off Whitney's nose.</span><<ldom>><<npcincr Whitney dom -1>>"
+  ],
+  "old_kr": [
+   "\t애초에 그물을 겨냥한 게 아니라서 다행이다. 당신은 <<his>> 얼굴을 향해 공을 세게 던진다. <span class=\"green\">공은 목표물에 명중해, 휘트니의 코에 맞고 튕겨 나간다.</span><<ldom>><<npcincr Whitney dom -1>>"
+  ],
+  "new_en": [
+   "\tGood thing you're not aiming for the net. You hurl the ball at <<his>> face. <span class=\"green\">It hits its mark, bouncing off Whitney's nose.</span><<ldom>><<npcincr Whitney dom -1>>"
+  ],
+  "context": "<<if currentSkillValue(\"handskill\") gte random(200, 800)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You nod. \"Fuck,\" <<he>> says. \"Fuck fuck fuck.\" <<He>> climbs off of you, and sits on <<his>> bed, looking at the pile of toys all around."
+  ],
+  "old_kr": [
+   "당신은 고개를 끄덕인다. \"씨발,\" <<he>>【이가】 말한다. \"씨발 씨발 씨발.\" <<He>>【은는】 당신에게서 떨어져 침대 위에 앉더니, 사방에 널린 인형 더미를 바라본다."
+  ],
+  "new_en": [
+   "You nod. \"Fuck,\" <<he>> says. \"Fuck fuck fuck.\" <<He>> climbs off of you, letting the toys on <<his>> back fall, and sits on <<his>> bed, looking at the pile of toys all around."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\"You know what?\" <<he>> says. \"Fuck it. These are mine, and so are you. I have the best collection in the world.\" <<He>> rises, letting the toys on <<his>> back fall."
+  ],
+  "old_kr": [
+   "\"그거 아냐?\" <<he>>【이가】 말한다. \"씨발 알 빠야. 이것들도 내 거고, 너도 내 거야. 난 세상에서 제일 쩌는 컬렉션을 가졌다고.\" <<He>>【은는】 등에 얹힌 장난감들이 툭툭 떨어지게 내버려 둔 채 일어선다."
+  ],
+  "new_en": [
+   "\"You know what?\" <<he>> says. \"Fuck it. These are mine, and so are you. I have the best collection in the world.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<<endevent>><<npc Whitney>><<person1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<<endevent>><<npc Whitney>><<person1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<<endevent>><<npc Whitney>><<person1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<<endevent>><<npc Whitney>><<person1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<<npc Whitney>><<person1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": "<<endevent>><<npc Whitney>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ }
+]

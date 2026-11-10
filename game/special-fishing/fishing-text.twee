@@ -284,10 +284,34 @@
 		<</addinlineevent>>
 	<</if>>
 
-	<<addinlineevent 6>>
-		<<set _fishingSurfacer to weightedRandom(... fishingSurfacingFish(_fishingLocation))>>
-		<<= setup.foodstuff[_fishingSurfacer].name>>【이가】 잠시 수면 위로 떠오르는 것을 본다.<<lstress>><<stress -1>>
-	<</addinlineevent>>
+
+	<<if preferredSeasonFishList(_fishingLocation).length>>
+		<<set _fishingSeasonFish to weightedRandom(... preferredSeasonFishList(_fishingLocation))>>
+		<<set _fishingSeasonFishBoth to preferredLocationFishList(_fishingLocation).map(([f]) => f).includes(_fishingSeasonFish)>>
+		<<addinlineevent 2>>
+			A <span class="purple"><<if _fishingSeasonFishBoth>>huge<<else>>large<</if>></span> _fishingSeasonFish swims around your line.
+		<</addinlineevent>>
+		<<addinlineevent 2>>
+			You watch a pair of <span class="purple"><<if _fishingSeasonFishBoth>>huge<<else>>large<</if>></span> _fishingSeasonFish swim around each other.<<lstress>><<stress -1>>
+		<</addinlineevent>>
+	<</if>>
+
+	<<if preferredLocationFishList(_fishingLocation).length>>
+		<<set _fishingLocationFish to weightedRandom(... preferredLocationFishList(_fishingLocation))>>
+		<<set _fishingLocationFishBoth to preferredSeasonFishList(_fishingLocation).map(([f]) => f).includes(_fishingLocationFish)>>
+		<<addinlineevent 2>>
+			You see <span class="purple"><<if _fishingLocationFishBoth>>a huge<<else>>a large<</if>></span> _fishingLocationFish break the surface for a moment.<<lstress>><<stress -1>>
+		<</addinlineevent>>
+		<<addinlineevent 2>>
+			A <span class="purple"><<if _fishingLocationFishBoth>>huge<<else>>large<</if>></span> _fishingLocationFish surfaces nearby.<<lstress>><<stress -1>>
+		<</addinlineevent>>
+	<</if>>
+
+	<<if Time.isBloodMoon()>>
+		<<addinlineevent 4>>
+			You watch <span class="purple">large</span> fish chase and eat smaller fish in the red moonlight.
+		<</addinlineevent>>
+	<</if>>
 
 	<<addinlineevent 3>>
 		낚싯바늘에는 아직 아무것도 걸리지 않았다.
@@ -471,7 +495,7 @@
 				거센 바람에 하마터면 발을 헛디딜 뻔한다.
 			<</addinlineevent>>
 			<<addinlineevent 1>>
-				<<= fishingLocationWaterBodyName(_fishingLocation)>>【이가】 요동친다.
+				The <<= fishingLocationWaterBodyName(_fishingLocation)>> churns as the
 				<<if Weather.name is "heavyPrecipitation">>
 					거센 폭우
 				<<else>>
@@ -1002,7 +1026,7 @@
 
 			<<if fameTotal() gte 2000 and $docks.status gte 50>>
 				<<addinlineevent 1>>
-					항만 노동자들 중 밖에서 마주친 적 있는 사람을 알아볼지 궁금해진다.
+					You wonder if any of the dock workers recognise you from outside work.
 				<</addinlineevent>>
 			<</if>>
 		<</if>>
@@ -1245,7 +1269,7 @@
 
 	<<if fameTotal() gte 2000 and Weather.dayState isnot "night" and !Time.isBloodMoon() and ["fishingPier", "fishingBeach"].includes(_fishingLocation)>>
 		<<addinlineevent 1>>
-			이곳에서 누군가 당신을 알아볼지 궁금해진다.
+			You wonder if anyone would recognise you here.
 		<</addinlineevent>>
 	<</if>>
 	<<if $community_service gte 1>>
@@ -1361,7 +1385,7 @@
 	<</if>>
 
 	/* Ear Slime */
-	<<if  numberOfEarSlime()>>
+	<<if numberOfEarSlime()>>
 		<<addinlineevent 1>>
 			귀 속 슬라임<<if numberOfEarSlime() gt 1>>들<</if>>【이가】 당신에게 미치는 영향에 대해 곱씹지 않으려 애쓴다.
 		<</addinlineevent>>
@@ -1378,7 +1402,7 @@
 	<</if>>
 
 	/* Rent */
-	<<if $renttime lte 0 and $money lt $rentmoney + ($babyRent ?? 0)>>
+	<<if $rentTime lte 0 and $money lt $rentMoney + ($babyRent ?? 0)>>
 		<<addinlineevent 1>>
 			이번 주 집세를 어떻게 마련할지 생각한다.<<stress 1>><<gstress>>
 		<</addinlineevent>>
@@ -1585,7 +1609,7 @@
 	<</if>>
 
 	/* Avery */
-	<<if !["fallen", "kicked"].includes($avery_fate)>> 
+	<<if !["fallen", "kicked"].includes($avery_fate)>>
 		<<if isLoveInterest("Avery")>>
 			<<addinlineevent 1>>
 				에이버리가 지금 무엇을 하고 있을지 궁금해진다.
@@ -1675,7 +1699,7 @@
 	<</if>>
 
 	/* Kylar Bad End */
-	<<if $trauma gte ($traumamax / 5) * 3 and  $badEndStats.find(function (stat) { return stat.source is "Kylar Abduction"; }) and !isLoveInterest("Kylar")>>
+	<<if $trauma gte ($traumamax / 5) * 3 and $badEndStats.find(function (stat) { return stat.source is "Kylar Abduction"; }) and !isLoveInterest("Kylar")>>
 		<<set _fishingBadEndWeight to _fishingRecentBadEndSource is "Kylar Abduction" ? 2 : 0.5>>
 		<<addinlineevent _fishingBadEndWeight>>
 			카일라의 저택 벽이 당신을 옥죄어 오던 순간을 떠올린다.<<trauma 1>><<gtrauma>>
@@ -1749,7 +1773,7 @@
 		<</if>>
 		<<if $gwylanTalked and $gwylanSeen>>
 			<<run statusCheck("Gwylan")>>
-			<<if _gwylanLovePercent gte 50 and _gwylanLovePercent lt 100>>
+			<<if _gwylanLovePercent gte 40 and _gwylanLovePercent lt 100>>
 				<<addinlineevent 1>>
 					생각이 그윌란에게로 향한다. 다음에 <<nnpc_him "Gwylan">>에게 어떤 이야기를 들려줄지 한동안 고민한다.
 				<</addinlineevent>>
@@ -1782,7 +1806,7 @@
 			윈터가 박물관에서 또 다른 인파를 상대하고 있을지 궁금해진다.
 		<</addinlineevent>>
 	<</if>>
-	/* 
+	/*
 	* =========== TRANSFORMATIONS ===========
 	*/
 
@@ -1857,7 +1881,7 @@
 	<<if !["disabled", "hidden"].includes($transformationParts.fallenAngel.wings)>>
 
 	<</if>>
-	/* 
+	/*
 	* =========== STATS ===========
 	*/
 
@@ -1940,7 +1964,7 @@
 	/* Tiredness */
 	<<if $tiredness gte (C.tiredness.max / 5) * 3>>
 		<<addinlineevent 3>>
-			하품을 참으며 낚싯줄을 팽팽하게 유지한다. 
+			You fight a yawn and keep your line taut.
 		<</addinlineevent>>
 	<</if>>
 	<<if $tiredness gte (C.tiredness.max / 5) * 3>>
@@ -1948,19 +1972,19 @@
 			눈을 비비며 다시 <<fishingBob>>에 초점을 맞춘다.
 		<</addinlineevent>>
 	<</if>>
-		<<if $tiredness gte (C.tiredness.max / 5) * 3>>
+	<<if $tiredness gte (C.tiredness.max / 5) * 3>>
 		<<addinlineevent 1>>
-			눈꺼풀이 무거워지는 것을 느끼지만 겨우 깨어 있는다. 
+			You feel your eyelids drooping, but are able to remain awake.
 		<</addinlineevent>>
 	<</if>>
 	<<if $tiredness gte (C.tiredness.max / 5) * 3>>
 		<<addinlineevent 1>>
-			자세를 고치며 깨어 있으려 애쓴다. 
+			You shift your stance and try to stay awake.
 		<</addinlineevent>>
 	<</if>>
 	<<if $tiredness gte (C.tiredness.max / 5) * 3>>
 		<<addinlineevent 1>>
-			천천히 눈을 깜빡이며 계속 주의를 기울인다. 
+			You blink slowly and force yourself to keep watch.
 		<</addinlineevent>>
 	<</if>>
 	<<if $tiredness gte (C.tiredness.max / 5) * 3>>
@@ -1970,7 +1994,7 @@
 	<</if>>
 	<<if $tiredness gte (C.tiredness.max / 5) * 3>>
 		<<addinlineevent 3>>
-			잠자리에 들 생각을 하면서도 낚시를 계속한다. 
+			You think about going to bed, but keep fishing anyway.
 		<</addinlineevent>>
 	<</if>>
 	<<if $tiredness gte (C.tiredness.max / 5) * 4>>

@@ -76,8 +76,8 @@
 		<<main_hall_icon>><<link [[중앙 홀 (0:01)|Orphanage]]>><<pass 1>><</link>>
 	<</if>>
 	<br>
-	<<if $debug is 1>>
-		<<loitericon>><<link [[로빈을 기다린다 (DEBUG)|$passage]]>><<passTimeUntil 7>><</link>>
+	<<if $debug>>
+		<<loitericon>><<link [[Wait for Robin (DEBUG)|$passage]]>><<passTimeUntil 7>><</link>>
 	<</if>>
 
 <<elseif _robin_location is "bath">>
@@ -930,15 +930,15 @@
 		<<neckon>>
 		<<robinoptions>>
 	<<else>>
-		안에는 
+		Inside is a picture of
 		<<if $carried.neck.photo is "Robin">>
-			`<<nnpc_him "Robin">>`의 사진이 들어 있다.
-		<<elseif($carried.neck.photo is "Black Wolf" or $carried.neck.photo is "Great Hawk")>>
-			<<= window.KR.gatPersonNameDictKR($carried.neck.photo)>>의 사진이 들어 있다.
+			<<nnpc_him "Robin">>.
+		<<elseif $carried.neck.photo is "Black Wolf" or $carried.neck.photo is "Great Hawk">>
+			the <<print $carried.neck.photo>>.
 		<<elseif $carried.neck.photo is "Gwylan" and $gwylan?.timer?.nobody gte Time.date.timeStamp>>
 			누구의 사진도 들어있지 않다.
 		<<else>>
-			`<<print window.KR.gatPersonNameDictKR($carried.neck.photo)>>`의 사진이 들어 있다.
+			<<print $carried.neck.photo>>.
 		<</if>>
 		<br><br>
 		<<switch $carried.neck.photo>>
@@ -977,7 +977,7 @@
 			<<He>>【은는】 얼굴에 <<if isLoveInterest("Robin") and C.npc.Robin.trauma gte 40>>고통스러운<<else>>갈등하는<</if>> 표정을 지었다<<if $robinnote is 1 and !$robinromance>>. 거기엔 슬픔도 약간 서려 있었다<</if>>.
 			<<if $robinromance is 1>>
 				<br><br>
-				<<He>>【은는】 당신을 쳐다보았다. <<if C.npc.Robin.dom gte 60>>"나보다 <<nnpc_him "Whitney">>【을를】 더 사랑해? <<nnpc_he "Whitney">>한테 나한테 없는 무슨 매력이 있는 건데?"<<else>>하지만 무슨 말을 해야 할지 모르는 것 같았다.<</if>><<npcincr Robin love -1>><<llove>>
+				<<He>> looks at you<<if C.npc.Robin.dom gte 60>>. "Do you love <<nnpc_him "Whitney">> more than me? What does <<nnpc_he "Whitney">> have that I don't?"<<else>>, but seems unable to bring <<himself>> to say anything.<</if>><<npcincr Robin love -1>><<llove>>
 			<</if>>
 			<br><br>
 			<<neckon>>
@@ -990,14 +990,14 @@
 				<br><br>
 				당신은 <<him>>에게 너무 가까이 다가가거나 만지지 않은 채, 그저 당신이 곁에 있다는 걸 알 수 있을 만큼만 거리를 유지했다. 이내 <<his>> 호흡이 잦아들었다.
 				<br><br>
-				"미안해. 그땐 널 구하지 못했어. 하지만," <<He>>【은는】 당신의 눈을 들여다보았다. "만약 <<nnpc_he "Eden">>【이가】 널 또 괴롭히면, 내가 널 지켜줄게.<<if $robinromance is 1>> 널 위해서라면 아무리 무서워도 해낼 거야.<</if>>"
-				<<set $robin.hurtReason to "you having Eden in your love locket">>
+				"Sorry. I couldn't save you then. But," <<He>> looks into your eyes. "If <<nnpc_he "Eden">> ever harasses you again, I'll protect you.<<if $robinromance is 1>> For you, I will do it no matter how scared it makes me.<</if>>"
+				<<set $robin.hurtReason to "you having Eden in your love locket">><<set $robin.timer.hurt to 1>>
 				<<if $robinromance is 1>>
 					<br><br>
-					<<He>>【은는】 당신을 쳐다보았다. <<if C.npc.Robin.dom gte 60>>"나보다 <<nnpc_him "Eden">>【을를】 더 사랑해? 어떻게 그럴 수 있어?"<<else>>하지만 무슨 말을 해야 할지 모르는 것 같았다.<</if>><<npcincr Robin love -1>><<llove>>
+					<<He>> looks at you<<if C.npc.Robin.dom gte 60>>. "Do you love <<nnpc_him "Eden">> more than me? How could you?"<<else>>, but seems unable to bring <<himself>> to say something.<</if>><<npcincr Robin love -1>><<llove>>
 				<</if>>
 			<<else>>
-				"이 <<nnpc_he "Eden">>【은는】 누구야? 연예인이야? 나무꾼?"<<if $robinnote is 1 and !$robinromance>> <<he>>【이가】 조금 시무룩한 표정으로 물었다.<<elseif $robinromance is 1>> <<He>>【은는】 당신을 쳐다보았다. <<if C.npc.Robin.dom gte 60>>"나보다 <<nnpc_him "Eden">>【을를】 더 사랑해?"<<else>>하지만 무슨 말을 해야 할지 모르는 것 같았다.<</if>><<npcincr Robin love -1>><<llove>><</if>>
+				"Who is <<nnpc_he "Eden">>? A celebrity? A lumberjack?"<<if $robinnote is 1 and !$robinromance>> <<he>> asks, looking a bit dejected.<<elseif $robinromance is 1>> <<He>> looks at you<<if C.npc.Robin.dom gte 60>>. "Do you love <<nnpc_him "Eden">> more than me?"<<else>>, but seems unable to bring <<himself>> to say something.<</if>><<npcincr Robin love -1>><<llove>><</if>>
 			<</if>>
 			<br><br>
 			<<neckon>>
@@ -1020,7 +1020,7 @@
 				당신은 <<he>>【이가】 에이버리를 책가방으로 때리며 당신이 자기 것이라고 소리쳤던 것을 놀렸다.<<if $robinromance>> "하지만, 그건 사실이잖아, 안 그래?"<</if>> <<He>>【은는】 얼굴을 붉혔다.
 				<<if $robinromance is 1>>
 					<br><br>
-					<<He>>【은는】 당신을 쳐다보았다. <<if C.npc.Robin.dom gte 60>>"나보다 <<nnpc_him "Avery">>【을를】 더 사랑해? <<nnpc_he "Avery">>한테 나한테 없는 무슨 매력이 있는 건데?"<<else>>하지만 무슨 말을 해야 할지 모르는 것 같았다.<</if>><<npcincr Robin love -1>><<llove>>
+					<<He>> looks at you<<if C.npc.Robin.dom gte 60>>. "Do you love <<nnpc_him "Avery">> more than me? What does <<nnpc_he "Avery">> have that I don't?"<<else>>, but seems unable to bring <<himself>> to say something.<</if>><<npcincr Robin love -1>><<llove>>
 				<</if>>
 				<br><br>
 				<<neckon>>
@@ -1032,7 +1032,7 @@
 				<<robinoptions>>
 			<</if>>
 		<<case "Alex">>
-			"이 <<nnpc_he "Alex">>【은는】 누구야? 연예인이야? 아니면 농부?"<<if $robinnote is 1 and !$robinromance>> <<he>>【이가】 시무룩한 표정으로 물었다.<<elseif $robinromance is 1>> <<He>>【은는】 당신을 쳐다보았다. <<if C.npc.Robin.dom gte 60>>"나보다 <<nnpc_him "Alex">>【을를】 더 사랑해?"<<else>>하지만 무슨 말을 해야 할지 모르는 것 같았다.<</if>><<npcincr Robin love -1>><<llove>><</if>>
+			"Who is <<nnpc_he "Alex">>? A celebrity? A farmer?"<<if $robinnote is 1 and !$robinromance>> <<he>> asks, looking a bit dejected.<<elseif $robinromance is 1>> <<He>> looks at you<<if C.npc.Robin.dom gte 60>>. "Do you love <<nnpc_him "Alex">> more than me?"<<else>>, but seems unable to bring <<himself>> to say something.<</if>><<npcincr Robin love -1>><<llove>><</if>>
 			<br><br>
 			<<neckon>>
 			<<robinoptions>>
@@ -1052,13 +1052,13 @@
 			<<neckon>>
 			<<robinoptions>>
 		<<case "Kylar">>
-			"네가 카일라랑 잘 지내서 다행이야. 대부분은 그러지 않거든," 로빈은 방금 깨달았다는 듯 눈을 동그랗게 떴다. "아! 그래서 <<nnpc_he "Kylar">>【이가】 식당에서 우리랑 같이 점심을 먹는구나."<<if $robinnote is 1 and !$robinromance>> <<His>> 입가에 띤 미소는 눈까지 닿지 못했다.<<elseif $robinromance is 1>> <<He>>【은는】 당신을 쳐다보았다. <<if C.npc.Robin.dom gte 60>>"나보다 <<nnpc_him "Kylar">>【을를】 더 사랑해?"<<else>>하지만 무슨 말을 해야 할지 모르는 것 같았다.<</if>><<npcincr Robin love -1>><<llove>><</if>> <<npcincr Robin trauma -1>><<stress -6>><<lrtrauma>><<lstress>>
+			"I'm glad you're getting along with Kylar. Most people don't," Robin's eyes widen, realisation dawning on <<him>>. "Oh! That's why <<nnpc_he "Kylar">> eats lunch with us in the cafeteria."<<if $robinnote is 1 and !$robinromance>> <<His>> smile doesn't reach <<his>> eyes.<<elseif $robinromance is 1>> <<He>> looks at you<<if C.npc.Robin.dom gte 60>>. "Do you love <<nnpc_him "Kylar">> more than me?"<<else>>, but seems unable to bring <<himself>> to say something.<</if>><<npcincr Robin love -1>><<llove>><</if>> <<npcincr Robin trauma -1>><<stress -6>><<lrtrauma>><<lstress>>
 			<br><br>
 			<<neckon>>
 			<<robinoptions>>
 		<<case "Black Wolf">>
-			<<if $blackwolfmonster is 2>>
-				<<He>>【은는】 킥킥거렸다. "이거 진짜 사진이야? 너무 진짜 같잖아!"
+			<<if resolveIfNamedBeastIsMonster("blackwolf")>>
+				<<He>> chuckles. "Is this a real picture? It looks so real!"
 			<<else>>
 				"늑대잖아!" <<he>>【이가】 숨을 들이켜며 얼굴에 미소가 번졌다. "완전 멋있다!"
 			<</if>>
@@ -1072,10 +1072,10 @@
 			<<neckon>>
 			<<robinoptions>>
 		<<case "Great Hawk">>
-			<<if $greathawkmonster is 2>>
-				<<He>>【은는】 킥킥거렸다. "이거 진짜 사진이야? 너무 진짜 같잖아!"
+			<<if resolveIfNamedBeastIsMonster("greathawk")>>
+				<<He>> chuckles. "Is this a real picture? It looks so real!"
 			<<else>>
-				"이건... 매잖아!" <<he>>【이가】 숨을 들이켜며 얼굴에 미소가 번졌다. "너무 아름다워! 나도 새 좋아하는데!"
+				"It's... a hawk!" <<he>> gasps, a smile spreading across <<his>> face. "It's beautiful! I like birds, too!"
 			<</if>>
 			<<if $robinromance is 1>>
 				<br><br>
@@ -1088,7 +1088,7 @@
 			<<robinoptions>>
 		<<case "Gwylan">>
 			<<if $gwylan?.timer?.nobody gte Time.date.timeStamp>>
-				"여기에... <span class="pink">아무도</span> 없잖아. 비어 있는데." <<he>>【이가】 말했다. 당신은 <<him>>에게 그저 목걸이로 차고 다닐 뿐이라고 말했다.
+				"There's... <span class="pink">nobody</span>. It's empty," <<he>> says. You tell <<him>> you just wear it as a necklace.
 				<br><br>
 				"너한테 잘 어울려!" <<he>>【이가】 미소 지으며 말했다. <<stress -6>><<lstress>>
 			<<elseif $hypnosis_traits.devotion gte 4>>
@@ -1098,7 +1098,7 @@
 				<br><br>
 				"방금 그 빛줄기는 대체 뭐야?" 로빈이 <<his>> 눈을 비볐다.
 			<<elseif $gwylan?.robin gte 50>>
-				"어라, 얘 <<nnpc_he "Gwylan">> 아니야?" <<He>>【이가】 미소 지으며 물었다. <<if $robinromance is 1>> 그러더니, <<he>>【은는】 팔짱을 낀 채 입을 삐죽였다. <<if C.npc.Robin.dom gte 60>>"나보다 <<nnpc_him "Gwylan">>【을를】 더 사랑해?"<<else>><<He>>【은는】 무언가 말하고 싶어 하는 듯했지만, 끝내 입을 열지 못했다.<</if>><<npcincr Robin love -1>><<llove>><</if>>
+				"Oh, isn't this <<nnpc_he "Gwylan">>?" <<he>> asks with a smile. <<if $robinromance is 1>> Then, <<he>> pouts at you, crossing <<his>> arms. <<if C.npc.Robin.dom gte 60>>"Do you love <<nnpc_him "Gwylan">> more than me?"<<else>><<He>> seems to want to say something, but can't bring <<himself>> to do it.<</if>><<npcincr Robin love -1>><<llove>><</if>>
 			<<elseif $gwylan?.robinShop>>
 				"어라, <<nnpc_he "Gwylan">>【은는】 숲속 골동품점 주인 아니야?"<<if $robinromance is 1>> <<He>>【은는】 팔짱을 낀 채 입을 삐죽였다. <<if C.npc.Robin.dom gte 60>>"나보다 <<nnpc_him "Gwylan">>【을를】 더 사랑해? <<nnpc_he "Gwylan">>한테 나한테 없는 무슨 매력이 있는 건데?"<<else>><<He>>【은는】 무언가 말하고 싶어 하는 듯했지만, 끝내 입을 열지 못했다.<</if>><<npcincr Robin love -1>><<llove>><</if>>
 				<br><br>
@@ -2434,7 +2434,7 @@
 <<set $outside to 1>><<set $location to "town">><<effects>>
 <<set _robin to statusCheck("Robin")>>
 
-<<if $tutorial is 0 and $debug is 0>>
+<<if $tutorial is 0 and !$debug>>
 	<<endevent>>
 	<<generate1>><<person1>>당신이 로빈과 함께 고아원을 나서자 지나가던 <<person>>【와과】 부딪힌다. <<He>>【은는】 비틀거리며 물러나 분노한 눈으로 당신을 바라보지만, 당신을 훑어보자 그 분노는 음흉한 욕망으로 바뀐다. "이번 주에 본 것 중 네가 제일 귀엽네! 이리 와."
 	<br><br>
@@ -2483,7 +2483,7 @@
 	<<endevent>>
 <</if>>
 
-<<if $tutorial is 0 and $debug is 0>>
+<<if $tutorial is 0 and !$debug>>
 	<<set $tutorial to 1>>
 
 <<elseif C.npc.Avery.love gte random(20, 100) and C.npc.Avery.state is "active" and $avery_mansion?.schedule isnot "away" and !$avery_injury and $robinaverybeat isnot 1>>
@@ -3403,13 +3403,8 @@
 
 	관리인의 얼굴에 분노가 번진다. <<He>>【이가】 당신의 머리채를 잡고 <<him>>【와과】 눈높이가 맞을 때까지 끌어올린다.
 	<br>
-	<span class="green">"하루 주지,"</span> 베일리가 으르렁거린다. <<He>>【이가】 당신을 놓아주며 밀친다. "나가, 당장!"
-	<<set $renttime += 1>>
-	<<if $rentday is 7>>
-		<<set $rentday to 1>>
-	<<else>>
-		<<set $rentday += 1>>
-	<</if>>
+	<span class="green">"You get one day,"</span> growls Bailey. <<He>> releases you and gives you a shove. "Out, now!"
+	<<set $rentTime += 1>>
 	<br><br>
 
 	<<tearful>> 당신은 사무실을 떠난다.
@@ -3481,12 +3476,12 @@
 <<set $outside to 0>><<set $location to "home">><<effects>>
 
 <<set $robinpaid to 1>>
-<<set $rentmoney *= 2>>
+<<set $rentMoney *= 2>>
 <<if $robineventnote is 1>>
 	<<set $robineventnote to 0>>
 <</if>>
 
-"좋아," 베일리가 말한다. "그럼 이번 주에는 <<printmoney $rentmoney "red">>【을를】 빚진 셈이군. 나라면 바쁘게 움직일 거야."
+"Fine," Bailey says. "You owe me <<printmoney $rentMoney "red">> for this week then. I'd get busy if I were you."
 <br><br>
 <<endevent>>
 <<link [[다음|Orphanage]]>><</link>>
@@ -4295,8 +4290,8 @@ _skin_array.includes("right_cheek") and !["tattoo", "brand", "magic"].includes($
 		<br><br>
 
 		<<if $player.penisExist and $player.vaginaExist>>
-			<<He>>【은는】 당신의 <<penis>> 끝에 입을 맞추고, 혀로 기둥을 따라 훑는다.
-			그러는 동안, <<he>>【은는】 손가락을 당신의 음부에 밀어 넣고 안팎으로 움직이기 시작한다. <<He>>【은는】 당신을 올려다본다.
+			<<He>> kisses the tip of your <<penis>>, and runs <<his>> tongue along your length.
+			Meanwhile, <<he>> plunges a finger into your quim and begins pumping in and out.
 		<<elseif $player.penisExist>>
 			<<He>>【은는】 당신의 <<penis>> 끝에 입을 맞추고, 혀로 기둥을 따라 훑으며 튕기고 핥는다.
 		<<else>>
@@ -4793,7 +4788,7 @@ _skin_array.includes("right_cheek") and !["tattoo", "brand", "magic"].includes($
 <br><br>
 <<endcombat>>
 
-<<if $kylar_camera is 2 and C.npc.Kylar.state is "active">>
+<<if [2, 7].includes($kylar_camera) and C.npc.Kylar.state is "active">>
 	<<if !$syndromekylar>>
 		끔찍한 오한이 온몸을 스쳐 지나간다. <span class="blue">무언가가 당신을 지켜보고 있다.</span><<set $kylar_mad to 1>>
 		<br><br>
@@ -4840,7 +4835,7 @@ _skin_array.includes("right_cheek") and !["tattoo", "brand", "magic"].includes($
 
 		로빈이 흥분하는 것을 느낄 수 있다.
 		<<if C.npc.Robin.dom gte 60>>
-			<<He>>【은는】 가볍게 당신에게 몸을 비비기 시작한다. "하고 싶어?" <<He>>【은는】 당신의 귓가에 속삭인다.
+			<<He>> starts lightly grinding against you. "Do you want to?" <<he>> whispers in your ear.
 		<<else>>
 			<<He>>【은는】 그것을 숨기려 애쓰는 듯하다.
 		<</if>>
@@ -5303,8 +5298,8 @@ _skin_array.includes("right_cheek") and !["tattoo", "brand", "magic"].includes($
 		"그, 그러니까." <<He>>【은는】 시선을 피한다. "미안한데, 나 그 돈이 필요해." <<He>>【은는】 부끄러운 듯하다.
 		<br><br>
 
-		<<if $submissive lte 500>>
-			<<link [[돈을 요구한다|Robin Money Demand]]>><<def 1>><<set $robindebt += 1>><<npcincr Robin trauma 3>><<npcincr Robin love -1>><<npcincr Robin dom -1>><</link>><<defianttext>><<llove>><<ldom>>
+		<<if displayDefiantOption(500)>>
+			<<link [[Demand the money|Robin Money Demand]]>><<def 1>><<set $robindebt += 1>><<npcincr Robin trauma 3>><<npcincr Robin love -1>><<npcincr Robin dom -1>><<wolfDefiant 500>><</link>><<defianttext 500>><<llove>><<ldom>>
 			<br>
 		<</if>>
 		<<robinoptions>>
@@ -5975,8 +5970,8 @@ _skin_array.includes("right_cheek") and !["tattoo", "brand", "magic"].includes($
 <</if>>
 <<clotheson>>
 <<if $phase is 1>>
-	<<if $pubfame and $pubfame.task is "bailey" and $pubfame.status isnot "done">>
-		<span class="red">미키가 <<his>> 컴퓨터에 없는지 확신할 수 없습니다. 다시 시도해야 합니다.</span>
+	<<if $pubfame?.task is "bailey" and $pubfame.status isnot "done">>
+		<span class="red">You can't say for sure that Mickey isn't on <<his>> computer. You'll need to try again.</span>
 	<<elseif $hacker_tasks.length gte 2>>
 		<span class="green">해커의 일을 완료했습니다. 랜드리와 이야기해야 합니다.</span>
 	<</if>>
@@ -6168,8 +6163,8 @@ USB를 설치하자 잠시 후 파일 폴더가 자동으로 나타난다. 당�
 	시간이 흐르고 트럭이 멈춘다. 누군가 트렁크를 연다. <span class="red">베일리다.</span>
 	<br><br>
 
-	<<if $renttime lte 0>>
-		"어차피 돈 낼 때가 됐잖아." <<nnpc_he "Bailey">>【이가】 비웃는다.
+	<<if $rentTime lte 0>>
+		"It's about time you paid up anyway," <<nnpc_he "Bailey">> sneers.
 	<<else>>
 		"아직 돈 내는 날은 아니지." <<nnpc_he "Bailey">>【이가】 비웃는다.
 	<</if>>
@@ -7148,9 +7143,9 @@ USB를 설치하자 잠시 후 파일 폴더가 자동으로 나타난다. 당�
 "정말 미, 미안해! 내가 뭘 하는지는 알았는데... 멈출 수가..." <<He>>【은는】 말을 흐리고, <<his>> 얼굴에서는 눈물이 쉴 새 없이 흐른다.
 <br><br>
 <<if C.npc.Robin.dom gte 50>>
-	<<if $robinromance is 1>>"내가 널 지켜줘야 하는데, 상처나 입히고..."<<else>>"미안해," <<he>>【이가】 흐느낌을 삼킨다. "넌 내 친구인데, 난... 내가 네 곁에 있어 줬어야 했는데..." 눈물범벅이 된 얼굴로 침통한 표정을 지으며, <<he>>【은는】 주먹을 꽉 쥔다.<</if>>
+	<<if $robinromance is 1>>"I'm supposed to be the one protecting you, not hurting you..."<<else>>"I'm sorry." <<He>> chokes back a sob, "You're my friend, I... I'm supposed to be there for you..." <<He>> clenches <<his>> fists, a grim look on <<his>> tear-streaked face.<</if>>
 <<else>>
-	<<if $robinromance is 1>>"내가 널 다치게 했어... 난 평생 나 자신을 용서 못 할 거야."<<else>>"제발... 날 미워하지 마, 난... 정말 미안해," <<he>>【이가】 자기 자신에게 소름이 끼친다는 듯한 표정으로 간신히 말을 쥐어짠다. "내가 널 다치게 했어... 미안해, 정말 미안해," <<he>>【은는】 제 몸을 두 팔로 감싸 안은 채, 거의 패닉에 빠져 사과를 연발한다.<</if>>
+	<<if $robinromance is 1>>"I hurt you... I can never forgive myself."<<else>>"Please... Don't hate me, I... I'm so sorry," <<he>> barely manages, looking horrified with <<himself>>. "I hurt you... I'm sorry, I'm so sorry." <<He>> keeps apologising, looking almost frantic as <<he>> holds <<his>> arms against <<himself>>.<</if>>
 <</if>>
 <br><br>
 
@@ -7164,7 +7159,7 @@ USB를 설치하자 잠시 후 파일 폴더가 자동으로 나타난다. 당�
 <<if $speech_attitude is "meek">>
 	<<if $robinromance is 1>>"용서할게..." 당신은 속삭인다. "그건 네가 아니었어."<<else>>"괘... 괜찮아," 당신은 눈물을 꾹 참으며 간신히 말한다. "네가 아니었어. 그건 로빈이 아니었어."<</if>>
 <<elseif $speech_attitude is "bratty">>
-	<<if $robinromance is 1>>"야, 네 잘못 아니야," 당신이 말한다. "평소라면 절대 안 그럴 거란 거 알아."<<else>>"사과하지 마," 당신은 <<his>> 눈을 똑바로 마주치지 못한 채 말한다. "네 잘못이 아니란 거 알아. 넌 나한테 그럴 애가 아니잖아."<</if>>
+	<<if $robinromance is 1>>"Hey, it's not your fault," you say. "I know you'd never do that normally."<<else>>"Don't apologise," you say, though you can't quite meet <<his>> eyes as you do so, "I know it wasn't your fault. You wouldn't do that to me."<</if>>
 <<else>>
 	<<if $robinromance is 1>>"정말 힘들었겠다." 당신은 <<him>>에게 힘없는 미소를 지어 보인다. "용서할게."<<else>>"엄청 울었잖아. 날 해치고 싶지 않았다는 거 알아." 아직 조금 불안하긴 하지만, 당신은 <<him>>에게 힘없는 미소를 지어 보인다. "용서할게."<</if>>
 <</if>>
@@ -9362,8 +9357,8 @@ USB를 설치하자 잠시 후 파일 폴더가 자동으로 나타난다. 당�
 			어린 고아 중 한 명이 환하게 웃는다. "냄새 좋다, 로빈!" <<He>>【은는】 칭찬에 긴장을 풀고, 당신에게 안도하는 작은 눈길을 보낸다. 당신은 <<him>>에게 슬쩍 엄지를 치켜세운다.
 		<</if>>
 	<<else>>
-		<<wearProp "burnt">>
-		당신과 로빈은 나란히 일하지만, 누가 더 능숙한 요리사인지는 분명하다. 로빈이 익숙하고 여유롭게 움직이는 동안, 당신은 요리 과정 내내 어설프게 허둥댄다. 도구가 부딪히는 소리와 고아들의 노골적이지 않은 시선 사이에서 집중력이 흔들린다.<<housekeeping 1 400>><<ghousekeeping 400>>
+		<<wearProp "inedible burnt">>
+		The two of you work side by side, but it's clear who the more skilled cook is. While Robin moves with practiced ease, you fumble your way through the cooking process. Between the clatter of utensils and the orphans' not-so-subtle glances, your concentration wavers.<<housekeeping 1 400>><<ghousekeeping 400>>
 		<br><br>
 		희미한 탄 냄새가 코를 찌른다. 팬을 내려다보자, <span class="red">당신의 요리가 있어야 할 자리에는 새까맣게 탄 덩어리만 남아 있다.</span> 고아 하나가 기침한다.<<stress 6>><<gstress>>
 		<br><br>

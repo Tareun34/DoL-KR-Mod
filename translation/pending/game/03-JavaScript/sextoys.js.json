@@ -1,0 +1,25 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tif (V.options.debugdisable === \"f\" || V.debug === 1)"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tif (V.options.debugdisable === \"f\" || V.debug)"
+  ],
+  "context": "\tif (typeof index !== \"number\") {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tif (V.options.debugdisable === \"f\" || V.debug === 1)",
+   "\t\t\tErrors.report(`[npcHasStrapon]: index must be between 0 and 5 inclusive, was ${index}.`, { index });"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tif (V.options.debugdisable === \"f\" || V.debug) Errors.report(`[npcHasStrapon]: index must be between 0 and 5 inclusive, was ${index}.`, { index });"
+  ],
+  "context": "\t} else if (index < 0 || index > 5) {"
+ }
+]

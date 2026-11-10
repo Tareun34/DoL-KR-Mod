@@ -1,0 +1,20 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tpattern_name: \"materials\","
+  ],
+  "context": "\t\t\tpattern_layer: \"primary\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tpattern_name: \"shapes\","
+  ],
+  "context": "\t\t\tpattern_layer: \"primary\","
+ }
+]

@@ -44,6 +44,7 @@
 			facestyle: "default",
 			facevariant: "default",
 			freckles: false,
+			bodyFreckles: "none",
 			brows: "none",
 			mouth: "none",
 			trauma: false,
@@ -429,7 +430,13 @@
 	<label>초기 태닝: <<numberslider "$characterViewer.skinColour.range" $characterViewer.skinColour.range 0 100 1>></label>
 	<br><br>
 
-	<span class="gold">자지 크기</span>
+	<span class="gold">Body Freckles</span><br>
+	<label>None <<radiobutton "$characterViewer.bodyState.bodyFreckles" "none" autocheck>></label> |
+	<label>Upper body <<radiobutton "$characterViewer.bodyState.bodyFreckles" "upper" autocheck>></label> |
+	<label>Full body <<radiobutton "$characterViewer.bodyState.bodyFreckles" "full" autocheck>></label> |
+	<br><br>
+
+	<span class="gold">Penis Size</span>
 	<br>
 	<<set _keys to Object.keys(_penisSize)>>
 	<<for _i to 0; _i lt _keys.length; _i++>>
@@ -518,6 +525,7 @@
 	<<link "초기화">>
 		<<set $characterViewer.bodyState.show_face to true>>
 		<<set $characterViewer.bodyState.freckles to false>>
+		<<set $characterViewer.bodyState.bodyFreckles to "none">>
 		<<set $characterViewer.bodyState.brows to "none">>
 		<<set $characterViewer.bodyState.blush to 0>>
 		<<set $characterViewer.bodyState.mouth to "none">>
@@ -540,6 +548,7 @@
 	<<link "무작위">>
 		<<set $characterViewer.bodyState.show_face to true>>
 		<<set $characterViewer.bodyState.freckles to !random(1)>>
+		<<set $characterViewer.bodyState.bodyFreckles to ["none", "upper", "full"].random()>>
 		<<set $characterViewer.bodyState.brows to _browTypes.random()>>
 		<<set $characterViewer.bodyState.blush to random(4)>>
 		<<set $characterViewer.bodyState.mouth to _mouthTypes.random()>>
@@ -1368,6 +1377,8 @@
 	/*Skin & tan*/
 	<<set _modeloptions.skin_type to $characterViewer.skinColour.type>>
 	<<set _modeloptions.skin_tone to $characterViewer.skinColour.range>>
+	<<set _modeloptions.freckles to $characterViewer.bodyState.freckles>>
+	<<set _modeloptions.bodyFreckles to $characterViewer.bodyState.bodyFreckles>>
 
 	/*Hair*/
 	<<set _modeloptions.hair_colour_style to $characterViewer.colours.hair_colour_style>>
@@ -1402,7 +1413,6 @@
 	/*Face*/
 	<<set _modeloptions.facestyle to $characterViewer.bodyState.facestyle>>
 	<<set _modeloptions.facevariant to $characterViewer.bodyState.facevariant>>
-	<<set _modeloptions.freckles to $characterViewer.bodyState.freckles>>
 	<<set _modeloptions.brows to $characterViewer.bodyState.brows>>
 	<<set _modeloptions.mouth to $characterViewer.bodyState.mouth>>
 	<<set _modeloptions.trauma to $characterViewer.bodyState.trauma>>

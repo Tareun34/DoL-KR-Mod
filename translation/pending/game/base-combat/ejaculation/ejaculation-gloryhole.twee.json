@@ -1,0 +1,1988 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> groans as <<he>> cums; ejaculate covers your feet.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"goo\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> quietly cums on your feet, slickening them with ejaculate.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"goo\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> grunts and rubs <<his>> cunt on your feet as <<he>> cums, splattering your feet and legs with ejaculate.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"goo\">>",
+   "\t\t\t\t\t<<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"goo\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 신음하며 사정한다. 정액이 당신의 발을 덮는다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"goo\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>>【은는】 조용히 당신의 발 위에 사정하며, 정액으로 미끌거리게 만든다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"goo\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>>【은는】 끙 소리를 내며 사정하는 동안 당신의 발에 보지를 비벼대고, 당신의 발과 다리에 정액을 뿌려댄다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"goo\">>",
+   "\t\t\t\t\t<<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"goo\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t<<He>> groans as <<he>> cums; ejaculate covers your feet.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"goo\">>",
+   "\t\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t\t<<He>> quietly cums on your feet, slickening them with ejaculate.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"goo\">>",
+   "\t\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t\t<<He>> grunts and rubs <<his>> cunt on your feet as <<he>> cums, splattering your feet and legs with ejaculate.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"goo\">>",
+   "\t\t\t\t\t\t<<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"goo\">>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>> sighs as you finish with <<his>> pussy, shaking <<his>> thighs together against your hand as <<his>> body convulses.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"goo\">>",
+   "\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t<<He>> cums silently, cunt twitching against your hand uncontrollably.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"goo\">>",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>> screams, grabbing your hand and fucking <<his>> pussy with your fingers. Your fingers are soaked in ejaculate.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"goo\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>>【은는】 당신이 자신의 보지를 끝마치게 만들자 한숨을 내쉬며, 몸이 경련하는 동안 당신의 손을 향해 허벅지를 떨며 맞댄다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"goo\">>",
+   "\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t<<He>>【은는】 조용히 절정에 달하며, 당신의 손에 닿은 보지가 제멋대로 꿈틀거린다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"goo\">>",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>>【은는】 비명을 지르며 당신의 손을 낚아채고 당신의 손가락으로 자신의 보지를 범한다. 당신의 손가락이 정액으로 흠뻑 젖는다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"goo\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t<<He>> sighs as you finish with <<his>> pussy, shaking <<his>> thighs together against your hand as <<his>> body convulses.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"goo\">>",
+   "\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t<<He>> cums silently, cunt twitching against your hand uncontrollably.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"goo\">>",
+   "\t\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t\t<<He>> screams, grabbing your hand and fucking <<his>> pussy with your fingers. Your fingers are soaked in ejaculate.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"goo\">>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 5)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>> groans as <<he>> cums, dragging <<his>> wet pussy across yours. \"That was so good.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<thighejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"goo\">>",
+   "\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t<<He>> moans as <<he>> grinds downs hard on your <<pussy>>.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"goo\">>",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>> screams, mashing <<his>> crotch against the wall. Ejaculate streams from <<his>> pussy, drenching your exposed legs. <<He>> giggles, \"I hope I didn't make too much of a mess.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"goo\">>",
+   "\t\t\t\t\t<<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"goo\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 신음하고, 젖은 보지를 당신의 보지에 비벼댄다. \"정말 기분 좋았어.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<thighejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"goo\">>",
+   "\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t<<He>>【은는】 신음하며 당신의 <<pussy>> 표면을 거칠게 문지른다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"goo\">>",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>>【은는】 비명을 지르며 자신의 가랑이를 벽에 짓이긴다. 보지에서 사정액이 흘러나와 당신의 노출된 다리를 적신다. <<He>>【은는】 낄낄대며 말한다. \"너무 엉망으로 만들지 않았으면 좋겠는데.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"goo\">>",
+   "\t\t\t\t\t<<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"goo\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t<<He>> groans as <<he>> cums, dragging <<his>> wet pussy across yours. \"That was so good.\"",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<thighejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"goo\">>",
+   "\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t<<He>> moans as <<he>> grinds downs hard on your <<pussy>>.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"goo\">>",
+   "\t\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t\t<<He>> screams, mashing <<his>> crotch against the wall. Ejaculate streams from <<his>> pussy, drenching your exposed legs. <<He>> giggles, \"I hope I didn't make too much of a mess.\"",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"goo\">>",
+   "\t\t\t\t\t\t<<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"goo\">>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 5)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>> groans and grinds <<his>> crotch against your face; you feel the wall shake as <<he>> cums on your mouth.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t<<He>> ejaculates on your face, rubbing <<his>> clit against your nose as <<he>> finished. You feel cum running down your nose and lips.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>> rubs <<his>> clit rapidly, squirting your face through the hole with cum. You feel slime running down your face and neck.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"face\" \"goo\" 2>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>>【은는】 신음하며 자신의 가랑이를 당신의 얼굴에 짓이긴다. 사정하며 당신의 입에 액체를 쏟아낼 때 벽이 흔들리는 것이 느껴진다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 얼굴에 사정하며, 클리토리스를 당신의 코에 비벼댄다. 정액이 코와 입술을 타고 흘러내리는 것이 느껴진다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>>【은는】 클리토리스를 빠르게 문지르며, 구멍을 통해 당신의 얼굴에 정액을 뿜어낸다. 당신의 얼굴과 목을 타고 슬라임이 흘러내리는 것이 느껴진다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"face\" \"goo\" 2>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t<<He>> groans and grinds <<his>> crotch against your face; you feel the wall shake as <<he>> cums on your mouth.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t<<He>> ejaculates on your face, rubbing <<his>> clit against your nose as <<he>> finished. You feel cum running down your nose and lips.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t\t<<He>> rubs <<his>> clit rapidly, squirting your face through the hole with cum. You feel slime running down your face and neck.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"face\" \"goo\" 2>>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 5)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>> groans and grinds <<his>> crotch roughly against your mouth; you feel the wall shake as <<he>> cums into your waiting mouth."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>>【은는】 신음하며 자신의 가랑이를 당신의 입에 거칠게 짓이긴다. 당신의 입을 향해 사정할 때 벽이 흔들리는 것이 느껴진다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t<<He>> groans and grinds <<his>> crotch roughly against your mouth; you feel the wall shake as <<he>> cums into your waiting mouth.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t<<He>> ejaculates into your mouth, grinding <<his>> cunt against the wall as <<he>> finishes. You feel ejaculate running down your throat.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t\t<<He>> rubs <<his>> clit rapidly, squirting into your open mouth. You feel cum running down your throat and dripping off your chin.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"face\" \"goo\" 2>>",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t\t<!-- following appear to be Male PC to Female Antagonist only? -->",
+   "\t\t\t<<elseif $NPCList[0].vagina is \"otheranus\">>",
+   "\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t<<He>> shakes as <<he>> cums, driving your <<penis>> deeply into <<his>> ass as <<he>> releases a final moan.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t<<He>> clenches <<his>> ass around your <<penis>>, preventing you from moving as <<he>> finishes with a gasp.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<elseif $NPCList[0].vagina is \"otheranusimminent\">>",
+   "\t\t\t\t<<if playerChastity(\"penis\")>>",
+   "\t\t\t\t\t<<He>> rubs <<his>> ass against your $worn.genitals.name until <<he>> cums."
+  ],
+  "context": "\t\t\t\t<<switch random(1, 5)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t<<He>> ejaculates into your mouth, grinding <<his>> cunt against the wall as <<he>> finishes. You feel ejaculate running down your throat."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 입 안에 사정하며, 벽에 보지를 거칠게 비벼댄다. 당신의 목구멍으로 정액이 흘러내리는 것이 느껴진다."
+  ],
+  "new_en": [
+   "\t\t\t\t<<elseif $nopenile gte 1 and random (1, 2) is 1>>",
+   "\t\t\t\t\tRespecting your wishes, <<he>> keeps pressing <<his>> anus on the tip of your <<penis>> and cums without taking it."
+  ],
+  "context": "\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>> rubs <<his>> clit rapidly, squirting into your open mouth. You feel cum running down your throat and dripping off your chin."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>>【은는】 클리토리스를 빠르게 문지르며, 당신의 벌린 입에 정액을 뿜어낸다. 목구멍으로 정액이 흘러내리고 턱 끝에서 떨어지는 것이 느껴진다."
+  ],
+  "new_en": [
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> grinds the head of your <<penis>> against <<his>> asshole and finishes before it slips in."
+  ],
+  "context": "\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"face\" \"goo\" 2>>",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<!-- following appear to be Male PC to Female Antagonist only? -->",
+   "\t\t\t<<elseif $NPCList[0].vagina is \"otheranus\">>",
+   "\t\t\t\t<<He>> shakes as <<he>> cums, driving your cock deeply into <<his>> ass as <<he>> releases a final moan.",
+   "\t\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"face\" \"goo\" 2>>",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<!-- following appear to be Male PC to Female Antagonist only? -->",
+   "\t\t\t<<elseif $NPCList[0].vagina is \"otheranus\">>",
+   "\t\t\t\t<<He>>【은는】 사정하며 떨고, 마지막 신음과 함께 당신의 자지를 자신의 항문 깊숙이 박아 넣는다.",
+   "\t\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> drives <<his>> pussy hard against your cock as <<he>> shudders with pleasure.",
+   "\t\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【은는】 쾌락에 몸을 떨며 당신의 자지에 자신의 보지를 거칠게 밀어붙인다.",
+   "\t\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t<<He>> drives <<his>> pussy hard against your <<penis>> as <<he>> shudders with pleasure.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t<<He>> relishes in getting fucked to orgasm, rhythmically clenching <<his>> pussy around your <<penis>>.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t<</switch>>"
+  ],
+  "context": "\t\t\t<<elseif $NPCList[0].vagina is \"penis\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if !playerHasStrapon()>>",
+   "\t\t\t\t\t<<He>> moans as <<he>> cums on your throbbing cock."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if !playerHasStrapon()>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 발딱 선 자지에 사정하며 신음한다."
+  ],
+  "new_en": [
+   "\t\t\t\t<<if playerChastity(\"penis\")>>",
+   "\t\t\t\t\t<<He>> grinds <<his>> pussy against your $worn.genitals.name until <<he>> cums.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<elseif $nopenile gte 1 and random (1, 2) is 1>>",
+   "\t\t\t\t\t<<He>> rubs <<his>> pussy against the tip of your <<penis>>, but respects your request and doesn't take it inside.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t<<elseif $NPCList[0].vagina is \"penisimminent\" or $NPCList[0].vagina is \"penisentrance\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> moans as <<he>> cums on your $worn.under_lower.name."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 당신의 $worn.under_lower.name 위에 사정하며 신음한다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> moans as <<he>> squirts on the tip your <<penis>>.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> cums as <<he>> sucks your <<penis>>, dropping away as <<he>> gasps for air."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【은는】 당신의 <<penis>>【을를】 빨며 사정하고, 숨을 헐떡이며 물러난다."
+  ],
+  "new_en": [
+   "\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t<<He>> cums as <<he>> sucks on your <<penis>> faster and faster, dropping away as <<he>> gasps for air.",
+   "\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t<<His>> mouth pressed on the hole, <<he>> cums while taking your <<penis>> deep inside <<his>> throat with a muffled sound.",
+   "\t\t\t\t<</switch>>"
+  ],
+  "context": "\t\t\t<<elseif $NPCList[0].mouth is \"penis\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>> groans and rubs <<his>> clit, spraying your face with ejaculate through the hole.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t<<He>> moans as <<he>> ejaculates onto <<his>> thighs.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>>【은는】 신음하며 클리토리스를 문지르고, 구멍을 통해 당신의 얼굴에 정액을 뿜어낸다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t<<He>>【은는】 자신의 허벅지에 사정하며 신음한다.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t<<He>> groans and rubs <<his>> clit, spraying your face with ejaculate through the hole.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t\t<<He>> moans as <<he>> ejaculates onto <<his>> thighs.",
+   "\t\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 3)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>> groans and grinds <<his>> clit roughly against your restrained face; you feel the wall shake as <<he>> cums on your mouth.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t<<He>> ejaculates on your face, rubbing <<his>> clit against your nose as <<he>> finished. You feel goo running down your nose and lips.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>> rubs <<his>> clit rapidly, squirting your face through the hole with cum. You try futilely to back away but your restraints hold you in place; you feel slime running down your face and neck.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"face\" \"goo\" 2>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>>【은는】 신음하며 자신의 클리토리스를 당신의 구속된 얼굴에 거칠게 짓이긴다. 당신의 입에 사정할 때 벽이 흔들리는 것이 느껴진다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 얼굴에 사정하며, 클리토리스를 코에 비벼댄다. 코와 입술을 타고 액체가 흘러내리는 것이 느껴진다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>>【은는】 클리토리스를 빠르게 문지르며, 구멍을 통해 당신의 얼굴에 액체를 뿜어낸다. 구속 때문에 피할 수 없다. 얼굴과 목을 타고 슬라임이 흘러내리는 것이 느껴진다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"face\" \"goo\" 2>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t<<He>> groans and grinds <<his>> clit roughly against your restrained face; you feel the wall shake as <<he>> cums on your mouth.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t<<He>> ejaculates on your face, rubbing <<his>> clit against your nose as <<he>> finished. You feel goo running down your nose and lips.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t\t<<He>> rubs <<his>> clit rapidly, squirting your face through the hole with cum. You try futilely to back away but your restraints hold you in place; you feel slime running down your face and neck.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"face\" \"goo\" 2>>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 5)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>> groans and grinds <<his>> crotch roughly against your tongue; you feel the wall shake as <<he>> cums into your waiting mouth.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t<<He>> ejaculates into your mouth, grinding <<his>> cunt against the wall as <<he>> finishes. You feel ejaculate running down your throat.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>> rubs <<his>> clit rapidly, squirting into your open mouth. You try futilely to back away but your restraints hold you in place; you feel cum running down your throat and dripping off your chin. \"I hope you were thirsty, you little slut.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"face\" \"goo\" 2>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>>【은는】 신음하며 자신의 가랑이를 당신의 혀에 거칠게 짓이긴다. 당신의 기다리는 입을 향해 사정할 때 벽이 흔들리는 것이 느껴진다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 입 안에 사정하며, 벽에 보지를 거칠게 비벼댄다. 당신의 목구멍으로 액체가 흘러내리는 것이 느껴진다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t<<He>>【은는】 클리토리스를 빠르게 문지르며 당신의 벌린 입에 액체를 뿜어낸다. 구속 때문에 피할 수 없다. 목구멍으로 정액이 흘러내리고 턱 끝에서 떨어지는 것이 느껴진다. \"목 말랐길 바래, 이 작은 창녀야.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"face\" \"goo\" 2>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t<<He>> groans and grinds <<his>> crotch roughly against your tongue; you feel the wall shake as <<he>> cums into your waiting mouth.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t<<He>> ejaculates into your mouth, grinding <<his>> cunt against the wall as <<he>> finishes. You feel ejaculate running down your throat.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t\t<<He>> rubs <<his>> clit rapidly, squirting into your open mouth. You try futilely to back away but your restraints hold you in place; you feel cum running down your throat and dripping off your chin. \"I hope you were thirsty, you little slut.\"",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"face\" \"goo\" 2>>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 5)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>> groans and rubs <<his>> clit, spraying your restrained face with ejaculate through the hole. Goo drips from your face and down the wall.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t<<He>> moans as <<he>> ejaculates onto <<his>> thighs. <<He>> reaches through the wall, <span class=\"purple\">shoving <<his>> fingers down your throat.</span> You gag and retch as <<he>> laughs. \"Such a disgusting little piggy.\"",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>>【은는】 신음하며 클리토리스를 문지르고, 구멍을 통해 당신의 구속된 얼굴에 액체를 뿜어낸다. 슬라임이 당신의 얼굴을 타고 벽으로 흘러내린다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t<<He>>【은는】 자신의 허벅지에 사정하며 신음한다. <<He>>【은는】 벽을 통해 손을 뻗어, <span class=\"purple\">당신의 목구멍으로 손가락을 쑤셔 넣는다.</span> 당신이 웩거리며 구역질을 하자 <<he>>【이가】 웃는다. \"정말 역겨운 작은 돼지 같으니라고.\"",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t<<He>> groans and rubs <<his>> clit, spraying your restrained face with ejaculate through the hole. Goo drips from your face and down the wall.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t\t<<He>> moans as <<he>> ejaculates onto <<his>> thighs. <<He>> reaches through the wall, <span class=\"purple\">shoving <<his>> fingers down your throat.</span> You gag and retch as <<he>> laughs. \"Such a disgusting little piggy.\"",
+   "\t\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 3)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case \"vagina\" \"vaginaimminent\" \"vaginaentrance\" \"anus\" \"anusentrance\" \"anusimminent\" \"thighs\">>",
+   "\t\t\t\t\t<<switch random(1, 3)>>",
+   "\t\t\t\t\t<<case 1>>",
+   "\t\t\t\t\t\t<<He>> shakes as <<he>> cums, slapping you across the ass with <<his>> $NPCList[0].penisdesc.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 2>>",
+   "\t\t\t\t\t\t<<He>> cums loudly, then spanks your ass with <<his>> $NPCList[0].penisdesc. \"Something to remember me by, whore.\"",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t\t<<He>> cums quietly, rubbing <<his>> $NPCList[0].penisdesc along your back.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<case \"mouth\">>",
+   "\t\t\t\t\t<<He>> cums loudly, shoving <<his>> $NPCList[0].penisdesc deep into your throat, making you gag. Tears stream down your face.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case \"mouthentrance\" \"mouthimminent\" \"chest\" \"lefthand\" \"righthand\">>",
+   "\t\t\t\t\t<<switch random(1, 3)>>",
+   "\t\t\t\t\t<<case 1>>",
+   "\t\t\t\t\t\t<<He>> shakes as <<he>> cums, slapping you across the face with <<his>> $NPCList[0].penisdesc.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 2>>",
+   "\t\t\t\t\t\t<<He>> cums loudly, then laughs, wiping <<his>> $NPCList[0].penisdesc of on your hair."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case \"vagina\" \"vaginaimminent\" \"vaginaentrance\" \"anus\" \"anusentrance\" \"anusimminent\" \"thighs\">>",
+   "\t\t\t\t\t<<switch random(1, 3)>>",
+   "\t\t\t\t\t<<case 1>>",
+   "\t\t\t\t\t\t<<He>>【은는】 사정하며 몸을 떨고, 당신의 엉덩이를 자신의 <<print window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【으로로】 후려친다.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 2>>",
+   "\t\t\t\t\t\t<<He>>【은는】 크게 사정하고는 당신의 엉덩이를 찰싹 때린다. \"나를 기억할 기념품이야, 창녀야.\"",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t\t<<He>>【은는】 조용히 사정하며, 당신의 등 뒤로 자신의 <<print window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【을를】 문지른다.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<case \"mouth\">>",
+   "\t\t\t\t\t<<He>>【은는】 크게 사정하며 당신의 목구멍 깊숙이 자신의 <<print window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【을를】 쑤셔 넣어 구역질을 유발한다. 눈물이 얼굴을 타고 흐른다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case \"mouthentrance\" \"mouthimminent\" \"chest\" \"lefthand\" \"righthand\">>",
+   "\t\t\t\t\t<<switch random(1, 3)>>",
+   "\t\t\t\t\t<<case 1>>",
+   "\t\t\t\t\t\t<<He>>【은는】 사정하며 몸을 떨고, 당신의 얼굴을 자신의 <<print window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【으로로】 후려친다.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 2>>",
+   "\t\t\t\t\t\t<<He>>【은는】 크게 사정하고 웃음을 터뜨리며, 자신의 <<print window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【을를】 당신의 머리카락에 닦아낸다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case \"vagina\">>",
+   "\t\t\t\t\t\t<<switch random(1, 5)>>",
+   "\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t<<He>> pushes <<his>> strap-on deep in your <<pussy>> and grinds the harness against <<his>> clit until <<he>> finishes.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\t<<He>> holds the strap-on deep in your <<pussy>> and cums with a soft moan, <<his>> juices dripping down the wall.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"goo\">>",
+   "\t\t\t\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t\t\t\t<<He>> keeps the strap-on buried in you and rocks against the wall through the orgasm, then gently wipes it on your thighs.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"goo\">><<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"goo\">>",
+   "\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t<<case \"vaginaimminent\">>",
+   "\t\t\t\t\t\t<<if playerChastity(\"vagina\")>>",
+   "\t\t\t\t\t\t\t<<switch random(1, 3)>>",
+   "\t\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t\t<<He>> works the strap-on against your $worn.genitals.name through the hole while the hilt presses into <<his>> clit until <<he>> finishes.",
+   "\t\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t\t\t\t\t<<He>> cums hard, juices running down your $worn.genitals.name and soaking the wall while the strap-on fails to break through.",
+   "\t\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"goo\">>",
+   "\t\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t\t<<elseif $novaginal gte 1>>",
+   "\t\t\t\t\t\t\t<<switch random(1, 3)>>",
+   "\t\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t\t<<He>> rubs the head of the strap-on firmly against your <<pussy>> lips, the harness friction pushing <<him>> over.",
+   "\t\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t\t\t\t\tAt the last second <<he>> pushes <<his>> strap-on through the hole, trying to penetrate your <<pussy>>, but the orgasm hits and cuts the attempt short.",
+   "\t\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"goo\">>",
+   "\t\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t<<switch random(1, 3)>>",
+   "\t\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t\t<<He>> frantically rubs the head of the strap-on against your <<pussy>> lips while grinding <<his>> clit against the base.",
+   "\t\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t\t\t\t\t<<He>> cums while slapping the wet strap-on repeatedly against your clit through the hole.",
+   "\t\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"goo\">>",
+   "\t\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t<<case \"vaginaentrance\">>",
+   "\t\t\t\t\t\t<<if playerChastity(\"vagina\")>>",
+   "\t\t\t\t\t\t\t<<He>> rubs <<his>> strap-on against your $worn.genitals.name until the harness makes <<him>> cum. Juices soak the metal.",
+   "\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"goo\">>",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t\t<<He>> rubs the head of the strap-on against your <<pussy>> while the harness works <<his>> clit until <<he>> cums.",
+   "\t\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\t\t<<He>> presses the tip of the strap-on firmly against your <<pussy>> lips and grinds until <<he>> squirts through the hole.",
+   "\t\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"goo\">>",
+   "\t\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t<<case \"anus\">>",
+   "\t\t\t\t\t\t<<switch random(1, 5)>>",
+   "\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t<<He>> pushes <<his>> strap-on deep in your <<bottom>> through the hole and grinds the harness until <<he>> cums. Juices run down your crack.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\t<<He>> keeps the strap-on buried in your ass and rocks through the orgasm, then gently wipes it on your cheeks.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"goo\">>",
+   "\t\t\t\t\t\t\t<<case 5>>",
+   "\t\t\t\t\t\t\t\t<<He>> holds <<his>> strap-on as deep as possible in your <<bottom>> and cums with a soft moan, juices dripping down your thighs.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"goo\">><<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"goo\">>",
+   "\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t<<case \"anusimminent\">>",
+   "\t\t\t\t\t\t<<if playerChastity(\"anus\")>>",
+   "\t\t\t\t\t\t\t<<switch random(1, 3)>>",
+   "\t\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t\t<<He>> rubs the head of the strap-on against your $worn.genitals.name through the hole, the base stimulating <<his>> clit until <<he>> finishes.",
+   "\t\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t\t\t\t\t<<He>> slaps <<his>> strap-on hard on your $worn.genitals.name as the orgasm hits, clearly frustrated.",
+   "\t\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"goo\">>",
+   "\t\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t\t<<elseif $noanal gte 1>>",
+   "\t\t\t\t\t\t\t<<switch random(1, 3)>>",
+   "\t\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t\t<<He>> holds the tip of the strap-on firmly pressed against your <<bottom>> and humps the wall, grinding <<his>> clit until <<he>> finishes.",
+   "\t\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t\t\t\t\t<<He>> starts to push the tip inside but only manages to grind the head against your anus as <<he>> climaxes.",
+   "\t\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"goo\">>",
+   "\t\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t<<switch random(1, 3)>>",
+   "\t\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t\t<<He>> presses the head of the strap-on insistently against your twitching asshole through the hole as <<he>> cums, grinding <<his>> clit with need.",
+   "\t\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t\t\t\t\t<<He>> pushes the head harder and harder against your <<bottom>> while you clench during <<his>> climax. A strong squirt soaks your butt and the wall.",
+   "\t\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"goo\">>",
+   "\t\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t<<case \"anusentrance\">>",
+   "\t\t\t\t\t\t<<if playerChastity(\"anus\")>>",
+   "\t\t\t\t\t\t\t<<He>> rubs <<his>> strap-on against the $worn.genitals.name protecting your anus until the harness rubbing on <<his>> clit makes <<him>> cum.",
+   "\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"goo\">>",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t\t<<He>> rubs the tip of <<his>> strap-on against your ass while the harness works <<his>> clit until <<he>> finishes.",
+   "\t\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\t\t<<He>> presses the head of the strap-on, wet with <<his>> juices, firmly against your <<bottom>> and grinds until <<he>> cums.",
+   "\t\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"goo\">><<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"goo\">>",
+   "\t\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t<<case \"thighs\">>",
+   "\t\t\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t<<He>> slides <<his>> strap-on between your thighs until the friction on <<his>> clit tips <<him>> over.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\tYou hold the strap-on between your thighs while <<he>> cums with a soft moan and wipes the wet strap-on on your legs.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<thighejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"goo\">>",
+   "\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t<<case \"cheeks\">>",
+   "\t\t\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t<<He>> slides the strap-on slowly up and down your crack, letting the harness grind against <<his>> clit until <<he>> finishes.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\tThe full length of the strap-on lies between your cheeks, and <<he>> rocks against the wall until <<he>> cums with a soft moan. <<His>> juices run down the shaft, straight into your cleft.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"goo\">>",
+   "\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t<<case \"otheranus\">>",
+   "\t\t\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t<<He>> shakes as <<he>> cums, driving your <<penis>> deeply into <<his>> ass as <<he>> releases a final moan.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\t<<He>> clenches <<his>> ass around your <<penis>>, preventing you from moving as <<he>> finishes with a gasp.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t<<case \"otheranusimminent\">>",
+   "\t\t\t\t\t\t<<if playerChastity(\"penis\")>>",
+   "\t\t\t\t\t\t\t<<He>> rubs <<his>> ass against your $worn.genitals.name until <<he>> cums.",
+   "\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<elseif $nopenile gte 1 and random (1, 2) is 1>>",
+   "\t\t\t\t\t\t\tRespecting your wishes, <<he>> keeps pressing <<his>> anus on the tip of your <<penis>> and cums without taking it.",
+   "\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t<<He>> grinds the head of your <<penis>> against <<his>> asshole and finishes before it slips in.",
+   "\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t<<case \"otheranusimminent\">>",
+   "\t\t\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t<<He>> keeps pressing <<his>> hole against the tip of your strap-on until the teasing tips <<him>> over.",
+   "\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\t<<He>> tries to sit back but the angle stays wrong; the constant rub alone gets <<him>> off.",
+   "\t\t\t\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t\t\t\t<<He>> works <<his>> own harness while the tip just rests against <<him>>, finishing with a soft gasp.",
+   "\t\t\t\t\t\t<</switch>>"
+  ],
+  "context": "\t\t\t\t<<switch $NPCList[0].penis>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t\t<<He>> cums silently, mouth agape, rubbing <<his>> $NPCList[0].penisdesc against your cheek."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t\t<<He>>【은는】 입을 벌린 채 조용히 사정하며, 자신의 <<print window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【을를】 당신의 뺨에 문지른다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case \"mouth\">>",
+   "\t\t\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t<<He>> thrusts <<his>> strap-on into your mouth and fucks it with increased speed until <<he>> finishes with a moan.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\t<<He>> keeps the strap-on in your mouth while the base works <<his>> clit. Juices run down the shaft and over your chin.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t<<case \"mouthimminent\">>",
+   "\t\t\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t<<He>> almost gets the tip in, then cums and just strokes the strap-on against your lips, waiting for you to lick it.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\t<<He>> cums a little too soon, squirting everywhere while slapping the wet strap-on all over your face.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t<<case \"mouthentrance\">>",
+   "\t\t\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t<<He>> rubs the tip of <<his>> strap-on against your lips through the hole until the harness makes <<him>> cum, then gently wipes it across your cheek.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\t<<He>> cums with a quiet moan, rubbing the head of the strap-on over your face.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t<<case \"penis\" \"penisentrance\" \"penisimminent\">>",
+   "\t\t\t\t\t\t<<He>> slides <<his>> strap-on along your <<penis>> until <<he>> finishes with a loud groan."
+  ],
+  "context": "\t\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>> moans as <<he>> cums, rubbing <<his>> clit with the base of <<his>> $NPCList[0].penisdesc.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 신음하고, 자신의 <<print window.KR.getPenisDescKr($NPCList[0].penisdesc)>> 밑동으로 클리토리스를 문지른다.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case \"chest\">>",
+   "\t\t\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t<<He>> rubs <<his>> strap-on between your <<breasts>> until the harness makes <<him>> cum.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\t<<He>> finishes while grinding against your <<breasts>>, then wipes the shaft clean on them.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<chestejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"chest\" \"goo\">>",
+   "\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t<<case \"rightarm\">>",
+   "\t\t\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t<<He>> works <<his>> strap-on in your hand until the harness friction makes <<him>> finish.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\t<<He>> cums with a soft moan, <<his>> juices coating your fingers.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"rightarm\" \"goo\">>",
+   "\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t<<case \"leftarm\">>",
+   "\t\t\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t<<He>> works <<his>> strap-on in your hand until the harness friction makes <<him>> finish.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\t<<He>> cums with a soft moan, <<his>> juices coating your fingers.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"goo\">>",
+   "\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<if $NPCList[0].mouth is \"penis\">>",
+   "\t\t\t\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t\t<<He>> cums as <<he>> sucks on your <<penis>> faster and faster, dropping away as <<he>> gasps for air.",
+   "\t\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\t\t<<His>> mouth pressed on the hole, <<he>> cums while taking your <<penis>> deep inside <<his>> throat with a muffled sound.",
+   "\t\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t<<He>> moans as <<he>> cums, rubbing <<his>> clit against the base of the strap-on until juices run down the shaft and onto the wall.",
+   "\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case \"vagina\" \"vaginaimminent\" \"vaginaentrance\" \"anus\" \"anusentrance\" \"anusimminent\" \"thighs\">>",
+   "\t\t\t\t\t<<He>> shakes as <<he>> cums, wiping <<his>> $NPCList[0].penisdesc off on your ass.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case \"mouth\">>",
+   "\t\t\t\t\t<<He>> cums loudly, grinding <<his>> $NPCList[0].penisdesc against <<his>> own crotch with <<his>> hand as <<he>> cums.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case \"mouthentrance\" \"mouthimminent\" \"chest\" \"lefthand\" \"righthand\">>",
+   "\t\t\t\t\t<<He>> cums silently, mouth agape, rubbing <<his>> $NPCList[0].penisdesc against your cheek.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>> moans as <<he>> cums, rubbing <<his>> clit with the base of <<his>> $NPCList[0].penisdesc.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case \"vagina\" \"vaginaimminent\" \"vaginaentrance\" \"anus\" \"anusentrance\" \"anusimminent\" \"thighs\">>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 몸을 떨고, 당신의 엉덩이에 자신의 <<print window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【을를】 닦아낸다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case \"mouth\">>",
+   "\t\t\t\t\t<<He>>【은는】 크게 사정하며, 사정하는 동안 손으로 자신의 가랑이에 <<print window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【을를】 문지른다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case \"mouthentrance\" \"mouthimminent\" \"chest\" \"lefthand\" \"righthand\">>",
+   "\t\t\t\t\t<<He>>【은는】 입을 벌린 채 조용히 사정하며, 당신의 뺨에 자신의 <<print window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【을를】 문지른다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 신음하고, 자신의 <<print window.KR.getPenisDescKr($NPCList[0].penisdesc)>> 밑동으로 클리토리스를 문지른다.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case \"mouth\">>",
+   "\t\t\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\tYou gag as <<he>> forces <<his>> strap-on deep into your throat through the hole and grinds on the harness with  <<his>> clit until <<he>> cums.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\t<<He>> fucks your mouth with <<his>> strap-on while the base works <<his>> clit. Juices run down the shaft and over your chin.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">><<oralejacstat>><<ejacstat>><<bodyliquid \"mouth\" \"goo\">>",
+   "\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t<<case \"mouthimminent\">>",
+   "\t\t\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t<<He>> almost gets the tip in, then cums and just grinds the strap-on against your lips. \"Open up next time.\"",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\t<<He>> finishes, <<his>> juices running down the strap-on that <<he>> rubs over your face, leaving a sticky mess.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t<<case \"mouthentrance\">>",
+   "\t\t\t\t\t\t<<switch random(1, 4)>>",
+   "\t\t\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t\t\t<<He>> rubs the tip of <<his>> strap-on against your lips until the harness makes <<him>> cum.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<case 3 4>>",
+   "\t\t\t\t\t\t\t\t<<He>> cums while slapping the wet strap-on against your face a few times, then wipes it across your cheek.",
+   "\t\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t\t\t<</switch>>",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<He>> moans as <<he>> cums, rubbing <<his>> clit hard against the base of <<his>> strap-on until juices run down the shaft.",
+   "\t\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t<<switch $NPCList[0].penis>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> shakes as <<he>> cums, pulling <<his>> cock out and ejaculating onto the backs of your thighs. You feel <<him>> wipe <<his>> cock clean on your ass.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<thighejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> slams <<his>> crotch hard into your ass as <<he>> cums and ejaculates onto your tummy and the wall.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<tummyejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"tummy\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> groan as <<he>> cums, ejaculating a massive load that covers your thighs and tummy; cum drips coolly down your legs, pooling on the ground.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<thighejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"semen\">>",
+   "\t\t\t\t\t<<tummyejacstat>><<set $hygiene += 500>><<bodyliquid \"tummy\" \"semen\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 몸을 떨고, 자지를 빼내어 당신의 허벅지 뒤편에 사정한다. <<he>>【이가】 당신의 엉덩이에 자지를 닦아내는 것이 느껴진다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<thighejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 당신의 엉덩이에 가랑이를 세게 들이받고, 당신의 배와 벽에 사정한다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<tummyejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"tummy\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 신음한다. 엄청난 양의 정액이 당신의 허벅지와 배를 덮고, 다리를 타고 시원하게 흘러내려 바닥에 고인다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<thighejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"semen\">>",
+   "\t\t\t\t\t<<tummyejacstat>><<set $hygiene += 500>><<bodyliquid \"tummy\" \"semen\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t<<He>> shakes as <<he>> cums, pulling <<his>> cock out and ejaculating onto the backs of your thighs. You feel <<him>> wipe <<his>> cock clean on your ass.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<thighejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"semen\">>",
+   "\t\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t\t<<He>> slams <<his>> crotch hard into your ass as <<he>> cums and ejaculates onto your tummy and the wall.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<tummyejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"tummy\" \"semen\">>",
+   "\t\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t\t<<He>> groan as <<he>> cums, ejaculating a massive load that covers your thighs and tummy; cum drips coolly down your legs, pooling on the ground.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<thighejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"semen\">>",
+   "\t\t\t\t\t\t<<tummyejacstat>><<set $hygiene += 500>><<bodyliquid \"tummy\" \"semen\">>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> groans as <<he>> ejaculates onto your <<pussy>>. You feel semen coating your outer lips and pooling around your knees.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> strokes <<his>> cock and ejaculates onto your <<pussy>> without a word, sending streams of semen running down your cunt; you can feel <<him>> flicking <<his>> cock dry on your ass.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> moans and strokes <<his>> cock as <<he>> cums, sending thick ropes of semen onto your <<pussy>> and ass.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t<<bottomejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 신음하며 당신의 <<pussy>> 겉에 사정한다. 정액이 외음부를 덮고 무릎 주위에 고이는 것이 느껴진다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>>【은는】 자지를 쓰다듬으며 아무 말 없이 당신의 <<pussy>> 겉에 사정한다. 정액 줄기가 보지를 타고 흘러내리고, 엉덩이에 자지를 털어 닦아내는 것이 느껴진다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 신음하고 자지를 쓰다듬는다. 끈적한 정액 줄기가 당신의 <<pussy>> 겉과 엉덩이를 덮는다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t<<bottomejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t<<He>> groans as <<he>> ejaculates onto your <<pussy>>. You feel semen coating your outer lips and pooling around your knees.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t\t<<He>> strokes <<his>> cock and ejaculates onto your <<pussy>> without a word, sending streams of semen running down your cunt; you can feel <<him>> flicking <<his>> cock dry on your ass.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t\t<<He>> moans and strokes <<his>> cock as <<he>> cums, sending thick ropes of semen onto your <<pussy>> and ass.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t\t<<bottomejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<elseif $NPCList[0].penis is \"vaginaimminent\" and playerChastity(\"vagina\")>>",
+   "\t\t\t\t<<He>> moans as <<he>> ejaculates onto your $worn.genitals.name."
+  ],
+  "old_kr": [
+   "\t\t\t<<elseif $NPCList[0].penis is \"vaginaimminent\" and playerChastity(\"vagina\")>>",
+   "\t\t\t\t<<He>>【은는】 신음하며 당신의 $worn.genitals.name 위로 사정한다."
+  ],
+  "new_en": [],
+  "context": "\t\t\t\t<</switch>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<switch random(1, 7)>>",
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> cums before <<he>> can penetrate your <<pussy>>, ejaculating on the outside. Semen coats your outer lips and tummy."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<switch random(1, 7)>>",
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 <<pussy>> 안을 뚫기도 전에 사정하며, 겉부분에 정액을 쏟는다. 정액이 외음부와 배를 뒤덮는다."
+  ],
+  "new_en": [
+   "\t\t\t\t<<if playerChastity(\"vagina\")>>",
+   "\t\t\t\t\t<<He>> moans as <<he>> ejaculates onto your $worn.genitals.name."
+  ],
+  "context": "\t\t\t<<elseif $NPCList[0].penis is \"vaginaimminent\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> ejaculates onto your <<pussy>> before <<he>> can penetrate you, sending warm streams of semen running down your cunt; <<he>> groans in disappointment."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>>【은는】 뚫기도 전에 당신의 <<pussy>> 부근에 사정하며, 따뜻한 정액이 보지를 타고 흘러내린다. <<he>>【이가】 실망스러운 듯 신음한다."
+  ],
+  "new_en": [
+   "\t\t\t\t<<elseif $novaginal gte 1 and random(1, 2) is 1>>",
+   "\t\t\t\t\tRespecting your wishes, <<he>> keeps the tip of <<his>> cock pressed to your <<pussy>> and cums all over, without pushing in."
+  ],
+  "context": "\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> moans and strokes <<his>> cock as <<he>> cums, sending thick ropes of semen onto your <<pussy>> and ass.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t<<bottomejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<</switch>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 신음하고 자지를 쓰다듬는다. 끈적한 정액 줄기가 당신의 <<pussy>> 부근과 엉덩이를 덮는다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t<<bottomejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<</switch>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch random(1, 7)>>",
+   "\t\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t\t<<He>> cums before <<he>> can penetrate your <<pussy>>, ejaculating on the outside. Semen coats your outer lips and tummy.",
+   "\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t\t\t<<He>> ejaculates onto your <<pussy>> before <<he>> can penetrate you, sending warm streams of semen running down your cunt; <<he>> groans in disappointment.",
+   "\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t\t\t<<He>> moans and strokes <<his>> cock as <<he>> cums, sending thick ropes of semen onto your <<pussy>> and ass.",
+   "\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t\t\t<<bottomejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> thrusts deeply into your <<pussy>> as <<he>> cums, holding <<his>> cock deep in your womb. Semen splashes inside your <<pussy>> as you drive back against <<him>>.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vagina\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> quiets and pounds <<his>> cock into you as <<he>> cums. Semen fills your <<pussy>> as you push back against the wall.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vagina\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> convulses and grinds on your cunt as <<he>> cums, smashing your <<clit>> and sending thick waves of cum into your <<pussy>>. Semen oozes from your vagina and down your legs, pooling around your knees. \"I just love fucking faceless wet cunts.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t<<vaginalejacstat>><<set $hygiene += 500>><<bodyliquid \"vagina\" \"semen\">>",
+   "\t\t\t\t\t<<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"semen\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 당신의 <<pussy>> 깊숙이 찌르고, 자지를 자궁 안에 박아 넣은 채 유지한다. 당신이 그를 향해 허리를 밀어붙이자 <<pussy>> 안에서 정액이 튀어 오른다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vagina\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>>【은는】 조용히 당신의 몸속을 세게 들이박으며 사정한다. 당신이 벽을 향해 몸을 밀어붙이자 <<pussy>> 안이 정액으로 가득 찬다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vagina\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 당신의 보지를 짓이기고, <<clit>> 부분을 세게 압박하며 <<pussy>> 안으로 끈적한 정액을 쏟아붓는다. 질에서 정액이 흘러나와 다리를 타고 흐르고, 무릎 주위에 고인다. \"얼굴은 안 보이지만, 보지에 박히는 걸 정말 좋아하는 것 같네.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t<<vaginalejacstat>><<set $hygiene += 500>><<bodyliquid \"vagina\" \"semen\">>",
+   "\t\t\t\t\t<<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"semen\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t<<He>> thrusts deeply into your <<pussy>> as <<he>> cums, holding <<his>> cock deep in your womb. Semen splashes inside your <<pussy>> as you drive back against <<him>>.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<vaginalejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vagina\" \"semen\">>",
+   "\t\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t\t<<He>> quiets and pounds <<his>> cock into you as <<he>> cums. Semen fills your <<pussy>> as you push back against the wall.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<vaginalejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vagina\" \"semen\">>",
+   "\t\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t\t<<He>> convulses and grinds on your cunt as <<he>> cums, smashing your <<clit>> and sending thick waves of cum into your <<pussy>>. Semen oozes from your vagina and down your legs, pooling around your knees. \"I just love fucking faceless wet cunts.\"",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<vaginalentranceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"vaginaoutside\" \"semen\">>",
+   "\t\t\t\t\t\t<<vaginalejacstat>><<set $hygiene += 500>><<bodyliquid \"vagina\" \"semen\">>",
+   "\t\t\t\t\t\t<<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"semen\">>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> shakes as <<he>> cums, withdrawing <<his>> cock from your cheeks and ejaculating onto your ass.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> smashes hard against the wall, ejaculating between your cheeks.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> grunts as <<he>> cums. You feel a flood of warm cum dripping down your ass and crotch.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"bottom\" \"semen\" 2>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 몸을 떨고, 엉덩이에서 자지를 빼내어 당신의 엉덩이에 사정한다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>>【은는】 벽에 세게 몸을 들이박으며, 엉덩이 사이에 사정한다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 끙 소리를 낸다. 따뜻한 정액이 엉덩이와 가랑이를 타고 흘러내리는 것이 느껴진다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"bottom\" \"semen\" 2>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t<<He>> shakes as <<he>> cums, withdrawing <<his>> cock from your cheeks and ejaculating onto your ass.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t\t<<He>> smashes hard against the wall, ejaculating between your cheeks.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t\t<<He>> grunts as <<he>> cums. You feel a flood of warm cum dripping down your ass and crotch.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"bottom\" \"semen\" 2>>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> strokes <<his>> cock, ejaculating onto your bottom. Semen drips down your butt and into your crack.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> strokes <<his>> cock and quietly ejaculates onto your ass. You feel semen dripping down your crack.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> moans and strokes <<his>> cock as <<he>> cums; you feel the splash of wet semen cover your ass and drip down your crotch.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"bottom\" \"semen\" 2>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 자지를 쓰다듬으며 당신의 엉덩이에 사정한다. 정액이 엉덩이를 타고 흘러 항문 틈으로 들어간다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>>【은는】 자지를 쓰다듬으며 조용히 당신의 엉덩이에 사정한다. 정액이 항문 틈을 타고 흘러내리는 것이 느껴진다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 신음한다. 젖은 정액이 당신의 엉덩이를 덮고 가랑이를 타고 흘러내리는 것이 느껴진다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"bottom\" \"semen\" 2>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t<<He>> strokes <<his>> cock, ejaculating onto your bottom. Semen drips down your butt and into your crack.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t\t<<He>> strokes <<his>> cock and quietly ejaculates onto your ass. You feel semen dripping down your crack.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t\t<<He>> moans and strokes <<his>> cock as <<he>> cums; you feel the splash of wet semen cover your ass and drip down your crotch.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"bottom\" \"semen\" 2>>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<elseif $NPCList[0].penis is \"anusimminent\" and playerChastity(\"anus\")>>",
+   "\t\t\t\t<<He>> strokes <<his>> cock and ejaculates onto your $worn.genitals.name."
+  ],
+  "old_kr": [
+   "\t\t\t<<elseif $NPCList[0].penis is \"anusimminent\" and playerChastity(\"anus\")>>",
+   "\t\t\t\t<<He>>【은는】 자지를 쓰다듬으며 당신의 $worn.genitals.name 위로 사정한다."
+  ],
+  "new_en": [],
+  "context": "\t\t\t\t<</switch>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<switch random(1, 7)>>",
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> cums before <<he>> can penetrate your wriggling ass, ejaculating on the outside. You feel semen coat your ass and drip warmly down your crack."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<switch random(1, 7)>>",
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 꿈틀거리는 항문을 뚫기도 전에 사정하며 외부에 쏟는다. 정액이 엉덩이를 덮고 항문 틈을 타고 따뜻하게 흘러내린다."
+  ],
+  "new_en": [
+   "\t\t\t\t<<if playerChastity(\"anus\")>>",
+   "\t\t\t\t\t<<He>> strokes <<his>> cock and ejaculates onto your $worn.genitals.name."
+  ],
+  "context": "\t\t\t<<elseif $NPCList[0].penis is \"anusimminent\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> strokes <<his>> cock and ejaculates onto your ass before <<he>> can penetrate you, sending streams of semen running down your crack; <<he>> groans, disappointed."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>>【은는】 항문을 뚫기도 전에 엉덩이에 사정한다. 정액 줄기가 항문 틈을 타고 흘러내린다. <<he>>【이가】 실망스러운 듯 신음한다."
+  ],
+  "new_en": [
+   "\t\t\t\t<<elseif $noanal gte 1 and random(1, 2) is 1>>",
+   "\t\t\t\t\t<<He>> presses the tip of <<his>> cock on your anus, at the limit of penetrating, but respects your wishes and <<his>> semen soon covers your asshole."
+  ],
+  "context": "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> moans and strokes <<his>> cock as <<he>> cums, you feel a flood of semen on your ass and crotch.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"bottom\" \"semen\" 2>>",
+   "\t\t\t\t<</switch>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 신음한다. 정액이 당신의 엉덩이와 가랑이를 뒤덮는다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"bottom\" \"semen\" 2>>",
+   "\t\t\t\t<</switch>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch random(1, 7)>>",
+   "",
+   "\t\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t\t<<He>> cums before <<he>> can penetrate your wriggling ass, ejaculating on the outside. You feel semen coat your ass and drip warmly down your crack.",
+   "\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t\t\t<<He>> strokes <<his>> cock and ejaculates onto your ass before <<he>> can penetrate you, sending streams of semen running down your crack; <<he>> groans, disappointed.",
+   "\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>",
+   "\t\t\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t\t\t<<He>> moans and strokes <<his>> cock as <<he>> cums, you feel a flood of semen on your ass and crotch.",
+   "\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 1000>><<bodyliquid \"bottom\" \"semen\" 2>>",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<bottomejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"bottom\" \"semen\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> moans, pounding your ass as <<he>> cums. You groan as semen streams into your asshole.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<analejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"anus\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> pushes hard into your <<bottom>> as <<he>> cums, and you mash your <<bottom>> against the wall in response. Semen fills you as you moan with pleasure.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<analejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"anus\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> convulses and with a final shove, cums in your ass. Thick waves of semen pump into you. <span class=\"blue\">You gasp as your ass overflows;</span> cum oozes from your ass and runs down your legs. \"I can't see your face, but I bet you love being fucked in the ass.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<analejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"anus\" \"semen\">>",
+   "\t\t\t\t\t<<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"semen\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 당신의 엉덩이를 거칠게 들이박는다. 정액이 항문 안으로 쏟아져 들어온다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<analejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"anus\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 당신의 <<bottom>> 부근을 세게 들이박고, 당신은 그에 맞춰 <<bottom>> 부근을 벽에 짓이긴다. 쾌락에 신음하는 동안 당신은 정액으로 가득 찬다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<analejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"anus\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 몸을 떨고 마지막으로 세게 밀어 넣는다. 끈적한 정액 파도가 당신의 몸속으로 밀려 들어온다. <span class=\"blue\">당신의 항문이 넘쳐흐르자 당신은 숨을 헐떡인다.</span> 정액이 항문에서 흘러나와 다리를 타고 내려간다. \"얼굴은 안 보이지만, 항문에 박히는 걸 정말 좋아하는 것 같군.\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<analejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"anus\" \"semen\">>",
+   "\t\t\t\t\t<<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"semen\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t<<He>> moans, pounding your ass as <<he>> cums. You groan as semen streams into your asshole.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<analejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"anus\" \"semen\">>",
+   "\t\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t\t<<He>> pushes hard into your <<bottom>> as <<he>> cums, and you mash your <<bottom>> against the wall in response. Semen fills you as you moan with pleasure.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<analejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"anus\" \"semen\">>",
+   "\t\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t\t<<He>> convulses and with a final shove, cums in your ass. Thick waves of semen pump into you. <span class=\"blue\">You gasp as your ass overflows;</span> cum oozes from your ass and runs down your legs. \"I can't see your face, but I bet you love being fucked in the ass.\"",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<analejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"anus\" \"semen\">>",
+   "\t\t\t\t\t\t<<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"semen\">>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> moans as <<he>> cums, ejaculating onto your <<breasts>>.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<chestejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"chest\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> strokes the tip of <<his>> cock between your <<breasts>> and wordlessly ejaculates onto them. Your <<breasts>> cool as semen slides down your body.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<chestejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"chest\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> bears down on your <<breasts>>, grunting as <<he>> cums; semen shoots between your <<breasts>> and onto the wall.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<chestejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"chest\" \"semen\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 신음하고, 당신의 <<breasts>> 위로 사정한다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<chestejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"chest\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 <<breasts>> 사이에 자지 끝을 비비며 아무 말 없이 그 위에 사정한다. 정액이 몸을 타고 흘러내리며 <<breasts>> 부근이 식어간다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<chestejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"chest\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 당신의 <<breasts>> 부근을 짓누른다. 정액이 당신의 <<breasts>> 사이와 벽으로 튀어 오른다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<chestejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"chest\" \"semen\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t<<He>> moans as <<he>> cums, ejaculating onto your <<breasts>>.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<chestejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"chest\" \"semen\">>",
+   "\t\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t\t<<He>> strokes the tip of <<his>> cock between your <<breasts>> and wordlessly ejaculates onto them. Your <<breasts>> cool as semen slides down your body.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<chestejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"chest\" \"semen\">>",
+   "\t\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t\t<<He>> bears down on your <<breasts>>, grunting as <<he>> cums; semen shoots between your <<breasts>> and onto the wall.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<chestejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"chest\" \"semen\">>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> moans, stroking <<his>> cock and ejaculating onto your face.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> strokes <<his>> cock and ejaculates onto your face. Warm cum drips down your forehead and nose.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> grips <<his>> cock tightly, working it while aiming through the hole straight at your mouth. <span class=\"pink\">You splutter and gag as thick ropes of cum push past your lips and into your mouth.</span>",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<cumswallow `$NPCList[_nn].type` null `npcSemenMod($NPCList[_nn].penissize)`>>",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 신음하며 자지를 쓰다듬고 당신의 얼굴에 사정한다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>>【은는】 자지를 쓰다듬고 당신의 얼굴에 사정한다. 따뜻한 정액이 이마와 코를 타고 흘러내린다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>>【은는】 자지를 꽉 쥐고 흔들며 구멍을 통해 당신의 입을 조준한다. <span class=\"pink\">끈적한 정액 줄기가 당신의 입술을 밀치고 쏟아져 들어오자 당신은 웩거리며 사레든다.</span>",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<cumswallow `$NPCList[_nn].type` null `npcSemenMod($NPCList[_nn].penissize)`>>",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t<<He>> moans, stroking <<his>> cock and ejaculating onto your face.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t\t<<He>> strokes <<his>> cock and ejaculates onto your face. Warm cum drips down your forehead and nose.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t\t<<He>> grips <<his>> cock tightly, working it while aiming through the hole straight at your mouth. <span class=\"pink\">You splutter and gag as thick ropes of cum push past your lips and into your mouth.</span>",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<cumswallow `$NPCList[_nn].type` null `npcSemenMod($NPCList[_nn].penissize)`>>",
+   "\t\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> gasps, ejaculating onto your lips as you barely brush against the tip of <<his>> penis.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> brushes <<his>> cock against your face, causing <<him>> to ejaculate early. Cum drips down your lips and chin; <<he>> sounds frustrated.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> cums before <<he>> can enter your mouth. Thick ropes of cum cover your cheeks, chin, and into your waiting mouth. <<He>> sounds frustrated.",
+   "\t\t\t\t\t<<cumswallow `$NPCList[_nn].type` null `npcSemenMod($NPCList[_nn].penissize)`>>",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 헐떡이며, 당신이 자지 끝에 살짝 닿는 순간 입술에 사정한다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 얼굴에 자지를 비비다가 서둘러 사정한다. 입술과 턱에 정액이 흐르고, <<he>>【이가】 짜증 섞인 소리를 낸다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>>【은는】 입에 넣기도 전에 사정한다. 끈적한 정액 줄기가 당신의 뺨과 턱, 그리고 입안까지 덮친다. <<he>>【이가】 짜증 섞인 소리를 낸다.",
+   "\t\t\t\t\t<<cumswallow `$NPCList[_nn].type` null `npcSemenMod($NPCList[_nn].penissize)`>>",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t<<He>> gasps, ejaculating onto your lips as you barely brush against the tip of <<his>> penis.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t\t<<He>> brushes <<his>> cock against your face, causing <<him>> to ejaculate early. Cum drips down your lips and chin; <<he>> sounds frustrated.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t\t<<He>> cums before <<he>> can enter your mouth. Thick ropes of cum cover your cheeks, chin, and into your waiting mouth. <<He>> sounds frustrated.",
+   "\t\t\t\t\t\t<<cumswallow `$NPCList[_nn].type` null `npcSemenMod($NPCList[_nn].penissize)`>>",
+   "",
+   "\t\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> unexpectedly shoves <<his>> cock down your throat as <<he>> cums. You gag as semen streams down your throat, forcing you to swallow.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> puts <<his>> hands on the wall as <<he>> mashes <<his>> cock into your mouth, ejaculating with a moan. You gag as cum fills your mouth and drips down your chin.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> wildly thrusts <<his>> cock down your throat as <<he>> cums, shaking the entire wall. <span class=\"pink\">Semen streams down your throat,</span> fills your mouth and covers your face as <<he>> flails.",
+   "\t\t\t\t\t<<faceejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"semen\">>",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 예상치 못하게 자지를 당신의 목구멍 깊숙이 쑤셔 넣는다. 정액이 목구멍으로 쏟아져 내려 당신은 강제로 삼킬 수밖에 없다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>>【은는】 벽에 손을 대고 당신의 입에 자지를 짓이기며 사정한다. 입안 가득 정액이 차오르고 턱으로 흐른다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 자지를 당신의 목구멍 깊숙이 마구 찌르고 벽 전체가 흔들린다. <span class=\"pink\">정액이 목구멍으로 쏟아져 내리고,</span> 입안을 가득 채우며 얼굴까지 뒤덮는다.",
+   "\t\t\t\t\t<<faceejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"semen\">>",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t<<He>> unexpectedly shoves <<his>> cock down your throat as <<he>> cums. You gag as semen streams down your throat, forcing you to swallow.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t\t<<He>> puts <<his>> hands on the wall as <<he>> mashes <<his>> cock into your mouth, ejaculating with a moan. You gag as cum fills your mouth and drips down your chin.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t\t<<He>> wildly thrusts <<his>> cock down your throat as <<he>> cums, shaking the entire wall. <span class=\"pink\">Semen streams down your throat,</span> fills your mouth and covers your face as <<he>> flails.",
+   "\t\t\t\t\t\t<<faceejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"semen\">>",
+   "\t\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> groans as <<he>> cums; ejaculate covers your feet.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> quietly cums on your feet, slickening them with semen.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> grunts and thrusts <<his>> cock between your feet as <<he>> cums, splattering cum on your feet and legs in the process that pools around your knees.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"semen\">>",
+   "\t\t\t\t\t<<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"semen\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 신음하며 사정한다. 정액이 당신의 발을 덮는다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>>【은는】 조용히 당신의 발 위에 사정하며, 정액으로 미끌거리게 만든다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>>【은는】 끙 소리를 내며 사정하는 동안 자지를 당신의 발 사이에 들이박고, 정액을 발과 다리에 뿌려대어 무릎 주위에 웅덩이를 만든다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"semen\">>",
+   "\t\t\t\t\t<<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"semen\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t<<He>> groans as <<he>> cums; ejaculate covers your feet.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"semen\">>",
+   "\t\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t\t<<He>> quietly cums on your feet, slickening them with semen.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"semen\">>",
+   "\t\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t\t<<He>> grunts and thrusts <<his>> cock between your feet as <<he>> cums, splattering cum on your feet and legs in the process that pools around your knees.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<feetejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"feet\" \"semen\">>",
+   "\t\t\t\t\t\t<<thighejacstat>><<set $hygiene += 500>><<bodyliquid \"thigh\" \"semen\">>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> groans as <<he>> cums, penis sliding hotly in your hand and covering it with cum.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> quietly cums on your hand. Semen drips down your fingers. \"I'd rather fuck your mouth next time...\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> spasms and moans, shooting thick streams of cum and splattering your <<breasts>> in the process.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"semen\">>",
+   "\t\t\t\t\t<<chestejacstat>><<set $hygiene += 500>><<bodyliquid \"chest\" \"semen\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 신음하며 사정한다. 자지가 손 안에서 뜨겁게 미끄러지며 정액으로 뒤덮는다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>>【은는】 조용히 당신의 손에 사정한다. 정액이 손가락을 타고 흘러내린다. \"다음엔 네 입에 박고 싶네...\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 몸을 떨고 신음한다. 정액 줄기가 튀어 올라 당신의 <<breasts>> 부근까지 뒤덮는다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"semen\">>",
+   "\t\t\t\t\t<<chestejacstat>><<set $hygiene += 500>><<bodyliquid \"chest\" \"semen\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t<<He>> groans as <<he>> cums, penis sliding hotly in your hand and covering it with cum.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"semen\">>",
+   "\t\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t\t<<He>> quietly cums on your hand. Semen drips down your fingers. \"I'd rather fuck your mouth next time...\"",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"semen\">>",
+   "\t\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t\t<<He>> spasms and moans, shooting thick streams of cum and splattering your <<breasts>> in the process.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"leftarm\" \"semen\">>",
+   "\t\t\t\t\t\t<<chestejacstat>><<set $hygiene += 500>><<bodyliquid \"chest\" \"semen\">>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> groans as <<he>> cums, penis sliding hotly in your hand and covering it with cum.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"rightarm\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>> quietly cums on your hand. Semen drips down your fingers. \"I'd rather fuck your mouth next time...\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"rightarm\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>> spasms and moans, shooting thick streams of cum and splattering your <<breasts>> in the process.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"rightarm\" \"semen\">>",
+   "\t\t\t\t\t<<chestejacstat>><<set $hygiene += 500>><<bodyliquid \"chest\" \"semen\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 신음하며 사정한다. 자지가 손 안에서 뜨겁게 미끄러지며 정액으로 뒤덮는다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"rightarm\" \"semen\">>",
+   "\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t<<He>>【은는】 조용히 당신의 손에 사정한다. 정액이 손가락을 타고 흘러내린다. \"다음엔 네 입에 박고 싶네...\"",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"rightarm\" \"semen\">>",
+   "\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t<<He>>【은는】 사정하며 몸을 떨고 신음한다. 정액 줄기가 튀어 올라 당신의 <<breasts>> 부근까지 뒤덮는다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"rightarm\" \"semen\">>",
+   "\t\t\t\t\t<<chestejacstat>><<set $hygiene += 500>><<bodyliquid \"chest\" \"semen\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t<<He>> groans as <<he>> cums, penis sliding hotly in your hand and covering it with cum.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"rightarm\" \"semen\">>",
+   "\t\t\t\t\t<<case 4 5 6>>",
+   "\t\t\t\t\t\t<<He>> quietly cums on your hand. Semen drips down your fingers. \"I'd rather fuck your mouth next time...\"",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"rightarm\" \"semen\">>",
+   "\t\t\t\t\t<<case 7>>",
+   "\t\t\t\t\t\t<<He>> spasms and moans, shooting thick streams of cum and splattering your <<breasts>> in the process.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"rightarm\" \"semen\">>",
+   "\t\t\t\t\t\t<<chestejacstat>><<set $hygiene += 500>><<bodyliquid \"chest\" \"semen\">>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>> groans and rubs <<his>> cock, spraying your face with ejaculate through the hole.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t<<He>> moans as <<he>> ejaculates onto the ground.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>>【은는】 신음하며 자지를 문지르고, 구멍을 통해 당신의 얼굴에 정액을 뿜어낸다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t<<He>>【은는】 신음하며 땅바닥에 사정한다.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t<<He>> groans and rubs <<his>> cock, spraying your face with ejaculate through the hole.",
+   "\t\t\t\t\t\t<br><br>",
+   "",
+   "\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t\t<<He>> moans as <<he>> ejaculates onto the ground.",
+   "\t\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 3)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> groans as you fuck <<his>> ass.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 4 5>>",
+   "\t\t\t\t\t<<He>> moans as you pound <<his>> ass and ejaculates on the ground.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 6 7>>",
+   "\t\t\t\t\t<<He>> sighs as <<he>> ejaculates onto <<his>> own chest.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 당신이 자신의 항문을 범하는 동안 신음한다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 4 5>>",
+   "\t\t\t\t\t<<He>>【은는】 당신이 자신의 항문을 박는 동안 신음하며 땅바닥에 사정한다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 6 7>>",
+   "\t\t\t\t\t<<He>>【은는】 자신의 가슴에 사정하며 한숨을 쉰다.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t<<He>> groans as you fuck <<his>> ass with your <<penis>>.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 4 5>>",
+   "\t\t\t\t\t\t<<He>> moans as you pound <<his>> ass and ejaculates on the ground.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 6 7>>",
+   "\t\t\t\t\t\t<<He>> sighs as <<he>> ejaculates onto <<his>> own chest.",
+   "\t\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<elseif $NPCList[0].penis is \"otheranusfrot\" or $NPCList[0].penis is \"otheranusentrance\" or $NPCList[0].penis is \"otheranusimminent\">>",
+   "\t\t\t\t<<switch random(1, 7)>>",
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> noisily cums as you fuck <<his>> cheeks.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 4 5>>",
+   "\t\t\t\t\t<<He>> moans as you rub against <<his>> anus and ejaculates on the ground; <<he>> seems disappointed."
+  ],
+  "old_kr": [
+   "\t\t\t<<elseif $NPCList[0].penis is \"otheranusfrot\" or $NPCList[0].penis is \"otheranusentrance\" or $NPCList[0].penis is \"otheranusimminent\">>",
+   "\t\t\t\t<<switch random(1, 7)>>",
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 당신이 자신의 엉덩이를 범하는 동안 요란하게 사정한다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 4 5>>",
+   "\t\t\t\t\t<<He>>【은는】 당신이 항문에 비비는 동안 신음하며 땅바닥에 사정한다. <<he>>【은는】 실망한 듯 보인다."
+  ],
+  "new_en": [
+   "\t\t\t<<elseif $NPCList[0].penis is \"otheranusimminent\">>",
+   "\t\t\t\t<<if playerChastity(\"penis\")>>",
+   "\t\t\t\t\t<<He>> rubs <<his>> ass against your $worn.genitals.name until <<he>> cums."
+  ],
+  "context": "\t\t\t\t<</switch>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 6 7>>",
+   "\t\t\t\t\t<<He>> sighs as <<he>> ejaculates onto <<his>> own chest."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 6 7>>",
+   "\t\t\t\t\t<<He>>【은는】 자신의 가슴에 사정하며 한숨을 쉰다."
+  ],
+  "new_en": [
+   "\t\t\t\t<<elseif $nopenile gte 1 and random (1, 2) is 1>>",
+   "\t\t\t\t\tRespecting your wishes, <<he>> keeps pressing <<his>> anus on the tip of your <<penis>> and cums without taking it."
+  ],
+  "context": "\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> cums as <<he>> pleasures you with <<his>> mouth.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 4 5>>",
+   "\t\t\t\t\t<<He>> cums on the ground, then stops abruptly.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 6 7>>",
+   "\t\t\t\t\t<<He>> pushes against the wall, shoving your cock into <<his>> throat; <<he>> ejaculates on <<his>> chest as <<he>> throats your cock.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>>【은는】 입으로 당신을 기쁘게 해주다 사정한다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 4 5>>",
+   "\t\t\t\t\t<<He>>【은는】 땅바닥에 사정하고 갑자기 멈춘다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 6 7>>",
+   "\t\t\t\t\t<<He>>【은는】 벽을 밀어붙이고 당신의 자지를 목구멍에 쑤셔 넣는다. 당신의 자지를 삼키는 동안 가슴에 사정한다.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t<<He>> cums as <<he>> pleasures you with <<his>> mouth.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 4 5>>",
+   "\t\t\t\t\t\t<<He>> cums on the ground, then stops abruptly.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 6 7>>",
+   "\t\t\t\t\t\t<<He>> pushes against the wall, shoving your cock into <<his>> throat; <<he>> ejaculates on <<his>> chest as <<he>> throats your cock.",
+   "\t\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 7)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>> groans and rubs <<his>> $NPCList[0].penisdesc, spraying your face with ejaculate through the hole.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t<<He>> moans as <<he>> ejaculates onto the ground. <<He>> reaches through the wall, <span class=\"purple\">shoving <<his>> fingers down your throat.</span> You gag and retch as <<he>> laughs. \"Next time I'm throating you <<bitch>>; better train up.\"",
+   "\t\t\t\t\t<<gstress>><<gtrauma>><<gpain>><<violence 3>><<bruise neck>><<hitstat>>",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<He>>【은는】 신음하며 <<his>> <<print window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【을를】 문지르고, 구멍을 통해 당신의 얼굴에 정액을 뿜어낸다.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t<<He>>【은는】 땅바닥에 사정하며 신음한다. <<He>>【은는】 벽을 통해 손을 뻗어, <span class=\"purple\"><<his>> 손가락을 당신의 목구멍으로 쑤셔 넣는다.</span> 당신이 웩거리며 구역질을 하자 <<he>>【이가】 웃는다. \"다음번엔 네 목구멍을 뚫어주마 <<bitch>>; 훈련해 두는 게 좋을 거다.\"",
+   "\t\t\t\t\t<<gstress>><<gtrauma>><<gpain>><<violence 3>><<bruise neck>><<hitstat>>",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t\t<<He>> groans and rubs <<his>> $NPCList[0].penisdesc, spraying your face with ejaculate through the hole.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid \"face\" \"goo\">>",
+   "\t\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t\t<<He>> moans as <<he>> ejaculates onto the ground. <<He>> reaches through the wall, <span class=\"purple\">shoving <<his>> fingers down your throat.</span> You gag and retch as <<he>> laughs. \"Next time I'm throating you <<bitch>>; better train up.\"",
+   "\t\t\t\t\t\t<<gstress>><<gtrauma>><<gpain>><<violence 3>><<bruise neck>><<hitstat>>",
+   "\t\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t<<switch random(1, 3)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<!-- Special case male PC with female NPC -->"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<!-- Special case male PC with female NPC -->"
+  ],
+  "context": "\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<!-- Start simplified strap-on sub-case -->"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<!-- Start strap-on sub-case -->"
+  ],
+  "context": "\t<<if $NPCList[0].gender is \"m\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $consensual is 0>><!-- Non-consen strap-on case -->"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<!-- Start Consensual Strap-on -->",
+   "\t\t\t<<if $consensual is 1>>"
+  ],
+  "context": "\t\t<<if $NPCList[0].penisdesc.includes(\"strap-on\")>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<case 6 7>>",
+   "\t\t\t\t\t<<He>> sighs as <<he>> ejaculates onto <<his>> own chest.",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch random(1, 7)>>",
+   "\t\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t\t<<He>> rubs <<his>> ass over your <<penis>> until <<he>> cums.",
+   "\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<case 4 5>>",
+   "\t\t\t\t\t\t\t<<He>> grinds the head of your <<penis>> against <<his>> asshole and ejaculates before it slips in.",
+   "\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\t<<case 6 7>>",
+   "\t\t\t\t\t\t\t<<He>> presses <<his>> anus hard against the tip of your <<penis>>, trying to get it inside, but this pushes <<him>> over the edge and <<he>> spills <<his>> semen all over the ground.",
+   "\t\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $NPCList[0].penis is \"otheranusfrot\" or $NPCList[0].penis is \"otheranusentrance\">>",
+   "\t\t\t\t<<switch random(1, 7)>>",
+   "\t\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t\t<<He>> noisily cums as you fuck <<his>> cheeks.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 4 5>>",
+   "\t\t\t\t\t\t<<He>> moans as you rub against <<his>> anus and ejaculates on the ground; <<he>> seems disappointed.",
+   "\t\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t<<case 6 7>>",
+   "\t\t\t\t\t\t<<He>> sighs as <<he>> ejaculates onto <<his>> own chest.",
+   "\t\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<elseif $NPCList[0].penis is \"otheranusfrot\" or $NPCList[0].penis is \"otheranusentrance\" or $NPCList[0].penis is \"otheranusimminent\">>",
+   "\t\t\t\t<<switch random(1, 7)>>",
+   "\t\t\t\t<<case 1 2 3>>",
+   "\t\t\t\t\t<<He>> noisily cums as you fuck <<his>> cheeks.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 4 5>>",
+   "\t\t\t\t\t<<He>> moans as you rub against <<his>> anus and ejaculates on the ground; <<he>> seems disappointed.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<<case 6 7>>",
+   "\t\t\t\t\t<<He>> sighs as <<he>> ejaculates onto <<his>> own chest.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<!-- Special case male PC being orally serviced by male NPC with no other contact -->"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<elseif $NPCList[0].penis is \"penis\" or $NPCList[0].penis is \"penisentrance\" or $NPCList[0].penis is \"penisimminent\">>",
+   "\t\t\t\t<<He>> slides <<his>> cock along your <<penis>> until <<he>> finishes with a loud groan.",
+   "\t\t\t\t<!-- Special case male PC being orally serviced by male NPC with no other contact -->"
+  ],
+  "context": "\t\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<He>> collapses in orgasmic bliss."
+  ],
+  "context": "\t\t\t\t<br><br>"
+ }
+]

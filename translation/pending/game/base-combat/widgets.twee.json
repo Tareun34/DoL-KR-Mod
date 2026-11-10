@@ -1,0 +1,57 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $speechtemplevirgin to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $speechTempleVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t<<countBrokenVows $_taker>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $speechtemplevirgin to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $speechTempleVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t<<countBrokenVows _args[0]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $_npc and $_npc.penisdesc && $_npc.penisdesc.includes(\"strap-on\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $_npc?.penisdesc?.includes(\"strap-on\")>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $machine and $machine.tattoo and [\"left_thigh\", \"right_thigh\"].includes($machine.tattoo.use)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if [\"left_thigh\", \"right_thigh\"].includes($machine?.tattoo?.use)>>"
+  ],
+  "context": "\t<<set $_parts to [$anususe, $vaginause, $chestuse, $mouthuse]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $NPCList[$_condomnpc].condom and $NPCList[$_condomnpc].condom.willUse>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $NPCList[$_condomnpc].condom?.willUse>>"
+  ],
+  "context": "\t<<set $_condomArticle to (_args[1] ? _args[1] : 0)>>"
+ }
+]

@@ -44,7 +44,7 @@
 <</if>>
 <<if $stress gte $stressmax and !$possessed>>
 	<<passoutstreet>>
-<<elseif $pubfame and $pubfame.task is "bailey" and $pubfame.bailey.fight is "ready">>
+<<elseif $pubfame?.task is "bailey" and $pubfame.bailey.fight is "ready">>
 	<<generateRole 0 0 "thug">><<generateRole 1 0 "thug">><<generateRole 2 0 "thug">><<generateRole 3 0 "thug">>
 	한 무리의 <<group>>【이가】 골목에서 당신에게 다가온다. 몇몇 행인들이 그들을 피하며 시선을 돌리는 것이 보인다. 무리의 우두머리인 <<person1>><<person>>【이가】 음흉하게 웃는다. "<span class="red">저 녀석이군.</span> 우리 밥값은 하겠어."
 	<br><br>

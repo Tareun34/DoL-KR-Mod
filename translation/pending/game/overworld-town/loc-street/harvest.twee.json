@@ -1,0 +1,13 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $pubfame and $pubfame.task is \"bailey\" and $pubfame.bailey.fight is \"ready\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<elseif $pubfame?.task is \"bailey\" and $pubfame.bailey.fight is \"ready\">>"
+  ],
+  "context": "\t<<passoutstreet>>"
+ }
+]

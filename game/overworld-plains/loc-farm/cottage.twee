@@ -126,7 +126,7 @@
 <<elseif npcIsPregnant("Alex") and !talkedAboutPregnancy("Alex","pc") and npcBellySize("Alex") gte 1>>
 	<<alex_cottage_pregnancy_reveal>>
 
-<<elseif ($farm_countdown lte 0 or $farm_countdown is undefined) and ($renttime lte -2 or ($renttime lte 0 and Time.hour gte 4 and Time.hour lte 21))>>
+<<elseif ($farm_countdown lte 0 or $farm_countdown is undefined) and ($rentTime lte -2 or ($rentTime lte 0 and Time.hour gte 4 and Time.hour lte 21))>>
 	<<unset $farm_countdown>><<unset $baileyReunionScene>>
 	<span class="red">문 두드리는 소리가 들린다.</span>
 	<br><br>
@@ -431,10 +431,10 @@
 		<<if ($specialClothesEffects.bimbo.total gte random(100,1000) || $specialClothesEffects.pimp.total gte random(100,1000)) or $arousal gte ($arousalmax / 10) * 9>>
 			<<wetDream>>
 		<<elseif !_wakingEffect>>
-			당신은 깊이 잠든다.
-			<br><br>
+			You sleep soundly.
 		<</if>>
 		<<if !_sleepinterrupt and (Time.hour gt 21 or Time.hour lt 6) and $bus is "farm_alex_room" or $alex_bed is "player" and !_alexWakeNursery>>
+			<br><br>
 			<<switch random(1, 6)>>
 				<<case 1>>
 					<<if Time.hour is 5>>
@@ -463,6 +463,7 @@
 	<</if>>
 	<<sleepeffects>>
 	<<if $remywake is 1>>
+		<br><br>
 		<<npc Alex>><<person1>>
 		"일어나!" 누군가 당신의 어깨를 흔든다. 알렉스다. <span class="red">"녀석들이 왔어."</span> <<he>>【이가】 말한다. "레미 놈이야. 우린 할 수 있어. 준비해, 난
 		<<if $farm.tower_guard>>
@@ -485,6 +486,7 @@
 		<<link [[준비한다|Farm Assault Wardrobe]]>><<endevent>><<set $phase to 1>><<unset $remywake>><</link>>
 		<br>
 	<<elseif _sleepinterrupt>>
+		<br><br>
 		<<npc Alex>><<person1>>
 		<<if _alexWakeNursery is 1>>
 			당신은 다락방으로 이어지는 계단이 삐걱거리는 소리에 잠에서 깬다.
@@ -694,7 +696,7 @@
 	<<else>>
 		경고도 없이 알렉스가 당신의 입에 대고 <<his>> 엉덩이를 쳐올린다. <<His>> 절정으로 당신의 얼굴이 음란한 체액으로 뒤덮인다. 당신은 입술을 핥는다. 이상하게도 맛이 좋다. <<bodyliquid "face" "goo">>
 	<</if>>
-	<<arousal 1500>><<garousal>>
+	<<arousal 1500>><<garousal>><<oralejacstat>><<ejacstat>><<cumswallow "human" null npcSemenMod(C.npc.Alex.penissize)>>
 <<else>> /* Give Alex a hand job */
 	<<if $NPCList[0].penis isnot "none">>
 		<<His>> 몸이 절정의 희열로 경련하며 당신의 손을 정액으로 뒤덮는다. <<arousal 1500 "mouth">><<garousal>><<if random(0,1) is 1>><<bodyliquid "rightarm" "semen">><<else>><<bodyliquid "leftarm" "semen">><</if>>
@@ -710,7 +712,7 @@
 	<<link [[다음 |Farm Alex Somno Orgasm]]>><</link>>
 <<else>>
 	<<if $phase is 0>>
-		<<his>> 몸에서 긴장이 풀리고, <<he>>【은는】 한숨을 쉰다. 절정에 도달한 모양이다. <<He>>【은는】 당신에게 매달리고, 당신은 미소 짓는다. <<stress -6>><<lstress>>
+		The tension leaves <<his>> body, and <<he>> sighs, apparently having climaxed. <<He>> clings to you, and you smile. <<stress -6>><<lstress>><<npcincr Alex lust -1>><<llust>>
 	<<else>>
 		<<if $NPCList[0].penis isnot "none">>
 			당신은 <<his>> 자지를 다시 <<his>> 복서 팬티 안으로 집어넣는다.
@@ -964,7 +966,7 @@
 	<<He>>【은는】 당신과 <<his>> 사타구니 사이를 힐끗거린다. "야간 승마 어때?" <<he>>【은는】 히죽거리며 묻는다.
 	<br><br>
 
-	<<link [[수락한다|Farm Alex Somno Wake Sex]]>><<set $sexstart to 1>><</link>>
+	<<link [[Accept|Farm Alex Somno Wake Sex]]>><<set $sexstart to 1>><</link>><<promiscuous1>>
 	<br>
 	<<link [[거절한다|Farm Alex Somno Wake Reject]]>><</link>>
 <<else>>
@@ -982,7 +984,9 @@
 	<<neutral 1>>
 	<<maninit>>
 
-	당신은 알렉스를 팔로 감싼다. <<He>>【은는】 당신의 목에 키스와 사랑의 흔적을 남기기 전에 그 제스처에 화답한다. <<arousal 600>><<garousal>>
+	You wrap your arms around Alex. <<He>> returns the gesture before ravaging your neck with kisses and love bites. <<arousal 600>><<garousal>>
+	<br><br>
+	<<promiscuity1>>
 	<<set $enemytrust += 100>>
 <</if>>
 
@@ -3197,7 +3201,9 @@
 	<<cottage_bailey_options>>
 <</if>>
 
-<<set $renttime to 7>><<set $rentday to Time.weekDay>>
+
+
+<<set $rentTime to 7>>
 
 :: Farm Cottage Bailey Confront
 <<effects>>
@@ -3285,8 +3291,8 @@
 <<effects>>
 <<set $baileypaychain to 0>>
 <<set $baileyRefusedToPay += 1>>
-<<set $baileyRefusedToPayTotal += $rentmoney + ($babyRent || 0)>>
-<<set $baileyRefusedToPayTotalStat += $rentmoney + ($babyRent || 0)>>
+<<set $baileyRefusedToPayTotal += $rentMoney + ($babyRent || 0)>>
+<<set $baileyRefusedToPayTotalStat += $rentMoney + ($babyRent || 0)>>
 
 알렉스가 문을 쾅 닫는다.
 <<if $bailey_encroach is undefined>>
@@ -4476,7 +4482,7 @@
 계속해서 힘을 주자 고통이 견딜 수 없을 만큼 심해진다. 모든 것이 희미해진다.
 <br><br>
 
-<<link [[다음 (2:00)|Farm PC Birth 5]]>><<run beginPlayerBirth()>><<pass 120>><</link>>
+<<link [[Next (2:00)|Farm PC Birth 5]]>><<run setPlayerLitterBorn()>><<pass 120>><</link>>
 
 :: Farm PC Birth 5
 <<effects>>
@@ -4922,7 +4928,7 @@
 <<effects>>
 <<loadNPC 1 "alexs_parent1">>
 <<loadNPC 2 "alexs_parent2">>
-"<<person2>><<Ma>>【은는】 지금 좀 바쁘시지만, <<person3>><<father>>【이가】 시내에 계시고 우리를 도와주기로 했다고 하셨어. 오래 걸리진 않을 거야." <<person1>><<he>>【이가】 전보다 더 들뜬 표정으로 말한다.
+<<person2>>"<<Ma>> is kind of busy right now, but he said <<person3>><<father>>'s at the city and that <<he>> agreed to help us, it shouldn't take long," <<person1>><<he>> says looking more excited than before.
 <br><br>
 
 얼마 기다리지 않아 차 한 대가 다가와 경적을 울린다.
@@ -4954,7 +4960,7 @@
 :: Farm Alex Orphanage Trip 2
 <<effects>>
 
-당신은 곧 당신의 <<if childrenCountBetweenParents("pc","Alex") gte 2>>아이들이 있는<<else>>아이가 있는<</if>> 고아원에 도착한다. 알렉스는 고아원의 상태를 보고 경악한 표정을 짓는다.
+You soon arrive at the orphanage, where your <<if childrenCountBetweenParents("pc","Alex") gte 2>>children are<<else>>child is<</if>>, Alex looks horrified when <<person1>><<he>> see the state the orphanage is in.
 <br><br>
 
 "네가 가서 <<if childrenCountBetweenParents("pc","Alex") gte 2>>아이들을<<else>>아이를<</if>> 데려와 줄 수 있을까?" 알렉스가 묻는다. "난 저 안에 들어갈 수 있을지 모르겠어."

@@ -1,0 +1,176 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou sleep soundly.",
+   "\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\t당신은 깊이 잠든다.",
+   "\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t\tYou sleep soundly."
+  ],
+  "context": "\t\t<<elseif !_wakingEffect>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tThe tension leaves <<his>> body, and <<he>> sighs, apparently having climaxed. <<He>> clings to you, and you smile. <<stress -6>><<lstress>>"
+  ],
+  "old_kr": [
+   "\t\t<<his>> 몸에서 긴장이 풀리고, <<he>>【은는】 한숨을 쉰다. 절정에 도달한 모양이다. <<He>>【은는】 당신에게 매달리고, 당신은 미소 짓는다. <<stress -6>><<lstress>>"
+  ],
+  "new_en": [
+   "\t\tThe tension leaves <<his>> body, and <<he>> sighs, apparently having climaxed. <<He>> clings to you, and you smile. <<stress -6>><<lstress>><<npcincr Alex lust -1>><<llust>>"
+  ],
+  "context": "\t<<if $phase is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<link [[Accept|Farm Alex Somno Wake Sex]]>><<set $sexstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<link [[수락한다|Farm Alex Somno Wake Sex]]>><<set $sexstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t<<link [[Accept|Farm Alex Somno Wake Sex]]>><<set $sexstart to 1>><</link>><<promiscuous1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou wrap your arms around Alex. <<He>> returns the gesture before ravaging your neck with kisses and love bites. <<arousal 600>><<garousal>>"
+  ],
+  "old_kr": [
+   "\t당신은 알렉스를 팔로 감싼다. <<He>>【은는】 당신의 목에 키스와 사랑의 흔적을 남기기 전에 그 제스처에 화답한다. <<arousal 600>><<garousal>>"
+  ],
+  "new_en": [
+   "\tYou wrap your arms around Alex. <<He>> returns the gesture before ravaging your neck with kisses and love bites. <<arousal 600>><<garousal>>",
+   "\t<br><br>",
+   "\t<<promiscuity1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "",
+   "",
+   "<<set $renttime to 7>><<set $rentday to Time.weekDay>>"
+  ],
+  "old_kr": [
+   "<<set $renttime to 7>><<set $rentday to Time.weekDay>>"
+  ],
+  "new_en": [
+   "",
+   "",
+   "<<set $rentTime to 7>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Next (2:00)|Farm PC Birth 5]]>><<run beginPlayerBirth()>><<pass 120>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[다음 (2:00)|Farm PC Birth 5]]>><<run beginPlayerBirth()>><<pass 120>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Next (2:00)|Farm PC Birth 5]]>><<run setPlayerLitterBorn()>><<pass 120>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\"<<person2>><<Ma>> is kind of busy right now, but he said <<person3>><<father>>'s at the city and that <<he>> agreed to help us, it shouldn't take long,\" <<person1>><<he>> says looking more excited than before."
+  ],
+  "old_kr": [
+   "\"<<person2>><<Ma>>【은는】 지금 좀 바쁘시지만, <<person3>><<father>>【이가】 시내에 계시고 우리를 도와주기로 했다고 하셨어. 오래 걸리진 않을 거야.\" <<person1>><<he>>【이가】 전보다 더 들뜬 표정으로 말한다."
+  ],
+  "new_en": [
+   "<<person2>>\"<<Ma>> is kind of busy right now, but he said <<person3>><<father>>'s at the city and that <<he>> agreed to help us, it shouldn't take long,\" <<person1>><<he>> says looking more excited than before."
+  ],
+  "context": "<<loadNPC 2 \"alexs_parent2\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You soon arrive at the orphanage, where your <<if childrenCountBetweenParents(\"pc\",\"Alex\") gte 2>>children are<<else>>child is<</if>>, Alex looks horrified when <<he>> see the state the orphanage is in."
+  ],
+  "old_kr": [
+   "당신은 곧 당신의 <<if childrenCountBetweenParents(\"pc\",\"Alex\") gte 2>>아이들이 있는<<else>>아이가 있는<</if>> 고아원에 도착한다. 알렉스는 고아원의 상태를 보고 경악한 표정을 짓는다."
+  ],
+  "new_en": [
+   "You soon arrive at the orphanage, where your <<if childrenCountBetweenParents(\"pc\",\"Alex\") gte 2>>children are<<else>>child is<</if>>, Alex looks horrified when <<person1>><<he>> see the state the orphanage is in."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif ($farm_countdown lte 0 or $farm_countdown is undefined) and ($renttime lte -2 or ($renttime lte 0 and Time.hour gte 4 and Time.hour lte 21))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<elseif ($farm_countdown lte 0 or $farm_countdown is undefined) and ($rentTime lte -2 or ($rentTime lte 0 and Time.hour gte 4 and Time.hour lte 21))>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<br><br>"
+  ],
+  "context": "\t\t<<if !_sleepinterrupt and (Time.hour gt 21 or Time.hour lt 6) and $bus is \"farm_alex_room\" or $alex_bed is \"player\" and !_alexWakeNursery>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t<<if $remywake is 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br><br>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<arousal 1500>><<garousal>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<arousal 1500>><<garousal>><<oralejacstat>><<ejacstat>><<cumswallow \"human\" null npcSemenMod(C.npc.Alex.penissize)>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<set $baileyRefusedToPayTotal += $rentmoney + ($babyRent || 0)>>",
+   "<<set $baileyRefusedToPayTotalStat += $rentmoney + ($babyRent || 0)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set $baileyRefusedToPayTotal += $rentMoney + ($babyRent || 0)>>",
+   "<<set $baileyRefusedToPayTotalStat += $rentMoney + ($babyRent || 0)>>"
+  ],
+  "context": "<<set $baileyRefusedToPay += 1>>"
+ }
+]

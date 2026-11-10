@@ -35,7 +35,7 @@
 <!-- SPECIFIC HAND ACTION WIDGETS -->
 
 <<widget "combat-spank">>
-	<<bruise bottom>><<hitstat>><<set $speechspank to 1>>
+	<<bruise bottom>><<hitstat>><<set $speechSpank to 1>>
 
 	<<if $worn.lower.anus_exposed is 1 and $worn.over_lower.anus_exposed is 1 and $worn.under_lower.name isnot "naked" and $worn.under_lower.anus_exposed is 0>>
 		<<set $_through to $worn.under_lower.name>>
@@ -61,7 +61,7 @@
 <<widget "combat-dildospank">>
 	<<set $_hand to _args[0]>>
 	<<set $_toy to ($_hand is "left" ? $NPCList[_n].lefttool : $NPCList[_n].righttool)>>
-	<<bruise bottom>><<hitstat>><<set $speechspank to 1>>
+	<<bruise bottom>><<hitstat>><<set $speechSpank to 1>>
 	<<if npcHasSexToyOfType(_n,"dildo")>>
 
 		<<if $NPCList[_n].location.genitals is "head" or $mouthuse is "facesit" or $mouthuse is "penis">>
@@ -198,17 +198,17 @@
 		<<neutral 10 "genitals" _n>>
 		<<bodypart_admire_chance pubic>>
 	<<elseif ($rng gte 21 or $novaginal is 1) and (!$player.penisExist or random(1,100) gte 51)>>
-		<<He>>【이가】 당신의 클리토리스를 꼬집는다.
-		<<set $speechclit to 1>><<neutral 10 "genitals" _n>>
+		<<He>> gives your clitoris a tweak.
+		<<set $speechClit to 1>><<neutral 10 "genitals" _n>>
 		<<bodypart_admire_chance pubic>>
 	<<elseif $rng gte 21 or $novaginal is 1>>
-		<<He>>【이가】 당신의 보지를 희롱하며 당신의 <<penisSimple>> 밑동을 문지른다.
-		<<neutral 10 "genitals" _n>><<set $speechfutapenis to 1>>
+		<<He>> rubs the base of your <<penisSimple>> while toying with your pussy.
+		<<neutral 10 "genitals" _n>><<set $speechFutaPenis to 1>>
 		<<bodypart_admire_chance pubic>>
 	<<elseif $rng lte 20 and $novaginal is 0>>
 		<span class="pink"><<He>>【이가】 따뜻한 당신의 <<pussy>> 속으로 손가락을 깊숙이 쑤셔 넣는다.</span>
 		<<neutral 15 "genitals" _n>>
-		<<set $speechvagina to 1>><<set $vaginastate to "otherhand">>
+		<<set $speechVagina to 1>><<set $vaginastate to "otherhand">>
 		<<combat-set-hand-target _args[0] "vagina">>
 		<<bodypart_admire_chance pubic>>
 	<</if>>
@@ -226,13 +226,13 @@
 		<<neutral 10 "genitals" _n>>
 		<<bodypart_admire_chance pubic>>
 	<<elseif $rng gte 21>>
-		<<He>>【이가】 당신의 귀두를 문지른다.
-		<<neutral 10 "genitals" _n>><<set $speechglans to 1>>
+		<<He>> rubs your glans.
+		<<neutral 10 "genitals" _n>><<set $speechGlans to 1>>
 		<<bodypart_admire_chance pubic>>
 	<<elseif $rng lte 20>>
 		<span class="pink"><<He>>【이가】 손가락으로 당신의 자지를 부드럽게 감싸 쥔다.</span>
 		<<neutral 15 "genitals" _n>>
-		<<set $speechpenis to 1>><<set $penisstate to "otherhand">>
+		<<set $speechPenis to 1>><<set $penisstate to "otherhand">>
 		<<combat-set-hand-target _args[0] "penis">>
 		<<bodypart_admire_chance pubic>>
 	<</if>>
@@ -258,7 +258,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			"<<He>>【이가】 당신의 손을 으스러져라 꽉 쥔다.",
 			"<<He>>【이가】 당신의 손가락을 뒤로 꺾어버린다."
 		)>>
-		<<violence 10>><<hitstat>><<set $speechbeat to 1>>
+		<<violence 10>><<hitstat>><<set $speechPlayerBeaten to 1>>
 	<<elseif $rng gte 96>>
 		<span class="purple"><<He>>【이가】 당신의 <<print ($_hand is "left" ? "오른손" : "왼손")>>【을를】 놓아준다.</span>
 		<<combat-reset-hand _args[0]>>
@@ -280,8 +280,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<combat-set-hand-target _args[0] "vaginaentrance">>
 		<<neutral 15 "genitals" _n>><<set $vaginastate to "otherhandentrance">>
 	<<elseif $rng lte 100>>
-		<<He>>【이가】 당신의 <<pussy>> 안쪽을 <<strokes>>
-		<<neutral 20 "genitals" _n>><<set $speechvagina to 1>>
+		<<He>> <<strokes>> the inside of your <<pussy>>,
+		<<neutral 20 "genitals" _n>><<set $speechVagina to 1>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			무의식적인 몸떨림을 일으키며.
 		<<elseif $arousal gte $arousalmax / 5>>
@@ -300,8 +300,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<combat-set-hand-target _args[0] "penisentrance">>
 		<<neutral 15 "genitals" _n>><<set $penisstate to "otherhandentrance">>
 	<<elseif $rng lte 100>>
-		<<He>>【이가】 당신의 <<penis>> 전체를 마사지하듯 주무르며,
-		<<neutral 20 "genitals" _n>><<set $speechpenis to 1>>
+		<<He>> massages the length of your <<penis>>,
+		<<neutral 20 "genitals" _n>><<set $speechPenis to 1>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			당신이 무의식적으로 몸을 떨게 만들며.
 		<<elseif $arousal gte $arousalmax / 5>>
@@ -356,7 +356,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<set $anususe to "hand">>
 		<<set $anusstate to "handentrance">>
 		<<neutral 15 _n>>
-		<<set $speechanus to 1>>
+		<<set $speechAnus to 1>>
 		<<bodypart_admire_chance random_bottom>>
 	<</if>>
 <</widget>>
@@ -381,8 +381,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<combat-set-hand-target _args[0] "anusentrance">>
 		<<neutral 15 _n>>
 	<<elseif $rng lte 100>>
-		<<He>>【이가】 리드미컬하게 손가락을 당신의 항문에 넣었다 뺐다 하며,
-		<<neutral 20 _n>><<set $speechanus to 1>>
+		<<He>> rhythmically slides <<his>> finger in and out of your ass,
+		<<neutral 20 _n>><<set $speechAnus to 1>>
 		<<if $player.sex is "f">>
 			항문을 애태운다.
 		<<else>>
@@ -416,13 +416,13 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<neutral 10 "genitals" _n>>
 		<<bodypart_admire_chance pubic>>
 	<<elseif ($_rng gte 21 or $novaginal is 0) and (!$player.penisExist or random(1,100) gte 51)>>
-		<<He>>【이가】 <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 클리토리스를 <<print either("문지른다","가볍게 때린다")>><<if $_clothing isnot undefined>>, 당신의 <<print $_clothing>>【을를】 너머로<</if>>.
-		<<set $speechclit to 1>><<neutral 10 "genitals" _n>>
+		<<He>> <<print either("rubs","slaps")>> your clit with the $_toy in <<his>> _args[0] hand<<if $_clothing isnot undefined>>, through your <<print $_clothing>><</if>>.
+		<<set $speechClit to 1>><<neutral 10 "genitals" _n>>
 		<<violence 1>>
 		<<bodypart_admire_chance pubic>>
 	<<elseif $_rng gte 21 or $novaginal is 0>>
-		<<He>>【이가】 당신의 보지를 희롱하는 동시에 <<his>> <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 <<penisSimple>> 밑동을 문지른다<<if $_clothing isnot undefined>>, 당신의 <<print $_clothing>>【을를】 통해<</if>>.
-		<<neutral 10 "genitals" _n>><<set $speechfutapenis to 1>>
+		<<He>> rubs the base of your <<penisSimple>> with <<his>> $_toy while toying with your pussy<<if $_clothing isnot undefined>>, through your <<print $_clothing>><</if>>.
+		<<neutral 10 "genitals" _n>><<set $speechFutaPenis to 1>>
 		<<bodypart_admire_chance pubic>>
 	<<elseif $_rng lte 20 and $novaginal is 0
 	and $worn.under_lower.name isnot "naked" and ($worn.under_lower.state isnot "waist" or $worn.under_lower.vagina_exposed gte 1)
@@ -431,8 +431,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 	and !playerChastity("vagina")) and $vaginause isnot "othermouth" and ($settings.vaginalDoubleEnabled and $settings.toyMultiplePenetrationEnabled or $vaginause is 0)>>
 		/* penetration */
 		/* Doesn't check if the PC is already penetrated (aside from mouth) in order to allow for multiple penetrations. */
-		<span class="pink"><<He>>【이가】 <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【을를】 당신의 따뜻한 <<pussy>>에 깊숙이 쑤셔 넣는다.</span>
-		<<neutral 15 "genitals" _n>><<set $speechvagina to 1>><<combat-set-hand-target _args[0] "vaginadildo">>
+		<span class="pink"><<He>> plunges <<his>> _args[0]-hand $_toy into your warm <<pussy>>.</span>
+		<<neutral 15 "genitals" _n>><<set $speechVagina to 1>><<combat-set-hand-target _args[0] "vaginadildo">>
 		<<bodypart_admire_chance pubic>>
 	<<else>>
 		<<He>>【이가】 <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 음순을 <<strokes>>
@@ -457,7 +457,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<print either("리듬에 맞춰","개의치 않고","나란히")>>
 			<<if $vaginastate is _n>><<his>> <<npcPenisSimple _n>>,<<else>><<set $_n to _n>><<personselect $vaginastate>><<combatpersons>>의 자지,<<set _n to $_n>><</if>>
 		<</if>>
-		<<neutral 20 "genitals" _n>><<set $speechvagina to 1>>
+		<<neutral 20 "genitals" _n>><<set $speechVagina to 1>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			무의식적인 몸떨림을 일으키며.
 		<<elseif $arousal gte $arousalmax / 5>>
@@ -499,8 +499,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<neutral 10 "genitals" _n>>
 		<<bodypart_admire_chance pubic>>
 	<<elseif $rng gte 21>>
-		<<He>>【이가】 <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 귀두를 <<print either("가볍게 친다","찰싹 때린다","희롱한다","문지른다")>><<if $_clothing isnot undefined>>, 당신의 <<print $_clothing>>【을를】 너머로<</if>>.
-		<<neutral 10 "genitals" _n>><<set $speechglans to 1>>
+		<<He>> <<print either("slaps","smacks","teases","rubs")>> your glans with the $_toy in <<his>> _args[0] hand<<if $_clothing isnot undefined>>, through your <<print $_clothing>><</if>>.
+		<<neutral 10 "genitals" _n>><<set $speechGlans to 1>>
 		<<violence 1>>
 		<<bodypart_admire_chance pubic>>
 	<<elseif $rng lte 20
@@ -511,7 +511,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		/* escalation */
 		<span class="pink"><<He>>【이가】 <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【을를】 당신의 <<penisSimple>>에 <<print either("문지른다","비벼댄다","펜싱하듯 부딪친다")>>.</span>
 		<<neutral 15 "genitals" _n>>
-		<<set $speechpenis to 1>>
+		<<set $speechPenis to 1>>
 		<<combat-set-hand-target _args[0] "penisdildo">>
 		<<bodypart_admire_chance pubic>>
 	<<else>>
@@ -542,8 +542,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<his>> <<print _args[0] is "left" ? "왼손" : "오른손">>【으로로】, <<he>>【이가】 당신의 <<penis>> 전체를 <<print either("마사지한다","문지른다","펜싱하듯 부딪친다","비빈다")>>
 			당신이 <<set $_n to _n>><<personselect $penistarget>><<combatpersons>> $_teased【을를】 $_fuck 동안.<<personselect $_n>>
 		<<else>>
-			<<He>>【이가】 <<his>> <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 <<penis>> 전체를 <<print either("마사지한다","문지른다","펜싱하듯 부딪친다","비빈다")>>,
-			<<neutral 20 "genitals" _n>><<set $speechpenis to 1>>
+			<<He>> <<print either("massages","rubs","fences","frots")>> the length of your <<penis>> with the $_toy in <<his>> _args[0] hand,
+			<<neutral 20 "genitals" _n>><<set $speechPenis to 1>>
 			<<if !playerHasStrapon()>>
 				<<if $arousal gte ($arousalmax / 5) * 4>>
 					당신이 무의식적으로 몸을 떨게 만들며.
@@ -587,12 +587,12 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<span class="pink"><<he>>【이가】 <<his>> <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【을를】 당신의 자지 위로 찔러넣는다.</span>
 		<<set $penisuse to "stroker">><<set $penisstate to "stroker">>
 		<<neutral 15 "genitals" _n>>
-		<<set $speechpenis to 1>>
+		<<set $speechPenis to 1>>
 		<<combat-set-hand-target _args[0] "penisstroker">>
 		<<bodypart_admire_chance pubic>>
 	<<else>>
-		<<he>>【이가】 <<his>> <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 <<if $_clothing isnot "none">>당신의 $_clothing【을를】 너머로, <</if>>당신의 귀두를 애태운다.
-		<<neutral 10 "genitals" _n>><<set $speechglans to 1>>
+		<<He>> teases your glans with the $_toy in <<his>> _args[0] hand<<if $_clothing isnot "none">>, through your $_clothing<</if>>.
+		<<neutral 10 "genitals" _n>><<set $speechGlans to 1>>
 		<<bodypart_admire_chance pubic>>
 	<</if>>
 <</widget>>
@@ -647,7 +647,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<span class="pink"><<He>>【이가】 <<his>> <<print _hand is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【을를】 당신의 엉덩이에 찔러 넣는다<<if playerHasButtPlug()>>, 당신의 $worn.butt_plug.name【은는】 아랑곳하지 않고<</if>>.</span>
 		<<combat-set-hand-target _hand "anusdildo">>
 		<<neutral 15 _n>>
-		<<set $speechanus to 1>>
+		<<set $speechAnus to 1>>
 		<<bodypart_admire_chance random_bottom>>
 	<<else>>
 		<<He>>【이가】 <<his>> <<print _hand is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 <<bottom>>【을를】 <<strokes>><<if playerHasButtPlug()>>, 당신의 $worn.butt_plug.name【을를】 문지르면서<</if>>.
@@ -673,7 +673,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<else>>
 			<<He>>【이가】 <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【을를】 당신의 항문 안팎으로 $_rhythmically 쑤셔 넣었다 뺀다,
 		<</if>>
-		<<neutral 20 _n>><<set $speechanus to 1>>
+		<<neutral 20 _n>><<set $speechAnus to 1>>
 		<<if $player.sex is "f">>
 			당신의 항문을 희롱하면서.
 		<<else>>
@@ -939,12 +939,12 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<span class="lblue"><<He>>【이가】 당신의 머리카락을 놓아준다.</span>
 		<<combat-reset-hand _args[0]>>
 	<<elseif $enemyanger gte 61>>
-		당신의 머리카락을 꽉 쥔 채, <<he>>【이가】 당신의 머리를 확 잡아당긴다.
-		<<violence 4 1 1 1 _n>><<set $speechhair to 1>>
+		With your hair in <<his>> grip, <<he>> yanks back your head.
+		<<violence 4 1 1 1 _n>><<set $speechHair to 1>>
 		<<bodypart_admire_chance forehead>>
 	<<elseif $enemyanger gte 21>>
-		<<He>>【이가】 당신의 머리카락을 한 움큼 쥔 채로 쓰다듬는다.
-		<<set $speechhair to 1>><<neutral 1 _n>>
+		<<He>> strokes your hair while holding it bunched in <<his>> grip.
+		<<set $speechHair to 1>><<neutral 1 _n>>
 		<<bodypart_admire_chance forehead>>
 	<<else>>
 		<span class="lblue"><<He>>【이가】 당신의 머리카락을 놓아준다.</span>
@@ -993,8 +993,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				당신의 <<exposedupper>>【을를】 드러낸다.
 				<<neutral 2 _n>>
 			<<else>>
-				<span class="lewd">당신의 <<breasts>>【을를】 드러낸다.</span>
-				<<neutral 3 _n>><<set $speechbreasts to 1>>
+				<span class="lewd">revealing your <<breasts>>.</span>
+				<<neutral 3 _n>><<set $speechExposeBreasts to 1>>
 			<</if>>
 		<<case "midriff">>
 			<<if $_target is "upper">>
@@ -1004,15 +1004,15 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<He>>【이가】 <<print ($_hand is "left" ? "왼손" : "오른손")>>으로 당신의 $_clothing_lower.name【을를】 잡아당기며, 당신의 $_clothing_upper.name【을를】 복부 아래로 끌어내린다.
 				<<neutral 1 _n>>
 			<</if>>
-			<<if playerBellyVisible()>><<set $speechpregnant to 1>><</if>>
+			<<if playerBellyVisible()>><<set $speechPregnant to 1>><</if>>
 		<<case "waist">>
 			<<He>>【이가】 <<print ($_hand is "left" ? "왼손" : "오른손")>>으로 당신의 $_clothing_upper.name【을를】 허벅지까지 끌어내려,
 			<<if !_bottomlessExposed>>
 				당신의 <<exposedlower>>【을를】 드러낸다.
 				<<neutral 2 _n>>
 			<<else>>
-				<span class="lewd">당신의 <<genitals>>【을를】 드러낸다.</span>
-				<<neutral 5 _n>><<set $speechgenitals to 1>>
+				revealing your <span class="lewd"><<genitals>>.</span>
+				<<neutral 5 _n>><<set $speechExposeGenitals to 1>>
 			<</if>>
 		<<case "thighs">>
 			<<He>>【이가】 <<print ($_hand is "left" ? "왼손" : "오른손")>>으로 당신의 $_clothing_upper.name【을를】 무릎까지 끌어내린다.
@@ -1071,7 +1071,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<He>>【이가】 <<print ($_hand is "left" ? "왼손" : "오른손")>>으로 당신의 $_clothing_upper.name【을를】 복부 위로 걷어 올린다.
 					<</if>>
 					<<neutral 2 _n>>
-					<<if playerBellyVisible()>><<set $speechpregnant to 1>><</if>>
+					<<if playerBellyVisible()>><<set $speechPregnant to 1>><</if>>
 				<</if>>
 			<<case "midriff">>
 				<<if $_target is "upper">>
@@ -1082,8 +1082,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						당신의 <<exposedupper>>【을를】 노출시킨다.
 						<<neutral 2 _n>>
 					<<else>>
-						<span class="lewd">당신의 <<breasts>>【을를】 노출시킨다.</span>
-						<<neutral 3 _n>><<set $speechbreasts to 1>>
+						<span class="lewd">exposing your <<breasts>>.</span>
+						<<neutral 3 _n>><<set $speechExposeBreasts to 1>>
 					<</if>>
 				<</if>>
 			<<case "chest">>
@@ -1117,21 +1117,21 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				당신의 <<exposedupper>>【을를】 드러낸다.
 				<<neutral 2 _n>>
 			<<else>>
-				<span class="lewd">당신의 <<breasts>>【을를】 드러낸다.</span>
-				<<neutral 3 _n>><<set $speechbreasts to 1>>
+				<span class="lewd">revealing your <<breasts>>.</span>
+				<<neutral 3 _n>><<set $speechExposeBreasts to 1>>
 			<</if>>
 		<<case "midriff">>
 			<<He>>【이가】 <<print ($_hand is "left" ? "왼손" : "오른손")>>으로 당신의 $_clothing.name【을를】 복부 아래로 끌어내린다.
 			<<neutral 1 _n>>
-			<<if playerBellyVisible()>><<set $speechpregnant to 1>><</if>>
+			<<if playerBellyVisible()>><<set $speechPregnant to 1>><</if>>
 		<<case "waist">>
 			<<He>>【이가】 <<print ($_hand is "left" ? "왼손" : "오른손")>>으로 당신의 $_clothing.name【을를】 허벅지까지 끌어내려,
 			<<if !_bottomlessExposed and $_slot isnot "under_lower" and setup.clothes.lower[clothesIndex('lower', $worn.lower)].skirt isnot 1>>
 				당신의 <<exposedlower>>【을를】 드러낸다.
 				<<neutral 2 _n>>
 			<<else>>
-				<span class="lewd">당신의 <<genitals>>【을를】 드러낸다.</span>
-				<<neutral 5 _n>><<set $speechgenitals to 1>>
+				revealing your <span class="lewd"><<genitals>>.</span>
+				<<neutral 5 _n>><<set $speechExposeGenitals to 1>>
 			<</if>>
 		<<case "thighs">>
 			<<He>>【이가】 <<print ($_hand is "left" ? "왼손" : "오른손")>>으로 당신의 $_clothing.name【을를】 무릎까지 끌어내린다.
@@ -1157,11 +1157,11 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<case "midriff">>
 				<<He>>【이가】 <<print ($_hand is "left" ? "왼손" : "오른손")>>으로 당신의 $_clothing.name【을를】 걷어 올려, 당신의 복부를 노출시킨다.
 				<<neutral 1 _n>>
-				<<if playerBellyVisible()>><<set $speechpregnant to 1>><</if>>
+				<<if playerBellyVisible()>><<set $speechPregnant to 1>><</if>>
 			<<case "chest">>
 				<<if _toplessExposed>>
-					<<He>>【이가】 <<print ($_hand is "left" ? "왼손" : "오른손")>>으로 당신의 $_clothing.name【을를】 걷어 올려, <span class="lewd">당신의 <<breasts>>【을를】 노출시킨다.</span>
-					<<neutral 2 _n>><<set $speechbreasts to 1>>
+					<<He>> lifts up your $_clothing.name with <<his>> $_hand hand, <span class="lewd">exposing your <<breasts>>.</span>
+					<<neutral 2 _n>><<set $speechExposeBreasts to 1>>
 				<<else>>
 					<<He>>【이가】 <<print ($_hand is "left" ? "왼손" : "오른손")>>으로 당신의 $_clothing.name【을를】 가슴 위로 걷어 올려, 당신의 <<exposedupper>>【을를】 노출시킨다.
 					<<neutral 1 _n>>
@@ -1188,7 +1188,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<He>>【이가】 당신의 $_clothing.name【을를】 옆으로 젖혀, <span class="lewd">당신의 <<genitals>>【을를】 드러낸다.</span>
 		<<set $_clothing.state to "totheside">>
 		<<combat-reset-hand $_hand>><<neutral 5 _n>>
-		<<set $_clothing.vagina_exposed to 1>><<set $_clothing.anus_exposed to 1>><<set $_clothing.exposed to 1>><<set $speechgenitals to 1>>
+		<<set $_clothing.vagina_exposed to 1>><<set $_clothing.anus_exposed to 1>><<set $_clothing.exposed to 1>><<set $speechExposeGenitals to 1>>
 	<</if>>
 <</widget>>
 
@@ -1296,7 +1296,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<neutral 2 _n>>
 	<<else>>
 		<span class="lewd"><<genitals>>.</span>
-		<<neutral 5 _n>><<set $speechgenitals to 1>>
+		<<neutral 5 _n>><<set $speechExposeGenitals to 1>>
 	<</if>>
 <</widget>>
 
@@ -1306,7 +1306,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 	<<He>>【이가】 당신의 $worn.butt_plug.name【을를】 빼내어, <span class="lewd">당신의 항문을 드러낸다.</span>
 	<<set $worn.butt_plug.state to "removed">>
 	<<combat-reset-hand $_hand>><<neutral 5 _n>>
-	<<set $speechanusentrance to 1>>
+	<<set $speechAnusEntrance to 1>>
 	<<unset $handOnButtPlug>>
 <</widget>>
 
@@ -1482,8 +1482,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<combat-reset-hand $_hand>>
 	<<elseif V[$_strugglevar] is 1>>
 		<<set V[$_strugglevar] to 0>>
-		당신은 어떻게든 <<him>>【이가】 당신의 $worn[$_slot].name【을를】 벗기지 못하게 막아낸다.
-		<<set $speechstripstruggle to 1>>
+		You manage to keep <<him>> from stripping you of your $worn[$_slot].name.
+		<<set $speechStripStruggle to 1>>
 	<<elseif $rng gte 101>>
 		<span class="lblue"><<He>>【이가】 당신의 $worn[$_slot].name에서 손을 놓는다.</span>
 		<<combat-reset-hand $_hand>>
@@ -1580,17 +1580,17 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 <<widget "combat-hand-on-head_breasts">>
 	<<rng>>
 	<<if $rng gte 69 and ($worn.face.type.includes("face_covering") or $worn.face.type.includes("gag"))>>
-		<<He>>【이가】 당신의 입을 <<hisselect _n>> <<= window.KR.getBreastSizeKr($NPCList[_n].breastdesc)>>에 밀어붙이지만, 당신의 $worn.face.name【으로로】 인해 막힌다.
-		<<set $speechheadbreasts to 1>>
+		<<He>> pushes your mouth against <<hisselect _n>> $NPCList[_n].breastdesc, but it's blocked by your $worn.face.name.
+		<<set $speechHeadBreasts to 1>>
 		<<if $NPCList[_n].type is "plant" and $NPCList[_n].pronoun is "f" and $settings.breastFeedingEnabled>>
 			<span class="pink"><<hisselect _n>> 멍울에서 넥타르가 새어 나온다.</span>
 			<<damageFaceCover 1>>
 		<<elseif $NPCList[_n].lactation is 1 and $settings.breastFeedingEnabled>>
-			<span class="pink"><<hisselect _n>> 멍울에서 모유가 새어 나온다.</span>
-			<<set $speechheadsuckleclosed to 1>>
+			<span class="pink">Milk leaks from <<hisselect _n>> bud.</span>
+			<<set $speechHeadSuckleClosed to 1>>
 			<<damageFaceCover 1>>
 		<<else>>
-			<<set $speechheadnippleclosed to 1>>
+			<<set $speechHeadNippleClosed to 1>>
 		<</if>>
 		<<damageFaceCover 1>>
 	<<elseif $rng gte 71>>
@@ -1610,18 +1610,18 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<if $NPCList[_n].type is "plant" and $NPCList[_n].pronoun is "f" and $settings.breastFeedingEnabled>>
 			<span class="pink"><<hisselect _n>> 멍울에서 넥타르가 새어 나온다.</span>
 		<<elseif $NPCList[_n].lactation is 1 and $settings.breastFeedingEnabled>>
-			<span class="pink"><<hisselect _n>> 멍울에서 모유가 새어 나온다.</span>
-			<<set $speechheadsuckleclosed to 1>>
+			<span class="pink">Milk leaks from <<hisselect _n>> bud.</span>
+			<<set $speechHeadSuckleClosed to 1>>
 		<<else>>
-			<<set $speechheadnippleclosed to 1>>
+			<<set $speechHeadNippleClosed to 1>>
 		<</if>>
 	<<else>>
 		<<neutral 3 _n>>
 		<<He>>【이가】 당신의 머리를 <<hisselect _n>> <<= window.KR.getBreastSizeKr($NPCList[_n].breastsdesc)>> 사이에 고정한다.
 		<<if $NPCList[_n].breastsize gte 6>>
-			<<set $speechheadbreasts to 1>>
+			<<set $speechHeadBreasts to 1>>
 		<<else>>
-			<<set $speechheadchest to 1>>
+			<<set $speechHeadChest to 1>>
 		<</if>>
 	<</if>>
 	<<bodypart_admire_chance forehead>>
@@ -1675,19 +1675,19 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<elseif $enemyanger gt 100>>
 				움켜쥔 것에 대한 당신의 반응을 본 <<he>>【이가】 포기하기 전 한 번 더 억지로 떼어내려 시도한다.
 				<<set $worn.genitals.integrity -= 5>>
-				<<arousal 100 "genitals">><<combat-reset-hand _args[0]>><<set $speechchastity to 1>><<bodypart_admire_chance pubic>>
+				<<arousal 100 "genitals">><<combat-reset-hand _args[0]>><<set $speechChastity to 1>><<bodypart_admire_chance pubic>>
 			<<else>>
-				당황한 기색이 역력한 <<He>>【이가】 잠시 더 꽉 쥐더니 멈춘다.
-				<<combat-reset-hand _args[0]>><<set $speechchastity to 1>><<bodypart_admire_chance pubic>>
+				<<He>> stops after a few more moments of squeezing, looking bewildered.
+				<<combat-reset-hand _args[0]>><<set $speechChastity to 1>><<bodypart_admire_chance pubic>>
 			<</if>>
 			<<set $worn.genitals.integrity -= 5>>
 		<<elseif $worn.genitals.origin is $NPCList[_n].fullDescription>>
-			<span class="lblue"><<He>>【이가】 놓아주기 전 당신의 $worn.genitals.name【을를】 부드럽게 붙잡는다.</span>
-			<<combat-reset-hand _args[0]>><<set $speechchastity to 1>><<bodypart_admire_chance pubic>>
+			<span class="lblue"><<He>> gently holds onto your $worn.genitals.name before letting it go.</span>
+			<<combat-reset-hand _args[0]>><<set $speechChastity to 1>><<bodypart_admire_chance pubic>>
 		<<else>>
-			<span class="blue"><<He>>【이가】 당신의 $worn.genitals.name【을를】 벗겨내려 시도한다.</span>
-			<<His>> 거친 손길은 당신을 더욱 애타고 달아오르게 만든다. 실망한 표정의 <<He>>【이가】 잠시 무력하게 잡아당기더니 포기한다.
-			<<set $enemyanger += 5>><<combat-reset-hand _args[0]>><<set $speechchastity to 1>><<bodypart_admire_chance pubic>><<set $worn.genitals.integrity -= 10>>
+			<span class="blue"><<He>> tries to loosen your $worn.genitals.name.</span>
+			<<His>> rough handling leaves you feeling more frustrated and aroused. <<He>> gives up after a few moments of impotent tugging, looking disappointed.
+			<<set $enemyanger += 5>><<combat-reset-hand _args[0]>><<set $speechChastity to 1>><<bodypart_admire_chance pubic>><<set $worn.genitals.integrity -= 10>>
 		<</if>>
 		<<neutral 1 "genitals" _n>><<arousal 5 "genitals">>
 	<</if>>
@@ -1853,22 +1853,22 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<span class="purple"><<He>>【이가】 <<his>> <<print _args[0] is "left" ? "왼손" : "오른손">>【으로로】 당신의 $worn.lower.name【을를】 움켜쥔다.</span>
 				<<set $handtarget to "lowerclothes">><<neutral 1 _n>>
 			<<elseif !(($player.penisExist and !playerChastity("penis")) or ($player.vaginaExist and !playerChastity("vagina")))>>
-				<<He>>【이가】 당신의 허벅지 안쪽을 <<strokes>> <<his>> 손가락으로 당신의 $worn.genitals.name【을를】 스친다<<if $worn.genitals.name is "chastity parasite">>, <span class="lewd">그 감각에 당신은 더욱 흥분한다.</span><<arousal 100 "genitals">><<else>>.<</if>>
-				<<neutral 10 "genitals" _n>><<set $speechchastity to 1>>
+				<<He>> <<strokes>> your inner thigh and brushes <<his>> fingers against your $worn.genitals.name<<if $worn.genitals.name is "chastity parasite">>, <span class="lewd">leaving you feeling more aroused.</span><<arousal 100 "genitals">><<else>>.<</if>>
+				<<neutral 10 "genitals" _n>><<set $speechChastity to 1>>
 			<<elseif ($player.penisExist and !playerChastity("penis")) and ($player.vaginaExist and !playerChastity("vagina"))>>
 				<<if $player.ballsExist and random(0,1) is 1>>
-					<<He>>【이가】 당신의 <<testicles>>【을를】 <<strokes>> 귀두를 애태운다.
-					<<neutral 10 "genitals" _n>><<set $speechglans to 1>>
+					<<He>> <<strokes>> your <<testicles>> and teases your glans.
+					<<neutral 10 "genitals" _n>><<set $speechGlans to 1>>
 				<<else>>
-					<<He>>【이가】 당신의 <<penis>>【와과】 <<pussy>>【이가】 만나는 밑동을 쓰다듬는다.
-					<<neutral 10 "genitals" _n>><<set $speechfutapenis to 1>>
+					<<He>> strokes the base of your <<penis>> where it meets your <<pussy>>.
+					<<neutral 10 "genitals" _n>><<set $speechFutaPenis to 1>>
 				<</if>>
 			<<elseif $player.penisExist and $player.ballsExist and !playerChastity("penis")>>
-				<<He>>【이가】 당신의 <<testicles>>【을를】 <<strokes>> 귀두를 애태운다.
-				<<neutral 10 "genitals" _n>><<set $speechglans to 1>>
+				<<He>> <<strokes>> your <<testicles>> and teases your glans.
+				<<neutral 10 "genitals" _n>><<set $speechGlans to 1>>
 			<<elseif $player.vaginaExist and !playerChastity("vagina")>>
-				<<He>>【이가】 당신의 불두덩을 <<strokes>> 클리토리스를 애태운다.
-				<<neutral 10 "genitals" _n>><<set $speechclit to 1>>
+				<<He>> <<strokes>> your pubic mound and teases your clit.
+				<<neutral 10 "genitals" _n>><<set $speechClit to 1>>
 			<</if>>
 			<<combat-set-hand-target _args[0] $handtarget>>
 		<</if>>
@@ -1885,17 +1885,17 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<He>>【이가】 당신의 허벅지 안쪽을 <<strokes>> <<his>> 손가락으로 당신의 $worn.under_lower.name【을를】 스친다.
 				<<neutral 10 "genitals" _n>>
 			<<elseif !(($player.penisExist and !playerChastity("penis")) or ($player.vaginaExist and !playerChastity("vagina")))>>
-				<<He>>【이가】 당신의 허벅지 안쪽을 <<strokes>> <<his>> 손가락으로 당신의 $worn.genitals.name【을를】 스친다<<if $worn.genitals.name is "chastity parasite">>, <span class="lewd">그 감각에 당신은 더욱 흥분한다.</span><<arousal 100 "genitals">><<else>>.<</if>>
-				<<neutral 10 "genitals" _n>><<set $speechchastity to 1>>
+				<<He>> <<strokes>> your inner thigh and brushes <<his>> fingers against your $worn.genitals.name<<if $worn.genitals.name is "chastity parasite">>, <span class="lewd">leaving you feeling more aroused.</span><<arousal 100 "genitals">><<else>>.<</if>>
+				<<neutral 10 "genitals" _n>><<set $speechChastity to 1>>
 			<<elseif ($player.penisExist and !playerChastity("penis")) and ($player.vaginaExist and !playerChastity("vagina"))>>
-				<<He>>【이가】 허벅지를 따라 <<his>> 손을 미끄러뜨리며 당신의 <<penis>>【와과】 <<pussy>>【이가】 만나는 부위를 어루만진다.
-				<<neutral 10 "genitals" _n>><<set $speechfutapenis to 1>>
+				<<He>> runs <<his>> hand up your thigh and over the area where your <<penis>> and <<pussy>> meet.
+				<<neutral 10 "genitals" _n>><<set $speechFutaPenis to 1>>
 			<<elseif $player.penisExist and !playerChastity("penis")>>
-				<<He>>【이가】 당신의 허벅지 안쪽을 <<strokes>> <<his>> 손가락으로 당신의 <<glans>>【을를】 스친다.
-				<<neutral 10 "genitals" _n>><<set $speechglans to 1>>
+				<<He>> <<strokes>> your inner thigh and brushes <<his>> fingers against your <<glans>>.
+				<<neutral 10 "genitals" _n>><<set $speechGlans to 1>>
 			<<elseif $player.vaginaExist and !playerChastity("vagina")>>
-				<<He>>【이가】 당신의 허벅지 안쪽을 <<strokes>> <<his>> 손가락으로 클리토리스를 스친다.
-				<<neutral 10 "genitals" _n>><<set $speechclit to 1>>
+				<<He>> <<strokes>> your inner thigh and brushes <<his>> fingers against your clit.
+				<<neutral 10 "genitals" _n>><<set $speechClit to 1>>
 			<<else>>
 				<<He>>【이가】 당신의 허벅지 안쪽을 <<strokes>>
 				<<neutral 10 "genitals" _n>>
@@ -2024,7 +2024,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<else>>
 			<<He>>【이가】 당신의 배를 어루만진다.
 			<<neutral 1 _n>>
-			<<if playerBellyVisible()>><<set $speechpregnant to 1>><</if>>
+			<<if playerBellyVisible()>><<set $speechPregnant to 1>><</if>>
 		<</if>>
 		<<bodypart_admire_chance back>>
 	<<elseif $enemyanger + $rng lte 50>>
@@ -2093,7 +2093,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<span class="purple">그곳에서는 모유 냄새가 난다.</span>
 		<</if>>
 		<<combat-set-hand-target _args[0] "head_breasts">><<set $mouthuse to "breasts">><<set $mouthstate to "breasts">><<set $head to "breasts">>
-		<<set $NPCList[_n].chest to "mouthentrance">><<set $speechheadbreasts to 1>><<neutral 3 _n>><<set $mouthactiondefault to "breastclosed">>
+		<<set $NPCList[_n].chest to "mouthentrance">><<set $speechHeadBreasts to 1>><<neutral 3 _n>><<set $mouthactiondefault to "breastclosed">>
 		<<set $NPCList[_n].location.head to "head">><<set $mouthtarget to _n>>
 		<<bodypart_admire_chance forehead>>
 	<<elseif $enemyanger + $rng lte 80>>
@@ -2101,7 +2101,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<He>>【이가】 <<his>> <<print _args[0] is "left" ? "왼손" : "오른손">>【으로로】 당신의 어깨를 밀며, 얼마나 단단히 끼어 있는지 시험해 본다.
 			<<neutral 2 _n>>
 		<<else>>
-			<<set $speechbottom to 1>>
+			<<set $speechBottom to 1>>
 			<<if $worn.over_lower.state is "waist" and setup.clothes.over_lower[clothesIndex('over_lower', $worn.over_lower)].skirt is 0>>
 				<<if $worn.lower.state is "waist" and setup.clothes.lower[clothesIndex('lower', $worn.lower)].skirt is 0>>
 					<<He>>【이가】 당신의 $worn.over_lower.name 너머로 <<bottom>>【을를】 더듬으려 하지만, 당신이 옷을 너무 두껍게 입어 거의 느껴지지 않는다.
@@ -2238,15 +2238,15 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<elseif $player.penisExist>>
 			/*$penis use need to be checked inside of $player.penisExist check to prevent mention of the clitoris*/
 			<<if $penisuse is 0>>
-				<<He>>【이가】 귀두를 꼬집는다.
-				<<neutral 15 "genitals" _n>><<bruise penis>><<set $speechglans to 1>>
+				<<He>> pinches your glans.
+				<<neutral 15 "genitals" _n>><<bruise penis>><<set $speechGlans to 1>>
 			<<else>>
 				<<He>>【이가】 기둥을 꼬집는다.
 				<<neutral 10 "genitals" _n>><<bruise penis>>
 			<</if>>
 		<<elseif $player.vaginaExist and !playerChastity("vagina")>>
-			<<He>>【이가】 클리토리스를 꼬집는다.
-			<<neutral 15 "genitals" _n>><<bruise vagina>><<set $speechclit to 1>>
+			<<He>> pinches your clitoris.
+			<<neutral 15 "genitals" _n>><<bruise vagina>><<set $speechClit to 1>>
 		<</if>>
 		<<bodypart_admire_chance pubic>>
 	<<elseif $enemyanger + $rng lte 120>>
@@ -2373,8 +2373,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<violence 1>><<bruise bottom>><<hitstat>>
 			<<bodypart_admire_chance random_bottom>>
 		<<else>>
-			<span class="purple"><<He>>【이가】 <<his>> <<print _args[0] is "left" ? "왼손" : "오른손">>【으로로】 머리채를 휘어잡는다.</span>
-			<<combat-set-hand-target _args[0] "hair">><<violence 2>><<set $speechhair to 1>>
+			<span class="purple"><<He>> seizes your hair with <<his>> _args[0] hand.</span>
+			<<combat-set-hand-target _args[0] "hair">><<violence 2>><<set $speechHair to 1>>
 			<<bodypart_admire_chance forehead>>
 		<</if>>
 	<<elseif $enemyanger + $rng lte 160>>
@@ -2388,8 +2388,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<violence 2>><<combat-set-hand-target _args[0] "throat">><<set $neckuse to "hand">>
 			<</if>>
 		<<elseif $leftarm isnot "bound" and $rightarm isnot "bound" and $leftarm isnot "grappled" and $rightarm isnot "grappled" and $NPCList[_n].lefthand isnot "arms" and $NPCList[_n].righthand isnot "arms">>
-			<span class="purple"><<He>>【이가】 당신의 팔을 짓누른다.</span>
-			<<combat-set-hand-target _args[0] "arms">><<disablearms>><<set $leftarm to "grappled">><<set $rightarm to "grappled">><<set $lefttarget to _n>><<set $righttarget to _n>><<violence 2>><<bruise leftarm>><<bruise rightarm>><<set $speecharms to 1>>
+			<span class="purple"><<He>> pins down your arms.</span>
+			<<combat-set-hand-target _args[0] "arms">><<disablearms>><<set $leftarm to "grappled">><<set $rightarm to "grappled">><<set $lefttarget to _n>><<set $righttarget to _n>><<violence 2>><<bruise leftarm>><<bruise rightarm>><<set $speechArms to 1>>
 			<<if $vaginause is "cover">>
 				<<set $vaginause to 0>>
 			<</if>>
@@ -2402,53 +2402,53 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<bodypart_admire_chance random_shoulder>>
 		<<else>>
 			<<if $walltype is "front">>
-				<<He>>【이가】 당신의 뺨을 갈긴다.
-				<<violence 10>><<bruise face>><<hitstat>><<set $speechbeat to 1>>
+				<<He>> slaps your face.
+				<<violence 10>><<bruise face>><<hitstat>><<set $speechPlayerBeaten to 1>>
 				<<bodypart_admire_chance random_cheek>>
 			<<else>>
-				<<He>>【이가】 당신의 <<bottom>>【을를】 찰싹 때린다.
-				<<violence 10>><<bruise bottom>><<hitstat>><<set $speechspank to 1>>
+				<<He>> slaps your <<bottom>>.
+				<<violence 10>><<bruise bottom>><<hitstat>><<set $speechSpank to 1>>
 				<<bodypart_admire_chance random_bottom>>
 			<</if>>
 		<</if>>
 	<<elseif $enemyanger + $rng lte 175>>
 		<<if $walltype is "front">>
-			<<He>>【은는】 당신이 아프든 말든 신경도 쓰지 않고 손톱을 세워 <<breasts>>【을를】 꽉 움켜쥔다.
-			<<violence 10>><<bruise chest>><<hitstat>><<set $speechbeat to 1>>
+			<<He>> digs <<his>> nails into your <<breasts>> while groping, giving no heed to your comfort.
+			<<violence 10>><<bruise chest>><<hitstat>><<set $speechPlayerBeaten to 1>>
 			<<bodypart_admire_chance back>>
 		<<else>>
-			<<He>>【은는】 당신이 아프든 말든 신경도 쓰지 않고 손톱을 세워 <<bottom>>【을를】 꽉 움켜쥔다.
-			<<violence 10>><<bruise bottom>><<hitstat>><<set $speechspank to 1>>
+			<<He>> digs <<his>> nails into your <<bottom>> while groping, giving no heed to your comfort.
+			<<violence 10>><<bruise bottom>><<hitstat>><<set $speechSpank to 1>>
 			<<bodypart_admire_chance back>>
 		<</if>>
 	<<elseif $enemyanger + $rng lte 180>>
 		<<if $walltype is "front">>
-			<<He>>【이가】 당신의 <<breasts>>【을를】 세게 친다.
-			<<violence 10>><<bruise chest>><<hitstat>><<set $speechbeat to 1>>
+			<<He>> smacks your <<breasts>>.
+			<<violence 10>><<bruise chest>><<hitstat>><<set $speechPlayerBeaten to 1>>
 			<<bodypart_admire_chance back>>
 		<<else>>
-			<<He>>【이가】 당신의 허벅지를 세게 친다.
-			<<violence 10>><<bruise thigh>><<hitstat>><<set $speechbeat to 1>>
+			<<He>> smacks your thighs.
+			<<violence 10>><<bruise thigh>><<hitstat>><<set $speechPlayerBeaten to 1>>
 			<<bodypart_admire_chance random_thigh>>
 		<</if>>
 	<<elseif $enemyanger + $rng lte 185 and !(playerBellySize(true) gte 8)>>
 		<<if $position is "wall" and $walltype isnot "front">>
-			<<He>>【이가】 당신의 허벅지를 때린다.
-			<<bruise thigh>><<hitstat>><<violence 10>><<set $speechbeat to 1>>
+			<<He>> beats your thigh.
+			<<bruise thigh>><<hitstat>><<violence 10>><<set $speechPlayerBeaten to 1>>
 			<<bodypart_admire_chance random_thigh>>
 		<<else>>
-			<<He>>【이가】 당신의 배를 주먹으로 친다.
-			<<violence 20>><<bruise tummy>><<hitstat>><<set $speechbeat to 1>>
+			<<He>> punches your tummy.
+			<<violence 20>><<bruise tummy>><<hitstat>><<set $speechPlayerBeaten to 1>>
 			<<bodypart_admire_chance back>>
 		<</if>>
 	<<elseif $enemyanger + $rng lte 190>>
 		<<if $position is "wall" and $walltype isnot "front">>
-			<<He>>【은는】 당신의 <<bottom>>【을를】 <<print either("찰싹 때린다","후려친다","때린다","철썩 때린다","세게 내리친다")>>.
-			<<violence 20>><<bruise bottom>><<hitstat>><<set $speechbeat to 1>>
+			<<He>> <<print either("spanks","whacks","slaps","smacks","thwacks")>> your <<bottom>>.
+			<<violence 20>><<bruise bottom>><<hitstat>><<set $speechPlayerBeaten to 1>>
 			<<bodypart_admire_chance random_bottom>>
 		<<else>>
-			<<He>>【이가】 당신의 <<breasts>>【을를】 찰싹 때린다.
-			<<violence 20>><<bruise chest>><<hitstat>><<set $speechbeat to 1>><<playWithBreasts>>
+			<<He>> slaps your <<breasts>>.
+			<<violence 20>><<bruise chest>><<hitstat>><<set $speechPlayerBeaten to 1>><<playWithBreasts>>
 			<<bodypart_admire_chance breasts>>
 		<</if>>
 	<<elseif $enemyanger + $rng lte 195>>
@@ -2456,7 +2456,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<He>>【이가】 당신의 얼굴에 침을 뱉는다.
 			<<neutral 5 _n>>
 		<<else>>
-			<<if $NPCList[_n].clothes and $NPCList[_n].clothes.set>>
+			<<if $NPCList[_n].clothes?.set>>
 				<<set $_clothesSet to $NPCList[_n].clothes.set>>
 			<</if>>
 			<<if $worn.feet.cursed is 1>>
@@ -2479,68 +2479,68 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<if _args[0] is "left">>
 			<<if $position is "wall" and $walltype isnot "front">>
 				<<if $player.penisExist>>
-					<<He>>【이가】 속수무책인 당신의 <<bottom>>【을를】 할퀸다.
-					<<violence 20>><<bruise bottom>><<hitstat>><<set $speechbeat to 1>>
+					<<He>> scratches your helpless <<bottom>>.
+					<<violence 20>><<bruise bottom>><<hitstat>><<set $speechPlayerBeaten to 1>>
 				<<elseif $player.vaginaExist>>
-					<<He>>【이가】 속수무책인 당신의 <<bottom>>【을를】 할퀸다.
-					<<violence 20>><<bruise bottom>><<hitstat>><<set $speechbeat to 1>>
+					<<He>> scratches your helpless <<bottom>>.
+					<<violence 20>><<bruise bottom>><<hitstat>><<set $speechPlayerBeaten to 1>>
 				<</if>>
 				<<bodypart_admire_chance random_bottom>>
 			<<else>>
 				<<rng>>
 				<<if $rng gte 81>>
-					<<He>>【이가】 주먹으로 당신의 코를 때린다.
-					<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>
+					<<He>> punches your nose.
+					<<violence 20>><<bruise face>><<hitstat>><<set $speechPlayerBeaten to 1>>
 					<<bodypart_admire_chance forehead>>
 				<<elseif $rng gte 61>>
-					<<He>>【이가】 주먹으로 당신의 뒷목을 친다.
-					<<violence 20>><<bruise neck>><<hitstat>><<set $speechbeat to 1>>
+					<<He>> punches the back of your neck.
+					<<violence 20>><<bruise neck>><<hitstat>><<set $speechPlayerBeaten to 1>>
 					<<bodypart_admire_chance back>>
 				<<elseif $rng gte 41>>
-					<<He>>【이가】 주먹으로 당신의 뺨을 때린다.
-					<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>
+					<<He>> punches your cheek.
+					<<violence 20>><<bruise face>><<hitstat>><<set $speechPlayerBeaten to 1>>
 					<<bodypart_admire_chance random_cheek>>
 				<<elseif $rng gte 21>>
-					<<He>>【이가】 주먹으로 당신의 턱을 친다.
-					<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>
+					<<He>> punches your jaw.
+					<<violence 20>><<bruise face>><<hitstat>><<set $speechPlayerBeaten to 1>>
 					<<bodypart_admire_chance breasts>>
 				<<else>>
-					<<He>>【이가】 당신의 앞목을 찌른다.
-					<<violence 20>><<bruise neck>><<hitstat>><<set $speechbeat to 1>>
+					<<He>> jabs the front of your neck.
+					<<violence 20>><<bruise neck>><<hitstat>><<set $speechPlayerBeaten to 1>>
 					<<bodypart_admire_chance random_shoulder>>
 				<</if>>
 			<</if>>
 		<<else>>
 			<<if $position is "wall" and $walltype isnot "front">>
 				<<if $player.penisExist and (!$player.vaginaExist or random(0,100) gte 50)>>
-					<<He>>【이가】 당신의 회음부를 찌른다.
-					<<violence 20>><<bruise penis>><<hitstat>><<set $speechbeat to 1>>
+					<<He>> jabs your gooch.
+					<<violence 20>><<bruise penis>><<hitstat>><<set $speechPlayerBeaten to 1>>
 				<<elseif $player.vaginaExist>>
-					<<He>>【이가】 당신의 회음부를 찌른다.
-					<<violence 20>><<bruise vagina>><<hitstat>><<set $speechbeat to 1>>
+					<<He>> jabs your gooch.
+					<<violence 20>><<bruise vagina>><<hitstat>><<set $speechPlayerBeaten to 1>>
 				<</if>>
 				<<bodypart_admire_chance pubic>>
 			<<else>>
 				<<rng>>
 				<<if $rng gte 81>>
-					<<He>>【이가】 당신의 뺨 한쪽을 할퀸다.
-					<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>
+					<<He>> scratches the side of your face.
+					<<violence 20>><<bruise face>><<hitstat>><<set $speechPlayerBeaten to 1>>
 					<<bodypart_admire_chance random_cheek>>
 				<<elseif $rng gte 61>>
-					<<He>>【이가】 당신의 뒷목을 할퀸다.
-					<<violence 20>><<bruise neck>><<hitstat>><<set $speechbeat to 1>>
+					<<He>> scratches the back of your neck.
+					<<violence 20>><<bruise neck>><<hitstat>><<set $speechPlayerBeaten to 1>>
 					<<bodypart_admire_chance back>>
 				<<elseif $rng gte 41>>
-					<<He>>【이가】 당신의 뺨을 할퀸다.
-					<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>
+					<<He>> scratches your cheek.
+					<<violence 20>><<bruise face>><<hitstat>><<set $speechPlayerBeaten to 1>>
 					<<bodypart_admire_chance random_cheek>>
 				<<elseif $rng gte 21>>
-					<<He>>【이가】 당신의 턱을 할퀸다.
-					<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>
+					<<He>> scratches your jaw.
+					<<violence 20>><<bruise face>><<hitstat>><<set $speechPlayerBeaten to 1>>
 					<<bodypart_admire_chance random_shoulder>>
 				<<else>>
-					<<He>>【이가】 당신의 앞목을 할퀸다.
-					<<violence 20>><<bruise neck>><<hitstat>><<set $speechbeat to 1>>
+					<<He>> scratches the front of your neck.
+					<<violence 20>><<bruise neck>><<hitstat>><<set $speechPlayerBeaten to 1>>
 					<<bodypart_admire_chance back>>
 				<</if>>
 			<</if>>
@@ -2601,10 +2601,10 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<</if>>
 		<<rng>>
 		<<if $NPCList[_n].penis is "thighs">>
-			<<set $speechthigh to 1>>
+			<<set $speechThigh to 1>>
 			<<if $player.vaginaExist>>
 				<<if $rng gte 101>>
-					<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
+					<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
 						<<if $NPCList[_n].chastity.penis.includes("chastity")>>
 							<<He>>【이가】 콘돔을 끼우려고 하지만, <<his>> $NPCList[_n].chastity.penis 위로 씌울 수 없는 것 같다. <span class="red"><<He>>【은는】 빠르게 포기한다.</span>
 							<<set $NPCList[_n].condom.willUse to false>>
@@ -2617,7 +2617,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<<if $NPCList[_n].type is "plant" and $NPCList[_n].penissize gte 4 and canImpregnateParasite("vagina")>>
 						<span class="red">그것의 무언가가 당신을 두렵게 만든다.</span>
 					<</if>>
-					<<set $thighuse to 0>><<set $NPCList[_n].penis to "vaginaentrance">><<set $vaginause to "penis">><<set $vaginastate to "entrance">><<set $vaginatarget to _n>><<set $speechvaginaentrance to 1>>
+					<<set $thighuse to 0>><<set $NPCList[_n].penis to "vaginaentrance">><<set $vaginause to "penis">><<set $vaginastate to "entrance">><<set $vaginatarget to _n>><<set $speechVaginaEntrance to 1>>
 				<<else>>
 					<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 허벅지와 <<pussy>> 사이에 문지른다.
 					<<sex 5 "genital" _n>>
@@ -2634,9 +2634,9 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<</if>>
 		<<rng>>
 		<<if $NPCList[_n].penis is "cheeks">>
-			<<set $speechcheeks to 1>>
+			<<set $speechCheeks to 1>>
 			<<if $rng gte 101>>
-				<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
+				<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
 					<<if $NPCList[_n].chastity.penis.includes("chastity")>>
 						<<He>>【이가】 콘돔을 끼우려고 하지만, <<his>> $NPCList[_n].chastity.penis 위로 씌울 수 없는 것 같다. <span class="red"><<He>>【은는】 빠르게 포기한다.</span>
 						<<set $NPCList[_n].condom.willUse to false>>
@@ -2649,7 +2649,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<if $NPCList[_n].type is "plant" and $NPCList[_n].penissize gte 4 and canImpregnateParasite("anus")>>
 					<span class="red">그것의 무언가가 당신을 두렵게 만든다.</span>
 				<</if>>
-				<<set $NPCList[_n].penis to "anusentrance">><<set $anusstate to "entrance">><<set $anustarget to _n>><<set $bottomuse to 0>><<set $cheekactiondefault to "cheeks">><<set $speechanusentrance to 1>>
+				<<set $NPCList[_n].penis to "anusentrance">><<set $anusstate to "entrance">><<set $anustarget to _n>><<set $bottomuse to 0>><<set $cheekactiondefault to "cheeks">><<set $speechAnusEntrance to 1>>
 			<<else>>
 				<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 엉덩이골 사이에 문지른다.
 				<<submission 3 _n>>
@@ -2657,7 +2657,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<</if>>
 		<<rng>>
 		<<if $NPCList[_n].penis is "leftarm">>
-			<<set $speechhandjobpenis to 1>>
+			<<set $speechHandjobPenis to 1>>
 			<<if $rng gte 1>>
 				<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 손가락 사이에 문지른다.
 				<<submission 1 _n>>
@@ -2668,7 +2668,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<</if>>
 		<<rng>>
 		<<if $NPCList[_n].penis is "rightarm">>
-			<<set $speechhandjobpenis to 1>>
+			<<set $speechHandjobPenis to 1>>
 			<<if $rng gte 1>>
 				<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 손가락 사이에 문지른다.
 				<<submission 1 _n>>
@@ -2679,7 +2679,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<</if>>
 		<<rng>>
 		<<if $NPCList[_n].penis is "botharm">>
-			<<set $speechhandjobpenis to 1>>
+			<<set $speechHandjobPenis to 1>>
 			<<if $rng gte 1>>
 				<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 양손 사이에 문지른다.
 				<<submission 2 _n>>
@@ -2690,7 +2690,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<</if>>
 		<<rng>>
 		<<if $NPCList[_n].penis is "feet">>
-			<<set $speechfeet to 1>>
+			<<set $speechFeet to 1>>
 			<<if $rng gte 1>>
 				<<if $enemyarousal gte (($enemyarousalmax / 10) * 8)>>
 					<<if $npcSub>>당신은 절정에 다가가는 <<him>>【을를】 위해 속도를 높여 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 문지른다<<else>><<He>>【은는】 절정에 다가가며 점점 더 강한 힘으로 당신의 발에 박아댄다<</if>>.
@@ -2743,7 +2743,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<if $npcSub>>당신은 규칙적으로 허리를 움직이며 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 빨아들인다<<else>><<He>>【은는】 규칙적으로 허리를 움직이며 당신의 <<pussy>>【을를】 박아댄다<</if>>.
 					<</if>>
 				<</if>>
-				<<sex 30 "genital" _n>><<bruise vagina>><<violence 1>><<set $speechvaginapenetrated to 1>><<pain _pain>>
+				<<sex 30 "genital" _n>><<bruise vagina>><<violence 1>><<set $speechVaginaPenetrated to 1>><<pain _pain>>
 			<</if>>
 		<</if>>
 		<<rng>>
@@ -2768,7 +2768,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<span class="red">당신은 <<pussy>>【이가】 <<his>> 자지를 받아들이며 늘어나자 낑낑거린다.</span>
 						<<default>>
 						<</switch>>
-						<<sex 30 "genital" _n>><<takeTempleVirginity $NPCList[_n].fullDescription "vaginal">><<violence 1>><<set $speechvaginapenetrated to 1>>
+						<<sex 30 "genital" _n>><<takeTempleVirginity $NPCList[_n].fullDescription "vaginal">><<violence 1>><<set $speechVaginaPenetrated to 1>>
 						<<pain _pain>>
 					<<elseif $player.virginity.vaginal is true>>
 						<<if $sexStats.vagina.pregnancy.totalBirthEvents gt 0>>
@@ -2787,13 +2787,13 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<<violence 100>>
 							<</switch>>
 						<</if>>
-						<<sex 100 "genital" _n>><<takeVirginity $NPCList[_n].fullDescription "vaginal">><<set $speechvaginavirgin to 1>>
+						<<sex 100 "genital" _n>><<takeVirginity $NPCList[_n].fullDescription "vaginal">><<set $speechVaginaVirgin to 1>>
 						<<if $enemyanger gte 100>><<set _pain *= 1.5>><</if>><<pain _pain>>
 					<</if>>
 					<<vaginalstat>><<set $NPCList[_n].penis to "vagina">><<takeNPCVirginity _n "penile">><<bruise vagina>><<raped>><<vaginaraped>><<set $vaginastate to "penetrated">>
 				<<else>>
-					당신의 뜻을 존중하여, <<he>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지르지만 삽입하지는 않는다.
-					<<sex 15 "genital" _n>><<set $speechvaginawithhold to 1>>
+					Respecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> but does not penetrate.
+					<<sex 15 "genital" _n>><<set $speechVaginaWithhold to 1>>
 				<</if>>
 				<<if setup.bodyliquid.combined("vagina") gte 1 or setup.bodyliquid.combined("vaginaoutside") gte 1>>
 					당신의 <<pussy>>에서 애액이 흘러나와, <<his>> 기둥 위로 묻어난다.
@@ -2808,31 +2808,31 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<set $NPCList[_n].penis to 0>><<set $vaginause to 0>><<set $vaginastate to 0>>
 			<<elseif $rng gte 1>>
 				<<if $worn.over_lower.vagina_exposed is 0>>
-					<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.
-					<<sex 5 "genital" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechvaginaentrance to 1>>
+					<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.over_lower.name.
+					<<sex 5 "genital" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechVaginaEntrance to 1>>
 				<<elseif $worn.lower.vagina_exposed is 0>>
-					<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.
-					<<sex 5 "genital" _n>><<set $worn.lower.integrity -= 10>><<set $speechvaginaentrance to 1>>
+					<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.lower.name.
+					<<sex 5 "genital" _n>><<set $worn.lower.integrity -= 10>><<set $speechVaginaEntrance to 1>>
 				<<elseif $worn.lower.vagina_exposed is 1 and $worn.over_lower.vagina_exposed is 1>>
 					<<rng>>
 					<<if $worn.under_lower.vagina_exposed is 0>>
-						<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.under_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.
-						<<sex 5 "genital" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechvaginaentrance to 1>>
+						<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.under_lower.name.
+						<<sex 5 "genital" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechVaginaEntrance to 1>>
 					<<elseif $worn.under_lower.vagina_exposed is 1>>
 						<<if $rng gte 51>>
 							<<if $NPCList[_n].chastity.penis.includes("chastity")>>
 								<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> $NPCList[_n].chastity.penis【을를】 당신의 <<pussy>>에 문지른다<<if playerChastity("vagina")>><<set $worn.genitals.integrity -= 10>>, 당신의 $worn.genitals.name 너머로<</if>>.
 								<<sex 25 "genital" _n>><<set $speechNPCChastity to 1>>
 							<<elseif playerChastity("vagina")>>
-								<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.genitals.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.
-								<<sex 25 "genital" _n>><<set $worn.genitals.integrity -= 10>><<set $speechchastity to 1>>
+								<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.genitals.name.
+								<<sex 25 "genital" _n>><<set $worn.genitals.integrity -= 10>><<set $speechChastity to 1>>
 							<<elseif !$npcSub>>
 								<<if $vaginaWetness gte ($NPCList[_n].penissize * 15) + random(1, 40) or random(1, 2) is 2>>
-									<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 갖다 댄다. <<vagina_lube_text>><span class="pink">그 끝이 당신을 짓누르며, 당장이라도 삽입할 듯하다.</span>
-									<<sex 20 "genital" _n>><<set $NPCList[_n].penis to "vaginaimminent">><<set $vaginastate to "imminent">><<set $speechvaginaimminent to 1>>
+									<<He>> pushes <<his>> $NPCList[_n].penisdesc against your <<pussy>>. <<vagina_lube_text>><span class="pink">the tip presses into you, a thrust away from penetrating.</span>
+									<<sex 20 "genital" _n>><<set $NPCList[_n].penis to "vaginaimminent">><<set $vaginastate to "imminent">><<set $speechVaginaImminent to 1>>
 								<<else>>
-									<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 밀어붙이지만, <span class="blue">삽입에는 실패하고,</span> 대신 각도를 틀어 당신의 <<clit>>에 그것을 문지른다.
-									<<sex 5 "genital" _n>><<set $speechvaginaimminent to 1>>
+									<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>>, <span class="blue">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it against your <<clit>>.
+									<<sex 5 "genital" _n>><<set $speechVaginaImminent to 1>>
 									<<if $enemyarousal gte ($enemyarousalmax / 2) and random(1, 3) is 3 and !npcHasStrapon(_n) and !wearingCondom(_n)>>
 										끝에서 쿠퍼액이 흘러나와, <span class="blue">당신의 보지를 윤활해 준다.</span>
 										<<bodyliquid "vaginaoutside" "semen">>
@@ -2846,14 +2846,14 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<<else>>
 									<<He>>【은는】 삽입하려 하지 않고 <<his>> <<print window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【으로로】 당신의 <<pussy>>【을를】 애태운다.
 								<</if>>
-								<<sex 10 "genital" _n>><<set $speechvaginaentrance to 1>>
+								<<sex 10 "genital" _n>><<set $speechVaginaEntrance to 1>>
 							<<else>>
 								<<if $npcSub>>
 									당신은 $worn.genitals.name【이가】 가로막는 상황에서 할 수 있는 한 최선을 다해 당신의 <<pussy>>【으로로】 <<his>> <<print window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 애태운다.
 								<<else>>
 									<<He>>【은는】 당신의 $worn.genitals.name【이가】 가로막는 상황에서 할 수 있는 한 최선을 다해 <<his>> <<print window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【으로로】 당신의 <<pussy>>【을를】 애태운다.
 								<</if>>
-								<<sex 5 "genital" _n>><<set $speechchastity to 1>>
+								<<sex 5 "genital" _n>><<set $speechChastity to 1>>
 							<</if>>
 						<</if>>
 					<</if>>
@@ -2913,7 +2913,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<<if $npcSub>>당신은 규칙적으로 허리를 움직이며 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 빨아들인다<<else>><<He>>【은는】 규칙적으로 허리를 움직이며 당신의 <<pussy>>【을를】 박아댄다<</if>>, $_alongsidetext.
 						<</if>>
 					<</if>>
-					<<sex 30 "genitals" _n>><<bruise vagina>><<violence 1>><<set $speechvaginapenetrated to 1>><<pain _pain>>
+					<<sex 30 "genitals" _n>><<bruise vagina>><<violence 1>><<set $speechVaginaPenetrated to 1>><<pain _pain>>
 				<<else>> /* single penetration */
 					<<set _pain to Math.floor($vaginalPain * (1.5 / (7 - ($NPCList[_n].penissize or 3))))>>
 					<<if $enemyanger gte 100>><<set _pain *= 1.5>>
@@ -2945,7 +2945,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<<if $npcSub>>당신은 규칙적으로 허리를 움직이며 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 빨아들인다<<else>><<He>>【은는】 규칙적으로 허리를 움직이며 당신의 <<pussy>>【을를】 박아댄다<</if>>.
 						<</if>>
 					<</if>>
-					<<sex 30 "genitals" _n>><<bruise vagina>><<violence 1>><<set $speechvaginapenetrated to 1>><<pain _pain>>
+					<<sex 30 "genitals" _n>><<bruise vagina>><<violence 1>><<set $speechVaginaPenetrated to 1>><<pain _pain>>
 				<</if>>
 			<</if>>
 		<</if>>
@@ -2984,7 +2984,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<span class="red">당신은 <<pussy>>【이가】 그들의 <<penises>>【을를】 받아들이며 늘어나자 낑낑거린다.</span>
 							<<default>>
 							<</switch>>
-							<<sex 30 "genitals" _n>><<takeTempleVirginity $NPCList[_n].fullDescription "vaginal">><<violence 1>><<set $speechvaginapenetrated to 1>>
+							<<sex 30 "genitals" _n>><<takeTempleVirginity $NPCList[_n].fullDescription "vaginal">><<violence 1>><<set $speechVaginaPenetrated to 1>>
 							<<pain _pain>>
 						<<elseif $player.virginity.vaginal is true>>
 							<<if $sexStats.vagina.pregnancy.totalBirthEvents gt 0>>
@@ -3003,13 +3003,13 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 									<<violence 100>>
 								<</switch>>
 							<</if>>
-							<<sex 100 "genitals" _n>><<takeVirginity $NPCList[_n].fullDescription "vaginal">><<set $speechvaginavirgin to 1>>
+							<<sex 100 "genitals" _n>><<takeVirginity $NPCList[_n].fullDescription "vaginal">><<set $speechVaginaVirgin to 1>>
 							<<if $enemyanger gte 100>><<set _pain *= 1.5>><</if>><<pain _pain>>
 						<</if>>
 						<<vaginalstat>><<vaginaldoublestat>><<set $NPCList[_n].penis to "vaginadouble">><<takeNPCVirginity _n "penile">><<bruise vagina>><<raped>><<vaginaraped>><<set $vaginastate to "doublepenetrated">>
 					<<else>>
-						당신의 뜻을 존중하여, <<he>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지르지만 삽입하지는 않는다.
-						<<sex 15 "genitals" _n>><<set $speechvaginawithhold to 1>>
+						Respecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> but does not penetrate.
+						<<sex 15 "genitals" _n>><<set $speechVaginaWithhold to 1>>
 					<</if>>
 				<<else>>
 					<<if $novaginal is 0>>
@@ -3028,7 +3028,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<span class="red">당신은 <<pussy>>【이가】 <<his>> 자지를 받아들이며 늘어나자 낑낑거린다.</span>
 							<<default>>
 							<</switch>>
-							<<sex 30 "genitals" _n>><<takeTempleVirginity $NPCList[_n].fullDescription "vaginal">><<violence 1>><<set $speechvaginapenetrated to 1>>
+							<<sex 30 "genitals" _n>><<takeTempleVirginity $NPCList[_n].fullDescription "vaginal">><<violence 1>><<set $speechVaginaPenetrated to 1>>
 							<<pain _pain>>
 						<<elseif $player.virginity.vaginal is true>>
 							<<if $sexStats.vagina.pregnancy.totalBirthEvents gt 0>>
@@ -3047,13 +3047,13 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 									<<violence 100>>
 								<</switch>>
 							<</if>>
-							<<sex 100 "genitals" _n>><<takeVirginity $NPCList[_n].fullDescription "vaginal">><<set $speechvaginavirgin to 1>>
+							<<sex 100 "genitals" _n>><<takeVirginity $NPCList[_n].fullDescription "vaginal">><<set $speechVaginaVirgin to 1>>
 							<<if $enemyanger gte 100>><<set _pain *= 1.5>><</if>><<pain _pain>>
 						<</if>>
 						<<vaginalstat>><<set $NPCList[_n].penis to "vaginadouble">><<takeNPCVirginity _n "penile">><<bruise vagina>><<raped>><<vaginaraped>><<set $vaginastate to "doublepenetrated">>
 					<<else>>
-						당신의 뜻을 존중하여, <<he>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지르지만 삽입하지는 않는다.
-						<<sex 15 "genitals" _n>><<set $speechvaginawithhold to 1>>
+						Respecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> but does not penetrate.
+						<<sex 15 "genitals" _n>><<set $speechVaginaWithhold to 1>>
 					<</if>>
 				<</if>>
 				<<if setup.bodyliquid.combined("vagina") gte 1 or setup.bodyliquid.combined("vaginaoutside") gte 1>>
@@ -3069,32 +3069,32 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<set $NPCList[_n].penis to 0>><<set $vaginause to 0>><<set $vaginastate to 0>>
 			<<elseif $rng gte 1>>
 				<<if $worn.over_lower.vagina_exposed is 0>>
-					<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.
-					<<sex 5 "genitals" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechvaginaentrance to 1>>
+					<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.over_lower.name.
+					<<sex 5 "genitals" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechVaginaEntrance to 1>>
 				<<elseif $worn.lower.vagina_exposed is 0>>
-					<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.
-					<<sex 5 "genitals" _n>><<set $worn.lower.integrity -= 10>><<set $speechvaginaentrance to 1>>
+					<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.lower.name.
+					<<sex 5 "genitals" _n>><<set $worn.lower.integrity -= 10>><<set $speechVaginaEntrance to 1>>
 				<<elseif $worn.lower.vagina_exposed is 1 and $worn.over_lower.vagina_exposed is 1>>
 					<<rng>>
 					<<if $worn.under_lower.vagina_exposed is 0>>
-						<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.under_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.
-						<<sex 5 "genitals" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechvaginaentrance to 1>>
+						<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.under_lower.name.
+						<<sex 5 "genitals" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechVaginaEntrance to 1>>
 					<<elseif $worn.under_lower.vagina_exposed is 1>>
 						<<if $rng gte 51>>
 							<<if $NPCList[_n].chastity.penis.includes("chastity")>>
 								<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> $NPCList[_n].chastity.penis【을를】 당신의 <<pussy>>에 문지른다<<if playerChastity("vagina")>><<set $worn.genitals.integrity -= 10>>, 당신의 $worn.genitals.name 너머로<</if>>.
 								<<sex 25 "genitals" _n>><<set $speechNPCChastity to 1>>
 							<<elseif playerChastity("vagina")>>
-								<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.genitals.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.
-								<<sex 25 "genitals" _n>><<set $worn.genitals.integrity -= 10>><<set $speechchastity to 1>>
+								<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.genitals.name.
+								<<sex 25 "genitals" _n>><<set $worn.genitals.integrity -= 10>><<set $speechChastity to 1>>
 							<<elseif !$npcSub>>
 								<<if $vaginaWetness gte ($NPCList[_n].penissize * 15) + random(1, 40) or random(1, 3) is 2>>
-									<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 갖다 댄다. <<vagina_lube_text>><span class="pink">그 끝이 당신을 짓누르며, 당장이라도 삽입할 듯하다.</span>
-									<<sex 20 "genitals" _n>><<set $NPCList[_n].penis to "vaginaimminentdouble">><<set $speechvaginaimminent to 1>>
+									<<He>> pushes <<his>> $NPCList[_n].penisdesc against your <<pussy>>. <<vagina_lube_text>><span class="pink">the tip presses into you, a thrust away from penetrating.</span>
+									<<sex 20 "genitals" _n>><<set $NPCList[_n].penis to "vaginaimminentdouble">><<set $speechVaginaImminent to 1>>
 									<<if $vaginastate isnot "doublepenetrated">><<set $vaginastate to "doubleimminent">><</if>>
 								<<else>>
-									<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 밀어붙이지만, <span class="blue">삽입에는 실패하고,</span> 대신 각도를 틀어 당신의 <<clit>>【와과】 다른 자지에 그것을 문지른다.
-									<<sex 5 "genitals" _n>><<set $speechvaginaimminent to 1>>
+									<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>>; <span class="blue">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it against your <<clit>> and the other cock.
+									<<sex 5 "genitals" _n>><<set $speechVaginaImminent to 1>>
 									<<if $enemyarousal gte ($enemyarousalmax / 2) and random(1, 3) is 3 and !npcHasStrapon(_n) and !wearingCondom(_n)>>
 										끝에서 쿠퍼액이 흘러나와, <span class="blue">당신의 보지를 윤활해 준다.</span>
 										<<bodyliquid "vaginaoutside" "semen">>
@@ -3109,14 +3109,14 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 									<<He>>【은는】 삽입하려 하지 않고 <<his>> <<print window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【으로로】 당신의 <<pussy>>【을를】 애태운다.
 								<</if>>
 
-								<<sex 10 "genitals" _n>><<set $speechvaginaentrance to 1>>
+								<<sex 10 "genitals" _n>><<set $speechVaginaEntrance to 1>>
 							<<else>>
 								<<if $npcSub>>
 									당신은 $worn.genitals.name【이가】 가로막는 상황에서 할 수 있는 한 최선을 다해 당신의 <<pussy>>【으로로】 <<his>> <<print window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 애태운다.
 								<<else>>
 									<<He>>【은는】 당신의 $worn.genitals.name【이가】 가로막는 상황에서 할 수 있는 한 최선을 다해 <<his>> <<print window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【으로로】 당신의 <<pussy>>【을를】 애태운다.
 								<</if>>
-								<<sex 5 "genitals" _n>><<set $speechchastity to 1>>
+								<<sex 5 "genitals" _n>><<set $speechChastity to 1>>
 							<</if>>
 						<</if>>
 					<</if>>
@@ -3163,7 +3163,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<if $npcSub>>당신은 규칙적으로 허리를 움직이며 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 빨아들인다<<else>><<He>>【은는】 규칙적으로 허리를 움직이며 당신의 <<bottom>>【을를】 박아댄다<</if>><<alongsideButtPlug>>.
 					<</if>>
 				<</if>>
-				<<sex 30 "anal" _n>><<bruise anus>><<violence 1>><<set $speechanuspenetrated to 1>><<pain _pain>>
+				<<sex 30 "anal" _n>><<bruise anus>><<violence 1>><<set $speechAnusPenetrated to 1>><<pain _pain>>
 			<<elseif $rng gte 1>>
 				<<set _pain to Math.floor($analPain * (1.5 / (7 - ($NPCList[_n].penissize or 3))))>>
 				<<if $enemyanger gte 100>><<set _pain *= 1.5>>
@@ -3195,7 +3195,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<if $npcSub>>당신은 규칙적으로 허리를 움직이며 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 빨아들인다<<else>><<He>>【은는】 규칙적으로 허리를 움직이며 당신의 <<bottom>>【을를】 박아댄다<</if>>.
 					<</if>>
 				<</if>>
-				<<sex 30 "anal" _n>><<bruise anus>><<violence 1>><<set $speechanuspenetrated to 1>><<pain _pain>>
+				<<sex 30 "anal" _n>><<bruise anus>><<violence 1>><<set $speechAnusPenetrated to 1>><<pain _pain>>
 			<</if>>
 		<</if>>
 		<<rng>>
@@ -3217,7 +3217,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<span class="green">당신은 그것을 거의 느끼지 못한다.</span>
 						<<default>>
 						<</switch>>
-						<<sex 30 "anal" _n>><<violence 1>><<set $speechanuspenetrated to 1>>
+						<<sex 30 "anal" _n>><<violence 1>><<set $speechAnusPenetrated to 1>>
 						<<if $enemyanger gte 100>><<set _pain *= 1.75>><</if>><<pain _pain>>
 					<<elseif $player.virginity.anal is true>>
 						<span class="pink"><<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 처녀 항문 깊숙이 밀어넣어<<alongsideButtPlug>>,</span> <span class="red">당신이 상상조차 하지 못한 방식으로 당신을 유린한다.</span>
@@ -3228,14 +3228,14 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<span class="green">항문은 이미 처음이 아니지만, 당신은 거의 아무것도 느끼지 못한다.</span>
 						<<default>>
 						<</switch>>
-						<<sex 100 "anal" _n>><<violence 50>><<set $speechanusvirgin to 1>>
+						<<sex 100 "anal" _n>><<violence 50>><<set $speechAnusVirgin to 1>>
 						<<if $enemyanger gte 100>><<set _pain *= 1.75>><</if>><<pain _pain>>
 						<<takeVirginity $NPCList[_n].fullDescription "anal">>
 					<</if>>
 					<<analstat>><<set $NPCList[_n].penis to "anus">><<takeNPCVirginity _n "penile">><<set $anusstate to "penetrated">><<bruise anus>><<raped>><<anusraped>>
 				<<else>>
-					당신의 뜻을 존중하여, <<he>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문과 $_buttplug에 문지르지만 삽입하지는 않는다.
-					<<sex 15 "anal" _n>><<set $speechanuswithhold to 1>>
+					Respecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your anus and $_buttplug but does not penetrate.
+					<<sex 15 "anal" _n>><<set $speechAnusWithhold to 1>>
 				<</if>>
 			<<elseif $rng gte 1>>
 				<<if $noanal is 0>>
@@ -3247,7 +3247,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<span class="red">당신은 항문이 <<his>> 자지를 받아들이며 늘어나자 낑낑거린다.</span>
 						<<default>>
 						<</switch>>
-						<<sex 30 "anal" _n>><<violence 1>><<set $speechanuspenetrated to 1>>
+						<<sex 30 "anal" _n>><<violence 1>><<set $speechAnusPenetrated to 1>>
 						<<if $enemyanger gte 100>><<set _pain *= 1.5>><</if>><<pain _pain>>
 					<<elseif $player.virginity.anal is true>>
 						<span class="pink"><<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 처녀 항문 깊숙이 밀어넣어,</span> <span class="red">당신이 상상조차 하지 못한 방식으로 당신을 유린한다.</span>
@@ -3258,13 +3258,13 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<span class="green">항문은 이미 처음이 아니지만, 당신은 거의 아무것도 느끼지 못한다.</span>
 						<<default>>
 						<</switch>>
-						<<sex 100 "anal" _n>><<takeVirginity $NPCList[_n].fullDescription "anal">><<violence 50>><<set $speechanusvirgin to 1>>
+						<<sex 100 "anal" _n>><<takeVirginity $NPCList[_n].fullDescription "anal">><<violence 50>><<set $speechAnusVirgin to 1>>
 						<<if $enemyanger gte 100>><<set _pain *= 1.5>><</if>><<pain _pain>>
 					<</if>>
 					<<analstat>><<set $NPCList[_n].penis to "anus">><<takeNPCVirginity _n "penile">><<bruise anus>><<raped>><<anusraped>><<set $anusstate to "penetrated">>
 				<<else>>
-					당신의 뜻을 존중하여, <<he>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문에 문지르지만 삽입하지는 않는다.
-					<<sex 15 "anal" _n>><<set $speechanuswithhold to 1>>
+					Respecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your anus but does not penetrate.
+					<<sex 15 "anal" _n>><<set $speechAnusWithhold to 1>>
 				<</if>>
 			<</if>>
 			<<if setup.bodyliquid.combined("bottom") gte 1 or setup.bodyliquid.combined("anus") gte 1>>
@@ -3279,29 +3279,29 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<set $NPCList[_n].penis to 0>><<set $anususe to 0>><<set $anusstate to 0>>
 			<<elseif $rng gte 1>>
 				<<if $worn.over_lower.anus_exposed is 0>>
-					<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 문지른다.
-					<<sex 5 "anal" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechanusentrance to 1>>
+					<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.over_lower.name.
+					<<sex 5 "anal" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechAnusEntrance to 1>>
 				<<elseif $worn.lower.anus_exposed is 0>>
-					<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 문지른다.
-					<<sex 5 "anal" _n>><<set $worn.lower.integrity -= 10>><<set $speechanusentrance to 1>>
+					<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.lower.name.
+					<<sex 5 "anal" _n>><<set $worn.lower.integrity -= 10>><<set $speechAnusEntrance to 1>>
 				<<elseif $worn.lower.anus_exposed is 1 and $worn.over_lower.anus_exposed is 1>>
 					<<rng>>
 					<<if $worn.under_lower.anus_exposed is 0>>
-						<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.under_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 문지른다.
-						<<set $speechanusentrance to 1>><<sex 5 "anal" _n>><<set $worn.under_lower.integrity -= 10>>
+						<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.under_lower.name.
+						<<set $speechAnusEntrance to 1>><<sex 5 "anal" _n>><<set $worn.under_lower.integrity -= 10>>
 					<<elseif $worn.under_lower.anus_exposed is 1>>
 						<<if $rng gte 51>>
 							<<if $NPCList[_n].chastity.penis.includes("chastity")>>
 								<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> $NPCList[_n].chastity.penis【을를】 당신의 항문에 문지른다<<if playerChastity("anus")>><<set $worn.genitals.integrity -= 10>>, 당신의 $worn.genitals.name 너머로<</if>>.
 								<<sex 25 "anal" _n>><<set $speechNPCChastity to 1>>
 							<<elseif playerChastity("anus")>>
-								<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.genitals.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문에 문지른다.
-								<<sex 25 "anal" _n>><<set $worn.genitals.integrity -= 10>><<set $speechchastity to 1>>
+								<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your anus through your $worn.genitals.name.
+								<<sex 25 "anal" _n>><<set $worn.genitals.integrity -= 10>><<set $speechChastity to 1>>
 							<<elseif playerHasButtPlug()>>
 								<<switch random(0,2)>>
 									<<case 0>>
-										<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문과 당신의 $worn.butt_plug.name에 문지른다.
-										<<sex 10 "anal" _n>><<set $speechanusentrance to 1>>
+										<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your anus and your $worn.butt_plug.name.
+										<<sex 10 "anal" _n>><<set $speechAnusEntrance to 1>>
 										<<if $enemyarousal gte ($enemyarousalmax / 2) and random(1, 3) is 3 and !npcHasStrapon(_n) and !wearingCondom(_n)>>
 											끝부분에서 쿠퍼액이 흘러나와, <span class="blue">당신의 엉덩이를 적신다.</span>
 											<<bodyliquid "bottom" "semen">>
@@ -3317,14 +3317,14 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 												<<bodyliquid "bottom" "semen">>
 											<</if>>
 										<</if>>
-										<<sex 10 "anal" _n>><<set $speechanusentrance to 1>>
+										<<sex 10 "anal" _n>><<set $speechAnusEntrance to 1>>
 									<<case 2>>
 										<<if $anusWetness gte ($NPCList[_n].penissize * 15) + random(1, 40) or random(0, 2) is 2>>
-											<<anus_lube_text>><<if $npcSub>>당신은<<else>><<he>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문과 $worn.butt_plug.name에 밀어붙이고, <span class="pink">당장이라도 쑤셔넣을 듯 짓누른다.</span>
-											<<sex 10 "anal" _n>><<set $NPCList[_n].penis to "anusimminent">><<set $anusstate to "imminent">><<set $speechanusimminent to 1>>
+											<<anus_lube_text>><<if $npcSub>>you press<<else>><<he>> presses<</if>> <<his>> $NPCList[_n].penisdesc against your anus and your $worn.butt_plug.name, <span class="pink">a thrust away from penetrating.</span>
+											<<sex 10 "anal" _n>><<set $NPCList[_n].penis to "anusimminent">><<set $anusstate to "imminent">><<set $speechAnusImminent to 1>>
 										<<else>>
-											<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>【와과】 당신의 $worn.butt_plug.name에 밀어붙이지만, <span class="blue">삽입에는 실패하고,</span> 대신 각도를 틀어 당신의 엉덩이골 사이에 문지른다.
-											<<sex 5 "anal" _n>><<set $speechanusimminent to 1>>
+											<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> and your $worn.butt_plug.name, <span class="blue">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it between your cheeks.
+											<<sex 5 "anal" _n>><<set $speechAnusImminent to 1>>
 											<<if $enemyarousal gte ($enemyarousalmax / 2) and random(1, 3) is 3 and !npcHasStrapon(_n) and !wearingCondom(_n)>>
 												끝부분에서 쿠퍼액이 흘러나와, <span class="blue">당신의 엉덩이를 적신다.</span>
 												<<bodyliquid "bottom" "semen">>
@@ -3333,11 +3333,11 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<</switch>>
 							<<elseif !$npcSub>>
 								<<if $anusWetness gte ($NPCList[_n].penissize * 15) + random(1, 40) or random(1, 2) is 2>>
-									<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 밀어붙인다. <<anus_lube_text>><span class="pink">그 끝이 당신을 짓누르며, 당장이라도 삽입할 듯하다.</span>
-									<<sex 20 "anal" _n>><<set $NPCList[_n].penis to "anusimminent">><<set $anusstate to "imminent">><<set $speechanusimminent to 1>>
+									<<He>> presses <<his>> $NPCList[_n].penisdesc against your <<bottom>>. <<anus_lube_text>><span class="pink">the tip presses into you, a thrust away from penetrating.</span>
+									<<sex 20 "anal" _n>><<set $NPCList[_n].penis to "anusimminent">><<set $anusstate to "imminent">><<set $speechAnusImminent to 1>>
 								<<else>>
-									<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 밀어붙이지만, <span class="blue">삽입에는 실패하고,</span> 대신 각도를 틀어 당신의 엉덩이골 사이에 문지른다.
-									<<sex 5 "anal" _n>><<set $speechanusimminent to 1>>
+									<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>>, <span class="blue">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it between your cheeks.
+									<<sex 5 "anal" _n>><<set $speechAnusImminent to 1>>
 									<<if $enemyarousal gte ($enemyarousalmax / 2) and random(1, 3) is 3 and !npcHasStrapon(_n) and !wearingCondom(_n)>>
 										끝부분에서 쿠퍼액이 흘러나와, <span class="blue">당신의 엉덩이를 적신다.</span>
 										<<bodyliquid "bottom" "semen">>
@@ -3350,7 +3350,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<<else>>
 								<<His>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【이가】 당신의 <<bottom>>에 문질러진다.
 							<</if>>
-							<<sex 5 "anal" _n>><<set $speechanusentrance to 1>>
+							<<sex 5 "anal" _n>><<set $speechAnusEntrance to 1>>
 						<</if>>
 					<</if>>
 				<</if>>
@@ -3409,7 +3409,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<<if $npcSub>>당신은 규칙적으로 허리를 움직이며 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【와과】 다른 자지 위로 허리를 돌린다<<else>><<He>>【은는】 규칙적으로 허리를 움직이며 $_alongsidetext 당신의 <<bottom>>【을를】 박아댄다<<alongsideButtPlug>><</if>>.
 						<</if>>
 					<</if>>
-					<<sex 30 "anal" _n>><<bruise anus>><<violence 1>><<set $speechanuspenetrated to 1>><<pain _pain>>
+					<<sex 30 "anal" _n>><<bruise anus>><<violence 1>><<set $speechAnusPenetrated to 1>><<pain _pain>>
 
 				<<else>> /* Not double */
 					<<set _pain to Math.floor($analPain * (1.5 / (7 - ($NPCList[_n].penissize or 3))))>>
@@ -3442,7 +3442,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<<if $npcSub>>당신은 규칙적으로 허리를 움직이며 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 빨아들인다<<else>><<He>>【은는】 규칙적으로 허리를 움직이며 당신의 <<bottom>>【을를】 박아댄다<</if>>.
 						<</if>>
 					<</if>>
-					<<sex 30 "anal" _n>><<bruise anus>><<violence 1>><<set $speechanuspenetrated to 1>><<pain _pain>>
+					<<sex 30 "anal" _n>><<bruise anus>><<violence 1>><<set $speechAnusPenetrated to 1>><<pain _pain>>
 				<</if>>
 			<</if>>
 		<</if>>
@@ -3474,7 +3474,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 									<span class="red">당신은 항문이 <<his>> 자지를 받아들이며 늘어나자 낑낑거린다.</span>
 								<<default>>
 							<</switch>>
-							<<sex 30 "anal" _n>><<violence 1>><<set $speechanuspenetrated to 1>>
+							<<sex 30 "anal" _n>><<violence 1>><<set $speechAnusPenetrated to 1>>
 							<<if $enemyanger gte 100>><<set _pain *= 1.5>><</if>><<pain _pain>>
 						<<elseif $player.virginity.anal is true>>
 							<span class="pink"><<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 처녀 항문 깊숙이 밀어넣어<<alongsideButtPlug>>,</span> <span class="red">당신이 상상조차 하지 못한 방식으로 당신을 유린한다.</span>
@@ -3492,13 +3492,13 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 									<<default>>
 								<</switch>>
 							<</if>>
-							<<sex 100 "anal" _n>><<takeVirginity $NPCList[_n].fullDescription "anal">><<violence 50>><<set $speechanusvirgin to 1>>
+							<<sex 100 "anal" _n>><<takeVirginity $NPCList[_n].fullDescription "anal">><<violence 50>><<set $speechAnusVirgin to 1>>
 							<<if $enemyanger gte 100>><<set _pain *= 1.5>><</if>><<pain _pain>>
 						<</if>>
 						<<analstat>><<analdoublestat>><<set $NPCList[_n].penis to "anusdouble">><<takeNPCVirginity _n "penile">><<bruise anus>><<raped>><<anusraped>><<set $anusstate to "doublepenetrated">>
 					<<else>>
-						당신의 뜻을 존중하여, <<he>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문과 다른 자지에 문지르지만 삽입하지는 않는다.
-						<<sex 15 "anal" _n>><<set $speechanuswithhold to 1>>
+						Respecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your anus, and the other cock, but does not penetrate.
+						<<sex 15 "anal" _n>><<set $speechAnusWithhold to 1>>
 					<</if>>
 				<<else>>
 					<<if $noanal is 0>>
@@ -3510,7 +3510,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<span class="red">당신은 항문이 <<his>> 자지를 받아들이며 늘어나자 낑낑거린다.</span>
 							<<default>>
 							<</switch>>
-							<<sex 30 "anal" _n>><<violence 1>><<set $speechanuspenetrated to 1>>
+							<<sex 30 "anal" _n>><<violence 1>><<set $speechAnusPenetrated to 1>>
 							<<if $enemyanger gte 100>><<set _pain *= 1.5>><</if>><<pain _pain>>
 						<<elseif $player.virginity.anal is true>>
 							<span class="pink"><<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 처녀 항문 깊숙이 밀어넣어<<alongsideButtPlug>>,</span> <span class="red">당신이 상상조차 하지 못한 방식으로 당신을 유린한다.</span>
@@ -3528,14 +3528,14 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 									<<default>>
 								<</switch>>
 							<</if>>
-							<<sex 100 "anal" _n>><<violence 50>><<set $speechanusvirgin to 1>>
+							<<sex 100 "anal" _n>><<violence 50>><<set $speechAnusVirgin to 1>>
 							<<if $enemyanger gte 100>><<set _pain *= 1.5>><</if>><<pain _pain>>
 							<<takeVirginity $NPCList[_n].fullDescription "anal">>
 						<</if>>
 						<<analstat>><<set $NPCList[_n].penis to "anusdouble">><<takeNPCVirginity _n "penile">><<bruise anus>><<raped>><<anusraped>><<set $anusstate to "doublepenetrated">>
 					<<else>>
-						당신의 뜻을 존중하여, <<he>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문에 문지르지만, 삽입하지는 않는다.
-						<<sex 15 "anal" _n>><<set $speechanuswithhold to 1>>
+						Respecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your anus, but does not penetrate.
+						<<sex 15 "anal" _n>><<set $speechAnusWithhold to 1>>
 					<</if>>
 				<</if>>
 				<<if setup.bodyliquid.combined("bottom") gte 1 or setup.bodyliquid.combined("anus") gte 1>>
@@ -3557,29 +3557,29 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<set $NPCList[_n].penis to 0>><<set $anususe to 0>><<set $anusstate to 0>>
 			<<elseif $rng gte 1>>
 				<<if $worn.over_lower.anus_exposed is 0>>
-					<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 문지른다.
-					<<sex 5 "anal" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechanusentrance to 1>>
+					<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.over_lower.name.
+					<<sex 5 "anal" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechAnusEntrance to 1>>
 				<<elseif $worn.lower.anus_exposed is 0>>
-					<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 문지른다.
-					<<sex 5 "anal" _n>><<set $worn.lower.integrity -= 10>><<set $speechanusentrance to 1>>
+					<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.lower.name.
+					<<sex 5 "anal" _n>><<set $worn.lower.integrity -= 10>><<set $speechAnusEntrance to 1>>
 				<<elseif $worn.lower.anus_exposed is 1 and $worn.over_lower.anus_exposed is 1>>
 					<<rng>>
 					<<if $worn.under_lower.anus_exposed is 0>>
-						<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.under_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 문지른다.
-						<<set $speechanusentrance to 1>><<sex 5 "anal" _n>><<set $worn.under_lower.integrity -= 10>>
+						<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.under_lower.name.
+						<<set $speechAnusEntrance to 1>><<sex 5 "anal" _n>><<set $worn.under_lower.integrity -= 10>>
 					<<elseif $worn.under_lower.anus_exposed is 1>>
 						<<if $rng gte 51>>
 							<<if $NPCList[_n].chastity.penis.includes("chastity")>>
 								<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> $NPCList[_n].chastity.penis【을를】 당신의 항문에 문지른다<<if playerChastity("anus")>><<set $worn.genitals.integrity -= 10>>, 당신의 $worn.genitals.name 너머로<</if>>.
 								<<sex 25 "anal" _n>><<set $speechNPCChastity to 1>>
 							<<elseif playerChastity("anus")>>
-								<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.genitals.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문에 문지른다.
-								<<sex 25 "anal" _n>><<set $worn.genitals.integrity -= 10>><<set $speechchastity to 1>>
+								<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your anus through your $worn.genitals.name.
+								<<sex 25 "anal" _n>><<set $worn.genitals.integrity -= 10>><<set $speechChastity to 1>>
 							<<elseif playerHasButtPlug()>>
 								<<switch random(0,2)>>
 									<<case 0>>
-										<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문과 당신의 $worn.butt_plug.name에 문지른다.
-										<<sex 10 "anal" _n>><<set $speechanusentrance to 1>>
+										<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your anus and your $worn.butt_plug.name.
+										<<sex 10 "anal" _n>><<set $speechAnusEntrance to 1>>
 										<<if $enemyarousal gte ($enemyarousalmax / 2) and random(1, 3) is 3 and !npcHasStrapon(_n) and !wearingCondom(_n)>>
 											끝부분에서 쿠퍼액이 흘러나와, <span class="blue">당신의 엉덩이를 적신다.</span>
 											<<bodyliquid "bottom" "semen">>
@@ -3595,15 +3595,15 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 												<<bodyliquid "bottom" "semen">>
 											<</if>>
 										<</if>>
-										<<sex 10 "anal" _n>><<set $speechanusentrance to 1>>
+										<<sex 10 "anal" _n>><<set $speechAnusEntrance to 1>>
 									<<case 2>>
 										<<if $anusWetness gte ($NPCList[_n].penissize * 15) + random(1, 40) or random(0, 2) is 2>>
 											<<anus_lube_text>><<if $npcSub>>당신은<<else>><<he>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문과 $worn.butt_plug.name에 밀어붙이고, <span class="pink">당장이라도 쑤셔넣을 듯 짓누른다.</span>
 											<<sex 10 "anal" _n>><<set $NPCList[_n].penis to "anusimminentdouble">>
-											<<if $anusstate isnot "doublepenetrated">><<set $anusstate to "doubleimminent">><</if>><<set $speechanusimminent to 1>>
+											<<if $anusstate isnot "doublepenetrated">><<set $anusstate to "doubleimminent">><</if>><<set $speechAnusImminent to 1>>
 										<<else>>
-											<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>【와과】 당신의 $worn.butt_plug.name에 밀어붙이지만, <span class="blue">삽입에는 실패하고,</span> 대신 각도를 틀어 당신의 엉덩이골 사이에 문지른다.
-											<<sex 5 "anal" _n>><<set $speechanusimminent to 1>>
+											<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> and your $worn.butt_plug.name, <span class="blue">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it between your cheeks.
+											<<sex 5 "anal" _n>><<set $speechAnusImminent to 1>>
 											<<if $enemyarousal gte ($enemyarousalmax / 2) and random(1, 3) is 3 and !npcHasStrapon(_n) and !wearingCondom(_n)>>
 												끝부분에서 쿠퍼액이 흘러나와, <span class="blue">당신의 엉덩이를 적신다.</span>
 												<<bodyliquid "bottom" "semen">>
@@ -3614,10 +3614,10 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<<if $anusWetness gte ($NPCList[_n].penissize * 15) + random(1, 40) or random(1, 2) is 2>>
 									<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 밀어붙인다. <<anus_lube_text>><span class="pink">그 끝이 당신을 짓누르며, 당장이라도 삽입할 듯하다.</span>
 									<<sex 20 "anal" _n>><<set $NPCList[_n].penis to "anusimminentdouble">>
-									<<if $anusstate isnot "doublepenetrated">><<set $anusstate to "doubleimminent">><</if>><<set $speechanusimminent to 1>>
+									<<if $anusstate isnot "doublepenetrated">><<set $anusstate to "doubleimminent">><</if>><<set $speechAnusImminent to 1>>
 								<<else>>
-									<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 밀어붙이지만, <span class="blue">삽입에는 실패하고,</span> 대신 각도를 틀어 당신의 엉덩이골 사이에 문지른다.
-									<<sex 5 "anal" _n>><<set $speechanusimminent to 1>>
+									<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>>, <span class="blue">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it between your cheeks.
+									<<sex 5 "anal" _n>><<set $speechAnusImminent to 1>>
 									<<if $enemyarousal gte ($enemyarousalmax / 2) and random(1, 3) is 3 and !npcHasStrapon(_n) and !wearingCondom(_n)>>
 										끝부분에서 쿠퍼액이 흘러나와, <span class="blue">당신의 엉덩이를 적신다.</span>
 										<<bodyliquid "bottom" "goo">>
@@ -3630,7 +3630,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<<else>>
 								<<His>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【이가】 당신의 <<bottom>>에 문질러진다.
 							<</if>>
-							<<sex 5 "anal" _n>><<set $speechanusentrance to 1>>
+							<<sex 5 "anal" _n>><<set $speechAnusEntrance to 1>>
 						<</if>>
 					<</if>>
 				<</if>>
@@ -3675,7 +3675,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<span class="pink">꿀이 당신의 목구멍으로 쏟아져 내린다.</span>
 					<<nectarfed 15>>
 				<</if>>
-				<<submission 10 _n>><<bruise face>><<bruise neck>><<violence 1>><<set $speechmouthpenetrated to 1>>
+				<<submission 10 _n>><<bruise face>><<bruise neck>><<violence 1>><<set $speechMouthPenetrated to 1>>
 			<<elseif $rng gte 1>>
 				<<if $npcSub>>
 					당신은 계속해서 당신의 입으로 <<him>>【을를】 기쁘게 한다.
@@ -3701,7 +3701,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<span class="pink">달콤한 꿀이 당신의 입 안으로 뚝뚝 떨어진다.</span>
 					<<nectarfed 10>>
 				<</if>>
-				<<submission 10 _n>><<bruise face>><<violence 1>><<set $speechmouthpenetrated to 1>>
+				<<submission 10 _n>><<bruise face>><<violence 1>><<set $speechMouthPenetrated to 1>>
 			<</if>>
 		<</if>>
 		<<rng>>
@@ -3734,7 +3734,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<span class="pink">달콤한 꿀이 당신의 입 안으로 뚝뚝 떨어진다.</span>
 							<<nectarfed 10>>
 						<</if>>
-						<<submission 10 _n>><<set $speechmouthpenetrated to 1>>
+						<<submission 10 _n>><<set $speechMouthPenetrated to 1>>
 					<<elseif $player.virginity.oral is true>>
 						<span class="pink"><<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 입 안에 쑤셔넣는다.</span>
 						<<if $NPCList[_n].type is "plant">>
@@ -3742,7 +3742,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<else>>
 							<span class="red">이상한 맛이 난다.</span>
 						<</if>>
-						<<submission 30 _n>><<takeVirginity $NPCList[_n].fullDescription "oral">><<violence 1>><<set $speechmouthvirgin to 1>>
+						<<submission 30 _n>><<takeVirginity $NPCList[_n].fullDescription "oral">><<violence 1>><<set $speechOralVirgin to 1>>
 					<</if>>
 					<<oralstat>><<set $NPCList[_n].penis to "mouth">><<bruise face>><<raped>><<set $mouthstate to "penetrated">>
 				<<elseif $mouthsubmit>>
@@ -3751,7 +3751,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<span class="pink">당신은 혀로 꿀을 핥아먹는다.</span>
 						<<nectarfed 3>>
 					<</if>>
-					<<submission 5 _n>><<set $speechmouthimminent to 1>>
+					<<submission 5 _n>><<set $speechMouthImminent to 1>>
 				<<else>>
 					<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 입술에 문지른다.
 				<</if>>
@@ -3788,7 +3788,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<<if $NPCList[_n].type is "plant" and !["peniskiss","penislick"].includes($mouthactiondefault)>>
 						<span class="pink">끝부분에서 꿀이 번들거린다.</span>
 					<</if>>
-					<<set $NPCList[_n].penis to "mouthimminent">><<submission 5 _n>><<set $mouthstate to "imminent">><<set $speechmouthimminent to 1>>
+					<<set $NPCList[_n].penis to "mouthimminent">><<submission 5 _n>><<set $mouthstate to "imminent">><<set $speechMouthImminent to 1>>
 				<</if>>
 			<</if>>
 		<</if>>
@@ -3800,11 +3800,11 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<elseif $rng gte 1>>
 				<<submission 3 _n>><<playWithBreasts>>
 				<<if $breastcup is "none">>
-					<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<breasts>>에 문지른다.
-					<<set $speechchestrub to 1>>
+					<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<breasts>>.
+					<<set $speechChestRub to 1>>
 				<<else>>
-					<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<breasts>> 사이에 문지른다.
-					<<set $speechbreastrub to 1>>
+					<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc between your <<breasts>>.
+					<<set $speechBreastRub to 1>>
 				<</if>>
 			<</if>>
 		<</if>>
@@ -3820,19 +3820,19 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<</if>>
 			<<else>>
 				<<if $penisuse is "feet">>
-					<<He>>【은는】 발로 당신의 <<penis>>【을를】 배 쪽에 밀어붙이며 발가락 사이에 당신의 <<glans>>【을를】 끼우고 문지른다.
-					<<set $speechpenisfoot to 1>><<neutral 5 "genitals" _n>><<violence 1 1 1 1 _n>>
+					<<He>> presses your <<penis>> against your stomach with <<his>> foot and rubs your <<glans>> between <<his>> toes.
+					<<set $speechPenisFoot to 1>><<neutral 5 "genitals" _n>><<violence 1 1 1 1 _n>>
 				<<elseif $vaginause is "feet">>
-					<<He>>【은는】 <<his>> 발로 당신의 <<pussy>>【을를】 짓누르며 애태운다.
-					<<set $speechvaginafoot to 1>><<neutral 5 "genitals" _n>><<violence 1 1 1 1 _n>>
+					<<He>> presses and teases your <<pussy>> with <<his>> foot.
+					<<set $speechVaginaFoot to 1>><<neutral 5 "genitals" _n>><<violence 1 1 1 1 _n>>
 				<</if>>
 			<</if>>
 		<</if>>
 		<<rng>>
 		<<if $NPCList[_n].penis is "otherfrot">>
 			<<if $rng gte 101>>
-				<span class="blue"><<He>>【이가】 엉덩이를 비틀어 <<his>> 항문을 당신의 <<penis>>에 밀어붙인다.</span>
-				<<set $penisuse to "otheranus">><<set $NPCList[_n].penis to "otheranusentrance">><<set $penisstate to "otheranusentrance">><<set $speechotheranusentrance to 1>>
+				<span class="blue"><<He>> shifts <<his>> ass and presses <<his>> anus against your <<penis>>.</span>
+				<<set $penisuse to "otheranus">><<set $NPCList[_n].penis to "otheranusentrance">><<set $penisstate to "otheranusentrance">><<set $speechNPCAnusEntrance to 1>>
 			<<else>>
 				<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> 엉덩이를 당신의 <<penis>>에 문지른다.
 				<<sex 5 "genital" _n>>
@@ -3841,8 +3841,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<rng>>
 		<<if $NPCList[_n].penis is "otheranus">>
 			<<if $rng gte 101>>
-				<span class="purple"><<He>>【이가】 골반을 뒤로 빼며, <<his>> 항문에서 당신의 <<penis>>【을를】 놓아준다.</span>
-				<<sex 30 "genital" _n>><<set $NPCList[_n].penis to "otheranusimminent">><<set $penisstate to "otheranusimminent">><<set $speechotheranusimminent to 1>>
+				<span class="purple"><<He>> moves <<his>> pelvis away, releasing your <<penis>> from <<his>> anus.</span>
+				<<sex 30 "genital" _n>><<set $NPCList[_n].penis to "otheranusimminent">><<set $penisstate to "otheranusimminent">><<set $speechNPCAnusImminent to 1>>
 				<<if playerHasStrapon()>><<violence 1 1 1 0>>
 				<<else>><<bruise penis>><<violence 1>><</if>>
 			<<elseif $rng gte 1>>
@@ -3879,7 +3879,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<if $npcSub>>당신은 규칙적인 움직임으로 <<his>> 엉덩이 안으로 파고들고<<else>><<He>>【은는】 규칙적인 움직임으로 당신의 <<penis>> 위로 허리를 돌린다<</if>>.
 					<</if>>
 				<</if>>
-				<<sex 30 "genital" _n>><<set $speechotheranuspenetrated to 1>>
+				<<sex 30 "genital" _n>><<set $speechNPCAnusPenetrated to 1>>
 				<<if playerHasStrapon()>><<violence 1 1 1 0>>
 				<<else>><<bruise penis>><<violence 1>><</if>>
 			<</if>>
@@ -3887,35 +3887,35 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<rng>>
 		<<if $NPCList[_n].penis is "otheranusimminent">>
 			<<if $rng gte 101>>
-				<span class="blue"><<He>>【은는】 당신의 <<penis>>에 엉덩이를 밀어붙이는 것을 멈춘다.</span>
-				<<set $NPCList[_n].penis to "otheranusentrance">><<set $penisstate to "otheranusentrance">><<set $speechotheranusentrance to 1>>
+				<span class="blue"><<He>> stops pressing <<his>> ass against your <<penis>>.</span>
+				<<set $NPCList[_n].penis to "otheranusentrance">><<set $penisstate to "otheranusentrance">><<set $speechNPCAnusEntrance to 1>>
 			<<elseif $rng gte 1>>
 				<<if $nopenile is 0>>
 					<<set $penisactiondefault to "otheranustake">>
 					<<if ((playerPenisSize() is -1 and $arousal lt ($arousalmax / 5) * 4) or (playerPenisSize() is -2 and $arousal lt ($arousalmax / 10) * 9))>>
-						<<He>>【은는】 당신을 받아들이려 <<his>> 엉덩이를 당신의 <<penis>> 끝에 밀어붙인다. <span class="blue">하지만 당신은 발기하지 않은 상태다.</span>
-						<<set $speechpenissmall to 1>><<set $enemyanger += 5>>
+						<<He>> presses <<his>> ass against the tip of your <<penis>>, trying to take you in. <span class="blue">But you don't have an erection.</span>
+						<<set $speechPenisSmall to 1>><<set $enemyanger += 5>>
 					<<elseif playerPenisSize() lte 2 or playerPenisSize() is 3 and random(1, 100) gte 70 or playerPenisSize() gte 4 and random(1, 100) gte 90>>
 						<<if playerHasStrapon() or $player.virginity.penile isnot true>>
-							<span class="pink"><<He>>【이가】 당신의 <<penis>>【을를】 <<his>> 엉덩이 속으로 부드럽게 밀어 넣으며, 뿌리까지 집어삼킨다.</span>
-							<<sex 30 "genital" _n>><<set $speechotheranuspenetrated to 1>>
+							<span class="pink"><<He>> eases your <<penis>> into <<his>> ass, swallowing you to the base.</span>
+							<<sex 30 "genital" _n>><<set $speechNPCAnusPenetrated to 1>>
 							<<if playerHasStrapon()>><<violence 1 1 1 0>>
 							<<else>><<bruise penis>><<takeTempleVirginity $NPCList[_n].fullDescription "penile">><<violence 1>><<raped>><<penisraped>><</if>>
 						<<elseif $player.virginity.penile is true>>
-							<span class="pink"><<He>>【은는】 당신의 처녀 자지를 <<his>> 엉덩이 안으로 밀어넣어,</span><span class="red"> 당신의 귀두에서 포피를 벗겨내며</span> <<virginitylosttext $NPCList[_n].fullDescription>>
-							<<sex 100 "genital" _n>><<takeVirginity $NPCList[_n].fullDescription "penile">><<bruise penis>><<violence 100>><<raped>><<penisraped>><<set $speechpenisvirgin to 1>>
+							<span class="pink"><<He>> eases your virgin penis into <<his>> ass,</span><span class="red"> separating your foreskin from your glans and</span> <<virginitylosttext $NPCList[_n].fullDescription>>
+							<<sex 100 "genital" _n>><<takeVirginity $NPCList[_n].fullDescription "penile">><<bruise penis>><<violence 100>><<raped>><<penisraped>><<set $speechPenisVirgin to 1>>
 						<</if>>
 						<<penilestat>><<set $NPCList[_n].penis to "otheranus">><<takeNPCVirginity _n "anal">><<set $penisstate to "otheranus">>
 						<<if playerPenisSize() gte 4>>
 							<<He>>【은는】 이렇게 거대한 것을 집어삼켰다는 사실에 득의양양한 표정을 짓는다.
 						<</if>>
 					<<else>>
-						<<He>>【은는】 당신을 받아들이려 <<his>> 엉덩이를 당신의 <<penis>> 끝에 밀어붙인다. <span class="blue">당신의 둘레가 너무 굵어 무리다.</span>
-						<<set $speechpenisbig to 1>><<set $enemyanger += 5>>
+						<<He>> presses <<his>> ass against the tip of your <<penis>>, trying to take you in. <span class="blue">Your girth proves too much.</span>
+						<<set $speechPenisBig to 1>><<set $enemyanger += 5>>
 					<</if>>
 				<<else>>
-					당신의 뜻을 존중하여, <<he>>【은는】 <<his>> 엉덩이로 당신의 <<penis>>【을를】 집어삼키지 않고 대신 당신의 <<glans>> 끝을 애태운다.
-					<<sex 15 "genital" _n>><<set $speechotheranuswithhold to 1>>
+					Respecting your wishes, <<he>> does not envelop your <<penis>> with <<his>> ass, instead teasing the tip of your <<glans>>.
+					<<sex 15 "genital" _n>><<set $speechNPCAnusWithhold to 1>>
 				<</if>>
 			<</if>>
 		<</if>>
@@ -3926,16 +3926,16 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<set $NPCList[_n].penis to 0>><<set $penisuse to 0>><<set $penisstate to 0>>
 			<<elseif $rng gte 1>>
 				<<if $worn.over_lower.vagina_exposed is 0>>
-					<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> 당신의 $worn.over_lower.name 너머로 <<his>> 엉덩이를 당신의 <<penis>>에 문지른다.
-					<<sex 5 "genital" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechotheranusentrance to 1>>
+					<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.over_lower.name.
+					<<sex 5 "genital" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechNPCAnusEntrance to 1>>
 				<<elseif $worn.lower.vagina_exposed is 0>>
-					<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> 당신의 $worn.lower.name 너머로 <<his>> 엉덩이를 당신의 <<penis>>에 문지른다.
-					<<sex 5 "genital" _n>><<set $worn.lower.integrity -= 10>><<set $speechotheranusentrance to 1>>
+					<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.lower.name.
+					<<sex 5 "genital" _n>><<set $worn.lower.integrity -= 10>><<set $speechNPCAnusEntrance to 1>>
 				<<elseif $worn.lower.vagina_exposed is 1 and $worn.over_lower.vagina_exposed is 1>>
 					<<rng>>
 					<<if $worn.under_lower.vagina_exposed is 0>>
-						<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> 당신의 $worn.under_lower.name 너머로 <<his>> 엉덩이를 당신의 <<penis>>에 문지른다.
-						<<sex 5 "genital" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechotheranusentrance to 1>>
+						<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.under_lower.name.
+						<<sex 5 "genital" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechNPCAnusEntrance to 1>>
 					<<elseif $worn.under_lower.vagina_exposed is 1>>
 						<<if $rng gte 71>>
 							<<if $NPCList[_n].chastity.anus.includes("shield")>>
@@ -3949,16 +3949,16 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 									<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> 당신의 $worn.genitals.name 너머로 <<his>> 엉덩이를 당신의 <<penis>>에 문지른다.
 									<<set $worn.genitals.integrity -= 10>>
 								<</if>>
-								<<sex 20 "genital" _n>><<set $speechchastity to 1>>
+								<<sex 20 "genital" _n>><<set $speechChastity to 1>>
 							<<elseif $nopenile is 1 and !$npcSub>>
-								<span class="purple"><<He>>【이가】 당신의 <<penis>>에 엉덩이를 밀어붙인다.</span>
-								<<sex 20 "genital" _n>><<set $NPCList[_n].penis to "otheranusimminent">><<set $penisstate to "otheranusimminent">><<set $speechotheranusimminent to 1>>
+								<span class="purple"><<He>> presses <<his>> ass against your <<penis>>.</span>
+								<<sex 20 "genital" _n>><<set $NPCList[_n].penis to "otheranusimminent">><<set $penisstate to "otheranusimminent">><<set $speechNPCAnusImminent to 1>>
 							<<elseif $penisWetness gte (playerPenisSize() * 15) + random(1, 40) or random(1, 2) is 2 and !$npcSub>>
-								<<He>>【이가】 당신의 <<penis>>에 엉덩이를 밀어붙인다. <<penis_lube_text>> <span class="pink">당신의 끝부분이 <<him>> 안으로 파고들어, 한 번만 허리를 쳐올리면 집어삼켜질 듯하다.</span>
-								<<sex 20 "genital" _n>><<set $NPCList[_n].penis to "otheranusimminent">><<set $penisstate to "otheranusimminent">><<set $speechotheranusimminent to 1>>
+								<<He>> presses <<his>> ass against your <<penis>>. <<penis_lube_text>> <span class="pink">your tip is pushed into <<him>>, a thrust away from being enveloped.</span>
+								<<sex 20 "genital" _n>><<set $NPCList[_n].penis to "otheranusimminent">><<set $penisstate to "otheranusimminent">><<set $speechNPCAnusImminent to 1>>
 							<<elseif !$npcSub>>
-								<<He>>【이가】 당신의 <<penis>>에 엉덩이를 밀어붙이지만, <span class="blue">당신을 집어삼키는 데는 실패한다.</span> 당신의 <<penisSimple>>【이가】 빗겨 나가며 <<his>> 엉덩이골 사이를 문지른다.
-								<<sex 5 "genital" _n>><<set $speechotheranusimminent to 1>>
+								<<He>> presses <<his>> ass against your <<penis>>, <span class="blue">but fails to envelop you.</span> Your <<penisSimple>> angles away and rubs between <<his>> cheeks.
+								<<sex 5 "genital" _n>><<set $speechNPCAnusImminent to 1>>
 							<</if>>
 						<<elseif $rng gte 1>>
 							<<if !playerChastity("penis")>>
@@ -3981,11 +3981,11 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<else>>
 					<<He>>【은는】 당신의 입술에 천천히 <<his>> 엉덩이를 문지른다.
 				<</if>>
-				<<sex 3 "mouth" _n>><<set $speechmouthotheranus to 1>>
+				<<sex 3 "mouth" _n>><<set $speechMouthNPCAnus to 1>>
 				<<if $mouthactiondefault is "anallick">>
-					<<set $speechanallick to 1>>
+					<<set $speechAnalLick to 1>>
 				<<elseif $mouthactiondefault is "analkiss">>
-					<<set $speechanalkiss to 1>>
+					<<set $speechAnalKiss to 1>>
 				<</if>>
 			<<else>>
 				<span class="purple"><<He>>【은는】 당신의 얼굴에서 엉덩이를 뗀다.</span>
@@ -4011,20 +4011,13 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<</if>>
 				<<neutral 1 _n>>
 			<</if>>
-			<<set $speechfencingentrance to 1>>
+			<<set $speechFencingEntrance to 1>>
 		<<elseif $NPCList[_n].penis is "penisimminent" and !$npcSub>>
 			<<He>>【은는】 앞을 향해 찌르고,
 			<span class="pink">
 				<<if playerChastity("penis")>>
-					<<if $enemyarousal gte (($enemyarousalmax / 10) * 7)>>
-						격렬하게 부딪치며
-					<<elseif $enemyarousal gte (($enemyarousalmax / 10) * 4)>>
-						세게 내리찍으며
-					<<else>>
-						맞대고 누르며
-					<</if>>
-					당신의 $worn.genitals.name에 <<his>> <<npcPenisSimple _n>>【을를】 비빈다.
-					<<set $worn.genitals.integrity -= 10>><<set $speechchastity to 1>>
+					<<his>> <<npcPenisSimple _n>> against your $worn.genitals.name.
+					<<set $worn.genitals.integrity -= 10>><<set $speechChastity to 1>>
 				<<else>>
 					<<his>> <<npcPenisSimple _n>>【을를】 당신의 <<penis>>에 맞대어
 					<<if $enemyarousal gte (($enemyarousalmax / 10) * 7)>>
@@ -4036,7 +4029,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<</if>>
 				<</if>>
 			</span>
-			<<set $penisstate to "otherpenis">><<set $NPCList[_n].penis to "penis">><<sex 20 "genital" _n>><<set $speechpenispenis to 1>>
+			<<set $penisstate to "otherpenis">><<set $NPCList[_n].penis to "penis">><<sex 20 "genital" _n>><<set $speechFencing to 1>>
 		<<elseif $NPCList[_n].penis is "penis">>
 			<<if $rng gte 1>>
 				<<if playerChastity("penis")>>
@@ -4057,7 +4050,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<</if>>
 					<<set $worn.genitals.integrity -= 5>>
 					<<if $worn.genitals.name is "chastity parasite">><<arousal 100 "genitals">><</if>>
-					<<set $speechchastity to 1>>
+					<<set $speechChastity to 1>>
 				<<elseif $enemyarousal gte $enemyarousalmax * 0.8>>
 					<<He>>【은는】 허리를 놀리며, <<if $npcSub>>본능적으로 <</if>>당신의 <<penis>>【을를】 <<his>> 자지에 격렬하게 들이박는다.
 					<<if $penisWetness gte 45 and !playerHasStrapon() and !wearingCondom(_n) and !wearingCondom("player")>>
@@ -4075,7 +4068,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<else>>
 					<<He>>【은는】 서로의 <<penises>>【을를】 맞대고 주무르며 애무한다.
 				<</if>>
-				<<sex 20 "genital" _n>><<set $speechpenispenis to 1>>
+				<<sex 20 "genital" _n>><<set $speechFencing to 1>>
 			<<else>>
 				<span class="lblue"><<He>>【은는】 당신의 것에서 <<his>> <<npcPenisSimple _n>>【을를】 떼어낸다.</span>
 				<<set $penisuse to 0>><<set $NPCList[_n].penis to 0>>
@@ -4099,8 +4092,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<rng>>
 		<<if $NPCList[_n].vagina is "frot">>
 			<<if $rng gte 101>>
-				<span class="blue"><<He>>【은는】 <<his>> 클리토리스를 떼어내고, 굶주린 보지를 당신의 <<penis>>에 꽉 누른다.</span>
-				<<set $penisuse to "othervagina">><<set $NPCList[_n].vagina to "penisentrance">><<set $penisstate to "entrance">><<set $speechpenisentrance to 1>>
+				<span class="blue"><<He>> moves <<his>> clit away and presses <<his>> hungry pussy against your <<penis>>.</span>
+				<<set $penisuse to "othervagina">><<set $NPCList[_n].vagina to "penisentrance">><<set $penisstate to "entrance">><<set $speechNPCVaginaEntrance to 1>>
 			<<else>>
 				<<if $npcSub>>당신은 <<his>> 클리토리스를<<else>><<He>>【은는】 <<his>> 클리토리스를<</if>> 당신의 <<glans>>에 비빈다.
 				<<sex 5 "genital" _n>>
@@ -4109,8 +4102,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<rng>>
 		<<if $NPCList[_n].vagina is "penis">>
 			<<if $rng gte 101>>
-				<span class="purple"><<He>>【은는】 골반을 치우고, <<his>> 보지에서 당신의 <<penis>>【을를】 빼낸다.</span>
-				<<sex 30 "genital" _n>><<set $NPCList[_n].vagina to "penisimminent">><<set $penisstate to "imminent">><<set $speechpenisimminent to 1>>
+				<span class="purple"><<He>> moves <<his>> pelvis away, releasing your <<penis>> from <<his>> vagina.</span>
+				<<sex 30 "genital" _n>><<set $NPCList[_n].vagina to "penisimminent">><<set $penisstate to "imminent">><<set $speechNPCVaginaImminent to 1>>
 				<<if playerHasStrapon()>><<violence 1 1 1 0>>
 				<<else>><<bruise penis>><<violence 1>><</if>>
 			<<elseif $rng gte 1>>
@@ -4147,7 +4140,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<if $npcSub>>당신은 일정한 동작으로 <<his>> 보지 안으로 밀어넣고<<else>><<He>>【은는】 일정한 동작으로 당신의 <<penis>> 위에서 기승위를 한다<</if>>.
 					<</if>>
 				<</if>>
-				<<sex 30 "genital" _n>><<set $speechpenispenetrated to 1>>
+				<<sex 30 "genital" _n>><<set $speechNPCVaginaPenetrated to 1>>
 				<<if playerHasStrapon()>><<violence 1 1 1 0>>
 				<<else>><<bruise penis>><<violence 1>><</if>>
 			<</if>>
@@ -4155,34 +4148,34 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<rng>>
 		<<if $NPCList[_n].vagina is "penisimminent">>
 			<<if $rng gte 101>>
-				<span class="blue"><<He>>【은는】 당신의 <<penis>>에 <<his>> 보지를 누르던 것을 멈춘다.</span>
-				<<set $NPCList[_n].vagina to "penisentrance">><<set $penisstate to "entrance">><<set $speechpenisentrance to 1>>
+				<span class="blue"><<He>> stops pressing <<his>> pussy against your <<penis>>.</span>
+				<<set $NPCList[_n].vagina to "penisentrance">><<set $penisstate to "entrance">><<set $speechNPCVaginaEntrance to 1>>
 			<<elseif $rng gte 1>>
 				<<if $nopenile is 0>>
 					<<if ((playerPenisSize() is -1 and $arousal lt ($arousalmax / 5) * 4) or (playerPenisSize() is -2 and $arousal lt ($arousalmax / 10) * 9))>>
-						<<He>>【은는】 당신의 <<penis>> 끝에 <<his>> 보지를 누르며 안으로 머금으려 한다. <span class="blue">하지만 당신은 발기하지 않았다.</span>
-						<<set $speechpenissmall to 1>><<set $enemyanger += 5>>
+						<<He>> presses <<his>> pussy against the tip of your <<penis>>, trying to take you in. <span class="blue">But you don't have an erection.</span>
+						<<set $speechPenisSmall to 1>><<set $enemyanger += 5>>
 					<<elseif playerPenisSize() lte 2 or playerPenisSize() is 3 and random(1, 100) gte 70 or playerPenisSize() gte 4 and random(1, 100) gte 90>>
 						<<if playerHasStrapon() or $player.virginity.penile isnot true>>
-							<span class="pink"><<He>>【은는】 당신의 <<penis>>【을를】 <<his>> 보지 안으로 천천히 밀어넣어, 뿌리 끝까지 삼킨다.</span>
-							<<sex 30 "genital" _n>><<set $speechpenispenetrated to 1>>
+							<span class="pink"><<He>> eases your <<penis>> into <<his>> pussy, swallowing you to the base.</span>
+							<<sex 30 "genital" _n>><<set $speechNPCVaginaPenetrated to 1>>
 							<<if playerHasStrapon()>><<violence 1 1 1 0>>
 							<<else>><<bruise penis>><<takeTempleVirginity $NPCList[_n].fullDescription "penile">><<violence 1>><<raped>><<penisraped>><</if>>
 						<<elseif $player.virginity.penile is true>>
-							<span class="pink"><<He>>【은는】 당신의 동정 자지를 <<his>> 보지 안으로 천천히 밀어넣어,</span><span class="red"> 귀두에서 포피가 벗겨지게 만들고 <<virginitylosttext $NPCList[_n].fullDescription>></span>
-							<<sex 100 "genital" _n>><<takeVirginity $NPCList[_n].fullDescription "penile">><<bruise penis>><<violence 100>><<raped>><<penisraped>><<set $speechpenisvirgin to 1>>
+							<span class="pink"><<He>> eases your virgin penis into <<his>> pussy,</span><span class="red"> separating your foreskin from your glans and <<virginitylosttext $NPCList[_n].fullDescription>></span>
+							<<sex 100 "genital" _n>><<takeVirginity $NPCList[_n].fullDescription "penile">><<bruise penis>><<violence 100>><<raped>><<penisraped>><<set $speechPenisVirgin to 1>>
 						<</if>>
 						<<penilestat>><<set $NPCList[_n].vagina to "penis">><<takeNPCVirginity _n "vaginal">><<set $penisstate to "penetrated">>
 						<<if playerPenisSize() gte 4>>
 							<<He>>【은는】 이렇게 커다란 것을 품었다는 사실에 뿌듯한 표정을 짓는다.
 						<</if>>
 					<<else>>
-						<<He>>【은는】 당신의 <<penis>> 끝에 <<his>> 보지를 누르며 안으로 머금으려 한다. <span class="blue">하지만 당신의 굵기가 너무 버겁다.</span> <<He>>【은는】 당신의 기둥에 보지를 비빈다.
-						<<set $speechpenisbig to 1>><<set $enemyanger += 5>>
+						<<He>> presses <<his>> pussy against the tip of your <<penis>>, trying to take you in. <span class="blue">Your girth proves too much.</span> <<He>> frots against your length.
+						<<set $speechPenisBig to 1>><<set $enemyanger += 5>>
 					<</if>>
 				<<else>>
-					당신의 의사를 존중하여, <<he>>【은는】 <<his>> 보지로 당신의 <<penis>>【을를】 삼키는 대신 귀두 끝을 애태운다.
-					<<sex 15 "genital" _n>><<set $speechpeniswithhold to 1>>
+					Respecting your wishes, <<he>> does not envelop your <<penis>> with <<his>> vagina, instead teasing the tip of your glans.
+					<<sex 15 "genital" _n>><<set $speechNPCVaginaWithhold to 1>>
 				<</if>>
 			<</if>>
 		<</if>>
@@ -4193,16 +4186,16 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<set $NPCList[_n].vagina to 0>><<set $penisuse to 0>><<set $penisstate to 0>>
 			<<elseif $rng gte 1>>
 				<<if $worn.over_lower.vagina_exposed is 0>>
-					<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.over_lower.name 너머로 <<his>> 보지를 당신의 <<penis>>에 비빈다.
-					<<sex 5 "genital" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechpenisentrance to 1>>
+					<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> pussy against your <<penis>> through your $worn.over_lower.name.
+					<<sex 5 "genital" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechNPCVaginaEntrance to 1>>
 				<<elseif $worn.lower.vagina_exposed is 0>>
-					<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.lower.name 너머로 <<his>> 보지를 당신의 <<penis>>에 비빈다.
-					<<sex 5 "genital" _n>><<set $worn.lower.integrity -= 10>><<set $speechpenisentrance to 1>>
+					<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> pussy against your <<penis>> through your $worn.lower.name.
+					<<sex 5 "genital" _n>><<set $worn.lower.integrity -= 10>><<set $speechNPCVaginaEntrance to 1>>
 				<<elseif $worn.lower.vagina_exposed is 1 and $worn.over_lower.vagina_exposed is 1>>
 					<<rng>>
 					<<if $worn.under_lower.vagina_exposed is 0>>
-						<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.under_lower.name 너머로 <<his>> 보지를 당신의 <<penis>>에 비빈다.
-						<<sex 5 "genital" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechpenisentrance to 1>>
+						<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> pussy against your <<penis>> through your $worn.under_lower.name.
+						<<sex 5 "genital" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechNPCVaginaEntrance to 1>>
 					<<elseif $worn.under_lower.vagina_exposed is 1>>
 						<<if $rng gte 51>>
 							<<if $NPCList[_n].chastity.vagina.includes("chastity")>>
@@ -4216,16 +4209,16 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 									<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.genitals.name 너머로 <<his>> 보지를 당신의 <<penis>>에 비빈다.
 									<<set $worn.genitals.integrity -= 10>>
 								<</if>>
-								<<sex 20 "genital" _n>><<set $speechchastity to 1>>
+								<<sex 20 "genital" _n>><<set $speechChastity to 1>>
 							<<elseif $nopenile is 1 and !$npcSub>>
-								<span class="purple"><<He>>【은는】 당신의 <<penis>>에 <<his>> 보지를 누른다.</span>
-								<<sex 20 "genital" _n>><<set $NPCList[_n].vagina to "penisimminent">><<set $penisstate to "imminent">><<set $speechpenisimminent to 1>>
+								<span class="purple"><<He>> presses <<his>> pussy against your <<penis>>.</span>
+								<<sex 20 "genital" _n>><<set $NPCList[_n].vagina to "penisimminent">><<set $penisstate to "imminent">><<set $speechNPCVaginaImminent to 1>>
 							<<elseif $penisWetness gte (playerPenisSize() * 15) + random(1, 40) or random(1, 2) is 2 and !$npcSub>>
-								<<He>>【은는】 당신의 <<penis>>에 <<his>> 보지를 누른다. <<penis_lube_text>> <span class="pink">당신의 끝부분이 <<him>> 안으로 밀려 들어가, 단 한 번의 찌르기면 완전히 집어삼켜질 듯하다.</span>
-								<<sex 20 "genital" _n>><<set $NPCList[_n].vagina to "penisimminent">><<set $penisstate to "imminent">><<set $speechpenisimminent to 1>>
+								<<He>> presses <<his>> pussy against your <<penis>>. <<penis_lube_text>> <span class="pink">your tip is pushed into <<him>>, a thrust away from being enveloped.</span>
+								<<sex 20 "genital" _n>><<set $NPCList[_n].vagina to "penisimminent">><<set $penisstate to "imminent">><<set $speechNPCVaginaImminent to 1>>
 							<<elseif !$npcSub>>
-								<<He>>【은는】 당신의 <<penis>>에 <<his>> 보지를 누르지만, <span class="blue">당신을 삼키는 데는 실패한다.</span> 당신의 <<penisSimple>>【이가】 비껴가며 <<his>> 클리토리스에 문질러진다.
-								<<sex 5 "genital" _n>><<set $speechpenisimminent to 1>>
+								<<He>> presses <<his>> pussy against your <<penis>>, <span class="blue">but fails to envelop you.</span> Your <<penisSimple>> angles away and rubs against <<his>> clit.
+								<<sex 5 "genital" _n>><<set $speechNPCVaginaImminent to 1>>
 								<<if $enemyarousal gte ($enemyarousalmax / 2) and random(1, 3) is 3>>
 									<<his>> 보지에서 음탕한 애액이 뚝뚝 떨어져, <span class="blue">당신의 자지를 윤활시킨다.</span>
 									<<bodyliquid "penis" "goo">>
@@ -4271,7 +4264,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<span class="pink">달콤한 넥타르가 당신의 입 안으로 흘러든다.</span>
 					<<nectarfed 8>>
 				<</if>>
-				<<violence 3>><<bruise face>><<set $speechvaginamouth to 1>>
+				<<violence 3>><<bruise face>><<set $speechMouthNPCVagina to 1>>
 			<<else>>
 				<<if $mouthsubmit is 1>>
 					<<if $rng gte 1>>
@@ -4286,7 +4279,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<elseif $enemyarousal gte (($enemyarousalmax / 5) * 3)>>
 							<<his>> 애액 맛이 느껴진다.
 						<</if>>
-						<<sex 3 "mouth" _n>><<set $speechvaginamouth to 1>>
+						<<sex 3 "mouth" _n>><<set $speechMouthNPCVagina to 1>>
 					<<else>>
 						<<He>>【은는】 당신의 얼굴에서 <<his>> 보지를 치운다.
 						<<set $mouthuse to 0>><<set $mouthstate to 0>><<set $NPCList[_n].vagina to 0>>
@@ -4304,7 +4297,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<elseif $enemyarousal gte (($enemyarousalmax / 5) * 3)>>
 							<<his>> 애액 맛이 느껴진다.
 						<</if>>
-						<<sex 3 "mouth" _n>><<set $speechvaginamouth to 1>>
+						<<sex 3 "mouth" _n>><<set $speechMouthNPCVagina to 1>>
 					<<else>>
 						<<He>>【은는】 당신의 얼굴에서 <<his>> 보지를 치운다.
 						<<set $mouthuse to 0>><<set $mouthstate to 0>><<set $NPCList[_n].vagina to 0>>
@@ -4321,7 +4314,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<He>>【은는】 <<his>> 보지를 당신의 것에 더 가까이 들이댄다.
 				<<neutral 1 _n>>
 			<</if>>
-			<<set $speechtribentrance to 1>>
+			<<set $speechTribEntrance to 1>>
 		<<elseif $NPCList[_n].vagina is "vaginaimminent" and !$npcSub>>
 			<<He>>【은는】 허리를 앞으로 튕겨, <span class="pink">
 			<<if $enemyarousal gte (($enemyarousalmax / 10) * 7)>>
@@ -4331,8 +4324,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<else>>
 				지그시
 			<</if>>
-			<<his>> 보지를 당신의 것에 들이박는다.</span>
-			<<set $vaginastate to "othervagina">><<set $NPCList[_n].vagina to "vagina">><<sex 20 "genital" _n>><<set $speechvaginavagina to 1>>
+			<<his>> pussy against yours.</span>
+			<<set $vaginastate to "othervagina">><<set $NPCList[_n].vagina to "vagina">><<sex 20 "genital" _n>><<set $speechTrib to 1>>
 		<<elseif $NPCList[_n].vagina is "vagina">>
 			<<if $rng gte 1>>
 				<<if $enemyarousal gte $enemyarousalmax * 0.8>>
@@ -4352,7 +4345,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<else>>
 					<<He>>【은는】 <<his>> 보지로 당신의 <<pussy>>【을를】 맞대고 비비며 입 맞추듯 부빈다.
 				<</if>>
-				<<sex 20 "genital" _n>><<set $speechvaginavagina to 1>>
+				<<sex 20 "genital" _n>><<set $speechTrib to 1>>
 			<<else>>
 				<span class="lblue"><<He>>【은는】 당신의 것에서 <<his>> 보지를 떼어낸다.</span>
 				<<set $vaginause to 0>><<set $NPCList[_n].vagina to 0>>
@@ -4386,7 +4379,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<</if>>
 		<<rng>>
 		<<if $NPCList[_n].vagina is "feet">>
-			<<set $speechfeet to 1>>
+			<<set $speechFeet to 1>>
 			<<if $rng gte 1>>
 				<<if !$npcSub>>
 					<<He>>【은는】 당신의 발에 <<his>> 보지를 비빈다.
@@ -4412,18 +4405,18 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<</if>>
 			<<else>>
 				<<if $penisuse is "feet">>
-					<<He>>【은는】 발로 당신의 <<penis>>【을를】 배 쪽에 밀어붙이며 발가락 사이에 당신의 <<glans>>【을를】 끼우고 문지른다.
-					<<set $speechpenisfoot to 1>><<neutral 5 "genitals" _n>><<violence 1>>
+					<<He>> presses your <<penis>> against your stomach with <<his>> foot and rubs your <<glans>> between <<his>> toes.
+					<<set $speechPenisFoot to 1>><<neutral 5 "genitals" _n>><<violence 1>>
 				<<elseif $vaginause is "feet">>
-					<<He>>【은는】 당신의 <<pussy>>에 <<his>> 발을 문지른다.
-					<<set $speechvaginafoot to 1>><<neutral 5 "genitals" _n>><<violence 1>>
+					<<He>> rubs <<his>> foot against your <<pussy>>.
+					<<set $speechVaginaFoot to 1>><<neutral 5 "genitals" _n>><<violence 1>>
 				<</if>>
 			<</if>>
 		<</if>>
 		<<rng>>
 		<<if $NPCList[_n].vagina is "otherfrot">>
 			<<if $rng gte 101>>
-				<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and !$player.condom and $parasite.penis.name is undefined>>
+				<<if $NPCList[_n].condom?.willUse is true and !$player.condom and $parasite.penis.name is undefined>>
 					<<if playerChastity("penis")>>
 						<<He>>【이가】 당신의 페니스에 콘돔을 씌우려 하지만, 당신의 $worn.genitals.name 위로는 씌울 수 없는 모양이다. <span class="red"><<He>>【은는】 이내 포기한다.</span>
 						<<set $NPCList[_n].condom.willUse to false>>
@@ -4432,8 +4425,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<equipNPCCondom _n "player">>
 					<</if>>
 				<</if>>
-				<span class="blue"><<He>>【이가】 엉덩이를 비틀어 <<his>> 항문을 당신의 <<penis>>에 밀어붙인다.</span>
-				<<set $penisuse to "otheranus">><<set $NPCList[_n].vagina to "otheranusentrance">><<set $penisstate to "otheranusentrance">><<set $speechotheranusentrance to 1>>
+				<span class="blue"><<He>> shifts <<his>> ass and presses <<his>> anus against your <<penis>>.</span>
+				<<set $penisuse to "otheranus">><<set $NPCList[_n].vagina to "otheranusentrance">><<set $penisstate to "otheranusentrance">><<set $speechNPCAnusEntrance to 1>>
 			<<else>>
 				<<He>>【은는】 당신의 <<penis>>에 <<his>> 엉덩이를 비빈다.
 				<<sex 5 "genital" _n>>
@@ -4442,8 +4435,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<rng>>
 		<<if $NPCList[_n].vagina is "otheranus">>
 			<<if $rng gte 101>>
-				<span class="purple"><<He>>【이가】 골반을 뒤로 빼며, <<his>> 항문에서 당신의 <<penis>>【을를】 빼낸다.</span>
-				<<sex 30 "genital" _n>><<set $NPCList[_n].vagina to "otheranusimminent">><<set $penisstate to "otheranusimminent">><<set $speechotheranusimminent to 1>>
+				<span class="purple"><<He>> moves <<his>> pelvis away, releasing your <<penis>> from <<his>> anus.</span>
+				<<sex 30 "genital" _n>><<set $NPCList[_n].vagina to "otheranusimminent">><<set $penisstate to "otheranusimminent">><<set $speechNPCAnusImminent to 1>>
 				<<if playerHasStrapon()>><<violence 1 1 1 0>>
 				<<else>><<bruise penis>><<violence 1>><</if>>
 			<<elseif $rng gte 1>>
@@ -4476,7 +4469,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<He>>【은는】 일정한 동작으로 당신의 <<penis>> 위에서 기승위를 한다.
 					<</if>>
 				<</if>>
-				<<sex 30 "genital" _n>><<set $speechotheranuspenetrated to 1>>
+				<<sex 30 "genital" _n>><<set $speechNPCAnusPenetrated to 1>>
 				<<if playerHasStrapon()>><<violence 1 1 1 0>>
 				<<else>><<bruise penis>><<violence 1>><</if>>
 			<</if>>
@@ -4484,34 +4477,34 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<rng>>
 		<<if $NPCList[_n].vagina is "otheranusimminent">>
 			<<if $rng gte 101>>
-				<span class="blue"><<He>>【은는】 당신의 <<penis>>에 엉덩이를 밀어붙이는 것을 멈춘다.</span>
-				<<set $NPCList[_n].vagina to "otheranusentrance">><<set $penisstate to "otheranusentrance">><<set $speechotheranusentrance to 1>>
+				<span class="blue"><<He>> stops pressing <<his>> ass against your <<penis>>.</span>
+				<<set $NPCList[_n].vagina to "otheranusentrance">><<set $penisstate to "otheranusentrance">><<set $speechNPCAnusEntrance to 1>>
 			<<elseif $rng gte 1>>
 				<<if $nopenile is 0>>
 					<<if ((playerPenisSize() is -1 and $arousal lt ($arousalmax / 5) * 4) or (playerPenisSize() is -2 and $arousal lt ($arousalmax / 10) * 9))>>
-						<<He>>【은는】 당신을 받아들이려 <<his>> 엉덩이를 당신의 <<penis>> 끝에 밀어붙인다. <span class="blue">하지만 당신은 발기하지 않은 상태다.</span>
-						<<set $speechpenissmall to 1>><<set $enemyanger += 5>>
+						<<He>> presses <<his>> ass against the tip of your <<penis>>, trying to take you in. <span class="blue">But you don't have an erection.</span>
+						<<set $speechPenisSmall to 1>><<set $enemyanger += 5>>
 					<<elseif playerPenisSize() lte 2 or playerPenisSize() is 3 and random(1, 100) gte 70 or playerPenisSize() gte 4 and random(1, 100) gte 90>>
 						<<if playerHasStrapon() or $player.virginity.penile isnot true>>
-							<span class="pink"><<He>>【이가】 당신의 <<penis>>【을를】 <<his>> 엉덩이 속으로 부드럽게 밀어 넣으며, 뿌리까지 집어삼킨다.</span>
-							<<sex 30 "genital" _n>><<set $speechotheranuspenetrated to 1>>
+							<span class="pink"><<He>> eases your <<penis>> into <<his>> ass, swallowing you to the base.</span>
+							<<sex 30 "genital" _n>><<set $speechNPCAnusPenetrated to 1>>
 							<<if playerHasStrapon()>><<violence 1 1 1 0>>
 							<<else>><<bruise penis>><<takeTempleVirginity $NPCList[_n].fullDescription "penile">><<violence 1>><<raped>><<penisraped>><</if>>
 						<<elseif $player.virginity.penile is true>>
-							<span class="pink"> <<He>>【은는】 당신의 동정 자지를 <<his>> 항문 안으로 천천히 밀어넣어,</span><span class="red"> 귀두에서 포피가 벗겨지게 만들고 <<virginitylosttext $NPCList[_n].fullDescription>></span>
-							<<sex 100 "genital" _n>><<takeVirginity $NPCList[_n].fullDescription "penile">><<bruise penis>><<violence 100>><<raped>><<penisraped>><<set $speechpenisvirgin to 1>>
+							<span class="pink"> <<He>> eases your virgin penis into <<his>> ass,</span><span class="red"> separating your foreskin from your glans and <<virginitylosttext $NPCList[_n].fullDescription>></span>
+							<<sex 100 "genital" _n>><<takeVirginity $NPCList[_n].fullDescription "penile">><<bruise penis>><<violence 100>><<raped>><<penisraped>><<set $speechPenisVirgin to 1>>
 						<</if>>
 						<<penilestat>><<takeNPCVirginity _n "anal">><<set $NPCList[_n].vagina to "otheranus">><<set $penisstate to "otheranus">>
 						<<if playerPenisSize() gte 4>>
 							<<He>>【은는】 이렇게 거대한 것을 집어삼켰다는 사실에 득의양양한 표정을 짓는다.
 						<</if>>
 					<<else>>
-						<<He>>【은는】 당신을 받아들이려 <<his>> 엉덩이를 당신의 <<penis>> 끝에 밀어붙인다. <span class="blue">당신의 둘레가 너무 굵어 무리다.</span>
-						<<set $speechpenisbig to 1>><<set $enemyanger += 5>>
+						<<He>> presses <<his>> ass against the tip of your <<penis>>, trying to take you in. <span class="blue">Your girth proves too much.</span>
+						<<set $speechPenisBig to 1>><<set $enemyanger += 5>>
 					<</if>>
 				<<else>>
-					당신의 뜻을 존중하여, <<he>>【은는】 <<his>> 엉덩이로 당신의 <<penis>>【을를】 집어삼키지 않고 대신 당신의 <<glans>> 끝을 애태운다.
-					<<sex 15 "genital" _n>><<set $speechotheranuswithhold to 1>>
+					Respecting your wishes, <<he>> does not envelop your <<penis>> with <<his>> ass, instead teasing the tip of your <<glans>>.
+					<<sex 15 "genital" _n>><<set $speechNPCAnusWithhold to 1>>
 				<</if>>
 			<</if>>
 		<</if>>
@@ -4521,7 +4514,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<span class="lblue"><<He>>【은는】 당신의 <<penis>>에서 엉덩이를 뗀다.</span>
 				<<set $NPCList[_n].vagina to 0>><<set $penisuse to 0>><<set $penisstate to 0>>
 			<<elseif $rng gte 1>>
-				<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and !$player.condom and $parasite.penis.name is undefined and
+				<<if $NPCList[_n].condom?.willUse is true and !$player.condom and $parasite.penis.name is undefined and
 				$worn.under_lower.vagina_exposed is 1 and $worn.lower.vagina_exposed is 1 and $worn.over_lower.vagina_exposed is 1>>
 					<<if playerChastity("penis")>>
 						<<He>>【이가】 당신의 페니스에 콘돔을 씌우려 하지만, 당신의 $worn.genitals.name 위로는 씌울 수 없는 모양이다. <span class="red"><<He>>【은는】 이내 포기한다.</span>
@@ -4533,16 +4526,16 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<</if>>
 
 				<<if $worn.over_lower.vagina_exposed is 0>>
-					<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> 당신의 $worn.over_lower.name 너머로 <<his>> 엉덩이를 당신의 <<penis>>에 문지른다.
-					<<sex 5 "genital" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechotheranusentrance to 1>>
+					<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.over_lower.name.
+					<<sex 5 "genital" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechNPCAnusEntrance to 1>>
 				<<elseif $worn.lower.vagina_exposed is 0>>
-					<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> 당신의 $worn.lower.name 너머로 <<his>> 엉덩이를 당신의 <<penis>>에 문지른다.
-					<<sex 5 "genital" _n>><<set $worn.lower.integrity -= 10>><<set $speechotheranusentrance to 1>>
+					<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.lower.name.
+					<<sex 5 "genital" _n>><<set $worn.lower.integrity -= 10>><<set $speechNPCAnusEntrance to 1>>
 				<<elseif $worn.lower.vagina_exposed is 1 and $worn.over_lower.vagina_exposed is 1>>
 					<<rng>>
 					<<if $worn.under_lower.vagina_exposed is 0>>
-						<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> 당신의 $worn.under_lower.name 너머로 <<his>> 엉덩이를 당신의 <<penis>>에 문지른다.
-						<<sex 5 "genital" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechotheranusentrance to 1>>
+						<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.under_lower.name.
+						<<sex 5 "genital" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechNPCAnusEntrance to 1>>
 					<<elseif $worn.under_lower.vagina_exposed is 1>>
 						<<if $rng gte 51>>
 							<<if $NPCList[_n].chastity.anus.includes("shield")>>
@@ -4556,16 +4549,16 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 									<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> 당신의 $worn.genitals.name 너머로 <<his>> 엉덩이를 당신의 <<penis>>에 문지른다.
 									<<set $worn.genitals.integrity -= 10>>
 								<</if>>
-								<<sex 25 "genital" _n>><<set $speechchastity to 1>>
+								<<sex 25 "genital" _n>><<set $speechChastity to 1>>
 							<<elseif $nopenile is 1 and !$npcSub>>
-								<span class="purple"><<He>>【이가】 당신의 <<penis>>에 엉덩이를 밀어붙인다.</span>
-								<<sex 20 "genital" _n>><<set $NPCList[_n].vagina to "otheranusimminent">><<set $penisstate to "otheranusimminent">><<set $speechotheranusimminent to 1>>
+								<span class="purple"><<He>> presses <<his>> ass against your <<penis>>.</span>
+								<<sex 20 "genital" _n>><<set $NPCList[_n].vagina to "otheranusimminent">><<set $penisstate to "otheranusimminent">><<set $speechNPCAnusImminent to 1>>
 							<<elseif $penisWetness gte (playerPenisSize() * 15) + random(1, 40) or random(1, 2) is 2 and !$npcSub>>
-								<<He>>【이가】 당신의 <<penis>>에 엉덩이를 밀어붙인다. <<penis_lube_text>> <span class="pink">당신의 끝부분이 <<him>> 안으로 파고들어, 한 번만 허리를 쳐올리면 집어삼켜질 듯하다.</span>
-								<<sex 20 "genital" _n>><<set $NPCList[_n].vagina to "otheranusimminent">><<set $penisstate to "otheranusimminent">><<set $speechotheranusimminent to 1>>
+								<<He>> presses <<his>> ass against your <<penis>>. <<penis_lube_text>> <span class="pink">your tip is pushed into <<him>>, a thrust away from being enveloped.</span>
+								<<sex 20 "genital" _n>><<set $NPCList[_n].vagina to "otheranusimminent">><<set $penisstate to "otheranusimminent">><<set $speechNPCAnusImminent to 1>>
 							<<elseif !$npcSub>>
-								<<He>>【이가】 당신의 <<penis>>에 엉덩이를 밀어붙이지만, <span class="blue">당신을 집어삼키는 데는 실패한다.</span> 당신의 <<penisSimple>>【이가】 빗겨 나가며 <<his>> 엉덩이골 사이를 문지른다.
-								<<sex 5 "genital" _n>><<set $speechotheranusimminent to 1>>
+								<<He>> presses <<his>> ass against your <<penis>>, <span class="blue">but fails to envelop you.</span> Your <<penisSimple>> angles away and rubs between <<his>> cheeks.
+								<<sex 5 "genital" _n>><<set $speechNPCAnusImminent to 1>>
 							<</if>>
 						<<elseif $rng gte 1>>
 							<<if !playerChastity("penis")>>
@@ -4648,7 +4641,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<if $settings.analingusGivingEnabled and ($rng lte 5 or ($rng lte 10 and $enemyanger gte $enemyangermax / 10))>>
 				<<He>>【은는】 당신의 얼굴 위에서 자세를 바꾸어, 당신의 입에 <<his>> 엉덩이를 짓누른다.
 				<<set $mouthstate to "anal">><<set $NPCList[_n].vagina to "facesitanal">>
-				<<set $speechmouthotheranus to 1>>
+				<<set $speechMouthNPCAnus to 1>>
 
 			<<elseif $worn.face.type.includes("face_covering") or $worn.face.type.includes("gag")>>
 				<<if $enemyanger lt $enemyangermax/2>>
@@ -4685,7 +4678,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<elseif $enemyarousal gte (($enemyarousalmax / 5) * 3)>>
 					<<his>> 애액 맛이 느껴진다.
 				<</if>>
-				<<sex 3 "mouth" _n>><<set $speechfacesit to 1>>
+				<<sex 3 "mouth" _n>><<set $speechFaceSit to 1>>
 			<<else>>
 				<<He>>【은는】 당신의 얼굴에서 일어난다.
 				<<set $mouthuse to 0>><<set $mouthstate to 0>><<set $NPCList[_n].vagina to 0>>
@@ -4708,11 +4701,11 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<else>>
 					<<He>>【은는】 당신의 입술에 천천히 <<his>> 엉덩이를 문지른다.
 				<</if>>
-				<<sex 3 "mouth" _n>><<set $speechmouthotheranus to 1>>
+				<<sex 3 "mouth" _n>><<set $speechMouthNPCAnus to 1>>
 				<<if $mouthactiondefault is "anallick">>
-					<<set $speechanallick to 1>>
+					<<set $speechAnalLick to 1>>
 				<<elseif $mouthactiondefault is "analkiss">>
-					<<set $speechanalkiss to 1>>
+					<<set $speechAnalKiss to 1>>
 				<</if>>
 			<<elseif $rng gte 0>>
 				<<He>>【은는】 자세를 바꾸며 당신의 입에서 <<his>> 엉덩이를 치우고, 대신 <<his>> 보지를 그 위에 짓누른다.
@@ -4720,7 +4713,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<span class="pink">입구에서 넥타르가 반짝인다.</span>
 				<</if>>
 				<<set $mouthstate to "vagina">><<set $NPCList[_n].vagina to "facesit">>
-				<<set $speechfacesit to 1>><<set $mouthtarget to _n>>
+				<<set $speechFaceSit to 1>><<set $mouthtarget to _n>>
 			<<else>>
 				<<He>>【은는】 당신의 얼굴에서 일어난다.
 				<<set $mouthuse to 0>><<set $mouthstate to 0>><<set $NPCList[_n].vagina to 0>>
@@ -4735,11 +4728,11 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<else>>
 					<<He>>【은는】 당신의 입술에 천천히 <<his>> 엉덩이를 문지른다.
 				<</if>>
-				<<sex 3 "mouth" _n>><<set $speechmouthotheranus to 1>>
+				<<sex 3 "mouth" _n>><<set $speechMouthNPCAnus to 1>>
 				<<if $mouthactiondefault is "anallick">>
-					<<set $speechanallick to 1>>
+					<<set $speechAnalLick to 1>>
 				<<elseif $mouthactiondefault is "analkiss">>
-					<<set $speechanalkiss to 1>>
+					<<set $speechAnalKiss to 1>>
 				<</if>>
 			<<else>>
 				<span class="purple"><<He>>【은는】 당신의 얼굴에서 엉덩이를 뗀다.</span>
@@ -5242,7 +5235,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<</if>>
 		<<rng>>
 		<<if $NPCList[_n].mouth is "kiss">>
-			<<if $speechvaginavirgin isnot 1 and $speechpenisvirgin isnot 1 and $speechanusvirgin isnot 1 and $speechmouthvirgin isnot 1>>
+			<<if $speechVaginaVirgin isnot 1 and $speechPenisVirgin isnot 1 and $speechAnusVirgin isnot 1 and $speechOralVirgin isnot 1>>
 				<<if $_preventKiss>>
 					<span class="red"><<He>>【은는】 당신에게서 입술을 떼어내며 화난 듯이 쳐다본다.</span>
 					<<set $enemytrust -= 200>><<set $enemyanger += 200>><<set $mouthuse to 0>><<set $NPCList[_n].mouth to 0>><<set $mouthstate to 0>>
@@ -5278,7 +5271,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<</if>>
 		<<rng>>
 		<<if $NPCList[_n].mouth is "kissimminent">>
-			<<if $speechvaginavirgin isnot 1 and $speechpenisvirgin isnot 1 and $speechanusvirgin isnot 1 and $speechmouthvirgin isnot 1 and !$_preventKiss>>
+			<<if $speechVaginaVirgin isnot 1 and $speechPenisVirgin isnot 1 and $speechAnusVirgin isnot 1 and $speechOralVirgin isnot 1 and !$_preventKiss>>
 				<<if $rng gte 101>>
 					<span class="lblue"><<He>>【은는】 당신에게서 입술을 떼어낸다.</span>
 					<<set $NPCList[_n].mouth to 0>><<set $mouthuse to 0>><<set $mouthstate to 0>>
@@ -5324,7 +5317,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<</if>>
 		<<rng>>
 		<<if $NPCList[_n].mouth is "kissentrance">>
-			<<if $speechvaginavirgin isnot 1 and $speechpenisvirgin isnot 1 and $speechanusvirgin isnot 1 and $speechmouthvirgin isnot 1 and !$_preventKiss>>
+			<<if $speechVaginaVirgin isnot 1 and $speechPenisVirgin isnot 1 and $speechAnusVirgin isnot 1 and $speechOralVirgin isnot 1 and !$_preventKiss>>
 				<<if $rng gte 101>>
 					<span class="lblue"><<He>>【은는】 당신에게서 입술을 떼어낸다.</span>
 					<<set $NPCList[_n].mouth to 0>><<set $mouthuse to 0>><<set $mouthstate to 0>>
@@ -5338,7 +5331,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<namedNpcReaction _n "kiss">>
 					<</if>>
 					<<if $player.virginity.kiss is true>>
-						<<set $speechkissvirgin to 1>>
+						<<set $speechKissVirgin to 1>>
 					<</if>>
 					<<if $npcrow.includes(_n)>>
 						<<takeKissVirginityNamed `$npc[$npcrow.indexOf(_n)]`>>
@@ -5363,7 +5356,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<</if>>
 		<<rng>>
 		<<if $NPCList[_n].mouth is "chest">>
-			<<if $speechvaginavirgin isnot 1 and $speechpenisvirgin isnot 1 and $speechanusvirgin isnot 1 and $speechmouthvirgin isnot 1>>
+			<<if $speechVaginaVirgin isnot 1 and $speechPenisVirgin isnot 1 and $speechAnusVirgin isnot 1 and $speechOralVirgin isnot 1>>
 				<<if $enemyanger gte 100>>
 					<<if $milk_amount gte 1>>
 						<<He>>【은는】 당신의 <<nipple>>【을를】 빤다. <<Hes>> 거칠게 물어뜯고 짜낸다. 끝에서 모유가 흘러나온다.
@@ -5395,7 +5388,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<</if>>
 		<<rng>>
 		<<if $NPCList[_n].mouth is "chestimminent">>
-			<<if $speechvaginavirgin isnot 1 and $speechpenisvirgin isnot 1 and $speechanusvirgin isnot 1 and $speechmouthvirgin isnot 1>>
+			<<if $speechVaginaVirgin isnot 1 and $speechPenisVirgin isnot 1 and $speechAnusVirgin isnot 1 and $speechOralVirgin isnot 1>>
 				<<if $lactating is 1 and $settings.breastFeedingEnabled and $milk_amount gte 1>>
 					<span class="pink"><<He>>【은는】 당신의 <<nipple>>【을를】 <<his>> 입에 머금는다. 끝에서 모유가 흘러나오는 것이 느껴진다.</span>
 					<<breastfeed>>
@@ -5424,7 +5417,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<</if>>
 		<<rng>>
 		<<if $NPCList[_n].mouth is "chestentrance">>
-			<<if $speechvaginavirgin isnot 1 and $speechpenisvirgin isnot 1 and $speechanusvirgin isnot 1 and $speechmouthvirgin isnot 1>>
+			<<if $speechVaginaVirgin isnot 1 and $speechPenisVirgin isnot 1 and $speechAnusVirgin isnot 1 and $speechOralVirgin isnot 1>>
 				<<if $enemyanger gte 100>>
 					<<He>>【은는】 아플 정도로 세게 당신의 <<nipple>>【을를】 깨문다.
 					<<set $NPCList[_n].mouth to "chestimminent">><<set $cheststate to "chestimminent">>
@@ -5444,7 +5437,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<rng>>
 		<<unset _npc_speech>>
 		<<namedNpcComments $NPCList[_n].fullDescription>>
-		<<if ($NPCList[_n].mouth is 0 or $NPCList[_n].mouth is "speech_only" or ($NPCList[_n].type is "plant" and $speechkissvirgin is 1)) and $speechdisable isnot 1 and _noNameComment>>
+		<<if ($NPCList[_n].mouth is 0 or $NPCList[_n].mouth is "speech_only" or ($NPCList[_n].type is "plant" and $speechKissVirgin is 1)) and $speechDisable isnot 1 and _noNameComment>>
 			<<if $role is "islander" and (!$islander_language or $islander_language lt 100) and !_npc_speech>>
 				<<He>>【은는】 <<his>> 알아들을 수 없는 언어로 말하며 손짓한다.
 			<<elseif $NPCList[_n].type is "plant" and !_npc_speech>>
@@ -5469,25 +5462,25 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						"네 알몸이 보고 싶어!")>>"
 					<</if>>
 				<</if>>
-			<<elseif $speechvaginavirgin is 1 and $NPCList[_n].penis is "vagina" and !_npc_speech>>
+			<<elseif $speechVaginaVirgin is 1 and $NPCList[_n].penis is "vagina" and !_npc_speech>>
 				<<if $enemyanger lte 60>>
 					<<He>>【이가】 말한다. "처녀였다니! 운도 좋지!"
 				<<else>>
 					<<He>>【이가】 말한다. "네 처녀막이 찢어지는 게 느껴지더군, <<bitch>>. 나를 기억할 만한 징표지."
 				<</if>>
-			<<elseif $speechpenisvirgin is 1 and ($NPCList[_n].vagina is "penis" or $NPCList[_n].vagina is "otheranus" or $NPCList[_n].penis is "otheranus") and !_npc_speech>>
+			<<elseif $speechPenisVirgin is 1 and ($NPCList[_n].vagina is "penis" or $NPCList[_n].vagina is "otheranus" or $NPCList[_n].penis is "otheranus") and !_npc_speech>>
 				<<if $enemyanger lte 60>>
 					<<He>>【이가】 말한다. "아아! 처음이었지, 그렇지? 기분 최고야!"
 				<<else>>
 					<<He>>【이가】 말한다. "동정 자지가 뚫리는 기분은 어때? 난 끝내주게 좋은데."
 				<</if>>
-			<<elseif $speechanusvirgin is 1 and $NPCList[_n].penis is "anus" and !_npc_speech>>
+			<<elseif $speechAnusVirgin is 1 and $NPCList[_n].penis is "anus" and !_npc_speech>>
 				<<if $enemyanger lte 60>>
 					<<He>>【이가】 말한다. "엄청 조이잖아! 엉덩이가 이렇게 쓰이는 건 처음인가 보군."
 				<<else>>
 					<<He>>【이가】 말한다. "엄청 조이잖아! 엉덩이가 이렇게 쓰이는 건 처음인가 보군. 네가 제대로 길들여지려면 내가 해줄 일이 아직 한참 남았어."
 				<</if>>
-			<<elseif $speechmouthvirgin is 1 and $NPCList[_n].penis is "mouth" and !_npc_speech>>
+			<<elseif $speechOralVirgin is 1 and $NPCList[_n].penis is "mouth" and !_npc_speech>>
 				<<if npcHasStrapon(_n)>>
 					<<if $enemyanger lte 60>>
 						<<He>>【이가】 말한다. "입으로 해주는 건 처음이야?"
@@ -5501,9 +5494,9 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<He>>【이가】 말한다. "자지 맛을 보는 건 처음이야? 조만간 정액에 중독된 자지 노예가 될 거다."
 					<</if>>
 				<</if>>
-			<<elseif $speechspray is 1 and !_npc_speech>>
+			<<elseif $speechPepperSpray is 1 and !_npc_speech>>
 				<<sprayspeech>>
-			<<elseif $speechcum is 1 and $rng gte 61 and $speechorgasmrepeat lte 1 and $speechorgasmcount lte 6 and !_npc_speech>>
+			<<elseif $speechPlayerOrgasm is 1 and $rng gte 61 and $speechorgasmrepeat lte 1 and $speechorgasmcount lte 6 and !_npc_speech>>
 				<<cumspeech>>
 			<<elseif $rng gte 91 and !_npc_speech>>
 				<<if not $gloryhole>>
@@ -5770,7 +5763,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<He>>【은는】 당신의 배에 침을 뱉는다.
 						<<neutral 5 _n>>
 						<<bodypart_admire back>>
-						<<if playerBellyVisible()>><<set $speechpregnant to 1>><</if>>
+						<<if playerBellyVisible()>><<set $speechPregnant to 1>><</if>>
 					<<elseif $NPCList[_n].location.genitals isnot "head" and $NPCList[_n].location.head isnot "head" and $NPCList[_n].location.head isnot "genitals" and $chestuse is 0>>
 						<<set $NPCList[_n].mouth to "chestentrance">><<set $chestuse to "mouth">><<set $cheststate to "mouthentrance">><<set $chesttarget to _n>>
 						<span class="blue"><<He>>【은는】 <<his>> 머리를 당신의 가슴 쪽으로 움직인다.</span>
@@ -5952,7 +5945,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<else>>
 			<<He>>【이가】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 배에 문지른다.
 			<<submission 2 _n>>
-			<<if playerBellyVisible()>><<set $speechpregnant to 1>><</if>>
+			<<if playerBellyVisible()>><<set $speechPregnant to 1>><</if>>
 		<</if>>
 	<<elseif $enemyanger + $rng lte 30>>
 		<<if $position is "wall" and $walltype isnot "front">>
@@ -5989,7 +5982,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<if $player.penisExist or playerHasStrapon()>>
 			<<if $penisuse is 0>>
 				<<if $settings.analEnabled and $consensual is 1>>
-					<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and !$player.condom and $parasite.penis.name is undefined and
+					<<if $NPCList[_n].condom?.willUse is true and !$player.condom and $parasite.penis.name is undefined and
 					$worn.under_lower.vagina_exposed is 1 and $worn.lower.vagina_exposed is 1 and $worn.over_lower.vagina_exposed is 1>>
 						<<if playerChastity("penis")>>
 							<<He>>【이가】 당신의 자지에 콘돔을 씌우려 하지만, 당신의 $worn.genitals.name 위로 넘길 수 없는 듯하다. <span class="red"><<He>>【이가】 이내 포기한다.</span>
@@ -5999,8 +5992,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<<equipNPCCondom _n "player">>
 						<</if>>
 					<</if>>
-					<span class="blue"><<He>>【이가】 당신의 위로 올라타, 당신의 <<penis>>에 <<his>> 엉덩이를 문지른다.</span>
-					<<neutral 5 _n>><<set $penisuse to "otheranus">><<set $NPCList[_n].penis to "otheranusentrance">><<set $penisstate to "otheranusentrance">><<set $speechotheranusentrance to 1>><<set $penistarget to _n>>
+					<span class="blue"><<He>> straddles you, rubbing <<his>> ass against your <<penis>>.</span>
+					<<neutral 5 _n>><<set $penisuse to "otheranus">><<set $NPCList[_n].penis to "otheranusentrance">><<set $penisstate to "otheranusentrance">><<set $speechNPCAnusEntrance to 1>><<set $penistarget to _n>>
 					<<set $NPCList[_n].location.genitals = "genitals">>
 				<</if>>
 			<</if>>
@@ -6017,7 +6010,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<<if $NPCList[_n].type is "plant" and !["peniskiss","penislick"].includes($mouthactiondefault)>>
 						<span class="pink">그 끝에서 넥타르가 번들거린다.</span>
 					<</if>>
-					<<neutral 5 _n>><<set $mouthuse to "penis">><<set $NPCList[_n].penis to "mouthentrance">><<set $mouthstate to "entrance">><<set $speechmouthentrance to 1>>
+					<<neutral 5 _n>><<set $mouthuse to "penis">><<set $NPCList[_n].penis to "mouthentrance">><<set $mouthstate to "entrance">><<set $speechMouthEntrance to 1>>
 					<<set $NPCList[_n].location.genitals = "head">><<set $mouthtarget to _n>>
 				<</if>>
 			<</if>>
@@ -6033,7 +6026,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<</if>>
 	<<elseif $enemyanger + $rng lte 100 and $NPCList[_n].location.genitals is 0 and $NPCList[_n].location.head isnot "genitals" and $walltype isnot "front">>
 		<<if $player.vaginaExist and $vaginause is 0 and ($anususe isnot 0 or random(0,100) gte 50)>>
-			<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
+			<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
 				<<if $NPCList[_n].chastity.penis.includes("chastity")>>
 					<<He>>【이가】 콘돔을 쓰려 하지만, <<his>> $NPCList[_n].chastity.penis 위로 넘길 수 없는 듯하다. <span class="red"><<He>>【이가】 이내 포기한다.</span>
 					<<set $NPCList[_n].condom.willUse to false>>
@@ -6042,8 +6035,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<<equipNPCCondom _n>>
 				<</if>>
 			<</if>>
-			<span class="blue"><<He>>【이가】 당신의 다리 사이로 움직여, <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>> 앞에 자리 잡게 한다.</span>
-			<<neutral 5 _n>><<set $vaginause to "penis">><<set $NPCList[_n].penis to "vaginaentrance">><<set $vaginastate to "entrance">><<set $speechvaginaentrance to 1>><<set $vaginatarget to _n>>
+			<span class="blue"><<He>> moves between your legs, positioning <<his>> $NPCList[_n].penisdesc in front of your <<pussy>>.</span>
+			<<neutral 5 _n>><<set $vaginause to "penis">><<set $NPCList[_n].penis to "vaginaentrance">><<set $vaginastate to "entrance">><<set $speechVaginaEntrance to 1>><<set $vaginatarget to _n>>
 			<<set $NPCList[_n].location.genitals = "genitals">>
 
 		<<elseif $player.vaginaExist and $settings.vaginalDoubleEnabled and ($awareness lt 300 ? random(0,1) is 0 : random(0,3) isnot 0) and $anususe isnot "penisdouble" and $vaginause is "penis" and $NPCList[_n].penissize gte 2 and $NPCList[$vaginatarget].penissize gte 2 and !["legLock","legLocked"].includes($feetuse)>>
@@ -6077,7 +6070,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<</if>>
 			<<else>>
 				/* Do intended function. Switch player into DP state and set NPC state */
-				<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
+				<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
 					<<if $NPCList[_n].chastity.penis.includes("chastity")>>
 						<<He>>【이가】 콘돔을 쓰려 하지만, <<his>> $NPCList[_n].chastity.penis 위로 넘길 수 없는 듯하다. <span class="red"><<He>>【이가】 이내 포기한다.</span>
 						<<set $NPCList[_n].condom.willUse to false>>
@@ -6092,7 +6085,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<set $vaginause to "penisdouble">>
 				<<set $vaginastate to (["doublepenetration", "doubleimminent"].includes($vaginastate) ? $vaginastate : "doubleentrance")>>
 				/* NPC */
-				<<set $speechvaginaentrance to 1>>
+				<<set $speechVaginaEntrance to 1>>
 				<<set $NPCList[_n].penis to "vaginaentrancedouble">>
 				<<set $NPCList[_n].location.genitals = "genitals">>
 				<<if $NPCList[$vaginatarget].penis is "vagina">>
@@ -6105,7 +6098,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<</if>>
 
 		<<elseif $settings.analEnabled and $anususe is 0 and $bottomuse is 0>>
-			<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
+			<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
 				<<if $NPCList[_n].chastity.penis.includes("chastity")>>
 					<<He>>【이가】 콘돔을 쓰려 하지만, <<his>> $NPCList[_n].chastity.penis 위로 넘길 수 없는 듯하다. <span class="red"><<He>>【이가】 이내 포기한다.</span>
 					<<set $NPCList[_n].condom.willUse to false>>
@@ -6118,7 +6111,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<if $NPCList[_n].type is "plant" and $NPCList[_n].penissize gte 4 and canImpregnateParasite("anus")>>
 				<span class="red">어딘지 모르게 당신을 섬뜩하게 한다.</span>
 			<</if>>
-			<<neutral 5>><<set $anususe to "penis">><<set $NPCList[_n].penis to "anusentrance">><<set $anusstate to "entrance">><<set $speechanusentrance to 1>><<set $anustarget to _n>>
+			<<neutral 5>><<set $anususe to "penis">><<set $NPCList[_n].penis to "anusentrance">><<set $anusstate to "entrance">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>
 			<<set $NPCList[_n].location.genitals = "genitals">>
 
 		<<elseif $settings.analEnabled and $settings.analDoubleEnabled and ($awareness lt 300 ? random(0,1) is 0 : random(0,3) isnot 0) and $vaginause isnot "penisdouble" and $bottomuse isnot "penis" and $anususe is "penis" and $anususe isnot "penisdouble" and $NPCList[_n].penissize gte 2 and $NPCList[$anustarget].penissize gte 2 and !["legLock","legLocked"].includes($feetuse)>>
@@ -6157,7 +6150,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<</if>>
 			<<else>>
 			/* Otherwise do the intended function */
-				<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
+				<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
 					<<if $NPCList[_n].chastity.penis.includes("chastity")>>
 						<<He>>【이가】 콘돔을 쓰려 하지만, <<his>> $NPCList[_n].chastity.penis 위로 넘길 수 없는 듯하다. <span class="red"><<He>>【이가】 이내 포기한다.</span>
 						<<set $NPCList[_n].condom.willUse to false>>
@@ -6177,7 +6170,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<</if>>
 
 				/* NPC */
-				<<set $NPCList[_n].penis to "anusentrancedouble">><<set $NPCList[_n].location.genitals = "genitals">><<set $speechanusentrance to 1>>
+				<<set $NPCList[_n].penis to "anusentrancedouble">><<set $NPCList[_n].location.genitals = "genitals">><<set $speechAnusEntrance to 1>>
 				<<if $NPCList[$anustarget].penis is "anus">>
 					<<set $NPCList[$anustarget].penis to "anusdouble">>
 				<<elseif $NPCList[$anustarget].penis is "anusimminent">>
@@ -6196,7 +6189,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			and !$worn.face.type.includes("face_covering") and !$worn.face.type.includes("gag")>>
 			<span class="purple"><<He>>【이가】 몸을 돌려 당신의 얼굴 앞으로 <<his>> 엉덩이를 들이민다.</span>
 			<<submission 5 _n>><<set $mouthuse to "otheranus">><<set $mouthstate to "otheranus">><<set $NPCList[_n].penis to "mouthotheranus">>
-			<<set $NPCList[_n].location.genitals = "head">><<set $speechmouthotheranus to 1>><<set $mouthtarget to _n>>
+			<<set $NPCList[_n].location.genitals = "head">><<set $speechMouthNPCAnus to 1>><<set $mouthtarget to _n>>
 		<<else>>
 			<<He>>【이가】 노출된 맨살 위로 <<his>> 기둥을 천천히 덧그리듯 문지른다.
 			<<neutral 1 _n>><<neutral 5 _n>>
@@ -6213,7 +6206,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<<if $NPCList[_n].type is "plant" and !["peniskiss","penislick"].includes($mouthactiondefault)>>
 						<span class="pink">그 끝에서 넥타르가 번들거린다.</span>
 					<</if>>
-					<<submission 5 _n>><<set $mouthuse to "penis">><<set $mouthstate to "imminent">><<set $NPCList[_n].penis to "mouthimminent">><<set $speechmouthimminent to 1>>
+					<<submission 5 _n>><<set $mouthuse to "penis">><<set $mouthstate to "imminent">><<set $NPCList[_n].penis to "mouthimminent">><<set $speechMouthImminent to 1>>
 					<<set $NPCList[_n].location.genitals = "head">><<set $mouthtarget to _n>>
 				<<else>>
 					<<He>>【이가】 노출된 맨살 위로 <<his>> 기둥을 천천히 덧그리듯 문지른다.
@@ -6228,17 +6221,17 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<span class="purple"><<He>>【이가】 <<his>> 발로 당신의 <<genitals>>【을를】 꾹 누른다.</span>
 		<<neutral 5 "genitals" _n>><<violence 1>><<set $NPCList[_n].penis to "footjob">>
 		<<if $player.penisExist and $penisuse is 0>>
-			<<set $penisuse to "feet">><<set $speechpenisfoot to 1>>
+			<<set $penisuse to "feet">><<set $speechPenisFoot to 1>>
 		<</if>>
 		<<if $player.vaginaExist and $vaginause is 0>>
 			<<set $vaginause to "feet">>
 			<<if !$player.penisExist>>
-				<<set $speechvaginafoot to 1>>
+				<<set $speechVaginaFoot to 1>>
 			<</if>>
 		<</if>>
 	<<elseif $enemyanger + $rng lte 170 and $NPCList[_n].location.genitals is 0 and $NPCList[_n].location.head isnot "genitals" and $walltype isnot "front">>
 		<<if $anususe is 0 and $settings.analEnabled>>
-			<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
+			<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
 				<<if $NPCList[_n].chastity.penis.includes("chastity")>>
 					<<He>>【이가】 콘돔을 쓰려 하지만, <<his>> $NPCList[_n].chastity.penis 위로 넘길 수 없는 듯하다. <span class="red"><<He>>【이가】 이내 포기한다.</span>
 					<<set $NPCList[_n].condom.willUse to false>>
@@ -6249,21 +6242,21 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<</if>>
 			<<if $worn.lower.anus_exposed is 1 and $worn.over_lower.anus_exposed is 1>>
 				<<if $worn.under_lower.anus_exposed is 1 and $worn.genitals.anus_exposed is 1 and $NPCList[_n].chastity.penis.includes("chastity")>>
-					<span class="purple"><<He>>【이가】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문에 밀어붙인다.</span>
-					<<neutral 5 "anus">><<set $anususe to "penis">><<set $NPCList[_n].penis to "anusentrance">><<set $anusstate to "entrance">><<set $speechanusentrance to 1>><<set $anustarget to _n>>
+					<span class="purple"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus.</span>
+					<<neutral 5 "anus">><<set $anususe to "penis">><<set $NPCList[_n].penis to "anusentrance">><<set $anusstate to "entrance">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>
 				<<elseif $worn.under_lower.anus_exposed is 1 and $worn.genitals.anus_exposed is 1>>
-					<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문에 밀착시키며, <span class="pink">삽입할 준비를 한다.</span>
-					<<sex 5 "anal" _n>><<set $anususe to "penis">><<set $NPCList[_n].penis to "anusimminent">><<set $anusstate to "imminent">><<set $speechanusimminent to 1>><<set $anustarget to _n>>
+					<<He>> presses <<his>> $NPCList[_n].penisdesc against your anus, <span class="pink">preparing to penetrate.</span>
+					<<sex 5 "anal" _n>><<set $anususe to "penis">><<set $NPCList[_n].penis to "anusimminent">><<set $anusstate to "imminent">><<set $speechAnusImminent to 1>><<set $anustarget to _n>>
 				<<elseif $worn.under_lower.anus_exposed is 0>>
-					<span class="blue"><<He>>【이가】 당신의 $worn.under_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 항문에 밀어붙인다.</span>
-					<<sex 3 "anal" _n>><<set $NPCList[_n].penis to "anusentrance">><<set $anususe to "penis">><<set $worn.under_lower.integrity -= 10>><<set $anusstate to "entrance">><<set $speechanusentrance to 1>><<set $anustarget to _n>>
+					<span class="blue"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.under_lower.name.</span>
+					<<sex 3 "anal" _n>><<set $NPCList[_n].penis to "anusentrance">><<set $anususe to "penis">><<set $worn.under_lower.integrity -= 10>><<set $anusstate to "entrance">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>
 				<</if>>
 			<<elseif $worn.over_lower.anus_exposed is 0>>
-				<span class="blue"><<He>>【이가】 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 항문에 밀어붙인다.</span>
-				<<sex 2 "anal" _n>><<set $NPCList[_n].penis to "anusentrance">><<set $anususe to "penis">><<set $worn.over_lower.integrity -= 10>><<set $anusstate to "entrance">><<set $speechanusentrance to 1>><<set $anustarget to _n>>
+				<span class="blue"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.over_lower.name.</span>
+				<<sex 2 "anal" _n>><<set $NPCList[_n].penis to "anusentrance">><<set $anususe to "penis">><<set $worn.over_lower.integrity -= 10>><<set $anusstate to "entrance">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>
 			<<elseif $worn.lower.anus_exposed is 0>>
-				<span class="blue"><<He>>【이가】 당신의 $worn.lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 항문에 밀어붙인다.</span>
-				<<sex 2 "anal" _n>><<set $NPCList[_n].penis to "anusentrance">><<set $anususe to "penis">><<set $worn.lower.integrity -= 10>><<set $anusstate to "entrance">><<set $speechanusentrance to 1>><<set $anustarget to _n>>
+				<span class="blue"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.lower.name.</span>
+				<<sex 2 "anal" _n>><<set $NPCList[_n].penis to "anusentrance">><<set $anususe to "penis">><<set $worn.lower.integrity -= 10>><<set $anusstate to "entrance">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>
 			<</if>>
 			<<if $NPCList[_n].type is "plant" and $NPCList[_n].penissize gte 4 and canImpregnateParasite("anus")>>
 				<span class="red">어딘지 모르게 당신을 섬뜩하게 한다.</span>
@@ -6272,7 +6265,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<</if>>
 	<<elseif $enemyanger + $rng gte 171 and $NPCList[_n].location.genitals is 0 and $NPCList[_n].location.head isnot "genitals" and $walltype isnot "front">>
 		<<if $player.vaginaExist and $vaginause is 0 and (!$player.penisExist or $anususe isnot 0 or random(0,100) gte 50)>>
-			<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
+			<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
 				<<if $NPCList[_n].chastity.penis.includes("chastity")>>
 					<<He>>【이가】 콘돔을 쓰려 하지만, <<his>> $NPCList[_n].chastity.penis 위로 넘길 수 없는 듯하다. <span class="red"><<He>>【이가】 이내 포기한다.</span>
 					<<set $NPCList[_n].condom.willUse to false>>
@@ -6283,21 +6276,21 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<</if>>
 			<<if $worn.lower.vagina_exposed is 1 and $worn.over_lower.vagina_exposed is 1>>
 				<<if $worn.under_lower.vagina_exposed is 1 and !playerChastity("vagina") and $NPCList[_n].chastity.penis.includes("chastity")>>
-					<span class="purple"><<He>>【이가】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 밀어붙인다.</span>
-					<<sex 5 "genital" _n>><<set $vaginause to "penis">><<set $NPCList[_n].penis to "vaginaentrance">><<set $vaginastate to "entrance">><<set $speechvaginaentrance to 1>><<set $vaginatarget to _n>>
+					<span class="purple"><<He>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>>.</span>
+					<<sex 5 "genital" _n>><<set $vaginause to "penis">><<set $NPCList[_n].penis to "vaginaentrance">><<set $vaginastate to "entrance">><<set $speechVaginaEntrance to 1>><<set $vaginatarget to _n>>
 				<<elseif $worn.under_lower.vagina_exposed is 1 and !playerChastity("vagina")>>
-					<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 밀착시키며, <span class="pink">삽입할 준비를 한다.</span>
-					<<sex 5 "genital" _n>><<set $vaginause to "penis">><<set $NPCList[_n].penis to "vaginaimminent">><<set $vaginastate to "imminent">><<set $speechvaginaimminent to 1>><<set $vaginatarget to _n>>
+					<<He>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>>, <span class="pink">preparing to penetrate.</span>
+					<<sex 5 "genital" _n>><<set $vaginause to "penis">><<set $NPCList[_n].penis to "vaginaimminent">><<set $vaginastate to "imminent">><<set $speechVaginaImminent to 1>><<set $vaginatarget to _n>>
 				<<elseif $worn.under_lower.vagina_exposed is 0>>
-					<span class="blue"><<He>>【이가】 당신의 $worn.under_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 밀어붙인다.</span>
-					<<set $worn.under_lower.integrity -= 10>><<sex 3 "genital" _n>><<set $NPCList[_n].penis to "vaginaentrance">><<set $vaginause to "penis">><<set $vaginastate to "entrance">><<set $speechvaginaentrance to 1>><<set $vaginatarget to _n>>
+					<span class="blue"><<He>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.under_lower.name.</span>
+					<<set $worn.under_lower.integrity -= 10>><<sex 3 "genital" _n>><<set $NPCList[_n].penis to "vaginaentrance">><<set $vaginause to "penis">><<set $vaginastate to "entrance">><<set $speechVaginaEntrance to 1>><<set $vaginatarget to _n>>
 				<</if>>
 			<<elseif $worn.over_lower.vagina_exposed is 0>>
-				<span class="blue"><<He>>【이가】 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 밀어붙인다.</span>
-				<<sex 2 "genital" _n>><<set $NPCList[_n].penis to "vaginaentrance">><<set $vaginause to "penis">><<set $worn.over_lower.integrity -= 10>><<set $vaginastate to "entrance">><<set $speechvaginaentrance to 1>><<set $vaginatarget to _n>>
+				<span class="blue"><<He>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.over_lower.name.</span>
+				<<sex 2 "genital" _n>><<set $NPCList[_n].penis to "vaginaentrance">><<set $vaginause to "penis">><<set $worn.over_lower.integrity -= 10>><<set $vaginastate to "entrance">><<set $speechVaginaEntrance to 1>><<set $vaginatarget to _n>>
 			<<elseif $worn.lower.vagina_exposed is 0>>
-				<span class="blue"><<He>>【이가】 당신의 $worn.lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 밀어붙인다.</span>
-				<<sex 2 "genital" _n>><<set $NPCList[_n].penis to "vaginaentrance">><<set $vaginause to "penis">><<set $worn.lower.integrity -= 10>><<set $vaginastate to "entrance">><<set $speechvaginaentrance to 1>><<set $vaginatarget to _n>>
+				<span class="blue"><<He>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.lower.name.</span>
+				<<sex 2 "genital" _n>><<set $NPCList[_n].penis to "vaginaentrance">><<set $vaginause to "penis">><<set $worn.lower.integrity -= 10>><<set $vaginastate to "entrance">><<set $speechVaginaEntrance to 1>><<set $vaginatarget to _n>>
 			<</if>>
 			<<if $NPCList[_n].type is "plant" and $NPCList[_n].penissize gte 4 and canImpregnateParasite("vagina")>>
 				<span class="red">어딘지 모르게 당신을 섬뜩하게 한다.</span>
@@ -6305,7 +6298,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<set $NPCList[_n].location.genitals to "genitals">>
 		<<elseif $player.penisExist>>
 			<<if $anususe is 0 and $settings.analEnabled>>
-				<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
+				<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes("strap-on")>>
 					<<if $NPCList[_n].chastity.penis.includes("chastity")>>
 						<<He>>【이가】 콘돔을 쓰려 하지만, <<his>> $NPCList[_n].chastity.penis 위로 넘길 수 없는 듯하다. <span class="red"><<He>>【이가】 이내 포기한다.</span>
 						<<set $NPCList[_n].condom.willUse to false>>
@@ -6316,21 +6309,21 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<</if>>
 				<<if $worn.lower.anus_exposed is 1 and $worn.over_lower.anus_exposed is 1>>
 					<<if $worn.under_lower.anus_exposed is 1 and $worn.genitals.anus_exposed is 1 and $NPCList[_n].chastity.penis.includes("chastity")>>
-						<span class="purple"><<He>>【이가】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문에 밀어붙인다.</span>
-						<<neutral 5 "anus">><<set $anususe to "penis">><<set $NPCList[_n].penis to "anusentrance">><<set $anusstate to "entrance">><<set $speechanusentrance to 1>><<set $anustarget to _n>>
+						<span class="purple"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus.</span>
+						<<neutral 5 "anus">><<set $anususe to "penis">><<set $NPCList[_n].penis to "anusentrance">><<set $anusstate to "entrance">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>
 					<<elseif $worn.under_lower.anus_exposed is 1 and $worn.genitals.anus_exposed is 1>>
-						<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문에 밀착시키며, <span class="pink">삽입할 준비를 한다.</span>
-						<<sex 5 "anal" _n>><<set $anususe to "penis">><<set $NPCList[_n].penis to "anusimminent">><<set $anusstate to "imminent">><<set $speechanusimminent to 1>><<set $anustarget to _n>>
+						<<He>> presses <<his>> $NPCList[_n].penisdesc against your anus, <span class="pink">preparing to penetrate.</span>
+						<<sex 5 "anal" _n>><<set $anususe to "penis">><<set $NPCList[_n].penis to "anusimminent">><<set $anusstate to "imminent">><<set $speechAnusImminent to 1>><<set $anustarget to _n>>
 					<<elseif $worn.under_lower.anus_exposed is 0>>
-						<span class="blue"><<He>>【이가】 당신의 $worn.under_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 항문에 밀어붙인다.</span>
-						<<sex 3 "anal" _n>><<set $NPCList[_n].penis to "anusentrance">><<set $anususe to "penis">><<set $worn.under_lower.integrity -= 10>><<set $anusstate to "entrance">><<set $speechanusentrance to 1>><<set $anustarget to _n>>
+						<span class="blue"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.under_lower.name.</span>
+						<<sex 3 "anal" _n>><<set $NPCList[_n].penis to "anusentrance">><<set $anususe to "penis">><<set $worn.under_lower.integrity -= 10>><<set $anusstate to "entrance">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>
 					<</if>>
 				<<elseif $worn.over_lower.anus_exposed is 0>>
-					<span class="blue"><<He>>【이가】 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 항문에 밀어붙인다.</span>
-					<<sex 2 "anal" _n>><<set $NPCList[_n].penis to "anusentrance">><<set $anususe to "penis">><<set $worn.over_lower.integrity -= 10>><<set $anusstate to "entrance">><<set $speechanusentrance to 1>><<set $anustarget to _n>>
+					<span class="blue"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.over_lower.name.</span>
+					<<sex 2 "anal" _n>><<set $NPCList[_n].penis to "anusentrance">><<set $anususe to "penis">><<set $worn.over_lower.integrity -= 10>><<set $anusstate to "entrance">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>
 				<<elseif $worn.lower.anus_exposed is 0>>
-					<span class="blue"><<He>>【이가】 당신의 $worn.lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 항문에 밀어붙인다.</span>
-					<<sex 2 "anal" _n>><<set $NPCList[_n].penis to "anusentrance">><<set $anususe to "penis">><<set $worn.lower.integrity -= 10>><<set $anusstate to "entrance">><<set $speechanusentrance to 1>><<set $anustarget to _n>>
+					<span class="blue"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.lower.name.</span>
+					<<sex 2 "anal" _n>><<set $NPCList[_n].penis to "anusentrance">><<set $anususe to "penis">><<set $worn.lower.integrity -= 10>><<set $anusstate to "entrance">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>
 				<</if>>
 				<<if $NPCList[_n].type is "plant" and $NPCList[_n].penissize gte 4 and canImpregnateParasite("anus")>>
 					<span class="red">어딘지 모르게 당신을 섬뜩하게 한다.</span>
@@ -6347,17 +6340,17 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 	<<if $gloryhole>>
 		보지가 기대에 차 기다리고 있다.
 	<<elseif $npcSub>>
-		<<His>> 다리가 떨리고, <<his>> 보지가 당신이 무언가 해주기를 기다린다.
-		<<neutral 1 _n>><<set $speechvaginaflaunt to 1>>
+		<<His>> legs quiver, <<his>> pussy waiting for you to do something.
+		<<neutral 1 _n>><<set $speechVaginaFlaunt to 1>>
 	<<elseif $enemyanger + $rng lte 20 and $NPCList[_n].location.genitals is 0>>
-		<<He>>【은는】 노골적으로 <<his>> 엉덩이를 흔든다.
-		<<neutral 1 _n>><<set $speechvaginaflaunt to 1>>
+		<<He>> sways <<his>> hips suggestively.
+		<<neutral 1 _n>><<set $speechVaginaFlaunt to 1>>
 	<<elseif $enemyanger + $rng lte 40>>
-		<<He>>【은는】 <<his>> 보지를 문지른다.
-		<<neutral 3 _n>><<set $speechvaginaflaunt to 1>>
+		<<He>> rubs <<his>> pussy.
+		<<neutral 3 _n>><<set $speechVaginaFlaunt to 1>>
 	<<elseif $enemyanger + $rng lte 50 and $NPCList[_n].location.genitals is 0 and $NPCList[_n].location.head isnot "genitals"
 			and ($player.penisExist or playerHasStrapon()) and $penisuse is 0 and $settings.analEnabled and $walltype isnot "front">>
-		<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and !$player.condom and $parasite.penis.name is undefined and
+		<<if $NPCList[_n].condom?.willUse is true and !$player.condom and $parasite.penis.name is undefined and
 		$worn.under_lower.vagina_exposed is 1 and $worn.lower.vagina_exposed is 1 and $worn.over_lower.vagina_exposed is 1>>
 			<<if playerChastity("penis")>>
 				<<He>>【은는】 당신의 자지에 콘돔을 씌우려 하지만, $worn.genitals.name 때문에 제대로 씌우지 못한다. <span class="red"><<He>>【은는】 곧 포기한다.</span>
@@ -6367,8 +6360,8 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<equipNPCCondom _n "player">>
 			<</if>>
 		<</if>>
-		<span class="blue"><<He>>【이가】 당신의 위에 올라타, <<his>> 엉덩이를 당신의 <<penis>>에 비빈다.</span>
-		<<neutral 5 "genitals">><<set $penisuse to "otheranus">><<set $NPCList[_n].vagina to "otheranusentrance">><<set $penisstate to "otheranusentrance">><<set $speechotheranusentrance to 1>><<set $penistarget to _n>>
+		<span class="blue"><<He>> straddles you, rubbing <<his>> ass against your <<penis>>.</span>
+		<<neutral 5 "genitals">><<set $penisuse to "otheranus">><<set $NPCList[_n].vagina to "otheranusentrance">><<set $penisstate to "otheranusentrance">><<set $speechNPCAnusEntrance to 1>><<set $penistarget to _n>>
 		<<set $NPCList[_n].location.genitals = "genitals">>
 	<<elseif $enemyanger + $rng lte 60 and $NPCList[_n].location.genitals is 0 and $NPCList[_n].location.head isnot "head" and $mouthuse is 0 and ($position isnot "wall" or $walltype is "front") and !$worn.face.type.includes("face_covering") and !$worn.face.type.includes("gag")>>
 		<<if $rng % 5 is 0 and $settings.facesitEnabled>>
@@ -6384,11 +6377,11 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			)>>
 			</span>
 			<<submission 5 _n>><<set $NPCList[_n].vagina to "facesit">><<set $mouthuse to "facesit">><<set $mouthstate to "vagina">>
-			<<set $speechfacesit to 1>><<set $NPCList[_n].location.genitals = "head">><<set $mouthtarget to _n>>
+			<<set $speechFaceSit to 1>><<set $NPCList[_n].location.genitals = "head">><<set $mouthtarget to _n>>
 		<<else>>
 			<span class="purple"><<He>>【이가】 다리를 벌리며 당신의 머리를 잡고 부드럽게 <<his>> 보지 쪽으로 이끈다.</span>
 			<<submission 5 _n>><<set $mouthuse to "othervagina">><<set $NPCList[_n].vagina to "mouth">><<set $mouthstate to "othervagina">>
-			<<set $speechvaginamouth to 1>><<set $NPCList[_n].location.genitals = "head">><<set $mouthtarget to _n>>
+			<<set $speechMouthNPCVagina to 1>><<set $NPCList[_n].location.genitals = "head">><<set $mouthtarget to _n>>
 		<</if>>
 		<<if $NPCList[_n].type is "plant">>
 			<span class="pink">입구에서 넥타르가 반짝인다.</span>
@@ -6418,7 +6411,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 	<<elseif $enemyanger + $rng lte 100 and $penisuse is 0 and ($player.penisExist or playerHasStrapon()) and $worn.under_lower.vagina_exposed is 1 and $worn.lower.vagina_exposed is 1 and $worn.over_lower.vagina_exposed is 1 and $NPCList[_n].location.genitals is 0 and $NPCList[_n].location.head isnot "genitals" and $walltype isnot "front">>
 		<!-- mount and prepare for vaginal sex -->
 		<<set $penisuse to "othervagina">><<set $NPCList[_n].vagina to "penisentrance">><<set $penisstate to "entrance">><<set $penistarget to _n>>
-		<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and !$player.condom and $parasite.penis.name is undefined>>
+		<<if $NPCList[_n].condom?.willUse is true and !$player.condom and $parasite.penis.name is undefined>>
 			<<if playerChastity("penis")>>
 				<<He>>【은는】 당신의 자지에 콘돔을 씌우려 하지만, $worn.genitals.name 때문에 제대로 씌우지 못한다. <span class="red"><<He>>【은는】 곧 포기한다.</span>
 				<<set $NPCList[_n].condom.willUse to false>>
@@ -6432,12 +6425,12 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 	<<elseif $enemyanger + $rng lte 100 and $vaginause is 0 and $player.vaginaExist and $worn.under_lower.vagina_exposed is 1 and $worn.lower.vagina_exposed is 1 and $worn.over_lower.vagina_exposed is 1 and $NPCList[_n].location.genitals is 0 and $NPCList[_n].location.head isnot "genitals" and $walltype isnot "front">>
 		<!-- tribbing -->
 		<<set $vaginause to "othervagina">><<set $vaginastate to "othervaginaentrance">><<set $NPCList[_n].vagina to "vaginaentrance">><<sex 5 "genital" _n>><<set $vaginatarget to _n>>
-		<span class="blue"><<He>>【이가】 <<his>> 보지를 당신의 것에 가까이 댄다.</span>
-		<<set $NPCList[_n].location.genitals = "genitals">><<set $speechtribentrance to 1>>
+		<span class="blue"><<He>> moves <<his>> pussy close to yours.</span>
+		<<set $NPCList[_n].location.genitals = "genitals">><<set $speechTribEntrance to 1>>
 	<<elseif $enemyanger + $rng lte 120 and $penisuse is 0 and ($player.penisExist or playerHasStrapon()) and $worn.under_lower.vagina_exposed is 1 and $worn.lower.vagina_exposed is 1 and $worn.over_lower.vagina_exposed is 1 and $NPCList[_n].location.genitals is 0 and $NPCList[_n].location.head isnot "genitals" and !playerChastity("penis") and $walltype isnot "front">>
 		<!-- forceful vaginal sex -->
 		<<set $penisuse to "othervagina">><<set $NPCList[_n].vagina to "penisimminent">><<set $penisstate to "imminent">><<set $penistarget to _n>>
-		<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and !$player.condom and $parasite.penis.name is undefined>>
+		<<if $NPCList[_n].condom?.willUse is true and !$player.condom and $parasite.penis.name is undefined>>
 			<<if playerChastity("penis")>>
 				<<He>>【은는】 당신의 자지에 콘돔을 씌우려 하지만, $worn.genitals.name 때문에 제대로 씌우지 못한다. <span class="red"><<He>>【은는】 곧 포기한다.</span>
 				<<set $NPCList[_n].condom.willUse to false>>
@@ -6475,12 +6468,12 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<span class="purple"><<He>>【이가】 당신의 <<genitals>>에 <<his>> 발을 짓누른다.</span>
 		<<neutral 5 "genitals" _n>><<violence 1>><<set $NPCList[_n].vagina to "footjob">>
 		<<if ($player.penisExist or playerHasStrapon()) and $penisuse is 0>>
-			<<set $penisuse to "feet">><<set $speechpenisfoot to 1>>
+			<<set $penisuse to "feet">><<set $speechPenisFoot to 1>>
 		<</if>>
 		<<if $player.vaginaExist and $vaginause is 0>>
 			<<set $vaginause to "feet">>
 			<<if !$player.penisExist>>
-				<<set $speechvaginafoot to 1>>
+				<<set $speechVaginaFoot to 1>>
 			<</if>>
 		<</if>>
 	<<elseif $enemyanger + $rng lte 180 and $NPCList[_n].location.genitals is 0 and $NPCList[_n].location.head isnot "genitals" and !(playerBellySize(true) gte 8)>>
@@ -6498,11 +6491,11 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<else>>
 			<<if $position is "wall" and $walltype isnot "front" and $NPCList[_n].location.genitals is 0 and $NPCList[_n].location.head isnot "genitals">>
 				<<if $player.penisExist>>
-					<<He>>【은는】 당신의 <<penis>>【을를】 걷어찬다.
-					<<violence 20>><<hitstat>><<bruise penis>><<set $speechbeat to 1>>
+					<<He>> kicks your <<penis>>.
+					<<violence 20>><<hitstat>><<bruise penis>><<set $speechPlayerBeaten to 1>>
 				<<elseif $player.vaginaExist>>
-					<<He>>【은는】 당신의 <<pussy>>【을를】 걷어찬다.
-					<<violence 20>><<hitstat>><<bruise vagina>><<set $speechbeat to 1>>
+					<<He>> kicks your <<pussy>>.
+					<<violence 20>><<hitstat>><<bruise vagina>><<set $speechPlayerBeaten to 1>>
 				<</if>>
 			<<elseif $NPCList[_n].location.genitals is 0 and $NPCList[_n].location.head isnot "head" and $mouthuse is 0 and !$worn.face.type.includes("face_covering") and !$worn.face.type.includes("gag")>>
 				<<if $rng % 2 is 0 and $settings.facesitEnabled>>
@@ -6518,11 +6511,11 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					)>>
 					</span>
 					<<submission 5 _n>><<set $NPCList[_n].vagina to "facesit">><<set $mouthuse to "facesit">><<set $mouthstate to "vagina">>
-					<<violence 3>><<bruise face>><<set $speechfacesit to 1>><<set $mouthtarget to _n>>
+					<<violence 3>><<bruise face>><<set $speechFaceSit to 1>><<set $mouthtarget to _n>>
 					<<set $NPCList[_n].location.genitals = "head">>
 				<<else>>
-					<span class="purple"><<He>>【이가】 당신의 머리에 다리를 휘감고, <<his>> 보지를 당신의 입에 밀착시킨다.</span>
-					<<submission 5 _n>><<set $mouthuse to "othervagina">><<set $NPCList[_n].vagina to "mouth">><<set $mouthstate to "othervagina">><<violence 3>><<bruise face>><<set $speechvaginamouth to 1>>
+					<span class="purple"><<He>> wraps <<his>> legs around your head and presses <<his>> pussy against your mouth.</span>
+					<<submission 5 _n>><<set $mouthuse to "othervagina">><<set $NPCList[_n].vagina to "mouth">><<set $mouthstate to "othervagina">><<violence 3>><<bruise face>><<set $speechMouthNPCVagina to 1>>
 					<<set $NPCList[_n].location.genitals = "head">><<set $mouthtarget to _n>>
 				<</if>>
 				<<if $NPCList[_n].type is "plant">>
@@ -6533,15 +6526,15 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 	<<elseif $NPCList[_n].location.genitals is 0 and $NPCList[_n].location.head isnot "genitals">>
 		<<if $position is "wall" and $walltype isnot "front">>
 			<<if $player.penisExist>>
-				<<He>>【은는】 당신의 <<penis>>【을를】 걷어찬다.
-				<<violence 20>><<hitstat>><<bruise penis>><<set $speechbeat to 1>>
+				<<He>> kicks your <<penis>>.
+				<<violence 20>><<hitstat>><<bruise penis>><<set $speechPlayerBeaten to 1>>
 			<<elseif $player.vaginaExist>>
-				<<He>>【은는】 당신의 <<pussy>>【을를】 걷어찬다.
-				<<violence 20>><<hitstat>><<bruise vagina>><<set $speechbeat to 1>>
+				<<He>> kicks your <<pussy>>.
+				<<violence 20>><<hitstat>><<bruise vagina>><<set $speechPlayerBeaten to 1>>
 			<</if>>
 		<<else>>
-			<<He>>【은는】 당신의 얼굴을 걷어찬다.
-			<<violence 10>><<bruise face>><<set $speechbeat to 1>><<hitstat>>
+			<<He>> kicks you in the face.
+			<<violence 10>><<bruise face>><<set $speechPlayerBeaten to 1>><<hitstat>>
 		<</if>>
 	<</if>>
 <</widget>>
@@ -6665,7 +6658,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<!-- -175 per turn with one hand: max to 0 oxygen in 7 turns -->
 				<<oxygen -225>>
 			<</if>>
-			<<set $speechthroat to 1>>
+			<<set $speechChoke to 1>>
 			<<sub 1>>
 		<</if>>
 		<<bruise neck>><<bruise neck>>
@@ -6738,7 +6731,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<oxygen -200>>
 			<</if>>
 			<<set $askedtochoke to 0>>
-			<<set $speechthroat to 1>>
+			<<set $speechChoke to 1>>
 		<</if>>
 		<<bruise neck>>
 

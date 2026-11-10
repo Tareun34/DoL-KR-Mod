@@ -1,0 +1,62 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<</widget>>"
+  ],
+  "old_kr": [
+   "<</widget>>"
+  ],
+  "new_en": [
+   "<</widget>>",
+   "",
+   "/* PC lines (plead / demand / moan). */",
+   "",
+   "<<widget \"pc-line-sydney-plead\">>",
+   "\t<<run statusCheck(\"Sydney\")>>",
+   "\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t<<addSpeechLine \"plead\">>",
+   "\t\t\t\"I thought... you said lust was a sin...\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<<else>>",
+   "\t\t<<addSpeechLine \"plead\">>",
+   "\t\t\t\"I'm sorry, I'll be pure! Please stop!\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "<</widget>>",
+   "",
+   "<<widget \"pc-line-sydney-demand\">>",
+   "\t<<run statusCheck(\"Sydney\")>>",
+   "\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t<<addSpeechLine \"demand\">>",
+   "\t\t\t\"I miss when you were pure. At least you didn't pull shit like this.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<<else>>",
+   "\t\t<<addSpeechLine \"demand\">>",
+   "\t\t\t\"What sort of punishment is this? Get off me!\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "<</widget>>",
+   "",
+   "<<widget \"pc-line-sydney-moan\">>",
+   "\t<<run statusCheck(\"Sydney\")>>",
+   "\t<<if !_sydneyChastity>>",
+   "\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t<<addSpeechLine \"moan\">>",
+   "\t\t\t\t\"You're the most delicious sin of all.\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<<else>>",
+   "\t\t\t<<addSpeechLine \"moan\">>",
+   "\t\t\t\t\"Forever, as one.\"",
+   "\t\t\t<</addSpeechLine>>",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\t<<addSpeechLine \"moan\">>",
+   "\t\t\t\"You make me so lustful.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "<</widget>>"
+  ],
+  "context": "\t<<sydneyExpose>>"
+ }
+]

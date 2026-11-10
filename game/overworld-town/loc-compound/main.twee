@@ -101,7 +101,7 @@
 			<<beastNEWinit 1 dog>>
 			경비 <<beasttype>> 한 마리가 당신을 향해 달려온다. <<bHe>>【은는】 몇 피트 떨어진 곳에서 멈춰 짖기 시작한다.
 			<br><br>
-			<<if $monster is 1 or $settings.bestialityEnabled>>
+			<<if beastSexEnabledForType("dog", $monster is 1)>>
 				<<if hasSexStat("deviancy", 2)>>
 					<<link [[`<<bhim>>【을를】 진정시키기`|Elk Compound Bestiality]]>><<set $sexstart to 1>><</link>><<deviant2>>
 					<br>
@@ -257,8 +257,9 @@
 <<person>>【은는】 말없이 액체를 살피더니, <<his>> 코트에서 현금 뭉치를 꺼낸다. <<He>>【은는】 쳐다보지도 않고 당신에게 돈을 건네고는 문을 닫는다.
 <br><br>
 
-<<money `($phials_held * 100000)` "compoundPhials">>
-<span class="gold">£<<print ($phials_held * 1000)>>【을를】 벌었습니다.</span>
+<<set _sale to $phials_held * 100_000>>
+<<money _sale "compoundPhials">>
+<span class="gold">You've made <<printmoney _sale>>.</span>
 <br><br>
 <<world_corruption "soft" $phials_held>>
 <<set $stat_aphrodisiacs_sold += $phials_held>>
@@ -571,8 +572,8 @@
 <</if>>
 "자, 됐군." <<he>>【이가】 전선의 다른 쪽 끝을 <<him>> 옆에 있는 기계에 꽂으며 말한다. "이제 <<girl>>, 말해봐, 누구 밑에서 일하지?"
 <br><br>
-<<if $player.penisExist and $player.vaginaExist>>
-	"운이 좋은 줄 알아." <<he>>【이가】 당신의 성기를 흘끗 보며 덧붙인다. "나한테 달렸다면, 실험을 위해 널 여기 가둬뒀을 거야. 진정한 자웅동체는 드물거든."
+<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>
+	"You should count yourself fortunate," <<he>> adds, glancing at your genitals. "If it were up to me, we'd keep you here for experimentation. Rare to find one with genitals like yours."
 	<br><br>
 <</if>>
 <i>고통이나 흥분도가 최대치에 도달하면, 당신은 <<him>>에게 모든 것을 말하게 될 것이다.</i>
@@ -584,7 +585,7 @@
 	lie: 0,
 	mock: 0,
 }>>
-<<compoundoptions>>
+<<compoundOptions>>
 
 :: Elk Compound Crystal
 <<set $outside to 0>><<set $location to "compound">><<effects>>
@@ -789,7 +790,7 @@
 <</if>>
 <br><br>
 
-<<compoundoptions>>
+<<compoundOptions>>
 
 :: Elk Compound Lie
 <<set $outside to 0>><<set $location to "compound">><<effects>>
@@ -819,7 +820,7 @@
 	"그거 안됐군." <<he>>【이가】 다이얼을 돌리며 말한다. "난 한참 여기 있을 수 있거든."
 	<br><br>
 <</if>>
-<<compoundoptions>>
+<<compoundOptions>>
 
 :: Elk Compound Mock
 <<set $outside to 0>><<set $location to "compound">><<effects>>
@@ -849,7 +850,7 @@
 	"닥쳐." <<he>>【이가】 다이얼을 돌리며 말을 끊는다.
 	<br><br>
 <</if>>
-<<compoundoptions>>
+<<compoundOptions>>
 
 :: Elk Compound Beg
 <<set $outside to 0>><<set $location to "compound">><<effects>>
@@ -879,7 +880,7 @@
 	"마지막으로 말하는데, 협조하면 보내주겠다." <<He>>【은는】 다이얼을 돌린다.
 	<br><br>
 <</if>>
-<<compoundoptions>>
+<<compoundOptions>>
 
 :: Elk Compound Flirt
 <<set $outside to 0>><<set $location to "compound">><<effects>>
@@ -910,7 +911,7 @@
 	"그만! 당장." <<He>>【은는】 진지해 보인다.
 	<br><br>
 <</if>>
-<<compoundoptions>>
+<<compoundOptions>>
 
 :: Elk Compound Interior
 <<set $outside to 0>><<set $location to "compound">><<effects>>

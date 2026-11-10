@@ -1,0 +1,29 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou struggle to free your arms.",
+   "\t\t<<set $speechstruggle to 1>>"
+  ],
+  "old_kr": [
+   "\t\t팔을 빼내기 위해 몸부림친다.",
+   "\t\t<<set $speechstruggle to 1>>"
+  ],
+  "new_en": [
+   "\t\tYou struggle to free your arms.",
+   "\t\t<<set $speechStruggle to 1>>"
+  ],
+  "context": "\t\t<<set $leftaction to 0>><<set $leftactiondefault to \"leftstruggleW\">><<set $rightaction to 0>><<set $leftactiondefault to \"leftstruggleW\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<actionshandbite>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<actionshandbite $mouthtarget>>"
+  ],
+  "context": "\t\t<<set $mouthactiondefault to $mouthaction>><<set $mouthaction to 0>>"
+ }
+]

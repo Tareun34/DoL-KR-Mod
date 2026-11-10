@@ -524,8 +524,8 @@
 
 :: Temple Jordan Room
 <<set $outside to 0>><<set $location to "temple">><<temple_effects>><<effects>>
-<<set $jordansong to true>>
-당신은 좁고 긴 침실에 있다. 높은 창문으로 약간의 자연광이 들어오고, 그 아래에는 침대가 놓여 있다. 문 근처에는 금속 막대, 철퇴, 채찍이 걸린 무기 거치대가 있다. 그 옆 바닥에는 방패가 기대어 있다.
+<<set $jordansong to true>><<npc Jordan>><<person1>>
+You're in a thin, long bedroom. A little natural light enters the room from a high window, beneath which lies the bed itself. Near the door is a weapon rack, carrying metal rods, maces, and whips. A shield rests on the floor beside it.
 <br><br>
 방 반대편 끝에는 커튼이 쳐져 있다. 물 흐르는 소리가 들린다. 그러다 누군가 노래를 부르기 시작한다.
 <br><br>
@@ -551,7 +551,9 @@
 <<link [[커튼 뒤를 엿본다|Temple Jordan Peek]]>><<trauma -6>><<grace -5>><</link>><<llgrace>><<ltrauma>>
 <br>
 <<set $skulduggerydifficulty to 300>>
-<<link [[몰래 빠져나간다|Temple Jordan Sneak]]>><</link>><<skulduggerydifficulty>>
+<<link [[Sneak out|Temple Jordan Sneak]]>><<endevent>><</link>><<skulduggerydifficulty>>
+<br>
+<<link [[Stay|Temple Jordan Stay]]>><</link>>
 <br>
 
 :: Temple Jordan Peek
@@ -559,7 +561,7 @@
 <<set $jordanSin to 1>>
 당신은 발소리를 죽여 커튼으로 다가가 옆으로 머리를 내민다.
 <br><br>
-<<npc Jordan>><<person1>>조던이 보인다. <<Hes>> 샤워 중이다. 물이 <<his>> 감긴 눈 위로, 그리고 <<his>> 벌거벗은 몸을 따라 흘러내린다.
+You see Jordan. <<Hes>> having a shower. Water runs over <<his>> closed eyes and down <<his>> naked body.
 <<if $NPCList[0].penis isnot "none">>
 	<<if $NPCList[0].breastsize gte 3>>
 		<<His>> <<= window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【와과】 <<= window.KR.getBreastSizeKr($NPCList[0].breastsdesc)>>【이가】 <<he>>【이가】 움직일 때마다 흔들리고 출렁인다.
@@ -729,6 +731,27 @@
 <<endevent>>
 <<link [[다음|Temple]]>><</link>>
 <br>
+
+:: Temple Jordan Stay
+
+<<set $outside to 0>><<set $location to "temple">><<temple_effects>><<effects>><<pass 10>>
+Curiosity gets the better of you, and you decide to stay.
+<br><br>
+You admire Jordan's weapons, trying to tune <<his>> singing out in order to give <<him>> some privacy.
+<br><br>
+The shower stops. You lost track of time, and can't leave without being seen anymore.
+<br><br>
+The curtain opens, revealing Jordan. <<He>> screams.
+<<llgrace>><<grace -5>>
+<br><br>
+<<link [[Run|Temple Jordan Run]]>><</link>><<athleticsdifficulty 1 1400>>
+<br>
+<<link [[Apologise|Temple Jordan Apologise]]>><<grace 1>><</link>><<ggrace>>
+<br>
+<<if hasSexStat("promiscuity", 2)>>
+	<<link [[Flirt|Temple Jordan Flirt]]>><</link>><<promiscuous2>>
+	<br>
+<</if>>
 
 :: Temple Quarters Flirt
 

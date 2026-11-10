@@ -1,0 +1,462 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<He>> follows the arrow's instruction, <span class=\"blue\">and positions <<his>> $NPCList[_n].penisdesc in front of your mouth.</span>",
+   "\t\t\t<<neutral 5>><<set $mouthuse to \"penis\">><<set $NPCList[_n].penis to \"mouthentrance\">><<set $mouthstate to \"entrance\">><<set $speechmouthentrance to 1>><<set $mouthtarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<He>>【은는】 화살표의 지시를 따라, <span class=\"blue\"><<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 입 앞에 가져다 댄다.</span>",
+   "\t\t\t<<neutral 5>><<set $mouthuse to \"penis\">><<set $NPCList[_n].penis to \"mouthentrance\">><<set $mouthstate to \"entrance\">><<set $speechmouthentrance to 1>><<set $mouthtarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t<<He>> follows the arrow's instruction, <span class=\"blue\">and positions <<his>> $NPCList[_n].penisdesc in front of your mouth.</span>",
+   "\t\t\t<<neutral 5>><<set $mouthuse to \"penis\">><<set $NPCList[_n].penis to \"mouthentrance\">><<set $mouthstate to \"entrance\">><<set $speechMouthEntrance to 1>><<set $mouthtarget to _n>>"
+  ],
+  "context": "\t\t<<elseif $NPCList[_n].penis is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"purple\"><<He>> wraps <<his>> legs around your head and presses <<his>> pussy against your mouth.</span>",
+   "\t\t\t\t<<submission 5>><<set $mouthuse to \"othervagina\">><<set $NPCList[_n].vagina to \"mouth\">><<set $mouthstate to \"othervagina\">><<violence 3>><<bruise face>><<set $speechvaginamouth to 1>><<set $mouthtarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"purple\"><<He>>【은는】 다리로 당신의 머리를 감싸고 자기 보지를 당신의 입에 밀착시킨다.</span>",
+   "\t\t\t\t<<submission 5>><<set $mouthuse to \"othervagina\">><<set $NPCList[_n].vagina to \"mouth\">><<set $mouthstate to \"othervagina\">><<violence 3>><<bruise face>><<set $speechvaginamouth to 1>><<set $mouthtarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"purple\"><<He>> wraps <<his>> legs around your head and presses <<his>> pussy against your mouth.</span>",
+   "\t\t\t\t<<submission 5>><<set $mouthuse to \"othervagina\">><<set $NPCList[_n].vagina to \"mouth\">><<set $mouthstate to \"othervagina\">><<violence 3>><<bruise face>><<set $speechMouthNPCVagina to 1>><<set $mouthtarget to _n>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if !$speechadmired>><<set $speechadmired to 1>>",
+   "\t\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t\t<<if !$speechadmired>><<set $speechadmired to 1>>",
+   "\t\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t\t<<if !$speechAdmired>><<set $speechAdmired to 1>>",
+   "\t\t\t<<He>> speaks."
+  ],
+  "context": "\t\t<<famesex 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if !$speechadmired>><<set $speechadmired to 1>>",
+   "\t\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t\t<<if !$speechadmired>><<set $speechadmired to 1>>",
+   "\t\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t\t<<if !$speechAdmired>><<set $speechAdmired to 1>>",
+   "\t\t\t<<He>> speaks."
+  ],
+  "context": "\t\t<<famesex 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if !$speechadmired>><<set $speechadmired to 1>>",
+   "\t\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t\t<<if !$speechadmired>><<set $speechadmired to 1>>",
+   "\t\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t\t<<if !$speechAdmired>><<set $speechAdmired to 1>>",
+   "\t\t\t<<He>> speaks."
+  ],
+  "context": "\t\t<<famebestiality 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<if $speechadmired>>",
+   "\t\t\t\t\t\t\t\t<<He>> glares."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t<<if $speechadmired>>",
+   "\t\t\t\t\t\t\t\t<<He>>【은는】 노려본다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<if $speechAdmired>>",
+   "\t\t\t\t\t\t\t\t<<He>> glares."
+  ],
+  "context": "\t\t\t\t\t\t<<default>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $speechadmired>>",
+   "\t\t\t\t\t\t\t<<He>> flashes a smug grin."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<if $speechadmired>>",
+   "\t\t\t\t\t\t\t<<He>>【이가】 의기양양한 미소를 짓는다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $speechAdmired>>",
+   "\t\t\t\t\t\t\t<<He>> flashes a smug grin."
+  ],
+  "context": "\t\t\t\t\t<<if random(1)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "\t\t\t<<set $enemyanger += 10>><<set $enemytrust -= 100>><<fameprostitution 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "\t\t\t<<set $enemyanger += 10>><<set $enemytrust -= 100>><<fameprostitution 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "\t\t\t<<fameprostitution 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "\t\t<<set $enemyanger += 10>><<set $enemytrust -= $skin[_args[0]].degree>><<fameprostitution 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "\t\t<<set $enemytrust -= 20>><<fameprostitution 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $NPCList[_n].location.genitals = \"head\">><<set $speechmouthotheranus to 1>><<set $mouthtarget to _n>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $NPCList[_n].location.genitals = \"head\">><<set $speechMouthNPCAnus to 1>><<set $mouthtarget to _n>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $speechfacesit to 1>><<set $NPCList[_n].location.genitals = \"head\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $speechFaceSit to 1>><<set $NPCList[_n].location.genitals = \"head\">>"
+  ],
+  "context": "\t\t\t\t<<submission 5>><<set $NPCList[_n].vagina to \"facesit\">><<set $mouthuse to \"facesit\">><<set $mouthstate to \"vagina\">><<set $mouthtarget to _n>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<neutral 5>><<set $anususe to \"penis\">><<set $NPCList[_n].penis to \"anusentrance\">><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<neutral 5>><<set $anususe to \"penis\">><<set $NPCList[_n].penis to \"anusentrance\">><<set $anusstate to \"entrance\">><<set $speechAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $NPCList[_n].location.genitals to \"genitals\">><<set $penistarget to _n>><<set $speechfencingentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $NPCList[_n].location.genitals to \"genitals\">><<set $penistarget to _n>><<set $speechFencingEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t<<neutral 5>><<set $NPCList[_n].penis to \"penisentrance\">><<set $penisuse to \"otherpenis\">><<set $penisstate to \"otherpenisentrance\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $NPCList[_n].location.genitals to \"genitals\">><<set $penistarget to _n>><<set $speechpenisentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $NPCList[_n].location.genitals to \"genitals\">><<set $penistarget to _n>><<set $speechNPCVaginaEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t<<neutral 5>><<set $NPCList[_n].vagina to \"penisentrance\">><<set $penisuse to \"othervagina\">><<set $penisstate to \"entrance\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $NPCList[_n].location.genitals to \"genitals\">><<set $vaginatarget to _n>><<set $speechvaginaentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $NPCList[_n].location.genitals to \"genitals\">><<set $vaginatarget to _n>><<set $speechVaginaEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t<<neutral 5>><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginause to \"penis\">><<set $vaginastate to \"entrance\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $NPCList[_n].location.genitals to \"genitals\">><<set $vaginatarget to _n>><<set $speechtribentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $NPCList[_n].location.genitals to \"genitals\">><<set $vaginatarget to _n>><<set $speechTribEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t<<neutral 5>><<set $NPCList[_n].vagina to \"vaginaentrance\">><<set $vaginause to \"othervagina\">><<set $vaginastate to \"othervaginaentrance\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechAdmired to 1>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "\t<<set $enemytrust -= 20>><<famerape 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "\t<<fameexhibitionism 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "\t<<famebestiality 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "\t<<famesex 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "\t\t<<famepregnancy 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "\t<<fameimpreg 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "<<widget \"bodypart_admire_girly\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "<<widget \"bodypart_admire_boyish\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "\t<<famescrap 1>><<set $enemytrust -= 5>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "\t<<set $enemyanger += 20>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "<<widget \"bodypart_admire_lewd\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "\t<<set $enemytrust -= 35>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "\t<<if $NPCList[_n].type is \"plant\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$speechadmired and !_admireNothing>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$speechAdmired and !_admireNothing>><<set $speechAdmired to 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$speechadmired>><<set $speechadmired to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$speechAdmired>><<set $speechAdmired to 1>>"
+  ],
+  "context": "<<widget \"bodypart_admire_plant\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t/* Disabled until the source of body fluids is tracked - Avery may be the one who came on the PC."
+  ],
+  "context": "\t\t\t\t<<case \"Avery\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t*/"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $enemytype isnot \"beast\" and ($NPCList[_n].mouth is 0 or $NPCList[_n].mouth is \"speech_only\" or ($NPCList[_n].type is \"plant\" and $speechkissvirgin is 1)) and $speechdisable isnot 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $enemytype isnot \"beast\" and ($NPCList[_n].mouth is 0 or $NPCList[_n].mouth is \"speech_only\" or ($NPCList[_n].type is \"plant\" and $speechKissVirgin is 1)) and $speechDisable isnot 1>>"
+  ],
+  "context": "<<widget \"bodypart_admire_chance\">>"
+ }
+]

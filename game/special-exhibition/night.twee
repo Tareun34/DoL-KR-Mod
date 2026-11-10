@@ -177,8 +177,8 @@
 <<if playerChastity("hidden")>>
 	"사람들이 당신을 함부로 대하지 못하게 하려는 건가요?" <<he>>【은는】 말한다.
 	<br><br>
-<<elseif $player.penisExist and $player.vaginaExist>>
-	"둘 다 있네요," <<he>>【이가】 숨을 삼킨다.
+<<elseif $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>
+	"You have both," <<he>> gasps.
 	<<if $fame.exhibitionism gte 1000>>
 		"당신이 내가 계속 듣던 그 노출증 환자군요."
 	<<elseif $fame.exhibitionism gte 400>>
@@ -484,6 +484,7 @@
 <</if>>
 두 번째 다리도 따라 들어간다. 물은 허리까지 차오른다. 공원 한복판에서 벌거벗고 드러난 채 물살을 가르며 중앙의 폭포까지 나아간다.
 <<exhibitionism4>>
+<<waterwash>><<waterbr 2>>
 
 <<link [[다음|Park Fountain 2]]>><<pass 10>><</link>>
 <br>

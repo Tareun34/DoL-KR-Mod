@@ -114,7 +114,15 @@ setup.debugMenu.eventList = {
 			widgets: [``],
 		},
 		{
-			link: [`적 신뢰도 +++`, stayOnPassageFn],
+			link: [`Make Rent Due`, stayOnPassageFn],
+			widgets: [`<<set $rentTime to -1>>`],
+		},
+		{
+			link: [`Max Thug Anger`, stayOnPassageFn],
+			widgets: [`<<set $rentThug to { anger: 5, angerCountdown: 0, traps: [] }>>`],
+		},
+		{
+			link: [`Enemy Trust +++`, stayOnPassageFn],
 			widgets: [`<<set $enemytrust += 2000>>`, `<<set $enemyanger -= 1000>>`],
 		},
 		{
@@ -258,32 +266,39 @@ setup.debugMenu.eventList = {
 			text_only: `\n`,
 		},
 		{
-			link: [`모든 짐승을 수컷으로`, stayOnPassageFn],
-			widgets: [`<<set $settings.monsterChance to 0>>`, `<<set $settings.beastMaleChanceMale to 100>>`, `<<set $settings.beastMaleChanceFemale to 100>>`],
-		},
-		{
-			link: [`모든 짐승을 암컷으로`, stayOnPassageFn],
-			widgets: [`<<set $settings.monsterChance to 0>>`, `<<set $settings.beastMaleChanceMale to 0>>`, `<<set $settings.beastMaleChanceFemale to 0>>`],
-		},
-		{
-			link: [`모든 짐승을 보지 달린 남자로`, stayOnPassageFn],
+			link: [`Make all beasts male`, stayOnPassageFn],
 			widgets: [
-				`<<set $settings.beastMaleChanceMale to 100>>`,
-				`<<set $settings.beastMaleChanceFemale to 100>>`,
-				`<<set $settings.maleNPCVaginaChance to 100>>`,
+				() => {
+					C.beastSettingTypes.forEach(type => {
+						V.settings.beastSettings[type].maleChance = 100;
+						V.settings.beastSettings[type].maleChanceMale = 100;
+						V.settings.beastSettings[type].maleChanceFemale = 100;
+					});
+				},
 			],
 		},
 		{
-			link: [`모든 짐승을 자지 달린 여자로`, stayOnPassageFn],
+			link: [`Make all beasts female`, stayOnPassageFn],
 			widgets: [
-				`<<set $settings.beastMaleChanceMale to 0>>`,
-				`<<set $settings.beastMaleChanceFemale to 0>>`,
-				`<<set $settings.femaleNPCPenisChance to 100>>`,
+				() => {
+					C.beastSettingTypes.forEach(type => {
+						V.settings.beastSettings[type].maleChance = 0;
+						V.settings.beastSettings[type].maleChanceMale = 0;
+						V.settings.beastSettings[type].maleChanceFemale = 0;
+					});
+				},
 			],
 		},
 		{
-			link: [`모든 짐승을 수인으로`, stayOnPassageFn],
-			widgets: [`<<set $settings.monsterChance to 100>>`, `<<set $settings.monsterHallucinationsOnly to false>>`],
+			link: [`Make all beasts monster people`, stayOnPassageFn],
+			widgets: [
+				() => {
+					C.beastSettingTypes.forEach(type => {
+						V.settings.beastSettings[type].monsterChance = 100;
+						V.settings.beastSettings[type].hallucinationsOnly = false;
+					});
+				},
+			],
 		},
 		{
 			text_only: `\n`,
@@ -303,6 +318,14 @@ setup.debugMenu.eventList = {
 		{
 			link: [`겨울`, stayOnPassageFn],
 			widgets: [`<<run Time.timeTravel(new DateTime(Time.year, 12))>>`],
+		},
+		{
+			link: [`Toggle Weather Band Bounds`, stayOnPassageFn],
+			widgets: [`<<set $debugWeatherBandBounds to !$debugWeatherBandBounds>>`],
+		},
+		{
+			link: [`Sky Testing`, `Sky Testing`],
+			widgets: [`<<if $passage isnot "Sky Testing">><<set $lastPassage to $passage>><<freezePlayerStats>><</if>>`],
 		},
 		{
 			text_only: `\n`,
@@ -494,10 +517,6 @@ setup.debugMenu.eventList = {
 		{
 			link: [`디버그 줄 숨김`, stayOnPassageFn],
 			widgets: [`<<set $debugLines to false>>`],
-		},
-		{
-			link: [`날씨 구간 경계 토글`, stayOnPassageFn],
-			widgets: [`<<set $debugWeatherBandBounds to !$debugWeatherBandBounds>>`],
 		},
 		{
 			text_only: `\n`,
@@ -953,7 +972,7 @@ setup.debugMenu.eventList = {
 		{
 			link: [`베일리가 로빈을 팔다`, `Orphanage`],
 			widgets: [
-				`<<set $renttime to 0>>`,
+				`<<set $rentTime to 0>>`,
 				`<<set $baileydefeatedchain to 3>>`,
 				`<<set $robinpaid to 1>>`,
 				`<<set $robinromance to 1>>`,

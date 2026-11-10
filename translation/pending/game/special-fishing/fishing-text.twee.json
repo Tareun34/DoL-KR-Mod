@@ -1,0 +1,240 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<addinlineevent 6>>",
+   "\t\t<<set _fishingSurfacer to weightedRandom(... fishingSurfacingFish(_fishingLocation))>>",
+   "\t\tYou see <<a _fishingSurfacer>> break the surface for a moment.<<lstress>><<stress -1>>",
+   "\t<</addinlineevent>>"
+  ],
+  "old_kr": [
+   "\t<<addinlineevent 6>>",
+   "\t\t<<set _fishingSurfacer to weightedRandom(... fishingSurfacingFish(_fishingLocation))>>",
+   "\t\t<<= setup.foodstuff[_fishingSurfacer].name>>【이가】 잠시 수면 위로 떠오르는 것을 본다.<<lstress>><<stress -1>>",
+   "\t<</addinlineevent>>"
+  ],
+  "new_en": [
+   "",
+   "\t<<if preferredSeasonFishList(_fishingLocation).length>>",
+   "\t\t<<set _fishingSeasonFish to weightedRandom(... preferredSeasonFishList(_fishingLocation))>>",
+   "\t\t<<set _fishingSeasonFishBoth to preferredLocationFishList(_fishingLocation).map(([f]) => f).includes(_fishingSeasonFish)>>",
+   "\t\t<<addinlineevent 2>>",
+   "\t\t\tA <span class=\"purple\"><<if _fishingSeasonFishBoth>>huge<<else>>large<</if>></span> _fishingSeasonFish swims around your line.",
+   "\t\t<</addinlineevent>>",
+   "\t\t<<addinlineevent 2>>",
+   "\t\t\tYou watch a pair of <span class=\"purple\"><<if _fishingSeasonFishBoth>>huge<<else>>large<</if>></span> _fishingSeasonFish swim around each other.<<lstress>><<stress -1>>",
+   "\t\t<</addinlineevent>>",
+   "\t<</if>>",
+   "",
+   "\t<<if preferredLocationFishList(_fishingLocation).length>>",
+   "\t\t<<set _fishingLocationFish to weightedRandom(... preferredLocationFishList(_fishingLocation))>>",
+   "\t\t<<set _fishingLocationFishBoth to preferredSeasonFishList(_fishingLocation).map(([f]) => f).includes(_fishingLocationFish)>>",
+   "\t\t<<addinlineevent 2>>",
+   "\t\t\tYou see <span class=\"purple\"><<if _fishingLocationFishBoth>>a huge<<else>>a large<</if>></span> _fishingLocationFish break the surface for a moment.<<lstress>><<stress -1>>",
+   "\t\t<</addinlineevent>>",
+   "\t\t<<addinlineevent 2>>",
+   "\t\t\tA <span class=\"purple\"><<if _fishingLocationFishBoth>>huge<<else>>large<</if>></span> _fishingLocationFish surfaces nearby.<<lstress>><<stress -1>>",
+   "\t\t<</addinlineevent>>",
+   "\t<</if>>",
+   "",
+   "\t<<if Time.isBloodMoon()>>",
+   "\t\t<<addinlineevent 4>>",
+   "\t\t\tYou watch <span class=\"purple\">large</span> fish chase and eat smaller fish in the red moonlight.",
+   "\t\t<</addinlineevent>>",
+   "\t<</if>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\tThe <<= fishingLocationWaterBodyName(_fishingLocation)>> churns as the "
+  ],
+  "old_kr": [
+   "\t\t\t\t<<= fishingLocationWaterBodyName(_fishingLocation)>>【이가】 요동친다."
+  ],
+  "new_en": [
+   "\t\t\t\tThe <<= fishingLocationWaterBodyName(_fishingLocation)>> churns as the"
+  ],
+  "context": "\t\t\t<<addinlineevent 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tYou wonder if any of the dock workers recognize you from outside work."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t항만 노동자들 중 밖에서 마주친 적 있는 사람을 알아볼지 궁금해진다."
+  ],
+  "new_en": [
+   "\t\t\t\t\tYou wonder if any of the dock workers recognise you from outside work."
+  ],
+  "context": "\t\t\t\t<<addinlineevent 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou wonder if anyone would recognize you here."
+  ],
+  "old_kr": [
+   "\t\t\t이곳에서 누군가 당신을 알아볼지 궁금해진다."
+  ],
+  "new_en": [
+   "\t\t\tYou wonder if anyone would recognise you here."
+  ],
+  "context": "\t\t<<addinlineevent 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou fight a yawn and keep your line taut. "
+  ],
+  "old_kr": [
+   "\t\t\t하품을 참으며 낚싯줄을 팽팽하게 유지한다. "
+  ],
+  "new_en": [
+   "\t\t\tYou fight a yawn and keep your line taut."
+  ],
+  "context": "\t\t<<addinlineevent 3>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou feel your eyelids drooping, but are able to remain awake. "
+  ],
+  "old_kr": [
+   "\t\t\t눈꺼풀이 무거워지는 것을 느끼지만 겨우 깨어 있는다. "
+  ],
+  "new_en": [
+   "\t\t\tYou feel your eyelids drooping, but are able to remain awake."
+  ],
+  "context": "\t\t<<addinlineevent 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou shift your stance and try to stay awake. "
+  ],
+  "old_kr": [
+   "\t\t\t자세를 고치며 깨어 있으려 애쓴다. "
+  ],
+  "new_en": [
+   "\t\t\tYou shift your stance and try to stay awake."
+  ],
+  "context": "\t\t<<addinlineevent 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou blink slowly and force yourself to keep watch. "
+  ],
+  "old_kr": [
+   "\t\t\t천천히 눈을 깜빡이며 계속 주의를 기울인다. "
+  ],
+  "new_en": [
+   "\t\t\tYou blink slowly and force yourself to keep watch."
+  ],
+  "context": "\t\t<<addinlineevent 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou think about going to bed, but keep fishing anyway. "
+  ],
+  "old_kr": [
+   "\t\t\t잠자리에 들 생각을 하면서도 낚시를 계속한다. "
+  ],
+  "new_en": [
+   "\t\t\tYou think about going to bed, but keep fishing anyway."
+  ],
+  "context": "\t\t<<addinlineevent 3>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if  numberOfEarSlime()>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if numberOfEarSlime()>>"
+  ],
+  "context": "\t/* Ear Slime */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $renttime lte 0 and $money lt $rentmoney + ($babyRent ?? 0)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $rentTime lte 0 and $money lt $rentMoney + ($babyRent ?? 0)>>"
+  ],
+  "context": "\t/* Rent */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if ![\"fallen\", \"kicked\"].includes($avery_fate)>> "
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if ![\"fallen\", \"kicked\"].includes($avery_fate)>>"
+  ],
+  "context": "\t/* Avery */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $trauma gte ($traumamax / 5) * 3 and  $badEndStats.find(function (stat) { return stat.source is \"Kylar Abduction\"; }) and !isLoveInterest(\"Kylar\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $trauma gte ($traumamax / 5) * 3 and $badEndStats.find(function (stat) { return stat.source is \"Kylar Abduction\"; }) and !isLoveInterest(\"Kylar\")>>"
+  ],
+  "context": "\t/* Kylar Bad End */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if _gwylanLovePercent gte 50 and _gwylanLovePercent lt 100>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if _gwylanLovePercent gte 40 and _gwylanLovePercent lt 100>>"
+  ],
+  "context": "\t\t\t<<run statusCheck(\"Gwylan\")>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t/* "
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t/*"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t/* "
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t/*"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $tiredness gte (C.tiredness.max / 5) * 3>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $tiredness gte (C.tiredness.max / 5) * 3>>"
+  ],
+  "context": "\t/* Tiredness */"
+ }
+]

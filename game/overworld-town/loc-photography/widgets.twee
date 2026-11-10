@@ -313,8 +313,8 @@
 		<br>
 		<<link [[찰싹 때린다|Photo High Smack]]>><<famescrap 1 "pic">><<photo_attention 1>><<stress -6>><</link>><<gattention>><<lstress>>
 		<br>
-		<<if $submissive lte 500>>
-			<<link [[포효한다|Photo High Roar]]>><<famescrap 1 "pic">><<photo_attention 1>><<photo_interest 2>><<stress -6>><<famemodel 1 "pic">><</link>><<defianttext>><<gattention>><<gginterest>><<lstress>>
+		<<if displayDefiantOption(500)>>
+			<<link [[Roar|Photo High Roar]]>><<famescrap 1 "pic">><<photo_attention 1>><<photo_interest 2>><<stress -6>><<famemodel 1 "pic">><<wolfDefiant 500>><</link>><<defianttext 500>><<gattention>><<gginterest>><<lstress>>
 			<br>
 		<</if>>
 	<</addinlineevent>>
@@ -324,7 +324,7 @@
 <<if $photo_attention[_photo_location] gte 6>>
 	<<addinlineevent "photo_high_danger_3" 1.45>>
 		<<generatey1>><<generatey2>><<person1>>
-		당신은 길 건너편에서 이상한 눈빛으로 쳐다보는 <<person>>【을를】 알아차린다. 그때 등 뒤에서 발소리가 들려온다. <<person2>><<person>>【이가】 달려와 당신의 <<bottom>>【을를】 세게 찰싹 때린다. 범인을 보려고 뒤돌아보려는 찰나, 등을 돌린 틈을 타 <<person1>><<person>>【이가】 달려드는 소리가 들린다.
+		You notice a <<person>> giving you a funny look from across the road. Then you hear footsteps behind you. A <<person2>><<person>> rushes up, and delivers a hard smack to your <<bottom>>. You attempt to turn to see the culprit, only to hear the <<person1>><<person>> charge at you while your back is turned.
 		<br><br>
 
 		부피가 큰 의상 때문에 제때 몸을 돌리지 못하고 한 대 더 맞는다.<<gattention>><<photo_attention 1>><<gpain>><<gstress>><<pain 4>><<stress 6>>
@@ -654,7 +654,7 @@
 			<<lheat>>
 		<</if>>
 		<br>
-		<<link [[니키를 찾는다 (0:01)|Photo High Niki]]>><<photo_pass 1>><</link>>
+		<<link [[Find Niki (0:01)|Photo High Niki]]>><<photo_pass 1>><<endevent>><</link>>
 		<br>
 		<br>
 	<</if>>

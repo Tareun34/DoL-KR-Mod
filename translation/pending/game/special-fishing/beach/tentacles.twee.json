@@ -1,0 +1,26 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tThe teenagers by the fire fall silent, watching in shock. <<generatey1>><<person1>>One of them jumps up and runs toward you. \"Hold on!\" <<He>> shouts, splashing into the water."
+  ],
+  "old_kr": [
+   "\t\t\t모닥불가에 있던 십 대들이 입을 다물고 충격받은 표정으로 쳐다본다. <<generatey1>><<person1>>그중 한 명이 벌떡 일어나 당신을 향해 달려온다. \"버텨!\" <<He>>【이가】 소리치며 물속으로 뛰어든다."
+  ],
+  "new_en": [
+   "\t\t\tThe teenagers by the fire fall silent, watching in shock. <<generatey1>><<person1>>One of them jumps up and runs toward you. \"Hold on!\" <<he>> shouts, splashing into the water."
+  ],
+  "context": "\t\t<<if $rng gte 20>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<br><br>"
+ }
+]

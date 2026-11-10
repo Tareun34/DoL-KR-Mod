@@ -1,0 +1,99 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\"What's going on here?\" Sirris asks, frowning at you and the deliquents."
+  ],
+  "old_kr": [
+   "\t\t\t\"여기서 무슨 일이니?\" 시리스가 당신과 불량 학생들을 보며 눈살을 찌푸리며 묻는다."
+  ],
+  "new_en": [
+   "\t\t\t\"What's going on here?\" Sirris asks, frowning at you and the delinquents."
+  ],
+  "context": "\t\t<<case 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou explain one way. The deliquents explain another."
+  ],
+  "old_kr": [
+   "\t\t\t당신은 한 가지 방식으로 설명한다. 불량 학생들은 다른 방식으로 설명한다."
+  ],
+  "new_en": [
+   "\t\t\tYou explain one way. The delinquents explain another."
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   ":: Events Swimming Freed",
+   "<<set $outside to 0>><<set $location to \"pool\">><<schooleffects>><<effects>>",
+   "",
+   "You swim to the side of the pool and turn around. Mason kneels and cuts through your bindings. \"There. I hope another student didn't do this to you.\" <<He>> steps away.",
+   "<br><br>",
+   "",
+   "<<endevent>>",
+   "",
+   "<<link [[Next|Swimming Lesson]]>><</link>>",
+   "<br>",
+   "",
+   ":: Events Swimming Freed Refuse",
+   "<<set $outside to 0>><<set $location to \"pool\">><<schooleffects>><<effects>>",
+   "",
+   "<<if $speech_attitude is \"meek\">>",
+   "\t\"N-no,\" you say. \"I should stay tied up.\"",
+   "<<elseif $speech_attitude is \"bratty\">>",
+   "\t\"Did I ask for help?\" you say, glaring at the teacher.",
+   "<<else>>",
+   "\t\"I'm fine. Thanks,\" you say.",
+   "<</if>>",
+   "<br><br>",
+   "",
+   "Mason looks confused. \"If you're sure. I don't think there's a rule forbidding bound <<= pcAreArmsBound(\"any\") ? \"arm\" : \"limb\">>s while swimming. Just be careful, okay?\"",
+   "<br><br>",
+   "",
+   "<<endevent>>",
+   "",
+   "<<link [[Next|Swimming Lesson]]>><</link>>",
+   "<br>",
+   ""
+  ],
+  "old_kr": [
+   ":: Events Swimming Freed",
+   "<<set $outside to 0>><<set $location to \"pool\">><<schooleffects>><<effects>>",
+   "",
+   "당신은 수영장 가장자리로 헤엄쳐 가서 몸을 돌린다. 메이슨이 무릎을 꿇고 당신의 결박을 끊어준다. \"자. 다른 학생이 이런 짓을 한 게 아니었으면 좋겠군.\" <<He>>【은는】 물러선다.",
+   "<br><br>",
+   "",
+   "<<endevent>>",
+   "",
+   "<<link [[다음|Swimming Lesson]]>><</link>>",
+   "<br>",
+   "",
+   ":: Events Swimming Freed Refuse",
+   "<<set $outside to 0>><<set $location to \"pool\">><<schooleffects>><<effects>>",
+   "",
+   "<<if $speech_attitude is \"meek\">>",
+   "\t\"아, 아니요.\" 당신은 말한다. \"계속 묶여 있어야 해요.\"",
+   "<<elseif $speech_attitude is \"bratty\">>",
+   "\t\"제가 도와달라고 했나요?\" 당신은 선생님을 쏘아보며 말한다.",
+   "<<else>>",
+   "\t\"전 괜찮아요. 고마워요.\" 당신은 말한다.",
+   "<</if>>",
+   "<br><br>",
+   "",
+   "메이슨은 혼란스러워 보인다. \"네가 그렇다면야. 수영 중에 <<= pcAreArmsBound(\"any\") ? \"팔\" : \"사지\">>【을를】 묶는 걸 금지하는 규칙은 없는 것 같으니. 조심하기나 해, 알았지?\"",
+   "<br><br>",
+   "",
+   "<<endevent>>",
+   "",
+   "<<link [[다음|Swimming Lesson]]>><</link>>",
+   "<br>",
+   ""
+  ],
+  "new_en": [],
+  "context": ""
+ }
+]

@@ -230,8 +230,8 @@
 
 				<<link [[다음|Gwylan Request Clothes Waiter Tea]]>><</link>>
 				<br>
-			<<elseif _gwylanLovePercent gte 50 and C.npc.Gwylan.lust gte 25>>
-				<<He>>【은는】 생각에 잠긴 표정으로 당신을 올려다본다.
+			<<elseif _gwylanLovePercent gte 40 and C.npc.Gwylan.lust gte 25>>
+				<<He>> looks up at you with a thoughtful expression on <<his>> face.
 				<<if $worn.neck.collared is 1>>
 					"목걸이까지 하고 왔네. 날 모실 준비가 됐겠군." <<he>>【이가】 윙크하며 말한다.
 				<<else>>
@@ -1057,9 +1057,9 @@
 <br><br>
 
 <<if !$gwylanSeen.includes("request_preen")>>
-	"이런 깃털을 다시 보게 될 줄은 몰랐어.
-	<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or $greathawkmonster is 2>>하피<<else>>매<</if>>들은 멸종된 줄 알았는데."
-	<<He>>【이가】 가게 더 깊숙이 들어가면서 <<his>> 목소리가 점점 희미해진다. "날개를 물려받을 정도로 가까이 다가갔다니."
+	"I never thought I would see feathers like this again.
+	The <<if resolveIfNamedBeastIsMonster("greathawk")>>harpies<<else>>hawks<</if>> were thought to be extinct."
+	<<His>> voice grows fainter as <<he>> moves deeper into the shop. "To think that you have gotten so close to one as to inherit its wings."
 	<br><br>
 
 	<<if isLoveInterest("Great Hawk")>>
@@ -1077,8 +1077,8 @@
 
 	<<He>>【은는】 <<his>> 손으로 <<his>> 입을 막으며 킥킥 웃는다. "미안." <<he>>【이가】 말한다. "생각보다 내가 더 조용했나 봐."
 <<else>>
-	"아직도 믿기지 않아. 만약 <<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or $greathawkmonster is 2>>하피<<else>>매<</if>>들이 돌아오고 있다면, 밖에는 또 무엇이 있을까?"
-	<<He>>【이가】 가게 더 깊숙이 들어가면서 <<his>> 목소리가 점점 희미해진다. "이번엔 뭘 만들까? 회복제? 럴커 퇴치제? 오, 아니면..."
+	"I still can't believe it. If the <<if resolveIfNamedBeastIsMonster("greathawk")>>harpies<<else>>hawks<</if>> are returning, what else could be out there?"
+	<<His>> voice grows fainter as <<he>> moves deeper into the shop. "What should I make this time? A restorative? Lurker repellent? Oh, maybe..."
 	<br><br>
 
 	<<His>> 목소리는 완전히 사라진다. 당신은 자신의 깃털에 대해 알지 못하는 효과가 무엇인지 궁금해하기 시작한다.
@@ -1097,8 +1097,8 @@
 :: Gwylan Request Preen 2
 <<effects>><<run statusCheck("Gwylan")>><<set _tf to checkTFparts()>>
 <<set _selfFeatherNum to 1>>
-그윌란이 도구 몇 개를 들어 보인다. 나사 뚜껑이 달린 병. 얇은 붓.
-보존 처리된 부리<<if !($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or $greathawkmonster is 0>>【은는】 거대 매의 것과 섬뜩할 정도로 닮아 보인다<</if>>.
+Gwylan holds up a few instruments. A screw-top jar. A thin brush.
+A preserved beak<<if !resolveIfNamedBeastIsMonster("greathawk")>> that looks eerily close to the Great Hawk's<</if>>.
 <<if !$gwylanSeen.includes("request_preen")>>
 	먼지가 뽀얗게 쌓여 있다. "좀 닦아야겠군." <<he>>【이가】 <<his>> 소매로 그것들을 닦으며 말한다.
 <<else>>
@@ -2164,7 +2164,7 @@
 :: Gwylan Chastity Removal Gold 3
 <<effects>><<run statusCheck("Gwylan")>>
 <<if $gwylanSeen.includes("request_gas_mask")>>
-	마지막으로 방독면을 착용하자, 마침 그윌란이 돌아온다. <<facewear "gas mask">>
+	You strap the gas mask on last, just in time for Gwylan to return. <<facewear "gas mask" "black" "white">>
 <<else>>
 	마지막으로 호흡용 마스크를 착용하자, 마침 그윌란이 돌아온다. <<facewear "surgical mask" "blue">>
 <</if>>
@@ -2846,99 +2846,92 @@
 
 :: Gwylan Request Widgets [widget]
 <<widget "gwylanRequestText">>
-    <<set $_request to gwylanRequest()>>
-    <<switch $_request.event>>
+	<<set $_request to gwylanRequest()>>
+	<<switch $_request.event>>
 
-        <<case "clothing">>
-            <<if $_request.special is "gas mask">>
-                "하이 가에 있는 옷가게에 <u>방독면</u>이 새로 들어왔다는 소문을 들었어. 그게 진짜 방독면인지, 아니면 그냥 특이한 코스튬인지 알고 싶네.
-                괜찮다면 나한테 하나 가져다줄래? 특별히, <span class="white">흰색</span> 렌즈가 달린 <span class="black">검은색</span> 방독면으로 부탁해. <span class="gold">그걸 직접 쓰고 이리 와야 해</span>."
-            <<elseif $_request.special is "gold accessories">>
-                "엘크 가에 있는 성인용품점에서 파는 장신구 세트가 있어. <u>전부 황금으로 맞춰진 세트지. 팔찌, 발찌, 그리고 초커까지.</u>
-                초라한 나를 위해 그 정도 수고는 해줄 수 있겠지? 물론, <span class="gold">네가 그걸 입고 있는 모습을 먼저 보고 싶네</span>."
-            <<else>>
-                <<set $_outfit to $_request.details.outfit>>
-                <<set $_shops to $_request.details.shops>>
-                <<set $_shopPrimaryRaw to $_shops.includes("clothing") ? "clothing" : $_shops[0]>>
-                <<set $_shopTextRaw to $_shops.filter(shop => shop !== $_shopPrimaryRaw)>>
-				<<set _translateShop to function(shop) {
-					switch(shop) {
-						case "clothing": return "옷가게";
-						case "adult": return "성인용품점";
-						case "antique": return "골동품점";
-						default: return shop;
-					}
-				}>>
+		<<case "clothing">>
+			<<if $_request.special is "gas mask">>
+				"I've heard whispers that the clothing shop on High Street received a shipment of <u>gas masks</u>. I'd like to know if they're genuine, or just unusual costume items.
+				Could you be a dear and fetch one for me? Specifically, a <span class="black">black</span> one with <span class="white">white</span> lenses. Be sure to <span class="gold">wear it here</span>."
+			<<elseif $_request.special is "gold accessories">>
+				"There's a set of accessories being sold at the adult shop on Elk street. <u>It's a matching set of gold. Bracelets, anklets, and a choker.</u>
+				Would you suffer such a gift for little old me? Of course, <span class="gold">I'd like to see you wearing them first</span>."
+			<<else>>
+				<<set $_outfit to $_request.details.outfit>>
+				<<set $_shops to $_request.details.shops>>
+				<<for _i to 0; _i lt $_shops.length; _i++>>
+					<<set $_shops[_i] to ($_shops[_i] is "baitShop" ? "bait" : $_shops[_i])>>
+				<</for>>
+				<<set $_shopPrimary to $_shops.includes("clothing") ? "clothing" : $_shops[0]>>
+				<<set $_shopText to $_shops.filter(shop => shop !== $_shopPrimary)>>
+				"There's <<if $_outfit>>an outfit<<else>>a piece of clothing<</if>> that caught my eye
+				over at the <<= $_shopPrimary>> shop<<if $_shopText.length gte 1>>, although I believe it's also stocked at the <<= formatList($_shopText, "and")>> shop<<if $_shopText.length gte 2>>s<</if>><</if>>.
+				<<set $_shoppingList to $_request.items.filter(piece => !piece.skip && !piece.alt)>>
+				<<set $_plural to $_outfit || $_shoppingList[0].word is "n">>
+				<<if $_outfit>>
+					<span class="teal">It's a full set.</span>
+				<</if>>
+				<<set _shoppingListText to []>>
+				<<for $_i to 0; $_i lt $_shoppingList.length; $_i++>>
+					<<set $_colour to $_shoppingList[$_i].colour_requirement>>
+					<<set $_colour_acc to $_shoppingList[$_i].acc_colour_requirement>>
+					<<set $_word to $_shoppingList[$_i].word>>
+					<<if $_colour isnot "any">>
+						<<set $_firstWord to $_word is "n" ? "a set of" : ["a","e","i","o","u"].some(letter => $_colour.startsWith(letter)) ? "an" : "a">>
+						<<set $_firstWord += " <span class='" + $_colour + "'>" + $_colour + "</span>">>
+						<<set $_secondWord to $_colour_acc isnot "any" ? " with " + " <span class='" + $_colour_acc + "'>" + $_colour_acc + "</span> details" : "">>
+					<<else>>
+						<<set $_firstWord to $_word is "n" ? "a set of" : $_word>>
+						<<set $_secondWord to "">>
+					<</if>>
+					<<set $_theName to "<u>" + $_shoppingList[$_i].name + "</u>">>
+					<<set $_theRest to $_firstWord += " " + $_theName + $_secondWord>>
+					<<set _shoppingListText.push($_theRest)>>
+				<</for>>
+				<<= formatList(_shoppingListText, "and", true).toUpperFirst()>>.
+				<<if $_request.items.some(item => item.integrity_requirement isnot "any")>>
+					<<set $_full to []>><<set $_frayed to []>><<set $_torn to []>><<set $_tattered to []>>
+					<<for $_i to 0; $_i lt $_shoppingList.filter(items => items.integrity_requirement isnot "any").length; $_i++>>
+						<<switch $_shoppingList[$_i].integrity_word>>
+							<<case "full">><<set $_full.push($_shoppingList[$_i].name)>>
+							<<case "frayed">><<set $_frayed.push($_shoppingList[$_i].name)>>
+							<<case "torn">><<set $_torn.push($_shoppingList[$_i].name)>>
+							<<case "tattered">><<set $_tattered.push($_shoppingList[$_i].name)>>
+						<</switch>>
+					<</for>>
+					<<if $_full.length>>
+						<<if $_full.length gt 1>>The <<print formatList($_full, "and")>> were<<elseif $_plural>>They were<<else>>It was<</if>> <span class="green">pristine</span>.
+					<</if>>
+					<<if $_frayed.length>>
+						I'd like to see how <<if $_frayed.length gt 1>>the <<print formatList($_frayed, "and")>> look<<elseif $_plural>>they look<<else>>it looks<</if>> after a little bit of wear, maybe even <span class="teal">frayed</span>.
+					<</if>>
+					<<if $_torn.length>>
+						Don't be afraid to take <<if $_torn.length gt 1>>the <<print formatList($_torn, "and")>><<elseif $_plural>>them<<else>>it<</if>> out around town, I'd like to see how <<if $_torn.length gt 1>>they look<<else>>it looks<</if>> <span class="purple">torn</span>.
+					<</if>>
+					<<if $_tattered.length>>
+						Wear <<if $_tattered.length gt 1>>the <<print formatList($_tattered, "and")>><<elseif $_plural>>them<<else>>it<</if>> for a while, until <<if $_tattered.length gt 1 || $_plural>>they're<<else>>it's<</if>> in <span class="red">tatters</span>.
+					<</if>>
+				<</if>>
+				<<set $_conclusions to [
+					"I bet you'll look great in <<if $_plural>>them<<else>>it<</if>>! Be sure to <span class='gold'>wear <<if $_plural>>them<<else>>it<</if>> here</span> so I can see.",
+					"<span class='gold'>Wear <<if $_plural>>them<<else>>it<</if>> here,</span> if you would be so kind.",
+					"If you could <span class='gold'>wear <<if $_plural>>them<<else>>it<</if>> here,</span> that would be wonderful.",
+				]>>
+				<<if $gwylanSeen.includes("yearning") and $gwylan.timer.ritual and Time.date.dayDifference(new DateTime($gwylan.timer.ritual)) lte 0>>
+					<<set $_conclusions.push("<span class='gold'>Wear <<if $_plural>>them<<else>>it<</if>> here,</span> and maybe I'll rip them right off of you.")>>
+				<</if>>
+				<<print $_conclusions.pluck()>>
+				<<if $_request.details.replacements is "allowed">>
+					<<if $_outfit>>They come<<else>>It comes<</if>> in a few different styles, <span class="green">any of them will do</span>."
+				<<elseif $_request.details.replacements is "blocked">>
+					<<if $_outfit>>They come<<else>>It comes<</if>> in a few different styles, <span class="red">so make sure you get the right one<<if $_plural>>s<</if>>.</span>"
+				<<else>>
+					<<print either("It should be easy enough.", "No fuss, no muss.", "Go on then, dear.", "I'll owe you.")>>"
+				<</if>>
+			<</if>>
+			<br><br>
 
-				<<set $_shopPrimary to _translateShop($_shopPrimaryRaw)>>
-				<<set $_shopText to $_shopTextRaw.map(shop => _translateShop(shop))>>
-                "내 눈길을 사로잡은 <<if $_outfit>>옷 세트가<<else>>옷이 하나<</if>> 있어.
-                저기 <<= $_shopPrimary>>에 말이야<<if $_shopText.length gte 1>>. 뭐, <<= formatList($_shopText, "그리고")>> 상점<<if $_shopText.length gte 2>>들<</if>>에도 재고가 있을 거라고 생각하지만<</if>>.
-                <<set $_shoppingList to $_request.items.filter(piece => !piece.skip && !piece.alt)>>
-                <<set $_plural to $_outfit || $_shoppingList[0].word is "n">>
-                <<if $_outfit>>
-                    <span class="teal">그건 전체 세트야.</span>
-                <</if>>
-                <<set _shoppingListText to []>>
-                <<for $_i to 0; $_i lt $_shoppingList.length; $_i++>>
-                    <<set $_colour to $_shoppingList[$_i].colour_requirement>>
-                    <<set $_colour_acc to $_shoppingList[$_i].acc_colour_requirement>>
-                    <<set $_word to $_shoppingList[$_i].word>>
-                    <<if $_colour isnot "any">>
-                        <<set $_firstWord to $_word is "n" ? "<span class='" + $_colour + "'>" + setup.colourName($_colour) + "</span> 세트" : "<span class='" + $_colour + "'>" + setup.colourName($_colour) + "</span>">>
-                        <<set $_secondWord to $_colour_acc isnot "any" ? "에 <span class='" + $_colour_acc + "'>" + setup.colourName($_colour_acc) + "</span> 장식이 들어간" : "">>
-                    <<else>>
-                        <<set $_firstWord to $_word is "n" ? "세트" : "">>
-                        <<set $_secondWord to "">>
-                    <</if>>
-                    <<set $_theName to "<u>" + $_shoppingList[$_i].name + "</u>">>
-                    <<set $_theRest to ($_firstWord ? $_firstWord + ($_secondWord ? "" : " ") : "") + $_secondWord + ($_secondWord ? " " : "") + $_theName>>
-                    <<set _shoppingListText.push($_theRest)>>
-                <</for>>
-                <<= formatList(_shoppingListText, "그리고", true).toUpperFirst()>>【이】야.
-                <<if $_request.items.some(item => item.integrity_requirement isnot "any")>>
-                    <<set $_full to []>><<set $_frayed to []>><<set $_torn to []>><<set $_tattered to []>>
-                    <<for $_i to 0; $_i lt $_shoppingList.filter(items => items.integrity_requirement isnot "any").length; $_i++>>
-                        <<switch $_shoppingList[$_i].integrity_word>>
-                            <<case "full">><<set $_full.push($_shoppingList[$_i].name)>>
-                            <<case "frayed">><<set $_frayed.push($_shoppingList[$_i].name)>>
-                            <<case "torn">><<set $_torn.push($_shoppingList[$_i].name)>>
-                            <<case "tattered">><<set $_tattered.push($_shoppingList[$_i].name)>>
-                        <</switch>>
-                    <</for>>
-                    <<if $_full.length>>
-                        <<if $_full.length gt 1>><<print formatList($_full, "【와과】")>>【은는】 <<elseif $_plural>>그것들은<<else>>그것은<</if>> <span class="green">아주 새것</span>이었어.
-                    <</if>>
-                    <<if $_frayed.length>>
-                        난 <<if $_frayed.length gt 1>><<print formatList($_frayed, "【와과】")>>【이가】 <<elseif $_plural>>그것들이<<else>>그것이<</if>> 조금 닳은 뒤엔 어떤 모습일지 궁금해, 어쩌면 <span class="teal">올이 풀려도</span> 괜찮을 거야.
-                    <</if>>
-                    <<if $_torn.length>>
-                        <<if $_torn.length gt 1>><<print formatList($_torn, "【와과】")>>【을를】<<elseif $_plural>>그것들을<<else>>그것을<</if>> 입고 거리를 돌아다니는 걸 두려워하지 마, 난 그게 <span class="purple">찢어졌을 때</span> 어떻게 보일지 알고 싶거든.
-                    <</if>>
-                    <<if $_tattered.length>>
-                        <<if $_tattered.length gt 1>><<print formatList($_tattered, "【와과】")>>【을를】<<elseif $_plural>>그것들을<<else>>그것을<</if>> 한동안 입고 있어 봐, <span class="red">너덜너덜</span>해질 때까지 말이야.
-                    <</if>>
-                <</if>>
-                <<set $_conclusions to [
-                    "네가 입으면 정말 멋질 거야! 내가 볼 수 있게 <span class='gold'>꼭 입고 이리 와야 해</span>.",
-                    "괜찮다면, <span class='gold'>그걸 직접 입고 이리 와줘.</span>",
-                    "<span class='gold'>그걸 입고 여기로 와준다면,</span> 정말 훌륭할 거야.",
-                ]>>
-                <<if $gwylanSeen.includes("yearning") and $gwylan.timer.ritual and Time.date.dayDifference(new DateTime($gwylan.timer.ritual)) lte 0>>
-                    <<set $_conclusions.push("<span class='gold'>그걸 입고 여기로 와줘.</span> 어쩌면 내가 바로 찢어 벗겨버릴지도 모르니까.")>>
-                <</if>>
-                <<print $_conclusions.pluck()>>
-                <<if $_request.details.replacements is "allowed">>
-                    여러 가지 스타일이 있는데, <span class="green">아무거나 상관없어</span>."
-                <<elseif $_request.details.replacements is "blocked">>
-                    여러 가지 스타일이 있으니까, <span class="red">꼭 제대로 된 걸로 가져와야 해.</span>"
-                <<else>>
-                    <<print either("어렵진 않을 거야.", "번거로울 것 없어.", "그럼 어서 해, 얘야.", "신세 좀 질게.")>>"
-                <</if>>
-            <</if>>
-            <br><br>
-
-            <span class="gold">그윌란의 의뢰가 당신의 일지에 추가되었습니다.</span>
+			<span class="gold">Gwylan's request has been added to your journal.</span>
 
 		<<case "ingredients">>
 			<<if $_request.special is "tutorial">>

@@ -1,0 +1,141 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<elseif $rng gte 3 and $settings.bestialityEnabled and ($hypnosis_traits.deviancy is undefined or $hypnosis_traits.deviancy lt 5)>>",
+   "\t\t\tUnspeakable images fill your mind, luring you someplace alien."
+  ],
+  "old_kr": [
+   "\t\t<<elseif $rng gte 3 and $settings.bestialityEnabled and ($hypnosis_traits.deviancy is undefined or $hypnosis_traits.deviancy lt 5)>>",
+   "\t\t\t형언할 수 없는 형상들이 마음을 채우며, 당신을 낯선 곳으로 유혹한다."
+  ],
+  "new_en": [
+   "\t\t<<elseif $rng gte 3 and isBestialityOnForAnyCreature() and ($hypnosis_traits.deviancy is undefined or $hypnosis_traits.deviancy lt 5)>>",
+   "\t\t\tUnspeakable images fill your mind, luring you someplace alien."
+  ],
+  "context": "\t\t\t<<set _tentacle.head to \"hypnosis_cover\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou kick _the _tentacle.fullDesc and it reels away from you.",
+   "\t\t<<defiance 2>><<set $speechhit to 1>><<tentacleadvdisable _tentacle>><<set $attackstat += 1>>"
+  ],
+  "old_kr": [
+   "\t\t당신이 _the _tentacle.fullDesc【을를】 발로 걷어차자 그것은 비틀거리며 멀어진다.",
+   "\t\t<<defiance 2>><<set $speechhit to 1>><<tentacleadvdisable _tentacle>><<set $attackstat += 1>>"
+  ],
+  "new_en": [
+   "\t\tYou kick _the _tentacle.fullDesc and it reels away from you.",
+   "\t\t<<defiance 2>><<set $speechPlayerHits to 1>><<tentacleadvdisable _tentacle>><<set $attackstat += 1>>"
+  ],
+  "context": "\t\t<<set $feetaction to 0>><<set $feetactiondefault to \"feethit\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $skin[_args[0]] and $skin[_args[0]].special is \"holy\" or $skin[_args[1]] and $skin[_args[1]].special is \"holy\" and !$banishDisable>>",
+   "\t\tThe holy symbol on your skin burns with a white light, <span class=\"pink\">searing you,</span> <span class=\"teal\">and _the _tentacle.fullDesc.</span><<pain 8>><<set _tentacle.tentaclehealth -= 12>><<tentacle_record \"banish\" 12>><<tentacleadvdisable _tentacle>>",
+   "\t\t<<set $speechbanish to 1>>"
+  ],
+  "old_kr": [
+   "\t<<if $skin[_args[0]] and $skin[_args[0]].special is \"holy\" or $skin[_args[1]] and $skin[_args[1]].special is \"holy\" and !$banishDisable>>",
+   "\t\t피부 위의 성스러운 문양이 하얀 빛으로 타오르며, <span class=\"pink\">당신을 지지고,</span> <span class=\"teal\">_the _tentacle.fullDesc까지 태운다.</span><<pain 8>><<set _tentacle.tentaclehealth -= 12>><<tentacle_record \"banish\" 12>><<tentacleadvdisable _tentacle>>",
+   "\t\t<<set $speechbanish to 1>>"
+  ],
+  "new_en": [
+   "\t<<if ($skin[_args[0]]?.special is \"holy\" or $skin[_args[1]]?.special is \"holy\") and !$banishDisable>>",
+   "\t\tThe holy symbol on your skin burns with a white light, <span class=\"pink\">searing you,</span> <span class=\"teal\">and _the _tentacle.fullDesc.</span><<pain 8>><<set _tentacle.tentaclehealth -= 12>><<tentacle_record \"banish\" 12>><<tentacleadvdisable _tentacle>>",
+   "\t\t<<set $speechBanish to 1>>"
+  ],
+  "context": "<<widget \"tentacle_skin\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechmouthvirgin to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechOralVirgin to 2>>"
+  ],
+  "context": "\t\t\t\t<<if $abomination is 1 and $NPCList[0].type is \"plant\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechvaginavirgin to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechVaginaVirgin to 2>>"
+  ],
+  "context": "\t\t\t\t<<if $abomination is 1 and $NPCList[0].type is \"plant\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $speechpenisvirgin to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $speechPenisVirgin to 2>>"
+  ],
+  "context": "\t\t\t<<if $abomination is 1 and $NPCList[0].type is \"plant\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $speechanusvirgin to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $speechAnusVirgin to 2>>"
+  ],
+  "context": "\t\t\t<<if $abomination is 1 and $NPCList[0].type is \"plant\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $speechhit to 1 * _multi>><<set $attackstat += 1 * _multi>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $speechPlayerHits to 1 * _multi>><<set $attackstat += 1 * _multi>>"
+  ],
+  "context": "\t\t<<defiance `2 * _multi`>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $speechbanish to 1 * _multi>><<set $attackstat += 1 * _multi>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $speechBanish to 1 * _multi>><<set $attackstat += 1 * _multi>>"
+  ],
+  "context": "\t\t<<defiance `Math.floor($purity / 150) * _multi`>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechstruggle to 1>><<defiance 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechStruggle to 1>><<defiance 1>>"
+  ],
+  "context": "\t\t\t<<set $leftaction to 0>><<set $leftactiondefault to \"leftstruggle\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<defiance 1>><<set $speechstruggle to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<defiance 1>><<set $speechStruggle to 1>>"
+  ],
+  "context": "\t\t\t<<set $rightaction to 0>><<set $rightactiondefault to \"rightstruggle\">>"
+ }
+]

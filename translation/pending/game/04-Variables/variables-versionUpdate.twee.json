@@ -1,0 +1,546 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $robinPillory and $robinPillory.danger gt 15>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $robinPillory?.danger gt 15>>"
+  ],
+  "context": "\t<!-- v0.3.9.3: Robin pillory bug -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $farm and $farm.wage gte 1500>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $farm?.wage gte 1500>>"
+  ],
+  "context": "\t<!-- v0.3.10.0 farm wage fix -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $objectVersion.specialClothes lt 21 or $objectVersion.specialClothes is undefined>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $objectVersion.specialClothes lt 22 or $objectVersion.specialClothes is undefined>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $objectVersion.specialClothes to 21>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $objectVersion.specialClothes to 22>>"
+  ],
+  "context": "\t\t<!-- DO increment this, and don't forget to do it in variables-start.twee, too -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $objectVersion.museumAntiques lt 20 or $objectVersion.museumAntiques is undefined>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $objectVersion.museumAntiques lt 21 or $objectVersion.museumAntiques is undefined>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $objectVersion.museumAntiques to 20>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $objectVersion.museumAntiques to 21>>"
+  ],
+  "context": "\t\t<<updateMuseumAntiques>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$objectVersion.hairFix lt 1 or $objectVersion.hairFix is undefined>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$objectVersion.hairFix gte 1 or $objectVersion.hairFix is undefined>>"
+  ],
+  "context": "\t<!-- Fix for hair style renames -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t <!-- DO NOT MOVE ABOVE \"Gameplay Options Variable Refactor\" -->"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<!-- Must precede <<updateNewNamedNpcs>> -->",
+   "\t<<if $settings.skinToneMode is undefined>>",
+   "\t\t<<run Object.assign($settings, skinToneSettingsFromDarkChance($settings.darkSkinChance))>>",
+   "\t\t<<unset $settings.darkSkinChance>>",
+   "\t\t<<run [",
+   "\t\t\tV.NPCName,",
+   "\t\t\tV.NPCList,",
+   "\t\t\tObject.values(V.per_npc),",
+   "\t\t\t[V.dock_dog, V.pillory.tenant.person, V.model_host, V.model_dom, V.parentNPC, V.shyNPC, V.currentNPC],",
+   "\t\t].flat().forEach(npc => {",
+   "\t\t\tif (npc && npc.skincolour === 0) delete npc.skincolour;",
+   "\t\t})>>",
+   "\t<</if>>",
+   "",
+   "\t<!-- DO NOT MOVE ABOVE \"Gameplay Options Variable Refactor\" -->"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set C.npc[\"Ivory Wraith\"].skincolour to \"ghost\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set C.npc[\"Ivory Wraith\"].skinType to \"ghost\">>"
+  ],
+  "context": "\t\t<<if C.npc[\"Ivory Wraith\"].init is 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $per_npc.farm_tower_guard and $per_npc.farm_tower_guard.active isnot undefined>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $per_npc.farm_tower_guard?.active isnot undefined>>"
+  ],
+  "context": "\t<!-- V0.4 tower guard state saved -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $daily and $daily.tentacle_forest_lurker>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $daily?.tentacle_forest_lurker>>"
+  ],
+  "context": "\t<!-- V0.4.0.6 Separating tentacle forest lurker from daily object to prevent midnight errors in tentacle forest -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $brothelVending and $brothelVending.status is \"sold\" and $brothelVending.weeksEmpty lt 4 and ($brothelVending.condomsSold >= 1 or $brothelVending.lubeSold >= 1)>> /* condomsSold or lubeSold checks added later to prevent bugs. This won't fix old save vending machine disappearances as cleanly, but it fixes importing a save in the first 4 weeks after the machine has been sold giving a free machine */"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $brothelVending?.status is \"sold\" and $brothelVending.weeksEmpty lt 4 and ($brothelVending.condomsSold >= 1 or $brothelVending.lubeSold >= 1)>> /* condomsSold or lubeSold checks added later to prevent bugs. This won't fix old save vending machine disappearances as cleanly, but it fixes importing a save in the first 4 weeks after the machine has been sold giving a free machine */"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $brothelVending and $brothelVending.products is 0 and $brothelVending.weeksEmpty gt 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $brothelVending?.products is 0 and $brothelVending.weeksEmpty gt 0>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<!-- v <= 0.4.5.3: Consolidated these into $speechSextoyState -->"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<!-- v <= 0.4.5.3: Consolidated these into $speechSexToyState -->"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $bird and $bird.state and !$bird.hunts>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $bird?.state and !$bird.hunts>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $avery_tower and $avery_tower.effects?.includes(\"bailey\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $avery_tower?.effects?.includes(\"bailey\")>>"
+  ],
+  "context": "\t<!-- 0.5.5.2, proper skyscraper init -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $avery_mansion and $avery_mansion.version is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $avery_mansion?.version is 1>>"
+  ],
+  "context": "\t<!-- 0.5.5.5, housekeeping events only once a day -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $avery_mansion and $avery_mansion.version is 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $avery_mansion?.version is 2>>"
+  ],
+  "context": "\t<!-- 0.5.7.0, Avery talk -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $avery_mansion and $avery_mansion.version is 3>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $avery_mansion?.version is 3>>"
+  ],
+  "context": "\t<!-- 0.5.7.1, Avery talk for real -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\tfirstDay: $timeStats.docks and $timeStats.docks.total ? false : true,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tfirstDay: $timeStats.docks?.total ? false : true,"
+  ],
+  "context": "\t\t\tstatus: $dockstatus || 30,"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $frozenValues and $frozenValues.player>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $frozenValues?.player>>"
+  ],
+  "context": "\t\t\t<<set $player.penissize += 2>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $hospitalintro is \"party\" or ($avery_tower and $avery_tower.effects.includes(\"Harper\"))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $hospitalintro is \"party\" or ($avery_tower?.effects.includes(\"Harper\"))>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$objectVersion.foodstuff or $objectVersion.foodstuff lt 7>>",
+   "\t\t<<updatePlants>>",
+   "\t\t<<set $objectVersion.foodstuff to 7>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$objectVersion.foodstuff or $objectVersion.foodstuff lt 8>>",
+   "\t\t<<updateFoodstuff>>",
+   "\t\t<<set $objectVersion.foodstuff to 8>>"
+  ],
+  "context": "\t<!-- Increment in variables-start.twee as well whenever new foodstuff objects are added -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $avery_antiques and $avery_antiques.noticed.includes(\"dagger\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $avery_antiques?.noticed.includes(\"dagger\")>>"
+  ],
+  "context": "\t/* 0.5.9.6 giving Avery's mansion antiques to PCs prevented by bug */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<!-- Fix for the player not knowing the parents of children they fathered. -->",
+   "\t<<if !$objectVersion.playerDonorBirths>>",
+   "\t\t<<run nameDeliveredRandomCarriers()>>",
+   "\t\t<<run $pregnancies.filter(pregnancy => pregnancy.deliveredDate isnot null).forEach(pregnancy => learnPlayerFatheredBirth(pregnancy.pregnancyId))>>",
+   "\t\t<<set $objectVersion.playerDonorBirths to 1>>",
+   "\t<</if>>",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $sexStats and $sexStats.vagina.menstruation and $sexStats.vagina.menstruation.fertileLeadDays is undefined>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $sexStats?.vagina.menstruation and $sexStats.vagina.menstruation.fertileLeadDays is undefined>>"
+  ],
+  "context": "\tso their current cycle has a value. Fresh cycles roll their own. -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t})>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if C.npc.Kylar.init and C.npc.Kylar.state is 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $settings.bestialityEnabled isnot undefined>>",
+   "\t\t<<set $settings.granularBeastControl to false>>",
+   "\t\t<<run migrateNamedBeastSettings()>>",
+   "\t\t<<unset $blackwolfmonster>>",
+   "\t\t<<unset $nightmonstermonster>>",
+   "\t\t<<unset $greathawkmonster>>",
+   "\t\t<<run migrateBeastSettings()>>",
+   "\t\t<<unset $settings.bestialityEnabled>>",
+   "\t\t<<unset $settings.beastMaleChance>>",
+   "\t\t<<unset $settings.beastMaleChanceMale>>",
+   "\t\t<<unset $settings.beastMaleChanceFemale>>",
+   "\t\t<<unset $settings.beastMaleChanceSplit>>",
+   "\t\t<<unset $settings.monsterHallucinationsOnly>>",
+   "\t\t<<unset $settings.monsterChance>>",
+   "\t<</if>>",
+   "",
+   "\t<<if $genericBeastSettings is undefined>>",
+   "\t\t<<set $genericBeastSettings to {",
+   "\t\t\tbeastMaleChance: 80,",
+   "\t\t\tbeastMaleChanceMale: 80,",
+   "\t\t\tbeastMaleChanceFemale: 80,",
+   "\t\t\tbeastMaleChanceSplit: false,",
+   "\t\t\tmonsterHallucinationsOnly: true,",
+   "\t\t\tmonsterChance: 50,",
+   "\t\t\tbestiality: \"on\",",
+   "\t\t}>>",
+   "\t<</if>>",
+   "",
+   "\t<<if $settings.horsesEnabled isnot undefined>>",
+   "\t\t<<if !$settings.horsesEnabled and $settings.beastSettings.horse.bestiality isnot \"off\">>",
+   "\t\t\t<<set $settings.beastSettings.horse.bestiality to \"off\">>",
+   "\t\t\t<<set $settings.granularBeastControl to true>>",
+   "\t\t<</if>>",
+   "\t\t<<unset $settings.horsesEnabled>>",
+   "\t<</if>>",
+   "",
+   "\t<<set $genericBeastSettings.victimsAlwaysMonster ??= false>>",
+   "\t<<for _beastType range C.beastSettingTypes>>",
+   "\t\t<<set $settings.beastSettings[_beastType].victimsAlwaysMonster ??= false>>",
+   "\t<</for>>",
+   "",
+   "\t<<if $options.tipdisable is \"f\">>",
+   "\t\t<<set $options.tipdisable to false>>",
+   "\t<<elseif $options.tipdisable is \"t\">>",
+   "\t\t<<set $options.tipdisable to true>>",
+   "\t<</if>>",
+   "",
+   "\t<!-- The dark skin percentage became a lightest/most common/darkest skin tone range",
+   "\tthat goes from 0-100 from lightest to darkest tone.  Ivory Wraith's \"ghost\" is a skin type rather than a tone now. -->",
+   "\t<<if $objectVersion.skinTone is undefined>>",
+   "\t\t<<run [",
+   "\t\t\tV.NPCName,",
+   "\t\t\tV.NPCList,",
+   "\t\t\tObject.values(V.per_npc),",
+   "\t\t\tObject.values(V.storedNPCs).map(stored => stored.npc),",
+   "\t\t\t[V.dock_dog, V.pillory.tenant.person, V.model_host, V.model_dom, V.parentNPC, V.shyNPC, V.currentNPC],",
+   "\t\t].flat().forEach(npc => {",
+   "\t\t\tif (!npc) return;",
+   "\t\t\tif (npc.skincolour === \"ghost\") { npc.skinType = \"ghost\"; delete npc.skincolour; }",
+   "\t\t\telse if (npc.skincolour === \"white\") npc.skincolour = 0;",
+   "\t\t\telse if (npc.skincolour === \"black\") npc.skincolour = 70;",
+   "\t\t})>>",
+   "\t\t<<set $objectVersion.skinTone to 1>>",
+   "\t<</if>>",
+   "",
+   "\t<<if !$objectVersion.KylarFix and C.npc.Kylar.init and C.npc.Kylar.state is 0>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $objectVersion.KylarFix to 1>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $avery_mansion and $avery_mansion.version is 4>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $avery_mansion?.version is 4>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\t<<if $tfFIX is undefined or $tfFIX lte 9>>",
+   "\t\t<<if $transformationParts.fallenAngel.wings is \"classicfallenplus\">><<set $transformationParts.fallenAngel.wings to \"classic-fallenplus\">><</if>>",
+   "\t<</if>>",
+   "\t<<set $tfFIX to 10>>",
+   "",
+   "\t<<if $travelSpeed is undefined>>",
+   "\t\t<<set $travelSpeed to \"normally\">>",
+   "\t<</if>>",
+   "",
+   "\t<<if $plots is undefined>>",
+   "\t\t<<set $plots to {}>>",
+   "\t<</if>>",
+   "\t<<for _plotLocation range [\"garden\", \"farm\", \"wolf\", \"eden\", \"asylum\"]>>",
+   "\t\t<<set $plots[_plotLocation] ??= []>>",
+   "\t<</for>>",
+   "",
+   "\t/* Adding $avery_helicopter for Avery's helicopter event */",
+   "\t<<if C.npc.Avery.init is 1 and !$avery_helicopter>>",
+   "\t\t<<set $avery_helicopter to []>>",
+   "\t\t<<set $avery_helicopter.timer to 0>>",
+   "\t<</if>>",
+   "\t",
+   "\t/* Mine Rework */",
+   "\t<<unset $mines_guards_dig>>",
+   "\t<<unset $mines_entrance_drains>>",
+   "\t<<unset $mines_crystals>>",
+   "\t<<unset $mines_suspicion>>",
+   "",
+   "\t<<if $ironmanmode and $options.maxStates is 1>>",
+   "\t\t<<set $options.maxStates to 5>>",
+   "\t<</if>>",
+   "",
+   "\t<<if $collapsedRelationBoxes is undefined>>",
+   "\t\t<<set $collapsedRelationBoxes to []>>",
+   "\t<</if>>",
+   "",
+   "\t<<if $defaultSidebarMouth is undefined>>",
+   "\t\t<<set $defaultSidebarMouth to \"smile\">>",
+   "\t<</if>>",
+   "",
+   "\t/* 0.5.13.0 */",
+   "\t<<if $settings.nudeGenderPerception === 0 and $nudeGenderPerceptionBackComp is undefined>>",
+   "\t\t<<set $schoolrep.crossdress to 0>>",
+   "\t\t<<set $schoolrep.herm to 0>>",
+   "\t<</if>>",
+   "\t<<set $nudeGenderPerceptionBackComp to 1>>",
+   "",
+   "\t<!-- Renamed to $speechDisable -->",
+   "\t<<unset $speechdisable>>",
+   "",
+   "\t<!-- Replaced by $NPCList[n].speechotheranusescape -->",
+   "\t<<unset $speechotheranusescape1 $speechotheranusescape2 $speechotheranusescape3 $speechotheranusescape4 $speechotheranusescape5 $speechotheranusescape6>>",
+   "",
+   "\t<<if def $sciencechance>>",
+   "\t\t<<unset $sciencechance>>",
+   "\t<</if>>",
+   "",
+   "\t<<if $player.skin.faceFreckles is undefined>>",
+   "\t\t<<set $player.skin.faceFreckles to $player.freckles is true>>",
+   "\t\t<<run delete $player.freckles>>",
+   "\t<</if>>",
+   "\t<<if $player.skin.bodyFreckles is undefined>>",
+   "\t\t<<set $player.skin.bodyFreckles to \"none\">>",
+   "\t<</if>>",
+   "\t",
+   "\t/* fixed $specialTransform being 1 with no divine tfs */",
+   "\t<<if $demon gte 1 or $angel gte 1 or $fallenangel gte 2>>",
+   "\t\t<<set $specialTransform to 1>>",
+   "\t<<else>>",
+   "\t\t<<set $specialTransform to 0>>",
+   "\t<</if>>",
+   "",
+   "\t<<set $rentDay ??= $rentday>><<unset $rentday>>",
+   "\t<<set $rentTime ??= $renttime>><<unset $renttime>>",
+   "\t<<set $rentMoney ??= $rentmoney>><<unset $rentmoney>>",
+   "\t<<set $rentStage ??= $rentstage>><<unset $rentstage>>",
+   "\t<<set $rentSale ??= $rentsale>><<unset $rentsale>>",
+   "",
+   "\t<<if $kylar_manor_secret gte 3 and !$kylar_altar_research>>",
+   "\t\t<<set $kylar_altar_research to []>>",
+   "\t\t<<set $kylar_altar_library to 0>>",
+   "\t<</if>>",
+   "",
+   "\t<<if def $cumballoon>>",
+   "\t\t<<unset $cumballoon>>",
+   "\t<</if>>",
+   "\t<<if !$objectVersion.nnpcOutfits>>",
+   "\t\t<<if C.npc.Bailey.outfits>>",
+   "\t\t\t<<initNNPCClothes \"Bailey\" \"update\">>",
+   "\t\t<</if>>",
+   "\t\t<<if C.npc.Niki.outfits>>",
+   "\t\t\t<<initNNPCClothes \"Niki\" \"update\">>",
+   "\t\t<</if>>",
+   "\t\t<<if C.npc.Quinn.outfits>>",
+   "\t\t\t<<initNNPCClothes \"Quinn\" \"update\">>",
+   "\t\t<</if>>",
+   "\t\t<<if C.npc.Sam.outfits>>",
+   "\t\t\t<<initNNPCClothes \"Sam\" \"update\">>",
+   "\t\t<</if>>",
+   "\t\t<<if C.npc.Wren.outfits>>",
+   "\t\t\t<<initNNPCClothes \"Wren\" \"update\">>",
+   "\t\t<</if>>",
+   "\t\t<<if C.npc.Zephyr.outfits>>",
+   "\t\t\t<<initNNPCClothes \"Zephyr\" \"update\">>",
+   "\t\t<</if>>",
+   "\t\t<<if C.npc.Jordan.outfits>>",
+   "\t\t\t<<initNNPCClothes \"Jordan\" \"reset\">>",
+   "\t\t<</if>>",
+   "\t\t<<set $objectVersion.nnpcOutfits to 1>>",
+   "\t<</if>>",
+   "\t",
+   "\t<<if $kylarbed is 0>>",
+   "\t\t<<unset $kylarbed>>",
+   "\t<</if>>",
+   "",
+   "\t<<unset $rentDay>>",
+   "",
+   "\t<<if $virginityProtected is true and (![true, \"Sydney\"].includes($player.virginity.vaginal) or ![true, \"Sydney\"].includes($player.virginity.penile))>>",
+   "\t\t<<set $virginityProtected to false>>",
+   "\t<</if>>"
+  ],
+  "context": "\t<</if>>"
+ }
+]

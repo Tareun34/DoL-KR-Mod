@@ -1,0 +1,50 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $player.penisExist and $player.vaginaExist>>",
+   "\t\"What kind of a freak are you?\" the <<person1>><<person>> says, as the <<person2>><<person>> covers <<his>> mouth with <<his>> hand. The <<person3>><<person>> looks transfixed."
+  ],
+  "old_kr": [
+   "<<if $player.penisExist and $player.vaginaExist>>",
+   "\t\"넌 대체 무슨 괴물이냐?\" <<person1>><<person>>【이가】 말하자, <<person2>><<person>>【은는】 <<his>> 손으로 <<his>> 입을 가린다. <<person3>><<person>>【은는】 넋을 잃고 바라본다."
+  ],
+  "new_en": [
+   "<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>",
+   "\t\"What kind of a freak are you?\" the <<person1>><<person>> says, as the <<person2>><<person>> covers <<his>> mouth with <<his>> hand. The <<person3>><<person>> looks transfixed."
+  ],
+  "context": "<<schoolrep_naked>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $player.gender_appearance is \"f\">>",
+   "\t\tAll three laugh. \"That wasn't what I was expecting,\" the <<person1>><<person>> says. \"You're some kind of pervert.\""
+  ],
+  "old_kr": [
+   "\t<<if $player.gender_appearance is \"f\">>",
+   "\t\t세 명 모두 웃는다. \"내가 기대했던 건 이게 아닌데.\" <<person1>><<person>>【이가】 말한다. \"너 변태구나.\""
+  ],
+  "new_en": [
+   "\t<<if $player.gender_appearance is \"f\" and $settings.nudeGenderPerception !== 0>>",
+   "\t\tAll three laugh. \"That wasn't what I was expecting,\" the <<person1>><<person>> says. \"You're some kind of pervert.\""
+  ],
+  "context": "<<elseif $player.penisExist>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $player.gender_appearance is \"m\">>",
+   "\t\tAll three laugh. \"That wasn't what I was expecting,\" the <<person1>><<person>> says. \"You're some kind of pervert.\""
+  ],
+  "old_kr": [
+   "\t<<if $player.gender_appearance is \"m\">>",
+   "\t\t세 명 모두 웃는다. \"내가 기대했던 건 이게 아닌데.\" <<person1>><<person>>【이가】 말한다. \"너 변태구나.\""
+  ],
+  "new_en": [
+   "\t<<if $player.gender_appearance is \"m\" and $settings.nudeGenderPerception !== 0>>",
+   "\t\tAll three laugh. \"That wasn't what I was expecting,\" the <<person1>><<person>> says. \"You're some kind of pervert.\""
+  ],
+  "context": "<<else>>"
+ }
+]

@@ -345,6 +345,10 @@
 	<<skill_difficulty currentSkillValue('housekeeping') "가사" _args[0] _args[1] _args[2]>>
 <</widget>>
 
+<<widget "pickaxedifficulty">>
+	<<skill_difficulty $prof.pickaxe "Pickaxe" _args[0] _args[1] _args[2]>>
+<</widget>>
+
 <<widget "difficulty">>
 	<<if _args[0] and !$settings.blindStatsEnabled>>
 	| 성공 확률:
@@ -425,14 +429,15 @@
 			different standards for how to display skill difficulty text (and so it does not call <<skillDifficultyText>>)
 		 -->
 		<<set _successVars to {
-			"체격": "physiqueSuccess",
-			"의지력": "willpowerSuccess",
-			"춤": "danceSuccess",
-			"수영": "swimmingSuccess",
-			"운동": "athleticsSuccess",
-			"관리": "tendingSuccess",
-			"가사": "housekeepingSuccess",
-			"영어": "englishSuccess"
+			"Physique": "physiqueSuccess",
+			"Willpower": "willpowerSuccess",
+			"Dance": "danceSuccess",
+			"Swimming": "swimmingSuccess",
+			"Athletics": "athleticsSuccess",
+			"Tending": "tendingSuccess",
+			"Housekeeping": "housekeepingSuccess",
+			"English": "englishSuccess",
+			"Pickaxe": "pickaxeSuccess"
 		}>>
 		<<if _successVars[_args[1]] isnot undefined>>
 			<<set V[_successVars[_args[1]]] to (($_skill gte random(_skilldifficultymin, _skilldifficultymax)) ? 1 : 0)>>

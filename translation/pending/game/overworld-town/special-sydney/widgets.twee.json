@@ -1,0 +1,41 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $bus is \"schoollibrary\" or $location is \"school\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $worn.neck.name is \"love locket\" and C.npc.Sydney.love gte 10 and $rng gte 91 and !$daily.sydney.lovelocket and ((_sydney_location is \"library\" and $location is \"school\") or (_sydney_location is \"temple\" and $location is \"temple\"))>>",
+   "\t\t<<set $daily.sydney.lovelocket to 1>>",
+   "\t\t<<person1>>",
+   "\t\tSydney's eyes fall on your love locket.",
+   "\t\t<br><br>",
+   "\t\t\"Cute necklace you got there<<if $sydneyromance is 1>>.\" <<He>> fiddles with it.<<else>>,\" <<he>> comments.<</if>>",
+   "\t\t<br><br>",
+   "\t\t<<neckstrip>><<wearProp \"love locket\" $carried.neck.colour>>",
+   "\t\t<<link [[Thank <<him>>|Sydney Locket]]>><<set $phase to 1>><</link>>",
+   "\t\t<br>",
+   "\t\t<<link [[Show <<him>> your love locket|Sydney Locket]]>><<set $phase to 2>><</link>>",
+   "\t\t<br>",
+   "\t\t<<link [[Change the subject|Sydney Locket]]>><<set $phase to 3>><</link>>",
+   "\t<<elseif $bus is \"schoollibrary\" or $location is \"school\">>"
+  ],
+  "context": "\t<<sydneySchedule>><<run statusCheck(\"Sydney\")>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if $kylar_altar_sydney_accost>>",
+   "\t\t\t\t\t\t<<socialiseicon \"ask\">><<link [[Ask to be taken to the forbidden room|Library Altar Forbidden (0:05)]]>><<pass 5>><<unset $kylar_altar_sydney_accost>><</link>>",
+   "\t\t\t\t\t\t<br>",
+   "\t\t\t\t\t<<elseif $kylar_altar_library gte 100>>",
+   "\t\t\t\t\t\t<<socialiseicon \"ask\">><<link [[Ask about the forest altar|Library Altar Counter]]>><</link>>",
+   "\t\t\t\t\t\t<br>",
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<sydneyOptionsTalk>>"
+ }
+]

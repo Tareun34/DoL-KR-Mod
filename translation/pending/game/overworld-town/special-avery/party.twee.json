@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $avery_party.task and $avery_mansion.fox.task_complete is \"success\" and $avery_mansion.fox.task_detail is \"ascend\">>",
+   "\t\t\tJordan stares across the table at Avery. \"I wanted to talk with you about your building project on Elk Street,\" <<he>> says. \"The bishop and I have concerns about your intentions. You know the site you've chosen is on holy ground? Not to mention the height of the building. It violates scriptural law.\""
+  ],
+  "old_kr": [
+   "\t\t<<if $avery_party.task and $avery_mansion.fox.task_complete is \"success\" and $avery_mansion.fox.task_detail is \"ascend\">>",
+   "\t\t\t조던이 테이블 너머로 에이버리를 바라본다. \"엘크 가에서 진행 중이신 건축 프로젝트에 관해 대화를 나누고 싶었습니다.\" <<he>>가 말한다. \"주교님과 저는 당신의 의도에 우려를 표하고 있습니다. 당신이 선택한 부지가 성스러운 땅이라는 것을 아십니까? 건물의 높이는 말할 것도 없지요. 그것은 경전의 율법에 위배됩니다.\""
+  ],
+  "new_en": [
+   "\t\t<<if $avery_party.task and $avery_mansion.fox.task_detail is \"ascend\">>",
+   "\t\t\tJordan stares across the table at Avery. \"I wanted to talk with you about your building project on Elk Street,\" <<he>> says. \"The bishop and I have concerns about your intentions. You know the site you've chosen is on holy ground? Not to mention the height of the building. It violates scriptural law.\""
+  ],
+  "context": "\t<<else>>"
+ }
+]

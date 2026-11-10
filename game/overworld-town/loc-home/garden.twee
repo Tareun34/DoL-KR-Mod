@@ -113,13 +113,18 @@
 <</if>>
 <<if $stress gte $stressmax>>
 	<<passouthome>>
-<<elseif $exposed gte 1 and Time.hour lt 22 and Time.hour gt 6>>
+<<elseif $exposed gte 1 and Time.hour lt 22 and Time.hour gte 6>>
 	<<exhibitionismgarden>>
-	이런 모습을 누군가에게 들킬지도 모른다는 생각에 견딜 수 없다. 당신은 서둘러 침실로 향한다.
-		<br><br>
-		<<link [[다음|Bedroom]]>><</link>>
-	<<elseif !$weekly.gardenBirdRobin and Weather.precipitation is "none" and getRobinLocation() is "orphanage" and C.npc.Robin.trauma lte 25 and C.npc.Robin.dom lte 60 and $rng gte 81>>
-		<<set $weekly.gardenBirdRobin to true>>
+	You can't bear the thought of someone catching you like this. You hasten to your bedroom.
+	<br><br>
+	<<if $rentTime lte 0>>
+		<<set $bus to "home">>
+		<<link [[Next|Bedroom Bailey]]>><</link>>
+	<<else>>
+		<<bedroomEntryEvent "forced">>
+	<</if>>
+<<elseif !$weekly.gardenBirdRobin and Weather.precipitation is "none" and getRobinLocation() is "orphanage" and C.npc.Robin.trauma lte 25 and C.npc.Robin.dom lte 60 and $rng gte 81>>
+	<<set $weekly.gardenBirdRobin to true>>
 
 		<<npc Robin>><<person1>>
 		울타리가 쳐진 정원으로 들어서자, 누군가가 눈에 띈다. <span class="gold">로빈이다.</span>
@@ -166,7 +171,7 @@
 	<<link [[내 식물은 내가 물 줄 수 있다고 말한다|Robin Watering Berate]]>><<npcincr Robin dom -1>><<control 10>><</link>><<ldom "Robin">><<gcontrol>>
 	<br>
 
-<<elseif !$weekly.gardenCropTheft and $orphan_hope lte -10 and $plots.garden and $plots.garden.some(p => p.stage >= 5) and $rng gte 81>>
+<<elseif !$weekly.gardenCropTheft and $orphan_hope lte -10 and $plots.garden?.some(p => p.stage >= 5) and $rng gte 81>>
 
 	<<set $weekly.gardenCropTheft to true>>
 	<<set $cropTheft to {}>>
@@ -478,8 +483,8 @@
 	<br><br>
 <</if>>
 
-<<if $tutorial is 0 and $debug is 0>>
-	<<generate1>><<person1>><<= $exposed gte 1 ? "그렇게 조심했음에도 불구하고, 당신은" : "당신은">> 지나가던 <<person>>【와과】 부딪힌다. <<He>>【은는】 비틀거리며 뒤로 물러서더니 화난 눈으로 당신을 쳐다보지만, 당신을 보자 <<his>> 분노는 음탕함으로 바뀐다. "이번 주에 본 것 중에 제일 귀엽네! 이리 와."
+<<if $tutorial is 0 and !$debug>>
+	<<generate1>><<person1>><<= $exposed gte 1 ? "Despite being so careful, you" : "You">> bump into a <<person>> passing by. <<He>> staggers back and looks at you with anger, but <<his>> rage turns to lechery as <<he>> beholds you. "You're the cutest thing I've seen all week! Come 'ere."
 	<br><br>
 
 	<<link [[다음|Tutorial]]>><<set $molestationstart to 1>><<set $tutorialExit to "Residential Alleyways">><</link>>
@@ -562,23 +567,12 @@
 	<</if>>
 <<elseif $phase is 1>>
 	<<set $phase to 0>>
-	/* TODO: eventpool */
-	<<if $rng gte 61 and ($hallucinations gte 2 or $backgroundTraits.includes("plantlover"))>>
-		무언가 다리를 스친다. 당신은 벌레려니 하고 털어내지만, 다시 한번 같은 일이 일어난다. 아래를 내려다보니 줄기 하나가 발목을 감싸고 있다.
-		<br><br>
-
-		<<link [[털어내기|Garden Stem Shake]]>><</link>>
-		<br>
-		<<link [[자세히 보기|Garden Stem Look]]>><</link>>
-		<br>
-	<<else>>
-		<<hallucinogen 60>>
-		물을 주자 식물에서 이상한 향기가 피어오른다. 머리가 어질어질하다. <<ghallucinogens>><<if $backgroundTraits.includes("plantlover")>><<arousal 6>><<garousal>><</if>>
-		<br><br>
-
-		<<link [[다음|Garden Flowers]]>><</link>>
-		<br>
+	<<cleareventpool>>
+	<<if $hallucinations gte 2 or $backgroundTraits.includes("plantlover")>>
+		<<addevent "gardenStem" 2>>
 	<</if>>
+	<<addevent "gardenScent" 3>>
+	<<runeventpool>>
 <<elseif $phase2 is "watered" and $rng lte (C.npc.Robin.love - 50) and _robin_location is "orphanage" and _robin.trauma lt 80 and Weather.precipitation isnot "rain" and (Weather.precipitation isnot "snow" or $alex_greenhouse gte 3) and $daily.robin.tending isnot 1>>
 	<<set $daily.robin.tending to 1>><<set $phase to 1>><<set $phase2 to 0>>
 	<<npc Robin>><<person1>>
@@ -837,7 +831,7 @@
 	<br><br>
 <</if>>
 
-<<link [[다음|Bedroom]]>><</link>>
+<<bedroomEntryEvent "forced">>
 <br>
 
 :: Bask Sneak Wait
@@ -846,7 +840,7 @@
 당신은 <<lewdness>>【을를】 드러낸 채 덤불 아래에 숨어 고아들이 지루해져 떠날 때까지 기다린다. 아무도 없게 되자, 당신은 정원을 가로질러 침실 창문을 통해 안전한 곳으로 달려간다.
 <br><br>
 
-<<link [[다음|Bedroom]]>><</link>>
+<<bedroomEntryEvent "forced">>
 <br>
 
 :: Garden Shove
@@ -1093,8 +1087,8 @@
 	<br><br>
 	당신은 긴장을 풀고 평화로운 분위기를 즐기며 거의 꾸벅꾸벅 졸 뻔하다가, 로빈이 경쾌하게 말하는 소리를 듣는다. "다 됐다!"
 	<br><br>
-	당신은 눈을 비비고 머리카락을 살펴본다.
-	<<set _target to either("twin fishtails","left fishtail","right fishtail")>>
+	You rub your eyes and examine your hair.
+	<<set _target to either("twin fishtails","fishtail left","fishtail right")>>
 	<<if $hairtype isnot _target>>
 		<<set $hairtype to _target>>
 		아름답다.

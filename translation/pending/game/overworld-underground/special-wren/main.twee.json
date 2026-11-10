@@ -1,0 +1,11 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $wrenHeistMissed to false>>"
+  ],
+  "context": "\t<<set $wrenHeistDance to {}>>"
+ }
+]

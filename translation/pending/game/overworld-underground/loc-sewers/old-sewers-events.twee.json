@@ -1,0 +1,34 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\tA <<beasttype>> claws <<bhis>> way from the crate. There's something unusual about <<bhis>> eyes. <<bHe>> takes an instant to regard and measure you, then snakes across the floor, lust on <<bhis>> mind."
+  ],
+  "old_kr": [
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t<<beasttype>> 한 마리가 <<bhis>> 몸을 끌며 상자에서 발톱을 세우고 나온다. <<bhis>> 눈이 어딘가 이상하다. <<bHe>>【은는】 잠시 당신을 살피고 가늠하더니, <<bhis>> 마음속에 욕정을 품고 바닥을 기어온다."
+  ],
+  "new_en": [
+   "<<if beastSexEnabledForType(\"lizard\", $monster is 1)>>",
+   "\tA <<beasttype>> claws <<bhis>> way from the crate. There's something unusual about <<bhis>> eyes. <<bHe>> takes an instant to regard and measure you, then snakes across the floor, lust on <<bhis>> mind."
+  ],
+  "context": "<<beastNEWinit 1 lizard>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t<<link [[Approach|Sewers Box Lizard Rape]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t<<link [[다가간다|Sewers Box Lizard Rape]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "<<if beastSexEnabledForType(\"lizard\", $monster is 1)>>",
+   "\t<<link [[Approach|Sewers Box Lizard Rape]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": ""
+ }
+]

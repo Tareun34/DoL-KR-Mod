@@ -1,0 +1,110 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if !$settings.bestialityEnabled or $settings.monsterChance gte 100>>",
+   "\t\t\t\t\t<<set _animals to \"monsters\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if !$settings.bestialityEnabled or $settings.monsterChance gte 100>>",
+   "\t\t\t\t\t<<set _animals to \"괴물\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<if victimsAlwaysMonsterForType(\"pig\") or (monsterChanceForType(\"pig\") gte 100 and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType(\"pig\")))>>",
+   "\t\t\t\t\t<<set _animals to \"monsters\">>"
+  ],
+  "context": "\t\t\t<<case \"pig\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<beastNEWinit 1 pig>>",
+   "You are led once more to the stage, where the crowd awaits. Robin is already on stage. <<covered>>"
+  ],
+  "old_kr": [
+   "<<beastNEWinit 1 pig>>",
+   "당신은 다시 군중이 기다리는 무대로 끌려간다. 로빈은 이미 무대 위에 있다. <<covered>>"
+  ],
+  "new_en": [
+   "<<generateBeastVictim 1 pig>>",
+   "You are led once more to the stage, where the crowd awaits. Robin is already on stage. <<covered>>"
+  ],
+  "context": "<<set $outside to 0>><<set $location to \"underground\">><<effects>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\tOnce there, a metal shutter rattles open behind you, and two gigantic <<beastsplural>> step out. The first charges at Robin, while the second makes <<bhis>> way towards you. The audience cheers them on."
+  ],
+  "old_kr": [
+   "<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t그곳에 도착하자, 당신 뒤쪽의 금속 셔터가 덜컹 열리고 거대한 <<beastsplural>> 두 마리가 나온다. 첫 번째는 로빈에게 달려들고, 두 번째는 당신 쪽으로 다가온다. 관객들은 그들을 응원한다."
+  ],
+  "new_en": [
+   "<<if $rng gte 51 and beastSexEnabledForType(\"pig\", $monster is 1)>>",
+   "\tOnce there, a metal shutter rattles open behind you, and two gigantic <<beastsplural>> step out. The first charges at Robin, while the second makes <<bhis>> way towards you. The audience cheers them on."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\t\t<span class=\"red\">Robin cries out as a <<beasttype 0>> tackles <<nnpc_him \"Robin\">>.</span> You quickly turn around and charge at the <<beasttype 0>>, who turns to you at your arrival."
+  ],
+  "old_kr": [
+   "\t\t<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\t\t<span class=\"red\"><<beasttype 0>>【이가】 <<nnpc_him \"Robin\">>【을를】 덮치자 로빈이 비명을 지른다.</span> 당신은 재빨리 몸을 돌려 <<beasttype 0>>에게 돌진하고, 놈도 다가오는 당신을 향해 몸을 돌린다."
+  ],
+  "new_en": [
+   "\t\t<<if $rng gte 51 and beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\t\t<span class=\"red\">Robin cries out as a <<beasttype 0>> tackles <<nnpc_him \"Robin\">>.</span> You quickly turn around and charge at the <<beasttype 0>>, who turns to you at your arrival."
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>><!-- Modified for BeastPeople -->",
+   "\t\tYou run as fast you can. You hear the <<victimgirls>> scream as they are caught, one by one.",
+   "\t\tYou hear something running through the grass behind you, and feel <<print ($monster is 1 ? \"hands\" : \"paws\")>> on your back as you are forced to your knees.",
+   "\t\tThe <<beasttype 0>> starts humping<<if $NPCList[0].penis isnot \"none\">>, you feel <<bhis 0>> penis prodding your <<bottom>><</if>>."
+  ],
+  "old_kr": [
+   "\t<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>><!-- Modified for BeastPeople -->",
+   "\t\t당신은 전속력으로 달린다. <<victimgirls>>【이가】 하나둘씩 붙잡히며 비명을 지르는 소리가 들린다.",
+   "\t\t당신의 뒤쪽 풀숲을 헤치며 무언가 달려오는 소리가 들리더니, 등 뒤로 <<print ($monster is 1 ? \"손이\" : \"앞발이\")>> 느껴지며 강제로 무릎이 꿇린다.",
+   "\t\t<<beasttype 0>>【은는】 허릿짓을 하기 시작한다<<if $NPCList[0].penis isnot \"none\">>. <<bhis 0>> 페니스가 당신의 <<bottom>>【을를】 찌르는 것이 느껴진다<</if>>."
+  ],
+  "new_en": [
+   "\t<<if $rng gte 51 and beastSexEnabledForType(\"dog\", $monster is 1)>><!-- Modified for BeastPeople -->",
+   "\t\tYou run as fast you can. You hear the <<victimgirls>> scream as they are caught, one by one.",
+   "\t\tYou hear something running through the grass behind you, and feel <<print ($monster is 1 ? \"hands\" : \"paws\")>> on your back as you are forced to your knees.",
+   "\t\tThe <<beasttype 0>> starts humping<<if $NPCList[0].penis isnot \"none\">>, you feel <<bhis 0>> penis prodding your <<bottom>><</if>>."
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechdisable to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechDisable to 1>>"
+  ],
+  "context": "<<widget \"undergroundRobinKiss\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<set $speechdisable to 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set $speechDisable to 0>>"
+  ],
+  "context": "<</if>>"
+ }
+]

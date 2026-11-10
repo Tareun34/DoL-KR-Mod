@@ -59,8 +59,8 @@
 		<<npc Whitney>><<person1>>
 		발소리가 들리더니 문이 휙 열린다. 휘트니다. <<He>>【은는】 당신을 보자 미소 짓는다.
 		<br><br>
-		<<if [3,6,7].includes(Time.weekDay)>>
-			"내 걸레 왔네," <<he>>【은는】 어깨너머로 소리친 뒤, 다시 당신을 보고 문을 활짝 연다. "와줘서 좋네."
+		<<if whitneyHasFriendsOver()>>
+			"It's my slut," <<he>> shouts over <<his>> shoulder, before looking back at you, and opening the door all the way. "Glad you could join us."
 			<br><br>
 
 			<<link [[들어간다|Whitney Home Enter Gang]]>><</link>>
@@ -1465,7 +1465,7 @@
 
 당신은 휘트니의 손을 뿌리친다. <<He>>【은는】 잠깐 상처받은 것처럼 보이더니, 어깨를 으쓱하고 담배에 다시 불을 붙인다. "네 맘대로 해."
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Intro 1 Ask
 <<effects>>
@@ -1712,7 +1712,7 @@
 
 당신은 별일 없이 분수 옆에 도착한다. 그제야 <<he>>【은는】 담배에 불을 붙인다.
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Intro 2
 <<effects>>
@@ -2107,7 +2107,7 @@
 
 분수 옆으로 돌아오자, 휘트니는 담배 보루를 열고 불을 붙인다.
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Intro 3
 <<effects>><<set $location to "town">><<set $bus to "cliff">>
@@ -2415,7 +2415,9 @@
 
 당신은 공원의 분수 옆에 도착한다. 휘트니는 담배에 불을 붙이고, 당신에게 미소 짓는다.
 <<person1>><<clearsinglenpc 1>>
-<<whitneyoptions>>
+<<whitneyOptions>>
+
+
 :: Whitney Home Escort
 <<effects>>
 
@@ -2643,7 +2645,7 @@
 
 당신은 별일 없이 공원에 도착한다. <<He>>【은는】 담배에 불을 붙인다.
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Park Leave
 <<effects>>
@@ -2694,7 +2696,7 @@
   당신을 따라 <<his>> 침실로 들어간다.
 <</if>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 
 :: Whitney Home Enter Leave
@@ -2704,7 +2706,7 @@
 <<if C.npc.Whitney.lust gte 20>>
 	<<He>>【은는】 선택지를 재는 듯 잠시 당신을 살피다가, 어깨를 으쓱한다. "마음 정해지면 어디서 날 찾을지 알잖아." <<He>>【은는】 문을 닫는다.
 <<else>>
-	"길 잃었냐?" <<He>>【은는】 어깨를 으쓱한다. "어디서 날 찾을지 알잖아." <<he>>【은는】 문을 닫는다.
+	"Did you get lost?" <<He>> shrugs. "You know where to find me." <<He>> shuts the door.
 <</if>>
 
 <<link [[다음|Barb Street]]>><<endevent>><</link>>
@@ -3042,7 +3044,7 @@
 
 붉은 기가 휘트니의 얼굴에 번진다. "상상력 좋네." <<he>>【이가】 말한다. <<He>>【은는】 양팔을 양옆에 걸친 채 뒤로 기댄다.
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Lap Refrain
 <<effects>>
@@ -3050,14 +3052,14 @@
 당신은 <<him>>【을를】 놀리고 싶은 충동을 참는다. <<He>>【은는】 이상한 눈빛으로 당신을 본다. "뭐가 그렇게 웃겨?" <<he>>【이가】 묻는다. "됐어." <<He>>【은는】 양팔을 양옆에 걸친 채 뒤로 기댄다.
 <br><br>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Lap Nothing
 <<effects>>
 
 휘트니가 몸을 일으키고 양팔을 양옆에 걸친 채 뒤로 기댈 때까지, 당신은 계속 TV를 본다.
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Lap Tell
 <<effects>>
@@ -3073,14 +3075,14 @@
 
 <<He>>【은는】 몸을 일으킨다. "날 만족시킬 다른 방법이 있을지도 모르지." <<he>>【은는】 당신 몸 이곳저곳을 더듬고 찌른다. 하지만 더 밀어붙이지는 않고, 양팔을 양옆에 걸친 채 뒤로 기댄다.
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Sit Put
 <<effects>>
 
 당신은 불평하지 않는다. 휘트니는 한층 더 편하게 자리 잡는다.
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Sit Complain
 <<effects>>
@@ -3099,7 +3101,7 @@
 
 <<He>>【은는】 조금 더 당신 위에 앉아 있다가, 당신의 <<bottom>>【을를】 더듬고 몸을 옮긴다.
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Sit Throw
 <<effects>>
@@ -3116,7 +3118,7 @@
 <</if>>
 
 <br><br>
-<<whitneyoptions>>
+<<whitneyOptions>>
 :: Whitney Home Hang Hair Encourage
 <<effects>>
 
@@ -3125,14 +3127,14 @@
 
 "좋냐?" 휘트니가 묻는다. 당신이 대답하기도 전에 <<He>>【은는】 손을 내려 당신의 턱을 잡고, 고개를 조금 들어 올린 뒤, 몸을 숙여 당신의 뺨에 키스한다.
 <br><br>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Hair Move
 <<effects>>
 
 당신은 휘트니의 손에서 머리를 피한다. <<He>>【은는】 눈치를 알아차리고, 당신 머리를 만지작거리던 것을 멈춘다.
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Phone Snuggle
 <<effects>>
@@ -3145,21 +3147,21 @@
 	<<He>>【은는】 만족한 듯하고, 당신을 꽉 붙든다.
 <</if>>
 <br><br>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Phone Pull
 <<effects>>
 
 당신은 휘트니에게서 몸을 뺀다. <<He>>【은는】 처음에는 당신을 쫓으려는 듯 움직이지만, <<hes>> 허세를 부리는 것이다.
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Phone Still
 <<effects>>
 
 당신은 휘트니의 품 안에 그대로 있고, <<he>>【은는】 <<his>> 소셜 미디어 피드를 계속 넘기다가 재미있는 것이 보이면 멈춘다. <<He>>【은는】 어두운 유머 감각을 가졌다.
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Guitar Say
 <<effects>>
@@ -3169,7 +3171,7 @@
 
 <<He>>【은는】 한참 뒤 멈추고 기타를 치운다. "이웃들이 소음 때문에 불평하는 거 좋아하거든." <<he>>【이가】 말한다. "그리고 지금은 그 지랄 받아줄 기분 아니야."
 <br><br>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Guitar Up
 <<effects>>
@@ -3179,7 +3181,7 @@
 
 위층 바닥에서 쿵 소리가 나고, 휘트니는 멈춘다. "항상 재미를 망친다니까." <<he>>【이가】 말한다. "근데 지금은 걔들 불평 들을 기분 아니야." <<He>>【은는】 기타를 치운다.
 <br><br>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Guitar Down
 <<effects>>
@@ -3189,35 +3191,35 @@
 
 위층 바닥에서 쿵 소리가 나고, 휘트니는 멈춘다. "항상 재미를 망친다니까." <<he>>【이가】 말한다. "근데 지금은 걔들 불평 들을 기분 아니야." <<He>>【은는】 기타를 치운다.
 <br><br>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Talk Disapprove
 <<effects>>
 
 "네 허락 구한 적 없거든." 휘트니가 말한다. "너한테 선물 같은 거라도 가져다주면 생각이 바뀌려나?"
 <br><br>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Talk Influences
 <<effects>>
 
 휘트니는 웃음을 터뜨린다. "나보다 나쁜 영향을 주는 놈은 없어." 겨우 진정한 뒤 <<he>>【이가】 말한다. "너도 그 정도는 아는 줄 알았는데."
 <br><br>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Talk Tag
 <<effects>>
 
 휘트니는 고개를 젓는다. "너무 위험해." <<he>>【이가】 말한다. "내 걸레는 안전한 곳에 두는 게 낫지."
 <br><br>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Talk Nothing
 <<effects>>
 
 휘트니가 계속 말하는 동안 당신은 조용히 있는다. <<his>> 친구들 중에는 다른 이들보다 더 진짜 친구다운 이들이 있는 것 같다.
 <br><br>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Talk Nice
 <<effects>>
@@ -3225,21 +3227,21 @@
 "고맙다." <<he>>【이가】 말한다. "취향이 좀 있긴 하네." <<He>>【은는】 원래 입던 옷을 입고, 기분이 꽤 들뜬 듯하다.
 <br><br>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Talk Slut
 <<effects>>
 
 휘트니는 웃는다. "네가 전문가잖아." <<he>>【은는】 그렇게 말하고는 방을 가로질러 뽐내듯 걷는다. <<He>>【은는】 원래 입던 옷을 입고, 기분이 꽤 들뜬 듯하다.
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Talk Awful
 <<effects>>
 
 "좆 까." <<he>>【이가】 말한다. "네가 뭘 안다고." <<He>>【은는】 원래 입던 옷을 다시 입고, 기분이 조금 상한 듯하다.
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Gang Snacks Fetch
 <<effects>>
@@ -3488,10 +3490,10 @@
 		<<He>>【은는】 당신의 <<lewdness>>【을를】 음흉하게 훑어본다.
 		<br><br>
 
-		<<whitneyoptions>>
+		<<whitneyOptions>>
 	<<else>>
 		<br><br>
-		<<whitneyoptions>>
+		<<whitneyOptions>>
 	<</if>>
 <<elseif $enemyhealth lte 0>>
 	당신은 휘트니를 밀쳐내고 플랫에서 달아난다. <<tearful>> 당신은 어깨너머로 돌아본다. 휘트니는 따라오지 않는다.
@@ -3499,7 +3501,7 @@
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
-	<<whitneyexit>>
+	<<whitneyExit>>
 
 <<else>>
 	"너 진짜 존나 사람 애태우네." 휘트니는 중얼거리며 당신을 밀쳐낸다.
@@ -3509,7 +3511,7 @@
 	<<endcombat>>
 	<<tearful>> 당신은 정신을 가다듬는다.
 	<br><br>
-	<<whitneyoptions>>
+	<<whitneyOptions>>
 
 <</if>>
 
@@ -3567,7 +3569,7 @@
 
 	<<clotheson>>
 	<<endcombat>>
-	<<whitneyexit>>
+	<<whitneyExit>>
 <<elseif $enemyarousal gte $enemyarousalmax>>
 	<<ejaculation>>
 	휘트니는 만족스러운 한숨과 함께 뒤로 물러앉는다.
@@ -3602,8 +3604,8 @@
 		"거래해서 즐거웠다, 걸레야."
 		<br><br>
 
-		<<whitneyoptions>>
- 	<<else>>
+		<<whitneyOptions>>
+	<<else>>
 		<<npcincr Whitney lust -20>><<llust>>
 		<br><br>
 		<<clotheson>>
@@ -3621,7 +3623,7 @@
 		<</if>>
 		<br><br>
 		<<endcombat>>
-		<<whitneyexit>>
+		<<whitneyExit>>
 	<</if>>
 /*<<elseif $alarm is 1 and $rescue is 1>>
 	Whitney's head snaps up when <<he>> notices a couple of park goers looking in your direction. "Damn, you've got a set of lungs," Whitney grumbles, fixing <<his>> clothes as <<he>> <<= $phase is 0 ? "climbs" : "crawls">> off of you. "You're in for it next time."
@@ -3631,13 +3633,13 @@
 
 		<<clotheson>>
 		<<endcombat>>
-		<<whitneyexit>>
+		<<whitneyExit>>
 	<<else>>
 		<br><br>
 		<<clotheson>>
 		<<endcombat>>
 		<<npc Whitney>><<person1>>
-		<<whitneyoptions>>
+		<<whitneyOptions>>
 	<</if>>*/
 <<else>>
 	휘트니는 눈을 굴리고 당신에게서 내려온다. "좋아. 앞으로 내가 너한테 뭘 허락하나 봐라." <<He>>【은는】 <<his>> 옷매무새를 고치고, 불이 붙지 않은 담배를 입술 사이에 문다. "나중에 이 빚 갚게 될 거야. 두고 봐."
@@ -3647,7 +3649,7 @@
 	<<clotheson>>
 	<<endcombat>>
 	<<npc Whitney>><<person1>>
-	<<whitneyoptions>>
+	<<whitneyOptions>>
 <</if>>
 <<endcombat>>
 
@@ -3657,7 +3659,7 @@
 당신은 휘트니가 설거지하는 것을 돕는다. "고마워, 걸레년아." <<he>>【이가】 말한다.
 <br><br>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Kitchen Mess
 <<effects>>
@@ -3688,7 +3690,7 @@
 "씨발 변태 새끼." <<he>>【이가】 개수대에서 떨어지며 말한다.
 <br><br>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Kitchen Stop
 <<effects>>
@@ -3696,7 +3698,7 @@
 당신은 휘트니에게서 손을 떼고, <<hes>> 설거지를 마칠 때까지 기다린다.
 <br><br>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Kitchen Wait
 <<effects>>
@@ -3704,7 +3706,7 @@
 휘트니가 당신을 힐끗 본다. "거기 서서 내 엉덩이나 쳐다볼 거냐?" 휘트니가 묻는다. "놀랍지도 않네. 넌 날 보면서 변태 짓 할 기회를 놓칠 리가 없지."
 <br><br>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Masturbation Watch
 <<effects>>
@@ -3718,7 +3720,7 @@
 <<He>>【은는】 당신의 머리 위로 끈적한 수건을 던지고는, 옷을 입으러 어슬렁어슬렁 걸어간다. 돌아왔을 때 <<he>>【은는】 만족스러운 미소를 짓고 있다.
 <br><br>
 <<endevent>><<npc Whitney>><<person1>>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Masturbation
 <<effects>>
@@ -3816,7 +3818,7 @@
 몇 분 뒤 휘트니가 신음하는 소리가 들린다. <<He>>【은는】 당신의 머리 위로 끈적한 수건을 던지고는, 옷을 입으러 어슬렁어슬렁 걸어간다. 돌아왔을 때 <<he>>【은는】 만족스러운 미소를 짓고 있다.<<llust>><<npcincr Whitney lust -1>>
 <br><br>
 <<endevent>><<npc Whitney>><<person1>>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Masturbation Push
 <<effects>>
@@ -3824,7 +3826,7 @@
 당신은 휘트니를 밀쳐낸다. <<He>>【은는】 달려들어 당신의 목을 핥지만, 이내 물러선다. "마음대로 해라." <<he>>【이가】 말한다. "너 진짜 감질나게 하네. 언젠가 큰코다칠 줄 알아."
 <br><br>
 <<endevent>><<npc Whitney>><<person1>>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Masturbation Refuse
 <<effects>>
@@ -3832,7 +3834,7 @@
 당신은 휘트니의 접근을 거절한다. 휘트니는 잠시 생각하더니 이내 물러선다. "마음대로 해라." <<he>>【이가】 말한다. "너 진짜 감질나게 하네. 언젠가 큰코다칠 줄 알아."
 <br><br>
 <<endevent>><<npc Whitney>><<person1>>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Masturbation Sex
 <<if $sexstart is 1>>
@@ -3879,7 +3881,7 @@
 <<clotheson>>
 <<endcombat>>
 <<npc Whitney>><<person1>>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Gang Hat
 <<effects>>
@@ -4070,7 +4072,7 @@
 
 휘트니는 방 반대편을 이리저리 돌아다니며 그물을 맞추기 어렵게 만든다.
 <<if currentSkillValue("handskill") gte random(200, 800)>>
-	애초에 그물을 겨냥한 게 아니라서 다행이다. 당신은 <<his>> 얼굴을 향해 공을 세게 던진다. <span class="green">공은 목표물에 명중해, 휘트니의 코에 맞고 튕겨 나간다.</span><<ldom>><<npcincr Whitney dom -1>>
+	Good thing you're not aiming for the net. You hurl the ball at <<his>> face. <span class="green">It hits its mark, bouncing off Whitney's nose.</span><<ldom>><<npcincr Whitney dom -1>>
 	<br><br>
 
 	휘트니는 다음 두 개의 공을 경계하며 쿠션을 잡아 첫 번째를 막아내고, 그것을 던져 두 번째 공을 튕겨낸다. 쿠션은 당신의 머리 위를 날아가 부엌 조리대를 스치며, 건조대에 있던 프라이팬을 요란하게 바닥으로 떨어뜨린다.
@@ -4117,7 +4119,7 @@
 휘트니는 창문에서 고개를 돌려 의자에 털썩 앉는다.
 <br><br>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Window Look
 <<effects>>
@@ -4134,7 +4136,7 @@
 <<person1>>휘트니는 창문에서 고개를 돌려 의자에 털썩 앉는다.
 <br><br>
 <<endevent>><<npc Whitney>>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Window Leave
 <<effects>>
@@ -4142,7 +4144,7 @@
 당신은 휘트니를 그대로 내버려 둔다. <<He>>【은는】 잠시 후 역겹다는 듯 비웃더니, 몸을 돌려 의자에 털썩 앉는다.
 <br><br>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Examine Wait
 <<effects>>
@@ -4154,7 +4156,7 @@
 <br><br>
 <<endevent>><<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Examine Bed
 <<effects>>
@@ -4167,7 +4169,7 @@
 
 <<endevent>><<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Examine Box 1
 <<effects>>
@@ -4183,7 +4185,7 @@
 
 <<endevent>><<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Examine Box 2
 <<effects>>
@@ -4199,7 +4201,7 @@
 
 <<endevent>><<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Examine Box 3
 <<effects>>
@@ -4215,7 +4217,7 @@
 
 <<endevent>><<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Examine Covers
 <<effects>>
@@ -4231,7 +4233,7 @@
 
 <<endevent>><<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Examine Cupboard
 <<effects>>
@@ -4247,7 +4249,7 @@
 
 <<endevent>><<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Examine Cupboard Under
 <<effects>>
@@ -4263,7 +4265,7 @@
 
 <<endevent>><<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Examine Door
 <<effects>>
@@ -4292,7 +4294,7 @@
 
 <<endevent>><<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Examine Door Let
 <<effects>>
@@ -4314,7 +4316,7 @@
 
 <<endevent>><<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Examine Door Ignore
 <<effects>>
@@ -4327,7 +4329,7 @@
 
 <<endevent>><<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Examine Wardrobe
 <<effects>>
@@ -4343,7 +4345,7 @@
 
 <<endevent>><<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Examine Laundry
 <<effects>>
@@ -4359,7 +4361,7 @@
 
 <<endevent>><<npc Whitney>><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Examine Curtains
 <<effects>>
@@ -4507,10 +4509,10 @@
 :: Whitney Home Hang Toys Nod
 <<effects>>
 
-당신은 고개를 끄덕인다. "씨발," <<he>>【이가】 말한다. "씨발 씨발 씨발." <<He>>【은는】 당신에게서 떨어져 침대 위에 앉더니, 사방에 널린 인형 더미를 바라본다.
+You nod. "Fuck," <<he>> says. "Fuck fuck fuck." <<He>> climbs off of you, letting the toys on <<his>> back fall, and sits on <<his>> bed, looking at the pile of toys all around.
 <br><br>
 
-"그거 아냐?" <<he>>【이가】 말한다. "씨발 알 빠야. 이것들도 내 거고, 너도 내 거야. 난 세상에서 제일 쩌는 컬렉션을 가졌다고." <<He>>【은는】 등에 얹힌 장난감들이 툭툭 떨어지게 내버려 둔 채 일어선다.
+"You know what?" <<he>> says. "Fuck it. These are mine, and so are you. I have the best collection in the world."
 <br><br>
 
 <<link [[다음|Whitney Home Hang Toys]]>><</link>>
@@ -4576,7 +4578,7 @@
 
 <<endevent>><<npc "Whitney">><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Home Hang Toys Stare 2
 <<effects>>
@@ -4586,4 +4588,4 @@
 
 <<endevent>><<npc "Whitney">><<person1>>
 
-<<whitneyoptions>>
+<<whitneyOptions>>

@@ -34,7 +34,7 @@
 				<br><br>
 				당신은 작은 건물들이 모여 있는 곳으로 나온다. <span class="red">어쩌면 버려졌을지도 모를</span> 작은 농장처럼 생겼다. 10분 정도 더 걷자 좀 더 낯익은 지역이 나온다.
 				<br><br>
-				<<link [[다음|Farmland]]>><<pass 10>><<endevent>><<set $eventskip to 1>><</link>>
+				<<link [[Next (0:10)|Farmland]]>><<pass 10>><<endevent>><<set $eventskip to 1>><</link>>
 				<br>
 			<</addinlineevent>>
 		<</if>>
@@ -59,37 +59,39 @@
 			<br>
 		<</addinlineevent>>
 
-		<<addinlineevent "farmland_road_5">>
-			<<generate1>><<person1>>
-			"거기 누구쇼," <<personssimple>> 목소리가 말한다. 옆을 돌아보니 한 <<person>>【이가】 농장 입구에서 당신에게 손을 흔들고 있다.
-			<br><br>
-			"이웃이신가? 관심 있으면 팔려고 밀을 좀 챙겨뒀는데," <<he>>【이가】 말한다. "창고에 있던 거긴 한데, 상태는 좋아. 전부 다 해서 <<printmoney 1000>>만 주면 돼."
-			<br><br>
-
-			<<if !$plants_known.includes("rice")>>
-				"벼 씨앗도 가지고 있어. 난 도저히 키울 수가 없더라고. 흙이 안 맞나 봐. <<printmoney 3000>>에 가져가."
+		<<if $exposed is 0>>
+			<<addinlineevent "farmland_road_5">>
+				<<generate1>><<person1>>
+				"Ho there," says a <<personssimple>> voice. You look to the side, and see a <<person>> waving at you from the entrance to a farm.
+				<br><br>
+				"You a neighbour? I got a spare bushel of wheat for sale if you're interested," <<he>> says. "It's been in storage, but it's good. Just <<printmoney 1000>> for the lot."
 				<br><br>
 
-				<<if $money gte 3000>>
-					<<foodstufficon "rice">> <<link [[벼 씨앗을 산다 (£30)|Farmland Event Rice]]>><<set $plants_known.push("rice")>><<money -3000>><</link>><<gtending>>
+				<<if !$plants_known.includes("rice")>>
+					"I also have rice seeds. I couldn't get them to take. The soil's no good for them. You can have them for <<printmoney 3000>>."
+					<br><br>
+
+					<<if $money gte 3000>>
+						<<foodstufficon "rice">> <<link [[Buy rice seeds (£30)|Farmland Event Rice]]>><<set $plants_known.push("rice")>><<money -3000>><</link>><<gtending>>
+						<br>
+					<<else>>
+						<span class="blue">You can't afford the seeds.</span>
+						<br>
+					<</if>>
+				<</if>>
+				<br>
+				<<if $money gte 1000>>
+					<<link [[Buy 50 cups of wheat (£10)|Farmland Event Wheat]]>><<tending_give "wheat" 50>><<money -1000>><</link>>
 					<br>
 				<<else>>
-					<span class="blue">씨앗을 살 돈이 없다.</span>
+					<span class="blue">You can't afford the wheat.</span>
 					<br>
 				<</if>>
-			<</if>>
-			<br>
-			<<if $money gte 1000>>
-				<<link [[밀 50컵을 산다 (£10)|Farmland Event Wheat]]>><<tending_give "wheat" 50>><<money -1000>><</link>>
 				<br>
-			<<else>>
-				<span class="blue">밀을 살 돈이 없다.</span>
+				<<link [[Don't buy anything|Farmland]]>><<endevent>><<set $eventskip to 1>><</link>>
 				<br>
-			<</if>>
-			<br>
-			<<link [[아무것도 사지 않는다|Farmland]]>><<endevent>><<set $eventskip to 1>><</link>>
-			<br>
-		<</addinlineevent>>
+			<</addinlineevent>>
+		<</if>>
 
 		<<addinlineevent "farmland_road_6">>
 			목재가 가득 실린 트럭이 덜컹거리며 지나간다. 길은 트럭 한 대가 겨우 지나갈 정도로 좁다. 당신은 덤불 속으로 몸을 피하며 공간을 만든다.
@@ -277,8 +279,8 @@
 <br><br>
 
 <<if $rng gte 91>>
-	<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>
-		옆에서 바스락거리는 소리가 들린다. 무언가가 인간이 아닌 속도로 식물 사이를 헤치며 움직인다. 당신을 향해 똑바로 오고 있다.
+	<<if $settings.lurkersEnabled>>
+		You hear a rustle to the side. Something moves through the plants with inhuman speed. It's coming straight for you.
 		<br><br>
 
 		<<link [[다음|Farmland Event Flowers Lurker]]>><<set $struggle_start to 1>><</link>>
@@ -420,7 +422,7 @@ $worn.lower.name【을를】 벗어 들고 계속해서 밭을 가로지른다. 
 	<br><br>
 	자동차들을 다시 한 번 바라보지만, 돕고 싶어도 도울 수 없다는 사실을 깨닫는다. 그냥 지나치는 게 상책이다.
 <<else>>
-	사람들이 웃고 춤추는 소리가 들린다. 마음이 편안해진다. <<lstress>><<stress -4>><<ltrauma>><<trauma -2>>
+	You hear people laughing and dancing. It's comforting. <<lstress>><<stress -4>><<ltrauma>><<trauma -2>>
 <</if>>
 <br><br>
 

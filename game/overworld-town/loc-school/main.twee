@@ -255,15 +255,41 @@
 몇몇은 점심을 먹고 있다.
 <br><br>
 
-<<if $rng gte 67>>
-	<<generatey1>><<person1>>한 <<person>>【이가】 친구들이 지켜보는 가운데 나무에 오르려 하고 있다. 가장 낮은 나뭇가지가 거의 손에 닿지 않지만, <<he>>【은는】 간신히 붙잡는다. <<He>>【은는】 몸을 끌어올려 다른 가지를 잡으려다 미끄러져 아래 잔디밭으로 굴러떨어진다. <<His>> 친구들이 웃는다.
+<<if $rng gte 86 and !$weekly.whitneyMilkToss and !["dungeon", "pillory"].includes(C.npc.Whitney.state) and C.npc.Whitney.init is 1 and !$worn.upper.type.includes("naked") and !waterproofCheck($worn.over_upper) and !waterproofCheck($worn.upper)>>
+	<<set $weekly.whitneyMilkToss to true>>
+	<<npc Whitney>><<person1>>
+	You are socialising on the green when a sharp whistle cuts through the noise from somewhere above.
+	<br><br>
+
+	"Heads up, slut!"
+	<br><br>
+
+	You look up. Whitney is leaning over the roof railing, a shit-eating grin plastered across <<his>> face. <<He>> is twirling a carton of strawberry milk between <<his>> fingers.
+	<br><br>
+
+	"You look thirsty." <<He>> eyes your chest with deliberate aim, holding the carton out further. "Catch."
+	<br><br>
+
+	<<He>> doesn't wait for an answer.
+	<br><br>
+
+	<<link [[Try to catch it|Whitney Milk Catch]]>><</link>><<athleticsdifficulty 1 400>>
+	<br>
+	<<link [[Dodge|Whitney Milk Dodge]]>><</link>>
+	<br>
+	<<if hasSexStat("exhibitionism", 2)>>
+		<<link [[Stand still and flaunt|Whitney Milk Flaunt]]>><</link>><<exhibitionist2>>
+		<br>
+	<</if>>
+<<elseif $rng gte 58>>
+	<<generatey1>><<person1>>A <<person>> is trying to climb the tree while <<his>> friends watch. The lowest branch is almost out of reach, but <<he>> manages to grasp it. <<He>> hauls <<himself>> up, reaches for another, then slips and tumbles to the grass below. <<His>> friends laugh.
 	<br><br>
 
 	<<link [[어떻게 하는 건지 보여준다|School Green Climb]]>><<endevent>><</link>><<athleticsdifficulty 600 1000>>
 	<br>
 	<<link [[무시한다|School Rear Courtyard]]>><<endevent>><</link>>
 	<br>
-<<elseif $rng gte 33>>
+<<elseif $rng gte 30>>
 	<<generatey1>><<generatey2>><<person1>>
 	한 <<person>>【이가】 <<person2>><<person>>【을를】 민다. 그 <<person>>【은는】 <<person1>><<him>>【을를】 다시 밀친다.
 	<br><br>
@@ -689,7 +715,7 @@
 	당신은 <<nnpc_title "Leighton">>의 사무실 문을 두드린다. 문 너머에서 <<his>> 목소리가 들린다. "들어와라."
 	<br><br>
 
-	<<if $worn.upper.type.includes("school") and $worn.lower.type.includes("school") and !pcAreArmsBound("any") and !$worn.feet.type.includes("shackle") or Time.hour gte 14>>
+	<<if (wearingSchoolOutfit() or ["fifth", "afternoon"].includes($schoolstate)) and !pcAreArmsBound("any") and !$worn.feet.type.includes("shackle")>>
 		<<if $daily.school.headInterrupted isnot 1>>
 			당신이 들어가자 레이튼이 책상에서 고개를 든다. "무슨 일이지?"
 			<br><br>
@@ -757,8 +783,8 @@
 			"어쩌다 이런 꼴이 된 거지." <<he>>【이가】 당신 뒤로 걸어가며 중얼거린다. <span class="green">당신의 팔다리가 자유로워지는 것이 느껴진다.</span>
 			<br><br>
 			<<unbind>>
-			<<if (!$worn.upper.type.includes("school") or !$worn.lower.type.includes("school")) and $schoolstate isnot "fifth">> /*clothes don't matter for swim*/
-				"이 옷도 안 되겠군." <<He>>【이가】 서랍에서 옷 몇 벌을 꺼낸다. "자, 여기 있다."
+			<<if !wearingSchoolOutfit() and !["fifth", "afternoon"].includes($schoolstate)>> /*clothes don't matter for swim and after classes*/
+				"These clothes won't do either." <<He>> pulls some clothing out of a drawer. "Here you go."
 				<br><br>
 			<<else>>
 				<<link [[다음|Hallways]]>><<endevent>><</link>>
@@ -768,7 +794,7 @@
 			<<He>>【은는】 서랍에서 옷 몇 벌을 꺼낸다. "자, 여기 있다."
 			<br><br>
 		<</if>>
-		<<if !$worn.upper.type.includes("school") and !$worn.lower.type.includes("school") and $schoolstate isnot "fifth">>
+		<<if !wearingSchoolOutfit() and !["fifth", "afternoon"].includes($schoolstate)>>
 			<<if $player.gender_appearance is "m">>
 				<<if $rng gte 51 or !$settings.forcedCrossdressingEnabled>>
 					<<set $clothingselector to "m">>
@@ -810,7 +836,7 @@
 					<br>
 				<</if>>
 			<</if>>
-		<<elseif !$worn.lower.type.includes("school") and $schoolstate isnot "fifth">>
+		<<elseif !$worn.lower.type.includes("school") and !["fifth", "afternoon"].includes($schoolstate)>>
 			<<if $player.gender_appearance is "m">>
 				<<if $rng gte 51 or !$settings.forcedCrossdressingEnabled>>
 					<<set $clothingselector to "m">>
@@ -850,8 +876,8 @@
 					<br>
 				<</if>>
 			<</if>>
-		<<elseif !$worn.upper.type.includes("school") and $schoolstate isnot "fifth">>
-			<<He>>【은는】 당신에게 낡아 보이는 교복 셔츠를 건네준다. "창고에서 갈아입어라. 네 옷은 방과 후에 수영장에서 찾아갈 수 있도록 보내두겠다." <<He>>【은는】 다시 <<his>> 컴퓨터로 몸을 돌리고 당신이 옷을 갈아입도록 내버려 둔다.
+		<<elseif !$worn.upper.type.includes("school") and !["fifth", "afternoon"].includes($schoolstate)>>
+			<<He>> hands you a worn-looking school shirt. "You can get changed in the storeroom. I'll have your clothes sent to the pool for you to collect after school." <<He>> turns back to <<his>> computer and leaves you to change.
 			<br><br>
 
 			<<link [[옷을 갈아입고 나간다 (0:01)|Hallways]]>><<schoolspareclothes>><<endevent>><<pass 1>><</link>>
@@ -898,18 +924,18 @@
 <</if>>
 <br><br>
 <<if ($player.gender_appearance is $clothingselector) and !$genderknown.includes("Leighton") and !playerChastity("hidden")>> <!-- Leighton didn't expect this and checks the PC's records for their sex -->
-	<<He>>【은는】 잠시 혼란스러운 표정을 짓더니, 이내 <<his>> 컴퓨터로 돌아가 무언가를 찾아본다. <<He>>【은는】 잠시 훑어보더니,
-		<<if $player.penisExist and $player.vaginaExist>><!-- implication: PC's ambiguous sex is recorded as medical information -->
-			<<he>>【이가】 찾은 것에 숨을 들이킨다.
-		<<elseif $backgroundTraits.includes("crossdresser")>><!-- deliberately ambiguous implication: PC has been crossdressing for long enough for it to be on file -->
-			<<he>>【이가】 찾은 것에 히죽 웃는다.
+	<<He>> looks slightly confused for a moment, before turning back to <<his>> computer to look something up. <<He>> skims briefly before
+		<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>><!-- implication: PC's ambiguous sex is recorded as medical information -->
+			gasping at what <<he>> finds.
+		<<elseif $backgroundTraits.includes("crossdresser") and $settings.nudeGenderPerception !== 0>><!-- deliberately ambiguous implication: PC has been crossdressing for long enough for it to be on file -->
+			smirking at what <<he>> finds.
 		<<else>>
 			<<he>>【이가】 찾은 것에 눈썹을 치켜올리고는 무언가를 입력한다.
 		<</if>>
 		<<He>>【은는】 다시 당신을 쳐다보며 말한다. "미안하지만, 이 교복밖에 없구나. 자, 어서 갈아입어라."
 	<<set $genderknown.pushUnique("Leighton")>><<if $player.penisExist and $player.vaginaExist>><<detention -1>><</if>> <!-- Leighton is too surprised to be angry at herm PC right now -->
-<<elseif $player.sex is $clothingselector and $genderknown.includes("Leighton")>>
-	<<He>>【은는】 당신을 엄하게 쳐다보며 비웃는다. "<<print ($clothingselector is "m" ? "여자애" : "남자애")>>처럼 입고 싶다면 그건 네 자유지만, 다음부턴 그렇게 입고 오도록 해라. 자, 어서 갈아입어."
+<<elseif $player.sex is $clothingselector and $genderknown.includes("Leighton") and $settings.nudeGenderPerception !== 0>>
+	<<He>> looks at you sternly and scoffs. "If you want to dress as a <<print ($clothingselector is "m" ? "girl" : "boy")>>, that's your prerogative, but perhaps you should come dressed like it next time. Now, get dressed."
 <<else>>
 	<<He>>【은는】 당신을 엄하게 쳐다본다. "말대꾸하지 마라. 옷을 갈아입으라고 했다. 자, 어서 갈아입어."
 <</if>>
@@ -2001,11 +2027,11 @@
 <br><br>
 <<person2>><<persons>> 얼굴이 분노로 일그러진다. "그건 너무 잔인하잖아." <<he>>【이가】 으르렁거린다. <<him>> 뒤에서, <span class="red"><<person1>>
 <<switch $phase>>
-	<<case 0>> <<person>>【은는】 창백해져서 <<his>> 샌드위치에 목이 막히는 것 같다.
-	<<case 1>> <<persons>> 미소가 시무룩한 표정으로 바뀌었다.
-	<<case 2>> <<person>>【은는】 창백한 얼굴로 땅을 뚫어지게 쳐다보고 있다.
-	<<case 3>> <<person>>【은는】 <<his>> 얼굴에 겁에 질린 표정을 짓고 있다.
-	<<case 4>> <<person>>【은는】 <<his>> 눈을 감고 눈물을 흘리기 직전인 것 같다.
+	<<case 0>> <<person>> has gone pale and seems to be choking on <<his>> sandwich.
+	<<case 1>> <<persons>> smile has faded into a sour expression.
+	<<case 2>> <<person>> is staring intently at the ground, face pale.
+	<<case 3>> <<person>> has a horrified look on <<his>> face.
+	<<case 4>> <<person>> has closed <<his>> eyes and seems to be on the verge of tears.
 <</switch>>
 </span>
 <br><br>
@@ -2553,7 +2579,13 @@
 <<fameexhibitionism 2>>
 <<schoolrep_naked>>
 
-<<fullGroup>>【은는】 저마다 당신의 가랑이를 쳐다본다. 얼굴에는 놀라움이 가득하다.
+The <<fullGroup>> each stare at your crotch,
+<<if !$player.penisExist or !$player.vaginaExist>>
+	disappointment
+<<else>>
+	astonishment
+<</if>>
+on their faces.
 <br><br>
 <<courtyardrevealresponse>>
 <br><br>
@@ -2570,7 +2602,13 @@
 <<fameexhibitionism 5>>
 <<schoolrep_naked>>
 
-<<fullGroup>>【은는】 저마다 당신의 가랑이를 쳐다본다. 얼굴에는 놀라움이 가득하다.
+The <<fullGroup>> each stare at your crotch,
+<<if !$player.penisExist or !$player.vaginaExist>>
+	disappointment
+<<else>>
+	astonishment
+<</if>>
+on their faces.
 <br><br>
 <<courtyardrevealresponse>>
 <br><br>
@@ -3065,3 +3103,96 @@
 <br><br>
 
 <<courtyard>>
+
+
+:: Whitney Milk Catch
+<<effects>>
+
+<<if $athleticsSuccess>>
+	<<set $whitneySeen.pushUnique("milkTossCaught")>>
+	You track the carton's arc and snatch it out of the air with a single hand. A few students nearby murmur in surprise, impressed by the reflex.<<status 1>><<gcool>>
+	<br><br>
+
+	<<if $whitneyromance is 1>>
+		Whitney lets out a short laugh from the roof, leaning <<his>> chin on <<his>> folded arms atop the railing. "Not bad, slut. Didn't think you had it in you." <<He>> jerks <<his>> chin at the carton. "Well? Drink it. I didn't throw it down there for you to stand around looking <<cute>>."
+		<br><br>
+
+		You push the straw through and take a long sip. It's cold and aggressively sweet, just like the delinquent leaning over the railing watching you.<<npcincr Whitney love 1>><<glove>><<stress -6>><<lstress>><<trauma -6>><<ltrauma>>
+		<br><br>
+		"Now that's more like it." <<He>> gives you a lazy wave before pushing off the railing. "See you around, slut."
+		<br><br>
+	<<else>>
+		The grin slips off Whitney's face. <<He>> stares down at you from the railing, something between irritation and disbelief crossing <<his>> face.
+		<br><br>
+
+		<<if $speech_attitude is "bratty">>
+			You raise the carton in a mock toast, meeting <<his>> souring glare with an unapologetic smirk before deliberately sticking your tongue out at <<him>>.
+			<br><br>
+
+			Whitney's scowl deepens, and <<he>> aggressively flips you off from over the railing. "Brat," <<he>> spits. "Stick that tongue out again, you little shit, and see what I shove down your throat later." <<He>> shoots you a sharp glare before pushing off the railing.
+		<<else>>
+			"Tch. Don't get cocky," <<he>> sneers, glaring at your disappointingly dry top. "Would've looked a hell of a lot better dripping all over you. What a waste." <<He>> turns on <<his>> heel and walks off.
+		<</if>>
+		<br><br>
+
+		You push the straw through anyway and take a long, unhurried sip. It's cold and aggressively sweet. You earned it.<<stress -6>><<lstress>><<trauma -6>><<ltrauma>>
+		<br><br>
+	<</if>>
+<<else>>
+	<<set $whitneySeen.pushUnique("milkTossMissed")>>
+	You reach out but your timing is off. The carton slips through your fingers and tumbles into your chest, the impact enough to burst the cardboard on contact. Milk soaks through the front of your <<top>> in a cold, spreading bloom.<<wetUpper>>
+	<br><br>
+
+	Whitney bursts out laughing. "Nice catch, slut." <<He>> leans over the railing, grinning at the mess. "Don't pout. You look better like that anyway." <<His>> gaze drops to the soaked fabric clinging to your chest, lingering just long enough to make <<his>> point before <<he>> disappears back onto the roof.<<npcincr Whitney lust 1>><<glust>><<arousal 600>><<garousal>>
+	<br><br>
+
+	You hunch forward, arms crossed tight over your chest, and push through the crowd. Their laughter trails after you.<<stress 6>><<gstress>><<status -1>><<lcool>>
+	<br><br>
+<</if>>
+
+<<link [[Next|School Rear Courtyard]]>><<endevent>><</link>>
+<br>
+
+
+:: Whitney Milk Dodge
+<<effects>>
+
+You skip to the side, letting the carton hit the grass with a wet thud. The strawberry milk leaks out into the dirt, wasted.
+<br><br>
+
+Whitney's expression sours instantly. <<He>> scoffs, pulling back from the railing. "Fine. Waste my money." <<His>> eyes drag over you slowly, calculating. "I'll make it back off you one way or another." <<He>> turns on <<his>> heel and disappears back onto the roof without another word.
+<br><br>
+
+The threat hangs in the air long after <<he>> is gone.<<stress 6>><<gstress>><<npcincr Whitney love -1>><<llove>><<npcincr Whitney dom -1>><<ldom>>
+<br><br>
+
+<<link [[Next|School Rear Courtyard]]>><<endevent>><</link>>
+<br>
+
+
+:: Whitney Milk Flaunt
+<<effects>>
+
+You don't move a muscle. You watch the carton fall, waiting for the impact. It strikes your chest with a heavy thud, the cardboard bursting and drenching the front of your <<top>> in a sticky, pale pink explosion.<<wetUpper>>
+<br><br>
+
+You arch your back, deliberately drawing yourself up as you lock eyes with Whitney. You slowly drag your hands over the soaked fabric, smoothing it tight against your
+<<if $worn.under_upper.type.includes("naked")>>
+	body until it's little more than a translucent second skin.
+<<else>>
+	<<undertop>>.
+<</if>>
+You even catch a stray drop of pink from your lower lip with your tongue, never breaking eye contact.
+<br><br>
+
+"You're practically begging for a public fucking, aren't you?" <<he>> barks down, <<his>> eyes burning into your translucent <<top>>. "Don't tempt me, slut. I might just vault this railing and take you right in the dirt for the whole yard to see."<<npcincr Whitney lust 2>><<gglust>>
+<br><br>
+
+Whitney leans farther over the railing before clicking <<his>> tongue and abruptly straightening. <<He>> turns away and disappears back into the building.
+<br><br>
+
+You become very aware of the damp fabric clinging to your chest.
+<br><br>
+
+<<link [[Next|School Rear Courtyard]]>><<endevent>><</link>>
+<br>

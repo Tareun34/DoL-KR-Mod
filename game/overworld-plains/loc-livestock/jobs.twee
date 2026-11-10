@@ -1,7 +1,7 @@
 :: Livestock Job
 <<effects>>
 
-<<if $rng gte 51 or !$settings.bestialityEnabled>>
+<<if $rng gte 51 or !animalSexEnabledForType("pig")>>
 	<<if !playerChastity("hidden")>>
 		<<set $genderknown.pushUnique("Harper")>>
 	<</if>>
@@ -183,8 +183,8 @@
 		<br>
 	<<elseif $livestock.jobs.pig is 1>>
 		<<set $livestock.jobs.pig to 2>>
-		<<endevent>><<beastNEWinit 1 pig>>
-		레미가 당신을 축사 쪽 작은 길로 이끈다. 당신은 축사 앞에 도착하지만, 이내 맞은편의 더 작은 두 번째 축사로 향한다.
+		<<endevent>><<generateBeastVictim 1 pig>>
+		Remy leads you down the small lane towards the barn. You arrive in front of it, but then are turned toward the second, smaller barn opposite.
 		<br><br>
 
 		내부는 어둑하다. 이전에 있던 매트, 조명, 카메라가 설치되어 있다. 니키가 카메라를 조작하고 있다. 그 앞에는 이미 <<beasttype>> 한 마리가 건초 더미 옆에서 기다리고 있다.
@@ -202,8 +202,8 @@
 
 	<<elseif $livestock.jobs.pig is 2>>
 		<<set $livestock.jobs.pig to 1>>
-		<<endevent>><<beastNEWinit 3 pig>>
-		레미가 당신을 축사 쪽 작은 길로 이끈다. 당신은 축사 앞에 도착하지만, 이내 맞은편의 더 작은 두 번째 축사로 향한다.
+		<<endevent>><<generateBeastVictim 3 pig>>
+		Remy leads you down the small lane towards the barn. You arrive in front of it, but then are turned toward the second, smaller barn opposite.
 		<br><br>
 
 		내부는 어둑하다. 이전에 있던 매트, 조명, 카메라가 설치되어 있다. 가장자리에는 의자들이 원형으로 놓여 있다. 그곳은 <<people>>【으로로】 가득 차 있다. 세 마리의 <<beastsplural>>【이가】 매트 위 건초 더미 옆에서 기다리고 있다. 니키가 카메라를 조작하고 있다.
@@ -831,8 +831,8 @@
 	<</if>>
 	<br><br>
 <<elseif playerChastity()>>
-	<<if $player.penisExist and $player.vaginaExist>>
-		관객들이 당신의 자웅동체에 대해 수군거린다. "궁금해하실지도 모르겠습니다." 하퍼가 말을 잇는다. "여기 있는 모든 가축이 남성과 여성의 생식기를 모두 가지고 있는지 말입니다. 그렇지 않습니다. 이 표본은 독특합니다."
+	<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>
+		The audience murmurs about your genitals. "You might be wondering," Harper continues. "If all the livestock here are blessed with both male and female genitalia. They are not. This specimen is unique."
 		<br><br>
 	<</if>>
 
@@ -842,8 +842,8 @@
 	<<He>>【은는】 장치 앞부분에 <<his>> 손가락을 스친다. <<if $player.penisExist>>"<<pShes>> 이미 발기해서 금속에 맞서 팽팽해져 있습니다."<<else>>"<<pShes>> 이미 젖어서 금속 사이로 흘러내리고 있습니다."<</if>>
 	<br><br>
 <<else>>
-	<<if $player.penisExist and $player.vaginaExist>>
-		관객들이 당신의 자웅동체에 대해 수군거린다. "궁금해하실지도 모르겠습니다." 하퍼가 말을 잇는다. "여기 있는 모든 가축이 남성과 여성의 생식기를 모두 가지고 있는지 말입니다. 그렇지 않습니다. 이 표본은 독특합니다."
+	<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>
+		The audience murmurs about your genitals. "You might be wondering," Harper continues. "If all the livestock here are blessed with both male and female genitalia. They are not. This specimen is unique."
 		<br><br>
 	<</if>>
 
@@ -1237,8 +1237,8 @@
 :: Livestock Job Niki
 <<effects>>
 <<endevent>>
-<<beastNEWinit 1 pig>>
-헛간 문이 열리고, 농장 인부가 목줄을 들고 들어온다. 목줄이 팽팽해진다. 그것에 매달린 무언가가 들어오기를 거부한다.
+<<generateBeastVictim 1 pig>>
+The barn doors open, and a farmhand enters, holding a leash. The leash tightens. Whatever it's attached to refuses to enter.
 <br><br>
 몇 번 잡아당기고 다른 두어 명의 농장 인부의 도움으로, 그 짐승은 건물 안으로 억지로 끌려 들어온다. 그것은 <<beasttype>>【이】다.
 <br><br>
@@ -1739,6 +1739,7 @@
 <</if>>
 <br>
 <br><br>
+<<person1>>
 <<if $livestock.obey gte 30>>
 	레미가 미소 짓는다. "물론이지." <<he>>【이가】 말한다. "내 착한 <<pcow>>들에게는 모두 보상이 따르지."
 <<else>>
@@ -1877,8 +1878,8 @@
 	<</addinlineevent>>
 
 	<<addinlineevent "tie_stall_punishment_other_cow">>
-		<<beastNEWinit 1 cow>><<generate2>><<generate3>><<person1>>
-		축사 문이 열린다. 두 사람이 다투는 소리가 들린다. 가까워지면서 보니, 두 명의 일꾼이 그들 사이로 <<beasttype>>【을를】 몰고 있다. 일꾼들이 <<bhim>>【을를】 당신 옆 칸으로 끌고 가려 하자, <<bHe>>【은는】 땅에 <<bhis>> <<if $monster is 1>>발뒤꿈치를<<else>>발굽을<</if>> 푹 박고 버틴다.
+		<<generateBeastVictim 1 cow>><<generate2>><<generate3>><<person1>>
+		The doors to the barn open. You hear two voices arguing. As they get closer, you can see that two farmhands are herding a <<beasttype>> in between them. <<bHe>> digs <<bhis>> <<if $monster is 1>>heels<<else>>hooves<</if>> into the ground as the farmhands drag <<bhim>> to the stall next to you.
 		<br><br>
 		"멍청한 <<beasttype>>," <<person2>><<person>>【이가】 말한다. <<He>>【은는】 <<person1>><<beasttype>>에게 발길질을 한다. "네가 자초한 일이야."
 		<br><br>
@@ -1909,8 +1910,8 @@
 	<</addinlineevent>>
 
 	<<addinlineevent "tie_stall_punishment_screech">>
-		<<beastNEWinit 1 cow>><<generate2>><<generate3>><<person1>>
-		시끄러운 비명 소리가 허공을 가른다. <<if $syndromebird>>당신은 당신 반려의 울음소리라는 걸 알아챈다.<<stress -6>><<lstress>><<else>>목덜미의 털이 곤두서는 것이 느껴진다.<<stress 6>><<gstress>><</if>>
+		<<generateBeastVictim 1 cow>><<generate2>><<generate3>><<person1>>
+		A loud screech rips through the air. <<if $syndromebird>>You recognise the call of your spouse.<<stress -6>><<lstress>><<else>>You feel the hairs on the back of your neck stand on end.<<stress 6>><<gstress>><</if>>
 		<br><br>
 		밖에서 고함 소리가 울려 퍼진다. 차가운 땅을 구르는 발소리가 들린다. 목을 빼서 보니 공포에 질린 동물들과 당황한 일꾼들이 우르르 몰려가고 있다. 어떤 <<beasttype>>【이가】 <<person2>><<person>>【을를】 들이받아 넘어뜨린다. <<He>>【은는】 멍한 상태로 비틀거리며 일어난다.
 		<br><br>
@@ -1948,13 +1949,14 @@
 	<</addinlineevent>>
 
 	<<addinlineevent "tie_stall_punishment_rape_reward" 1000>>
-		<<if $rng gte 51 and (($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly) or $settings.bestialityEnabled))>>
-			<<if $rng gte 51 and $settings.horsesEnabled>>
-				<<beastNEWinit 1 horse>>
+		<<if $rng gte 51 and (beastSexEnabledForType("horse") or beastSexEnabledForType("dog"))>>
+			<<set _beastType to beastSexEnabledForType("horse") ? "horse" : "dog">>
+				<<beastNEWinit 1 _beastType>>
+			<<if beastSexEnabledForType(_beastType, $monster is 1)>>
+				<<set _attacker to $NPCList[0].type>>
 			<<else>>
-				<<beastNEWinit 1 dog>>
+				<<clearnpc>><<generate1>><<set _attacker to "farmhand">>
 			<</if>>
-			<<set _attacker to $NPCList[0].type>>
 		<<else>>
 			<<generate1>><<set _attacker to "farmhand">>
 		<</if>>
@@ -1979,8 +1981,8 @@
 		어떤 <<beasttype>>【이가】 당신 앞에서 멈춰 선다. <<bHe>>【은는】 크고 호기심 가득한 눈으로 당신을 올려다본다. <<bHe>>【은는】 가슴 깊숙한 곳에서 가르랑거리며 당신에게 몸을 비빈다.
 		<br><br>
 		<<if $rng lte 15>>
-			<<if $monster is 1 or $settings.bestialityEnabled>>
-				<<bhis>> 눈에 번뜩이는 빛이 돈다. <<bHe>>【은는】 당신의 엉덩이 쪽으로 어슬렁어슬렁 다가간다. 당신의 <<genitals>>에 <<bhis>> 뜨거운 입김이 느껴진다.
+			<<if beastSexEnabledForType("cat", $monster is 1)>>
+				There is a gleam in <<bhis>> eyes. <<bHe>> saunters around to your ass. You feel <<bhis>> hot breath on your <<genitals>>.
 				<br><br>
 				<<if $cat gte 6>>
 					당신은 <<beasttype>>에게 으르렁거린다. <<bHe>>도 마주 으르렁거린다. 팽팽한 침묵이 흐른다. 당신은 꼬리로 <<bhis>> 얼굴을 휙휙 치며 기다린다. <<if $monster is 1>><<bhim>>【이가】 한숨 쉬는<<else>>콧방귀 뀌는<</if>> 소리가 들린다. <<bHe>>【은는】 당신 옆에 털썩 주저앉는다.
@@ -2357,8 +2359,8 @@
 <br><br>
 <<if $phase is 0>>
 	<<if $skulduggerysuccess>>
-		<<if $rng gte 51 or !$settings.bestialityEnabled>>
-			"이 실험은 매우 민감합니다." 한 목소리가 말한다. <<if $harperSeen>>하퍼다<<else>>당신은 그 목소리를 모른다<</if>>. "만약 제가 적절한 시간 내에 혈청을 투여하지 않으면, 결과가 틀어질 수 있습니다."
+		<<if $rng gte 51 or !animalSexEnabledForType("pig")>>
+			"This experiment is very sensitive," a voice says. <<if $harperSeen>>It's Harper<<else>>You don't recognise it<</if>>. "If I don't administer the serum within the right time frame, it could throw off the results."
 		<<else>>
 			"장비가 비싸요." 한 목소리가 말한다. <<if $nikiSeen>>니키다<<else>>당신은 그 목소리를 모른다<</if>>. "그걸 빌리는 데 돈이 엄청나게 들어요."
 		<</if>>
@@ -2776,8 +2778,8 @@
 	당신은 조용히 있는다.<<if !$willpowersuccess>> 침착함을 유지하려는 최선의 노력에도 불구하고 심장이 마구 뛰는 것이 느껴진다. 당신은 결박에 저항하며 몸부림친다. 밧줄이 피부를 쓸어 상처를 낸다.<<pain 6>><<gpain>><</if>>
 <</if>>
 <br><br>
-<<if ($phase is 0 and $rng gte 75) or !$settings.bestialityEnabled or !$settings.lurkersEnabled>>
-	채터링 소리가 멈춘다. 무언가 헛간 뒤쪽으로 재빨리 움직이는 소리가 들린다. 그게 무엇이든, 당신을 공격할 위험을 감수하고 싶지는 않은 것 같다.<<stress -4>><<lstress>>
+<<if ($phase is 0 and $rng gte 75) or !$settings.lurkersEnabled>>
+	The chittering stops. You hear something skitter to the back of the barn. Whatever it is, it seems it doesn't want to risk attacking you.<<stress -4>><<lstress>>
 	<br><br>
 	<<link [[다음|Livestock Tie Stall Punishment End]]>><<endevent>><</link>>
 	<br>
@@ -2821,7 +2823,7 @@
 :: Livestock Tie Stall Punishment Lurker Struggle Finish
 <<effects>>
 <<if $struggle.done gte $struggle.number>>
-	럴커가 채터링 소리를 내며 당신에게서 뛰어내린다. 그것은 그림자 속으로 재빨리 사라진다. <<tearful>>, 당신은 흩어진 정신을 수습하고 다음에 무엇을 해야 할지 생각하려 애쓴다.
+	The lurker jumps away from you with a chitter. It scurries back into the shadows. <<tearful>> you try to gather your scattered wits and think of what to do next.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>

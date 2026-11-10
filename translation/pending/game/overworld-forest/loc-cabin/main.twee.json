@@ -1,0 +1,53 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<br><br>",
+   "\t\tYou slept soundly, but now feel a little rough."
+  ],
+  "old_kr": [
+   "\t\t<br><br>",
+   "\t\t푹 잤지만, 지금은 몸이 좀 좋지 않다."
+  ],
+  "new_en": [
+   "\t\t<br>",
+   "\t\tYou slept soundly, but now feel a little rough."
+  ],
+  "context": "\t<<if [\"dryheaving\",\"nausea\"].includes(_wakingEffect)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\"Wait,\" <<he>> says. You turn back to ask <<him>> what was wrong, but are interrupted by a kiss. <<takeKissVirginity \"Eden\" `(isLoveInterest(\"Eden\") ? \"loveInterest\" : \"romantic\")`>> "
+  ],
+  "old_kr": [
+   "\"기다려.\" <<he>>【이가】 말한다. 무슨 일인지 물어보려 돌아서지만, 입맞춤에 가로막힌다. <<takeKissVirginity \"Eden\" `(isLoveInterest(\"Eden\") ? \"loveInterest\" : \"romantic\")`>> "
+  ],
+  "new_en": [
+   "\"Wait,\" <<he>> says. You turn back to ask <<him>> what was wrong, but are interrupted by a kiss. <<takeKissVirginity \"Eden\" `(isLoveInterest(\"Eden\") ? \"loveInterest\" : \"romantic\")`>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br>"
+  ],
+  "context": "\t\t<<He>>【은는】 하품하며 다시 잠들려 하지만, <<his>> 눈이 번쩍 뜨인다. 마치 무언가 깨달은 것처럼."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<br>"
+  ],
+  "context": "\t\t\t<<bedicon \"eden\">><<link [[에덴과 함께 간다|Eden Cabin Bed]]>><<npcincr Eden love 1>><<npcincr Eden dom 1>><</link>><<glove>><<gdom>>"
+ }
+]

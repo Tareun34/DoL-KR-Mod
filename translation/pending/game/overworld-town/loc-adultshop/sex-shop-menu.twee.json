@@ -1,0 +1,86 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $debug is 1>>",
+   "\t<<ind>><<link [[Reload|Adult Shop Menu]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<if $debug is 1>>",
+   "\t<<ind>><<link [[새로고침|Adult Shop Menu]]>><</link>>"
+  ],
+  "new_en": [
+   "<<if $debug>>",
+   "\t<<ind>><<link [[Reload|Adult Shop Menu]]>><</link>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $debug is 1>>",
+   "\t<<ind>><<link [[Reload|Forest Shop Sex Toys]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<if $debug is 1>>",
+   "\t<<ind>><<link [[새로고침|Forest Shop Sex Toys]]>><</link>>"
+  ],
+  "new_en": [
+   "<<if $debug>>",
+   "\t<<ind>><<link [[Reload|Forest Shop Sex Toys]]>><</link>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $debug is 1>>",
+   "\t<<link [[Reload|Sextoys Inventory]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<if $debug is 1>>",
+   "\t<<link [[새로고침|Sextoys Inventory]]>><</link>>"
+  ],
+  "new_en": [
+   "<<if $worn.genitals.name is \"naked\" and $gold_chastity_count gte 1 and playerBellySize() lte 7>>",
+   "\tYou are carrying a golden chastity belt.",
+   "\t<br>",
+   "\t<<antiqueicon \"chastity\">><<link [[Wear it|Sextoys Inventory Gold Chastity Belt]]>><</link>>",
+   "\t<br><br>",
+   "<</if>>",
+   "",
+   "<<if $debug>>",
+   "\t<<link [[Reload|Sextoys Inventory]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Leave|$sextoyInvReturnLink]]>><<unset $sextoyInvReturnLink>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[떠난다|$sextoyInvReturnLink]]>><<unset $sextoyInvReturnLink>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Leave|$sextoyInvReturnLink]]>><<unset $sextoyInvReturnLink>><</link>>",
+   "",
+   ":: Sextoys Inventory Gold Chastity Belt",
+   "",
+   "<<effects>><<set $gold_chastity_count -= 1>><<set $antiquemoney -= 2000>>",
+   "",
+   "You examine the gold chastity belt in your hands. You think you see a faint glow emanating from it. You wonder what it would feel like to have something so beautiful protecting your <<genitals 1>>.",
+   "<br><br>",
+   "You feel an urge to try it on. You wrap it around your waist. As it clicks shut you wonder if there's a key somewhere.",
+   "<br><br>",
+   "<<clothesstrip>>",
+   "<<genitalswear 3>>",
+   "<<earnFeat \"Locked In Gold\">>",
+   "<<set $worn.genitals.origin to \"Underwater Temple\">>",
+   "",
+   "<<link [[Next|Sextoys Inventory]]>><<clotheson>><</link>>",
+   "<br>"
+  ],
+  "context": ""
+ }
+]

@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"What a trooper! Can I have another round of applause?\" The pair leave the stage, looking satisfied.<<gattention>><<pirate_attention 1>>"
+  ],
+  "old_kr": [
+   "\t\"대단한 친구로군요! 다시 한번 박수 부탁드립니다!\" 두 사람은 만족스러운 표정으로 무대를 떠난다.<<gattention>><<pirate_attention 1>>"
+  ],
+  "new_en": [
+   "\t\"What a trouper! Can I have another round of applause?\" The pair leave the stage, looking satisfied.<<gattention>><<pirate_attention 1>>"
+  ],
+  "context": "\t<<ejaculation>>"
+ }
+]

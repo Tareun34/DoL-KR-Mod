@@ -4,8 +4,8 @@
 당신은 레미의 농장 안에 있는 가축 목초지에 있다.
 <<if Weather.isSnow>>
 	<!-- Modified for Monster People -->
-	<<if ($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>
-		<<livestock_cows "cap">> 눈밭을 돌아다니며 신선한 풀을 찾고 있다. 전기 울타리 옆에 풀이 무성하게 자라 있음에도 불구하고, 그 근처에는 얼씬도 하지 않는다.
+	<<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
+		<<livestock_cows "cap">> roam across the snow in search of fresh grass, staying well away from the electric perimeter fence despite the grass growing thick beside it.
 	<<else>>
 		소들이 눈밭을 돌아다니며 신선한 풀을 찾고 있다. 전기 울타리 옆에 풀이 무성하게 자라 있음에도 불구하고, 그 근처에는 얼씬도 하지 않는다.
 	<</if>>
@@ -19,8 +19,8 @@
 	<</if>>
 <<else>>
 	<!-- Modified for Monster People -->
-	<<if ($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>
-		<<livestock_cows "cap">> 풀을 우적우적 씹고 있다. 전기 울타리 옆에 풀이 무성하게 자라 있음에도 불구하고, 그 근처에는 얼씬도 하지 않는다.
+	<<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
+		<<livestock_cows "cap">> munch on grass, staying well away from the electric perimeter fence despite the grass growing thick beside it.
 	<<else>>
 		소들이 풀을 우적우적 씹고 있다. 전기 울타리 옆에 풀이 무성하게 자라 있음에도 불구하고, 그 근처에는 얼씬도 하지 않는다.
 	<</if>>
@@ -50,8 +50,8 @@
 	농장 인부 두 명이 문을 밀어 열자 덜컹거리는 소리가 난다. 레미가 안으로 성큼성큼 들어와 <<livestock_horse>>에 올라타더니, 박차를 가해 들판을 질주한다. <<He>>【은는】 소들 주위를 돌며 한데 모아 출구 쪽으로 몰아간다.
 	<br><br>
 	<<if $hunger gte 2000>>
-		정신이 아득해진다. <span class="red">굶주리고 있다.</span> 풀이라도 뜯어먹고 싶다는 생각마저 든다.
-		<<gggstress>><<stress 36>>/*<<physique_loss 36>><<willpower 12>>*/
+		You feel faint. <span class="red">You're starving.</span> Even the thought of grass is appetising.
+		<<gggstress>><<stress 36>>/*<<physique -36>><<willpower 12>>*/
 	<<elseif $hunger gte 1600>>
 		뱃속에서 요란한 소리가 울린다. <span class="pink">너무 배가 고프다.</span> 풀이라도 뜯어먹고 싶다는 생각마저 든다.
 		<<ggstress>><<stress 18>>
@@ -151,7 +151,7 @@
 	<<elseif $arousal gte $arousalmax>>
 		<<orgasm>> 무릎에 힘이 풀려 풀밭 위로 쓰러진다.
 		<!-- Modified for Monster People -->
-		<<if ($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>
+		<<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
 			<<if maleChance() lt random(1, 100)>>
 				들판 곳곳의 카우걸들이 혼란스러운 표정으로 쳐다본다.
 
@@ -1099,8 +1099,8 @@
 
 레미의 말들에게 다가간다.
 
-<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>
-	멀리서는 말처럼 보이지만, 가까이 다가가자 머리와 몸통이
+<<if monsterCanAppearForType("horse")>>
+	They look like horses from a distance, but up close you see they have the heads and torsos of
 	<<if _horse_gender is "f">>
 		여성이다.
 	<<elseif _horse_gender is "m">>
@@ -1124,14 +1124,14 @@
 <br><br>
 
 <<if $livestock.horse.reputation gte 2>>
-	<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>
-		<span class="green">당신이 다가가자 몇몇이 고개를 끄덕이며 인사한다.</span>
+	<<if monsterCanAppearForType("horse")>>
+		<span class="green">A few nod in greeting as you approach.</span>
 	<<else>>
 		<span class="green">당신이 다가가자 그들이 더 가까이 다가온다.</span>
 	<</if>>
 <<elseif $livestock.horse.reputation gte 1>>
-	<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>
-		당신이 다가가는 것을 지켜본다. 몇몇은 재미있어하는 것 같다.
+	<<if monsterCanAppearForType("horse")>>
+		They watch as you approach. Some look amused.
 	<<else>>
 		당신이 다가가는 것을 지켜본다. 그들은 차분해 보인다.
 	<</if>>
@@ -1163,8 +1163,8 @@
 	<<clearnpc>><<beastNEWinit 1 horse>>
 
 	<!-- Modified for Monster People -->
-	<<if random(1,2) is 1 and $awareness gte 200 and $daily.livestock.horses_satisfied lt 6 and $settings.horsesEnabled and ($settings.bestialityEnabled or $monster is 1)>>
-		뒤쪽에 있는 <<beasttype>> 한 마리가 안절부절못하는 것 같다. <<bHe>>【은는】 다른 이들을 향해 발을 구르며,
+	<<if random(1,2) is 1 and $awareness gte 200 and $daily.livestock.horses_satisfied lt 6 and beastSexEnabledForType("horse", $monster is 1)>>
+		One <<beasttype>> in the back seems agitated. <<bHe>> stomps at the others, and is
 		<<if $monster is 1>>
 			무례하고 까다롭게 굴고 있다.
 		<<else>>
@@ -1248,7 +1248,7 @@
 	<<set _horse_gender to "b">>
 <</if>>
 
-<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>
+<<if monsterCanAppearForType("horse")>>
 	<<if $livestock.horse.reputation gte 2>>
 		당신은 손가락으로 켄타우로스들의 머리카락을 빗어준다. 켄타우로스들은 자기 차례를 받으려고 서로 밀친다. 등에는 털이 거의 없는데도 등을 긁어달라고 조르기도 한다.
 	<<else>>
@@ -1337,8 +1337,8 @@
 		<</if>>
 	<<else>>
 		<!-- Modified for Monster People -->
-		<<if $daily.livestock.horses_satisfied lt 6 and $settings.horsesEnabled and ($settings.bestialityEnabled or $monster is 1)>>
-			<<beasttype>> 한 마리는 당신이 <<bhim>> 빗질해주는 와중에도 불만스러워 보인다. <<bHe>>【은는】 계속해서 당신을 향해 발을 구르며,
+		<<if $daily.livestock.horses_satisfied lt 6 and beastSexEnabledForType("horse", $monster is 1)>>
+			One <<beasttype>> seems frustrated even as you brush <<bhim>>. <<bHe>> keeps stomping at you, and is
 			<<if $monster is 1>>
 				무례하고 까다롭게 군다.
 			<<else>>
@@ -2148,7 +2148,7 @@
 	발굽 소리가 들린다. <<person1>><<person>>【이가】 고개를 든다. "젠장!" <<he>>【이가】 소리치며 당신에게서 물러선다. 다른 이들도 그 뒤를 따르며, 당신은 <<if $livestock.winter.active>>바닥<<else>>풀밭<</if>>에 홀로 남겨진다.
 	<br><br>
 	<!-- Modified for Monster People -->
-	<<if ($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>
+	<<if monsterCanAppearForType("horse")>>
 		<<if maleChance() lt random(1, 100)>>
 			발굽 소리가 커지더니, 잠시 후 켄타우로스들에게 둘러싸인다. 그들이 당신을 보호하듯 둥글게 에워싸는 동안, 몇몇이 농장 일꾼들을 <<if $livestock.winter.active>>헛간 밖으로<<else>>들판 밖으로<</if>> 쫓아낸다.
 			<br><br>

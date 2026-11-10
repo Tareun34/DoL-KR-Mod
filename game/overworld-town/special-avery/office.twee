@@ -300,6 +300,7 @@
 
 :: Avery Office Drive
 <<effects>>
+<<set $averyschoolpickup to 1>>
 
 당신은 엘리베이터 카드키를 <<office_manager>>에게 돌려준 뒤, 주차장 입구에서 기다리고 있는 에이버리에게 돌아간다.
 <br><br>

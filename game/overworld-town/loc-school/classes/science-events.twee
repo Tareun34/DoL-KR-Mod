@@ -784,9 +784,9 @@
 			수업은 별일 없이 지나간다.
 			<br><br>
 		<<case 2>>
-			"여기서 무슨 일이니?" 시리스가 당신과 불량 학생들을 보며 눈살을 찌푸리며 묻는다.
+			"What's going on here?" Sirris asks, frowning at you and the delinquents.
 			<br><br>
-			당신은 한 가지 방식으로 설명한다. 불량 학생들은 다른 방식으로 설명한다.
+			You explain one way. The delinquents explain another.
 			<<if $delinquency gte 400>>
 				하지만 시리스는 당신의 불량한 평판 때문에 그것이 속임수라고 생각하며 믿지 않는다.
 				<br><br>
@@ -1008,37 +1008,6 @@
 
 	<<link [[다음|Science Lesson]]>><</link>>
 <</if>>
-
-:: Events Swimming Freed
-<<set $outside to 0>><<set $location to "pool">><<schooleffects>><<effects>>
-
-당신은 수영장 가장자리로 헤엄쳐 가서 몸을 돌린다. 메이슨이 무릎을 꿇고 당신의 결박을 끊어준다. "자. 다른 학생이 이런 짓을 한 게 아니었으면 좋겠군." <<He>>【은는】 물러선다.
-<br><br>
-
-<<endevent>>
-
-<<link [[다음|Swimming Lesson]]>><</link>>
-<br>
-
-:: Events Swimming Freed Refuse
-<<set $outside to 0>><<set $location to "pool">><<schooleffects>><<effects>>
-
-<<if $speech_attitude is "meek">>
-	"아, 아니요." 당신은 말한다. "계속 묶여 있어야 해요."
-<<elseif $speech_attitude is "bratty">>
-	"제가 도와달라고 했나요?" 당신은 선생님을 쏘아보며 말한다.
-<<else>>
-	"전 괜찮아요. 고마워요." 당신은 말한다.
-<</if>>
-<br><br>
-
-메이슨은 혼란스러워 보인다. "네가 그렇다면야. 수영 중에 <<= pcAreArmsBound("any") ? "팔" : "사지">>【을를】 묶는 걸 금지하는 규칙은 없는 것 같으니. 조심하기나 해, 알았지?"
-<br><br>
-
-<<endevent>>
-
-<<link [[다음|Swimming Lesson]]>><</link>>
-<br>
 
 :: Science Kick
 <<set $outside to 0>><<set $location to "school">><<schooleffects>><<effects>>

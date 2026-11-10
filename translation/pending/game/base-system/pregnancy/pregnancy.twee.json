@@ -1,0 +1,123 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if _args[4]>>",
+   "\t\t\t<<set _hours to Math.floor(_args[4] / 60)>>",
+   "\t\t\t<<set _minutes to _args[4] % 60>>",
+   "\t\t\t<<set _timeString to \" (\" + (_hours lt 10 ? \"0\": \"\") +_hours+\":\"+(_minutes lt 10 ? \"0\": \"\")+_minutes+\")\">>",
+   "\t\t<</if>>",
+   "\t\t<<link [[\"Next\" + (_args[4] ? _timeString : \"\")|_args[3]]]>>"
+  ],
+  "old_kr": [
+   "\t\t<<if _args[4]>>",
+   "\t\t\t<<set _hours to Math.floor(_args[4] / 60)>>",
+   "\t\t\t<<set _minutes to _args[4] % 60>>",
+   "\t\t\t<<set _timeString to \" (\" + (_hours lt 10 ? \"0\": \"\") +_hours+\":\"+(_minutes lt 10 ? \"0\": \"\")+_minutes+\")\">>",
+   "\t\t<</if>>",
+   "\t\t<<link [[\"다음\" + (_args[4] ? _timeString : \"\")|_args[3]]]>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[\"Next\" + (_args[4] ? \" \" + printTime(_args[4], true) : \"\")|_args[3]]]>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if _args[2]>>",
+   "\t\t\t<<set _hours to Math.floor(_args[2] / 60)>>",
+   "\t\t\t<<set _minutes to _args[2] % 60>>",
+   "\t\t\t<<set _timeString to \" (\" + (_hours lt 10 ? \"0\": \"\") +_hours+\":\"+(_minutes lt 10 ? \"0\": \"\")+_minutes+\")\">>",
+   "\t\t<</if>>",
+   "\t\t<<link [[\"Next\" + (_args[2] ? _timeString : \"\")|_args[1]]]>>"
+  ],
+  "old_kr": [
+   "\t\t<<if _args[2]>>",
+   "\t\t\t<<set _hours to Math.floor(_args[2] / 60)>>",
+   "\t\t\t<<set _minutes to _args[2] % 60>>",
+   "\t\t\t<<set _timeString to \" (\" + (_hours lt 10 ? \"0\": \"\") +_hours+\":\"+(_minutes lt 10 ? \"0\": \"\")+_minutes+\")\">>",
+   "\t\t<</if>>",
+   "\t\t<<link [[\"다음\" + (_args[2] ? _timeString : \"\")|_args[1]]]>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[\"Next\" + (_args[2] ? \" \" + printTime(_args[2], true) : \"\")|_args[1]]]>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<set $_text_output to `\"I believe they are <<if $_litter.length is 3>>all identical triplets<<else>>both identical twins<</if>>. They're the same gender and their facial features are similar.\"`>>"
+  ],
+  "old_kr": [
+   "\t\t<<set $_text_output to `\"제 생각엔 <<if $_litter.length is 3>>셋 다 일란성 세쌍둥이<<else>>둘 다 일란성 쌍둥이<</if>>인 것 같습니다. 성별도 같고 이목구비도 서로 닮았네요.\"`>>"
+  ],
+  "new_en": [
+   "\t\t<<set $_text_output to `\"I believe they are <<if $_litter.length is 3>>all identical triplets<<else>>both identical twins<</if>>. They're the same sex and their facial features are similar.\"`>>"
+  ],
+  "context": "\t<<if $_litter[0].identical isnot null>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<set $_text_output to `\"Despite being the same gender, I believe they are not identical. They appear to have slightly different facial features.\"`>>"
+  ],
+  "old_kr": [
+   "\t\t<<set $_text_output to `\"같은 성별이긴 하지만, 일란성은 아닌 것 같습니다. 이목구비가 약간 다르게 생겼네요.\"`>>"
+  ],
+  "new_en": [
+   "\t\t<<set $_text_output to `\"Despite being the same sex, I believe they are not identical. They appear to have slightly different facial features.\"`>>"
+  ],
+  "context": "\t<<elseif ($_genders.m is $_litter.length or $_genders.f is $_litter.length or $_genders.h is $_litter.length) and $_litter.length gt 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<set $_text_output += \" baby hermaphrodite\">>",
+   "\t\t\t<<if $_genders.h gt 1>><<set $_text_output += \"s\">><</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<set $_text_output += \" 명의 양성구유 아이\">>",
+   "\t\t\t<<if $_genders.h gt 1>><<set $_text_output += \"들\">><</if>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if $_genders.h gt 1>><<set $_text_output += \" babies\">><<else>><<set $_text_output += \" baby\">><</if>>",
+   "\t\t\t<<set $_text_output += \" with genitals like your own\">>"
+  ],
+  "context": "\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $_pregnancy and $_pregnancy.orifice is \"vagina\" and $player.virginity.vaginal is true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $_pregnancy?.orifice is \"vagina\" and $player.virginity.vaginal is true>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $_pregnancy and $_pregnancy.carrier isnot \"pc\" && $_pregnancy.donor is \"pc\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $_pregnancy?.donor is \"pc\" && $_pregnancy.carrier isnot \"pc\">>"
+  ],
+  "context": "\t\t<<set $_pregnancy to getLabouringPregnancy(_args[0])>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<if ($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>"
+  ],
+  "context": "\t\t\t\t\tA"
+ }
+]

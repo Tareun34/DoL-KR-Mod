@@ -1,0 +1,149 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou tell Gwylan that it appeared in the shop some time after you were wrapped up in a cocoon in the catacombs<<if $settings.spidersEnabled and $settings.bestialityEnabled>>, and tell <<him>> about the gigantic spiders<</if>>."
+  ],
+  "old_kr": [
+   "\t당신은 그윌란에게 카타콤에서 고치에 싸인 후 얼마 지나지 않아 상점에 나타났다고 말한다<<if $settings.spidersEnabled and $settings.bestialityEnabled>>. 그리고 거대한 거미들에 대해서도 <<him>>에게 이야기한다<</if>>."
+  ],
+  "new_en": [
+   "\tYou tell Gwylan that it appeared in the shop some time after you were wrapped up in a cocoon in the catacombs<<if $settings.spidersEnabled and animalSexEnabledForType(\"spider\")>>, and tell <<him>> about the gigantic spiders<</if>>."
+  ],
+  "context": "\t<<set $daily.gwylan.traumaTalk to true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "",
+   "You recount each tale to Gwylan. The asylum and the prison. Remy's farm. The underground brothel. The castle in the moor. Being hunted and caught in this forest. <<He>> stays silent until the end."
+  ],
+  "old_kr": [
+   "당신은 그윌란에게 각각의 이야기를 들려준다. 정신병원과 교도소. 레미의 농장. 지하 창관. 황야의 성. 이 숲에서 사냥당하고 붙잡혔던 일까지. <<He>>【은는】 끝까지 조용히 듣고만 있다."
+  ],
+  "new_en": [
+   "",
+   "You recount each tale to Gwylan. The asylum and the prison. Remy's farm. The underground brothel. The castle in the moor. Being hunted and caught in this forest. Slavery in the mines. <<He>> stays silent until the end."
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or $greathawkmonster is 2>><<set _hawkmonster to 1>><</if>>",
+   "You show Gwylan the feathery accessories."
+  ],
+  "old_kr": [
+   "<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or $greathawkmonster is 2>><<set _hawkmonster to 1>><</if>>",
+   "당신은 그윌란에게 깃털 장신구를 보여준다."
+  ],
+  "new_en": [
+   "<<if resolveIfNamedBeastIsMonster(\"greathawk\")>><<set _hawkmonster to 1>><</if>>",
+   "You show Gwylan the feathery accessories."
+  ],
+  "context": "<<set $daily.gwylan.traumaTalk to true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"I befriended the giant <<= $settings.bestialityEnabled ? \"birds\" : \"harpies\" >> that watched over the prison, and flew,\" you explain."
+  ],
+  "old_kr": [
+   "\t\"감옥을 지키던 거대한 <<= $settings.bestialityEnabled ? \"새들\" : \"하피들\" >>【이】랑 친해져서 그걸 타고 날아왔어.\" 라고 설명한다."
+  ],
+  "new_en": [
+   "\t\"I befriended the giant <<= resolveIfNamedBeastIsMonster(\"greathawk\") ? \"harpies\" : \"birds\" >> that watched over the prison, and flew,\" you explain."
+  ],
+  "context": "<<elseif _prisonStats?.reasonEnd is \"escapedSoaring\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<He>> looks around at all of the different outfits. A shadow passes over <<his>> face. <<He>> turns to you with <<= V.gwylanSeen.includes(\"yearning\") ? \"distress\" : _gwylanLovePercent gte 75 ? \"concern\" : \"a troubled frown\">>, and clasps your hands in <<his>> own. \"You are a pure, shining soul, dear. Don't let anyone swallow your light and claim it as their own.\""
+  ],
+  "old_kr": [
+   "<<He>>【은는】 온갖 종류의 옷들을 둘러본다. <<his>> 얼굴에 그늘이 스친다. <<He>>【은는】 <<= V.gwylanSeen.includes(\"yearning\") ? \"괴로운 표정\" : _gwylanLovePercent gte 75 ? \"걱정스러운 표정\" : \"곤란한 찡그림\">>【으로로】 당신을 돌아보고, 당신의 손을 <<his>> 손으로 감싸 쥔다. \"넌 순수하고 빛나는 영혼이야, 얘야. 누구도 네 빛을 삼켜 자기 것으로 만들게 두지 마.\""
+  ],
+  "new_en": [
+   "<<He>> looks around at all of the different outfits. A shadow passes over <<his>> face. <<He>> turns to you with <<= V.gwylanSeen.includes(\"yearning\") ? \"distress\" : _gwylanLovePercent gte 65 ? \"concern\" : \"a troubled frown\">>, and clasps your hands in <<his>> own. \"You are a pure, shining soul, dear. Don't let anyone swallow your light and claim it as their own.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"I've seen that symbol before,\" you say.<<if $worn.neck.name is \"stone pendant\" and $compound.symbol.length gt 1>>\"The full thing, not just the middle part, which looked like this.\" You hold up your stone pendant.<</if>>"
+  ],
+  "old_kr": [
+   "\t\"저 상징을 전에 본 적이 있어.\" 당신은 말한다.<<if $worn.neck.name is \"stone pendant\" and $compound.symbol.length gt 1>>\"이것처럼 생긴 가운데 부분만이 아니라, 전체 모습을 말이야.\" 당신은 돌 펜던트를 들어 보인다.<</if>>"
+  ],
+  "new_en": [
+   "\t\"I've seen that symbol before,\" you say.<<if $worn.neck.name is \"stone pendant\" and $compound.symbol.length gt 1>> \"The full thing, not just the middle part, which looked like this.\" You hold up your stone pendant.<</if>>"
+  ],
+  "context": "<<if $compound.symbol.length gt 1 or $gwylanSeen.includes(\"tattoos_intro\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $wrenHeist or $wrenSeen?.includes(\"heist\") and !$gwylanTalked.includes(\"heist_wren\")>>",
+   "\t<<link [[Tell Gwylan about the heist with Wren|Gwylan Talk Clothes Catsuit 3]]>><<set $phase2 to \"heist\">><</link>>"
+  ],
+  "old_kr": [
+   "<<if $wrenHeist or $wrenSeen?.includes(\"heist\") and !$gwylanTalked.includes(\"heist_wren\")>>",
+   "\t<<link [[그윌란에게 렌과 함께 한 습격에 대해 말한다|Gwylan Talk Clothes Catsuit 3]]>><<set $phase2 to \"heist\">><</link>>"
+  ],
+  "new_en": [
+   "<<if ($wrenHeist or $wrenSeen?.includes(\"heist\")) and !$gwylanTalked.includes(\"heist_wren\")>>",
+   "\t<<link [[Tell Gwylan about the heist with Wren|Gwylan Talk Clothes Catsuit 3]]>><<set $phase2 to \"heist\">><</link>>"
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   ":: Gwylan Talk Clothes Mine",
+   "<<effects>>",
+   "<<run statusCheck(\"Gwylan\")>><<set $daily.gwylan.clothesTalk++>>",
+   "<<set $gwylanTalked.pushUnique(\"mine\")>><<set $gwylan.progress += 2>>",
+   "<<set $daily.gwylan.traumaTalk to true>>",
+   "",
+   "You show Gwylan the mining helmet.",
+   "<br><br>",
+   "\"These used to be more common, back when the mines were still open,\" <<he>> says. \"The official story of why it was shut down was because of flooding, but I think they found something down there,\" <<he>> muses. \"So why did the shop show this to you?\"",
+   "<br><br>",
+   "You tell <<him>> about your slavery in the mine, and how you incited a rebellion and put them out of commission.",
+   "<br><br>",
+   "<<if $mine.heldGem>>",
+   "\t<<mine_gem_value>>",
+   "\t<<set $blackmoney -= _gem_value>>",
+   "\t\"They had us mining for these.\" You pull out a $mine.heldGem. <<His>> eyes go wide. Before you can react, <<he>> immediately rips it out of your hand, runs to the door, and chucks it as far as <<he>> can. <<He>> relaxes and walks back to you.",
+   "\t<br><br>",
+   "\t\"Now, where were we?\" <<He>> quickly notices your confusion. \"Oh! I'm sorry <<pcpetname \"Gwylan\">>. Those things are quite dangerous, I wouldn't recommend coming into contact with them again.\"",
+   "\t<br><br>",
+   "\t<<unset $mine.heldGem>>",
+   "<</if>>",
+   "\"That was a good thing you did, fighting back,\" <<he>> says. \"People are weak alone, but together, they become stronger.\" Your thoughts turn to the orphanage. \"I've suspected that the mines had resumed operation, I'm glad you stopped it.\"",
+   "<br><br>",
+   "",
+   "<<gwylanOptions>>",
+   "",
+   "",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $wrenHeist or $wrenSeen?.includes(\"heist\") and !$gwylanTalked.includes(\"heist_wren\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if ($wrenHeist or $wrenSeen?.includes(\"heist\")) and !$gwylanTalked.includes(\"heist_wren\")>>"
+  ],
+  "context": "<</if>>"
+ }
+]

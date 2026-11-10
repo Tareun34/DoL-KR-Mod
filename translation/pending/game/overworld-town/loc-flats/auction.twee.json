@@ -1,0 +1,115 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\"Going once!\" booms a <<person2>><<personsimple>> voice. \"Going twice! Sold!\" You hear a wail, followed by a heavy thud, then silence."
+  ],
+  "old_kr": [
+   "\"한 번!\" <<person2>><<personsimple>>의 목소리가 우렁차게 울린다. \"두 번! 낙찰!\" 비명 소리가 들리고, 이어서 쿵 하는 무거운 소리가 나더니, 정적이 흐른다."
+  ],
+  "new_en": [
+   "\"Going once!\" booms a <<person2>><<male>> voice. \"Going twice! Sold!\" You hear a wail, followed by a heavy thud, then silence."
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<pshes>> a cute one."
+  ],
+  "old_kr": [
+   "\t<<pshe>>【이가】 귀여운 아이로군요."
+  ],
+  "new_en": [
+   "\t<<pshes>> a cute one.\""
+  ],
+  "context": "\t<<set $flats_auction += 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You hear a thud, a high-pitched grinding of metal, then the ground shakes.",
+   "<<if pcAreArmsBound(\"any\")>>",
+   "\tSomeone removes your hood, and your bindings."
+  ],
+  "old_kr": [
+   "쿵 하는 소리, 날카로운 금속 가는 소리가 들리고, 땅이 흔들린다.",
+   "<<if pcAreArmsBound(\"any\")>>",
+   "\t누군가 당신의 두건과 결박을 풀어준다."
+  ],
+  "new_en": [
+   "You hear a thud, a high-pitched grinding of metal, then the ground shakes.",
+   "<<if pcAreArmsBound(\"any\") or $worn.feet.type.includes(\"shackle\")>>",
+   "\tSomeone removes your hood, and your bindings."
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Next|Mines Intro]]>><<endevent>><<flats_auction_end>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[다음|Mines Intro]]>><<endevent>><<flats_auction_end>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Next|Mine Intro]]>><<endevent>><<flats_auction_end>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "£<<print Math.trunc($flats_auction * 160)>>!"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\"£<<print Math.trunc($flats_auction * 160)>>!\""
+  ],
+  "context": "<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "£<<print Math.trunc($flats_auction * 180)>>!"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\"£<<print Math.trunc($flats_auction * 180)>>!\""
+  ],
+  "context": "<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "£<<print Math.trunc($flats_auction * 200)>>!"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\"£<<print Math.trunc($flats_auction * 200)>>!\""
+  ],
+  "context": "<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "£<<print Math.trunc($flats_auction * 220)>>!"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\"£<<print Math.trunc($flats_auction * 220)>>!\""
+  ],
+  "context": "<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<location \"mines\">><<effects>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<location \"mines\">><<set $outside to 0>><<effects>>"
+  ],
+  "context": ":: Flats Auction 7"
+ }
+]

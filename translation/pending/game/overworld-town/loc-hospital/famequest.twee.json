@@ -1,0 +1,29 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if _combatend or $speechsteal is 1>>",
+   "\t<span id=\"next\"><<link [[Next|Hospital Keycard Seduce Sex Finish]]>><</link>></span><<nexttext>>"
+  ],
+  "old_kr": [
+   "<<if _combatend or $speechsteal is 1>>",
+   "\t<span id=\"next\"><<link [[다음|Hospital Keycard Seduce Sex Finish]]>><</link>></span><<nexttext>>"
+  ],
+  "new_en": [
+   "<<if _combatend or $speechSteal is 1>>",
+   "\t<span id=\"next\"><<link [[Next|Hospital Keycard Seduce Sex Finish]]>><</link>></span><<nexttext>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if !$speechsteal>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if !$speechSteal>>"
+  ],
+  "context": "<<effectsman>>"
+ }
+]

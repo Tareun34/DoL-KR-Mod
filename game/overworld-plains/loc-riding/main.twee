@@ -131,8 +131,13 @@
 			<</if>>
 		<</for>>
 
-		<<if $money gte 2500>>
-			<<animalicon "horse-pick">><<link [[승마 수업 듣기 (£25 1:00)|Riding School Lesson]]>><<set $riding_lesson to 0>><<money -2500 "ridingLessons">><<thighskill _riding>><</link>><<gtiredness>><<gthighskill>>
+		<<if $exposed lte 0>>
+			<<if $money gte 2500>>
+				<<animalicon "horse-pick">><<link [[Take riding lesson (£25 1:00)|Riding School Lesson]]>><<set $riding_lesson to 0>><<money -2500 "ridingLessons">><<thighskill _riding>><</link>><<gtiredness>><<gthighskill>>
+				<br>
+			<</if>>
+		<<else>>
+			<<steedicon>><span class="blue">You're too exposed to go to the riding school!</span>
 			<br>
 		<</if>>
 
@@ -156,7 +161,7 @@
 		<br><br>
 	<</if>>
 	<!-- Modified for Monster People -->
-	<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>
+	<<if monsterCanAppearForType("horse")>>
 		<<if maleChance() lt random(1, 100)>>
 			레미가 당신에게 켄타우로스 한 마리를 배정해준다. 당신이 안장에 <<thightext>> 오르는 것을 켄타우로스가 지켜본다.
 			<<set $steed to "female">>
@@ -165,8 +170,8 @@
 			<<set $steed to "male">>
 		<</if>>
 	<<else>>
-		<<if beastMaleChance() lt random(1, 100)>>
-			레미가 당신에게 암말 한 마리를 배정해준다. 당신은 <<thightext>> 안장에 오른다.
+		<<if beastMaleChanceForType("horse") lt random(1, 100)>>
+			Remy assigns you to a mare. You <<thightext>> climb into the saddle.
 			<<set $steed to "mare">>
 		<<else>>
 			레미가 당신에게 종마 한 마리를 배정해준다. 당신은 <<thightext>> 안장에 오른다.
@@ -204,11 +209,11 @@
 	<<rng>>
 
 	<<if dangerEvent()>>
-		<<if $rng gte 81 and $settings.horsesEnabled>>
-			레미가 당신을 탁 트인 들판으로 이끈다. 말들은 뛰놀고 싶어 안달이 나서 통제하기가 더 어려워진다.
+		<<if $rng gte 81>>
+			Remy leads you to an open field. The steeds are eager to frolic, and become harder to control.
 			<br><br>
 			<!-- Modified for Monster People -->
-			<<if $steed isnot "mare" and $steed isnot "stallion" or $settings.bestialityEnabled>>
+			<<if beastSexEnabledForType("horse", $steed isnot "mare" and $steed isnot "stallion")>>
 				<<if currentSkillValue("thighskill") gte 200>>
 					당신의 <<steed_text>>【이가】 갑자기 달리기 시작한다. 당신은 안장에서 자세를 유지하지만, 어떤 수를 써도 말을 멈추게 할 수 없다.
 				<<else>>
@@ -565,8 +570,8 @@
 <br><br>
 
 <!-- Modified for Monster People -->
-	<<if $settings.horsesEnabled and $settings.analingusReceivingEnabled and ($steed isnot "mare" and $steed isnot "stallion" or $settings.bestialityEnabled)>>
-		벽을 밀며 엉덩이를 꿈틀거린다. 조금씩 나아가고 있는데, 그때 무언가 축축한 것이 당신의 <<bottom>>에 닿는다. 혀다.
+	<<if $settings.analingusReceivingEnabled and beastSexEnabledForType("horse", $steed isnot "mare" and $steed isnot "stallion")>>
+		You push against the wall and wiggle your hips. You're making progress, but then something wet touches your <<bottom>>. It's a tongue.
 
 		<<if $steed is "male" or $steed is "female">>
 			"참을 수가 없어." 켄타우로스가 잔해에 막혀 웅얼거리는 목소리로 말한다. "네 피부가 너무 짜."<<gstress>><<garousal>><<stress 6>><<arousal 600 "bottom">>
@@ -1333,8 +1338,10 @@
 
 	<<endcombat>><<clotheson>>
 
-	<<if Time.hour isnot $closinghour>>
-		<<investigateicon>><<link [[다른 사람 찾기 (0:20)|Riding School Contact]]>><<pass 20>><<endevent>><</link>>
+	<<if $pubfame.detail is "remyBetray">>
+		<<link [[Next|Riding School]]>><<endevent>><</link>>
+	<<elseif Time.hour isnot $closinghour>>
+		<<investigateicon>><<link [[Find someone else (0:20)|Riding School Contact]]>><<pass 20>><<endevent>><</link>>
 		<br>
 		<<getouticon>><<link [[일단 포기하기|Riding School]]>><<endevent>><</link>>
 	<<else>>

@@ -1,0 +1,506 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<error { message: \"<<npcincr>> attempted to modify lust for non-whitelisted npc \" + _nam + \". Make sure to add a lust clamp in <<relationshipclamp>> before whitelisting!\" }>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<error { message: \"<<npcincr>>【이가】 화이트리스트에 없는 NPC의 욕망을 수정하려고 시도했다 \" + _nam + \". 화이트리스트에 추가하기 전에 <<relationshipclamp>>에서 욕망 제한을 설정했는지 확인하세요.\" }>>"
+  ],
+  "new_en": [
+   "\t\t\t<<error { message: \"<<npcincr>> attempted to modify lust for non-whitelisted npc \" + _nam + \". Make sure to add a lust clamp in <<relationshipClamp>> before whitelisting!\" }>>"
+  ],
+  "context": "\t\t<<if !_lustwhitelist.includes(_nam)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\thas <span class=\"lewd\">claimed you as <<if $greathawkmonster gte 1>><<nnpc_his \"Great Hawk\">><<else>>its<</if>> <<wife>></span>."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t당신을 <span class=\"lewd\"><<if $greathawkmonster gte 1>><<nnpc_his \"Great Hawk\">><<else>>자신의<</if>> <<wife>></span>로 삼았다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t\thas <span class=\"lewd\">claimed you as <<if resolveIfNamedBeastIsMonster(\"greathawk\")>><<nnpc_his \"Great Hawk\">><<else>>its<</if>> <<wife>></span>."
+  ],
+  "context": "\t\t\t\t\t<<if $NPCName[_i].dom gte 50>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\tthinks you're <span class=\"lewd\"><<if $greathawkmonster gte 1>><<nnpc_his \"Great Hawk\">><<else>>its<</if>> <<wife>></span>."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t당신을 <span class=\"lewd\"><<if $greathawkmonster gte 1>><<nnpc_his \"Great Hawk\">><<else>>자신의<</if>> <<wife>></span>라고 생각한다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t\tthinks you're <span class=\"lewd\"><<if resolveIfNamedBeastIsMonster(\"greathawk\")>><<nnpc_his \"Great Hawk\">><<else>>its<</if>> <<wife>></span>."
+  ],
+  "context": "\t\t\t\t\t<<elseif $NPCName[_i].dom gte 20>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\twants you to <span class=\"red\">return <<if $greathawkmonster gte 1>><<nnpc_his \"Great Hawk\">><<else>>its<</if>> affections</span>."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t당신이 <span class=\"red\"><<if $greathawkmonster gte 1>><<nnpc_his \"Great Hawk\">><<else>>자신의<</if>> 애정에 답해 주길</span> 바란다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t\twants you to <span class=\"red\">return <<if resolveIfNamedBeastIsMonster(\"greathawk\")>><<nnpc_his \"Great Hawk\">><<else>>its<</if>> affections</span>."
+  ],
+  "context": "\t\t\t\t\t<<if $NPCName[_i].dom gte 50>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<print $blackwolfmonster gte 1 ? \"is\" : \"seems\">> <span class=\"lewd\">proud you're <<if $blackwolfmonster gte 1>><<nnpc_his \"Black Wolf\">><<else>>its<</if>> mate</span>."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<print $blackwolfmonster gte 1 ? \"확실히\" : \"왠지\">> 당신이 <span class=\"lewd\"><<if $blackwolfmonster gte 1>><<nnpc_his \"Black Wolf\">><<else>>자신의<</if>> 짝</span>인 것을 자랑스러워한다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<print resolveIfNamedBeastIsMonster(\"blackwolf\") ? \"is\" : \"seems\">> <span class=\"lewd\">proud you're <<if resolveIfNamedBeastIsMonster(\"blackwolf\")>><<nnpc_his \"Black Wolf\">><<else>>its<</if>> mate</span>."
+  ],
+  "context": "\t\t\t\t\t<<if $wolfpackferocity gt $wolfpackharmony>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<print $blackwolfmonster gte 1 ? \"is\" : \"seems\">> <span class=\"lewd\">glad you're <<if $blackwolfmonster gte 1>><<nnpc_his \"Black Wolf\">><<else>>its<</if>> mate</span>."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<print $blackwolfmonster gte 1 ? \"확실히\" : \"왠지\">> 당신이 <span class=\"lewd\"><<if $blackwolfmonster gte 1>><<nnpc_his \"Black Wolf\">><<else>>자신의<</if>> 짝</span>이라 기뻐한다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<print resolveIfNamedBeastIsMonster(\"blackwolf\") ? \"is\" : \"seems\">> <span class=\"lewd\">glad you're <<if resolveIfNamedBeastIsMonster(\"blackwolf\")>><<nnpc_his \"Black Wolf\">><<else>>its<</if>> mate</span>."
+  ],
+  "context": "\t\t\t\t\t<<elseif $wolfpackharmony gt $wolfpackferocity>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\tthinks of you <span class=\"lewd\">as <<if $blackwolfmonster gte 1>><<nnpc_his \"Black Wolf\">><<else>>its<</if>> mate</span>."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t당신을 <span class=\"lewd\"><<if $blackwolfmonster gte 1>><<nnpc_his \"Black Wolf\">><<else>>자신의<</if>> 짝</span>으로 생각한다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t\tthinks of you <span class=\"lewd\">as <<if resolveIfNamedBeastIsMonster(\"blackwolf\")>><<nnpc_his \"Black Wolf\">><<else>>its<</if>> mate</span>."
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tis <span class=\"pink\">nervous about how close you are becoming</span>.",
+   "\t\t\t\t<<elseif _gwylanLovePercent gte 80>>",
+   "\t\t\t\t\t<span class=\"green\">knows there's something special about you</span>.",
+   "\t\t\t\t<<elseif _gwylanLovePercent lt 65 and $gwylanTalked?.length gte 6 and !$daily.gwylan.clothesTalk>>",
+   "\t\t\t\t\tis <span class=\"blue\">eager to hear more of your stories</span>.",
+   "\t\t\t\t<<elseif _gwylanLovePercent gte 60>>",
+   "\t\t\t\t\t<span class=\"teal\">thinks there's something special about you</span>.",
+   "\t\t\t\t<<elseif _gwylanLovePercent gte 40>>",
+   "\t\t\t\t\tis <span class=\"lblue\">fascinated by you</span>."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t당신과 점점 가까워지는 것을 <span class=\"pink\">불안해한다</span>.",
+   "\t\t\t\t<<elseif _gwylanLovePercent gte 80>>",
+   "\t\t\t\t\t당신에게 <span class=\"green\">특별한 무언가가 있음을 안다</span>.",
+   "\t\t\t\t<<elseif _gwylanLovePercent lt 65 and $gwylanTalked?.length gte 6 and !$daily.gwylan.clothesTalk>>",
+   "\t\t\t\t\t당신의 이야기를 <span class=\"blue\">더 듣고 싶어 한다</span>.",
+   "\t\t\t\t<<elseif _gwylanLovePercent gte 60>>",
+   "\t\t\t\t\t당신에게 <span class=\"teal\">특별한 무언가가 있다고 생각한다</span>.",
+   "\t\t\t\t<<elseif _gwylanLovePercent gte 40>>",
+   "\t\t\t\t\t당신에게 <span class=\"lblue\">매료되어 있다</span>."
+  ],
+  "new_en": [
+   "\t\t\t\t\tis <span class=\"pink\">nervous about how close you are becoming</span>.",
+   "\t\t\t\t<<elseif _gwylanLovePercent gte 70>>",
+   "\t\t\t\t\t<span class=\"green\">knows there's something special about you</span>.",
+   "\t\t\t\t<<elseif _gwylanLovePercent lt 55 and $gwylanTalked?.length gte 6 and !$daily.gwylan.clothesTalk>>",
+   "\t\t\t\t\tis <span class=\"blue\">eager to hear more of your stories</span>.",
+   "\t\t\t\t<<elseif _gwylanLovePercent gte 50>>",
+   "\t\t\t\t\t<span class=\"teal\">thinks there's something special about you</span>.",
+   "\t\t\t\t<<elseif _gwylanLovePercent gte 30>>",
+   "\t\t\t\t\tis <span class=\"lblue\">fascinated by you</span>."
+  ],
+  "context": "\t\t\t\t<<elseif _gwylanStatus.includes(\"aroused\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tBailey",
+   "\t\t\t<<if $renttime lte 0>>",
+   "\t\t\t\tis <span class=\"red\">ready to collect</span>."
+  ],
+  "old_kr": [
+   "\t\t\t베일리는",
+   "\t\t\t<<if $renttime lte 0>>",
+   "\t\t\t\t<span class=\"red\">거둬 갈 준비가 되어 있다</span>."
+  ],
+  "new_en": [
+   "\t\t\tBailey",
+   "\t\t\t<<if isRentDue() or isBaileyLookingForPlayer()>>",
+   "\t\t\t\tis <span class=\"red\">ready to collect</span>."
+  ],
+  "context": "\t\t<<case Bailey>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $NPCList[_ii].speechotheranusescape to 0>>"
+  ],
+  "context": "\t\t\t<<set $NPCList[_ii].speechanusescape to 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$NPCName[_i].skincolour or $NPCName[_i].skincolour is \"none\" or _args[1] is \"skincolour\">>",
+   "\t\t<<if random(0, 99) lte $settings.darkSkinChance>>",
+   "\t\t\t<<set $NPCName[_i].skincolour to \"black\">>",
+   "\t\t<<else>>",
+   "\t\t\t<<set $NPCName[_i].skincolour to \"white\">>",
+   "\t\t<</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $NPCName[_i].skincolour is undefined or _args[1] is \"skincolour\">>",
+   "\t\t<<set $NPCName[_i].skincolour to randomSkinTone()>>"
+  ],
+  "context": "\t<<set _i to _args[0]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if ($NPCName[_i].type is \"human\" and maleChance(_override) lt random(1, 100)) or ($NPCName[_i].type isnot \"human\" and beastMaleChance(_override) lt random(1, 100))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if maleChance(_override) lt random(1, 100)>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if !$NPCName[_i].skincolour>>",
+   "\t\t\t<<if random(1, 100) lte $settings.darkSkinChance>>",
+   "\t\t\t\t<<set $NPCName[_i].skincolour to \"black\">>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set $NPCName[_i].skincolour to \"white\">>",
+   "\t\t\t<</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $NPCName[_i].skincolour is undefined>>",
+   "\t\t\t<<set $NPCName[_i].skincolour to randomSkinTone()>>"
+  ],
+  "context": "\t\t<<set $NPCName[_i].name_known to 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<if $wraithPrison and $wraithPrison.vision>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if $wraithPrison?.vision>>"
+  ],
+  "context": "\t\t\t\t\t<<set C.npc[\"Ivory Wraith\"].lust to 20>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set C.npc[\"Ivory Wraith\"].skincolour to \"ghost\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set C.npc[\"Ivory Wraith\"].skinType to \"ghost\">>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<case Jordan>><<set $NPCName[_i].outfits.pushUnique(\"maleRobe\", \"femaleRobe\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<case Jordan>><<set $NPCName[_i].outfits.pushUnique(\"jordanHabit\")>>"
+  ],
+  "context": "\t\t\t<<case Harper>><<set $NPCName[_i].outfits.pushUnique(\"doctor\")>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<case Bailey>><<set $NPCName[_i].outfits.pushUnique(\"townTurtleneck\", \"baileyJacket\")>>",
+   "\t\t\t<<case Niki>><<set $NPCName[_i].outfits.pushUnique(\"nikiCoat\")>>",
+   "\t\t\t<<case Quinn>><<set $NPCName[_i].outfits.pushUnique(\"quinnSuit\", \"quinnSkirtSuit\", \"quinnCoat\", \"quinnFurCoat\")>>",
+   "\t\t\t<<case Sam>><<set $NPCName[_i].outfits.pushUnique(\"samCardigan\")>>",
+   "\t\t\t<<case Wren>><<set $NPCName[_i].outfits.pushUnique(\"maleWren\", \"femaleWren\")>>",
+   "\t\t\t<<case Zephyr>><<set $NPCName[_i].outfits.pushUnique(\"Zephyr\")>>"
+  ],
+  "context": "\t\t\t<<case \"Ivory Wraith\">><<set $NPCName[_i].outfits to [\"naked\", \"moonRobe\"]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if Time.hour gte 18>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $location is \"avery_mansion\" and $avery_mansion.schedule is \"sleep\">>",
+   "\t\t\t\t\t<<npcClothesType $NPCName[_i] \"sleep\">>",
+   "\t\t\t\t<<elseif Time.hour gte 18>>"
+  ],
+  "context": "\t\t\t<<case Avery>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<case Eden Morgan Briar Landry Remy>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<case Eden Morgan Briar Landry Remy Zephyr>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<npcClothesType $NPCName[_i] \"temple\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<npcClothesName $NPCName[_i] \"jordanHabit\">>"
+  ],
+  "context": "\t\t\t<<case Jordan>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<case Bailey>>",
+   "\t\t\t\t<<if $location is \"home\">>",
+   "\t\t\t\t\t<<npcClothesName $NPCName[_i] \"townTurtleneck\">>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<npcClothesName $NPCName[_i] \"baileyJacket\">>",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<<npcClothesType $NPCName[_i] \"Wraith\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $NPCList[_npcno].penis is \"none\" and $NPCName[_i].strapons and $NPCName[_i].strapons.length gt 0 and random(0,99) lt $settings.straponChance>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $NPCList[_npcno].penis is \"none\" and $NPCName[_i].strapons?.length gt 0 and random(0,99) lt $settings.straponChance>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $NPCList[_npcno].skinType to $NPCName[_i].skinType>>"
+  ],
+  "context": "\t<<set $NPCList[_npcno].skincolour to $NPCName[_i].skincolour>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $daily.bwMonsterRoll isnot undefined and $blackwolfmonster is 1>>",
+   "\t\t\t<<if $daily.bwMonsterRoll is true>>",
+   "\t\t\t\t<<set $NPCList[_npcno].monster to \"monster\">>",
+   "\t\t\t\t<<set $monster to 1>><<set _monsterOverride to true>>",
+   "\t\t\t\t<<set $NPCList[_npcno].type to ($NPCList[_npcno].pronoun is \"f\" ? \"wolfgirl\" : \"wolfboy\")>>",
+   "\t\t\t\t<<set $NPCList[_npcno].lefthand to 0>>",
+   "\t\t\t\t<<set $NPCList[_npcno].righthand to 0>>",
+   "\t\t\t\t<<run delete $NPCList[_npcno].claws>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set $NPCList[_npcno].monster to 0>>",
+   "\t\t\t\t<<set $NPCList[_npcno].pronoun to \"i\">>",
+   "\t\t\t\t<<set $NPCList[_npcno].claws to \"claws\">>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $blackwolfmonster gte 1 or !$settings.bestialityEnabled>>",
+   "\t\t\t<<if ($settings.monsterChance gte $rng and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or ($blackwolfmonster is 2) or (!$settings.bestialityEnabled)>>",
+   "\t\t\t\t<<set $daily.bwMonsterRoll to true>>",
+   "\t\t\t\t<<set $NPCList[_npcno].monster to \"monster\">>",
+   "\t\t\t\t<<set $monster to 1>><<set _monsterOverride to true>>",
+   "\t\t\t\t<<set $NPCList[_npcno].type to ($NPCList[_npcno].pronoun is \"f\" ? \"wolfgirl\" : \"wolfboy\")>>",
+   "\t\t\t\t<<set $NPCList[_npcno].lefthand to 0>>",
+   "\t\t\t\t<<set $NPCList[_npcno].righthand to 0>>",
+   "\t\t\t\t<<run delete $NPCList[_npcno].claws>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set $daily.bwMonsterRoll to false>>",
+   "\t\t\t\t<<set $NPCList[_npcno].monster to 0>>",
+   "\t\t\t\t<<set $NPCList[_npcno].pronoun to \"i\">>",
+   "\t\t\t\t<<set $NPCList[_npcno].claws to \"claws\">>",
+   "\t\t\t<</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if resolveIfNamedBeastIsMonster(\"blackwolf\")>>",
+   "\t\t\t<<set $NPCList[_npcno].monster to \"monster\">>",
+   "\t\t\t<<set $monster to 1>><<set _monsterOverride to true>>",
+   "\t\t\t<<set $NPCList[_npcno].type to ($NPCList[_npcno].pronoun is \"f\" ? \"wolfgirl\" : \"wolfboy\")>>",
+   "\t\t\t<<set $NPCList[_npcno].lefthand to 0>>",
+   "\t\t\t<<set $NPCList[_npcno].righthand to 0>>",
+   "\t\t\t<<run delete $NPCList[_npcno].claws>>"
+  ],
+  "context": "\t\t<<set $NPCList[_npcno].stance to \"approach\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $daily.ghMonsterRoll isnot undefined and $greathawkmonster is 1>>",
+   "\t\t\t<<if $daily.ghMonsterRoll is true>>",
+   "\t\t\t\t<<set $NPCList[_npcno].monster to \"monster\">>",
+   "\t\t\t\t<<set $monster to 1>><<set _monsterOverride to true>>",
+   "\t\t\t\t<<set $NPCList[_npcno].type to \"harpy\">>",
+   "\t\t\t\t<<set $NPCList[_npcno].lefthand to 0>>",
+   "\t\t\t\t<<set $NPCList[_npcno].righthand to 0>>",
+   "\t\t\t\t<<run delete $NPCList[_npcno].claws>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set $NPCList[_npcno].monster to 0>>",
+   "\t\t\t\t<<set $NPCList[_npcno].pronoun to \"i\">>",
+   "\t\t\t\t<<set $NPCList[_npcno].claws to \"talons\">>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $greathawkmonster gte 1 or !$settings.bestialityEnabled>>",
+   "\t\t\t<<if ($settings.monsterChance gte $rng and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or ($greathawkmonster is 2) or (!$settings.bestialityEnabled)>>",
+   "\t\t\t\t<<set $daily.ghMonsterRoll to true>>",
+   "\t\t\t\t<<set $NPCList[_npcno].monster to \"monster\">>",
+   "\t\t\t\t<<set $monster to 1>><<set _monsterOverride to true>>",
+   "\t\t\t\t<<set $NPCList[_npcno].type to \"harpy\">>",
+   "\t\t\t\t<<set $NPCList[_npcno].lefthand to 0>>",
+   "\t\t\t\t<<set $NPCList[_npcno].righthand to 0>>",
+   "\t\t\t\t<<run delete $NPCList[_npcno].claws>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set $daily.ghMonsterRoll to false>>",
+   "\t\t\t\t<<set $NPCList[_npcno].monster to 0>>",
+   "\t\t\t\t<<set $NPCList[_npcno].pronoun to \"i\">>",
+   "\t\t\t\t<<set $NPCList[_npcno].claws to \"talons\">>",
+   "\t\t\t<</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if resolveIfNamedBeastIsMonster(\"greathawk\")>>",
+   "\t\t\t<<set $NPCList[_npcno].monster to \"monster\">>",
+   "\t\t\t<<set $monster to 1>><<set _monsterOverride to true>>",
+   "\t\t\t<<set $NPCList[_npcno].type to \"harpy\">>",
+   "\t\t\t<<set $NPCList[_npcno].lefthand to 0>>",
+   "\t\t\t<<set $NPCList[_npcno].righthand to 0>>",
+   "\t\t\t<<run delete $NPCList[_npcno].claws>>"
+  ],
+  "context": "\t\t<<set $NPCList[_npcno].stance to \"approach\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $daily.nmMonsterRoll isnot undefined and $nightmonstermonster is 1>>",
+   "\t\t\t<<if $daily.nmMonsterRoll is true>>",
+   "\t\t\t\t<<set $NPCList[_npcno].monster to \"monster\">>",
+   "\t\t\t\t<<set $monster to 1>><<set _monsterOverride to true>>",
+   "\t\t\t\t<<set $NPCList[_npcno].type to ($NPCList[_npcno].pronoun is \"f\" ? \"horned woman\" : \"horned man\")>>",
+   "\t\t\t\t<<set $NPCList[_npcno].lefthand to 0>>",
+   "\t\t\t\t<<set $NPCList[_npcno].righthand to 0>>",
+   "\t\t\t\t<<run delete $NPCList[_npcno].claws>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set $NPCList[_npcno].monster to 0>>",
+   "\t\t\t\t<<set $NPCList[_npcno].pronoun to \"i\">>",
+   "\t\t\t\t<<set $NPCList[_npcno].claws to \"claws\">>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $nightmonstermonster gte 1 or !$settings.bestialityEnabled>>",
+   "\t\t\t<<if ($settings.monsterChance gte $rng and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or ($nightmonstermonster is 2) or (!$settings.bestialityEnabled)>>",
+   "\t\t\t\t<<set $daily.nmMonsterRoll to true>>",
+   "\t\t\t\t<<set $NPCList[_npcno].monster to \"monster\">>",
+   "\t\t\t\t<<set $monster to 1>><<set _monsterOverride to true>>",
+   "\t\t\t\t<<set $NPCList[_npcno].type to ($NPCList[_npcno].pronoun is \"f\" ? \"horned woman\" : \"horned man\")>>",
+   "\t\t\t\t<<set $NPCList[_npcno].lefthand to 0>>",
+   "\t\t\t\t<<set $NPCList[_npcno].righthand to 0>>",
+   "\t\t\t\t<<run delete $NPCList[_npcno].claws>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set $daily.nmMonsterRoll to false>>",
+   "\t\t\t\t<<set $NPCList[_npcno].monster to 0>>",
+   "\t\t\t\t<<set $NPCList[_npcno].pronoun to \"i\">>",
+   "\t\t\t\t<<set $NPCList[_npcno].claws to \"claws\">>",
+   "\t\t\t<</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if resolveIfNamedBeastIsMonster(\"nightmonster\")>>",
+   "\t\t\t<<set $NPCList[_npcno].monster to \"monster\">>",
+   "\t\t\t<<set $monster to 1>><<set _monsterOverride to true>>",
+   "\t\t\t<<set $NPCList[_npcno].type to ($NPCList[_npcno].pronoun is \"f\" ? \"horned woman\" : \"horned man\")>>",
+   "\t\t\t<<set $NPCList[_npcno].lefthand to 0>>",
+   "\t\t\t<<set $NPCList[_npcno].righthand to 0>>",
+   "\t\t\t<<run delete $NPCList[_npcno].claws>>"
+  ],
+  "context": "\t\t<<set $NPCList[_npcno].stance to \"approach\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\t<<unset _strapIgnore>>",
+   "\t<<unset _condomIgnore>>"
+  ],
+  "context": "\t<<set $index to _npcno>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tcalling npcincr with them throws an error until the implemented adds clamps to <<relationshipclamp>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tcalling npcincr with them throws an error until the implemented adds clamps to <<relationshipClamp>>"
+  ],
+  "context": "\t\tdo NOT change this to reference setup.NPCNameList: this check exists to make sure whenever a new NNPC is added,"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<relationshipclamp>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<relationshipClamp>>"
+  ],
+  "context": "\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $sydneySeen and $sydneySeen.includes(\"initiate\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $sydneySeen?.includes(\"initiate\")>>"
+  ],
+  "context": "\t\t\t<<elseif $NPCName[_i].love gte 10>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $sydneySeen and $sydneySeen.includes(\"initiate\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $sydneySeen?.includes(\"initiate\")>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ }
+]

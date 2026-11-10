@@ -1,0 +1,220 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\t<span class=\"red\">You hear a scurrying up ahead.</span> It draws closer."
+  ],
+  "old_kr": [
+   "\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\t<span class=\"red\">앞에서 무언가 바스락거리는 소리가 들린다.</span> 점점 가까워진다."
+  ],
+  "new_en": [
+   "\t<<if $settings.lurkersEnabled>>",
+   "\t\t<span class=\"red\">You hear a scurrying up ahead.</span> It draws closer."
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You shake your head.",
+   "<<if $rng gte 76 and $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\"Damn, tough break,\" the <<person>> sighs. \"Well, plan B. <<pShes>> all yours.\""
+  ],
+  "old_kr": [
+   "당신은 고개를 젓는다.",
+   "<<if $rng gte 76 and $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\"젠장, 안됐네.\" <<person>>【이가】 한숨을 쉰다. \"그럼, 플랜 B. <<pShes>>【은는】 이제 네 거야.\""
+  ],
+  "new_en": [
+   "You shake your head.",
+   "<<if $rng gte 76 and $settings.lurkersEnabled>>",
+   "\t\"Damn, tough break,\" the <<person>> sighs. \"Well, plan B. <<pShes>> all yours.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[Next|Moor Fox Rape]]>><<set $molestationstart to 1>><<set $position to \"doggy\">><<set $NPCList[0].stance to \"top\">><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[다음|Moor Fox Rape]]>><<set $molestationstart to 1>><<set $position to \"doggy\">><<set $NPCList[0].stance to \"top\">><</link>>"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"fox\", $monster is 1)>>",
+   "\t\t<<link [[Next|Moor Fox Rape]]>><<set $molestationstart to 1>><<set $position to \"doggy\">><<set $NPCList[0].stance to \"top\">><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou turn to face your assailant, planting your feet and raising your arms in a defensive posture just in time to intercept <<if $NPCList[0].skincolour is \"black\">>an ebony<<else>>a pale<</if>> blur leaping at you from the bushes.",
+   "\t\tYou wrap your arms around it, twist to the side, and release. It crashes to the ground several metres away."
+  ],
+  "old_kr": [
+   "\t\t당신은 습격자를 향해 돌아서서 두 발을 단단히 딛고 방어 자세를 취하며, 덤불 속에서 튀어나오는 <<if $NPCList[0].skincolour is \"black\">>칠흑빛<<else>>창백한<</if>> 잔상을 때맞춰 맞받아친다.",
+   "\t\t당신은 놈을 팔로 감싸 쥐고 옆으로 비틀어 내동댕이친다. 놈은 몇 미터 떨어진 바닥으로 처박힌다."
+  ],
+  "new_en": [
+   "\t\tYou turn to face your assailant, planting your feet and raising your arms in a defensive posture just in time to intercept <<if $NPCList[0].skincolour gte 70>>an ebony<<else>>a pale<</if>> blur leaping at you from the bushes.",
+   "\t\tYou wrap your arms around it, twist to the side, and release. It crashes to the ground several metres away."
+  ],
+  "context": "\t<<if $monster is 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou turn to face your assailant, planting your feet and raising your arms in a defensive posture just in time to intercept <<if $NPCList[0].skincolour is \"black\">>an ebony<<else>>a pale<</if>> blur leaping at you from the bushes.",
+   "\t\tYou attempt to grab the blur in order to redirect its momentum, but you're not quite quick enough. The resulting full-force collision overwhelms your balance, knocking you head-over-heels onto the forest floor."
+  ],
+  "old_kr": [
+   "\t\t당신은 습격자를 향해 돌아서서 두 발을 단단히 딛고 방어 자세를 취하며, 덤불 속에서 튀어나오는 <<if $NPCList[0].skincolour is \"black\">>칠흑빛<<else>>창백한<</if>> 잔상을 때맞춰 맞받아치려 한다.",
+   "\t\t그 반동을 흘려보내려 붙잡으려 해보지만, 손이 닿기도 전에 한발 늦고 만다. 정면으로 들이받힌 강한 충격에 균형을 잃고 숲 바닥에 곤두박질치며 뒹군다."
+  ],
+  "new_en": [
+   "\t\tYou turn to face your assailant, planting your feet and raising your arms in a defensive posture just in time to intercept <<if $NPCList[0].skincolour gte 70>>an ebony<<else>>a pale<</if>> blur leaping at you from the bushes.",
+   "\t\tYou attempt to grab the blur in order to redirect its momentum, but you're not quite quick enough. The resulting full-force collision overwhelms your balance, knocking you head-over-heels onto the forest floor."
+  ],
+  "context": "\t<<if $monster is 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[Next|Moor Fox Rape]]>><<set $molestationstart to 1>><<set $position to \"doggy\">><<set $NPCList[0].stance to \"top\">><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[다음|Moor Fox Rape]]>><<set $molestationstart to 1>><<set $position to \"doggy\">><<set $NPCList[0].stance to \"top\">><</link>>"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"fox\", $monster is 1)>>",
+   "\t\t<<link [[Next|Moor Fox Rape]]>><<set $molestationstart to 1>><<set $position to \"doggy\">><<set $NPCList[0].stance to \"top\">><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[Next|Moor Fox Rape]]>><<set $molestationstart to 1>><<set $position to \"doggy\">><<set $NPCList[0].stance to \"top\">><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[다음|Moor Fox Rape]]>><<set $molestationstart to 1>><<set $position to \"doggy\">><<set $NPCList[0].stance to \"top\">><</link>>"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"fox\", $monster is 1)>>",
+   "\t\t<<link [[Next|Moor Fox Rape]]>><<set $molestationstart to 1>><<set $position to \"doggy\">><<set $NPCList[0].stance to \"top\">><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if ($settings.bestialityEnabled or $monster is 1) and $settings.horsesEnabled>>",
+   "\t\t\tas the <<beasttype>> stands over you.<<pain 4>><<gpain>>"
+  ],
+  "old_kr": [
+   "\t\t<<if ($settings.bestialityEnabled or $monster is 1) and $settings.horsesEnabled>>",
+   "\t\t\t바로 그때 <<beasttype>>【이가】 당신 위에 선다.<<pain 4>><<gpain>>"
+  ],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"horse\", $monster is 1)>>",
+   "\t\t\tas the <<beasttype>> stands over you.<<pain 4>><<gpain>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if ($settings.bestialityEnabled or $monster is 1) and $settings.horsesEnabled>>",
+   "\t\t\t<<link [[Next|Moor Horse Rape]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<if ($settings.bestialityEnabled or $monster is 1) and $settings.horsesEnabled>>",
+   "\t\t\t<<link [[다음|Moor Horse Rape]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"horse\", $monster is 1)>>",
+   "\t\t\t<<link [[Next|Moor Horse Rape]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if dangerEvent() and ($settings.bestialityEnabled or $monster is 1) and $settings.horsesEnabled>>",
+   "\tThe <<beasttype>> takes advantage of your position, and mounts you."
+  ],
+  "old_kr": [
+   "<<if dangerEvent() and ($settings.bestialityEnabled or $monster is 1) and $settings.horsesEnabled>>",
+   "\t<<beasttype>>【은는】 당신의 자세를 이용해, 당신 위에 올라탄다."
+  ],
+  "new_en": [
+   "<<if dangerEvent() and beastSexEnabledForType(\"horse\", $monster is 1)>>",
+   "\tThe <<beasttype>> takes advantage of your position, and mounts you."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $rng gte 51 and ($settings.bestialityEnabled or $monster is 1)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $rng gte 51 and beastSexEnabledForType(\"cat\", $monster is 1)>>"
+  ],
+  "context": "<<beastNEWinit 3 cat>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"fox\", $monster is 1)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   ":: Moor Pumpkin",
+   "<<effects>>",
+   "",
+   "<<if $tendingSuccess>>",
+   "\t<<wearProp \"pumpkin\">>",
+   "\tYou pull the pumpkin from its vine. <span class=\"green\">It's big and ripe.</span>",
+   "\t<<tending_pick pumpkin 1 1>>",
+   "\t<br><br>",
+   "",
+   "\t<<if !$plants_known.includes(\"pumpkin\")>>",
+   "\t\tYou spy seeds on the ground. They haven't sprouted, but they look healthy. <span class=\"gold\">You can now grow <<foodstufficon \"pumpkin\">> pumpkins.</span><<set $plants_known.push(\"pumpkin\")>>",
+   "\t\t<br><br>",
+   "\t<</if>>",
+   "",
+   "\t<<link [[Next|Moor]]>><<set $eventskip to 1>><</link>>",
+   "\t<br>",
+   "<<else>>",
+   "\tYou try to pull the pumpkin from its vine, but it's stuck. You pull a bit too hard, hurling it a distance. <span class=\"red\">It explodes on impact.</span>",
+   "\t<<gtending>><<tending 2>>",
+   "\t<br><br>",
+   "",
+   "\t<<link [[Next|Moor]]>><<set $eventskip to 1>><</link>>",
+   "\t<br>",
+   "<</if>>"
+  ],
+  "context": "<br>"
+ }
+]

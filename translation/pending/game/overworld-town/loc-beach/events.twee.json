@@ -1,0 +1,40 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"Looks like you're already collared,\" the <<person>> says. \"Perfect.\" They advance on you.",
+   " \t<br><br>"
+  ],
+  "old_kr": [
+   "\t\"벌써 목줄이 채워져 있네,\" <<person>>【이가】 말한다. \"완벽해.\" 그들이 당신을 향해 다가온다.",
+   "\t<br><br>"
+  ],
+  "new_en": [
+   "\t\"Looks like you're already collared,\" the <<person>> says. \"Perfect.\" They advance on you.",
+   "\t<br><br>"
+  ],
+  "context": "<<if $worn.neck.collared>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " \t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>"
+  ],
+  "context": "\t\"멍청한 걸레년.\" <<He>>【은는】 당신을 모래 위에 내팽개친다."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $rng gte 51 and beastSexEnabledForType(\"dog\", $monster is 1)>>"
+  ],
+  "context": "\t<br><br>"
+ }
+]

@@ -1,0 +1,330 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $player.sex is C.npc.Whitney.pronoun>>",
+   "\t\t\t\t\tA couple of Whitney's friends enter the bathroom. They laugh and nudge each other. They make no aggressive moves, but they refuse to leave you alone."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $player.sex is C.npc.Whitney.pronoun>>",
+   "\t\t\t\t\t휘트니의 무리 두엇이 화장실로 들어온다. 그들은 웃으며 서로를 쿡쿡 찌른다. 위협적인 움직임은 보이지 않지만, 당신을 가만히 내버려 둘 생각도 없는 것 같다."
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $player.sex is C.npc.Whitney.pronoun and $settings.nudeGenderPerception !== 0>>",
+   "\t\t\t\t\tA couple of Whitney's friends enter the bathroom. They laugh and nudge each other. They make no aggressive moves, but they refuse to leave you alone."
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\tThe quiet is broken by a low growl behind you. A large <<beasttype>> pounces on you from the shadows, forcing you to your knees."
+  ],
+  "old_kr": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t등 뒤에서 들려오는 낮게 으르렁거리는 소리가 적막을 깬다. 그림자 속에서 거대한 <<beasttype>>【이가】 당신을 덮치고, 당신을 무릎 꿇게 만든다."
+  ],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"cat\", $monster is 1)>>",
+   "\t\t\tThe quiet is broken by a low growl behind you. A large <<beasttype>> pounces on you from the shadows, forcing you to your knees."
+  ],
+  "context": "\t\t<<beastNEWinit 1 cat>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\tYou pass by a group of students who break into whispers as you pass by. You hear something about a hermaphrodite."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t당신이 지나가자 속삭이기 시작하는 학생들의 무리를 지나친다. 양성구유라는 말이 들린다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t\tYou pass by a group of students who break into whispers as you pass by. You make out the word 'both', whispered louder than the rest."
+  ],
+  "context": "\t\t\t\t\t<<if $schoolrep.herm gte 5 and !$worn.face.type.includes(\"mask\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $sadism gte 300 or $delinquency gte 600 or ($soldCount gte 1 and $money lt $rentmoney + ($babyRent or 0))>>",
+   "\t\t\t\t<<link [[Demand money to help (0:10)|Hallways Locker Victim]]>><<pass 10>><<set $phase to 2>><</link>><<if $soldCount gte 1 and $money lt $rentmoney + ($babyRent or 0)>><<note \"You need money for Bailey!\" \"red\">><<else>><<note \"Cash?\" \"gold\">><</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $sadism gte 300 or $delinquency gte 600 or ($soldCount gte 1 and $money lt $rentmoney + ($babyRent or 0))>>",
+   "\t\t\t\t<<link [[도와주는 대가로 돈을 요구한다 (0:10)|Hallways Locker Victim]]>><<pass 10>><<set $phase to 2>><</link>><<if $soldCount gte 1 and $money lt $rentmoney + ($babyRent or 0)>><<note \"베일리에게 낼 돈이 필요해!\" \"red\">><<else>><<note \"돈?\" \"gold\">><</if>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if $sadism gte 300 or $delinquency gte 600 or ($soldCount gte 1 and $money lt $rentMoney + ($babyRent or 0))>>",
+   "\t\t\t\t<<link [[Demand money to help (0:10)|Hallways Locker Victim]]>><<pass 10>><<set $phase to 2>><</link>><<if $soldCount gte 1 and $money lt $rentMoney + ($babyRent or 0)>><<note \"You need money for Bailey!\" \"red\">><<else>><<note \"Cash?\" \"gold\">><</if>>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\tYou look <<him>> up and down. After a moment, you start quoting your prices,",
+   "\t\t\t\t\t<<elseif $uncomfortable.prostituting is false or ($soldCount gte 1 and $money lt $rentmoney + ($babyRent or 0))>>",
+   "\t\t\t\t\t\tYou hesitate, but thoughts of Bailey flash through your mind, and you know you need the money. You take a deep breath and start quoting a price,"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t당신은 <<him>>【을를】 위아래로 훑어본다. 잠시 후, 당신은 당신의 화대를 부르기 시작한다,",
+   "\t\t\t\t\t<<elseif $uncomfortable.prostituting is false or ($soldCount gte 1 and $money lt $rentmoney + ($babyRent or 0))>>",
+   "\t\t\t\t\t\t당신은 주저하지만, 베일리의 얼굴이 머릿속을 스쳐 지나가고 당신에게는 돈이 필요하다는 사실을 알고 있다. 깊게 숨을 들이마시고 화대를 부르기 시작한다,"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\tYou look <<him>> up and down. After a moment, you start quoting your prices,",
+   "\t\t\t\t\t<<elseif $uncomfortable.prostituting is false or ($soldCount gte 1 and $money lt $rentMoney + ($babyRent or 0))>>",
+   "\t\t\t\t\t\tYou hesitate, but thoughts of Bailey flash through your mind, and you know you need the money. You take a deep breath and start quoting a price,"
+  ],
+  "context": "\t\t\t\t\t<<if hasSexStat(\"promiscuity\", 3) and $prostitutionstat gte 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\t\tYou see a <<beasttype>> rummaging in litter behind the kitchen. <<bHis>> ears prick, <span class=\"red\">and <<bhe>> bounds towards you</span>."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\t\t부엌 뒤 쓰레기통을 뒤지는 <<beasttype>>【을를】 발견한다. <<bHis>> 귀가 쫑긋 서더니, <span class=\"red\"><<bhe>>【이가】 당신을 향해 달려온다</span>."
+  ],
+  "new_en": [
+   "\t\t\t\t<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\t\t\t\tYou see a <<beasttype>> rummaging in litter behind the kitchen. <<bHis>> ears prick, <span class=\"red\">and <<bhe>> bounds towards you</span>."
+  ],
+  "context": "\t\t\t<<addinlineevent \"courtyard_dog_molest\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tWhitney and <<his>> friends surround you. Whitney smirks and grasps your shoulders.",
+   "\t\t\t<!-- dev note: Keep in mind that this scene uses player.gender directly and not player.gender_appearance. That's why we have to do complicated things. -->",
+   "\t\t\t<<if $player.sex is _whitney.pronoun>>",
+   "\t\t\t\t<<He>> tries to push you into the <<print ($player.sex is \"m\" ? \"girl\" : \"boy\")>>s' toilets."
+  ],
+  "old_kr": [
+   "\t\t\t휘트니와 <<his>> 친구들이 당신을 둘러싼다. 휘트니는 비웃으며 당신의 어깨를 붙잡는다.",
+   "\t\t\t<!-- dev note: Keep in mind that this scene uses player.gender directly and not player.gender_appearance. That's why we have to do complicated things. -->",
+   "\t\t\t<<if $player.sex is _whitney.pronoun>>",
+   "\t\t\t\t<<He>>【은는】 당신을 <<print ($player.sex is \"m\" ? \"여자\" : \"남자\")>> 화장실로 밀어 넣으려 한다."
+  ],
+  "new_en": [
+   "\t\t\tWhitney and <<his>> friends surround you. Whitney smirks and grasps your shoulders.",
+   "\t\t\t<!-- dev note: Keep in mind that this scene uses player.sex directly and not player.gender_appearance. That's why we have to do complicated things. -->",
+   "\t\t\t<<if $player.sex is _whitney.pronoun and $settings.nudeGenderPerception !== 0>>",
+   "\t\t\t\t<<He>> tries to push you into the <<print ($player.sex is \"m\" ? \"girl\" : \"boy\")>>s' toilets."
+  ],
+  "context": "\t\t<<if $whitney_toilet is undefined and $genderknown.includes(\"Whitney\") and _whitney.dom gte 14>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\"A new rule, slut,\" <<he>> says. \"No more hiding from me in the bathroom. You may be a <<if $player.sex is \"m\">>boy<<elseif $player.penisExist and $player.vaginaExist>>freak<<else>>girl<</if>>, but you're also mine. I want you nearby in case I feel like using you. That means you're using the <<nnpc_gendery \"Whitney\">>s' toilets from now on.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\"새 규칙이야, 걸레야.\" <<he>>【이가】 말한다. \"화장실에 숨어서 나 피하는 건 이제 끝이야. 넌 <<if $player.sex is \"m\">>남자<<elseif $player.penisExist and $player.vaginaExist>>괴물<<else>>여자<</if>>일지는 몰라도, 내 것이기도 해. 내가 쓰고 싶어질 때 근처에 있어야 하니까. 그러니까 이제부터 넌 <<nnpc_gendery \"Whitney\">> 화장실을 쓰는 거야.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\"A new rule, slut,\" <<he>> says. \"No more hiding from me in the bathroom. You may be a ",
+   "\t\t\t\t<<if ($player.penisExist and $player.vaginaExist) or $settings.nudeGenderPerception is 0>>",
+   "\t\t\t\t\tfreak, <!-- if genitals are ignored for gender perception, this is just regular bullying/name-calling, since the line might not make sense otherwise -->",
+   "\t\t\t\t<<elseif $player.sex is \"m\">>",
+   "\t\t\t\t\tboy,",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\tgirl,",
+   "\t\t\t\t<</if>> but you're also mine. I want you nearby in case I feel like using you. That means you're only using the <<nnpc_gendery \"Whitney\">>s' toilets from now on.\""
+  ],
+  "context": "\t\t\t\t<!-- dev note: This is ALSO weird for crossdresser PCs, because gender_appearance is what dictates getting thrown out of bathrooms, not gender, so they're ALSO already using the bathroom Whitney wants. -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [],
+  "old_kr": [
+   "",
+   "/* 한글판 전용: 변신 부위($selectedtfpart)를 한글로 출력 */",
+   "<<widget \"tfPartKr\">><<print ({\"ears\": \"귀\", \"wings\": \"날개\", \"tail\": \"꼬리\"})[$selectedtfpart] || $selectedtfpart>><</widget>>"
+  ],
+  "new_en": [
+   "",
+   "<<widget \"events_school_library_study\">>",
+   "\t<<rng 100>>",
+   "\t<<if $scienceprojectwon is 1 and $rng gte 91>>",
+   "\t\t<<generates1>><<person1>>A <<person>> stops at your table. \"Hey, you're that <<girl>> who won the science fair, right?\"",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<if $speech_attitude is \"meek\">>",
+   "\t\t\t\"Ah, it wasn't that impressive...\" You nod shyly, eyes drifting away.",
+   "\t\t<<elseif $speech_attitude is \"bratty\">>",
+   "\t\t\tYou shove a thumbs up proudly into the air. \"The one and only!\"",
+   "\t\t<<else>>",
+   "\t\t\t\"I sure did.\" You nod. \"What's up?\"",
+   "\t\t<</if>>",
+   "\t\t<br><br>",
+   "",
+   "\t\tThe <<personsimple>> nods back at you with a smile. \"That's amazing! Your project was so well-researched, you really knew what you were doing! I wish I could be like you! I entered the science fair too, but the teachers didn't even bother coming to my table.\"",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<He>> sighs. \"Not even the <<nnpc_title \"Leighton\">>. Maybe it's because I don't have the grades to show for it, but sometimes it's too hard to concentrate in class! Especially when some of the students keep touching and pulling pranks on me, or when my school supplies keep disappearing, and just because I was a little late too many times that I had to go to detention and—\"",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<He>> stiffens, then shakes <<his>> head. \"...Sorry, I'm rambling.\"",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<link [[Continue studying|Library Study Science Fair]]>><<set $phase to 0>><<stress -4>><</link>><<lstress>>",
+   "\t\t<br>",
+   "\t\t<<link [[Help out (0:10)|Library Study Science Fair]]>><<set $phase to 1>><<pass 10>><<status 6>><</link>><<gcool>>",
+   "\t\t<br>",
+   "\t<<elseif $rng gte 51>>",
+   "\t\t<<generatey1>><<generatey2>>While you are minding your own business, a <<fullGroup>> start harassing you.",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<link [[Ignore them|School Library Harass]]>><<set $phase to 0>><<trauma 2>><<stress 2>><</link>><<gtrauma>><<gstress>>",
+   "\t\t<br>",
+   "\t\t<<link [[Ask the librarian for help|School Library Harass]]>><<set $phase to 1>><<status -10>><</link>><<llcool>>",
+   "\t\t<br>",
+   "\t\t<<if C.npc.Sydney.init is 1 and $sydneySeen.includes(\"library\") and _sydney_location is \"library\">>",
+   "\t\t\t<<link [[Ask Sydney for help|School Library Harass]]>><<set $phase to 2>><</link>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t<<elseif _wraithEvent>>",
+   "\t\tAfter some time, you begin to feel anxious. You move to replace your textbook in the bookshelf.",
+   "\t\t<br><br>",
+   "\t\tYou catch a brief glimpse of a pale face through the gaps on the other side. <<stress 12>><<ggstress>><<trauma 4>><<gtrauma>>",
+   "\t\t<br><br>",
+   "\t\t<<link [[Next|School Library]]>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t<<else>>",
+   "\t\t<<outfitChecks>>",
+   "\t\t<<set _bottom.integrity -= 10>>",
+   "\t\t<<if _bottom.integrity lte 0>>",
+   "\t\t\tAs you rise from the chair, you hear a tear. Your <<bottoms>> <<is _bottom>> caught on the desk. You try to free <<= _bottom.plural ? \"them\" : \"it\">>, but <<= _bottom.plural ? \"they are\" : \"it is\">> torn clean off your body, exposing your <<= _bottomUnder?.name || \"<<undies>>\">>.",
+   "\t\t\t<<integritycheck no_text>>",
+   "\t\t\t<br><br>",
+   "\t\t<<else>>",
+   "\t\t\tAs you rise from the seat, you hear a tear. Your <<bottoms>> <<is _bottom>> caught on the desk.",
+   "\t\t\t<br><br>",
+   "\t\t<</if>>",
+   "\t\t<<link [[Next|School Library]]>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "<</widget>>"
+  ],
+  "context": "<</widget>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $player.penisExist and $player.vaginaExist>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if ($player.penisExist and $player.vaginaExist) or $settings.nudeGenderPerception is 0>>"
+  ],
+  "context": "\t\t\t<<set $daily.whitney.toiletCheck to 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _correctBathroom to (V.player.sex is \"f\" ? \"boys\" : \"girls\")>>"
+  ],
+  "context": "\t\t\t\t<<set _correctBathroom to (C.npc.Whitney.pronoun is \"m\" ? \"boys\" : \"girls\")>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $changingRoomGender is \"boys\" and $player.sex is \"m\" or $changingRoomGender is \"girls\" and $player.sex is \"f\" or ($player.penisExist and $player.vaginaExist) and $changingRoomGender isnot _correctBathroom>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $changingRoomGender isnot _correctBathroom>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if getRobinLocation(\"school\") and !$daily.robin.bump>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if C.npc.Robin.init is 1 and getRobinLocation() is \"school\" and $robinmissing is 0 and !$daily.robin.bump>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if ($settings.monsterChance gte 1 or $settings.bestialityEnabled) and $fame.bestiality gte 400>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if isBestialityOnForAnyCreature() and $fame.bestiality gte 400>>"
+  ],
+  "context": "\t\t<<run [\"sex\", \"prostitution\", \"rape\", \"exhibitionism\"].forEach(name => {if (V.fame[name] >= 400) T.fameRumour.push(name)})>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<if animalSexEnabledForType(\"dog\")>>"
+  ],
+  "context": "\t\t\t\t\t<<case \"bestiality\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $photo and $photo.nude_footage is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $photo?.nude_footage is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $photo and $photo.assault_footage is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $photo?.assault_footage is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $bullyevent is 18 and C.npc.Robin.init gte 1 and getRobinLocation() is \"school\" and $robinmissing is 0>>/* Robin Pantsed*/"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $bullyevent is 18 and C.npc.Robin.init is 1 and getRobinLocation() is \"school\" and $robinmissing is 0>>/* Robin Pantsed*/"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$player.penisExist or !$player.vaginaExist>>",
+   "\t\t\"<<print either(",
+   "\t\t\t\"The rumours are just a bunch of lies.\",",
+   "\t\t\t\"<<pShe>> doesn't even have both!\"",
+   "\t\t)>>\"",
+   "\t\t<<schoolrep herm -1>>",
+   "\t\t<<exit>>",
+   "\t<</if>>",
+   ""
+  ],
+  "context": "<<widget \"courtyardrevealresponse\">>"
+ }
+]

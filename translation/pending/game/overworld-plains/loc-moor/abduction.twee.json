@@ -1,0 +1,46 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou arrive at a tall fence. Through the bars you see grazing",
+   "\t<<if $settings.monsterChance gte 1 and $hallucinations gte 1 or $settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly or !$settings.bestialityEnabled>>"
+  ],
+  "old_kr": [
+   "\t높은 울타리에 도착한다. 창살 너머로 풀을 뜯는",
+   "\t<<if $settings.monsterChance gte 1 and $hallucinations gte 1 or $settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly or !$settings.bestialityEnabled>>"
+  ],
+  "new_en": [
+   "\tYou arrive at a tall fence. Through the bars you see grazing",
+   "\t<<if monsterCanAppearForType(\"cow\")>>"
+  ],
+  "context": "<<if $moor lte 10 or $moor is undefined>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Protest|Street Van Protest]]>><<def 1>><<stress 6>><<trauma -6>><</link>><<gstress>><<ltrauma>>"
+  ],
+  "old_kr": [
+   "<<link [[항의한다|Street Van Protest]]>><<def 1>><<stress 6>><<trauma -6>><</link>><<gstress>><<ltrauma>>"
+  ],
+  "new_en": [
+   "<<set $phase to \"riding\">>",
+   "",
+   "<<link [[Protest|Street Van Protest]]>><<def 1>><<stress 6>><<trauma -6>><</link>><<gstress>><<ltrauma>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou pull away as you feel a fell heat build within. The world spins, and you find yourself lying on the earth. Your <<genitals>> aches, and yearns.<<gggarousal>><<arousal 1800>><<drugs 240>>"
+  ],
+  "old_kr": [
+   "\t음란한 열기가 속에서 차오르는 것을 느끼며 당신은 몸을 뺀다. 세상이 빙빙 돌고, 정신을 차려보니 당신은 땅바닥에 쓰러져 있다. 당신의 <<genitals>>【이가】 욱신거리며 갈망한다.<<gggarousal>><<arousal 1800>><<drugs 240>>"
+  ],
+  "new_en": [
+   "\tYou pull away as you feel a fell heat build within. The world spins, and you find yourself lying on the earth. Your <<genitals>> <<if $player.penisExist and $player.vaginaExist>>ache, and yearn<<else>>aches, and yearns<</if>>.<<gggarousal>><<arousal 1800>><<drugs 240>>"
+  ],
+  "context": "\t<br><br>"
+ }
+]

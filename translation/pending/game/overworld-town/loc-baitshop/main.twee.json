@@ -1,0 +1,26 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t \"Looking for gear?\" <<he>> asks."
+  ],
+  "old_kr": [
+   "\t\t\t\t \"장비 찾으세요?\" <<he>>【이가】 묻는다."
+  ],
+  "new_en": [
+   "\t\t\t\t\"Looking for gear?\" <<he>> asks."
+  ],
+  "context": "\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<set $daily.fishing ??= {}>>"
+ }
+]

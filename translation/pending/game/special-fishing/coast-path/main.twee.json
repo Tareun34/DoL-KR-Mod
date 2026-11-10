@@ -1,0 +1,24 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<addinlineevent \"bite\" fishingCatchEventWeight(\"fishingCoastPath\", 8)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<addinlineevent \"bite\" `fishingCatchEventWeight(\"fishingCoastPath\", 8)`>>"
+  ],
+  "context": "<<cleareventpool>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Widgets Fishing Coast Path Wait Flavor [widget]"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ":: Widgets Fishing Coast Path Wait Flavour [widget]"
+  ],
+  "context": ""
+ }
+]

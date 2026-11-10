@@ -1,0 +1,21 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Her hair is absolutely full of knots, too. You gently run your fingers down, doing your best to untangle it while pulling out as few hairs as possible.",
+   "<<if $prisonerBrands and $prisonerBrands.includes(\"right cheek\")>>",
+   "\tShe winces whenever water runs down her face and touches her face branding, but sighs in contentment."
+  ],
+  "old_kr": [
+   "그녀의 머리카락은 매듭으로 가득했다. 당신은 손가락을 부드럽게 빗어 내리며, 가능한 한 머리카락을 적게 뽑으면서 엉킨 것을 풀기 위해 최선을 다한다.",
+   "<<if $prisonerBrands and $prisonerBrands.includes(\"right cheek\")>>",
+   "\t그녀는 물이 얼굴을 타고 흘러내려 얼굴의 낙인에 닿을 때마다 움찔했지만, 이내 만족스러운 한숨을 내쉰다."
+  ],
+  "new_en": [
+   "Her hair is absolutely full of knots, too. You gently run your fingers down, doing your best to untangle it while pulling out as few hairs as possible.",
+   "<<if $prisonerBrands?.includes(\"right cheek\")>>",
+   "\tShe winces whenever water runs down her face and touches her face branding, but sighs in contentment."
+  ],
+  "context": ""
+ }
+]

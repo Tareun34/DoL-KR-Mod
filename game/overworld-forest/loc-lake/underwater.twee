@@ -281,8 +281,8 @@
 
 당신은 받침대를 잡고, 당신의 <<bottom>>【을를】 그 위에 밀착시킨다. 그러자마자 붉은 빛이 타오르며 방을 비춘다. 이전에는 보이지 않던 조각상들이 위에서 당신을 내려다보고 있다.
 <br><br>
-<<if !(!$player.vaginaExist and playerIsPregnant())>>
-	당신은 뒤로 움찔하며 경련을 일으킨다. 방이 흔들리고 떨린다. 바닥에 균열이 생긴다. 균열은 넓어지며 더 많은 붉은 빛을 들여보낸다.
+<<if !(!$player.vaginaExist and playerIsPregnant() and V.settings.analPregnancy != "always")>>
+	You jerk back, and convulse. The room shakes and trembles. A crack appears in the floor. It widens, letting in more of the red light.
 	<<if numberOfEarSlime(true) gte 2>>
 		슬라임들이 당신의 귀에서 꿈틀거리며 빠져나오는 것이 느껴진다. 그것들은 틈새로 사라진다.
 		<<world_corruption "soft" 20>>
@@ -632,7 +632,7 @@
 				<<if _bottom>><<set _bottom.integrity -= 10>><</if>>
 				<<if _top>><<set _top.integrity -= 10>><</if>>
 				<<integritycheck>><<exposure>>
-				<br>
+				
 			<</if>>
 			항아리 근처에 머무는 물고기 떼로부터 간신히 헤엄쳐 벗어난다<<if !_fullyNaked>>, 하지만 옷이 더 낡아버렸다<</if>>.
 			<<trauma 12>><<stress 24>><<gtrauma>><<ggstress>>
@@ -646,32 +646,32 @@
 		<br>
 	<</addinlineevent>>	
 	<<if $lakeRuin.goldchastityfound>>
-        <<addinlineevent "divers" 4>>
-            <<generate1>><<person1>><<npcClothesType $NPCList[0] "beachDive">>
-            <<generate2>><<person2>><<npcClothesType $NPCList[1] "beachDive">>
-            항아리 안으로 손을 뻗던 당신은 멀지 않은 곳에서 두 명의 다이버, <<person1>><<person>>【와과】 <<person2>><<person>>【을를】 발견한다. <<person1>><<person>>【은는】 호수 바닥의 항아리들을 뒤지며 당신과 똑같이 분주하게 움직이고 있다. 유적 근처에 숨겨진 보물에 대한 소문을 들은 모양이다.
-            <br><br>
-            <<person2>><<person>>【이가】 당신을 가리키자, 그들은 눈에 분노를 띤 채 당신을 향해 헤엄쳐 오기 시작한다.
-            <br><br>
+		<<addinlineevent "divers" 4>>
+			<<generate1>><<person1>><<npcClothesType $NPCList[0] "beachDive">>
+			<<generate2>><<person2>><<npcClothesType $NPCList[1] "beachDive">>
+			You reach inside one of the pots when you notice a pair of divers not far away, a <<person1>><<person>> and a <<person2>><<person>>. The <<person1>><<person>> is rummaging through the pots on the lakebed, busy with the same activity as you. They must have heard about the riches hidden near the ruins.
+			<br><br>
+			The <<person2>><<person>> points at you and they start to swim in your direction, anger in their eyes.
+			<br><br>
 
-            <<link [[헤엄쳐 달아난다|Lake Depths Divers]]>><<set $phase to 1>><<tiredness 6>><</link>><<ggtiredness>><<swimmingdifficulty 500 1500>>
-            <br>
-            <<if $submissive lte 500>>
-                <<link [[그들을 위협한다|Lake Depths Divers]]>><<set $phase to 2>><</link>><<difficulty 50>>
-            <br>
-            <</if>>
-            <<if $submissive gte 1500>>
-                <<link [[그들을 달랜다|Lake Depths Divers]]>><<set $phase to 3>><</link>><<difficulty 75>>
-            <br>
-            <</if>>
-            <<if hasSexStat("promiscuity", 4)>>
-                <<link [[유혹한다|Lake Depths Divers]]>><<set $phase to 4>><</link>><<promiscuous4>><<difficulty `Math.round(($attractiveness + (currentSkillValue("seductionskill") * 10))/300)`>>
-            <br>
-            <</if>>
-            <<link [[기다린다|Lake Depths Divers]]>><<set $phase to 5>><</link>>
-            <br>
-        <</addinlineevent>>
-    <</if>>
+			<<link [[Swim away|Lake Depths Divers]]>><<set $phase to 1>><<tiredness 6>><</link>><<ggtiredness>><<swimmingdifficulty 500 1500>>
+			<br>
+			<<if displayDefiantOption(500)>>
+				<<link [[Threaten them|Lake Depths Divers]]>><<set $phase to 2>><<wolfDefiant 500>><</link>><<defianttext 500>><<difficulty 50>>
+			<br>
+			<</if>>
+			<<if $submissive gte 1500>>
+				<<link [[Appease them|Lake Depths Divers]]>><<set $phase to 3>><</link>><<submissivetext 1500>><<difficulty 75>>
+			<br>
+			<</if>>
+			<<if hasSexStat("promiscuity", 4)>>
+				<<link [[Seduce|Lake Depths Divers]]>><<set $phase to 4>><</link>><<promiscuous4>><<difficulty `Math.round(($attractiveness + (currentSkillValue("seductionskill") * 10))/300)`>>
+			<br>
+			<</if>>
+			<<link [[Wait|Lake Depths Divers]]>><<set $phase to 5>><</link>>
+			<br>
+		<</addinlineevent>>
+	<</if>>
 	<<addinlineevent "dust" 27>>
 		항아리 중 하나에 손을 뻗는다. 바닥에 보라색 가루가 있다. 당신이 손으로 휘젓자 가루가 팔 주위로 소용돌이친다. 몸이 달아오르는 것을 느낀다.
 		<<gstress>><<stress 3>><<garousal>><<arousal 600>>
@@ -842,12 +842,16 @@
 	<<lakeicon "pots">><<link [[항아리 수색하기|Lake Pots]]>><<pass 1>><<tiredness 1>>
 	<<if _goldchastity>>
 		<<set $gold_chastity_held to true>>
+		<<set $gold_chastity_count ??= 0>>
+		<<set $gold_chastity_count += 1>>
 	<</if>>
 	<<wateraction>><</link>><<loxygen>>
 	<br>
 	<<swimicon "up">><<link [[출구 쪽으로 헤엄친다|Lake Ruin]]>>
 	<<if _goldchastity>>
 		<<set $gold_chastity_held to true>>
+		<<set $gold_chastity_count ??= 0>>
+		<<set $gold_chastity_count += 1>>
 	<</if>>
 	<<wateraction>><</link>><<loxygen>>
 <<else>>
@@ -870,7 +874,7 @@
 :: Lake Gold Chastity Belt
 
 <<set $outside to 0>><<set $location to "lake_ruin">><<underwater>><<effects>><<lakeeffects>>
-<<set $antiquemoney -= 2000>><<wearProp "antique chastity">>
+<<set $antiquemoney -= 2000>><<wearProp "antique chastity">><<set $gold_chastity_count -= 1>>
 
 손에 든 황금 정조대를 살펴본다. 희미한 빛이 나오는 것 같다. 이렇게 아름다운 물건으로 <<genitals 1>>【을를】 보호하는 것은 어떤 느낌일지 궁금해진다.
 <br><br>
@@ -1093,120 +1097,120 @@
 
 <<underwater>><<effects>><<lakeeffects>>
 <<switch $phase>>
-    <<case 1>>
-        <<if $swimmingSuccess>>
-            당신은 발길질을 세게 하며 할 수 있는 한 빠르게 헤엄쳐 달아난다. 두 다이버는 빠르지만, <span class="green">당신이 더 빠르다</span>. 당신은 무너진 기둥 뒤로 몸을 숨기는 데 성공한다.
-            <br><br>
-            그들은 여전히 당신을 찾으며 다른 방향으로 헤엄쳐 멀어져 간다.
-            <br><br>
-            <<endevent>>
-            <<link [[다음|Lake Ruin Deep]]>><</link>>
-        <<else>>
-            당신은 필사적으로 헤엄쳐 달아난다.
-            <br><br>
-            두 다이버는 당신보다 빠르다. 잠시 후 누군가 당신의 발목을 낚아채는 것이 느껴진다. <span class="red">그들은 아까보다 훨씬 더 화가 난 표정이다.</span>
-            <br><br>
-            <<link [[다음|Lake Depths Divers Sex]]>><<set $phase to 2>><<set $molestationstart to 1>><</link>>
-        <</if>>
-        <<unset $swimmingSuccess>>
-    <<case 2>>
-        <<if random(1,3) lte 2>>
-            당신은 그 자리에 멈춰 서서, <<if $bodysize gt 2>>당신의 거대한 체구를 온전히 활용해<<elseif $bodysize lt 2>>비록 체구가 작을지라도<</if>> 최대한 위협적으로 보이려 애쓴다.
-            <br>
-            두 다이버가 멈춰 선다. 그들은 서로를 힐끗 바라보더니 <span class="green">돌아서서 헤엄쳐 간다.</span>
-            <br><br>
-            <<endevent>>
-            <<link [[다음|Lake Ruin Deep]]>><</link>>
-        <<else>>
-            당신은 위협적으로 보이려 애쓰지만, <<if $bodysize gt 2>>덩치가 크다고 해서 그들이 멈추는 것은 아니다<<elseif $bodysize lt 2>>작은 체구 탓에 역효과가 난다<<else>>명백히 먹히지 않고 있다<</if>>. 그들은 망설임 없이 순식간에 거리를 좁혀온다.
-            <br><br>
-            두 다이버가 당신을 붙잡으며, <span class="red">아까보다 훨씬 더 분노한 표정을 짓는다.</span>
-            <br><br>
-            <<link [[다음|Lake Depths Divers Sex]]>><<set $phase to 2>><<set $molestationstart to 1>><</link>>
-        <</if>>
-    <<case 3>>
-        <<if random(1,4) lte 3>>
-          당신은 <<if $bodysize gt 2>>덩치가 큼에도 불구하고 몸을 웅크려<<elseif $bodysize lt 2>>평소보다 더욱 몸을 작게 움츠리며<</if>> 최대한 위협적이지 않아 보이게 만든다.
-            <br><br>
-            당신이 위협이 되지 않는다는 것을 깨달은 <span class="pink">두 다이버는 이 상황을 이용하기로 마음먹는다.</span>
-            <br><br>
-            <<link [[다음|Lake Depths Divers Sex]]>><<set $molestationstart to 1>><</link>>
-        <<else>>
-            당신은 손짓으로 사과하려 하지만, 다이버들은 완전히 무시한다.
-            <br><br>
-            두 쌍의 손이 당신을 강하게 붙잡는다. 그들은 자신들의 일을 방해한 것에 대해 톡톡히 후회하게 만들어 줄 작정인 듯하며, 당신이 약한 모습을 보이자 <span class="red">오히려 더 화가 난 모양이다.</span>
-            <br><br>
-            <<link [[다음|Lake Depths Divers Sex]]>><<set $phase to 2>><<set $molestationstart to 1>><</link>>
-        <</if>>
-    <<case 4>>
-        <<if random(1,100) lte Math.round(($attractiveness + (currentSkillValue("seductionskill") * 5))*2/300)>>
-            <<promiscuity4>>
-            당신은 매혹적인 <<if $player.gender is "f">>인어<<elseif $player.gender is "m">>인어 남성<<else>>수중 생물<</if>>【을를】 연상시키도록 자세를 잡는다. 두 다이버는 계속 헤엄쳐 다가오며 순식간에 거리를 좁힌다.
-            <br><br>
-            당신은 <span class="pink">그들의 눈빛에서 분노가 사라지고 욕정이 서려 있는 것을 알아챈다.</span>
-            <br><br>
-            <<link [[다음|Lake Depths Divers Sex]]>><<set $sexstart to 1>><</link>>
-        <<else>>
-            <<promiscuity4>>
-            당신은 유혹하려 애쓰지만 물속이라는 환경은 도움이 되지 않는다. 다이버들은 당신의 행동을 무시한 채 곧 당신에게 도달한다.
-            <br><br>
-            누군가 당신을 거칠게 붙잡아 험하게 다루기 시작한다. <span class="red">그들은 아까보다 훨씬 더 화가 난 표정이다.</span>
-            <br><br>
-            <<link [[다음|Lake Depths Divers Sex]]>><<set $phase to 2>><<set $molestationstart to 1>><</link>>
-        <</if>>
-    <<default>>
-        두 다이버가 다가오자 당신은 방어할 태세를 갖춘다.
-        <br><br>
-        그들이 눈에 띄게 화를 내며 당신을 붙잡는다.
-        <br><br>
-        <<link [[다음|Lake Depths Divers Sex]]>><<set $phase to 1>><<set $molestationstart to 1>><</link>>
+	<<case 1>>
+		<<if $swimmingSuccess>>
+			You kick hard and swim away as fast as you can.	The pair of divers is fast, <span class="green">but you are faster</span>. You manage to slip behind a crumbled pillar and hide.
+			<br><br>
+			They soon swim off in another direction, still searching for you.
+			<br><br>
+			<<endevent>>
+			<<link [[Next|Lake Ruin Deep]]>><</link>>
+		<<else>>
+			You start swimming away desperately.
+			<br><br>
+			The pair of divers is faster than you are. You soon feel a hand grabbing your ankle. <span class="red">They look even angrier than before.</span>
+			<br><br>
+			<<link [[Next|Lake Depths Divers Sex]]>><<set $phase to 2>><<set $molestationstart to 1>><</link>>
+		<</if>>
+		<<unset $swimmingSuccess>>
+	<<case 2>>
+		<<if random(1,3) lte 2>>
+			You stand your ground, trying to look as intimidating as possible<<if $bodysize gt 2>> by making full use of your large size<<elseif $bodysize lt 2>> despite your smaller stature<</if>>.
+			<br>
+			The pair of divers stops. They share a quick glance before <span class="green">turning around and swimming away.</span>
+			<br><br>
+			<<endevent>>
+			<<link [[Next|Lake Ruin Deep]]>><</link>>
+		<<else>>
+			You try to look intimidating, <<if $bodysize gt 2>>but even your large size doesn't deter them<<elseif $bodysize lt 2>>but your small size works against you<<else>>but it clearly isn't working<</if>>. They don't hesitate and quickly close the distance.
+			<br><br>
+			The pair of divers grabs you, <span class="red">looking even angrier than before.</span>
+			<br><br>
+			<<link [[Next|Lake Depths Divers Sex]]>><<set $phase to 2>><<set $molestationstart to 1>><</link>>
+		<</if>>
+	<<case 3>>
+		<<if random(1,4) lte 3>>
+			You curl up and make yourself look as non-threatening as possible<<if $bodysize gt 2>> despite your large frame<<elseif $bodysize lt 2>>, shrinking even smaller than usual<</if>>.
+			<br><br>
+			Realising you're no threat, <span class="pink">the pair of divers decides to take advantage of the situation.</span>
+			<br><br>
+			<<link [[Next|Lake Depths Divers Sex]]>><<set $molestationstart to 1>><</link>>
+		<<else>>
+			You try to apologise with hand signals, but the divers ignore you completely.
+			<br><br>
+			Two pairs of hands grab you firmly. They clearly intend to make you feel sorry for disturbing them, and your display of weakness <span class="red">Only made them angrier than before.</span>.
+			<br><br>
+			<<link [[Next|Lake Depths Divers Sex]]>><<set $phase to 2>><<set $molestationstart to 1>><</link>>
+		<</if>>
+	<<case 4>>
+		<<if random(1,100) lte Math.round(($attractiveness + (currentSkillValue("seductionskill") * 5))*2/300)>>
+			<<promiscuity4>>
+			You strike poses that you try to make reminiscent of a seductive <<if $player.gender is "f">>mermaid<<elseif $player.gender is "m">>merman<<else>>merfolk<</if>>. The pair of divers continues swimming towards you, soon closing the gap.
+			<br><br>
+			You notice that <span class="pink">lust has replaced anger in their eyes.</span>
+			<br><br>
+			<<link [[Next|Lake Depths Divers Sex]]>><<set $sexstart to 1>><</link>>
+		<<else>>
+			<<promiscuity4>>
+			You try to be seductive, but being underwater doesn't help. The divers ignore your display and soon reach you.
+			<br><br>
+			You feel hands grabbing you and starting to rough you up. <span class="red">They look even angrier than before.</span>
+			<br><br>
+			<<link [[Next|Lake Depths Divers Sex]]>><<set $phase to 2>><<set $molestationstart to 1>><</link>>
+		<</if>>
+	<<default>>
+		You brace, ready to defend yourself as the two divers come closer.
+		<br><br>
+		They grab you, visibly angry.
+		<br><br>
+		<<link [[Next|Lake Depths Divers Sex]]>><<set $phase to 1>><<set $molestationstart to 1>><</link>>
 <</switch>>
 
 :: Lake Depths Divers Sex
 
 <<if $molestationstart is 1>>
-    <<set $molestationstart to 0>>
-    <<controlloss>>
-    <<violence 1>>
-    <<neutral 1>>
-    <<molested>>
-    <<maninit>>
-    <<set $water to 1>>
-    <<set $noBodyWriting to 1>>
-    <<set $speechdisable to 1>>
-    <<set $NPCList[0].mouth to "underwater">>
-    <<set $NPCList[1].mouth to "underwater">>
-    <<set $oxygen_last to $oxygen>>
-    <<switch $phase>>
-        <<case 1>>
-            두 다이버가 당신을 구타하기 시작하며, 자신들의 구역에 침입한 것을 톡톡히 후회하게 만들어 주겠다는 의도를 명백히 드러낸다.
-            <<set $enemyanger += 120>>
-        <<case 2>>
-            자신들에게 반항한 것에 분노한 두 다이버가 당신을 무참히 구타하기 시작한다.
-            <<set $enemyanger += 200>>
-        <<default>>
-            옷을 벗기 시작하는 두 다이버의 음란한 의도가 뻔히 드러난다.
-    <</switch>>
-    <<if $phase isnot 3 and random(1,2) is 1>>
-        <<set $phase to 3>>
-        옷을 벗기 시작하는 그들의 음란한 의도가 뻔히 드러난다.
-    <<elseif $phase isnot 3>>
-        <<npcidlegenitals>>
-    <</if>>
-    <br><br>
+	<<set $molestationstart to 0>>
+	<<controlloss>>
+	<<violence 1>>
+	<<neutral 1>>
+	<<molested>>
+	<<maninit>>
+	<<set $water to 1>>
+	<<set $noBodyWriting to 1>>
+	<<set $speechDisable to 1>>
+	<<set $NPCList[0].mouth to "underwater">>
+	<<set $NPCList[1].mouth to "underwater">>
+	<<set $oxygen_last to $oxygen>>
+	<<switch $phase>>
+		<<case 1>>
+			The two divers start hitting you, clearly intending to make you regret intruding on their territory.
+			<<set $enemyanger += 120>>
+		<<case 2>>
+			Furious that you defied them, the two divers start beating you brutally.
+			<<set $enemyanger += 200>>
+		<<default>>
+			The lewd intentions of the pair of divers are obvious as they start undressing.
+	<</switch>>
+	<<if $phase isnot 3 and random(1,2) is 1>>
+		<<set $phase to 3>>
+		Their lewd intentions are obvious as they start undressing.
+	<<elseif $phase isnot 3>>
+		<<npcidlegenitals>>
+	<</if>>
+	<br><br>
 
 <<elseif $sexstart is 1>>
-    <<set $sexstart to 0>>
-    <<set $consensual to 1>>
-    <<neutral 1>>
-    <<maninit>>
-    <<set $water to 1>>
-    <<set $enemytrust += 40>>
-    <<set $noBodyWriting to 1>>
-    <<set $speechdisable to 1>>
-    <<set $NPCList[0].mouth to "underwater">>
-    <<set $NPCList[1].mouth to "underwater">>
-    <<set $oxygen_last to $oxygen>>
+	<<set $sexstart to 0>>
+	<<set $consensual to 1>>
+	<<neutral 1>>
+	<<maninit>>
+	<<set $water to 1>>
+	<<set $enemytrust += 40>>
+	<<set $noBodyWriting to 1>>
+	<<set $speechDisable to 1>>
+	<<set $NPCList[0].mouth to "underwater">>
+	<<set $NPCList[1].mouth to "underwater">>
+	<<set $oxygen_last to $oxygen>>
 <</if>>
 
 

@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\"Oho,\" <<he>> says, lifting <span class=\"green\"><<a _produce>></span>. "
+  ],
+  "old_kr": [
+   "\t\t\"오호,\" <<he>>【이가】 <span class=\"green\"><<a _produce>></span>【을를】 들어 올리며 말한다. "
+  ],
+  "new_en": [
+   "\t\t\"Oho,\" <<he>> says, lifting <span class=\"green\"><<a _produce>></span>."
+  ],
+  "context": ""
+ }
+]

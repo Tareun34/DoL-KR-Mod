@@ -573,9 +573,9 @@
 		<<dry_full>><<upperstrip>><<lowerstrip>>
 		<<set _warmClothes to "마른 옷">>
 	<<elseif !_bottom>>
-		<<set _warmClothes to "바지">>
-	<<elseif $debug is 1 and $worn.over_upper.name is "naked" and $rng gte 46>>
-		<<set _warmClothes to "재킷">>
+		<<set _warmClothes to "some trousers">>
+	<<elseif $debug and $worn.over_upper.name is "naked" and $rng gte 46>>
+		<<set _warmClothes to "a jacket">>
 	<<elseif $worn.upper.warmth lt 6>>
 		<<set _warmClothes to _shirtless ? "셔츠" : "더 따뜻한 옷">>
 	<<elseif !$worn.neck.cursed>>
@@ -584,7 +584,7 @@
 		<<set _warmClothes to "모자">>
 	<</if>>
 
-	<<if $debug is 1 and $worn.over_upper.name is "naked" and $rng gt 100>>
+	<<if $debug and $worn.over_upper.name is "naked" and $rng gt 100>>
 		/* outerwearToDo: Give players a jacket that's suitably warm. Not the froggy coat. Rng to allow for the possibility that they'll get another article of clothing instead -- rng should normally be gte 45, I just wanted to make this impossible to get. */
 		<<set $_slot to "over_upper">>
 		<<set $_jacket to ["froggy coat"]>>
@@ -998,12 +998,8 @@ To get the previous major area passage, use: $safePassage (for links in the last
 	레미가 물그릇을 들어 올리자, 당신은 목이 얼마나 말랐는지 깨닫는다. <<He>>【이가】 그릇을 당신 입술에 가져다 대자, 당신은 차가운 물을 게걸스럽게 들이켠다. 갈증을 해소하려는 필사적인 몸짓에 물이 <<chest>>에 좀 쏟아지자 <<he>>【이가】 킥킥 웃는다. 마지막 한 방울까지 다 마시자, 당신은 안도의 한숨을 내쉰다.
 	<br><br>
 
-	레미는 그릇을 내려놓고 <<= $cow gte 2 and $transformationParts.cow.horns isnot "hidden" ? "당신 뿔의 밑동을 문지른다" : "당신 머리를 쓰다듬는다">>. "착한 <<girl>>【이】네. 다음번엔 조심할 거지, 응?"
-	<br><br>
+	Remy sets down the bowl and <<= $cow gte 2 and $transformationParts.cow.horns isnot "hidden" ? "rubs the base of your horns" : "pets your head">>. "That's a good <<girl>>. You'll take care next time, won't you?"
 	<<set Weather.bodyTemperature-->>
-	<<link [[알겠다고 한다|Livestock Passout 2]]>><<set $phase to 0>><<livestock_obey 1>><<transform cow 1>><</link>><<gobey>>
-	<br>
-	<<link [[밀쳐낸다|Livestock Passout 2]]>><<set $phase to 1>><<livestock_obey -1>><<trauma -6>><</link>><<lobey>><<ltrauma>>
 <<else>>
 	"네가 쓰러져서 떨고 있는 걸 발견했어. 걱정 많이 했다고. 하지만 검사해 보니 별문제는 없더군. 그냥 너무 추웠던 것뿐이야." <<He>>【이가】 당신의 머리카락을 쓰다듬는다.
 	<br><br>
@@ -1309,7 +1305,7 @@ To get the previous major area passage, use: $safePassage (for links in the last
 
 마지막으로 들리는 것은 어떤 <<personssimple>> 목소리다. "잠깐, 저 얼굴 아는데... 사람들이 <<overworld_nickname>>【이】라고 부르지 않나? 병원으로 데려가야겠어." <<He>>【은는】 당신을 안아 올려 차 뒷좌석에 태운다. 차 안은 따뜻했고, 당신은 잠이 들었다.
 <br><br>
-<<link [[일어난다|Hospital Bed]]>><<set $passoutReason to "hypothermia">><</link>>
+<<link [[Wake up|Hospital Bed]]>><<set $passoutReason to "hypothermia">><<endevent>><</link>>
 
 :: Passout Beach Hypothermia Molest
 <<if $molestationstart is 1>>
@@ -1993,7 +1989,7 @@ To get the previous major area passage, use: $safePassage (for links in the last
 	<br><br>
 
 	<<clotheson>>
-	<<whitneyexit>>
+	<<whitneyExit>>
 <</if>>
 
 :: Passout Gwylan Hot Cold
@@ -2328,7 +2324,7 @@ To get the previous major area passage, use: $safePassage (for links in the last
 	<br><br>
 	<<link [[다음|$safePassage]]>><<endevent>><<set $eventskip to 1>><</link>>
 
-<<elseif $syndromewolves is 1 and $wolfpacktrust gte 24 and ($monster is 1 or $settings.bestialityEnabled)>>
+<<elseif $syndromewolves is 1 and $wolfpacktrust gte 24 and beastSexEnabledForType("wolf", $monster is 1)>>
 	<<if $monster is 1>>
 		<<if $passoutReason is "hyperthermia">>
 			"털가죽도 없는데, <<ppackbrother>>【은는】 아직도 덥나? 집으로 와, 개울이 식혀줄 거다."
@@ -2360,7 +2356,7 @@ To get the previous major area passage, use: $safePassage (for links in the last
 		<<link [[다음|Wolf Cave]]>><<endevent>><<set $eventskip to 1>><<set $wolfevent to 0>><</link>>
 	<</if>>
 
-<<elseif $syndromewolves is 1 and ($monster is 1 or $settings.bestialityEnabled)>>
+<<elseif $syndromewolves is 1 and beastSexEnabledForType("wolf", $monster is 1)>>
 	<<if $monster is 1>>
 		"도망, 안 좋아," <<bhe>>【이가】 말한다. "동굴에 있었어야지. <<= $passoutReason is "hyperthermia" ? "거긴 개울이 시원해서, 더위 식히기 좋아" : "말랑한 인간은 온기를 위해 털가죽이 필요해">>." <<bHe>>【은는】 당신을 숲 속으로 끌고 가기 시작한다.
 	<<else>>
@@ -2372,8 +2368,8 @@ To get the previous major area passage, use: $safePassage (for links in the last
 		"가만히 있어. 넌 무리 소속이다."
 	<</if>>
 	<br><br>
-	<<link [[다음|Wolf Cave]]>><<endevent>><</link>>
-<<elseif $monster is 1 or $settings.bestialityEnabled>>
+	<<link [[Next|Wolf Cave]]>><<endevent>><</link>>
+<<elseif beastSexEnabledForType("wolf", $monster is 1)>>
 	<<if $monster is 1>>
 		"사냥감이 무력하군," <<bhe>>【이가】 말한다. "우두머리가 기뻐할 거다." <<bHe>>【은는】 당신을 숲 속으로 끌고 가기 시작한다.
 	<<else>>
@@ -3572,8 +3568,8 @@ To get the previous major area passage, use: $safePassage (for links in the last
 <</if>>
 <br><br>
 <<if dangerEvent()>>
-	<<persons>> 미소가
-	<<if $rng gte 81 and $settings.bestialityEnabled>>
+	The <<persons>> smile turns
+	<<if $rng gte 81 and animalSexEnabledForType("dog")>>
 		<<generateBEAST 2 dog>>
 		<<set $NPCList[1].name to $NPCList[1].pronoun is "f" ? $NPC_names_f.random() : $NPC_names_m.random()>>
 

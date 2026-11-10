@@ -35,7 +35,7 @@
 	</div>
 </div>
 
-<<if $debug is 1>>
+<<if $debug>>
 	<div id="debugOverlay" class="debugOverlay"></div>
 <</if>>
 
@@ -103,7 +103,7 @@
 				<<replace "#nanClear" t8n>><span class="green">변수가 초기화되었습니다.</span><</replace>>
 			<</link>>
 			<br>
-			<span class="red">경고: 모든 손상된 변수를 0으로 설정합니다. 이는 게임 상태에 예기치 않은 결과를 초래할 수 있습니다. 주의해서 진행하세요!</span>
+			<span class="red">WARNING: This will set all corrupted variables to 0. This may have unintended consequences to your game state. Proceed with caution!</span>
 		</div>
 		<br><br>
 	<</if>>

@@ -1,0 +1,559 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tThey reveal a richly decorated auditorium, the seats full, and all faces watching you in expectation. "
+  ],
+  "old_kr": [
+   "\t그 너머에는 화려하게 장식된 강당이 보이며, 객석은 꽉 차 있고 모두가 기대에 찬 얼굴로 당신을 지켜보고 있다. "
+  ],
+  "new_en": [
+   "\tThey reveal a richly decorated auditorium, the seats full, and all faces watching you in expectation."
+  ],
+  "context": "<<if _asylum_mirror_count gte 18>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "After a moment, the mirror's surface stirs, glows, and shifts. It doesn't reflect you, or your audience, but a "
+  ],
+  "old_kr": [
+   "잠시 후, 거울 표면이 일렁이며 빛나더니 형태가 바뀐다. 거울은 당신이나 관객이 아니라, 혼자 앉아 양손에 얼굴을 묻은 채 <<nnpc_his \"Sydney\">> 손가락 사이로 눈물을 흘리고 있는 한 "
+  ],
+  "new_en": [
+   "After a moment, the mirror's surface stirs, glows, and shifts. It doesn't reflect you, or your audience, but a"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\t<<link [[Next|Asylum Depths Mirror 4 3]]>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "\t",
+   "\t<<link [[다음|Asylum Depths Mirror 4 3]]>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "",
+   "\t<<link [[Next|Asylum Depths Mirror 4 3]]>><<endevent>><</link>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Music begins, and lights change as you begin to dance, plunging the audience into darkness. You can see only your stage, and a dimly lit orchestra to the side. You still feel the audience's enraptured eyes on you, drinking your every move. The thrill of it sends a shiver down your spine, energising your limbs, overcoming the creeping fatique.<<lllawareness>><<llltrauma>><<awareness -18>><<trauma -18>>"
+  ],
+  "old_kr": [
+   "음악이 시작되고, 당신이 춤을 추기 시작하자 조명이 바뀌며 관객들은 어둠 속에 잠긴다. 오직 무대와 한쪽에 희미하게 불을 밝힌 오케스트라만 보인다. 여전히 당신은 관객들의 황홀한 시선이 당신의 모든 움직임을 집어삼킬 듯 쫓고 있음을 느낀다. 그 짜릿함에 등골이 오싹해지며, 사지에 활력이 돌고 다가오는 피로를 이겨낸다.<<lllawareness>><<llltrauma>><<awareness -18>><<trauma -18>>"
+  ],
+  "new_en": [
+   "Music begins, and lights change as you begin to dance, plunging the audience into darkness. You can see only your stage, and a dimly lit orchestra to the side. You still feel the audience's enraptured eyes on you, drinking your every move. The thrill of it sends a shiver down your spine, energising your limbs, overcoming the creeping fatigue.<<lllawareness>><<llltrauma>><<awareness -18>><<trauma -18>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Remain Silent|Asylum Depths Mirror 4 Silent]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[침묵을 유지한다|Asylum Depths Mirror 4 Silent]]>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Remain silent|Asylum Depths Mirror 4 Silent]]>><</link>>"
+  ],
+  "context": "<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tIt looks like it used be a private office, but other furniture has since been dumped here. You see a glint in the corner of your eye. <span class=\"gold\">A small mirror stands half concealed beneath a sheet.</span> You free it from its hiding place. "
+  ],
+  "old_kr": [
+   "\t원래는 개인 사무실이었던 것 같지만, 다른 가구들도 이곳에 버려진 듯하다. 눈가에 반짝이는 무언가가 들어온다. <span class=\"gold\">작은 거울이 시트 아래에 반쯤 가려져 있다.</span> 당신은 거울을 꺼낸다. "
+  ],
+  "new_en": [
+   "\tIt looks like it used be a private office, but other furniture has since been dumped here. You see a glint in the corner of your eye. <span class=\"gold\">A small mirror stands half concealed beneath a sheet.</span> You free it from its hiding place."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Many chairs have been stacked in front of the windows. "
+  ],
+  "old_kr": [
+   "수많은 의자가 창문 앞에 쌓여 있다. "
+  ],
+  "new_en": [
+   "Many chairs have been stacked in front of the windows."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou find a medium-sized mirror while searching, half-hidden behind one of the remaining chairs.\t"
+  ],
+  "old_kr": [
+   "\t방을 뒤지던 중, 남아있는 의자 중 하나 뒤에 반쯤 숨겨진 중간 크기의 거울을 발견한다.\t"
+  ],
+  "new_en": [
+   "\tYou find a medium-sized mirror while searching, half-hidden behind one of the remaining chairs."
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<br><br> ",
+   "\tYou shift the mirror, and find a sheet of paper underneath."
+  ],
+  "old_kr": [
+   "\t<br><br> ",
+   "\t거울을 살짝 들추자 아래에 종이 한 장이 보인다."
+  ],
+  "new_en": [
+   "\t<br><br>",
+   "\tYou shift the mirror, and find a sheet of paper underneath."
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<br><br> ",
+   "\tYou enter the asylum once more."
+  ],
+  "old_kr": [
+   "\t<br><br> ",
+   "\t당신은 다시 정신병원으로 들어간다."
+  ],
+  "new_en": [
+   "\t<br><br>",
+   "\tYou enter the asylum once more."
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\tYou step over them, and find the source of the sound. A small river. It flows from the forest, into a tunnel running beneath the asylum."
+  ],
+  "old_kr": [
+   "\t",
+   "\t당신은 그것들을 넘어, 소리의 근원지를 찾는다. 작은 강이다. 숲에서 흘러나와 정신병원 아래의 지하도로 이어진다."
+  ],
+  "new_en": [
+   "",
+   "\tYou step over them, and find the source of the sound. A small river. It flows from the forest, into a tunnel running beneath the asylum."
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\tYou turn to enter the asylum once more, and find a large mirror leaning against the door. You're not sure how it got here, but"
+  ],
+  "old_kr": [
+   "\t",
+   "\t당신이 다시 정신병원으로 들어가려고 돌아서자, 문에 기대어 있는 커다란 거울이 보인다. 어떻게 여기 있는지 모르겠지만,"
+  ],
+  "new_en": [
+   "",
+   "\tYou turn to enter the asylum once more, and find a large mirror leaning against the door. You're not sure how it got here, but"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\t<<link [[Next|Asylum Depths]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t",
+   "\t<<link [[다음|Asylum Depths]]>><</link>>"
+  ],
+  "new_en": [
+   "",
+   "\t<<link [[Next|Asylum Depths]]>><</link>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\t<<link [[Next|Asylum Depths]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t",
+   "\t<<link [[다음|Asylum Depths]]>><</link>>"
+  ],
+  "new_en": [
+   "",
+   "\t<<link [[Next|Asylum Depths]]>><</link>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tPerhaps it will be useful later.<<lawareness>><<ltrauma>><<awareness -6>><<trauma -6>>",
+   "\t<</if>> "
+  ],
+  "old_kr": [
+   "\t\t아마 나중에 유용하게 쓰일 것이다.<<lawareness>><<ltrauma>><<awareness -6>><<trauma -6>>",
+   "\t<</if>> "
+  ],
+  "new_en": [
+   "\t\tPerhaps it will be useful later.<<lawareness>><<ltrauma>><<awareness -6>><<trauma -6>>",
+   "\t<</if>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou peer further down the tunnel. Your eyes adjust to the gloom, and you see that it branches. You'd be able to swim up there, but the current doesn't look any more gentle. "
+  ],
+  "old_kr": [
+   "\t당신은 지하도 안쪽을 더 깊이 들여다본다. 어둠에 눈이 익숙해지자 통로가 갈라지는 것이 보인다. 위로 헤엄쳐 갈 수 있겠지만, 물살이 더 약해 보이지는 않는다. "
+  ],
+  "new_en": [
+   "\tYou peer further down the tunnel. Your eyes adjust to the gloom, and you see that it branches. You'd be able to swim up there, but the current doesn't look any more gentle."
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\tYou climb onto the shore, dry yourself, dress, then enter the asylum."
+  ],
+  "old_kr": [
+   "\t",
+   "\t당신은 물가로 기어 올라와 몸을 닦고 옷을 입은 뒤, 정신병원으로 들어간다."
+  ],
+  "new_en": [
+   "",
+   "\tYou climb onto the shore, dry yourself, dress, then enter the asylum."
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<br><br> ",
+   "\tYou swim back to the garden, climb onto the shore, dry yourself, dress, and enter the asylum."
+  ],
+  "old_kr": [
+   "\t<br><br> ",
+   "\t당신은 정원으로 헤엄쳐 돌아와 물가로 올라가서 몸을 닦고 옷을 입은 뒤, 정신병원으로 들어간다."
+  ],
+  "new_en": [
+   "\t<br><br>",
+   "\tYou swim back to the garden, climb onto the shore, dry yourself, dress, and enter the asylum."
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\t<<link [[Next|Asylum Depths]]>><<dry>><<clotheson>><</link>>"
+  ],
+  "old_kr": [
+   "\t",
+   "\t<<link [[다음|Asylum Depths]]>><<dry>><<clotheson>><</link>>"
+  ],
+  "new_en": [
+   "",
+   "\t<<link [[Next|Asylum Depths]]>><<dry>><<clotheson>><</link>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\tYou climb onto the shore, dry yourself, dress, and enter the asylum."
+  ],
+  "old_kr": [
+   "\t",
+   "\t당신은 물가로 기어 올라와 몸을 닦고 옷을 입은 뒤, 정신병원으로 들어간다."
+  ],
+  "new_en": [
+   "",
+   "\tYou climb onto the shore, dry yourself, dress, and enter the asylum."
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\tYou climb onto the shore, dry yourself, dress, and enter the asylum."
+  ],
+  "old_kr": [
+   "\t",
+   "\t당신은 물가로 기어 올라와 몸을 닦고 옷을 입은 뒤, 정신병원으로 들어간다."
+  ],
+  "new_en": [
+   "",
+   "\tYou climb onto the shore, dry yourself, dress, and enter the asylum."
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou keep your eyes on the dim light up ahead. ",
+   "\tYou emerge in a large room, lit only by light seeping through grating far above. <span class=\"pink\">You feel a presence.</span> Two yellow eyes open, and stare at you.<<gstress>><<stress 6>>"
+  ],
+  "old_kr": [
+   "\t앞쪽의 희미한 빛에서 눈을 떼지 않는다. ",
+   "\t당신은 저 위쪽 쇠창살에서 새어 나오는 빛으로만 밝혀진 커다란 방으로 나온다. <span class=\"pink\">누군가의 기척이 느껴진다.</span> 노란 눈 두 개가 열리더니 당신을 노려본다.<<gstress>><<stress 6>>"
+  ],
+  "new_en": [
+   "\tYou keep your eyes on the dim light up ahead. You emerge in a large room, lit only by light seeping through grating far above. <span class=\"pink\">You feel a presence.</span> Two yellow eyes open, and stare at you.<<gstress>><<stress 6>>"
+  ],
+  "context": "\t<<set $asylum_tunnels to 5>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\tYou climb onto the shore, dry yourself, dress, and enter the asylum."
+  ],
+  "old_kr": [
+   "\t",
+   "\t당신은 물가로 기어 올라와 몸을 닦고 옷을 입은 뒤, 정신병원으로 들어간다."
+  ],
+  "new_en": [
+   "",
+   "\tYou climb onto the shore, dry yourself, dress, and enter the asylum."
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\tYou climb onto the shore, dry yourself, dress, and enter the asylum."
+  ],
+  "old_kr": [
+   "\t",
+   "\t당신은 물가로 기어 올라와 몸을 닦고 옷을 입은 뒤, 정신병원으로 들어간다."
+  ],
+  "new_en": [
+   "",
+   "\tYou climb onto the shore, dry yourself, dress, and enter the asylum."
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t/* "
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t/*"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<br><br> "
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>"
+  ],
+  "context": "\t당신은 낡은 방 중 하나를 탐색한다. 저 멀리 구석에 있는 물건을 제외하면 비어 있다. 그것은 당신과 같은 높이이며 시트로 덮여 있다."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<br><br> "
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>"
+  ],
+  "context": "\t한쪽 경첩에 비스듬히 매달려 있는 사무실 문을 발견한다. 당신은 그 안으로 들어간다."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<</if>> "
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<</if>>"
+  ],
+  "context": "\t\t거울 너머로 한 <<person>>【이가】 다른 사람들을 양옆에 거느린 채 당신을 기다리고 있다. 그들은 기대에 찬 표정으로 지켜본다."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<br><br> "
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>"
+  ],
+  "context": "\t기이하긴 해도, 당신은 정신병원에 있으며 그 사실을 잊는 것은 위험할 수 있다. 그 생각과 함께, <span class=\"green\">당신은 거울 방으로 돌아오지만,</span> 여전히 관객들이 기다리고 있는 장면이 눈앞에 펼쳐진다."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<br><br>"
+ }
+]

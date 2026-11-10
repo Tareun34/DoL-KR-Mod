@@ -1,0 +1,34 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if dangerEvent() and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\t<<tending_text>> Your hands get dirty, and beads of sweat slip down your cheek, but the flowers have lots more space when you're done. <<physique 6>>"
+  ],
+  "old_kr": [
+   "\t<<if dangerEvent() and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\t<<tending_text>> 손이 더러워지고 땀방울이 뺨을 타고 흐르지만, 일이 끝나자 꽃들이 자랄 공간이 훨씬 넓어졌다. <<physique 6>>"
+  ],
+  "new_en": [
+   "\t<<if dangerEvent() and beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\t\t<<tending_text>> Your hands get dirty, and beads of sweat slip down your cheek, but the flowers have lots more space when you're done. <<physique 6>>"
+  ],
+  "context": "\t<<beastNEWinit 1 wolf>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\tYou hear something behind you."
+  ],
+  "old_kr": [
+   "<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t등 뒤에서 무언가 소리가 들린다."
+  ],
+  "new_en": [
+   "<<if $rng gte 51 and beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\tYou hear something behind you."
+  ],
+  "context": "<<beastNEWinit 1 wolf>>"
+ }
+]

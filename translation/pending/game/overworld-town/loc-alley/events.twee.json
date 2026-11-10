@@ -1,0 +1,93 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "The <<person1>><<person>> casts an exasperated glance glance at <<his>> colleagues, but something in their eyes makes <<him>> relent. \"Fine,\" <<he>> says. \"Take the <<person4>><<personsimple>> and fuck off.\""
+  ],
+  "old_kr": [
+   "<<person1>><<person>>【이가】 동료들을 향해 짜증 섞인 눈길을 던지지만, 그들의 눈빛 속에 담긴 뭔가를 보고는 뜻을 꺾는다. \"좋아,\" <<he>>【이가】 말한다. \"<<person4>><<personsimple>> 데리고 꺼져.\""
+  ],
+  "new_en": [
+   "The <<person1>><<person>> casts an exasperated glance at <<his>> colleagues, but something in their eyes makes <<him>> relent. \"Fine,\" <<he>> says. \"Take the <<person4>><<personsimple>> and fuck off.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You launch yourself at the <<person1>><<person>>, catching <<him>> off guard. \"Fuck,\" <<he>> growls. \"Don't just stand there you fuckers, help me.\""
+  ],
+  "old_kr": [
+   "<<person1>><<person>>【을를】 향해 몸을 던져, 방심한 틈을 노린다. \"씨발,\" <<he>>【이가】 으르렁댄다. \"거기 그렇게 서 있지만 말고 좀 도와, 이 새끼들아.\""
+  ],
+  "new_en": [
+   "You launch yourself at the <<person1>><<person>>, catching <<him>> off guard. \"Fuck,\" <<he>> growls. \"Don't just stand there, you fuckers, help me.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<tearful>> you seize the opportunity. You remove the <<person>>'s bindings, and support their weight as you guide them to the exit, stopping only to"
+  ],
+  "old_kr": [
+   "\t<<tearful>> 그 기회를 놓치지 않는다. <<person>>의 결박을 풀어주고, 몸을 부축하며 출구로 이끈다. 다만 잠시 멈춰서"
+  ],
+  "new_en": [
+   "\t<<tearful>> you seize the opportunity. You remove the <<person>>'s bindings, and support <<his>> weight as you guide <<him>> to the exit, stopping only to"
+  ],
+  "context": "\t<<loadNPC 3 \"alleyways_rescue_victim\">><<person4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tThe <<person1>><<person>> steps back, and catches their foot in a grate. With a howl of pain, <<he>> collapses, distracting the <<person2>><<person>> and <<person3>><<person>>"
+  ],
+  "old_kr": [
+   "\t<<person1>><<person>>【이가】 뒷걸음질 치다 배수구 격자에 발이 걸린다. 고통에 찬 비명을 지르며 쓰러지고, 그 소리에 <<person2>><<person>>【와과】 <<person3>><<person>>【이가】 정신이 팔린다."
+  ],
+  "new_en": [
+   "\tThe <<person1>><<person>> steps back, and catches their foot in a grate. With a howl of pain, <<he>> collapses, distracting the <<person2>><<person>> and <<person3>><<person>>."
+  ],
+  "context": "<<elseif $enemyhealth lte 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<tearful>> you seize the opportunity. You remove the <<person>>'s bindings, and support their weight as you guide them to the exit, stopping only to"
+  ],
+  "old_kr": [
+   "\t<<tearful>> 그 기회를 놓치지 않는다. <<person>>의 결박을 풀어주고, 몸을 부축하며 출구로 이끈다. 다만 잠시 멈춰서"
+  ],
+  "new_en": [
+   "\t<<tearful>> you seize the opportunity. You remove the <<person>>'s bindings, and support <<his>> weight as you guide <<him>> to the exit, stopping only to"
+  ],
+  "context": "\t<<loadNPC 3 \"alleyways_rescue_victim\">><<person4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tThe <<person3>><<person>> leans close. \"What's the matter?\" <<he>> asks. \"You're not broken already are you?\""
+  ],
+  "old_kr": [
+   "\t<<person3>><<person>>【이가】 가까이 몸을 기울인다. \"왜 그래?\" <<he>>【이가】 묻는다. \"설마 벌써 무너진 건 아니지?\""
+  ],
+  "new_en": [
+   "\tThe <<person3>><<person>> leans close. \"What's the matter?\" <<he>> asks. \"You're not broken already, are you?\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You clamp down on the <<persons>> intruding digit, and hold on as <<he>> screams. <<He>> smacks at your with <<his>> other hand and backs away, sucking <<his>> thumb."
+  ],
+  "old_kr": [
+   "밀고 들어온 <<persons>> 손가락을 꽉 깨물고, 비명을 지르는 동안에도 놓지 않는다. <<He>>【은는】 다른 손으로 당신을 후려치고는 물러나, 엄지를 빨아댄다."
+  ],
+  "new_en": [
+   "You clamp down on the <<persons>> intruding digit, and hold on as <<he>> screams. <<He>> smacks at your <<bottom>> with <<his>> other hand and backs away, sucking <<his>> thumb."
+  ],
+  "context": ""
+ }
+]

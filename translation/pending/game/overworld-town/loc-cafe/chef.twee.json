@@ -1,0 +1,117 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"m\">>",
+   "\t\t<span class=\"red\">The ear slime refuses to allow you to wear the gown.</span>"
+  ],
+  "old_kr": [
+   "\t<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"m\">>",
+   "\t\t<span class=\"red\">귀 슬라임이 가운을 입는 것을 거부합니다.</span>"
+  ],
+  "new_en": [
+   "\t<<if $earSlime.forcedDressing?.type is \"m\">>",
+   "\t\t<span class=\"red\">The ear slime refuses to allow you to wear the gown.</span>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"f\">>",
+   "\t\t<span class=\"red\">The ear slime refuses to allow you to wear the tux.</span>"
+  ],
+  "old_kr": [
+   "\t<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"f\">>",
+   "\t\t<span class=\"red\">귀 슬라임이 턱시도를 입는 것을 거부합니다.</span>"
+  ],
+  "new_en": [
+   "\t<<if $earSlime.forcedDressing?.type is \"f\">>",
+   "\t\t<span class=\"red\">The ear slime refuses to allow you to wear the tux.</span>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"m\">>",
+   "\t\t<span class=\"red\">The ear slime refuses to allow you to wear the gown.</span>"
+  ],
+  "old_kr": [
+   "\t<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"m\">>",
+   "\t\t<span class=\"red\">귀 슬라임이 가운을 입는 것을 거부합니다.</span>"
+  ],
+  "new_en": [
+   "\t<<if $earSlime.forcedDressing?.type is \"m\">>",
+   "\t\t<span class=\"red\">The ear slime refuses to allow you to wear the gown.</span>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"f\">>",
+   "\t\t<span class=\"red\">The ear slime refuses to allow you to wear the tux.</span>"
+  ],
+  "old_kr": [
+   "\t<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"f\">>",
+   "\t\t<span class=\"red\">귀 슬라임이 턱시도를 입는 것을 거부합니다.</span>"
+  ],
+  "new_en": [
+   "\t<<if $earSlime.forcedDressing?.type is \"f\">>",
+   "\t\t<span class=\"red\">The ear slime refuses to allow you to wear the tux.</span>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif _gwylanLovePercent gte 50>>",
+   "\t\tThat same look of pride washes over you as <<he>> smiles at you. <<stress -3>><<lstress>>"
+  ],
+  "old_kr": [
+   "\t<<elseif _gwylanLovePercent gte 50>>",
+   "\t\t<<he>>【이가】 당신에게 미소 짓자, 그 자랑스러운 표정이 당신에게도 번진다. <<stress -3>><<lstress>>"
+  ],
+  "new_en": [
+   "\t<<elseif _gwylanLovePercent gte 40>>",
+   "\t\tThat same look of pride washes over you as <<he>> smiles at you. <<stress -3>><<lstress>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<elseif _gwylanLovePercent gte 40 and $gwylanTalked.length gte 8>>",
+   "\t<<He>> hugs you when you get close."
+  ],
+  "old_kr": [
+   "<<elseif _gwylanLovePercent gte 40 and $gwylanTalked.length gte 8>>",
+   "\t<<He>>【은는】 당신이 가까이 다가가자 안아준다."
+  ],
+  "new_en": [
+   "<<elseif _gwylanLovePercent gte 30 and $gwylanTalked.length gte 8>>",
+   "\t<<He>> hugs you when you get close."
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"I'm glad you remembered me, despite all the attention on you.\"",
+   "<<elseif _gwylanLovePercent gte 40 and $gwylanTalked.length gte 8>>",
+   "\t\"I'm glad you still have time for little old me despite being the star of the show.\""
+  ],
+  "old_kr": [
+   "\t\"이렇게 많은 관심을 받는데도, 날 기억해줘서 기뻐.\"",
+   "<<elseif _gwylanLovePercent gte 40 and $gwylanTalked.length gte 8>>",
+   "\t\"이 쇼의 주인공인데도 보잘것없는 나를 위해 시간을 내주다니 기쁘네.\""
+  ],
+  "new_en": [
+   "\t\"I'm glad you remembered me, despite all the attention on you.\"",
+   "<<elseif _gwylanLovePercent gte 30 and $gwylanTalked.length gte 8>>",
+   "\t\"I'm glad you still have time for little old me despite being the star of the show.\""
+  ],
+  "context": "<<if $gwylanSeen.includes(\"yearning\")>>"
+ }
+]

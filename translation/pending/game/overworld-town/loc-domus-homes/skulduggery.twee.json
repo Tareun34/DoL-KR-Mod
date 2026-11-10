@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\tA low growl interrupts you, and a <<beasttype>> emerges from the darkness. <<bHe>> starts to bark.<<if $monster is 1>> \"Intruder! Away!\"<</if>>"
+  ],
+  "old_kr": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t낮은 으르렁거림이 당신을 방해하고, 어둠 속에서 <<beasttype>> 한 마리가 나타난다. <<bHe>>【이가】 짖기 시작한다.<<if $monster is 1>> \"침입자다! 물러가!\"<</if>>"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\tA low growl interrupts you, and a <<beasttype>> emerges from the darkness. <<bHe>> starts to bark.<<if $monster is 1>> \"Intruder! Away!\"<</if>>"
+  ],
+  "context": "\t<<beastNEWinit 1 dog>>"
+ }
+]

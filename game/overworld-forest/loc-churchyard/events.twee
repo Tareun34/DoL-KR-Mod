@@ -398,8 +398,8 @@
 
 <<beastNEWinit 1 spider>>
 <<if $settings.spidersEnabled>>
-	깨어나 보니, 두꺼운 거미줄에 묶여 천장에 거꾸로 매달려 있다. 몸부림치며 발버둥친다.
-	<<if $monster is 1 or $settings.bestialityEnabled>>
+	You awaken upside down, suspended from the ceiling by a thick string of silk. You squirm and struggle.
+	<<if beastSexEnabledForType("spider", $monster is 1)>>
 		<<if $monster is 1>>
 			"이런 이런," 어둠 속에서 누군가 나지막이 노래하듯 말한다. <span class="red"><<beasttype>>【이가】 재빨리 모습을 드러내, 갈망하는 눈으로 당신의 몸을 훑어본다.</span>
 			<br><br>

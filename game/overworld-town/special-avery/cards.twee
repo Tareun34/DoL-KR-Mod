@@ -293,22 +293,11 @@
 <<set _targets = ["Avery", "Bailey", "Leighton", "Quinn"]>>
 <<set _spitTargets = _targets.filter(t => $avery_cards.drink[`${t.toLowerCase()}_spit`] == "t")>>
 
-당신은 네 개의 잔에 술을 따른다.
-<br>
-<<for _target range _targets>>
-	<br>
-	<<set _drink_en to $avery_cards.drink[_target.toLowerCase()]>>
-	<<switch _drink_en>>
-		<<case "whisky">><<set _drink_ko to "위스키">>
-		<<case "brandy">><<set _drink_ko to "브랜디">>
-		<<case "gin">><<set _drink_ko to "진">>
-		<<case "vodka">><<set _drink_ko to "보드카">>
-		<<default>><<set _drink_ko to "술">>
-	<</switch>>
-	당신은 <<= window.KR.gatPersonNameDictKR(_target)>>에게 _drink_ko【을를】 따라준다.
-	<br>
-<</for>>
-<br>
+You pour drinks into four glasses:
+<<print formatList(
+	_targets.map(t => `${V.avery_cards.drink[t.toLowerCase()]} for ${t}`)
+)>>.
+<br><br>
 
 <<switch _spitTargets.length>>
 	<<case 4>>
@@ -1431,11 +1420,11 @@
 <<effects>>
 <<averyscore>>
 <<if $avery_mansion>>
-    <<set $bus to "avery_garage">>
-    <<money `((C.npc.Avery.love * 10 + $endear * 10 + 10) * 100)` "avery">>
+	<<set $bus to "avery_garage">>
+	<<money `averyPayout()` "avery">>
 
-    에이버리는 대저택의 차고에 차를 세운다. <<He>>【은는】 당신에게 <span class="gold">£<<print (C.npc.Avery.love * 10 + $endear * 10 + 10)>></span>을 쥐여주고는, 몸을 기울여 당신의 뺨에 입을 맞춘다. "그 가면은 가져도 좋습니다. 기념품으로 생각하시죠."
-    <br><br>
+	Avery pulls up to the mansion and into the garage. <<He>> hands you <<printmoney `averyPayout()`>>, then leans over and kisses your cheek. "You can keep the mask. Consider it a souvenir."
+	<br><br>
 
     <<He>>【이가】 문을 열고 차에서 내리자, 당신도 따라 내린다.
     <br><br>
@@ -1443,11 +1432,11 @@
     <<link [[다음|Mansion Garage]]>><<avery_cards_end>><<endevent>><</link>>
     <br>
 <<else>>
-    <<set $bus to "domus">>
-    <<money `((C.npc.Avery.love * 10 + $endear * 10 + 10) * 100)` "avery">>
+	<<set $bus to "domus">>
+	<<money `averyPayout()` "avery">>
 
-    에이버리가 고아원 밖에 차를 세운다. <<He>>【은는】 당신에게 <span class="gold">£<<print (C.npc.Avery.love * 10 + $endear * 10 + 10)>></span>을 쥐여주고 당신의 뺨에 입을 맞춘 뒤, 몸을 기울여 문을 열어준다. "베일리에게 안부 전해주시죠," <<he>>【이가】 말한다. "그리고 <<nnpc_his "Bailey">> 손실에 대한 유감도 함께." <<He>>【은는】 윙크를 보낸다. "그 가면은 가져도 좋습니다. 기념품으로 생각하시죠."
-    <br><br>
+	Avery pulls up outside the orphanage. <<He>> hands you <<printmoney `averyPayout()`>>, kisses your cheek, and leans over to open your door. "Give Bailey my regards," <<he>> says. "And my condolences for <<nnpc_his "Bailey">> loss." <<He>> winks. "You can keep the mask. Consider it a souvenir."
+	<br><br>
 
     <<He>>【이가】 타이어가 미끄러지도록 차를 몰고 떠나자, 근처에 있던 고양이가 깜짝 놀라 달아난다. 당신은 고아원 안으로 들어간다.
     <br><br>
@@ -1466,13 +1455,13 @@
 <<effects>>
 
 <<averyscore>>
-<<money `((C.npc.Avery.love * 10 + $endear * 10 + 10) * 100)` "avery">>
+<<money `averyPayout()` "avery">>
 
 "승자에게 전리품이 돌아가는 법이죠." 퀸은 <<person4>><<his>> 패배에도 개의치 않는 듯 말한다. 베일리는 현금 더미를 보며 <<person2>><<himself>> 미소를 허락하지만, 너무 빨리 사라져 당신이 잘못 본 것 같을 정도다.
 <br><br>
 당신은 문가에서 베일리와 함께 <<he>>【이가】 <<his>> 손님들에게 작별 인사를 하는 것을 기다린다. 레이튼이 당신 앞에 멈춰 선다. "오늘 밤은 얌전히 있었구나." <<person3>><<he>>【이가】 말한다. "학교에서도 계속 그러길 바란다."
 <br><br>
-에이버리는 베일리에게 말하지 않고 당신 앞에 멈춰 선다. "동행해 줘서 고맙군." 에이버리가 이를 악물고 말한다. "네 보호자가 집까지 안전하게 데려다주겠지. 자, 수고비로 조금 남겨 뒀어." <<person1>><<He>>【은는】 당신에게 <span class="gold">£<<print (C.npc.Avery.love * 10 + $endear * 10 + 10)>></span>【을를】 건넨다.
+Avery doesn't speak to Bailey, but stops in front of you. "Thank you for accompanying me," Avery says through gritted teeth. "I'm sure your caretaker will see you home safe. Here, I spared a little something for your trouble." <<person1>><<He>> hands you <<printmoney `averyPayout()`>>.
 <br><br>
 그 말을 끝으로, <<he>>【은는】 뒤도 돌아보지 않고 나간다.
 <br><br>
@@ -1828,14 +1817,14 @@
 <<effects>>
 
 <<averyscore>>
-<<money `((C.npc.Avery.love * 10 + $endear * 10 + 10) * 100)` "avery">>
+<<money `averyPayout()` "avery">>
 
 베일리는 출구에서 손님 하나하나에게 작별 인사를 건넨다. 퀸은 <<person2>><<his>> 손을 잡고 악수한다. "멋진 저녁 감사했습니다." <<person4>><<he>>【이가】 말한다. "고아원에서도, 음, 좋은 일 계속해 주십시오."
 <br><br>
 
 다음은 에이버리다. <<person1>><<He>>【은는】 베일리에게 고개를 끄덕인 뒤 당신에게 돌아선다.
 <br>
-"오늘 저녁 함께해 줘서 고맙군." <<he>>【이가】 주머니로 손을 뻗으며 말한다. <<He>>【은는】 지폐를 더 꺼내 당신에게 <span class="gold">£<<print (C.npc.Avery.love * 10 + $endear * 10 + 10)>></span>【을를】 건넨다.
+"Thank you for joining me this evening," <<he>> says, reaching to a pocket. <<He>> produces more notes, and hands you <<printmoney `averyPayout()`>>.
 <br><br>
 
 "퀸의 말에 동감하지." 에이버리가 방을 나간 후, 레이튼이 베일리에게 말한다. "훌륭한 저녁이었네, 그리고 계속 수고해주게. 자네 원생들은 가르치는 보람이 항상 있어."
@@ -2488,11 +2477,11 @@
 <<effects>>
 
 <<averyscore>>
-<<money `((C.npc.Avery.love * 10 + $endear * 10 + 10) * 100)` "avery">>
+<<money `averyPayout()` "avery">>
 
 베일리는 출구에 서서 떠나는 <<person2>><<his>> 손님들에게 작별 인사를 건넨다. 레이튼이 먼저 나가고, 에이버리가 뒤따른다. <<person1>><<He>>【은는】 떠나기 전 당신에게 몸을 돌린다.
 <br><br>
-"동행해줘서 고맙습니다," <<he>>【이가】 이를 악문 채 말한다. "수고비로 조금 드리죠." <<He>>【은는】 퀸을 힐끗 본다. "의료비로 쓰게 될지도 모르고요." <<He>>【은는】 당신에게 <span class="gold">£<<print (C.npc.Avery.love * 10 + $endear * 10 + 10)>></span>를 건넨다.
+"Thank you for accompanying me," <<he>> says through gritted teeth. "A little something for your trouble." <<He>> glances at Quinn. "For medical bills, maybe." <<He>> hands you <<printmoney `averyPayout()`>>.
 <br><br>
 
 에이버리가 떠나자, 퀸은 베일리 앞에 선다. "고마워요, 베일리." <<person4>><<he>>【이가】 말한다. "걱정 마세요. 당신의 보호 대상은 무사히 돌려보내 드릴 테니."
@@ -2875,8 +2864,8 @@
 	<<link [[다음|Danube Street]]>><<endevent>><<avery_cards_end>><</link>>
 	<br>
 <<else>>
-	당신은 대문의 양쪽을 붙잡고 억지로 벌려보려 하지만, <span class="red">아무 소용이 없다.</span> 곧 <<beastsplural>>【이가】 당신에게 들이닥친다.
-	<<if $monster is 1 or $settings.bestialityEnabled>>
+	You grasp the two halves of the gate, and try to force them apart, <span class="red">but to no avail.</span> The <<beastsplural>> are soon upon you.
+	<<if beastSexEnabledForType("dog", $monster is 1)>>
 		<br><br>
 
 		<<link [[다음|Avery Cards Quinn Dogs]]>><<set $molestationstart to 1>><</link>>

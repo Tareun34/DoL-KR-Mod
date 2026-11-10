@@ -37,69 +37,32 @@
 <</widget>>
 
 <<widget "forestdeeper">>
-	숲속으로 더 깊이 들어간다
-	<br>
 	<<if $worn.feet.type.includes("heels") and !$possessed>>
-		<<heelsicon "hobble">><<link [[하이힐을 신고 절뚝인다 (0:30)|Forest]]>><<set $forestmod to 3>><<set $forest += 5>><<pass 30>><<set $forestmove to "hobble">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<gharass>>
-		<<if $town_projects.road gte 4 and $forest lte 24>>
-			<br>
-			<<forestroadicon "deep">><<link [[길을 따라간다 (0:10)|Forest]]>><<set $forestmod to 1>><<set $forest += 5>><<set $forestmove to "road">><<pass 10>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><<set $eventskip to 1>><</link>><<noharass>>
-		<</if>>
+		<<heelsicon "hobble">><<link [[Hobble deeper into the forest (0:30)|Forest]]>><<set $forestmod to 3>><<set $forest += 5>><<pass 30>><<set $forestmove to "hobble">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<gharass>>
 	<<else>>
-		<<if !$worn.feet.type.includes("shackle")>>
-			<<runicon>><<link [[빠르게 간다 (0:05)|Forest]]>><<set $forestmod to 3>><<set $forest += 5>><<pass 5>><<set $forestmove to "quickly">><<if $foresthunt gte 1>><<set $foresthunt += 0.5>><</if>><</link>><<gharass>>
-			<br>
-		<</if>>
+		<<travelSpeedInfo>>
 		<<if $nextPassageCheck is "Forest Blood Deeper">>
 			<span class="nextLink"><<walkicon>><<link [[호수.|Forest Blood Deeper]]>><<set $forestmod to 1.5>><<set $forest += 5>><<set $forestmove to "normally">><</link>></span>
 		<<else>>
-			<<walkicon>><<link [[평소처럼 걷는다 (0:10)|Forest]]>><<set $forestmod to 1.5>><<set $forest += 5>><<set $forestmove to "normally">><<pass 10>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><</link>>
-		<</if>>
-		<br>
-		<<sneakicon>><<link [[조심스럽게 간다 (0:30)|Forest]]>><<set $forestmod to 1>><<set $forest += 5>><<pass 30>><<set $forestmove to "carefully">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<lharass>>
-		<<if $town_projects.road gte 4 and $forest lte 24>>
-			<br>
-			<<forestroadicon "deep">><<link [[길을 따라간다 (0:05)|Forest]]>><<set $forestmod to 1>><<set $forest += 5>><<set $forestmove to "road">><<pass 5>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><<set $eventskip to 1>><</link>><<noharass>>
+			<<forestTravelIcon "forest">><<link `'Go deeper into the forest (<span class="travelTime">' + _travelTimeString + '</span>)'` "Forest">><<forestTravel "deeper">><</link>>
 		<</if>>
 	<</if>>
 <</widget>>
 
 <<widget "forestsearch">>
-	이 구역을 수색한다 <<gtreasure>>
-	<br>
-	<<if !$worn.feet.type.includes("shackle")>>
-		<<runicon>><<link [[빠르게 (0:05)|Forest]]>><<set $forest_search to true>><<set $forestmod to 3>><<pass 5>><<set $forestmove to "quick_search">><<if $foresthunt gte 1>><<set $foresthunt += 0.5>><</if>><</link>><<gharass>>
-		<br>
-	<</if>>
-	<<walkicon>><<link [[보통 속도로 (0:10)|Forest]]>><<set $forest_search to true>><<set $forestmod to 1.5>><<set $forestmove to "normal_search">><<pass 10>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><</link>>
-	<br>
-	<<sneakicon>><<link [[조심스럽게 (0:30)|Forest]]>><<set $forest_search to true>><<set $forestmod to 1>><<pass 30>><<set $forestmove to "careful_search">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<lharass>>
+	<<travelSpeedInfo>>
+	<<foresticon "search">><<link `'Search this area (<span class="travelTime">' + _travelTimeString + '</span>)'` "Forest">><<forestTravel "search">><</link>><<gtreasure>>
 <</widget>>
 
 <<widget "forestlessdeep">>
-	마을 방향으로 간다
-	<br>
 	<<if $worn.feet.type.includes("heels") and !$possessed>>
-		<<heelsicon "hobble">><<link [[하이힐을 신고 절뚝인다 (0:30)|Forest]]>><<set $forestmod to 3>><<set $forest -= 5>><<pass 30>><<set $forestmove to "hobble">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<gharass>>
-		<<if $town_projects.road gte 4 and $forest lte 25 and $forest gte 1>>
-			<br>
-			<<forestroadicon "town">><<link [[길을 따라간다 (0:10)|Forest]]>><<set $forestmod to 1>><<set $forest -= 5>><<set $forestmove to "road">><<pass 10>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><<set $eventskip to 1>><</link>><<noharass>>
-		<</if>>
+		<<heelsicon "hobble">><<link [[Hobble towards town (0:30)|Forest]]>><<set $forestmod to 3>><<set $forest -= 5>><<pass 30>><<set $forestmove to "hobble">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<gharass>>
 	<<else>>
-		<<if !$worn.feet.type.includes("shackle")>>
-			<<runicon>><<link [[빠르게 간다 (0:05)|Forest]]>><<set $forestmod to 3>><<set $forest -= 5>><<pass 5>><<set $forestmove to "quickly">><<if $foresthunt gte 1>><<set $foresthunt += 0.5>><</if>><</link>><<gharass>>
-			<br>
-		<</if>>
+		<<travelSpeedInfo>>
+		<<forestTravelIcon "town">><<link `'Go towards town (<span class="travelTime">' + _travelTimeString + '</span>)'` "Forest">><<forestTravel "town">><</link>>
 		<<if $nextPassageCheck is "Forest Blood Less Deep">>
-			<span class="nextLink"><<walkicon>><<link [[호수.|Forest Blood Less Deep]]>><<set $forestmod to 1.5>><<set $forest -= 5>><<set $forestmove to "normally">><</link>></span>
-		<<else>>
-			<<walkicon>><<link [[평소처럼 걷는다 (0:10)|Forest]]>><<set $forestmod to 1.5>><<set $forest -= 5>><<set $forestmove to "normally">><<pass 10>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><</link>>
-		<</if>>
-		<br>
-		<<sneakicon>><<link [[조심스럽게 간다 (0:30)|Forest]]>><<set $forestmod to 1>><<set $forest -= 5>><<pass 30>><<set $forestmove to "carefully">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<lharass>>
-		<<if $town_projects.road gte 4 and $forest lte 25 and $forest gte 1>>
 			<br>
-			<<forestroadicon "town">><<link [[길을 따라간다 (0:05)|Forest]]>><<set $forestmod to 1>><<set $forest -= 5>><<set $forestmove to "road">><<pass 5>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><<set $eventskip to 1>><</link>><<noharass>>
+			<span class="nextLink"><<walkicon>><<link [[The lake.|Forest Blood Less Deep]]>><<set $forestmod to 1.5>><<set $forest -= 5>><<set $forestmove to "normally">><</link>></span>
 		<</if>>
 	<</if>>
 <</widget>>
@@ -386,8 +349,8 @@
 			<br><br>
 
 			<!-- Modified for monster people -->
-			<<if $monster is 1 or $settings.bestialityEnabled>>
-				<<link [[다음|Forest Wolf2]]>><<set $molestationstart to 1>><</link>>
+			<<if beastSexEnabledForType("wolf", $monster is 1)>>
+				<<link [[Next|Forest Wolf2]]>><<set $molestationstart to 1>><</link>>
 				<br>
 			<<else>>
 				그들은 숲 속으로 당신을 쫓아온다. 당신은 등 뒤에서 그들의 소리가 더 이상 들리지 않을 때까지 달린다. 당신이 그들을 따돌린 것인지 그들이 지루해진 것인지 확신할 수 없다.
@@ -397,7 +360,7 @@
 				<<link [[다음 (0:20)|Forest]]>><<pass 20>><<endevent>><<set $eventskip to 1>><</link>>
 			<</if>>
 		<</addinlineevent>>
-		<<if $settings.voreEnabled and $settings.bestialityEnabled>>
+		<<if $settings.voreEnabled and animalSexEnabledForType("snake")>>
 			<<addevent "forestsnake" 0.33>>
 		<</if>>
 		<<addevent "forestbear">>
@@ -438,7 +401,7 @@
 			<</addinlineevent>>
 		<</if>>
 		<<addevent "forestrock">>
-		<<if $settings.bestialityEnabled and $settings.waspsEnabled>>
+		<<if $settings.waspsEnabled>>
 			<<addevent "forestwasps">>
 		<</if>>
 		<<addinlineevent "deepforest_clothingdamage">>
@@ -509,6 +472,7 @@
 	<</addinlineevent>>
 	<<if $forest lte 60>>
 		<<addevent "forestriver" 0.33>>
+		<<addevent "foresttrail" 0.33>>
 	<<else>>
 		<<addinlineevent "safeforest_deer" 0.33>>
 			공터에 들어서자 산들바람이 당신의 얼굴을 스친다. 그 한가운데 사슴 한 마리가 서 있다. 사슴은 당신을 알아차리고 먹이 먹는 것을 멈추지만, 달아나지는 않는다.
@@ -569,8 +533,8 @@
 	<<else>>
 		<<addevent "forestgem" 2>>
 		<<addinlineevent "eventforestitem_bees" 4>>
-			<<if $settings.bestialityEnabled and $settings.beesEnabled>>
-				앞에서 부드러운 윙윙거리는 소리가 들린다. 커다란 벌집이 나무에 매달려 있다. 일벌들이 꽃가루를 찾아 안팎으로 날아다닌다. 꿀은 꽤 가치가 있을 것이다.
+			<<if $settings.beesEnabled>>
+				You hear a gentle buzz up ahead. A large beehive hangs from a tree. Workers fly in and out in a quest for pollen. The honey would be valuable.
 				<br><br>
 
 				<<if currentSkillValue('tending') gte 800>>
@@ -604,8 +568,8 @@
 
 	<<beastNEWinit 1 wolf>>
 	<!-- Modified for monster people -->
-	<<if numberOfEarSlime() and ($settings.bestialityEnabled or $monster is 1) and ($earSlime.growth gte 80 - ($earSlime.deviancy * 10))>>
-		<span class="lewd">머릿속 슬라임이 네 발로 엎드리라고 명령하는 것이 느껴진다.</span> 순순히 따르면 보상을 주겠다고 약속하고, 따르지 않으면 대가를 치르게 하겠다고 협박한다.
+	<<if numberOfEarSlime() and beastSexEnabledForType("wolf", $monster is 1) and ($earSlime.growth gte 80 - ($earSlime.deviancy * 10))>>
+		<span class="lewd">You feel the slime in your head command you to drop to all fours.</span> It promises rewards if you comply, and threatens consequences if you do not.
 		<br><br>
 
 		<<if hasSexStat("deviancy", 4) and $submissive gte 1900>>
@@ -618,8 +582,8 @@
 		<br>
 
 	<<else>>
-		<<if hasSexStat("deviancy", 2) and ($settings.bestialityEnabled or $monster is 1)>>
-			<<link [[교미 자세를 취한다|Forest Wolf Mate]]>><</link>><<deviant2>>
+		<<if hasSexStat("deviancy", 2) and beastSexEnabledForType("wolf", $monster is 1)>>
+			<<link [[Adopt mating posture|Forest Wolf Mate]]>><</link>><<deviant2>>
 			<br>
 		<</if>>
 		<<if $wolfgirl gte 6>>
@@ -637,8 +601,8 @@
 	<br><br>
 
 	<<beastNEWinit 2 wolf>>
-	<<if hasSexStat("deviancy", 3) and ($settings.bestialityEnabled or $monster is 1)>>
-		<<link [[교미 자세를 취한다|Forest Wolf Mate2]]>><</link>><<deviant3>>
+	<<if hasSexStat("deviancy", 3) and beastSexEnabledForType("wolf", $monster is 1)>>
+		<<link [[Adopt mating posture|Forest Wolf Mate2]]>><</link>><<deviant3>>
 		<br>
 	<</if>>
 	<<if $wolfgirl gte 6>>
@@ -710,8 +674,8 @@
 	<</if>>
 	<br><br>
 
-	<<if $settings.bestialityEnabled or $monster is 1>>
-		<<link [[버틴다|Forest Boar Brace]]>><</link>>
+	<<if beastSexEnabledForType("boar", $monster is 1)>>
+		<<link [[Brace|Forest Boar Brace]]>><</link>>
 		<br>
 		<<link [[피한다|Forest Boar Dodge]]>><</link>><<dancedifficulty 1 600>>
 		<br>
@@ -737,8 +701,8 @@
 	<<link [[우회한다 (0:30)|Forest]]>><<endevent>><<pass 30>><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><<set $eventskip to 1>><</link>>
 	<br>
 	<!-- Modified for Monster People -->
-	<<if random(1, 5) is 5 and ($settings.bestialityEnabled or $monster is 1)>>
-		<<link [[무시한다|Forest Bear Molestation]]>><<set $molestationstart to 1>><</link>>
+	<<if random(1, 5) is 5 and beastSexEnabledForType("bear", $monster is 1)>>
+		<<link [[Ignore them|Forest Bear Molestation]]>><<set $molestationstart to 1>><</link>>
 		<br>
 	<<else>>
 		<<link [[무시한다|Forest]]>><<endevent>><<set $eventskip to 1>><</link>>
@@ -760,8 +724,8 @@
 	<</if>>
 	<br><br>
 
-	<<if $monster is 1 or $settings.bestialityEnabled>>
-		<<link [[다음|Forest Wolf]]>><<set $molestationstart to 1>><</link>>
+	<<if beastSexEnabledForType("wolf", $monster is 1)>>
+		<<link [[Next|Forest Wolf]]>><<set $molestationstart to 1>><</link>>
 		<br>
 	<<else>>
 		그것은 숲속에서 당신을 쫓아온다. 당신은 뒤에서 소리가 들리지 않을 때까지 달린다. 당신이 도망친 건지, 놈이 지루해진 건지는 확실치 않다.
@@ -1049,8 +1013,8 @@
 				<br>
 
 			<<else>>
-				<<if $monster is 1 or $settings.bestialityEnabled>>
-					검은 늑대가 당신을 향해 달려온다!
+				<<if beastSexEnabledForType("wolf", $monster is 1)>>
+					The Black Wolf bounds towards you!
 					<<if $monster is 1>>
 						"도망, 안 좋다," <<bhe>>【이가】 말한다.
 					<</if>>
@@ -1062,8 +1026,8 @@
 					<<link [[다음|Forest]]>><<endevent>><<set $eventskip to 1>><</link>>
 				<</if>>
 			<</if>>
-		<<elseif $monster is 1 or $settings.bestialityEnabled>>
-			근처에서 바스락거리는 소리가 들린다. 한 쌍의 빛나는 노란 눈이 숲 한가운데서 당신을 지켜본다.
+		<<elseif beastSexEnabledForType("wolf", $monster is 1)>>
+			You hear rustling nearby. A pair of glowing yellow eyes watch you from the canopy.
 			<<if $monster is 1>>
 				머리부터 발끝까지 벌거벗은 우뚝 솟은 몸은 두꺼운 검은 털로 덮여 있다. 짐승의 으르렁거리는 소리와 함께, <<bhe>>【이가】 당신을 향해 도약한다!
 			<<else>>
@@ -1595,8 +1559,8 @@
 		<<elseif !_snakeKnown>>
 			<<link [[둥지를 뒤져본다|Forest Nest Snake]]>><</link>>
 			<br>
-		<<elseif _snakeKnown and hasSexStat("deviancy", 4) and $settings.voreEnabled>>
-			<<link [[스스로를 먹잇감으로 바친다|Forest Nest Snake Vore 1]]>><</link>><<deviant4>>
+		<<elseif _snakeKnown and hasSexStat("deviancy", 4) and $settings.voreEnabled and animalSexEnabledForType("snake")>>
+			<<link [[Present yourself as food|Forest Nest Snake Vore 1]]>><</link>><<deviant4>>
 			<br>
 		<</if>>
 		<<if $forest_nest.fox is 3>>
@@ -1620,8 +1584,8 @@
 	<</if>>
 	<br><br>
 
-	<<if $monster is 1 or $settings.bestialityEnabled>>
-		<<link [[다음|Forest Fox Revenge]]>><<set $molestationstart to 1>><</link>>
+	<<if beastSexEnabledForType("fox", $monster is 1)>>
+		<<link [[Next|Forest Fox Revenge]]>><<set $molestationstart to 1>><</link>>
 		<br>
 	<<else>>
 		그들은 숲속에서 당신을 쫓아온다. 당신은 뒤에서 그들의 소리가 더 이상 들리지 않을 때까지 달린다. 그들을 따돌린 건지 아니면 그들이 지루해진 건지는 알 수 없다.
@@ -3045,7 +3009,7 @@
 		<<if _args[1]>>
 			<<set $_max to _args[0]>>
 		<<else>>
-			<<if $forest_nest and $forest_nest.type>>
+			<<if $forest_nest?.type>>
 				<<switch $forest_nest.type>>
 					<<case 1>><<set $_max to (_args[0] + 2)>>
 					<<case 2>><<set $_max to (_args[0] + 7)>>
@@ -3130,4 +3094,111 @@
 	<br><br>
 	<<link [[다음|Forest]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<br>
+<</widget>>
+
+<<widget "forestTravel">>
+	<<travelSpeedInfo>>
+	<<switch _speedNow>>
+		<<case "quickly">><<set $forestmod to 3>><<set _huntGain to 0.5>><<set _move to "quickly">><<set _searchMove to "quick_search">>
+		<<case "normally">><<set $forestmod to 1.5>><<set _huntGain to 1>><<set _move to "normally">><<set _searchMove to "normal_search">>
+		<<case "carefully">><<set $forestmod to 1>><<set _huntGain to 2>><<set _move to "carefully">><<set _searchMove to "careful_search">>
+	<</switch>>
+	<<switch _args[0]>>
+		<<case "search">><<set $forest_search to true>><<set _move to _searchMove>>
+		<<case "deeper">><<set $forest += 5>>
+		<<case "town">><<set $forest -= 5>>
+	<</switch>>
+	<<set $forestmove to _move>>
+	<<pass _travelTime>>
+	<<if $foresthunt gte 1>><<set $foresthunt += _huntGain>><</if>>
+<</widget>>
+
+<<widget "forestShortcuts">>
+	<<set _heeled to $worn.feet.type.includes("heels") and !$possessed>>
+	<<set _roadTime to _heeled ? 10 : 5>>
+	<<set _roadDeep to $town_projects.road gte 4 and $forest lte 24>>
+	<<set _roadTown to $town_projects.road gte 4 and $forest lte 25 and $forest gte 1>>
+	<<set _tunnel to _args[0] is "in" and $historytrait gte 2 and $thicket_tunnel_intro is 1>>
+	<<set _pathIn to _args[0] is "in" and $historytrait gte 3>>
+	<<set _pathOut to _args[0] is "out" and $historytrait gte 3>>
+
+	<<if _roadDeep or _roadTown or _tunnel or _pathIn or _pathOut>>
+		Shortcuts
+		<br>
+		<<if _roadDeep>>
+			<<forestroadicon "deep">><<link [[Follow road deeper (<<print getTimeString(_roadTime)>>)|Forest]]>><<set $forestmod to 1>><<set $forest += 5>><<set $forestmove to "road">><<pass _roadTime>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><<set $eventskip to 1>><</link>><<noharass>>
+			<br>
+		<</if>>
+		<<if _roadTown>>
+				<<forestroadicon "town">><<link [[Follow road towards town (<<print getTimeString(_roadTime)>>)|Forest]]>><<set $forestmod to 1>><<set $forest -= 5>><<set $forestmove to "road">><<pass _roadTime>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><<set $eventskip to 1>><</link>><<noharass>>
+			<br>
+		<</if>>
+		<<if _tunnel>>
+			<<foresticon "bush">><<link [[Take the secret tunnel to the Residential alleyways (0:05)|Residential Thicket]]>><<pass 5>><<set $foresthunt to 0>><</link>>
+			<br>
+		<</if>>
+		<<if _pathIn>>
+			<<forestroadicon "secret">>
+			<<link [[Take secret path deeper into the woods (0:10)|Forest]]>>
+				<<set $forestmod to 1.5>><<set $forest += 50>><<set $forestmove to "secretin">><<pass 10>>
+				<<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>>
+				<<if $forestHunter is "Gwylan" and $foresthunt gte 1>><<set $foresthunt += 5>><</if>>
+			<</link>>
+			<br>
+		<</if>>
+		<<if _pathOut>>
+			<<forestroadicon "secret">>
+			<<link [[Take secret path out of the woods (0:10)|Forest]]>>
+				<<set $forestmod to 1.5>><<set $forest -= 50>><<set $forestmove to "secretout">><<pass 10>>
+				<<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>>
+				<<if $forestHunter is "Gwylan" and $foresthunt gte 1>><<set $foresthunt += 5>><</if>>
+			<</link>>
+			<br>
+		<</if>>
+		<br>
+	<</if>>
+<</widget>>
+
+
+/* TODO: Forest Travel Icons */
+<<widget "forestTravelIcon">>
+	<<if _args[0] is "town">>
+		<<if $forest lte 50>>
+			<<icon "forest-outskirts.png">>
+		<<else>>
+			<<icon "town-canopy.png">>
+		<</if>>
+	<<elseif $forest lte 50>>
+		<<icon "forest-nature.png">>
+	<<else>>
+		<<icon "town-asylum.png">>
+	<</if>>
+<</widget>>
+
+<<widget "foresttrail">>
+	<<generate1>><<person1>>
+	You cautiously step through the undergrowth when you hear heavy treading ahead.
+	<br><br>
+
+	<<if isLoveInterest("Eden") or isLoveInterest("Black Wolf")>>
+		You glance up expecting <<= isLoveInterest("Eden") is true ? "Eden" : "Black Wolf">>, but are quickly proven wrong.
+		<br><br>
+	<</if>>
+
+	A <<person>> trudges your way, a heavy bag slung over <<his>> shoulder. <<He>> looks out of breath, brows scrunched in frustration as <<he>> spots you and approaches. Facing <<him>> alone unnerves you slightly. <<gstress>><<stress 6>>
+	<br><br>
+
+	"Hey, <<girl>>, you wouldn't happen to know which way the lake is, would you?"
+	<br><br>
+
+	<<link [[Give directions|Forest Trail Encounter]]>><<set $phase to "truth">><</link>>
+	<br>
+	<<link [[Trick the stranger|Forest Trail Encounter]]>><<set $phase to "trick">><</link>>
+	<br>
+	<<link [[Say you aren't sure|Forest Trail Encounter]]>><<set $phase to "unsure">><</link>>
+	<br>
+	<<if $anxiety gte 2>>
+		<<link [[Run away|Forest Trail Encounter]]>><<set $phase to "run">><</link>><<athleticsdifficulty 400 1000>> <<severe_anxiety_disorder_text>>
+		<br>
+	<</if>>
 <</widget>>

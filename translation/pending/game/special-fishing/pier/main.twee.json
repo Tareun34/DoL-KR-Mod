@@ -1,0 +1,81 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou carry the sodden <<= $clothingItem.item.name>> over to a bin on the pier and throw <<= $clothingItem.item.word is \"n\" ? \"them\" : \"it\">> away."
+  ],
+  "old_kr": [
+   "\t\t축축하게 젖은 <<= $clothingItem.item.name>>【을를】 부두에 있는 쓰레기통으로 가져가 갖다 버린다."
+  ],
+  "new_en": [
+   "\t\tYou carry the sodden <<= $clothingItem.item.name>> over to a bin and throw <<= $clothingItem.item.word is \"n\" ? \"them\" : \"it\">> away."
+  ],
+  "context": "\t<<elseif $fishingAmbientOverride is \"tossClothing\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<addinlineevent \"bite\" fishingCatchEventWeight(\"fishingPier\", 10)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<addinlineevent \"bite\" `fishingCatchEventWeight(\"fishingPier\", 10)`>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<addinlineevent \"whitneyBet\" fishingDangerEventWeight(1)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addinlineevent \"whitneyBet\" `fishingDangerEventWeight(1)`>>"
+  ],
+  "context": "<<if $daily.fishing.fishingPier.whitney.phase is \"idle\" and fishingHasMinutesPassedSinceNpcArrival(60) and !$daily.fishing.fishingPier.whitney.betComplete and !$weekly.fishing.whitneyBet>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<addinlineevent \"fisherExposedAttack\" fishingDangerEventWeight($daily.fishing.fishingPier.fisherOgle)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addinlineevent \"fisherExposedAttack\" `fishingDangerEventWeight($daily.fishing.fishingPier.fisherOgle)`>>"
+  ],
+  "context": "<<if $daily.fishing.fishingPier.fisher.phase is \"fishing\" and fishingHasMinutesPassedSinceNpcArrival(60) and $exposed gte 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<addinlineevent \"tentacles\" fishingDangerEventWeight(0.25)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addinlineevent \"tentacles\" `fishingDangerEventWeight(0.25)`>>"
+  ],
+  "context": "<<if [undefined, \"finished\"].includes($daily.fishing.fishingPier.whitney.phase)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<addinlineevent \"pierSwarm\" fishingDangerEventWeight(0.25)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addinlineevent \"pierSwarm\" `fishingDangerEventWeight(0.25)`>>"
+  ],
+  "context": "<<if $settings.swarmsEnabled and $daily.fishing.fishingPier.whitney.phase isnot \"bet\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Widgets Fishing Pier Wait Flavor [widget]"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ":: Widgets Fishing Pier Wait Flavour [widget]"
+  ],
+  "context": ""
+ }
+]

@@ -1,0 +1,34 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $settings.bestialityEnabled>>",
+   "\t<span class=\"red\"><i>It's not their fault. They're just cute animals.</i> You've gained the \"Stockholm Syndrome: Wolves\" trait.</span>"
+  ],
+  "old_kr": [
+   "<<if $settings.bestialityEnabled>>",
+   "\t<span class=\"red\"><i>그들 잘못이 아니야. 그냥 귀여운 동물일 뿐인걸.</i> \"스톡홀름 증후군: 늑대\" 특성을 얻었습니다.</span>"
+  ],
+  "new_en": [
+   "<<if animalSexEnabledForType(\"wolf\")>>",
+   "\t<span class=\"red\"><i>It's not their fault. They're just cute animals.</i> You've gained the \"Stockholm Syndrome: Wolves\" trait.</span>"
+  ],
+  "context": "<<set $wolfpackharmony to 10>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $settings.bestialityEnabled>>",
+   "\t<span class=\"red\"><i>It's not their fault. They're just cute animals.</i> You've gained the \"Stockholm Syndrome: Wolves\" trait.</span>"
+  ],
+  "old_kr": [
+   "<<if $settings.bestialityEnabled>>",
+   "\t<span class=\"red\"><i>그들 잘못이 아니야. 그냥 귀여운 동물일 뿐인걸.</i> \"스톡홀름 증후군: 늑대\" 특성을 얻었습니다.</span>"
+  ],
+  "new_en": [
+   "<<if animalSexEnabledForType(\"wolf\")>>",
+   "\t<span class=\"red\"><i>It's not their fault. They're just cute animals.</i> You've gained the \"Stockholm Syndrome: Wolves\" trait.</span>"
+  ],
+  "context": "<<set $wolfpackharmony to 10>>"
+ }
+]

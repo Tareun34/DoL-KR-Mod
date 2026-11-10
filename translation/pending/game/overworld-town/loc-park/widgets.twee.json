@@ -1,0 +1,37 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\t\tBefore you can react, a giant sewer <<beasttype>> has clambered upon you."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\t\t반응하기도 전에, 거대한 하수도 <<beasttype>>【이가】 당신의 위로 기어오른다."
+  ],
+  "new_en": [
+   "\t\t\t\t<<if beastSexEnabledForType(\"lizard\", $monster is 1)>>",
+   "\t\t\t\t\tBefore you can react, a giant sewer <<beasttype>> has clambered upon you."
+  ],
+  "context": "\t\t\t\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "<<widget \"pumpkin_prop\">>",
+   "\t<<set _pumpkin_carving to ($pumpkin_carving + ($pumpkin_carving_knowledge?.length * 5))>>",
+   "\t<<if _pumpkin_carving gte 15>>",
+   "\t\t<<wearProp \"jack_o_lantern\">>",
+   "\t<<elseif _pumpkin_carving gte 7>>",
+   "\t\t<<wearProp \"jack_o_lantern_simple\">>",
+   "\t<<else>>",
+   "\t\t<<wearProp \"jack_o_lantern_rough\">>",
+   "\t<</if>>",
+   "<</widget>>"
+  ],
+  "context": "<</widget>>"
+ }
+]

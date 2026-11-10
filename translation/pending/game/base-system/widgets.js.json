@@ -1,0 +1,13 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t// Allure changes from Bailey's thugs hunting the PC",
+   "\tif ([\"town\"].includes(V.location) && V.rentThug && isBaileyLookingForPlayer()) allure += V.rentThug.anger * 500;",
+   ""
+  ],
+  "context": ""
+ }
+]

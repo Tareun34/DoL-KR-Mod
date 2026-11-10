@@ -1,0 +1,266 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "/* globals orphanagePlotsPlanted orphanagePlotsWatered */"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "/* globals orphanagePlotsPlanted orphanagePlotsWatered waterPlotsIfRaining */"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tconst rentPaused = inRentPausedBadEnd();",
+   "\tconst hasMansion = V.avery_mansion && V.avery_fate !== \"fallen\" && V.avery_fate !== \"kicked\";",
+   "\tif (!rentPaused) {",
+   "\t\tif (hasMansion) {",
+   "\t\t\tif (Time.weekDay !== 1) {",
+   "\t\t\t\tV.avery_mansion.days_absent++;",
+   "\t\t\t}",
+   "\t\t\tif (V.avery_mansion.rage.assess >= 9 || V.avery_mansion.days_absent >= 2) {",
+   "\t\t\t\tpassRentTick();",
+   "\t\t\t}",
+   "\t\t} else {",
+   "\t\t\tpassRentTick();",
+   "\t\t}",
+   "\t}",
+   "\tif (hasMansion) V.avery_mansion.study_unlocked = 0;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tif (isAveryPayingBailey() && Time.weekDay !== 1) V.avery_mansion.days_absent++;",
+   "\tif (isAveryPayingBailey() !== 2 && !inRentPausedBadEnd()) passRentTick();",
+   "\tif (isAveryPayingBailey()) V.avery_mansion.study_unlocked = 0;",
+   "",
+   "\tif (V.avery_helicopter?.timer > 0) V.avery_helicopter.timer--;"
+  ],
+  "context": "\t// Avery takes on the PC's debt, but stops if unsatisfied"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\tif (V.mine?.setup.food > 0) V.mine.setup.food--;",
+   "\tif (V.mine?.setup.dust > 0) V.mine.setup.dust--;",
+   "\tif (V.mine?.distraction.night > 0) {",
+   "\t\tV.mine.distraction.night--;",
+   "\t} else if (V.mine?.distraction.night === 0) {",
+   "\t\tdelete V.mine.distraction.night;",
+   "\t}",
+   "\tif (V.mine?.distraction.mining > 0) {",
+   "\t\tV.mine.distraction.mining--;",
+   "\t} else if (V.mine?.distraction.mining === 0) {",
+   "\t\tdelete V.mine.distraction.mining;",
+   "\t}",
+   "\tif (V.mine?.distraction.minecarts > 0) {",
+   "\t\tV.mine.distraction.minecarts--;",
+   "\t} else if (V.mine?.distraction.minecarts === 0) {",
+   "\t\tdelete V.mine.distraction.minecarts;",
+   "\t}"
+  ],
+  "context": "\t}"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\t\t// When you view a plot while it is raining, it automatically becomes watered, so we don't need to check frequently if it's raining to water plots. Hourly is good enough.",
+   "\t\twaterPlotsIfRaining();"
+  ],
+  "context": "\t\t}"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t}",
+   "",
+   "\t// Thug traps",
+   "\tfor (let i = 0; i < V.rentThug?.traps.length; i++) {",
+   "\t\tif (Time.date.timeStamp >= V.rentThug.traps[i].endTime) V.rentThug.traps.deleteAt([i]);"
+  ],
+  "context": "\t\tV.stress += Math.floor(minutes * 40);"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\tif (V.kylar.timer.letter >= 1) V.kylar.timer.letter--;"
+  ],
+  "context": "\t\tV.kylar.timer.street += 10 + C.npc.Kylar.lust / 4;"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\tif (V.averydateattended !== 1 && !V.avery_injury) V.averydatemissed = 1;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tif (V.averydateattended !== 1 && !V.avery_injury && (!V.avery_mansion || V.avery_mansion.away_timer <= 0)) V.averydatemissed = 1;"
+  ],
+  "context": "\t\t\tV.averydate = 0;"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\tif (V.avery_mansion.rage.dinner_done !== 1 && between(Time.weekDay, 3, 7) && !V.avery_injury && !inRentPausedBadEnd()) {"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tif (",
+   "\t\t\t\tV.avery_mansion.rage.dinner_done !== 1 &&",
+   "\t\t\t\tbetween(Time.weekDay, 3, 7) &&",
+   "\t\t\t\t!V.avery_injury &&",
+   "\t\t\t\t!inRentPausedBadEnd() &&",
+   "\t\t\t\tV.avery_mansion.rage.timer !== 30",
+   "\t\t\t) {"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\tif (V.wraithAngerCooldown > 0) V.wraithAngerCooldown--;",
+   "\t\t\telse {"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tV.wraithAngerCooldown--;",
+   "\t\t\tif (V.wraithAngerCooldown <= 0) {"
+  ],
+  "context": "\t\tif (V.wraithAngerCooldown) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\twikifier(\"relationshipclamp\");"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\twikifier(\"relationshipClamp\");"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tif (V.milk_drank_stat >= 1000 && V.milkdranktrait === 0) {"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tif (V.milk_drank_stat >= 10000 && V.milkdranktrait === 0) {"
+  ],
+  "context": "\t}"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tif (Time.monthName === \"February\" && Time.monthDay <= 14 && !V.avery_valentines && V.avery_mansion) {"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tif (Time.monthName === \"February\" && Time.monthDay <= 14 && !V.avery_valentines) {"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tV.avery_valentines.reservation = false;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tV.avery_valentines.reservations = false;"
+  ],
+  "context": "\t\tV.avery_valentines.done = false;"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\tdelete V.halloween_pumpkins_bought;",
+   "\t\tdelete V.halloween_pumpkin_competition;",
+   "\t\tdelete V.halloween_pumpkin_kylar;",
+   "\t\tdelete V.halloween_domus_pumpkin;"
+  ],
+  "context": "\t\tdelete V.halloweenWolves;"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\tif (Time.schoolDay && V.schoolfameblackmail !== undefined) V.schoolfameblackmail++;"
+  ],
+  "context": "\t}"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "/**",
+   " * Returns true on and after the day rent is due until the player is confronted by Bailey, unless Avery is paying for them.",
+   " *",
+   " * @returns {boolean} Rent due, yes or no?",
+   " */",
+   "function isRentDue() {",
+   "\treturn V.rentTime <= 0 && isAveryPayingBailey() !== 2 && !inRentPausedBadEnd();",
+   "}",
+   "window.isRentDue = isRentDue;",
+   "",
+   "/**",
+   " * Returns true whenever rent is late and unpaid until the player pays Bailey, unless Avery is paying for them.",
+   " *",
+   " * @returns {boolean} Bailey looking for player, yes or no?",
+   " */",
+   "function isBaileyLookingForPlayer() {",
+   "\treturn (isRentDue() && V.rentTime < 0) || (V.baileyRefusedToPay && isAveryPayingBailey() !== 2);",
+   "}",
+   "window.isBaileyLookingForPlayer = isBaileyLookingForPlayer;",
+   "",
+   "/**",
+   " * Returns true if player is adopted by Avery. Can also check specifically for if Avery is currently paying Bailey or not.",
+   " *",
+   " * @returns {0|1|2} 0 = Not adopted | 1 = Adopted, Avery refusing to pay Bailey | 2 = Adopted, Avery paying Bailey",
+   " */",
+   "function isAveryPayingBailey() {",
+   "\tif (!V.avery_mansion || C.npc.Avery.state === \"dismissed\") return 0;",
+   "\telse if (V.avery_mansion.rage.assess >= 9 || V.avery_mansion.days_absent >= 2) return 1;",
+   "\telse return 2;",
+   "}",
+   "window.isAveryPayingBailey = isAveryPayingBailey;",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tV.renttime--;",
+   "\tif (V.renttime < 0 && V.renttime % 7 === 0) {",
+   "\t\tV.baileyRefusedToPayTotal += V.rentmoney + (V.babyRent || 0);",
+   "\t\tV.baileyRefusedToPayTotalStat += V.rentmoney + (V.babyRent || 0);"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tV.rentTime--;",
+   "\twikifier(\"thuganger\", \"passive\");",
+   "\tif (V.rentTime < 0 && V.rentTime % 7 === 0) {",
+   "\t\tV.baileyRefusedToPayTotal += V.rentMoney + (V.babyRent || 0);",
+   "\t\tV.baileyRefusedToPayTotalStat += V.rentMoney + (V.babyRent || 0);"
+  ],
+  "context": "function passRentTick() {"
+ }
+]

@@ -53,7 +53,7 @@
 		<</addinlineevent>>
 	<</if>>
 
-	<<if isBeastSceneAllowed() and $harper_appointments.last isnot "dog">>
+	<<if beastSexEnabledForType("dog") and $harper_appointments.last isnot "dog">>
 		<<addinlineevent "harper dog">>
 			<<set $harper_appointments.last to "dog">>
 			<<include "Doctor Harper's Office Dog">>
@@ -198,7 +198,7 @@
 
 :: Doctor Harper's Office Dog
 <<generate2>>
-<<if V.settings.bestialityEnabled>>
+<<if animalSexEnabledForType("dog")>>
 	<<generateBEAST 3 dog>>
 <<else>>
 	<<generateBEAST 3 dog undefined undefined "monster">>

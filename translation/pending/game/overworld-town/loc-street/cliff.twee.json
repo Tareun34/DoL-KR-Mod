@@ -1,0 +1,26 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tA police car pulls up besides you. A <<person2>><<person>> steps out first, visibly tense. <<pShes>> followed by a <<person1>><<person>>."
+  ],
+  "old_kr": [
+   "\t\t경찰차 한 대가 당신 옆에 멈춰 선다. 눈에 띄게 긴장한 <<person2>><<person>>【이가】 먼저 차에서 내린다. 그 뒤를 이어 <<person1>><<person>>【이가】 내린다."
+  ],
+  "new_en": [
+   "\t\tA police car pulls up besides you. A <<person2>><<person>> steps out first, visibly tense. <<person1>><<Hes>> followed by a <<person>>."
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $chef_sus gte 100 and $chef_threat and (crimeSumCurrent() gte 2500  or $community_service gte 1)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $chef_sus gte 100 and $chef_threat and (crimeSumCurrent() gte 2500 or $community_service gte 1)>>"
+  ],
+  "context": "\t<<rng>><<run statusCheck(\"Gwylan\")>>"
+ }
+]

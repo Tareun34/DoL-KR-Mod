@@ -86,32 +86,40 @@
 		<<exit>>
 	<</if>>
 
-	<<if $rentday isnot undefined || $rentmoney isnot undefined>>
+	<<if $rentTime isnot undefined || $rentMoney isnot undefined>>
 		<hr>
 		<h1 class="header gold bold">중요 알림</h1>
 		<ul class="journal">
-			<<if $avery_mansion>>/* Is Avery paying for the PC? */
-				<<if $avery_mansion.rage.assess gte 9 or C.npc.Avery.state is "dismissed">>
-					<<set _avery_pay to false>>
-				<<else>>
-					<<set _avery_pay to true>>
-				<</if>>
-			<<else>>
-				<<set _avery_pay to false>>
-			<</if>>
-			<<if !_avery_pay>>
-				<<if $rentday isnot undefined>>
-					<<if $renttime lte 0>>
-						<li>베일리가 당신을 찾고 있습니다. 당장 <<printmoney $rentmoney>><<babyRentDisplay " (고아원 아이 돌봄 명목 " " 포함)" "gold">>【을를】 내놓으라고 요구합니다.</li>
+			<<if $rentTime isnot undefined>>
+				<<if isRentDue() or isBaileyLookingForPlayer()>>
+					<li>
+					<<if $baileyRefusedToPay>>
+						Bailey will try to visit you again on <<rentday>> and wants <<printmoney $rentMoney>><<babyRentDisplay " plus " " for not looking after your children" "gold">>.
 					<<else>>
-						<li>베일리는 <<rentday>>까지 <<printmoney $rentmoney>><<babyRentDisplay " (고아원 아이 돌봄 명목 " " 포함)" "gold">>【을를】 상납하라고 요구하고 있습니다.</li>
+						Bailey is looking for you and wants <<printmoney $rentMoney>><<babyRentDisplay " plus " " for not looking after your children" "gold">>.
 					<</if>>
-				<<elseif $rentmoney isnot undefined>>
-					<li>베일리가 요구하는 금액은 <<printmoney $rentmoney>><<babyRentDisplay " (고아원 아이 돌봄 명목 " " 포함)" "gold">>입니다.</li>
+					<<if $rentThug>>
+						<<if $rentTime is 0 and !$baileyRefusedToPay>>
+							<span class="green"><<nnpc_His "Bailey">> thugs aren't after you yet.</span>
+						<<else>>
+							<<switch $rentThug?.anger>>
+								<<case 0>><span class="teal"><<nnpc_His "Bailey">> thugs are looking for you.</span>
+								<<case 1>><span class="lblue"><<nnpc_His "Bailey">> thugs are focused on finding you.</span>
+								<<case 2>><span class="blue"><<nnpc_His "Bailey">> thugs are frustrated by you.</span>
+								<<case 3>><span class="purple"><<nnpc_His "Bailey">> thugs are making your capture a priority.</span>
+								<<case 4>><span class="pink"><<nnpc_His "Bailey">> thugs are developing a vendetta against you.</span>
+								<<default>><span class="red"><<nnpc_His "Bailey">> thugs view catching you as their number one priority.</span>
+							<</switch>>
+						<</if>>
+					<</if>></li>
+				<<elseif isAveryPayingBailey() isnot 2>>
+					<li>Bailey wants <<printmoney $rentMoney>> on <<rentday>><<babyRentDisplay " plus " " for not looking after your children" "gold">>.</li>
 				<</if>>
+			<<elseif $rentMoney isnot undefined>>
+				<li>Bailey wants <<printmoney $rentMoney>><<babyRentDisplay " plus " " for not looking after your children" "gold">>.</li>
 			<</if>>
 
-			<<if $bailey_confiscation and $bailey_confiscation.items and $bailey_confiscation.items.length gt 0>> /* Bailey Confiscation System */
+			<<if $bailey_confiscation?.items?.length gt 0>> /* Bailey Confiscation System */
 				<<set _rentDueDate to getFormattedDate(new DateTime(Time.date).addDays(($bailey_confiscation.day + 7) - Time.days), true)>>
 				<<set _discardDate to getFormattedDate(new DateTime(Time.date).addDays(($bailey_confiscation.day + 8) - Time.days), true)>>
 				<li>베일리가 당신의 <<baileyConfiscationListFull>>【을를】 압수했습니다. <span class="gold"><<print _rentDueDate>></span>까지 집세를 내거나 <span class="gold"><<print _discardDate>></span> 전에 물건을 되사지 않으면, <<nnpc_he "Bailey">>【은는】 그것들을 전당포에 넘길 것입니다.</li>
@@ -350,14 +358,57 @@
 					<<elseif $pubfame.status is "accepted">>
 						미키의 의뢰를 맡았습니다.
 					<<elseif $pubfame.status is "done">>
-						미키의 의뢰를 완료했습니다.
+						You've completed the task 'Mickey' gave you.
+					<<elseif $pubfame.status is "hiding">> /* only happens when the elk compound interrogation is failed */
+						You've failed the task 'Mickey' gave you.
 					<</if>>
 				</li>
+			<</if>>
+
+			<<if $schoolfameblackmail isnot undefined and Time.schoolDay>>
+				<<set _blackmail_colour to $schoolfameconsensual is 1 ? "white" : $schoolfameblackmail gte 3 ? "red" : "pink">>
+				/*White for paid lewd photoshoots, red for when the school board event is possible, pink for unpaid lewd photoshoots */
+				<<if $schoolfameboard isnot 1 or $schoolfameconsensual is 1>>
+					<<if $schoolfameblackmail gt 0 and Time.hour lt 17>>
+						<li> Leighton expects to see you at <<nnpc_his "Leighton">> office <span @class=_blackmail_colour>today</span> between <<ampm 7 00>> and <<ampm 17 00>>. </li>
+					<<elseif $schoolfameblackmail is 0>>
+						<li> You've done the photoshoot at Leighton's office today. </li>
+					<</if>>
+				<</if>>
 			<</if>>
 		</ul>
 	<</if>>
 
-	<<if !$statFreeze and (($location is "asylum" and ($eden_asylum_window is 1 or ($daily.eden.distract gte 1 and Time.hour lt 21))) || $temple_spear_mission gte 1 || $docks.hired || ($brothelshowdata.intro and $brothelshowdata.type is "none") || $exhibitionismrun || $robindebtevent gte 1 and $robinmissing isnot 0 || $pubtask2 is 1 || $pubtask || $police_hack is 1 || $pub_hack_job gte 1 || $pubfame ||( $earSlime.event and !_tempEventHide) || $earSlime.forcedCommando isnot undefined || $earSlime.forcedDressing isnot undefined || $temple_rank is "prospective" || $chef_state gte 4 || $mason_pond gte 1 || ($brothel_machine_repair gte 1 and $brothel_machine_repair lte 3) || ($harpy gte 6 and $birdFly isnot 1) || getChildrenAt("inventory").filter(child => child.species === "hawk").length gt 0 || $adultshopgrandopening || ($adultshopintro is 1 and $adultshopunlocked is undefined) || $gwylan?.request.event)>>
+	<<if $museumintro is 1>>
+		<<museumAntiqueText>><<museumPaintingText>><<set _museumItemsFound to []>><<set _museumItemsTalk to []>>
+		<<set _museumKeys to Object.keys($museumAntiques.antiques)>>
+		<<for _i to 0; _i lt _museumKeys.length; _i++>>
+			<<if ["found", "talk"].includes($museumAntiques.antiques[_museumKeys[_i]])>>
+				<<if _museumAntiqueText[_museumKeys[_i]]>>
+					<<if ["found"].includes($museumAntiques.antiques[_museumKeys[_i]])>>
+						<<set _museumItemsFound.push(_museumAntiqueText[_museumKeys[_i]].name.toLowerCase())>>
+					<<else>>
+						<<set _museumItemsTalk.push(_museumAntiqueText[_museumKeys[_i]].name.toLowerCase())>>
+					<</if>>
+				<<else>>
+					<li><span class="red">Warning: Antique "_museumKeys[_i]" doesn't have a hint. Did you export this save from a modded version?</span></li>
+					<<set $museumAntiqueJournalHints.delete(_museumKeys[_i])>>
+				<</if>>
+			<</if>>
+		<</for>>
+		<<set _museumKeys to Object.keys($museumAntiques.paintings)>>
+		<<for _i to 0; _i lt _museumKeys.length; _i++>>
+			<<if ["found", "talk"].includes($museumAntiques.paintings[_museumKeys[_i]])>>
+				<<if ["found"].includes($museumAntiques.antiques[_museumKeys[_i]])>>
+					<<set _museumItemsFound.push(_museumPaintingText[_museumKeys[_i]].journalName.toLowerCase())>>
+				<<else>>
+					<<set _museumItemsTalk.push(_museumPaintingText[_museumKeys[_i]].journalName.toLowerCase())>>
+				<</if>>
+			<</if>>
+		<</for>>
+	<</if>>
+
+	<<if !$statFreeze and (($location is "asylum" and ($eden_asylum_window is 1 or ($daily.eden.distract gte 1 and Time.hour lt 21))) || $temple_spear_mission gte 1 || $docks.hired || ($brothelshowdata.intro and $brothelshowdata.type is "none") || $exhibitionismrun || $robindebtevent gte 1 and $robinmissing isnot 0 || $pubtask2 is 1 || $pubtask || $police_hack is 1 || $pub_hack_job gte 1 || $pubfame ||( $earSlime.event and !_tempEventHide) || $earSlime.forcedCommando isnot undefined || $earSlime.forcedDressing isnot undefined || $temple_rank is "prospective" || $chef_state gte 4 || $mason_pond gte 1 || ($brothel_machine_repair gte 1 and $brothel_machine_repair lte 3) || ($harpy gte 6 and $birdFly isnot 1) || getChildrenAt("inventory").filter(child => child.species === "hawk").length gt 0 || $adultshopgrandopening || ($adultshopintro is 1 and $adultshopunlocked is undefined) || $gwylan?.request.event || _museumItemsFound?.length gte 1 || _museumItemsTalk?.length gte 1)>>
 		/*TODO: streamline during eventual Journal UI Overhaul bc lol. lmao, even. */
 		<hr>
 		<h1 class="header gold bold">약속</h1>
@@ -435,6 +486,10 @@
 				<<if $hacker_tasks.length gte 2>>
 					<li><<socialiseicon>>랜드리에게 미키에 대해 이야기해야 합니다.</li>
 				<</if>>
+			<</if>>
+
+			<<if $fake_artefact is "pc" and $avery_fate isnot "ascended">>
+				<li><<ind>>Landry wants you to find the wishing stones in the vault in Avery's mansion and replace them with the fakes <<nnpc_he Landry>> provided. <<nnpc_He Landry>> said that would save Avery from <<nnpc_himself "Avery">>.</li>
 			<</if>>
 
 			<<if $pubfame>>
@@ -744,6 +799,12 @@
 						<li><span class="red">그윌란이 당신에게 무언가 부탁했지만 이 작업에는 일지 설명이 없습니다! 이 버그를 보고해 주십시오.</span></li>
 				<</switch>>
 			<</if>>
+
+			<<if _museumItemsFound?.length gte 1>>
+				<li><<museumicon>>You should show the <<= formatList(_museumItemsFound, "and")>> to Winter<<if _museumItemsTalk.length gte 1>>, and ask <<nnpc_him "Winter">> about the <<= formatList(_museumItemsTalk, "and")>><</if>>.</li>
+			<<elseif _museumItemsTalk?.length gte 1>>
+				<li><<museumicon>>You should ask Winter about the <<= formatList(_museumItemsTalk, "and")>>.</li>
+			<</if>>
 		</ul>
 	<</if>>
 
@@ -836,9 +897,6 @@
 					<li>에덴이 <<ampm 18 00>>에 크리스마스 만찬에 초대했습니다.</li>
 				<</if>>
 			<</if>>
-			<<if $fake_artefact is "pc" and $avery_fate isnot "ascended">>
-				<li>랜드리가 에이버리의 저택 금고에 있는 소원의 돌을 자신이 준 가짜로 바꿔치기 하기를 원합니다. 그렇게 하면 에이버리를 <<nnpc_himself "Avery">>로부터 구할 수 있다고 합니다.</li>
-			<</if>>
 		</ul>
 	<</if>>
 
@@ -894,26 +952,6 @@
 				<</if>>
 				</li>
 			<</if>>
-			/* Reworked, left in while in construction
-			<<if $avery_mansion.landry gte 2 and $auriga_artefact is "Avery">>
-				<li>Landry will give you <span class="gold">£10000</span> if you can bring <<nnpc_him "Landry">> the <span class="pink">wishing stones</span> from Avery's mansion.</li>
-				<<if $avery_mansion.mickey>>
-					<li>Mickey suggests making Avery feel more dominant would cause them to reveal the stones' location. Alternatively, helping Avery reach their goals could bring them into the open.</li>
-				<</if>>
-				<<if $avery_mansion.jobs.includes("dungeon")>>
-					<li>Avery revealed a dungeon containing a vault. It seems a likely place for the stones.</li>
-				<</if>>
-				<<if $avery_mansion.fake_stones is 2>>
-					<li>Optionally, replace Avery's wishing stones with the fakes Mickey gave you.</li>
-				<</if>>
-			<<elseif $avery_mansion.landry gte 2 and $auriga_artefact is "pc">>
-				<li>Landry will give you <span class="gold">£10000</span> if you can bring <<nnpc_him "Landry">> the <span class="pink">wishing stones</span> that are in your possession.</li>
-			<</if>>
-			<<if $avery_mansion.fake_stones is 1>>
-				<li><<investigateicon>> Find a convincing fake to swap for the wishing stones.</li>
-			<<elseif $avery_mansion.fake_stones is 2>>
-				<li><<icon "avery-vault.png">> Leave the fake wishing stones in Avery's vault.</li>
-			<</if>>*/
 			<<if $avery_mansion.jobs.filter(job => !job.includes("dungeon")).length>>
 				<li>
 					<<icon "avery-garage.png">>퇴근 후 예의 바르게 맞이하길 원합니다.
@@ -1000,6 +1038,31 @@
 		</ul>
 	<</if>>
 
+	<<if $kylar_altar_research and $kylar_sleep_abduction and !$kylar_altar_research.includes("tape")>>
+		<h1 class="header gold bold">Investigate the forest altar.</h1>
+		<ul class="journal">		
+			<<if $kylar_altar_research.includes("library")>>
+				<li><span class="black">You've learned all there is to know from the school library.</span></li>
+				<<if !$kylar_altar_research.includes("temple")>>
+					<li>Search for the missing pages at the temple.</li>
+				<<else>>
+					<li><span class="black">You found the missing pages at the temple.</span></li>
+				<</if>>
+				<<if $kylar_altar_research.includes("temple") and !$kylar_altar_research.includes("tape")>>
+					<li>Play the video tape you found. There's a player in Kylar's manor.</li>
+				<</if>>
+			<<else>>
+				<<if $kylar_altar_library gte 100>>
+					<li>Ask at the school library counter.</li>
+				<<elseif $kylar_altar_library gte 1>>
+					<li>School library research progress: <span class="gold">$kylar_altar_library%</span></li>
+				<<else>>
+					<li>Search for information in the school library.</li>
+				<</if>>
+			<</if>>
+		</ul>
+	<</if>>
+
 	<<if $scienceproject is "ongoing">>
 		<hr>
 		<h1 class="header gold bold">과학 박람회</h1>
@@ -1016,16 +1079,13 @@
 		<</if>>
 		당신에게는 다음과 같이 진행 중인 과학 프로젝트가 있습니다. 박람회에 출품할 하나를 골라야 합니다.
 		<br><br>
+		<<scienceprojectchance>>
 		<<if $sciencelichenknown is 1>>
 			<span class="gold bold">지역의 이끼</span>
 			<br>
-			<<if $sciencechance is undefined>>
-				<<set $sciencechance to []>>
-			<</if>>
 			<<if $sciencelichenpark is 1>>
 				<<if $sciencelichenparkready is 1>>
-					<<run $sciencechance.pushUnique("Lichen")>>
-					<span class='fa-icon fa-selected'></span> 공원에 있는 이끼를 프로젝트에 추가했습니다.
+					<span class='fa-icon fa-selected'></span> You've incorporated the lichen living in the park to your project.
 					<br>
 				<<else>>
 					<span class='fa-icon fa-unselected'></span> 공원에 있는 이끼를 조사했습니다. 집이나 도서관에서 내용을 정리해야 합니다.
@@ -1037,8 +1097,7 @@
 			<</if>>
 			<<if $sciencelichentemple is 1>>
 				<<if $sciencelichentempleready is 1>>
-					<<run $sciencechance.pushUnique("Temple")>>
-					<span class='fa-icon fa-selected'></span> 신전에 있는 이끼를 이끼를 프로젝트에 추가했습니다.
+					<span class='fa-icon fa-selected'></span> You've incorporated the lichen living on the temple to your project.
 					<br>
 				<<else>>
 					<span class='fa-icon fa-unselected'></span> 신전에 있는 이끼를 조사했습니다. 집이나 도서관에서 프로젝트에 추가해야 합니다.
@@ -1050,8 +1109,7 @@
 			<</if>>
 			<<if $sciencelichendrain is 1>>
 				<<if $sciencelichendrainready is 1>>
-					<<run $sciencechance.pushUnique("Drain")>>
-					<span class='fa-icon fa-selected'></span> 배수구에 있는 이끼를 이끼를 프로젝트에 추가했습니다.
+					<span class='fa-icon fa-selected'></span> You've incorporated the lichen living in the storm drain to your project.
 					<br>
 				<<else>>
 					<span class='fa-icon fa-unselected'></span> 배수구에 사는 이끼를 조사했습니다. 집이나 도서관에서 프로젝트에 추가해야 합니다.
@@ -1063,8 +1121,7 @@
 			<</if>>
 			<<if $sciencelichenlake is 1>>
 				<<if $sciencelichenlakeready is 1>>
-					<<run $sciencechance.pushUnique("Ruin")>>
-					<span class='fa-icon fa-selected'></span> 호수의 폐허에 있는 이끼를 프로젝트에 추가했습니다.
+					<span class='fa-icon fa-selected'></span> You've incorporated the lichen living on the lake ruin to your project.
 					<br>
 				<<else>>
 					<span class='fa-icon fa-unselected'></span> 호수 폐허에 있는 이끼를 관찰했습니다. 집이나 도서관에서 프로젝트에 반영해야 합니다.
@@ -1074,7 +1131,7 @@
 				<span class='fa-icon fa-unselected'></span><span class="black"> 호수 폐허에 있는 보라색 이끼를 조사해야 합니다.</span>
 				<br>
 			<</if>>
-			이 프로젝트가 박람회에서 우승할 확률은 <span @class="($sciencechance.length is 0 ? 'red' : $sciencechance.length is 1 ? 'pink' : $sciencechance.length is 2 ? 'purple' : $sciencechance.length is 3 ? 'teal' : $sciencechance.length is 4 ? 'green' : '')"><<print ($sciencelichenparkready * 25 + $sciencelichenlakeready * 25 + $sciencelichendrainready * 25 + $sciencelichentempleready * 25)>>%</span>입니다. 이 프로젝트로 우승한다면 트라우마가 크게 줄어들며 교사들에게 좋은 인상을 심어줄 수 있습니다.
+			As it is, this project has a <span @class="($sciencelichenchance gte 100 ? 'green' : $sciencelichenchance gte 75 ? 'teal' : $sciencelichenchance gte 50 ? 'purple' : $sciencelichenchance gte 25 ? 'pink' : $sciencelichenchance gte 0 ? 'red' : '')"><<print $sciencelichenchance>>%</span> chance of winning the fair. Winning with this project will greatly reduce trauma and endear you to your teachers.
 			<br><br>
 		<<else>>
 			<span class="black">????????????</span>
@@ -1099,8 +1156,7 @@
 				집이나 도서관에서 버섯을 프로젝트에 추가하세요.
 			<</if>>
 			<br>
-			<<set $scienceshroomchance to ($scienceshroomwolfready * 10 + $scienceshroomheartready * 10)>>
-			박람회에서 우승할 확률이 <span @class="$scienceshroomchance gte 100 ? 'green' : $scienceshroomchance gte 80 ? 'teal' : $scienceshroomchance gte 60 ? 'lblue' : $scienceshroomchance gte 40 ? 'purple' : $scienceshroomchance gte 20 ? 'pink' : $scienceshroomchance gte 0 ? 'red' : ''"><<print $scienceshroomchance>>%</span>입니다. 이 프로젝트로 우승하면 트라우마가 크게 줄어들며 학생들 사이에서 유명해집니다.
+			As it is, this project has a <span @class="$scienceshroomchance gte 100 ? 'green' : $scienceshroomchance gte 80 ? 'teal' : $scienceshroomchance gte 60 ? 'lblue' : $scienceshroomchance gte 40 ? 'purple' : $scienceshroomchance gte 20 ? 'pink' : $scienceshroomchance gte 0 ? 'red' : ''"><<print $scienceshroomchance>>%</span> chance of winning the fair. Winning with this project will greatly reduce trauma and make you more popular among your peers.
 			<br><br>
 		<<else>>
 			<span class="black">????????????</span>
@@ -1118,7 +1174,7 @@
 				집이나 도서관에서 프로젝트에 남근 기록을 추가하세요.
 			<</if>>
 			<br>
-			이 프로젝트가 박람회에서 우승할 확률은 <span @class="$sciencephallusready gte 10 ? 'green' : $sciencephallusready gte 8 ? 'teal' : $sciencephallusready gte 6 ? 'lblue' : $sciencephallusready gte 4 ? 'purple' : $sciencephallusready gte 2 ? 'pink' : $sciencephallusready gte 0 ? 'red' : ''"><<print ($sciencephallusready * 10)>>%</span>입니다. 우승하면 트라우마가 크게 줄어들며 훨씬 유명해질 수 있습니다.
+			As it is, this project has a <span @class="$sciencephallusready gte 10 ? 'green' : $sciencephallusready gte 8 ? 'teal' : $sciencephallusready gte 6 ? 'lblue' : $sciencephallusready gte 4 ? 'purple' : $sciencephallusready gte 2 ? 'pink' : $sciencephallusready gte 0 ? 'red' : ''"><<print $sciencephalluschance>>%</span> chance of winning the fair. Winning with this project will greatly reduce trauma and make you more famous.
 			<br>
 		<<else>>
 			<span class="black">????????????</span>
@@ -1239,10 +1295,10 @@
 				</li>
 			<</if>>
 			<<if $antiquemoney gt 0>>
-				<li><<museumicon>><span class="green">£<<print $antiquemoney>></span>어치 골동품. 박물관에 팔 수 있습니다.</li>
+				<li><<museumicon>><span class="green">£<<print $antiquemoney.toLocaleString("en-GB")>></span> in antiques. You can sell them to the museum.</li>
 			<</if>>
 			<<if $blackmoney gt 0>>
-				<li><<highicon>><span class="green">£<<print $blackmoney>></span>어치 장물. 암시장에서 팔 수 있습니다.</li>
+				<li><<highicon>><span class="green">£<<print $blackmoney.toLocaleString("en-GB")>></span> in stolen goods. You can sell them to someone on the black market.</li>
 			<</if>>
 			<<if $phials_held gt 0>>
 				<li><<icon "aphrodisiac.png">> 최음제 <span class="green">$phials_held</span>병. 엘크 가에서 팔 수 있습니다.</li>
@@ -1304,12 +1360,12 @@
 	<</if>>
 
 
-	<<if Object.keys($plots).length gte 1>> /* display plot readiness */
+	<<if Object.values($plots).some(loc => loc.length)>> /* display plot readiness */
 		<hr>
 		<h1 class="header gold bold">텃밭</h1>
 		<<for $_plotToDisplay range ["garden", "farm", "wolf", "eden", "asylum"]>>
 			<<set $_currentPlot to $plots[$_plotToDisplay]>>
-			<<if $_currentPlot and $_currentPlot.filter(()=>true).length>>
+			<<if $_currentPlot?.filter(()=>true).length>>
 				<<set $_plotsToWater to $_currentPlot.filter(plot => plot.stage >= 1 && plot.stage < 5 && plot.bed !== "water" && plot.water === 0).length>>
 				<<set $_plotsToPick  to $_currentPlot.filter(plot => plot.stage >= 5 ).length>>
 				<<set $_plotsEmpty   to $_currentPlot.filter(plot => !(plot.stage >= 1)).length>>
@@ -1367,30 +1423,10 @@
 		<<if $museumintro is 1>>
 			<<museumAntiqueText>><<museumPaintingText>>
 			<<if $museumAntiqueJournalHints.length gte 1 || Object.values(V.museumAntiques.paintings).includes("found")>>
-				<<set _hintslist to clone($museumAntiqueJournalHints).reverse()>>
 				<<if $museumAntiqueJournalHints.length gte 1>>
-					윈터는 박물관에서 없어진 물품들에 대해 언급한 적이 있습니다.
+					Winter has mentioned some items that are missing from the museum. You can view available hints by <<if SugarCube.Browser.isMobile.any()>>tapping on<<else>>hovering over<</if>> each pedestal in the list below.
 				<</if>>
-				<ul class="journal">
-					<<for _hint range _hintslist>>
-						<<if _museumAntiqueText[_hint]>>
-							<<if ["found", "talk"].includes($museumAntiques.antiques[_hint])>>
-								<li><<= _museumAntiqueText[_hint].name.toLowerCase()>>【을를】 윈터에게 보여줘야 합니다.</li>
-							<<else>>
-								<li><<print _museumAntiqueText[_hint].journal>></li>
-							<</if>>
-						<<else>>
-							<li><span class="red">경고: 골동품 "_hint"에 대한 힌트가 없습니다. 모드가 설치된 버전에서 세이브를 가져왔습니까?</span></li>
-							<<set $museumAntiqueJournalHints.delete(_hint)>>
-						<</if>>
-					<</for>>
-					<<for $_labelP, $_valueP range $museumAntiques.paintings>>
-						<<if $_valueP is "found">>
-							<li><<= _museumPaintingText[$_labelP].journalName.toLowerCase()>>【을를】 윈터에게 보여줘야 합니다.</li>
-						<</if>>
-					<</for>>
-				</ul>
-				<br>
+				<br><br>
 			<</if>>
 			<<set $_antiquesFound to Object.values($museumAntiques.antiques).filter(status => status !== "notFound").length>>
 			<<set $_paintingsFound to Object.values($museumAntiques.paintings).filter(status => status !== "notFound").length>>
@@ -1425,7 +1461,7 @@
 				<</if>>
 				<div class="itemCollectible">
 					<<for _labelM, _valueM range $museumAntiques.antiques>>
-						<<set _antique to $museumAntiqueJournalHints.includes(_labelM) ? _museumAntiqueText[_labelM]?.journalName || _museumAntiqueText[_labelM].name.toLowerCase().toUpperFirst() : _museumAntiqueText[_labelM].name.toLowerCase().toUpperFirst()>>
+						<<set _antique to $museumAntiqueJournalHints.includes(_labelM) ? _museumAntiqueText[_labelM].journal || _museumAntiqueText[_labelM]?.journalName || _museumAntiqueText[_labelM].name.toLowerCase().toUpperFirst() : _museumAntiqueText[_labelM].name.toLowerCase().toUpperFirst()>>
 						<<if $museumAntiqueJournalHints.includes(_labelM)>>
 							<<switch _valueM>>
 								<<case "notFound">>
@@ -1440,7 +1476,7 @@
 						<<else>>
 							<<switch _valueM>>
 								<<case "notFound">>
-									<div class="item unknown" tooltip="알 수 없는 골동품.">
+									<div class="item unknown" tooltip="Unknown antique">
 										<<mysteryicon>>
 									</div>
 								<<default>>
@@ -1513,7 +1549,7 @@
 										<img class="icon" @src="'img/misc/prop/' + _museumPaintingText[_labelP].inlineFull" width="120" height="120">
 									</div>
 								<<case "notFound">>
-									<div class="item" tooltip="알 수 없는 그림.">
+									<div class="item" tooltip="Unknown painting">
 										<img class="icon" src="img/misc/prop/curtain.png" width="120" height="120">
 									</div>
 								<<default>>
@@ -1528,12 +1564,12 @@
 			<br>
 		<</if>>
 
+		<<set _foodstuffKeys to Object.keys(setup.foodstuff)>>
 		<<if $plants_known.length gte 0>>
-			<<set _foodstuffKeys to Object.keys(setup.foodstuff)>>
-			<<set _collection to 0>>
+			<<set _plantCollection to 0>>
 			<<for _i to 0; _i lt $plants_known.length; _i++>>
 				<<if Object.keys(setup.foodstuff).includes($plants_known[_i])>>
-					<<set _collection += 1>>
+					<<set _plantCollection += 1>>
 				<</if>>
 			<</for>>
 			<<set _total to 0>>
@@ -1542,15 +1578,15 @@
 					<<set _total += 1>>
 				<</if>>
 			<</for>>
-			<<if _collection is 0>>
-				심을 수 있는 씨앗이 없습니다. 세상을 더 탐험하여 씨앗을 발견합시다.
+			<<if _plantCollection is 0>>
+				You can't grow any plants. Explore the world more to discover seeds.
 			<<else>>
-				<span class="gold"><<= _collection>></span>종류의 식물을 키울 수 있습니다.
-				<<if _collection is _total>>
-					<span class="green">모든</span> 씨앗을 찾았습니다.
+				You can grow <span class="gold"><<= _plantCollection>></span> <<pluralise _plantCollection "kind of plant" "kinds of plants">>.
+				<<if _plantCollection is _total>>
+					You've found <span class="green">every</span> seed.
 				<<else>>
-					<<set _seedsMissing to _total - _collection>>
-					<span class="gold"><<= _seedsMissing>></span>개의 씨앗을 찾지 못했습니다.
+					<<set _seedsMissing to _total - _plantCollection>>
+					You're missing <span class="gold"><<= _seedsMissing>></span> <<pluralise _seedsMissing "seed">>.
 				<</if>>
 			<</if>>
 			<br><br>
@@ -1569,7 +1605,7 @@
 									<<icon `"tending/" + _icon`>>
 								</div>
 							<<else>>
-								<div class="item unknown" tooltip="미확인 씨앗.">
+								<div class="item unknown" tooltip="Unknown seed">
 									<<mysteryicon>>
 								</div>
 							<</if>>
@@ -1577,9 +1613,57 @@
 					<</for>>
 				</div>
 			</details>
-		<</if>>
-		<<if $fishing.locationsFound.length>>
 			<br>
+		<</if>>
+
+		<<set _recipeCollection to 0>>
+		<<set _total to 0>>
+		<<for _i to 0; _i lt _foodstuffKeys.length; _i++>>
+			<<if $foodstuff[_foodstuffKeys[_i]].knows_recipe>>
+				<<set _recipeCollection += 1>>
+			<</if>>
+			<<if setup.foodstuff[_foodstuffKeys[_i]].recipe and setup.foodstuff[_foodstuffKeys[_i]].recipe.difficulty lt 5>> /* Excludes unobtainable ghostbrew and wolfbrew */
+				<<set _total += 1>>
+			<</if>>
+		<</for>>
+		<<if _recipeCollection gte 0>>
+			<<if _recipeCollection is 0>>
+				You haven't learnt any recipes. Explore the world more to discover recipes.
+			<<else>>
+				You have learnt <span class="gold"><<= _recipeCollection>></span> <<pluralise _recipeCollection "recipe">>.
+				<<if _recipeCollection is _total>>
+					You've discovered <span class="green">every</span> recipe.
+				<<else>>
+					<<set _recipesMissing to _total - _recipeCollection>>
+					You're missing <span class="gold"><<= _recipesMissing>></span> <<pluralise _recipesMissing "recipe">>.
+				<</if>>
+			<</if>>
+			<br><br>
+			<details class="journal">
+				<summary class="journal">Recipes</summary>
+				<div class="itemCollectible">
+					<<for _i to 0; _i lt _foodstuffKeys.length; _i++>>
+						<<set _recipeItem to setup.foodstuff[_foodstuffKeys[_i]]>>
+						<<set _tooltip to _recipeItem.name.toUpperFirst()>>
+						<<set _icon to _recipeItem?.icon>>
+						<<if _recipeItem.recipe and _recipeItem.recipe.difficulty lt 5>> /* Excludes unobtainable ghostbrew and wolfbrew */
+							<<if $foodstuff[_foodstuffKeys[_i]].knows_recipe>>
+								<div class="item" @tooltip="_tooltip">
+									<<icon `"tending/" + _icon`>>
+								</div>
+							<<else>>
+								<div class="item unknown" tooltip="Unknown recipe">
+									<<mysteryicon>>
+								</div>
+							<</if>>
+						<</if>>
+					<</for>>
+				</div>
+			</details>
+			<br>
+		<</if>>
+
+		<<if $fishing.locationsFound.length>>
 			<<set _fishingLocations to ["fishingPier", "fishingBeach", "fishingCoastPath", "fishingForestLake", "fishingMoor"]>>
 			<<set _fishKeys to Object.keys(setup.fishing.lootTables.fish)>>
 			<<set _fishDiscovered to _fishKeys.filter(k => $fishing.record[k]).length>>
@@ -1734,8 +1818,8 @@
 			<<if !$journalNotes[_currentPage]>><<set _currentPage to "default">><</if>>
 			<<replace "#customOverlayContent">><<journalNotes>><</replace>>
 		<</link>> |
-		<<if $debug is 1>>
-			<<link "디버그: 코드 실행 <<=($options.enableJournalDebugTwee ? '비활성화' : '활성화')>>">>
+		<<if $debug>>
+			<<link "DEBUG: <<=($options.enableJournalDebugTwee ? 'Disable' : 'Enable')>> Code Execution">>
 				<<if $options.enableJournalDebugTwee>>
 					<<set delete $options.enableJournalDebugTwee>>
 				<<else>>
@@ -1771,7 +1855,7 @@
 <</widget>>
 
 <<widget "journalNotesTextarea">>
-	<<if $options.enableJournalDebugTwee and $debug is 1>>
+	<<if $options.enableJournalDebugTwee and $debug>>
 		<div class="settingsToggleItemWide">
 			<<foldout true "_journalDebugTweeFoldout">>
 				<span style="font-size:large">출력</span>

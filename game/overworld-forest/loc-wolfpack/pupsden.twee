@@ -54,7 +54,7 @@
 
 <</if>>
 
-<<if $settings.bestialityEnabled and $settings.breastFeedingEnabled and $lactating is 1 and hasSexStat("deviancy", 3) and ($settings.monsterChance lt 100 or ($settings.monsterHallucinationsOnly and $hallucinations is 0))>>
+<<if animalSexEnabledForType("wolf") and !$wolfcave_monster_roll and $settings.breastFeedingEnabled and $lactating is 1 and hasSexStat("deviancy", 3)>>
 
 	<<if $wolfcavebreast is 3>>
 		<span class="blue">새끼들이 젖으로 배를 채웠다.</span>

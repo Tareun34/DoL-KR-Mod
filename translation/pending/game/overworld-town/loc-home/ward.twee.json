@@ -1,0 +1,31 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if ($baileydefeatedchain gte 3 or $baileyRefusedToPay gte 3) and",
+   "(!$avery_mansion or [\"fallen\",\"kicked\"].includes($avery_fate) or $avery_mansion.rage.assess gte 9 or $avery_mansion.days_absent gte 2)>>",
+   "\tThe thug stops you at the door. \"Sorry, <<girl>>. Bailey says you're not allowed to enter until you <span class=\"red\">pay up</span>.\" You're turned away."
+  ],
+  "old_kr": [
+   "<<if ($baileydefeatedchain gte 3 or $baileyRefusedToPay gte 3) and",
+   "(!$avery_mansion or [\"fallen\",\"kicked\"].includes($avery_fate) or $avery_mansion.rage.assess gte 9 or $avery_mansion.days_absent gte 2)>>",
+   "\t깡패가 문 앞에서 당신을 막는다. \"미안, <<girl>>. 베일리가 네가 <span class=\"red\">빚을 갚기</span> 전까지는 들어올 수 없다고 했어.\" 당신은 쫓겨난다."
+  ],
+  "new_en": [
+   "<<if $baileydefeatedchain gte 3 or $baileyRefusedToPay gte 3 or isBaileyLookingForPlayer()>>",
+   "\tThe thug stops you at the door. \"Sorry, <<girl>>. Bailey says you're not allowed to enter until you <span class=\"red\">pay up</span>.\" You're turned away."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $storedChildrenToys and $storedChildrenToys[$location] and $storedChildrenToys[$location].length gt 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $storedChildrenToys and $storedChildrenToys[$location]?.length gt 0>>"
+  ],
+  "context": "<</if>>"
+ }
+]

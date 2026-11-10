@@ -357,8 +357,8 @@
 
 		<<if $leftaction is "leftstruggle" and $rightaction is "rightstruggle" and !$abomination and $lefttarget is $righttarget>>
 			<<set $leftaction to 0>><<set $rightaction to 0>><<set $leftactiondefault to "leftstruggle">><<set $rightactiondefault to "rightstruggle">>
-			당신은 온 힘을 다해 몸부림친다.
-			<<defiance 2 $lefttarget>><<set $speechstruggle to 1>>
+			You struggle with all your might.
+			<<defiance 2 $lefttarget>><<set $speechStruggle to 1>>
 			<<if currentSkillValue('physique') gte random(1, 32000) and !$robinRentEvent>>
 				<span class="teal">당신은 몸을 비틀어 팔을 빼내는 데 성공한다.</span>
 				<<defiance 5 $lefttarget>>
@@ -376,8 +376,8 @@
 
 		<<if $leftaction is "leftstruggle" and !$abomination>>
 			<<set $leftaction to 0>><<set $leftactiondefault to "leftstruggle">>
-			당신은 몸부림친다.
-			<<set $speechstruggle to 1>><<defiance 1 $lefttarget>>
+			You struggle.
+			<<set $speechStruggle to 1>><<defiance 1 $lefttarget>>
 			<<if currentSkillValue('physique') gte random(1, 64000) and !$robinRentEvent>>
 				<span class="teal">당신은 몸을 비틀어 팔을 빼내는 데 성공한다.</span>
 				<<defiance 5 $lefttarget>>
@@ -395,8 +395,8 @@
 
 		<<if $rightaction is "rightstruggle" and !$abomination>>
 			<<set $rightaction to 0>><<set $rightactiondefault to "rightstruggle">>
-			당신은 몸부림친다.
-			<<defiance 1 $righttarget>><<set $speechstruggle to 1>>
+			You struggle.
+			<<defiance 1 $righttarget>><<set $speechStruggle to 1>>
 			<<if currentSkillValue('physique') gte random(1, 64000) and !$robinRentEvent>>
 				<span class="teal">당신은 몸을 비틀어 팔을 빼내는 데 성공한다.</span>
 				<<defiance 5 $righttarget>>
@@ -495,7 +495,7 @@
 
 		<<if $leftaction is "lefthit" and $rightaction is "righthit" and $lefttarget is $righttarget>>
 			<<set $leftaction to 0>><<set $rightaction to 0>><<set $leftactiondefault to "lefthit">>
-			<<set $rightactiondefault to "righthit">><<actionshit both>><<defiance 5 $lefttarget>><<set $speechhit to 1>><<set $attackstat += 2>>
+			<<set $rightactiondefault to "righthit">><<actionshit both>><<defiance 5 $lefttarget>><<set $speechPlayerHits to 1>><<set $attackstat += 2>>
 		<</if>>
 
 		<<if $leftaction is "lefthit">>
@@ -510,11 +510,11 @@
 					왼손을 휘두르려 하지만, <span class="red">슬라임 때문에 집중이 흐트러져 빗나간다.</span>
 					<<gwillpower>><<willpower 1>>
 				<<else>>
-					슬라임이 당신이 <<if $enemytype is "beast">><<beasttype>>【을를】<<else>><<personselect $lefttarget>><<person>>【을를】<</if>> 때리지 못하게 방해하려 하지만, <span class="green">당신은 개의치 않고 가격한다.</span>
-					<<actionshit $lefttarget>><<defiance 2 $lefttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
+					The slime tries to prevent you from hitting the <<if $enemytype is "beast">><<beasttype>><<else>><<personselect $lefttarget>><<person>><</if>>, <span class="green">but you make contact regardless.</span>
+					<<actionshit $lefttarget>><<defiance 2 $lefttarget>><<set $speechPlayerHits to 1>><<set $attackstat += 1>>
 				<</if>>
 			<<else>>
-				<<actionshit $lefttarget>><<defiance 2 $lefttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
+				<<actionshit $lefttarget>><<defiance 2 $lefttarget>><<set $speechPlayerHits to 1>><<set $attackstat += 1>>
 			<</if>>
 		<</if>>
 
@@ -530,79 +530,79 @@
 					오른손을 휘두르려 하지만, <span class="red">슬라임 때문에 집중이 흐트러져 빗나간다.</span>
 					<<gwillpower>><<willpower 1>>
 				<<else>>
-					슬라임이 당신이 <<if $enemytype is "beast">><<beasttype>>【을를】<<else>><<personselect $righttarget>><<person>>【을를】<</if>> 때리지 못하게 방해하려 하지만, <span class="green">당신은 개의치 않고 가격한다.</span>
-					<<actionshit $righttarget>><<defiance 2 $righttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
+					The slime tries to prevent you from hitting the <<if $enemytype is "beast">><<beasttype>><<else>><<personselect $righttarget>><<person>><</if>>, <span class="green">but you make contact regardless.</span>
+					<<actionshit $righttarget>><<defiance 2 $righttarget>><<set $speechPlayerHits to 1>><<set $attackstat += 1>>
 				<</if>>
 			<<else>>
-				<<actionshit $righttarget>><<set $speechhit to 1>><<defiance 2 $righttarget>><<set $attackstat += 1>>
+				<<actionshit $righttarget>><<set $speechPlayerHits to 1>><<defiance 2 $righttarget>><<set $attackstat += 1>>
 			<</if>>
 		<</if>>
 
 		<<if $leftaction is "leftcamerapose" and $rightaction is "rightcamerapose">>
 			<<set $leftaction to 0>><<set $rightaction to 0>><<set $leftactiondefault to "leftcamerapose">><<set $rightactiondefault to "rightcamerapose">>
 			<<neutral 4>>
-			당신은 카메라를 향해 피스 사인을 그린다.
-			<<set $speechcamerapose to 1>>
+			You make peace signs for the cameras.
+			<<set $speechCameraPose to 1>>
 		<<elseif $leftaction is "leftcamerapose">>
 			<<set $leftaction to 0>><<set $leftactiondefault to "leftcamerapose">>
 			<<neutral 2>>
-			당신은 왼손으로 피스 사인을 그린다.
-			<<set $speechcamerapose to 1>>
+			You make a peace sign with your left hand.
+			<<set $speechCameraPose to 1>>
 		<<elseif $rightaction is "rightcamerapose">>
 			<<set $rightaction to 0>><<set $rightactiondefault to "rightcamerapose">>
 			<<neutral 2>>
-			당신은 오른손으로 피스 사인을 그린다.
-			<<set $speechcamerapose to 1>>
+			You make a peace sign with your right hand.
+			<<set $speechCameraPose to 1>>
 		<</if>>
 
 		<<cover_end>>/*Resets $face and other variables that are covered */
 
 		<<if $leftaction is "leftcoverface" and $rightaction is "rightcoverface">>
 			<<if $uncomfortable.hypnosis is false and $hypnosis_traits.cover gte random(1,5)>>
-				<<hypnosisText '당신은 얼굴을 가리려 하지만, 음란한 생각이 끼어들고 <span class="lewd">정신은 곧장 그것을 받아들인다.</span> 당신은 양손으로 얼굴을 쓰다듬으며 윙크하고 입술 주변을 유혹적으로 매만진다.'>>
-				<<submission 1>><<set $speechcamerapose to 1>><<hypnotised 1>>
+				<<hypnosisText 'You intend to cover your face, but a lewd thought intrudes <span class="lewd">and your mind immediately accepts it.</span> You stroke your face with your hands, winking and teasing around your lips.'>>
+				<<submission 1>><<set $speechCameraPose to 1>><<hypnotised 1>>
 			<<elseif $hypnosis_traits.cover gte 1 and currentSkillValue('willpower') lt random(1, (200 * $hypnosis_traits.cover))>>
-				<<hypnosisText '당신은 얼굴을 가리려 하지만, <span class="pink">그 생각은 정신에서 낚아채이듯 사라지고 다른 생각으로 바뀐다.</span> 당신은 양손으로 얼굴을 쓰다듬으며 윙크하고 입술 주변을 유혹적으로 매만진다.'>>
-				<<submission 1>><<set $speechcamerapose to 1>><<hypnotised 1>><<willpower 1>>
+				<<hypnosisText 'You intend to cover your face, <span class="pink">but the thought is snatched from your mind and replaced with another.</span> You stroke your face with your hands, winking and teasing around your lips.'>>
+				<<submission 1>><<set $speechCameraPose to 1>><<hypnotised 1>><<willpower 1>>
 			<<else>>
 				당신은
 				<<if $hypnosis_traits.cover gte 1>>
 					<span class="green">충동적인 생각을 억누르고</span>
 				<</if>>
-				양손으로 얼굴을 가린다.
-				<<set $speechcoverface to 1>><<set $face to "covered">><<neutral 2>>
+				cover your face with your hands.
+				<<set $speechCoverFace to 1>><<set $face to "covered">><<neutral 2>>
 				<<set $leftaction to 0>><<set $rightaction to 0>><<set $leftactiondefault to "leftcoverface">><<set $rightactiondefault to "rightcoverface">>
 			<</if>>
 		<<elseif $leftaction is "leftcoverface">>
 			<<if $uncomfortable.hypnosis is false and $hypnosis_traits.cover gte random(1,5)>>
-				<<hypnosisText '당신은 얼굴을 가리려 하지만, 음란한 생각이 끼어들고 <span class="lewd">정신은 곧장 그것을 받아들인다.</span> 당신은 왼손으로 얼굴을 쓰다듬으며 윙크하고 입술 주변을 유혹적으로 매만진다.'>>
-				<<submission 1>><<set $speechcamerapose to 1>><<hypnotised 1>>
+				<<hypnosisText 'You intend to cover your face, but a lewd thought intrudes <span class="lewd">and your mind immediately accepts it.</span> You stroke your face with your left hand, winking and teasing around your lips.'>>
+				<<submission 1>><<set $speechCameraPose to 1>><<hypnotised 1>>
 			<<elseif $hypnosis_traits.cover gte 1 and currentSkillValue('willpower') lt random(1, (200 * $hypnosis_traits.cover))>>
-				<<hypnosisText '당신은 얼굴을 가리려 하지만, <span class="pink">그 생각은 정신에서 낚아채이듯 사라지고 다른 생각으로 바뀐다.</span> 당신은 왼손으로 얼굴을 쓰다듬으며 윙크하고 입술 주변을 유혹적으로 매만진다.'>>
-				<<submission 1>><<set $speechcamerapose to 1>><<hypnotised 1>><<willpower 1>>
+				<<hypnosisText 'You intend to cover your face, <span class="pink">but the thought is snatched from your mind and replaced with another.</span> You stroke your face with your left hand, winking and teasing around your lips.'>>
+				<<submission 1>><<set $speechCameraPose to 1>><<hypnotised 1>><<willpower 1>>
 			<<else>>
 				당신은
 				<<if $hypnosis_traits.cover gte 1>>
 					<span class="green">충동적인 생각을 억누르고</span>
 				<</if>>
-				왼손으로 얼굴을 가린다.
-				<<set $speechcoverface to 1>><<set $face to "covered">><<neutral 1>>
+				cover your face with your left hand.
+				<<set $speechCoverFace to 1>><<set $face to "covered">><<neutral 1>>
 				<<set $leftaction to 0>><<set $leftactiondefault to "leftcoverface">>
 			<</if>>
 		<<elseif $rightaction is "rightcoverface">>
 			<<if $uncomfortable.hypnosis is false and $hypnosis_traits.cover gte random(1,5)>>
-				<<hypnosisText '당신은 얼굴을 가리려 하지만, 음란한 생각이 끼어들고 <span class="lewd">정신은 곧장 그것을 받아들인다.</span> 당신은 오른손으로 얼굴을 쓰다듬으며 윙크하고 입술 주변을 유혹적으로 매만진다.'>>
-				<<submission 1>><<set $speechcamerapose to 1>><<hypnotised 1>>
+				<<hypnosisText 'You intend to cover your face, but a lewd thought intrudes <span class="lewd">and your mind immediately accepts it.</span> You stroke your face with your right hand, winking and teasing around your lips.'>>
+				<<submission 1>><<set $speechCameraPose to 1>><<hypnotised 1>>
 			<<elseif $hypnosis_traits.cover gte 1 and currentSkillValue('willpower') lt random(1, (200 * $hypnosis_traits.cover))>>
-				<<hypnosisText '당신은 얼굴을 가리려 하지만, <span class="pink">그 생각은 정신에서 낚아채이듯 사라지고 다른 생각으로 바뀐다.</span> 당신은 오른손으로 얼굴을 쓰다듬으며 윙크하고 입술 주변을 유혹적으로 매만진다.'>>
-				<<submission 1>><<set $speechcamerapose to 1>><<hypnotised 1>><<willpower 1>>
+				<<hypnosisText 'You intend to cover your face, <span class="pink">but the thought is snatched from your mind and replaced with another.</span> You stroke your face with your right hand, winking and teasing around your lips.'>>
+				<<submission 1>><<set $speechCameraPose to 1>><<hypnotised 1>><<willpower 1>>
 			<<else>>
 				당신은
 				<<if $hypnosis_traits.cover gte 1>>
 					<span class="green">충동적인 생각을 억누르고</span>
 				<</if>>
-				오른손으로 얼굴을 가린다.
-				<<set $speechcoverface to 1>><<set $face to "covered">><<neutral 1>>
+				cover your face with your right hand.
+				<<set $speechCoverFace to 1>><<set $face to "covered">><<neutral 1>>
 				<<set $rightaction to 0>><<set $rightactiondefault to "rightcoverface">>
 			<</if>>
 		<</if>>
@@ -765,7 +765,7 @@
 		<<if $leftaction is "leftclit">>
 		<<set $leftaction to 0>><<set $leftactiondefault to "leftclit">><<handskilluse>>
 			<<if combatSkillCheck("hand", $lefttarget)>>
-				<<actionsclitstroke $lefttarget>><<submission 10>><<set $speechhandjobvagina to 1>>
+				<<actionsclitstroke $lefttarget>><<submission 10>><<set $speechHandjobVagina to 1>>
 			<<elseif $NPCList[$lefttarget].vagina is "leftarm">>
 				<<set $leftarm to 0>><<set $leftactiondefault to "leftplay">>
 				<<set $NPCList[$lefttarget].vagina to 0>><<personselect $lefttarget>>
@@ -777,7 +777,7 @@
 		<<if $rightaction is "rightclit">>
 			<<set $rightaction to 0>><<set $rightactiondefault to "rightclit">><<handskilluse>>
 			<<if combatSkillCheck("hand", $righttarget)>>
-				<<actionsclitstroke $righttarget>><<submission 10>><<set $speechhandjobvagina to 1>>
+				<<actionsclitstroke $righttarget>><<submission 10>><<set $speechHandjobVagina to 1>>
 			<<elseif $NPCList[$righttarget].vagina is "rightarm">>
 				<<set $rightarm to 0>><<set $rightactiondefault to "rightplay">>
 				<<set $NPCList[$righttarget].vagina to 0>><<personselect $righttarget>>
@@ -1214,8 +1214,8 @@
 				<</if>>
 
 				<<if $neckuse is "hand">>
-					당신은 목을 조르는 <<his>> 손에 손톱을 박아넣고 끌어당긴다.
-					<<defiance 2 _n>><<set $speechstruggle to 1>>
+					You dig your nails into <<his>> hand around your throat and pull it.
+					<<defiance 2 _n>><<set $speechStruggle to 1>>
 					<<if currentSkillValue('physique') gte random(1, 60000/_handsCount)>>
 						<span class="teal">당신은 목에서 <<his>> 손을 떼어내는 데 성공한다.</span>
 						<<defiance 5 _n>>
@@ -1511,7 +1511,7 @@
 					당신은 <<pussy>> 위로 손가락을 미끄러뜨린다<<if !$worn.lower.type.includes("naked") and !$worn.under_lower.type.includes("naked")>>, 옷 아래로 그 형태를 느끼면서<</if>>.
 					<<addVaginalWetness 0>><<arousal 5 "masturbationVagina">>
 				<</if>>
-				<<submission 3>><<set $speechmasturbate to 1>>
+				<<submission 3>><<set $speechMasturbate to 1>>
 			<</if>>
 		<</if>>
 
@@ -1541,7 +1541,7 @@
 					당신은 <<pussy>> 위로 손가락을 미끄러뜨린다<<if !$worn.lower.type.includes("naked") and !$worn.under_lower.type.includes("naked")>>, 옷 아래로 그 형태를 느끼면서<</if>>.
 					<<addVaginalWetness 0>><<arousal 5 "masturbationVagina">>
 				<</if>>
-				<<submission 3>><<set $speechmasturbate to 1>>
+				<<submission 3>><<set $speechMasturbate to 1>>
 			<</if>>
 		<</if>>
 
@@ -1571,7 +1571,7 @@
 					당신은 옷 너머로 형태를 느끼며, <<penis>>【을를】 쓰다듬는다.
 					<<arousal 5 "masturbationPenis">>
 				<</if>>
-				<<submission 3>><<set $speechmasturbate to 1>>
+				<<submission 3>><<set $speechMasturbate to 1>>
 			<</if>>
 		<</if>>
 
@@ -1601,7 +1601,7 @@
 					당신은 옷 너머로 형태를 느끼며, <<penis>>【을를】 쓰다듬는다.
 					<<arousal 5 "masturbationPenis">>
 				<</if>>
-				<<submission 3>><<set $speechmasturbate to 1>>
+				<<submission 3>><<set $speechMasturbate to 1>>
 			<</if>>
 		<</if>>
 
@@ -1655,7 +1655,7 @@
 					<</if>>
 					<<arousal 5 "masturbationAnal">>
 				<</if>>
-				<<submission 3>><<set $speechmasturbate to 1>>
+				<<submission 3>><<set $speechMasturbate to 1>>
 			<</if>>
 		<</if>>
 
@@ -1709,7 +1709,7 @@
 					<</if>>
 					<<arousal 5 "masturbationAnal">>
 				<</if>>
-				<<submission 3>><<set $speechmasturbate to 1>>
+				<<submission 3>><<set $speechMasturbate to 1>>
 			<</if>>
 		<</if>>
 
@@ -1784,7 +1784,7 @@
 				당신은 <<pussy>> 위로 $_dildo【을를】 문지른다<<if !$worn.lower.type.includes("naked") and !$worn.under_lower.type.includes("naked")>>, 옷 아래로 그 형태를 느끼면서<</if>>.
 				<<addVaginalWetness 0>><<arousal 5 "genitals">>
 			<</if>>
-			<<submission 5>><<set $speechmasturbate to 1>>
+			<<submission 5>><<set $speechMasturbate to 1>>
 		<</if>>
 
 		<<if $rightaction is "dildoSelfPussyEntrance">>
@@ -1811,7 +1811,7 @@
 				당신은 <<pussy>> 위로 $_dildo【을를】 문지른다<<if !$worn.lower.type.includes("naked") and !$worn.under_lower.type.includes("naked")>>, 옷 아래로 그 형태를 느끼면서<</if>>.
 				<<addVaginalWetness 0>><<arousal 5 "genitals">>
 			<</if>>
-			<<submission 5>><<set $speechmasturbate to 1>>
+			<<submission 5>><<set $speechMasturbate to 1>>
 		<</if>>
 
 		<<if $leftaction is "dildoSelfPussy">>
@@ -1830,7 +1830,7 @@
 					당신은 $_dildo【으로로】 <<pussy>>【을를】 쑤신다.
 				<</if>>
 			<</if>>
-			<<addVaginalWetness 2>><<arousal 50 "genitals">><<submission 10>><<set $speechmasturbate to 1>>
+			<<addVaginalWetness 2>><<arousal 50 "genitals">><<submission 10>><<set $speechMasturbate to 1>>
 		<</if>>
 		<<if $rightaction is "dildoSelfPussy">>
 			<<set $rightaction to 0>><<set $rightactiondefault to "dildoSelfPussy">><<set $rightarm to "dildoSelfPussy">>
@@ -1848,7 +1848,7 @@
 					당신은 $_dildo【으로로】 <<pussy>>【을를】 쑤신다.
 				<</if>>
 			<</if>>
-			<<addVaginalWetness 2>><<arousal 50 "genitals">><<submission 10>><<set $speechmasturbate to 1>>
+			<<addVaginalWetness 2>><<arousal 50 "genitals">><<submission 10>><<set $speechMasturbate to 1>>
 		<</if>>
 
 		<<if $leftaction is "dildoSelfAnusEntrance">>
@@ -1875,7 +1875,7 @@
 				당신은 항문 위로 $_dildo【을를】 문지른다<<if !$worn.lower.type.includes("naked") and !$worn.under_lower.type.includes("naked")>>, 옷 아래로 그 형태를 느끼면서<</if>>.
 				<<addVaginalWetness 0>><<arousal 5 "genitals">>
 			<</if>>
-			<<submission 5>><<set $speechmasturbate to 1>>
+			<<submission 5>><<set $speechMasturbate to 1>>
 		<</if>>
 
 		<<if $rightaction is "dildoSelfAnusEntrance">>
@@ -1902,7 +1902,7 @@
 				당신은 $_dildo【을를】 항문에 문지른다<<if !$worn.lower.type.includes("naked") and !$worn.under_lower.type.includes("naked")>>, 옷 아래로 느껴지는 형태를 느끼며<</if>>.
 				<<addVaginalWetness 0>><<arousal 5 "genitals">>
 			<</if>>
-			<<submission 5>><<set $speechmasturbate to 1>>
+			<<submission 5>><<set $speechMasturbate to 1>>
 		<</if>>
 
 		<<if $leftaction is "dildoSelfAnus">>
@@ -1921,7 +1921,7 @@
 					당신은 $_dildo【으로로】 항문을 쑤신다.
 				<</if>>
 			<</if>>
-			<<arousal 50 "anus">><<submission 10>><<set $speechmasturbate to 1>>
+			<<arousal 50 "anus">><<submission 10>><<set $speechMasturbate to 1>>
 		<</if>>
 		<<if $rightaction is "dildoSelfAnus">>
 			<<set $rightaction to 0>><<set $rightactiondefault to "dildoSelfAnus">><<set $rightarm to "dildoSelfAnus">>
@@ -1939,7 +1939,7 @@
 					당신은 $_dildo【으로로】 항문을 쑤신다.
 				<</if>>
 			<</if>>
-			<<arousal 50 "anus">><<submission 10>><<set $speechmasturbate to 1>>
+			<<arousal 50 "anus">><<submission 10>><<set $speechMasturbate to 1>>
 		<</if>>
 
 		<<if $leftaction is "strokerSelfPenisEntrance">>
@@ -1962,7 +1962,7 @@
 				당신은 <<penis>> 위로 _stroker【을를】 문지른다<<if !$worn.lower.type.includes("naked") and !$worn.under_lower.type.includes("naked")>>, 옷 아래로 그 형태를 느끼며<</if>>.
 				<<arousal 5 "genitals">>
 			<</if>>
-			<<submission 2>><<set $speechmasturbate to 1>>
+			<<submission 2>><<set $speechMasturbate to 1>>
 		<</if>>
 		<<if $leftaction is "strokerSelfPenis">>
 			<<set $leftaction to 0>><<set $leftactiondefault to "strokerSelfPenis">><<set $leftarm to "strokerSelfPenis">>
@@ -1981,7 +1981,7 @@
 					당신은 _stroker【으로로】 <<penis>>【을를】 유린한다.
 				<</if>>
 			<</if>>
-			<<arousal 50 "genitals">><<submission 5>><<set $speechmasturbate to 1>>
+			<<arousal 50 "genitals">><<submission 5>><<set $speechMasturbate to 1>>
 		<</if>>
 
 		<<if $rightaction is "strokerSelfPenisEntrance">>
@@ -2004,7 +2004,7 @@
 				당신은 <<penis>> 위로 _stroker【을를】 문지른다<<if !$worn.lower.type.includes("naked") and !$worn.under_lower.type.includes("naked")>>, 옷 아래로 그 형태를 느끼며<</if>>.
 				<<arousal 5 "genitals">>
 			<</if>>
-			<<submission 2>><<set $speechmasturbate to 1>>
+			<<submission 2>><<set $speechMasturbate to 1>>
 		<</if>>
 		<<if $rightaction is "strokerSelfPenis">>
 			<<set $rightaction to 0>><<set $rightactiondefault to "strokerSelfPenis">><<set $rightarm to "strokerSelfPenis">>
@@ -2023,7 +2023,7 @@
 					당신은 _stroker【으로로】 <<penis>>【을를】 유린한다.
 				<</if>>
 			<</if>>
-			<<arousal 50 "genitals">><<submission 5>><<set $speechmasturbate to 1>>
+			<<arousal 50 "genitals">><<submission 5>><<set $speechMasturbate to 1>>
 		<</if>>
 
 		<<if $leftaction is "strokerDrop">>
@@ -2046,7 +2046,7 @@
 			/* Note: deliberately does not take virginities */
 			<<set $leftaction to 0>><<set $leftactiondefault to "dildoOtherPussyFuck">><<handskilluse>>
 			<<if combatSkillCheck("hand", $lefttarget)>>
-				<<submission 10>><<set $speechdildovagina to 1>><<set $leftarm to "dildoOtherPussyFuck">><<set $NPCList[0].vagina to "leftDildo">>
+				<<submission 10>><<set $speechDildoVagina to 1>><<set $leftarm to "dildoOtherPussyFuck">><<set $NPCList[0].vagina to "leftDildo">>
 
 				당신은 왼손에 든 $currentSexToyLeft.name【으로로】 <<their $lefttarget>> 보지를 <<handtext>> 유린한다.
 
@@ -2062,7 +2062,7 @@
 			/* Note: deliberately does not take virginities */
 			<<set $rightaction to 0>><<set $rightactiondefault to "dildoOtherPussyFuck">><<handskilluse>>
 			<<if combatSkillCheck("hand", $righttarget)>>
-				<<submission 10>><<set $speechdildovagina to 1>><<set $rightarm to "dildoOtherPussyFuck">><<set $NPCList[0].vagina to "rightDildo">>
+				<<submission 10>><<set $speechDildoVagina to 1>><<set $rightarm to "dildoOtherPussyFuck">><<set $NPCList[0].vagina to "rightDildo">>
 
 				당신은 오른손에 든 $currentSexToyRight.name【으로로】 <<their $righttarget>> 보지를 <<handtext>> 유린한다.
 
@@ -2122,7 +2122,7 @@
 			/* Note: deliberately does not take virginities */
 			<<set $leftaction to 0>><<set $leftactiondefault to "dildoOtherAnusFuck">><<handskilluse>>
 			<<if combatSkillCheck("hand", $lefttarget)>>
-				<<submission 10>><<set $speechdildoanus to 1>><<set $leftarm to "dildoOtherAnusFuck">>
+				<<submission 10>><<set $speechDildoAnus to 1>><<set $leftarm to "dildoOtherAnusFuck">>
 				<<if $NPCList[$lefttarget].vagina isnot "none">>
 					<<set $NPCList[$lefttarget].vagina to "leftDildoAnus">>
 				<</if>>
@@ -2149,7 +2149,7 @@
 			/* Note: deliberately does not take virginities */
 			<<set $rightaction to 0>><<set $rightactiondefault to "dildoOtherAnusFuck">><<handskilluse>>
 			<<if combatSkillCheck("hand", $righttarget)>>
-				<<submission 10>><<set $speechdildoanus to 1>><<set $rightarm to "dildoOtherAnusFuck">>
+				<<submission 10>><<set $speechDildoAnus to 1>><<set $rightarm to "dildoOtherAnusFuck">>
 				<<if $NPCList[$righttarget].vagina isnot "none">>
 					<<set $NPCList[$righttarget].vagina to "rightDildoAnus">>
 				<</if>>
@@ -2270,7 +2270,7 @@
 			/* Note: deliberately does not take virginities */
 			<<set $leftaction to 0>><<set $leftactiondefault to "strokerOtherPenisFuck">><<handskilluse>>
 			<<if combatSkillCheck("hand", $lefttarget)>>
-				<<submission 10>><<set $speechstroker to 1>><<set $leftarm to "strokerOtherPenisFuck">><<set $NPCList[$lefttarget].penis to "leftStroker">>
+				<<submission 10>><<set $speechStroker to 1>><<set $leftarm to "strokerOtherPenisFuck">><<set $NPCList[$lefttarget].penis to "leftStroker">>
 
 				당신은 왼손에 든 $currentSexToyLeft.name【으로로】 <<their $lefttarget>> <<npcPenis $lefttarget>>【을를】 <<handtext>> 유린한다.
 
@@ -2286,7 +2286,7 @@
 			/* Note: deliberately does not take virginities */
 			<<set $rightaction to 0>><<set $rightactiondefault to "strokerOtherPenisFuck">><<handskilluse>>
 			<<if combatSkillCheck("hand", $righttarget)>>
-				<<submission 10>><<set $speechstroker to 1>><<set $rightarm to "strokerOtherPenisFuck">><<set $NPCList[$righttarget].penis to "rightStroker">>
+				<<submission 10>><<set $speechStroker to 1>><<set $rightarm to "strokerOtherPenisFuck">><<set $NPCList[$righttarget].penis to "rightStroker">>
 
 				당신은 오른손에 든 $currentSexToyRight.name【으로로】 <<their $righttarget>> <<npcPenis $righttarget>>【을를】 <<handtext>> 유린한다.
 
@@ -2609,8 +2609,8 @@
 			<<set $_legLockDif to Math.floor((100 - $NPCList[$feettarget].pregnancyAvoidance) * 15)>>
 			<<if combatSkillCheck("thigh", $feettarget, $NPCList[$feettarget].fullDescription, $_legLockDif)>>
 				<<brat 2>><<sex 5 "genitals" $feettarget>><<set $feetactiondefault to "legLocked">><<set $feetuse to "legLock">><<set $leglocktarget to $feettarget>>
-				<<set $speechleglock to 1>><<personselect $feettarget>>
-				<<thighstat>><span class="lblue">당신은 <<combatperson $feettarget>>에게 <<if $position is "missionary">>다리를 감고<<else>>다리로 밀착하고<</if>> <<thightext>> 저항하며, <<him>>【이가】 빠져나가지 못하게 한다.</span>
+				<<set $speechLegLock to 1>><<personselect $feettarget>>
+				<<thighstat>><span class="lblue">You <<thightext>> <<if $position is "missionary">>wrap your legs around<<else>>push back against<</if>> <<combatperson $feettarget>>, preventing <<him>> from pulling out.</span>
 			<<else>>
 				당신은 <<combatperson $feettarget>>에게 <<if $position is "missionary">>다리를 감으려<<else>>다리로 밀착하려<</if>> 하지만 <<he>>【은는】 당신의 다리를 당겨 빼낸다.
 			<</if>>
@@ -2620,11 +2620,11 @@
 			<<set $feetaction to 0>><<thighskilluse>><<set $feetactiondefault to "legLocked">>
 			<<set $_legLockDif to Math.floor((100 - $NPCList[$feettarget].pregnancyAvoidance) * 10)>>
 			<<if combatSkillCheck("thigh", $feettarget, $NPCList[$feettarget].fullDescription, $_legLockDif)>>
-				<<brat 2>><<sex 5 "genitals" $feettarget>><<set $speechleglock to 1>><<personselect $feettarget>>
-				<span class="lewd">당신은 <<combatperson $feettarget>>에게 <<if $position is "missionary">>다리를 감은 채로<<else>>계속 다리로 밀착한 채로<</if>> 유지하며, <<him>>【이가】 도망칠 틈을 주지 않는다.</span>
+				<<brat 2>><<sex 5 "genitals" $feettarget>><<set $speechLegLock to 1>><<personselect $feettarget>>
+				<span class="lewd">You keep <<if $position is "missionary">>your legs wrapped around<<else>>pushing back against<</if>> <<combatperson $feettarget>>, giving <<him>> no chance to escape.</span>
 			<<elseif $orgasmdown gte 1>>
-				<<sex 5 "genitals" $feettarget>><<set $speechleglock to 1>><<personselect $feettarget>>
-				<span class="lewd">당신은 절정에 다다르자 <<combatperson $feettarget>>에게 더욱 강하게 <<if $position is "missionary">>다리를 감으며<<else>>다리로 밀착하며<</if>>, <<his>> 도주를 막는다. </span>
+				<<sex 5 "genitals" $feettarget>><<set $speechLegLock to 1>><<personselect $feettarget>>
+				<span class="lewd">You <<if $position is "missionary">>wrap your legs around<<else>>push back against<</if>> <<combatperson $feettarget>> even harder as you orgasm, preventing <<his>> escape. </span>
 			<<else>>
 				<<set $feetactiondefault to "legLock">><<set $feetuse to 0>><<unset $leglocktarget>>
 				<span class="blue">당신은 <<combatperson $feettarget>>에게 <<if $position is "missionary">>다리를 감은 상태를 유지하려<<else>>다리로 계속 밀착하려<</if>> 하지만 <<he>>【은는】 용케 당신의 다리를 벌려 떼어낸다.</span>
@@ -2870,6 +2870,8 @@
 				<<set $feetaction to 0>><<set $feetactiondefault to "hide">>
 				<<set _difficulty to $NPCList[0].skills.security>>
 				<<set _difficulty += $liquidcount * 20>>
+				<<set _stalked to ($NPCList[0].fullDescription isnot "Ivory Wraith" and ($NPCList[0].legs is "run" or $NPCList[0].bold gte random(1, 1000))
+				or $NPCList[0].fullDescription is "Ivory Wraith" and C.npc["Ivory Wraith"].lust gte random(5, 15))>>
 				<<if currentSkillValue('skulduggery') gte random(1, _difficulty)>>
 					<<set _hide_success to true>>
 				<</if>>
@@ -2899,8 +2901,7 @@
 							당신은 작은 골목으로 몸을 날려 쓰레기통 뒤에 숨는다.
 					<</switch>>
 					<<set $stalk_end to "hide">>
-				<<elseif !_hide_success and ($NPCList[0].fullDescription isnot "Ivory Wraith" and ($NPCList[0].legs is "run" or $NPCList[0].bold gte random(1, 1000))
-				or $NPCList[0].fullDescription is "Ivory Wraith" and C.npc["Ivory Wraith"].lust gte random(5,15))>>
+				<<elseif !_hide_success and _stalked>>
 					<<switch $location>>
 						<<case alley>>
 							당신은 좁은 골목으로 몸을 날려 쓰레기통 뒤에 숨는다. 모퉁이 너머를 살짝 엿본다. 아무도 보이지 않는다.
@@ -2938,26 +2939,26 @@
 						<<case alley>>
 							당신은 좁은 골목으로 몸을 날려 쓰레기통 뒤에 숨는다.
 							<<if $NPCList[0].fullDescription isnot "Ivory Wraith">>
-								<span class="green"><<if $enemyno gt 1>>그들은<<else>><<stalk_nnpc_name>>【은는】 <</if>> 당신이 있는 쪽을 쳐다보지도 않고 지나쳐 간다.</span>
+								<span class="green"><<if $enemyno gt 1>>They pass<<else>><<stalk_nnpc_name>> passes<</if>> by <<if _stalked>>after looking around for a moment<<else>>without looking your way<</if>>.</span>
 							<</if>>
 						<<case forest lake>>
 							당신은 빽빽한 덤불 속으로 달려가 두꺼운 나무 기둥 뒤에 숨는다. 가장자리 너머로 살짝 엿본다.
 							<<if $NPCList[0].fullDescription isnot "Ivory Wraith">>
-								<span class="green"><<if $enemyno gt 1>>그들은<<else>><<stalk_nnpc_name>>【은는】 <</if>> 당신이 있는 쪽을 쳐다보지도 않고 지나쳐 간다.</span>
+								<span class="green"><<if $enemyno gt 1>>They pass<<else>><<stalk_nnpc_name>> passes<</if>> by <<if _stalked>>after looking around for a moment<<else>>without looking your way<</if>>.</span>
 							<</if>>
 						<<case moor>>
 							당신은 작은 언덕을 넘어 도랑으로 뛰어든다.
 							<<if $NPCList[0].fullDescription isnot "Ivory Wraith">>
 								<<if $enemyno gt 1>>
-									그들은 언덕 위에서 잠시 멈췄다가, <span class="green">당신 쪽을 쳐다보지도 않고 지나쳐 간다.</span>
+									They pause at the top, <span class="green">then move on <<if _stalked>>after looking around for a moment<<else>>without looking your way<</if>>.</span>
 								<<else>>
-									<<stalk_nnpc_name>>【은는】 언덕 위에서 잠시 멈췄다가, <span class="green">당신 쪽을 쳐다보지도 않고 지나쳐 간다.</span>
+									<<stalk_nnpc_name>> pauses at the top, <span class="green">then moves on <<if _stalked>>after looking around for a moment<<else>>without looking your way<</if>>.</span>
 								<</if>>
 							<</if>>
 						<<default>>
 							당신은 좁은 골목으로 몸을 날려 쓰레기통 뒤에 숨는다. 옆을 살짝 엿본다.
 							<<if $NPCList[0].fullDescription isnot "Ivory Wraith">>
-								<span class="green"><<if $enemyno gt 1>>그들은<<else>><<stalk_nnpc_name>>【은는】 <</if>> 당신이 있는 쪽을 쳐다보지도 않고 지나쳐 간다.</span>
+								<span class="green"><<if $enemyno gt 1>>They pass<<else>><<stalk_nnpc_name>> passes<</if>> by <<if _stalked>>after looking around for a moment<<else>>without looking your way<</if>>.</span>
 							<</if>>
 					<</switch>>
 					<<if $NPCList[0].fullDescription is "Ivory Wraith">>
@@ -3254,15 +3255,15 @@
 		<<if $mouthaction is "growl">>
 			<<set $mouthaction to 0>><<set $mouthactiondefault to "growl">><<set _sound to 1>>
 			<<if playerAwareTheyAreInHeat()>>
-				<<set $speechgrowlheat to 1>>
+				<<set $speechGrowlHeat to 1>>
 				<<submission 2>>
 				당신은 으르렁거리려 하지만, <span class="pink">발정기 탓에 음탕하게 흐느끼는 소리로 들린다.</span>
 			<<elseif playerRutMinArousal() or playerHeatMinArousal()>>
-				<<set $speechgrowlrut to 1>>
+				<<set $speechGrowlRut to 1>>
 				<<submission 2>>
 				당신은 으르렁거리려 하지만, <span class="pink">러트 탓에 음탕하게 흐느끼는 소리로 들린다.</span>
 			<<else>>
-				<<set $speechgrowl to 1>>
+				<<set $speechGrowl to 1>>
 				<<actionsgrowl>>
 				<<brat 2>>
 			<</if>>
@@ -3271,11 +3272,11 @@
 		<<if $mouthaction is "plead">>
 			<<set $mouthaction to 0>><<set _sound to 1>>
 			<<if $neckuse is "hand" and $oxygen lt $oxygenmax and $settings.asphyxiaLevel gte 2>>
-				<<wheeze "<<him>>에게 애원한다">>
-				<<set $speechwheezeaction to "plead">>
+				<<wheeze "plead with <<him>>">>
+				<<set $speechChokedAction to "plead">>
 			<<else>>
 				<<set $mouthactiondefault to "plead">>
-				<<actionsplead>><<set $speechplead to 1>>
+				<<actionsplead>><<set $speechPlead to 1>>
 				<<if $role is "islander" and (!$islander_language or $islander_language lt 100)>>
 					<<if $enemyno gte 2>>그들은 당신의 말을 이해하지 못하지만<<else>><<He>>【은는】 당신의 말을 이해하지 못하지만<</if>>, 당신의 어조에는 반응한다.
 				<</if>>
@@ -3286,11 +3287,11 @@
 		<<if $mouthaction is "moan">>
 			<<set $mouthaction to 0>><<set _sound to 1>>
 			<<if $neckuse is "hand" and $oxygen lt $oxygenmax and $settings.asphyxiaLevel gte 2>>
-				<<wheeze "야한 말을 한다" 2>><<set $speechmoan to 1>>
-				<<set $speechwheezeaction to "moan">>
+				<<wheeze "say something sexy" 2>><<set $speechMoan to 1>>
+				<<set $speechChokedAction to "moan">>
 			<<else>>
 				<<set $mouthactiondefault to "moan">>
-				<<actionsmoan>><<set $speechmoan to 1>>
+				<<actionsmoan>><<set $speechMoan to 1>>
 				<<if $role is "islander" and (!$islander_language or $islander_language lt 100)>>
 					<<if $enemyno gte 2>>그들은 당신의 말을 이해하지 못하지만<<else>><<He>>【은는】 당신의 말을 이해하지 못하지만<</if>>, 당신의 어조에는 반응한다.
 				<</if>>
@@ -3301,8 +3302,8 @@
 		<<if $mouthaction is "ask" and $askAction is "askchoke" and $askedtochoke isnot 1>>
 			<<set $mouthaction to 0>><<unset $askAction>><<set _sound to 1>>
 			<<if $neckuse is "hand" and $oxygen lt $oxygenmax and $settings.asphyxiaLevel gte 2>>
-				<<wheeze "목을 졸라 달라고 부탁한다" 1>>
-				<<set $speechwheezeaction to "askChoke">>
+				<<wheeze "ask to choke you" 1>>
+				<<set $speechChokedAction to "askChoke">>
 			<<else>>
 				<<set $askedtochoke to 1>>
 				<<set $mouthactiondefault to 0>>
@@ -3317,14 +3318,14 @@
 		<<if $mouthaction is "ask" and $askAction is "askrough">>
 			<<set $mouthaction to 0>><<unset $askAction>><<set _sound to 1>>
 			<<if $neckuse is "hand" and $oxygen lt $oxygenmax and $settings.asphyxiaLevel gte 2>>
-				<<wheeze "더 거칠게 해 달라고 부탁한다" 2>>
-				<<set $speechwheezeaction to "askRough">>
+				<<wheeze "ask to be rougher" 2>>
+				<<set $speechChokedAction to "askRough">>
 			<<else>>
 				<<askrough>>
 				<<if $role is "islander" and (!$islander_language or $islander_language lt 100)>>
 					<span class="red"><<if $enemyno gte 2>>그들은 당신의 말을 이해하지 못하고<<else>><<He>>【은는】 당신의 말을 이해하지 못하고<</if>>,</span> 이를 무시한다.
 				<</if>>
-				<<submission 1>><<set $enemyanger += (10 * $englishtrait)>><<set $speechaskrough to 1>>
+				<<submission 1>><<set $enemyanger += (10 * $englishtrait)>><<set $speechAskRough to 1>>
 			<</if>>
 		<</if>>
 
@@ -3342,7 +3343,7 @@
 				<<else>>
 					<<wheeze "무언가를 요구한다">>
 				<</if>>
-				<<set $speechwheezeaction to "demand">>
+				<<set $speechChokedAction to "demand">>
 			<<else>>
 				<<set $mouthactiondefault to "demand">>
 				<<if $submissive gte 850 and $wolfgirl gte 6>>
@@ -3350,7 +3351,7 @@
 				<<else>>
 					<<actionsdemand>>
 				<</if>>
-				<<set $speechdemand to 1>>
+				<<set $speechDemand to 1>>
 				<<if $role is "islander" and (!$islander_language or $islander_language lt 100)>>
 					<<if $enemyno gte 2>>그들은 당신의 말을 이해하지 못하지만<<else>><<He>>【은는】 당신의 말을 이해하지 못하지만<</if>>, 당신의 어조에 움찔한다.
 				<</if>>
@@ -3366,8 +3367,8 @@
 			<</if>>
 			<<set $mouthaction to 0>><<set _sound to 1>>
 			<<if $neckuse is "hand" and $oxygen lt $oxygenmax and $settings.asphyxiaLevel gte 2>>
-				<<wheeze "<<him>>【을를】 조롱한다">>
-				<<set $speechwheezeaction to "mock">>
+				<<wheeze "mock <<him>>">>
+				<<set $speechChokedAction to "mock">>
 			<<else>>
 				<<if _disparage is false>>
 					<<set $mouthactiondefault to "mock">>
@@ -3378,7 +3379,7 @@
 					<<set $mouthactiondefault to "rest">>
 					<<set _disparage to false>>
 				<</if>>
-				<<actionsmock>><<set $speechdemand to 1>>
+				<<actionsmock>><<set $speechDemand to 1>>
 				<<brat `1 + $englishtrait` $mouthtarget>>
 				<<if $role is "islander" and (!$islander_language or $islander_language lt 100)>>
 				<<elseif $mockaction is $NPCList[$mouthtarget].insecurity>>
@@ -3427,7 +3428,7 @@
 				<<if $NPCList[$mouthtarget].type is "plant">>
 					<span class="pink"> 단맛이 난다.</span>
 				<</if>>
-				<<submission 10>><<bruise face>><<oralstat>><<raped>><<set $mouthstate to "penetrated">><<set $speechmouthpenetrated to 1>>
+				<<submission 10>><<bruise face>><<oralstat>><<raped>><<set $mouthstate to "penetrated">><<set $speechMouthPenetrated to 1>>
 			<<elseif $player.virginity.oral is true>>
 				<<if $NPCList[$mouthtarget].type is "plant">>
 					<span class="red">거북할 정도로 단맛이 난다.</span>
@@ -3436,7 +3437,7 @@
 				<</if>>
 				<<submission 30>>
 				<<takeVirginity $NPCList[$mouthtarget].fullDescription "oral">><<bruise face>><<oralstat>><<violence 1>><<raped>>
-				<<set $mouthstate to "penetrated">><<set $speechmouthvirgin to 1>>
+				<<set $mouthstate to "penetrated">><<set $speechOralVirgin to 1>>
 			<</if>>
 		<</if>>
 
@@ -3578,24 +3579,24 @@
 			<<if $NPCList[$mouthtarget].lefthand is "head_breasts">><<set $NPCList[$mouthtarget].lefthand to "head_nipples">><</if>>
 			<<if $NPCList[$mouthtarget].righthand is "head_breasts">><<set $NPCList[$mouthtarget].righthand to "head_nipples">><</if>>
 			<<if $settings.breastFeedingEnabled and $NPCList[$mouthtarget].type is "plant" and $NPCList[$mouthtarget].pronoun is "f">>
-				<span class="purple">달콤한 넥타르가 당신의 입안을 채운다.</span>
-				<<nectarfed 15>><<set $speechheadsuckle to 1>><<submission 2>>
+				<span class="purple">Sweet nectar fills your mouth.</span>
+				<<nectarfed 15>><<set $speechHeadSuckle to 1>><<submission 2>>
 			<<elseif $settings.breastFeedingEnabled and $NPCList[$mouthtarget].lactation is 1>>
-				<span class="purple">달콤하고 부드러운 우유가 당신의 입안을 채운다.</span>
-				<<breastfed>><<set $speechheadsuckle to 1>><<submission 2>>
+				<span class="purple">Sweet, creamy milk fills your mouth.</span>
+				<<breastfed>><<set $speechHeadSuckle to 1>><<submission 2>>
 			<<else>>
-				<<set $speechheadnipple to 1>>
+				<<set $speechHeadNipple to 1>>
 			<</if>>
 		<</if>>
 
 		<<if $mouthaction is "scream">>
 			<<set $mouthaction to 0>><<set _sound to 1>>
 			<<if $neckuse is "hand" and $oxygen lt $oxygenmax and $settings.asphyxiaLevel gte 2>>
-				<<wheeze "도움을 청하려 비명을 지른다">>
-				<<set $speechwheezeaction to "scream">>
+				<<wheeze "scream for help">>
+				<<set $speechChokedAction to "scream">>
 			<<elseif $drugged gt 0 or $arousal gte $arousalmax * 0.9>>
-				당신은 입을 열어 살려달라고 비명을 지르려 하지만, <span class="pink"><<= $drugged gt 0 ? "당신의 약에 취한 정신" : "당신의 흥분감">>【이가】 그것을 음란한 신음소리로 만들어버린다.</span>
-				<<neutral 1>><<set $speechmoan to 1>>
+				You try to scream for help, <span class="pink">but <<= $drugged gt 0 ? "your drugged state of mind" : "your arousal">> makes it sound like a lewd moan.</span>
+				<<neutral 1>><<set $speechMoan to 1>>
 			<<elseif $uncomfortable.hypnosis is false and $hypnosis_traits.scream gte random(1,5)>>
 				<<set $mouthaction to 0>><<unset $askAction>><<set _sound to 1>>
 				<<hypnosisText '당신은 도움을 청하려 비명을 지르려 하지만, 음란한 생각이 끼어들고 <span class="lewd">정신은 곧장 그것을 받아들인다.</span> <<askrough>>'>>
@@ -3607,7 +3608,7 @@
 			<<elseif numberOfEarSlime() and $earSlime.growth gte (currentSkillValue('willpower')/ 10)>>
 				당신은 입을 벌려 살려달라고 소리치려 하지만, <span class="lewd">갑작스러운 흥분감이 그것을 음란한 신음소리로 바꿔버린다.</span> 슬라임이 당신을 빠르게 마비시키는 것을 느낀다.
 				<<if $earSlime.growth gt 50>><<set $earSlime.defyCooldown++>><</if>>
-				<<submission 1>><<set $speechmoan to 1>><<drugs 10>><<arousal 1000>>
+				<<submission 1>><<set $speechMoan to 1>><<drugs 10>><<arousal 1000>>
 			<<elseif numberOfEarSlime() and $earSlime.corruption gte (currentSkillValue('willpower')/ 10) and random(0,100) gte 50>>
 				당신은 입을 열어 살려달라고 비명을 지르려 하지만, <span class="red">목소리가 목구멍에 막혀 나오지 않는다.</span> 슬라임이 당신의 집중력을 앗아가는 것을 느낀다.
 				<<gwillpower>><<willpower 1>>
@@ -3644,7 +3645,7 @@
 						"에덴! 도와줘!"
 					<</if>>
 				<</if>>
-				<<brat 10>><<set $alarm to 1>><<set $mouthactiondefault to "scream">><<set $speechscream to 1>>
+				<<brat 10>><<set $alarm to 1>><<set $mouthactiondefault to "scream">><<set $speechScreamForHelp to 1>>
 				<<if $NPCList[0].lefthand is 0 and $mouthuse is 0 and $position isnot "wall" and !$robinRentEvent>>
 					<<set $NPCList[0].lefthand to "mouth">><<person1>><<He>>【은는】 손으로 당신의 입을 틀어막아 조용히 시킨다.
 					<<set $enemytrust -= 40>><<set $mouthuse to "lefthand">>
@@ -3661,14 +3662,14 @@
 			<<set _unforgiver to $NPCList.find(npc => npc.traits.includes("unforgiving"))>>
 			<<if $neckuse is "hand" and $oxygen lt $oxygenmax and $settings.asphyxiaLevel gte 2>>
 				<<wheeze "apologise">>
-				<<set $speechwheezeaction to "apologize">>
+				<<set $speechChokedAction to "apologise">>
 			<<elseif $enemytype is "beast">>
 				당신은 <<him>>에게 나쁘게 굴어서 미안하다고 말한다.
 				<<set $mouthactiondefault to "plead">>
 				<<if $NPCList[$mouthtarget] is _unforgiver and $apologised is 0>>
 					<!-- apology to an unforgiving character, instead add 25 anger at no english, remove maximum of 50 at excellent english -->
-					<<bHe>>【은는】 당신을 무시한다.
-					<<set $apologised to 1>><<set $speechapologiseunforgiving to 1>>
+					<<bHe>> ignores you.
+					<<set $apologised to 1>><<set $speechApologiseUnforgiving to 1>>
 					<<set $enemyanger += Math.clamp(25 - $englishtrait * 20, $enemyangermax / -4, $enemyangermax / 2)>>
 				<<elseif $NPCList[$mouthtarget] is _unforgiver>>
 					<!-- repeated apology, now it's just more anger -->
@@ -3681,8 +3682,8 @@
 					<<else>>
 						상대는 그저 코웃음 칠 뿐이다.
 					<</if>>
-					<span class="red"><<bHe>>【은는】 대답으로 <<beast_growls_text>>, 당신의 사과를 무시한다.</span>
-					<<set $apologised to 1>><<set $speechapologiseunforgiving to 1>>
+					<span class="red"><<bHe>> <<beast_growls_text>> in response, and ignores your apology.</span>
+					<<set $apologised to 1>><<set $speechApologiseUnforgiving to 1>>
 					<<set $enemyanger += Math.clamp(25 - $englishtrait * 20, $enemyangermax / -2, $enemyangermax / 2)>>
 				<<elseif $apologised is 0>>
 					<<if $monster is 1>>
@@ -3690,20 +3691,20 @@
 					<<else>>
 						그것은 당신의 말을 이해하지 못하지만, 당신의 목소리 톤은 영향을 미친다.
 					<</if>>
-					<<set $apologised to 1>><<set $speechapologise to 1>>
+					<<set $apologised to 1>><<set $speechApologise to 1>>
 					<<set $enemyanger -= 50 * (1 + $englishtrait)>>
 				<<else>>
-					<<bHe>>【은는】 당신을 무시한다.
-					<<set $speechapologiseno to 1>>
+					<<bHe>> ignores you.
+					<<set $speechApologiseRejected to 1>>
 				<</if>>
 			<<else>>
 				<<if $robinmist>>
-					당신은 외친다. "곁에 있어주지 못해서 미안해!"
-					<<set $speechapologiseno to 1>>
+					You shout. "I'm sorry I wasn't there for you!"
+					<<set $speechApologiseRejected to 1>>
 				<<elseif $robinRentEvent is 1 and $combatPhase is "Robin">>
-					당신은 <<him>>에게 돈을 지불하지 않아서 미안하다고 말한다.
-					<<set $speechapologiseno to 1>>
-				<<elseif $npc.includes("Ivory Wraith") and $wraithPrison and $wraithPrison.vision and !$wraithApologiseCooldown>>
+					You tell <<him>> you're sorry for not paying <<him>>.
+					<<set $speechApologiseRejected to 1>>
+				<<elseif $npc.includes("Ivory Wraith") and $wraithPrison?.vision and !$wraithApologiseCooldown>>
 					<<if $wraith.state is "haunt">>
 						당신은 <<him>>에게 모든 것을 빼앗아서 미안하다고 말한다.
 					<<else>>
@@ -3711,11 +3712,11 @@
 					<</if>>
 					<<set $mouthactiondefault to "plead">>
 					<<if $apologised is 0>>
-						<<set $apologised to 1>><<set $speechapologise to 1>><<set $wraithApologise to true>><<set $wraithApologiseCooldown to true>>
+						<<set $apologised to 1>><<set $speechApologise to 1>><<set $wraithApologise to true>><<set $wraithApologiseCooldown to true>>
 						<<set $enemyanger -= 100 * (1 + $englishtrait)>>
 					<<else>>
-						<<He>>【은는】 분노하며 자신의 목을 할퀸다.
-						<<set $speechapologiseno to 1>>
+						<<He>> angrily claws at <<his>> neck.
+						<<set $speechApologiseRejected to 1>>
 					<</if>>
 				<<else>>
 					당신은 <<him>>에게 나쁘게 굴어서 미안하다고 말한다.
@@ -3724,7 +3725,7 @@
 						<span class="red"><<He>>【은는】 코웃음 친다.</span>
 						<<if $apologised is 0>>
 							<<set $enemyanger += Math.clamp(25 - $englishtrait * 20, $enemyangermax / -4, $enemyangermax / 2)>>
-							<<set $apologised to 1>><<set $speechapologiseunforgiving to 1>>
+							<<set $apologised to 1>><<set $speechApologiseUnforgiving to 1>>
 						<<else>>
 							<<set $enemyanger += Math.clamp(100 - $englishtrait * 20, 0, $enemyangermax / 2)>>
 						<</if>>
@@ -3735,19 +3736,19 @@
 						<<else>>
 							상대는 그저 코웃음 치며 말한다. "쟤 말은 듣지 마."
 						<</if>>
-						<span class="red"><<He>>【은는】 고개를 끄덕이고, 당신의 사과를 무시한다.</span>
-						<<set $apologised to 1>><<set $speechapologiseunforgiving to 1>>
+						<span class="red"><<He>> nods, and ignores your apology.</span>
+						<<set $apologised to 1>><<set $speechApologiseUnforgiving to 1>>
 						<<set $enemyanger += Math.clamp(25 - $englishtrait * 20, $enemyangermax / -2, $enemyangermax / 2)>>
 					<<elseif $apologised is 0>>
 						<<His>> 표정이 누그러진다.
 						<<if $NPCList[$mouthtarget].fullDescription is "Avery">>
 							<<note "에이버리의 구원자" "teal">>
 						<</if>>
-						<<set $apologised to 1>><<set $speechapologise to 1>>
+						<<set $apologised to 1>><<set $speechApologise to 1>>
 						<<set $enemyanger -= 50 * (1 + $englishtrait)>>
 					<<else>>
-						<<He>>【은는】 당신을 무시한다.
-						<<set $speechapologiseno to 1>>
+						<<He>> ignores you.
+						<<set $speechApologiseRejected to 1>>
 					<</if>>
 				<</if>>
 			<</if>>
@@ -3759,7 +3760,7 @@
 				<<wheeze>>
 			<<else>>
 				<<set $mouthactiondefault to "plead">>
-				<<set $trauma -= $traumagain>><<set $traumagain to 0>><<set $speechforgive to 1>><<set $angelforgive to 1>>
+				<<set $trauma -= $traumagain>><<set $traumagain to 0>><<set $speechForgive to 1>><<set $angelforgive to 1>>
 				<<traumaClamp>>
 				<<actionsforgive>>
 			<</if>>
@@ -3882,7 +3883,7 @@
 				<<set $mouthaction to 0>><<set $mouthactiondefault to "bitepussy">><<personselect $mouthtarget>>
 				당신은 <<hisselect $mouthtarget>> 음순을 꽉 깨문다. <<He>>【은는】 <<if $enemytype is "man">>비명을 지르며<<elseif $enemytype is "beast">>으르렁거리며<<else>>날카로운 비명을 지르며<</if>> 고통스러워하며 물러난다.
 				<<set $NPCList[$mouthtarget].vagina to 0>><<set $NPCList[$mouthtarget].location.genitals to 0>>
-				<<defiance 20 $mouthtarget>><<attackstat>><<control 15>><<set $mouthuse to 0>><<set $penisbitten to 1>><<set $mouthstate to 0>><<set $speechhit to 1>>
+				<<defiance 20 $mouthtarget>><<attackstat>><<control 15>><<set $mouthuse to 0>><<set $penisbitten to 1>><<set $mouthstate to 0>><<set $speechPlayerHits to 1>>
 				<<if $transformationParts.traits.fangs isnot "disabled">>
 					<<defiance 20 $mouthtarget>>
 					당신은 핥아서 송곳니를 깨끗이 닦아낸다.
@@ -4323,7 +4324,7 @@
 				<<wheeze "<<him>>에게 콘돔을 쓰라고 말한다">>
 			<<else>>
 				<<set $mouthactiondefault to "rest">><<sub 2>>
-				<<if $NPCList[$mouthtarget].condom and $NPCList[$mouthtarget].condom.willUse is true>><<set $_checkSkip to true>><</if>>
+				<<if $NPCList[$mouthtarget].condom?.willUse is true>><<set $_checkSkip to true>><</if>>
 				<<if $consensual is 0>>
 					<<set $_condomAskBaseDifficulty to 2000 + 10 * (100 - $NPCList[$mouthtarget].pregnancyAvoidance)>>
 					<<set $_condomAskDifficultyMultiplier to 200>>
@@ -4335,7 +4336,9 @@
 				<<set $NPCList[$mouthtarget].condomAsk to true>>
 				당신은 <<combatperson>>에게 콘돔을 사용해 달라고 부탁한다.
 				<<if $role is "islander" and (!$islander_language or $islander_language lt 100)>>
-					<span class="red"><<if $enemyno gte 2>>그들은<<else>><<He>>【은는】 <</if>> 당신의 말을 이해하지 못하고,</span> 말을 무시한다.
+					<span class="red"><<if $enemyno gte 2>>They don't<<else>><<He>> doesn't<</if>> understand your words,</span> and <<if $enemyno gte 2>>ignore<<else>>ignores<</if>> them.
+				<<elseif $role is "creature">>
+					<span class="red">You don't think <<if $enemyno gte 2>>they understand<<else>>it understands<</if>> you.</span>
 				<<elseif combatSkillCheck("seduction", $mouthtarget, $NPCList[$mouthtarget].fullDescription, $_condomAskBaseDifficulty, $_condomAskDifficultyMultiplier) or $gamemode is "soft" or $gloryhole or $npcrow.includes($mouthtarget) or $_checkSkip>>
 					<<if !$npcrow.includes($mouthtarget)>>
 						<<if $settings.condomLevel is 1 or !$NPCList[$mouthtarget].condom>>
@@ -4955,8 +4958,8 @@
 
 		<<if $mouthaction is "pay">>
 			<<set $mouthaction to 0>><<set $mouthactiondefault to "rest">>
-			<<if $money gte $rentmoney + ($babyRent or 0)>>
-				<<set $speechpay to 1>>
+			<<if $money gte $rentMoney + ($babyRent or 0)>>
+				<<set $speechPay to 1>>
 				<<if $speech_attitude is "meek">>
 					"그, 그만!" 당신이 외친다. "돈을 줄 테니까, 그... 로빈은 그냥 놔줘."
 				<<elseif $speech_attitude is "bratty">>
@@ -4965,7 +4968,7 @@
 					"<<nnpc_him "Robin">>【을를】 놔줘!" 당신이 외친다. "돈은 있어. 내가 낼게."
 				<</if>>
 			<<else>>
-				<<set $speechpay to -1>>
+				<<set $speechPay to -1>>
 				<<if $speech_attitude is "meek">>
 					"그, 그만!" 당신이 소리친다. "가진 게 부족하긴, 하, 하지만... 제발 <<nnpc_him "Robin">>【은는】 그냥 놔줘!"
 				<<elseif $speech_attitude is "bratty">>
@@ -5081,9 +5084,13 @@
 							<<else>>
 								그 창백한 형체는 계속해서 떠다니며 따라온다.
 							<</if>>
+						<<elseif $NPCList[0].type isnot "human">>
+							The <<print $NPCList[0].fullDescription>> is still following you.
 						<<else>>
 							<<print window.KR.getDescriptionKr($NPCList[0].fullDescription)>>【이가】 여전히 당신을 쫓아오고 있다.
 						<</if>>
+					<<elseif $NPCList[0].type isnot "human">>
+						The <<person1>><<beasttype>> is still following you.
 					<<else>>
 						<<person1>><<person>>【이가】 여전히 당신을 쫓아오고 있다.
 					<</if>>
@@ -5095,20 +5102,28 @@
 							<<else>>
 								<<if $wraith.seen gte 3>>낯익은 <</if>>창백한 형체가 당신 뒤로 떠다니고 있지만, 당신의 존재를 알아채지 못한 것 같다.
 							<</if>>
-							발은 땅에 닿지 않지만, 발소리는 여전히 들려온다.
+							Its feet don't touch the ground, but you still hear footsteps.
+						<<elseif $NPCList[0].type isnot "human">>
+							You see a <<person1>><<beasttype>> following you. <span class="pink">It's the <<print $NPCList[0].fullDescription>>.</span>
 						<<else>>
 							당신을 쫓아오는 <<person1>><<personsimple>>【이가】 보인다. <span class="pink"><<print window.KR.getDescriptionKr($NPCList[0].fullDescription)>>【이】다.</span>
 						<</if>>
+					<<elseif $NPCList[0].type isnot "human">>
+						You see a <<person1>><<beasttype>> following you.
 					<<else>>
 						당신을 쫓아오는 <<person1>><<person>>【이가】 보인다.
 					<</if>>
 				<</if>>
 				<<if $npcrow.includes(0)>>
 					<<if $NPCList[0].fullDescription is "Ivory Wraith">>
-						그것은
+						It
+					<<elseif $NPCList[0].type isnot "human">>
+						<<bHe>>
 					<<else>>
 						<<nnpc_He $NPCList[0].fullDescription>>【은는】 
 					<</if>>
+				<<elseif $NPCList[0].type isnot "human">>
+					<<bHe>>
 				<<else>>
 					<<He>>【은는】 
 				<</if>>
@@ -5127,9 +5142,17 @@
 				<</if>>
 				움직이고,
 				<<if $NPCList[0].skills.security gte 1000>>
-					<span class="red"><<his>> 시선이 꿰뚫어 볼 듯하다.</span>
+					<<if $NPCList[0].type isnot "human">>
+						<span class="red"><<bhis>> gaze is piercing.</span>
+					<<else>>
+						<span class="red"><<his>> gaze is piercing.</span>
+					<</if>>
 				<<elseif $NPCList[0].skills.security gte 800>>
-					<span class="pink"><<his>> 눈에는 불순한 빛이 서려 있다.</span>
+					<<if $NPCList[0].type isnot "human">>
+						<span class="pink">has a devious glint in <<bhis>> eyes.</span>
+					<<else>>
+						<span class="pink">has a devious glint in <<his>> eyes.</span>
+					<</if>>
 				<<elseif $NPCList[0].skills.security gte 600>>
 					<span class="purple">집중한 모습이다.</span>
 				<<elseif $NPCList[0].skills.security gte 400>>
@@ -5140,15 +5163,18 @@
 					<span class="teal">딴생각에 잠긴 듯하다.</span>
 				<</if>>
 				<<if $enemyno is 2>>
-					<<person2>><<person>>【이가】 <<person1>><<him>>【을를】 따라온다.
+					<<if $NPCList[0].type isnot "human">>
+						A <<person2>><<beasttype>> follows <<person1>><<bhim>>.
+					<<else>>
+						A <<person2>><<person>> follows <<person1>><<him>>.
+					<</if>>
 				<<elseif $enemyno gte 3>>
-					<<switch $enemyno>>
-						<<case 6>>다섯 명의
-						<<case 5>>네 명의
-						<<case 4>>세 명의
-						<<case 3>>두 명의
-					<</switch>>
-					다른 자들도 <<him>>【을를】 따라온다.
+					<<Number `$enemyno - 1`>>
+					<<if $NPCList[0].type isnot "human">>
+						others follow <<bhim>>.
+					<<else>>
+						others follow <<him>>.
+					<</if>>
 				<</if>>
 				<<set $stalk_assess to true>>
 			<</if>>
@@ -6301,10 +6327,10 @@
 			<<set $penisaction to 0>><<set $penisactiondefault to "otheranusescape">><<actionsotheranusescape>><<brat 10 $penistarget>>
 			<<set $penisuse to "otheranus">><<set $penisstate to "otheranusentrance">>
 			<<if $NPCList[$penistarget].vagina is "otheranusimminent">>
-				<<set $NPCList[$penistarget].vagina to "otheranusentrance">><<print '<<set $speechotheranusescape'+ ($penistarget + 1) +' to 1>>'>>
+				<<set $NPCList[$penistarget].vagina to "otheranusentrance">><<set $NPCList[$penistarget].speechotheranusescape to 1>>
 			<</if>>
 			<<if $NPCList[$penistarget].penis is "otheranusimminent">>
-				<<set $NPCList[$penistarget].penis to "otheranusentrance">><<print '<<set $speechotheranusescape'+ ($penistarget + 1) +' to 1>>'>>
+				<<set $NPCList[$penistarget].penis to "otheranusentrance">><<set $NPCList[$penistarget].speechotheranusescape to 1>>
 			<</if>>
 		<</if>>
 
@@ -6515,14 +6541,14 @@
 	<<set _action to _args[0] or "무언가 말한다">>
 	<<switch _args[1]>>
 		<<case 1>>
-			당신은 _action【을를】 하려 하지만, <span class="purple">이미 목을 졸리고 있어 헐떡거리는 숨소리만 나올 뿐이다.</span>
-			<<set $speechwheezeaskchokerough to 1>>
+			You try to _action, <span class="purple">but only a wheeze comes out because you are already being choked.</span>
+			<<set $speechChokedAlready to 1>>
 		<<case 2>>
-			당신은 _action【을를】 하려 하지만, <span class="lewd">목을 조르는 손 때문에 말을 할 수 없어 음란한 신음만 나올 뿐이다.</span>
-			<<set $speechwheezelewd to 1>>
+			You try to _action, <span class="lewd">but only a lewd moan comes out because the hand around your throat prevents you from talking.</span>
+			<<set $speechChokedMoan to 1>>
 		<<default>>
-			당신은 _action【을를】 하려 하지만, <span class="red">목을 꽉 쥔 손 때문에 막힌 숨소리만 나올 뿐이다.</span><<gwillpower>><<willpower 1>>
-			<<set $speechwheeze to 1>>
+			You try to _action, <span class="red">but only a choked wheeze comes out because of the hand squeezing your throat.</span><<gwillpower>><<willpower 1>>
+			<<set $speechChokedWheeze to 1>>
 	<</switch>>
 <</widget>>
 

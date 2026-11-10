@@ -1,0 +1,107 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $estate.cards.clothesRebuyTerms and $estate.cards.clothesRebuyTerms.price gt $money>>",
+   "\t\t<span class=\"blue\">You don't have enough money to accept the deal.</span>"
+  ],
+  "old_kr": [
+   "\t<<if $estate.cards.clothesRebuyTerms and $estate.cards.clothesRebuyTerms.price gt $money>>",
+   "\t\t<span class=\"blue\">거래를 받아들일 돈이 부족합니다.</span>"
+  ],
+  "new_en": [
+   "\t<<if $estate.cards.clothesRebuyTerms?.price gt $money>>",
+   "\t\t<span class=\"blue\">You don't have enough money to accept the deal.</span>"
+  ],
+  "context": "<<widget \"cards_oral_options\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\"Where were we?\" <<he>> teases."
+  ],
+  "old_kr": [
+   "\t\t\"우리가 어디까지 했더라?\" <<he>>【이가】 짓궂게 묻는다."
+  ],
+  "new_en": [
+   "\t\t\"Where were we?\" <<he>> teases.",
+   "\t\t<<estate_cards_bet>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $_susGain gt 0 and $estatePersistent and $estatePersistent.suspicion gte 100>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $_susGain gt 0 and $estatePersistent?.suspicion gte 100>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $estatePersistent.markedCards and $estatePersistent.markedCards.has(`${_c.name}${_c.suits[0]}`)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $estatePersistent.markedCards?.has(`${_c.name}${_c.suits[0]}`)>>"
+  ],
+  "context": "\t\t\t<<set _c to $blackjack.cards[$_i]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $estatePersistent.markedCards and $estatePersistent.markedCards.has(`${_c.name}${_c.suits[0]}`)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $estatePersistent.markedCards?.has(`${_c.name}${_c.suits[0]}`)>>"
+  ],
+  "context": "\t\t<<set _c to $blackjack.dealerCards[1]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $estatePersistent.markedCards and $estatePersistent.markedCards.has(`${_c.name}${_c.suits[0]}`)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $estatePersistent.markedCards?.has(`${_c.name}${_c.suits[0]}`)>>"
+  ],
+  "context": "\t\t\t\t<<set _c to _d[_i]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $estate.cards.confiscatedClothes and $estate.cards.confiscatedClothes.length gt 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $estate.cards.confiscatedClothes?.length gt 0>>"
+  ],
+  "context": "<<widget \"estate_cards_finish\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $estate.cards.luckStats and $estate.cards.luckStats.total gte 5>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $estate.cards.luckStats?.total gte 5>>"
+  ],
+  "context": "\t<!-- the first 4 games will always be neutral -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<estate_cards_bet>>"
+  ],
+  "context": "\t\t\"Where were we?\" Wren says."
+ }
+]

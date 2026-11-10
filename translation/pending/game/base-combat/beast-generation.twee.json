@@ -1,0 +1,99 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<!-- NEW Args are NPC#(1-6), Type, Gender-->"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<!-- NEW Args are NPC#(1-6), Type, Gender, Genitals, Monster status, Victim status-->"
+  ],
+  "context": "<<widget \"generateBEAST\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<!-- There isn't a generic \"creature\" beast type in the beast settings, so \"creature\" uses the wolf settings -->",
+   "\t<<set _settingsType to _type is \"creature\" ? \"wolf\" : _type>>"
+  ],
+  "context": "\t<<set _type to _args[1]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set _beast_victim to _args[5]>>"
+  ],
+  "context": "\t<<set _beast_monster to _args[4]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $NPCList[_n].gender to beastMaleChance($NPCList[_generate_partner].pronoun) gte random(1, 100) ? \"m\" : \"f\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $NPCList[_n].gender to beastMaleChanceForType(_settingsType, $NPCList[_generate_partner].pronoun) gte random(1, 100) ? \"m\" : \"f\">>"
+  ],
+  "context": "\t\t<!-- This determines if the couple is homo or not. The generated NPC's partner is, by default, the NPC directly before them in NPCList. The partner can be selected manually with an argument. -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if random(1, 100) lte beastMaleChance()>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if random(1, 100) lte beastMaleChanceForType(_settingsType)>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif !$settings.bestialityEnabled and $NPCList[0].monster is \"monster\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif _beast_monster is \"monster\">>",
+   "\t\t<<set $NPCList[_n].monster to \"monster\">>",
+   "\t<<elseif _beast_victim and victimsAlwaysMonsterForType(_settingsType)>>",
+   "\t\t<<set $NPCList[_n].monster to \"monster\">>",
+   "\t<<elseif !animalSexEnabledForType(_settingsType) and $NPCList[0].monster is \"monster\">>"
+  ],
+  "context": "\t\t<<set $NPCList[_n].monster to 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $settings.monsterChance gte $rng and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly) or _beast_monster is \"monster\">>",
+   "\t\t<<set $NPCList[_n].monster to \"monster\">>",
+   "\t<</if>>",
+   "",
+   "\t<<if $NPCList[_n].monster is 0 and !$settings.bestialityEnabled and $settings.monsterChance gt 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif monsterChanceForType(_settingsType) gte $rng and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType(_settingsType))>>"
+  ],
+  "context": "\t\t<<set $NPCList[_n].monster to \"monster\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if random(1, 100) lte $settings.darkSkinChance>>",
+   "\t\t\t<<set $NPCList[_n].skincolour to \"black\">>",
+   "\t\t<<else>>",
+   "\t\t\t<<set $NPCList[_n].skincolour to \"white\">>",
+   "\t\t<</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $NPCList[_n].skincolour to randomSkinTone()>>"
+  ],
+  "context": "\t\t<</if>>"
+ }
+]

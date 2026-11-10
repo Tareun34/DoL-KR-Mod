@@ -96,7 +96,7 @@
 		<<elseif _tmppspot is "b">>
 			네 <<bottom>> 위에서 <<print _tmpsmoving>> 게 정말 좋아<<print _tmpmark>>"
 		<<elseif _tmppspot is "bi">>
-			<span class="red">네 <<bottom>> 안에서 <<print _tmpsmoving>> 게 정말 좋아<<print _tmpmark>></span>"
+			<span class="red"> inside your <<bottom>><<print _tmpmark>></span>"
 		<<elseif _tmppspot is "i">>
 			<span class="red">네 몸 안에서 <<print _tmpsmoving>> 게 정말 좋아<<print _tmpmark>></span>"
 			<<set _tmpproof to "f">>

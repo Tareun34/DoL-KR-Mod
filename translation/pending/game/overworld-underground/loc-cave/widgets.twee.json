@@ -1,0 +1,29 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $settings.bestialityEnabled and $settings.slugsEnabled and random(1, 2) is 2>>",
+   "\t\t\t<span class=\"red\">A shape lunges from the water.</span> It misses, landing on the cave wall behind you. A giant slug. Another swims towards you."
+  ],
+  "old_kr": [
+   "\t\t<<if $settings.bestialityEnabled and $settings.slugsEnabled and random(1, 2) is 2>>",
+   "\t\t\t<span class=\"red\">형체 하나가 물속에서 달려든다.</span> 당신을 빗나가 당신 뒤의 동굴 벽에 떨어진다. 거대한 민달팽이다. 다른 하나가 당신을 향해 헤엄쳐 온다."
+  ],
+  "new_en": [
+   "\t\t<<if $settings.slugsEnabled and random(1, 2) is 2>>",
+   "\t\t\t<span class=\"red\">A shape lunges from the water.</span> It misses, landing on the cave wall behind you. A giant slug. Another swims towards you."
+  ],
+  "context": "\t<<if $pursuit gte 6>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if random(1, 2) is 2 and ($settings.bestialityEnabled or $settings.voreEnabled or $settings.swarmsEnabled) and $settings.slugsEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if random(1, 2) is 2 and ($settings.voreEnabled or $settings.swarmsEnabled) and $settings.slugsEnabled>>"
+  ],
+  "context": "\t\t<<if dangerEvent()>>"
+ }
+]

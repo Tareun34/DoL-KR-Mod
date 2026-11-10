@@ -1072,7 +1072,7 @@
 <</if>>
 <br><br>
 <<set _genderUnknown to isHermOrCrossdresser() and !$genderknown.includes("Whitney")>>
-<<if _genderUnknown and !playerChastity("hidden")>>
+<<if _genderUnknown and !playerChastity("hidden") and $settings.nudeGenderPerception !== 0>>
 	<<set $genderknown.pushUnique("Whitney")>><<set _whitneyGenderUnknown is true>>
 	<<if $player.penisExist and $player.vaginaExist>>
 		"둘 다 있다고?" 휘트니가 믿을 수 없다는 듯 말한다. "그게 어떻게 가능해?<<if $schoolrep.herm gte 3>> 내 말은, 소문은 들어봤지만...<</if>>"

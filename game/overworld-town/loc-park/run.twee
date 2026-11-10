@@ -497,8 +497,8 @@
 	베일리는 돈을 챙겨 넣다가 당신이 달려 지나가는 것을 본다.
 	<br><br>
 	<<if $park_run_seen_by.includes("bailey")>>
-		<<if $renttime lte 0>>
-			"도망갈 생각 마. 넌 나한테 빚이—"
+		<<if $rentTime lte 0>>
+			"Don't you dare run. You owe me—"
 			<br>
 			당신은 재빨리 달아난다.
 
@@ -510,8 +510,8 @@
 			"내 돈 제때 갚는 게 좋을 거야."
 		<</if>>
 	<<else>>
-		<<if $renttime lte 0>>
-			"찾고 있었어. 돈 갚을 시간—"
+		<<if $rentTime lte 0>>
+			"I've been looking for you. Time to pay—"
 			<br>
 			당신은 재빨리 달아난다.
 		<<else>>

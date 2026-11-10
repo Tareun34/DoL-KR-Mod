@@ -1,0 +1,34 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<link [[Approach Sydney|Adult Shop Dildo Thief Approach Sydney]]>><<set $phase to 0>><</link>>",
+   "\t<<if $speech_attitude is \"bratty\" or $debug is 1>>"
+  ],
+  "old_kr": [
+   "\t<<link [[시드니에게 다가간다|Adult Shop Dildo Thief Approach Sydney]]>><<set $phase to 0>><</link>>",
+   "\t<<if $speech_attitude is \"bratty\" or $debug is 1>>"
+  ],
+  "new_en": [
+   "\t<<link [[Approach Sydney|Adult Shop Dildo Thief Approach Sydney]]>><<set $phase to 0>><</link>>",
+   "\t<<if $speech_attitude is \"bratty\" or $debug>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Next|Sirris Shop Assistant Refuse Creeps Rape]]>><<set $molestationstart to 1>><<set $phase to 1>><</link>>",
+   "<<if $debug is 1>>"
+  ],
+  "old_kr": [
+   "<<link [[다음|Sirris Shop Assistant Refuse Creeps Rape]]>><<set $molestationstart to 1>><<set $phase to 1>><</link>>",
+   "<<if $debug is 1>>"
+  ],
+  "new_en": [
+   "<<link [[Next|Sirris Shop Assistant Refuse Creeps Rape]]>><<set $molestationstart to 1>><<set $phase to 1>><</link>>",
+   "<<if $debug>>"
+  ],
+  "context": "<<set $NPCList[1].lefthand to \"hair\">><<giveNPCsextoy 1 dildo \"right\">><<giveNPCsextoy 0 flog>>"
+ }
+]

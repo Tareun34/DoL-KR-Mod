@@ -1,0 +1,370 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"I doubt the cakes are any good here,\" <<he>> says, keeping <<his>> voice low. \"Not compared to what my parents make.\" "
+  ],
+  "old_kr": [
+   "\t\"여기 케이크가 맛있을지는 모르겠네,\" <<he>>【이가】 목소리를 낮추며 말한다. \"우리 부모님이 만드신 거에 비하면 별로일걸.\" "
+  ],
+  "new_en": [
+   "\t\"I doubt the cakes are any good here,\" <<he>> says, keeping <<his>> voice low. \"Not compared to what my parents make.\""
+  ],
+  "context": "<<if $rng gte 67>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Alex nods. \"Don't worry. I should really be working too. See you are the farm.\" <<He>> walks away."
+  ],
+  "old_kr": [
+   "알렉스는 고개를 끄덕인다. \"신경 쓰지 마. 나도 일하러 가봐야겠다. 농장에서 보자.\" <<He>>【은는】 걸어간다."
+  ],
+  "new_en": [
+   "Alex nods. \"Don't worry. I should really be working too. See you at the farm.\" <<He>> walks away."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\t<<link [[Grab a bite to eat|Street Alex Cafe]]>><<set $phase to 0>><</link>>"
+  ],
+  "old_kr": [
+   "\t",
+   "\t<<link [[밥을 먹으러 간다|Street Alex Cafe]]>><<set $phase to 0>><</link>>"
+  ],
+  "new_en": [
+   "",
+   "\t<<link [[Grab a bite to eat|Street Alex Cafe]]>><<set $phase to 0>><</link>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You don't react. "
+  ],
+  "old_kr": [
+   "당신은 아무 반응도 보이지 않는다. "
+  ],
+  "new_en": [
+   "You don't react."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\tAlex tucks into <<person1>><<his>> sandwich, none the wiser, until <<he>> finishes the last crumb. Satisfied, Alex leaves the cafe with you. \"Better head back,\" <<he>> says. \"Lots of work to do. Nice seeing you.\" <<He>> walks away."
+  ],
+  "old_kr": [
+   "\t",
+   "\t알렉스는 영문도 모른 채 샌드위치를 맛있게 베어 물고, 마지막 빵가루까지 싹 비운다. 알렉스는 만족스러운 듯 당신과 함께 카페를 나선다. \"돌아가는 게 낫겠어,\" <<he>>【이가】 말한다. \"할 일이 많거든. 만나서 반가웠어.\" <<He>>【은는】 걸어간다."
+  ],
+  "new_en": [
+   "",
+   "\tAlex tucks into <<person1>><<his>> sandwich, none the wiser, until <<he>> finishes the last crumb. Satisfied, Alex leaves the cafe with you. \"Better head back,\" <<he>> says. \"Lots of work to do. Nice seeing you.\" <<He>> walks away."
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\t<<link [[Next|Street Alex Cafe Whitney Intro]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t",
+   "\t<<link [[다음|Street Alex Cafe Whitney Intro]]>><</link>>"
+  ],
+  "new_en": [
+   "",
+   "\t<<link [[Next|Street Alex Cafe Whitney Intro]]>><</link>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\t<<link [[Next|Street Alex Cafe Whitney Intro Bully 2]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t",
+   "\t<<link [[다음|Street Alex Cafe Whitney Intro Bully 2]]>><</link>>"
+  ],
+  "new_en": [
+   "",
+   "\t<<link [[Next|Street Alex Cafe Whitney Intro Bully 2]]>><</link>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\tWhitney's gang look to <<him>>, as if waiting for a signal. Whitney grins."
+  ],
+  "old_kr": [
+   "\t",
+   "\t휘트니 패거리는 마치 신호를 기다리듯 <<him>>【을를】 쳐다본다. 휘트니가 씩 웃는다."
+  ],
+  "new_en": [
+   "",
+   "\tWhitney's gang look to <<him>>, as if waiting for a signal. Whitney grins."
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\t<<link [[Next|Street Alex Cafe Whitney Intro Bully 2]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t",
+   "\t<<link [[다음|Street Alex Cafe Whitney Intro Bully 2]]>><</link>>"
+  ],
+  "new_en": [
+   "",
+   "\t<<link [[Next|Street Alex Cafe Whitney Intro Bully 2]]>><</link>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\t<<link [[Next|Street Alex Cafe Whitney Intro Bully 3]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t",
+   "\t<<link [[다음|Street Alex Cafe Whitney Intro Bully 3]]>><</link>>"
+  ],
+  "new_en": [
+   "",
+   "\t<<link [[Next|Street Alex Cafe Whitney Intro Bully 3]]>><</link>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\"Like an academic rival?\" Alex asks. <<person1>><<He>> watches Whitney snatch someone else's drink from a table, chug it down, then throw it out the door behind <<him>>. \"I'm guessing not.\""
+  ],
+  "old_kr": [
+   "\"성적 라이벌 같은 거?\" 알렉스가 묻는다. <<person1>><<He>>【은는】 휘트니가 다른 테이블에서 음료를 낚아채 단숨에 들이켠 뒤, 등 뒤 문밖으로 던져버리는 모습을 지켜본다. \"그건 아닌 것 같네.\""
+  ],
+  "new_en": [
+   "\"Like an academic rival?\" Alex asks. <<person1>><<He>> watches Whitney snatch someone else's drink from a table, chug it down, then throw it out the door behind <<person2>><<him>>. \"I'm guessing not.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\"Do you mind?\" <<he>> asks. \"We're sharing a private moment.\""
+  ],
+  "old_kr": [
+   "\"신경 쓰지 말아 줄래?\" <<he>>【이가】 말한다. \"우린 둘만의 시간을 보내는 중이거든.\""
+  ],
+  "new_en": [
+   "\"Do you mind?\" <<person1>><<he>> asks. \"We're sharing a private moment.\""
+  ],
+  "context": "<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<person2>>Whitney examines Alex's clothes. \"Country fucker?\" <<he>> asks. "
+  ],
+  "old_kr": [
+   "<<person2>>휘트니는 알렉스의 옷차림을 훑어본다. \"촌구석 놈?\" <<he>>【이가】 묻는다. "
+  ],
+  "new_en": [
+   "<<person2>>Whitney examines Alex's clothes. \"Country fucker?\" <<he>> asks."
+  ],
+  "context": "<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Whitney staggers backwards, where two of <<person2>><<his>> friends catch <<his>> arms. Others recover from their shock, and step closer to Alex. Still recovering from the blow, Whitney gestures at <<person2>><<his>> gang, trying to hold them back, but they're too focused on Alex to notice. <<ldom \"Whitney\">><<npcincr Whitney dom -1>> "
+  ],
+  "old_kr": [
+   "휘트니가 비틀거리며 뒤로 물러서자, <<person2>><<his>> 패거리 두 명이 <<his>> 양팔을 붙잡는다. 충격에서 벗어난 다른 놈들이 알렉스에게 바짝 다가선다. 휘트니는 얻어맞은 충격이 아직 가시지 않았지만 패거리를 향해 손짓하며 막으려 한다. 하지만 놈들은 알렉스에게 정신이 팔려 알아채지 못한다. <<ldom \"Whitney\">><<npcincr Whitney dom -1>> "
+  ],
+  "new_en": [
+   "Whitney staggers backwards, where two of <<person2>><<his>> friends catch <<his>> arms. Others recover from their shock, and step closer to Alex. Still recovering from the blow, Whitney gestures at <<person2>><<his>> gang, trying to hold them back, but they're too focused on Alex to notice. <<ldom \"Whitney\">><<npcincr Whitney dom -1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t",
+   "\t\tAlex rises to <<person1>><<his>> feet, looks Whitney in the eyes a moment, <span class=\"red\">then punches <<person2>><<him>> in the face.</span>"
+  ],
+  "old_kr": [
+   "\t\t",
+   "\t\t자리에서 일어난 알렉스는 휘트니의 눈을 잠시 쳐다보더니, <span class=\"red\"><<person2>><<him>>의 얼굴에 주먹을 내리꽂는다.</span>"
+  ],
+  "new_en": [
+   "",
+   "\t\tAlex rises to <<person1>><<his>> feet, looks Whitney in the eyes a moment, <span class=\"red\">then punches <<person2>><<him>> in the face.</span>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tI just didn't like the way <<he>> was talking about you."
+  ],
+  "old_kr": [
+   "\t그냥 걔가 너에 대해 지껄이는 꼴이 너무 거슬렸어."
+  ],
+  "new_en": [
+   "\tI just didn't like the way <<person2>><<he>><<person1>> was talking about you."
+  ],
+  "context": "<<if $farm_stage gte 7>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Satisifed, Alex rises to <<his>> feet. \"I had a nice time. Thanks. I better get back to the farm. Work to do.\""
+  ],
+  "old_kr": [
+   "만족스러운 듯 알렉스가 자리에서 일어난다. \"재밌었어. 고마워. 난 이만 농장으로 돌아가 봐야겠다. 할 일이 있어서.\""
+  ],
+  "new_en": [
+   "Satisfied, Alex rises to <<his>> feet. \"I had a nice time. Thanks. I better get back to the farm. Work to do.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Satisifed, Alex rises to <<his>> feet. \"I had a nice time. Thanks. I better get back to the farm. Work to do.\""
+  ],
+  "old_kr": [
+   "만족스러운 듯 알렉스가 자리에서 일어난다. \"재밌었어. 고마워. 난 이만 농장으로 돌아가 봐야겠다. 할 일이 있어서.\""
+  ],
+  "new_en": [
+   "Satisfied, Alex rises to <<his>> feet. \"I had a nice time. Thanks. I better get back to the farm. Work to do.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<effects>> "
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<effects>>"
+  ],
+  "context": ":: Street Alex Well Busy"
+ }
+]

@@ -216,8 +216,8 @@
 당신은 황야를 가로질러 행군하며, 당신을 붙잡은 자들의 음흉한 시선을 견뎌낸다.
 <<set $moor -= 5>><<pass 60>>
 <<if $moor lte 10 or $moor is undefined>>
-	높은 울타리에 도착한다. 창살 너머로 풀을 뜯는
-	<<if $settings.monsterChance gte 1 and $hallucinations gte 1 or $settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly or !$settings.bestialityEnabled>>
+	You arrive at a tall fence. Through the bars you see grazing
+	<<if monsterCanAppearForType("cow")>>
 		<<if $settings.maleVictimChance is 100>>
 			불보이들이 보인다.
 		<<elseif $settings.maleVictimChance is 0>>
@@ -425,7 +425,9 @@
 <<person3>><<if $settings.pregnancySpeechEnabled>>"씨받이?"<<else>>"개인적으로는,"<</if>> <<person>>【이가】 끼어든다. "난 생산물 쪽에 더 관심이 많아. 한몫 단단히 챙기겠어." <<He>>【이가】 손에 금속 사슬과 목줄을 들고 당신에게 다가온다.
 <br><br>
 
-<<link [[항의한다|Street Van Protest]]>><<def 1>><<stress 6>><<trauma -6>><</link>><<gstress>><<ltrauma>>
+<<set $phase to "riding">>
+
+<<link [[Protest|Street Van Protest]]>><<def 1>><<stress 6>><<trauma -6>><</link>><<gstress>><<ltrauma>>
 <br>
 <<link [[싸운다|Street Van Fight]]>><<def 1>><<set $fightstart to 1>><</link>>
 <br>
@@ -869,7 +871,7 @@
 <<if $rng gte 91>>
 	달고, 걸쭉하다. <<person>>【이가】 씨익 웃는다.
 	<br><br>
-	음란한 열기가 속에서 차오르는 것을 느끼며 당신은 몸을 뺀다. 세상이 빙빙 돌고, 정신을 차려보니 당신은 땅바닥에 쓰러져 있다. 당신의 <<genitals>>【이가】 욱신거리며 갈망한다.<<gggarousal>><<arousal 1800>><<drugs 240>>
+	You pull away as you feel a fell heat build within. The world spins, and you find yourself lying on the earth. Your <<genitals>> <<if $player.penisExist and $player.vaginaExist>>ache, and yearn<<else>>aches, and yearns<</if>>.<<gggarousal>><<arousal 1800>><<drugs 240>>
 	<br><br>
 	거친 손이 당신의 어깨를 잡자, 몸에 전율이 흐른다. 당신은 억지로 일으켜 세워진다. "아직 갈 길이 멀어." <<person>>【이가】 말한다. "도착할 때쯤이면 아주 제대로 달아올라 있겠군."
 <<elseif $rng gte 51 and !playerIsPregnant()>>

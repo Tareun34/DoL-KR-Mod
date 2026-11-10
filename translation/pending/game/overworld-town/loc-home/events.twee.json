@@ -1,0 +1,68 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tBailey scoffs and crosses <<his>> arms. \"You owe me <<printmoney $rentmoney>>.\""
+  ],
+  "old_kr": [
+   "\t\t베일리는 코웃음을 치며 팔짱을 낀다. \"넌 나한테 <<printmoney $rentmoney>> 빚졌어.\""
+  ],
+  "new_en": [
+   "\t\tBailey scoffs and crosses <<his>> arms. \"You owe me <<printmoney $rentMoney>>.\""
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $money gte $rentmoney>>",
+   "\t\t\t\"I should be able to,\""
+  ],
+  "old_kr": [
+   "\t\t<<if $money gte $rentmoney>>",
+   "\t\t\t\"그럴 수 있을 거예요,\""
+  ],
+  "new_en": [
+   "\t\t<<if $money gte $rentMoney>>",
+   "\t\t\t\"I should be able to,\""
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   ":: Home Bailey Shove Dodge",
+   "<<npc Bailey>>",
+   "<<dancedifficulty 200 800 true>>",
+   "<<if $danceSuccess>>",
+   "<span class=\"green\">You edge carefully out of Bailey's path,</span> keeping close to the wall as <<he>> passes. <<He>> glances at you in passing, saying nothing. <<lstress>><<stress -6>>",
+   "<<else>>",
+   "You try to sidestep, <span class=\"red\">but misjudge which way <<hes>> heading</span>, bumping hard into <<his>> shoulder and stepping squarely on <<his>> foot.",
+   "<br><br>",
+   "<<He>> winces and stumbles back, managing to balance the supplies before using a free hand to roughly yank you aside. \"Enough with the games.\"<<pain 1>><<gpain>>",
+   "<</if>>",
+   "<br><br>",
+   "<<link [[Next|Orphanage]]>><<endevent>><</link>>",
+   "<br>",
+   "",
+   ":: Home Bailey Shove Stand",
+   "<<npc Bailey>>",
+   "<<if $speech_attitude is \"meek\">>",
+   "You hold your ground, hoping Bailey will go around you.",
+   "<<elseif $speech_attitude is \"bratty\">>",
+   "You stay right where you are, refusing to step aside.",
+   "<<else>>",
+   "You freeze in place, caught off guard before you can even react.",
+   "<</if>>",
+   "<br><br>",
+   "<<He>> doesn't so much as break stride. <<His>> elbow catches you hard as <<he>> passes, shoving you off balance. \"Enough with the games.\"<<pain 1>><<gpain>>",
+   "<br><br>",
+   "<<link [[Next|Orphanage]]>><<endevent>><</link>>",
+   "<br>"
+  ],
+  "context": "<br>"
+ }
+]

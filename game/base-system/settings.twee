@@ -6,7 +6,8 @@
 	<<set $player.gender_body to "a">>
 	<<set $player.bodyshape to "classic">>
 	<<set $player.ballsExist to false>>
-	<<set $player.freckles to false>>
+	<<set $player.skin.faceFreckles to false>>
+	<<set $player.skin.bodyFreckles to "none">>
 	<<set $player.breastsize to 0>>
 	<<set $player.penissize to 3>>
 	<<set $bodysize to 2>>
@@ -24,18 +25,15 @@
 	<<set $background to "waif">>
 	<<set $startingseason to "autumn">>
 	<<set $gamemode to "normal">>
-	<<set $settings.darkSkinChance to 10>>
 	<<set $settings.swarmsEnabled to true>>
 	<<set $settings.spidersEnabled to true>>
 	<<set $settings.slugsEnabled to true>>
 	<<set $settings.waspsEnabled to true>>
 	<<set $settings.beesEnabled to true>>
 	<<set $settings.lurkersEnabled to true>>
-	<<set $settings.horsesEnabled to true>>
 	<<set $settings.bodyWritingLevel to 3>>
 	<<set $settings.parasitesEnabled to true>>
 	<<set $settings.ruinedOrgasmEnabled to true>>
-	<<set $settings.bestialityEnabled to true>>
 	<<set $settings.slimesEnabled to true>>
 	<<set $settings.voreEnabled to true>>
 	<<set $settings.tentaclesEnabled to true>>
@@ -69,9 +67,11 @@
 	<<set $settings.forcedCrossdressingEnabled to true>>
 	<<set $saveName to "">>
 	<<set $settings.skillCheckStyle to "words">>
-	<<set $blackwolfmonster to 1>>
-	<<set $greathawkmonster to 1>>
-	<<set $nightmonstermonster to 1>>
+	<<set $settings.namedBeasts to {
+		blackwolf: {monsterChance: 50, hallucinationsOnly: true},
+		greathawk: {monsterChance: 50, hallucinationsOnly: true},
+		nightmonster: {monsterChance: 50, hallucinationsOnly: true}
+	}>>
 	<<set $reducedLineHeight to false>>
 	<<set $settings.clothingCostModifier to 1>>
 	<<set $settings.underwearCostModifier to 1>>
@@ -102,6 +102,9 @@
 	<<set $settings.tendingYieldModifier to 5>>
 	<<set $notifyUpdate = true>>
 	<<set _tan to 0>>
+	<<set $settings.skinToneMin to 0>>
+	<<set $settings.skinToneMode to 50>>
+	<<set $settings.skinToneMax to 100>>
 
 	<<startingPlayerImageReset>>
 <</widget>>
@@ -115,7 +118,6 @@
 	<</if>>
 	<<switch $currentSettings>>
 		<<case "quickStart" "tweak">><<replace #settingsDiv>><<quickStart>><</replace>>
-		<<case "presetConfirmDetails">><<replace #settingsDiv>><<presetConfirmDetails>><</replace>>
 		<<case "characterSettings" "character">>
 			<<replace #settingsDiv>><<characterSettings>><</replace>>
 			<<if StartConfig.enableImages and $passage is "Start">><<startingPlayerImageUpdate>><<removeclass #startingPlayerImage "hidden">><</if>>
@@ -316,11 +318,10 @@
 	<<if $passage is "Start">>
 		<<switch _selectedStart>>
 			<<case "default">>
-				<div class="my-1"><span class="gold bold">현재 설정:</span> <i>조정 가능</i></div>
-				<<button "게임 시작">>
-					<<presets _kinkPreset "save">>
-					<<presets _namedNpcPreset "save">>
-					<<presets _monstersPreset "save">>
+				<div class="my-1"><span class="gold bold">Current Settings:</span> <i>Adjustable</i></div>
+				<<button "Start Game!">>
+					<<run applyKinkPreset(_kinkPreset)>>
+					<<run applyMonstersPreset(_monstersPreset)>>
 					<<if _pregnancytype is "disabled">>
 						<<set $settings.playerPregnancyHumanEnabled to false>>
 						<<set $settings.playerPregnancyBeastEnabled to false>>
@@ -330,8 +331,6 @@
 					<<else>>
 						<<set $settings.pregnancyType to _pregnancytype or "realistic">>
 						<<set $settings.playerPregnancyHumanEnabled to true>>
-						<<set $settings.playerPregnancyBeastEnabled to true>>
-						<<set $settings.playerPregnancyEggLayingEnabled to true>>
 						<<set $settings.npcPregnancyEnabled to true>>
 						<<set $settings.nnpcPregnancyEnabled to true>>
 					<</if>>
@@ -354,7 +353,7 @@
 				<div class="my-1"><span class="gold bold">현재 설정:</span> <i>무작위</i></div>
 				<<button "게임 시작">>
 						/*Rerolls all settings*/
-					<<presets "randomize" "characterSettings" `randomizeSettings()`>>
+					<<randomiseSettings "all" "characterSettings">>
 					<<if ($feats.locked or ($settings.cheatsEnabledToggle is false and $settings.rentCostModifier gte 1 and $settings.tendingYieldModifier lte 5)) and ($feats.soft or ($gamemode isnot "soft" and $settings.allureModifier gte 1)) and ($feats.pregnancyLocked or ($settings.humanPregnancyMonths gte 3 and $settings.wolfPregnancyWeeks gte 4))>>
 						<<settingsExitFunction>>
 					<<else>><!-- confirm cheats -->
@@ -513,13 +512,21 @@
 		<<set $feats.pregnancyLocked to true>>
 	<</if>>
 	<<updatehistorycontrols>>
-	<<presets _namedNpcPreset "save">>
 	<<initnpcgender>>
+	<<if _namedNpcFemaleGenitals and _namedNpcFemaleGenitals isnot "random">>
+		<<assignNPCGenitalsByPronounCore "f" _namedNpcFemaleGenitals true>>
+	<</if>>
+	<<if _namedNpcMaleGenitals and _namedNpcMaleGenitals isnot "random">>
+		<<assignNPCGenitalsByPronounCore "m" _namedNpcMaleGenitals true>>
+	<</if>>
 	<<updatePersistentNPCs>>
 	<<hirsuteHideCheck>>
 	<<generateTipsList>>
-	<<if $player.freckles is "random">>
-		<<set $player.freckles to (random(1, 5) is 1)>>
+	<<if $player.skin.faceFreckles is "random">>
+		<<set $player.skin.faceFreckles to (random(1, 5) is 1)>>
+	<</if>>
+	<<if $player.skin.bodyFreckles is "random">>
+		<<set $player.skin.bodyFreckles to either("none", "none", "none", "upper", "full")>>
 	<</if>>
 	/* Reseeds named NPC cycle data in case the incomplete pregnancy content setting changed */
 	<<npcPregnancyUpdater>>
@@ -544,53 +551,9 @@
 	<</if>>
 <</widget>>
 
-/*complete:{"Vrelnir (Default)":"vrelDefault","Lollipop Scythe":"lollipopScythe","PurityGuy":"purityGuy","Fangi":"fangi"},*/
-<<widget "quickStartOptions">>
-	<<if _quickStartOptions is undefined>>
-		<<set _quickStartOptions to {
-			player:{"여성 부랑아":"femaleWaif","남성 부랑아":"maleWaif", "양성 부랑아":"hermaphroditeWaif", "브렐니르 PC":"vrel", "크로스드레서":"crossdresser","터프가이":"toughGuy"},
-			genericNpc:{
-				"기본 성별":"genericNpcDefaultGender",
-				"전원 남성":"genericNpcAllMaleGender",
-				"75% 남성":"genericNpc75MaleGender",
-				"전원 여성":"genericNpcAllFemaleGender",
-				"75% 여성":"genericNpc75FemaleGender",
-				"전원 이성":"genericNpcAllOppositeGenders",
-				"90% 이성":"genericNpc90OppositeGenders",
-				"75% 이성":"genericNpc75OppositeGenders",
-				"전원 동성":"genericNpcAllSameGenders",
-				"90% 동성":"genericNpc90SameGenders",
-				"75% 동성":"genericNpc75SameGenders",
-			},
-			namedNpc:{"기본 성별":"namedNpcDefaultGender", "전원 남성":"namedNpcAllMaleGender", "전원 여성":"namedNpcAllFemaleGender"},
-			beasts:{
-				"기본 성별":"beastDefaultGenders",
-				"전원 수컷":"beastMaleGenders",
-				"75% 수컷":"beast75MaleGenders",
-				"전원 암컷":"beastFemaleGenders",
-				"75% 암컷":"beast75FemaleGenders",
-				"전원 이성":"beastOppositeGenders",
-				"90% 이성":"beast90OppositeGenders",
-				"75% 이성":"beast75OppositeGenders",
-				"전원 동성":"beastSameGenders",
-				"90% 동성":"beast90SameGenders",
-				"75% 동성":"beast75SameGenders",
-			},
-			monsters:{"환각 상태일 때":"monstersDefault", "수인 없음":"monstersNone", "전부 수인":"monstersAll"},
-			kink:{"적당히 문란함":"kinkDefault", "바닐라":"kinkVanilla", "짐승 없음":"kinkNoBeasts", "무엇이든 허용":"kinkEverything"},
-			game:{
-				"노말 ":"gameNormal","이지 (업적 없음)":"gameSoft","하드":"gameHard","하드 (철인)":"gameHardIronman","마조히스트":"gameMasochist","치트 포함 이지 (업적 없음)":"gameSoftCheats","치트 포함 노말 (업적 없음)":"gameNormalCheats","치트 포함 하드 (업적 없음)":"gameHardCheats","치트 포함 마조히스트 (업적 없음)":"gameMasochistCheats"
-			},
-			images:{"기본":"imagesdefault","고화질":"imagesHigh","저화질":"imagesLow","성능 모드":"imagesPerformance","이미지 비활성화":"imagesDisable"},
-			settings:{"PC, 팁 표시":"settingPCTip","PC, 팁 없음":"settingPCNoTip","모바일, 팁 표시":"settingMobileTips","모바일, 팁 없음":"settingMobileNoTips"}
-		}>>
-	<</if>>
-<</widget>>
-
 <<widget "quickStart">>
 	<div @class="$passage is 'Start' ? '' : 'solidBorderContainer settings-container'">
 		<div class="settingsGrid">
-			<<quickStartOptions>>
 			<<if $passage is "Start">>
 				<div class="settingsHeader">
 					기본 설정
@@ -615,8 +578,7 @@
 
 			<div class="settingsToggleItem">
 				<<set _foundPregnancy to !!Object.values($NPCName).find(npc => npc.pregnancy && npc.pregnancy.enabled && getActivePregnancies(npc.fullDescription).length && !setup.pregnancy.canBePregnant.includes(npc.fullDescription))>>
-				<label>
-					<span class="gold">임신 모드:</span>
+					<span class="gold">Pregnancy Mode:</span>
 					<br>
 					<<if $passage is "Start">>
 						<label><<radiobutton "_pregnancytype" "realistic" `_pregnancytype ? "autocheck" : ($settings.pregnancyType is "realistic" ? "checked": "")`>> <mouse class="tooltip green">현실적<span>임신이 바로 진행되지 않으며, 임신이 되었는지 즉시 알 수 없습니다. 임신 테스트기를 사용해야 할 수도 있으며, 처음에는 아버지가 누구인지 모를 수 있습니다. 수 시간 안에 씻어내지 않으면 보지 바깥에 묻은 정액으로도 임신할 수 있습니다.</span></mouse></label> |
@@ -625,15 +587,12 @@
 					<<else>>
 						<<pregnancyType>>
 					<</if>>
-				</label>
 				<br>
-				<label>
 					<<fertilityCycles>>
-				</label>
 				<br>
-				<label data-target='["settingsincompletepregnancyenabled", "pregnancytype", "settingsnnpcpregnancyenabled", "settingsplayerpregnancyhumanenabled", "settingsplayerpregnancybeastenabled"]' data-disabledif="(T.foundPregnancy&&V.settings.incompletePregnancyEnabled===true)||T.pregnancytype==='disabled'||(!V.settings.nnpcPregnancyEnabled&&!V.settings.playerPregnancyHumanEnabled&&!V.settings.playerPregnancyBeastEnabled)">
+				<span data-target='["settingsincompletepregnancyenabled", "pregnancytype", "settingsnnpcpregnancyenabled", "settingsplayerpregnancyhumanenabled", "settingsplayerpregnancybeastenabled"]' data-disabledif="(T.foundPregnancy&&V.settings.incompletePregnancyEnabled===true)||T.pregnancytype==='disabled'||(!V.settings.nnpcPregnancyEnabled&&!V.settings.playerPregnancyHumanEnabled&&!V.settings.playerPregnancyBeastEnabled)">
 					<<incompletePregnancy>>
-				</label>
+				</span>
 			</div>
 
 			<<if _selectedStart isnot "custom">>
@@ -694,34 +653,60 @@
 				</div>
 
 				<div class="settingsToggleItem">
-					<span class="gold">네임드 NPC 성별:</span>
+					<span class="gold">Named NPC Genders:</span> <mouse class="tooltip linkBlue">(?)<span>Sets the gender and genitals for every Named NPC. <strong class='gold inline-colour'>Random Genders</strong> have a chance of generating women with penises and men with vaginas, this can be changed under Custom Settings. <strong class='blue inline-colour'>All Male</strong> are generated with penises. <strong class='pink inline-colour'>All Female</strong> are generated with vaginas.<br><br>The genitals options override these default settings. Individual Named NPC Genders/Genitals can also be customized before starting the game or mid-game under Named NPC Settings.</span></mouse>
 					<br>
 					<<if _namedNpcPreset is undefined>><<set _namedNpcPreset to "namedNpcDefaultGender">><</if>>
-					<label>전원 남성 <<radiobutton "_namedNpcPreset" "namedNpcAllMaleGender" autocheck>></label> |
-					<label><<print $passage is "Start" ? "무작위 성별" : "현재 성별">> <<radiobutton "_namedNpcPreset" "namedNpcDefaultGender" autocheck>></label> |
-					<label>전원 여성 <<radiobutton "_namedNpcPreset" "namedNpcAllFemaleGender" autocheck>></label>
+					<label>All Male <<radiovar "_namedNpcPreset" "namedNpcAllMaleGender">><<namedNpcGenderApply "namedNpcAllMaleGender">><</radiovar>></label> |
+					<label><<print $passage is "Start" ? "Random Genders" : "Current Genders">> <<radiovar "_namedNpcPreset" "namedNpcDefaultGender">><<namedNpcGenderApply "namedNpcDefaultGender">><</radiovar>></label> |
+					<label>All Female <<radiovar "_namedNpcPreset" "namedNpcAllFemaleGender">><<namedNpcGenderApply "namedNpcAllFemaleGender">><</radiovar>></label>
+					<div id="namedNpcGenderConfirm"><<namedNpcGenderConfirm>></div>
+				</div>
+
+				<div class="settingsToggleItem">
+					<span class="gold">Female Named NPC Genitals:</span>
+					<br>
+					<<if _namedNpcFemaleGenitals is undefined>><<set _namedNpcFemaleGenitals to "random">><</if>>
+					<label>Random <<radiobutton "_namedNpcFemaleGenitals" "random" autocheck>></label> |
+					<label>Penis <<radiobutton "_namedNpcFemaleGenitals" "m" autocheck>></label> |
+					<label>Vagina <<radiobutton "_namedNpcFemaleGenitals" "f" autocheck>></label>
+				</div>
+
+				<div class="settingsToggleItem">
+					<span class="gold">Male Named NPC Genitals:</span>
+					<br>
+					<<if _namedNpcMaleGenitals is undefined>><<set _namedNpcMaleGenitals to "random">><</if>>
+					<label>Random <<radiobutton "_namedNpcMaleGenitals" "random" autocheck>></label> |
+					<label>Penis <<radiobutton "_namedNpcMaleGenitals" "m" autocheck>></label> |
+					<label>Vagina <<radiobutton "_namedNpcMaleGenitals" "f" autocheck>></label>
 				</div>
 
 				<div class="settingsToggleItem">
 					<<if $passage is "Start">>
-						<span class="gold"><<= $settings.monsterChance is 100 ? "수인" : "짐승">> 성별:</span>
-						<<numberslider "$settings.beastMaleChance" $settings.beastMaleChance 0 100 25 {
+						<span class="gold"><<= $genericBeastSettings.monsterChance is 100 ? "Monster People" : "Beast">> Genders:</span>
+						<<numberslider "$genericBeastSettings.beastMaleChance" $genericBeastSettings.beastMaleChance 0 100 25 {
 							onInputChange: v => {
-								if (V.settings.beastMaleChanceSplit === true && v === 50) {
-									V.settings.beastMaleChanceMale = random (1, 99);
-									V.settings.beastMaleChanceFemale = random (1, 99);
+								if (V.genericBeastSettings.beastMaleChanceSplit && v === 50) {
+									V.genericBeastSettings.beastMaleChanceMale = random (1, 99);
+									V.genericBeastSettings.beastMaleChanceFemale = random (1, 99);
+									setAllBeastsMaleChanceSplit(true);
+									setAllBeastsMaleChanceMale(V.genericBeastSettings.beastMaleChanceMale);
+									setAllBeastsMaleChanceFemale(V.genericBeastSettings.beastMaleChanceFemale);
 									return;
 								}
-								if (V.settings.beastMaleChanceSplit === true) {
-									V.settings.beastMaleChanceMale = 100 - v;
-									V.settings.beastMaleChanceFemale = v;
+								if (V.genericBeastSettings.beastMaleChanceSplit) {
+									V.genericBeastSettings.beastMaleChanceMale = 100 - v;
+									V.genericBeastSettings.beastMaleChanceFemale = v;
+									setAllBeastsMaleChanceSplit(true);
+									setAllBeastsMaleChanceMale(100 - v);
+									setAllBeastsMaleChanceFemale(v);
 									return;
 								}
+								setAllBeastsMaleChance(v);
 							},
 							value: v => {
-								const beasts = V.settings.monsterChance === 100 ? "수인" : "짐승";
-								const Beasts = beasts;
-								if (V.settings.beastMaleChanceSplit === true) {
+								const beasts = V.genericBeastSettings.monsterChance === 100 ? "monster people" : "beasts";
+								const Beasts = beasts.charAt(0).toUpperCase() + beasts.slice(1);
+								if (V.genericBeastSettings.beastMaleChanceSplit) {
 									switch (v) {
 										case 100:
 											return `<span class="small-description">모든 ${beasts}이 <span class='gold inline-colour'>이성</span>에게 끌립니다.</span>`;
@@ -749,7 +734,7 @@
 										case 0:
 											return `<span class="small-description">모든 ${beasts}이 <span class='pink inline-colour'>암컷</span>이 됩니다.</span>`;
 										default:
-											return `<span class="small-description">${beasts}의 <span class='gold inline-colour'>${v}%</span>가 <span class='blue inline-colour'>수컷</span>이 됩니다.</span>`;
+											return `<span class="small-description"><span class='gold inline-colour'>${v}%</span> of ${beasts} will be <span class='blue inline-colour'>male</span>.</span>`;
 									}
 								}
 							},
@@ -765,9 +750,11 @@
 						<<if _monstersPreset is undefined>><<set _monstersPreset to "monstersDefault">><</if>>
 						<span class="gold">짐승을 수인로 대체:</span>
 						<br>
-						<label>항상 <<radiobutton "_monstersPreset" "monstersAll" autocheck>></label> |
-						<label>환각 상태일 때만 <<radiobutton "_monstersPreset" "monstersDefault" autocheck>></label> |
-						<label>사용 안 함 <<radiobutton "_monstersPreset" "monstersNone" autocheck>></label>
+						<div onchange="applyMonstersPreset(T.monstersPreset)">
+							<label>All the time <<radiobutton "_monstersPreset" "monstersAll" autocheck>></label> |
+							<label>Only when hallucinating <<radiobutton "_monstersPreset" "monstersDefault" autocheck>></label> |
+							<label>Never <<radiobutton "_monstersPreset" "monstersNone" autocheck>></label>
+						</div>
 					<<else>>
 						<<monsterSettings>>
 					<</if>>
@@ -777,14 +764,16 @@
 						<span class="gold">페티시 설정:</span>
 						<br>
 						<<if _kinkPreset is undefined>><<set _kinkPreset to "kinkDefault">><</if>>
-						<label><mouse class="tooltip" style="border-bottom: 2px dotted var(--link)">바닐라<span>모든 수인 관련 토글이 비활성화되며, 인간형 식물, 촉수, 슬라임, 모유 수유, 페이스시팅, 이중 삽입, 최면도 비활성화됩니다.</span></mouse>
-						<<radiobutton "_kinkPreset" "kinkVanilla" autocheck>></label> |
-						<label><mouse class="tooltip" style="border-bottom: 2px dotted var(--link)">꽤 방탕한<span>기본 설정. 워터스포츠를 제외한 모든 페티시가 활성화됩니다.</span></mouse>
-						<<radiobutton "_kinkPreset" "kinkDefault" autocheck>></label> |
-						<label><mouse class="tooltip" style="border-bottom: 2px dotted var(--link)">수인 없음<span>수인 관련 모든 설정이 비활성화됩니다. 수간, 스웜, 보어, 기생충, 거미, 민달팽이, 말벌, 럴커, 벌, 말 등이 포함됩니다.</span></mouse>
-						<<radiobutton "_kinkPreset" "kinkNoBeasts" autocheck>></label> |
-						<label><mouse class="tooltip" style="border-bottom: 2px dotted var(--link)">"뭐든지"<span>워터스포츠를 포함한 모든 페티시가 활성화됩니다.</span></mouse>
-						<<radiobutton "_kinkPreset" "kinkEverything" autocheck>></label>
+						<div onchange="applyKinkPreset(T.kinkPreset)">
+							<label><mouse class="tooltip" style="border-bottom: 2px dotted var(--link)">Vanilla<span>All beast-related toggles are disabled, as well as plant people, tentacles, slimes, lactation, facesitting, double penetration, and hypnosis.</span></mouse>
+							<<radiobutton "_kinkPreset" "kinkVanilla" autocheck>></label> |
+							<label><mouse class="tooltip" style="border-bottom: 2px dotted var(--link)">Reasonably Debauched<span>Default settings. All kinks are enabled, except for watersports.</span></mouse>
+							<<radiobutton "_kinkPreset" "kinkDefault" autocheck>></label> |
+							<label><mouse class="tooltip" style="border-bottom: 2px dotted var(--link)">No Beasts<span>All beast-related settings are disabled, including bestiality, swarms, vore, parasites, spiders, slugs, wasps, lurkers, and bees.</span></mouse>
+							<<radiobutton "_kinkPreset" "kinkNoBeasts" autocheck>></label> |
+							<label><mouse class="tooltip" style="border-bottom: 2px dotted var(--link)">Anything Goes<span>All kinks are enabled, including watersports.</span></mouse>
+							<<radiobutton "_kinkPreset" "kinkEverything" autocheck>></label>
+						</div>
 					</div>
 					<div class="settingsToggleItem">
 						<i>페티시 및 게임플레이 설정을 <<= _selectedStart is "custom" ? "변경하려면" : "더 세부적으로 조정하려면">> <span class="teal"><<= _selectedStart is "default" ? "커스텀 시작" : "게임 설정">></span> 탭을 방문하세요. 게임플레이 설정은 게임을 시작한 후에도 변경할 수 있습니다.</i>
@@ -806,8 +795,9 @@
 <</widget>>
 
 <<widget "beastSplitByFull">>
-	<<link `$settings.beastMaleChanceSplit is true ? "성적 지향 무시" : "성적 지향 설정"`>>
-		<<set $settings.beastMaleChanceSplit to $settings.beastMaleChanceSplit is true ? false : true>>
+	<<link `$genericBeastSettings.beastMaleChanceSplit ? "Ignore sexual orientation" : "Set sexual orientation"`>>
+		<<set $genericBeastSettings.beastMaleChanceSplit to !$genericBeastSettings.beastMaleChanceSplit>>
+		<<run setAllBeastsMaleChanceSplit($genericBeastSettings.beastMaleChanceSplit)>>
 		<<toggleclass "#simpleBeastGenders" "hidden">>
 		<<replace "#splitBeastGenders">><<beastMaleChanceSplitControls>><</replace>>
 		<<toggleclass "#splitBeastGenders" "hidden">>
@@ -824,10 +814,11 @@
 <</widget>>
 
 <<widget "beastSplitBy">>
-	<<link `$settings.beastMaleChanceSplit is true ? "성적 지향 무시" : "성적 지향 설정"`>>
-		<<set $settings.beastMaleChanceSplit to $settings.beastMaleChanceSplit is true ? false : true>>
+	<<link `$genericBeastSettings.beastMaleChanceSplit ? "Ignore sexual orientation" : "Set sexual orientation"`>>
+		<<set $genericBeastSettings.beastMaleChanceSplit to !$genericBeastSettings.beastMaleChanceSplit>>
+		<<run setAllBeastsMaleChanceSplit($genericBeastSettings.beastMaleChanceSplit)>>
 		<<replace "#beastSplitBy">><<beastSplitBy>><</replace>>
-		<<run $("#numberslider-input-settingsbeastmalechance").trigger("input");>>
+		<<run $("#numberslider-input-genericbeastsettingsbeastmalechance").trigger("input");>>
 	<</link>>
 <</widget>>
 
@@ -835,9 +826,9 @@
 	<div class="solidBorderContainer settings-container">
 		<div class="settingsGrid">
 			<div class="settingsToggleItem">
-			<span class="gold">무작위 생성:</span><br>
-				<<link "캐릭터 외모">><<presets "randomize" "characterSettings" `randomizeSettings('characterAppearance')`>><</link>>
-				<mouse class="tooltip linkBlue">(?)<span>플레이어 캐릭터의 외모(머리, 눈, 피부색, 성별, 신체 부위 크기)를 무작위로 설정합니다. 신체 크기, 성별 외모, 성기, 기본 피부색은 게임을 시작한 후에는 변경할 수 없습니다.</span></mouse>
+			<span class="gold">Randomise:</span><br>
+				<<link "Character appearance">><<randomiseSettings "characterAppearance" "characterSettings">><</link>>
+				<mouse class="tooltip linkBlue">(?)<span>Randomises the player character's appearance, including hair, eyes, skin colour, gender, and body part sizes. Body size, gender appearance, genitalia, and base skin colour cannot be changed after starting the game.</span></mouse>
 			<br>
 			</div>
 			<div class="settingsToggleItem">
@@ -892,8 +883,8 @@
 			>>
 
 			<div class="settingsToggleItem">
-				<span class="gold">체격:</span> <mouse class="tooltip linkBlue">(?)<span>체격이 크면 더 강인한 체력을 기를 수 있어 전투가 수월해집니다. 체격이 작으면 좁은 틈새를 빠져나갈 수 있어, 위험한 상황에서 탈출하기 수월해집니다. </span></mouse>
-<br>
+				<span class="gold">Body Size:</span> <mouse class="tooltip linkBlue">(?)<span>Larger bodies can build a more powerful physique, making combat easier. Smaller bodies can squeeze through gaps that larger bodies might get stuck in, allowing them to escape some dangerous situations. </span></mouse>
+				<br>
 
 				<label><mouse class="tooltip">조그마함<span class="blue"><i>초보자에게는 권장하지 않습니다.</i></span></mouse> <<radiobutton "$bodysize" 0 autocheck>></label> |
 				<label>작음 <<radiobutton "$bodysize" 1 autocheck>></label> |
@@ -1029,10 +1020,17 @@
 				<label>가슴 <<radiobutton "$hairlength" 400 autocheck>></label>
 			</div>
 			<div class="settingsToggleItem">
-				<span class="gold">주근깨:</span><br>
-				<label>예 <<radiobutton "$player.freckles" true autocheck>></label> |
-				<label>아니요 <<radiobutton "$player.freckles" false autocheck>></label> |
-				<label>무작위 <<radiobutton "$player.freckles" "random" autocheck>></label>
+				<span class="gold">Face Freckles:</span><br>
+				<label>Yes <<radiobutton "$player.skin.faceFreckles" true autocheck>></label> |
+				<label>No <<radiobutton "$player.skin.faceFreckles" false autocheck>></label> |
+				<label>Random <<radiobutton "$player.skin.faceFreckles" "random" autocheck>></label>
+			</div>
+			<div class="settingsToggleItem">
+				<span class="gold">Body Freckles:</span><br>
+				<label>None <<radiobutton "$player.skin.bodyFreckles" "none" autocheck>></label> |
+				<label>Upper body <<radiobutton "$player.skin.bodyFreckles" "upper" autocheck>></label> |
+				<label>Full body <<radiobutton "$player.skin.bodyFreckles" "full" autocheck>></label> |
+				<label>Random <<radiobutton "$player.skin.bodyFreckles" "random" autocheck>></label>
 			</div>
 		</div>
 
@@ -1130,8 +1128,8 @@
 			<div class="settingsToggleItemWide">
 				<span class="gold">무작위 생성:</span>
 				<br>
-				<<link "캐릭터 특성">><<presets "randomize" "characterSettings" `randomizeSettings('characterTrait')`>><</link>>
-				<mouse class="tooltip linkBlue">(?)<span>플레이어 캐릭터의 특성(배경, 성지식, 전반적인 민감도 등)을 무작위로 설정합니다. <i class="red">이 특성들은 게임을 시작한 후에는 변경할 수 없습니다.</i></span></mouse>
+				<<link "Character traits">><<randomiseSettings "characterTrait" "characterSettings">><</link>>
+				<mouse class="tooltip linkBlue">(?)<span>Randomises the player character's traits, including background, awareness, and general sensitivity. <i class="red">These traits cannot be changed after starting the game.</i></span></mouse>
 				<br>
 			</div>
 			<div class="settingsToggleItemWide">
@@ -1265,8 +1263,9 @@
 		<<else>>
 			<<radiobutton "$gamemode" "normal" autocheck>>
 		<</if>>
-	</label> |
-	<label><mouse class = "tooltip blue">이지 모드<span> 가볍고 음란한 모험을 선호하는 분들을 위한 모드입니다. 하지만 여전히 게임 내 어두운 부분이 존재할 수 있습니다.<br><i class="red normal">이 기능은 실험적이며 게임 진행을 막는 버그가 포함되어 있을 수 있습니다. 추후 변경되거나 삭제될 예정입니다. 설정에서 이지 모드를 유지하면 노말 모드로 변경할 때까지 업적을 획득할 수 없습니다. 이 모드를 사용하면 이 세이브 파일에서 영구적으로 일부 업적을 획득할 수 없게 됩니다.</i></span></mouse>
+	</label>
+	<<ind>>
+	<label><mouse class = "tooltip blue">Soft mode<span>For those who prefer a light-hearted lewd adventure, though the game is still dark in places. Makes all encounters consensual, and removes the pain and control stats. NPCs will always respect your wishes in encounters, and will stop when you ask.<br><i class="red normal">This is an experimental feature and contains gamebreaking bugs. It will be changed or removed in the future. Leaving the settings with soft mode will prevent you from earning feats until it is set to normal mode. Doing this will permanently prevent some feats from being earned in this save.</i></span></mouse>
 		<<if ($ironmanmode is true and ["hard","normal"].includes($gamemode) is true) and $passage != "Start">>
 			<input id="radiobutton-gamemode-8" name="radiobutton-gamemode" type="radio" tabindex="0" class="macro-radiobutton" disabled>
 		<<else>>
@@ -1305,10 +1304,10 @@
 			<div class="settingsToggleItem">
 				<span class="gold">무작위 설정:</span><br>
 
-				<<link "게임플레이">><<presets "randomize" "gameSettings" `randomizeSettings('gameplay')`>><</link>>
-				<mouse class="tooltip linkBlue">(?)<span>조우 확률, 의상 가격, 작물 수확량, 베일리의 집세 등 일반 게임플레이에 관련된 모든 설정을 무작위로 바꿉니다.</span></mouse> |
-				<<link "조우">><<presets "randomize" "gameSettings" `randomizeSettings('encounter')`>><</link>>
-				<mouse class="tooltip linkBlue">(?)<span>일반 NPC와 관련된 모든 설정을 무작위로 바꿉니다.</span></mouse>
+				<<link "Gameplay">><<randomiseSettings "gameplay" "gameSettings">><</link>>
+				<mouse class="tooltip linkBlue">(?)<span>Randomises all settings related to general gameplay, including encounter rate, clothing prices, crop yield, and Bailey's rent.</span></mouse> |
+				<<link "Encounters">><<randomiseSettings "encounter" "gameSettings">><</link>>
+				<mouse class="tooltip linkBlue">(?)<span>Randomises all settings related to generic NPCs.</span></mouse>
 				<br>
 			</div>
 
@@ -1318,7 +1317,7 @@
 				<label><<radiobutton "$settings.multipleWardrobes" false autocheck>> 공용 옷장 하나만 사용</label> |
 				<label><<radiobutton "$settings.multipleWardrobes" "isolated" autocheck>> 고립된 장소는 자체 옷장을 가짐</label>
 				<br>
-				<<if $debug is 1>>
+				<<if $debug>>
 					<!--This setting will not be ready on initial release-->
 					<label><<radiobutton "$settings.multipleWardrobes" "all" autocheck>> 모든 옷장에 개별 적용</label>
 					<br>
@@ -1432,12 +1431,17 @@
 <</widget>>
 
 <<widget "beastGenders">>
-	<<set _beasts to $settings.monsterChance is 100 ? "수인" : "짐승">>
+	<<set _beasts to $genericBeastSettings.monsterChance is 100 ? "monster people" : "beasts">>
 	<div class="numberslider-inline beastmalechance">
-		<<numberslider "$settings.beastMaleChance" $settings.beastMaleChance 0 100 1 {
-				value: v => {
-				const beasts = V.settings.monsterChance === 100 ? "수인" : "짐승";
-				const Beasts = beasts;
+		<span class="gold"><<= $genericBeastSettings.monsterChance is 100 ? "Monster People" : "Beast">> Genders:</span>
+		<<numberslider "$genericBeastSettings.beastMaleChance" $genericBeastSettings.beastMaleChance 0 100 1 {
+			onInputChange: v => {
+				setAllBeastsMaleChanceSplit(false);
+				setAllBeastsMaleChance(v);
+			},
+			value: v => {
+				const beasts = V.genericBeastSettings.monsterChance === 100 ? "monster people" : "beasts";
+				const Beasts = beasts.charAt(0).toUpperCase() + beasts.slice(1);
 				switch (v) {
 					case 0:
 						return `<span class="small-description"><span class='gold inline-colour'>모든</span> ${beasts}이 <span class='pink inline-colour'>암컷</span>이 됩니다.</span>`;
@@ -1456,26 +1460,34 @@
 <</widget>>
 
 <<widget "monsterSettings">>
-	<div class="numberslider-inline">
-		<span class="gold">수인 출현 확률:</span>
-		<<numberslider "$settings.monsterChance" $settings.monsterChance 0 100 1 {
-			value: v => {
-				switch (v) {
-					case 0:
-						return `<span class="small-description">짐승은 환각 상태에서 허용된 경우가 아니라면 <span class='gold inline-colour'>절대</span> 수인으로 나타나지 않습니다.</span>`;
-					case 50:
-						return `<span class="small-description">전체 짐승의 <span class='gold inline-colour'>절반</span>이 수인으로 대체됩니다.</span>`;
-					case 100:
-						return `<span class="small-description">짐승은 <span class='gold inline-colour'>항상</span> 수인으로 나타납니다.</span>`;
-					default:
-						return `<span class="small-description">짐승의 <span class='gold inline-colour'>${v}%</span>가 수인으로 대체됩니다.</span>`
-				}
-			},
-		}>>
+	<div class="beastSettingColumn">
+		<div class="numberslider-inline">
+			<span class="gold">Monster People Chance:</span>
+			<<numberslider "$genericBeastSettings.monsterChance" $genericBeastSettings.monsterChance 0 100 1 {
+				onInputChange: v => {
+					setAllBeastsMonsterChance(v);
+				},
+				value: v => {
+					switch (v) {
+						case 0:
+							return `<span class="small-description">Beasts will <span class='gold inline-colour'>never</span> appear as monster people.</span>`;
+						case 50:
+							return `<span class="small-description"><span class='gold inline-colour'>Half</span> of all beasts will be replaced by monster people.</span>`;
+						case 100:
+							return `<span class="small-description">Beasts will <span class='gold inline-colour'>always</span> be monster people.</span>`;
+						default:
+							return `<span class="small-description"><span class='gold inline-colour'>${v}%</span> of beasts will be replaced by monster people.</span>`
+					}
+				},
+			}>>
+		</div>
+		<label onchange="setAllBeastsMonsterHallucinationsOnly(V.genericBeastSettings.monsterHallucinationsOnly)">
+			<<checkbox "$genericBeastSettings.monsterHallucinationsOnly" false true autocheck>> Monster people can only appear during hallucinations
+		</label>
+		<label onchange="setAllBeastsVictimsAlwaysMonster(V.genericBeastSettings.victimsAlwaysMonster)">
+			<<checkbox "$genericBeastSettings.victimsAlwaysMonster" false true autocheck>> Beasts that are victims always appear as monster people
+		</label>
 	</div>
-	<label>
-		<<checkbox "$settings.monsterHallucinationsOnly" false true autocheck>> 수인은 환각 상태에서만 출현합니다
-	</label>
 <</widget>>
 
 <<widget "npcAttractionSettings">>
@@ -1490,14 +1502,21 @@
 <</widget>>
 
 <<widget "beastAttractionSettings">>
-	<div id="simpleBeastGenders" @class="(V.settings.beastMaleChanceSplit === true ? ' hidden' : '')">
-		<span class="gold"><<= $settings.monsterChance is 100 ? "수인" : "짐승">> 성별:</span>
-		<<beastGenders>>
+	<div class="beastSettingColumn">
+		<div id="simpleBeastGenders" @class="(V.genericBeastSettings.beastMaleChanceSplit ? ' hidden' : '')">
+			<<beastGenders>>
+		</div>
+		<div id="splitBeastGenders" @class="(!V.genericBeastSettings.beastMaleChanceSplit ? ' hidden' : '')">
+			<<beastMaleChanceSplitControls>>
+		</div>
+		<span id="beastSplitByFull"><<beastSplitByFull>></span>
+		<div class="beastSettingBestiality" role="group" aria-label="Bestiality" onchange="setAllBeastsBestialityMode(V.genericBeastSettings.bestiality)">
+			<span>Bestiality:</span>
+			<label><<radiobutton "$genericBeastSettings.bestiality" "on" autocheck>> Enabled</label> |
+			<label><<radiobutton "$genericBeastSettings.bestiality" "monsterOnly" autocheck>> Only as monster people</label> |
+			<label><<radiobutton "$genericBeastSettings.bestiality" "off" autocheck>> Disabled</label>
+		</div>
 	</div>
-	<div id="splitBeastGenders" @class="(V.settings.beastMaleChanceSplit === false ? ' hidden' : '')">
-		<<beastMaleChanceSplitControls>>
-	</div>
-	<span id="beastSplitByFull"><<beastSplitByFull>></span>
 <</widget>>
 
 <<widget "humanSettings">>
@@ -1596,9 +1615,11 @@
 				</span>
 				<<numberslider "$settings.npcVirginChanceAdult" $settings.npcVirginChanceAdult 0 100 1>>
 			</div>
-			<div class="settingsToggleItemWide numberslider-inline">
-				<span class="gold">어두운 피부를 가진 NPC일 확률:</span>
-				<<numberslider "$settings.darkSkinChance" $settings.darkSkinChance 0 100 1>>
+			<div class="settingsToggleItemWide">
+				<span class="gold">NPC Skin Tones:
+				<mouse class="tooltip linkBlue">(?)<span>Drag the handles to choose the lightest and darkest skin generated NPCs can have. Skin tones cluster around the most common tone. Randomly generated NNPC skin tones will fall within the boundaries. NNPCs can also have their skin tones manually set outside these values in their custom settings. Skin tone has no effect on gameplay. It only changes how NPCs look during sex/combat, and the skin tone their children inherit.</span></mouse>
+				</span>
+				<<skinToneRange>>
 			</div>
 		</div>
 	</div>
@@ -1646,19 +1667,37 @@
 	<div class="solidBorderContainer settings-container">
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				<<= $settings.monsterChance is 100 ? "수인" : "짐승">> 설정
+				Beast Preferences
+				<label class="settingsGranularToggle" onchange="wikifier('displaySubsection')">
+					<<checkbox "$settings.granularBeastControl" false true autocheck>> Granular Beast Preferences
+					<mouse class="tooltip linkBlue">(?)<span>Changing a generic beast setting will override that setting for all granular beast settings, while leaving other granular settings untouched.</span></mouse>
+				</label>
 			</div>
-			<div class="settingsToggleItem">
-				<<beastAttractionSettings>>
-			</div>
-			<div class="settingsToggleItem">
-				<<monsterSettings>>
-			</div>
+			<<if $settings.granularBeastControl>>
+				<<beastTypeSettingRow "dog" "Dogs">>
+				<<beastTypeSettingRow "cat" "Cats">>
+				<<beastTypeSettingRow "pig" "Pigs">>
+				<<beastTypeSettingRow "boar" "Boars">>
+				<<beastTypeSettingRow "wolf" "Wolves">>
+				<<beastTypeSettingRow "bear" "Bears">>
+				<<beastTypeSettingRow "dolphin" "Dolphins">>
+				<<beastTypeSettingRow "lizard" "Lizards">>
+				<<beastTypeSettingRow "cow" "Cattle">>
+				<<beastTypeSettingRow "horse" "Horses">>
+				<<beastTypeSettingRow "fox" "Foxes">>
+				<<beastTypeSettingRow "hawk" "Hawks">>
+				<<beastTypeSettingRow "spider" "Spiders">>
+				<<beastTypeSettingRow "snake" "Snakes">>
+			<<else>>
+				<div class="settingsToggleItem">
+					<<beastAttractionSettings>>
+				</div>
+				<div class="settingsToggleItem">
+					<<monsterSettings>>
+				</div>
+			<</if>>
 		</div>
 		<hr>
-		<div class="settingsToggleIndent">
-			<span class="red">수간을 비활성화하더라도 몬스터 소녀 및 소년과의 야한 이벤트는 발생할 수 있습니다.</span>
-		</div>
 		<div class="settingsGrid">
 			<div class="settingsHeader">
 				짐승 설정
@@ -1669,18 +1708,15 @@
 					<<script>>
 						let val = T.anyBeastOn ? false : true;
 						T.beastVars.forEach(x => V.settings[x] = val);
+						V.genericBeastSettings.bestiality = val ? "on" : "off";
+						setAllBeastsBestialityMode(V.genericBeastSettings.bestiality);
 					<</script>>
 					<<displaySubsection "beastSettings">>
 				<</button>>
 			</div>
 			<div class="settingsToggleItem">
 				<label>
-					<<checkbox "$settings.bestialityEnabled" false true autocheck>> 수간 활성화
-				</label>
-			</div>
-			<div class="settingsToggleItem">
-				<label>
-					<<checkbox "$settings.swarmsEnabled" false true autocheck>> 군집체(장어 등) 활성화
+					<<checkbox "$settings.swarmsEnabled" false true autocheck>> Enable swarms (Eels, etc)
 				</label>
 			</div>
 			<div class="settingsToggleItem">
@@ -1725,12 +1761,7 @@
 			</div>
 			<div class="settingsToggleItem">
 				<label>
-					<<checkbox "$settings.lurkersEnabled" false true autocheck>> 럴커 활성화
-				</label>
-			</div>
-			<div class="settingsToggleItem">
-				<label>
-					<<checkbox "$settings.horsesEnabled" false true autocheck>> <<= $settings.monsterChance is 100 ? "켄타우로스" : $settings.monsterChance is 0 ? "말" : "말과 켄타우로스">> 활성화
+					<<checkbox "$settings.lurkersEnabled" false true autocheck>> Enable lurkers <mouse class="tooltip linkBlue">(?)<span>Lurkers are strange-looking, leathery creatures with many limbs. They use a proboscis and are generally quite small.</span></mouse>
 				</label>
 			</div>
 			<div class="settingsToggleItem">
@@ -1746,7 +1777,11 @@
 	<div class="numberslider-inline beastMaleChanceMale">
 		<span class="gold">남성에게 끌리는 짐승 <mouse class="tooltip linkBlue">(?)<span>목격되는 수컷/수컷 짐승 짝짓기의 빈도에 영향을 미칩니다. <i class="blue none">당신이 남성으로 보일 경우, 당신에게 끌리는 NPC들은 이 패턴을 따르게 됩니다.</i></span></mouse></span>
 		<div class="numberSliderCompare">
-			<<numberslider "$settings.beastMaleChanceMale" $settings.beastMaleChanceMale 0 100 1 {
+			<<numberslider "$genericBeastSettings.beastMaleChanceMale" $genericBeastSettings.beastMaleChanceMale 0 100 1 {
+			onInputChange: v => {
+				setAllBeastsMaleChanceSplit(true);
+				setAllBeastsMaleChanceMale(v);
+			},
 				value: v => {
 					switch (v) {
 						case 0:
@@ -1763,7 +1798,11 @@
 	<div class="numberslider-inline beastMaleChanceFemale">
 		<span class="gold">여성에게 끌리는 짐승 <mouse class="tooltip linkBlue">(?)<span>목격되는 암컷/암컷 짐승 짝짓기의 빈도에 영향을 미칩니다. <i class="pink none">당신이 여성으로 보일 경우, 당신에게 끌리는 NPC들은 이 패턴을 따르게 됩니다.</i></span></mouse></span>
 		<div class="numberSliderCompare">
-			<<numberslider "$settings.beastMaleChanceFemale" $settings.beastMaleChanceFemale 0 100 1 {
+			<<numberslider "$genericBeastSettings.beastMaleChanceFemale" $genericBeastSettings.beastMaleChanceFemale 0 100 1 {
+			onInputChange: v => {
+				setAllBeastsMaleChanceSplit(true);
+				setAllBeastsMaleChanceFemale(v);
+			},
 				value: v => {
 					switch (v) {
 						case 0:
@@ -1776,6 +1815,143 @@
 				},
 			}>>
 		</div>
+	</div>
+<</widget>>
+
+<<widget "beastTypeGenders">>
+	<<set _beastType to _args[0]>>
+	<<capture _beastType>>
+		<<if $settings.beastSettings[_beastType].maleChanceSplit>>
+			<div class="numberslider-inline">
+				<span>Attracted to men <mouse class="tooltip linkBlue">(?)<span>The share of this creature that is <span class="blue none">male</span> when its target appears male. Affects how many male/male pairings you see.</span></mouse>:</span>
+				<<numberslider `"$settings.beastSettings." + _beastType + ".maleChanceMale"` $settings.beastSettings[_beastType].maleChanceMale 0 100 1 {
+					value: v => {
+						switch (v) {
+							case 0:
+								return `<span class="small-description"><span class='gold inline-colour'>All</span> <span class='pink inline-colour'>females</span> and <span class='gold inline-colour'>no</span> <span class='blue inline-colour'>males</span> will be <span class='blue inline-colour'>attracted to men</span>.</span>`;
+							case 100:
+								return `<span class="small-description"><span class='gold inline-colour'>No</span> <span class='pink inline-colour'>females</span> and <span class='gold inline-colour'>all</span> <span class='blue inline-colour'>males</span> will be <span class='blue inline-colour'>attracted to men</span>.</span>`;
+							default:
+								return `<span class="small-description"><span class='gold inline-colour'>${100 - v}%</span> of <span class='pink inline-colour'>females</span> and <span class='gold inline-colour'>${v}%</span> of <span class='blue inline-colour'>males</span> will be <span class='blue inline-colour'>attracted to men</span>.</span>`;
+						}
+					},
+				}>>
+			</div>
+			<div class="numberslider-inline">
+				<span>Attracted to women <mouse class="tooltip linkBlue">(?)<span>The share of this creature that is <span class="blue none">male</span> when its target appears female. Affects how many female/female pairings you see.</span></mouse>:</span>
+				<<numberslider `"$settings.beastSettings." + _beastType + ".maleChanceFemale"` $settings.beastSettings[_beastType].maleChanceFemale 0 100 1 {
+					value: v => {
+						switch (v) {
+							case 0:
+								return `<span class="small-description"><span class='gold inline-colour'>All</span> <span class='pink inline-colour'>females</span> and <span class='gold inline-colour'>no</span> <span class='blue inline-colour'>males</span> will be <span class='pink inline-colour'>attracted to women</span>.</span>`;
+							case 100:
+								return `<span class="small-description"><span class='gold inline-colour'>No</span> <span class='pink inline-colour'>females</span> and <span class='gold inline-colour'>all</span> <span class='blue inline-colour'>males</span> will be <span class='pink inline-colour'>attracted to women</span>.</span>`;
+							default:
+								return `<span class="small-description"><span class='gold inline-colour'>${100 - v}%</span> of <span class='pink inline-colour'>female</span> and <span class='gold inline-colour'>${v}%</span> of <span class='blue inline-colour'>male</span> will be <span class='pink inline-colour'>attracted to women</span>.</span>`;
+						}
+					},
+				}>>
+			</div>
+		<<else>>
+			<div class="numberslider-inline">
+				<span>Genders:</span>
+				<<numberslider `"$settings.beastSettings." + _beastType + ".maleChance"` $settings.beastSettings[_beastType].maleChance 0 100 1 {
+					value: v => {
+						switch (v) {
+							case 0:
+								return `<span class="small-description"><span class='gold inline-colour'>All</span> will be <span class='pink inline-colour'>female</span>.</span>`;
+							case 50:
+								return `<span class="small-description">Evenly <span class='gold inline-colour'>split</span> between <span class='blue inline-colour'>male</span> and <span class='pink inline-colour'>female</span>.</span>`;
+							case 100:
+								return `<span class="small-description"><span class='gold inline-colour'>All</span> will be <span class='blue inline-colour'>male</span>.</span>`;
+							default:
+								return v > 50
+									? `<span class="small-description"><span class='gold inline-colour'>${v}%</span> will be <span class='blue inline-colour'>male</span>.</span>`
+									: `<span class="small-description"><span class='gold inline-colour'>${100 - v}%</span> will be <span class='pink inline-colour'>female</span>.</span>`;
+						}
+					},
+				}>>
+			</div>
+		<</if>>
+		<<link `$settings.beastSettings[_beastType].maleChanceSplit ? "Ignore sexual orientation" : "Set sexual orientation"`>>
+			<<set $settings.beastSettings[_beastType].maleChanceSplit to !$settings.beastSettings[_beastType].maleChanceSplit>>
+			<<displaySubsection>>
+		<</link>>
+	<</capture>>
+<</widget>>
+
+<<widget "beastTypeSettingRow">>
+	<<set _beastType to _args[0]>>
+	<<set _beastLabel to _args[1]>>
+	<div class="settingsToggleItemWide">
+		<div class="gold beastTypeSettingLabel"><<print _beastLabel>></div>
+		<div class="beastTypeSettingSplit">
+			<div class="beastSettingColumn">
+				<<beastTypeGenders _beastType>>
+				<div class="beastSettingBestiality" role="group" aria-label="Bestiality">
+					<span>Bestiality:</span>
+					<label><<radiobutton `"$settings.beastSettings." + _beastType + ".bestiality"` "on" autocheck>> Enabled</label> |
+					<label><<radiobutton `"$settings.beastSettings." + _beastType + ".bestiality"` "monsterOnly" autocheck>> Only as monster people</label> |
+					<label><<radiobutton `"$settings.beastSettings." + _beastType + ".bestiality"` "off" autocheck>> Disabled</label>
+				</div>
+			</div>
+			<div class="beastSettingColumn">
+				<div class="numberslider-inline">
+					<span>Monster people chance:</span>
+					<<numberslider `"$settings.beastSettings." + _beastType + ".monsterChance"` $settings.beastSettings[_beastType].monsterChance 0 100 1 {
+						value: v => {
+							switch (v) {
+								case 0:
+									return `<span class="small-description">These creatures will <span class='gold inline-colour'>never</span> appear as monster people.</span>`;
+								case 50:
+									return `<span class="small-description"><span class='gold inline-colour'>Half</span> of these creatures will be replaced by monster people.</span>`;
+								case 100:
+									return `<span class="small-description">These creatures will <span class='gold inline-colour'>always</span> be monster people.</span>`;
+								default:
+									return `<span class="small-description"><span class='gold inline-colour'>${v}%</span> of these creatures will be replaced by monster people.</span>`;
+							}
+						},
+					}>>
+				</div>
+				<label>
+					<<checkbox `"$settings.beastSettings." + _beastType + ".hallucinationsOnly"` false true autocheck>> Monster people of this type can only appear during hallucinations
+				</label>
+				<label>
+					<<checkbox `"$settings.beastSettings." + _beastType + ".victimsAlwaysMonster"` false true autocheck>> Victims of this type always appear as monster people
+				</label>
+			</div>
+		</div>
+	</div>
+<</widget>>
+
+<<widget "namedBeastSettingRow">>
+	<<set _namedBeastKey to _args[0]>>
+	<div class="settingsToggleItem">
+		<div class="numberslider-inline">
+			<span class="gold">Monster person chance:</span>
+			<<numberslider `"$settings.namedBeasts." + _namedBeastKey + ".monsterChance"` $settings.namedBeasts[_namedBeastKey].monsterChance 0 100 1 {
+				onInputChange: v => {
+					if (v === 0) {
+						$("#npcSkinToneSetting").addClass("hidden");
+					} else {
+						$("#npcSkinToneSetting").removeClass("hidden");
+					}
+				},
+				value: v => {
+					switch (v) {
+						case 0:
+							return `<span class="small-description"><span class='gold inline-colour'>Always</span> a real beast.</span>`;
+						case 100:
+							return `<span class="small-description"><span class='gold inline-colour'>Always</span> a monster girl or boy.</span>`;
+						default:
+							return `<span class="small-description"><span class='gold inline-colour'>${v}%</span> chance to appear as a monster girl or boy.</span>`;
+					}
+				},
+			}>>
+		</div>
+		<label>
+			<<checkbox `"$settings.namedBeasts." + _namedBeastKey + ".hallucinationsOnly"` false true autocheck>> Monster person only during hallucinations
+		</label>
 	</div>
 <</widget>>
 
@@ -2054,7 +2230,7 @@
 <</widget>>
 
 <<widget "incompletePregnancy">>
-	<<checkbox "$settings.incompletePregnancyEnabled" false true autocheck>> 미완성 임신 콘텐츠 활성화
+	<label><<checkbox "$settings.incompletePregnancyEnabled" false true autocheck>> Enable incomplete pregnancy content</label>
 	<<if _foundPregnancy>>
 		<mouse class="tooltip linkBlue">(!!!)<span>네임드 NPC가 임신 중일 때는 비활성화할 수 없습니다.</span></mouse>
 	<<else>>
@@ -2066,10 +2242,10 @@
 <</widget>>
 
 <<widget "fertilityCycles">>
-	<<checkbox "$settings.fertilityCycleEnabled" false true autocheck>> 배란 주기 활성화
+	<label><<checkbox "$settings.fertilityCycleEnabled" false true autocheck>> Enable fertility cycles</label>
 	<mouse class="tooltip linkBlue">(?)<span>
-		<div>활성화하면, 플레이어의 월경 주기가 임신 가능 여부를 결정합니다.</div>
-		<div>비활성화하면 가임률이 항상 최고치로 유지됩니다. 발정기가 더 이상 적용되지 않습니다. 가임 촉진제로 인한 발정과 흥분은 영향을 받지 않습니다.</div>
+		<div>When enabled, the player's menstruation cycle will determine when they can get pregnant.</div>
+		<div>When disabled, fertility is always at its highest. Heat no longer applies. Rut and heat caused by fertility boosters are unaffected.</div>
 	</span></mouse>
 <</widget>>
 
@@ -2081,9 +2257,11 @@
 <<widget "pregnancySettings">>
 	<div class="solidBorderContainer settings-container">
 		<div class="settingsGrid">
-			<div class="settingsToggleItemWide">
-				<span class="red">이 설정들을 변경하더라도 현재 진행 중인 임신이 중단되거나 플레이어가 자식들과 상호작용하는 것을 막지는 못합니다.</span>
-			</div>
+			<<if $passage isnot "Start">>
+				<div class="settingsToggleItemWide">
+					<span class="red">Changing these toggles will not stop existing pregnancy or prevent the player from interacting with their children.</span>
+				</div>
+			<</if>>
 			<div class="settingsHeader">
 				임신 확률
 			</div>
@@ -2114,15 +2292,11 @@
 				valSpan.text((i, value) => value + "%");
 			}).trigger('change') })>>
 			<div class="settingsToggleItem">
-				<label>
-					임신 유형:
+					Pregnancy type:
 					<<pregnancyType>>
-				</label>
 			</div>
 			<div class="settingsToggleItem">
-				<label>
 					<<fertilityCycles>>
-				</label>
 			</div>
 			<div class="settingsToggleItem">
 				<label>
@@ -2141,7 +2315,7 @@
 			</div>
 			<div class="settingsToggleItem">
 				<label>
-					<<checkbox "$settings.nnpcPregnancyEnabled" false true autocheck>> 네임드 NPC/러브 인터레스트 임신 켜기
+					<<checkbox "$settings.nnpcPregnancyEnabled" false true autocheck>> Enable NNPC pregnancy
 				</label>
 			</div>
 			<div class="settingsToggleItem">
@@ -2166,9 +2340,7 @@
 			<<set _foundPregnancy to !!Object.values($NPCName).find(npc => npc.pregnancy && npc.pregnancy.enabled && getActivePregnancies(npc.fullDescription).length && !setup.pregnancy.canBePregnant.includes(npc.fullDescription))>>
 			<span data-target='["settingsincompletepregnancyenabled", "settingsnnpcpregnancyenabled", "settingsplayerpregnancyhumanenabled", "settingsplayerpregnancybeastenabled"]' data-disabledif="(T.foundPregnancy&&V.settings.incompletePregnancyEnabled===true)||(!V.settings.nnpcPregnancyEnabled&&!V.settings.playerPregnancyHumanEnabled&&!V.settings.playerPregnancyBeastEnabled)">
 				<div class="settingsToggleItem humanPregnancyMonths-container">
-					<label>
 						<<incompletePregnancy>>
-					</label>
 				</div>
 			</span>
 		</div>
@@ -2243,8 +2415,8 @@
 					<mouse class="tooltip linkBlue">(?)<span>PC가 임신하거나 다른 사람을 임신시키는 것에 대한 언급을 허용합니다. 비활성화하더라도 다른 임신 설정이 켜져 있을 경우 임신과 관련된 모든 언급이 사라지지는 않습니다.</span></mouse>
 				</label>
 			</div>
-			<<if $debug is 1>>
-				디버그:
+			<<if $debug>>
+				DEBUG:
 				<br>
 				<span class="gold">NPC들이 콘돔을 소지할 확률</span>
 				<br>
@@ -2413,12 +2585,12 @@
 				<<replace #npcSettingsMenu>><<npcSettingsMenu>><</replace>>
 			<</link>>
 			|
-			<<link "피부색">>
+			<<link "Skin tones">>
 				<<initnpcskin "skincolour">>
 				<<updatePersistentNPCs "skincolour">>
 				<<replace #npcSettingsMenu>><<npcSettingsMenu>><</replace>>
 			<</link>>
-			<<if $debug is 1>>
+			<<if $debug>>
 				|
 				<<link "머리색과 눈색 초기화 (기본 색상을 가진 NPC에게만 영향을 미침)">>
 					<<generateNPCNameHairAndEyeColors "default">>
@@ -2435,8 +2607,20 @@
 				생식기:
 				<<link "자지">><<assignAllNPCs "gender" "m">><</link>> | <<link "보지">><<assignAllNPCs "gender" "f">><</link>>
 				<br>
-				자지 크기:
-				<<set _penisNames to ["", "작은", "보통", "큰", "거대한"]>> /* the empty first element is necessary because _j starts at 1 */
+				<span @class="$passage is 'Start' ? 'link-disabled' : ''">
+					Male NNPC genitals:
+					<<link "Penises">><<assignNPCGenitalsByPronoun "m" "m">><</link>> | <<link "Vaginas">><<assignNPCGenitalsByPronoun "m" "f">><</link>>
+					<br>
+					Female NNPC genitals:
+					<<link "Vaginas">><<assignNPCGenitalsByPronoun "f" "f">><</link>> | <<link "Penises">><<assignNPCGenitalsByPronoun "f" "m">><</link>>
+				</span>
+				<br>
+				<<if $passage is "Start">>
+					<span class="small-description">These can only be set after you start a game.</span>
+					<br>
+				<</if>>
+				Penis size:
+				<<set _penisNames to ["", "Tiny", "Average", "Thick", "Huge"]>> /* the empty first element is necessary because _j starts at 1 */
 				<<for _j to 1; _j lt _penisNames.length; _j++>>
 					<<capture _j>>
 						<<link _penisNames[_j]>><<assignAllNPCs "penissize" _j>><</link>>
@@ -2453,8 +2637,8 @@
 					<</capture>>
 				<</for>>
 				<br>
-				피부색:
-				<<link "창백함">><<assignAllNPCs "skincolour" "white">><</link>> | <<link "어두움">><<assignAllNPCs "skincolour" "black">><</link>>
+				Skin tone:
+				<<link "Lightest">><<assignAllNPCs "skincolour" 0>><</link>> | <<link "Medium">><<assignAllNPCs "skincolour" 50>><</link>> | <<link "Darkest">><<assignAllNPCs "skincolour" 100>><</link>>
 			<</foldout>>
 		</div>
 		<hr>
@@ -2565,68 +2749,138 @@
 	<<set $_characteristic to _args[0]>>
 	<<set $_value to _args[1]>>
 	<<for $_i to 0; $_i lt $NPCName.length; $_i++>>
+		<<if $_characteristic is "gender" and getActivePregnancies($NPCName[$_i].nam).length>>
+			<<continue>>
+		<</if>>
 		<<set $NPCName[$_i][$_characteristic] to $_value>>
 		<<if $_characteristic is "breastsize">>
-			<<set $NPCName[$_i].breastdesc to $_i > 0 ? setup.breastsizes[$_value] + " breast" : "nipple">>
-			<<set $NPCName[$_i].breastsdesc to $_i > 0 ? setup.breastsizes[$_value] + " breasts" : "nipples">>
+			<<set $NPCName[$_i].breastdesc to $_value > 0 ? setup.breastsizes[$_value] + " breast" : "nipple">>
+			<<set $NPCName[$_i].breastsdesc to $_value > 0 ? setup.breastsizes[$_value] + " breasts" : "nipples">>
 		<</if>>
 	<</for>>
-	<<if $passage isnot "start" and $per_npc and Object.keys($per_npc).length gt 0>>
+	<<if $passage isnot "start" and $per_npc and Object.keys($per_npc).length gt 0 and ($_characteristic isnot "gender" or $_value isnot "h")>>
 		<<for $_i range Object.keys($per_npc)>>
 			<<set $per_npc[$_i][$_characteristic] to $_value>>
 			<<if $_characteristic is "breastsize">>
-				<<set $per_npc[$_i].breastdesc to $_i > 0 ? setup.breastsizes[$_value] + " breast" : "nipple">>
-				<<set $per_npc[$_i].breastsdesc to $_i > 0 ? setup.breastsizes[$_value] + " breasts" : "nipples">>
+				<<set $per_npc[$_i].breastdesc to $_value > 0 ? setup.breastsizes[$_value] + " breast" : "nipple">>
+				<<set $per_npc[$_i].breastsdesc to $_value > 0 ? setup.breastsizes[$_value] + " breasts" : "nipples">>
 			<</if>>
 		<</for>>
+	<</if>>
+	<<if $_characteristic is "gender" or $_characteristic is "pronoun">>
+		<<initnpcgender>>
+		<<updatePersistentNPCs>>
 	<</if>>
 	<<replace #npcSettingsMenu>><<npcSettingsMenu>><</replace>>
 <</widget>>
 
+<<widget "namedNpcGenderApply">>
+	<<if $passage is "Start" or _args[0] is "namedNpcDefaultGender">>
+		<<unset _namedNpcPendingGender>>
+		<<run applyNpcGenderPreset(_args[0])>>
+		<<initnpcgender>>
+		<<updatePersistentNPCs>>
+	<<else>>
+		<<set _namedNpcPendingGender to _args[0]>>
+	<</if>>
+	<<replace #namedNpcGenderConfirm>><<namedNpcGenderConfirm>><</replace>>
+<</widget>>
+
+<<widget "namedNpcGenderConfirm">>
+	<<if _namedNpcPendingGender>>
+		<br>
+		<span class="red">This will turn every Named NPC <<= _namedNpcPendingGender is "namedNpcAllMaleGender" ? "male and give them all penises" : "female and give them all vaginas">>. Individual choices will be lost.</span>
+		<br>
+		<<button "Yes">>
+			<<run applyNpcGenderPreset(_namedNpcPendingGender)>>
+			<<initnpcgender>>
+			<<updatePersistentNPCs>>
+			<<unset _namedNpcPendingGender>>
+			<<replace #namedNpcGenderConfirm>><</replace>>
+		<</button>>
+		<<button "No">>
+			<<unset _namedNpcPendingGender>>
+			<<set _namedNpcPreset to "namedNpcDefaultGender">>
+			<<displaySettings "quickStart">>
+		<</button>>
+	<</if>>
+<</widget>>
+
+<<widget "nnpcGenderSetByHand">>
+	<<set _nnpcGenderByHand to _nnpcGenderByHand ?? []>>
+	<<run _nnpcGenderByHand.includes(_args[0]) || _nnpcGenderByHand.push(_args[0])>>
+<</widget>>
+
+<<widget "assignNPCGenitalsByPronoun">>
+	<<assignNPCGenitalsByPronounCore _args[0] _args[1]>>
+	<<replace #npcSettingsMenu>><<npcSettingsMenu>><</replace>>
+<</widget>>
+
+<<widget "assignNPCGenitalsByPronounCore">>
+	<<set $_pronounFilter to _args[0]>>
+	<<set $_value to _args[1]>>
+	<<for $_i to 0; $_i lt $NPCName.length; $_i++>>
+		<<if $NPCName[$_i].pronoun is $_pronounFilter and !getActivePregnancies($NPCName[$_i].nam).length and !(_args[2] and (_nnpcGenderByHand ?? []).includes($_i))>>
+			<<set $NPCName[$_i].gender to $_value>>
+		<</if>>
+	<</for>>
+	<<if $_value isnot "h" and $passage isnot "Start" and $per_npc and Object.keys($per_npc).length gt 0>>
+		<<for $_i range Object.keys($per_npc)>>
+			<<if $per_npc[$_i].pronoun is $_pronounFilter>>
+				<<set $per_npc[$_i].gender to $_value>>
+			<</if>>
+		<</for>>
+	<</if>>
+	<<initnpcgender>>
+	<<updatePersistentNPCs>>
+<</widget>>
+
 <<widget "exportsettings">>
 	<div class="solidBorderContainer settings-container">
-	<div class="settings-intro">
-	<span class="yellow">"세이브/옵션" 오버레이의 설정도 함께 불러오거나 내보냅니다.</span>
-	<hr>
-	<h4 class="gold">설정 파일 불러오기/내보내기</h4>
+		<div class="settings-intro">
+			<span class="yellow">Will also import/export settings found in the "SAVE/OPTIONS" overlay.</span>
+			<hr>
+			<h4 class="gold">Settings File Import/Export</h4>
 
-	<<if SugarCube.Browser.isMobile.any() is true>>
-		현재 안드로이드에서는 파일에서 저장하고 불러오는 기능이 작동하지 않으니 주의하세요.
-	<<else>>
-		파일에서 불러오기: <input id="saveImport" type="file" value="파일에서 불러오기" onchange="importSettings(this.files, 'file')">
-		<br><br>
-		<<if $ironmanmode is true>>
-			<input type="button" value="파일로 저장" disabled>
-		<<else>>
-			<input type="button" value="파일로 저장" onclick="exportSettings(null,'file')">
-		<</if>>
-	<</if>>
-	<hr>
-	<h4 class="gold">설정 텍스트 내보내기/불러오기</h4>
+			<<if SugarCube.Browser.isMobile.any() is true>>
+				Note that saving and loading from file does not work on Android currently.
+			<<else>>
+				Load from file: <input id="saveImport" type="file" value="Load from file" onchange="importSettings(this.files, 'file')">
+				<br><br>
+				<<if $ironmanmode is true>>
+					<input type="button" value="Save to file" disabled>
+				<<else>>
+					<input type="button" value="Save to file" onclick="exportSettings('file')">
+				<</if>>
+			<</if>>
+			<hr>
+			<h4 class="gold">Settings Text Import/Export</h4>
 
-	<ul>
-	<li>현재 설정을 저장하려면 "설정 데이터 내보내기"를 클릭한 후, 필요한 곳에 데이터를 복사해서 붙여넣으세요.</li>
-	<li>현재 설정을 불러오려면, 설정 데이터를 붙여넣고 "설정 데이터 불러오기"를 클릭하세요.</li>
-	<li>안드로이드와 데이터를 주고받으려면, 이메일이나 pastebin 같은 서비스를 사용하는 것을 권장합니다. 문제가 발생하지 않도록 세이브 데이터의 시작과 끝이 정확한지 확인하세요.</li>
-	<li>현재 내용을 복사하려면 "텍스트 영역 복사하기"를 클릭하세요. 기기나 브라우저가 지원하지 않을 경우 버튼 이름이 "복사 오류"로 변경됩니다.</li>
-	</ul>
-	<textarea id="settingsDataInput" rows="4" cols="40" onClick="if(V.disableAutoSelect == false)this.select();" onfocus="V.tempDisable = true;" onblur="V.tempDisable = false;"></textarea>
-	<br>
-	<input type="button" value="텍스트 상자 비우기" onclick="clearTextBox('settingsDataInput')"/>
-	<input type="button" value="텍스트 상자 맨 위로" onclick="topTextArea('settingsDataInput')"/>
-	<input type="button" value="텍스트 상자 맨 아래로" onclick="bottomTextArea('settingsDataInput')"/>
-	<input type="button" value="설정 데이터 내보내기" onclick="exportSettings(null,'text')"/>
-	<input type="button" value="설정 데이터 불러오기" onclick="importSettings(null,'text')"/>
-	<input id="CopyTextArea" type="button" value="텍스트 복사" onclick="copySavedata('settingsDataInput')">
-	<input id="LoadExternalExportFile" type="button" value="외부 내보내기 파일 불러오기" onclick="loadExternalExportFile()">
+			<ul>
+			<li>To save your current settings, click on "Get Settings Data", then copy and paste the save data where required.</li>
+			<li>To load your current settings, paste in the settings data then click "Load Settings Data".</li>
+			<li>To transfer to and from Android, it is recommended to use email or a service such as pastebin. Please ensure that the start and the end of the save is exact to prevent issues.</li>
+			<li>Click on "Copy Text Area" to copy the current contents for you. The button name will change to "Copying Error" if your device or browser does not support it.</li>
+			</ul>
+			<textarea id="settingsDataInput" rows="4" cols="40" onClick="if(V.disableAutoSelect == false)this.select();" onfocus="V.tempDisable = true;" onblur="V.tempDisable = false;"></textarea>
+			<br>
+			<input type="button" value="Clear Text Box" onclick="clearTextBox('settingsDataInput')"/>
+			<input type="button" value="Top of Text Box" onclick="topTextArea('settingsDataInput')"/>
+			<input type="button" value="Bottom of Text Box" onclick="bottomTextArea('settingsDataInput')"/>
+			<input type="button" value="Get Settings Data" onclick="exportSettings('text')"/>
+			<input type="button" value="Load Settings Data" onclick="importSettings(null,'text')"/>
+			<input id="CopyTextArea" type="button" value="Copy Text Area" onclick="copySavedata('settingsDataInput')">
+			<input id="LoadExternalExportFile" type="button" value="Load External Export File" onclick="loadExternalExportFile()">
 
-	<br><br>
+			<br><br>
 
-	<label>
-		<<checkbox "$disableAutoSelect" false true autocheck>>
-		자동 선택을 비활성화합니다.
-	</label>
-	</div>
+			<label>
+				<<checkbox "$disableAutoSelect" false true autocheck>>
+				Disables auto select.
+			</label>
+			<br>
+			<span style="font-size: 80%">Settings exports made prior to version 0.5.13 are no longer supported.</span>
+		</div>
 	</div>
 <</widget>>
 
@@ -2693,9 +2947,9 @@
 			<span class="gold">생식기:</span>
 			<br>
 			<span data-target="npcname-pregnancy" data-disabledif="getActivePregnancies(V.NPCName[T.npcId].nam).length">
-				<label><<radiobutton "$NPCName[_npcId].gender" "f" autocheck>> 보지</label> |
-				<label><<radiobutton "$NPCName[_npcId].gender" "m" autocheck>> 자지</label>
-				<<if $debug is 1 or setup.features?.herm or $NPCName[_npcId].gender is "h">>| <label><<radiobutton "$NPCName[_npcId].gender" "h" autocheck>> 양성</label><</if>>
+				<label><<radiovar "$NPCName[_npcId].gender" "f">><<nnpcGenderSetByHand _npcId>><</radiovar>> Vagina</label> |
+				<label><<radiovar "$NPCName[_npcId].gender" "m">><<nnpcGenderSetByHand _npcId>><</radiovar>> Penis</label>
+				<<if $debug>>| <label><<radiovar "$NPCName[_npcId].gender" "h">><<nnpcGenderSetByHand _npcId>><</radiovar>> Both</label><</if>>
 			</span>
 		</div>
 		<div class="settingsToggleItem">
@@ -2724,8 +2978,8 @@
 		</div>
 		<div class="settingsToggleItem">
 			<span data-target="npcname-pregnancy" data-disabledif="!V.settings.nnpcPregnancyEnabled||setup.pregnancy.infertile.includes(V.NPCName[T.npcId].nam)||V.NPCName[T.npcId].pregnancy.enabled===undefined||getActivePregnancies(V.NPCName[T.npcId].nam).length||!setup.pregnancy.typesEnabled.includes(V.NPCName[T.npcId].type)">
-				<span class="gold">NPC 임신 활성화:</span>
-				<mouse class="tooltip linkBlue">(?)<span>"NNPC/LI 임신" 토글이 활성화되어 있어야 합니다. "미완성 임신 콘텐츠" 토글도 활성화해야 할 수 있습니다. 비활성화해도 이미 진행 중인 임신은 중단되지 않습니다.</span></mouse>
+				<span class="gold">Enable Pregnancy for NPC:</span>
+				<mouse class="tooltip linkBlue">(?)<span>Requires the "NNPC pregnancy" toggle to be enabled. May also require the "incomplete pregnancy content" toggle to be enabled. Disabling will not stop an existing pregnancy.</span></mouse>
 				<br>
 				<label><<radiobutton "$NPCName[_npcId].pregnancy.enabled" true autocheck>> 활성</label> |
 				<label><<radiobutton "$NPCName[_npcId].pregnancy.enabled" false autocheck>> 비활성</label>
@@ -2733,8 +2987,8 @@
 		</div>
 		<div class="settingsToggleItem">
 			<span data-target="npcname-analpregnancy" data-disabledif="!V.settings.nnpcPregnancyEnabled||!V.settings.npcAnalPregnancyEnabled||setup.pregnancy.infertile.includes(V.NPCName[T.npcId].nam)||V.NPCName[T.npcId].pregnancy.enabled===undefined||getActivePregnancies(V.NPCName[T.npcId].nam).length||!setup.pregnancy.typesEnabled.includes(V.NPCName[T.npcId].type)">
-				<span class="gold">NPC 항문 임신 활성화:</span>
-				<mouse class="tooltip linkBlue">(?)<span>"NNPC/LI 임신"과 "NPC 항문 임신" 토글이 전역 게임 설정에서 활성화되어 있어야 작동합니다. "미완성 임신 콘텐츠" 토글도 활성화해야 할 수 있습니다. 이 NPC의 임신 토글도 함께 활성화되어 있어야 합니다. 보지가 있는 NPC는 이 옵션을 켜면 질과 항문 모두로 임신할 수 있게 됩니다.</span></mouse>
+				<span class="gold">Enable Anal Pregnancy for NPC:</span>
+				<mouse class="tooltip linkBlue">(?)<span>"NNPC pregnancy" and "NPC anal pregnancy" must be toggled on in the global game settings for this to work. May also require the "incomplete pregnancy content" toggle to be enabled. Pregnancy for this NPC must be toggled on, as well. NPCs with vaginas will be able to carry both vaginally and anally if this is toggled on for them.</span></mouse>
 				<br>
 				<label><<radiobutton "$NPCName[_npcId].pregnancy.analEnabled" true autocheck>> 활성</label> |
 				<label><<radiobutton "$NPCName[_npcId].pregnancy.analEnabled" false autocheck>> 비활성</label>
@@ -2742,62 +2996,33 @@
 		</div>
 
 
-		<div class="settingsToggleItem">
-			<span class="gold">피부색:</span>
+		<<if $NPCName[_npcId].nam is "Black Wolf">>
+			<<namedBeastSettingRow "blackwolf">>
+		<<elseif $NPCName[_npcId].nam is "Great Hawk">>
+			<<namedBeastSettingRow "greathawk">>
+		<<elseif $NPCName[_npcId].nam is "Night Monster">>
+			<<namedBeastSettingRow "nightmonster">>
+		<</if>>
+
+		<<set _skinToneHidden to ($NPCName[_npcId].nam is "Black Wolf" and $settings.namedBeasts.blackwolf.monsterChance is 0)
+			or ($NPCName[_npcId].nam is "Great Hawk" and $settings.namedBeasts.greathawk.monsterChance is 0)
+			or ($NPCName[_npcId].nam is "Night Monster" and $settings.namedBeasts.nightmonster.monsterChance is 0)>>
+		<div id="npcSkinToneSetting" @class="'settingsToggleItem' + (_skinToneHidden ? ' hidden' : '')">
+			<span class="gold">Skin Tone:</span>
 			<br>
-			<<if $NPCName[_npcId].nam is "Black Wolf">>/*disable skin colour toggle when player has BW set to 'always a beast'*/
-				<span data-target="blackwolfmonster" data-disabledif="V.blackwolfmonster===0">
-				<label><<radiobutton "$NPCName[_npcId].skincolour" "white" autocheck>> 창백함</label> |
-				<label><<radiobutton "$NPCName[_npcId].skincolour" "black" autocheck>> 어두움</label>
-				</span>
-			<<elseif $NPCName[_npcId].nam is "Great Hawk">>/*disable skin colour toggle when player has GH set to 'always a beast'*/
-				<span data-target="greathawkmonster" data-disabledif="V.greathawkmonster===0">
-				<label><<radiobutton "$NPCName[_npcId].skincolour" "white" autocheck>> 창백함</label> |
-				<label><<radiobutton "$NPCName[_npcId].skincolour" "black" autocheck>> 어두움</label>
-				</span>
-			<<elseif $NPCName[_npcId].nam is "Night Monster">>/*disable skin colour toggle when player has NM set to 'always a beast'*/
-				<span data-target="nightmonstermonster" data-disabledif="V.nightmonstermonster===0">
-				<label><<radiobutton "$NPCName[_npcId].skincolour" "white" autocheck>> 창백함</label> |
-				<label><<radiobutton "$NPCName[_npcId].skincolour" "black" autocheck>> 어두움</label>
-				</span>
+			<<if ["Black Wolf", "Great Hawk", "Night Monster"].includes($NPCName[_npcId].nam)>>
+				<<npcSkinTone>>
 			<<else>>
-				<span data-target="npcname-npcidskincolour" data-disabledif="V.NPCName[T.npcId].skincolour==='ghost'">
-				<label><<radiobutton "$NPCName[_npcId].skincolour" "white" autocheck>> 창백함</label> |
-				<label><<radiobutton "$NPCName[_npcId].skincolour" "black" autocheck>> 어두움</label>
+				<span data-target="npcname-npcidskincolour" data-disabledif="V.NPCName[T.npcId].skinType==='ghost'">
+				<<npcSkinTone>>
 				</span>
 			<</if>>
 		</div>
-
-		<<if $NPCName[_npcId].nam is "Black Wolf">>
-			<div class="settingsToggleItemWide">
-				<span class="gold">야수 유형:</span>
-				<br>
-				<label><<radiobutton "$blackwolfmonster" 0 autocheck>> 항상 야수</label> |
-				<label><<radiobutton "$blackwolfmonster" 1 autocheck>> 조건 충족 시 수인</label> |
-				<label><<radiobutton "$blackwolfmonster" 2 autocheck>> 항상 수인</label>
-			</div>
-		<<elseif $NPCName[_npcId].nam is "Great Hawk">>
-			<div class="settingsToggleItemWide">
-				<span class="gold">야수 유형:</span>
-				<br>
-				<label><<radiobutton "$greathawkmonster" 0 autocheck>> 항상 야수</label> |
-				<label><<radiobutton "$greathawkmonster" 1 autocheck>> 조건 충족 시 수인</label> |
-				<label><<radiobutton "$greathawkmonster" 2 autocheck>> 항상 수인</label>
-			</div>
-		<<elseif $NPCName[_npcId].nam is "Night Monster">>
-			<div class="settingsToggleItemWide">
-				<span class="gold">야수 유형:</span>
-				<br>
-				<label><<radiobutton "$nightmonstermonster" 0 autocheck>> 항상 야수</label> |
-				<label><<radiobutton "$nightmonstermonster" 1 autocheck>> 조건 충족 시 수인</label> |
-				<label><<radiobutton "$nightmonstermonster" 2 autocheck>> 항상 수인</label>
-			</div>
-		<</if>>
 	</div>
 	<div style="clear:both;"></div>
 
-	<<if $debug is 1>>
-		디버그:
+	<<if $debug>>
+		DEBUG:
 		<br>
 		<div class="settingsToggleItemWide">
 			<span class="gold">머리색:</span>
@@ -2892,8 +3117,8 @@
 				<</if>>
 				<span style="font-size:80%">
 					<br>
-					<<if $per_npc[_pNPCId].name_known and $debug is 1>>
-						<<link "이름 바꾸기">>
+					<<if $per_npc[_pNPCId].name_known and $debug>>
+						<<link "Rename">>
 							<<if $per_npc[_pNPCId].pronoun is "f">>
 								<<set $per_npc[_pNPCId].name to $NPC_names_f.random()>>
 							<<else>>
@@ -2957,10 +3182,15 @@
 				}>>
 			</div>
 			<div class="settingsToggleItem">
-				<span class="gold">피부색:</span>
+				<span class="gold">Skin Tone:</span>
 				<br>
-				<label><<radiobutton "$per_npc[_pNPCId].skincolour" "white" autocheck>> 밝음</label> |
-				<label><<radiobutton "$per_npc[_pNPCId].skincolour" "black" autocheck>> 어두움</label>
+				<<if $per_npc[_pNPCId].skincolour isnot undefined>>
+					<<numberslider "$per_npc[_pNPCId].skincolour" $per_npc[_pNPCId].skincolour 0 100 1 {
+						value: v => setup.colours.getSkinToneSwatch(v),
+					}>>
+				<<else>>
+					<span class="small-description">Randomised.</span>
+				<</if>>
 			</div>
 		<</if>>
 	</div>
@@ -3013,6 +3243,37 @@
 		<</link>>
 	</div>
 	<<run $(() => {wikifier("featsMerge")})>>
+<</widget>>
+
+<<widget "skinToneRange">>
+	<div class="skinToneRange" @style="'--skin-gradient: linear-gradient(to right, ' + setup.colours.skin_options.gyaru.gradient.join(', ') + ')'">
+		<<for _handle range [["min", "Min", "Lightest"], ["mean", "Mode", "Most common"], ["max", "Max", "Darkest"]]>>
+			<<set _tone to $settings["skinTone" + _handle[1]]>>
+			<input type="range" min="0" max="100" step="1" @data-skin="_handle[0]" @data-tip="_handle[2] + ' skin tone'" @value="_tone"
+				@style="'--skin-thumb: ' + setup.colours.getSkinRgb(setup.colours.skin_options.gyaru, _tone / 100)">
+		<</for>>
+		<span class="skinToneTip"></span>
+	</div>
+<</widget>>
+
+<<widget "npcSkinTone">>
+	<<if $NPCName[_npcId].skinType is "ghost">>
+		<span class="small-description">Ghostly pale.</span>
+	<<elseif $NPCName[_npcId].skincolour isnot undefined>>
+		<<numberslider "$NPCName[_npcId].skincolour" $NPCName[_npcId].skincolour 0 100 1 {
+			value: v => setup.colours.getSkinToneSwatch(v),
+		}>>
+		<<link "Randomise">>
+			<<initnpcskinsingle _npcId "skincolour">>
+			<<replace #npcSettingsMenu>><<npcSettingsMenu>><</replace>>
+		<</link>>
+	<<else>>
+		<span class="small-description">Randomised when the game starts.</span>
+		<<link "Set tone">>
+			<<set $NPCName[_npcId].skincolour to Math.clamp($settings.skinToneMode, 0, 100)>>
+			<<replace #npcSettingsMenu>><<npcSettingsMenu>><</replace>>
+		<</link>>
+	<</if>>
 <</widget>>
 
 :: Settings [exitCheckBypass]

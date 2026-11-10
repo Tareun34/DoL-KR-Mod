@@ -1,0 +1,16 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if dangerEvent()>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $bus is \"barb\" and $mine?.freed isnot 1 and $rng gte 40>>",
+   "\t<<link [[Everything fades to black...|Flats Auction]]>><</link>>",
+   "\t<br>",
+   "<<elseif dangerEvent()>>"
+  ],
+  "context": ""
+ }
+]

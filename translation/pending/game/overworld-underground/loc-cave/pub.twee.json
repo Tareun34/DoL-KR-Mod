@@ -1,0 +1,26 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\"Sorry,\" Wren says with an embarrassed smile. \"How rude of me. It's nothing important. don't worry.\""
+  ],
+  "old_kr": [
+   "\"미안,\" 렌이 민망한 듯 웃으며 말한다. \"내가 너무 무례했네. 별일 아니니까 걱정 마.\""
+  ],
+  "new_en": [
+   "\"Sorry,\" Wren says with an embarrassed smile. \"How rude of me. It's nothing important. Don't worry.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $debug>>"
+  ],
+  "context": "<<else>>"
+ }
+]

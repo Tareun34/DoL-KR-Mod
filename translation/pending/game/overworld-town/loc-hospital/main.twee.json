@@ -1,0 +1,169 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if C.npc.Alex.pregnancy.sample is true and playerIsPregnant() and !isPregnancyEnding()>>",
+   "\t\t\t<<procedureicon \"paternity\">><<link [[Enquire about a paternity test (0:10)|Hospital Paternity Test]]>><<pass 10>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<if C.npc.Alex.pregnancy.sample is true and playerIsPregnant() and !isPregnancyEnding()>>",
+   "\t\t\t<<procedureicon \"paternity\">><<link [[친자 확인 검사에 대해 문의한다 (0:10)|Hospital Paternity Test]]>><<pass 10>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<if C.npc.Alex.pregnancy.sample is true and playerIsPregnant() and !isPregnancyEnding() and (getPlayerPregnancy().donor is \"Alex\" or !knowsDonor(getPlayerPregnancy().pregnancyId, \"pc\"))>>",
+   "\t\t\t<<procedureicon \"paternity\">><<link [[Enquire about a paternity test (0:10)|Hospital Paternity Test]]>><<pass 10>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<beastNEWinit 2 wolf>>",
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t<<link [[Climb down to the water (0:01)|Abduction Hospital Water]]>><<set $molestationstart to 1>><<pass 1>><</link>>"
+  ],
+  "old_kr": [
+   "<<beastNEWinit 2 wolf>>",
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t<<link [[물가로 내려간다 (0:01)|Abduction Hospital Water]]>><<set $molestationstart to 1>><<pass 1>><</link>>"
+  ],
+  "new_en": [
+   "<<generateBeastVictim 2 wolf>>",
+   "<<if beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\t<<link [[Climb down to the water (0:01)|Abduction Hospital Water]]>><<set $molestationstart to 1>><<pass 1>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $renttime lte 0>>",
+   "\t\t\t<<link [[Leave now (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $renttime lte 0>>",
+   "\t\t\t<<link [[지금 떠난다 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<if $rentTime lte 0>>",
+   "\t\t\t<<link [[Leave now (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $renttime lte 0>>",
+   "\t\t\t<<link [[Next (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $renttime lte 0>>",
+   "\t\t\t<<link [[다음 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<if $rentTime lte 0>>",
+   "\t\t\t<<link [[Next (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $renttime lte 0>>",
+   "\t\t\t<<link [[Leave now (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $renttime lte 0>>",
+   "\t\t\t<<link [[지금 떠난다 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<if $rentTime lte 0>>",
+   "\t\t\t<<link [[Leave now (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $renttime lte 0>>",
+   "\t\t\t<<link [[Next (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $renttime lte 0>>",
+   "\t\t\t<<link [[다음 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<if $rentTime lte 0>>",
+   "\t\t\t<<link [[Next (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $renttime lte 0>>",
+   "\t\t\t<<link [[Leave now (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $renttime lte 0>>",
+   "\t\t\t<<link [[지금 떠난다 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<if $rentTime lte 0>>",
+   "\t\t\t<<link [[Leave now (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $renttime lte 0>>",
+   "\t\t\t<<link [[Next (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $renttime lte 0>>",
+   "\t\t\t<<link [[다음 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<if $rentTime lte 0>>",
+   "\t\t\t<<link [[Next (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $renttime lte 0>>",
+   "\t<<link [[Next|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "<<if $renttime lte 0>>",
+   "\t<<link [[다음|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "<<if $rentTime lte 0>>",
+   "\t<<link [[Next|Hospital Rent]]>><<pass 10>><<endevent>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $robinfirstrentfight and ($baileypaychain lt 2 or $renttime lte -1) and [\"orphanage\",\"bath\",\"sleep\"].includes(_robin_location)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $robinfirstrentfight and ($baileypaychain lt 2 or $rentTime lte -1) and [\"orphanage\",\"bath\",\"sleep\"].includes(_robin_location)>>"
+  ],
+  "context": "<<run statusCheck(\"Robin\")>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<set $temple_chastity_timer to 30>>"
+  ],
+  "context": "<<set C.npc.Sydney.virginity.temple to true>>"
+ }
+]

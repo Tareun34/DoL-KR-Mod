@@ -86,36 +86,36 @@
 <br><br>
 
 <<if $hairlength gte 1000>>
-  뒤쪽에서 누군가 머리카락을 들어 올리는 느낌이 들었다. 뒤를 돌아보니 시드니가 당신을 향해 활짝 웃고 있었다.
-  <br><br>
-  "머리가 정말 기시네요." <<He>>【이가】 머릿결 사이로 <<his>> 손가락을 집어넣었다. "제가 만져봐도 될까요?"
-  <br><br>
-  당신은 고개를 끄덕였고, 시드니가 머리를 만지는 동안 다시 고개를 돌려 풍경을 감상했다. 몇몇 수습생들이 <<him>>【와과】 합류했다.
-  <br><br>
-  어깨를 톡톡 치는 손길이 느껴졌을 때 당신은 거의 졸고 있었다.
-  <br><br>
-  "다 됐어요!" 시드니가 손으로 당신의 머리카락을 들어 올리며 결과물을 보여주었다.
-  <br><br>
+	You feel your hair being picked up behind you. You turn around, and see Sydney beaming at you.
+	<br><br>
+	"Your hair is really long." <<He>> works <<his>> fingers through the locks. "May I?"
+	<br><br>
+	You nod, and turn back to admire the scenery as Sydney does your hair. Some initiates join <<him>>.
+	<br><br>
+	You almost doze off when you feel a finger tap on your shoulder.
+	<br><br>
+	"It's done!" Sydney lifts your hair in <<his>> hand to show you their work.
+	<br><br>
 
-  <<if $sydneyromance is 1>>
-      <<He>>【이가】 머리카락 끝자락에 입을 맞추었다. "머릿결이 정말 아름다워요."<<if $sydneySeen.includes("hairchange")>> <<He>>【이가】 뭔가를 떠올렸는지 미소가 더욱 밝아졌다. "그리고 제 머리를 도와주셨던 건 정말 어떻게 감사드려야 할지 모르겠어요."<</if>>
-      <br><br>
-  <</if>>
+	<<if $sydneyromance is 1>>
+		<<He>> plants a kiss on the tip of a strand. "Your hair is so beautiful."<<if $sydneySeen.includes("hairchange")>> <<He>> thinks of something, and <<his>> smile brightens. "And I can't thank you enough for your help with mine."<</if>>
+		<br><br>
+	<</if>>
 
-  <<if $worn.head.name is "naked" and random(1,6) is 1>>
-      <<He>>【이가】 마무리로 당신의 귀 뒤에 데이지 꽃을 꽂아주었다.
-      <<headwear "daisy">>
-      <br><br>
-  <</if>>
-  <<set _target to either("twin fishtails","half up twintail","heart braid","left fishtail","jellyfish twintails","right fishtail","scorpion tails","twin double braids")>>
-  <<if $hairtype isnot _target>>
-      <<set $hairtype to _target>>
-      당신은 잠시 새로운 헤어스타일을 살펴보았다.
-  <<else>>
-      당신은 잠시 머리카락을 살펴보았지만, 별다른 변화는 없었다. 하지만 엉킨 머리를 풀고 머릿결을 정돈해 주었다.
-  <</if>>
-  <<stress -6>><<lstress>>
-  <br><br>
+	<<if $worn.head.name is "naked" and random(1,6) is 1>>
+		<<He>> tucks a daisy behind your ear as the finishing touch.
+		<<headwear "daisy">>
+		<br><br>
+	<</if>>
+	<<set _target to either("twin fishtails","half up twintails","heart braids","fishtail left","jellyfish twintails","fishtail right","scorpion tails","twin double braids")>>
+	<<if $hairtype isnot _target>>
+		<<set $hairtype to _target>>
+		You spend a moment examining your new hair style.
+	<<else>>
+		You spend a moment examining your hair, there's not much change. They've untangled the knots in your hair and smoothed the strands, though.
+	<</if>>
+	<<stress -6>><<lstress>>
+	<br><br>
 <</if>>
 
 그들은 떠나기 시작하고, 시드니도 그들과 함께한다. <<if $sydneyromance is 1>><<He>>【은는】 떠나기 전 당신의 뺨에 입을 맞춘다. <</if>>"다시 일하러 가야죠. <<if _sydneyStatus.includes("corrupt")>>사악한<<else>>경건한<</if>> 자에게 휴식은 없으니까요."

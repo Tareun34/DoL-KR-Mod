@@ -1,0 +1,136 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tLeighton gets to <<his>> feet, eyes wide as <<he>> ogles your <<genitals>>. \"Oh my, you are a naughty<<if $player.sex is \"m\">> boy,<<elseif $player.penisExist and $player.vaginaExist and $player.gender_appearance is \"m\">>... um, boy...<<elseif $player.penisExist and $player.vaginaExist and $player.gender_appearance is \"f\">>... um, girl...<<else>> girl,<</if>> aren't you? Showing off to your <<nnpc_title \"Leighton\">> like this.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t레이튼은 자리에서 일어나, 당신의 <<genitals>>【을를】 뚫어져라 쳐다보며 눈을 크게 뜬다. \"오, 이런, 넌 정말 버릇없는<<if $player.sex is \"m\">> 녀석이구나,<<elseif $player.penisExist and $player.vaginaExist and $player.gender_appearance is \"m\">>... 음, 녀석...<<elseif $player.penisExist and $player.vaginaExist and $player.gender_appearance is \"f\">>... 음, 년...<<else>> 년이구나,<</if>> 그렇지 않나? 네 <<nnpc_title \"Leighton\">>에게 이렇게 과시하다니.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\tLeighton gets to <<his>> feet, eyes wide as <<he>> ogles your <<genitals>>. \"Oh my, you are a naughty ",
+   "\t\t\t\t\t<<if $settings.nudeGenderPerception is 0>>",
+   "\t\t\t\t\t\t<<girl>>,",
+   "\t\t\t\t\t<<elseif $settings.nudeGenderPerception is 2 and $player.sex isnot \"h\">>",
+   "\t\t\t\t\t\t <<pcSex>>,",
+   "\t\t\t\t\t<<elseif $player.penisExist and $player.vaginaExist>>...um, <<girl>>...",
+   "\t\t\t\t\t<<else>> ",
+   "\t\t\t\t\t\t<<girl>>,",
+   "\t\t\t\t\t<</if>> ",
+   "\t\t\t\t\taren't you? Showing off to your <<nnpc_title \"Leighton\">> like this.\""
+  ],
+  "context": "\t\t\t\t\t<<set $genderknown.pushUnique(\"Leighton\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"No underwear?\" <<he>> comments. \"That's against the rules,",
+   "\t\t\t\t\t<<if $player.penisExist and $player.vaginaExist>>",
+   "\t\t\t\t\t\tyoung... <<lady>>?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"속옷이 없다고?\" <<he>>【이가】 말한다. \"그건 규칙 위반이다,",
+   "\t\t\t\t\t<<if $player.penisExist and $player.vaginaExist>>",
+   "\t\t\t\t\t\t이런... <<lady>>?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"No underwear?\" <<he>> comments. \"That's against the rules,",
+   "\t\t\t\t\t<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>",
+   "\t\t\t\t\t\tyoung... <<lady>>?\""
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tPleased with yourself, you spend another minute polishing the troublesome spot. You make sure to put an extra wiggle in your hips, in case Leighton is still secretly watching.",
+   "\t<<if random(0, 100) lt 5 and ($settings.bestialityEnabled or $monster is 1)>>"
+  ],
+  "old_kr": [
+   "\t스스로에게 만족하며, 당신은 그 성가신 부분을 닦는 데 1분 더 할애한다. 레이튼이 여전히 몰래 보고 있을지도 모르니, 엉덩이를 한 번 더 흔들어주는 것도 잊지 않는다.",
+   "\t<<if random(0, 100) lt 5 and ($settings.bestialityEnabled or $monster is 1)>>"
+  ],
+  "new_en": [
+   "\tPleased with yourself, you spend another minute polishing the troublesome spot. You make sure to put an extra wiggle in your hips, in case Leighton is still secretly watching.",
+   "\t<<if random(0, 100) lt 5 and beastSexEnabledForType(\"dog\", $monster is 1)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<if $player.penissize is 5 and $player.penisExist and $player.vaginaExist>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<if $player.penissize gte 5 and $player.penisExist and $player.vaginaExist>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<elseif $player.penissize is 6>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<elseif $player.penissize gte 6>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $player.penissize is 5 and $player.penisExist and $player.vaginaExist>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $player.penissize gte 5 and $player.penisExist and $player.vaginaExist>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<elseif $player.penissize is 6>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<elseif $player.penissize gte 6>>"
+  ],
+  "context": "\t\t\t\t\t<<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<oxfordquick>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<oxfordQuick>>"
+  ],
+  "context": "<<endevent>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $anususe to \"penis\">><<set $NPCList[0].penis to \"anusentrance\">><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $anususe to \"penis\">><<set $NPCList[0].penis to \"anusentrance\">><<set $anusstate to \"entrance\">><<set $speechAnusEntrance to 1>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $anususe to \"penis\">><<set $NPCList[0].penis to \"anusentrance\">><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $anususe to \"penis\">><<set $NPCList[0].penis to \"anusentrance\">><<set $anusstate to \"entrance\">><<set $speechAnusEntrance to 1>>"
+  ],
+  "context": "\t<<elseif $phase is 0>>"
+ }
+]

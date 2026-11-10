@@ -99,12 +99,12 @@ var General = ((Macro, SexTypes) => {
 		const sperm = either("정액", "정자", "사정액");
 		const id = override || getSexesFromRandomGroup();
 		switch (id) {
-			case SexTypes.ALL_DICKGIRLS:
-				return `${sperm}【와과】 우유`;
+			case SexTypes.ALL_FEMALE_PENISES:
+				return `${sperm} and milk`;
 			case SexTypes.ALL_MALES:
 			case SexTypes.ALL_DICKS:
 				return sperm;
-			case SexTypes.ALL_CUNTBOYS:
+			case SexTypes.ALL_MALE_VAGINAS:
 			case SexTypes.ALL_VAGINAS:
 				return "음란한 체액";
 			case SexTypes.ALL_FEMALES:
@@ -120,7 +120,7 @@ var General = ((Macro, SexTypes) => {
 			case SexTypes.ALL_MALES:
 			case SexTypes.ALL_DICKS:
 				return ["cum"];
-			case SexTypes.ALL_CUNTBOYS:
+			case SexTypes.ALL_MALE_VAGINAS:
 			case SexTypes.ALL_VAGINAS:
 			case SexTypes.ALL_FEMALES:
 				return ["goo"];

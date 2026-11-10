@@ -1,0 +1,66 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"m\">>",
+   "\t\t<span class=\"red\">The ear slime refuses to allow you to wear a feminine outfit.</span>"
+  ],
+  "old_kr": [
+   "\t<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"m\">>",
+   "\t\t<span class=\"red\">귀 슬라임이 여성스러운 의상을 입는 것을 거부합니다.</span>"
+  ],
+  "new_en": [
+   "\t<<if $earSlime.forcedDressing?.type is \"m\">>",
+   "\t\t<span class=\"red\">The ear slime refuses to allow you to wear a feminine outfit.</span>"
+  ],
+  "context": "<<if $worn.face.type.includes(\"mask\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"f\">>",
+   "\t\t<span class=\"red\">The ear slime refuses to allow you to wear a masculine outfit.</span>"
+  ],
+  "old_kr": [
+   "\t<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"f\">>",
+   "\t\t<span class=\"red\">귀 슬라임이 남성스러운 의상을 입는 것을 거부합니다.</span>"
+  ],
+  "new_en": [
+   "\t<<if $earSlime.forcedDressing?.type is \"f\">>",
+   "\t\t<span class=\"red\">The ear slime refuses to allow you to wear a masculine outfit.</span>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"m\">>",
+   "\t<span class=\"red\">The ear slime refuses to allow you to wear a feminine outfit.</span>"
+  ],
+  "old_kr": [
+   "<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"m\">>",
+   "\t<span class=\"red\">귀 슬라임이 여성스러운 의상을 입는 것을 거부합니다.</span>"
+  ],
+  "new_en": [
+   "<<if $earSlime.forcedDressing?.type is \"m\">>",
+   "\t<span class=\"red\">The ear slime refuses to allow you to wear a feminine outfit.</span>"
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"f\">>",
+   "\t<span class=\"red\">The ear slime refuses to allow you to wear a masculine outfit.</span>"
+  ],
+  "old_kr": [
+   "<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"f\">>",
+   "\t<span class=\"red\">귀 슬라임이 남성스러운 의상을 입는 것을 거부합니다.</span>"
+  ],
+  "new_en": [
+   "<<if $earSlime.forcedDressing?.type is \"f\">>",
+   "\t<span class=\"red\">The ear slime refuses to allow you to wear a masculine outfit.</span>"
+  ],
+  "context": "<br>"
+ }
+]

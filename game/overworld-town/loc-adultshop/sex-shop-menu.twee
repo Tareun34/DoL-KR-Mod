@@ -17,8 +17,8 @@
 </div>
 <<run window.sexShopGridInit()>>
 <br><br>
-<<if $debug is 1>>
-	<<ind>><<link [[새로고침|Adult Shop Menu]]>><</link>>
+<<if $debug>>
+	<<ind>><<link [[Reload|Adult Shop Menu]]>><</link>>
 	<br>
 <</if>>
 <<getouticon>><<link [[떠난다|Adult Shop]]>><</link>>
@@ -37,8 +37,8 @@
 </div>
 <<run window.sexShopGridInit()>>
 <br><br>
-<<if $debug is 1>>
-	<<ind>><<link [[새로고침|Forest Shop Sex Toys]]>><</link>>
+<<if $debug>>
+	<<ind>><<link [[Reload|Forest Shop Sex Toys]]>><</link>>
 	<br>
 <</if>>
 <<getouticon>><<link [[떠난다|Forest Shop]]>><</link>>
@@ -60,9 +60,32 @@
 <<run window.patchStraponsWearStatus()>>
 <<run window.sexToysInventoryInit()>>
 
-<<if $debug is 1>>
-	<<link [[새로고침|Sextoys Inventory]]>><</link>>
+<<if $worn.genitals.name is "naked" and $gold_chastity_count gte 1 and playerBellySize() lte 7>>
+	You are carrying a golden chastity belt.
+	<br>
+	<<antiqueicon "chastity">><<link [[Wear it|Sextoys Inventory Gold Chastity Belt]]>><</link>>
+	<br><br>
+<</if>>
+
+<<if $debug>>
+	<<link [[Reload|Sextoys Inventory]]>><</link>>
 	<br>
 <</if>>
 
-<<link [[떠난다|$sextoyInvReturnLink]]>><<unset $sextoyInvReturnLink>><</link>>
+<<link [[Leave|$sextoyInvReturnLink]]>><<unset $sextoyInvReturnLink>><</link>>
+
+:: Sextoys Inventory Gold Chastity Belt
+
+<<effects>><<set $gold_chastity_count -= 1>><<set $antiquemoney -= 2000>>
+
+You examine the gold chastity belt in your hands. You think you see a faint glow emanating from it. You wonder what it would feel like to have something so beautiful protecting your <<genitals 1>>.
+<br><br>
+You feel an urge to try it on. You wrap it around your waist. As it clicks shut you wonder if there's a key somewhere.
+<br><br>
+<<clothesstrip>>
+<<genitalswear 3>>
+<<earnFeat "Locked In Gold">>
+<<set $worn.genitals.origin to "Underwater Temple">>
+
+<<link [[Next|Sextoys Inventory]]>><<clotheson>><</link>>
+<br>

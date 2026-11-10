@@ -358,7 +358,7 @@
 	<<link [[다음|Pound Food Event]]>><</link>>
 	<br>
 <<else>>
-	<<beastNEWinit 1 dog>>한 <<beasttype>>【이가】 기분 나빠하며, 당신이 먹으려고 할 때 당신을 깨문다.
+	<<generateBeastVictim 1 dog>>One <<beasttype>> takes offence, and nips at you as you try to eat.
 	<br><br>
 
 	<<link [[물러선다|Pound Food Back]]>><<sub 1>><<stress -6>><<pound_status -3>><</link>><<lpound_status>><<lstress>>
@@ -433,8 +433,8 @@
 
 배가 부른, 더 우세한 <<pound_text>>은 마당에서 빈둥거리고, 다른 녀석들은 찌꺼기를 찾아다닌다.
 <br><br>
-<<beastNEWinit 1 dog>>
-<<if $rng gte 67 and ($settings.bestialityEnabled or $monster is 1)>>
+<<generateBeastVictim 1 dog>>
+<<if $rng gte 67 and beastSexEnabledForType("dog", $monster is 1)>>
 	<<if numberOfEarSlime() and ($earSlime.growth gte 80 - ($earSlime.deviancy * 10))>>
 		한 <<beasttype>>【이가】 <<bhis>> 눈에 욕정을 담고 멀리서 당신을 지켜본다.
 		<span class="lewd">머릿속의 슬라임이 <<bhim>>에게 몸을 바치라고 명령하는 것을 느낀다.</span> 따르면 보상을 약속하고, 따르지 않으면 대가가 있을 것이라고 위협한다.
@@ -841,9 +841,9 @@
 <<person>>【이가】 휘파람을 불고, 당신의 드러난 <<bottom>>【을를】 때린다. "자," <<he>>【이가】 말한다. "이 불복종하는 <<bitch>>에게 네 불만을 풀어봐."
 <br><br>
 <<endcombat>>
-<<beastNEWinit 6 dog>>
-<<if $monster is 1 or $settings.bestialityEnabled>>
-	뒤에서 코가 당신을 쿡 찌르는 것이 느껴진다.
+<<generateBeastVictim 6 dog>>
+<<if beastSexEnabledForType("dog", $monster is 1)>>
+	You feel a nose prod you from behind.
 	<br><br>
 
 	<<link [[다음|Pound Punishment Beast]]>><<set $molestationstart to 1>><</link>>
@@ -867,6 +867,7 @@
 	<<neutral 1>>
 	<<molested>>
 	<<maninit>>
+	<<bindtemp>>
 	<<set $position to "wall">>
 	<<set $walltype to "pillory">>
 	<<set $head to "grappled">>
@@ -920,10 +921,12 @@
 	<<molested>>
 	<<beastCombatInit>>
 	<<beastTrainGenerate>>
-	<<set $position to "wall">>
-	<<set $walltype to "pillory">>
-	<<set $head to "grappled">>
+	<<bindtemp>>
 <</if>>
+
+<<set $position to "wall">>
+<<set $walltype to "pillory">>
+<<set $head to "grappled">>
 
 <<effects>>
 <<effectsman>>
@@ -1299,8 +1302,8 @@
 <<effects>>
 <<wakingEffects $sleepHoursTotal>>
 <<if ["dryheaving","nausea"].includes(_wakingEffect)>>
-	<br><br>
-	푹 잤지만, 지금은 몸이 좀 찌뿌둥하다.
+	<br>
+	You slept soundly, but now feel a little rough.
 	<br><br>
 <<elseif $nightmares gte 1 and $controlled is 0>>
 	<<nightmareWake>>
@@ -1311,7 +1314,7 @@
 		푹 잤다.
 		<br><br>
 	<<else>>
-		<br><br>
+		<br>
 	<</if>>
 <</if>>
 
@@ -1405,7 +1408,8 @@
 :: Pound Show Compete
 <<effects>>
 <<endevent>>
-<<beastNEWinit 4 dog>>당신은 자세가 허락하는 한 가장 빨리 장애물 코스를 향해 기어간다. 첫 번째는 슬라럼이다. <<pound_text>>은 어려움 없이 그 사이를 헤쳐 나간다.
+<<generateBeastVictim 4 dog>>
+You crawl towards the obstacle course as fast as your posture will allow. The first up is the slalom. The <<pound_text>> weave between them without difficulty.
 <br><br>
 
 <<pound_compete_text>>
@@ -1821,13 +1825,13 @@
 	<</if>>
 	<br><br>
 <<else>>
-	<<if $player.penisExist and $player.vaginaExist and playerChastity("cage")>>
-		그러자 <<person>>【이가】 당신의 정조대에 갇힌 <<penis>>【을를】 <<his>> 손가락 사이에 잡는다. "아하, 여기 보지도 있군. 정말 독특하네!"
+	<<if $player.penisExist and $player.vaginaExist and playerChastity("cage") and $settings.nudeGenderPerception !== 0>>
+		and the <<person>> takes your caged <<penis>> between <<his>> fingers. "Aha, there's a pussy here as well. How unique!"
 		<br><br>
 		<<He>>【은는】 <<his>> 집게손가락으로 당신의 <<pussy>>【을를】 쓰다듬는다. 관객들은 그 광경에 넋을 잃고 바라본다.
 		<br><br>
-	<<elseif $player.penisExist and $player.vaginaExist>>
-		그러자 <<person>>【이가】 당신의 <<penis>>【을를】 <<his>> 손가락 사이에 잡는다. "아하, 여기 보지도 있군. 정말 독특하네!"
+	<<elseif $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>
+		and the <<person>> takes your <<penis>> between <<his>> fingers. "Aha, there's a pussy here as well. How unique!"
 		<br><br>
 		<<He>>【은는】 당신의 자지를 위아래로 쓸어내리면서, 다른 손으로는 당신의 <<pussy>>【을를】 쓰다듬는다. 관객들은 그 광경에 넋을 잃고 바라본다.
 		<br><br>
@@ -1846,7 +1850,7 @@
 <br>
 "그래, <<pshe>>【은는】 건강한 녀석이야."
 <br>
-<<if ($settings.bestialityEnabled or $settings.monsterChance gte 1) and $settings.pregnancySpeechEnabled>>
+<<if beastSexEnabledForType("dog") and $settings.pregnancySpeechEnabled>>
 	<<if $player.penisExist>>
 		"<<phim>>【으로로】 새끼 몇 마리 낳게 해야겠어."
 	<<else>>
@@ -2064,8 +2068,8 @@
 <br>
 <<link [[벌거벗겨 밖으로 뛰게 만든다|Pound Abduction Gwylan Rescue 5]]>><<set $phase2 to 2>><</link>>
 <br>
-<<if $settings.monsterChance gte 100 or $settings.bestialityEnabled>>
-	<<link [[목줄을 채우고 모든 우리를 연다|Pound Abduction Gwylan Rescue 5]]>><<set $phase2 to 3>><</link>>
+<<if beastSexEnabledForType("dog", victimsAlwaysMonsterForType("dog") or (monsterChanceForType("dog") gte 100 and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType("dog"))))>>
+	<<link [[Leash them and open all the cages|Pound Abduction Gwylan Rescue 5]]>><<set $phase2 to 3>><</link>>
 	<br>
 <</if>>
 
@@ -2102,8 +2106,8 @@
 
 <<He>>【은는】 <<his>> 손을 들자, 당신의 목줄이 그 안에 나타난다. "집에 가자, 자기야." 두 사람은 복도를 걸어 내려간다.
 <<if $phase2 is 1>>
-	그윌란은 당신이 지나갈 때마다 각 우리의 자물쇠를 휙 열어준다.
-	많은 <<pound_text>>【이가】 당신을 따라 나오지만, 몇몇은 반쯤 정신을 잃은 직원들의 냄새를 호기심에 맡는다. <<if $settings.monsterChance gte 100 or $settings.bestialityEnabled>><span class="lewd">몇몇은 그들 위에 올라타기 시작한다.</span><</if>>
+	Gwylan flicks open the lock on each cage as you pass.
+	Many of the <<pound_text>> follow you out, but some curiously sniff the half-unconscious staff members. <<if beastSexEnabledForType("dog", monsterChanceForType("dog") gte 100 and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType("dog")))>><span class="lewd">Some begin to mount them.</span><</if>>
 <<elseif $phase2 is 2>>
 	그윌란은 당신이 지나갈 때마다 각 우리의 자물쇠를 휙 열어준다.
 	<<pound_text>>【은는】 당신을 따라 나오며, 몇몇은 앞서 달려가 마을을 가로지르는 알몸 직원들의 행렬에 합류한다.

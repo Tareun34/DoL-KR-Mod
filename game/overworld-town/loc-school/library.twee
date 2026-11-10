@@ -327,6 +327,14 @@
 			<<oliveicon>><<link [[바구니에서 올리브색 책을 꺼낸다 (0:01)|Olive Book 1]]>><<set $oliveExitPassage to "School Library">><<pass 1>><</link>>
 			<br>
 		<</if>>
+		<<if $kylar_manor_secret gte 3 and $kylar_sleep_abduction gte 1 and !$kylar_altar_research.includes("library") and $kylar_altar_library lt 100>>
+			<<ind>><<link [[Research the forest altar (0:20)|Library Altar Research]]>><<pass 20>><</link>><<skill_difficulty currentSkillValue('history') "History" 1 1000>>
+			<br>
+		<</if>>
+		<<if $pumpkin_carving_knowledge and !$pumpkin_carving_knowledge.includes("library")>>
+			<<icon "pumpkin-carving.png">><<link [[Study pumpkin carving (0:30)|Library Pumpkin]]>><<pass 30>><</link>>
+			<br>
+		<</if>>
 	<br>
 	<</if>>
 <<getouticon>><<link [[도서관을 나간다 (0:01)|Hallways]]>><<pass 1>><</link>>
@@ -352,65 +360,7 @@
 <br><br>
 
 <<if dangerEvent() and Time.schoolDay and $schoolstate isnot "early" and $schoolstate isnot "late">>
-	<<if $scienceprojectwon is 1 and $rng gte 91>>
-		<<generates1>><<person1>>한 <<person>>【이가】 당신의 테이블에 멈춰 선다. "저기, 너 과학 경진대회에서 우승한 그 <<girl>>, 맞지?"
-		<br><br>
-
-		<<if $speech_attitude is "meek">>
-			"아, 그렇게 대단한 건 아니었는데..." 당신은 수줍게 고개를 끄덕이며 시선을 피한다.
-		<<elseif $speech_attitude is "bratty">>
-			당신은 자랑스럽게 공중에 엄지를 치켜세운다. "바로 나야!"
-		<<else>>
-			"내가 그랬지." 당신은 고개를 끄덕인다. "무슨 일이야?"
-		<</if>>
-		<br><br>
-
-		그 <<personsimple>>【은는】 미소를 지으며 고개를 끄덕여 화답한다. "대단하다! 네 프로젝트는 정말 잘 연구됐더라, 뭘 해야 할지 제대로 알고 있었어! 나도 너처럼 될 수 있으면 좋을 텐데! 나도 과학 경진대회에 참가했는데, 선생님들은 내 테이블에 와보지도 않으셨어."
-		<br><br>
-
-		<<He>>【은는】 한숨을 쉰다. "<<nnpc_title "Leighton">> 교장 선생님조차도. 아마 내가 내세울 만한 성적이 없어서 그런가 봐, 하지만 가끔은 수업에 집중하기가 너무 힘들어! 특히 몇몇 학생들이 계속 나를 만지고 장난을 치거나, 학용품이 계속 사라질 때, 그리고 지각을 좀 많이 해서 벌을 받아야 했을 때—"
-		<br><br>
-
-		<<He>>【은는】 몸을 굳히더니, 이내 <<his>> 고개를 젓는다. "...미안, 내가 너무 떠들었네."
-		<br><br>
-
-		<<link [[계속 공부한다|Library Study Science Fair]]>><<set $phase to 0>><<stress -4>><</link>><<lstress>>
-		<br>
-		<<link [[도와준다 (0:10)|Library Study Science Fair]]>><<set $phase to 1>><<pass 10>><<status 6>><</link>><<gcool>>
-		<br>
-	<<elseif $rng gte 51>>
-		<<generatey1>><<generatey2>>당신이 하던 일에 집중하고 있을 때, 한 <<fullGroup>>【이가】 당신을 괴롭히기 시작한다.
-		<br><br>
-
-		<<link [[무시한다|School Library Harass]]>><<set $phase to 0>><<trauma 2>><<stress 2>><</link>><<gtrauma>><<gstress>>
-		<br>
-		<<link [[사서에게 도움을 요청한다|School Library Harass]]>><<set $phase to 1>><<status -10>><</link>><<llcool>>
-		<br>
-		<<if C.npc.Sydney.init is 1 and $sydneySeen.includes("library") and _sydney_location is "library">>
-			<<link [[시드니에게 도움을 요청한다|School Library Harass]]>><<set $phase to 2>><</link>>
-			<br>
-		<</if>>
-	<<elseif _wraithEvent>>
-		얼마 후, 당신은 불안감을 느끼기 시작한다. 당신은 교과서를 책장에 다시 꽂으려고 움직인다.
-		<br><br>
-		반대편 틈새로 창백한 얼굴이 언뜻 보인다. <<stress 12>><<ggstress>><<trauma 4>><<gtrauma>>
-		<br><br>
-		<<link [[다음|School Library]]>><<endevent>><</link>>
-		<br>
-	<<else>>
-		<<outfitChecks>>
-		<<set _bottom.integrity -= 10>>
-		<<if _bottom.integrity lte 0>>
-			의자에서 일어설 때, 무언가 찢어지는 소리가 들린다. 당신의 <<bottoms>>【이가】 책상에 걸렸다. <<= _bottom.plural ? "그것들을" : "그것을">> 빼내려 하지만, <<= _bottom.plural ? "그것들은" : "그것은">> 몸에서 완전히 찢어져 당신의 <<= _bottomUnder?.name || "<<undies>>">>【을를】 드러낸다.
-			<<integritycheck no_text>>
-			<br><br>
-		<<else>>
-			자리에서 일어설 때, 무언가 찢어지는 소리가 들린다. 당신의 <<bottoms>>【이가】 책상에 걸렸다.
-			<br><br>
-		<</if>>
-		<<link [[다음|School Library]]>><<endevent>><</link>>
-		<br>
-	<</if>>
+	<<events_school_library_study>>
 <<else>>
 	<<link [[다음|School Library]]>><<endevent>><</link>>
 	<br>
@@ -883,9 +833,9 @@
 		<br>
 	<<default>>
 		<<if Time.schoolDay and $schoolstate isnot "early" and $schoolstate isnot "late" and _counterApproach is 1>>
-			아무도 없다. 당신은 벨을 울린다. 아무도 응답하지 않는다.
-			<<if Time.hour lt 8 and $sydneyLate is 1 and $sydneySeen and $sydneySeen.includes("library")>>
-				시드니가 지각한 것 같다<<if $sydneySeen.includes("science")>>. 또<</if>>.
+			No one's there. You ring the bell. No one responds.
+			<<if Time.hour lt 8 and $sydneyLate is 1 and $sydneySeen?.includes("library")>>
+				It seems Sydney is late<<if $sydneySeen.includes("science")>> again<</if>>.
 			<</if>>
 		<</if>>
 		<<if !Time.schoolDay or $schoolstate is "early" or $schoolstate is "late">>
@@ -1135,3 +1085,222 @@
 	<<getouticon>><<link [[떠난다|School Library]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<br>
 <</if>>
+
+:: Library Altar Research
+<<effects>><<sydneySchedule>>
+<<set _historySuccess to currentSkillValue('history') gte random(1, 1000)>>
+<<rng 3>>
+<<if $rng is 3>>
+	You flick through a book on local history, pausing to read anything about the forest.
+	<<if _historySuccess>>
+		<<set $kylar_altar_library += 15>>
+		<span class="green">You find a description,</span> and diagram, of the temple grounds as it was centuries ago, extending into the forest.<<gggresearch>>
+		<br><br>
+	<<else>>
+		<<set $kylar_altar_library += 5>>
+		<span class="blue">You're unable to find anything solid.</span> Mere glimpses here and there.<<gresearch>>
+		<br><br>
+	<</if>>
+<<elseif $rng is 2>>
+	You wade through a tome about the local temple, and religion, hoping to find any information about the altar you found in the forest.
+	<<if _historySuccess>>
+		<<set $kylar_altar_library += 15>>
+		<span class="green">You find a passage detailing ancient rites,</span> using a stone altar like the one you found. Valuables were left there as a sacrifice.<<gggresearch>>
+		<br><br>
+	<<else>>
+		<<set $kylar_altar_library += 5>>
+		<span class="blue">You're unable to find anything solid.</span> Mere glimpses here and there.<<gresearch>>
+		<br><br>
+	<</if>>
+<<else>>
+	You skim a book on past customs, paying more attention to the chapters involving the forest.
+	<<if _historySuccess>>
+		<<set $kylar_altar_library += 15>>
+		<span class="green">You find an illustration of the altar,</span> <<generatev1>><<person1>>a <<person>> strapped to its surface, surrounded by dancing figures. You can't tell if the <<person>> is laughing or screaming.<<gggresearch>>
+		<br><br>
+		<<endevent>>
+	<<else>>
+		<<set $kylar_altar_library += 5>>
+		<span class="blue">You're unable to find anything solid.</span> Mere glimpses here and there.<<gresearch>>
+		<br><br>
+	<</if>>
+<</if>>
+
+<<set $kylar_altar_library to Math.clamp($kylar_altar_library, 0, 100)>>
+
+<<if $kylar_altar_library gte 100 and _sydney_location is "library" and ($sydneySeen isnot undefined and $sydneySeen.includes("library"))>>
+	<<npc Sydney>><<person1>>
+	<<if $sydney_romance is 1>>
+		A pair of arms wrap around you from behind, and a head rests on your shoulder. It's Sydney.
+		<br><br>
+		"Gotcha," <<he>> says, then pecks your cheek. "I've noticed you've become awful keen on the forest. Anything I can do to help?" <<He>> leans closer to your ear, and whispers. "I could sneak you into the forbidden room."
+		<br><br>
+	<<else>>
+		"I've seen you lurking between the shelves," says a voice from behind. It's Sydney. "What are you after?" <<He>> looks at the book in front of you, then continues in a conspiratorial whisper. "There's more books about the forest. In the forbidden room. Want me to show you?"
+	<</if>>
+	<br><br>
+	<<link [[Search the forbidden room (0:05)|Library Altar Forbidden]]>><<pass 5>><</link>>
+	<br>
+	<<link [[Another time|Library Altar Refuse]]>><<set $kylar_altar_sydney_accost to true>><</link>>
+	<br>
+<<elseif $kylar_altar_library gte 100>>
+	You've exhausted the books here. Perhaps the librarian will know more. <span class="gold">You should check at the counter</span> when it's staffed.
+	<br><br>
+
+	<<link [[Next|School Library]]>><<endevent>><</link>>
+	<br>
+<<elseif dangerEvent() and Time.schoolDay and $schoolstate isnot "early" and $schoolstate isnot "late">>
+	<<events_school_library_study>>
+<<else>>
+	<<link [[Next|School Library]]>><<endevent>><</link>>
+	<br>
+<</if>>
+
+:: Library Altar Counter
+<<effects>>
+
+Sydney flashes a conspiratorial smile. "I wondered what you were up to," <<he>> says, lowering <<his>> voice. "There's more books about the forest. In the forbidden room. Want me to show you?"
+<br><br>
+
+<<link [[Search the forbidden room (0:05)|Library Altar Forbidden]]>><<pass 5>><</link>>
+<br>
+<<link [[Another time|Library Altar Refuse]]>><<set $kylar_altar_sydney_accost to true>><</link>>
+<br>
+
+:: Library Altar Forbidden
+<<effects>>
+
+Sydney nods, and continues in <<his>> whisper. "Come with me."
+<br><br>
+
+You follow Sydney, weaving between shelves, until you come to an unmarked door, coloured like the walls around it. It creaks open, revealing a pitch black interior. Sydney ushers you through, then closes the door, plunging you both into darkness.
+<br><br>
+
+"The light's here somewhere." You hear a bump. "Ow."
+<br><br>
+
+A light flickers on, revealing stacks of cardboard boxes. "Behold, the forbidden room," Sydney says, before rushing over to a particular stack of boxes. "This one," Sydney says, rubbing <<his>> head. <<He>> lifts a couple of boxes aside, and opens another. There are stacks of books within.
+<br><br>
+
+<<link [[Next|Library Altar Forbidden 2]]>><</link>>
+<br>
+
+:: Library Altar Forbidden 2
+<<effects>>
+
+The topmost books seem to have nothing to do with the forest. Sydney digs until <<he>> reaches a worn tome, the title barely visible.
+<br><br>
+"Don't tell Winter this one's here," Sydney says. <<He>> opens it to the middle, turns the page, then frowns. <<He>> flips through the pages, forward and back.
+<br><br>
+"I could've sworn there was more," <<he>> says. You look at the page numbers. It skips several. Sydney notices too. "It's like someone removed them. That's a shame." <<He>> pauses a moment, in thought.
+<br><br>
+
+<<link [[Ask who might have removed them|Library Altar Forbidden Ask]]>><</link>>
+<br>
+<<link [[Remain silent|Library Altar Forbidden Silent]]>><</link>>
+<br>
+
+:: Library Altar Forbidden Ask
+<<effects>>
+
+<<if $speech_attitude is "meek">>
+	"Do you know anyone who would do such a thing?" you ask.
+<<elseif $speech_attitude is "bratty">>
+	"Who would steal pages from a book?" you ask. "They could've stolen the whole thing."
+<<else>>
+	"Do you know who could have taken them?" you ask.
+<</if>>
+<br><br>
+
+Sydney shakes <<his>> head. "It's a mystery. Only River and I knew the book was even here, and River would pass out if <<nnpc_he "River">> knew someone had defaced it. Unless," <<he>> pauses. "I did once tell someone. During confession at the temple. River told me not to read it, and I did anyway. I felt guilty."
+<br><br>
+
+<<link [[Say someone from the temple might have taken the page|Library Altar Forbidden Temple]]>><</link>>
+<br>
+<<link [[Remain silent|Library Altar Forbidden Silent 2]]>><</link>>
+<br>
+
+
+:: Library Altar Forbidden Silent
+<<effects>>
+
+You remain silent. 
+<br><br>
+
+"I don't know who could have done this," Sydney says. "Only River and I knew the book was here, and River would pass out if <<nnpc_he "River">> knew someone had defaced it. Unless," <<he>> pauses. "I did once tell someone. During confession at the temple. River told me not to read it, and I did anyway. I felt guilty."
+<br><br>
+
+<<link [[Say someone from the temple might have taken the page|Library Altar Forbidden Temple]]>><</link>>
+<br>
+<<link [[Remain silent|Library Altar Forbidden Silent 2]]>><</link>>
+<br>
+
+:: Library Altar Forbidden Temple
+<<effects>>
+
+<<if $speech_attitude is "meek">>
+	"I'd hate to cast aspersions," you say. "But the temple might have something to do with it."
+<<elseif $speech_attitude is "bratty">>
+	"The temple might have nicked it," you say. "They like squirreling away old lore."
+<<else>>
+	"Do you think the temple might have something to do with it?" you ask.
+<</if>>
+<br><br>
+
+Sydney laughs. "Why would they do such a thing? River would let them have the whole book if they wanted it. Sorry I haven't been more helpful." <<He>> bobs <<his>> head, giving the impression of a bow.
+<br><br>
+
+You exit the room. Sydney turns off the light, then follows you out. "I'd best get back to work before people make a mess of things." <<He>> disappears between the shelves.
+<br><br>
+
+<span class="gold">Perhaps the missing pages are at the temple.</span>
+<<set $kylar_altar_research.pushUnique("library")>>
+<<unset $kylar_altar_library>>
+<br><br>
+
+<<link [[Next|School Library]]>><<endevent>><</link>>
+<br>
+
+:: Library Altar Forbidden Silent 2
+<<effects>>
+
+You remain silent.
+<br><br>
+"Sorry I haven't been more helpful," Sydney says. <<He>> bobs <<his>> head, giving the impression of a bow.
+<br><br>
+
+You exit the room. Sydney turns off the light, then follows you out. "I'd best get back to work before people make a mess of things." <<He>> disappears between the shelves.
+<br><br>
+
+<span class="gold">Perhaps the missing pages are at the temple.</span>
+<<set $kylar_altar_research.pushUnique("library")>>
+<<unset $kylar_altar_library>>
+<br><br>
+
+<<link [[Next|School Library]]>><<endevent>><</link>>
+<br>
+
+:: Library Altar Refuse
+<<effects>>
+
+Sydney nods. "Just let me know if you change your mind." <<He>> disappears behind a shelf.
+<br><br>
+
+<<link [[Next|School Library]]>><<endevent>><</link>>
+<br>
+
+:: Library Pumpkin
+<<effects>>
+<<set $pumpkin_carving_knowledge.pushUnique("library")>>
+You search the shelves for a book on pumpkin carving. There's nothing so specialised, but you do find a book on Halloween that includes a relevant section. It gives useful tips, and suggests cutting into the pumpkin from the bottom.
+<br><br>
+
+<<if ($pumpkin_carving + ($pumpkin_carving_knowledge?.length * 5)) gte 15 and ($pumpkin_carving + ($pumpkin_carving_knowledge?.length * 5)) lte 19>>
+	<span class="gold">You've gained the Knowledge: Pumpkin Carving trait.</span>
+<<else>>
+	<span class="gold">You feel like you understand pumpkin carving a lot more.</span>
+<</if>>
+<br><br>
+
+<<link [[Next|School Library]]>><</link>>
+<br>

@@ -30,8 +30,8 @@
 		<<beastNEWinit 1 dog>>
 		당신은 별관으로 빠르게 걸어가 쪽지를 전달하지만, <span class="red">돌아서자 <<beasttype>>【이가】 당신에게 다가오는 것을 발견한다</span>.
 		<br><br>
-		<<if $monster is 1 or $settings.bestialityEnabled>>
-			<<link [[다음|English Outbuilding Molestation]]>><<set $molestationstart to 1>><</link>>
+		<<if beastSexEnabledForType("dog", $monster is 1)>>
+			<<link [[Next|English Outbuilding Molestation]]>><<set $molestationstart to 1>><</link>>
 			<br>
 		<<else>>
 			당신은 상처를 입긴 했지만, 간신히 교실로 도망친다.<<beastescape>>
@@ -127,8 +127,7 @@
 		<<if !$dorenintro || C.npc.Doren.dom lt 10>>
 			도렌은 허리에 손을 얹고 당신을 똑바로 쳐다본다. "그렇게 쉽게 날 속일 순 없다, <<lassie>>. 저기 무고한 학생과 떨어져서 앉아라."
 			<br><br>
-			도렌은 당신을 교실 반대편에 혼자 앉게 한다. 어쨌든 벗어나긴 했다.
-			<br><br>
+			Doren makes you sit alone on the other side of the room. You got away at least.
 		<<else>>
 			도렌이 박수를 친다. "놀라운 연기력이군, 하마터면 속을 뻔했어." <<He>>【은는】 허리에 손을 얹고 <<person1>><<person>>【을를】 똑바로 쳐다본다.
 			<<if $delinquency gte 400>>
@@ -231,8 +230,8 @@
 	당신은 도렌에게 도와달라고 외치며 괴롭힘을 당하고 있다고 알린다. 불량배들은 딱 잡아뗀다. "<<pShe>>【이가】 거짓말하는 거예요!"
 	<br><br>
 
-	<<npc Doren>><<person1>>
-	도렌은 허리에 손을 얹고 그들을 매섭게 노려본다. "그딴 얄팍한 수로 날 속일 순 없다. 교장실로 가라, 당장."
+	<<person1>>
+	Doren puts <<his>> hands on <<his>> hips and gives them a level stare. "You're not gonna fool me that easily. Office, now."
 	<br><br>
 	불량배들은 혀를 차며 발뺌을 멈추고 레이튼의 사무실로 직행한다.
 	<br><br>

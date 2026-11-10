@@ -92,9 +92,9 @@
 		<<He>>【이가】 <<his>> 손을 들어 손가락 하나를 편다. 당신의 시선이 거기에 고정된다. 그러고 나서 <<He>>【은는】 당신의 얼굴 가까이로 <<his>> 손을 가져가 오므린다. <<hypnosisText "당신은 본능적으로 고개를 들고, <<he>>【은는】 당신의 턱 밑을 긁어준다.">>
 		<br><br>
 
-		"...내 거미줄에 걸렸어." <<he>>【은는】 죄책감 어린 웃음을 지으며 말한다. "이 이상 진행하면 널 망가뜨릴까 봐 두려워."
-		<<if _gwylanLovePercent gte 80 and _gwylanStatus.includes("lust") and !$weekly.gwylanDeepest>>
-			<<His>> 엄지손가락이 당신의 뺨을 문지른다. "하지만, 내 안의 일부는 이걸 원해. 그냥 굴복하고..."
+		"...trapped in my web," <<he>> says with a guilty laugh. "I'm afraid I'll break you if I let this go any further."
+		<<if _gwylanLovePercent gte 70 and _gwylanStatus.includes("lust") and !$weekly.gwylanDeepest>>
+			<<His>> thumb rubs your cheek. "Yet, a part of me wants this. To just give in and..."
 			<br><br>
 
 			<<His>> 얼굴이 당신에게 가까이 다가온다. 당신의 입술에 <<his>> 숨결이 느껴지지만, <<he>>【은는】 키스하기 직전에 멈춘다. 잠시 망설인 후, <<he>>【은는】 당신을 풀어주고 당신을 돌아 지나간다.
@@ -418,8 +418,8 @@
 			<<link [[스스로 의지를 갖고 움직이는 슬라임|Gwylan Hypnosis Insight]]>><<set $phase to "slimes">><</link>>
 			<br>
 		<</if>>
-		<<if $settings.monsterHallucinationsOnly and $settings.monsterChance gte 1>>
-			<<link [[인간의 특징을 가진 동물|Gwylan Hypnosis Insight]]>><<set $phase to "monsters">><</link>>
+		<<if C.beastSettingTypes.some(type => monsterCanAppearForType(type)) or C.namedBeasts.some(beast => V.settings.namedBeasts[beast].monsterChance >= 1)>>
+			<<link [[Animals with human characteristics|Gwylan Hypnosis Insight]]>><<set $phase to "monsters">><</link>>
 			<br>
 		<</if>>
 		<<if $temple_confessor_intro>>
@@ -1043,7 +1043,7 @@
 <<lowerstrip>>
 <br><br>
 
-<<if $player.penisExist and $player.vaginaExist and !$gwylanSeen.includes("herm")>>
+<<if $player.penisExist and $player.vaginaExist and !$gwylanSeen.includes("herm") and $settings.nudeGenderPerception !== 0>>
 	<<set $gwylanSeen.pushUnique("herm")>>
 	당신의 <<genitals>>【을를】 본 <<His>> 눈이 살짝 커진다.
 	<<if C.npc.Gwylan.gender is "h">>
@@ -1051,8 +1051,8 @@
 	<<else>>
 		"와. 양성구유는 실제로 처음 봐. 넌 정말 놀라움으로 가득하구나!"
 	<</if>>
-<<elseif $crossdressing gte 1 and !$genderknown.includes("Gwylan")>>
-	당신의 <<genitals>>【을를】 본 <<He>>【은는】 고개를 살짝 갸웃거린다. "예상치 못한 성기네. 딱히 신경 쓰진 않지만."
+<<elseif $crossdressing gte 1 and !$genderknown.includes("Gwylan") and $settings.nudeGenderPerception !== 0>>
+	<<His>> head tilts slightly upon seeing your <<genitals>>. "Unexpected genitalia, not that I particularly mind."
 <</if>>
 <<set $genderknown.pushUnique("Gwylan")>>
 

@@ -1,0 +1,153 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\"Splendid!\" <<he>> says, grabbing your hand in both of <<his>> own and shaking. \"I'm Sam, by the way. This here is Ocean Breeze Cafe, the heart of our town's gossip and caffeine fixes. Come on, let me show you the ropes.\""
+  ],
+  "old_kr": [
+   "\"훌륭해요!\" <<he>>【이가】 당신의 손을 양손으로 잡고 흔들며 말한다. \"참, 전 샘이라고 해요. 이곳은 오션 브리즈 카페, 우리 마을의 가십과 카페인 충전의 중심지죠. 자, 제가 일하는 법을 알려드릴게요.\""
+  ],
+  "new_en": [
+   "\"Splendid!\" <<he>> says, grabbing your hand in both of <<his>> own and shaking. \"I'm Sam, by the way. Welcome to the team. Come on, let me show you the ropes.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Sam shows you around, conversing along the way. \"We serve smiles just as much as we serve coffee!\" <<He>> smiles brightly. \"Let's start with the basics. You'll be handling orders, refills, and most importantly, learning everyone's quirks. That one likes their pie before their coffee, for example. Sometimes the mayor visits, and <<nnpc_he \"Quinn\">> likes <<nnpc_his \"Quinn\">> tea stirred exactly seven times. Oh! And if you see a certain grumpy fisherman at the counter?\" <<He>> leans in conspiratorially. \"Extra bacon. Always.\""
+  ],
+  "old_kr": [
+   "샘은 당신에게 이곳저곳을 보여주며 대화를 나눈다. \"우리는 커피만큼이나 미소도 많이 대접한답니다!\" <<He>>【이가】 밝게 웃는다. \"기본부터 시작하죠. 주문받기, 리필하기, 그리고 가장 중요한 건 모두의 특이한 취향을 파악하는 거예요. 예를 들어 저분은 커피보다 파이를 먼저 드시는 걸 좋아하죠. 가끔 시장님이 오시는데, <<nnpc_he \"Quinn\">>【은는】 차를 정확히 일곱 번 젓는 걸 좋아해요. 아! 그리고 카운터에서 어떤 심술궂은 어부를 보게 된다면요?\" <<He>>【이가】 은밀하게 몸을 기울인다. \"베이컨 추가. 무조건이요.\""
+  ],
+  "new_en": [
+   "Sam shows you around, conversing along the way. \"It's your job to bring orders to the customers, ideally quickly. Most of the regulars are used to the wait, but the tourists think this is some chain shop and always want their food faster than we can get it out,\" <<he>> says with a huff."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<He>> leads you behind the counter where the rich smell of coffee beans and baking pastries grows stronger. \"I've another employee over there who'll teach you our signature drinks. And this\"—<<he>> pats an ancient but well-polished cash register with affection—\"is Old Betsy. She gets stuck sometimes, but just give her a gentle nudge.\""
+  ],
+  "old_kr": [
+   "<<He>>【은는】 커피콩과 굽고 있는 페이스트리의 진한 냄새가 더 강해지는 카운터 뒤로 당신을 안내한다. \"저쪽에 우리 시그니처 음료를 가르쳐 줄 다른 직원이 있어요. 그리고 이건,\" <<he>>【이가】 오래됐지만 잘 닦인 금전등록기를 애정 어린 손길로 토닥인다. \"올드 벳시예요. 가끔 걸리긴 하지만, 그냥 살짝 밀어주면 돼요.\""
+  ],
+  "new_en": [
+   "\"Oh! Sometimes the mayor visits, make sure to give <<nnpc_him \"Quinn\">> quality service. <<nnpc_His \"Quinn\">> business is important. I suppose everyone's is, but... Well, you know what I mean.\" Sam smiles at you."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<He>> clasps <<his>> hands together excitedly. \"So! Ready for your first shift? The <<= Time.hour lte 3 or Time.hour gte 18 ? \"dinner\" : Time.hour lte 12 ? \"breakfast\" : \"lunch\">> rush is about to begin!\""
+  ],
+  "old_kr": [
+   "<<He>>【이가】 신나서 두 손을 마주 잡는다. \"자! 첫 근무 준비됐나요? 곧 <<= Time.hour lte 3 or Time.hour gte 18 ? \"저녁\" : Time.hour lte 12 ? \"아침\" : \"점심\">> 러시가 시작될 거예요!\""
+  ],
+  "new_en": [
+   "<<He>> leads you behind the counter, towards the cash register. \"You might be working the register, Old Betsy. If she gets stuck, just give her a nudge and she'll work perfectly fine.\"",
+   "<br><br>",
+   "",
+   "You hear a muffled yell from behind the kitchen door, and it grabs Sam's attention. \"Oh, I better go handle that. You'll get the hang of it soon, I promise!\"",
+   "<br><br>",
+   "",
+   "With that, <<he>> leaves."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\t\tSam asks you to take some trash to the dumpster beside the cafe. Stood beside the dumpster, however, is a stray <<beasttype>>. It growls as you approach."
+  ],
+  "old_kr": [
+   "\t\t<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\t\t샘이 카페 옆 쓰레기통에 쓰레기를 버려달라고 부탁한다. 하지만 쓰레기통 옆에는 길 잃은 <<beasttype>>【이가】 서 있다. 당신이 다가가자 으르렁거린다."
+  ],
+  "new_en": [
+   "\t\t<<if $rng gte 51 and beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\t\tSam asks you to take some trash to the dumpster beside the cafe. Stood beside the dumpster, however, is a stray <<beasttype>>. It growls as you approach."
+  ],
+  "context": "\t\t<<beastNEWinit 1 dog>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You carefully put your fork down before making your way to the cafe bathroom.",
+   "With the door safely locked you reach under your clothes and remove your underwear, stopping for a moment to feel the thrill of what you're about to do.",
+   "With your $worn.under_lower.name off you unlatch the door to head back to your plate and the unsuspecting <<person>>.",
+   "<br><br>",
+   "The <<person>> looks up at you discreetly as you seat yourself,",
+   "and not wanting to ruin the surprise you make sure your skirt hem is safely covering your exposed <<genitals>> as you take your seat.",
+   "You decide to play a little at first, fidgeting with your legs as you slowly savour your $phase.",
+   "You want <<his>> full attention for what you plan next.",
+   "<br><br>",
+   "Slowly, you part your knees a little. At first just enough to make <<him>> wonder if <<hes>> seeing things,",
+   "and then as you lean down to help yourself to a particularly tasty looking piece of <<if $phase is \"pancakes\">>pancake<<else>>crepe<</if>> you part them completely,",
+   "giving <<him>> a complete unobstructed view of your inner thighs and everything in between.",
+   "The <<persons>> eyes visibly widen in shock as <<he>> stares at your bare <<genitals>>, unsure of how to react to your clearly deliberate act of exhibitionism.",
+   "<<if isHermOrCrossdresser()>>",
+   "\tFrom the look on <<his>> face it's clear <<he>> was not expecting you to"
+  ],
+  "old_kr": [
+   "조심스럽게 포크를 내려놓고 카페 화장실로 향한다.",
+   "문을 안전하게 잠근 후, 옷 속으로 손을 뻗어 속옷을 벗는다. 잠시 멈춰서 앞으로 할 일에 대한 스릴을 느낀다.",
+   "$worn.under_lower.name【을를】 벗고 문을 열어, 당신의 접시와 아무것도 모르는 <<person>>에게 돌아간다.",
+   "<br><br>",
+   "당신이 자리에 앉자 그 <<person>>【은는】 슬쩍 당신을 쳐다본다.",
+   "놀라움을 망치고 싶지 않아서, 자리에 앉을 때 치마 끝이 노출된 <<genitals>>【을를】 확실히 가리도록 한다.",
+   "처음에는 약간 장난을 치기로 하고, <<phaseFoodKR>>【을를】 천천히 음미하며 다리를 꼼지락거린다.",
+   "다음에 계획한 일을 위해 <<his>> 완전한 주의를 끌고 싶다.",
+   "<br><br>",
+   "천천히, 무릎을 약간 벌린다. 처음에는 <<he>>【이가】 헛것을 보나 싶을 정도로만 벌린다.",
+   "그러다 특히 맛있어 보이는 <<phaseFoodKR>> 조각을 먹기 위해 몸을 숙이면서 완전히 벌려,",
+   "<<him>>에게 당신의 허벅지 안쪽과 그 사이의 모든 것을 가림 없이 보여준다.",
+   "그 <<person>>의 눈이 충격으로 눈에 띄게 커지며, 당신의 노골적인 노출 행위에 어떻게 반응해야 할지 몰라 당신의 맨 <<genitals>>【을를】 쳐다본다.",
+   "<<if isHermOrCrossdresser()>>",
+   "\t<<his>> 얼굴 표정으로 보아, <<he>>【은는】 당신이"
+  ],
+  "new_en": [
+   "You carefully put your fork down before making your way to the cafe bathroom.",
+   "With the door safely locked you reach under your clothes and remove your underwear, stopping for a moment to feel the thrill of what you're about to do.",
+   "With your $worn.under_lower.name off you unlatch the door to head back to your plate and the unsuspecting <<person>>.",
+   "<br><br>",
+   "The <<person>> looks up at you discreetly as you seat yourself,",
+   "and not wanting to ruin the surprise you make sure your skirt hem is safely covering your exposed <<genitals>> as you take your seat.",
+   "You decide to play a little at first, fidgeting with your legs as you slowly savour your $phase.",
+   "You want <<his>> full attention for what you plan next.",
+   "<br><br>",
+   "Slowly, you part your knees a little. At first just enough to make <<him>> wonder if <<hes>> seeing things,",
+   "and then as you lean down to help yourself to a particularly tasty looking piece of <<if $phase is \"pancakes\">>pancake<<else>>crepe<</if>> you part them completely,",
+   "giving <<him>> a complete unobstructed view of your inner thighs and everything in between.",
+   "The <<persons>> eyes visibly widen in shock as <<he>> stares at your bare <<genitals>>, unsure of how to react to your clearly deliberate act of exhibitionism.",
+   "<<if isHermOrCrossdresser() and $settings.nudeGenderPerception !== 0>>",
+   "\tFrom the look on <<his>> face it's clear <<he>> was not expecting you to"
+  ],
+  "context": ":: Cafe Exhibitionism Legs Part Panty Takeoff"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$weekly.robinCafeVisit and C.npc.Robin.init gte 1 and $robinmissing is 0 and ![\"school\", \"sleep\"].includes(getRobinLocation())>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$weekly.robinCafeVisit and C.npc.Robin.init is 1 and $robinmissing is 0 and ![\"school\", \"sleep\"].includes(getRobinLocation())>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if [\"cafe\", \"walking_to_cafe\"].includes(gwylanSchedule()) and _gwylanLovePercent gte 50 and $hallucinations gte 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if [\"cafe\", \"walking_to_cafe\"].includes(gwylanSchedule()) and _gwylanLovePercent gte 40 and $hallucinations gte 2>>"
+  ],
+  "context": "\t<<run statusCheck(\"Gwylan\")>>"
+ }
+]

@@ -447,84 +447,84 @@
            <!--
 				Truffles are significantly more expensive than mushrooms. To prevent truffles from being weighted much more heavily than mushrooms in the request calculations, the Pig's requests are adjusted according to the QUANTITY of each item that's been collected, scaled by the average value the PC expects to make each hour.
 			-->
-           <<set _averageValue to (2 * setup.foodstuff["mushroom"].shop.sell_price
-               + 1 * setup.foodstuff["truffle"].shop.sell_price) / 3>>
-           <!-- Units are in hundredths of a pound. Quantities will be rounded up because pigs are greedy. -->
-           <<set _requestedValue to $tempBasket[0] * _averageValue + $tempBasket[1] * _averageValue>>
+			<<set _averageValue to (2 * setup.foodstuff["mushroom"].shop.sell_price
+				+ 1 * setup.foodstuff["truffle"].shop.sell_price) / 3>>
+			<!-- Units are in hundredths of a pound. Quantities will be rounded up because pigs are greedy. -->
+			<<set _requestedValue to $tempBasket[0] * _averageValue + $tempBasket[1] * _averageValue>>
 
-           <!-- Requires 8% of the market value in potatoes. -->
-           <<set _requiredPotatoes to Math.ceil((_requestedValue * 0.08 * _respectModifier)
-               / setup.foodstuff["potato"].shop.sell_price)>>
-           <!-- Or, 10% of the market value in carrots. -->
-           <<set _requiredCarrots to Math.ceil((_requestedValue * 0.10 * _respectModifier)
-               / setup.foodstuff["wild_carrot"].shop.sell_price)>>
-           <!-- Or, 5% of the market value in apples. -->
-           <<set _requiredApples to Math.ceil((_requestedValue * 0.05 * _respectModifier)
-               / setup.foodstuff["apple"].shop.sell_price)>>
+			<!-- Requires 8% of the market value in potatoes. -->
+			<<set _requiredPotatoes to Math.ceil((_requestedValue * 0.08 * _respectModifier)
+				/ setup.foodstuff["potato"].shop.sell_price)>>
+			<!-- Or, 10% of the market value in carrots. -->
+			<<set _requiredCarrots to Math.ceil((_requestedValue * 0.10 * _respectModifier)
+				/ setup.foodstuff["wild_carrot"].shop.sell_price)>>
+			<!-- Or, 5% of the market value in apples. -->
+			<<set _requiredApples to Math.ceil((_requestedValue * 0.05 * _respectModifier)
+				/ setup.foodstuff["apple"].shop.sell_price)>>
 
-           <<if $farm_work.pigs_fed gte 6>>
-               <<foodstufficon "potato">><span class="blue">돼지들이 너무 배가 불러서 더 이상 감자를 원하지 않습니다.</span>
-           <<elseif $foodstuff["potato"].amount gte _requiredPotatoes>>
-               <<foodstufficon "potato">><<link [[감자로 보상하기 (0:20)|Farm Woodland Forage Reward]]>>
-                   <<set $tempRewardType to "potato">>
-                   <<set $tempRewardQuantity to _requiredPotatoes>>
-                   <<set $foodstuff["potato"].amount -= _requiredPotatoes>>
-               <</link>>
-           <<else>>
-               <<insufficientQuantity "그들을 만족시킬 만큼의 감자" "blue" "<<foodstufficon 'potato'>>">>
-           <</if>>
-           <br>
+			<<if $farm_work.pigs_fed gte 6>>
+				<<foodstufficon "potato">><span class="blue">The pigs are too full to want more potatoes.</span>
+			<<elseif $foodstuff["potato"].amount gte _requiredPotatoes>>
+				<<foodstufficon "potato">><<link [[Reward them with potatoes (0:20)|Farm Woodland Forage Reward]]>>
+					<<set $tempRewardType to "potato">>
+					<<set $tempRewardQuantity to _requiredPotatoes>>
+					<<set $foodstuff["potato"].amount -= _requiredPotatoes>>
+				<</link>>
+			<<else>>
+				<<insufficientQuantity "potatoes to satisfy them" "blue" "<<foodstufficon 'potato'>>">>
+			<</if>>
+			<br>
 
-           <<if $foodstuff["wild_carrot"].amount gte _requiredCarrots>>
-               <<foodstufficon "wild_carrot">><<link [[당근으로 보상하기 (0:10)|Farm Woodland Forage Reward]]>>
-                   <<set $tempRewardType to "carrot">>
-                   <<set $tempRewardQuantity to _requiredCarrots>>
-                   <<set $foodstuff["wild_carrot"].amount -= _requiredCarrots>>
-               <</link>>
-           <<else>>
-               <<insufficientQuantity "그들을 만족시킬 만큼의 당근" "blue" "<<foodstufficon 'wild_carrot'>>">>
-           <</if>>
-           <br>
+			<<if $foodstuff["wild_carrot"].amount gte _requiredCarrots>>
+				<<foodstufficon "wild_carrot">><<link [[Reward them with carrots (0:10)|Farm Woodland Forage Reward]]>>
+					<<set $tempRewardType to "carrot">>
+					<<set $tempRewardQuantity to _requiredCarrots>>
+					<<set $foodstuff["wild_carrot"].amount -= _requiredCarrots>>
+				<</link>>
+			<<else>>
+				<<insufficientQuantity "carrots to satisfy them" "blue" "<<foodstufficon 'wild_carrot'>>">>
+			<</if>>
+			<br>
 
-           <<if $foodstuff["apple"].amount gte _requiredApples>>
-               <<if currentSkillValue("housekeeping") gte 400 and $mathstrait gte 3>>
-                   <<foodstufficon "apple">><<link [[사과로 보상하기 (0:20)|Farm Woodland Forage Reward]]>>
-                       <<set $tempRewardType to "apple">>
-                       <<set $tempRewardQuantity to _requiredApples>>
-                       <<set $foodstuff["apple"].amount -= _requiredApples>>
-                   <</link>>
-               <<elseif currentSkillValue("housekeeping") gte 400>>
-                   <<foodstufficon "apple">><<link [[사과로 보상하기 (0:15)|Farm Woodland Forage Reward]]>>
-                       <<set $tempRewardType to "apple">>
-                       <<set $tempRewardQuantity to _requiredApples>>
-                       <<set $foodstuff["apple"].amount -= _requiredApples>>
-                   <</link>>
-               <<else>>
-                   <<foodstufficon "apple">><<link [[사과로 보상하기 (0:10)|Farm Woodland Forage Reward]]>>
-                       <<set $tempRewardType to "apple">>
-                       <<set $tempRewardQuantity to _requiredApples>>
-                       <<set $foodstuff["apple"].amount -= _requiredApples>>
-                   <</link>>
-               <</if>>
-           <<else>>
-               <<insufficientQuantity "그들을 만족시킬 만큼의 사과" "blue" "<<foodstufficon 'apple'>>">>
-           <</if>>
-           <br>
+			<<if $foodstuff["apple"].amount gte _requiredApples>>
+				<<if currentSkillValue("housekeeping") gte 400 and $mathstrait gte 3>>
+					<<foodstufficon "apple">><<link [[Reward them with apples (0:20)|Farm Woodland Forage Reward]]>>
+						<<set $tempRewardType to "apple">>
+						<<set $tempRewardQuantity to _requiredApples>>
+						<<set $foodstuff["apple"].amount -= _requiredApples>>
+					<</link>>
+				<<elseif currentSkillValue("housekeeping") gte 400>>
+					<<foodstufficon "apple">><<link [[Reward them with apples (0:15)|Farm Woodland Forage Reward]]>>
+						<<set $tempRewardType to "apple">>
+						<<set $tempRewardQuantity to _requiredApples>>
+						<<set $foodstuff["apple"].amount -= _requiredApples>>
+					<</link>>
+				<<else>>
+					<<foodstufficon "apple">><<link [[Reward them with apples (0:10)|Farm Woodland Forage Reward]]>>
+						<<set $tempRewardType to "apple">>
+						<<set $tempRewardQuantity to _requiredApples>>
+						<<set $foodstuff["apple"].amount -= _requiredApples>>
+					<</link>>
+				<</if>>
+			<<else>>
+				<<insufficientQuantity "apples to satisfy them" "blue" "<<foodstufficon 'apple'>>">>
+			<</if>>
+			<br>
 
-           <<if ($settings.bestialityEnabled or $farm_work.pig.monster) and hasSexStat("deviancy", 5)>>
-               <<animalicon "pig">><<link [[당신의 몸으로 보상하기|Farm Woodland Forage Reward]]>>
-                   <<set $tempRewardType to "body">>
-               <</link>><<deviant5>>
-           <</if>>
-           <br>
+			<<if beastSexEnabledForType("pig", $farm_work.pig.monster) and hasSexStat("deviancy", 5)>>
+				<<animalicon "pig">><<link [[Reward them with your body|Farm Woodland Forage Reward]]>>
+					<<set $tempRewardType to "body">>
+				<</link>><<deviant5>>
+			<</if>>
+			<br>
 
-           <<getouticon>><<link [[아무것도 주지 않기|Farm Woodland Forage Reward]]>>
-               <<set $tempRewardType to "nothing">>
-           <</link>><<llrespect>>
-           <br>
-       <<else>>
-           오류 (Farm Woodland Forage): forageType이 올바르지 않습니다. 버그를 제보해 주십시오.
-       <</if>>
+			<<getouticon>><<link [[Reward them with nothing|Farm Woodland Forage Reward]]>>
+				<<set $tempRewardType to "nothing">>
+			<</link>><<llrespect>>
+			<br>
+		<<else>>
+			ERROR (Farm Woodland Forage): forageType is invalid. Please report.
+		<</if>>
 	<<else>>
        <!--
 			A PC with Tending S, the Green Thumb trait, and a Level 3 Woodland will find an average of:
@@ -542,87 +542,88 @@
 
 			If the PC refuses, the number of attempts will increase by 1 to a total of 5, and all remaining encounters will become non-consensual.
 		-->
-       당신은 꽤 오랫동안 이곳에 있었다. 수확량을 센 다음, 농장으로 돌아가기로 한다.
+		You've been here for a while. You decide to count up your harvest, then head back towards the farm.
 
-       <<set _uniqueItems to 0>>
-       <<for $_i = 0; $_i lt $tempBasket.length; $_i++>>
-           <<if $tempBasket[$_i] gt 0>>
-               <<set _uniqueItems += 1>>
-           <</if>>
-       <</for>>
+		<<set _uniqueItems to 0>>
+		<<for $_i = 0; $_i lt $tempBasket.length; $_i++>>
+			<<if $tempBasket[$_i] gt 0>>
+				<<set _uniqueItems += 1>>
+			<</if>>
+		<</for>>
 
-       <<set _basketTypes to ["mushroom", "truffle", ""]>>
-       <span class="green">
-           <<if _uniqueItems is 1>>
-               <<for $_j = 0; $_j < 2; $_j++>>
-                   <<if $tempBasket[$_j] gt 0>>
-                       <<foodstuffReport _basketTypes[$_j] $tempBasket[$_j] _basketTypes[$_j]>>【을를】 채집했다.
-                   <</if>>
-               <</for>>
-           <<else>>
-               <<foodstuffReport "mushroom" $tempBasket[0] "mushroom">>, 그리고 <<foodstuffReport "truffle" $tempBasket[1] "truffle">>【을를】 채집했다.
-           <</if>>
-       </span>
-       <br><br>
+		<<set _basketTypes to ["mushroom", "truffle", ""]>>
+		You have found
+		<span class="green">
+			<<if _uniqueItems is 1>>
+				<<for $_j = 0; $_j < 2; $_j++>>
+					<<if $tempBasket[$_j] gt 0>>
+						<<foodstuffReport _basketTypes[$_j] $tempBasket[$_j] _basketTypes[$_j]>>.
+					<</if>>
+				<</for>>
+			<<else>>
+				<<foodstuffReport "mushroom" $tempBasket[0] "mushroom">>, and <<foodstuffReport "truffle" $tempBasket[1] "truffle">>.
+			<</if>>
+		</span>
+		<br><br>
 
-       당신은 주위를 둘러본다. 숲의 이 구역은 낯설다. 무언가 잘못되었다...
-       <br><br>
+		You look around. You don't recognise this area of the woods. Something isn't right...
+		<br><br>
 
-       <!-- The farm_gen chain of doom -->
-       <<farm_text pig>>【이가】 나무 뒤에서 <<farm_his pig>> 머리를 불쑥 내민다.
-       <<farm_gen pig>>
-       또 다른 <<farm_text pig>>【이가】 수풀 속에서 걸어 나온다.
-       <<farm_gen pig>>
-       또 다른 <<farm_text pig>>【이가】 당신 뒤에 나타난다.
-       <<farm_gen pig>>
-       또 다른 <<farm_text pig>>【이가】 덤불을 헤치고 나온다.
-       <<farm_gen pig>>
-       당신은 또 다른 <<farm_text pig>>【을를】 발견한다.
-       그리고 또 한 마리. 그리고 또. 그리고 또. 그리고 또. <span class="red">그리고 또. 그리고 또.</span>
-       <br><br>
+		<!-- The farm_gen chain of doom -->
+		A <<farm_text pig>> pokes <<farm_his pig>> head out from behind a tree.
+		<<farm_gen pig>>
+		Another <<farm_text pig>> walks out from a bush.
+		<<farm_gen pig>>
+		Another <<farm_text pig>> appears behind you.
+		<<farm_gen pig>>
+		Another <<farm_text pig>> pushes through a thicket.
+		<<farm_gen pig>>
+		You see another <<farm_text pig>>.
+		And then another. And another. And another. And another. <span class="red">And another. And another.</span>
+		<br><br>
 
-       <<farm_text_many pig>>【이가】 당신을 에워싼다.
+		The <<farm_text_many pig>> surround you.
 
-       <<farm_gen pig>>
-       <<if $farm_work.pig.monster>>
-           <<farm_text_many pig>> 중 하나가 입을 연다. "우리 도와줬다. 너를. 여러 번. 너 보상 준다. 지금."
-       <<else>>
-           그들은 당신의 바구니를 응시한다. 그 의미는 분명해 보인다.
-       <</if>>
-       <br><br>
+		<<farm_gen pig>>
+		<<if $farm_work.pig.monster>>
+			One of the <<farm_text_many pig>> speaks up. "We help you. Many time. You give reward. Now."
+		<<else>>
+			They stare at your basket. You think the implication is clear.
+		<</if>>
+		<br><br>
 
-       <<if $rentmoney gt $money>>
-           수확물을 줄까 생각해보지만, 당신은 간신히 입에 풀칠이나 하는 처지다. 정말 그럴 여유가 있을까?
-       <<elseif $rentmoney * 2 gt $money>>
-           수확물을 줄까 생각해보지만, 돈이 빠듯하다. 그래도 다음 주 생활비를 충분히 벌 수 있을까?
-       <<else>>
-           수확물을 줄까 생각한다. 모든 것을 고려해볼 때, 당신은 약간의
-           <<if $tempBasket[0] gt 0>> 버섯을 포기할 여유는 있다.
-           <<else>> 송로버섯을 포기할 여유는 있다.
-           <</if>>
-       <</if>>
-       <<if hasSexStat("deviancy", 5)>> 그들에게 당신의 몸을 제안할 수도 있겠지만, 대체 몇 번이나 만족시켜줘야 할까?<</if>>
-       <br><br>
+		<<if $rentMoney gt $money>>
+			You think about giving them your harvest, but you're barely scraping by. Can you really afford it?
+		<<elseif $rentMoney * 2 gt $money>>
+			You think about giving them your harvest, but money is tight. Can you still make enough for next week?
+		<<else>>
+			You think about giving them your harvest. All things considered, you can afford to lose some
+			<<if $tempBasket[0] gt 0>> mushrooms.
+			<<else>> truffles.
+			<</if>>
+		<</if>>
+		<<if hasSexStat("deviancy", 5)>> You could offer them your body, but how many times will you need to satisfy them?<</if>>
+		<br><br>
 
-       <<foodstufficon "mushroom">><<link [[수확물을 바치기 (?:??)|Farm Woodland Forage Reward Extreme]]>>
-           <<set $tempRewardType to "basket">>
-       <</link>>
-       <br>
+		<<foodstufficon "mushroom">><<link [[Offer your harvest (?:??)|Farm Woodland Forage Reward Extreme]]>>
+			<<set $tempRewardType to "basket">>
+		<</link>>
+		<br>
 
-       <!-- The "body" and "nothing" rewards are disabled when bestiality is disabled and the pigs aren't monsters. -->
-       <<if $settings.bestialityEnabled or $farm_work.pig.monster>>
-           <<if hasSexStat("deviancy", 5)>>
-               <<animalicon "pig">><<link [[몸을 바치기 (?:??)|Farm Woodland Forage Reward Extreme]]>>
-                   <<set $tempRewardType to "body">>
-               <</link>><<deviant5>>
-           <</if>>
-           <br>
+		<!-- The "body" and "nothing" rewards are disabled when bestiality is disabled and the pigs aren't monsters. -->
+		<<if beastSexEnabledForType("pig", $farm_work.pig.monster)>>
+			<<if hasSexStat("deviancy", 5)>>
+				<<animalicon "pig">><<link [[Offer your body (?:??)|Farm Woodland Forage Reward Extreme]]>>
+					<<set $tempRewardType to "body">>
+				<</link>><<deviant5>>
+			<</if>>
+			<br>
 
-           <<foresticon>><<link [[거절하기 (?:??)|Farm Woodland Forage Reward Extreme]]>>
-               <<set $tempRewardType to "nothing">>
-           <</link>><<dangerousText>>
-           <br>
-       <</if>>
+			<<foresticon>><<link [[Refuse (?:??)|Farm Woodland Forage Reward Extreme]]>>
+				<<set $tempRewardType to "nothing">>
+			<</link>><<dangerousText>>
+			<br>
+		<</if>>
 	<</if>>
 <<else>>
    <<pass 20>>
@@ -694,34 +695,33 @@
        <!--
 			For calculation purposes, the exact quantities and frequencies that the Mushrooms and Truffles are harvested at should stay equal to each other if they end up being adjusted. Otherwise, the _averageValue variable will need to be recalculated with the new rates in mind.
 		-->
-       <<if _target lte 2>>
-           <!-- Mushrooms -->
-           <<wearProp "mushroom basket">>
-           <span class="green"><<foodstufficon "mushroom">> 버섯을 약간 찾았다.</span>
-           <<if $farm.woodland gte 3>>
-               <<tending_pick mushroom 10 30>>
-           <<else>>
-               <<tending_pick mushroom 5 15>>
-           <</if>>
-           <<set $tempBasket[0] += _tending_amount>>
-       <<else>>
-           <!-- Truffles -->
-           <!-- NOTE: THERE DOES NOT CURRENTLY EXIST A TRUFFLE BASKET SPRITE. SPRITEWORK NEEDED. -->
-           <<wearProp "mushroom basket">>
-           <span class="green"><<foodstufficon "truffle">> 송로버섯을 약간 찾았다.</span>
-           <<if $farm.woodland gte 3>>
-               <<tending_pick truffle 10 30>>
-           <<else>>
-               <<tending_pick truffle 5 15>>
-           <</if>>
-           <<set $tempBasket[1] += _tending_amount>>
-       <</if>>
-   <<else>>
-       오류 (Farm Woodland Forage): forageType이 올바르지 않습니다. 버그를 제보해 주십시오.
-   <</if>>
+		<<if _target lte 2>>
+			<!-- Mushrooms -->
+			<<wearProp "mushroom basket">>
+			<span class="green">You find some <<foodstufficon "mushroom">> mushrooms.</span>
+			<<if $farm.woodland gte 3>>
+				<<tending_pick mushroom 10 30>>
+			<<else>>
+				<<tending_pick mushroom 5 15>>
+			<</if>>
+			<<set $tempBasket[0] += _tending_amount>>
+		<<else>>
+			<!-- Truffles -->
+			<<wearProp "truffle basket">>
+			<span class="green">You find some <<foodstufficon "truffle">> truffles.</span>
+			<<if $farm.woodland gte 3>>
+				<<tending_pick truffle 10 30>>
+			<<else>>
+				<<tending_pick truffle 5 15>>
+			<</if>>
+			<<set $tempBasket[1] += _tending_amount>>
+		<</if>>
+	<<else>>
+		ERROR (Farm Woodland Forage): forageType is invalid. Please report.
+	<</if>>
 	<br><br>
 
-   <!--
+	<!--
 		If the PC is foraging for fruit or disabled bestiality, they will get scratched by some branches and nothing else will happen.
 
 		If they are foraging for fungi with a Level 2 Woodland, they will have a 1/2 chance of getting molested by a pig after being scratched by a branch.
@@ -730,42 +730,42 @@
 
 		If the chosen target on the PC's body fails, or if the PC gets hit with an unlucky 1/4, the pig will simply tackle them and the skill checks will be harder.
 	-->
-   <<if ($tempForageType is "fruit" and dangerEvent()) or ($tempForageType is "fungi" and (_fullyNaked or dangerEvent(1.25)))>>
-       <<set _checkResults to [
-           $hairlength gte random(300, 500),
-           not _topless,
-           not _bottomless,
-       ]>>
-       <<set _attemptOne to random(0, 2)>>
+	<<if ($tempForageType is "fruit" and dangerEvent()) or ($tempForageType is "fungi" and (_fullyNaked or dangerEvent(1.25)))>>
+		<<set _checkResults to [
+			$hairlength gte random(300, 500),
+			not _topless,
+			not _bottomless,
+		]>>
+		<<set _attemptOne to random(0, 2)>>
 
-       <<if _attemptOne is 0 and _checkResults[_attemptOne]>>
-           돌풍이 불자 당신의 <<hairDetails>>【이가】 나뭇가지에 걸린다. 꼼짝도 할 수 없다.<<gpain>><<pain 4>>
-       <<elseif _attemptOne is 1 and _checkResults[_attemptOne]>>
-           <<set _top.integrity -= 10>>
-           <<if _top.integrity lte 0>>
-               돌풍이 불자 당신의 _top.name【이가】 나뭇가지에 걸린다.
-               <span class="pink">그 힘에 몸에서 천이 찢어져 나가며, 당신의 <<undertop>>【이가】 드러난다.</span>
-           <<else>>
-               당신의 _top.name【이가】 나뭇가지에 걸려, 옷 상태가 더 나빠진다.
-           <</if>>
-       <<elseif _attemptOne is 2 and _checkResults[_attemptOne]>>
-           <<set _bottom.integrity -= 10>>
-           <<if _bottom.integrity lte 0>>
-               돌풍이 불자 당신의 _bottom.name【이가】 나뭇가지에 걸린다.
-               <span class="pink">그 힘에 몸에서 천이 찢어져 나가며, 당신의 <<undies>>【이가】 드러난다.</span>
-           <<else>>
-               당신의 _bottom.name【이가】 나뭇가지에 걸려, 옷 상태가 더 나빠진다.
-           <</if>>
-       <<else>>
-           돌풍에 주변 나뭇가지들이 휘날리며 피부를 긁고 지나간다.<<gpain>><<pain 4>>
-       <</if>>
-       <<integritycheck no_text>><<exposure>>
-       <br><br>
+		<<if _attemptOne is 0 and _checkResults[_attemptOne]>>
+			Your <<hairDetails>> catches on a branch as a gust of wind disturbs it. It's stuck.<<gpain>><<pain 4>>
+		<<elseif _attemptOne is 1 and _checkResults[_attemptOne]>>
+			<<set _top.integrity -= 10>>
+			<<if _top.integrity lte 0>>
+				Your _top.name <<= _top.plural ? "catch" : "catches">> on a branch as a gust of wind disturbs it.
+				<span class="pink">The force tears the fabric from your body, baring your <<undertop>>.</span>
+			<<else>>
+				Your _top.name <<= _top.plural ? "catch" : "catches">> on a branch, leaving your _top.name worse for wear.
+			<</if>>
+		<<elseif _attemptOne is 2 and _checkResults[_attemptOne]>>
+			<<set _bottom.integrity -= 10>>
+			<<if _bottom.integrity lte 0>>
+				Your _bottom.name <<= _bottom.plural ? "catch" : "catches">> on a branch as a gust of wind disturbs it.
+				<span class="pink">The force tears the fabric from your body, baring your <<undies>>.</span>
+			<<else>>
+				Your _bottom.name <<= _bottom.plural ? "catch" : "catches">> on a branch, leaving your _bottom.name worse for wear.
+			<</if>>
+		<<else>>
+			A gust of wind animates the nearby branches, scratching your skin.<<gpain>><<pain 4>>
+		<</if>>
+		<<integritycheck no_text>><<exposure>>
+		<br><br>
 
-       <<if $tempForageType is "fungi"
-           and (($farm.woodland is 2 and random(1, 2) is 2) or ($farm.woodland is 3 and random(1, 5) lte 4))
-           and ($settings.bestialityEnabled or $farm_work.pig.monster)>>
-           <!--
+		<<if $tempForageType is "fungi"
+			and (($farm.woodland is 2 and random(1, 2) is 2) or ($farm.woodland is 3 and random(1, 5) lte 4))
+			and beastSexEnabledForType("pig", $farm_work.pig.monster)>>
+			<!--
 				The event will be initiated by the PC's hair or clothes catching on a branch. Upon triggering this event, a pig will try to molest them.
 
 				If however the targeted check fails, due to the PC's hair being too short, the PC's upper or lower clothing slot being naked, or they simply hit the unlucky 1/4, the pig will first tackle them and the skill checks will be harder.
@@ -964,14 +964,14 @@
 
 		The pigs will take 30-40 minutes to return to the farm from where they took the player.
 	-->
-	<<if _pigsUnsatisfied lte 0 or not ($settings.bestialityEnabled or $farm_work.pig.monster)>>
+	<<if _pigsUnsatisfied lte 0 or not beastSexEnabledForType("pig", $farm_work.pig.monster)>>
 		<<set _passTime to random(30, 40)>>
 		<<pass _passTime>>
 
 		<<if _pigsUnsatisfied lte 0>>
 			<<pass 10>>
-			잠시 후, <<farm_text_many pig>> 식사에 만족한 듯 땅바닥에 느긋하게 드러누웠다.
-			<<if $settings.bestialityEnabled or $farm_work.pig.monster>>
+			After some time, the <<farm_text_many pig>> laze on the earth, satisfied with the meal.
+			<<if beastSexEnabledForType("pig", $farm_work.pig.monster)>>
 				<<ggrespect>><<farm_pigs 4>>
 			<<else>>
 				<<grespect>><<farm_pigs 1>>
@@ -994,9 +994,9 @@
 			<</if>>
 			<br><br>
 
-			돌아가는 길을 모르기 때문에, 당신은 녀석들이 일어날 때까지 기다렸다. 그동안 몇몇 <<farm_text_many pig>> 당신에게 다가와 식사의 보답으로 핥아주거나 코로 부벼대었다.
-			<<if $settings.bestialityEnabled or $farm_work.pig.monster>>
-				그들 중 일부는 여전히 음욕 어린 눈으로 당신을 바라보았지만, 나머지는 일종의 원형을 만들어 그들이 접근하지 못하도록 막아주었다.
+			You don't know the way back, so you wait for them to get up. Some <<farm_text_many pig>> approach you during this time, giving you a lick or a nuzzle for the meal.
+			<<if beastSexEnabledForType("pig", $farm_work.pig.monster)>>
+				A few of them still look at you with lustful eyes, but the others form a ring of sorts that stops them from approaching.
 			<</if>>
 			<br><br>
 
@@ -1157,7 +1157,7 @@
 
 <<elseif $tempRewardType is "body">>
 	<!--
-		The PC will satisfy a pig with their body (+1 Pig's Respect). If the PC has good Science and Tending, they will recognize and reward a pig that was particularly helpful (+1 Pig's Respect).
+		The PC will satisfy a pig with their body (+1 Pig's Respect). If the PC has good Science and Tending, they will recognise and reward a pig that was particularly helpful (+1 Pig's Respect).
 	-->
 	<<beastNEWinit 4 pig>>
 	<<set $farm_work.pig.gender to $NPCList[0].gender>>
@@ -1173,7 +1173,7 @@
 	<!-- Going to hell for this lol -->
 	<<if _checkResults[0] and _checkResults[1]>>
 
-		<span class="teal">당신은 유독 도움이 되었던 <<farm_text pig>> 알아차렸다.</span>
+		<span class="teal">You recognise a <<farm_text pig>> who was particularly helpful.</span>
 		<br><br>
 
 		당신은 바구니를 닫고 그에 기대어 누우며, <<farm_him pig>>【을를】 당신 쪽으로 끌어당겼다. <<farm_he pig>>【이가】 허리에 닿자, 당신은 다리로 <<farm_him pig>>【을를】 그곳에 고정했다.
@@ -1369,11 +1369,11 @@
 	<</if>>
 	<<switch $tempRewardType>>
 		<<case "potato">>
-			'감자'라는 단어를 알아들은 모양이다. 녀석들이 우리 쪽으로 터벅터벅 걸어가기 시작한다.
+			You think they recognised the word "potato." They start shuffling back to the farm.
 		<<case "carrot">>
-			'당근'이라는 단어를 알아들은 모양이다. 녀석들이 우리 쪽으로 걸어가기 시작한다.
+			You think they recognised the word "carrot." They start walking back to the farm.
 		<<case "apple">>
-			'사과'라는 단어를 알아들은 모양이다. 녀석들이 우리 쪽으로 종종걸음 치며 달려가기 시작한다.
+			You think they recognised the word "apple." They start trotting back to the farm.
 	<</switch>>
 	<br><br>
 
@@ -1444,7 +1444,7 @@
 <<elseif $tempRewardType is "body">>
 	<!-- Should not be possible to reach this branch without bestiality being enabled or the farm pigs being monsters. -->
 	<!--
-		The PC will satisfy a pig with their body (+1 Pig's Respect). If the PC has good Science and Tending, they will recognize and reward a pig that was particularly helpful (+1 Pig's Respect).
+		The PC will satisfy a pig with their body (+1 Pig's Respect). If the PC has good Science and Tending, they will recognise and reward a pig that was particularly helpful (+1 Pig's Respect).
 	-->
 	<<if $farm.beasts.pigs gte 5>>
 		<<set _pigsUnsatisfied to 1>>
@@ -1467,7 +1467,7 @@
 	]>>
 	<!-- Going to hell for this lol -->
 	<<if _checkResults[0] and _checkResults[1]>>
-		<span class="teal">당신은 유독 도움이 되었던 <<farm_text pig>> 알아차렸다.</span>
+		<span class="teal">You recognise a <<farm_text pig>> who was particularly helpful.</span>
 		<br><br>
 
 		당신은 바구니를 닫고 그에 기대어 누우며, <<farm_him pig>>【을를】 당신 쪽으로 끌어당겼다. <<farm_he pig>>【이가】 허리에 닿자, 당신은 다리로 <<farm_him pig>>【을를】 그곳에 고정했다.
@@ -1565,8 +1565,8 @@
 	<</if>>
 <<else>>
 	<<farm_pigs -3>>
-	<<if $farm.beasts.pigs gte -5 or not ($settings.bestialityEnabled or $farm_work.pig.monster)>>
-		녀석들이 당신을 빤히 보더니, 콧방귀를 뀌고는 툭툭 털며 가버렸다.
+	<<if $farm.beasts.pigs gte -5 or not beastSexEnabledForType("pig", $farm_work.pig.monster)>>
+		They consider you, then snort and trot away.
 		<br><br>
 
 		<<link [[다음|Farm Woodland]]>>
@@ -1991,7 +1991,7 @@
 					"암캐가 좋은 교훈을 배웠군," <<farm_text pig>>【이가】 말했다. "우린 떠난다." 머뭇거리며, 당신은 녀석들을 따라갔다.
 				<</if>>
 			<<else>>
-				결국 녀석들이 일어나 어디론가 엉금엉금 걸어가기 시작했다. 녀석들은 떠나면서도 당신을 음흉하게 쳐다보았다. 머뭇거리며, 당신은 녀석들을 따라갔다.
+				Eventually, they get up and start trotting somewhere. They leer at you as they go. Hesitantly, you follow them.
 			<</if>>
 		<</if>>
 		<br><br>
@@ -2011,7 +2011,7 @@
 	<<endcombat>>
 
 	<<npc Alex>><<person1>>
-	알렉스가 숲 가장자리에 도착했다. <<he>>【은는】 나뭇가지를 헤치고 당신을 일으켜 세워주었다. 사방에, 그리고 당신 몸에 묻은 돼지 발자국을 보며 그가 웃었다. "돼지들이란 원래 저런다니까," <<he>>【이가】 말했다. "정 안 되겠으면 기죽지 말고 꽉 휘어잡으라고."
+	Alex arrives at the edge of the woodland. <<He>> pushes through the foliage and helps you to your feet. Seeing the pig prints all around and on you, <<he>> laughs. "Pigs can be like that," <<he>> says. "If all else fails, don't be afraid to lay down the law."
 
 	<<if $exposed gte 1>>
 		<<glust>><<npcincr Alex lust 1>>
@@ -2095,8 +2095,8 @@
 <<else>>
 	마침내 당신의 <<farm_text pig $tempGenderHelpful>>【이가】 다른 <<farm_text pig>>【을를】 바닥에 짓눌렀다.
 	<<if $farm_work.pig.monster>>
-		숨을 몰아쉬며, <<farm_he pig $tempGenderHelpful>>【은는】 다른 <<farm_text_many pig>>【을를】 바라보며 말을 반복했다.
-		"안 도와줬어. 보상 없어."
+		Panting, <<farm_he pig $tempGenderHelpful>> looks at the other <<farm_text_many pig>> and repeats <<farm_himself pig $tempGenderHelpful>>.
+		"No helpful. No reward."
 	<<else>>
 		녀석은 지쳐 보였지만, 다른 돼지들을 향해 여전히 으르렁거렸다.
 	<</if>>
@@ -2950,7 +2950,7 @@
 	알렉스가 <<his>> 시선을 피하다가 웃는다. "넌 정말 대단하다." <<he>>【이가】 말한다. <<He>>【이가】 당신의 <<bottom>>【을를】 양손으로 꽉 잡고 <<him>>에게 끌어당긴다. "얌전히 있을게. 다시 일하러 가자." <<He>>【이가】 당신의 뺨에 키스한다.
 	<br><br>
 
-	<<link [[다음|Farm Woodland]]>><</link>>
+	<<link [[Next|Farm Woodland]]>><<endevent>><</link>>
 <</if>>
 
 

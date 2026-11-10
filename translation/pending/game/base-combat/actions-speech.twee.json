@@ -1,0 +1,29 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $money gte $rentmoney + ($babyRent or 0)>>",
+   "\t\t\t\t<<set _mouthaction[\"Pay Bailey\"] to \"pay\">>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $money gte $rentmoney + ($babyRent or 0)>>",
+   "\t\t\t\t<<set _mouthaction[\"베일리에게 지불한다\"] to \"pay\">>"
+  ],
+  "new_en": [
+   "\t\t\t<<if $money gte $rentMoney + ($babyRent or 0)>>",
+   "\t\t\t\t<<set _mouthaction[\"Pay Bailey\"] to \"pay\">>"
+  ],
+  "context": "\t\t<<if $robinRentEvent is 1 and $combatPhase is \"pay\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if [\"Robin\",\"Kylar\",\"Alex\",\"Avery\",\"Whitney\",\"Eden\",\"Sydney\"].includes($_npcname) and !npcHasStrapon($mouthtarget)"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if [\"Robin\",\"Kylar\",\"Alex\",\"Avery\",\"Whitney\",\"Eden\",\"Sydney\",\"Gwylan\"].includes($_npcname) and !npcHasStrapon($mouthtarget)"
+  ],
+  "context": "\t\t\t<<set $_npcname to $npc[$npcrow.indexOf($mouthtarget)]>>"
+ }
+]

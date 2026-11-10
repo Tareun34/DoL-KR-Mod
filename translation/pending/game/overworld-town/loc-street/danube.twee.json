@@ -1,0 +1,54 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<skinicon \"masturbate\">><<link [[Masturbate|Danube Challenge Masturbate]]>><<set $masturbationstart to 1>><</link>><<exhibitionist5>>"
+  ],
+  "old_kr": [
+   "\t<<skinicon \"masturbate\">><<link [[자위한다|Danube Challenge Masturbate]]>><<set $masturbationstart to 1>><</link>><<exhibitionist5>>"
+  ],
+  "new_en": [
+   "\t<<skinicon \"masturbate\">><<link [[Masturbate|Danube Challenge Masturbate]]>><<set $masturbationstart to 1>><</link>><<exhibitionist5>>",
+   "<<elseif $uncomfortable.prostituting is false>>",
+   "\t<<set _desperateaction to 1>>",
+   "\t<<skinicon \"masturbate\">><<link [[Masturbate|Danube Challenge Masturbate]]>><<set $masturbationstart to 1>><<set $desperateaction to _desperateaction>><</link>><<exhibitionist5>>"
+  ],
+  "context": "<<if hasSexStat(\"exhibitionism\", 5)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if C.npc.Gwylan.state is \"active\" and !isGwylanAbsent() and !$daily.gwylan.cafe and !$daily.gwylan.cafeOfferDeclined and !$daily.gwylan.cafeSkip and !$daily.gwylan.SchoolDropOff and ![\"reunion\", \"badEndReady\"].includes(statusCheck(\"Gwylan\")) and C.npc.Avery.state is \"active\" and $avery_mansion and !(between($chef_state, 7, 8) and $chef_rework lte 30) and Time.schoolDay and Time.hour is 7 and $exposed lte 0 and ($gwylan.sea + ($gwylanTalked.count(\"fox_mask\") * 20) + ($gwylanTalked.count(\"dark_pendant\") * 20) gte 40)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<run statusCheck(\"Gwylan\")>>",
+   "\t<<if C.npc.Gwylan.state is \"active\" and !isGwylanAbsent() and !$daily.gwylan.cafe and !$daily.gwylan.cafeOfferDeclined and !$daily.gwylan.cafeSkip and !$daily.gwylan.SchoolDropOff and ![\"reunion\", \"badEndReady\"].includesAny(_gwylanStatus) and C.npc.Avery.state is \"active\" and $avery_mansion and !(between($chef_state, 7, 8) and $chef_rework lte 30) and Time.schoolDay and Time.hour is 7 and $exposed lte 0 and ($gwylan.sea + ($gwylanTalked.count(\"fox_mask\") * 20) + ($gwylanTalked.count(\"dark_pendant\") * 20) gte 40)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $uncomfortable.prostituting is false>>",
+   "\t\t<<set _desperateaction to 1>>",
+   "\t\t<<link [[Strip|Danube Challenge Strip]]>><<set $phase to 0>><<set $desperateaction to _desperateaction>><</link>><<exhibitionist3>>",
+   "\t\t<br>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br>",
+   "\t<<elseif $uncomfortable.prostituting is false>>",
+   "\t\t<<set _desperateaction to 1>>",
+   "\t\t<<link [[Strip|Danube Challenge 2]]>><<set $desperateaction to _desperateaction>><</link>><<exhibitionist3>>"
+  ],
+  "context": "\t\t<<link [[옷을 벗는다|Danube Challenge 2]]>><</link>><<exhibitionist3>>"
+ }
+]

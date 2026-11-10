@@ -1,31 +1,50 @@
 :: Widgets speech-Eden [widget]
 <<widget "speech-eden">>
 	<<set _npc_speech to true>>
-	<<if ($speechpenisvirgin is 1 and $player.virginity.penile is "Eden") or ($speechvaginavirgin is 1 and $player.virginity.vaginal is "Eden")>>
-		<<He>>【이가】 말한다. "네 순결을 느꼈다. 어쩔 수 없었어. 널 취해야 했으니까."
-	<<elseif $speechanusvirgin is 1 and $player.virginity.anal is "Eden">>
-		<<He>>【이가】 말한다. "지금은 아프겠지만 곧 익숙해질 거다."
-	<<elseif $speechmouthvirgin is 1 and $player.virginity.oral is "Eden">>
-		<<He>>【이가】 말한다. "제길, 느낌 좋네. 우리 앞으로 더 자주 하게 될 거다."
-	<<elseif $speechkissvirgin is 1 and $player.virginity.kiss is "Eden">>
-		<<He>>【이가】 말한다. "어땠지? 난 아직 안 끝났다."
-	<<elseif $speechnamedrop is 1>>
-		<<set $speechnamedrop to 0>>
+	<<speechPool "Eden">>
+	<<if $player.virginity.anal is "Eden" and $speechAnusVirgin>>
+		<<addSpeechLine "virginity">>
+			<<He>> speaks. "I know this hurts now, but you'll get used to it soon."
+		<</addSpeechLine>>
+	<</if>>
+	<<if $player.virginity.oral is "Eden" and $speechOralVirgin>>
+		<<addSpeechLine "virginity">>
+			<<He>> speaks. "Damn, you feel great. We're definitely doing this more often."
+		<</addSpeechLine>>
+	<</if>>
+	<<if $player.virginity.kiss is "Eden" and $speechKissVirgin>>
+		<<addSpeechLine "virginity">>
+			<<He>> speaks. "How was that? I'm not done, though."
+		<</addSpeechLine>>
+	<</if>>
+	<<if $speechLINameDrop>>
 		<<switch _loveInterest>>
 			<<case "Black Wolf" "Great Hawk">>
-				<<He>>【이가】 말한다. "기회만 생기면 저건 널 갈가리 찢어버릴 거다. 피해 다녀."
+				<<addSpeechLine "namedrop">>
+					<<He>> speaks. "That thing will tear you apart the first chance it gets! Stay away from it."
+				<</addSpeechLine>>
 			<<case "Gwylan">>
-				<<He>>【이가】 굳는다. "그 망할 마녀도 널 내게서 빼앗으려 드는 건가?"
+				<<addSpeechLine "namedrop">>
+					<<He>> freezes. "That damned witch is trying to steal you from me, too?"
+				<</addSpeechLine>>
 			<<default>>
-				<<He>>【이가】 말한다. "그게 누구든, 잊어버려." <<He>>【이가】 상처받은 목소리로 말한다.
+				<<addSpeechLine "namedrop">>
+					<<He>> speaks. "Whoever that is, forget them." <<He>> sounds hurt.
+				<</addSpeechLine>>
 		<</switch>>
-	<<elseif $speechsextoy is 1>>
-		<<set $speechsextoy to 0>>
-		<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "섹스 토이들" : "섹스 토이")>>
-		에덴이 당신의 $_sexToy【을를】 쳐다본다. "이런 건 필요 없어," <<he>>【이가】 말한다. "방해만 된다."
-	<<else>>
-		<<set _noNameComment to true>>
 	<</if>>
+	<<if $speechNoticeSexToy>>
+		<<addSpeechLine "sexToy">>
+			<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "sex toys" : "sex toy")>>
+			Eden looks at your $_sexToy. "Toys like that aren't necessary," <<he>> says. "They might even get in the way."
+		<</addSpeechLine>>
+	<</if>>
+	<<if ($speechPenisVirgin is 1 and $player.virginity.penile is "Eden") or ($speechVaginaVirgin is 1 and $player.virginity.vaginal is "Eden")>>
+		<<addSpeechLine "virginity">>
+			<<He>> speaks. "I felt your virginity. I couldn't help it. I needed to take you."
+		<</addSpeechLine>>
+	<</if>>
+	<<speechSay>>
 	<<if $daily.eden.huntCaught gte 1>>
 		<<switch $daily.eden.huntCaught>>
 			<<case 1>> "누가 감히 널 건드려?" 에덴이 으르렁거린다.
@@ -39,7 +58,7 @@
 			<<case 9>> "네 주인이 누군지 잊지 마," 에덴이 말한다.
 			<<case 10>> "네 머리카락 한 올까지도 다 내 거다," 에덴이 으르렁거린다.
 		<</switch>>
-		<<set $daily.eden.huntCaught to ($daily.eden.huntCaught + 1) % 10>>
+		<<set $daily.eden.huntCaught to ($daily.eden.huntCaught + 1) % 11>>
 		<<unset _noNameComment>>
 	<</if>>
 	<<if $daily.eden.robinCrash gte 1>>
@@ -55,7 +74,7 @@
 			<<case 9>> "절대 널 놓아주지 않겠다," 에덴이 말한다.
 			<<case 10>> "너는 오직 내 거다," 에덴이 으르렁거린다. "다른 놈들은 머릿속에서 완전히 지워주마."
 		<</switch>>
-		<<set $daily.eden.robinCrash to ($daily.eden.robinCrash + 1) % 10>>
+		<<set $daily.eden.robinCrash to ($daily.eden.robinCrash + 1) % 11>>
 		<<unset _noNameComment>>
 	<</if>>
 <</widget>>

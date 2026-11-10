@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if Time.dayState is \"day\" and $exposed is 0 and $photo and $photo.street is \"ready\">> /* currently unused */",
+   "\t\t\t<<ind>><<link [[Modelling job (3:00)|Model Silly]]>><</link>><<gtiredness>>"
+  ],
+  "old_kr": [
+   "\t\t<<if Time.dayState is \"day\" and $exposed is 0 and $photo and $photo.street is \"ready\">> /* currently unused */",
+   "\t\t\t<<ind>><<link [[모델 일 (3:00)|Model Silly]]>><</link>><<gtiredness>>"
+  ],
+  "new_en": [
+   "\t\t<<if Time.dayState is \"day\" and $exposed is 0 and $photo?.street is \"ready\">> /* currently unused */",
+   "\t\t\t<<ind>><<link [[Modelling job (3:00)|Model Silly]]>><</link>><<gtiredness>>"
+  ],
+  "context": "\t\t<</if>>"
+ }
+]

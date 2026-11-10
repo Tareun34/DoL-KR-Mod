@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\"Ah. You know, I love going to the spa,\" <<He>> says. \"It's one of my favourite ways to unwind, I always get so stiff after work.\""
+  ],
+  "old_kr": [
+   "\t\t\"아, 나 스파 가는 거 엄청 좋아한단다.\" <<He>>【이가】 말한다. \"내가 가장 즐기는 휴식 방법 중 하나야. 일 끝나고 나면 몸이 항상 뻣뻣하게 굳어버리거든.\""
+  ],
+  "new_en": [
+   "\t\t\"Ah. You know, I love going to the spa,\" <<he>> says. \"It's one of my favourite ways to unwind, I always get so stiff after work.\""
+  ],
+  "context": ""
+ }
+]

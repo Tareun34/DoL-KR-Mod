@@ -104,9 +104,9 @@ $parasite.breasts.name is "parasite" or $parasite.penis.name is "parasite" or $p
 
 좌석이 가득 차자 관객석의 조명이 어두워지고, 하퍼가 부드럽게 말한다. "옷을 벗고 테이블 위에 누워주시겠어요?"
 <br>
-가운이 바닥으로 떨어지자 온몸의 털이 곤두서는 것 같다. 당신의 몸이 모든 관객에게 공개된다.
-<<if $player.penisExist and $player.vaginaExist>>
-	그들은 호기심 어린 수군거림으로 술렁인다. 당신의 <<genitals>> 때문인 게 틀림없다.
+You feel hairs stand on end as your gown falls to the floor, unveiling you for the whole audience to see.
+<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>
+	They erupt into inquisitive murmuring. It must be your <<genitals>>.
 <</if>>
 <<if $liquidcount gte 8>>
 	<<if $liquidcount gte 20>>

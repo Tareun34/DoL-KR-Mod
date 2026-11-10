@@ -1,0 +1,536 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\ttitle: \"Money Maker\",",
+   "\t\tdesc: \"Have £10,000.\",",
+   "\t\tdifficulty: 1,"
+  ],
+  "old_kr": [
+   "\t\ttitle: \"돈벌레\",",
+   "\t\tdesc: \"£10,000 보유하기.\",",
+   "\t\tdifficulty: 1,"
+  ],
+  "new_en": [
+   "\t\ttitle: \"Money Maker\",",
+   "\t\tdesc: \"Have £10,000.\",",
+   "\t\tdifficulty: 2,"
+  ],
+  "context": "\t\"Money Maker\": {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\ttitle: \"Tycoon\",",
+   "\t\tdesc: \"Have £100,000.\",",
+   "\t\tdifficulty: 2,"
+  ],
+  "old_kr": [
+   "\t\ttitle: \"재벌\",",
+   "\t\tdesc: \"£100,000 보유하기.\",",
+   "\t\tdifficulty: 2,"
+  ],
+  "new_en": [
+   "\t\ttitle: \"Tycoon\",",
+   "\t\tdesc: \"Have £100,000.\",",
+   "\t\tdifficulty: 3,"
+  ],
+  "context": "\tTycoon: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\ttitle: \"Millionaire\",",
+   "\t\tdesc: \"Have £1,000,000.\",",
+   "\t\tdifficulty: 3,"
+  ],
+  "old_kr": [
+   "\t\ttitle: \"백만장자\",",
+   "\t\tdesc: \"£1,000,000 보유하기.\",",
+   "\t\tdifficulty: 3,"
+  ],
+  "new_en": [
+   "\t\ttitle: \"Millionaire\",",
+   "\t\tdesc: \"Have £1,000,000.\",",
+   "\t\tdifficulty: 4,"
+  ],
+  "context": "\tMillionaire: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\ttitle: \"Being a Boy\",",
+   "\t\tdesc: \"Get to day 50 as a boy.\","
+  ],
+  "old_kr": [
+   "\t\ttitle: \"소년의 삶\",",
+   "\t\tdesc: \"소년으로서 50일 차에 도달하기.\","
+  ],
+  "new_en": [
+   "\t\ttitle: \"Hard Times\",",
+   "\t\tdesc: \"Get to day 50 after starting with a penis.\","
+  ],
+  "context": "\t\"Being a Boy\": {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\ttitle: \"Being a Girl\",",
+   "\t\tdesc: \"Get to day 50 as a girl.\","
+  ],
+  "old_kr": [
+   "\t\ttitle: \"소녀의 삶\",",
+   "\t\tdesc: \"소녀로서 50일 차에 도달하기.\","
+  ],
+  "new_en": [
+   "\t\ttitle: \"Tight Squeeze\",",
+   "\t\tdesc: \"Get to day 50 after starting with a vagina.\","
+  ],
+  "context": "\t\"Being a Girl\": {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\ttitle: \"Being a Hermaphrodite\",",
+   "\t\tdesc: \"Get to day 50 as a hermaphrodite.\","
+  ],
+  "old_kr": [
+   "\t\ttitle: \"후타나리의 삶\",",
+   "\t\tdesc: \"후타나리로서 50일 차에 도달하기.\","
+  ],
+  "new_en": [
+   "\t\ttitle: \"Double Trouble\",",
+   "\t\tdesc: \"Get to day 50 after starting with a penis and a vagina.\","
+  ],
+  "context": "\t\"Being a Hermaphrodite\": {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\ttitle: \"Most Aware\",",
+   "\t\tdesc: \"You see things others don't.\",",
+   "\t\tdifficulty: 1,"
+  ],
+  "old_kr": [
+   "\t\ttitle: \"세상 물정에 밝은\",",
+   "\t\tdesc: \"당신은 남들이 못 보는 것을 봅니다.\",",
+   "\t\tdifficulty: 1,"
+  ],
+  "new_en": [
+   "\t\ttitle: \"Most Aware\",",
+   "\t\tdesc: \"You see things others don't.\",",
+   "\t\tdifficulty: 2,"
+  ],
+  "context": "\t\"Most Aware\": {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\ttitle: \"Most Innocent\",",
+   "\t\tdesc: \"Everything is fine.\",",
+   "\t\tdifficulty: 1,"
+  ],
+  "old_kr": [
+   "\t\ttitle: \"가장 순수한 자\",",
+   "\t\tdesc: \"모든 게 다 괜찮을 거예요.\",",
+   "\t\tdifficulty: 1,"
+  ],
+  "new_en": [
+   "\t\ttitle: \"Most Innocent\",",
+   "\t\tdesc: \"Everything is fine.\",",
+   "\t\tdifficulty: 2,"
+  ],
+  "context": "\t\"Most Innocent\": {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\ttitle: \"Merchant\",",
+   "\t\tdesc: \"Dominate the market.\",",
+   "\t\tdifficulty: 2,"
+  ],
+  "old_kr": [
+   "\t\ttitle: \"상인\",",
+   "\t\tdesc: \"시장을 장악하세요.\",",
+   "\t\tdifficulty: 2,"
+  ],
+  "new_en": [
+   "\t\ttitle: \"Merchant\",",
+   "\t\tdesc: \"Dominate the market.\",",
+   "\t\tdifficulty: 3,"
+  ],
+  "context": "\tMerchant: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\thint: \"Hint: Turn the tables on a wealthy patron.\","
+  ],
+  "old_kr": [
+   "\t\thint: \"힌트: 부유한 후원자에게 역공을 가하세요.\","
+  ],
+  "new_en": [
+   "\t\thint: \"Hint: Turn the tables on a wealthy patron.\",",
+   "\t\taltDesc: \"Bound Avery in <<nnpc_his 'Avery'>> dungeon.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Social\"],"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\ttitle: \"Broodmother Zoologist\",",
+   "\t\tdesc: \"Filled out the parasite notebook.\",",
+   "\t\tdifficulty: 3,"
+  ],
+  "old_kr": [
+   "\t\ttitle: \"동물학자 무리의 어미\",",
+   "\t\tdesc: \"기생충 노트를 완성했습니다.\",",
+   "\t\tdifficulty: 3,"
+  ],
+  "new_en": [
+   "\t\ttitle: \"Broodmother Zoologist\",",
+   "\t\tdesc: \"Filled out the parasite notebook.\",",
+   "\t\tdifficulty: 4,"
+  ],
+  "context": "\t\"Broodmother Zoologist\": {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\ttitle: \"Life Comes in Threes\",",
+   "\t\tdesc: \"Gave birth to triplets.\",",
+   "\t\tdifficulty: 2,"
+  ],
+  "old_kr": [
+   "\t\ttitle: \"세 쌍둥이의 탄생\",",
+   "\t\tdesc: \"세 쌍둥이를 낳았습니다.\",",
+   "\t\tdifficulty: 2,"
+  ],
+  "new_en": [
+   "\t\ttitle: \"Life Comes in Threes\",",
+   "\t\tdesc: \"Gave birth to triplets.\",",
+   "\t\tdifficulty: 3,"
+  ],
+  "context": "\t\"Life Comes in Threes\": {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\ttitle: \"Life begins when you least expect\",",
+   "\t\tdesc: \"Gave birth to children as a male.\","
+  ],
+  "old_kr": [
+   "\t\ttitle: \"예상치 못한 생명의 탄생\",",
+   "\t\tdesc: \"남성의 몸으로 아이를 낳았습니다.\","
+  ],
+  "new_en": [
+   "\t\ttitle: \"Life Begins When You Least Expect\",",
+   "\t\tdesc: \"Gave birth to children despite not having a vagina.\","
+  ],
+  "context": "\t\"Life begins when you least expect\": {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\ttitle: \"Diversity of Life\",",
+   "\t\tdesc: \"Gave birth to children of many different species.\",",
+   "\t\tdifficulty: 4,"
+  ],
+  "old_kr": [
+   "\t\ttitle: \"생명의 다양성\",",
+   "\t\tdesc: \"수많은 다양한 종의 아이들을 낳았습니다.\",",
+   "\t\tdifficulty: 4,"
+  ],
+  "new_en": [
+   "\t\ttitle: \"Diversity of Life\",",
+   "\t\tdesc: \"Gave birth to children of many different species.\",",
+   "\t\tdifficulty: 3,"
+  ],
+  "context": "\t\"Diversity of Life\": {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\thint: \"Hint: Trouble at home.\","
+  ],
+  "old_kr": [
+   "\t\thint: \"힌트: 고아원의 골칫거리.\","
+  ],
+  "new_en": [
+   "\t\thint: \"Hint: Trouble at home.\",",
+   "\t\taltDesc: \"Made <<nnpc_him 'Bailey'>> cum.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Special\"],"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\thint: \"Hint: Trouble at school.\","
+  ],
+  "old_kr": [
+   "\t\thint: \"힌트: 학교의 골칫거리.\","
+  ],
+  "new_en": [
+   "\t\thint: \"Hint: Trouble at school.\",",
+   "\t\taltDesc: \"Made <<nnpc_him 'Leighton'>> cum.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Special\"],"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\ttitle: \"Alex's Partner\",",
+   "\t\tdesc: \"Made them cum.\",",
+   "\t\tdifficulty: 3,"
+  ],
+  "old_kr": [
+   "\t\ttitle: \"알렉스의 파트너\",",
+   "\t\tdesc: \"그가 절정에 달하게 만들기.\",",
+   "\t\tdifficulty: 3,"
+  ],
+  "new_en": [
+   "\t\ttitle: \"Alex's Partner\",",
+   "\t\tdesc: \"Made them cum.\",",
+   "\t\tdifficulty: 2,"
+  ],
+  "context": "\t\"Alex's Partner\": {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\thint: \"Hint: A field of fun.\","
+  ],
+  "old_kr": [
+   "\t\thint: \"힌트: 즐거움이 가득한 밭.\","
+  ],
+  "new_en": [
+   "\t\thint: \"Hint: A field of fun.\",",
+   "\t\taltDesc: \"Made <<nnpc_him 'Alex'>> cum.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Special\"],"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\thint: \"Hint: A taste of their own medicine.\","
+  ],
+  "old_kr": [
+   "\t\thint: \"힌트: 자업자득을 맛보여주세요.\","
+  ],
+  "new_en": [
+   "\t\thint: \"Hint: A taste of their own medicine.\",",
+   "\t\taltDesc: \"Made Harper drink <<nnpc_his 'Harper'>> serum.\",",
+   "\t\taltDescCond: \"true\","
+  ],
+  "context": "\t\tfilter: [\"All\", \"Special\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\talt: \"altTitle\", //Alternate title to display if the feat is unlocked and altCond is met",
+   "\taltCond: \"conditional\" //Conditional evaluated to decide whether or not to display the altTitle (the feat must be owned in the current save for this to happen, regardless of the conditional)"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\taltTitle: \"altTitleText\", //Alternate title to display if the feat is unlocked and altTitleCond is met",
+   "\taltTitleCond: \"conditional\" //Conditional evaluated to decide whether or not to display the altTitleText (the feat must be owned in the current save for this to happen, regardless of the conditional)",
+   "\taltDesc: \"altDescText\", //Alternate description to display if the feat is unlocked and altDescCond is met",
+   "\taltDescCond: \"conditional\" //Conditional evaluated to decide whether or not to display the altDescText (the feat must be owned in the current save for this to happen, regardless of the conditional)"
+  ],
+  "context": "\thidden: true, //Will hide the feat at all times unless unlocked, best for feats for unreleased content"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tdifficulty: 1,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tdifficulty: 2,"
+  ],
+  "context": "\t\tdesc: \"150일 차에 도달하기.\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tdifficulty: 2,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tdifficulty: 3,"
+  ],
+  "context": "\t\tdesc: \"기절하지 않고 150일 차에 도달하기.\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tdifficulty: 3,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tdifficulty: 4,"
+  ],
+  "context": "\t\tdesc: \"'희망 없는 굴레' 이야기의 모든 결말을 들었습니다.\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tdifficulty: 1,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tdifficulty: 2,"
+  ],
+  "context": "\t\tdesc: \"육체적 결합을 통해 그윌란이 숲을 정화하는 것을 도왔습니다.\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tdifficulty: 1,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tdifficulty: 2,"
+  ],
+  "context": "\t\tdesc: \"에덴의 최악의 악몽을 목격했습니다.\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tdifficulty: 2,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tdifficulty: 3,"
+  ],
+  "context": "\t\tdesc: \"모든 특별한 특성 획득하기.\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tdifficulty: 3,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tdifficulty: 4,"
+  ],
+  "context": "\t\tdesc: \"처녀 상태에서 자연 분만을 했습니다.\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tdifficulty: 2,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tdifficulty: 3,"
+  ],
+  "context": "\t\tdesc: \"그가 절정에 달하게 만들기.\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tdifficulty: 4,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tdifficulty: 3,"
+  ],
+  "context": "\t\tdesc: \"그가 절정에 달하게 만들기.\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tdifficulty: 3,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tdifficulty: 2,"
+  ],
+  "context": "\t\tdesc: \"누군가를 형틀에 보내기.\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\"Thugged It Out\": {",
+   "\t\ttitle: \"Thugged It Out\",",
+   "\t\tdesc: \"Utterly humiliated Bailey's thugs.\",",
+   "\t\tdifficulty: 2,",
+   "\t\tseries: \"\",",
+   "\t\tfilter: [\"All\", \"Discoveries-Town\"],",
+   "\t\thint: \"Hint: A waste of planning and resources.\",",
+   "\t\tsoftLockable: true,",
+   "\t},"
+  ],
+  "context": "\t},"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tseries: \"\","
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tseries: \"Mines\","
+  ],
+  "context": "\t\tdifficulty: 2,"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\tsoftLockable: true,",
+   "\t},",
+   "\t\"The Time is Now\": {",
+   "\t\ttitle: \"The Time is Now\",",
+   "\t\tdesc: \"Put the mines out of commission for good.\",",
+   "\t\tdifficulty: 3,",
+   "\t\tseries: \"Mines\",",
+   "\t\tfilter: [\"All\", \"Discoveries-Other\"],",
+   "\t\thint: \"Hint: Strike back against your captors.\",",
+   "\t\tsoftLockable: true,",
+   "\t},",
+   "\t\"Rock Bottom\": {",
+   "\t\ttitle: \"Rock Bottom\",",
+   "\t\tdesc: \"Reached the bottom of the mines.\",",
+   "\t\tdifficulty: 2,",
+   "\t\tseries: \"Mines\",",
+   "\t\tfilter: [\"All\", \"Discoveries-Other\"],",
+   "\t\thint: \"Hint: Reach the bottom.\","
+  ],
+  "context": "\t\thint: \"힌트: 오래된 산업 현장에서 탈출하세요.\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\tsoftLockable: true,",
+   "\t},",
+   "\t\"Pumpkin Master\": {",
+   "\t\ttitle: \"Pumpkin Master\",",
+   "\t\tdesc: \"Win the Halloween pumpkin carving competition.\",",
+   "\t\tdifficulty: 1,",
+   "\t\tseries: \"\",",
+   "\t\tfilter: [\"All\", \"Discoveries-Town\"],",
+   "\t\thint: \"Hint: Take part in a Halloween competition.\",",
+   "\t\tsoftLockable: true,",
+   "\t},",
+   "\t\"Nothing Copied\": {",
+   "\t\ttitle: \"Nothing Copied\",",
+   "\t\tdesc: \"Became a temple calligrapher.\",",
+   "\t\tdifficulty: 1,",
+   "\t\tseries: \"\",",
+   "\t\tfilter: [\"All\", \"Discoveries-Town\"],",
+   "\t\thint: \"Hint: Assist the temple scribes.\","
+  ],
+  "context": "\t\thint: \"힌트: 니키와 함께 일하십시오.\","
+ }
+]

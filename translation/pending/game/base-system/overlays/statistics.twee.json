@@ -1,0 +1,200 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $brothelVending and $brothelVending.total>>",
+   "\t\t\tProducts sold at the brothel: $brothelVending.total"
+  ],
+  "old_kr": [
+   "\t\t<<if $brothelVending and $brothelVending.total>>",
+   "\t\t\t창관 상품 판매 횟수: $brothelVending.total"
+  ],
+  "new_en": [
+   "\t\t<<if $brothelVending?.total>>",
+   "\t\t\tProducts sold at the brothel: $brothelVending.total"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tSemen swallowed: <<print Math.floor($semenswallowedstat)>> mL",
+   "\t\t<<if $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [
+   "\t\t삼킨 정액: <<print Math.floor($semenswallowedstat)>> mL",
+   "\t\t<<if $settings.bestialityEnabled>>"
+  ],
+  "new_en": [
+   "\t\tSemen swallowed: <<print Math.floor($semenswallowedstat)>> mL",
+   "\t\t<<if isBestialityOnForAnyCreature()>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $settings.bestialityEnabled>>",
+   "\t\t\t\tRaped by animals: $beastrapestat"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $settings.bestialityEnabled>>",
+   "\t\t\t\t동물에게 강간: $beastrapestat"
+  ],
+  "new_en": [
+   "\t\t\t<<if isBestialityOnForAnyCreature()>>",
+   "\t\t\t\tRaped by animals: $beastrapestat"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $bird and $bird.lurkersEaten>>",
+   "\t\t\tLurkers eaten: $bird.lurkersEaten"
+  ],
+  "old_kr": [
+   "\t\t<<if $bird and $bird.lurkersEaten>>",
+   "\t\t\t럴커 섭취 수: $bird.lurkersEaten"
+  ],
+  "new_en": [
+   "\t\t<<if $bird?.lurkersEaten>>",
+   "\t\t\tLurkers eaten: $bird.lurkersEaten"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $pound and $pound.progress gte 1>>",
+   "\t\t\t\tStray dog contentment: <<print Math.trunc($stray_happiness)>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $pound and $pound.progress gte 1>>",
+   "\t\t\t\t유기견 만족도: <<print Math.trunc($stray_happiness)>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if $pound?.progress gte 1>>",
+   "\t\t\t\tStray dog contentment: <<print Math.trunc($stray_happiness)>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $debug is 1>>",
+   "\t\t\t\tPimp fame: <<print Math.trunc($fame.pimp)>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $debug is 1>>",
+   "\t\t\t\t포주 명성: <<print Math.trunc($fame.pimp)>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if $debug>>",
+   "\t\t\t\tPimp fame: <<print Math.trunc($fame.pimp)>>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tGwylan Progress: <<if $gwylan?.progress is undefined>>0<<else>><<print $gwylan.progress>><</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t그윌란의 발전: <<if $gwylan?.progress is undefined>>0<<else>><<print $gwylan.progress>><</if>>"
+  ],
+  "new_en": [
+   "\t\t\tGwylan progress: <<if $gwylan?.progress is undefined>>0<<else>><<print $gwylan.progress>><</if>>",
+   "\t\t\t<br>",
+   "\t\t\tMine hope: <<if $mine?.hope is undefined>>0<<else>><<print $mine.hope>><</if>>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $hallucinations gte 2 or !$settings.bestialityEnabled>>Harpyness<<else>>Birdieness<</if>>: <<print Math.trunc($birdbuild)>> (30+ for full transformation)"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $hallucinations gte 2 or !$settings.bestialityEnabled>>하피 변이<<else>>새 변이<</if>>: <<print Math.trunc($birdbuild)>> (30+ 완전 변신)"
+  ],
+  "new_en": [
+   "\t\t\t<<if resolveIfNamedBeastIsMonster(\"greathawk\")>>Harpyness<<else>>Birdieness<</if>>: <<print Math.trunc($birdbuild)>> (30+ for full transformation)"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $hallucinations gte 2 or !$settings.bestialityEnabled>>Harpy<<else>>Bird<</if>> manifestation: <<print Math.trunc($harpy)>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $hallucinations gte 2 or !$settings.bestialityEnabled>>하피<<else>>새<</if>> 발현 단계: <<print Math.trunc($harpy)>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if resolveIfNamedBeastIsMonster(\"greathawk\")>>Harpy<<else>>Bird<</if>> manifestation: <<print Math.trunc($harpy)>>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"gold\">NPC Pregnancy</span>",
+   "\t\t\t\t<<for $_npc range $NPCName.filter(npc => npc.pregnancy and npc.pregnancy.enabled isnot undefined)>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"gold\">NPC 임신</span>",
+   "\t\t\t\t<<for $_npc range $NPCName.filter(npc => npc.pregnancy and npc.pregnancy.enabled isnot undefined)>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"gold\">NPC Pregnancy</span>",
+   "\t\t\t\t<<for $_npc range $NPCName.filter(npc => npc.pregnancy and npc.pregnancy.enabled isnot undefined).sort((a,b) => a.nam.localeCompare(b.nam))>>"
+  ],
+  "context": "\t\t\t<<foldout false \"_npcPregnancyFoldout\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $debug is 1>>",
+   "\t\t\t\t<<link \"Reset Stats (Debug)\">>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $debug is 1>>",
+   "\t\t\t\t<<link \"통계 초기화 (디버그)\">>"
+  ],
+  "new_en": [
+   "\t\t\t<<if $debug>>",
+   "\t\t\t\t<<link \"Reset Stats (Debug)\">>"
+  ],
+  "context": "\t\t\t</div>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<print Math.trunc($crossdressingTrait)>> %"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<print Math.trunc($crossdressingTrait)>>%"
+  ],
+  "context": "\t\t\t<<if $crossdressingTrait isnot undefined>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t0"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t0%",
+   "\t\t\t<</if>>",
+   "\t\t\t<br>",
+   "\t\t\tNectar addiction",
+   "\t\t\t<<if $backgroundTraits.includes(\"plantlover\")>>",
+   "\t\t\t\ttimer: <<print Math.trunc($nectar_timer)>> <<pluralise $nectar_timer \"day\">>",
+   "\t\t\t<<else>>",
+   "\t\t\t\tprogression: <<print Math.trunc(($nectar_addiction / 150) * 100)>>%"
+  ],
+  "context": "\t\t\t<<else>>"
+ }
+]

@@ -1,0 +1,311 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"beachday1\">>",
+   "\t<<generatey1>>You hear someone behind you. You turn just in time to see a <<person1>><<person>> rushing into you. <<He>> tackles you to the sand and tries to remove your clothes!"
+  ],
+  "old_kr": [
+   "<<widget \"beachday1\">>",
+   "\t<<generatey1>>뒤에서 누군가의 발소리가 들린다. 당신이 뒤돌아보는 찰나 <<person1>><<person>>【이가】 당신에게 달려든다. <<He>>【은는】 모래밭에 당신을 때려 눕히곤 당신의 옷을 벗기려 든다!"
+  ],
+  "new_en": [
+   "<<widget \"beachDayTackle\">>",
+   "\t<<generatey1>>You hear someone behind you. You turn just in time to see a <<person1>><<person>> rushing into you. <<He>> tackles you to the sand and tries to remove your clothes!"
+  ],
+  "context": ":: Widgets Beach [widget]"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"beachday3\">>",
+   "\t<<generate1>><<set $NPCList[0].virginity.penile to false>><<set $NPCList[0].virginity.vaginal to false>>You see a <<person1>><<person>> watching you. <<He>> seems to be here with <<his>> kids who are playing in the sand some way away. <<He>> looks away as you make eye contact."
+  ],
+  "old_kr": [
+   "<<widget \"beachday3\">>",
+   "\t<<generate1>><<set $NPCList[0].virginity.penile to false>><<set $NPCList[0].virginity.vaginal to false>><<person1>><<person>>【이가】 당신을 쳐다보는 게 보인다. <<He>>【은는】 저만치에서 모래놀이를 하는 <<his>> 아이들과 함께 여기 온 것 같다. 당신과 눈이 마주치자 <<He>>【은는】 시선을 돌려버린다."
+  ],
+  "new_en": [
+   "<<widget \"beachDayParent\">>",
+   "\t<<generate1>><<set $NPCList[0].virginity.penile to false>><<set $NPCList[0].virginity.vaginal to false>>You see a <<person1>><<person>> watching you. <<He>> seems to be here with <<his>> kids who are playing in the sand some way away. <<He>> looks away as you make eye contact."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"beachday4\">>",
+   "\tA gust of wind blows in from the ocean, pleasantly caressing your skin."
+  ],
+  "old_kr": [
+   "<<widget \"beachday4\">>",
+   "\t바다에서 돌풍이 불어와, 당신의 피부를 기분 좋게 어루만진다."
+  ],
+  "new_en": [
+   "<<widget \"beachDayWind\">>",
+   "\tA gust of wind blows in from the ocean, pleasantly caressing your skin."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"beachday5\">>",
+   "\tYou are walking along the shoreline when you hear a commotion behind you. Looking over your shoulder, you see a few of your classmates running towards you."
+  ],
+  "old_kr": [
+   "<<widget \"beachday5\">>",
+   "\t당신이 해안가를 걷고 있을 때 등 뒤에서 소란스러운 소리가 들린다. 어깨너머로 돌아보자, 당신의 반 친구 몇 명이 당신을 향해 달려오는 게 보인다."
+  ],
+  "new_en": [
+   "<<widget \"beachDayClassmates\">>",
+   "\tYou are walking along the shoreline when you hear a commotion behind you. Looking over your shoulder, you see a few of your classmates running towards you."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[Next|Beach Night Dog]]>><<set $eventskip to 1>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[다음|Beach Night Dog]]>><<set $eventskip to 1>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\t<<link [[Next|Beach Night Dog]]>><<set $eventskip to 1>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": "\t<!-- Modified for Beast People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"beachnight2\">>",
+   "\t<<generate1>>It's so dark, you don't see the <<person1>><<person>> lying on the sand until <<he>> grasps you by the ankle and pulls you to the ground."
+  ],
+  "old_kr": [
+   "<<widget \"beachnight2\">>",
+   "\t<<generate1>>사방이 너무 어두워서, 모래 위에 누워있던 <<person1>><<person>>【이가】 당신의 발목을 붙잡아 바닥으로 넘어뜨릴 때까지 눈치채지 못했다."
+  ],
+  "new_en": [
+   "<<widget \"beachNightAmbush\">>",
+   "\t<<generate1>>It's so dark, you don't see the <<person1>><<person>> lying on the sand until <<he>> grasps you by the ankle and pulls you to the ground."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"beachex1\">>",
+   "\t<<generatey1>>A <<person1>><<person>> spots you in your fragile state and calls out, <<catcalllewd>> Other heads turn in response and you quickly find yourself the centre of attention."
+  ],
+  "old_kr": [
+   "<<widget \"beachex1\">>",
+   "\t<<generatey1>>한 <<person1>><<person>>【이가】 불안해 보이는 당신을 발견하고는 소리친다, <<catcalllewd>> 그 소리에 고개를 돌린 다른 사람들에 의해 당신은 순식간에 시선의 중심이 된다."
+  ],
+  "new_en": [
+   "<<widget \"beachExposedNoticed\">>",
+   "\t<<generatey1>>A <<person1>><<person>> spots you in your fragile state and calls out, <<catcalllewd>> Other heads turn in response and you quickly find yourself the centre of attention."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"beachex2\">>",
+   "\t<<generatey1>>A <<person1>><<person>> spots you in your fragile state and calls out to <<his>> friends. You quickly find yourself surrounded. The <<person>> speaks, \"You know this isn't a nudist beach right? In fact, I think I should report you.\" You tense as <<he>> visibly inhales as if to shout, anticipating even more attention drawn to your predicament. Instead however, <<he>> and <<his>> friends burst into derisive laughter. \"Or, you know, I could help you out, give you something to cover up with. Of course, I'll want something in return. Get on your knees.\""
+  ],
+  "old_kr": [
+   "<<widget \"beachex2\">>",
+   "\t<<generatey1>><<person1>><<person>>【이가】 이 위태로운 상태의 당신을 발견하곤 <<his>> 친구들을 부른다. 당신은 순식간에 포위된다. <<person>>【이가】 말한다. \"여기 누드 비치 아닌 거 알지? 경찰에 신고해야 할 거 같은데.\" <<he>>【이가】 마치 큰 소리를 지르려는 듯 숨을 크게 들이켜자 당신은 곤경에 빠진 자신에게 시선이 더 몰릴 거란 예상에 몸을 움츠린다. 하지만 그 대신, <<he>>【와과】 <<his>> 친구들은 조소 섞인 웃음을 터뜨린다. \"아니면, 내가 옷 같은 걸 줘서 도와줄 수도 있고. 당연히, 공짜는 아니지. 무릎 꿇어.\""
+  ],
+  "new_en": [
+   "<<widget \"beachExposedMolestation\">>",
+   "\t<<generatey1>>A <<person1>><<person>> spots you in your fragile state and calls out to <<his>> friends. You quickly find yourself surrounded. The <<person>> speaks, \"You know this isn't a nudist beach right? In fact, I think I should report you.\" You tense as <<he>> visibly inhales as if to shout, anticipating even more attention drawn to your predicament. Instead however, <<he>> and <<his>> friends burst into derisive laughter. \"Or, you know, I could help you out, give you something to cover up with. Of course, I'll want something in return. Get on your knees.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou are splashing through the water when you notice a group of people your age staring at you. You don't know their names, but you recognise them from school. You suspect that the story of the naked <<girl>><<if $player.penisExist and $player.vaginaExist>> <<schoolrep herm 1>>with unusual genitalia<</if>> at the beach will quickly spread."
+  ],
+  "old_kr": [
+   "\t\t\t물장구를 치고 있을 때, 당신 또래의 한 무리가 당신을 빤히 쳐다보는 것을 알아차린다. 그들의 이름은 모르지만, 학교에서 본 얼굴들이다. 당신은 해변에 특이한 성기를 가진 알몸의 <<girl>><<if $player.penisExist and $player.vaginaExist>> <<schoolrep herm 1>><</if>>【이가】 있다는 이야기가 금방 퍼질 거라고 짐작한다."
+  ],
+  "new_en": [
+   "\t\t\tYou are splashing through the water when you notice a group of people your age staring at you. You don't know their names, but you recognise them from school. You suspect that the story of the naked <<girl>><<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>> <<schoolrep herm 1>>with unusual genitalia<</if>> at the beach will quickly spread."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"beachday2\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"beachDayDogTug\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"beachday6\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"beachDaySandPrank\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"beachnight1\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"beachNightDog\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"bloodmoonTourist1\">>",
+   "\tYou see a trio gazing at the red moon in the distance. You catch a bit of their conversation.",
+   "\t<br><br>",
+   "\t\"It's strange how they get blood moons every month here, right?\"<br>",
+   "\t\"It's just light pollution.\"<br>",
+   "\t\"Or... What if it's something supernatural?\"<br>",
+   "\t\"Don't be absurd.\"",
+   "<</widget>>",
+   "",
+   "<<widget \"bloodmoonTourist2\">>",
+   "\tYou see a couple gazing at the red moon in the distance. You catch a bit of their conversation.",
+   "\t<br><br>",
+   "\t\"How romantic. If I lived here, I'd come to look at this sight every time.\"<br>",
+   "\t\"You'd probably get sick of it rather quickly.\"<br>",
+   "\t\"Do you have any romantic bone in your body?\"",
+   "<</widget>>",
+   "",
+   "<<widget \"bloodmoonTourist3\">>",
+   "\tYou see a group gazing at the red moon in the distance. You catch a bit of their conversation.",
+   "\t<br><br>",
+   "\t\"Oh, what the hell is that-\"<br>",
+   "\t\"Wow, that's amazing!\"<br>",
+   "\t\"Didn't expect this place to have anything pretty to look at beyond the people.\"<br>",
+   "\t\"Don't look at it for too long, you're so drunk that you might lose your balance tilting your neck so far up.\"",
+   "<</widget>>",
+   "",
+   "<<widget \"bloodmoonTourist4\">>",
+   "\tYou see a couple gazing at the red moon in the distance. You catch a bit of their conversation.",
+   "\t<br><br>",
+   "\t\"Look at that. See, I told you the brochure was right!\"<br>",
+   "\t\"Uh. Wow.\"<br>",
+   "\t\"I don't know why you keep insisting that I'm always wrong-\"<br>",
+   "\t\"Oh, shut it.\"",
+   "<</widget>>",
+   "",
+   "",
+   "<<widget \"bloodmoonTouristBeach\">>",
+   "\t<<if random(0,10) is 0>>",
+   "\t\t<<cleareventpool>>",
+   "\t\t<<addevent \"bloodmoonTourist1\">>",
+   "\t\t<<addevent \"bloodmoonTourist2\">>",
+   "\t\t<<addevent \"bloodmoonTourist3\">>",
+   "\t\t<<addevent \"bloodmoonTourist4\">>",
+   "\t\t<<runeventpool>>",
+   "\t\t<br><br>",
+   "\t<</if>>",
+   "<</widget>>",
+   "",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $dangerevent to random(1, 100)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<cleareventpool>>"
+  ],
+  "context": "<<widget \"eventsbeach\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $dangerevent lte 15>>",
+   "\t\t\t<<beachnight1>>",
+   "\t\t<<elseif $dangerevent lte 30>>",
+   "\t\t\t<<beachnight2>>",
+   "\t\t<<elseif $dangerevent lte 100>>",
+   "\t\t\t<<beachday4>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<addevent \"beachNightDog\" 15>>",
+   "\t\t<<addevent \"beachNightAmbush\" 15>>",
+   "\t\t<<addevent \"beachDayWind\" 70>>",
+   "\t<<elseif $exposed gte 1>>",
+   "\t\t<<addevent \"beachExposedNoticed\" 80>>",
+   "\t\t<<addevent \"beachExposedMolestation\" 20>>",
+   "\t<<else>>",
+   "\t\t<<addevent \"beachDayTackle\" 10>>",
+   "\t\t<<if !$worn.lower.type.includes(\"naked\")>>",
+   "\t\t\t<<addevent \"beachDayDogTug\" 10>>"
+  ],
+  "context": "\t<<if Time.dayState is \"night\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $exposed gte 1>>",
+   "\t\t<<if $dangerevent lte 80>>",
+   "\t\t\t<<beachex1>>",
+   "\t\t<<elseif $dangerevent lte 100>>",
+   "\t\t\t<<beachex2>>",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\t<<if $dangerevent lte 10>>",
+   "\t\t\t<<beachday1>>",
+   "\t\t<<elseif $dangerevent lte 20 and !$worn.lower.type.includes(\"naked\")>>",
+   "\t\t\t<<beachday2>>",
+   "\t\t<<elseif $dangerevent lte 50>>",
+   "\t\t\t<<beachday3>>",
+   "\t\t<<elseif $dangerevent lte 70>>",
+   "\t\t\t<<beachday4>>",
+   "\t\t<<elseif $dangerevent lte 90>>",
+   "\t\t\t<<beachday5>>",
+   "\t\t<<elseif $dangerevent lte 100>>",
+   "\t\t\t<<beachday6>>",
+   "\t\t<</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<addevent \"beachDayParent\" 30>>",
+   "\t\t<<addevent \"beachDayWind\" 20>>",
+   "\t\t<<addevent \"beachDayClassmates\" 20>>",
+   "\t\t<<addevent \"beachDaySandPrank\" 10>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<runeventpool>>"
+  ],
+  "context": "\t<</if>>"
+ }
+]

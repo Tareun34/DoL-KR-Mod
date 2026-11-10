@@ -1,0 +1,75 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<checkbox \"$hcChallengeRandom.blind\" false true autocheck>> <span class=\"gold\">Blind random challenges</span> <span class=\"tooltip-anchor linkBlue\" tooltip='If enabled, selecting \"Proceed with random challenges\" will not tell you what challenges are enabled.<br><span class=\"red\">Not recommended unless you are familiar with all challenges.</span>'>(?)</span>"
+  ],
+  "old_kr": [
+   "<<checkbox \"$hcChallengeRandom.blind\" false true autocheck>> <span class=\"gold\">무작위 도전 과제 숨기기</span> <span class=\"tooltip-anchor linkBlue\" tooltip='활성화하면, \"무작위 도전 과제로 진행\"을 선택했을 때 어떤 도전 과제가 활성화되었는지 알려주지 않습니다.<br><span class=\"red\">모든 도전 과제에 익숙하지 않다면 권장하지 않습니다.</span>'>(?)</span>"
+  ],
+  "new_en": [
+   "<label>",
+   "<<checkbox \"$hcChallengeRandom.blind\" false true autocheck>>",
+   "<span class=\"gold\">Blind random challenges</span>",
+   "</label>",
+   "<span class=\"tooltip-anchor linkBlue\" tooltip='If enabled, selecting \"Proceed with random challenges\" will not tell you what challenges are enabled.<br><span class=\"red\">Not recommended unless you are familiar with all challenges.</span>'>(?)</span>"
+  ],
+  "context": "}>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t<<bHes>> on you in an instant."
+  ],
+  "old_kr": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t<<bHes>> 순식간에 당신에게 달려든다."
+  ],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"lizard\", $monster is 1)>>",
+   "\t\t\t<<bHes>> on you in an instant."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "As soon as you're done, the bishop motions towards you. A pair of confessors grab your arms and pull you away from the altar.",
+   "\"Just a precaution, dear brother. You bear her taint, which makes you vulnerable.\" You're pulled into joining the circle."
+  ],
+  "old_kr": [
+   "당신이 끝나자마자, 주교가 당신을 향해 손짓한다. 한 쌍의 고해 신부가 당신의 팔을 잡고 제단에서 끌어낸다.",
+   "\"그저 예방 조치일 뿐이다, 형제여. 너는 그녀의 오염을 짊어졌으니, 취약한 상태다.\" 당신은 원을 이루는 무리에 합류하게 된다."
+  ],
+  "new_en": [
+   "As soon as you're done, the Bishop motions towards you. A pair of confessors grab your arms and pull you away from the altar.",
+   "\"Just a precaution, dear brother. You bear her taint, which makes you vulnerable.\" You're pulled into joining the circle."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tHer blackened left arm pulls free, <span class=\"pink\">immediately growing to nearly double its length as her fingers sharpen into points. The sound of snapping bone and sinew fill the air.</span>"
+  ],
+  "old_kr": [
+   "\t\t그녀의 검게 변한 왼팔이 풀려나자마자, <span class=\"pink\">손가락이 뾰족하게 날카로워지면서 길이가 거의 두 배로 늘어난다. 뼈와 힘줄이 끊어지는 소리가 공기를 가득 메운다.</span>"
+  ],
+  "new_en": [
+   "\t\tHer blackened left arm pulls free, <span class=\"pink\">immediately growing to nearly double its length as her fingers sharpen into points. The sound of snapping bone and sinew fills the air.</span>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $debug>>"
+  ],
+  "context": ""
+ }
+]

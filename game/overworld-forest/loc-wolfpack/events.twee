@@ -938,7 +938,7 @@
 			"<<pPackbrother>>【은는】 <<pher>> 보상을 받을 수 있다."
 		<</if>>
 		<br><br>
-		<<if $settings.bestialityEnabled or $monster is 1>>
+		<<if beastSexEnabledForType("wolf", $monster is 1)>>
 			<<if hasSexStat("deviancy", 3)>>
 				<<link [[초대를 받아들인다|Wolf Cave Spar Sex]]>><<set $sexstart to 1>><<set $phase to 0>><</link>><<deviant3>>
 			<<else>>
@@ -963,7 +963,7 @@
 	<<if $wolfpackferocity gte 10>>
 		<<beasttype>>【은는】 <<bhis>> 송곳니를 드러내고 당신을 땅에 눌러붙인다. <<bHes>> 싸움에서 당신을 이긴 것만으로는 만족하지 못한 모양이다.
 		<br><br>
-		<<if $settings.bestialityEnabled or $monster is 1>>
+		<<if beastSexEnabledForType("wolf", $monster is 1)>>
 			<<if hasSexStat("deviancy", 3)>>
 				<<link [[복종한다|Wolf Cave Spar Sex]]>><<set $sexstart to 1>><<set $phase to 1>><<sub 1>><</link>><<deviant3>>
 				<br>
@@ -978,8 +978,8 @@
 	<<elseif $wolfpackharmony gte 10>>
 		<<beasttype>>【은는】 만족스러운 콧소리를 내며 <<bhis>> <<if $monster is 1>>손<<else>>코<</if>>로 당신을 툭 건드린다. <<bHis>> 꼬리가 다정하게 흔들린다.
 		<br><br>
-		<<if hasSexStat("deviancy", 3) and ($settings.bestialityEnabled or $monster is 1)>>
-			<<link [[보상을 받는다|Wolf Cave Spar Sex]]>><<set $sexstart to 1>><<set $phase to 2>><<sub 1>><</link>><<deviant3>>
+		<<if hasSexStat("deviancy", 3) and beastSexEnabledForType("wolf", $monster is 1)>>
+			<<link [[Reward|Wolf Cave Spar Sex]]>><<set $sexstart to 1>><<set $phase to 2>><<sub 1>><</link>><<deviant3>>
 			<br>
 		<</if>>
 		<<link [[숨을 돌린다 (0:05)|Wolf Cave Clearing]]>><<endevent>><<pass 5>><</link>>
@@ -1178,8 +1178,8 @@
 
 	<<if $wolfpackleader gte 1>>
 		<br><br>
-		<<if $settings.monsterChance gt 0 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)>>
-			당신은 <<wolf_cave_plural>>이 당신에게 <<bhim>>【을를】 처리하라고 외치는 소리를 듣는다<<if $settings.monsterChance lt 100>>, 격려하는 낑낑거림과 으르렁거림과 함께<</if>>.
+		<<if monsterCanAppearForType("wolf")>>
+			You hear <<wolf_cave_plural>> calling out for you to deal with <<bhim>><<if monsterChanceForType("wolf") lt 100>>, alongside whines and growls of encouragement<</if>>.
 		<<else>>
 			당신은 격려하는 낑낑거림과 으르렁거림을 듣는다.
 		<</if>>
@@ -1220,9 +1220,9 @@
 <br><br>
 
 <<set $bus to "wolfcaveclearing">> /* when event is resolved, player will be deposited in the clearing regardless of where they started */
-<<link [[<<beasttype>>【을를】 진정시키려 시도한다|Wolf Cave Bear Calm]]>><</link>><<tendingdifficulty 600 1200>><br>
-<<if $monster is 1 or $settings.bestialityEnabled>>
-	<<link [[싸운다|Wolf Cave Bear Fight]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>><br>
+<<link [[Try to calm the <<beasttype>>|Wolf Cave Bear Calm]]>><</link>><<tendingdifficulty 600 1200>><br>
+<<if beastSexEnabledForType("bear", $monster is 1)>>
+	<<link [[Fight|Wolf Cave Bear Fight]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>><br>
 <<else>>
 	<<link [[싸운다|Wolf Cave Bear Fight Finish]]>><<set $phase to 1>><</link>><br> /* autoresolve */
 <</if>>
@@ -1255,8 +1255,8 @@
 	당신의 말은 <<bhim>>【을를】 더욱 격분시키는 것 같다. 으르렁거리며, <<beasttype>>【은는】 당신에게 <<bhis>> 분노를 표출할 작정으로 앞으로 뛰어든다.
 	<br><br>
 
-	<<if $monster is 1 or $settings.bestialityEnabled>>
-		<<link [[싸운다|Wolf Cave Bear Fight]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>><br>
+	<<if beastSexEnabledForType("bear", $monster is 1)>>
+		<<link [[Fight|Wolf Cave Bear Fight]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>><br>
 	<<else>>
 		<<link [[싸운다|Wolf Cave Bear Fight Finish]]>><<set $phase to 1>><</link>><br> /* autoresolve */
 	<</if>>

@@ -1,0 +1,86 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if hasSexStat(\"deviancy\", 5) and ($settings.bestialityEnabled or ($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)))>>",
+   "\t\t\t<<animalicon \"pig\">><<link [[Pig|Briar's Office Show 2]]>><<acceptbrothelshow \"pig\">><</link>> | <span class=\"green\">+</span><<printmoney 150000 \"green\">><<deviant5>>",
+   "\t\t\t<br>",
+   "\t\t<<else>>",
+   "\t\t\t<<animalicon \"pig\">><<insufficientStat \"deviancy\" \"to take up the pig show\">>",
+   "\t\t\t<br>"
+  ],
+  "old_kr": [
+   "\t\t<<if hasSexStat(\"deviancy\", 5) and ($settings.bestialityEnabled or ($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)))>>",
+   "\t\t\t<<animalicon \"pig\">><<link [[돼지|Briar's Office Show 2]]>><<acceptbrothelshow \"pig\">><</link>> | <span class=\"green\">+</span><<printmoney 150000 \"green\">><<deviant5>>",
+   "\t\t\t<br>",
+   "\t\t<<else>>",
+   "\t\t\t<<animalicon \"pig\">><<insufficientStat \"deviancy\" \"돼지 쇼에 참여하기에는\">>",
+   "\t\t\t<br>"
+  ],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"pig\", victimsAlwaysMonsterForType(\"pig\") or monsterCanAppearForType(\"pig\"))>>",
+   "\t\t\t<<if hasSexStat(\"deviancy\", 5)>>",
+   "\t\t\t\t<<animalicon \"pig\">><<link [[Pig|Briar's Office Show 2]]>><<acceptbrothelshow \"pig\">><</link>> | <span class=\"green\">+</span><<printmoney 150000 \"green\">><<deviant5>>",
+   "\t\t\t\t<br>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<animalicon \"pig\">><<insufficientStat \"deviancy\" \"to take up the pig show\">>",
+   "\t\t\t\t<br>",
+   "\t\t\t<</if>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $demon gte 6 or (hasSexStat(\"deviancy\", 5) and $farm_stage gte 7 and $farm.steed and ($settings.bestialityEnabled or $per_npc.saddled_steed.monster is \"monster\"))>>",
+   "\t\tSuggest a show:"
+  ],
+  "old_kr": [
+   "\t<<if $demon gte 6 or (hasSexStat(\"deviancy\", 5) and $farm_stage gte 7 and $farm.steed and ($settings.bestialityEnabled or $per_npc.saddled_steed.monster is \"monster\"))>>",
+   "\t\t쇼 제안하기:"
+  ],
+  "new_en": [
+   "\t<<if $demon gte 6 or (hasSexStat(\"deviancy\", 5) and $farm_stage gte 7 and $farm.steed and beastSexEnabledForType(\"horse\", $per_npc.saddled_steed.monster is \"monster\"))>>",
+   "\t\tSuggest a show:"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if hasSexStat(\"deviancy\", 5) and $farm_stage gte 7 and $farm.steed and ($settings.bestialityEnabled or $per_npc.saddled_steed.monster is \"monster\")>>",
+   "\t\t\t<<animalicon \"horse\">><<link [[Horse|Briar's Office Show 2]]>><<acceptbrothelshow \"horse\">><</link>> | <span class=\"green\">+</span><<printmoney 200000 \"green\">><<deviant5>>"
+  ],
+  "old_kr": [
+   "\t\t<<if hasSexStat(\"deviancy\", 5) and $farm_stage gte 7 and $farm.steed and ($settings.bestialityEnabled or $per_npc.saddled_steed.monster is \"monster\")>>",
+   "\t\t\t<<animalicon \"horse\">><<link [[말|Briar's Office Show 2]]>><<acceptbrothelshow \"horse\">><</link>> | <span class=\"green\">+</span><<printmoney 200000 \"green\">><<deviant5>>"
+  ],
+  "new_en": [
+   "\t\t<<if hasSexStat(\"deviancy\", 5) and $farm_stage gte 7 and $farm.steed and beastSexEnabledForType(\"horse\", $per_npc.saddled_steed.monster is \"monster\")>>",
+   "\t\t\t<<animalicon \"horse\">><<link [[Horse|Briar's Office Show 2]]>><<acceptbrothelshow \"horse\">><</link>> | <span class=\"green\">+</span><<printmoney 200000 \"green\">><<deviant5>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled and ($passage is \"Briar's Office Show Ask\" or !$showExplanations.includes(\"Pig\"))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if animalSexEnabledForType(\"pig\") and !victimsAlwaysMonsterForType(\"pig\") and ($passage is \"Briar's Office Show Ask\" or !$showExplanations.includes(\"Pig\"))>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $settings.monsterChance gte 1 and ($passage is \"Briar's Office Show Ask\" or !$showExplanations.includes(\"Pig\")) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif (victimsAlwaysMonsterForType(\"pig\") or monsterCanAppearForType(\"pig\")) and ($passage is \"Briar's Office Show Ask\" or !$showExplanations.includes(\"Pig\"))>>"
+  ],
+  "context": "\t\t<br><br>"
+ }
+]

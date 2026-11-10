@@ -1,0 +1,176 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<elseif $sexRitual.crossdressing>>",
+   "\t<<He>> holds your thighs slightly apart. \"Unexpected genitalia, but not unwelcome. I'm nothing if not versatile.\""
+  ],
+  "old_kr": [
+   "<<elseif $sexRitual.crossdressing>>",
+   "\t<<He>>【은는】 당신의 허벅지를 살짝 벌린다. \"예상치 못한 생식기지만, 싫지는 않아. 난 뭐든 잘 다루거든.\""
+  ],
+  "new_en": [
+   "<<elseif $sexRitual.crossdressing and $settings.nudeGenderPerception !== 0>>",
+   "\t<<He>> holds your thighs slightly apart. \"Unexpected genitalia, but not unwelcome. I'm nothing if not versatile.\""
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\"<i>You are the lake. Expel.</i>\"<br>",
+   "\t\tGwylan's voice mercifully pulls you out. You let out your long-held breath, lungs filling with sweet air. \"You're strong. Well done. Don't worry, we'll get it all back out of you.\" <<Hes>> cradling your head against <<his>> lightly-freckled <<if C.npc.Gwylan.breastsize gte 3>><<print C.npc.Gwylan.breastsdesc>><<else>>chest<</if>>.",
+   "\t\t<<if _gwylanLovePercent gte 85>>",
+   "\t\t\t<<He>> kisses the top of your head."
+  ],
+  "old_kr": [
+   "\t\t\"<i>너는 호수다. 밀어내라.</i>\"<br>",
+   "\t\t그윌란의 목소리가 자비롭게도 당신을 끌어낸다. 오래 참고 있던 숨을 내쉬자, 달콤한 공기가 폐를 채운다. \"강하구나. 잘했어. 걱정 마, 전부 다시 빼내줄게.\" <<Hes>> 당신의 머리를 <<his>> 옅은 주근깨가 있는 <<if C.npc.Gwylan.breastsize gte 3>><<print window.KR.getBreastSizeKr(C.npc.Gwylan.breastsdesc)>><<else>>가슴<</if>>에 기대 품고 있다.",
+   "\t\t<<if _gwylanLovePercent gte 85>>",
+   "\t\t\t<<He>>【은는】 당신의 정수리에 입을 맞춘다."
+  ],
+  "new_en": [
+   "\t\t\"<i>You are the lake. Expel.</i>\"<br>",
+   "\t\tGwylan's voice mercifully pulls you out. You let out your long-held breath, lungs filling with sweet air. \"You're strong. Well done. Don't worry, we'll get it all back out of you.\" <<Hes>> cradling your head against <<his>> lightly-freckled <<if C.npc.Gwylan.breastsize gte 3>><<print C.npc.Gwylan.breastsdesc>><<else>>chest<</if>>.",
+   "\t\t<<if _gwylanLovePercent gte 75>>",
+   "\t\t\t<<He>> kisses the top of your head."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<His>> face is beet-rooted red, as if ashame of <<himself>>."
+  ],
+  "old_kr": [
+   "\t\t\t<<His>> 얼굴은 부끄러운 듯 새빨개져 있다."
+  ],
+  "new_en": [
+   "\t\t\t<<His>> face is beet-rooted red, as if ashamed of <<himself>>."
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\"I can't stay mad at you.\"",
+   "\t\t\t<<elseif _gwylanLovePercent gte 75>>",
+   "\t\t\t\t\"<<pcPetname \"Gwylan\" \"good\">>.\" The words ring in your ears. <<stress -6>><<lstress>><<arousal 50>><<garousal>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\"너한테 계속 화를 낼 순 없지.\"",
+   "\t\t\t<<elseif _gwylanLovePercent gte 75>>",
+   "\t\t\t\t\"<<pcPetname \"Gwylan\" \"good\">>.\" 그 단어들이 당신의 귓가에 울린다. <<stress -6>><<lstress>><<arousal 50>><<garousal>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\"I can't stay mad at you.\"",
+   "\t\t\t<<elseif _gwylanLovePercent gte 65>>",
+   "\t\t\t\t\"<<pcPetname \"Gwylan\" \"good\">>.\" The words ring in your ears. <<stress -6>><<lstress>><<arousal 50>><<garousal>>"
+  ],
+  "context": "\t\t\t<<if _gwylanStatus.includesAny(\"dom\", \"lust\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> quickly grabs them, using them for added balance as <<he>> continues to ride you.",
+   "\t\t\t\t\t<<elseif _gwylanLovePercent gte 75>>",
+   "\t\t\t\t\t\t<<He>> lifts them, allowing you to hold both as <<he>> continues to ride you.",
+   "\t\t\t\t\t\t<<His>> face turns a little more red, as if this was somehow unexpected."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 당신을 타는 동안 균형을 잡기 위해 재빠르게 그것들을 붙잡는다.",
+   "\t\t\t\t\t<<elseif _gwylanLovePercent gte 75>>",
+   "\t\t\t\t\t\t<<He>>【은는】 그것들을 들어 올려서 당신을 타는 동안 양쪽을 모두 잡을 수 있도록 해준다.",
+   "\t\t\t\t\t\t<<His>> 얼굴은 마치 예상하지 못했던 일인 양 조금 더 빨개진다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<He>> quickly grabs them, using them for added balance as <<he>> continues to ride you.",
+   "\t\t\t\t\t<<elseif _gwylanLovePercent gte 65>>",
+   "\t\t\t\t\t\t<<He>> lifts them, allowing you to hold both as <<he>> continues to ride you.",
+   "\t\t\t\t\t\t<<His>> face turns a little more red, as if this was somehow unexpected."
+  ],
+  "context": "\t\t\t\t\t<<if _gwylanStatus.includes(\"heat\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $debug is 1>>",
+   "\t\t<br><u>DEBUG:</u><br>",
+   "\t\tPlayer arousal: $arousal <br>",
+   "\t\tPlayer orgasms: $sexRitual.playerOrgasms <br>",
+   "\t\tPlayer orgasms resisted: $sexRitual.playerOrgasmsResisted <br>",
+   "\t\tPlayer orgasms failed: $sexRitual.playerOrgasmsFailed <br>",
+   "\t\tPlayer orgasm target: $sexRitual.orgasmTarget <br>",
+   "\t\tGwylan arousal: $sexRitual.arousal (max 200) <br>",
+   "\t\tGwylan orgasms: $sexRitual.gwylanOrgasms <br>",
+   "\t\tGwylan orgasms resisted: $sexRitual.gwylanOrgasmsBlocked <br>",
+   "\t\tcontrol: <<if $sexRitual.playerControlsSpeed>>Player<<else>>Gwylan<</if>> <br>",
+   "\t\tspeed: $sexRitual.speed <br>",
+   "\t\twillContest: $sexRitual.willContest <br>",
+   "\t\tposition: $sexRitual.position <br>",
+   "\t\tGwylan states: <<print formatList(_gwylanStatus)>><br>",
+   "\t\tPurge effectiveness: $sexRitual.purge <br>"
+  ],
+  "old_kr": [
+   "\t<<if $debug is 1>>",
+   "\t\t<br><u>디버그:</u><br>",
+   "\t\t플레이어 흥분도: $arousal <br>",
+   "\t\t플레이어 절정 횟수: $sexRitual.playerOrgasms <br>",
+   "\t\t플레이어 절정 억누름: $sexRitual.playerOrgasmsResisted <br>",
+   "\t\t플레이어 절정 참기 실패: $sexRitual.playerOrgasmsFailed <br>",
+   "\t\t플레이어 절정 목표치: $sexRitual.orgasmTarget <br>",
+   "\t\t그윌란 흥분도: $sexRitual.arousal (최대 200) <br>",
+   "\t\t그윌란 절정 횟수: $sexRitual.gwylanOrgasms <br>",
+   "\t\t그윌란 절정 억누름: $sexRitual.gwylanOrgasmsBlocked <br>",
+   "\t\t제어권: <<if $sexRitual.playerControlsSpeed>>플레이어<<else>>그윌란<</if>> <br>",
+   "\t\t속도: $sexRitual.speed <br>",
+   "\t\t의지 대결(willContest): $sexRitual.willContest <br>",
+   "\t\t체위(position): $sexRitual.position <br>",
+   "\t\t그윌란 상태: <<print formatList(_gwylanStatus)>><br>",
+   "\t\t정화 효과: $sexRitual.purge <br>"
+  ],
+  "new_en": [
+   "\t<<if $debug>>",
+   "\t\t<br><u>DEBUG:</u><br>",
+   "\t\tPlayer arousal: $arousal <br>",
+   "\t\tPlayer orgasms: $sexRitual.playerOrgasms <br>",
+   "\t\tPlayer orgasms resisted: $sexRitual.playerOrgasmsResisted <br>",
+   "\t\tPlayer orgasms failed: $sexRitual.playerOrgasmsFailed <br>",
+   "\t\tPlayer orgasm target: $sexRitual.orgasmTarget <br>",
+   "\t\tGwylan arousal: $sexRitual.arousal (max 200) <br>",
+   "\t\tGwylan orgasms: $sexRitual.gwylanOrgasms <br>",
+   "\t\tGwylan orgasms resisted: $sexRitual.gwylanOrgasmsBlocked <br>",
+   "\t\tcontrol: <<if $sexRitual.playerControlsSpeed>>Player<<else>>Gwylan<</if>> <br>",
+   "\t\tspeed: $sexRitual.speed <br>",
+   "\t\twillContest: $sexRitual.willContest <br>",
+   "\t\tposition: $sexRitual.position <br>",
+   "\t\tGwylan states: <<print formatList(_gwylanStatus)>><br>",
+   "\t\tPurge effectiveness: $sexRitual.purge <br>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $player.penisExist and $player.vaginaExist and !$gwylanSeen.includes(\"herm\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $player.penisExist and $player.vaginaExist and !$gwylanSeen.includes(\"herm\") and $settings.nudeGenderPerception !== 0>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "<<if $earSlime.event is \"have sex with someone\" or $earSlime.event is \"have sex with someone or something\">>",
+   "\t<<set $earSlime.event to \"\">>",
+   "<</if>>",
+   ""
+  ],
+  "context": "<<canvas-model-temporary-effect \"petals\">>"
+ }
+]

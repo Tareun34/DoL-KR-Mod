@@ -1,0 +1,322 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $pubtasksetting is \"lurkers\" and $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\t\t\t<<crimeicon \"black box\">><<link [[Search for Landry's black box|Moor Box Lurkers]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $pubtasksetting is \"lurkers\" and $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\t\t\t<<crimeicon \"black box\">><<link [[랜드리의 블랙박스를 찾는다|Moor Box Lurkers]]>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if $pubtasksetting is \"lurkers\" and $settings.lurkersEnabled>>",
+   "\t\t\t\t<<crimeicon \"black box\">><<link [[Search for Landry's black box|Moor Box Lurkers]]>><</link>>"
+  ],
+  "context": "\t\t<<if $pubtask is \"moor\" and $pubtask2 isnot 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<crimeicon \"black box\">><<link [[Search for Landry's black box|Moor Box]]>><</link>>",
+   "\t\t\t<<elseif random(1, 2) is 2 and $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\t\t\t<<crimeicon \"black box\">><<link [[Search for Landry's black box|Moor Box Lurkers]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<crimeicon \"black box\">><<link [[랜드리의 블랙박스를 찾는다|Moor Box]]>><</link>>",
+   "\t\t\t<<elseif random(1, 2) is 2 and $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\t\t\t<<crimeicon \"black box\">><<link [[랜드리의 블랙박스를 찾는다|Moor Box Lurkers]]>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<crimeicon \"black box\">><<link [[Search for Landry's black box|Moor Box]]>><</link>>",
+   "\t\t\t<<elseif random(1, 2) is 2 and $settings.lurkersEnabled>>",
+   "\t\t\t\t<<crimeicon \"black box\">><<link [[Search for Landry's black box|Moor Box Lurkers]]>><</link>>"
+  ],
+  "context": "\t\t\t<<elseif $pubtasksetting is \"person\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tGo deeper into the moor",
+   "\t\t<br>",
+   "\t\t<<if $harpy gte 6 and $birdFly gte 1 and !$plucked>>",
+   "\t\t\t<<glideicon>><<link [[Fly (<<print getTimeString(_hoursPassed, _minutesPassed)>>)|Moor]]>><<set $fatigueMod to _fatigueMod>><<set $flightTime to _flightTime>><<bird_pass _flightTime>><<set $moor += 5>><<set $forestmod to 1>><<set $moormove to \"fly\">><</link>><<flight_text>><<gtiredness>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t\t황야 깊숙이 들어간다",
+   "\t\t<br>",
+   "\t\t<<if $harpy gte 6 and $birdFly gte 1 and !$plucked>>",
+   "\t\t\t<<glideicon>><<link [[날아간다 (<<print getTimeString(_hoursPassed, _minutesPassed)>>)|Moor]]>><<set $fatigueMod to _fatigueMod>><<set $flightTime to _flightTime>><<bird_pass _flightTime>><<set $moor += 5>><<set $forestmod to 1>><<set $moormove to \"fly\">><</link>><<flight_text>><<gtiredness>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>"
+  ],
+  "new_en": [],
+  "context": "\t<<if $moor lt 100>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<heelsicon \"hobble\">><<link [[Hobble in heels (0:30)|Moor]]>><<bird_pass 30>><<set $moor += 5>><<set $forestmod to 3>><<set $moormove to \"hobble\">><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<gharass>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<heelsicon \"hobble\">><<link [[하이힐을 신고 절뚝인다 (0:30)|Moor]]>><<bird_pass 30>><<set $moor += 5>><<set $forestmod to 3>><<set $moormove to \"hobble\">><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<gharass>>"
+  ],
+  "new_en": [
+   "\t\t\t<<heelsicon \"hobble\">><<link [[Hobble deeper into the moor (0:30)|Moor]]>><<bird_pass 30>><<set $moor += 5>><<set $forestmod to 3>><<set $moormove to \"hobble\">><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<gharass>>"
+  ],
+  "context": "\t\t<<if $worn.feet.type.includes(\"heels\") and !$possessed>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if !$worn.feet.type.includes(\"shackle\")>>",
+   "\t\t\t\t<<runicon>><<link [[Quickly (0:05)|Moor]]>><<bird_pass 5>><<set $moor += 5>><<set $forestmod to 3>><<set $moormove to \"quick\">><<if $moor_hunt gte 1>><<set $moor_hunt += 0.5>><</if>><</link>><<gharass>>",
+   "\t\t\t\t<br>",
+   "\t\t\t<</if>>",
+   "\t\t\t<<walkicon>><<link [[Normally (0:10)|Moor]]>><<bird_pass 10>><<set $moor += 5>><<set $forestmod to 1>><<set $moormove to \"normal\">><<if $moor_hunt gte 1>><<set $moor_hunt += 1>><</if>><</link>>",
+   "\t\t\t<br>",
+   "\t\t\t<<sneakicon>><<link [[Carefully (0:30)|Moor]]>><<bird_pass 30>><<set $moor += 5>><<set $moormove to \"careful\">><<set $forestmod to 0.5>><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<lharass>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if !$worn.feet.type.includes(\"shackle\")>>",
+   "\t\t\t\t<<runicon>><<link [[빠르게 (0:05)|Moor]]>><<bird_pass 5>><<set $moor += 5>><<set $forestmod to 3>><<set $moormove to \"quick\">><<if $moor_hunt gte 1>><<set $moor_hunt += 0.5>><</if>><</link>><<gharass>>",
+   "\t\t\t\t<br>",
+   "\t\t\t<</if>>",
+   "\t\t\t<<walkicon>><<link [[보통 속도로 (0:10)|Moor]]>><<bird_pass 10>><<set $moor += 5>><<set $forestmod to 1>><<set $moormove to \"normal\">><<if $moor_hunt gte 1>><<set $moor_hunt += 1>><</if>><</link>>",
+   "\t\t\t<br>",
+   "\t\t\t<<sneakicon>><<link [[조심스럽게 (0:30)|Moor]]>><<bird_pass 30>><<set $moor += 5>><<set $moormove to \"careful\">><<set $forestmod to 0.5>><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<lharass>>"
+  ],
+  "new_en": [
+   "\t\t\t<<moorTravelIcon \"moor\">><<link `'Go deeper into the moor (<span class=\"travelTime\">' + _travelTimeString + '</span>)'` \"Moor\">><<moorTravel \"deeper\">><</link>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tSearch nearby <<gtreasure>>",
+   "\t\t<br>",
+   "\t\t<<if $harpy gte 6 and $birdFly gte 1 and !$plucked>>",
+   "\t\t\t<<glideicon>><<link [[Fly (<<print getTimeString(_hoursPassed, _minutesPassed)>>)|Moor]]>><<set $fatigueMod to _fatigueMod>><<set $flightTime to _flightTimeSearch>><<bird_pass _flightTimeSearch>><<set $forestmod to 0.5>><<set $moormove to \"fly_search\">><</link>><<flight_text>><<gtiredness>><<lharass>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if !$worn.feet.type.includes(\"shackle\")>>",
+   "\t\t\t<<runicon>><<link [[Quickly (0:05)|Moor]]>><<bird_pass 5>><<set $forestmod to 3>><<set $moormove to \"quick_search\">><<if $moor_hunt gte 1>><<set $moor_hunt += 0.5>><</if>><</link>><<gharass>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<walkicon>><<link [[Normally (0:10)|Moor]]>><<bird_pass 10>><<set $forestmod to 1>><<set $moormove to \"normal_search\">><<if $moor_hunt gte 1>><<set $moor_hunt += 1>><</if>><</link>>",
+   "\t\t<br>",
+   "\t\t<<sneakicon>><<link [[Carefully (0:30)|Moor]]>><<bird_pass 30>><<set $forestmod to 0.5>><<set $moormove to \"careful_search\">><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<lharass>>",
+   "\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t근처를 수색한다 <<gtreasure>>",
+   "\t\t<br>",
+   "\t\t<<if $harpy gte 6 and $birdFly gte 1 and !$plucked>>",
+   "\t\t\t<<glideicon>><<link [[날아간다 (<<print getTimeString(_hoursPassed, _minutesPassed)>>)|Moor]]>><<set $fatigueMod to _fatigueMod>><<set $flightTime to _flightTimeSearch>><<bird_pass _flightTimeSearch>><<set $forestmod to 0.5>><<set $moormove to \"fly_search\">><</link>><<flight_text>><<gtiredness>><<lharass>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if !$worn.feet.type.includes(\"shackle\")>>",
+   "\t\t\t<<runicon>><<link [[빠르게 (0:05)|Moor]]>><<bird_pass 5>><<set $forestmod to 3>><<set $moormove to \"quick_search\">><<if $moor_hunt gte 1>><<set $moor_hunt += 0.5>><</if>><</link>><<gharass>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<walkicon>><<link [[보통 속도로 (0:10)|Moor]]>><<bird_pass 10>><<set $forestmod to 1>><<set $moormove to \"normal_search\">><<if $moor_hunt gte 1>><<set $moor_hunt += 1>><</if>><</link>>",
+   "\t\t<br>",
+   "\t\t<<sneakicon>><<link [[조심스럽게 (0:30)|Moor]]>><<bird_pass 30>><<set $forestmod to 0.5>><<set $moormove to \"careful_search\">><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<lharass>>",
+   "\t\t<br><br>"
+  ],
+  "new_en": [
+   "",
+   "\t<<mooricon \"search\">><<link `'Search nearby (<span class=\"travelTime\">' + _travelTimeString + '</span>)'` \"Moor\">><<moorTravel \"search\">><</link>><<gtreasure>>",
+   "\t<br><br>",
+   ""
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tGo towards the coast",
+   "\t\t<br>",
+   "\t\t<<if $harpy gte 6 and $birdFly gte 1 and !$plucked>>",
+   "\t\t\t<<glideicon>><<link [[Fly (<<print getTimeString(_hoursPassed, _minutesPassed)>>)|Moor]]>><<set $fatigueMod to _fatigueMod>><<set $flightTime to _flightTime>><<bird_pass _flightTime>><<set $moor -= 5>><<set $forestmod to 1>><<set $moormove to \"fly\">><</link>><<flight_text>><<gtiredness>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t\t해안가로 향한다",
+   "\t\t<br>",
+   "\t\t<<if $harpy gte 6 and $birdFly gte 1 and !$plucked>>",
+   "\t\t\t<<glideicon>><<link [[날아간다 (<<print getTimeString(_hoursPassed, _minutesPassed)>>)|Moor]]>><<set $fatigueMod to _fatigueMod>><<set $flightTime to _flightTime>><<bird_pass _flightTime>><<set $moor -= 5>><<set $forestmod to 1>><<set $moormove to \"fly\">><</link>><<flight_text>><<gtiredness>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>"
+  ],
+  "new_en": [],
+  "context": "\t<<if $moor gt 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<heelsicon \"hobble\">><<link [[Hobble in heels (0:30)|Moor]]>><<bird_pass 30>><<set $moor -= 5>><<set $forestmod to 3>><<set $moormove to \"hobble\">><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<gharass>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<heelsicon \"hobble\">><<link [[하이힐을 신고 절뚝인다 (0:30)|Moor]]>><<bird_pass 30>><<set $moor -= 5>><<set $forestmod to 3>><<set $moormove to \"hobble\">><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<gharass>>"
+  ],
+  "new_en": [
+   "\t\t\t<<heelsicon \"hobble\">><<link [[Hobble towards the coast (0:30)|Moor]]>><<bird_pass 30>><<set $moor -= 5>><<set $forestmod to 3>><<set $moormove to \"hobble\">><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<gharass>>"
+  ],
+  "context": "\t\t<<if $worn.feet.type.includes(\"heels\") and !$possessed>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if !$worn.feet.type.includes(\"shackle\")>>",
+   "\t\t\t\t<<runicon>><<link [[Quickly (0:05)|Moor]]>><<bird_pass 5>><<set $moor -= 5>><<set $forestmod to 3>><<set $moormove to \"quick\">><<if $moor_hunt gte 1>><<set $moor_hunt += 0.5>><</if>><</link>><<gharass>>",
+   "\t\t\t\t<br>",
+   "\t\t\t<</if>>",
+   "\t\t\t<<walkicon>><<link [[Normally (0:10)|Moor]]>><<bird_pass 10>><<set $moor -= 5>><<set $forestmod to 1>><<set $moormove to \"normal\">><<if $moor_hunt gte 1>><<set $moor_hunt += 1>><</if>><</link>>",
+   "\t\t\t<br>",
+   "\t\t\t<<sneakicon>><<link [[Carefully (0:30)|Moor]]>><<bird_pass 30>><<set $moor -= 5>><<set $forestmod to 0.5>><<set $moormove to \"careful\">><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<lharass>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if !$worn.feet.type.includes(\"shackle\")>>",
+   "\t\t\t\t<<runicon>><<link [[빠르게 (0:05)|Moor]]>><<bird_pass 5>><<set $moor -= 5>><<set $forestmod to 3>><<set $moormove to \"quick\">><<if $moor_hunt gte 1>><<set $moor_hunt += 0.5>><</if>><</link>><<gharass>>",
+   "\t\t\t\t<br>",
+   "\t\t\t<</if>>",
+   "\t\t\t<<walkicon>><<link [[보통 속도로 (0:10)|Moor]]>><<bird_pass 10>><<set $moor -= 5>><<set $forestmod to 1>><<set $moormove to \"normal\">><<if $moor_hunt gte 1>><<set $moor_hunt += 1>><</if>><</link>>",
+   "\t\t\t<br>",
+   "\t\t\t<<sneakicon>><<link [[조심스럽게 (0:30)|Moor]]>><<bird_pass 30>><<set $moor -= 5>><<set $forestmod to 0.5>><<set $moormove to \"careful\">><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<lharass>>"
+  ],
+  "new_en": [
+   "\t\t\t<<moorTravelIcon \"coast\">><<link `'Go towards the coast (<span class=\"travelTime\">' + _travelTimeString + '</span>)'` \"Moor\">><<moorTravel \"coast\">><</link>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $bird and $bird.upgrades and $bird.upgrades.snare gte 1>>",
+   "\tYour snare is here."
+  ],
+  "old_kr": [
+   "<<if $bird and $bird.upgrades and $bird.upgrades.snare gte 1>>",
+   "\t당신의 덫이 여기에 있다."
+  ],
+  "new_en": [
+   "<<if $bird?.upgrades?.snare gte 1>>",
+   "\tYour snare is here."
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $player.penisExist and $player.vaginaExist>>",
+   "\t\t\"Both?\" <<he>> asks. \"It's my lucky day. Shame I don't have a camera.\""
+  ],
+  "old_kr": [
+   "\t<<if $player.penisExist and $player.vaginaExist>>",
+   "\t\t\"둘 다 달렸다고?\" <<he>>【이가】 묻는다. \"오늘 완전 땡잡았네. 카메라가 없는 게 아쉬울 따름이야.\""
+  ],
+  "new_en": [
+   "\t<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>",
+   "\t\t\"Both?\" <<he>> asks. \"It's my lucky day. Shame I don't have a camera.\""
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $player.gender_appearance is \"f\">>",
+   "\t\t\t\"Now there's a surprise,\" <<he>> says."
+  ],
+  "old_kr": [
+   "\t\t<<if $player.gender_appearance is \"f\">>",
+   "\t\t\t\"이거 놀라운데.\" <<he>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t\t<<if $player.gender_appearance is \"f\" and $settings.nudeGenderPerception !== 0>>",
+   "\t\t\t\"Now there's a surprise,\" <<he>> says."
+  ],
+  "context": "\t<<elseif $player.penisExist>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $player.gender_appearance is \"m\">>",
+   "\t\t\t\"Now there's a surprise,\" <<he>> says."
+  ],
+  "old_kr": [
+   "\t\t<<if $player.gender_appearance is \"m\">>",
+   "\t\t\t\"이거 놀라운데.\" <<he>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t\t<<if $player.gender_appearance is \"m\" and $settings.nudeGenderPerception !== 0>>",
+   "\t\t\t\"Now there's a surprise,\" <<he>> says."
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $player.penisExist and $player.vaginaExist>>",
+   "\t\"Both?\" <<he>> asks. \"It's my lucky day. Shame I don't have a camera.\""
+  ],
+  "old_kr": [
+   "<<if $player.penisExist and $player.vaginaExist>>",
+   "\t\"둘 다 달렸다고?\" <<he>>【이가】 묻는다. \"오늘 완전 땡잡았네. 카메라가 없는 게 아쉬울 따름이야.\""
+  ],
+  "new_en": [
+   "<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>",
+   "\t\"Both?\" <<he>> asks. \"It's my lucky day. Shame I don't have a camera.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $player.gender_appearance is \"f\">>",
+   "\t\t\"Now there's a surprise,\" <<he>> says."
+  ],
+  "old_kr": [
+   "\t<<if $player.gender_appearance is \"f\">>",
+   "\t\t\"이거 놀라운데.\" <<he>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<if $player.gender_appearance is \"f\" and $settings.nudeGenderPerception !== 0>>",
+   "\t\t\"Now there's a surprise,\" <<he>> says."
+  ],
+  "context": "<<elseif $player.penisExist>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $player.gender_appearance is \"m\">>",
+   "\t\t\"Now there's a surprise,\" <<he>> says."
+  ],
+  "old_kr": [
+   "\t<<if $player.gender_appearance is \"m\">>",
+   "\t\t\"이거 놀라운데.\" <<he>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<if $player.gender_appearance is \"m\" and $settings.nudeGenderPerception !== 0>>",
+   "\t\t\"Now there's a surprise,\" <<he>> says."
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<moorShortcuts>>",
+   "\t<<travelSpeedOptions>>",
+   "\t<br><br>",
+   "\t<<travelSpeedInfo>>",
+   ""
+  ],
+  "context": "\t<</if>>"
+ }
+]

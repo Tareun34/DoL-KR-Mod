@@ -134,8 +134,8 @@
 		<<beastNEWinit 1 dog>>
 		<<beasttype>>【이가】 짖는 소리가 들린다.
 
-		<<if $monster is 1 or $settings.bestialityEnabled>>
-			무거운 것이 등을 짓누르며 당신을 바닥으로 쓰러뜨린다. 무릎을 꿇고 벗어나려 발버둥쳐 보지만, <<beasttype>>【이가】 당신의 위로 올라타 꼼짝 못하게 억누른다.
+		<<if beastSexEnabledForType("dog", $monster is 1)>>
+			A heavy weight presses against your back and forces you to the ground. You try to struggle to your knees, but the <<beasttype>> mounts you and holds you down.
 			<br><br>
 
 			<<link [[다음|Bondage Dog Rape]]>><<set $molestationstart to 1>><</link>>
@@ -373,8 +373,8 @@
 	<<elseif $rng gte 31>>
 
 			<<beastNEWinit 3 dog>>
-			<<if $monster is 1 or $settings.bestialityEnabled>>
-				여러 마리의 <<beastsplural>>【이가】 짖는 소리가 들린다. 빠르게 다가오더니 이내 당신을 포위한다.
+			<<if beastSexEnabledForType("dog", $monster is 1)>>
+				You hear several <<beastsplural>> barking. They're approaching fast, and soon surround you.
 				<br><br>
 
 				누군가 웃는다. "주인이 녀석들 힘 좀 빼라고 하던데," 그 목소리가 말한다. "이 정도면 충분하겠군."
@@ -440,8 +440,8 @@
 
 		<<else>>
 
-			<<if $monster is 1 or $settings.bestialityEnabled>>
-				<<link [[다음|Bondage Two Wolf Rape]]>><<set $molestationstart to 1>><</link>>
+			<<if beastSexEnabledForType("wolf", $monster is 1)>>
+				<<link [[Next|Bondage Two Wolf Rape]]>><<set $molestationstart to 1>><</link>>
 				<br>
 			<<else>>
 				당신은 벌떡 일어나 도망친다. 늑대들이 뒤쫓아온다. 다치긴 했지만 어찌저찌 탈출에 성공한다.<<beastescape>>
@@ -492,8 +492,8 @@
 
 		<<else>>
 
-			<<if $monster is 1 or $settings.bestialityEnabled>>
-				그러고는 당신의 위로 올라탄다.
+			<<if beastSexEnabledForType("wolf", $monster is 1)>>
+				Then mounts you.
 				<br><br>
 				<<link [[다음|Bondage Wolf Rape]]>><<set $molestationstart to 1>><</link>>
 				<br>

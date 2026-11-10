@@ -1,0 +1,44 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $submissive lte 500>>",
+   "\t\t\t<<link [[Roar|Photo High Roar]]>><<famescrap 1 \"pic\">><<photo_attention 1>><<photo_interest 2>><<stress -6>><<famemodel 1 \"pic\">><</link>><<defianttext>><<gattention>><<gginterest>><<lstress>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $submissive lte 500>>",
+   "\t\t\t<<link [[포효한다|Photo High Roar]]>><<famescrap 1 \"pic\">><<photo_attention 1>><<photo_interest 2>><<stress -6>><<famemodel 1 \"pic\">><</link>><<defianttext>><<gattention>><<gginterest>><<lstress>>"
+  ],
+  "new_en": [
+   "\t\t<<if displayDefiantOption(500)>>",
+   "\t\t\t<<link [[Roar|Photo High Roar]]>><<famescrap 1 \"pic\">><<photo_attention 1>><<photo_interest 2>><<stress -6>><<famemodel 1 \"pic\">><<wolfDefiant 500>><</link>><<defianttext 500>><<gattention>><<gginterest>><<lstress>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou notice a <<person>> giving you a funny look from across the road. Then you hear footsteps behind you. A <<person2>><<person>> rushes up, and delivers a hard smack to your <<bottom>>. You attempt to turn to see the culprit, only to hear the <<person1>><<person>> to charge at you while your back is turned."
+  ],
+  "old_kr": [
+   "\t\t당신은 길 건너편에서 이상한 눈빛으로 쳐다보는 <<person>>【을를】 알아차린다. 그때 등 뒤에서 발소리가 들려온다. <<person2>><<person>>【이가】 달려와 당신의 <<bottom>>【을를】 세게 찰싹 때린다. 범인을 보려고 뒤돌아보려는 찰나, 등을 돌린 틈을 타 <<person1>><<person>>【이가】 달려드는 소리가 들린다."
+  ],
+  "new_en": [
+   "\t\tYou notice a <<person>> giving you a funny look from across the road. Then you hear footsteps behind you. A <<person2>><<person>> rushes up, and delivers a hard smack to your <<bottom>>. You attempt to turn to see the culprit, only to hear the <<person1>><<person>> charge at you while your back is turned."
+  ],
+  "context": "\t\t<<generatey1>><<generatey2>><<person1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Find Niki (0:01)|Photo High Niki]]>><<photo_pass 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[니키를 찾는다 (0:01)|Photo High Niki]]>><<photo_pass 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Find Niki (0:01)|Photo High Niki]]>><<photo_pass 1>><<endevent>><</link>>"
+  ],
+  "context": "\t\t<br>"
+ }
+]

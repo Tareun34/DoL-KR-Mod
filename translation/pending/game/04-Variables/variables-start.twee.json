@@ -1,0 +1,150 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<set $settings.femaleNPCPenisChance to 0>>",
+   "\t<<set $settings.maleNPCVaginaChance to 0>>",
+   "\t<<set $settings.straponChance to 0>>"
+  ],
+  "old_kr": [
+   "\t<<set $settings.femaleNPCPenisChance to 0>>",
+   "\t<<set $settings.maleNPCVaginaChance to 0>>",
+   "\t<<set $settings.femaleNPCHermChance to 0>>",
+   "\t<<set $settings.maleNPCHermChance to 0>>",
+   "\t<<set $settings.straponChance to 0>>"
+  ],
+  "new_en": [
+   "\t<<set $settings.femaleNPCPenisChance to 5>>",
+   "\t<<set $settings.maleNPCVaginaChance to 5>>",
+   "\t<<set $settings.straponChance to 5>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tmaxStates: 5,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tmaxStates: 20,"
+  ],
+  "context": "\t\tcombatLightTFColor: 0.2,"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\ttipdisable: \"f\","
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\ttipdisable: false,"
+  ],
+  "context": "\t\ttimestyle: _globalGeneralDefaults.timestyle or \"military\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\"specialClothes\": 21,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\"specialClothes\": 22,"
+  ],
+  "context": "\t\t\t\"updateClothes\": 85,"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\"foodstuff\": 7,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\"foodstuff\": 8,"
+  ],
+  "context": "\t\t\t\"animations\": 1,"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $settings.beastMaleChance to 80>>",
+   "\t<<set $settings.beastMaleChanceMale to 80>>",
+   "\t<<set $settings.beastMaleChanceFemale to 80>>",
+   "\t<<set $settings.beastMaleChanceSplit to false>>",
+   "\t<<set $settings.monsterHallucinationsOnly to true>>",
+   "\t<<set $settings.monsterChance to 50>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $settings.granularBeastControl to false>>",
+   "\t/* Not real settings, just the saved generic settings that the granular settings get set to when granular beast setting is turned off and you change the generic beast settings. So these aren't checked in game anywhere, only the granular beast settings are checked. */",
+   "\t<<set $genericBeastSettings to {",
+   "\t\tbeastMaleChance: 50,",
+   "\t\tbeastMaleChanceMale: 50,",
+   "\t\tbeastMaleChanceFemale: 50,",
+   "\t\tbeastMaleChanceSplit: false,",
+   "\t\tmonsterHallucinationsOnly: true,",
+   "\t\tmonsterChance: 50,",
+   "\t\tbestiality: \"on\",",
+   "\t\tvictimsAlwaysMonster: false,",
+   "\t}>>",
+   "\t<<set $settings.beastSettings to {",
+   "\t\tdog: {monsterChance: 50, hallucinationsOnly: true, maleChance: 50, maleChanceMale: 50, maleChanceFemale: 50, maleChanceSplit: false, bestiality: \"on\", victimsAlwaysMonster: false},",
+   "\t\tcat: {monsterChance: 50, hallucinationsOnly: true, maleChance: 50, maleChanceMale: 50, maleChanceFemale: 50, maleChanceSplit: false, bestiality: \"on\", victimsAlwaysMonster: false},",
+   "\t\tpig: {monsterChance: 50, hallucinationsOnly: true, maleChance: 50, maleChanceMale: 50, maleChanceFemale: 50, maleChanceSplit: false, bestiality: \"on\", victimsAlwaysMonster: false},",
+   "\t\twolf: {monsterChance: 50, hallucinationsOnly: true, maleChance: 50, maleChanceMale: 50, maleChanceFemale: 50, maleChanceSplit: false, bestiality: \"on\", victimsAlwaysMonster: false},",
+   "\t\tdolphin: {monsterChance: 50, hallucinationsOnly: true, maleChance: 50, maleChanceMale: 50, maleChanceFemale: 50, maleChanceSplit: false, bestiality: \"on\", victimsAlwaysMonster: false},",
+   "\t\tlizard: {monsterChance: 50, hallucinationsOnly: true, maleChance: 50, maleChanceMale: 50, maleChanceFemale: 50, maleChanceSplit: false, bestiality: \"on\", victimsAlwaysMonster: false},",
+   "\t\tbear: {monsterChance: 50, hallucinationsOnly: true, maleChance: 50, maleChanceMale: 50, maleChanceFemale: 50, maleChanceSplit: false, bestiality: \"on\", victimsAlwaysMonster: false},",
+   "\t\tboar: {monsterChance: 50, hallucinationsOnly: true, maleChance: 50, maleChanceMale: 50, maleChanceFemale: 50, maleChanceSplit: false, bestiality: \"on\", victimsAlwaysMonster: false},",
+   "\t\thorse: {monsterChance: 50, hallucinationsOnly: true, maleChance: 50, maleChanceMale: 50, maleChanceFemale: 50, maleChanceSplit: false, bestiality: \"on\", victimsAlwaysMonster: false},",
+   "\t\tfox: {monsterChance: 50, hallucinationsOnly: true, maleChance: 50, maleChanceMale: 50, maleChanceFemale: 50, maleChanceSplit: false, bestiality: \"on\", victimsAlwaysMonster: false},",
+   "\t\thawk: {monsterChance: 50, hallucinationsOnly: true, maleChance: 50, maleChanceMale: 50, maleChanceFemale: 50, maleChanceSplit: false, bestiality: \"on\", victimsAlwaysMonster: false},",
+   "\t\tcow: {monsterChance: 50, hallucinationsOnly: true, maleChance: 50, maleChanceMale: 50, maleChanceFemale: 50, maleChanceSplit: false, bestiality: \"on\", victimsAlwaysMonster: false},",
+   "\t\tspider: {monsterChance: 50, hallucinationsOnly: true, maleChance: 50, maleChanceMale: 50, maleChanceFemale: 50, maleChanceSplit: false, bestiality: \"on\", victimsAlwaysMonster: false},",
+   "\t\tsnake: {monsterChance: 50, hallucinationsOnly: true, maleChance: 50, maleChanceMale: 50, maleChanceFemale: 50, maleChanceSplit: false, bestiality: \"on\", victimsAlwaysMonster: false},",
+   "\t}>>"
+  ],
+  "context": "\t<<set $homochance to 4>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $plots to {}>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $plots to {",
+   "\t\t\"garden\": [],",
+   "\t\t\"farm\": [],",
+   "\t\t\"wolf\": [],",
+   "\t\t\"eden\": [],",
+   "\t\t\"asylum\": []",
+   "\t}>>"
+  ],
+  "context": "\t<<set $asylum_plot_intro to 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $defaultSidebarMouth is undefined>>",
+   "\t\t<<set $defaultSidebarMouth to \"smile\">>",
+   "\t<</if>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\t<<set $travelSpeed to \"normally\">>",
+   "",
+   "\t<<set $collapsedRelationBoxes to []>>"
+  ],
+  "context": "\t<<set $timeMessages to []>>"
+ }
+]

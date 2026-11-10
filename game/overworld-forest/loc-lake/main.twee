@@ -211,8 +211,8 @@
 			<</if>>
 		<</if>>
 
-		<<if $debug is 1>>
-			<<lakeicon "campfire">><<link [[북쪽 모닥불로 (0:10)|Lake Firepit]]>><<pass 10>><</link>>
+		<<if $debug>>
+			<<lakeicon "campfire">><<link [[North to firepit (0:10)|Lake Firepit]]>><<pass 10>><</link>>
 			<br>
 		<</if>>
 		<<if $earSlime.forcedCommando isnot undefined and $worn.under_lower.name isnot "naked">>
@@ -604,7 +604,7 @@
 <<set $forest to 50>><<set $bus to "lakefishingrock">>
 <<if $phase is "rockclimb">>
 	<<set $phase to 0>>
-	당신은 낚시 바위 아래의 기슭으로 헤엄쳐 가 거친 표면 위로 몸을 끌어올린다. 바위 위로 물방울이 뚝뚝 떨어진다.
+	You swim to the bank beneath the fishing rock and haul yourself up onto the rough surface, dripping water onto the stone.
 <<else>>
 	당신은 낚시 바위 위에 있다.
 <</if>>
@@ -653,7 +653,7 @@
 		<<watericon "waterfall">><<link [[북쪽 폭포로 (0:10)|Lake Waterfall]]>><<pass 10>><</link>>
 	<</if>>
 	<br>
-	<<lakeicon "campfire">><<link [[남쪽 캠프장으로 (0:20)|Lake Campsite]]>><<pass 20>><</link>>
+	<<lakeicon "campfire">><<link [[South to campsite (0:20)|Lake Campsite]]>><<pass 20>><</link>>
 
 	<<if canStartFishing()>>
 		<<if !$fishing.locationsFound.includes("fishingForestLake")>>
@@ -1033,8 +1033,8 @@
 	<</if>>
 	<<if $exposed gte 1 and $laketeenspresent is 1>>
 		<br>
-	<<elseif $debug is 1>>
-		<<lakeicon "dock">><<link [[부두로 헤엄쳐 가기 (0:10)|Lake Dock]]>><<pass 10>><</link>>
+	<<elseif $debug>>
+		<<lakeicon "dock">><<link [[Swim to dock (0:10)|Lake Dock]]>><<pass 10>><</link>>
 		<br>
 	<</if>>
 	<<if $nextPassageCheck is "Lake Depths">>
@@ -1290,8 +1290,8 @@
 	<br><br>
 
 	<<if $exposed gte 1 and $laketeenspresent is 1>>
-	<<elseif $debug is 1>>
-		<<lakeicon "dock">><<link [[부두로 헤엄쳐 가기 (0:02)|Lake Dock]]>><<pass 2>><</link>>
+	<<elseif $debug>>
+		<<lakeicon "dock">><<link [[Swim to dock (0:02)|Lake Dock]]>><<pass 2>><</link>>
 		<br>
 	<</if>>
 	<<set $eventskip to 0>>

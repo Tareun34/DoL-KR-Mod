@@ -1,0 +1,88 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $tutorial is 0 and $debug is 0>>",
+   "\t\t\t\t<<robinicon `_standType is \"Chocolate\" ? \"cocoa\" : \"lemonade\"`>><<link [[_linkStart + \" to help set up (0:30)\"|_passageStart + _standType + \" Set Tutorial\"]]>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $tutorial is 0 and $debug is 0>>",
+   "\t\t\t\t<<robinicon `_standType is \"Chocolate\" ? \"cocoa\" : \"lemonade\"`>><<link [[_linkStart + \"준비를 돕는다 (0:30)\"|_passageStart + _standType + \" Set Tutorial\"]]>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if $tutorial is 0 and !$debug>>",
+   "\t\t\t\t<<robinicon `_standType is \"Chocolate\" ? \"cocoa\" : \"lemonade\"`>><<link [[_linkStart + \" to help set up (0:30)\"|_passageStart + _standType + \" Set Tutorial\"]]>>"
+  ],
+  "context": "\t\t<<if $exposed lte 0 or _anyItemsInRoom>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<set $rentsale to 0>>",
+   "\t<i>You've proven to Bailey that <<nnpc_he \"Bailey\">> can't simply expect you to pay <<nnpc_him \"Bailey\">> on time.",
+   "\t<span class=\"red\">Robin will no longer be safe from Bailey, unless you can hold Bailey off.</span></i>"
+  ],
+  "old_kr": [
+   "\t<<set $rentsale to 0>>",
+   "\t<i>당신은 <<nnpc_he \"Bailey\">>【이가】 당신이 제때 <<nnpc_him \"Bailey\">>에게 돈을 낼 거라고 단순히 기대할 수 없다는 것을 베일리에게 증명했다.",
+   "\t<span class=\"red\">당신이 베일리를 막아내지 못하면, 로빈은 더 이상 베일리에게서 안전하지 않을 것이다.</span></i>"
+  ],
+  "new_en": [
+   "\t<<set $rentSale to 0>>",
+   "\t<i>You've proven to Bailey that <<nnpc_he \"Bailey\">> can't simply expect you to pay <<nnpc_him \"Bailey\">> on time.",
+   "\t<span class=\"red\">Robin will no longer be safe from Bailey, unless you can hold Bailey off.</span></i>"
+  ],
+  "context": "<<widget \"robinRentUnsafeMessage\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if Time.dayState isnot \"night\" and $exposed gte 1 and getRobinLocation() is \"orphanage\">>",
+   "\t\t\t<<if hasSexStat(\"exhibitionism\", 5) and $exposed is 2>>",
+   "\t\t\t\t<<bedroomicon>><<link [[Robin's room (0:01)|Robin Room Naked]]>><<pass 1>><</link>><<exhibitionist5>>"
+  ],
+  "old_kr": [
+   "\t\t<<if Time.dayState isnot \"night\" and $exposed gte 1 and getRobinLocation() is \"orphanage\">>",
+   "\t\t\t<<if hasSexStat(\"exhibitionism\", 5) and $exposed is 2>>",
+   "\t\t\t\t<<bedroomicon>><<link [[로빈의 방 (0:01)|Robin Room Naked]]>><<pass 1>><</link>><<exhibitionist5>>"
+  ],
+  "new_en": [
+   "\t\t<<if Time.dayState isnot \"night\" and ($exposed gte 1 or $exposedRaw gte 1) and getRobinLocation() is \"orphanage\">>",
+   "\t\t\t<<if hasSexStat(\"exhibitionism\", 5) and ($exposed is 2 or $exposedRaw is 2)>>",
+   "\t\t\t\t<<bedroomicon>><<link [[Robin's room (0:01)|Robin Room Naked]]>><<pass 1>><</link>><<exhibitionist5>>"
+  ],
+  "context": "\t<<if C.npc.Robin.init is 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<elseif hasSexStat(\"exhibitionism\", 4) and $exposed is 1>>",
+   "\t\t\t\t<<bedroomicon>><<link [[Robin's room (0:01)|Robin Room Naked]]>><<pass 1>><</link>><<exhibitionist4>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<elseif hasSexStat(\"exhibitionism\", 4) and $exposed is 1>>",
+   "\t\t\t\t<<bedroomicon>><<link [[로빈의 방 (0:01)|Robin Room Naked]]>><<pass 1>><</link>><<exhibitionist4>>"
+  ],
+  "new_en": [
+   "\t\t\t<<elseif hasSexStat(\"exhibitionism\", 4) and ($exposed is 1 or $exposedRaw is 1)>>",
+   "\t\t\t\t<<bedroomicon>><<link [[Robin's room (0:01)|Robin Room Naked]]>><<pass 1>><</link>><<exhibitionist4>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<elseif $exposed lte 0>>",
+   "\t\t\t<<bedroomicon>><<link [[Robin's room (0:01)|Robin's Room Entrance]]>><<pass 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<elseif $exposed lte 0>>",
+   "\t\t\t<<bedroomicon>><<link [[로빈의 방 (0:01)|Robin's Room Entrance]]>><<pass 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<elseif $exposed lte 0 or $exposedRaw lte 0>>",
+   "\t\t\t<<bedroomicon>><<link [[Robin's room (0:01)|Robin's Room Entrance]]>><<pass 1>><</link>>"
+  ],
+  "context": ""
+ }
+]

@@ -1,0 +1,14 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<templeicon \"scriptorium\">><<link [[Scriptorium (0:01)|Temple Scriptorium]]>><<pass 1>><</link>>",
+   "\t\t<br>"
+  ],
+  "context": "\t\t<br>"
+ }
+]

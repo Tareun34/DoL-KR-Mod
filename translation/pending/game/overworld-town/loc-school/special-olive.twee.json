@@ -1,0 +1,35 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechdisable to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechDisable to 1>>"
+  ],
+  "context": "\t<<set $pinchSpeech to 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechdisable to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechDisable to 1>>"
+  ],
+  "context": "\t<<maninit>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if ($studyBooks and $studyBooks.rented isnot \"Pinch\" and $studyBooks.stolen isnot \"Pinch\") or $studyBooks is undefined>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $studyBooks is undefined or ($studyBooks.rented isnot \"Pinch\" and $studyBooks.stolen isnot \"Pinch\")>>"
+  ],
+  "context": "\t<</if>>"
+ }
+]

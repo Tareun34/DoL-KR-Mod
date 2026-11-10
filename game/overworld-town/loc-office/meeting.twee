@@ -29,8 +29,8 @@
 <<effects>>
 
 <<if dangerEvent(1, 8000, 300*$officeFloor)>>
-	<<if $rng gte 51 or (!$settings.bestialityEnabled and $monster isnot 1)>>
-		<<person3>><<person>>【이가】 방으로 들어와 당신 옆에 앉는다.
+	<<if $rng gte 51 or !beastSexEnabledForType("dog", $monster is 1)>>
+		A <<person3>><<person>> enters the room and sits down next to you.
 		<br><br>
 		<<if $NPCList[1].skills.security gte 600>>
 			"이거 재미있는 회의가 되겠군." <<he>>【은는】 음탕한 시선으로 당신을 보며 말한다.
@@ -175,9 +175,9 @@
 	<<elseif $meetingPhase is 3>>
 		<<person>>【은는】 더욱 대담해져서
 		<<if setup.clothes.lower[clothesIndex('lower', $worn.lower)].skirt is 1>>
-			당신의 $worn.lower.name 아래로 <<his>> 손을 슬쩍 넣어 <<undies>> 위로 당신을 문지른다.
+			slips <<his>> hand under your $worn.lower.name and begins rubbing your <<undies>>.
 		<<else>>
-			당신의 $worn.lower.name 안으로 <<his>> 손을 쑤셔 넣어 <<undies>> 위로 당신을 문지른다.
+			shoves <<his>> hand down your $worn.lower.name and begins rubbing your <<undies>>.
 		<</if>>
 		<<His>> 단단한 손길에 당신은 몸을 떤다.<<garousal>> <<arousal 200 "genitals">>
 		<br><br>
@@ -272,9 +272,11 @@
 			<<He>>【은는】 당신의 요구를 무시하고 계속 문지른다.
 		<</if>>
 	<<else>>
-		<<person>>【은는】 격렬하게
-		<<if $player.penisExist>>
-			당신의 <<genitals>>【을를】 흔든다.
+		The <<person>> vigorously
+		<<if $player.penisExist and $player.vaginaExist>>
+			strokes your <<genitals>>.
+		<<elseif $player.penisExist>>
+			jerks your <<genitals>>.
 		<<else>>
 			당신의 <<genitals>>【을를】 손가락으로 희롱한다.
 		<</if>>

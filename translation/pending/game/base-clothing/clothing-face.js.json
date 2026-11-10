@@ -1,0 +1,11 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tpattern_name: \"designs\","
+  ],
+  "context": "\t\t\tpattern_layer: \"primary\","
+ }
+]

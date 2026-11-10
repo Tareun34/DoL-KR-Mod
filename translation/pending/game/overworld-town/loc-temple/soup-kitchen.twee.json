@@ -1,0 +1,97 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $debug is 1 and !Time.betweenHours(18, 20, 1)>>",
+   "\t<<loitericon>><<link [[Wait for the soup kitchen to open (DEBUG)|Soup Kitchen]]>><<passTimeUntil 18 1>><</link>>"
+  ],
+  "old_kr": [
+   "<<if $debug is 1 and !Time.betweenHours(18, 20, 1)>>",
+   "\t<<loitericon>><<link [[무료 급식소가 열리기를 기다린다 (DEBUG)|Soup Kitchen]]>><<passTimeUntil 18 1>><</link>>"
+  ],
+  "new_en": [
+   "<<if $debug and !Time.betweenHours(18, 20, 1)>>",
+   "\t<<loitericon>><<link [[Wait for the soup kitchen to open (DEBUG)|Soup Kitchen]]>><<passTimeUntil 18 1>><</link>>"
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if C.npc.River.love gte 20>>",
+   "\t\t<<addinlineevent \"soup_kitchen_teach_recipe\" 0.2>>",
+   "\t\t\t<<set $soupKitchenTeachRecipe to [\"porridge\", \"turnip_soup\", \"bread\"].random()>>",
+   "\t\t\t<<npc River>><<person1>>",
+   "\t\t\t<<switch $soupKitchenTeachRecipe>>",
+   "\t\t\t\t<<case \"porridge\">>",
+   "\t\t\t\t\tRiver calls you to the kitchen and sets a bag of oats and a bottle of milk on the table beside you.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\"Start preparing us some porridge <<he>> says before returning to the stove.",
+   "\t\t\t\t<<case \"turnip_soup\">>",
+   "\t\t\t\t\tRiver calls you to the kitchen and sets some turnips, potatoes and onions on the table beside you.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\"Start preparing us some turnip soup <<he>> says before returning to the stove.",
+   "\t\t\t\t<<case \"bread\">>",
+   "\t\t\t\t\tRiver calls you over to the kitchen and sets a large bag of flour, alongside salt and vegetable oil on the table beside you.",
+   "\t\t\t\t\t<br><br>",
+   "\t\t\t\t\t\"Start preparing us some dough,\" <<he>> says before returning to the stove.",
+   "\t\t\t<</switch>>",
+   "",
+   "\t\t\t<br><br>",
+   "\t\t\t<<if $foodstuff[$soupKitchenTeachRecipe]?.knows_recipe is true>>",
+   "\t\t\t\t<<link [[Get to work|Soup Kitchen Prepare Recipe]]>><</link>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<link [[Say you don't know the recipe|Soup Kitchen Learn Recipe]]>><</link>>",
+   "\t\t\t<</if>>",
+   "\t\t<</addinlineevent>>",
+   "\t<</if>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   ":: Soup Kitchen Prepare Recipe",
+   "",
+   "<<set $outside to 0>><<set $location to \"temple\">><<effects>>",
+   "<<npc River>><<person1>>",
+   "<<switch $soupKitchenTeachRecipe>>",
+   "\t<<case \"porridge\">>",
+   "\t\tYou measure out the oats, add the milk, and set the pot over the heat, stirring until it thickens up.",
+   "\t<<case \"turnip_soup\">>",
+   "\t\tYou chop up the vegetables and get a pot going on the stove, tossing them in once they're ready.",
+   "\t<<case \"bread\">>",
+   "\t\tYou mix together the flour, oil and salt. Once it begins to thicken, you knead until finished. You set your dough aside to rise, then take prepared dough to put in the oven.",
+   "<</switch>>",
+   "<br><br>",
+   "River glances over when you're done. <<He>> gives a brief nod. \"Good.\"",
+   "<br><br>",
+   "",
+   "<<unset $soupKitchenTeachRecipe>>",
+   "<<endevent>>",
+   "<<link [[Next|Soup Kitchen]]>><</link>>",
+   "<br>",
+   "",
+   ":: Soup Kitchen Learn Recipe",
+   "",
+   "<<set $outside to 0>><<set $location to \"temple\">><<effects>>",
+   "<<npc River>><<person1>>",
+   "River steps over to the counter. \"Watch how I do it.\" <<learn_recipe $soupKitchenTeachRecipe>>",
+   "<br><br>",
+   "",
+   "<<He>> <<if C.npc.River.love gte 40>>smiles. <<else>>nods. <</if>>\"See? Just like that, it's simple enough.\"",
+   "<br><br>",
+   "",
+   "<<unset $soupKitchenTeachRecipe>>",
+   "<<endevent>>",
+   "<<link [[Next|Soup Kitchen]]>><</link>>",
+   "<br>"
+  ],
+  "context": "<</if>>"
+ }
+]

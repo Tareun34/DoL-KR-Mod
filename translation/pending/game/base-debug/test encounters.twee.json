@@ -1,0 +1,29 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<residentialex2>>",
+   "<<link [[Next|Domus Street]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<residentialex2>>",
+   "<<link [[다음|Domus Street]]>><</link>>"
+  ],
+  "new_en": [
+   "<<residentialExposedDumpsterDog>>",
+   "<<link [[Next|Domus Street]]>><</link>>"
+  ],
+  "context": "<!-- Keeping this only as an example on how to use Widget as Event for debug -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if EventSystem.any() and $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if EventSystem.any() and $debug>>"
+  ],
+  "context": "<br>"
+ }
+]

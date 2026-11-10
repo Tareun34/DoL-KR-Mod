@@ -1,0 +1,423 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "As you are about to leave the building, you hear a great uproar. Dozens of students are gathering outside as a helicopter descends upon the school precincts. One of the passenger doors swings open. Avery beckons from inside."
+  ],
+  "old_kr": [
+   "건물을 막 떠나려는데, 엄청난 소란이 들려온다. 헬리콥터 한 대가 학교 구내로 하강하자 수십 명의 학생들이 밖으로 모여든다. 승객석 문 하나가 활짝 열린다. 안에서 에이버리가 손짓한다."
+  ],
+  "new_en": [
+   "As you are about to leave the building, you hear a great uproar. Dozens of students are gathering outside as a helicopter hovers over the school precincts. One of the doors swings open, and a ladder rolls down with loud clanks."
+  ],
+  "context": "<<npc Avery>><<person1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "",
+   "\"Come on, get a move on, I haven't got all day! Important business awaits!\""
+  ],
+  "old_kr": [
+   "",
+   "\"자, 어서 움직여. 하루 종일 기다려 줄 순 없다고! 중요한 사업이 기다리고 있단 말이야!\""
+  ],
+  "new_en": [
+   "You see Avery lean out, beckoning from above. <<He>> says something, but the only thing you can hear over the noise is your name."
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "",
+   "<<link [[Board helicopter (0:20)|Avery Helicopter]]>><<npcincr Avery love 2>><</link>><<gglove>>"
+  ],
+  "old_kr": [
+   "",
+   "<<link [[헬리콥터에 탑승한다 (0:20)|Avery Helicopter]]>><<npcincr Avery love 2>><</link>><<gglove>>"
+  ],
+  "new_en": [
+   "You hear murmuring of fellow classmates around you. They seem impressed by the extravagance. <<gcool>><<status 1>>",
+   "<br><br>",
+   "<<link [[Board helicopter (0:20)|Avery Helicopter]]>><<pass 20>><</link>><<glove>><<if $avery_mansion>><<gdom>><</if>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Walk away|Avery Helicopter Walk]]>><<npcincr Avery love -1>><<npcincr Avery rage 5>><</link>><<garage>><<llove>>"
+  ],
+  "old_kr": [
+   "<<link [[걸어서 자리를 뜬다|Avery Helicopter Walk]]>><<npcincr Avery love -1>><<npcincr Avery rage 5>><</link>><<garage>><<llove>>"
+  ],
+  "new_en": [
+   "<<link [[Walk away|Avery Helicopter Walk]]>><<npcincr Avery love -1>><<npcincr Avery rage 1>><</link>><<garage>><<llove>>"
+  ],
+  "context": "<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $debug>>"
+  ],
+  "context": "</div>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $farm and $farm.milking and $farm.milking.alexNightEvent>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $farm?.milking?.alexNightEvent>>"
+  ],
+  "context": "\t>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $wraithPrison and $wraithPrison.vision>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $wraithPrison?.vision>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $nightmaresSeen.includes(\"mine\")>>",
+   "\t\t\t<<set $scenePassages.pushUnique(\"NightmareMine\")>>",
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $pubfame and $pubfame.status>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $pubfame?.status>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<</if>>",
+   "\t<<if $avery_tower?.progress gte 25 and $avery_tower?.stage gte 0>>",
+   "\t\t<<set $scenePassages.pushUnique(\"Skyscraper Foundation\")>>",
+   "\t<</if>>",
+   "\t<<if $avery_tower?.progress gte 60 and $avery_tower?.stage gte 1>>",
+   "\t\t<<set $scenePassages.pushUnique(\"Skyscraper Structure\")>>",
+   "\t<</if>>",
+   "\t<<if $averySeen?.includes(\"puppyPlayReturn\")>>",
+   "\t\t<<set $scenePassages.pushUnique(\"Mansion Return Walk Dog\")>>"
+  ],
+  "context": "\t\t<<set $scenePassages.pushUnique(\"PrisonScarredInmate\")>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\tpassages: [\"SV Avery Helicopter\",\"Avery Helicopter\",\"Avery Helicopter Drink\",\"Avery Helicopter Refuse\",\"Avery Helicopter 2\",\"Avery Helicopter Nod\",\"Avery Helicopter Brush\",\"Avery Helicopter Push\",\"Avery Helicopter Sex\",\"Avery Helicopter Sex End\",\"Avery Helicopter Roll\",\"Avery Helicopter Slap\",\"Avery Helicopter Walk\"],"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\tpassages: [\"SV Avery Helicopter\",\"Avery Helicopter\", \"Avery Helicopter Destination\", \"Avery Helicopter Drink\",\"Avery Helicopter Refuse\", \"Avery Helicopter Refuse 2\",\"Avery Helicopter 2\", \"Avery Helicopter Gossip\",\"Avery Helicopter Turbulence\",\"Avery Helicopter View\", \"Avery Helicopter View Lewd\", \"Avery Helicopter View Lewd Refuse\", \"Avery Helicopter 3\",\"Avery Helicopter Sex\",\"Avery Helicopter Sex End\",\"Avery Helicopter Rape\",\"Avery Helicopter Rape End\",\"Avery Helicopter Threat End\", \"Avery Helicopter Walk\"],"
+  ],
+  "context": "\t\t\t\tstartPassage:\"SV Avery Helicopter\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\tmanualVariableChanges:\"<<set $robinpaid to 1>><<set $robinromance to 1>><<set $bus to \\\"home\\\">><<set $robinfirstrentfight to 0>><<set $baileydefeatedchain to 3>><<unset $baileyReunionScene>><<set $renttime to 0>><<set $robinmissing to 0>><<set $hoursGoneFromHome to 0>>\","
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\tmanualVariableChanges:\"<<set $robinpaid to 1>><<set $robinromance to 1>><<set $bus to \\\"home\\\">><<set $robinfirstrentfight to 0>><<set $baileydefeatedchain to 3>><<unset $baileyReunionScene>><<set $rentTime to 0>><<set $robinmissing to 0>><<set $hoursGoneFromHome to 0>>\","
+  ],
+  "context": "\t\t\t\tpassages:[\"Rent Pay\",\"Rent Seduce\",\"Rent Refuse\",\"Rent First Robin Fight\",\"Rent First Robin Fight Finish\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\tpassages:[\"Eden Valentines Bath\",\"Eden Radio Intro 2\",\"Eden Radio Intro 3\",\"Eden Radio Intro 4\"],"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\tpassages:[\"Eden Radio Intro\",\"Eden Radio Intro 2\",\"Eden Radio Intro 3\",\"Eden Radio Intro 4\"],"
+  ],
+  "context": "\t\t\t\tstartPassage:\"Eden Radio Intro\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t},",
+   "\t\t\t\"NightmareMine\":{",
+   "\t\t\t\tname:\"Nightmare Mine\",",
+   "\t\t\t\tstartPassage:\"Nightmare Mine\",",
+   "\t\t\t\tpassages:[\"Nightmare Mine\", \"Nightmare Mine 2\", \"Nightmare Mine 3\", \"Nightmare Mine Wake\", \"Nightmare Mine End\"],",
+   "\t\t\t\tmanualVariableChanges:\"<<set $sleephour to 1>><<set $nightmareExit to 'Bed'>>\",",
+   "\t\t\t\tunlocked: $scenePassages.includes(\"NightmareMine\")"
+  ],
+  "context": "\t\t\t\tunlocked: $scenePassages.includes(\"NightmareGwylan\")"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\"AveryPubWinter\":{",
+   "\t\t\t\tname: \"Avery Pub Winter\",",
+   "\t\t\t\tstartPassage: \"SV Avery Pub Winter\",",
+   "\t\t\t\tpassages:[\"SV Avery Pub Winter\",\"Avery Pub Winter Accept\",\"Avery Pub Winter Drink\",\"Avery Pub Winter Sing Intro\",\"Avery Pub Winter Sing\",\"Avery Pub Winter Sing Jolly\",\"Avery Pub Winter Sing Jolly 2\",\"Avery Pub Winter Sing Jolly 3\",\"Avery Pub Winter Sing Sorrowful\",\"Avery Pub Winter Sing Sorrowful 2\",\"Avery Pub Winter Sing Sorrowful 3\",\"Avery Pub Winter Sing Ironic\",\"Avery Pub Winter Sing Ironic 2\",\"Avery Pub Winter Sing Ironic 3\",\"Avery Pub Winter Sing Harpy\",\"Avery Pub Winter Sing Harpy 2\",\"Avery Pub Winter Sing Harpy 3\",\"Avery Pub Winter Sing Fail\",\"Avery Pub Winter Sing Fail 2\",\"Avery Pub Winter Sing Back\",\"Avery Pub Winter Sing Kiss\",\"Avery Pub Winter Sing Leave\",\"Avery Pub Winter Drink Finish\",\"Avery Pub Winter Drink Finish 2\",\"Avery Pub Winter Refuse\"],",
+   "\t\t\t\tmanualVariableChanges:\"<<set $location to 'town'>><<run Time.setTime(15,0)>>\",",
+   "\t\t\t\tunlocked: $scenePassages.includes(\"Avery Pub Winter\")",
+   "\t\t\t},",
+   "\t\t\t\"AverySpa\":{",
+   "\t\t\t\tname: \"Avery Spa\",",
+   "\t\t\t\tstartPassage: \"SV Avery Spa\",",
+   "\t\t\t\tpassages: [\"SV Avery Spa\", \"Avery Spa\", \"Avery Spa Lewd\", \"Avery Spa 2\", \"Avery Spa Offer\", \"Avery Spa Accept\", \"Avery Spa Oral\", \"Avery Spa Oral Finish\", \"Avery Spa Reward\", \"Avery Spa Reward Finish\", \"Avery Spa No Reward\", \"Avery Spa Refuse\", \"Avery Spa Rape\", \"Avery Spa Rape Finish\", \"Avery Spa End Normal\", \"Avery Spa End Satisfied\", \"Avery Spa End Awkward\", \"Avery Spa End Angry\"],",
+   "\t\t\t\tmanualVariableChanges: \"<<set $location to 'spa'>><<run Time.setTime(9,0)>>\",",
+   "\t\t\t\tunlocked: $scenePassages.includes(\"Avery Spa\")",
+   "\t\t\t},",
+   "\t\t\t\"MansionReturnWalkDog\":{",
+   "\t\t\t\tname: \"Avery Dog Walk\",",
+   "\t\t\t\tstartPassage: \"SV Mansion Return Walk Dog\",",
+   "\t\t\t\tpassages: [\"SV Mansion Return Walk Dog\", \"Mansion Return Walk Dog Bark\", \"Mansion Return Walk Dog Silent\", \"Mansion Return Walk Dog Bite\", \"Mansion Return Walk Dog 2\", \"Mansion Return Walk Dog Near\", \"Mansion Return Walk Dog Bid\", \"Mansion Return Walk Dog Lick\", \"Mansion Return Walk Dog Shut\", \"Mansion Return Walk Dog Snap\", \"Mansion Return Walk Dog Run\", \"Mansion Return Walk Dog Howl\", \"Mansion Return Walk Dog Yours\", \"Mansion Return Walk Dog Okay\", \"Mansion Return Walk Dog Lick 2\", \"Mansion Return Walk Dog Wolf Silent\", \"Mansion Return Walk Dog Growl\", \"Mansion Return Walk Dog Growl Lick\", \"Mansion Return Walk Dog Growl Silent\", \"Mansion Return Walk Dog Growl Attacked\", \"Mansion Return Walk Dog Rape\", \"Mansion Return Walk Dog Rape Finish\", \"Mansion Return Walk Dog Rape Avery\", \"Mansion Return Walk Dog Rape Silent\", \"Mansion Return Walk Dog Rape Say\", \"Mansion Return Walk Dog Rape Help\", \"Mansion Return Walk Dog Rape Cover\", \"Mansion Return Walk Dog Rape Free\", \"Mansion Return Walk Dog Endure\", \"Mansion Return Walk Dog Stand\", \"Mansion Return Walk Dog 2 Bark\", \"Mansion Return Walk Dog 2 Silent\", \"Mansion Return Walk Dog 2 Bite\", \"Mansion Return Walk Dog End\"],",
+   "\t\t\t\tmanualVariableChanges:\"<<set $location to 'avery_mansion'>><<run Time.setTime(21,0)>>\",",
+   "\t\t\t\tunlocked: $scenePassages.includes(\"Mansion Return Walk Dog\")",
+   "\t\t\t},",
+   "\t\t\t\"AverySkyscraperFoundation\":{",
+   "\t\t\t\tname: \"Avery Skyscraper 1\",",
+   "\t\t\t\tstartPassage: \"SV Skyscraper Foundation\",",
+   "\t\t\t\tpassages: [\"SV Skyscraper Foundation\", \"Skyscraper Foundation Insult\", \"Skyscraper Foundation Nice\", \"Skyscraper Foundation Silent\", \"Skyscraper Foundation 2\", \"Skyscraper Foundation 3\", \"Skyscraper Foundation 4\", \"Skyscraper Foundation Yes\", \"Skyscraper Foundation No\", \"Skyscraper Foundation Silent 2\", \"Skyscraper Foundation Tackle\", \"Skyscraper Foundation Avery\", \"Skyscraper Foundation 5\", \"Skyscraper Foundation Remember\", \"Skyscraper Foundation Happen\", \"Skyscraper Foundation Silent 3\"],",
+   "\t\t\t\tmanualVariableChanges: \"<<set $location to 'avery_skyscraper'>><<run Time.setTime(21,0)>><<unset $avery_fate>><<set $avery_tower.progress to 25>>\",",
+   "\t\t\t\tunlocked: $scenePassages.includes(\"Skyscraper Foundation\")",
+   "\t\t\t},",
+   "\t\t\t\"AverySkyscraperStructure\":{",
+   "\t\t\t\tname: \"Avery Skyscraper 2\",",
+   "\t\t\t\tstartPassage: \"SV Skyscraper Structure\",",
+   "\t\t\t\tpassages: [\"Skyscraper Structure Impressive\", \"Skyscraper Structure Stupid\", \"Skyscraper Structure Silent\", \"Skyscraper Structure 2\", \"Skyscraper Whitney\", \"Skyscraper Whitney Sensible\", \"Skyscraper Whitney Strategic\", \"Skyscraper Whitney Egg\", \"Skyscraper Whitney 2\", \"Skyscraper Whitney 3\", \"Skyscraper Whitney Jump\", \"Skyscraper Whitney Jump 2\", \"Skyscraper Whitney Jump 3\", \"Skyscraper Whitney Stay\", \"Skyscraper Whitney Stay 2\", \"Skyscraper Whitney Stay Whitney\", \"Skyscraper Whitney Leer\", \"Skyscraper Whitney Stand\", \"Skyscraper Whitney Fire\", \"Skyscraper Whitney Fire Nod\", \"Skyscraper Whitney Fire Alone\", \"Skyscraper Whitney Fire Refuse\", \"Skyscraper Whitney Fire Sex Refuse\", \"Skyscraper Whitney Fire Sex\", \"Skyscraper Whitney Fire Sex Finish\", \"Skyscraper Whitney Fire Sex End\", \"Skyscraper Whitney Stay Avery\", \"Skyscraper Structure End\"],",
+   "\t\t\t\tmanualVariableChanges: \"<<set $location to 'avery_skyscraper'>><<run Time.setTime(21,0)>><<unset $avery_fate>><<set $avery_tower.progress to 60>>\",",
+   "\t\t\t\tunlocked: $scenePassages.includes(\"Skyscraper Structure\")",
+   "\t\t\t},"
+  ],
+  "context": "\t\t\t},"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $scenesSearch.text.length is 0 or ((_value.unlocked or $debug is 1) and (_value.name.toLowerCase().includes($scenesSearch.text.toLowerCase()) or \"\".concat(_value.startPassage).toLowerCase().includes($scenesSearch.text.toLowerCase())))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $scenesSearch.text.length is 0 or ((_value.unlocked or $debug) and (_value.name.toLowerCase().includes($scenesSearch.text.toLowerCase()) or \"\".concat(_value.startPassage).toLowerCase().includes($scenesSearch.text.toLowerCase())))>>"
+  ],
+  "context": "\t\t<<set _lowerPassages to \"\".concat(_value.startPassage).toLowerCase()>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if _item.unlocked is false and $debug is 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if _item.unlocked is false and !$debug>>"
+  ],
+  "context": "\t\t<<set _item to _scenes[_keys[_i]]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $robinfirstrentfight and ($baileypaychain lt 2 or $renttime lte -1)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $robinfirstrentfight and ($baileypaychain lt 2 or $rentTime lte -1)>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   ":: SV Avery Pub Winter",
+   "<<set $outside to 0>><<set $location to \"town\">><<effects>><<set $bus to \"harvest\">>",
+   "",
+   "You enter <<his>> car and sit down. It's comfortably warm. After a bit, the two of you arrive on Harvest Street. Avery parks across from the pub and opens the car door for you. \"The cafe's hot drinks are good, but there should be more options here,\" <<he>> says, gesturing for you to follow <<him>> as <<he>> walks towards the pub.",
+   "<br><br>",
+   "",
+   "<<link [[Hold Avery's hand|Avery Pub Winter Accept]]>><<set $endear += 10>><<set $phase to 0>><</link>><<gendear>><<handholdingvirginitywarning>><br>",
+   "<<link [[Follow along|Avery Pub Winter Accept]]>><<set $phase to 1>><</link>><br>",
+   "<<link [[Refuse|Avery Pub Winter Refuse]]>><<npcincr Avery rage 5>><<npcincr Avery love -1>><</link>><<garage>><<llove>>",
+   "",
+   ":: SV Mansion Return Walk Dog",
+   "<<npc Avery>><<person1>>",
+   "",
+   "<<if $worn.neck.name is \"familiar collar\" and $worn.neck.cursed is 1>>",
+   "\tAvery pulls on your familiar collar, trying to remove and replace it, but no matter how hard <<he>> tugs, it doesn't give.",
+   "\t<br><br>",
+   "",
+   "\t<<if C.npc.Avery.rage gte random(20, 100) and $averyragerevealed gte 1>>",
+   "\t\t<<He>> gives one last hearty tug, and <span class=\"blue\">freezes as <<his>> hands touch the golden heart</span>. You hear a low buzzing. <span class=\"red\">Avery starts to shake.</span>",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<He>> manages to let go, and gasps. <span class=\"red\"><<His>> eyes are full of rage,</span> but <<he>> backs down, staring at the heart. <<npcincr Avery rage 1>><<npcincr Avery dom -1>><<garage>><<ldom>>",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<endevent>>",
+   "\t\t<<avery_mansion_end_links>>",
+   "\t<<else>>",
+   "\t\t<<He>> releases you with a huff. \"Pity. I've always wanted a dog. Suppose I'll have to make do, as usual.\" <<He>> walks away.",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<endevent>>",
+   "\t\t<<avery_mansion_end_links>>",
+   "\t<</if>>",
+   "<<else>>",
+   "\t<<if $exposed gte 2>>",
+   "\t\tAvery watches you remove your clothing, <<his>> expression unreadable. You drop to your knees, and Avery steps forward, collar ready. <<He>> tightens it until it's snug. Then <<he>> tightens it another notch.",
+   "",
+   "\t\t<<if $phase is 1>>",
+   "\t\t\t<<exhibitionism5>>",
+   "\t\t<<else>>",
+   "\t\t\t<br><br>",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\tYou drop to your knees. Avery steps forward, collar ready. <<He>> tightens it until it's snug. Then <<he>> tightens it another notch.",
+   "\t<</if>>",
+   "\t<<undress \"avery_dog_walk\">>",
+   "\t<br><br>",
+   "",
+   "\t<<He>> walks in a circle, examining you, while pulling the leash taut between <<his>> hands. <<He>> crouches to attach it.",
+   "\t<<leash 24>>",
+   "\t<br><br>",
+   "",
+   "\t\"Who's a good dog?\"",
+   "\t<br><br>",
+   "",
+   "\t<<link [[Bark happily|Mansion Return Walk Dog Bark]]>><<set $avery_walk_reaction to \"bark\">><<attach_leash>><<npcincr Avery dom 1>><</link>><<gdom>>",
+   "\t<br>",
+   "\t<<link [[Remain silent|Mansion Return Walk Dog Silent]]>><<set $avery_walk_reaction to \"silent\">><<attach_leash>><<npcincr Avery dom 1>><</link>><<gdom>>",
+   "\t<br>",
+   "\t<<link [[Bite|Mansion Return Walk Dog Bite]]>><<set $avery_walk_reaction to \"bite\">><<attach_leash>><<pain 4>><<npcincr Avery love -1>><<npcincr Avery rage 1>><<npcincr Avery dom -1>><</link>><<gpain>><<llove>><<garage>><<ldom>>",
+   "\t<br>",
+   "<</if>>",
+   "",
+   ":: SV Skyscraper Foundation",
+   "<<npc Avery>><<person1>>",
+   "",
+   "You follow Avery to the garage, and climb into the sports car beside <<him>>. <<He>> ignites the engine, and drives onto Danube boulevard.",
+   "<br><br>",
+   "",
+   "<<pass 5>>",
+   "You see the cranes before you arrive, though they don't seem to be in use at the moment. Avery stops close to the site, and you both climb outside.",
+   "<<if $avery_tower.effects.includes(\"temple\")>>",
+   "\t<<He>> kicks away a temple protestor. The others give you both a wide berth.",
+   "<</if>>",
+   "<br><br>",
+   "",
+   "There's now a rectangular pit where the building will stand. It goes deep, with tunnels leading away at the bottom.",
+   "<br><br>",
+   "",
+   "\"Already impressive, isn't it,\" Avery says.",
+   "<br><br>",
+   "",
+   "<<link [[Insult it|Skyscraper Foundation Insult]]>><<npcincr Avery rage 1>><<npcincr Avery love -1>><</link>><<garage>><<llove>>",
+   "<br>",
+   "<<link [[Say it's very nice|Skyscraper Foundation Nice]]>><<npcincr Avery love 1>><</link>><<glove>>",
+   "<br>",
+   "<<link [[Remain silent|Skyscraper Foundation Silent]]>><<npcincr Avery love -1>><</link>><<llove>>",
+   "",
+   ":: SV Skyscraper Structure",
+   "<<npc Avery>><<person1>>",
+   "",
+   "The journey to Avery's skyscraper isn't long. You see the building looming above the others before you arrive.",
+   "",
+   "<<if $avery_tower.effects.includes(\"temple\")>>",
+   "\tPeople from the temple have formed a blockade in front of the car park, arms linked. Avery accelerates as <<he>> approaches, forcing them to jump aside.",
+   "<</if>>",
+   "<br><br>",
+   "",
+   "Avery climbs out, and walks around the bonnet to open your door.",
+   "<br><br>",
+   "",
+   "\"Impressive, isn't it?\" Avery says, hands on hips. The building already rises above its neighbours, with exposed steel jutting yet higher.",
+   "<br><br>",
+   "",
+   "",
+   "<<link [[Say it's impressive|Skyscraper Structure Impressive]]>><<npcincr Avery love 1>><</link>><<glove>>",
+   "<br>",
+   "<<link [[Say it's stupid|Skyscraper Structure Stupid]]>><<npcincr Avery love -1>><</link>><<llove>>",
+   "<br>",
+   "<<link [[Say nothing|Skyscraper Structure Silent]]>><</link>>",
+   "",
+   ":: SV Avery Spa",
+   "<<npc Avery>><<person1>>",
+   "<<spa_init>>",
+   "",
+   "<<set $endear to 0>>",
+   "It's not long before one enters, wearing a towel around <<his>> <<= $pronoun is \"m\" ? \"waist\" : \"body\">>",
+   "",
+   "<<if $averyragerevealed is 1>>",
+   "\t<<set _rageColour to (",
+   "\t\t\tC.npc.Avery.rage gte 80 ? \"red\" :",
+   "\t\t\tC.npc.Avery.rage gte 60 ? \"pink\" :",
+   "\t\t\tC.npc.Avery.rage gte 40 ? \"purple\" :",
+   "\t\t\tC.npc.Avery.rage gte 20 ? \"lblue\" : \"green\"",
+   "\t\t)>>",
+   "<<else>>",
+   "\t<<set _rageColour to \"green\">>",
+   "<</if>>",
+   "<span @class=\"_rageColour\">It's Avery.</span>",
+   "<br><br>",
+   "<<He>> seems surprised to see you, but <<he>> hides it quickly.",
+   "<br><br>",
+   "\"Well,\" <<he>> says, undoing <<his>> towel and setting it aside,",
+   "<<if $averySeen.includes(\"spa\")>>",
+   "\t<<if $averyragerevealed is 1 and (C.npc.Avery.rage gte 60 or $averyRejectedSpa)>>",
+   "\t\t\"I wonder if you'll obey me this time.\" <<He>> raises an eyebrow.",
+   "\t<<else>>",
+   "\t\t\"It's nice to see you again, <<pcpetname \"Avery\">>. I'm sure you'll take good care of me, won't you?\"",
+   "\t<</if>>",
+   "<<else>>",
+   "\t\"I can't say I expected to see you",
+   "\t<<if $averyragerevealed is 1 and C.npc.Avery.rage gte 60>>",
+   "\t\tin a position of service, considering your attitude as of late.\" <<He>> raises an eyebrow.",
+   "\t<<else>>",
+   "\t\there, <<pcpetname \"Avery\">>.\"",
+   "\t<</if>>",
+   "<</if>>",
+   "<br><br>",
+   "<<He>> lies down on the table, folding <<his>> arms underneath <<his>> head.",
+   "<br><br>",
+   "How do you want to behave?",
+   "<br><br>",
+   "",
+   "<<link [[Cute|Avery Spa]]>><<set $spa.behaviour to \"cute\">><</link>><<note \"+ Endearment?\" \"teal\">>",
+   "<br>",
+   "<<link [[Sophisticated|Avery Spa]]>><<set $spa.behaviour to \"sophisticated\">><</link>><<note \"+ Endearment?\" \"teal\">>",
+   "<br>",
+   "<<link [[Alluring|Avery Spa]]>><<set $spa.behaviour to \"alluring\">><</link>><<promiscuous1>><<note \"+ Endearment?\" \"teal\">>"
+  ],
+  "context": "<</if>>"
+ }
+]

@@ -1,0 +1,176 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[Tease|Domus House Tease]]>><<transform cat 2>><</link>><<deviant1>>"
+  ],
+  "old_kr": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[유혹한다|Domus House Tease]]>><<transform cat 2>><</link>><<deviant1>>"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\t<<link [[Tease|Domus House Tease]]>><<transform cat 2>><</link>><<deviant1>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $player.penisExist and $player.vaginaExist>>",
+   "\t\t\t\tYou don't want people knowing you have both sets of gear, do you?\"",
+   "\t\t\t<<elseif isCrossdressing()>>",
+   "\t\t\t\tYou don't want people knowing you like dressing as a <<print ($player.gender_appearance is \"m\" ? \"boy\" : \"girl\")>>, do you?\""
+  ],
+  "old_kr": [
+   "\t\t\t<<if $player.penisExist and $player.vaginaExist>>",
+   "\t\t\t\t네가 양쪽 성기를 다 가지고 있다는 걸 사람들이 알길 원하진 않겠지, 안 그래?\"",
+   "\t\t\t<<elseif isCrossdressing()>>",
+   "\t\t\t\t네가 <<print ($player.gender_appearance is \"m\" ? \"남자애\" : \"여자애\")>>처럼 입는 걸 좋아한다는 걸 사람들이 알길 원하진 않겠지, 안 그래?\""
+  ],
+  "new_en": [
+   "\t\t\t<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>",
+   "\t\t\t\tYou don't want people knowing you have both sets of gear, do you?\"",
+   "\t\t\t<<elseif isCrossdressing() and $settings.nudeGenderPerception !== 0>>",
+   "\t\t\t\tYou don't want people knowing you like dressing as a <<print ($player.gender_appearance is \"m\" ? \"boy\" : \"girl\")>>, do you?\""
+  ],
+  "context": "\t\t<<if !playerChastity() and $worn.under_lower.vagina_exposed is 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "",
+   "<<if dangerEvent() and ($monster is 1 or $settings.bestialityEnabled)>>"
+  ],
+  "old_kr": [
+   "<<if dangerEvent() and ($monster is 1 or $settings.bestialityEnabled)>>"
+  ],
+  "new_en": [
+   "",
+   "<<if dangerEvent() and beastSexEnabledForType(\"dog\", $monster is 1)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $rng gte 91 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\tYou turn to run, but trip over a hose and fall flat on your face. The <<beasttype>> jumps on top of you."
+  ],
+  "old_kr": [
+   "<<if $rng gte 91 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t당신은 돌아서서 도망치려 하지만, 호스에 걸려 얼굴을 바닥에 박고 넘어진다. <<beasttype>>【이가】 당신 위로 뛰어오른다."
+  ],
+  "new_en": [
+   "<<if $rng gte 91 and beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\tYou turn to run, but trip over a hose and fall flat on your face. The <<beasttype>> jumps on top of you."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tWhile they maintain the pretence that this is life-art, it's quite clear they just enjoy getting a",
+   "\t\t<<if $player.sex is \"h\">>",
+   "\t\t\thermaphrodite",
+   "\t\t<<else>>",
+   "\t\t\t<<girl>>"
+  ],
+  "old_kr": [
+   "\t\t라이프 아트라는 명목은 유지하고 있지만, 사실 그들은 그저",
+   "\t\t<<if $player.sex is \"h\">>",
+   "\t\t\t양성구유가",
+   "\t\t<<else>>",
+   "\t\t\t<<girl>>【이가】"
+  ],
+  "new_en": [
+   "\t\tWhile they maintain the pretence that this is life-art, it's quite clear they just enjoy getting a <<girl>>",
+   "\t\t<<if $player.sex is \"h\" and $settings.nudeGenderPerception !== 0>>",
+   "\t\t\twith such unique genitals"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tto expose <<pherself>> in the lewd poses they want to see.",
+   "\t\tMany are not even pretending to paint, however, the <<person>> keeps everyone in line and under control."
+  ],
+  "old_kr": [
+   "\t\t그들이 보고 싶어 하는 음란한 자세로 <<pherself>>【을를】 드러내는 걸 즐길 뿐이다.",
+   "\t\t많은 사람이 그림을 그리는 척조차 하지 않지만, <<person>>【은는】 모두를 줄 세우고 통제한다."
+  ],
+  "new_en": [
+   "\t\tto expose <<pherself>> in the lewd poses they want to see.",
+   "\t\tMany are not even pretending to paint, but the <<person>> keeps everyone in line and under control."
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<domusquick>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<domusQuick>>"
+  ],
+  "context": "\t<<endevent>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<domusquick>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<domusQuick>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<domusquick>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<domusQuick>>"
+  ],
+  "context": "<<endevent>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $player.penisExist and $player.vaginaExist>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>"
+  ],
+  "context": "\t<<pass 2 hour>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $rng gte 51 and ($settings.bestialityEnabled or $settings.monsterChance gte 100 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>><!-- Modified for Monster People -->"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $rng gte 51 and beastSexEnabledForType(\"dog\", monsterChanceForType(\"dog\") gte 100 and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType(\"dog\")))>><!-- Modified for Monster People -->"
+  ],
+  "context": "\t\t<<set $model_dom to clone($NPCList[1])>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif hasSexStat(\"deviancy\", 3) and $rng lte 33 and ($monster is 1 or $settings.bestialityEnabled)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif hasSexStat(\"deviancy\", 3) and $rng lte 33 and beastSexEnabledForType(\"dog\", $monster is 1)>>"
+  ],
+  "context": "\t\t<br>"
+ }
+]

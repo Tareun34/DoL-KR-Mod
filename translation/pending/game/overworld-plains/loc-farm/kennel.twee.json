@@ -1,0 +1,62 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "",
+   "\t<<tearful>> you rise to your feet. \"Good <<girl_npc>>,\" you say. The <<beasttype>>'s tail wags."
+  ],
+  "old_kr": [
+   "",
+   "\t<<tearful>> 당신은 일어선다. \"착한 <<girl_npc>>.\" 당신이 말한다. <<beasttype>>의 꼬리가 흔들린다."
+  ],
+  "new_en": [
+   "\t<<person1>>",
+   "\t<<tearful>> you rise to your feet. \"Good <<girl_npc>>,\" you say. The <<beasttype>>'s tail wags."
+  ],
+  "context": "\t<<beastejaculation>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled or $farm_work.dog.monster is true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"dog\", $farm_work.dog.monster)>>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled or $farm_work.dog.monster is true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"dog\", $farm_work.dog.monster)>>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<effects>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<effects>><<person1>>"
+  ],
+  "context": ":: Farm Kennel Play Sex Finish"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled or $NPCList[0].monster>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"dog\", $NPCList[0].monster is \"monster\")>>"
+  ],
+  "context": "\t<br>"
+ }
+]

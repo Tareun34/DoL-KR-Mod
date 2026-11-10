@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t<<link [[Wake up|Dog Park]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t<<link [[일어난다|Dog Park]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\t\t<<link [[Wake up|Dog Park]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": "\t<<else>>"
+ }
+]

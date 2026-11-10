@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Next|Trash]]>><<set $eventskip to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[다음|Trash]]>><<set $eventskip to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Next|Trash]]>><<set $eventskip to 1>><<endevent>><</link>>"
+  ],
+  "context": ""
+ }
+]

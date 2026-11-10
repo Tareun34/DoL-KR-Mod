@@ -937,8 +937,8 @@
 	<<link [[걸어서 돌아간다 (0:30)|Moor Passage Walk]]>><<pass 30>><</link>>
 	<br>
 <<else>>
-	<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>
-		<span class="red">앞에서 무언가 바스락거리는 소리가 들린다.</span> 점점 가까워진다.
+	<<if $settings.lurkersEnabled>>
+		<span class="red">You hear a scurrying up ahead.</span> It draws closer.
 		<br><br>
 
 		<<link [[다음|Moor Passage Struggle]]>><<set $struggle_start to 1>><</link>>
@@ -2065,7 +2065,7 @@
 
 당신은 여정을 계속한다.
 <<beastNEWinit 3 cat>>
-<<if $rng gte 51 and ($settings.bestialityEnabled or $monster is 1)>>
+<<if $rng gte 51 and beastSexEnabledForType("cat", $monster is 1)>>
 	<<outfitChecks>>
 	어쨌든 그냥 느낌일 뿐이다.
 	<br><br>
@@ -2987,9 +2987,9 @@
 :: Moor Plant Refuse
 <<set $location to "moor">><<set $outside to 1>><<effects>>
 
-당신은 고개를 젓는다.
-<<if $rng gte 76 and $settings.bestialityEnabled and $settings.lurkersEnabled>>
-	"젠장, 안됐네." <<person>>【이가】 한숨을 쉰다. "그럼, 플랜 B. <<pShes>>【은는】 이제 네 거야."
+You shake your head.
+<<if $rng gte 76 and $settings.lurkersEnabled>>
+	"Damn, tough break," the <<person>> sighs. "Well, plan B. <<pShes>> all yours."
 	<br><br>
 
 	<span class="red"><<He>>【이가】 당신 얼굴에 그 생물을 던지자, 그것이 달라붙는다.</span> 다른 생물을 묶고 있던 덩굴들이 느슨해진다. <<personsimple>>【은는】 당신을 남겨두고 걸어간다.
@@ -3899,8 +3899,8 @@
 	<</if>>
 	<br><br>
 
-	<<if $monster is 1 or $settings.bestialityEnabled>>
-		<<link [[다음|Moor Fox Rape]]>><<set $molestationstart to 1>><<set $position to "doggy">><<set $NPCList[0].stance to "top">><</link>>
+	<<if beastSexEnabledForType("fox", $monster is 1)>>
+		<<link [[Next|Moor Fox Rape]]>><<set $molestationstart to 1>><<set $position to "doggy">><<set $NPCList[0].stance to "top">><</link>>
 	<<else>>
 		잠깐의 몸부림 끝에, 당신은 간신히 일어나 도망친다.<<beastescape>>
 		<br><br>
@@ -3914,8 +3914,8 @@
 <<effects>>
 <<if $physiqueSuccess>>
 	<<if $monster is 1>>
-		당신은 습격자를 향해 돌아서서 두 발을 단단히 딛고 방어 자세를 취하며, 덤불 속에서 튀어나오는 <<if $NPCList[0].skincolour is "black">>칠흑빛<<else>>창백한<</if>> 잔상을 때맞춰 맞받아친다.
-		당신은 놈을 팔로 감싸 쥐고 옆으로 비틀어 내동댕이친다. 놈은 몇 미터 떨어진 바닥으로 처박힌다.
+		You turn to face your assailant, planting your feet and raising your arms in a defensive posture just in time to intercept <<if $NPCList[0].skincolour gte 70>>an ebony<<else>>a pale<</if>> blur leaping at you from the bushes.
+		You wrap your arms around it, twist to the side, and release. It crashes to the ground several metres away.
 	<<else>>
 		당신은 습격자를 향해 돌아서서 두 발을 단단히 딛고 방어 자세를 취하며, 덤불 속에서 튀어나오는 적갈색 잔상을 때맞춰 맞받아친다.
 		당신은 놈을 팔로 감싸 쥐고 옆으로 비틀어 내동댕이친다. 놈은 몇 미터 떨어진 바닥으로 처박힌다.
@@ -3930,8 +3930,8 @@
 	<br>
 <<else>>
 	<<if $monster is 1>>
-		당신은 습격자를 향해 돌아서서 두 발을 단단히 딛고 방어 자세를 취하며, 덤불 속에서 튀어나오는 <<if $NPCList[0].skincolour is "black">>칠흑빛<<else>>창백한<</if>> 잔상을 때맞춰 맞받아치려 한다.
-		그 반동을 흘려보내려 붙잡으려 해보지만, 손이 닿기도 전에 한발 늦고 만다. 정면으로 들이받힌 강한 충격에 균형을 잃고 숲 바닥에 곤두박질치며 뒹군다.
+		You turn to face your assailant, planting your feet and raising your arms in a defensive posture just in time to intercept <<if $NPCList[0].skincolour gte 70>>an ebony<<else>>a pale<</if>> blur leaping at you from the bushes.
+		You attempt to grab the blur in order to redirect its momentum, but you're not quite quick enough. The resulting full-force collision overwhelms your balance, knocking you head-over-heels onto the forest floor.
 		<br><br>
 
 		눈을 뜨자, 습격자와 코앞에서 마주치게 된다. 바로 <<beasttype>>이다.
@@ -3951,8 +3951,8 @@
 	<</if>>
 	<br><br>
 
-	<<if $monster is 1 or $settings.bestialityEnabled>>
-		<<link [[다음|Moor Fox Rape]]>><<set $molestationstart to 1>><<set $position to "doggy">><<set $NPCList[0].stance to "top">><</link>>
+	<<if beastSexEnabledForType("fox", $monster is 1)>>
+		<<link [[Next|Moor Fox Rape]]>><<set $molestationstart to 1>><<set $position to "doggy">><<set $NPCList[0].stance to "top">><</link>>
 	<<else>>
 		짧은 몸싸움 끝에, 당신은 가까스로 몸을 일으켜 허겁지겁 도망친다.<<beastescape>>
 		<br><br>
@@ -3993,8 +3993,8 @@
 	<</if>>
 	<br><br>
 
-	<<if $monster is 1 or $settings.bestialityEnabled>>
-		<<link [[다음|Moor Fox Rape]]>><<set $molestationstart to 1>><<set $position to "doggy">><<set $NPCList[0].stance to "top">><</link>>
+	<<if beastSexEnabledForType("fox", $monster is 1)>>
+		<<link [[Next|Moor Fox Rape]]>><<set $molestationstart to 1>><<set $position to "doggy">><<set $NPCList[0].stance to "top">><</link>>
 	<<else>>
 		잠깐의 몸부림 끝에, 당신은 간신히 일어나 도망친다.<<beastescape>>
 		<br><br>
@@ -4033,7 +4033,7 @@
 	<</if>>
 	<br><br>
 
-	<<if $settings.bestialityEnabled or $monster is 1>>
+	<<if beastSexEnabledForType("fox", $monster is 1)>>
 		<<if hasSexStat("deviancy", 3)>>
 			<<link [[<<bhim>>【을를】 애무한다|Moor Fox Deviant Pet]]>><<transform fox 1>><</link>><<deviant3>>
 		<<else>>
@@ -4664,8 +4664,8 @@
 	<<else>>
 		<<bHis>> 움직임은 당신이 감당하기에는 너무 격렬해서, 균형을 잃게 된다. <span class="red">당신은 땅으로 떨어진다</span>
 
-		<<if ($settings.bestialityEnabled or $monster is 1) and $settings.horsesEnabled>>
-			바로 그때 <<beasttype>>【이가】 당신 위에 선다.<<pain 4>><<gpain>>
+		<<if beastSexEnabledForType("horse", $monster is 1)>>
+			as the <<beasttype>> stands over you.<<pain 4>><<gpain>>
 			<br><br>
 
 			<<link [[다음|Moor Horse Rape]]>><<set $molestationstart to 1>><</link>>
@@ -4702,8 +4702,8 @@
 		<<stress 6>><<gstress>>
 		<br><br>
 
-		<<if ($settings.bestialityEnabled or $monster is 1) and $settings.horsesEnabled>>
-			<<link [[다음|Moor Horse Rape]]>><<set $molestationstart to 1>><</link>>
+		<<if beastSexEnabledForType("horse", $monster is 1)>>
+			<<link [[Next|Moor Horse Rape]]>><<set $molestationstart to 1>><</link>>
 			<br>
 		<<else>>
 			<<beasttype>>【이가】 뒷발로 일어선다. 당신은 <<bhim>>에게서 황급히 물러나, 당신 옆 땅을 짓밟는 무거운 발굽을 간신히 피한다.
@@ -4975,8 +4975,8 @@
 :: Moor Horse Riding Failure
 <<effects>>
 
-<<if dangerEvent() and ($settings.bestialityEnabled or $monster is 1) and $settings.horsesEnabled>>
-	<<beasttype>>【은는】 당신의 자세를 이용해, 당신 위에 올라탄다.
+<<if dangerEvent() and beastSexEnabledForType("horse", $monster is 1)>>
+	The <<beasttype>> takes advantage of your position, and mounts you.
 	<br><br>
 
 	<<link [[다음|Moor Horse Rape]]>><<set $molestationstart to 1>><</link>>
@@ -5146,3 +5146,28 @@
 <br>
 <<link [[깃 다듬기 (0:05)|Moor Bird Screech Stroke]]>><<transform bird 1>><<pass 5>><<stress -6>><<trauma -6>><</link>><<ltrauma>><<lstress>>
 <br>
+
+:: Moor Pumpkin
+<<effects>>
+
+<<if $tendingSuccess>>
+	<<wearProp "pumpkin">>
+	You pull the pumpkin from its vine. <span class="green">It's big and ripe.</span>
+	<<tending_pick pumpkin 1 1>>
+	<br><br>
+
+	<<if !$plants_known.includes("pumpkin")>>
+		You spy seeds on the ground. They haven't sprouted, but they look healthy. <span class="gold">You can now grow <<foodstufficon "pumpkin">> pumpkins.</span><<set $plants_known.push("pumpkin")>>
+		<br><br>
+	<</if>>
+
+	<<link [[Next|Moor]]>><<set $eventskip to 1>><</link>>
+	<br>
+<<else>>
+	You try to pull the pumpkin from its vine, but it's stuck. You pull a bit too hard, hurling it a distance. <span class="red">It explodes on impact.</span>
+	<<gtending>><<tending 2>>
+	<br><br>
+
+	<<link [[Next|Moor]]>><<set $eventskip to 1>><</link>>
+	<br>
+<</if>>

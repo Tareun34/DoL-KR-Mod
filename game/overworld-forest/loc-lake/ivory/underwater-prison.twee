@@ -54,8 +54,8 @@
 <<else>>
 	창백한 형체가 당신 앞에 떠 있다.
 	<<if $wraith.state is "haunt">>
-		<<if $wraithPrison and $wraithPrison.vision>>
-			그것이 발톱이 달린 손을 당신의 가슴에 얹는다. 온몸에 사무치는 한기가 느껴진다. 방이 빙빙 도는 것이 느껴지고, 등이 바닥에 닿는다.
+		<<if $wraithPrison?.vision>>
+			It places a clawed hand on your chest. You can feel a bitter chill in your whole body. You feel the room spin, and your back touch the floor.
 			<br><br>
 			"<span class="wraith">아직도 모르겠느냐, 도둑놈? 두 번 말하게 하지 마라.</span>"
 		<<else>>
@@ -64,8 +64,8 @@
 			"<span class="wraith">죽은 자의 것을 훔치고 싶다면, 너도 그들과 함께하게 될 것이다.</span>"
 		<</if>>
 	<<elseif $wraith.state is "despair">>
-		<<if $wraithPrison and $wraithPrison.vision>>
-			그것이 발톱이 달린 손을 당신의 가슴에 얹는다. 온몸에 사무치는 한기가 느껴진다. 방이 빙빙 도는 것이 느껴지고, 등이 바닥에 닿는다.
+		<<if $wraithPrison?.vision>>
+			It places a clawed hand on your chest. You can feel a bitter chill in your whole body. You feel the room spin, and your back touch the floor.
 			<br><br>
 			"<span class="wraith">찾을 수가 없어. 목걸이가 없으니 너무 춥구나. 나를 따뜻하게 해주지 않겠니, <<pcpetname "Wraith">>?</span>"
 		<<else>>
@@ -517,9 +517,9 @@
 			<<else>>
 				뱉어내려 하지만, 몸이 말을 듣지 않는다.
 			<</if>>
-			입안이 꽃 핀 이끼로 가득 차자, 그것이 당신에게 키스한다.
-			몸이 긴장하지만, 이내 기묘한 안도감이 밀려온다. <<takeKissVirginity "Ivory Wraith" "rape">>
-			<<stress -200>><<lllstress>><<trauma 36>><<gggtrauma>><<purity -50>><<lllpurity>><<physique_loss 16>><<llphysique>><<pain -15>><<llpain>>
+			Once your mouth is full of the flowering lichen, it kisses you.
+			You tense up, but soon enough, you feel an odd sense of relief. <<takeKissVirginity "Ivory Wraith" "rape">>
+			<<stress -200>><<lllstress>><<trauma 36>><<gggtrauma>><<purity -50>><<lllpurity>><<physique -16>><<llphysique>><<pain -15>><<llpain>>
 			<br><br>
 			주변의 모든 것이 빙글빙글 돌며 사라지고, 소용돌이치는 무의 바다에 당신과 창백한 얼굴만이 남는다. 생각이 불타 없어지자, 당신의 정신은 해방을 갈망하며 비명을 지른다. <<ggghallucinogens>>
 			<br><br>

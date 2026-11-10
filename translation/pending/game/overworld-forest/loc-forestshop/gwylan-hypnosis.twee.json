@@ -1,0 +1,64 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\"...trapped in my web,\" <<he>> says with a guilty laugh. \"I'm afraid I'll break you if I let this go any further.\"",
+   "\t\t<<if _gwylanLovePercent gte 80 and _gwylanStatus.includes(\"lust\") and !$weekly.gwylanDeepest>>",
+   "\t\t\t<<His>> thumb rubs your cheek. \"Yet, a part of me wants this. To just give in and...\""
+  ],
+  "old_kr": [
+   "\t\t\"...내 거미줄에 걸렸어.\" <<he>>【은는】 죄책감 어린 웃음을 지으며 말한다. \"이 이상 진행하면 널 망가뜨릴까 봐 두려워.\"",
+   "\t\t<<if _gwylanLovePercent gte 80 and _gwylanStatus.includes(\"lust\") and !$weekly.gwylanDeepest>>",
+   "\t\t\t<<His>> 엄지손가락이 당신의 뺨을 문지른다. \"하지만, 내 안의 일부는 이걸 원해. 그냥 굴복하고...\""
+  ],
+  "new_en": [
+   "\t\t\"...trapped in my web,\" <<he>> says with a guilty laugh. \"I'm afraid I'll break you if I let this go any further.\"",
+   "\t\t<<if _gwylanLovePercent gte 70 and _gwylanStatus.includes(\"lust\") and !$weekly.gwylanDeepest>>",
+   "\t\t\t<<His>> thumb rubs your cheek. \"Yet, a part of me wants this. To just give in and...\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $settings.monsterHallucinationsOnly and $settings.monsterChance gte 1>>",
+   "\t\t\t<<link [[Animals with human characteristics|Gwylan Hypnosis Insight]]>><<set $phase to \"monsters\">><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $settings.monsterHallucinationsOnly and $settings.monsterChance gte 1>>",
+   "\t\t\t<<link [[인간의 특징을 가진 동물|Gwylan Hypnosis Insight]]>><<set $phase to \"monsters\">><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<if C.beastSettingTypes.some(type => monsterCanAppearForType(type)) or C.namedBeasts.some(beast => V.settings.namedBeasts[beast].monsterChance >= 1)>>",
+   "\t\t\t<<link [[Animals with human characteristics|Gwylan Hypnosis Insight]]>><<set $phase to \"monsters\">><</link>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<elseif $crossdressing gte 1 and !$genderknown.includes(\"Gwylan\")>>",
+   "\t<<His>> head tilts slightly upon seeing your <<genitals>>. \"Unexpected genitalia, not that I particularly mind.\""
+  ],
+  "old_kr": [
+   "<<elseif $crossdressing gte 1 and !$genderknown.includes(\"Gwylan\")>>",
+   "\t당신의 <<genitals>>【을를】 본 <<He>>【은는】 고개를 살짝 갸웃거린다. \"예상치 못한 성기네. 딱히 신경 쓰진 않지만.\""
+  ],
+  "new_en": [
+   "<<elseif $crossdressing gte 1 and !$genderknown.includes(\"Gwylan\") and $settings.nudeGenderPerception !== 0>>",
+   "\t<<His>> head tilts slightly upon seeing your <<genitals>>. \"Unexpected genitalia, not that I particularly mind.\""
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $player.penisExist and $player.vaginaExist and !$gwylanSeen.includes(\"herm\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $player.penisExist and $player.vaginaExist and !$gwylanSeen.includes(\"herm\") and $settings.nudeGenderPerception !== 0>>"
+  ],
+  "context": ""
+ }
+]

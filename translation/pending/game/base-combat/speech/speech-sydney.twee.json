@@ -1,0 +1,3644 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $speechNPCPenisVirgin is 1 or $speechNPCVaginaVirgin is 1>>",
+   "\t\t<<if $speechpenisvirgin is 1 or $speechvaginavirgin is 1 or $speechanusvirgin is 1>>",
+   "\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t<<if $sydneySeen.includes(\"corruptroom\")>>",
+   "\t\t\t\t\t<<He>> moans, looking to you with pure ecstasy. \"The feeling of you ruining me gets better each time. We belong to each other, now and forever!\" <<He>> holds on to you tight. <<set $corruptionEvent to 1>><<npcincr Sydney purity -5>><<llspurity>>"
+  ],
+  "old_kr": [
+   "\t<<if $speechNPCPenisVirgin is 1 or $speechNPCVaginaVirgin is 1>>",
+   "\t\t<<if $speechpenisvirgin is 1 or $speechvaginavirgin is 1 or $speechanusvirgin is 1>>",
+   "\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t<<if $sydneySeen.includes(\"corruptroom\")>>",
+   "\t\t\t\t\t<<He>>【은는】 당신을 향해 순수한 환희에 찬 표정을 지으며 신음한다. \"당신이 나를 망가뜨리는 기분이 매번 더 좋아져. 우린 이제 영원히 서로의 것이야!\" <<He>>【은는】 당신을 꽉 끌어안는다. <<set $corruptionEvent to 1>><<npcincr Sydney purity -5>><<llspurity>>"
+  ],
+  "new_en": [
+   "\t<<speechPool \"Sydney\">>",
+   "\t<<if $speechNPCPenisVirgin or $speechNPCVaginaVirgin>>",
+   "\t\t<<addSpeechLine \"virginity\">>",
+   "\t\t\t<<if $speechPenisVirgin is 1 or $speechVaginaVirgin is 1 or $speechAnusVirgin is 1>>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<if $sydneySeen.includes(\"corruptroom\")>>",
+   "\t\t\t\t\t\t<<He>> moans, looking to you with pure ecstasy. \"The feeling of you ruining me gets better each time. We belong to each other, now and forever!\" <<He>> holds on to you tight. <<set $corruptionEvent to 1>><<npcincr Sydney purity -5>><<llspurity>>",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<He>> moans, looking to you with pure ecstasy. \"You did it. You defiled me at last. We belong to each other forever now!\" <<He>> holds on to you tight. <<set $corruptionEvent to 1>><<npcincr Sydney purity -20>><<lllspurity>>",
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> moans, looking to you with pure ecstasy. \"You did it. You defiled me at last. We belong to each other forever now!\" <<He>> holds on to you tight. <<set $corruptionEvent to 1>><<npcincr Sydney purity -20>><<lllspurity>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 당신을 향해 순수한 환희에 찬 표정을 지으며 신음한다. \"당신이 해냈어. 드디어 나를 더럽혔어. 우린 이제 영원히 서로의 것이야!\" <<He>>【은는】 당신을 꽉 끌어안는다. <<set $corruptionEvent to 1>><<npcincr Sydney purity -20>><<lllspurity>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $templePromised is \"Sydney\">>",
+   "\t\t\t\t\t\t<<He>> gasps, looking to you with pure ecstasy. \"We... we did it... I'm so happy...\" <<He>> holds on to you tightly. \"This means we're bound together forever... right?\" <<npcincr Sydney purity -5>><<llspurity>>",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<He>> gasps, looking to you with pure ecstasy. \"We shouldn't be doing this... so why do I feel so happy...?\" <<He>> holds on to you tightly. \"This means we're bound together forever... right?\" <<set $corruptionEvent to 1>><<npcincr Sydney purity -20>><<lllspurity>>",
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $templePromised is \"Sydney\">>",
+   "\t\t\t\t\t<<He>> gasps, looking to you with pure ecstasy. \"We... we did it... I'm so happy...\" <<He>> holds on to you tightly. \"This means we're bound together forever... right?\" <<npcincr Sydney purity -5>><<llspurity>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $templePromised is \"Sydney\">>",
+   "\t\t\t\t\t<<He>>【은는】 당신을 향해 순수한 환희에 찬 표정을 지으며 헐떡인다. \"우리... 우리가 해냈어... 나 너무 행복해...\" <<He>>【은는】 당신을 꽉 끌어안는다. \"이건 우리가 영원히 묶였다는 뜻이지... 그렇지?\" <<npcincr Sydney purity -5>><<llspurity>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<if $sydneySeen.includes(\"corruptroom\")>>",
+   "\t\t\t\t\t\t<<He>> moans, looking to you with pure ecstasy. \"The feeling of you ruining me gets better every time. I belong to you, now and forever!\" <<He>> holds on to you tightly. <<set $corruptionEvent to 1>><<npcincr Sydney purity -5>><<llspurity>>",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<He>> moans, looking to you with pure ecstasy. \"You did it. You defiled me at last. We belong to each other forever now!\" <<He>> holds on to you tight. <<set $corruptionEvent to 1>><<npcincr Sydney purity -20>><<lllspurity>>",
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> gasps, looking to you with pure ecstasy. \"We shouldn't be doing this... so why do I feel so happy...?\" <<He>> holds on to you tightly. \"This means we're bound together forever... right?\" <<set $corruptionEvent to 1>><<npcincr Sydney purity -20>><<lllspurity>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 당신을 향해 순수한 환희에 찬 표정을 지으며 헐떡인다. \"이러면 안 되는데... 어째서 이렇게 행복한 기분이 드는 거지...?\" <<He>>【은는】 당신을 꽉 끌어안는다. \"이건 우리가 영원히 묶였다는 뜻이지... 그렇지?\" <<set $corruptionEvent to 1>><<npcincr Sydney purity -20>><<lllspurity>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $templePromised is \"Sydney\">>",
+   "\t\t\t\t\t\t<<He>> gasps, looking to you with pure ecstasy. \"We... we did it... I'm so happy...\" <<He>> holds on to you tightly. \"Even if I wasn't your first... this means we're bound together forever... right?\" <<npcincr Sydney purity -5>><<llspurity>>",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<He>> gasps, looking to you with pure ecstasy. \"We shouldn't be doing this... so why do I feel so happy...?\" <<He>> holds on to you tightly. \"It's okay that I wasn't your first, as long as I'm your last!\" <<set $corruptionEvent to 1>><<npcincr Sydney purity -20>><<lllspurity>>",
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<else>>",
+   "\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t<<if $sydneySeen.includes(\"corruptroom\")>>",
+   "\t\t\t\t\t<<He>> moans, looking to you with pure ecstasy. \"The feeling of you ruining me gets better every time. I belong to you, now and forever!\" <<He>> holds on to you tightly. <<set $corruptionEvent to 1>><<npcincr Sydney purity -5>><<llspurity>>"
+  ],
+  "old_kr": [
+   "\t\t<<else>>",
+   "\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t<<if $sydneySeen.includes(\"corruptroom\")>>",
+   "\t\t\t\t\t<<He>>【은는】 당신을 향해 순수한 환희에 찬 표정을 지으며 신음한다. \"당신이 나를 망가뜨리는 기분이 매번 더 좋아져. 난 이제 영원히 당신의 것이야!\" <<He>>【은는】 당신을 꽉 끌어안는다. <<set $corruptionEvent to 1>><<npcincr Sydney purity -5>><<llspurity>>"
+  ],
+  "new_en": [
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechNPCAnusVirgin>>",
+   "\t\t<<addSpeechLine \"virginity\">>",
+   "\t\t\t<<if $speechPenisVirgin is 1>>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>> moans. \"This is your first time doing this too, isn't it? Don't slow down. Please!\" <<He>> wraps <<his>> legs around you."
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> moans, looking to you with pure ecstasy. \"You did it. You defiled me at last. We belong to each other forever now!\" <<He>> holds on to you tight. <<set $corruptionEvent to 1>><<npcincr Sydney purity -20>><<lllspurity>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 당신을 향해 순수한 환희에 찬 표정을 지으며 신음한다. \"당신이 해냈어. 드디어 나를 더럽혔어. 우린 이제 영원히 서로의 것이야!\" <<He>>【은는】 당신을 꽉 끌어안는다. <<set $corruptionEvent to 1>><<npcincr Sydney purity -20>><<lllspurity>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> gasps. \"Are... are you sure we're still pure...? It feels... too good...\" <<He>> holds on to you tightly."
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $templePromised is \"Sydney\">>",
+   "\t\t\t\t\t<<He>> gasps, looking to you with pure ecstasy. \"We... we did it... I'm so happy...\" <<He>> holds on to you tightly. \"Even if I wasn't your first... this means we're bound together forever... right?\" <<npcincr Sydney purity -5>><<llspurity>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $templePromised is \"Sydney\">>",
+   "\t\t\t\t\t<<He>>【은는】 당신을 향해 순수한 환희에 찬 표정을 지으며 헐떡인다. \"우리... 우리가 해냈어... 나 너무 행복해...\" <<He>>【은는】 당신을 꽉 끌어안는다. \"내가 당신의 첫 번째가 아니더라도... 이건 우리가 영원히 묶였다는 뜻이지... 그렇지?\" <<npcincr Sydney purity -5>><<llspurity>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>> moans. \"Woah, I never expected it to feel like that... keep going!\" <<He>> wraps <<his>> legs around you."
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> gasps, looking to you with pure ecstasy. \"We shouldn't be doing this... so why do I feel so happy...?\" <<He>> holds on to you tightly. \"It's okay that I wasn't your first, as long as I'm your last!\" <<set $corruptionEvent to 1>><<npcincr Sydney purity -20>><<lllspurity>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 당신을 향해 순수한 환희에 찬 표정을 지으며 헐떡인다. \"이러면 안 되는데... 어째서 이렇게 행복한 기분이 드는 거지...?\" <<He>>【은는】 당신을 꽉 끌어안는다. \"내가 당신의 마지막이라면, 첫 번째가 아니어도 괜찮아!\" <<set $corruptionEvent to 1>><<npcincr Sydney purity -20>><<lllspurity>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> gasps. \"Are... are you sure I'm still pure...? It feels... too good...\" <<He>> holds on to you tightly."
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> moans. \"This is your first time doing this too, isn't it? Don't slow down. Please!\" <<He>> wraps <<his>> legs around you."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【은는】 신음한다. \"당신도 이거 처음이지, 그렇지? 느려지지 마. 제발!\" <<He>>【은는】 <<his>> 다리로 당신을 감싼다."
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> moans and places a hand on your head. \"This is your first time doing this, isn't it? You're doing great.\""
+  ],
+  "context": "\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> gasps. \"Are... are you sure we're still pure...? It feels... too good...\" <<He>> holds on to you tightly."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【은는】 헐떡인다. \"우, 우리 아직 순결한 거 확실해...? 기분이... 너무 좋은데...\" <<He>>【은는】 당신을 꽉 끌어안는다."
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> gasps. \"Is... is this your first time doing thi—\" <<He>> stifles further lewd noises by placing <<his>> hands over <<his>> mouth."
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> moans. \"Woah, I never expected it to feel like that... keep going!\" <<He>> wraps <<his>> legs around you.",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<He>> gasps. \"Are... are you sure I'm still pure...? It feels... too good...\" <<He>> holds on to you tightly.",
+   "\t\t\t<</if>>",
+   "\t\t<</if>>",
+   "\t<<elseif $speechmouthvirgin is 1>>",
+   "\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t<<He>> moans and places a hand on your head. \"This is your first time doing this, isn't it? You're doing great.\"",
+   "\t\t<<else>>",
+   "\t\t\t<<He>> gasps. \"Is... is this your first time doing thi—\" <<He>> stifles further lewd noises by placing <<his>> hands over <<his>> mouth.",
+   "\t\t<</if>>",
+   "\t<<elseif $speechNPCKissVirgin is 1>>",
+   "\t\t<<He>> gazes at you lovingly. \"That was my first kiss...\" <<he>> giggles.",
+   "\t<<elseif $speechhermaroused is 1>>",
+   "\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t<<if _sydney.gender is \"h\">>",
+   "\t\t\t\t<<He>> gasps. \"Woah! <<nnpc_Mum \"Sirris\">> always told me I was special, but you have both too!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【은는】 신음한다. \"와, 이런 기분일 줄은 정말 몰랐어... 계속해줘!\" <<He>>【은는】 <<his>> 다리로 당신을 감싼다.",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<He>>【은는】 헐떡인다. \"나, 나 아직 순결한 거 확실해...? 기분이... 너무 좋은데...\" <<He>>【은는】 당신을 꽉 끌어안는다.",
+   "\t\t\t<</if>>",
+   "\t\t<</if>>",
+   "\t<<elseif $speechmouthvirgin is 1>>",
+   "\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t<<He>>【은는】 신음하며 당신의 머리에 손을 얹는다. \"이거 처음 하는 거지, 그렇지? 정말 잘하고 있어.\"",
+   "\t\t<<else>>",
+   "\t\t\t<<He>>【은는】 헐떡인다. \"이, 이거 처음 하느—\" <<He>>【은는】 <<his>> 입을 손으로 틀어막아 더 이상의 음탕한 소리를 참는다.",
+   "\t\t<</if>>",
+   "\t<<elseif $speechNPCKissVirgin is 1>>",
+   "\t\t<<He>>【은는】 당신을 애정 어린 시선으로 바라본다. \"내 첫 키스였어...\" <<he>>【이가】 꺄르륵 웃는다.",
+   "\t<<elseif $speechhermaroused is 1>>",
+   "\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t<<if _sydney.gender is \"h\">>",
+   "\t\t\t\t<<He>>【은는】 헐떡인다. \"와! <<nnpc_mum Sirris>>【이가】 나한테 항상 특별하다고 말했었는데, 당신도 둘 다 가지고 있구나!\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<if _sydney.gender is \"h\">>",
+   "\t\t\t\t\t<<He>> gasps. \"Woah! <<nnpc_Mum \"Sirris\">> always told me I was special, but you have both too!\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> gasps. \"Woah! <<nnpc_Mum \"Sirris\">> never told me that was possible.\"",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> gasps. \"Woah! <<nnpc_Mum \"Sirris\">> never told me that was possible.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【은는】 헐떡인다. \"와! <<nnpc_mum Sirris>>【은는】 그게 가능하다고 절대 말 안 해줬는데.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<if _sydney.gender is \"h\">>",
+   "\t\t\t\t\t<<He>> gasps. \"You... have both too? I thought I was the only one!\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> gasps. \"B...both? I didn't know that was possible!\"",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<else>>",
+   "\t\t\t<<if _sydney.gender is \"h\">>",
+   "\t\t\t\t<<He>> gasps. \"You... have both too? I thought I was the only one!\""
+  ],
+  "old_kr": [
+   "\t\t<<else>>",
+   "\t\t\t<<if _sydney.gender is \"h\">>",
+   "\t\t\t\t<<He>>【은는】 헐떡인다. \"당신... 둘 다 있어? 나만 그런 줄 알았어!\""
+  ],
+  "new_en": [
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechCrossdressAroused is 1>>",
+   "\t\t<<addSpeechLine \"reveal\">>",
+   "\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t<<He>> gasps. \"All this time, you were a <<pcSex>>? Well, that doesn't change how I feel about you.\""
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> gasps. \"B...both? I didn't know that was possible!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【은는】 헐떡인다. \"두... 둘 다? 그게 가능한 건 줄 몰랐어!\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> gasps. \"You're... a <<pcSex>>? Th-that's okay! I don't think of you any differently!\""
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechcrossdressaroused is 1>>",
+   "\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t<<He>> gasps. \"All this time, you were a <<pcSex>>? Well, that doesn't change how I feel about you.\"",
+   "\t\t<<else>>",
+   "\t\t\t<<He>> gasps. \"You're... a <<pcSex>>? Th-that's okay! I don't think of you any differently!\"",
+   "\t\t<</if>>",
+   "\t<<elseif $speechnamedrop is 1 and $sydneyromance is 1>>",
+   "\t\t<<set $speechnamedrop to 0>>"
+  ],
+  "old_kr": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechcrossdressaroused is 1>>",
+   "\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t<<He>>【은는】 헐떡인다. \"여태까지, 당신이 <<pcSex>>【이었였】단 말이야? 음, 그래도 내 마음은 변하지 않아.\"",
+   "\t\t<<else>>",
+   "\t\t\t<<He>>【은는】 헐떡인다. \"당신이... <<pcSex>>라고? 그-그래도 괜찮아! 나는 당신을 조금도 다르게 생각하지 않아!\"",
+   "\t\t<</if>>",
+   "\t<<elseif $speechnamedrop is 1 and $sydneyromance is 1>>",
+   "\t\t<<set $speechnamedrop to 0>>"
+  ],
+  "new_en": [
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $sydneyromance is 1 and $speechLINameDrop>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> baulks. \"An... animal? What?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【은는】 기겁한다. \"도... 동물? 뭐라고?\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<He>> baulks. \"An... animal? What?\"",
+   "\t\t\t\t\t<<npcincr Sydney love -10>><<llllove>>",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"Black Wolf\" \"Great Hawk\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> baulks. \"H... <<nnpc_him \"Whitney\">>?!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【은는】 기겁한다. \"그... <<nnpc_him \"Whitney\">> 말이야?!\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<He>> baulks. \"H... <<nnpc_him \"Whitney\">>?!\"",
+   "\t\t\t\t\t<<npcincr Sydney love -10>><<llllove>>",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"Whitney\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> freezes. \"I... thought you were just friends. You mean...?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【은는】 얼어붙는다. \"난... 당신들이 그냥 친구인 줄 알았어. 그 말은...?\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<He>> freezes. \"I... thought you were just friends. You mean...?\"",
+   "\t\t\t\t\t<<npcincr Sydney love -10>><<llllove>>",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"Robin\" \"Kylar\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> freezes. \"Wh... who? Who is it?!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【은는】 얼어붙는다. \"누... 누구? 누구야?!\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<He>> freezes. \"Wh... who? Who is it?!\"",
+   "\t\t\t\t\t<<npcincr Sydney love -10>><<llllove>>",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<default>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<npcincr Sydney love -10>><<llllove>>",
+   "\t<<elseif $speechsextoy is 1>>",
+   "\t\t<<set $speechsextoy to 0>>",
+   "\t\t<<set _sexToy to ($rightarm is \"heldSexToy\" and $leftarm is \"heldSexToy\" ? \"sex toys\" : \"sex toy\")>>",
+   "\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t<<He>> looks at your <<print _sexToy>> and grins. \"<<print either(\"Oh, I'd like nothing more than to test that out with you.\",\"You got that on a discount, right?\")>>\"",
+   "\t\t<<elseif _sydneyStatus.includes(\"pure\")>>",
+   "\t\t\t<<He>> looks at your <<print _sexToy>> and blushes. \"<<print either(\"Oh, that's from <<nnpc_mum Sirris>>'s store!\",\"...How do you use that one?\")>>\"",
+   "\t\t<<else>>",
+   "\t\t\t<<He>> looks at your <<print _sexToy>> and blushes. \"This feels wrong, but I don't want to stop.\"",
+   "\t\t<</if>>",
+   "\t<<elseif $speechcum is 1>>",
+   "\t\t<<if $speechspank is 1>>"
+  ],
+  "old_kr": [
+   "\t\t<<npcincr Sydney love -10>><<llllove>>",
+   "\t<<elseif $speechsextoy is 1>>",
+   "\t\t<<set $speechsextoy to 0>>",
+   "\t\t<<set _sexToy to ($rightarm is \"heldSexToy\" and $leftarm is \"heldSexToy\" ? \"섹스 토이들\" : \"섹스 토이\")>>",
+   "\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t<<He>>【은는】 당신의 <<print _sexToy>>【을를】 바라보며 씩 웃는다. \"<<print either(\"아, 당신이랑 그걸 같이 써보는 것보다 좋은 건 없을 거예요.\",\"그거 할인할 때 산 거죠, 그렇죠?\")>>\"",
+   "\t\t<<elseif _sydneyStatus.includes(\"pure\")>>",
+   "\t\t\t<<He>>【은는】 당신의 <<print _sexToy>>【을를】 바라보고 얼굴을 붉힌다. \"<<print either(\"아, 그거 <<nnpc_mum Sirris>>의 가게에서 파는 거죠!\",\"...그건 어떻게 쓰는 건가요?\")>>\"",
+   "\t\t<<else>>",
+   "\t\t\t<<He>>【은는】 당신의 <<print _sexToy>>【을를】 바라보고 얼굴을 붉힌다. \"이러면 안 될 것 같은데, 멈추고 싶지 않아요.\"",
+   "\t\t<</if>>",
+   "\t<<elseif $speechcum is 1>>",
+   "\t\t<<if $speechspank is 1>>"
+  ],
+  "new_en": [
+   "\t<</if>>",
+   "\t<<if $speechNoticeSexToy>>",
+   "\t\t<<addSpeechLine \"sexToy\">>",
+   "\t\t\t<<set _sexToy to ($rightarm is \"heldSexToy\" and $leftarm is \"heldSexToy\" ? \"sex toys\" : \"sex toy\")>>",
+   "\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t<<He>> looks at your <<print _sexToy>> and grins. \"<<print either(\"Oh, I'd like nothing more than to test that out with you.\",\"You got that on a discount, right?\")>>\"",
+   "\t\t\t<<elseif _sydneyStatus.includes(\"pure\")>>",
+   "\t\t\t\t<<He>> looks at your <<print _sexToy>> and blushes. \"<<print either(\"Oh, that's from <<nnpc_mum Sirris>>'s store!\",\"...How do you use that one?\")>>\"",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<He>> looks at your <<print _sexToy>> and blushes. \"This feels wrong, but I don't want to stop.\"",
+   "\t\t\t<</if>>",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechPlayerOrgasm>>",
+   "\t\t<<addSpeechLine \"playerOrgasm\">>",
+   "\t\t\t<<if $speechSpank is 1>>",
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<He>> looks down at you with confusion. \"This is supposed to be painful, what... what is this?\" <<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<He>> smiles at you and giggles. \"Seeing you struggle and writhe just makes it better.\" <<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<He>> looks to you with a mixture of panic and confusion as you climax. <<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<if $sydneySeen.includes(\"player climax\")>>",
+   "\t\t\t\t\t\t\t<<He>> smiles at you. \"I... I did it! I made you...\" <<he>> giggles. <<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t<<His>> eyes widen. \"A-are you okay? You're shaking!\" You manage to nod in response, and <<he>> calms down. <<npcincr Sydney purity -5>><<llspurity>>",
+   "\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<He>> smiles at you and giggles. \"My turn, now.\" <<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<He>> lovingly clings to you as you tremble. <<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t\t<<set $sydneySeen.pushUnique(\"player climax\")>>",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if playerChastity() and !$sydneySeen.includes(\"chastity\") and $speechExposeGenitals>>",
+   "\t\t<<addSpeechLine \"expose\">>",
+   "\t\t\t<<if $worn.genitals.name is \"chastity parasite\">>",
+   "\t\t\t\t<!-- +corruption/-purity but never +lust -->",
+   "\t\t\t\t<<His>> eyebrows raise in surprise upon seeing your <<printChastity>>. <<set _lustincrdisplay to 1>><<set _lustincr to 1>><<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<His>> eyebrows raise in surprise upon seeing your <<printChastity>>. <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t<</if>>",
+   "\t\t\t<<set $sydneySeen.pushUnique(\"chastity\")>>",
+   "\t\t\t<<set $sydneyUniqueComments.pushUnique(\"chastity\")>>",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechSpank>>",
+   "\t\t<<addSpeechLine \"spank\">>",
+   "\t\t\t<<if $speechMoan is 1>>",
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>> blushes. \"Th-this is supposed to be a punishment!\"`,",
+   "\t\t\t\t\t\t\t`<<He>> blushes. \"I don't understand, am I not punishing you hard enough?\"`,",
+   "\t\t\t\t\t\t\t`<<He>> blushes. \"Are you... enjoying this?\" <<npcincr Sydney purity -1>><<lspurity>>`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>> smirks. \"I knew you were into this.\" <<npcincr Sydney purity -1>><<lspurity>>`,",
+   "\t\t\t\t\t\t\t`<<He>> smirks. \"Naughty <<girls>> get punished, and I love it when you're naughty.\" <<npcincr Sydney purity -1>><<lspurity>>`,",
+   "\t\t\t\t\t\t\t`<<He>> smirks. \"I want to savour your moans. I should spank you more often.\" <<npcincr Sydney purity -1>><<lspurity>>`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>> pouts. \"This is supposed to be discipline, you know.\"`,",
+   "\t\t\t\t\t\t\t`<<He>> blushes. \"Are you... into this?\" <<npcincr Sydney purity -1>><<lspurity>>`,",
+   "\t\t\t\t\t\t\t`<<He>> blushes. \"This is supposed to be a punishment! Stop moaning like that!\" <<npcincr Sydney purity -1>><<lspurity>>`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<if $sydneySeen.includes(\"spank\") and $rng lte 10 and $location is \"school\">>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"It's either I do this, or the <<nnpc_title \"Leighton\">> does, so please cooperate!\"",
+   "\t\t\t\t\t\t<<elseif $rng lte 10 and $location is \"temple\">>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"How dare you defile sacred ground!?\"",
+   "\t\t\t\t\t\t<<elseif $rng lte 35>>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"No one is above discipline!\"",
+   "\t\t\t\t\t\t<<elseif $rng lte 70>>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"Hold still! You need to learn your lesson!\"",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"The pain will help you remember! Accept your punishment!\"",
+   "\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<if $sydneySeen.includes(\"spank\") and $rng lte 10 and $location is \"school\">>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"Better me than the <<nnpc_title \"Leighton\">>, right?\"",
+   "\t\t\t\t\t\t<<elseif $rng lte 10 and $location is \"temple\">>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"You've defiled a sacred place. Maybe I should defile you in return.\"",
+   "\t\t\t\t\t\t<<elseif $rng lte 35>>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"I bet you're enjoying this.\"",
+   "\t\t\t\t\t\t<<elseif $rng lte 70>>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"Does this make you angry? Maybe I'll let you do the same to me.\"",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"I won't stop until you enjoy the pain.\"",
+   "\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<if $sydneySeen.includes(\"spank\") and $rng lte 10 and $location is \"school\">>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"It's either I do this, or the <<nnpc_title \"Leighton\">> does, so please cooperate!\"",
+   "\t\t\t\t\t\t<<elseif $rng lte 10 and $location is \"temple\">>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"How dare you defile sacred ground!?\"",
+   "\t\t\t\t\t\t<<elseif $rng lte 35>>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"Don't get the wrong idea, this is purely disciplinary.\"",
+   "\t\t\t\t\t\t<<elseif $rng lte 70>>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"I wish you would just behave so I wouldn't have to do this, I don't like hurting you.\"",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"Jordan's taught me a thing or two about discipline, it's time for you to learn too.\"",
+   "\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechApologise>>",
+   "\t\t<<addSpeechLine \"apologise\">>"
+  ],
+  "context": "\t\t<</switch>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<He>> looks down at you with confusion. \"This is supposed to be painful, what... what is this?\" <<npcincr Sydney purity -2>><<lspurity>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<He>>【은는】 혼란스러운 표정으로 당신을 내려다본다. \"이건 고통스러워야 하는 건데, 뭐... 이게 뭐야?\" <<npcincr Sydney purity -2>><<lspurity>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t\t<<He>> looks confused. \"Why are you sorry? Everything's okay, I promise.\""
+  ],
+  "context": "\t\t\t<<switch _sydneyStatus>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> smiles at you and giggles. \"Seeing you struggle and writhe just makes it better.\" <<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>> looks to you with a mixture of panic and confusion as you climax. <<npcincr Sydney purity -2>><<lspurity>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 당신에게 미소 지으며 꺄르륵 웃는다. \"네가 발버둥치며 괴로워하는 걸 보니까 더 좋아.\" <<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t당신이 절정에 달하자 <<He>>【은는】 당황과 혼란이 섞인 표정으로 당신을 바라본다. <<npcincr Sydney purity -2>><<lspurity>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> speaks. \"I know how you can make it up to me.\"",
+   "\t\t\t<</switch>>",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechApologiseRejected>>",
+   "\t\t<<addSpeechLine \"apologise\">>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t\t<<He>> looks confused. \"You keep saying you're sorry, are you okay? We can stop if you want.\"",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<He>> speaks. \"Yes, keep saying that, you look so delightfully helpless.\"",
+   "\t\t\t<</switch>>",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechApologiseUnforgiving>>",
+   "\t\t<<addSpeechLine \"apologise\">>",
+   "\t\t\t<<He>> frowns. \"You haven't earned forgiveness.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if !$sydneyUniqueComments.includes(\"chastity\") and $speechChastity>>",
+   "\t\t<<addSpeechLine \"chastity\">>",
+   "\t\t\t<<set $sydneyUniqueComments.pushUnique(\"chastity\")>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t\t<<if $worn.genitals.name is \"chastity parasite\">>",
+   "\t\t\t\t\t\t<<print `\"What is that? Do you need to go to the hospital?\"`>>",
+   "\t\t\t\t\t<<elseif _sydneyChastity>>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"We're matching!\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"We're both still pure if we both have chastity devices, right?\"`,",
+   "\t\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"At least we don't have to worry since we're both protected.\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"You got me to remove mine, but now you have one?\"`,",
+   "\t\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"So this is how it feels.\"`,",
+   "\t\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"Oh.\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<if $worn.genitals.name is \"chastity parasite\">>",
+   "\t\t\t\t\t\t\"I'm always up for trying new things, but that's a little freaky.\"",
+   "\t\t\t\t\t<<elseif _sydneyChastity>>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"Okay, hear me out, if we smash the chastity devices together really hard...\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"We need to find the keys for our chastity devices soon.\"`,",
+   "\t\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"I guess we're both just lusty sinners and can't do anything about it.\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"You're kidding me, right?\"`,",
+   "\t\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"Is this a joke?\"`,",
+   "\t\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"Oh you absolute sextease, you got me to remove mine just to—\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $sydneySeen.includes(\"player climax\")>>",
+   "\t\t\t\t\t\t<<He>> smiles at you. \"I... I did it! I made you...\" <<he>> giggles. <<npcincr Sydney purity -2>><<lspurity>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $sydneySeen.includes(\"player climax\")>>",
+   "\t\t\t\t\t\t<<He>>【은는】 당신에게 미소 지으며 꺄르륵 웃는다. \"내... 내가 해냈어! 내가 당신을...\" <<npcincr Sydney purity -2>><<lspurity>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t\t<<He>> winces. \"H... harder...\"",
+   "\t\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t\t<<He>> winces. \"You're hurting me...\"",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<He>> winces. \"Ow! Is it always this painful?\"",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t\t<<He>> gives you a menacing glare. \"I know you can hit harder than that.\"",
+   "\t\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t\t<<He>> laughs. \"I love it when you're rough!\""
+  ],
+  "context": "\t\t\t\t<<case \"pure\" \"pureLust\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<His>> eyes widen. \"A-are you okay? You're shaking!\" You manage to nod in response, and <<he>> calms down. <<npcincr Sydney purity -5>><<llspurity>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<His>> 눈이 휘둥그레진다. \"괜, 괜찮아? 덜덜 떨고 있잖아!\" 당신이 대답으로 간신히 고개를 끄덕이자 <<he>>【은는】 안도한다. <<npcincr Sydney purity -5>><<llspurity>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<He>> winces. \"Ow! Haha, harder!\""
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> smiles at you and giggles. \"My turn, now.\" <<npcincr Sydney purity -2>><<lspurity>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 당신에게 미소 지으며 꺄르륵 웃는다. \"이제, 내 차례야.\" <<npcincr Sydney purity -2>><<lspurity>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> notices your attempts to cover yourself. \"Remember when I was the apprehensive one? How things have changed.\""
+  ],
+  "context": "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> lovingly clings to you as you tremble. <<npcincr Sydney purity -2>><<lspurity>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t당신이 벌벌 떠는 동안 <<He>>【은는】 애정을 담아 당신에게 매달린다. <<npcincr Sydney purity -2>><<lspurity>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> notices your attempts to cover yourself. \"It's okay, I don't mind seeing you like this anymore. We can both trust each other, right?\""
+  ],
+  "context": "\t\t\t\t<<default>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t\t<<set $sydneySeen.pushUnique(\"player climax\")>>",
+   "\t<<elseif $speechgenitals is 1 and playerChastity() and !$sydneySeen.includes(\"chastity\")>>",
+   "\t\t<<if $worn.genitals.name is \"chastity parasite\">>",
+   "\t\t\t<!-- +corruption/-purity but never +lust -->",
+   "\t\t\t<<His>> eyebrows raise in surprise upon seeing your <<printChastity>>. <<set _lustincrdisplay to 1>><<set _lustincr to 1>><<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t<<else>>",
+   "\t\t\t<<His>> eyebrows raise in surprise upon seeing your <<printChastity>>. <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t<</if>>",
+   "\t\t<<set $sydneySeen.pushUnique(\"chastity\")>>",
+   "\t\t<<set $sydneyUniqueComments.pushUnique(\"chastity\")>>",
+   "\t<<elseif $speechpenispenetrated is 1 and $sydneyComments.penetrated is 0>>",
+   "\t\t<<set $sydneyComments.penetrated to 2>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\">>"
+  ],
+  "old_kr": [
+   "\t\t<</if>>",
+   "\t\t<<set $sydneySeen.pushUnique(\"player climax\")>>",
+   "\t<<elseif $speechgenitals is 1 and playerChastity() and !$sydneySeen.includes(\"chastity\")>>",
+   "\t\t<<if $worn.genitals.name is \"chastity parasite\">>",
+   "\t\t\t<!-- +corruption/-purity but never +lust -->",
+   "\t\t\t당신의 <<printChastity>>【을를】 보자 <<His>> 눈썹이 놀라움으로 치켜 올라간다. <<set _lustincrdisplay to 1>><<set _lustincr to 1>><<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t<<else>>",
+   "\t\t\t당신의 <<printChastity>>【을를】 보자 <<His>> 눈썹이 놀라움으로 치켜 올라간다. <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t<</if>>",
+   "\t\t<<set $sydneySeen.pushUnique(\"chastity\")>>",
+   "\t\t<<set $sydneyUniqueComments.pushUnique(\"chastity\")>>",
+   "\t<<elseif $speechpenispenetrated is 1 and $sydneyComments.penetrated is 0>>",
+   "\t\t<<set $sydneyComments.penetrated to 2>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\">>"
+  ],
+  "new_en": [
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if !$sydneyUniqueComments.includes(\"hair\") and $speechHair>>",
+   "\t\t<<addSpeechLine \"hair\">>",
+   "\t\t\t<<set $sydneyUniqueComments.pushUnique(\"hair\")>>",
+   "\t\t\t<<if _sydney.hairColour isnot \"strawberryblond\">>",
+   "\t\t\t\t<<He>> speaks. \"I've always loved your hair. That's why I didn't hesitate to take your advice on my appearance.\"",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<He>> speaks. \"I've always loved your hair.\"",
+   "\t\t\t<</if>>",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if !$sydneyUniqueComments.includes(\"withhold\") and ($speechVaginaWithhold or $speechAnusWithhold or $speechNPCVaginaWithhold or $speechNPCAnusWithhold)>>",
+   "\t\t<<addSpeechLine \"withhold\">>",
+   "\t\t\t<<set $sydneyUniqueComments.pushUnique(\"withhold\")>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t\t<<He>> smiles with glee. \"We both have to stay pure, after all.\" <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<He>> gives an exaggerated sigh, but smiles. \"You're such a fucking sextease sometimes!\" <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t<</switch>>",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t<<if $speechNPCVaginaPenetrated>>"
+  ],
+  "context": "\t\t\t<</switch>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> barely manages to speak. \"If... if you... I'm going to...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 간신히 말을 내뱉는다. \"만약... 만약 당신이... 나는...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"If... if you... I'm going to...\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"Th-the temple will punish me for this... but I don't care anymore!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"신-신전에서 이걸 알면 벌을 내리겠지만... 이젠 아무래도 상관없어!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Th-the temple will punish me for this... but I don't care anymore!\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"Y...you're really inside...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"다... 당신 진짜로 안에 있어...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Y...you're really inside...\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> grabs you by the head and pulls your face close to <<hers>>. \"I want you to put a child in me. Now.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 당신의 머리를 붙잡고 얼굴을 <<hers>> 것 쪽으로 바짝 끌어당긴다. \"내 안에 아이를 심어줘. 지금 당장.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t\t<<He>> grabs you by the head and pulls your face close to <<hers>>. \"I want you to put a child in me. Now.\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t\t<<if $rng gte 81 and $settings.pregnancySpeechEnabled>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> moans. \"Harder. Harder! I'm almost there!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 신음한다. \"더 세게. 더 세게! 거의 다 왔어!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t\t<<He>> moans. \"Harder. Harder! I'm almost there!\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"This is worth any punishment the temple will do to me.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"신전에서 어떤 벌을 받더라도 그만한 가치가 있어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"This is worth any punishment the temple will do to me.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"I love the feeling of you inside me.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"내 안에 네가 있는 느낌이 너무 좋아.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I love the feeling of you inside me.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> barely manages to speak. \"I think I'm... getting close...!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 간신히 말을 잇는다. \"나... 갈 것 같아...!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"I think I'm... getting close...!\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"We're both sinners now, aren't we?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"우린 둘 다 죄인이야, 그렇지?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"We're both sinners now, aren't we?\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"I think I'm getting used to this.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"나 이거 익숙해진 것 같아.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I think I'm getting used to this.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> barely manages to speak. \"If... if you... I'm going to...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 간신히 말을 내뱉는다. \"만약... 만약 당신이... 나는...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"If... if you... I'm going to...\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"This... still feels so wrong... but...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"이건... 여전히 잘못된 기분이지만... 하지만...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"This... still feels so wrong... but...\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"Y...you're really inside...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"다... 당신 진짜로 안에 있어...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Y...you're really inside...\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> moans. \"Harder. Harder! I'm almost there!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 신음한다. \"더 세게. 더 세게! 거의 다 왔어!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> moans. \"Harder. Harder! I'm almost there!\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"I can't believe I never tried this. You've really opened my eyes.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"이걸 여태껏 안 해봤다니 믿을 수 없어. 네가 내 눈을 뜨게 해줬어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I can't believe I never tried this. You've really opened my eyes.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"I love the feeling of you inside me.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"내 안에 네가 있는 느낌이 너무 좋아.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I love the feeling of you inside me.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> barely manages to speak. \"I think I'm... getting close...!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 간신히 말을 잇는다. \"나... 갈 것 같아...!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"I think I'm... getting close...!\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"We're still pure, right? This doesn't count?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"우리 아직 순결한 거지, 그렇지? 이건 치지 않는 거잖아?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"We're still pure, right? This doesn't count?\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"I think I'm getting used to this.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"나 이거 익숙해진 것 같아.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I think I'm getting used to this.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> barely manages to speak. \"Sh... should I... pull out?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 간신히 말을 잇는다. \"빼... 빼야 할까?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"Sh... should I... pull out?\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"Th-the temple will punish me for this... but I don't care anymore!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"신-신전에서 이걸 알면 벌을 내리겠지만... 이젠 아무래도 상관없어!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Th-the temple will punish me for this... but I don't care anymore!\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"I... I'm really inside...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"나... 나 진짜로 안에 있어...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I... I'm really inside...\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> grabs you by the head and pulls your face close to <<hers>>. \"I want to put a child in you.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 당신의 머리를 붙잡고 얼굴을 <<hers>> 것 쪽으로 바짝 끌어당긴다. \"네 안에 아이를 심고 싶어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t\t<<He>> grabs you by the head and pulls your face close to <<hers>>. \"I want to put a child in you.\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t\t<<if $rng gte 81 and $settings.pregnancySpeechEnabled>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> moans. \"I'm almost there! Are you ready?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 신음한다. \"거의 다 왔어! 준비됐어?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t\t<<He>> moans. \"I'm almost there! Are you ready?\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"This is worth any punishment the temple will do to me.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"신전에서 어떤 벌을 받더라도 그만한 가치가 있어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"This is worth any punishment the temple will do to me.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"I love the feeling of being inside you.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"네 안에 들어가 있는 느낌이 너무 좋아.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I love the feeling of being inside you.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> barely manages to speak. \"I think I'm... getting close...!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 간신히 말을 잇는다. \"나... 갈 것 같아...!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"I think I'm... getting close...!\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"We're both sinners now, aren't we?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"우린 둘 다 죄인이야, 그렇지?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"We're both sinners now, aren't we?\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"I'm getting used to this feeling.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"이 감각에 익숙해지고 있어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I'm getting used to this feeling.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"Sh... should I... pull out?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 간신히 말을 잇는다. \"빼... 빼야 할까?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t\t<<He>> barely manages to speak. \"Sh... should I... pull out?\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t\t<<if $settings.pregnancySpeechEnabled and !$player.vaginaExist and _sydney.gender is \"m\" and knowsAboutAnyPregnancy(\"pc\",\"Sydney\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"If... if you... I'm going to...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 간신히 말을 내뱉는다. \"만약... 만약 당신이... 나는...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t\t<<He>> barely manages to speak. \"If... if you... I'm going to...\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"This... still feels so wrong... but...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"이건... 여전히 잘못된 기분이지만... 하지만...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"This... still feels so wrong... but...\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"I...I'm really inside...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"나... 나 진짜로 안에 있어...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I...I'm really inside...\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> grabs you by the head and pulls your face close to <<hers>>. \"I want to put a child in you.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 당신의 머리를 붙잡고 얼굴을 <<hers>> 것 쪽으로 바짝 끌어당긴다. \"네 안에 아이를 심고 싶어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t\t<<He>> grabs you by the head and pulls your face close to <<hers>>. \"I want to put a child in you.\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t\t<<if $rng gte 81 and $settings.pregnancySpeechEnabled and !$player.vaginaExist and _sydney.gender is \"m\" and knowsAboutAnyPregnancy(\"pc\",\"Sydney\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> moans. \"I'm almost there! Are you ready?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 신음한다. \"거의 다 왔어! 준비됐어?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t\t<<He>> moans. \"I'm almost there! Are you ready?\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"Are you sure this feels good for you?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"너도 기분 좋은 거 확실해?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Are you sure this feels good for you?\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"I love being inside you.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"네 안에 있는 게 너무 좋아.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I love being inside you.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> barely manages to speak. \"I think I'm... getting close...!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 간신히 말을 잇는다. \"나... 갈 것 같아...!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"I think I'm... getting close...!\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"We're still pure, right? This doesn't count?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"우리 아직 순결한 거지, 그렇지? 이건 치지 않는 거잖아?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"We're still pure, right? This doesn't count?\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"I'm getting used to this feeling.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"이 감각에 익숙해지고 있어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I'm getting used to this feeling.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> barely manages to speak. \"Ah... something's coming...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 간신히 말을 잇는다. \"아... 뭔가 나올 것 같아...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"Ah... something's coming...\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"I'm starting to feel weird...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"기분이 이상해지기 시작했어...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I'm starting to feel weird...\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> giggles. \"This tickles!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 꺄르륵 웃는다. \"이거 간지러워!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> giggles. \"This tickles!\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> moans, grabbing the back of your head. \"I'm almost there! Are you ready?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 신음하며 당신의 뒤통수를 붙잡는다. \"거의 다 왔어! 준비됐어?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> moans, grabbing the back of your head. \"I'm almost there! Are you ready?\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"I hope you don't plan on wasting any.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"하나도 낭비할 생각하지 마.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I hope you don't plan on wasting any.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"You look so cute down there.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"아래에서 보니까 너무 귀엽네.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"You look so cute down there.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> barely manages to speak. \"I think I'm... getting close...!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 간신히 말을 잇는다. \"나... 갈 것 같아...!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"I think I'm... getting close...!\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"You can breathe, right? I'm not hurting you?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"숨 쉴 수 있지, 그렇지? 나 너 아프게 하는 거 아니지?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"You can breathe, right? I'm not hurting you?\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"Your mouth is so warm.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"네 입은 너무 따뜻해.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"penetrated\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Your mouth is so warm.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<</switch>>",
+   "\t<<elseif ($speechvaginamouth + $speechanallick + $speechanalkiss + $speechmouthotheranus + $speechthroat + $speechfacesit) gte 1 and $sydneyComments.mouth is 0>>",
+   "\t\t<<set $sydneyComments.mouth to 3>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>> barely manages to speak. \"Ah... something's coming...\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>> speaks. \"I'm starting to feel weird...\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> giggles. \"This tickles!\""
+  ],
+  "old_kr": [
+   "\t\t<</switch>>",
+   "\t<<elseif ($speechvaginamouth + $speechanallick + $speechanalkiss + $speechmouthotheranus + $speechthroat + $speechfacesit) gte 1 and $sydneyComments.mouth is 0>>",
+   "\t\t<<set $sydneyComments.mouth to 3>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>>【은는】 간신히 말을 잇는다. \"아... 뭔가 나올 것 같아...\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"기분이 이상해지기 시작했어...\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 꺄르륵 웃는다. \"이거 간지러워!\""
+  ],
+  "new_en": [
+   "\t\t\t<</if>>",
+   "\t<</switch>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t<<if $speechMouthNPCVagina or $speechAnalLick or $speechAnalKiss or $speechMouthNPCAnus or $speechChoke or $speechFaceSit>>",
+   "\t\t\t\t\t<<addSpeechLine \"oral\">>",
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"Ah... something's coming...\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>> moans, grabbing the back of your head. \"I'm almost there! Are you ready?\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>> speaks. \"Lick harder.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> speaks. \"You look so cute down there.\""
+  ],
+  "old_kr": [
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>>【은는】 신음하며 당신의 뒤통수를 붙잡는다. \"거의 다 왔어! 준비됐어?\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"더 강하게 핥아줘.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"아래에서 보니까 너무 귀엽네.\""
+  ],
+  "new_en": [
+   "\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t<<if $speechMouthNPCVagina or $speechAnalLick or $speechAnalKiss or $speechMouthNPCAnus or $speechChoke or $speechFaceSit>>",
+   "\t\t\t\t\t<<addSpeechLine \"oral\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I'm starting to feel weird...\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<default>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>> barely manages to speak. \"I think I'm... getting close...!\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>> speaks. \"You can breathe, right? I'm not hurting you?\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> speaks. \"Your tongue is so warm.\""
+  ],
+  "old_kr": [
+   "\t\t\t<<default>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>>【은는】 간신히 말을 잇는다. \"나... 갈 것 같아...!\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"숨 쉴 수 있지, 그렇지? 나 너 아프게 하는 거 아니지?\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"네 혀는 너무 따뜻해.\""
+  ],
+  "new_en": [
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<if $speechMouthNPCVagina or $speechAnalLick or $speechAnalKiss or $speechMouthNPCAnus or $speechChoke or $speechFaceSit>>",
+   "\t\t\t\t\t<<addSpeechLine \"oral\">>",
+   "\t\t\t\t\t\t<<He>> giggles. \"This tickles!\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<</switch>>",
+   "\t<<elseif ($speechvaginavagina + $speechtribentrance) gte 1 and $sydneyComments.trib is 0>>",
+   "\t\t<<set $sydneyComments.trib to 3>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>> barely manages to speak. \"If... if you... I'm going to...\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>> speaks. \"This... still feels so wrong... but...\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> speaks. \"We're... really touching down there...\""
+  ],
+  "old_kr": [
+   "\t\t<</switch>>",
+   "\t<<elseif ($speechvaginavagina + $speechtribentrance) gte 1 and $sydneyComments.trib is 0>>",
+   "\t\t<<set $sydneyComments.trib to 3>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>>【은는】 간신히 말을 내뱉는다. \"만약... 만약 당신이... 나는...\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"이건... 여전히 잘못된 기분이지만... 하지만...\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"우리... 진짜로 아래가 닿고 있어...\""
+  ],
+  "new_en": [
+   "\t\t\t<</if>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t<<if $speechMouthNPCVagina or $speechAnalLick or $speechAnalKiss or $speechMouthNPCAnus or $speechChoke or $speechFaceSit>>",
+   "\t\t\t\t\t<<addSpeechLine \"oral\">>",
+   "\t\t\t\t\t\t<<He>> moans, grabbing the back of your head. \"I'm almost there! Are you ready?\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>> moans. \"I'm almost there! Are you ready?\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>> speaks. \"Are you sure this feels good for you?\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> speaks. \"I love being this close together.\""
+  ],
+  "old_kr": [
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>>【은는】 신음한다. \"거의 다 왔어! 준비됐어?\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"너도 기분 좋은 거 확실해?\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"이렇게 밀착해 있는 게 너무 좋아.\""
+  ],
+  "new_en": [
+   "\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t<<if $speechMouthNPCVagina or $speechAnalLick or $speechAnalKiss or $speechMouthNPCAnus or $speechChoke or $speechFaceSit>>",
+   "\t\t\t\t\t<<addSpeechLine \"oral\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Lick harder.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<default>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>> barely manages to speak. \"I think I'm... getting close...!\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>> speaks. \"We're still pure, right? This doesn't count?\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> speaks. \"I'm getting used to this feeling.\""
+  ],
+  "old_kr": [
+   "\t\t\t<<default>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>>【은는】 간신히 말을 잇는다. \"나... 갈 것 같아...!\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"우리 아직 순결한 거지, 그렇지? 이건 치지 않는 거잖아?\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"이 감각에 익숙해지고 있어.\""
+  ],
+  "new_en": [
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<if $speechMouthNPCVagina or $speechAnalLick or $speechAnalKiss or $speechMouthNPCAnus or $speechChoke or $speechFaceSit>>",
+   "\t\t\t\t\t<<addSpeechLine \"oral\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"You look so cute down there.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"D...don't... put it in...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 간신히 말을 잇는다. \"넣, 넣지 마...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $speechVaginaImminent or $speechNPCVaginaImminent or $speechVaginaEntrance or $speechNPCVaginaEntrance>>",
+   "\t\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t\t<<He>> barely manages to speak. \"D...don't... put it in...\"",
+   "\t\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> speaks. \"J... just the tip, alright?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"그-그냥 끝만, 알았지?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $speechVaginaImminent or $speechNPCVaginaImminent or $speechVaginaEntrance or $speechNPCVaginaEntrance>>",
+   "\t\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t\t<<He>> speaks. \"J... just the tip, alright?\"",
+   "\t\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> giggles nervously. \"This is dangerous...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 초조하게 꺄르륵 웃는다. \"이거 위험해...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $speechVaginaImminent or $speechNPCVaginaImminent or $speechVaginaEntrance or $speechNPCVaginaEntrance>>",
+   "\t\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t\t<<He>> giggles nervously. \"This is dangerous...\"",
+   "\t\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> speaks through gasps and moans. \"J...just put it in already. I can't take it anymore!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 헐떡임과 신음을 섞어 말한다. \"그, 그냥 넣어줘. 더는 못 참겠어!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $speechVaginaImminent or $speechNPCVaginaImminent or $speechVaginaEntrance or $speechNPCVaginaEntrance>>",
+   "\t\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t\t<<He>> speaks through gasps and moans. \"J...just put it in already. I can't take it anymore!\"",
+   "\t\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> smiles at you with pleading eyes and spreads <<his>> legs further. \"Wh... what are you waiting for...?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 애원하는 눈빛으로 당신에게 미소를 지으며 <<his>> 다리를 더 벌린다. \"뭐... 뭐 기다리는 거야...?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $speechVaginaImminent or $speechNPCVaginaImminent or $speechVaginaEntrance or $speechNPCVaginaEntrance>>",
+   "\t\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t\t<<He>> smiles at you with pleading eyes and spreads <<his>> legs further. \"Wh... what are you waiting for...?\"",
+   "\t\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> giggles. \"G... go ahead. Just be gentle, please.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 꺄르륵 웃는다. \"계... 계속해. 조금만 부드럽게 부탁할게.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $speechVaginaImminent or $speechNPCVaginaImminent or $speechVaginaEntrance or $speechNPCVaginaEntrance>>",
+   "\t\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t\t<<He>> giggles. \"G... go ahead. Just be gentle, please.\"",
+   "\t\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> moans. \"Do it. Deflower me. Make me yours!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 신음한다. \"해줘. 내 순결을 가져가. 날 네 것으로 만들어줘!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $speechVaginaImminent or $speechNPCVaginaImminent or $speechVaginaEntrance or $speechNPCVaginaEntrance>>",
+   "\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t<<He>> moans. \"Do it. Deflower me. Make me yours!\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<<if _sydneyVirgin>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> moans. \"Stop teasing me!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 신음한다. \"애태우지 마!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $speechVaginaImminent or $speechNPCVaginaImminent or $speechVaginaEntrance or $speechNPCVaginaEntrance>>",
+   "\t\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t\t<<He>> moans. \"Stop teasing me!\"",
+   "\t\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $speechvaginaimminent is 1>>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"I want to be inside you.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<if $speechvaginaimminent is 1>>",
+   "\t\t\t\t\t\t\t<<He>>【은는】 말한다. \"네 안에 들어가고 싶어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $speechVaginaImminent is 1>>",
+   "\t\t\t\t\t\t\t<<if $speechVaginaImminent or $speechNPCVaginaImminent or $speechVaginaEntrance or $speechNPCVaginaEntrance>>",
+   "\t\t\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t\t\t<<He>> speaks. \"I want to be inside you.\"",
+   "\t\t\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<He>> speaks. \"I want you inside me.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t<<He>>【은는】 말한다. \"내 안에 네가 있었으면 좋겠어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<if $speechVaginaImminent or $speechNPCVaginaImminent or $speechVaginaEntrance or $speechNPCVaginaEntrance>>",
+   "\t\t\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t\t\t<<He>> speaks. \"I want you inside me.\"",
+   "\t\t\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> speaks. \"I want to put it in.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"넣고 싶어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $speechVaginaImminent or $speechNPCVaginaImminent or $speechVaginaEntrance or $speechNPCVaginaEntrance>>",
+   "\t\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t\t<<He>> speaks. \"I want to put it in.\"",
+   "\t\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"I... think I'm ready...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 간신히 말을 잇는다. \"나... 준비된 것 같아...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $speechNPCAnusImminent or $speechNPCAnusEntrance>>",
+   "\t\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t\t<<He>> barely manages to speak. \"I... think I'm ready...\"",
+   "\t\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> speaks. \"Be gentle, please...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"부드럽게 해줘, 부탁이야...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $speechNPCAnusImminent or $speechNPCAnusEntrance>>",
+   "\t\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t\t<<He>> speaks. \"Be gentle, please...\"",
+   "\t\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> giggles nervously. \"I've never even though about doing it this way...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 초조하게 꺄르륵 웃는다. \"이런 식으로 하는 건 상상도 못 해봤는데...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $speechNPCAnusImminent or $speechNPCAnusEntrance>>",
+   "\t\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t\t<<He>> giggles nervously. \"I've never even though about doing it this way...\"",
+   "\t\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> speaks through gasps and moans. \"J...just put it in already. I can't take it anymore!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 헐떡임과 신음을 섞어 말한다. \"그, 그냥 넣어줘. 더는 못 참겠어!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $speechNPCAnusImminent or $speechNPCAnusEntrance>>",
+   "\t\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t\t<<He>> speaks through gasps and moans. \"J...just put it in already. I can't take it anymore!\"",
+   "\t\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> smiles at you with pleading eyes and spreads <<his>> legs further. \"Wh... what are you waiting for...?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 애원하는 눈빛으로 당신에게 미소를 지으며 <<his>> 다리를 더 벌린다. \"뭐... 뭐 기다리는 거야...?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $speechNPCAnusImminent or $speechNPCAnusEntrance>>",
+   "\t\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t\t<<He>> smiles at you with pleading eyes and spreads <<his>> legs further. \"Wh... what are you waiting for...?\"",
+   "\t\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> giggles. \"At least it's still pure this way.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 꺄르륵 웃는다. \"그래도 이런 방식이면 아직 순결하네.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $speechNPCAnusImminent or $speechNPCAnusEntrance>>",
+   "\t\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t\t<<He>> giggles. \"At least it's still pure this way.\"",
+   "\t\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> moans. \"Stop teasing me!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 신음한다. \"애태우지 마!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $speechNPCAnusImminent or $speechNPCAnusEntrance>>",
+   "\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t<<He>> moans. \"Stop teasing me!\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"I want you inside me.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"내 안에 네가 있었으면 좋겠어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $speechNPCAnusImminent or $speechNPCAnusEntrance>>",
+   "\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"I want you inside me.\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> speaks. \"I want to put it in.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"넣고 싶어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $speechNPCAnusImminent or $speechNPCAnusEntrance>>",
+   "\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"I want to put it in.\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif ($speechanusimminent + $speechanusentrance) gte 1 and $sydneyComments.imminent is 0>>",
+   "\t\t<<set $sydneyComments.imminent to 2>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t<<if _sydneyVirgin>>",
+   "\t\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t\t<<He>> barely manages to speak. \"D...don't... put it in...\"",
+   "\t\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"J... just the tip, alright?\"",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<He>> giggles nervously. \"This is dangerous...\""
+  ],
+  "old_kr": [
+   "\t<<elseif ($speechanusimminent + $speechanusentrance) gte 1 and $sydneyComments.imminent is 0>>",
+   "\t\t<<set $sydneyComments.imminent to 2>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t<<if _sydneyVirgin>>",
+   "\t\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t\t<<He>>【은는】 간신히 말을 잇는다. \"넣, 넣지 마...\"",
+   "\t\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"그-그냥 끝만, 알았지?\"",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<He>>【은는】 초조하게 꺄르륵 웃는다. \"이거 위험해...\""
+  ],
+  "new_en": [
+   "\t<</if>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t<<if _sydneyVirgin>>",
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<if $speechAnusImminent or $speechAnusEntrance>>",
+   "\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t<<He>> barely manages to speak. \"D...don't... put it in...\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<if $speechAnusImminent or $speechAnusEntrance>>",
+   "\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t<<He>> speaks. \"J... just the tip, alright?\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t<</switch>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t\t<<He>> speaks through gasps and moans. \"J...just let me put it in already! I can't take it anymore!\"",
+   "\t\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t\t<<He>> smiles at you pleadingly. \"Wh... what are you waiting for...?\"",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<He>> giggles. \"G... go ahead. Just be gentle, please.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t\t<<He>>【은는】 헐떡임과 신음을 섞어 말한다. \"그, 그냥 넣게 해줘! 더는 못 참겠어!\"",
+   "\t\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t\t<<He>>【은는】 애원하는 표정으로 당신에게 미소를 지어 보인다. \"뭐... 뭐 기다리는 거야...?\"",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<He>>【은는】 꺄르륵 웃는다. \"계... 계속해. 조금만 부드럽게 부탁할게.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $speechAnusImminent or $speechAnusEntrance>>",
+   "\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t<<He>> giggles nervously. \"This is dangerous...\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> moans. \"Stop teasing me!\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>> speaks. \"I want to be inside you.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> speaks. \"I want to put it in.\"",
+   "\t\t\t\t<</if>>",
+   "\t\t<</switch>>",
+   "\t<<elseif $speechspank is 1>>",
+   "\t\t<<if $speechmoan is 1>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>> blushes. \"Th-this is supposed to be a punishment!\"`,",
+   "\t\t\t\t\t\t`<<He>> blushes. \"I don't understand, am I not punishing you hard enough?\"`,",
+   "\t\t\t\t\t\t`<<He>> blushes. \"Are you... enjoying this?\" <<npcincr Sydney purity -1>><<lspurity>>`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>> smirks. \"I knew you were into this.\" <<npcincr Sydney purity -1>><<lspurity>>`,",
+   "\t\t\t\t\t\t`<<He>> smirks. \"Naughty <<girls>> get punished, and I love it when you're naughty.\" <<npcincr Sydney purity -1>><<lspurity>>`,",
+   "\t\t\t\t\t\t`<<He>> smirks. \"I want to savour your moans. I should spank you more often.\" <<npcincr Sydney purity -1>><<lspurity>>`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>> pouts. \"This is supposed to be discipline, you know.\"`,",
+   "\t\t\t\t\t\t`<<He>> blushes. \"Are you... into this?\" <<npcincr Sydney purity -1>><<lspurity>>`,",
+   "\t\t\t\t\t\t`<<He>> blushes. \"This is supposed to be a punishment! Stop moaning like that!\" <<npcincr Sydney purity -1>><<lspurity>>`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t<</switch>>",
+   "\t\t<<else>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<if $sydneySeen.includes(\"spank\") and $rng lte 10 and $location is \"school\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"It's either I do this, or the <<nnpc_title \"Leighton\">> does, so please cooperate!\"",
+   "\t\t\t\t\t<<elseif $rng lte 10 and $location is \"temple\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"How dare you defile sacred ground!?\"",
+   "\t\t\t\t\t<<elseif $rng lte 35>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"No one is above discipline!\"",
+   "\t\t\t\t\t<<elseif $rng lte 70>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Hold still! You need to learn your lesson!\"",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"The pain will help you remember! Accept your punishment!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 신음한다. \"애태우지 마!\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"네 안에 들어가고 싶어.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"넣고 싶어.\"",
+   "\t\t\t\t<</if>>",
+   "\t\t<</switch>>",
+   "\t<<elseif $speechspank is 1>>",
+   "\t\t<<if $speechmoan is 1>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>>【은는】 얼굴을 붉힌다. \"이, 이건 벌이잖아!\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 얼굴을 붉힌다. \"이해를 못 하겠네, 내가 벌을 제대로 못 주고 있는 거야?\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 얼굴을 붉힌다. \"너 혹시... 이걸 즐기는 거야?\" <<npcincr Sydney purity -1>><<lspurity>>`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>>【은는】 씩 웃는다. \"네가 이런 거 좋아하는 줄 알았어.\" <<npcincr Sydney purity -1>><<lspurity>>`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 씩 웃는다. \"나쁜 <<girls>>【은는】 벌을 받아야지. 네가 나쁘게 구는 게 너무 좋아.\" <<npcincr Sydney purity -1>><<lspurity>>`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 씩 웃는다. \"네 신음 소리를 맛보고 싶어. 널 더 자주 때려줘야겠어.\" <<npcincr Sydney purity -1>><<lspurity>>`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>>【은는】 입을 삐죽 내민다. \"이건 훈육이란 말이야, 알아?\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 얼굴을 붉힌다. \"너 혹시... 이걸 즐기는 거야?\" <<npcincr Sydney purity -1>><<lspurity>>`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 얼굴을 붉힌다. \"이건 벌이란 말이야! 그렇게 신음 소리 내지 마!\" <<npcincr Sydney purity -1>><<lspurity>>`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t<</switch>>",
+   "\t\t<<else>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<if $sydneySeen.includes(\"spank\") and $rng lte 10 and $location is \"school\">>",
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"내가 하든지, 아니면 <<nnpc_title \"Leighton\">>【이가】 하든지 둘 중 하나야, 그러니까 제발 협조해!\"",
+   "\t\t\t\t\t<<elseif $rng lte 10 and $location is \"temple\">>",
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"어떻게 감히 신성한 장소를 더럽혀!?\"",
+   "\t\t\t\t\t<<elseif $rng lte 35>>",
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"누구도 훈육에서 예외일 순 없어!\"",
+   "\t\t\t\t\t<<elseif $rng lte 70>>",
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"가만히 있어! 제대로 배워야 하니까!\"",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"아프면 기억에 잘 남을 거야! 벌을 받아들여!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $speechAnusImminent or $speechAnusEntrance>>",
+   "\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t<<He>> speaks through gasps and moans. \"J...just let me put it in already! I can't take it anymore!\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<if $sydneySeen.includes(\"spank\") and $rng lte 10 and $location is \"school\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Better me than the <<nnpc_title \"Leighton\">>, right?\"",
+   "\t\t\t\t\t<<elseif $rng lte 10 and $location is \"temple\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"You've defiled a sacred place. Maybe I should defile you in return.\"",
+   "\t\t\t\t\t<<elseif $rng lte 35>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I bet you're enjoying this.\"",
+   "\t\t\t\t\t<<elseif $rng lte 70>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Does this make you angry? Maybe I'll let you do the same to me.\"",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I won't stop until you enjoy the pain.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<if $sydneySeen.includes(\"spank\") and $rng lte 10 and $location is \"school\">>",
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"<<nnpc_title \"Leighton\">>【이가】 하는 것보다는 내가 하는 게 낫겠지?\"",
+   "\t\t\t\t\t<<elseif $rng lte 10 and $location is \"temple\">>",
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"넌 신성한 곳을 더럽혔어. 내가 대신 널 더럽혀줄까.\"",
+   "\t\t\t\t\t<<elseif $rng lte 35>>",
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"너 이거 분명 즐기고 있는 거지.\"",
+   "\t\t\t\t\t<<elseif $rng lte 70>>",
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"이렇게 하니까 화나? 나한테 똑같이 하게 해줄지도 모르지.\"",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"네가 이 고통을 즐길 때까지 멈추지 않을 거야.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<if $speechAnusImminent or $speechAnusEntrance>>",
+   "\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t<<He>> smiles at you pleadingly. \"Wh... what are you waiting for...?\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<if $sydneySeen.includes(\"spank\") and $rng lte 10 and $location is \"school\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"It's either I do this, or the <<nnpc_title \"Leighton\">> does, so please cooperate!\"",
+   "\t\t\t\t\t<<elseif $rng lte 10 and $location is \"temple\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"How dare you defile sacred ground!?\"",
+   "\t\t\t\t\t<<elseif $rng lte 35>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Don't get the wrong idea, this is purely disciplinary.\"",
+   "\t\t\t\t\t<<elseif $rng lte 70>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I wish you would just behave so I wouldn't have to do this, I don't like hurting you.\"",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Jordan's taught me a thing or two about discipline, it's time for you to learn too.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<if $sydneySeen.includes(\"spank\") and $rng lte 10 and $location is \"school\">>",
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"내가 하든지, 아니면 <<nnpc_title \"Leighton\">>【이가】 하든지 둘 중 하나야, 그러니까 제발 협조해!\"",
+   "\t\t\t\t\t<<elseif $rng lte 10 and $location is \"temple\">>",
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"어떻게 감히 신성한 장소를 더럽혀!?\"",
+   "\t\t\t\t\t<<elseif $rng lte 35>>",
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"오해하지 마, 이건 순전히 훈육의 일환이니까.\"",
+   "\t\t\t\t\t<<elseif $rng lte 70>>",
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"그냥 말 잘 들었으면 이런 짓 안 해도 되잖아, 난 널 아프게 하고 싶지 않아.\"",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"조던한테 훈육에 대해 좀 배웠어, 이제 네가 배울 차례야.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<if $speechAnusImminent or $speechAnusEntrance>>",
+   "\t\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t\t<<He>> giggles. \"G... go ahead. Just be gentle, please.\"",
+   "\t\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<</switch>>",
+   "\t\t<</if>>",
+   "\t<<elseif $speechapologise is 1>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t<<He>> looks confused. \"Why are you sorry? Everything's okay, I promise.\"",
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t<<He>> speaks. \"I know how you can make it up to me.\"",
+   "\t\t<</switch>>",
+   "\t<<elseif $speechapologiseno is 1>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t<<He>> looks confused. \"You keep saying you're sorry, are you okay? We can stop if you want.\"",
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t<<He>> speaks. \"Yes, keep saying that, you look so delightfully helpless.\"",
+   "\t\t<</switch>>",
+   "\t<<elseif $speechapologiseunforgiving is 1>>",
+   "\t\t<<He>> frowns. \"You haven't earned forgiveness.\"",
+   "\t<<elseif ($speechvaginawithhold + $speechanuswithhold + $speechpeniswithhold + $speechotheranuswithhold) gte 1 and !$sydneyUniqueComments.includes(\"withhold\")>>",
+   "\t\t<<set $sydneyUniqueComments.pushUnique(\"withhold\")>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t<<He>> smiles with glee. \"We both have to stay pure, after all.\" <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t<<He>> gives an exaggerated sigh, but smiles. \"You're such a fucking sextease sometimes!\" <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t<</switch>>",
+   "\t<<elseif $speechNPCChastity is 1 and $sydneyComments.chastity is 0>>",
+   "\t\t<<set $sydneyComments.chastity to 3>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`<<He>> speaks. \"Sorry about the belt, but I really need to stay safe...\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"Please don't hurt yourself trying to mess with my belt.\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"Th... the belt's not going to make you stop loving me, is it?\"`",
+   "\t\t\t\t)>>",
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`<<He>> speaks. \"I want this thing off, but I know it's for my own good.\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"Don't hurt yourself against the belt, it's a finger pincher.\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"I hope the belt's not a dealbreaker.\"`",
+   "\t\t\t\t)>>",
+   "\t\t<</switch>>",
+   "\t<<elseif $speechchastity is 1 and !$sydneyUniqueComments.includes(\"chastity\")>>",
+   "\t\t<<set $sydneyUniqueComments.pushUnique(\"chastity\")>>"
+  ],
+  "old_kr": [
+   "\t\t\t<</switch>>",
+   "\t\t<</if>>",
+   "\t<<elseif $speechapologise is 1>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t<<He>>【은는】 혼란스러운 표정을 짓는다. \"왜 사과하는 거야? 괜찮아, 약속할게.\"",
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t<<He>>【은는】 말한다. \"어떻게 하면 용서받을 수 있는지 난 알아.\"",
+   "\t\t<</switch>>",
+   "\t<<elseif $speechapologiseno is 1>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t<<He>>【은는】 혼란스러운 표정을 짓는다. \"계속 미안하다고 하는데, 너 괜찮아? 원하면 그만할 수도 있어.\"",
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t<<He>>【은는】 말한다. \"그래, 계속 그렇게 말해봐, 그렇게 무력해 보이는 게 너무 재밌으니까.\"",
+   "\t\t<</switch>>",
+   "\t<<elseif $speechapologiseunforgiving is 1>>",
+   "\t\t<<He>>【은는】 눈살을 찌푸린다. \"넌 용서받지 못했어.\"",
+   "\t<<elseif ($speechvaginawithhold + $speechanuswithhold + $speechpeniswithhold + $speechotheranuswithhold) gte 1 and !$sydneyUniqueComments.includes(\"withhold\")>>",
+   "\t\t<<set $sydneyUniqueComments.pushUnique(\"withhold\")>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t<<He>>【은는】 환하게 웃는다. \"우리 둘 다 결국 순결을 유지해야 하니까.\" <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t<<He>>【은는】 과장되게 한숨을 쉬지만 입가엔 미소가 걸려 있다. \"당신은 가끔 정말 사람을 애태우는 변태 같아요!\" <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t<</switch>>",
+   "\t<<elseif $speechNPCChastity is 1 and $sydneyComments.chastity is 0>>",
+   "\t\t<<set $sydneyComments.chastity to 3>>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`<<He>>【은는】 말한다. \"벨트는 미안해, 하지만 안전을 위해서 어쩔 수 없어...\"`,",
+   "\t\t\t\t\t`<<He>>【은는】 말한다. \"내 벨트 풀려고 하다가 다치지 마.\"`,",
+   "\t\t\t\t\t`<<He>>【은는】 말한다. \"베... 벨트 때문에 날 안 좋아하게 되는 건 아니지?\"`",
+   "\t\t\t\t)>>",
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`<<He>>【은는】 말한다. \"이거 풀고 싶지만, 나를 위해서라는 걸 알아.\"`,",
+   "\t\t\t\t\t`<<He>>【은는】 말한다. \"벨트에 손가락 끼일 수 있으니까 다치지 않게 조심해.\"`,",
+   "\t\t\t\t\t`<<He>>【은는】 말한다. \"벨트 때문에 너무 실망하지 않았으면 좋겠어.\"`",
+   "\t\t\t\t)>>",
+   "\t\t<</switch>>",
+   "\t<<elseif $speechchastity is 1 and !$sydneyUniqueComments.includes(\"chastity\")>>",
+   "\t\t<<set $sydneyUniqueComments.pushUnique(\"chastity\")>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t<<if $speechAnusImminent or $speechAnusEntrance>>",
+   "\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t<<He>> moans. \"Stop teasing me!\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t<<if $speechAnusImminent or $speechAnusEntrance>>",
+   "\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I want to be inside you.\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<if $speechAnusImminent or $speechAnusEntrance>>",
+   "\t\t\t\t\t<<addSpeechLine \"imminent\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I want to put it in.\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t<</switch>>",
+   "\t<<switch _sydneyStatus>>",
+   "\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t<<if $speechHandjobPenis or $speechHandjobVagina or $speechCheeks or $speechThigh or $speechFeet or $speechChestRub or $speechBreastRub>>",
+   "\t\t\t\t\t<<addSpeechLine \"touch\">>",
+   "\t\t\t\t\t\t<<He>> stifles a moan. \"I... I think... something's coming...\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t<<if $speechHandjobPenis or $speechHandjobVagina or $speechCheeks or $speechThigh or $speechFeet or $speechChestRub or $speechBreastRub>>",
+   "\t\t\t\t\t<<addSpeechLine \"touch\">>",
+   "\t\t\t\t\t\t<<He>> gasps. \"Th... this is called foreplay, right?\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<if $speechHandjobPenis or $speechHandjobVagina or $speechCheeks or $speechThigh or $speechFeet or $speechChestRub or $speechBreastRub>>",
+   "\t\t\t\t\t<<addSpeechLine \"touch\">>",
+   "\t\t\t\t\t\t<<He>> giggles. \"I... guess this isn't too impure.\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t<<if $speechHandjobPenis or $speechHandjobVagina or $speechCheeks or $speechThigh or $speechFeet or $speechChestRub or $speechBreastRub>>",
+   "\t\t\t\t\t<<addSpeechLine \"touch\">>",
+   "\t\t\t\t\t\t<<He>> speaks through gasps and moans. \"Just a little more!\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t<<if $speechHandjobPenis or $speechHandjobVagina or $speechCheeks or $speechThigh or $speechFeet or $speechChestRub or $speechBreastRub>>",
+   "\t\t\t\t\t<<addSpeechLine \"touch\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"You're pretty good at this.\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<if $speechHandjobPenis or $speechHandjobVagina or $speechCheeks or $speechThigh or $speechFeet or $speechChestRub or $speechBreastRub>>",
+   "\t\t\t\t\t<<addSpeechLine \"touch\">>",
+   "\t\t\t\t\t\t<<He>> lets out a clearly fake yawn. \"Already bored of the foreplay.\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t\t<<default>>",
+   "\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t<<if $speechHandjobPenis or $speechHandjobVagina or $speechCheeks or $speechThigh or $speechFeet or $speechChestRub or $speechBreastRub>>",
+   "\t\t\t\t\t<<addSpeechLine \"touch\">>",
+   "\t\t\t\t\t\t<<He>> speaks through gasps and moans. \"I'm getting close...\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t<<if $speechHandjobPenis or $speechHandjobVagina or $speechCheeks or $speechThigh or $speechFeet or $speechChestRub or $speechBreastRub>>",
+   "\t\t\t\t\t<<addSpeechLine \"touch\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I think I can handle a little more.\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<if $speechHandjobPenis or $speechHandjobVagina or $speechCheeks or $speechThigh or $speechFeet or $speechChestRub or $speechBreastRub>>",
+   "\t\t\t\t\t<<addSpeechLine \"touch\">>",
+   "\t\t\t\t\t\t<<He>> giggles. \"I wouldn't want anyone else to touch me like this.\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</if>>",
+   "\t<</switch>>",
+   "",
+   "\t<<if _sydney.gender is \"h\">>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t<<if $worn.genitals.name is \"chastity parasite\">>",
+   "\t\t\t\t\t<<print `\"What is that? Do you need to go to the hospital?\"`>>",
+   "\t\t\t\t<<elseif _sydneyChastity>>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"We're matching!\"`,",
+   "\t\t\t\t\t\t`<<He>> speaks. \"We're both still pure if we both have chastity devices, right?\"`,",
+   "\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"At least we don't have to worry since we're both protected.\"`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"You got me to remove mine, but now you have one?\"`,",
+   "\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"So this is how it feels.\"`,",
+   "\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"Oh.\"`",
+   "\t\t\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<case \"pure\" \"pureLust\" \"neutral\" \"neutralLust\">>",
+   "\t\t\t\t<<if $worn.genitals.name is \"chastity parasite\">>",
+   "\t\t\t\t\t<<print `\"그게 뭐예요? 병원에 가야 하는 거 아닌가요?\"`>>",
+   "\t\t\t\t<<elseif _sydneyChastity>>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>>【은는】 당신의 <<printChastity>>【을를】 바라본다. \"우리 커플이네!\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 말한다. \"우리 둘 다 정조대를 차고 있으면 둘 다 여전히 순결한 거겠지?\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 당신의 <<printChastity>>【을를】 바라본다. \"둘 다 안전하니까 최소한 걱정할 필요는 없겠다.\"`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>>【은는】 당신의 <<printChastity>>【을를】 바라본다. \"내 건 벗기더니 넌 그걸 차고 있어?\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 당신의 <<printChastity>>【을를】 바라본다. \"아, 이런 기분이었구나.\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 당신의 <<printChastity>>【을를】 바라본다. \"아.\"`",
+   "\t\t\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t<<if $speechFutaPenis>>",
+   "\t\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Am... am I doing this right?\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"It's getting harder! And... wetter.\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I'm... not being too rough, am I?\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t<<switch _sydneyStatus>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $worn.genitals.name is \"chastity parasite\">>",
+   "\t\t\t\t\t\"I'm always up for trying new things, but that's a little freaky.\"",
+   "\t\t\t\t<<elseif _sydneyChastity>>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>> speaks. \"Okay, hear me out, if we smash the chastity devices together really hard...\"`,",
+   "\t\t\t\t\t\t`<<He>> speaks. \"We need to find the keys for our chastity devices soon.\"`,",
+   "\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"I guess we're both just lusty sinners and can't do anything about it.\"`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"You're kidding me, right?\"`,",
+   "\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"Is this a joke?\"`,",
+   "\t\t\t\t\t\t`<<He>> stares at your <<printChastity>>. \"Oh you absolute sextease, you got me to remove mine just to—\"`",
+   "\t\t\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $worn.genitals.name is \"chastity parasite\">>",
+   "\t\t\t\t\t\"새로운 걸 시도하는 건 언제든 환영이지만, 그건 좀 기괴하네요.\"",
+   "\t\t\t\t<<elseif _sydneyChastity>>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>>【은는】 말한다. \"좋아, 내 말 들어봐. 만약 우리 정조대를 서로 세게 부딪치면...\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 말한다. \"우리 정조대 열쇠를 빨리 찾아봐야 할 것 같아.\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 당신의 <<printChastity>>【을를】 바라본다. \"우린 둘 다 음탕한 죄인이고 아무것도 할 수 없는 모양이네.\"`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>>【은는】 당신의 <<printChastity>>【을를】 바라본다. \"농담하는 거지, 그렇지?\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 당신의 <<printChastity>>【을를】 바라본다. \"이거 장난이야?\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 당신의 <<printChastity>>【을를】 바라본다. \"오, 완전 날 놀리려고 이러네. 내 건 벗게 해 놓고는—\"`",
+   "\t\t\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $speechFutaPenis>>",
+   "\t\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I love that you've also got both sets of gear. You really are perfect.\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I'll stick my fingers in your mouth after this, so you can taste yourself.\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"It'd be a shame if I just redirected your cumshot right into your own pussy. Then I could clone you!\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"So, which one do you like more?\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<default>>",
+   "\t\t\t\t<<if $speechFutaPenis>>",
+   "\t\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I never would have learned things like this, if not for you.\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I think I'm getting the hang of this!\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Does it feel good when I work it like this?\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"corrupt\" \"corruptLust\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>> winces. \"H... harder...\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>> winces. \"You're hurting me...\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> winces. \"Ow! Is it always this painful?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>>【은는】 흠칫 놀란다. \"더... 세게...\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>>【은는】 흠칫 놀란다. \"나 아파...\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 흠칫 놀란다. \"아얏! 원래 이렇게 아픈 거야?\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $speechFutaPenis>>",
+   "\t\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Am... am I doing this right?\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"It's getting harder! And... wetter.\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I'm... not being too rough, am I?\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"pure\" \"pureLust\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>> gives you a menacing glare. \"I know you can hit harder than that.\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>> laughs. \"I love it when you're rough!\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> winces. \"Ow! Haha, harder!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>>【은는】 위협적으로 쏘아본다. \"이것보다 더 세게 때릴 수 있다는 거 알아.\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>>【은는】 웃는다. \"네가 거칠게 구는 거 정말 좋아!\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 흠칫 놀란다. \"아얏! 하하, 더 세게!\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $speechFutaPenis>>",
+   "\t\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I love that you've got both sets of gear. You really are perfect.\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"It'd be a shame if I just redirected your cumshot right into your own pussy. Then I could clone you!\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"So, which one feels better?\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"corrupt\" \"corruptLust\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>> winces. \"Hit me again! I like it!\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>> laughs. \"If you enjoy being rough, I guess I have to enjoy it too.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> winces. \"Ow! That one really hurt!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>>【은는】 흠칫 놀란다. \"한 번 더 때려줘! 너무 좋아!\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>>【은는】 웃는다. \"네가 이렇게 거칠게 구는 걸 즐긴다면, 나도 즐겨야지.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 흠칫 놀란다. \"아얏! 방금 건 진짜 아팠어!\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $speechFutaPenis>>",
+   "\t\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"You're so unique. I never learned about this in science class.\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I think I'm getting used to working with both.\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I'm almost jealous. I wish I knew what both felt like.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<default>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> notices your attempts to cover yourself. \"A-are you nervous? That's okay, I am too.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t당신이 몸을 가리려고 애쓰는 것을 보고 <<He>>【은는】 말한다. \"가, 긴장했어? 괜찮아, 나도 그러니까.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $speechPenis or $speechGlans>>",
+   "\t\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Am... am I doing this right?\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t<<case \"pure\" \"pureLust\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> notices your attempts to cover yourself. \"Remember when I was the apprehensive one? How things have changed.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t당신이 몸을 가리려고 애쓰는 것을 보고 <<He>>【은는】 말한다. \"내가 덜덜 떨었던 거 기억나? 상황이 완전히 역전됐네.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $speechPenis or $speechGlans>>",
+   "\t\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t\t\t<<He>> giggles. \"This toy makes me feel hot. I need it inside me.\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t<<case \"corrupt\" \"corruptLust\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> notices your attempts to cover yourself. \"It's okay, I don't mind seeing you like this anymore. We can both trust each other, right?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t당신이 몸을 가리려고 애쓰는 것을 보고 <<He>>【은는】 말한다. \"괜찮아, 네가 이런 모습이어도 전혀 신경 안 써. 우린 서로 믿잖아, 그렇지?\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $speechPenis or $speechGlans>>",
+   "\t\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I never would have learned things like this, if not for you.\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I think I'm getting the hang of this!\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t<<default>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechhair is 1 and !$sydneyUniqueComments.includes(\"hair\")>>",
+   "\t\t<<set $sydneyUniqueComments.pushUnique(\"hair\")>>",
+   "\t\t<<if _sydney.hairColour isnot \"strawberryblond\">>",
+   "\t\t\t<<He>> speaks. \"I've always loved your hair. That's why I didn't hesitate to take your advice on my appearance.\"",
+   "\t\t<<else>>",
+   "\t\t\t<<He>> speaks. \"I've always loved your hair.\"",
+   "\t\t<</if>>",
+   "\t<<elseif ($speechhandjobpenis + $speechhandjobvagina + $speechcheeks + $speechthigh + $speechfeet + $speechchestrub + $speechbreastrub) gte 1 and $sydneyComments.touch is 0>>",
+   "\t\t<<set $sydneyComments.touch to 3>>"
+  ],
+  "old_kr": [
+   "\t<<elseif $speechhair is 1 and !$sydneyUniqueComments.includes(\"hair\")>>",
+   "\t\t<<set $sydneyUniqueComments.pushUnique(\"hair\")>>",
+   "\t\t<<if _sydney.hairColour isnot \"strawberryblond\">>",
+   "\t\t\t<<He>>【은는】 말한다. \"난 항상 네 머리카락을 좋아했어. 그래서 내 겉모습에 대한 네 조언을 망설임 없이 받아들인 거야.\"",
+   "\t\t<<else>>",
+   "\t\t\t<<He>>【은는】 말한다. \"난 네 머리카락이 항상 좋았어.\"",
+   "\t\t<</if>>",
+   "\t<<elseif ($speechhandjobpenis + $speechhandjobvagina + $speechcheeks + $speechthigh + $speechfeet + $speechchestrub + $speechbreastrub) gte 1 and $sydneyComments.touch is 0>>",
+   "\t\t<<set $sydneyComments.touch to 3>>"
+  ],
+  "new_en": [
+   "\t<<else>>"
+  ],
+  "context": "\t\t<</switch>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>> stifles a moan. \"I... I think... something's coming...\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>> gasps. \"Th... this is called foreplay, right?\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> giggles. \"I... guess this isn't too impure.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>>【은는】 신음을 억누른다. \"나... 갈 것 같아...\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>>【은는】 헐떡인다. \"이... 이걸 애무라고 하는 거지?\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 꺄르륵 웃는다. \"이거... 그렇게 불순하진 않은 것 같아.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $speechPenis or $speechGlans>>",
+   "\t\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Am... am I doing this right?\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> giggles. \"It's getting bigger!\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I'm... not being too rough, am I?\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"pure\" \"pureLust\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>> speaks through gasps and moans. \"Just a little more!\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>> speaks. \"You're pretty good at this.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> lets out a clearly fake yawn. \"Already bored of the foreplay.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>>【은는】 헐떡임과 신음을 섞어 말한다. \"조금만 더!\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"너 이런 거 꽤 잘한다.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 짐짓 하품하는 시늉을 한다. \"벌써 애무가 지루해졌어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $speechPenis or $speechGlans>>",
+   "\t\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I'm going to wring you dry.\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Just relax, and let me take care of this.\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> giggles. \"Make sure to keep it down!\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"corrupt\" \"corruptLust\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>> speaks through gasps and moans. \"I'm getting close...\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>> speaks. \"I think I can handle a little more.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> giggles. \"I wouldn't want anyone else to touch me like this.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t<<He>>【은는】 헐떡임과 신음을 섞어 말한다. \"나 갈 것 같아...\"",
+   "\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"조금 더 할 수 있을 것 같아.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 꺄르륵 웃는다. \"다른 사람이 나를 이렇게 만지는 건 원하지 않아.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $speechPenis or $speechGlans>>",
+   "\t\t\t\t\t<<addSpeechLine \"fondle\">>",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I never would have learned things like this, if not for you.\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"I think I'm getting the hang of this!\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Does it feel good when I work it like this?\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<default>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $sydneyComments.fondle is 0 and ($speechfutapenis + $speechvagina + $speechclit + $speechpenis + $speechglans + $speechanus + $speechbottom) gte 1>>",
+   "\t\t<<if $speechfutapenis is 1>>",
+   "\t\t\t<<set $sydneyComments.fondle to 3>>",
+   "\t\t\t<<if _sydney.gender is \"h\">>",
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"Am... am I doing this right?\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"It's getting harder! And... wetter.\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"I'm... not being too rough, am I?\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"I love that you've also got both sets of gear. You really are perfect.\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"I'll stick my fingers in your mouth after this, so you can taste yourself.\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"It'd be a shame if I just redirected your cumshot right into your own pussy. Then I could clone you!\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"So, which one do you like more?\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"I never would have learned things like this, if not for you.\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"I think I'm getting the hang of this!\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"Does it feel good when I work it like this?\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>> <!-- sydney is not a herm -->",
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"Am... am I doing this right?\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"It's getting harder! And... wetter.\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"I'm... not being too rough, am I?\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"I love that you've got both sets of gear. You really are perfect.\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"It'd be a shame if I just redirected your cumshot right into your own pussy. Then I could clone you!\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"So, which one feels better?\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"You're so unique. I never learned about this in science class.\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"I think I'm getting used to working with both.\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"I'm almost jealous. I wish I knew what both felt like.\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t<</switch>>"
+  ],
+  "old_kr": [
+   "\t<<elseif $sydneyComments.fondle is 0 and ($speechfutapenis + $speechvagina + $speechclit + $speechpenis + $speechglans + $speechanus + $speechbottom) gte 1>>",
+   "\t\t<<if $speechfutapenis is 1>>",
+   "\t\t\t<<set $sydneyComments.fondle to 3>>",
+   "\t\t\t<<if _sydney.gender is \"h\">>",
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"나... 지금 잘하고 있는 거 맞지?\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"점점 더 딱딱해지고 있어! 그리고... 젖었어.\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"내가... 너무 거칠게 하는 건 아니지?\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"네가 두 가지 다 가지고 있다는 게 너무 좋아. 넌 정말 완벽해.\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"이거 끝나고 네 입에 손가락을 넣을게. 그러면 네 맛을 볼 수 있을 거야.\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"네 정액이 네 보지로 바로 들어가게 하지 않는다면 아쉽겠지. 그럼 널 똑같이 복제할 수 있을 텐데!\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"그래서, 둘 중 어느 게 더 좋아?\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"네가 아니었다면 이런 건 절대 배울 수 없었을 거야.\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"어떻게 하는지 알 것 같아!\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"내가 이렇게 해주니까 기분 좋아?\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>> <!-- sydney is not a herm -->",
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"나... 지금 잘하고 있는 거 맞지?\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"점점 더 딱딱해지고 있어! 그리고... 젖었어.\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"내가... 너무 거칠게 하는 건 아니지?\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"네가 두 가지 다 가지고 있다는 게 너무 좋아. 넌 정말 완벽해.\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"네 정액이 네 보지로 바로 들어가게 하지 않는다면 아쉽겠지. 그럼 널 똑같이 복제할 수 있을 텐데!\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"그래서, 어느 게 더 기분 좋아?\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"넌 정말 특별해. 이런 건 과학 시간에도 배운 적 없어.\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"이제 두 개를 다루는 데 익숙해진 것 같아.\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"질투 날 정도야. 나도 둘 다 가지고 있으면 어떤 기분일지 알고 싶어.\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t<</switch>>"
+  ],
+  "new_en": [
+   "\t<<if $rng gte 96 and !$sydneyUniqueComments.includes(\"clothes\")>>",
+   "\t\t<<if $worn.upper.name is \"nun's habit\" or $worn.upper.name is \"monk's habit\">>",
+   "\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<set $sydneyUniqueComments.pushUnique(\"clothes\")>><<He>> runs <<his>> hands over your $worn.upper.name. <<He>> almost seems nostalgic. <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<set $sydneyUniqueComments.pushUnique(\"clothes\")>><<He>> looks over your $worn.upper.name. \"Does... wearing that make this all okay?\" <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<elseif $speechvagina is 1 or $speechclit is 1>>",
+   "\t\t\t<<set $sydneyComments.fondle to 3>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>> speaks. \"Am... am I doing this right?\"`,",
+   "\t\t\t\t\t\t`<<He>> giggles. \"It's getting wetter!\"`,",
+   "\t\t\t\t\t\t`<<He>> speaks. \"I'm... not being too rough, am I?\"`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>> speaks. \"I'll stick my fingers in your mouth after this, so you can taste yourself.\"`,",
+   "\t\t\t\t\t\t`<<He>> speaks. \"Just relax, and let me take care of this.\"`,",
+   "\t\t\t\t\t\t`<<He>> giggles. \"Make sure to keep it down!\"`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>> speaks. \"I never would have learned things like this, if not for you.\"`,",
+   "\t\t\t\t\t\t`<<He>> speaks. \"I think I'm getting the hang of this!\"`,",
+   "\t\t\t\t\t\t`<<He>> speaks. \"How deep should I go?\"`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t<</switch>>",
+   "\t\t<<elseif $speechpenis is 1 or $speechglans is 1>>",
+   "\t\t\t<<set $sydneyComments.fondle to 3>>",
+   "\t\t\t<<if playerHasStrapon()>>",
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<He>> speaks. \"Am... am I doing this right?\"",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<He>> giggles. \"This toy makes me feel hot. I need it inside me.\"",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"I never would have learned things like this, if not for you.\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"I think I'm getting the hang of this!\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t<</switch>>"
+  ],
+  "old_kr": [
+   "\t\t<<elseif $speechvagina is 1 or $speechclit is 1>>",
+   "\t\t\t<<set $sydneyComments.fondle to 3>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>>【은는】 말한다. \"나... 지금 잘하고 있는 거 맞지?\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 꺄르륵 웃는다. \"점점 더 젖고 있어!\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 말한다. \"내가... 너무 거칠게 하는 건 아니지?\"`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>>【은는】 말한다. \"이거 끝나고 네 입에 손가락을 넣을게. 그러면 네 맛을 볼 수 있을 거야.\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 말한다. \"그냥 긴장 풀고, 나한테 맡겨둬.\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 꺄르륵 웃는다. \"조용히 해야 해!\"`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>>【은는】 말한다. \"네가 아니었다면 이런 건 절대 배울 수 없었을 거야.\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 말한다. \"어떻게 하는지 알 것 같아!\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 말한다. \"얼마나 깊이 넣을까?\"`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t<</switch>>",
+   "\t\t<<elseif $speechpenis is 1 or $speechglans is 1>>",
+   "\t\t\t<<set $sydneyComments.fondle to 3>>",
+   "\t\t\t<<if playerHasStrapon()>>",
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<He>>【은는】 말한다. \"나... 지금 잘하고 있는 거 맞지?\"",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<He>>【은는】 꺄르륵 웃는다. \"이 장난감을 만지니까 몸이 달아오르는 것 같아. 내 안에 넣고 싶어.\"",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"네가 아니었다면 이런 건 절대 배울 수 없었을 거야.\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"어떻게 하는지 알 것 같아!\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t<</switch>>"
+  ],
+  "new_en": [
+   "\t\t<<elseif $worn.neck.name is \"holy pendant\" or $worn.neck.name is \"stone pendant\">>",
+   "\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<set $sydneyUniqueComments.pushUnique(\"clothes\")>><<set $sydneySeen.pushUnique(\"holy pendant\")>><<He>> stares at your $worn.neck.name. <<He>> almost seems nostalgic. <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"Am... am I doing this right?\"`,",
+   "\t\t\t\t\t\t\t`<<He>> giggles. \"It's getting bigger!\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"I'm... not being too rough, am I?\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"I'm going to wring you dry.\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"Just relax, and let me take care of this.\"`,",
+   "\t\t\t\t\t\t\t`<<He>> giggles. \"Make sure to keep it down!\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"I never would have learned things like this, if not for you.\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"I think I'm getting the hang of this!\"`,",
+   "\t\t\t\t\t\t\t`<<He>> speaks. \"Does it feel good when I work it like this?\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t<</switch>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"나... 지금 잘하고 있는 거 맞지?\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 꺄르륵 웃는다. \"점점 커지고 있어!\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"내가... 너무 거칠게 하는 건 아니지?\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"널 쥐어짜 버릴 거야.\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"그냥 긴장 풀고, 나한테 맡겨둬.\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 꺄르륵 웃는다. \"조용히 해야 해!\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"네가 아니었다면 이런 건 절대 배울 수 없었을 거야.\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"어떻게 하는지 알 것 같아!\"`,",
+   "\t\t\t\t\t\t\t`<<He>>【은는】 말한다. \"내가 이렇게 해주니까 기분 좋아?\"`",
+   "\t\t\t\t\t\t)>>",
+   "\t\t\t\t<</switch>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<set $sydneyUniqueComments.pushUnique(\"clothes\")>><<set $sydneySeen.pushUnique(\"holy pendant\")>><<He>> looks over your $worn.neck.name. \"Does... wearing that make this all okay?\" <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $worn.neck.name is \"dark pendant\">>",
+   "\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<set $sydneyUniqueComments.pushUnique(\"clothes\")>><<set $sydneySeen.pushUnique(\"dark pendant\")>><<He>> stares at your $worn.neck.name. <<He>> seems to get lost in it for a moment. <<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<set $sydneyUniqueComments.pushUnique(\"clothes\")>><<set $sydneySeen.pushUnique(\"dark pendant\")>><<He>> looks over your $worn.neck.name. \"It's... so pretty, but also a little unsettling...\" <<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $location is \"school\" and $exposed lte 0 and !wearingSchoolOutfit()>>",
+   "\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<set $sydneyUniqueComments.pushUnique(\"clothes\")>><<He>> looks over your clothes and giggles. \"That's not proper school uniform. Don't worry, I can help you take it off.\" <<set $combatgoal to \"strip\">>",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<set $sydneyUniqueComments.pushUnique(\"clothes\")>><<He>> looks over your clothes. \"Y-you should really adhere to the dress code, before you get in trouble...\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $worn.lower.name is \"naked\" and playerHasStrapon()>>",
+   "\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<set $sydneyUniqueComments.pushUnique(\"clothes\")>><<He>> looks over your <<penisSimple>> and giggles. \"Oh, these toys are fun.\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<set $sydneyUniqueComments.pushUnique(\"clothes\")>><<He>> looks over your <<penisSimple>> and blushes. \"<<nnpc_Mum \"Sirris\">>'s always talking about these.\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $exposed gte 1>>",
+   "\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<set $sydneyUniqueComments.pushUnique(\"clothes\")>><<He>> looks over your body and giggles. \"You look even better all exposed like this.\" <<npcincr Sydney lust 1>><<glust>>",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<set $sydneyUniqueComments.pushUnique(\"clothes\")>><<He>> shyly looks over your exposed body. \"Y-you're... you look... uhm...\" <<He>> looks away for a moment. \"You look good.\" <<npcincr Sydney lust 1>><<npcincr Sydney purity -2>><<gslust>><<lspurity>>",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<elseif $speechanus is 1 or $speechbottom is 1>>",
+   "\t\t\t<<set $sydneyComments.fondle to 3>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>> speaks. \"Am... am I doing this right?\"`,",
+   "\t\t\t\t\t\t`<<He>> giggles. \"I didn't know this spot could make someone feel good!\"`,",
+   "\t\t\t\t\t\t`<<He>> speaks. \"I'm... not being too rough, am I?\"`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>> speaks. \"Maybe we should stick something bigger in there.\"`,",
+   "\t\t\t\t\t\t`<<He>> speaks. \"Just relax, and let me take care of this.\"`,",
+   "\t\t\t\t\t\t`<<He>> giggles. \"Make sure to keep it down!\"`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>> speaks. \"I never would have learned things like this, if not for you.\"`,",
+   "\t\t\t\t\t\t`<<He>> speaks. \"I think I'm getting the hang of this!\"`,",
+   "\t\t\t\t\t\t`<<He>> speaks. \"How deep should I go?\"`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t<</switch>>"
+  ],
+  "old_kr": [
+   "\t\t<<elseif $speechanus is 1 or $speechbottom is 1>>",
+   "\t\t\t<<set $sydneyComments.fondle to 3>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>>【은는】 말한다. \"나... 지금 잘하고 있는 거 맞지?\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 꺄르륵 웃는다. \"이 부위가 사람 기분 좋게 만드는지 몰랐어!\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 말한다. \"내가... 너무 거칠게 하는 건 아니지?\"`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>>【은는】 말한다. \"여기에 더 큰 걸 넣어볼까.\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 말한다. \"그냥 긴장 풀고, 나한테 맡겨둬.\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 꺄르륵 웃는다. \"조용히 해야 해!\"`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>>【은는】 말한다. \"네가 아니었다면 이런 건 절대 배울 수 없었을 거야.\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 말한다. \"어떻게 하는지 알 것 같아!\"`,",
+   "\t\t\t\t\t\t`<<He>>【은는】 말한다. \"얼마나 깊이 넣을까?\"`",
+   "\t\t\t\t\t)>>",
+   "\t\t\t<</switch>>"
+  ],
+  "new_en": [],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`<<He>> covers <<his>> blush. \"D-don't just stare at it...\"`,",
+   "\t\t\t\t\t`<<He>> giggles. \"You're looking at me funny...\"`,",
+   "\t\t\t\t\t`<<He>> whispers. \"N-no one else has ever seen me like this before...\"`",
+   "\t\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`<<He>>【은는】 붉어진 얼굴을 가린다. \"그렇게 쳐다보지만 말고...\"`,",
+   "\t\t\t\t\t`<<He>>【은는】 꺄르륵 웃는다. \"너 나 이상하게 쳐다보고 있어...\"`,",
+   "\t\t\t\t\t`<<He>>【은는】 속삭인다. \"아, 아무한테도 내 이런 모습 보여준 적 없어...\"`",
+   "\t\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<He>> looks upwards. \"S...such a sin, doing this on such holy ground...\"",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"pure\" \"pureLust\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`<<He>> uses two fingers to spread <<his>> lips. \"Enjoying the view?\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"Yeah, I know, it looks perfect doesn't it?\"`,",
+   "\t\t\t\t\t`<<He>> giggles. \"It's all yours.\"`",
+   "\t\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`<<He>>【은는】 두 손가락으로 <<his>> 입술을 벌린다. \"즐겁게 보고 있어?\"`,",
+   "\t\t\t\t\t`<<He>>【은는】 말한다. \"응, 알아, 완벽해 보이지, 그렇지?\"`,",
+   "\t\t\t\t\t`<<He>>【은는】 꺄르륵 웃는다. \"전부 네 거야.\"`",
+   "\t\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<He>> giggles. \"Let's defile this place.\"",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"corrupt\" \"corruptLust\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`<<He>> speaks. \"You're staring. At least let me look at yours, too...\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"What are you going to do?\"`,",
+   "\t\t\t\t\t`<<He>> speaks. \"W...well? Don't just stand there...\"`",
+   "\t\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<print either(",
+   "\t\t\t\t\t`<<He>>【은는】 말한다. \"그만 빤히 쳐다봐. 네 것도 좀 보여줘...\"`,",
+   "\t\t\t\t\t`<<He>>【은는】 말한다. \"어떻게 할 거야?\"`,",
+   "\t\t\t\t\t`<<He>>【은는】 말한다. \"어... 음? 그렇게 서 있지만 말고...\"`",
+   "\t\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<He>> giggles. \"W...we're doing this in the temple, and nothing is stopping us...\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t<</switch>>",
+   "\t<<elseif $location is \"school\">>",
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<He>> looks around nervously. \"If... if someone caught us...\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<He>> giggles. \"I sure hope one of the other students hear us.\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<<default>>",
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<He>> looks around. \"I hope there's no one waiting in line...\"",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<default>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $rng gte 96 and !$sydneyUniqueComments.includes(\"clothes\")>>",
+   "\t\t\t<<set $sydneyUniqueComments.pushUnique(\"clothes\")>>",
+   "\t\t\t<<if $worn.upper.name is \"nun's habit\" or $worn.upper.name is \"monk's habit\">>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>> runs <<his>> hands over your $worn.upper.name. <<He>> almost seems nostalgic. <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> looks over your $worn.upper.name. \"Does... wearing that make this all okay?\" <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $worn.neck.name is \"holy pendant\" or $worn.neck.name is \"stone pendant\">>",
+   "\t\t\t\t<<set $sydneySeen.pushUnique(\"holy pendant\")>>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>> stares at your $worn.neck.name. <<He>> almost seems nostalgic. <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> looks over your $worn.neck.name. \"Does... wearing that make this all okay?\" <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $worn.neck.name is \"dark pendant\">>",
+   "\t\t\t\t<<set $sydneySeen.pushUnique(\"dark pendant\")>>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>> stares at your $worn.neck.name. <<He>> seems to get lost in it for a moment. <<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> looks over your $worn.neck.name. \"It's... so pretty, but also a little unsettling...\" <<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $location is \"school\" and $exposed lte 0 and !wearingSchoolOutfit()>>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>> looks over your clothes and giggles. \"That's not proper school uniform. Don't worry, I can help you take it off.\" <<set $combatgoal to \"strip\">>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> looks over your clothes. \"Y-you should really adhere to the dress code, before you get in trouble...\"",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $worn.lower.name is \"naked\" and playerHasStrapon()>>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>> looks over your <<penisSimple>> and giggles. \"Oh, these toys are fun.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> looks over your <<penisSimple>> and blushes. \"<<nnpc_Mum \"Sirris\">>'s always talking about these.\"",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $exposed gte 1>>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>> looks over your body and giggles. \"You look even better all exposed like this.\" <<npcincr Sydney lust 1>><<glust>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>> shyly looks over your exposed body. \"Y-you're... you look... uhm...\" <<He>> looks away for a moment. \"You look good.\" <<npcincr Sydney lust 1>><<npcincr Sydney purity -2>><<gslust>><<lspurity>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _noNameComment to true>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $rng gte 91>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<He>> murmurs. \"Sorry, I don't really know what I'm doing...\"",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<He>> speaks. \"We sure know how to have fun.\"",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t\"I used to get so nervous about this kind of thing...\"",
+   "\t\t\t<</switch>>",
+   "\t\t<<elseif $rng gte 86>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<He>> speaks. \"This is... so sinful...\"",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<He>> speaks. \"You've opened my eyes, being a sinner is too much fun!\"",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>> speaks. \"I was always taught that this was sinful, but...\"",
+   "\t\t\t<</switch>>",
+   "\t\t<<elseif $rng gte 81>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<He>> murmurs. \"N...not too rough, please...\"",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<He>> speaks. \"I can handle anything you have for me. Come on, show me what you've got!\"",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>> speaks. \"I... you can be a little rough, if you want...\"",
+   "\t\t\t<</switch>>",
+   "\t\t<<elseif $rng gte 76>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<He>> takes a deep breath. \"I... I can do this.\"",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<He>> speaks. \"Think you can keep up?\"",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>> speaks. \"I think I can keep pace with you, now.\"",
+   "\t\t\t<</switch>>",
+   "\t\t<<elseif $rng gte 71>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<He>> takes a deep breath. \"We... need to stay quiet...\"",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<He>> giggles. \"Shh!\"",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>> speaks. \"Let's try not to get caught...\"",
+   "\t\t\t<</switch>>",
+   "\t\t<<elseif $rng gte 66>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<He>> looks upwards. \"Forgive me...\"",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<He>> giggles. \"Looks like I'm due for some discipline. Maybe you can punish me?\"",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>> giggles. \"I've sinned... is this my punishment?\"",
+   "\t\t\t<</switch>>",
+   "\t\t<<elseif $rng gte 61>>",
+   "\t\t\t<<if $location is \"temple\">>",
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<He>> looks upwards. \"S...such a sin, doing this on such holy ground...\"",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<He>> giggles. \"Let's defile this place.\"",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<He>> giggles. \"W...we're doing this in the temple, and nothing is stopping us...\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<elseif $location is \"school\">>",
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<He>> looks around nervously. \"If... if someone caught us...\"",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<He>> giggles. \"I sure hope one of the other students hear us.\"",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<He>> looks around. \"I hope there's no one waiting in line...\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<He>> looks around nervously. \"Here, of all places...\"",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<He>> giggles. \"Think anyone will find us?\"",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<He>> looks around. \"I think we're safe.\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<else>>",
+   "\t\t\t<<set _noNameComment to true>>",
+   "\t\t<</if>>",
+   "\t<</if>>",
+   "\t<<if $sydneyComments>>",
+   "\t\t<<set _keys to Object.keys($sydneyComments)>>",
+   "\t\t<<for $_i to 0; $_i lt _keys.length; $_i++>>",
+   "\t\t\t<<if $sydneyComments[_keys[$_i]] gt 0>>",
+   "\t\t\t\t<<set $sydneyComments[_keys[$_i]]-->>",
+   "\t\t\t<</if>>",
+   "\t\t<</for>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $rng gte 96 and !$sydneyUniqueComments.includes(\"clothes\")>>",
+   "\t\t\t<<set $sydneyUniqueComments.pushUnique(\"clothes\")>>",
+   "\t\t\t<<if $worn.upper.name is \"nun's habit\" or $worn.upper.name is \"monk's habit\">>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>>【은는】 <<his>> 손으로 당신의 $worn.upper.name 위를 훑는다. <<He>>【은는】 향수에 젖은 듯 보인다. <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 $worn.upper.name【을를】 살펴본다. \"그거 입고 있으면... 다 괜찮아지는 걸까?\" <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $worn.neck.name is \"holy pendant\" or $worn.neck.name is \"stone pendant\">>",
+   "\t\t\t\t<<set $sydneySeen.pushUnique(\"holy pendant\")>>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 $worn.neck.name【을를】 빤히 바라본다. <<He>>【은는】 향수에 젖은 듯 보인다. <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 $worn.neck.name【을를】 살펴본다. \"그거 입고 있으면... 다 괜찮아지는 걸까?\" <<npcincr Sydney purity 2>><<gspurity>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $worn.neck.name is \"dark pendant\">>",
+   "\t\t\t\t<<set $sydneySeen.pushUnique(\"dark pendant\")>>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 $worn.neck.name【을를】 빤히 바라본다. <<He>>【은는】 잠시 깊은 생각에 빠진 듯하다. <<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 $worn.neck.name【을를】 살펴본다. \"정말 예쁘긴 한데, 동시에 기분이 묘하네...\" <<npcincr Sydney purity -2>><<lspurity>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $location is \"school\" and $exposed lte 0 and !wearingSchoolOutfit()>>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 옷차림을 살펴보고 꺄르륵 웃는다. \"학교 교복 제대로 안 입었네. 걱정 마, 내가 벗겨줄 테니까.\" <<set $combatgoal to \"strip\">>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 옷차림을 살펴본다. \"문제 생기기 전에 규정 복장대로 잘 차려입는 게 좋을걸...\"",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $worn.lower.name is \"naked\" and playerHasStrapon()>>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 <<penisSimple>>【을를】 살펴보고 꺄르륵 웃는다. \"아, 이거 재밌네.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 <<penisSimple>>【을를】 살펴보고 얼굴을 붉힌다. \"<<nnpc_mum Sirris>>【이가】 이런 거에 대해서 맨날 이야기했는데.\"",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $exposed gte 1>>",
+   "\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t<<He>>【은는】 당신의 몸을 살펴보고 꺄르륵 웃는다. \"이렇게 보니까 더 좋아 보이는데.\" <<npcincr Sydney lust 1>><<glust>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<He>>【은는】 노출된 당신의 몸을 수줍게 살펴본다. \"너, 너 정말... 어, 음...\" <<He>>【은는】 잠시 눈을 돌린다. \"보기 좋아.\" <<npcincr Sydney lust 1>><<npcincr Sydney purity -2>><<gslust>><<lspurity>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _noNameComment to true>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $rng gte 91>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<He>>【은는】 중얼거린다. \"미안해, 어떻게 해야 하는지 잘 몰라서...\"",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"우리 재밌게 노는 법을 잘 아는 것 같아.\"",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t\"이런 짓 할 때마다 긴장했었는데...\"",
+   "\t\t\t<</switch>>",
+   "\t\t<<elseif $rng gte 86>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"이건... 진짜 죄악이야...\"",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"네 덕에 눈을 떴어, 죄인이 되는 게 이렇게나 재밌다니!\"",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"항상 이건 죄악이라고 배웠는데...\"",
+   "\t\t\t<</switch>>",
+   "\t\t<<elseif $rng gte 81>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<He>>【은는】 중얼거린다. \"너무 거칠지 않게, 부탁할게...\"",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"네가 뭘 하든 다 받아들일 수 있어. 자, 한번 보여줘 봐!\"",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"나... 네가 거칠게 해도 괜찮아...\"",
+   "\t\t\t<</switch>>",
+   "\t\t<<elseif $rng gte 76>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<He>>【은는】 심호흡을 한다. \"나... 나 할 수 있어.\"",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"나 따라올 수 있겠어?\"",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"이젠 나도 네 속도에 맞출 수 있을 것 같아.\"",
+   "\t\t\t<</switch>>",
+   "\t\t<<elseif $rng gte 71>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<He>>【은는】 심호흡을 한다. \"우리... 조용히 해야 해...\"",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<He>>【은는】 꺄르륵 웃는다. \"쉿!\"",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>>【은는】 말한다. \"안 들키게 조심하자...\"",
+   "\t\t\t<</switch>>",
+   "\t\t<<elseif $rng gte 66>>",
+   "\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t<<He>>【은는】 위를 쳐다본다. \"용서하소서...\"",
+   "\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t<<He>>【은는】 꺄르륵 웃는다. \"나 아무래도 훈육을 받아야 할까 봐. 네가 나한테 벌 좀 줄래?\"",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t<<He>>【은는】 꺄르륵 웃는다. \"나 죄를 지었는데... 이게 내 벌인 거야?\"",
+   "\t\t\t<</switch>>",
+   "\t\t<<elseif $rng gte 61>>",
+   "\t\t\t<<if $location is \"temple\">>",
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<He>>【은는】 위를 쳐다본다. \"이, 이런 성스러운 곳에서 이러다니, 정말 씻을 수 없는 죄악이야...\"",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<He>>【은는】 꺄르륵 웃는다. \"이곳을 엉망으로 만들어버리자.\"",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<He>>【은는】 꺄르륵 웃는다. \"우, 우린 신전에서 이러고 있는데 아무도 말리지 않아...\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<elseif $location is \"school\">>",
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<He>>【은는】 긴장한 채 주변을 둘러본다. \"만약... 만약 누구한테 들키면...\"",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<He>>【은는】 꺄르륵 웃는다. \"다른 학생들이 우리 소리를 들었으면 좋겠다.\"",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<He>>【은는】 주변을 둘러본다. \"기다리는 사람이 아무도 없었으면 좋겠네...\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch _sydneyStatus>>",
+   "\t\t\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t\t\t<<He>>【이가】 불안한 듯 주위를 둘러본다. \"하필이면 이런 곳에서...\"",
+   "\t\t\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t\t\t<<He>>【이가】 낄낄거린다. \"누가 우릴 찾아낼까?\"",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t\t\t<<He>>【이가】 주위를 둘러본다. \"안전한 것 같아.\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<else>>",
+   "\t\t\t<<set _noNameComment to true>>",
+   "\t\t<</if>>",
+   "\t<</if>>",
+   "\t<<if $sydneyComments>>",
+   "\t\t<<set _keys to Object.keys($sydneyComments)>>",
+   "\t\t<<for $_i to 0; $_i lt _keys.length; $_i++>>",
+   "\t\t\t<<if $sydneyComments[_keys[$_i]] gt 0>>",
+   "\t\t\t\t<<set $sydneyComments[_keys[$_i]]-->>",
+   "\t\t\t<</if>>",
+   "\t\t<</for>>"
+  ],
+  "new_en": [
+   "\t\t<<switch _sydneyStatus>>",
+   "\t\t\t<<case \"pure\" \"pureLust\">>",
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<He>> looks around nervously. \"Here, of all places...\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<<case \"corrupt\" \"corruptLust\">>",
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<He>> giggles. \"Think anyone will find us?\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<<default>>",
+   "\t\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t\t<<He>> looks around. \"I think we're safe.\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t<</switch>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$sydneyComments>>",
+   "\t\t<<set $sydneyComments to {}>>",
+   "\t\t<<set $sydneyComments.penetrated to 0>>",
+   "\t\t<<set $sydneyComments.mouth to 0>>",
+   "\t\t<<set $sydneyComments.trib to 0>>",
+   "\t\t<<set $sydneyComments.imminent to 0>>",
+   "\t\t<<set $sydneyComments.chastity to 0>>",
+   "\t\t<<set $sydneyComments.touch to 0>>",
+   "\t\t<<set $sydneyComments.fondle to 0>>",
+   "\t\t<<set $sydneyComments.flaunt to 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$sydneyUniqueComments>>"
+  ],
+  "context": "\t<<set _sydney to statusCheck(\"Sydney\")>><<rng>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t<<elseif $speechNPCAnusVirgin is 1>>",
+   "\t\t<<if $speechpenisvirgin is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechOralVirgin>>",
+   "\t\t<<addSpeechLine \"virginity\">>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<else>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechNPCKissVirgin>>",
+   "\t\t<<addSpeechLine \"virginity\">>",
+   "\t\t\t<<He>> gazes at you lovingly. \"That was my first kiss...\" <<he>> giggles.",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechHermAroused is 1>>",
+   "\t\t<<addSpeechLine \"reveal\">>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<print either(",
+   "\t\t\t\t\t\t`<<He>> speaks. \"I never would have learned things like this, if not for you.\"`,",
+   "\t\t\t\t\t\t`<<He>> speaks. \"I think I'm getting the hang of this!\"`,",
+   "\t\t\t\t\t\t`<<He>> speaks. \"How deep should I go?\"`",
+   "\t\t\t\t\t)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>",
+   "\t\t\t\t\t\t<<He>> winces. \"Hit me again! I like it!\"",
+   "\t\t\t\t\t<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>",
+   "\t\t\t\t\t\t<<He>> laughs. \"If you enjoy being rough, I guess I have to enjoy it too.\"",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<He>> winces. \"Ow! That one really hurt!\"",
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<<default>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<speechSay>>"
+  ],
+  "context": "\t<</if>>"
+ }
+]

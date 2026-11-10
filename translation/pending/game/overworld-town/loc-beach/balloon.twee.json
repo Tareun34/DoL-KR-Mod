@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Eat the popcorn (0:15)|Balloon Consume]]>><<set $phase to $balloonStand.robin.status is \"help needed\" ? \"ask_eat\" : \"popcorn\">><<trauma -3>><</link>><<ltrauma>><br>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[팝콘을 먹는다 (0:15)|Balloon Consume]]>><<set $phase to $balloonStand.robin.status is \"help needed\" ? \"ask_eat\" : \"popcorn\">><<trauma -3>><</link>><<ltrauma>><br>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Eat the popcorn (0:15)|Balloon Consume]]>><<set $phase to $balloonStand.robin.status is \"help needed\" ? \"ask_eat\" : \"popcorn\">><<trauma -3>><<pass 15>><</link>><<ltrauma>><br>"
+  ],
+  "context": "\t<<case \"popcorn\">>"
+ }
+]

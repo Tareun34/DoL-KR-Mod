@@ -1,0 +1,233 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"breasts\">><<silently>>",
+   "\t<<if Number.isInteger($player.breastsize)>>",
+   "\t\t<<if $player.breastsize lte 0>>",
+   "\t\t\t<<set _text_output to \"nipples\">>",
+   "\t\t<<else>>",
+   "\t\t\t<<set _text_output to setup.breastsizes[$player.breastsize] + \" breasts\">>"
+  ],
+  "old_kr": [
+   "<<widget \"breasts\">><<silently>>",
+   "\t<<if Number.isInteger($player.breastsize)>>",
+   "\t\t<<if $player.breastsize lte 0>>",
+   "\t\t\t<<set _text_output to \"유두만 있는 가슴\">>",
+   "\t\t<<else>>",
+   "\t\t\t<<set _text_output to window.KR.getBreastSizeKr(setup.breastsizes[$player.breastsize]) + \" 가슴\">>"
+  ],
+  "new_en": [
+   "<<widget \"breasts\">>",
+   "\t<<silently>>",
+   "\t\t<<if Number.isInteger($player.breastsize)>>",
+   "\t\t\t<<if $player.breastsize lte 0>>",
+   "\t\t\t\t<<set _text_output to \"nipples\">>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _text_output to `${setup.breastsizes[$player.breastsize]} `>>",
+   "\t\t\t\t<<if !_breastSensitivityDescribed or _args[0]>><<silently>><<breastsensitivity>><</silently>><<set _text_output += _text_output2>><</if>>",
+   "\t\t\t\t<<set _text_output += \"breasts\">>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $options.debugdisable is \"f\">>",
+   "\t\t\t<<set _text_output to \"ERROR - $$player.breastsize is not a number: $player.breastsize\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $options.debugdisable is \"f\">>",
+   "\t\t<<set _text_output to \"ERROR - $$player.breastsize is not a number: $player.breastsize\">>",
+   "\t<</if>>",
+   "<</silently>><<if !_breastSensitivityDescribed or _args[0]>><<breastsensitivity>><</if>><<print _text_output>><</widget>>"
+  ],
+  "old_kr": [
+   "\t<<elseif $options.debugdisable is \"f\">>",
+   "\t\t<<set _text_output to \"오류 - $player.breastsize 값이 숫자가 아닙니다\">>",
+   "\t<</if>>",
+   "<</silently>><<if !_breastSensitivityDescribed or _args[0]>><<breastsensitivity>><</if>><<print _text_output>><</widget>>"
+  ],
+  "new_en": [
+   "\t<</silently>>",
+   "\t<<print _text_output>>",
+   "<</widget>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if !_underOutfit>> <!-- Two separate items, not an outfit -->",
+   "\t\t<<set _text_output += \" and \" + $_secondhalf>>"
+  ],
+  "old_kr": [
+   "\t<<if !_underOutfit>> <!-- Two separate items, not an outfit -->",
+   "\t\t<<set _text_output += \"【와과】 \" + $_secondhalf>>"
+  ],
+  "new_en": [
+   "\t<<if !_underOutfit and $worn.under_lower.name isnot \"naked\">> <!-- Two separate items, not an outfit -->",
+   "\t\t<<set _text_output += \" and \" + $_secondhalf>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $NPCList[$index].name_known is 1>>",
+   "\t\t<<set _text_output to $NPCList[$index].name>>"
+  ],
+  "old_kr": [
+   "\t<<elseif $NPCList[$index].name_known is 1>>",
+   "\t\t<<set _text_output to window.KR.gatPersonNameDictKR($NPCList[$index].name)>>"
+  ],
+  "new_en": [
+   "\t<<elseif $NPCList[$index].name_known is 1 and $NPCList[$index].name>>",
+   "\t\t<<set _text_output to $NPCList[$index].name>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<girl>><<set _text_output to _text_output + \"friend\">>"
+  ],
+  "old_kr": [
+   "\t\t<<woman>><<set _text_output to _text_output + \"친구\">>"
+  ],
+  "new_en": [
+   "\t\t<<girlfriend>>"
+  ],
+  "context": "\t<<if $robinromance is 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<case \"f\">><<set _text_output to \"girl\">>",
+   "\t<<case \"m\">><<set _text_output to \"boy\">>",
+   "\t<<case \"h\">><<set _text_output to \"hermaphrodite\">>"
+  ],
+  "old_kr": [
+   "\t<<case \"f\">><<set _text_output to \"소녀\">>",
+   "\t<<case \"m\">><<set _text_output to \"소년\">>",
+   "\t<<case \"h\">><<set _text_output to \"후타나리\">>"
+  ],
+  "new_en": [
+   "\t<<case \"f\">><<set _text_output to \"girl\">>",
+   "\t<<case \"m\">><<set _text_output to \"boy\">>",
+   "\t<<case \"h\">><<set _text_output to \"hermaphrodite\">><<error { message: \"pcSex got a bad case: scenes should have unique exceptions for case h!\" } >>"
+  ],
+  "context": "\t<<switch $player.sex>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $hallucinations gte 2 or !$settings.bestialityEnabled>>",
+   "\t\t\t<span class=\"gold\">Harpy</span>"
+  ],
+  "old_kr": [
+   "\t\t<<if $hallucinations gte 2 or !$settings.bestialityEnabled>>",
+   "\t\t\t<span class=\"gold\">하피</span>"
+  ],
+  "new_en": [
+   "\t\t<<if resolveIfNamedBeastIsMonster(\"greathawk\")>>",
+   "\t\t\t<span class=\"gold\">Harpy</span>"
+  ],
+  "context": "\t<<if !$settings.blindStatsEnabled>> |"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<set _text_output to $NPCList[_na].type>>"
+  ],
+  "old_kr": [
+   "\t<<set _text_output to window.KR.getBeastTypeKr($NPCList[_na].type)>>"
+  ],
+  "new_en": [
+   "\t<<if $NPCList[_na].name_known is 1 and $NPCList[_na].fullDescription is \"Black Wolf\">>",
+   "\t\t<<set _text_output to $NPCList[_na].fullDescription>>",
+   "\t<<else>>",
+   "\t\t<<set _text_output to $NPCList[_na].type>>",
+   "\t<</if>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case \"lizardgirl\" \"lizardboy\">><<set _text_output to \"lizardgirls and lizardboys\">>",
+   "\t\t\t\t<<case \"wolfgirl\" \"wolfboy\">><<set _text_output to \"wolfgirls and wolfboys\">>",
+   "\t\t\t\t<<case \"doggirl\" \"dogboy\">><<set _text_output to \"doggirls and dogboys\">>",
+   "\t\t\t\t<<case \"dolphingirl\" \"dolphinboy\">><<set _text_output to \"dolphingirls and dolphinboys\">>",
+   "\t\t\t\t<<case \"beargirl\" \"bearboy\">><<set _text_output to \"beargirls and bearboys\">>",
+   "\t\t\t\t<<case \"catgirl\" \"catboy\">><<set _text_output to \"catgirls and catboys\">>",
+   "\t\t\t\t<<case \"piggirl\" \"pigboy\">><<set _text_output to \"piggirls and pigboys\">>",
+   "\t\t\t\t<<case \"boargirl\" \"boarboy\">><<set _text_output to \"boargirls and boarboys\">>",
+   "\t\t\t\t<<case \"cowgirl\" \"bullboy\">><<set _text_output to \"cowgirls and bullboys\">>",
+   "\t\t\t\t<<case \"foxgirl\" \"foxboy\">><<set _text_output to \"foxgirls and foxboys\">>",
+   "\t\t\t\t<<case \"spidergirl\" \"spiderboy\">><<set _text_output to \"spidergirls and spiderboys\">>",
+   "\t\t\t\t<<default>><<set _text_output to \"creatures\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case \"lizardgirl\" \"lizardboy\">><<set _text_output to \"리자드걸과 리자드보이들\">>",
+   "\t\t\t\t<<case \"wolfgirl\" \"wolfboy\">><<set _text_output to \"늑대소녀와 늑대소년들\">>",
+   "\t\t\t\t<<case \"doggirl\" \"dogboy\">><<set _text_output to \"개소녀와 개소년들\">>",
+   "\t\t\t\t<<case \"dolphingirl\" \"dolphinboy\">><<set _text_output to \"돌고래소녀와 돌고래소년들\">>",
+   "\t\t\t\t<<case \"beargirl\" \"bearboy\">><<set _text_output to \"곰소녀와 곰소년들\">>",
+   "\t\t\t\t<<case \"catgirl\" \"catboy\">><<set _text_output to \"고양이소녀와 고양이소년들\">>",
+   "\t\t\t\t<<case \"piggirl\" \"pigboy\">><<set _text_output to \"돼지소녀와 돼지소년들\">>",
+   "\t\t\t\t<<case \"boargirl\" \"boarboy\">><<set _text_output to \"멧돼지소녀와 멧돼지소년들\">>",
+   "\t\t\t\t<<case \"cowgirl\" \"bullboy\">><<set _text_output to \"소 소녀와 소 소년들\">>",
+   "\t\t\t\t<<case \"foxgirl\" \"foxboy\">><<set _text_output to \"여우소녀와 여우소년들\">>",
+   "\t\t\t\t<<case \"spidergirl\" \"spiderboy\">><<set _text_output to \"거미소녀와 거미소년들\">>",
+   "\t\t\t\t<<default>><<set _text_output to \"생물들\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<case \"lizardgirl\" \"lizardboy\">><<set _text_output to \"lizardgirls and lizardboys\">>",
+   "\t\t\t\t<<case \"wolfgirl\" \"wolfboy\">><<set _text_output to \"wolfgirls and wolfboys\">>",
+   "\t\t\t\t<<case \"doggirl\" \"dogboy\">><<set _text_output to \"doggirls and dogboys\">>",
+   "\t\t\t\t<<case \"dolphingirl\" \"dolphinboy\">><<set _text_output to \"dolphingirls and dolphinboys\">>",
+   "\t\t\t\t<<case \"beargirl\" \"bearboy\">><<set _text_output to \"beargirls and bearboys\">>",
+   "\t\t\t\t<<case \"catgirl\" \"catboy\">><<set _text_output to \"catgirls and catboys\">>",
+   "\t\t\t\t<<case \"piggirl\" \"pigboy\">><<set _text_output to \"piggirls and pigboys\">>",
+   "\t\t\t\t<<case \"boargirl\" \"boarboy\">><<set _text_output to \"boargirls and boarboys\">>",
+   "\t\t\t\t<<case \"cowgirl\" \"bullboy\">><<set _text_output to \"cowgirls and bullboys\">>",
+   "\t\t\t\t<<case \"foxgirl\" \"foxboy\">><<set _text_output to \"foxgirls and foxboys\">>",
+   "\t\t\t\t<<case \"spidergirl\" \"spiderboy\">><<set _text_output to \"spidergirls and spiderboys\">>",
+   "\t\t\t\t<<case \"snakegirl\" \"snakeboy\">><<set _text_output to \"snakegirls and snakeboys\">>",
+   "\t\t\t\t<<default>><<set _text_output to \"creatures\">>"
+  ],
+  "context": "\t\t\t<<switch $NPCList[_na].type>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte $rng and $hallucinations gte 1) or ($settings.monsterChance gte $rng and !$settings.monsterHallucinationsOnly) or ($nightmonstermonster is 2) or (!$settings.bestialityEnabled)>>",
+   "\t\t<<set _text_output to \"horned \" + ($NPCName[31].pronoun is \"m\" ? \"man\" : \"woman\")>>"
+  ],
+  "old_kr": [
+   "\t<<if ($settings.monsterChance gte $rng and $hallucinations gte 1) or ($settings.monsterChance gte $rng and !$settings.monsterHallucinationsOnly) or ($nightmonstermonster is 2) or (!$settings.bestialityEnabled)>>",
+   "\t\t<<set _text_output to \"뿔 달린 \" + ($NPCList[0].pronoun is \"m\" ? \"남자\" : \"여자\")>>"
+  ],
+  "new_en": [
+   "\t<<if resolveIfNamedBeastIsMonster(\"nightmonster\")>>",
+   "\t\t<<set _text_output to \"horned \" + ($NPCName[31].pronoun is \"m\" ? \"man\" : \"woman\")>>"
+  ],
+  "context": "\t<<silently>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $options.debugdisable is \"f\">>",
+   "\t\t<<set _text_output to \"ERROR - $$player.breastsize is not a number: $player.breastsize\">>",
+   "\t<</if>>",
+   "<</silently>><<if !_breastSensitivityDescribed or _args[0]>><<breastsensitivity>><</if>><<print _text_output>><</widget>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<</silently>>",
+   "\t<<print _text_output>>",
+   "<</widget>>"
+  ],
+  "context": "\t<</if>>"
+ }
+]

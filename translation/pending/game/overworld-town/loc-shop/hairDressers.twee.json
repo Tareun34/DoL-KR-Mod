@@ -1,0 +1,53 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<set _dyeNames to [\"Red\", \"Ebony\",\"Jet black\", \"Black\", \"Blond\", \"Soft Blond\", \"Platinum blond\", \"Golden\", \"Ashy blond\", \"Strawberry blond\", \"Dark Brown\", \"Brown\", \"Copper Brown\", \"Soft brown\", \"Light brown\", \"Burnt Orange\", \"Ginger\", \"Blood Orange\", \"Blue\", \"Deep Blue\", \"Neon Blue\", \"Frost Blue\", \"Green\", \"Dark Lime\", \"Toxic Green\", \"Teal\", \"Aquamarine\", \"Pink\", \"Bright Pink\", \"Hot pink\", \"Soft pink\", \"Rosegold\", \"Crimson\", \"Wine\", \"Purple\", \"Medium Purple\", \"Bright Purple\", \"Grey\", \"White\", \"Snow white\"]>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set _dyeNames to [\"Red\", \"Ebony\",\"Jet black\", \"Black\", \"Blond\", \"Soft blond\", \"Platinum blond\", \"Golden\", \"Ashy blond\", \"Strawberry blond\", \"Dark brown\", \"Brown\", \"Copper brown\", \"Soft brown\", \"Light brown\", \"Burnt orange\", \"Ginger\", \"Blood orange\", \"Blue\", \"Deep blue\", \"Neon blue\", \"Frost blue\", \"Green\", \"Dark lime\", \"Toxic green\", \"Teal\", \"Aquamarine\", \"Pink\", \"Bright pink\", \"Hot pink\", \"Soft pink\", \"Rose gold\", \"Crimson\", \"Wine\", \"Purple\", \"Medium purple\", \"Bright purple\", \"Grey\", \"White\", \"Snow white\"]>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $haircolour isnot $naturalhaircolour>>",
+   "\t\t\t\t\t<<set _dyeOptions[\"Remove dye\"] to \"removeDye\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $haircolour isnot $naturalhaircolour>>",
+   "\t\t\t\t\t<<set _dyeOptions[\"염색 빼기\"] to \"removeDye\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $haircolour isnot $naturalhaircolour or $hairColourStyle is \"gradient\">>",
+   "\t\t\t\t\t<<set _dyeOptions[\"Remove dye\"] to \"removeDye\">>"
+  ],
+  "context": "\t\t\t\t<<set _twotoneDyeOptions to {}>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $_length to (_i * 100) + 100>>",
+   "\t\t\t\t\t<<if $_length + 50 lt $hairlength>> /* + 50 to ensure it's not cut too early */"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $_length to (_i * 100) + 50>>",
+   "\t\t\t\t\t<<if $_length + 25 lt $hairlength>> /* + 25 to ensure it's not cut too early */"
+  ],
+  "context": "\t\t\t\t<<for _i to 9; _i gte 0; _i-->>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set _modeloptions.freckles = $player.freckles == true and $makeup.concealer != 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set _modeloptions.freckles = $player.skin.faceFreckles == true and $makeup.concealer != 1>>"
+  ],
+  "context": "\t\t\t\t<<set _modeloptions.scars to false>>"
+ }
+]

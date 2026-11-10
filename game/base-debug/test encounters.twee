@@ -286,8 +286,8 @@
 
 :: Alley Dog
 <!-- Keeping this only as an example on how to use Widget as Event for debug -->
-<<residentialex2>>
-<<link [[다음|Domus Street]]>><</link>>
+<<residentialExposedDumpsterDog>>
+<<link [[Next|Domus Street]]>><</link>>
 
 :: Abomination Old
 <<if $molestationstart is 1>>
@@ -2246,7 +2246,7 @@ NPC 지배력:<br>
 <br>
 <<link [[처녀/동정 빼앗기 NPC 생성|_test]]>><<endevent>><<generatetakevirginity 1>><<generatetakevirginity 2>><<generatetakevirginity 3>><<generatetakevirginity 4>><<generatetakevirginity 5>><<generatetakevirginity 6>><</link>>
 <br>
-<<if EventSystem.any() and $debug is 1>>
+<<if EventSystem.any() and $debug>>
 	<<script>>
 		V.NPCList.forEach((element, index) => {
 			console.log(`NPC_${index}; penis: ${element.penis}; vagina: ${element.vagina}.`);

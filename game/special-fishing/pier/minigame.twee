@@ -73,7 +73,7 @@
 	<br>
 	<<link [[줄 끊기|Fishing Pier Cut]]>><</link>>
 
-	<<if V.debug === 1>>
+	<<if V.debug>>
 		<br><br>
 		디버그
 		<br>

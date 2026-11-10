@@ -38,9 +38,9 @@
 
 <<if $gift is "valentines_chocolate" and $valentines>>
 	<<earnFeat "Be My Valentine">>
-	당신은 거대 매에게 발렌타인 초콜릿 상자를 건넨다.
-	<<if $greathawkmonster is 0>>
-		<<bHe>>【이가】 호기심 어린 듯 고개를 갸웃거리더니 상자를 쪼아본다. <<bHe>>【은는】 곧 뚜껑을 열어젖히고 안에 든 초콜릿들을 살핀다. 조심스레 초콜릿을 하나씩 들어 옆에 치워둔 뒤, 리본을 써서 상자를 둥지에 묶어 소중한 자리에 둔다.
+	You hand the Great Hawk the box of Valentines chocolates.
+	<<if !resolveIfNamedBeastIsMonster("greathawk")>>
+		<<bHe>> tilts <<bhis>> head, curious, then pecks at it. <<bHe>> soon manages to open the lid, and observes the chocolates within. With care, <<bhe>> lifts each chocolate, and places them aside. Then <<bhe>> adds the box to the nest, tying it in by the ribbon, giving it a place of pride.
 	<<else>>
 		<<bHe>>【이가】 호기심 어린 듯 미간을 찌푸린다. "이게 의미가 있는 건가?" <<bhe>>【이가】 묻는다. "용서해라. 인간의 풍습은 잘 모른다." <<bHe>>【은는】 뚜껑을 휙 열어젖힌다. 조심스레 초콜릿을 하나씩 들어 옆에 치워둔 뒤, 리본을 엮어 상자를 둥지에 묶어 소중한 자리에 둔다.
 		<br><br>
@@ -48,8 +48,8 @@
 	<</if>>
 	<<gglove>><<npcincr "Great Hawk" love 3>>
 <<elseif setup.foodstuff[$gift].food.tags.includes("carnivore")>>
-	<<if $greathawkmonster is 0>>
-		거대 매는 의아한 듯 고개를 갸웃거린다. <<bHe>>【은는】 부리로 살점 한 덩이를 뜯어내 삼킨다. 이내 나머지도 한 번에 뜯어내 순식간에 먹어치운다.
+	<<if !resolveIfNamedBeastIsMonster("greathawk")>>
+		The Great Hawk looks at it with a puzzled expression. "Strange meat," <<bhe>> says. "Humans hunt strange things. I will take though." <<bHe>> bows. "Thank you."
 		<br><br>
 		<<bHe>>【은는】 느긋하게 날개를 퍼덕인다. 식사가 마음에 든 모양이다.<<glove>><<npcincr "Great Hawk" love 1>>
 	<<else>>
@@ -61,8 +61,8 @@
 	<<saveFavoriteFood "Great Hawk" $gift>>
 	<<earnFeat "Return the Favour">>
 <<elseif setup.foodstuff[$gift].food.tags.includes("drink")>>
-	<<if $greathawkmonster is 0>>
-		거대 매는 고개를 갸웃거리며 음료를 관찰한다. 그러더니 부리를 집어넣고 혀로 액체를 핥아 마신다. 맛이 마음에 들었는지, <<bhe>>【은는】 발톱으로 음료를 들어 올려 남은 것을 목구멍 속으로 털어 넣는다.
+	<<if !resolveIfNamedBeastIsMonster("greathawk")>>
+		The Great Hawk lifts the drink. "My <<wife>> has strange ideas," <<bhe>> says. "Drink you can carry. Or is it a human thing?" <<bHe>> gives it a sniff, then a sip. <<bHis>> wings unfurl in pleasure.
 		<br><br>
 		<<bHe>>【은는】 느긋하게 날개를 퍼덕인다. 음료가 마음에 든 모양이다.<<glove>><<npcincr "Great Hawk" love 1>>
 	<<else>>

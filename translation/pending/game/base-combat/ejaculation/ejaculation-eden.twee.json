@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> holds your hair at the nape your neck as cum erupts from <<his>> $NPCList[_nn].penisdesc."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【은는】 당신의 뒷목 머리채를 꽉 쥐고 <<his>> <<= window.KR.getPenisDescKr($NPCList[_nn].penisdesc)>>에서 정액을 분출한다."
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> holds your hair at the nape of your neck as cum erupts from <<his>> $NPCList[_nn].penisdesc."
+  ],
+  "context": "\t\t\t<<case 1 2 3>>"
+ }
+]

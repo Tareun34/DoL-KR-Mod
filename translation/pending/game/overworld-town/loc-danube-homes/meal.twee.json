@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t<<link [[Next|Danube Meal Dogs]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "<<if ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t<<link [[다음|Danube Meal Dogs]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t<<link [[Next|Danube Meal Dogs]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": ""
+ }
+]

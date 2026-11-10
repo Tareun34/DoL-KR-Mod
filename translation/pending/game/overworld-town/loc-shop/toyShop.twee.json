@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou can't help but think about your children when being in here."
+  ],
+  "old_kr": [
+   "\t이곳에 있으니 아이들 생각이 절로 난다."
+  ],
+  "new_en": [
+   "\tYou can't help but think about your <<if getBornChildren().length gte 2>>children<<else>>child<</if>> when being in here."
+  ],
+  "context": "<<if $pregnancyStats.humanToysUnlocked>>"
+ }
+]

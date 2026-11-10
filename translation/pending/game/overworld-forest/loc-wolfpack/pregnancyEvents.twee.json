@@ -1,0 +1,44 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tThe beast's maw is clamped tightly around you, keeping your arm restrained. <<bHe>> pulls you away from the cave with terryfing strength. You decide to follow the animal's lead, so as to reduce the pain in your arm. The <<beasttype>> drags you across the forest and into the edge of town, the Nightingale Street hospital can be seen beyond the trees."
+  ],
+  "old_kr": [
+   "\t\t\t야수의 턱이 꽉 물려 당신의 팔을 결박한다. <<bHe>>【은는】 끔찍한 힘으로 당신을 동굴 밖으로 끌어당긴다. 당신은 팔의 고통을 덜기 위해 짐승이 이끄는 대로 따르기로 한다. <<beasttype>>【은는】 숲을 가로질러 마을 변두리까지 당신을 질질 끌고 간다. 나무들 너머로 나이팅게일 거리 병원이 보인다."
+  ],
+  "new_en": [
+   "\t\t\tThe beast's maw is clamped tightly around you, keeping your arm restrained. <<bHe>> pulls you away from the cave with terrifying strength. You decide to follow the animal's lead, so as to reduce the pain in your arm. The <<beasttype>> drags you across the forest and into the edge of town, the Nightingale Street hospital can be seen beyond the trees."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Next (<<print getTimeString(_timeCalc)>>)|Pregnancy Birth Wolf Cave 2]]>><<run beginPlayerBirth()>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[다음 (<<print getTimeString(_timeCalc)>>)|Pregnancy Birth Wolf Cave 2]]>><<run beginPlayerBirth()>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Next (<<print getTimeString(_timeCalc)>>)|Pregnancy Birth Wolf Cave 2]]>><<run setPlayerLitterBorn()>><<pass _timeCalc>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled>>",
+   "\t\t<span class=\"red\"><i>After giving birth to pups of your own, you see they're just cute animals.</i> You've gained the \"Stockholm Syndrome: Wolves\" trait.</span>"
+  ],
+  "old_kr": [
+   "\t<<if $settings.bestialityEnabled>>",
+   "\t\t<span class=\"red\"><i>자신만의 새끼들을 낳고 나니, 그들이 그저 귀여운 동물일 뿐이라는 것을 알게 됩니다.</i> \"스톡홀름 증후군: 늑대\" 특성을 얻었습니다.</span>"
+  ],
+  "new_en": [
+   "\t<<if animalSexEnabledForType(\"wolf\")>>",
+   "\t\t<span class=\"red\"><i>After giving birth to pups of your own, you see they're just cute animals.</i> You've gained the \"Stockholm Syndrome: Wolves\" trait.</span>"
+  ],
+  "context": "<<if $syndromewolves isnot 1>>"
+ }
+]

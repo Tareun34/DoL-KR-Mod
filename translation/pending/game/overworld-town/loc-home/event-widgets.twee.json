@@ -1,0 +1,113 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<npc Bailey>>Bailey shoves past you, carrying a resupply for the kitchen.",
+   "\t\t\t<<pain 1>><<gpain>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<npc Bailey>>베일리가 부엌으로 식료품을 옮기며 거칠게 당신을 밀치고 지나간다.",
+   "\t\t\t<<pain 1>><<gpain>>"
+  ],
+  "new_en": [
+   "\t\t\t<<npc Bailey>>Bailey approaches, showing no sign of stepping aside. <<He>> has <<his>> arms full of supplies for the kitchen."
+  ],
+  "context": "\t\t<<case 10>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "",
+   "\t\t\t<<link [[Next|Orphanage]]>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "",
+   "\t\t\t<<link [[다음|Orphanage]]>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t<<link [[Dodge|Home Bailey Shove Dodge]]>><<endevent>><</link>><<dancedifficulty 200 800>>",
+   "\t\t\t<br>",
+   "\t\t\t<<link [[Stand still|Home Bailey Shove Stand]]>><<endevent>><</link>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<switch random(1, 14)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<switch random(1, 15)>>"
+  ],
+  "context": "<<widget \"homeeventnorm\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<case 15>>",
+   "\t\t\t<<generatey1>><<generatey2>><<generatey3>>",
+   "\t\t\t<<if $mine?.freed isnot 1>>",
+   "\t\t\t\tYou overhear two orphans talking.",
+   "\t\t\t\t<br><br>",
+   "\t\t\t\t\"I haven't seen <<person3>><<him>> in a while, have you?\" a <<person1>><<person>> asks.",
+   "\t\t\t\t<br>",
+   "\t\t\t\t\"The last I saw, <<person3>><<he>> was heading to look for work at the flats,\" ",
+   "\t\t\t\ta <<person2>><<person>> answers. \"But that was weeks ago. I'm worried that <<person3>><<he>>'ll never show up again,<<if !$town_projects.bridge gte 4>> just like the rest of them.<</if>>\" ",
+   "\t\t\t\tThe <<person1>><<person>> looks dejected.",
+   "\t\t\t\t<<if $town_projects.bridge gte 4>>",
+   "\t\t\t\t\t<<llhope>><<hope -3>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<lllhope>><<hope -5>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t\t<<gstress>><<stress 5>><<gtrauma>><<trauma 5>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\tYou overhear three orphans talking.",
+   "\t\t\t\t<br><br>",
+   "\t\t\t\t\"Tell us about the escape from the mines again!\" a <<person1>><<person>> exclaims.",
+   "\t\t\t\t<br>",
+   "\t\t\t\t\"I've told you this story several times already,\" a <<person3>><<person>> says.",
+   "\t\t\t\t<br>",
+   "\t\t\t\t\"But it gets better every time,\" a <<person2>><<person>> pleads, <<his>> eyes wide.",
+   "\t\t\t\t<br>",
+   "\t\t\t\t\"Fine,\" the <<person3>><<person>> sighs. \"So–\"<<gghope>><<hope 3>><<ggreb>><<reb 3>>",
+   "\t\t\t\t<br><br>",
+   "\t\t\t\tYou sneak away feeling good about yourself. <<llstress>><<stress -20>><<lltrauma>><<trauma -20>>",
+   "\t\t\t<</if>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<link [[Next|Orphanage]]>><<endevent>><</link>>",
+   "\t\t\t<br>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "<<widget \"gardenStem\">>",
+   "\tSomething brushes against your leg. You shake it off, assuming it an insect, but it happens again. You look down and see a stem curling around your ankle.",
+   "\t<br><br>",
+   "",
+   "\t<<link [[Shake it off|Garden Stem Shake]]>><</link>>",
+   "\t<br>",
+   "\t<<link [[Look closer|Garden Stem Look]]>><</link>>",
+   "\t<br>",
+   "<</widget>>",
+   "",
+   "<<widget \"gardenScent\">>",
+   "\t<<hallucinogen 60>>",
+   "\tA strange scent rises from the plants as you water. You feel lightheaded. <<ghallucinogens>><<if $backgroundTraits.includes(\"plantlover\")>><<arousal 6>><<garousal>><</if>>",
+   "\t<br><br>",
+   "",
+   "\t<<link [[Next|Garden Flowers]]>><</link>>",
+   "\t<br>",
+   "<</widget>>"
+  ],
+  "context": "<</widget>>"
+ }
+]

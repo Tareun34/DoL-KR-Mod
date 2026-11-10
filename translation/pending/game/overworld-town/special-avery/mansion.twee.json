@@ -1,0 +1,132 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<br><br>",
+   "\t\tYou slept soundly, but now feel a little rough."
+  ],
+  "old_kr": [
+   "\t\t<br><br>",
+   "\t\t푹 잤지만, 지금은 몸이 좀 찌뿌둥하다."
+  ],
+  "new_en": [
+   "\t\t<br>",
+   "\t\tYou slept soundly, but now feel a little rough."
+  ],
+  "context": "\t<<if [\"dryheaving\",\"nausea\"].includes(_wakingEffect)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\tseems <<= $averyragerevealed is 1 ? `furious` : `irritated`>> by the skyscraper's current progress.<<if C.npc.Avery.rage gte 40>> <<He>> informs you <<he>> expects better from you going forward.<</if>> <<npcincr Avery rage 1>><<garage>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t마천루의 현재 진행 상황에 대해 <<= $averyragerevealed is 1 ? `분노한` : `짜증이 난`>> 것 같다.<<if C.npc.Avery.rage gte 40>> <<He>>【은는】 앞으로 당신이 더 잘하길 기대하겠다고 말한다.<</if>> <<npcincr Avery rage 1>><<garage>>"
+  ],
+  "new_en": [
+   "\t\t\t\tseems <<= $averyragerevealed is 1 ? `furious at` : `irritated by`>> the skyscraper's current progress.<<if C.npc.Avery.rage gte 40>> <<He>> informs you <<he>> expects better from you going forward.<</if>> <<npcincr Avery rage 1>><<garage>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\"I've seen you on advertisements for the Ocean Breeze Cafe,\" <<he>> says. \"You look <<cute>> all dressed up. You're a <<= $photo and $photo.audienceSize gte 2 ? `professional` : `natural`>> in front of a camera, aren't you?\" <<He>> smiles at you. \"Have you considered making a career of it?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\"오션 브리즈 카페 광고에서 자기를 봤어.\" <<he>>【이가】 말한다. \"한껏 차려입은 모습이 아주 <<cute>>하더군. 자긴 카메라 앞에서도 <<= $photo and $photo.audienceSize gte 2 ? `프로` : `타고난 사람`>> 같아, 그렇지?\" <<He>>【이가】 당신에게 미소 짓는다. \"아예 직업으로 삼아볼 생각은 없어?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\"I've seen you on advertisements for the Ocean Breeze Cafe,\" <<he>> says. \"You look <<cute>> all dressed up. You're a <<= $photo?.audienceSize gte 2 ? `professional` : `natural`>> in front of a camera, aren't you?\" <<He>> smiles at you. \"Have you considered making a career of it?\""
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<if $avery_antiques.progress is 0>>",
+   "\t<<set $avery_antiques.progress to 1>>",
+   "<</if>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br>"
+  ],
+  "context": "\t<<if isLoveInterest(\"Avery\") and !$daily.avery.talk.flirt and $avery_pool isnot \"swim\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<br>"
+  ],
+  "context": "\t\t<<if !$avery_mansion.study_unlocked>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $avery_valentines and $avery_valentines.invite is true and $avery_valentines.reservations is false>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $avery_valentines?.invite is true and $avery_valentines.reservations is false>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $avery_valentines and $avery_valentines.init is true and $avery_valentines.invite is false and $avery_valentines.done is false>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $avery_valentines?.init is true and $avery_valentines.invite is false and $avery_valentines.done is false>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $avery_valentines and $avery_valentines.chocolate is true and !$avery_valentines.chocolate_asked>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $avery_valentines?.chocolate is true and !$avery_valentines.chocolate_asked>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if C.npc.Avery.rage gte 80 or (C.npc.Avery.rage gte 20 and $avery_mansion.rage.assess gte 1)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if C.npc.Avery.rage gte 80 or (C.npc.Avery.rage gte 20 and $avery_mansion.rage.assess gte 5)>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $avery_mansion.schedule is \"pool\">>",
+   "\t\t<<npcexpose>>",
+   "\t<</if>>"
+  ],
+  "context": "\t<<set $enemytrust += 100>>"
+ }
+]

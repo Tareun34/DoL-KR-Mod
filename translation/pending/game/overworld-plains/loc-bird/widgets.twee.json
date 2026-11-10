@@ -1,0 +1,125 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<link [[Next (?:??)|Bird Hunt Passout]]>><<bird_pass _returnTime>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<link [[다음 (?:??)|Bird Hunt Passout]]>><<bird_pass _returnTime>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t<<passout>>",
+   "\t\t\t<<link [[Next (?:??)|Bird Hunt Passout]]>><<bird_pass _returnTime>><</link>>"
+  ],
+  "context": "\t\t\t<<flight_time_check _returnTime \"silent\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<switch $_looted>>",
+   "\t\t\t<<case \"tools\">>",
+   "\t\t\t\ttoolbox",
+   "\t\t\t<<case \"sticks\">>",
+   "\t\t\t\t<<pluralise $_amount \"stick\">>",
+   "\t\t\t<<case \"leaves\">>",
+   "\t\t\t\t<<pluralise $_amount \"leaf\">>",
+   "\t\t\t<<case \"lurkers\">>",
+   "\t\t\t\t<<pluralise $_amount \"lurker\">>",
+   "\t\t\t<<case \"feathers\">>",
+   "\t\t\t\t<<pluralise $_amount \"feather\">>",
+   "\t\t\t<<default>>",
+   "\t\t\t\t$_looted"
+  ],
+  "old_kr": [
+   "\t\t<<switch $_looted>>",
+   "\t\t\t<<case \"tools\">>",
+   "\t\t\t\t도구 상자",
+   "\t\t\t<<case \"sticks\">>",
+   "\t\t\t\t<<pluralise $_amount \"나뭇가지\" \"나뭇가지\">>",
+   "\t\t\t<<case \"leaves\">>",
+   "\t\t\t\t<<pluralise $_amount \"나뭇잎\" \"나뭇잎\">>",
+   "\t\t\t<<case \"lurkers\">>",
+   "\t\t\t\t<<pluralise $_amount \"럴커\" \"럴커\">>",
+   "\t\t\t<<case \"feathers\">>",
+   "\t\t\t\t<<pluralise $_amount \"깃털\" \"깃털\">>",
+   "\t\t\t<<default>>",
+   "\t\t\t\t$_looted"
+  ],
+  "new_en": [
+   "\t\t\t<<switch $_looted>>",
+   "\t\t\t\t<<case \"tools\">>",
+   "\t\t\t\t\ttoolbox",
+   "\t\t\t\t<<case \"sticks\">>",
+   "\t\t\t\t\t<<pluralise $_amount \"stick\">>",
+   "\t\t\t\t<<case \"leaves\">>",
+   "\t\t\t\t\t<<pluralise $_amount \"leaf\">>",
+   "\t\t\t\t<<case \"lurkers\">>",
+   "\t\t\t\t\t<<pluralise $_amount \"lurker\">>",
+   "\t\t\t\t<<case \"feathers\">>",
+   "\t\t\t\t\t<<pluralise $_amount \"feather\">>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t$_looted"
+  ],
+  "context": "\t\t\t<span class=\"green\"><<birdicon $_looted>> $_amount"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $debug is 1>>",
+   "\t\t\t\t<span class=\"gold\">DEBUG:</span> Lurker time remaining"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $debug is 1>>",
+   "\t\t\t\t<span class=\"gold\">DEBUG:</span> 럴커 남은 시간"
+  ],
+  "new_en": [
+   "\t\t\t<<if $debug>>",
+   "\t\t\t\t<span class=\"gold\">DEBUG:</span> Lurker time remaining"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<physique_loss `_args[0] / 10`>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<physique `_args[0] / -10`>>"
+  ],
+  "context": "\t\t\t\t<<trauma `_args[0] / 4`>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $bird and $bird.injured gt 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $bird?.injured gt 1>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $greathawkmonster is 2 or ($greathawkmonster is 1 and $hallucinations gte 1)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if resolveIfNamedBeastIsMonster(\"greathawk\")>>"
+  ],
+  "context": "<<widget \"your_bird_text\">><<silently>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $bird.hunts and $bird.hunts.weight>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $bird.hunts?.weight>>"
+  ],
+  "context": "\t<</if>>"
+ }
+]

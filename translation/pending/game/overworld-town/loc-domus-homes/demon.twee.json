@@ -1,0 +1,97 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<bHe>> licks your face. There's no one else in the room."
+  ],
+  "old_kr": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<bHe>>【이가】 당신의 얼굴을 핥는다. 방 안에는 아무도 없다."
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\t<<bHe>> licks your face. There's no one else in the room."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t'Perverted sadist gets just desserts'"
+  ],
+  "old_kr": [
+   "\t'변태 가학주의자, 인과응보를 맛보다'"
+  ],
+  "new_en": [
+   "\t'Perverted sadist gets just deserts'"
+  ],
+  "context": "<<if $rng gte 81>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<effects>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set $outside to 0>><<effects>>"
+  ],
+  "context": ":: Domus Window Couple Seduce"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<effects>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set $outside to 0>><<effects>>"
+  ],
+  "context": ":: Domus Window Couple Sex Finish"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<effects>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set $outside to 0>><<effects>>"
+  ],
+  "context": ":: Domus Window Bound Seduce"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<effects>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set $outside to 0>><<effects>>"
+  ],
+  "context": ":: Domus Window Bound Seduce Sex Finish"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<effects>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set $outside to 0>><<effects>>"
+  ],
+  "context": ":: Domus Window Dog Seduce"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<effects>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set $outside to 0>><<effects>>"
+  ],
+  "context": ":: Domus Window Curtain"
+ }
+]

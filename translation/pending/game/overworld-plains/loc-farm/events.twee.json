@@ -1,0 +1,40 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $farm.beasts.horses lte -5 and $rng gte 51 and $settings.horsesEnabled and ($settings.bestialityEnabled or ($farm_work.horse.monster_roll is true and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)))>>",
+   "\t\tYou're stood inside the stall, trying to coax <<farm_him horse>> in, when <<farm_he horse>> strikes. <<farm_He horse>> runs at you, forcing you to leap aside to get out of <<farm_his horse>> way. You're left slung over the fence between stalls."
+  ],
+  "old_kr": [
+   "\t<<if $farm.beasts.horses lte -5 and $rng gte 51 and $settings.horsesEnabled and ($settings.bestialityEnabled or ($farm_work.horse.monster_roll is true and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)))>>",
+   "\t\t당신이 마방 안에서 <<farm_him horse>>【을를】 달래려 할 때, <<farm_he horse>>【이가】 덮쳐온다. <<farm_He horse>>【이가】 당신에게 달려들어, 당신은 <<farm_his horse>> 길을 피하기 위해 옆으로 뛰어오를 수밖에 없었다. 당신은 마방 사이의 울타리에 걸쳐진 채로 남겨진다."
+  ],
+  "new_en": [
+   "\t<<if $farm.beasts.horses lte -5 and $rng gte 51 and beastSexEnabledForType(\"horse\", $farm_work.horse.monster)>>",
+   "\t\tYou're stood inside the stall, trying to coax <<farm_him horse>> in, when <<farm_he horse>> strikes. <<farm_He horse>> runs at you, forcing you to leap aside to get out of <<farm_his horse>> way. You're left slung over the fence between stalls."
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if monsterCanAppearForType(\"horse\")>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if beastMaleChance() lt random(1, 100)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastMaleChanceForType(\"horse\") lt random(1, 100)>>"
+  ],
+  "context": "<<else>>"
+ }
+]

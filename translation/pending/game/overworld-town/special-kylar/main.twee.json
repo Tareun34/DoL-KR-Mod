@@ -1,0 +1,1187 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tand smiles, <<his>> face wet with your lewd fluids.",
+   "\t<<elseif $semen_amount gte 1>>",
+   "\t\tand swallows, before opening <<his>> mouth to you. <<He>> swallowed every drop."
+  ],
+  "old_kr": [
+   "\t\t당신의 음란한 체액으로 얼굴이 젖은 채로 미소를 짓는다.",
+   "\t<<elseif $semen_amount gte 1>>",
+   "\t\t꿀꺽 삼키더니 입을 벌려 당신에게 보여준다. 한 방울도 남김없이 다 마셔버렸다."
+  ],
+  "new_en": [
+   "\t\tand smiles, <<his>> face wet with your lewd fluids.",
+   "\t<<elseif $semen_amount gte 1 and !$player.condom>>",
+   "\t\tand swallows, before opening <<his>> mouth to you. <<He>> swallowed every drop."
+  ],
+  "context": "\t<<if !$player.penisExist>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Your bedroom door is ajar. You peek through the gap. Nothing seems to be amiss, until you look in your wardrobe."
+  ],
+  "old_kr": [
+   "당신 침실 문이 살짝 열려 있다. 틈새로 엿본다. 옷장을 보기 전까지는 아무 문제도 없는 것 같다."
+  ],
+  "new_en": [
+   "<<if $kylar.timer.letter is 30>>",
+   "\tYou check your wardrobe.",
+   "<<else>> ",
+   "\tYour bedroom door is ajar. You peek through the gap. Nothing seems to be amiss, until you look in your wardrobe.",
+   "<</if>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Bedroom|Bedroom]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[침실|Bedroom]]>><</link>>"
+  ],
+  "new_en": [
+   "<<endevent>>",
+   "<<link [[Bedroom|Bedroom]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"Pervert,\" you declare. <<He>> jumps in fright and throws the bedding away. \"You've been playing with my clothes.\""
+  ],
+  "old_kr": [
+   "\t\"변태.\" 당신이 선언한다. <<He>>【은는】 깜짝 놀라 이불을 내던진다. \"내 옷 가지고 장난쳤잖아.\""
+  ],
+  "new_en": [
+   "\t\"Why are you here?\" you ask. <<He>> jumps in fright and throws the bedding away. \"What are- why were you playing with my stuff?\""
+  ],
+  "context": "<<if $speech_attitude is \"meek\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"Creep,\" you declare. <<He>> jumps in fright and throws the bedding away. \"You've been playing with my clothes.\""
+  ],
+  "old_kr": [
+   "\t\"변태.\" 당신이 선언한다. <<He>>【은는】 깜짝 놀라 이불을 내던진다. \"내 옷 가지고 장난쳤잖아.\""
+  ],
+  "new_en": [
+   "\t\"Kylar!\" you shout. <<He>> jumps in fright and throws the bedding away. \"Why are you messing with my things?\""
+  ],
+  "context": "<<elseif $speech_attitude is \"bratty\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"Creep,\" you declare. <<He>> jumps in fright and throws the bedding away. \"You've been playing with my clothes.\""
+  ],
+  "old_kr": [
+   "\t\"변태.\" 당신이 선언한다. <<He>>【은는】 깜짝 놀라 이불을 내던진다. \"내 옷 가지고 장난쳤잖아.\""
+  ],
+  "new_en": [
+   "\t\"Creep,\" you say. <<He>> jumps in fright and throws the bedding away. \"You've been messing with my stuff.\""
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou whisper to Kylar that you find <<if $settings.bestialityEnabled>>beasts<<else>>monsters<</if>> almost as good as people, sometimes better. Their instinct-driven, animalistic mating makes you shiver. Kylar doesn't seem to know what to say."
+  ],
+  "old_kr": [
+   "\t\t\t당신은 카일라에게 <<if $settings.bestialityEnabled>>짐승들<<else>>괴물들<</if>>【이가】 사람만큼 좋고, 때로는 더 좋다고 속삭인다. 본능에 끌리는 짐승 같은 교미가 당신을 떨리게 한다. 카일라는 무슨 말을 해야 할지 모르는 듯하다."
+  ],
+  "new_en": [
+   "\t\t\tYou whisper to Kylar that you find <<if isBestialityOnForAnyCreature()>>beasts<<else>>monsters<</if>> almost as good as people, sometimes better. Their instinct-driven, animalistic mating makes you shiver. Kylar doesn't seem to know what to say."
+  ],
+  "context": "\t\t<<elseif _kinkType is 5 and $bestialitytrait gte 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou whisper to Kylar that you find <<print ($settings.bestialityEnabled ? \"beasts\" : \"monsters\")>> almost as good as people, sometimes better. Their instinct-driven, animalistic mating makes you shiver. <<He>> looks away, wide-eyed."
+  ],
+  "old_kr": [
+   "\t\t\t당신은 카일라에게 <<print ($settings.bestialityEnabled ? \"짐승들\" : \"괴물들\")>>【이가】 사람만큼 좋고, 때로는 더 좋다고 속삭인다. 본능에 끌리는 짐승 같은 교미가 당신을 떨리게 한다. <<He>>【은는】 눈을 크게 뜨고 시선을 피한다."
+  ],
+  "new_en": [
+   "\t\t\tYou whisper to Kylar that you find <<print (isBestialityOnForAnyCreature() ? \"beasts\" : \"monsters\")>> almost as good as people, sometimes better. Their instinct-driven, animalistic mating makes you shiver. <<He>> looks away, wide-eyed."
+  ],
+  "context": "\t\t<<elseif _kinkType is 5 and $bestialitytrait gte 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Just cuddle (0:30)|Kylar Orphanage Cuddle]]>><<unset $bedGuest>><<set $kylarbed to 0>><<set $phase to 1>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[그냥 껴안고 있는다 (0:30)|Kylar Orphanage Cuddle]]>><<unset $bedGuest>><<set $kylarbed to 0>><<set $phase to 1>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Just cuddle (0:30)|Kylar Orphanage Cuddle]]>><<unset $bedGuest>><<unset $kylarbed>><<set $phase to 1>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Kylar hugs your arm on the walk over, as if afraid you'll run. The halls are empty, and you reach the bathrooms without anyone noticing you.",
+   "<<if ($player.penisExist and $player.vaginaExist) or ($backgroundTraits.includes(\"crossdresser\") and isCrossdressing()) or $player.gender is \"n\">>"
+  ],
+  "old_kr": [
+   "가는 동안 카일라는 당신이 달아날까 두려운 듯 당신의 팔을 끌어안는다. 복도는 비어 있고, 누구에게도 들키지 않은 채 화장실에 도착한다.",
+   "<<if ($player.penisExist and $player.vaginaExist) or ($backgroundTraits.includes(\"crossdresser\") and isCrossdressing()) or $player.gender is \"n\">>"
+  ],
+  "new_en": [
+   "Kylar hugs your arm on the walk over, as if afraid you'll run. The halls are empty, and you reach the bathrooms without anyone noticing you.",
+   "<<if ($backgroundTraits.includes(\"crossdresser\") and isCrossdressing()) or $player.gender is \"n\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<historyicon>><<link [[Go to your history lesson (0:01)|Canteen Stay]]>><<unset $robinexit>><</link>><br>",
+   "\t<<if _kylarlocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|Canteen Stay]]>><<unset $robinexit>><</link>><br>"
+  ],
+  "old_kr": [
+   "\t<<historyicon>><<link [[역사 수업에 간다 (0:01)|Canteen Stay]]>><<unset $robinexit>><</link>><br>",
+   "\t<<if _kylarlocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[카일라를 따라 도서관에 간다 (0:02)|Canteen Stay]]>><<unset $robinexit>><</link>><br>"
+  ],
+  "new_en": [
+   "\t<<historyicon>><<link [[Go to your history lesson (0:01)|Canteen Stay]]>><<unset $robinexit>><</link>><br>",
+   "\t<<if _kylarLocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|Canteen Stay]]>><<unset $robinexit>><</link>><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou finish your food. Kylar carries your trays away, then walks in the direction of the <<if _kylarlocation.area is \"library\">>library<<else>>rear courtyard<</if>>."
+  ],
+  "old_kr": [
+   "\t당신은 음식을 다 먹는다. 카일라는 당신의 식판을 치운 뒤 <<if _kylarlocation.area is \"library\">>도서관<<else>>뒤쪽 안뜰<</if>> 방향으로 걸어간다."
+  ],
+  "new_en": [
+   "\tYou finish your food. Kylar carries your trays away, then walks in the direction of the <<if _kylarLocation.area is \"library\">>library<<else>>rear courtyard<</if>>."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarlocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "old_kr": [
+   "\t<<historyicon>><<link [[역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarlocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[카일라를 따라 도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "new_en": [
+   "\t<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarLocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "context": "\t<<endevent>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarlocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "old_kr": [
+   "\t<<historyicon>><<link [[역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarlocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[카일라를 따라 도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "new_en": [
+   "\t<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarLocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "context": "\t<<endevent>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "<<if _kylarlocation.area is \"library\">>",
+   "\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "old_kr": [
+   "<<historyicon>><<link [[역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "<<if _kylarlocation.area is \"library\">>",
+   "\t<<schoolicon \"library\">><<link [[카일라를 따라 도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "new_en": [
+   "<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "<<if _kylarLocation.area is \"library\">>",
+   "\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "context": "<<endevent>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarlocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "old_kr": [
+   "\t<<historyicon>><<link [[역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarlocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[카일라를 따라 도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "new_en": [
+   "\t<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarLocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "context": "\t<<endevent>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarlocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "old_kr": [
+   "\t<<historyicon>><<link [[역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarlocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[카일라를 따라 도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "new_en": [
+   "\t<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarLocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "context": "\t<<endevent>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarlocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "old_kr": [
+   "\t<<historyicon>><<link [[역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarlocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[카일라를 따라 도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "new_en": [
+   "\t<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarLocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarlocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "old_kr": [
+   "\t<<historyicon>><<link [[역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarlocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[카일라를 따라 도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "new_en": [
+   "\t<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "\t<<if _kylarLocation.area is \"library\">>",
+   "\t\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "context": "\t<<endevent>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "<<if _kylarlocation.area is \"library\">>",
+   "\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "old_kr": [
+   "<<historyicon>><<link [[역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "<<if _kylarlocation.area is \"library\">>",
+   "\t<<schoolicon \"library\">><<link [[카일라를 따라 도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "new_en": [
+   "<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>",
+   "<<if _kylarLocation.area is \"library\">>",
+   "\t<<schoolicon \"library\">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>"
+  ],
+  "context": "<<endevent>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<He>> holds you for a moment, until <<his>> afterglow fades away. \"I n-need to go now. Thank you, my love.\" <<he>> says before turning to leave, <<his>> face still flushed."
+  ],
+  "old_kr": [
+   "\t<<He>>【이가】 여운이 가라앉을 때까지 잠시 당신을 안고 있는다. \"나, 나 이제 가봐야 해. 고마워, 내 사랑.\" <<he>>【이가】 얼굴을 붉힌 채 돌아서서 떠나기 전에 말한다."
+  ],
+  "new_en": [
+   "\t<<He>> holds you for a moment, until <<his>> afterglow fades away. \"I n-need to go now. Thank you, my love,\" <<he>> says before turning to leave, <<his>> face still flushed."
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"kylargag\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"kylarGag\">>"
+  ],
+  "context": ":: Widgets Kylar [widget]"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"kylarangry\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"kylarAngry\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"kylaroptions\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"kylarOptions\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<kylaroptionstext>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<kylarOptionsText>>"
+  ],
+  "context": "\t<<if _args[0] isnot \"notext\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<kylaroptionsleave \"manor\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<kylarOptionsLeave \"manor\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<kylaroptionsleave>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<kylarOptionsLeave>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<kylaroptionsleave \"manor\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<kylarOptionsLeave \"manor\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<kylaroptionsleave \"leave\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<kylarOptionsLeave \"leave\">>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"kylaroptionsleave\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"kylarOptionsLeave\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"kylaroptionstext\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"kylarOptionsText\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<kylargag>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<kylarGag>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<kylarangry>>",
+   "\t<<kylargag>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<kylarAngry>>",
+   "\t<<kylarGag>>"
+  ],
+  "context": "<<elseif $phase is 2>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<kylargag>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<kylarGag>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<kylarangry>>",
+   "\t<<kylargag>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<kylarAngry>>",
+   "\t<<kylarGag>>"
+  ],
+  "context": "<<elseif $phase is 2>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<kylargag>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<kylarGag>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<kylarangry>>",
+   "\t<<kylargag>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<kylarAngry>>",
+   "\t<<kylarGag>>"
+  ],
+  "context": "<<elseif $phase is 2>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<endevent>>"
+  ],
+  "context": "<<set $outside to 0>><<set $location to \"home\">><<effects>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptionsleave>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptionsLeave>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<kylaroptions \"notext\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<kylarOptions \"notext\">>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<kylarOptions>>"
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": "<<set $daily.kylar.underwear to {}>> <!-- this ensures that kylar won't generate new underwear today -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": "<<set $daily.kylar.underwear to {}>> <!-- this ensures that kylar won't generate new underwear today -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<kylaroptions \"notext\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<kylarOptions \"notext\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "<<elseif $worn.neck.name is \"love locket\" and C.npc.Kylar.love gte 10 and $rng gte 91 and !$weekly.kylarLovelocket>>",
+   "\t<<set $weekly.kylarLovelocket to 1>>",
+   "\t<<if $kylarLocket is \"confronted\">>",
+   "\t\t<<if _kylarStatus.includes(\"Rage\")>>",
+   "\t\t\tYou chat with Kylar. <<He>> stares at your locket, and gives you a baleful stare. <<npcincr Kylar rage 3>><<ggksuspicion>>",
+   "\t\t<<elseif _kylarStatus.includes(\"Love\")>>",
+   "\t\t\tYou chat with Kylar. <<He>> stares at your locket, face flushed with emotion. <<He>> looks at you for a long while, before turning away. <<npcincr Kylar love -3>><<lllove>>",
+   "\t\t<<else>>",
+   "\t\t\tYou chat with Kylar. <<He>> struggles to look in your direction for a while. <<npcincr Kylar love -1>><<llove>>",
+   "\t\t<</if>>",
+   "\t<<elseif $kylarLocket is \"took\">>",
+   "\t\tYou chat with Kylar. <<He>> says nothing, but there's no misreading the look of unease on <<his>> face as <<he>> eyes your locket. <<stress 6>><<gstress>>",
+   "\t<<elseif $kylarLocket>>",
+   "\t\t<<if _kylarStatus.includes(\"Rage\")>>",
+   "\t\t\t<<if $kylarLocket is \"self\">>",
+   "\t\t\t\tYou chat with Kylar. <<His>> eyes flit between you and your locket with devout fervour. <<npcincr Kylar rage -3>><<llksuspicion>>",
+   "\t\t\t<<elseif $kylarLocket is \"added\">>",
+   "\t\t\t\tYou chat with Kylar. <<He>> keeps casting intense glances at your locket. <<stress 6>><<gstress>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\tYou chat with Kylar. <<He>> gives your locket a baleful stare. <<npcincr Kylar rage 3>><<ggksuspicion>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif _kylarStatus.includes(\"Love\")>>",
+   "\t\t\t<<if $kylarLocket is \"self\">>",
+   "\t\t\t\tYou chat with Kylar. <<He>> says nothing as <<he>> steals glances at your locket, but you think you see tears slowly well up. <<npcincr Kylar love 1>><<glove>>",
+   "\t\t\t<<elseif $kylarLocket is \"added\">>",
+   "\t\t\t\tYou chat with Kylar. <<He>> keeps casting anxious glances at your locket. <<stress 6>><<gstress>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\tYou chat with Kylar. <<He>> is too intent on staring at your locket to look at you properly. <<npcincr Kylar rage 3>><<ggksuspicion>>",
+   "\t\t\t<</if>>",
+   "\t\t<<else>>",
+   "\t\t\tYou chat with Kylar. <<He>> stares at you, <<his>> expression unreadable.",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\t<<set $kylarSeen.pushUnique(\"locket\")>>",
+   "\t\t<<if _kylarStatus.includes(\"Rage\")>>",
+   "\t\t\tYou chat with Kylar. <<He>> stares at your love locket, silent and unblinking. You're not even sure if <<hes>> breathing.",
+   "\t\t<<elseif _kylarStatus.includes(\"Love\")>>",
+   "\t\t\tYou chat with Kylar. <<He>> reaches forward and tries to open your locket without you noticing, but jumps back once <<he>> notices you staring.",
+   "\t\t<<else>>",
+   "\t\t\tYou chat with Kylar. <<He>> stares at your love locket, before turning red once <<he>> notices you staring back.",
+   "\t\t<</if>>",
+   "\t<</if>>"
+  ],
+  "context": "\t<<exit>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<kylarOptions>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<kylarOptions>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<kylarOptions>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<kylarOptions>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<kylarOptions>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<kylarOptions>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<kylarOptions>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": "<<endevent>><<npc Kylar>><<person1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": "<<endevent>><<npc Kylar>><<person1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<set _kylarlocation to getKylarLocation()>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set _kylarLocation to getKylarLocation()>>"
+  ],
+  "context": "<<endevent>><<npc Kylar>><<person1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<set _kylarlocation to getKylarLocation()>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set _kylarLocation to getKylarLocation()>>"
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<set _kylarlocation to getKylarLocation()>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set _kylarLocation to getKylarLocation()>>"
+  ],
+  "context": "<<run statusCheck(\"Kylar\")>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<set _kylarlocation to getKylarLocation()>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set _kylarLocation to getKylarLocation()>>"
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<kylarOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<kylaroptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<kylarOptions>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   ":: Kylar Bedroom Letter",
+   "<<set $outside to 0>><<set $location to \"home\">><<effects>><<wearProp \"note\">>",
+   "<<npc Kylar>><<person1>>",
+   "",
+   "A letter lies on your bed. Someone must have broken into your room. <<stress 6>><<gstress>>",
+   "<br><br>",
+   "",
+   "Cautiously, you open it. All stiff and crinkled, the letter is written in blood, reeking of metal<<= $settings.watersportsEnabled ? \", piss\": \"\">> and cum.<<= playerIsPregnant() ? \" You retch at the smell.\": \"\">> Your breath quickens. <<stress 6>><<gstress>>",
+   "<br><br>",
+   "",
+   "/* Picking a school LI for the letter. Will prioritize LIs set in the attitudes menu, then LIs that have been unlocked as LIs, then just any one of them as a last resort*/",
+   "<<set _setLI to []>>",
+   "<<set _unlockedLI to []>>",
+   "<<set _schoolLI to []>>",
+   "<<silently>><<for _li range [\"Robin\", \"Sydney\", \"Whitney\"]>>",
+   "\t<<= isLoveInterest(_li) ? _setLI.push(_li) : isPossibleLoveInterest(_li) ? _unlockedLI.push(_li) : _schoolLI.push(_li)>>",
+   "<</for>><</silently>>",
+   "",
+   "<blockquote>",
+   "\t<em>",
+   "\t\t\"Dear <<kylar_pet_name>>,",
+   "\t\t<br><br>",
+   "",
+   "\t\tI love you.",
+   "\t\t<br><br>",
+   "",
+   "\t\tI'm not really good at expressing myself verbally, so I wrote you a love letter. Does it please you, <<kylar_pet_name>>? I hope it does. I know it does. You love me, after all, don't you? I love you, too.",
+   "\t\t<br><br>",
+   "",
+   "\t\t/* the grammar here is intentional */",
+   "\t\tYou like to visit me in my dreams, don't you, since my dreams are made of only you.<<= !_kylarStatus.includes(\"Love\") ? \" In my dreams, you love me back.\": \"\">> Do you dream of me, too? I hope you do.",
+   "\t\t<br><br>",
+   "",
+   "\t\tI want you, all of you. I worship at the altar of you. We belong together. You're mine and I'm yours. It's written in the stars, <<kylar_pet_name>>!",
+   "\t\t<br><br>",
+   "",
+   "\t\tI can't even imagine my life without you. You gave it meaning for I am nothing without you.",
+   "\t\t<<if C.npc.Kylar.rage gte 60>>",
+   "\t\t\tSo, why do you keep looking the other way? At <<= _setLI.length gte 1 ? _setLI.pluck() : _unlockedLI.length gte 1 ? _unlockedLI.pluck() : _schoolLI.pluck()>>? Not at me? Can't you see my heart? Is my love not enough? Am I... not enough?",
+   "\t\t<</if>>",
+   "\t\t<br><br>",
+   "",
+   "\t\tYou should lick the paper. I've infused my bodily fluids on it. It tastes like me, I hope. I want it to permeate into your body, letting my undying love reach your heart. Thinking about it makes me...",
+   "\t\t<br><br>",
+   "",
+   "\t\tForever yours,",
+   "\t\t<br>",
+   "\t\tKylar",
+   "\t\t<br><br>",
+   "",
+   "\t\t<div class=\"text-clip\"><<for _i to 0; _i lt 15; _i++>>loveyoui<</for>></div>",
+   "\t\t<div class=\"text-clip\"><<for _i to 0; _i lt 15; _i++>>youilove<</for>></div>",
+   "\t\t<div class=\"text-clip\"><<for _i to 0; _i lt 15; _i++>>I love you. <</for>></div>",
+   "\t\t<div class=\"text-clip\"><<for _i to 0; _i lt 15; _i++>>you. I love <</for>></div>",
+   "\t\t<div class=\"text-clip\"><<for _i to 0; _i lt 15; _i++>>ILOVEYOU<</for>></div>",
+   "\t\t<div class=\"text-clip\"><<for _i to 0; _i lt 15; _i++>>YOUILOVE<</for>></div>",
+   "\t\t\"",
+   "\t</em>",
+   "</blockquote>",
+   "",
+   "Hearing a rustling sound outside, you <<= $speech_attitude is \"meek\" ? \"fearfully\" : $speech_attitude is \"bratty\" ? \"quickly\" : \"tentatively\">> look up.",
+   "<br><br>",
+   "",
+   "<<if $rng lte (C.npc.Kylar.love - 50)/2>>",
+   "\tKylar stares back at you with a crazed smile, panting, <<his>> palms pressed against the window. \"I love you,\" <<he>> mouths",
+   "\t<<if C.npc.Kylar.lust gte 60>> ",
+   "\t\tand <<= [\"kisses\", \"licks\", \"draws a heart on\"].pluck()>> the glass",
+   "\t<</if>>",
+   "\tbefore disappearing into the dark.",
+   "<<else>>",
+   "\tNo one's there.",
+   "<</if>>",
+   "<<stress 6>><<gstress>>",
+   "<br><br>",
+   "",
+   "<<link [[Keep the letter|Kylar Bedroom Letter 2]]>><<set $phase to 1>><<npcincr Kylar love 1>><</link>><<glove>>",
+   "<br>",
+   "<<link [[Lick the letter|Kylar Bedroom Letter 2]]>><<set $phase to 2>><<npcincr Kylar love 3>><<npcincr Kylar lust 3>><</link>><<gglove>><<gglust>>",
+   "<br>",
+   "<<link [[Trash the letter|Kylar Bedroom Letter 2]]>><<set $phase to 0>><<npcincr Kylar love -1>><<npcincr Kylar rage 1>><</link>><<llove>><<gksuspicion>>",
+   "<br>",
+   "",
+   ":: Kylar Bedroom Letter 2",
+   "<<set $outside to 0>><<set $location to \"home\">><<effects>>",
+   "",
+   "<<if $phase is 1>>",
+   "\t<<wearProp \"note\">>",
+   "\tYou press the letter to your chest, smiling happily.",
+   "<<elseif $phase is 2>>",
+   "\t<<wearProp \"note\">>",
+   "\tYou lick the letter. It tastes metallic and bitter. Just like Kylar. <<arousal 600>><<garousal>>",
+   "<<else>>",
+   "\tYou look at it with disgust and toss it in the trash.",
+   "<</if>>",
+   "<br><br>",
+   "",
+   "<<link [[Next|Kylar Bedroom 1]]>><</link>>",
+   "<br>"
+  ],
+  "context": "<<destinationeventend>>"
+ }
+]

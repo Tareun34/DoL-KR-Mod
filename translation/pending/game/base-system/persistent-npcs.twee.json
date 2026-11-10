@@ -1,0 +1,26 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $per_npc[$_name] and $per_npc[$_name].name>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $per_npc[$_name]?.name>>"
+  ],
+  "context": "\t\t/*Adds name back into name pool */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</if>>",
+   "",
+   "\t\t\t<!-- Set Skin Tone -->",
+   "\t\t\t<<if $per_npc[$_i].skincolour is undefined or _args[0] is \"skincolour\">>",
+   "\t\t\t\t<<set $per_npc[$_i].skincolour to randomSkinTone()>>"
+  ],
+  "context": "\t\t\t\t<<set $per_npc[$_i].vagina to ($per_npc[$_i].gender !== \"m\" ? \"clothed\" : \"none\")>>"
+ }
+]

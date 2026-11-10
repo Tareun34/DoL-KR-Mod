@@ -1,0 +1,309 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {string} bus",
+   " * @param {string} fishKey"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingLocationKey} bus",
+   " * @param {FishingFishKey} fishKey"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tpreferredMatchCount += .75;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tpreferredMatchCount += 0.75;"
+  ],
+  "context": "\tif (fishConfig.requiresBaitFish) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {string} fishKey"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingFishKey} fishKey"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {string} fishKey"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingFishKey} fishKey"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param bus"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingLocationKey} bus"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {string} location"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingLocationKey} location"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {string} bus",
+   " * @returns {{type: string, size: number}}"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingLocationKey} bus",
+   " * @returns {FishingHookedFish}"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * Returns the fish found at the location as [fishKey, weight] pairs, weighted by location rarity, for use with weightedRandom."
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * Returns fish at the location whose preferred location includes the given location,",
+   " * as [fishKey, weight] pairs for use with weightedRandom."
+  ],
+  "context": "/**"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {string} location"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingLocationKey} location"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "function fishingSurfacingFish(location) {"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "function preferredLocationFishList(location) {"
+  ],
+  "context": " */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t.filter(([, fishConfig]) => fishConfig.locations[location] > 0)"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t.filter(([, fishConfig]) => fishConfig.preferredLocation.includes(location))"
+  ],
+  "context": "\treturn Object.entries(setup.fishing.lootTables.fish)"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "window.fishingSurfacingFish = fishingSurfacingFish;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "window.preferredLocationFishList = preferredLocationFishList;",
+   "",
+   "/**",
+   " * Returns fish at the location whose preferred season includes the current season,",
+   " * as [fishKey, weight] pairs for use with weightedRandom.",
+   " *",
+   " * @param {FishingLocationKey} location",
+   " * @returns {Array}",
+   " */",
+   "function preferredSeasonFishList(location) {",
+   "\treturn Object.entries(setup.fishing.lootTables.fish)",
+   "\t\t.filter(([, fishConfig]) => fishConfig.locations[location] > 0 && fishConfig.preferredSeason.includes(Time.season))",
+   "\t\t.map(([fishKey, fishConfig]) => [fishKey, fishConfig.locations[location]]);",
+   "}",
+   "window.preferredSeasonFishList = preferredSeasonFishList;"
+  ],
+  "context": "}"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {object} fish"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingHookedFish} fish"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {string} bus"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingLocationKey} bus"
+  ],
+  "context": " * @param {object} lootTable"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {string} bus"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingLocationKey} bus"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {string} bus",
+   " * @returns {{slot: string, item: object, colour: string}}"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingLocationKey} bus",
+   " * @returns {FishingCaughtClothing}"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {string} fishKey"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingFishKey} fishKey"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {string} bus"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingLocationKey} bus"
+  ],
+  "context": " * @param {number} fishSize"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @returns {string}"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @returns {FishingFishKey}"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {string} fishType"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingFishKey} fishType"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {string} fishKey"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingFishKey} fishKey"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\treturn V.debug === 1 || (!pcAreArmsBound(\"any\") && V.worn.handheld.type.includes(\"fishing_rod\"));"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\treturn V.debug || (!pcAreArmsBound(\"any\") && V.worn.handheld.type.includes(\"fishing_rod\"));"
+  ],
+  "context": "function canStartFishing() {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {object} fish"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingHookedFish} fish"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {string} bus"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingLocationKey} bus"
+  ],
+  "context": "/**"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {string} bus"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingLocationKey} bus"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {string} bus"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {FishingLocationKey} bus"
+  ],
+  "context": "/**"
+ }
+]

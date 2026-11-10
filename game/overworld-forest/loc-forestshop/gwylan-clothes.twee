@@ -477,7 +477,7 @@
 	당신은 그윌란에게 다른 할로윈 의상들과 함께 나타나기 시작했다고 말한다. <<He>>【은는】 그 대답을 예상했다는 듯 고개를 끄덕인다.
 <<else>>
 	<<set $daily.gwylan.traumaTalk to true>>
-	당신은 그윌란에게 카타콤에서 고치에 싸인 후 얼마 지나지 않아 상점에 나타났다고 말한다<<if $settings.spidersEnabled and $settings.bestialityEnabled>>. 그리고 거대한 거미들에 대해서도 <<him>>에게 이야기한다<</if>>.
+	You tell Gwylan that it appeared in the shop some time after you were wrapped up in a cocoon in the catacombs<<if $settings.spidersEnabled and animalSexEnabledForType("spider")>>, and tell <<him>> about the gigantic spiders<</if>>.
 	<br><br>
 
 	<<He>>【은는】 고개를 끄덕이다가, 갑자기 <<his>> 손가락을 튕긴다. "거미줄! 그걸 쓰면 훨씬 더 멋져 보일 거야. 충분히 두껍게 만들 수만 있다면 자르기도 힘들겠지. 물론, 그러려면 직접 채집해야 하는데, 지난번에 그랬을 땐... 알이 너무 많아서..." <<He>>【은는】 몸을 떤다.
@@ -1191,7 +1191,8 @@
 <<set $gwylanTalked.pushUnique("bad_end")>><<set $gwylan.progress += 5>>
 <<set $daily.gwylan.traumaTalk to true>>당신은 가게를 둘러보며, 당신이 미지의 장소로 끌려가 세상과 단절된 후 나타난 모든 옷을 가리킨다.
 <br><br>
-당신은 그윌란에게 각각의 이야기를 들려준다. 정신병원과 교도소. 레미의 농장. 지하 창관. 황야의 성. 이 숲에서 사냥당하고 붙잡혔던 일까지. <<He>>【은는】 끝까지 조용히 듣고만 있다.
+
+You recount each tale to Gwylan. The asylum and the prison. Remy's farm. The underground brothel. The castle in the moor. Being hunted and caught in this forest. Slavery in the mines. <<He>> stays silent until the end.
 <br><br>
 "넌 강해." <<he>>【이가】 말한다. "말로 표현할 수 없을 만큼 강해. 그 모든 곳에서 돌아올 수 있는 사람은 너 말고는 생각나지 않아. 다른 사람에게 그 모든 걸 이야기하는 건 말할 것도 없고." <<He>>【은는】 당신을 껴안는다. <<stress -6>><<lstress>>
 <br><br>
@@ -1524,8 +1525,8 @@
 <<effects>><<run statusCheck("Gwylan")>><<set _tf to checkTFparts()>><<set $daily.gwylan.clothesTalk++>>
 <<set $gwylanTalked.pushUnique("bird")>><<set $gwylan.progress++>>
 <<set $daily.gwylan.traumaTalk to true>>
-<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or $greathawkmonster is 2>><<set _hawkmonster to 1>><</if>>
-당신은 그윌란에게 깃털 장신구를 보여준다.
+<<if resolveIfNamedBeastIsMonster("greathawk")>><<set _hawkmonster to 1>><</if>>
+You show Gwylan the feathery accessories.
 <br><br>
 
 <<His>> 눈이 휘둥그레진다. "오, 와! 완전 새것 같잖아! 어디 보자, 어디 보자!" <<He>>【이가】 그것들을 잡으려 하고, 당신은 건네준다.
@@ -1597,7 +1598,7 @@
 
 	<<He>>【이가】 놀란 표정을 짓는다. "엄청나게 위험했잖아. 운이 좋았네, 바다가 널 도왔나 봐. 그런 거리를... 휩쓸려 갈 수도 있었을 텐데!" <<He>>【이가】 갑자기 당신을 껴안는다. "그렇게 무모하게 굴지 마! 그래도 돌아와서 기뻐."
 <<elseif _prisonStats?.reasonEnd is "escapedSoaring">>
-	"감옥을 지키던 거대한 <<= $settings.bestialityEnabled ? "새들" : "하피들" >>【이】랑 친해져서 그걸 타고 날아왔어." 라고 설명한다.
+	"I befriended the giant <<= resolveIfNamedBeastIsMonster("greathawk") ? "harpies" : "birds" >> that watched over the prison, and flew," you explain.
 	<br><br>
 
 	<<if _tf.birdWings>>
@@ -1654,6 +1655,35 @@
 
 <<gwylanOptions>>
 
+
+:: Gwylan Talk Clothes Mine
+<<effects>>
+<<run statusCheck("Gwylan")>><<set $daily.gwylan.clothesTalk++>>
+<<set $gwylanTalked.pushUnique("mine")>><<set $gwylan.progress += 2>>
+<<set $daily.gwylan.traumaTalk to true>>
+
+You show Gwylan the mining helmet.
+<br><br>
+"These used to be more common, back when the mines were still open," <<he>> says. "The official story of why it was shut down was because of flooding, but I think they found something down there," <<he>> muses. "So why did the shop show this to you?"
+<br><br>
+You tell <<him>> about your slavery in the mine, and how you incited a rebellion and put them out of commission.
+<br><br>
+<<if $mine.heldGem>>
+	<<mine_gem_value>>
+	<<set $blackmoney -= _gem_value>>
+	"They had us mining for these." You pull out a $mine.heldGem. <<His>> eyes go wide. Before you can react, <<he>> immediately rips it out of your hand, runs to the door, and chucks it as far as <<he>> can. <<He>> relaxes and walks back to you.
+	<br><br>
+	"Now, where were we?" <<He>> quickly notices your confusion. "Oh! I'm sorry <<pcpetname "Gwylan">>. Those things are quite dangerous, I wouldn't recommend coming into contact with them again."
+	<br><br>
+	<<unset $mine.heldGem>>
+<</if>>
+"That was a good thing you did, fighting back," <<he>> says. "People are weak alone, but together, they become stronger." Your thoughts turn to the orphanage. "I've suspected that the mines had resumed operation, I'm glad you stopped it."
+<br><br>
+
+<<gwylanOptions>>
+
+
+
 <!-- Temple -->
 
 :: Gwylan Talk Clothes Temple
@@ -1678,7 +1708,7 @@
 당신은 더 이상 질문하지 않기로 한다.
 <br><br>
 
-<<He>>【은는】 온갖 종류의 옷들을 둘러본다. <<his>> 얼굴에 그늘이 스친다. <<He>>【은는】 <<= V.gwylanSeen.includes("yearning") ? "괴로운 표정" : _gwylanLovePercent gte 75 ? "걱정스러운 표정" : "곤란한 찡그림">>【으로로】 당신을 돌아보고, 당신의 손을 <<his>> 손으로 감싸 쥔다. "넌 순수하고 빛나는 영혼이야, 얘야. 누구도 네 빛을 삼켜 자기 것으로 만들게 두지 마."
+<<He>> looks around at all of the different outfits. A shadow passes over <<his>> face. <<He>> turns to you with <<= V.gwylanSeen.includes("yearning") ? "distress" : _gwylanLovePercent gte 65 ? "concern" : "a troubled frown">>, and clasps your hands in <<his>> own. "You are a pure, shining soul, dear. Don't let anyone swallow your light and claim it as their own."
 <br><br>
 
 <<gwylanOptions>>
@@ -2509,7 +2539,7 @@
 <</if>>
 당신은 최선을 다해 겹쳐진 반원, 뻗어 나가는 덩굴손, 그리고 중앙에 있는 세 모서리의 매듭을 묘사한다.
 <<if $compound.symbol.length gt 1 or $gwylanSeen.includes("tattoos_intro")>>
-	"저 상징을 전에 본 적이 있어." 당신은 말한다.<<if $worn.neck.name is "stone pendant" and $compound.symbol.length gt 1>>"이것처럼 생긴 가운데 부분만이 아니라, 전체 모습을 말이야." 당신은 돌 펜던트를 들어 보인다.<</if>>
+	"I've seen that symbol before," you say.<<if $worn.neck.name is "stone pendant" and $compound.symbol.length gt 1>> "The full thing, not just the middle part, which looked like this." You hold up your stone pendant.<</if>>
 	<<if $compound.symbol.includes("wraith")>>
 		"엘크 가의 복합단지, <<= _seenLocations.join(", ")>>에서 찾았어."
 		<br><br>
@@ -2673,8 +2703,8 @@
 	<<link [[그윌란에게 훔친 금괴에 대해 말한다|Gwylan Talk Clothes Catsuit 3]]>><<set $phase2 to "gold">><</link>>
 	<br>
 <</if>>
-<<if $wrenHeist or $wrenSeen?.includes("heist") and !$gwylanTalked.includes("heist_wren")>>
-	<<link [[그윌란에게 렌과 함께 한 습격에 대해 말한다|Gwylan Talk Clothes Catsuit 3]]>><<set $phase2 to "heist">><</link>>
+<<if ($wrenHeist or $wrenSeen?.includes("heist")) and !$gwylanTalked.includes("heist_wren")>>
+	<<link [[Tell Gwylan about the heist with Wren|Gwylan Talk Clothes Catsuit 3]]>><<set $phase2 to "heist">><</link>>
 	<br>
 <</if>>
 <<link [[들어줘서 고맙다고 그윌란에게 인사한다|Gwylan Talk Clothes Catsuit 3]]>><<set $phase2 to "thank">><</link>>

@@ -1,0 +1,156 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if hasSexStat(\"deviancy\", 2) and ($settings.bestialityEnabled or $monster is 1)>>",
+   "\t\t\t\t<<link [[Lewd play|Wolf Cave Lewd Play]]>><<set $sexstart to 1>><</link>><<deviant2>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if hasSexStat(\"deviancy\", 2) and ($settings.bestialityEnabled or $monster is 1)>>",
+   "\t\t\t\t<<link [[음란한 장난을 친다|Wolf Cave Lewd Play]]>><<set $sexstart to 1>><</link>><<deviant2>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if hasSexStat(\"deviancy\", 2) and beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\t\t\t\t<<link [[Lewd play|Wolf Cave Lewd Play]]>><<set $sexstart to 1>><</link>><<deviant2>>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tThe Black Wolf is agitated. <<bHe>> bites and growls at the others, agitating them in turn."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t검은 늑대가 흥분해 있다. <<bHe>>【은는】 다른 녀석들을 물고 으르렁거리며 덩달아 흥분하게 만든다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<endevent>><<npc \"Black Wolf\">>",
+   "\t\t\t\t\tThe Black Wolf is agitated. <<bHe>> bites and growls at the others, agitating them in turn."
+  ],
+  "context": "\t\t\t\t<<if $wolfpackleader is 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tOne of the larger <<beastsplural>> challenges the Black Wolf. The Black Wolf wins after a brief tussle, but <<bhis>> anger is not assuaged. <<bHe>> growls and bites at the other <<beastsplural>>, as if daring any to challenge <<bhim>>."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t덩치가 큰 <<beastsplural>> 중 하나가 검은 늑대에게 덤빈다. 짧은 몸싸움 끝에 검은 늑대가 이겼지만, <<bhis>> 분노는 가라앉지 않는다. <<bHe>>【은는】 누가 또 덤빌 테면 덤벼보라는 듯, 다른 <<beastsplural>>【을를】 향해 으르렁거리며 물어뜯는다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<npc \"Black Wolf\" 2>><<person1>>",
+   "\t\t\t\t\tOne of the larger <<beastsplural>> challenges the Black Wolf. The Black Wolf wins after a brief tussle, but <<person2>><<bhis>> anger is not assuaged. <<bHe>> growls and bites at the other <<beastsplural>>, as if daring any to challenge <<bhim>>.",
+   "\t\t\t\t\t<<endevent>><<npc \"Black Wolf\">><<person1>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $settings.bestialityEnabled or $monster is 1>>",
+   "\t\t\t\t\t<<link [[Favour the low ranking <<beasttype 0>>|Wolf Cave Rank]]>><<set $phase to 0>><</link>><<deviant1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $settings.bestialityEnabled or $monster is 1>>",
+   "\t\t\t\t\t<<link [[서열이 낮은 <<beasttype 0>>【을를】 편애한다|Wolf Cave Rank]]>><<set $phase to 0>><</link>><<deviant1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<if beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\t\t\t\t\t<<link [[Favour the low ranking <<beasttype 0>>|Wolf Cave Rank]]>><<set $phase to 0>><</link>><<deviant1>>"
+  ],
+  "context": "\t\t\t\t<<saveNPC 1 wolf_rank_2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<endevent>><<npc \"Black Wolf\">>",
+   "\t\t\t\tAmidst the group, you notice the Black Wolf standing atop a large rock, surrounded by a larger group of <<wolf_cave_plural>>. <<bHe>> suddenly raises <<bhis>> head and begins howling loudly, yet beautifully. A second <<beasttype>> takes notice and joins <<bhis>> pack sibling in hearty bonding."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<endevent>><<npc \"Black Wolf\">>",
+   "\t\t\t\t무리 한가운데서, 당신은 거대한 바위 위에서 무수한 <<wolf_cave_plural>>에게 둘러싸인 채 서 있는 검은 늑대를 발견한다. <<bHe>>【은는】 돌연 고개를 치켜들고는 크고도 아름답게 울부짖기 시작한다. 다른 <<beasttype>>【이가】 그걸 보고는 뜨거운 유대감을 담아 <<bhis>> 하울링에 동참한다."
+  ],
+  "new_en": [
+   "\t\t\t\t<<npc \"Black Wolf\" 2>><<person2>>",
+   "\t\t\t\tAmidst the group, you notice the Black Wolf standing atop a large rock, surrounded by a larger group of <<wolf_cave_plural>>. <<bHe>> suddenly raises <<bhis>> head and begins howling loudly, yet beautifully. A second <<person1>><<beasttype>> takes notice and joins <<bhis>> pack sibling in hearty bonding."
+  ],
+  "context": "\t\t\t<<addinlineevent \"wolf cave howl chorus\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $pound and $pound.progress is 6>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $pound?.progress is 6>>"
+  ],
+  "context": "\t\t\t<</addinlineevent>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or (!$settings.bestialityEnabled)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if monsterChanceForType(\"wolf\") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType(\"wolf\"))>>"
+  ],
+  "context": "<<widget \"wolf_cave_update\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if beastMaleChance() gte 100>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastMaleChanceForType(\"wolf\") gte 100>>"
+  ],
+  "context": "<<widget \"wolf_cave_plural\">><<silently>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif beastMaleChance() gte 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif beastMaleChanceForType(\"wolf\") gte 1>>"
+  ],
+  "context": "\t\t<<set _wolves_plural to \"m\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$settings.bestialityEnabled or $wolfcave_monster_roll is true or ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $wolfcave_monster_roll or (monsterChanceForType(\"wolf\") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType(\"wolf\")))>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif beastMaleChance() gte 100 or (beastMaleChance() gte 1 and beastMaleChance() gte random(0,100))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif beastMaleChanceForType(\"wolf\") gte 100 or (beastMaleChanceForType(\"wolf\") gte 1 and beastMaleChanceForType(\"wolf\") gte random(0,100))>>"
+  ],
+  "context": "\t\t<<set _wolves_singular to _args[0]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$settings.bestialityEnabled or $wolfcave_monster_roll is true or ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $wolfcave_monster_roll or (monsterChanceForType(\"wolf\") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType(\"wolf\")))>>"
+  ],
+  "context": "\t<</if>>"
+ }
+]

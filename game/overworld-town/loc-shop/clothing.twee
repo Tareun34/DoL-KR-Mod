@@ -50,7 +50,7 @@
 			<<clothingcategoryicon "all">>
 			<<link "전체 보기">><<replace "#clothingShop-div">><<AllShop>><</replace>><</link>>
 			<br><br>
-			<<if $debug is 1>>
+			<<if $debug>>
 				<<clothingcategoryicon "over-outfit">>
 				<<link "겉옷 세트 보기">><<replace "#clothingShop-div">><<OverOutfitShop>><</replace>><</link>>
 				<br><br>

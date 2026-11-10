@@ -255,6 +255,9 @@
 :: Mansion Display Loosen
 <<effects>>
 
+<<if $avery_antiques.progress is 0>>
+	<<set $avery_antiques.progress to 1>>
+<</if>>
 <<if $avery_antiques.bolt is 1>>
 	당신은 더 값비싼 골동품을 보호하는 볼트를 풀려고 시도한다.
 <<else>>
@@ -406,8 +409,8 @@
 <<else>>
 	<<wakingEffects $sleepHoursTotal>>
 	<<if ["dryheaving","nausea"].includes(_wakingEffect)>>
-		<br><br>
-		푹 잤지만, 지금은 몸이 좀 찌뿌둥하다.
+		<br>
+		You slept soundly, but now feel a little rough.
 		<br><br>
 	<<elseif $nightmares gte 1 and $controlled is 0>>
 		당신은 <<if _wakingEffect>>꿈에서<<else>>꿈속에서 자신이<</if>> <<if ["haunt", "despair"].includes($wraith.state) and $rng lte 25>>창백하고<<else>>어둡고<</if>> 끔찍한 무언가에게 사냥당하고 있다.
@@ -418,7 +421,7 @@
 			당신은 깊이 잠든다.
 			<br><br>
 		<<else>>
-			<br><br>
+			<br>
 		<</if>>
 	<</if>>
 
@@ -1490,17 +1493,17 @@
 			<br>
 		<</if>>
 
-		<<if $avery_valentines and $avery_valentines.invite is true and $avery_valentines.reservations is false>>
+		<<if $avery_valentines?.invite is true and $avery_valentines.reservations is false>>
 			<br>
 			<<socialiseicon "ask">><<link [[에이버리가 어떻게 그렇게 급히 저녁 예약을 잡았는지 묻는다|Mansion Talk Ask]]>><<set $avery_valentines.reservations to true>><<set $avery_ask to "reservations">><</link>>
 		<</if>>
 
-		<<if $avery_valentines and $avery_valentines.init is true and $avery_valentines.invite is false and $avery_valentines.done is false>>
+		<<if $avery_valentines?.init is true and $avery_valentines.invite is false and $avery_valentines.done is false>>
 			<br>
 			<<socialiseicon "ask">><<link [[그래도 발렌타인데이에 에이버리와 저녁 식사를 하러 가겠냐고 묻는다|Mansion Talk Ask]]>><<set $avery_ask to "valentines">><</link>>
 		<</if>>
 
-		<<if $avery_valentines and $avery_valentines.chocolate is true and !$avery_valentines.chocolate_asked>>
+		<<if $avery_valentines?.chocolate is true and !$avery_valentines.chocolate_asked>>
 			<br>
 			<<socialiseicon "ask">><<link [[에이버리가 당신이 준 초콜릿을 먹었는지 묻는다|Mansion Talk Ask]]>><<set $avery_ask to "chocolate">><</link>>
 		<</if>>
@@ -1790,7 +1793,7 @@
 	"그냥 잠깐 얘기 좀 하고 싶었어요." 당신이 말한다. "시간 괜찮으시다면요."
 <</if>>
 <br><br>
-<<if C.npc.Avery.rage gte 80 or (C.npc.Avery.rage gte 20 and $avery_mansion.rage.assess gte 1)>>
+<<if C.npc.Avery.rage gte 80 or (C.npc.Avery.rage gte 20 and $avery_mansion.rage.assess gte 5)>>
 	<<avery_current_room_dirty_check>>
 	에이버리는 당신을 향해 <<= $averyragerevealed gte 1 ? `비웃듯 미소 짓는다` : `얼굴을 찌푸린다`>>. "더 할 만한 일이 있을 텐데, <<pcpetname "Avery">>," <<he>>【이가】 말한다<<if _dirty_room>>, 노골적으로<</if>>.
 
@@ -1920,7 +1923,7 @@
 				마천루의 현재 진행 상황에 대해 <<= $averyragerevealed is 1 ? `짜증이 난` : `불만족스러운`>> 것 같다.<<if C.npc.Avery.rage gte 60>> <<He>>【은는】 앞으로 당신이 더 잘하길 기대하겠다고 말한다.<</if>>
 				<br><br>
 			<<else>>
-				마천루의 현재 진행 상황에 대해 <<= $averyragerevealed is 1 ? `분노한` : `짜증이 난`>> 것 같다.<<if C.npc.Avery.rage gte 40>> <<He>>【은는】 앞으로 당신이 더 잘하길 기대하겠다고 말한다.<</if>> <<npcincr Avery rage 1>><<garage>>
+				seems <<= $averyragerevealed is 1 ? `furious at` : `irritated by`>> the skyscraper's current progress.<<if C.npc.Avery.rage gte 40>> <<He>> informs you <<he>> expects better from you going forward.<</if>> <<npcincr Avery rage 1>><<garage>>
 				<br><br>
 			<</if>>
 		<</if>>
@@ -1948,7 +1951,7 @@
 				오션 브리즈 카페의 재개장 날 이야기가 나온다. "레드 카펫을 걸어본 게 그때가 처음이었나?" 에이버리가 묻는다. "흥미롭지 않아? 자네의 옛 보호자가 분위기를 망쳐버린 건 정말 유감이지만 말이야." <<= $averyragerevealed is 1? `<<He>>【은는】 비웃는다` : `<<His>> 미소가 일그러진다`>>. 그때를 떠올리며 말이다. "내가 좀 더 머물 수도 있었지만, 내겐 시간이 그리 많지 않았거든."
 				<br><br>
 			<<else>>
-				"오션 브리즈 카페 광고에서 자기를 봤어." <<he>>【이가】 말한다. "한껏 차려입은 모습이 아주 <<cute>>하더군. 자긴 카메라 앞에서도 <<= $photo and $photo.audienceSize gte 2 ? `프로` : `타고난 사람`>> 같아, 그렇지?" <<He>>【이가】 당신에게 미소 짓는다. "아예 직업으로 삼아볼 생각은 없어?"
+				"I've seen you on advertisements for the Ocean Breeze Cafe," <<he>> says. "You look <<cute>> all dressed up. You're a <<= $photo?.audienceSize gte 2 ? `professional` : `natural`>> in front of a camera, aren't you?" <<He>> smiles at you. "Have you considered making a career of it?"
 				<br><br>
 			<</if>>
 		<<else>>
@@ -6772,6 +6775,9 @@
 	<<neutral 1>>
 	<<maninit>>
 	<<set $enemytrust += 100>>
+	<<if $avery_mansion.schedule is "pool">>
+		<<npcexpose>>
+	<</if>>
 
 	<<if ["garden","lounge","drink","breakfast"].includes($avery_mansion.schedule) or $avery_pool is "swim">>
 		<<set $position to "missionary">>

@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<span class=\"red\"> inside your <<bottom>></span><<print _tmpmark>>\""
+  ],
+  "old_kr": [
+   "\t\t\t<span class=\"red\">네 <<bottom>> 안에서 <<print _tmpsmoving>> 게 정말 좋아<<print _tmpmark>></span>\""
+  ],
+  "new_en": [
+   "\t\t\t<span class=\"red\"> inside your <<bottom>><<print _tmpmark>></span>\""
+  ],
+  "context": "\t\t<<elseif _tmppspot is \"bi\">>"
+ }
+]

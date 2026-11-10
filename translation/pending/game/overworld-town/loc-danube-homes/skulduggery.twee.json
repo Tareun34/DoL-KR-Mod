@@ -1,0 +1,35 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"cat\", $monster is 1)>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $penisuse to \"feet\">><<set $speechpenisfoot to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $penisuse to \"feet\">><<set $speechPenisFoot to 1>>"
+  ],
+  "context": "\t\t<<if $player.penisExist and (!$player.vaginaExist or random(1, 2) is 2)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $vaginause to \"feet\">><<set $speechvaginafoot to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $vaginause to \"feet\">><<set $speechVaginaFoot to 1>>"
+  ],
+  "context": "\t\t<<else>>"
+ }
+]

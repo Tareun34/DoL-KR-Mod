@@ -1,0 +1,53 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $wraithPrison and $wraithPrison.vision>>",
+   "\t\t\tIt places a clawed hand on your chest. You can feel a bitter chill in your whole body. You feel the room spin, and your back touch the floor."
+  ],
+  "old_kr": [
+   "\t\t<<if $wraithPrison and $wraithPrison.vision>>",
+   "\t\t\t그것이 발톱이 달린 손을 당신의 가슴에 얹는다. 온몸에 사무치는 한기가 느껴진다. 방이 빙빙 도는 것이 느껴지고, 등이 바닥에 닿는다."
+  ],
+  "new_en": [
+   "\t\t<<if $wraithPrison?.vision>>",
+   "\t\t\tIt places a clawed hand on your chest. You can feel a bitter chill in your whole body. You feel the room spin, and your back touch the floor."
+  ],
+  "context": "\t<<if $wraith.state is \"haunt\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $wraithPrison and $wraithPrison.vision>>",
+   "\t\t\tIt places a clawed hand on your chest. You can feel a bitter chill in your whole body. You feel the room spin, and your back touch the floor."
+  ],
+  "old_kr": [
+   "\t\t<<if $wraithPrison and $wraithPrison.vision>>",
+   "\t\t\t그것이 발톱이 달린 손을 당신의 가슴에 얹는다. 온몸에 사무치는 한기가 느껴진다. 방이 빙빙 도는 것이 느껴지고, 등이 바닥에 닿는다."
+  ],
+  "new_en": [
+   "\t\t<<if $wraithPrison?.vision>>",
+   "\t\t\tIt places a clawed hand on your chest. You can feel a bitter chill in your whole body. You feel the room spin, and your back touch the floor."
+  ],
+  "context": "\t<<elseif $wraith.state is \"despair\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tOnce your mouth is full of the flowering lichen, it kisses you.",
+   "\t\t\tYou tense up, but soon enough, you feel an odd sense of relief. <<takeKissVirginity \"Ivory Wraith\" \"rape\">>",
+   "\t\t\t<<stress -200>><<lllstress>><<trauma 36>><<gggtrauma>><<purity -50>><<lllpurity>><<physique_loss 16>><<llphysique>><<pain -15>><<llpain>>"
+  ],
+  "old_kr": [
+   "\t\t\t입안이 꽃 핀 이끼로 가득 차자, 그것이 당신에게 키스한다.",
+   "\t\t\t몸이 긴장하지만, 이내 기묘한 안도감이 밀려온다. <<takeKissVirginity \"Ivory Wraith\" \"rape\">>",
+   "\t\t\t<<stress -200>><<lllstress>><<trauma 36>><<gggtrauma>><<purity -50>><<lllpurity>><<physique_loss 16>><<llphysique>><<pain -15>><<llpain>>"
+  ],
+  "new_en": [
+   "\t\t\tOnce your mouth is full of the flowering lichen, it kisses you.",
+   "\t\t\tYou tense up, but soon enough, you feel an odd sense of relief. <<takeKissVirginity \"Ivory Wraith\" \"rape\">>",
+   "\t\t\t<<stress -200>><<lllstress>><<trauma 36>><<gggtrauma>><<purity -50>><<lllpurity>><<physique -16>><<llphysique>><<pain -15>><<llpain>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ }
+]

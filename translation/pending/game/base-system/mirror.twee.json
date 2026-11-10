@@ -1,0 +1,200 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t{ type: \"sex\", name: \"slut\" },",
+   "\t\t\t{ type: \"prostitution\", name: \"whore\" },",
+   "\t\t\t{ type: \"rape\", name: \"fucktoy\" },",
+   "\t\t\t{ type: \"bestiality\", name: $settings.bestialityEnabled ? \"bitch\" : \"monster fucker\" },",
+   "\t\t\t{ type: \"exhibitionism\", name: \"flaunter\" },",
+   "\t\t\t{ type: \"pregnancy\", name: $fame.pregnancy gte 1000 ? \"broodmother\" : ($fame.pregnancy gte 400 ? \"breeder\" : \"mother\") },",
+   "\t\t\t{ type: \"impreg\", name: $fame.impreg gte 1000 ? \"allfather\" : ($fame.impreg gte 400 ? \"sire\" : \"inseminator\") },"
+  ],
+  "old_kr": [
+   "\t\t\t{ type: \"sex\", name: \"걸레\" },",
+   "\t\t\t{ type: \"prostitution\", name: \"창녀\" },",
+   "\t\t\t{ type: \"rape\", name: \"육변기\" },",
+   "\t\t\t{ type: \"bestiality\", name: $settings.bestialityEnabled ? \"암캐\" : \"괴물박이\" },",
+   "\t\t\t{ type: \"exhibitionism\", name: \"노출광\" },",
+   "\t\t\t{ type: \"pregnancy\", name: $fame.pregnancy gte 1000 ? \"번식모\" : ($fame.pregnancy gte 400 ? \"번식용\" : \"어미\") },",
+   "\t\t\t{ type: \"impreg\", name: $fame.impreg gte 1000 ? \"만인의 아버지\" : ($fame.impreg gte 400 ? \"씨내리\" : \"수정자\") },"
+  ],
+  "new_en": [
+   "\t\t\t{ type: \"sex\", name: \"slut\" },",
+   "\t\t\t{ type: \"prostitution\", name: \"whore\" },",
+   "\t\t\t{ type: \"rape\", name: \"fucktoy\" },",
+   "\t\t\t{ type: \"bestiality\", name: isBestialityOnForAnyCreature() ? \"bitch\" : \"monster fucker\" },",
+   "\t\t\t{ type: \"exhibitionism\", name: \"flaunter\" },",
+   "\t\t\t{ type: \"pregnancy\", name: $fame.pregnancy gte 1000 ? \"broodmother\" : ($fame.pregnancy gte 400 ? \"breeder\" : \"mother\") },",
+   "\t\t\t{ type: \"impreg\", name: $fame.impreg gte 1000 ? \"allfather\" : ($fame.impreg gte 400 ? \"sire\" : \"inseminator\") },"
+  ],
+  "context": "\t\t<<set _neg = ["
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<div id=\"visualsFaceVariants\" @class=\"setup.faceStyleOptions.length gt 1 ? 'settingsToggleItem' : 'settingsToggleItemWide'\">",
+   "\t\t\t<span class=\"gold bold\">Demeanour:</span>"
+  ],
+  "old_kr": [
+   "\t\t<div id=\"visualsFaceVariants\" @class=\"setup.faceStyleOptions.length gt 1 ? 'settingsToggleItem' : 'settingsToggleItemWide'\">",
+   "\t\t\t<span class=\"gold bold\">인상:</span>"
+  ],
+  "new_en": [
+   "\t\t<div id=\"visualsFaceVariants\" class=\"settingsToggleItem\">",
+   "\t\t\t<span class=\"gold bold\">Demeanour:</span>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $debug is 1>>",
+   "\t\t\tWrite"
+  ],
+  "old_kr": [
+   "",
+   "\t\t<<set _listBoxOptions to {}>>",
+   "\t\t<<for _k, _v range _bodyWritingOptions[$bodywritingSet]>>",
+   "\t\t\t<<if $bodywritingSet is \"Debug\">>",
+   "\t\t\t\t<<set _label to (_v.writingKr ? _v.writingKr : _k)>>",
+   "\t\t\t\t<<set _listBoxOptions[_label] to _v>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _listBoxOptions[_k] to _v>>",
+   "\t\t\t<</if>>",
+   "\t\t<</for>>",
+   "",
+   "\t\t<<if $debug is 1>>",
+   "\t\t\t적을 내용:"
+  ],
+  "new_en": [
+   "\t\t<<if $debug>>",
+   "\t\t\tWrite"
+  ],
+  "context": "\t\t<</for>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if $debug>>"
+  ],
+  "context": "\t\t\t\t\t_x.factor"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $debug>>"
+  ],
+  "context": "\t\t\t<</for>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $rentThug and isBaileyLookingForPlayer()>>",
+   "\t\t\t<<run _increaseAllure.push(`Hunted by Bailey's thugs${$rentThug.anger gte 1 ? \" \" + \"+\".repeat($rentThug.anger) : \"\"}`)>>",
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<div id=\"visualsFreckles\" class=\"settingsToggleItemWide\">",
+   "\t\t\t<span class=\"gold bold\">Freckles:</span>",
+   "\t\t\t<br>",
+   "\t\t\tFace: <label>Disabled <<radiobutton \"$player.skin.faceFreckles\" false autocheck>></label>",
+   "\t\t\t| <label>Enabled <<radiobutton \"$player.skin.faceFreckles\" true autocheck>></label>",
+   "\t\t\t<br>",
+   "\t\t\tBody: <label>Disabled <<radiobutton \"$player.skin.bodyFreckles\" \"none\" autocheck>></label>",
+   "\t\t\t| <label>Upper body <<radiobutton \"$player.skin.bodyFreckles\" \"upper\" autocheck>></label>",
+   "\t\t\t| <label>Full body <<radiobutton \"$player.skin.bodyFreckles\" \"full\" autocheck>></label>",
+   "\t\t</div>",
+   "\t\t<<run $(() => {",
+   "\t\t\t$('#visualsFreckles input[type=\"radio\"]').on(\"change\", () => {",
+   "\t\t\t\tWikifier.wikifyEval('<<updatesidebarimg true>>');",
+   "\t\t\t});",
+   "\t\t})>>"
+  ],
+  "context": "\t\t</div>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t</div>",
+   "",
+   "\t\t<div class=\"settingsToggleItem\">",
+   "\t\t\t<span class=\"gold bold\">Default expression:</span>",
+   "\t\t\t<br>",
+   "\t\t\tYour default facial expression is:",
+   "\t\t\t<<listbox \"$defaultSidebarMouth\" autoselect>>",
+   "\t\t\t\t<<option \"Smile\" \"smile\">>",
+   "\t\t\t\t<<option \"Neutral\" \"neutral\">>",
+   "\t\t\t<</listbox>>",
+   "\t\t\t<<run $(() => {",
+   "\t\t\t\t$(\"#listbox-defaultsidebarmouth\").on(\"change\", () => {",
+   "\t\t\t\t\tWikifier.wikifyEval('<<updatesidebarimg true>>');",
+   "\t\t\t\t});",
+   "\t\t\t})>>"
+  ],
+  "context": "\t\t\t</div>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $debug>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<set _modeloptions.freckles = $player.freckles == true and $makeup.concealer != 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<set _modeloptions.freckles = $player.skin.faceFreckles == true and $makeup.concealer != 1>>",
+   "\t\t\t\t\t\t<<set _modeloptions.bodyFreckles to $player.skin.bodyFreckles>>"
+  ],
+  "context": "\t\t\t\t\t\t<<set _modeloptions.skin_tone = Skin.color.tan>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if _ownsMakeup or _makeup.length gt 0 or $player.freckles == true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if _ownsMakeup or _makeup.length gt 0 or $player.skin.faceFreckles == true>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $player.freckles == true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $player.skin.faceFreckles == true>>"
+  ],
+  "context": "\t\t\t/* CONCEALER */"
+ }
+]

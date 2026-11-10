@@ -26,7 +26,7 @@ IMPORTANT:
 	<<if !_globalThemeDefaults>>
 		<<set _globalThemeDefaults to {}>>
 	<</if>>
-	<<if $debug is 1>>
+	<<if $debug>>
 		/*<label><<checkbox "$notifyUpdate" false true autocheck>> Notify when there's a new game update available</label>
 		<br>*/
 		/*<<link "Check for updates">>
@@ -129,7 +129,7 @@ IMPORTANT:
 			<label><<radiovar "$options.pepperSprayDisplay" "none">><<updatesidebarimg>><</radiovar>> 숨김</label>
 		</div>
 		<div class="settingsToggleItem">
-			<label><<checkbox "$options.tipdisable" "t" "f" autocheck>> 사이드바에 힌트 및 팁 표시 활성화</label>
+			<label><<checkbox "$options.tipdisable" true false autocheck>> Enable sidebar hints and tips</label>
 		</div>
 		<div class="settingsToggleItem">
 			<label><<checkbox "$options.debugdisable" "t" "f" autocheck>> 추가 에러 메시지 활성화</label>
@@ -429,20 +429,26 @@ IMPORTANT:
 				모든 텍스트 애니메이션을 비활성화하려면 체크를 해제하세요
 			</label>
 			<br>
+			<label>
 			<<checkbox "$options.textAnimsDrunk" false true autocheck { onToggle: t => {
 				$("#prevDrunk").replaceWith(Wikifier.wikifyEval('<span id="prevDrunk" @class="basicDrunkCss(3)">취기 흔들림</span>'));
 			}}>>
-			<span id="prevDrunk" @class="basicDrunkCss(3)">취기 흔들림</span>
+			<span id="prevDrunk" @class="basicDrunkCss(3)">Drunk sway</span>
+			</label>
 			<br>
+			<label>
 			<<checkbox "$options.textAnimsHeat" false true autocheck { onToggle: t => {
 				$("#prevHeat").replaceWith(Wikifier.wikifyEval('<span id="prevHeat" @class="basicJitterCss()">발정기/러트 떨림</span>'));
 			}}>>
-			<span id="prevHeat" @class="basicJitterCss()">발정기/러트 떨림</span>
+			<span id="prevHeat" @class="basicJitterCss()">Heat/rut jitter</span>
+			</label>
 			<br>
+			<label>
 			<<checkbox "$options.textAnimsHypno" false true autocheck { onToggle: t => {
 				$("#prevHypno").replaceWith(Wikifier.wikifyEval('<span id="prevHypno"><<hypnosisText "최면 나선">></span>'));
 			}}>>
-			<span id="prevHypno"><<hypnosisText "최면 나선">></span>
+			<span id="prevHypno"><<hypnosisText "Hypnosis spiral">></span>
+			</label>
 		</div>
 	</div>
 <</widget>>
@@ -635,22 +641,6 @@ IMPORTANT:
 		<br>
 		이미지 비활성화됨
 	<</if>>
-	<hr>
-	<div class="settingsGrid">
-		<div class="settingsHeader options">히스토리 깊이</div>
-		<div class="settingsToggleItem">
-			N-1 이전의 히스토리로 되돌아가기를 활성화합니다. 버그를 보고하거나 선택을 되돌릴 때 유용합니다.
-			<hr>
-			<label>
-				<<checkbox "$options.historyControls" false true autocheck>> 사이드바에 히스토리 컨트롤 표시
-			</label>
-		</div>
-		<div class="settingsToggleItem">
-			<span class="gold">메모리에 저장된 상태:</span>
-			<<numberslider "$options.maxStates" `$options.maxStates gt 20 ? 20 : $options.maxStates` 1 20 1 $ironmanmode>>
-			<br><br>
-		</div>
-	</div>
 <</widget>>
 
 <<widget "setupCombatLightingDemo">>
@@ -708,7 +698,7 @@ IMPORTANT:
 		<div class="settingsToggleItem">
 			<label><<checkbox "$options.showDebugRenderer" false true autocheck>> 렌더러 디버거 활성화</label>
 		</div>
-		<<if $debug is 1 or $options.showCombatTools>>
+		<<if $debug or $options.showCombatTools>>
 			<div class="settingsToggleItem">
 				<label><<checkbox "$options.showCombatTools" false true autocheck>> 전투 도구 활성화</label>
 			</div>
@@ -736,6 +726,27 @@ IMPORTANT:
 			<br><br>
 			<input type="button" value="설정" onclick='zoom()'/>
 			<input type="button" value="초기화" onclick='zoom(100)'/>
+		</div>
+	</div>
+	<hr>
+	<div class="settingsGrid">
+		<div class="settingsHeader options">History Depth</div>
+		<<if not $ironmanmode>>
+			<div class="settingsToggleItem">
+				Enables going back in history up to N-1 passages. Useful for reporting bugs or undoing decisions.
+				<hr>
+				<label>
+					<<checkbox "$options.historyControls" false true autocheck>> Display history controls in the sidebar
+				</label>
+				<<if $debug is 1>>
+					<span class="tooltip-anchor linkBlue" tooltip="<span class='linkBlue'>/ and - on the numpad can be used for moving through passage history. * reloads the passage with new rng.</span>">(?)</span>
+				<</if>>
+			</div>
+		<</if>>
+		<div class="settingsToggleItem">
+			<span class="gold">States saved to memory:</span>
+			<<numberslider "$options.maxStates" `$options.maxStates gt 100 ? 100 : $options.maxStates` 1 100 1>>
+			<br><br>
 		</div>
 	</div>
 <</widget>>

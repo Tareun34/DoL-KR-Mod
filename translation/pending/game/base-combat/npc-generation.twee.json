@@ -1,0 +1,193 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"generateStrangeCreature\">>",
+   "\t<<set _strapIgnore to 1>><<set _condomIgnore to 1>>",
+   "\t<<generateRole `_args[0] - 1` \"strange\" \"creature\">>",
+   "\t<<undressNPC _args[0]>>",
+   "<</widget>>",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if random(1, 100) lte $settings.darkSkinChance>>",
+   "\t\t<<set $NPCList[_n].skincolour to \"black\">>",
+   "\t<<else>>",
+   "\t\t<<set $NPCList[_n].skincolour to \"white\">>",
+   "\t<</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $NPCList[_n].skincolour to randomSkinTone()>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $NPCList[_n].gender is \"f\" and !_strapIgnore and !npcHasStrapon(_n)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $NPCList[_n].gender is \"f\" and !_strapIgnore and !_straponIgnore and !npcHasStrapon(_n)>>"
+  ],
+  "context": "\t<!-- Sets females with strap-ons as adjustment-->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\t<<unset _strapIgnore>>",
+   "\t<<unset _straponIgnore>>",
+   "\t<<unset _condomIgnore>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<elseif $_i isnot -1 and $NPCName[$_i].strapons and $NPCName[$_i].strapons.length gte 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<elseif $_i isnot -1 and $NPCName[$_i].strapons?.length gte 1>>"
+  ],
+  "context": "\t\t\t<<set $NPCList[_xx].strapon.temp to true>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<elseif $_npc.monster is \"monster\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<elseif $_npc.monster is \"monster\" or $_npc.role is \"creature\">>"
+  ],
+  "context": "\t\t\t<<unset _npcClothesPreset>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<elseif $location is \"mines\">>",
+   "\t\t\t<<set _npcClothingOptions to [\"mines\"]>>"
+  ],
+  "context": "\t\t\t<<set _npcClothingOptions to [\"prison\"]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set _npcClothingOptions to [$_schoolType]>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set _npcClothingOptions.push($_schoolType)>>"
+  ],
+  "context": "\t\t\t\t<<case \"school\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set _npcClothingOptions to [\"schoolSwim\"]>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set _npcClothingOptions.push(\"schoolSwim\")>>"
+  ],
+  "context": "\t\t\t\t<<case \"pool\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set _npcClothingOptions to [\"dance_studio\"]>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set _npcClothingOptions.push(\"dance_studio\")>>"
+  ],
+  "context": "\t\t\t\t<<case \"dance_studio\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if isNNPCOutfitEquippedHereToday($_npc)>>",
+   "\t\t\t<<set $_keptOutfitType to setup.npcClothesSets.find(set => set.name === $_npc.clothes.set).type>>",
+   "\t\t\t<<if _npcClothingOptions.includes($_keptOutfitType)>>",
+   "\t\t\t\t<<set _npcClothes to $_keptOutfitType>>",
+   "\t\t\t<</if>>",
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t<<set _npcClothes to _npcClothingOptions.random()>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $_g to maleChance() gte random(1, 100) ? \"m\" : \"f\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set _male to maleChance() / 100>>",
+   "\t<<set _maleVagina to $settings.maleNPCVaginaChance / 100>>",
+   "\t<<set _femalePenis to $settings.femaleNPCPenisChance / 100>>",
+   "\t<<set _strapon to $settings.straponChance / 100>>"
+  ],
+  "context": "\t<<set $_n to _args[0]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $player.vaginaExist and $settings.straponChance is 0 and !unableTakeVirginity(\"vaginal\")>>",
+   "\t\t<<if $settings.femaleNPCPenisChance gte 1>>",
+   "\t\t\t<<generateNPC $_n a $_g m>>",
+   "\t\t<<else>>",
+   "\t\t\t<<generateNPC $_n a m m>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $player.vaginaExist and !unableTakeVirginity(\"vaginal\")>>",
+   "\t\t<<set _straponIgnore to 1>>",
+   "\t\t<<set _pick to weightedRandom(",
+   "\t\t\t[[\"m\", \"m\"], _male * (1 - _maleVagina)],",
+   "\t\t\t[[\"f\", \"m\"], (1 - _male) * _femalePenis],",
+   "\t\t\t[[\"m\", \"f\"], _male * _maleVagina * _strapon],",
+   "\t\t\t[[\"f\", \"f\"], (1 - _male) * (1 - _femalePenis) * _strapon]",
+   "\t\t)>>",
+   "\t\t<<generateNPC $_n a `_pick[0]` `_pick[1]`>>",
+   "\t\t<<if _pick[1] is \"f\">>",
+   "\t\t\t<<run $_n -= 1>>",
+   "\t\t\t<<npcstrapon $_n>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $settings.maleNPCVaginaChance gte 1>>",
+   "\t\t\t<<generateNPC $_n a $_g f>>",
+   "\t\t<<else>>",
+   "\t\t\t<<generateNPC $_n a f f>>",
+   "\t\t<</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set _straponIgnore to 1>>",
+   "\t\t<<set _pick to weightedRandom(",
+   "\t\t\t[[\"m\", \"f\"], _male * _maleVagina],",
+   "\t\t\t[[\"f\", \"f\"], (1 - _male) * (1 - _femalePenis)]",
+   "\t\t)>>",
+   "\t\t<<generateNPC $_n a `_pick[0]` `_pick[1]`>>"
+  ],
+  "context": "\t<<elseif $player.penisExist and !$settings.analEnabled and !unableTakeVirginity(\"penile\")>>"
+ }
+]

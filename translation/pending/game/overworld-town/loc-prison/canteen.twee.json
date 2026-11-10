@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<He>> brags openly about \"having\" you, stopping passers by and making sure they have a good look."
+  ],
+  "old_kr": [
+   "\t<<He>>【은는】 당신을 \"가졌다\"고 노골적으로 자랑하며, 지나가는 사람들을 멈춰 세워 당신을 제대로 보게 만든다."
+  ],
+  "new_en": [
+   "\t<<He>> brags openly about \"having\" you, stopping passersby and making sure they have a good look."
+  ],
+  "context": "<<if $prison.tattooed gte 80>>"
+ }
+]

@@ -505,7 +505,7 @@
 <<set $outside to 0>><<set $location to "school">><<effects>>
 <<if $enemyarousal gte $enemyarousalmax>>
 	<<ejaculation>>
-	"착한 <<girl>>." <<he>>【이가】 말한다. "잊지 마, 매일 등교할 때마다 널 보고 싶으니까."
+	"Good <<girl>>," <<he>> says.
 	<<if $phase is 1>>
 		<<He>>【은는】 당신에게 <<printmoney 15000>><<money 15000 "prostitution">>【을를】 건넨다.
 	<<elseif $phase is 0>>

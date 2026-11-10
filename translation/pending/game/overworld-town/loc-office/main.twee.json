@@ -1,0 +1,42 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tEverything goes dark...",
+   "\t<br>"
+  ],
+  "old_kr": [
+   "\t시야가 어두워진다...",
+   "\t<br>"
+  ],
+  "new_en": [
+   "\tEverything goes dark...",
+   "\t<br><br>"
+  ],
+  "context": "<<widget \"officepassout\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<link [[Wake up|Office Supply Molest]]>><<set $molestationstart to 2>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<link [[깨어난다|Office Supply Molest]]>><<set $molestationstart to 2>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t<<link [[Wake up|Office Supply Molest]]>><<set $molestationstart to 2>><<endevent>><</link>>"
+  ],
+  "context": "\t\t<<if $rng gte 81>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>"
+  ],
+  "context": "<<if $stress gte $stressmax>>"
+ }
+]

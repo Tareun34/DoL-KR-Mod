@@ -1,0 +1,203 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<label><<checkbox \"$options.tipdisable\" \"t\" \"f\" autocheck>> Enable sidebar hints and tips</label>"
+  ],
+  "old_kr": [
+   "\t\t\t<label><<checkbox \"$options.tipdisable\" \"t\" \"f\" autocheck>> 사이드바에 힌트 및 팁 표시 활성화</label>"
+  ],
+  "new_en": [
+   "\t\t\t<label><<checkbox \"$options.tipdisable\" true false autocheck>> Enable sidebar hints and tips</label>"
+  ],
+  "context": "\t\t<div class=\"settingsToggleItem\">"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<span id=\"prevDrunk\" @class=\"basicDrunkCss(3)\">Drunk sway</span>"
+  ],
+  "old_kr": [
+   "\t\t\t<span id=\"prevDrunk\" @class=\"basicDrunkCss(3)\">취기 흔들림</span>"
+  ],
+  "new_en": [
+   "\t\t\t<span id=\"prevDrunk\" @class=\"basicDrunkCss(3)\">Drunk sway</span>",
+   "\t\t\t</label>"
+  ],
+  "context": "\t\t\t}}>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<span id=\"prevHeat\" @class=\"basicJitterCss()\">Heat/rut jitter</span>"
+  ],
+  "old_kr": [
+   "\t\t\t<span id=\"prevHeat\" @class=\"basicJitterCss()\">발정기/러트 떨림</span>"
+  ],
+  "new_en": [
+   "\t\t\t<span id=\"prevHeat\" @class=\"basicJitterCss()\">Heat/rut jitter</span>",
+   "\t\t\t</label>"
+  ],
+  "context": "\t\t\t}}>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<span id=\"prevHypno\"><<hypnosisText \"Hypnosis spiral\">></span>"
+  ],
+  "old_kr": [
+   "\t\t\t<span id=\"prevHypno\"><<hypnosisText \"최면 나선\">></span>"
+  ],
+  "new_en": [
+   "\t\t\t<span id=\"prevHypno\"><<hypnosisText \"Hypnosis spiral\">></span>",
+   "\t\t\t</label>"
+  ],
+  "context": "\t\t\t}}>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<hr>",
+   "\t<div class=\"settingsGrid\">",
+   "\t\t<div class=\"settingsHeader options\">History Depth</div>",
+   "\t\t<div class=\"settingsToggleItem\">",
+   "\t\t\tEnables going back in history up to N-1 passages. Useful for reporting bugs or undoing decisions.",
+   "\t\t\t<hr>",
+   "\t\t\t<label>",
+   "\t\t\t\t<<checkbox \"$options.historyControls\" false true autocheck>> Display history controls in the sidebar",
+   "\t\t\t</label>",
+   "\t\t</div>",
+   "\t\t<div class=\"settingsToggleItem\">",
+   "\t\t\t<span class=\"gold\">States saved to memory:</span>",
+   "\t\t\t<<numberslider \"$options.maxStates\" `$options.maxStates gt 20 ? 20 : $options.maxStates` 1 20 1 $ironmanmode>>",
+   "\t\t\t<br><br>",
+   "\t\t</div>",
+   "\t</div>"
+  ],
+  "old_kr": [
+   "\t<hr>",
+   "\t<div class=\"settingsGrid\">",
+   "\t\t<div class=\"settingsHeader options\">히스토리 깊이</div>",
+   "\t\t<div class=\"settingsToggleItem\">",
+   "\t\t\tN-1 이전의 히스토리로 되돌아가기를 활성화합니다. 버그를 보고하거나 선택을 되돌릴 때 유용합니다.",
+   "\t\t\t<hr>",
+   "\t\t\t<label>",
+   "\t\t\t\t<<checkbox \"$options.historyControls\" false true autocheck>> 사이드바에 히스토리 컨트롤 표시",
+   "\t\t\t</label>",
+   "\t\t</div>",
+   "\t\t<div class=\"settingsToggleItem\">",
+   "\t\t\t<span class=\"gold\">메모리에 저장된 상태:</span>",
+   "\t\t\t<<numberslider \"$options.maxStates\" `$options.maxStates gt 20 ? 20 : $options.maxStates` 1 20 1 $ironmanmode>>",
+   "\t\t\t<br><br>",
+   "\t\t</div>",
+   "\t</div>"
+  ],
+  "new_en": [],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $debug>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<label>"
+  ],
+  "context": "\t\t<div class=\"settingsToggleItem\">"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t</label>"
+  ],
+  "context": "\t\t\t\t메뉴에서 플레이어의 알몸 숨기기"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<label>"
+  ],
+  "context": "\t\t<div class=\"settingsToggleItem\">"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t</label>"
+  ],
+  "context": "\t\t\t\t의류 교체 경고 활성화"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<label>"
+  ],
+  "context": "\t\t<div class=\"settingsToggleItem\">"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t</label>"
+  ],
+  "context": "\t\t\t\t전투 중 스크롤 위치 복구"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $debug is 1 or $options.showCombatTools>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $debug or $options.showCombatTools>>"
+  ],
+  "context": "\t\t</div>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t</div>",
+   "\t</div>",
+   "\t<hr>",
+   "\t<div class=\"settingsGrid\">",
+   "\t\t<div class=\"settingsHeader options\">History Depth</div>",
+   "\t\t<<if not $ironmanmode>>",
+   "\t\t\t<div class=\"settingsToggleItem\">",
+   "\t\t\t\tEnables going back in history up to N-1 passages. Useful for reporting bugs or undoing decisions.",
+   "\t\t\t\t<hr>",
+   "\t\t\t\t<label>",
+   "\t\t\t\t\t<<checkbox \"$options.historyControls\" false true autocheck>> Display history controls in the sidebar",
+   "\t\t\t\t</label>",
+   "\t\t\t\t<<if $debug is 1>>",
+   "\t\t\t\t\t<span class=\"tooltip-anchor linkBlue\" tooltip=\"<span class='linkBlue'>/ and - on the numpad can be used for moving through passage history. * reloads the passage with new rng.</span>\">(?)</span>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t</div>",
+   "\t\t<</if>>",
+   "\t\t<div class=\"settingsToggleItem\">",
+   "\t\t\t<span class=\"gold\">States saved to memory:</span>",
+   "\t\t\t<<numberslider \"$options.maxStates\" `$options.maxStates gt 100 ? 100 : $options.maxStates` 1 100 1>>",
+   "\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t<input type=\"button\" value=\"초기화\" onclick='zoom(100)'/>"
+ }
+]

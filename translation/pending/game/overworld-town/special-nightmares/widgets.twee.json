@@ -1,0 +1,25 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $wraithPrison and $wraithPrison.vision>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $wraithPrison?.vision>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>",
+   "",
+   "\t\t<<if $mine>>",
+   "\t\t\t<<set $_possibleNightmares.push(\"Nightmare Mine\")>>"
+  ],
+  "context": "\t\t\t<<set $_possibleNightmares.push(\"Nightmare Gwylan\")>>"
+ }
+]

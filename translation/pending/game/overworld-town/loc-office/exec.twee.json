@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<crimeUp 5 \"thievery\">>",
+   "\t\tThe <<person1>><<person>> doesn't even glance at you as you slip the file away. <<lstress>>"
+  ],
+  "old_kr": [
+   "\t\t<<crimeUp 5 \"thievery\">>",
+   "\t\t서류철을 슬쩍 빼돌리는 동안 <<person1>><<person>>【은는】 당신 쪽을 쳐다보지도 않는다. <<lstress>>"
+  ],
+  "new_en": [
+   "\t\t<<set $blackmoney += 50>><<crimeUp 5 \"thievery\">>",
+   "\t\tThe <<person1>><<person>> doesn't even glance at you as you slip the file away. <<lstress>>"
+  ],
+  "context": "\t<<if $skulduggerysuccess is 1>>"
+ }
+]

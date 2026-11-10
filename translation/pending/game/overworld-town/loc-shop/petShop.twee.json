@@ -1,0 +1,13 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $daily.seenPets isnot true and $fame.bestiality gte 200 and $settings.bestialityEnabled and ($settings.monsterChance lt 100 or $settings.monsterHallucinationsOnly)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if !$daily.seenPets and $fame.bestiality gte 200 and [\"dog\", \"cat\", \"lizard\"].some(type => animalSexEnabledForType(type))>>"
+  ],
+  "context": "\t<<if Time.dayState isnot \"night\">>"
+ }
+]

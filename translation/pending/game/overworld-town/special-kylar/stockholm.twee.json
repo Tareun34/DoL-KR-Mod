@@ -1,0 +1,66 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"m\">>",
+   "\t<span class=\"red\">The ear slime refuses to allow you to wear the dress.</span>"
+  ],
+  "old_kr": [
+   "<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"m\">>",
+   "\t<span class=\"red\">귀 슬라임이 드레스를 입는 것을 허락하지 않는다.</span>"
+  ],
+  "new_en": [
+   "<<if $earSlime.forcedDressing?.type is \"m\">>",
+   "\t<span class=\"red\">The ear slime refuses to allow you to wear the dress.</span>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"f\">>",
+   "\t<span class=\"red\">The ear slime refuses to allow you to wear the suit.</span>"
+  ],
+  "old_kr": [
+   "<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"f\">>",
+   "\t<span class=\"red\">귀 슬라임이 정장을 입는 것을 허락하지 않는다.</span>"
+  ],
+  "new_en": [
+   "<<if $earSlime.forcedDressing?.type is \"f\">>",
+   "\t<span class=\"red\">The ear slime refuses to allow you to wear the suit.</span>"
+  ],
+  "context": "<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"m\">>",
+   "\t<span class=\"red\">The ear slime refuses to allow you to wear the dress.</span>"
+  ],
+  "old_kr": [
+   "<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"m\">>",
+   "\t<span class=\"red\">귀 슬라임이 드레스를 입는 것을 허락하지 않는다.</span>"
+  ],
+  "new_en": [
+   "<<if $earSlime.forcedDressing?.type is \"m\">>",
+   "\t<span class=\"red\">The ear slime refuses to allow you to wear the dress.</span>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"f\">>",
+   "\t<span class=\"red\">The ear slime refuses to allow you to wear the suit.</span>"
+  ],
+  "old_kr": [
+   "<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is \"f\">>",
+   "\t<span class=\"red\">귀 슬라임이 정장을 입는 것을 허락하지 않는다.</span>"
+  ],
+  "new_en": [
+   "<<if $earSlime.forcedDressing?.type is \"f\">>",
+   "\t<span class=\"red\">The ear slime refuses to allow you to wear the suit.</span>"
+  ],
+  "context": "<br>"
+ }
+]

@@ -1,0 +1,200 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\t\t\tThe heather parts as something rushes towards you. Before it arrives, you hear a rustling from behind. Something lands on your <<bottom>> before you can turn."
+  ],
+  "old_kr": [
+   "\t\t\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\t\t\t무언가가 당신을 향해 달려오자 헤더 숲이 갈라진다. 그것이 도착하기도 전에 등 뒤에서 바스락거리는 소리가 들린다. 당신이 고개를 돌리기도 전에 무언가 당신의 <<bottom>>에 내려앉는다."
+  ],
+  "new_en": [
+   "\t\t\t<<if $settings.lurkersEnabled>>",
+   "\t\t\t\tThe heather parts as something rushes towards you. Before it arrives, you hear a rustling from behind. Something lands on your <<bottom>> before you can turn."
+  ],
+  "context": "\t\t<<case 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if hasSexStat(\"deviancy\", 5) and ($settings.bestialityEnabled or $monster is 1) and $settings.horsesEnabled>>",
+   "\t\t\t\t<<link [[Let <<bhim>> mount you|Moor Horse]]>><<set $phase to 2>><</link>><<deviant5>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if hasSexStat(\"deviancy\", 5) and ($settings.bestialityEnabled or $monster is 1) and $settings.horsesEnabled>>",
+   "\t\t\t\t<<link [[<<bhim>>에게 올라타게 둔다|Moor Horse]]>><<set $phase to 2>><</link>><<deviant5>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if hasSexStat(\"deviancy\", 5) and beastSexEnabledForType(\"horse\", $monster is 1)>>",
+   "\t\t\t\t<<link [[Let <<bhim>> mount you|Moor Horse]]>><<set $phase to 2>><</link>><<deviant5>>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $settings.bestialityEnabled>>",
+   "\t\t\t\t<<link [[Next|Moor Cat]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $settings.bestialityEnabled>>",
+   "\t\t\t\t<<link [[다음|Moor Cat]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if animalSexEnabledForType(\"cat\")>>",
+   "\t\t\t\t<<link [[Next|Moor Cat]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\t\t\tYou hear bubbles break the surface. At once, several creatures lunge from the depths. You stagger as one lands on your face. Another lands on your <<bottom>>."
+  ],
+  "old_kr": [
+   "\t\t\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\t\t\t수면 위로 기포가 터지는 소리가 들린다. 갑자기 깊은 곳에서 여러 생물체들이 튀어나온다. 그 중 하나가 얼굴에 날아와 착지하면서 당신은 비틀거린다. 또 다른 하나는 당신의 <<bottom>>에 내려앉는다."
+  ],
+  "new_en": [
+   "\t\t\t<<if $settings.lurkersEnabled>>",
+   "\t\t\t\tYou hear bubbles break the surface. At once, several creatures lunge from the depths. You stagger as one lands on your face. Another lands on your <<bottom>>."
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<rng 3>>",
+   "\t\t<<if $rng is 3>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<rng 4>>",
+   "\t\t<<if $rng is 4>>"
+  ],
+  "context": "\t<<if random(1, 8) is 8 or ($moormove is \"quick_search\" or $moormove is \"normal_search\" or $moormove is \"careful_search\" or $moormove is \"fly_search\") and random(1, 4) is 4>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<br>",
+   "\t\t<<elseif $rng is 3 and Time.season isnot \"winter\">>",
+   "\t\t\tYou come to a patch of big leaves on trailing vines.",
+   "\t\t\t<br><br>",
+   "\t\t\t<<if currentSkillValue('tending') gte 400>>",
+   "\t\t\t\tPumpkins. You search under the flowers, and find orange vegetables.",
+   "\t\t\t\t<br><br>",
+   "\t\t\t\t<<if pcAreArmsBound(\"both\")>>",
+   "\t\t\t\t\t<span class=\"red\">Both of your arms are bound</span>, so you are unable to pick pumpkins.",
+   "\t\t\t\t\t<br>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<foodstufficon \"pumpkin\">> <<link [[Pick pumpkin (0:30)|Moor Pumpkin]]>><<pass 30>><</link>><<tendingdifficulty 300 600>>",
+   "\t\t\t\t\t<br>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<span class=\"blue\">You need a higher tending skill to identify them.</span>",
+   "\t\t\t\t<br><br>",
+   "\t\t\t<</if>>",
+   "\t\t\t<<mooricon>><<link [[Continue|Moor]]>><<set $eventskip to 1>><</link>>"
+  ],
+  "context": "\t\t\t<<link [[다음|Moor]]>><<handheldon>><<set $eventskip to 1>><</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $settings.lurkersEnabled>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $bird and $bird.injured gt 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $bird?.injured gt 1>>"
+  ],
+  "context": "\t\t<<case 9 10>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $bird and $bird.injured gt 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $bird?.injured gt 1>>"
+  ],
+  "context": "\t\t<<case 8 9>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "<<widget \"moorTravel\">>",
+   "\t<<travelSpeedInfo>>",
+   "\t<<switch _speedNow>>",
+   "\t\t<<case \"quickly\">><<set $forestmod to 3>><<set _huntGain to 0.5>><<set _move to \"quick\">><<set _searchMove to \"quick_search\">>",
+   "\t\t<<case \"normally\">><<set $forestmod to 1>><<set _huntGain to 1>><<set _move to \"normal\">><<set _searchMove to \"normal_search\">>",
+   "\t\t<<case \"carefully\">><<set $forestmod to 0.5>><<set _huntGain to 2>><<set _move to \"careful\">><<set _searchMove to \"careful_search\">>",
+   "\t<</switch>>",
+   "\t<<switch _args[0]>>",
+   "\t\t<<case \"search\">><<set _move to _searchMove>>",
+   "\t\t<<case \"deeper\">><<set $moor += 5>>",
+   "\t\t<<case \"coast\">><<set $moor -= 5>>",
+   "\t<</switch>>",
+   "\t<<set $moormove to _move>>",
+   "\t<<bird_pass _travelTime>>",
+   "\t<<if $moor_hunt gte 1>><<set $moor_hunt += _huntGain>><</if>>",
+   "<</widget>>",
+   "",
+   "<<widget \"moorShortcuts\">>",
+   "\t<<if $harpy gte 6 and $birdFly gte 1 and !$plucked>>",
+   "\t\tShortcuts",
+   "\t\t<br>",
+   "\t\t<<if $moor lt 100>>",
+   "\t\t\t<<glideicon>><<link `'Fly deeper into the moor (' + getTimeString(_hoursPassed, _minutesPassed) + ')'` \"Moor\">><<set $fatigueMod to _fatigueMod>><<set $flightTime to _flightTime>><<bird_pass _flightTime>><<set $moor += 5>><<set $forestmod to 1>><<set $moormove to \"fly\">><</link>><<flight_text>><<gtiredness>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<glideicon>><<link `'Fly and search nearby (' + getTimeString(_hoursPassedSearch, _minutesPassedSearch) + ')'` \"Moor\">><<set $fatigueMod to _fatigueMod>><<set $flightTime to _flightTimeSearch>><<bird_pass _flightTimeSearch>><<set $forestmod to 0.5>><<set $moormove to \"fly_search\">><</link>><<flight_text>><<gtiredness>><<lharass>>",
+   "\t\t<br>",
+   "\t\t<<if $moor gt 0>>",
+   "\t\t\t<<glideicon>><<link `'Fly towards the coast (' + getTimeString(_hoursPassed, _minutesPassed) + ')'` \"Moor\">><<set $fatigueMod to _fatigueMod>><<set $flightTime to _flightTime>><<bird_pass _flightTime>><<set $moor -= 5>><<set $forestmod to 1>><<set $moormove to \"fly\">><</link>><<flight_text>><<gtiredness>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "<</widget>>",
+   "",
+   "<<widget \"moorTravelIcon\">>",
+   "\t<<if $moor lte 0>>",
+   "\t\t<<set _depth to \"plain\">>",
+   "\t<<elseif $moor lte 20>>",
+   "\t\t<<set _depth to \"heather\">>",
+   "\t<<elseif $moor lte 50>>",
+   "\t\t<<set _depth to \"bushes\">>",
+   "\t<<elseif $moor lte 99>>",
+   "\t\t<<set _depth to \"wetland\">>",
+   "\t<<else>>",
+   "\t\t<<set _depth to \"castle\">>",
+   "\t<</if>>",
+   "\t<<if Time.season is \"winter\">>",
+   "\t\t<<set _depth to _depth + \"-winter\">>",
+   "\t<</if>>",
+   "\t<<icon `_args[0] + \"-\" + _depth + \".png\"`>>",
+   "<</widget>>"
+  ],
+  "context": "<</widget>>"
+ }
+]

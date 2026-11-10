@@ -44,7 +44,7 @@
 <</widget>>
 
 <<widget "undergroundRobinKiss">>
-	<<set $speechdisable to 1>>
+	<<set $speechDisable to 1>>
 	<<if $robinFucked>>
 		<<if _args[0] is "kissback">>
 			<<print either(
@@ -259,8 +259,8 @@
 					"'163번'." 당신의 목소리는 멍하다.
 				<</if>>
 			<<case "pig">>
-				<<if !$settings.bestialityEnabled or $settings.monsterChance gte 100>>
-					<<set _animals to "괴물">>
+				<<if victimsAlwaysMonsterForType("pig") or (monsterChanceForType("pig") gte 100 and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType("pig")))>>
+					<<set _animals to "monsters">>
 				<<else>>
 					<<set _animals to "동물">>
 				<</if>>
@@ -533,11 +533,11 @@
 
 :: Underground Robin Stage Intro
 <<set $outside to 0>><<set $location to "underground">><<effects>>
-<<beastNEWinit 1 pig>>
-당신은 다시 군중이 기다리는 무대로 끌려간다. 로빈은 이미 무대 위에 있다. <<covered>>
+<<generateBeastVictim 1 pig>>
+You are led once more to the stage, where the crowd awaits. Robin is already on stage. <<covered>>
 
-<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>
-	그곳에 도착하자, 당신 뒤쪽의 금속 셔터가 덜컹 열리고 거대한 <<beastsplural>> 두 마리가 나온다. 첫 번째는 로빈에게 달려들고, 두 번째는 당신 쪽으로 다가온다. 관객들은 그들을 응원한다.
+<<if $rng gte 51 and beastSexEnabledForType("pig", $monster is 1)>>
+	Once there, a metal shutter rattles open behind you, and two gigantic <<beastsplural>> step out. The first charges at Robin, while the second makes <<bhis>> way towards you. The audience cheers them on.
 	<br><br>
 
 	<<link [[다음|Underground Robin Stage Pig]]>><<set $molestationstart to 1>><</link>>
@@ -1276,7 +1276,7 @@ $machineHandler【이가】 당신과 로빈을 기계에서 풀어주고, 무�
 <<if $timer is 0>>
 	<<set $timer to 3>>
 <</if>>
-<<set $speechdisable to 0>>
+<<set $speechDisable to 0>>
 <br><br>
 
 <<if $enemyno lte 1>>
@@ -1398,8 +1398,8 @@ $machineHandler【이가】 당신과 로빈을 기계에서 풀어주고, 무�
 
 		<<link [[다음|Underground Robin Escape Orphanage]]>><<set $phase to 1>><<unset $robinBeast>><</link>>
 	<<else>>
-		<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>
-			<span class="red"><<beasttype 0>>【이가】 <<nnpc_him "Robin">>【을를】 덮치자 로빈이 비명을 지른다.</span> 당신은 재빨리 몸을 돌려 <<beasttype 0>>에게 돌진하고, 놈도 다가오는 당신을 향해 몸을 돌린다.
+		<<if $rng gte 51 and beastSexEnabledForType("dog", $monster is 1)>>
+			<span class="red">Robin cries out as a <<beasttype 0>> tackles <<nnpc_him "Robin">>.</span> You quickly turn around and charge at the <<beasttype 0>>, who turns to you at your arrival.
 			<br><br>
 
 			"여기에 영웅 납셨네," 뒤따라온 <<person>>【이가】 말하는 소리가 들린다. <<He>>【은는】 혼자가 아니다. 무리의 대다수가 <<him>>【을를】 뒤따르고 있다. "영웅들이 어떻게 되는지 알아? 본보기로 전락하지." 무리가 당신을 에워싸고 둥글게 원을 만든다.
@@ -1422,10 +1422,10 @@ $machineHandler【이가】 당신과 로빈을 기계에서 풀어주고, 무�
 		<</if>>
 	<</if>>
 <<else>>
-	<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>><!-- Modified for BeastPeople -->
-		당신은 전속력으로 달린다. <<victimgirls>>【이가】 하나둘씩 붙잡히며 비명을 지르는 소리가 들린다.
-		당신의 뒤쪽 풀숲을 헤치며 무언가 달려오는 소리가 들리더니, 등 뒤로 <<print ($monster is 1 ? "손이" : "앞발이")>> 느껴지며 강제로 무릎이 꿇린다.
-		<<beasttype 0>>【은는】 허릿짓을 하기 시작한다<<if $NPCList[0].penis isnot "none">>. <<bhis 0>> 페니스가 당신의 <<bottom>>【을를】 찌르는 것이 느껴진다<</if>>.
+	<<if $rng gte 51 and beastSexEnabledForType("dog", $monster is 1)>><!-- Modified for BeastPeople -->
+		You run as fast you can. You hear the <<victimgirls>> scream as they are caught, one by one.
+		You hear something running through the grass behind you, and feel <<print ($monster is 1 ? "hands" : "paws")>> on your back as you are forced to your knees.
+		The <<beasttype 0>> starts humping<<if $NPCList[0].penis isnot "none">>, you feel <<bhis 0>> penis prodding your <<bottom>><</if>>.
 		<br><br>
 
 		"이 녀석이 널 마음에 들어 하는 것 같네," 뒤따라온 <<person>>【이가】 말하는 소리가 들린다. <<He>>【은는】 혼자가 아니다. 무리의 대다수가 <<him>>【을를】 뒤따르고 있다.

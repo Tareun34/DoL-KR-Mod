@@ -14,8 +14,8 @@
 		"침입자다! 침입자! 친구인가?"
 	<</if>>
 	<br><br>
-	<<if $monster is 1 or $settings.bestialityEnabled>>
-		<<link [[유혹한다|Domus House Tease]]>><<transform cat 2>><</link>><<deviant1>>
+	<<if beastSexEnabledForType("dog", $monster is 1)>>
+		<<link [[Tease|Domus House Tease]]>><<transform cat 2>><</link>><<deviant1>>
 		<br>
 	<</if>>
 	<<link [[무시한다|Domus House Ignore]]>><</link>>
@@ -755,10 +755,10 @@
 		"거래를 하자." <<he>>【이가】 말한다. "이 사진들을 지우게 해줄게, 그 대가로 너와 더 친밀하게 알아가고 싶어.
 
 		<<if !playerChastity() and $worn.under_lower.vagina_exposed is 1>>
-			<<if $player.penisExist and $player.vaginaExist>>
-				네가 양쪽 성기를 다 가지고 있다는 걸 사람들이 알길 원하진 않겠지, 안 그래?"
-			<<elseif isCrossdressing()>>
-				네가 <<print ($player.gender_appearance is "m" ? "남자애" : "여자애")>>처럼 입는 걸 좋아한다는 걸 사람들이 알길 원하진 않겠지, 안 그래?"
+			<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>
+				You don't want people knowing you have both sets of gear, do you?"
+			<<elseif isCrossdressing() and $settings.nudeGenderPerception !== 0>>
+				You don't want people knowing you like dressing as a <<print ($player.gender_appearance is "m" ? "boy" : "girl")>>, do you?"
 			<<else>>
 				네 <<genitals>>【을를】 보고 싶어 할 변태들이 많을 거라고 확신해."
 			<</if>>
@@ -1286,7 +1286,8 @@
 :: Domus Entrance Pet
 <<set $outside to 0>><<set $location to "town">><<effects>>
 
-<<if dangerEvent() and ($monster is 1 or $settings.bestialityEnabled)>>
+
+<<if dangerEvent() and beastSexEnabledForType("dog", $monster is 1)>>
 
 	당신은 무릎을 꿇고 손을 내민다. <<bHe>>【은는】 으르렁거리는 것을 멈추지만, 이제는 좀 지나치게 친근해 보인다. <<bHe>>【은는】 당신에게 올라타려고 한다.
 	<<if $monster is 1>>
@@ -1310,8 +1311,8 @@
 :: Domus Entrance Run
 <<set $outside to 0>><<set $location to "town">><<effects>>
 
-<<if $rng gte 91 and ($monster is 1 or $settings.bestialityEnabled)>>
-	당신은 돌아서서 도망치려 하지만, 호스에 걸려 얼굴을 바닥에 박고 넘어진다. <<beasttype>>【이가】 당신 위로 뛰어오른다.
+<<if $rng gte 91 and beastSexEnabledForType("dog", $monster is 1)>>
+	You turn to run, but trip over a hose and fall flat on your face. The <<beasttype>> jumps on top of you.
 	<<if $monster is 1>>
 		"마음이 바뀌었어. 잠시만 같이 있어!"
 	<</if>>
@@ -1326,7 +1327,7 @@
 	<</if>>
 	<br><br>
 	<<endevent>>
-	<<domusquick>>
+	<<domusQuick>>
 <</if>>
 
 :: Domus Entrance Dog
@@ -1495,7 +1496,7 @@
 	<<clotheson>>
 	<<endcombat>>
 
-	<<domusquick>>
+	<<domusQuick>>
 <</if>>
 
 :: Domus Gutters Molestation
@@ -1546,7 +1547,7 @@
 당신은 <<moneyGain 25>>【을를】 벌었다.
 <br><br>
 <<endevent>>
-<<domusquick>>
+<<domusQuick>>
 
 :: Domus Gutters Molestation Finish
 <<if $enemyhealth lte 0>>
@@ -1628,7 +1629,7 @@
 <<if !dangerEvent() or random(1,2) is 1>> /* default - occurs slightly more than half the time. ~50% chance. */
 	<<strip>>
 	<<pass 2 hour>>
-	<<if $player.penisExist and $player.vaginaExist>>
+	<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>
 		<<if $fame.exhibitionism gte 600>>
 			당신이 무대에 오르자 한 <<personsimple>>【이가】 웃는다. "<<phim>>에게 돈 주고 옷을 벗게 했다고?! 난 <<phim>>【이가】 옷 입은 걸 본 적이 없는 것 같은데."
 			<br><br>
@@ -1687,14 +1688,12 @@
 		<<fameexhibitionism 10 "pic">><<famemodel 2 art>>
 		<<if playerBellyVisible()>><<famepregnancy `Math.ceil(playerBellySize() / 10)`>><</if>>
 	<<else>>
-		라이프 아트라는 명목은 유지하고 있지만, 사실 그들은 그저
-		<<if $player.sex is "h">>
-			양성구유가
-		<<else>>
-			<<girl>>【이가】
+		While they maintain the pretence that this is life-art, it's quite clear they just enjoy getting a <<girl>>
+		<<if $player.sex is "h" and $settings.nudeGenderPerception !== 0>>
+			with such unique genitals
 		<</if>>
-		그들이 보고 싶어 하는 음란한 자세로 <<pherself>>【을를】 드러내는 걸 즐길 뿐이다.
-		많은 사람이 그림을 그리는 척조차 하지 않지만, <<person>>【은는】 모두를 줄 세우고 통제한다.
+		to expose <<pherself>> in the lewd poses they want to see.
+		Many are not even pretending to paint, but the <<person>> keeps everyone in line and under control.
 		<<if !hasSexStat("exhibitionism", 3)>>
 			이렇게 긴장하지만 않았다면 즐겼을지도 모른다.
 		<<else>>
@@ -1898,7 +1897,7 @@
 		<br><br>
 		<<set $model_host to clone($NPCList[0])>>
 		<<set $model_dom to clone($NPCList[1])>>
-		<<if $rng gte 51 and ($settings.bestialityEnabled or $settings.monsterChance gte 100 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>><!-- Modified for Monster People -->
+		<<if $rng gte 51 and beastSexEnabledForType("dog", monsterChanceForType("dog") gte 100 and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType("dog")))>><!-- Modified for Monster People -->
 			<<endevent>>/*clears out the people*/
 			<<beastNEWinit 1 dog>>
 			"진짜처럼? <span class="red">딱 맞는 게 있지.</span>" 허리를 잡고 있던 손이 풀리고, 뒤에서 발소리가 들린다. 문이 열리고 휘파람 소리가 난다.
@@ -2565,7 +2564,7 @@
 
 		<<link [[다음|Domus Street]]>><<endevent>><</link>>
 		<br>
-	<<elseif hasSexStat("deviancy", 3) and $rng lte 33 and ($monster is 1 or $settings.bestialityEnabled)>>
+	<<elseif hasSexStat("deviancy", 3) and $rng lte 33 and beastSexEnabledForType("dog", $monster is 1)>>
 		<<pass 60>>
 		얼굴을 붉힌다. 아래를 내려다본다.
 		<br>

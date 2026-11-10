@@ -1,0 +1,631 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $debug is 1>>",
+   "\t\tDebug - Keep selected babies result (ID - Checkbox - Result)"
+  ],
+  "old_kr": [
+   "\t<<if $debug is 1>>",
+   "\t\t디버그 - 선택된 아기 유지 결과 (ID - 체크박스 - 결과)"
+  ],
+  "new_en": [
+   "\t<<if $debug>>",
+   "\t\tDebug - Keep selected babies result (ID - Checkbox - Result)"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<set _hours to Math.floor(_time / 60)>>",
+   "<<set _minutes to _time % 60>>",
+   "<<link [[\"Next (\"+_hours+\":\"+(_minutes lt 10 ? \"0\": \"\")+_minutes+\")\"| Pregnancy Birth Hospital]]>><<pass _time>><<set $phase to 1>><</link>>"
+  ],
+  "old_kr": [
+   "<<set _hours to Math.floor(_time / 60)>>",
+   "<<set _minutes to _time % 60>>",
+   "<<link [[다음 (<<print getTimeString(_time)>>)| Pregnancy Birth Hospital]]>><<pass _time>><<set $phase to 1>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[\"Next \" + printTime(_time, true)| Pregnancy Birth Hospital]]>><<pass _time>><<set $phase to 1>><</link>>"
+  ],
+  "context": "<</switch>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<set _hours to Math.floor(_time / 60)>>",
+   "<<set _minutes to _time % 60>>",
+   "<<link [[\"Next (\"+_hours+\":\"+(_minutes lt 10 ? \"0\": \"\")+_minutes+\")\"| Pregnancy Birth Hospital]]>><<pass _time>><<set $phase to 1>><</link>>"
+  ],
+  "old_kr": [
+   "<<set _hours to Math.floor(_time / 60)>>",
+   "<<set _minutes to _time % 60>>",
+   "<<link [[다음 (<<print getTimeString(_time)>>)| Pregnancy Birth Hospital]]>><<pass _time>><<set $phase to 1>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[\"Next \" + printTime(_time, true)| Pregnancy Birth Hospital]]>><<pass _time>><<set $phase to 1>><</link>>"
+  ],
+  "context": "<</switch>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Next (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Hospital 3]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[다음 (<<print getTimeString(_timeCalc)>>)|Pregnancy Birth Hospital 3]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Next (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Hospital 3]]>><<endevent>><<run setPlayerLitterBorn()>><<pass _timeCalc>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Next|Pregnancy Birth Hospital 5]]>><<storeon \"hospital_birth\">><<pass 24 hour>><<stress -40>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[다음|Pregnancy Birth Hospital 5]]>><<storeon \"hospital_birth\">><<pass 24 hour>><<stress -40>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Next|Pregnancy Birth Hospital 5]]>><<storeon \"hospital_birth\">><<pass 24 hour>><<stress -40>><<set $tiredness to 0>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Next|Orphanage]]>><<unset $litter_size>><<unset $first_birth>><<endevent>><<set $ward_unlocked to true>><<unset $bornChildrenIds>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[다음|Orphanage]]>><<unset $litter_size>><<unset $first_birth>><<endevent>><<set $ward_unlocked to true>><<unset $bornChildrenIds>><</link>>"
+  ],
+  "new_en": [
+   "<<if isRentDue() or isBaileyLookingForPlayer() or $rentPregInterruption>>",
+   "\t<<link [[Next|Rent Pregnant Return]]>><<unset $first_birth>><<endevent>><<set $ward_unlocked to true>><<unset $bornChildrenIds>><</link>>",
+   "<<else>>",
+   "\t<<link [[Next|Orphanage]]>><<unset $litter_size>><<unset $first_birth>><<endevent>><<set $ward_unlocked to true>><<unset $bornChildrenIds>><</link>>",
+   "<</if>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You do your best to stay calm, but panic starts to set in.",
+   "<<if $gwylanSeen.includes(\"beast_ritual\")>>",
+   "\tYou know Gwylan can be clumsy, but <<he>> always seems to know what <<hes>> doing."
+  ],
+  "old_kr": [
+   "최대한 침착하려 애쓰지만, 공황 상태에 빠지기 시작한다.",
+   "<<if $gwylanSeen.includes(\"beast_ritual\")>>",
+   "\t그윌란이 서툴다는 건 알지만, <<he>>【은는】 항상 자기가 뭘 하는지 아는 것 같다."
+  ],
+  "new_en": [
+   "You do your best to stay calm, but panic starts to set in.",
+   "<<if $gwylanSeen.includes(\"ritual_beast\")>>",
+   "\tYou know Gwylan can be clumsy, but <<he>> always seems to know what <<hes>> doing."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Next (<<print getTimeString(_timeCalc)>>)|Pregnancy Birth Forest Shop 4]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[다음 (<<print getTimeString(_timeCalc)>>)|Pregnancy Birth Forest Shop 4]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Next (<<print getTimeString(_timeCalc)>>)|Pregnancy Birth Forest Shop 4]]>><<endevent>><<run setPlayerLitterBorn()>><<pass _timeCalc>><</link>>"
+  ],
+  "context": "\t<<case \"human\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Next (<<print getTimeString(_timeCalc)>>)|Pregnancy Birth Forest Shop Wolf]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[다음 (<<print getTimeString(_timeCalc)>>)|Pregnancy Birth Forest Shop Wolf]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Next (<<print getTimeString(_timeCalc)>>)|Pregnancy Birth Forest Shop Wolf]]>><<endevent>><<run setPlayerLitterBorn()>><<pass _timeCalc>><</link>>"
+  ],
+  "context": "\t<<case \"wolf\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled>>",
+   "\t\t<span class=\"red\"><i>After giving birth to pups of your own, you see they're just cute animals.</i> You've gained the \"Stockholm Syndrome: Wolves\" trait.</span>"
+  ],
+  "old_kr": [
+   "\t<<if $settings.bestialityEnabled>>",
+   "\t\t<span class=\"red\"><i>스스로 새끼를 낳고 나니, 그들이 그저 귀여운 동물로 보이기 시작합니다.</i> \"스톡홀름 증후군: 늑대\" 특성을 얻었습니다.</span>"
+  ],
+  "new_en": [
+   "\t<<if animalSexEnabledForType(\"wolf\")>>",
+   "\t\t<span class=\"red\"><i>After giving birth to pups of your own, you see they're just cute animals.</i> You've gained the \"Stockholm Syndrome: Wolves\" trait.</span>"
+  ],
+  "context": "<<if $syndromewolves isnot 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<switch _litter[0].gender>>",
+   "\t\t\t<<case \"m\">>",
+   "\t\t\t\t<<set _he to \"he\">>",
+   "\t\t\t\t<<set _He to \"He\">>",
+   "\t\t\t\t<<set _his to \"his\">>",
+   "\t\t\t\t<<set _His to \"His\">>",
+   "\t\t\t\t<<set _him to \"him\">>",
+   "\t\t\t\t<<set _gender to \"male\">>",
+   "\t\t\t<<case \"f\">>",
+   "\t\t\t\t<<set _he to \"she\">>",
+   "\t\t\t\t<<set _He to \"She\">>",
+   "\t\t\t\t<<set _his to \"her\">>",
+   "\t\t\t\t<<set _His to \"Her\">>",
+   "\t\t\t\t<<set _him to \"her\">>",
+   "\t\t\t\t<<set _gender to \"female\">>",
+   "\t\t\t<<case \"h\">>",
+   "\t\t\t\t<<set _he to \"she\">>",
+   "\t\t\t\t<<set _He to \"She\">>",
+   "\t\t\t\t<<set _his to \"her\">>",
+   "\t\t\t\t<<set _His to \"Her\">>",
+   "\t\t\t\t<<set _him to \"her\">>",
+   "\t\t\t\t<<set _gender to \"hermaphrodite\">>",
+   "\t\t<</switch>>"
+  ],
+  "old_kr": [
+   "\t\t<<switch _litter[0].gender>>",
+   "\t\t\t<<case \"m\">>",
+   "\t\t\t\t<<set _he to \"아이\">>",
+   "\t\t\t\t<<set _He to \"아이\">>",
+   "\t\t\t\t<<set _his to \"아이의\">>",
+   "\t\t\t\t<<set _His to \"아이의\">>",
+   "\t\t\t\t<<set _him to \"아이\">>",
+   "\t\t\t\t<<set _gender to \"male\">>",
+   "\t\t\t<<case \"f\">>",
+   "\t\t\t\t<<set _he to \"아이\">>",
+   "\t\t\t\t<<set _He to \"아이\">>",
+   "\t\t\t\t<<set _his to \"아이의\">>",
+   "\t\t\t\t<<set _His to \"아이의\">>",
+   "\t\t\t\t<<set _him to \"아이\">>",
+   "\t\t\t\t<<set _gender to \"female\">>",
+   "\t\t\t<<case \"h\">>",
+   "\t\t\t\t<<set _he to \"아이\">>",
+   "\t\t\t\t<<set _He to \"아이\">>",
+   "\t\t\t\t<<set _his to \"아이의\">>",
+   "\t\t\t\t<<set _His to \"아이의\">>",
+   "\t\t\t\t<<set _him to \"아이\">>",
+   "\t\t\t\t<<set _gender to \"hermaphrodite\">>",
+   "\t\t<</switch>>"
+  ],
+  "new_en": [],
+  "context": "\t\t<<set _multiple to false>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Are you excited for the gender reveal?\" <<he>> asks."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"성별을 알게 되어 기대되시나요?\" <<he>>【이가】 묻는다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"I hope you're excited to know your child's sex,\" <<he>> says."
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Look, <<print _he>> is moving around,\" the doctor says. \"Can you see the fingers?\" It almost appears <<print _his>> hand is waving at the screen. You feel movements inside at the same time.<<llstress>><<stress -7>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"보세요, <<print _he>>【이가】 움직이고 있어요,\" 의사가 말한다. \"손가락이 보이나요?\" 마치 <<print _his>> 손이 화면에 대고 손을 흔드는 것처럼 보인다. 동시에 안에서 움직임이 느껴진다.<<llstress>><<stress -7>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Look, there's movement,\" the doctor says. \"Can you see the fingers?\" You look at the screen, and see a hand. It almost looks like it is waving at you. You can feel what you see on the screen as well, happening inside your body. <<llstress>><<stress -7>>"
+  ],
+  "context": "\t\t\t\t<<if !_multiple>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Your child looks healthy,\" Harper continues. \"<<print _He>> just needs to keep growing, putting on weight and maturing <<print _his>> lungs.",
+   "\t\t\t\t\tIt's very important that you make healthy choices right now, as your children depend on your body for everything.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"아이는 건강해 보입니다,\" 하퍼가 말을 잇는다. \"<<print _He>>【은는】 계속 자라면서 체중을 늘리고 <<print _his>> 폐를 성숙시키기만 하면 됩니다. 지금은 아이가 모든 것을 당신의 몸에 의존하고 있으니, 건강한 선택을 하는 것이 매우 중요합니다.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Your child is growing well,\" Harper continues. \"Make sure to take healthy choices right now. The baby's growth depends entirely on your body, and taking care of it will assure a healthy development.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Look, they're moving around,\" the doctor says. \"Can you see the fingers?\" It almost appears one of their hands is waving at the screen. You feel movements inside at the same time.<<llstress>><<stress -7>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"보세요, 아이들이 움직이고 있어요,\" 의사가 말한다. \"손가락이 보이나요?\" 마치 아이들 중 하나의 손이 화면에 대고 손을 흔드는 것처럼 보인다. 동시에 안에서 움직임이 느껴진다.<<llstress>><<stress -7>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Look, there's movement,\" the doctor says. \"Can you see the fingers?\" You look at the screen, and see a pair of hands. It almost looks like one of them is waving at you. You can feel what you see on the screen as well, happening inside your body.<<llstress>><<stress -7>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tHarper continues. \"Your children look healthy. They just need to keep growing, putting on weight and maturing their lungs.",
+   "\t\t\t\t\tIt's very important that you make healthy choices right now, as your children depend on your body for everything.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t하퍼가 말을 잇는다. \"아이들은 건강해 보입니다. 계속 자라면서 체중을 늘리고 폐를 성숙시키기만 하면 됩니다. 지금은 아이들이 모든 것을 당신의 몸에 의존하고 있으니, 건강한 선택을 하는 것이 매우 중요합니다.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Your children are growing well,\" Harper continues. \"Make sure to take healthy choices right now. The babies' growth depends entirely on your body, and taking care of it will assure a healthy development.\""
+  ],
+  "context": "\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Your babies are doing fine,\" the doctor says. \"They're a little smaller than if you just had the one, but they are responsive and moving well. There's ample fluid as well, so it should be a normal pregnancy.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"아기들은 괜찮습니다,\" 의사가 말한다. \"하나만 가졌을 때보다는 조금 작지만, 반응도 좋고 잘 움직입니다. 양수도 충분해서 정상적인 임신이 될 겁니다.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Your babies are doing fine,\" the doctor says. \"They're a little smaller than if you just had the one, but there's responsiveness, with plenty of activity. There's ample fluid as well, so it should be a normal pregnancy.\""
+  ],
+  "context": "\t\t\t\t<<if _multiple>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tOn the screen you can see them moving around, legs and arms switching places. One jerks. \"Hiccups,\" Harper assures you."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t화면에는 아기들이 움직이는 모습이 보인다. 다리와 팔이 자리를 바꾼다. 한 아기가 움찔한다. \"딸꾹질입니다.\" 하퍼가 당신을 안심시킨다."
+  ],
+  "new_en": [
+   "\t\t\t\t\tOn the screen you can see them moving around, arms and legs switching positions. There's a sudden jerk from one of them. \"Hiccups,\" Harper assures you."
+  ],
+  "context": "\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Your baby is doing great. <<print _He>> is responsive and moving well,\" the doctor says. \"There's ample fluid as well, so it should be a normal pregnancy.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"아기는 아주 잘 자라고 있습니다. <<print _He>>【은는】 반응도 좋고 잘 움직여요.\" 의사가 말한다. \"양수도 충분하니, 정상적인 임신이 될 겁니다.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Your baby is doing fine,\" the doctor says. \"There's responsiveness, with plenty of activity. There's ample fluid as well, so it should be a normal pregnancy.\""
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tOn the screen you can see <<print _him>> moving around, legs and arms switching places. <<print _He>> jerks. \"Hiccups,\" Harper assures you."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t화면에는 <<print _him>>【이가】 움직이는 모습이 보인다. 다리와 팔이 자리를 바꾼다. <<print _He>>【이가】 움찔한다. \"딸꾹질입니다.\" 하퍼가 당신을 안심시킨다."
+  ],
+  "new_en": [
+   "\t\t\t\t\tOn the screen you can see your child moving around, arms and legs shifting positions. There's a sudden jerk. \"Hiccups,\" Harper assures you."
+  ],
+  "context": "\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Your babies are healthy,\" the doctor says. \"They are responsive and moving well. There's ample fluid, so it should be a normal pregnancy.\"<<llstress>><<stress -8>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"아기들은 건강합니다.\" 의사가 말한다. \"반응도 좋고 잘 움직여요. 양수도 충분하니, 정상적인 임신이 될 겁니다.\"<<llstress>><<stress -8>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Your babies are healthy,\" the doctor says. \"There's responsiveness, with plenty of activity from all of them. There's ample fluid as well, so it should be a normal pregnancy.\"<<llstress>><<stress -8>>"
+  ],
+  "context": "\t\t\t\t<<if _multiple>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tYou can see them moving around on the screen, legs and arms switching places. One jerks. \"Hiccups,\" Harper assures you."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t화면에는 아기들이 움직이는 모습이 보인다. 다리와 팔이 자리를 바꾼다. 한 아기가 움찔한다. \"딸꾹질입니다.\" 하퍼가 당신을 안심시킨다."
+  ],
+  "new_en": [
+   "\t\t\t\t\tYou can see them moving around on the screen, arms and legs switching positions. There's a sudden jerk coming from one of them. \"Hiccups,\" Harper assures you."
+  ],
+  "context": "\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Your baby is healthy,\" the doctor says. \"<<print _He>> is responsive and moving well. There's ample fluid, so it should be a normal pregnancy.\"<<llstress>><<stress -8>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"아기는 건강합니다.\" 의사가 말한다. \"<<print _He>>【은는】 반응도 좋고 잘 움직여요. 양수도 충분하니, 정상적인 임신이 될 겁니다.\"<<llstress>><<stress -8>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Your baby is healthy,\" the doctor says. \"There's responsiveness, with plenty of activity. There's ample fluid as well, so it should be a normal pregnancy.\"<<llstress>><<stress -8>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tYou can see <<print _him>> moving around on the screen, legs and arms switching places. <<print _He>> jerks. \"Hiccups,\" Harper assures you."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t화면에는 <<print _him>>【이가】 움직이는 모습이 보인다. 다리와 팔이 자리를 바꾼다. <<print _He>>【이가】 움찔한다. \"딸꾹질입니다.\" 하퍼가 당신을 안심시킨다."
+  ],
+  "new_en": [
+   "\t\t\t\t\tOn the screen you can see your child moving around, arms and legs switching positions. There's a sudden jerk. \"Hiccups,\" Harper assures you."
+  ],
+  "context": "\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Are you excited for the gender reveal?\" <<he>> asks."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"성별을 알게 되어 기대되시나요?\" <<he>>【이가】 묻는다."
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"I hope you're excited to know your child's sex,\" <<he>> says."
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Look, <<print _he>> is moving around,\" the doctor says. \"Can you see the toes?\" It almost appears <<print _his>> paw is waving at the screen. You feel movements inside at the same time.<<llstress>><<stress -7>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"보세요, <<print _he>>【이가】 움직이고 있어요.\" 의사가 말한다. \"발가락이 보이나요?\" 마치 <<print _his>> 발이 화면을 향해 손을 흔드는 것처럼 보인다. 동시에 뱃속에서 움직임이 느껴진다.<<llstress>><<stress -7>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Look, there's movement,\" the doctor says. \"Can you see the toes?\" You look at the screen, and see a paw. It almost looks like it is waving at you. You can feel what you see on the screen as well, happening inside your body. <<llstress>><<stress -7>>"
+  ],
+  "context": "\t\t\t\t<<if !_multiple>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Your pup looks healthy,\" Harper continues. \"<<print _He>> just need to keep growing, putting on weight and maturing <<print _his>> lungs.",
+   "\t\t\t\t\tIt's very important that you make healthy choices right now, as your children depend on your body for everything.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"새끼는 건강해 보입니다.\" 하퍼가 말을 잇는다. \"<<print _He>>【은는】 계속 자라면서 체중을 늘리고 <<print _his>> 폐를 성숙시키기만 하면 됩니다. 지금은 아이가 모든 것을 당신의 몸에 의존하고 있으니, 건강한 선택을 하는 것이 매우 중요합니다.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Your child is growing well,\" Harper continues. \"Make sure to take healthy choices right now. The baby's growth depends entirely on your body, and taking care of it will assure a healthy development. It's especially important that you take care with such an unusual pregnancy.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Look, they're moving around,\" the doctor says. \"Can you see the toes?\" It almost appears one of their paws is waving at the screen. You feel movements inside at the same time.<<llstress>><<stress -7>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"보세요, 아기들이 움직이고 있어요.\" 의사가 말한다. \"발가락이 보이나요?\" 마치 아기들 중 하나의 발이 화면을 향해 손을 흔드는 것처럼 보인다. 동시에 뱃속에서 움직임이 느껴진다.<<llstress>><<stress -7>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Look, there's movement,\" the doctor says. \"Can you see the toes?\" You look at the screen, and see a pair of paws. It almost looks like one of them is waving at you. You can feel what you see on the screen as well, happening inside your body.<<llstress>><<stress -7>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tHarper continues. \"Your children look healthy. They just need to keep growing, putting on weight and maturing their lungs.",
+   "\t\t\t\t\tIt's very important that you make healthy choices right now, as your children depend on your body for everything. It's especially important that you take care with such an unusual pregnancy.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t하퍼가 말을 잇는다. \"아이들은 건강해 보입니다. 계속 자라면서 체중을 늘리고 폐를 성숙시키기만 하면 됩니다.",
+   "\t\t\t\t\t지금은 아이들이 모든 것을 당신의 몸에 의존하고 있으니, 건강한 선택을 하는 것이 매우 중요합니다. 특히 이렇게 특이한 임신인 만큼 몸조리를 잘하는 것이 중요합니다.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Your children are growing well,\" Harper continues. \"Make sure to take healthy choices right now. The babies' growth depends entirely on your body, and taking care of it will assure a healthy development. It's especially important that you take care with such an unusual pregnancy.\""
+  ],
+  "context": "\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Your ba... litter, is doing fine,\" the doctor says. \"They're a little smaller than if you just had the one, but they are responsive and moving well. There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"아... 아니, 새끼들은 괜찮습니다.\" 의사가 말한다. \"한 마리만 가졌을 때보다는 조금 작지만, 반응도 좋고 잘 움직입니다. 양수도 충분해서 정상적인 임신이 될 겁니다. 이런 임신이 정상일 수 있는 한에서 말이죠.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Your ba... litter, is doing fine,\" the doctor says. \"They're a little smaller than if you just had the one, but there's responsiveness, with plenty of activity. There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be.\""
+  ],
+  "context": "\t\t\t\t<<if _multiple>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tOn the screen you can see them moving around, legs switching places. One jerks. \"Hiccups,\" Harper assures you."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t화면에서 새끼들이 다리를 교차하며 움직이는 것을 볼 수 있다. 한 마리가 움찔한다. \"딸꾹질입니다.\" 하퍼가 당신을 안심시킨다."
+  ],
+  "new_en": [
+   "\t\t\t\t\tOn the screen you can see them moving around, legs switching positions. There's a sudden jerk from one of them. \"Hiccups,\" Harper assures you."
+  ],
+  "context": "\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Your pup is doing great. <<print _He>> is responsive and moving well,\" the doctor says. \"There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"새끼는 아주 잘 자라고 있습니다. <<print _He>>【은는】 반응도 좋고 잘 움직입니다.\" 의사가 말한다. \"양수도 충분해서 정상적인 임신이 될 겁니다. 이런 임신이 정상일 수 있는 한에서 말이죠.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Your pup is doing fine,\" the doctor says. \"There's responsiveness, with plenty of activity. There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be.\""
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tOn the screen you can see <<print _him>> moving around, legs switching places. <<print _He>> jerks. \"Hiccups,\" Harper assures you."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t화면에서 <<print _him>>【이가】 다리를 교차하며 움직이는 것을 볼 수 있다. <<print _He>>【이가】 움찔한다. \"딸꾹질입니다.\" 하퍼가 당신을 안심시킨다."
+  ],
+  "new_en": [
+   "\t\t\t\t\tOn the screen you can see your child moving around, legs shifting positions. There's a sudden jerk. \"Hiccups,\" Harper assures you."
+  ],
+  "context": "\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Your pups are healthy,\" the doctor says. \"They are responsive and moving well. There's ample fluid, so it should be a normal pregnancy. As normal as a pregnancy like this can be.\"<<llstress>><<stress -8>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"새끼들은 건강합니다.\" 의사가 말한다. \"반응도 좋고 잘 움직입니다. 양수도 충분해서 정상적인 임신이 될 겁니다. 이런 임신이 정상일 수 있는 한에서 말이죠.\"<<llstress>><<stress -8>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Your pups are healthy,\" the doctor says. \"There's responsiveness, with plenty of activity. There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be.\"<<llstress>><<stress -8>>"
+  ],
+  "context": "\t\t\t\t<<if _multiple>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tYou can see them moving around on the screen, legs switching places. One jerks. \"Hiccups,\" Harper assures you."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t화면에서 새끼들이 다리를 교차하며 움직이는 것을 볼 수 있다. 한 마리가 움찔한다. \"딸꾹질입니다.\" 하퍼가 당신을 안심시킨다."
+  ],
+  "new_en": [
+   "\t\t\t\t\tOn the screen you can see them moving around, legs switching positions. There's a sudden jerk from one of them. \"Hiccups,\" Harper assures you."
+  ],
+  "context": "\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Your pup is healthy,\" the doctor says. \"<<print _He>> is responsive and moving well. There's ample fluid, so it should be a normal pregnancy. As normal as a pregnancy like this can be.\"<<llstress>><<stress -8>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"새끼는 건강합니다.\" 의사가 말한다. \"<<print _He>>【은는】 반응도 좋고 잘 움직입니다. 양수도 충분해서 정상적인 임신이 될 겁니다. 이런 임신이 정상일 수 있는 한에서 말이죠.\"<<llstress>><<stress -8>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Your pup is healthy,\" the doctor says. \"There's responsiveness, with plenty of activity. There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be.\"<<llstress>><<stress -8>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tYou can see <<print _him>> moving around on the screen, legs switching places. <<print _He>> jerks. \"Hiccups,\" Harper assures you."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t화면에서 <<print _him>>【이가】 다리를 교차하며 움직이는 것을 볼 수 있다. <<print _He>>【이가】 움찔한다. \"딸꾹질입니다.\" 하퍼가 당신을 안심시킨다."
+  ],
+  "new_en": [
+   "\t\t\t\t\tOn the screen you can see your child moving around, legs switching positions. There's a sudden jerk. \"Hiccups,\" Harper assures you."
+  ],
+  "context": "\t\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\"Unfortunately, the hardening shell is making it nearly impossible to tell the gender. I suspect you won't have to wait too long to find out for yourself, though.\" <<He>> continues moving the wand, trying to get a better angle, but the picture is too small and distorted."
+  ],
+  "old_kr": [
+   "\t\t\t\t\"안타깝게도, 껍데기가 단단해지고 있어서 성별을 알아내는 것이 거의 불가능합니다. 하지만 직접 확인하기까지 그리 오래 기다릴 필요는 없을 것 같군요.\" <<He>>【은는】 더 나은 각도를 잡으려고 탐촉자를 계속 움직이지만, 화면이 너무 작고 왜곡되어 있다."
+  ],
+  "new_en": [
+   "\t\t\t\t\"Unfortunately, the hardening shell is making it nearly impossible to tell the sex. I suspect you won't have to wait too long to find out for yourself, though.\" <<He>> continues moving the wand, trying to get a better angle, but the picture is too small and distorted."
+  ],
+  "context": "\t\t\t<<if !knowsGender(_litter[0].childId, \"pc\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Your ba... eggs, are doing fine,\" the doctor says. \"They are responsive and moving well. There's ample fluid, so it should be a normal pregnancy. As normal as a pregnancy like this can be.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"아... 아니, 알들은 괜찮습니다.\" 의사가 말한다. \"반응도 좋고 잘 움직입니다. 양수도 충분해서 정상적인 임신이 될 겁니다. 이런 임신이 정상일 수 있는 한에서 말이죠.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Your ba... eggs, are doing fine,\" the doctor says. \"They are responsive and moving well. There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be.\""
+  ],
+  "context": "\t\t\t\t<<if _multiple>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Your egg is doing great. The baby inside is responsive and moving well,\" the doctor says. \"There's ample fluid, so it should be a normal pregnancy. As normal as a pregnancy like this can be.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"알은 아주 잘 자라고 있습니다. 안의 아기는 반응도 좋고 잘 움직입니다.\" 의사가 말한다. \"양수도 충분해서 정상적인 임신이 될 겁니다. 이런 임신이 정상일 수 있는 한에서 말이죠.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Your egg is doing great. The baby inside is responsive and moving well,\" the doctor says. \"There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be.\""
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Your eggs are healthy,\" the doctor says. \"They are responsive and moving well. There's ample fluid, so it should be a normal pregnancy. As normal as a pregnancy like this can be.\"<<llstress>><<stress -8>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"알들은 건강합니다.\" 의사가 말한다. \"반응도 좋고 잘 움직입니다. 양수도 충분해서 정상적인 임신이 될 겁니다. 이런 임신이 정상일 수 있는 한에서 말이죠.\"<<llstress>><<stress -8>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Your eggs are healthy,\" the doctor says. \"There's responsiveness, with plenty of activity. There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be.\"<<llstress>><<stress -8>>"
+  ],
+  "context": "\t\t\t\t<<if _multiple>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\"Your egg is healthy,\" the doctor says. \"It is responsive and moving well. There's ample fluid, so it should be a normal pregnancy. As normal as a pregnancy like this can be.\"<<llstress>><<stress -8>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\"알은 건강합니다.\" 의사가 말한다. \"반응도 좋고 잘 움직입니다. 양수도 충분해서 정상적인 임신이 될 겁니다. 이런 임신이 정상일 수 있는 한에서 말이죠.\"<<llstress>><<stress -8>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\"Your egg is healthy,\" the doctor says. \"It is responsive and moving well. There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be.\"<<llstress>><<stress -8>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "   hospital birth passages, only the drive home differs. Not merged with Bailey's",
+   "   drive-home (it's a separate scene, not duplicated prose). */"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "   hospital birth passages, only the drive home differs. */"
+  ],
+  "context": "/* Alex drive-home. Branches in from Hospital 5 when Alex is the father; reuses the"
+ }
+]

@@ -1,0 +1,31 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<link [[Next|Prison Spire]]>><<endevent>><<rut_end>><<location \"prison\">><</link>>"
+  ],
+  "old_kr": [
+   "\t<<link [[다음|Prison Spire]]>><<endevent>><<rut_end>><<location \"prison\">><</link>>"
+  ],
+  "new_en": [
+   "\t<<link [[Next|Prison Yard]]>><<endevent>><<rut_end>><<location \"prison\">><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled>>",
+   "\t\t<<link [[Next|Prison Beast]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if $settings.bestialityEnabled>>",
+   "\t\t<<link [[다음|Prison Beast]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if isBestialityOnForAnyCreature()>>",
+   "\t\t<<link [[Next|Prison Beast]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": "\t<br><br>"
+ }
+]

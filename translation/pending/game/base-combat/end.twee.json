@@ -1,0 +1,606 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechspraycycleplant>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechSprayCyclePlant>>"
+  ],
+  "context": "\t<<unset $right_guard>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $doubleVaginalDialogue>>",
+   "\t<<unset $doubleAnalDialogue>>"
+  ],
+  "context": "\t<<unset $encounterDialogue>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechwheeze>>",
+   "\t<<unset $speechwheezelewd>>",
+   "\t<<unset $speechwheezeaskchokerough>>",
+   "\t<<unset $speechwheezeaction>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechChokedWheeze>>",
+   "\t<<unset $speechChokedMoan>>",
+   "\t<<unset $speechChokedAlready>>",
+   "\t<<unset $speechChokedAction>>"
+  ],
+  "context": "\t<<set $askedtochoke to 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechdisable to 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechDisable to 0>>"
+  ],
+  "context": "\t<<unset $anusfucked>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechcrossdressangry>>",
+   "\t<<unset $speechcrossdressaroused>>",
+   "\t<<unset $speechcrossdressshock>>",
+   "\t<<unset $speechcrossdressdisappointed>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechCrossdressAngry>>",
+   "\t<<unset $speechCrossdressAroused>>",
+   "\t<<unset $speechCrossdressShock>>",
+   "\t<<unset $speechCrossdressDisappointed>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechhermangry>>",
+   "\t<<unset $speechhermaroused>>",
+   "\t<<unset $speechhermshock>>",
+   "\t<<unset $speechhermdisappointed>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechHermAngry>>",
+   "\t<<unset $speechHermAroused>>",
+   "\t<<unset $speechHermShock>>",
+   "\t<<unset $speechHermDisappointed>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechsextoy>>",
+   "\t<<unset $speechSextoyState>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechNoticeSexToy>>",
+   "\t<<unset $speechSexToyState>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $whitneyUniqueComments>>",
+   "\t<<unset $speechSaidLines>>"
+  ],
+  "context": "\t<<unset $averyUniqueComments>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechcum>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechPlayerOrgasm>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechmilk>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechLactate>>"
+  ],
+  "context": "\t<<set $speechorgasmcount to 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechpenispenetrated>>",
+   "\t<<unset $speechvaginapenetrated>>",
+   "\t<<unset $speechanuspenetrated>>",
+   "\t<<unset $speechmouthpenetrated>>",
+   "\t<<unset $speechotheranuspenetrated>>",
+   "\t<<unset $speechvaginaimminent>>",
+   "\t<<unset $speechpenisimminent>>",
+   "\t<<unset $speechanusimminent>>",
+   "\t<<unset $speechmouthimminent>>",
+   "\t<<unset $speechotheranusimminent>>",
+   "\t<<unset $speechvaginaentrance>>",
+   "\t<<unset $speechanusentrance>>",
+   "\t<<unset $speechmouthentrance>>",
+   "\t<<unset $speechpenisentrance>>",
+   "\t<<unset $speechotheranusentrance>>",
+   "\t<<unset $speechvaginawithhold>>",
+   "\t<<unset $speechanuswithhold>>",
+   "\t<<unset $speechpeniswithhold>>",
+   "\t<<unset $speechotheranuswithhold>>",
+   "\t<<unset $speechvagina>>",
+   "\t<<unset $speechpenis>>",
+   "\t<<unset $speechanus>>",
+   "\t<<unset $speechvaginamouth>>",
+   "\t<<unset $speechvaginavagina>>",
+   "\t<<unset $speechbeat>>",
+   "\t<<unset $speechhit>>",
+   "\t<<unset $speechtribentrance>>",
+   "\t<<unset $speechfacesit>>",
+   "\t<<unset $speechmouthotheranus>>",
+   "\t<<unset $speechanallick>>",
+   "\t<<unset $speechanalkiss>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechNPCVaginaPenetrated>>",
+   "\t<<unset $speechVaginaPenetrated>>",
+   "\t<<unset $speechAnusPenetrated>>",
+   "\t<<unset $speechMouthPenetrated>>",
+   "\t<<unset $speechNPCAnusPenetrated>>",
+   "\t<<unset $speechVaginaImminent>>",
+   "\t<<unset $speechNPCVaginaImminent>>",
+   "\t<<unset $speechAnusImminent>>",
+   "\t<<unset $speechMouthImminent>>",
+   "\t<<unset $speechNPCAnusImminent>>",
+   "\t<<unset $speechVaginaEntrance>>",
+   "\t<<unset $speechAnusEntrance>>",
+   "\t<<unset $speechMouthEntrance>>",
+   "\t<<unset $speechNPCVaginaEntrance>>",
+   "\t<<unset $speechNPCAnusEntrance>>",
+   "\t<<unset $speechVaginaWithhold>>",
+   "\t<<unset $speechAnusWithhold>>",
+   "\t<<unset $speechNPCVaginaWithhold>>",
+   "\t<<unset $speechNPCAnusWithhold>>",
+   "\t<<unset $speechVagina>>",
+   "\t<<unset $speechPenis>>",
+   "\t<<unset $speechAnus>>",
+   "\t<<unset $speechMouthNPCVagina>>",
+   "\t<<unset $speechTrib>>",
+   "\t<<unset $speechPlayerBeaten>>",
+   "\t<<unset $speechPlayerHits>>",
+   "\t<<unset $speechTribEntrance>>",
+   "\t<<unset $speechFaceSit>>",
+   "\t<<unset $speechMouthNPCAnus>>",
+   "\t<<unset $speechAnalLick>>",
+   "\t<<unset $speechAnalKiss>>"
+  ],
+  "context": "<<widget \"manend\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechfencingentrance>>",
+   "\t<<unset $speechpenispenis>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechFencingEntrance>>",
+   "\t<<unset $speechFencing>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechheadbreasts>>",
+   "\t<<unset $speechheadchest>>",
+   "\t<<unset $speechheadnipple>>",
+   "\t<<unset $speechheadsuckle>>",
+   "\t<<unset $speechheadnippleclosed>>",
+   "\t<<unset $speechheadsuckleclosed>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechHeadBreasts>>",
+   "\t<<unset $speechHeadChest>>",
+   "\t<<unset $speechHeadNipple>>",
+   "\t<<unset $speechHeadSuckle>>",
+   "\t<<unset $speechHeadNippleClosed>>",
+   "\t<<unset $speechHeadSuckleClosed>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechfeet>>",
+   "\t<<unset $speechthigh>>",
+   "\t<<unset $speechcheeks>>",
+   "\t<<unset $speechhandjobpenis>>",
+   "\t<<unset $speechhandjobvagina>>",
+   "\t<<unset $speechmasturbate>>",
+   "\t<<unset $speechdildovagina>>",
+   "\t<<unset $speechdildoanus>>",
+   "\t<<unset $speechstroker>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechFeet>>",
+   "\t<<unset $speechThigh>>",
+   "\t<<unset $speechCheeks>>",
+   "\t<<unset $speechHandjobPenis>>",
+   "\t<<unset $speechHandjobVagina>>",
+   "\t<<unset $speechMasturbate>>",
+   "\t<<unset $speechDildoVagina>>",
+   "\t<<unset $speechDildoAnus>>",
+   "\t<<unset $speechStroker>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechthroat>>",
+   "\t<<unset $speechvaginafoot>>",
+   "\t<<unset $speechpenisfoot>>",
+   "\t<<unset $speechchastity>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechChoke>>",
+   "\t<<unset $speechVaginaFoot>>",
+   "\t<<unset $speechPenisFoot>>",
+   "\t<<unset $speechChastity>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechstruggle>>",
+   "\t<<unset $speechstripstruggle>>",
+   "\t<<unset $speechspank>>",
+   "\t<<unset $speecharms>>",
+   "\t<<unset $speechclit>>",
+   "\t<<unset $speechglans>>",
+   "\t<<unset $speechfutapenis>>",
+   "\t<<unset $speechbottom>>",
+   "\t<<unset $speechhair>>",
+   "\t<<unset $speechchestrub>>",
+   "\t<<unset $speechbreastrub>>",
+   "\t<<unset $speechvaginaflaunt>>",
+   "\t<<unset $speechpenisbig>>",
+   "\t<<unset $speechpenisescape>>",
+   "\t<<unset $speechvaginaescape>>",
+   "\t<<unset $speechanusescape>>",
+   "\t<<unset $speechsteal>>",
+   "\t<<unset $speechnamedrop>>",
+   "\t<<unset $speechadmired>>",
+   "\t<<unset $speechaskrough>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechStruggle>>",
+   "\t<<unset $speechStripStruggle>>",
+   "\t<<unset $speechSpank>>",
+   "\t<<unset $speechArms>>",
+   "\t<<unset $speechClit>>",
+   "\t<<unset $speechGlans>>",
+   "\t<<unset $speechFutaPenis>>",
+   "\t<<unset $speechBottom>>",
+   "\t<<unset $speechHair>>",
+   "\t<<unset $speechChestRub>>",
+   "\t<<unset $speechBreastRub>>",
+   "\t<<unset $speechVaginaFlaunt>>",
+   "\t<<unset $speechPenisBig>>",
+   "\t<<unset $speechPenisSmall>>",
+   "\t<<unset $speechNPCVaginaEscape>>",
+   "\t<<unset $speechNPCAnusEscape>>",
+   "\t<<unset $speechVaginaEscape>>",
+   "\t<<unset $speechAnusEscape>>",
+   "\t<<unset $speechSteal>>",
+   "\t<<unset $speechLINameDrop>>",
+   "\t<<unset $speechAdmired>>",
+   "\t<<unset $speechAskRough>>"
+  ],
+  "context": "\t<<unset $speechNPCChastity>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechwheeze>>",
+   "\t<<unset $speechwheezelewd>>",
+   "\t<<unset $speechwheezeaskchokerough>>",
+   "\t<<unset $speechwheezeaction>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechChokedWheeze>>",
+   "\t<<unset $speechChokedMoan>>",
+   "\t<<unset $speechChokedAlready>>",
+   "\t<<unset $speechChokedAction>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechcum>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechPlayerOrgasm>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechmilk>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechLactate>>"
+  ],
+  "context": "\t<<set $speechorgasmrepeat to 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechgenitals>>",
+   "\t<<unset $speechbreasts>>",
+   "\t<<unset $speechscream>>",
+   "\t<<unset $speechapologise>>",
+   "\t<<unset $speechplead>>",
+   "\t<<unset $speechmoan>>",
+   "\t<<unset $speechspecialdialogue>> /* For nnpcs */",
+   "\t<<unset $speechdemand>>",
+   "\t<<unset $speechspecialdialogue>> /* For nnpcs */",
+   "\t<<unset $speechcoverface>>",
+   "\t<<unset $speechcoverpenis>>",
+   "\t<<unset $speechcovervagina>>",
+   "\t<<unset $speechapologiseno>>",
+   "\t<<unset $speechapologiseunforgiving>>",
+   "\t<<unset $speechforgive>>",
+   "\t<<unset $speechspray>>",
+   "\t<<unset $speechvaginavirgin>>",
+   "\t<<unset $speechanusvirgin>>",
+   "\t<<unset $speechmouthvirgin>>",
+   "\t<<unset $speechpenisvirgin>>",
+   "\t<<unset $speechkissvirgin>>",
+   "\t<<unset $speechtemplevirgin>>",
+   "\t<<unset $speechgrowl>>",
+   "\t<<unset $speechgrowlheat>>",
+   "\t<<unset $speechgrowlrut>>",
+   "\t<<unset $speechpregnant>>",
+   "\t<<unset $speechleglock>>",
+   "\t<<unset $speechbanish>>",
+   "\t<<unset $speechfallentransform>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechExposeGenitals>>",
+   "\t<<unset $speechExposeBreasts>>",
+   "\t<<unset $speechScreamForHelp>>",
+   "\t<<unset $speechApologise>>",
+   "\t<<unset $speechPlead>>",
+   "\t<<unset $speechMoan>>",
+   "\t<<unset $speechDemand>>",
+   "\t<<unset $speechCoverFace>>",
+   "\t<<unset $speechCoverPenis>>",
+   "\t<<unset $speechCoverVagina>>",
+   "\t<<unset $speechApologiseRejected>>",
+   "\t<<unset $speechApologiseUnforgiving>>",
+   "\t<<unset $speechForgive>>",
+   "\t<<unset $speechPepperSpray>>",
+   "\t<<unset $speechVaginaVirgin>>",
+   "\t<<unset $speechAnusVirgin>>",
+   "\t<<unset $speechOralVirgin>>",
+   "\t<<unset $speechPenisVirgin>>",
+   "\t<<unset $speechKissVirgin>>",
+   "\t<<unset $speechTempleVirgin>>",
+   "\t<<unset $speechGrowl>>",
+   "\t<<unset $speechGrowlHeat>>",
+   "\t<<unset $speechGrowlRut>>",
+   "\t<<unset $speechPregnant>>",
+   "\t<<unset $speechLegLock>>",
+   "\t<<unset $speechBanish>>",
+   "\t<<unset $speechFallenTransform>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $speechcrossdressangry is 2>>",
+   "\t\t<<set $speechcrossdressangry to 1>>",
+   "\t<<elseif $speechcrossdressangry is 1>>",
+   "\t\t<<unset $speechcrossdressangry>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $speechCrossdressAngry is 2>>",
+   "\t\t<<set $speechCrossdressAngry to 1>>",
+   "\t<<elseif $speechCrossdressAngry is 1>>",
+   "\t\t<<unset $speechCrossdressAngry>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $speechcrossdressaroused is 2>>",
+   "\t\t<<set $speechcrossdressaroused to 1>>",
+   "\t<<elseif $speechcrossdressaroused is 1>>",
+   "\t\t<<unset $speechcrossdressaroused>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $speechCrossdressAroused is 2>>",
+   "\t\t<<set $speechCrossdressAroused to 1>>",
+   "\t<<elseif $speechCrossdressAroused is 1>>",
+   "\t\t<<unset $speechCrossdressAroused>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $speechcrossdressshock is 2>>",
+   "\t\t<<set $speechcrossdressshock to 1>>",
+   "\t<<elseif $speechcrossdressshock is 1>>",
+   "\t\t<<unset $speechcrossdressshock>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $speechCrossdressShock is 2>>",
+   "\t\t<<set $speechCrossdressShock to 1>>",
+   "\t<<elseif $speechCrossdressShock is 1>>",
+   "\t\t<<unset $speechCrossdressShock>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $speechcrossdressdisappointed is 2>>",
+   "\t\t<<set $speechcrossdressdisappointed to 1>>",
+   "\t<<elseif $speechcrossdressdisappointed is 1>>",
+   "\t\t<<unset $speechcrossdressdisappointed>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $speechCrossdressDisappointed is 2>>",
+   "\t\t<<set $speechCrossdressDisappointed to 1>>",
+   "\t<<elseif $speechCrossdressDisappointed is 1>>",
+   "\t\t<<unset $speechCrossdressDisappointed>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $speechhermangry is 2>>",
+   "\t\t<<set $speechhermangry to 1>>",
+   "\t<<elseif $speechhermangry is 1>>",
+   "\t\t<<unset $speechhermangry>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $speechHermAngry is 2>>",
+   "\t\t<<set $speechHermAngry to 1>>",
+   "\t<<elseif $speechHermAngry is 1>>",
+   "\t\t<<unset $speechHermAngry>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $speechhermaroused is 2>>",
+   "\t\t<<set $speechhermaroused to 1>>",
+   "\t<<elseif $speechhermaroused is 1>>",
+   "\t\t<<unset $speechhermaroused>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $speechHermAroused is 2>>",
+   "\t\t<<set $speechHermAroused to 1>>",
+   "\t<<elseif $speechHermAroused is 1>>",
+   "\t\t<<unset $speechHermAroused>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $speechhermshock is 2>>",
+   "\t\t<<set $speechhermshock to 1>>",
+   "\t<<elseif $speechhermshock is 1>>",
+   "\t\t<<unset $speechhermshock>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $speechHermShock is 2>>",
+   "\t\t<<set $speechHermShock to 1>>",
+   "\t<<elseif $speechHermShock is 1>>",
+   "\t\t<<unset $speechHermShock>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $speechhermdisappointed is 2>>",
+   "\t\t<<set $speechhermdisappointed to 1>>",
+   "\t<<elseif $speechhermdisappointed is 1>>",
+   "\t\t<<unset $speechhermdisappointed>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $speechHermDisappointed is 2>>",
+   "\t\t<<set $speechHermDisappointed to 1>>",
+   "\t<<elseif $speechHermDisappointed is 1>>",
+   "\t\t<<unset $speechHermDisappointed>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $speechpenisescape to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $speechNPCVaginaEscape to 1>>"
+  ],
+  "context": "\t<<if $NPCList[_n].speechpenisescape is 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $speechvaginaescape to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $speechVaginaEscape to 1>>"
+  ],
+  "context": "\t<<if $NPCList[_n].speechvaginaescape is 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $speechanusescape to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $speechAnusEscape to 1>>",
+   "\t<</if>>",
+   "\t<<if $NPCList[_n].speechotheranusescape is 1>>",
+   "\t\t<<set $speechNPCAnusEscape to 1>>"
+  ],
+  "context": "\t<<if $NPCList[_n].speechanusescape is 1>>"
+ }
+]

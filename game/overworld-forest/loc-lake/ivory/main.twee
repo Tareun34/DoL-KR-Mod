@@ -434,7 +434,7 @@
 		<<case "Robin">>
 			<<npckiss>><<unset $robinbed>><<unset $bedGuest>>
 		<</switch>>
-	<<set $speechdisable to 1>>
+	<<set $speechDisable to 1>>
 <<elseif $struggle_start is 1>>
 	<<set $combat to 1>>
 	<<controlloss>>
@@ -458,7 +458,7 @@
 		<<set $wraith.type to "man">><<set $wraith.gen to "man">>
 		<<maninit>><<set $enemyhealth to 600>><<set $enemyhealthmax to 600>>
 	<</if>>
-	<<set $speechdisable to 1>>
+	<<set $speechDisable to 1>>
 <</if>>
 
 <<effectsWraith>>
@@ -1274,9 +1274,10 @@
 
 :: Christmas Mirror 3
 <<effects>>
-당신은 거대한 성당 한가운데에 있다. 성대한 연회를 위해 테이블이 차려져 있다.
-<<if $wraithPrison and $wraithPrison.vision is true>>
-	사방에서 어렴풋이 아는 얼굴들이 미소 지으며 즐거워하고 있다.
+You're in the middle of a large cathedral. Tables are set up for a great feast.
+All around you, faces you
+<<if $wraithPrison?.vision is true>>
+	vaguely
 <<else>>
 	사방에서 모르는 얼굴들이 미소 지으며 즐거워하고 있다.
 <</if>>
@@ -1303,8 +1304,8 @@
 팔을 뻗는다. 무엇을 향해 뻗는지는 확실하지 않지만, 어떤 존재가 다가오는 것을 느낀다. 그 존재는 당신을 부르지도, 밀어내지도 않는다.
 <br><br>
 
-<<if $wraithPrison and $wraithPrison.vision is true>>
-	<<link [[사과한다|Christmas Mirror 5]]>><<set $phase to 1>><</link>>
+<<if $wraithPrison?.vision is true>>
+	<<link [[Apologise|Christmas Mirror 5]]>><<set $phase to 1>><</link>>
 <<else>>
 	<<link [[묻는다|Christmas Mirror 5]]>><</link>>
 <</if>>

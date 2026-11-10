@@ -553,7 +553,7 @@
 <<effects>>
 무리의 다른 늑대들처럼 살아온 당신은 그들과 더 깊은 유대감을 느낀다. "물러서!" 당신이 말한다. 검은 늑대는 <<if $monster isnot 1>>당신의 명령을 이해한 듯 <</if>>한 걸음 뒤로 물러선다.
 
-"무리가 화난 거 알아..." 당신은 <<if $settings.bestialityEnabled>>짐승들<<else>>괴물들<</if>>【이가】 알아듣기 쉽도록 천천히 말하려 애쓴다. "긴장감은 높고, 사냥 성공률은 낮지. 하지만 무리가 강해지려면 단결해야 해. 가족끼리 공격해선 안 돼." 당신은 단호한 요구를 간신히 유지한다.
+"Pack is angry, I know..." You try to speak slowly, as if to help the <<if animalSexEnabledForType("wolf")>>beasts<<else>>monsters<</if>> understand you. "Tensions high, and successful hunts low. But pack must remain united to be strong. Family must not attack family." You manage to remain firm in your demand.
 <br><br>
 
 <<if $wolfchallengereason is 1>>

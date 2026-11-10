@@ -1,0 +1,190 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<link [[Next|Farmland]]>><<pass 10>><<endevent>><<set $eventskip to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<link [[다음|Farmland]]>><<pass 10>><<endevent>><<set $eventskip to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<link [[Next (0:10)|Farmland]]>><<pass 10>><<endevent>><<set $eventskip to 1>><</link>>"
+  ],
+  "context": "\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<addinlineevent \"farmland_road_5\">>",
+   "\t\t\t<<generate1>><<person1>>",
+   "\t\t\t\"Ho there,\" says a <<personssimple>> voice. You look to the side, and see a <<person>> waving at you from the entrance to a farm.",
+   "\t\t\t<br><br>",
+   "\t\t\t\"You a neighbour? I got a spare bushel of wheat for sale if you're interested,\" <<he>> says. \"It's been in storage, but it's good. Just <<printmoney 1000>> for the lot.\"",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<if !$plants_known.includes(\"rice\")>>",
+   "\t\t\t\t\"I also have rice seeds. I couldn't get them to take. The soil's no good for them. You can have them for <<printmoney 3000>>.\""
+  ],
+  "old_kr": [
+   "\t\t<<addinlineevent \"farmland_road_5\">>",
+   "\t\t\t<<generate1>><<person1>>",
+   "\t\t\t\"거기 누구쇼,\" <<personssimple>> 목소리가 말한다. 옆을 돌아보니 한 <<person>>【이가】 농장 입구에서 당신에게 손을 흔들고 있다.",
+   "\t\t\t<br><br>",
+   "\t\t\t\"이웃이신가? 관심 있으면 팔려고 밀을 좀 챙겨뒀는데,\" <<he>>【이가】 말한다. \"창고에 있던 거긴 한데, 상태는 좋아. 전부 다 해서 <<printmoney 1000>>만 주면 돼.\"",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<if !$plants_known.includes(\"rice\")>>",
+   "\t\t\t\t\"벼 씨앗도 가지고 있어. 난 도저히 키울 수가 없더라고. 흙이 안 맞나 봐. <<printmoney 3000>>에 가져가.\""
+  ],
+  "new_en": [
+   "\t\t<<if $exposed is 0>>",
+   "\t\t\t<<addinlineevent \"farmland_road_5\">>",
+   "\t\t\t\t<<generate1>><<person1>>",
+   "\t\t\t\t\"Ho there,\" says a <<personssimple>> voice. You look to the side, and see a <<person>> waving at you from the entrance to a farm.",
+   "\t\t\t\t<br><br>",
+   "\t\t\t\t\"You a neighbour? I got a spare bushel of wheat for sale if you're interested,\" <<he>> says. \"It's been in storage, but it's good. Just <<printmoney 1000>> for the lot.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $money gte 3000>>",
+   "\t\t\t\t\t<<foodstufficon \"rice\">> <<link [[Buy rice seeds (£30)|Farmland Event Rice]]>><<set $plants_known.push(\"rice\")>><<money -3000>><</link>><<gtending>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $money gte 3000>>",
+   "\t\t\t\t\t<<foodstufficon \"rice\">> <<link [[벼 씨앗을 산다 (£30)|Farmland Event Rice]]>><<set $plants_known.push(\"rice\")>><<money -3000>><</link>><<gtending>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<if !$plants_known.includes(\"rice\")>>",
+   "\t\t\t\t\t\"I also have rice seeds. I couldn't get them to take. The soil's no good for them. You can have them for <<printmoney 3000>>.\"",
+   "\t\t\t\t\t<br><br>",
+   "",
+   "\t\t\t\t\t<<if $money gte 3000>>",
+   "\t\t\t\t\t\t<<foodstufficon \"rice\">> <<link [[Buy rice seeds (£30)|Farmland Event Rice]]>><<set $plants_known.push(\"rice\")>><<money -3000>><</link>><<gtending>>",
+   "\t\t\t\t\t\t<br>",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<span class=\"blue\">You can't afford the seeds.</span>",
+   "\t\t\t\t\t\t<br>",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t\t<br>",
+   "\t\t\t\t<<if $money gte 1000>>",
+   "\t\t\t\t\t<<link [[Buy 50 cups of wheat (£10)|Farmland Event Wheat]]>><<tending_give \"wheat\" 50>><<money -1000>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<span class=\"blue\">You can't afford the seeds.</span>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<span class=\"blue\">씨앗을 살 돈이 없다.</span>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<span class=\"blue\">You can't afford the wheat.</span>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<</if>>",
+   "\t\t\t<br>",
+   "\t\t\t<<if $money gte 1000>>",
+   "\t\t\t\t<<link [[Buy 50 cups of wheat (£10)|Farmland Event Wheat]]>><<tending_give \"wheat\" 50>><<money -1000>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t<</if>>",
+   "\t\t\t<br>",
+   "\t\t\t<<if $money gte 1000>>",
+   "\t\t\t\t<<link [[밀 50컵을 산다 (£10)|Farmland Event Wheat]]>><<tending_give \"wheat\" 50>><<money -1000>><</link>>"
+  ],
+  "new_en": [],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<else>>",
+   "\t\t\t\t<span class=\"blue\">You can't afford the wheat.</span>"
+  ],
+  "old_kr": [
+   "\t\t\t<<else>>",
+   "\t\t\t\t<span class=\"blue\">밀을 살 돈이 없다.</span>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<link [[Don't buy anything|Farmland]]>><<endevent>><<set $eventskip to 1>><</link>>"
+  ],
+  "context": "\t\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<</if>>",
+   "\t\t\t<br>",
+   "\t\t\t<<link [[Don't buy anything|Farmland]]>><<endevent>><<set $eventskip to 1>><</link>>",
+   "\t\t\t<br>",
+   "\t\t<</addinlineevent>>"
+  ],
+  "old_kr": [
+   "\t\t\t<</if>>",
+   "\t\t\t<br>",
+   "\t\t\t<<link [[아무것도 사지 않는다|Farmland]]>><<endevent>><<set $eventskip to 1>><</link>>",
+   "\t\t\t<br>",
+   "\t\t<</addinlineevent>>"
+  ],
+  "new_en": [
+   "\t\t\t<</addinlineevent>>",
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\tYou hear a rustle to the side. Something moves through the plants with inhuman speed. It's coming straight for you."
+  ],
+  "old_kr": [
+   "\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\t옆에서 바스락거리는 소리가 들린다. 무언가가 인간이 아닌 속도로 식물 사이를 헤치며 움직인다. 당신을 향해 똑바로 오고 있다."
+  ],
+  "new_en": [
+   "\t<<if $settings.lurkersEnabled>>",
+   "\t\tYou hear a rustle to the side. Something moves through the plants with inhuman speed. It's coming straight for you."
+  ],
+  "context": "<<if $rng gte 91>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou hear people laughing and dancing. It’s comforting. <<lstress>><<stress -4>><<ltrauma>><<trauma -2>>"
+  ],
+  "old_kr": [
+   "\t사람들이 웃고 춤추는 소리가 들린다. 마음이 편안해진다. <<lstress>><<stress -4>><<ltrauma>><<trauma -2>>"
+  ],
+  "new_en": [
+   "\tYou hear people laughing and dancing. It's comforting. <<lstress>><<stress -4>><<ltrauma>><<trauma -2>>"
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<</if>>",
+   "\t\t\t<br>",
+   "\t\t\t<<link [[Don't buy anything|Farmland]]>><<endevent>><<set $eventskip to 1>><</link>>",
+   "\t\t\t<br>",
+   "\t\t<</addinlineevent>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</addinlineevent>>",
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<br>"
+ }
+]

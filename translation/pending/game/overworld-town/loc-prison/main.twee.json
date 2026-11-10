@@ -1,0 +1,92 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<br><br>",
+   "\t\tYou slept soundly, but now feel a little rough."
+  ],
+  "old_kr": [
+   "\t\t<br><br>",
+   "\t\t푹 잤지만, 지금은 몸이 좀 찌뿌둥하다."
+  ],
+  "new_en": [
+   "\t\t<br>",
+   "\t\tYou slept soundly, but now feel a little rough."
+  ],
+  "context": "\t<<if [\"dryheaving\",\"nausea\"].includes(_wakingEffect)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Next (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Prison 3]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[다음 (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Prison 3]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Next (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Prison 3]]>><<endevent>><<run setPlayerLitterBorn()>><<pass _timeCalc>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Next (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Prison Wolf]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[다음 (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Prison Wolf]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Next (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Prison Wolf]]>><<endevent>><<run setPlayerLitterBorn()>><<pass _timeCalc>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Next|Pregnancy Birth Prison 5]]>><<storeon \"prison_birth\">><<pass 24 hour>><<stress -40>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[다음|Pregnancy Birth Prison 5]]>><<storeon \"prison_birth\">><<pass 24 hour>><<stress -40>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Next|Pregnancy Birth Prison 5]]>><<storeon \"prison_birth\">><<pass 24 hour>><<stress -40>><<set $tiredness to 0>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Next|Pregnancy Birth Prison Wolf 3]]>><<storeon \"prison_birth\">><<pass 24 hour>><<stress -40>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[다음|Pregnancy Birth Prison Wolf 3]]>><<storeon \"prison_birth\">><<pass 24 hour>><<stress -40>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Next|Pregnancy Birth Prison Wolf 3]]>><<storeon \"prison_birth\">><<pass 24 hour>><<stress -40>><<set $tiredness to 0>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br>"
+  ],
+  "context": "\t\t<<furnitureicon \"poster\">><<link [[포스터를 조사한다|Prison Poster]]>><<set $prison.tunnel to 1>><</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br>"
+  ],
+  "context": "\t\t<<furnitureicon \"poster\">><<link [[포스터 뒤 벽을 시험해 본다|Prison Poster 2]]>><<set $prison.tunnel to 2>><</link>>"
+ }
+]

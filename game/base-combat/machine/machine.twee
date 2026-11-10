@@ -137,10 +137,10 @@
 				<<set $machine_stat += 1>>
 			<</if>>
 		<<case "foam">>
-			<span class="pink"><<machine_damage tattoo>> 타투건이 당신의 <<bodypart $machine.tattoo.use>> 위로 분홍색 거품을 분사한다.</span>
-			<<if $skin[$machine.tattoo.use] and $skin[$machine.tattoo.use].pen and ["brand", "magic"].includes($skin[$machine.tattoo.use].pen)>>
-				<span class="blue">거품이 걷혔지만 당신의 <<tattoo $machine.tattoo.use>>【은는】 아무런 변화가 없다.</span>
-				<<machine_damage tattoo>> 타투건이 뒤로 물러난다.
+			<span class="pink">The <<machine_damage tattoo>> tattoo gun sprays a pink foam over your <<bodypart $machine.tattoo.use>>.</span>
+			<<if ["brand", "magic"].includes($skin[$machine.tattoo.use]?.pen)>>
+				<span class="blue">Nothing happens to your <<tattoo $machine.tattoo.use>> as the foam clears.</span>
+				The <<machine_damage tattoo>> tattoo gun pulls away.
 				<<set $machine.tattoo.use to "ready">>
 				<<set $machine.tattoo.state to "ready">>
 				<<set $machine.tattoo.ammo -= 1>>

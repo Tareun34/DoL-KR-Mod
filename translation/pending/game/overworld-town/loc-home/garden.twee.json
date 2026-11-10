@@ -1,0 +1,167 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou can't bear the thought of someone catching you like this. You hasten to your bedroom.",
+   "\t<br><br>",
+   "\t<<link [[Next|Bedroom]]>><</link>>",
+   "<<elseif !$weekly.gardenBirdRobin and Weather.precipitation is \"none\" and getRobinLocation() is \"orphanage\" and C.npc.Robin.trauma lte 25 and C.npc.Robin.dom lte 60 and $rng gte 81>>",
+   "\t<<set $weekly.gardenBirdRobin to true>>"
+  ],
+  "old_kr": [
+   "\t이런 모습을 누군가에게 들킬지도 모른다는 생각에 견딜 수 없다. 당신은 서둘러 침실로 향한다.",
+   "\t\t<br><br>",
+   "\t\t<<link [[다음|Bedroom]]>><</link>>",
+   "\t<<elseif !$weekly.gardenBirdRobin and Weather.precipitation is \"none\" and getRobinLocation() is \"orphanage\" and C.npc.Robin.trauma lte 25 and C.npc.Robin.dom lte 60 and $rng gte 81>>",
+   "\t\t<<set $weekly.gardenBirdRobin to true>>"
+  ],
+  "new_en": [
+   "\tYou can't bear the thought of someone catching you like this. You hasten to your bedroom.",
+   "\t<br><br>",
+   "\t<<if $rentTime lte 0>>",
+   "\t\t<<set $bus to \"home\">>",
+   "\t\t<<link [[Next|Bedroom Bailey]]>><</link>>",
+   "\t<<else>>",
+   "\t\t<<bedroomEntryEvent \"forced\">>",
+   "\t<</if>>",
+   "<<elseif !$weekly.gardenBirdRobin and Weather.precipitation is \"none\" and getRobinLocation() is \"orphanage\" and C.npc.Robin.trauma lte 25 and C.npc.Robin.dom lte 60 and $rng gte 81>>",
+   "\t<<set $weekly.gardenBirdRobin to true>>"
+  ],
+  "context": "\t<<exhibitionismgarden>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $tutorial is 0 and $debug is 0>>",
+   "\t<<generate1>><<person1>><<= $exposed gte 1 ? \"Despite being so careful, you\" : \"You\">> bump into a <<person>> passing by. <<He>> staggers back and looks at you with anger, but <<his>> rage turns to lechery as <<he>> beholds you. \"You're the cutest thing I've seen all week! Come 'ere.\""
+  ],
+  "old_kr": [
+   "<<if $tutorial is 0 and $debug is 0>>",
+   "\t<<generate1>><<person1>><<= $exposed gte 1 ? \"그렇게 조심했음에도 불구하고, 당신은\" : \"당신은\">> 지나가던 <<person>>【와과】 부딪힌다. <<He>>【은는】 비틀거리며 뒤로 물러서더니 화난 눈으로 당신을 쳐다보지만, 당신을 보자 <<his>> 분노는 음탕함으로 바뀐다. \"이번 주에 본 것 중에 제일 귀엽네! 이리 와.\""
+  ],
+  "new_en": [
+   "<<if $tutorial is 0 and !$debug>>",
+   "\t<<generate1>><<person1>><<= $exposed gte 1 ? \"Despite being so careful, you\" : \"You\">> bump into a <<person>> passing by. <<He>> staggers back and looks at you with anger, but <<his>> rage turns to lechery as <<he>> beholds you. \"You're the cutest thing I've seen all week! Come 'ere.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t/* TODO: eventpool */",
+   "\t<<if $rng gte 61 and ($hallucinations gte 2 or $backgroundTraits.includes(\"plantlover\"))>>",
+   "\t\tSomething brushes against your leg. You shake it off, assuming it an insect, but it happens again. You look down and see a stem curling around your ankle.",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<link [[Shake it off|Garden Stem Shake]]>><</link>>",
+   "\t\t<br>",
+   "\t\t<<link [[Look closer|Garden Stem Look]]>><</link>>",
+   "\t\t<br>",
+   "\t<<else>>",
+   "\t\t<<hallucinogen 60>>",
+   "\t\tA strange scent rises from the plants as you water. You feel lightheaded. <<ghallucinogens>><<if $backgroundTraits.includes(\"plantlover\")>><<arousal 6>><<garousal>><</if>>",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<link [[Next|Garden Flowers]]>><</link>>",
+   "\t\t<br>"
+  ],
+  "old_kr": [
+   "\t/* TODO: eventpool */",
+   "\t<<if $rng gte 61 and ($hallucinations gte 2 or $backgroundTraits.includes(\"plantlover\"))>>",
+   "\t\t무언가 다리를 스친다. 당신은 벌레려니 하고 털어내지만, 다시 한번 같은 일이 일어난다. 아래를 내려다보니 줄기 하나가 발목을 감싸고 있다.",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<link [[털어내기|Garden Stem Shake]]>><</link>>",
+   "\t\t<br>",
+   "\t\t<<link [[자세히 보기|Garden Stem Look]]>><</link>>",
+   "\t\t<br>",
+   "\t<<else>>",
+   "\t\t<<hallucinogen 60>>",
+   "\t\t물을 주자 식물에서 이상한 향기가 피어오른다. 머리가 어질어질하다. <<ghallucinogens>><<if $backgroundTraits.includes(\"plantlover\")>><<arousal 6>><<garousal>><</if>>",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<link [[다음|Garden Flowers]]>><</link>>",
+   "\t\t<br>"
+  ],
+  "new_en": [
+   "\t<<cleareventpool>>",
+   "\t<<if $hallucinations gte 2 or $backgroundTraits.includes(\"plantlover\")>>",
+   "\t\t<<addevent \"gardenStem\" 2>>"
+  ],
+  "context": "\t<<set $phase to 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Next|Bedroom]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[다음|Bedroom]]>><</link>>"
+  ],
+  "new_en": [
+   "<<bedroomEntryEvent \"forced\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Next|Bedroom]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[다음|Bedroom]]>><</link>>"
+  ],
+  "new_en": [
+   "<<bedroomEntryEvent \"forced\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou rub your eyes and examine your hair.",
+   "\t<<set _target to either(\"twin fishtails\",\"left fishtail\",\"right fishtail\")>>"
+  ],
+  "old_kr": [
+   "\t당신은 눈을 비비고 머리카락을 살펴본다.",
+   "\t<<set _target to either(\"twin fishtails\",\"left fishtail\",\"right fishtail\")>>"
+  ],
+  "new_en": [
+   "\tYou rub your eyes and examine your hair.",
+   "\t<<set _target to either(\"twin fishtails\",\"fishtail left\",\"fishtail right\")>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $exposed gte 1 and Time.hour lt 22 and Time.hour gt 6>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<elseif $exposed gte 1 and Time.hour lt 22 and Time.hour gte 6>>"
+  ],
+  "context": "\t<<passouthome>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif !$weekly.gardenCropTheft and $orphan_hope lte -10 and $plots.garden and $plots.garden.some(p => p.stage >= 5) and $rng gte 81>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<elseif !$weekly.gardenCropTheft and $orphan_hope lte -10 and $plots.garden?.some(p => p.stage >= 5) and $rng gte 81>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addevent \"gardenScent\" 3>>",
+   "\t<<runeventpool>>"
+  ],
+  "context": "\t<</if>>"
+ }
+]

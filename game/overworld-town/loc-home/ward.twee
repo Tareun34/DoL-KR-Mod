@@ -39,9 +39,8 @@
 <</switch>>
 <br><br>
 
-<<if ($baileydefeatedchain gte 3 or $baileyRefusedToPay gte 3) and
-(!$avery_mansion or ["fallen","kicked"].includes($avery_fate) or $avery_mansion.rage.assess gte 9 or $avery_mansion.days_absent gte 2)>>
-	깡패가 문 앞에서 당신을 막는다. "미안, <<girl>>. 베일리가 네가 <span class="red">빚을 갚기</span> 전까지는 들어올 수 없다고 했어." 당신은 쫓겨난다.
+<<if $baileydefeatedchain gte 3 or $baileyRefusedToPay gte 3 or isBaileyLookingForPlayer()>>
+	The thug stops you at the door. "Sorry, <<girl>>. Bailey says you're not allowed to enter until you <span class="red">pay up</span>." You're turned away.
 	<br><br>
 
 	<<link [[다음|Orphanage]]>><</link>>
@@ -135,7 +134,7 @@
 <<else>>
 	그것은 무수한 팔로 <<childrenNames _childrenIds>>【을를】 안고, 한 번에 모두에게 노래를 불러주고 있다. 아이들은 모두 평화롭게 잠들어 있다.
 <</if>>
-<<if $storedChildrenToys and $storedChildrenToys[$location] and $storedChildrenToys[$location].length gt 0>>
+<<if $storedChildrenToys and $storedChildrenToys[$location]?.length gt 0>>
 	<<set _wraithToy to $storedChildrenToys[$location].random().name_lower>>
 	형체의 등 뒤에 달린 반투명한 촉수에 매달려 <<A _wraithToy>>【이가】 허공에 떠 있다.
 <</if>>

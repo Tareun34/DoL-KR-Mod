@@ -1,0 +1,69 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte $rng and $hallucinations gte 1) or ($settings.monsterChance gte $rng and !$settings.monsterHallucinationsOnly)>>",
+   "\t\t<<if $settings.monsterChance gte 100 or $settings.bestialityEnabled>>",
+   "\t\t\t<<if beastMaleChance() is 100>>",
+   "\t\t\t\t<<set _text_output to \"dogboys\">>",
+   "\t\t\t<<elseif beastMaleChance() is 0>>",
+   "\t\t\t\t<<set _text_output to \"doggirls\">>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _text_output to \"dogpeople\">>",
+   "\t\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t<<if ($settings.monsterChance gte $rng and $hallucinations gte 1) or ($settings.monsterChance gte $rng and !$settings.monsterHallucinationsOnly)>>",
+   "\t\t<<if $settings.monsterChance gte 100 or $settings.bestialityEnabled>>",
+   "\t\t\t<<if beastMaleChance() is 100>>",
+   "\t\t\t\t<<set _text_output to \"개 소년들\">>",
+   "\t\t\t<<elseif beastMaleChance() is 0>>",
+   "\t\t\t\t<<set _text_output to \"개 소녀들\">>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _text_output to \"수인들\">>",
+   "\t\t\t<</if>>"
+  ],
+  "new_en": [
+   "\t<<if victimsAlwaysMonsterForType(\"dog\") or (monsterChanceForType(\"dog\") gte $rng and $hallucinations gte 1) or (monsterChanceForType(\"dog\") gte $rng and !monsterHallucinationsOnlyForType(\"dog\"))>>",
+   "\t\t<<if beastMaleChanceForType(\"dog\") is 100>>",
+   "\t\t\t<<set _text_output to \"dogboys\">>",
+   "\t\t<<elseif beastMaleChanceForType(\"dog\") is 0>>",
+   "\t\t\t<<set _text_output to \"doggirls\">>"
+  ],
+  "context": "<<widget \"pound_text\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<set _text_output to \"hounds\">>"
+  ],
+  "old_kr": [
+   "\t\t\t<<set _text_output to \"사냥개들\">>"
+  ],
+  "new_en": [
+   "\t\t\t<<set _text_output to \"dogpeople\">>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou close the last cage, and look down at your body. <span class=\"pink\">Your clothes are soaking wet and transparent!</span>"
+  ],
+  "old_kr": [
+   "\t\t마지막 우리를 닫고 몸을 내려다본다. <span class=\"pink\">당신의 옷이 흠뻑 젖어 속이 다 비친다!</span>"
+  ],
+  "new_en": [
+   "\t\tYou close the last cage, and look down at your body.",
+   "\t\t<<if (!$worn.upper.type.includes(\"naked\") and $upperwetstage gte 3)",
+   "\t\t\tor (!$worn.lower.type.includes(\"naked\") and $lowerwetstage gte 3)",
+   "\t\t\tor (!$worn.under_upper.type.includes(\"naked\") and $underupperwetstage gte 3)",
+   "\t\t\tor (!$worn.under_lower.type.includes(\"naked\") and $underlowerwetstage gte 3)>>",
+   "\t\t\t<span class=\"pink\">Your clothes are soaking wet and transparent!</span>",
+   "\t\t<<else>>",
+   "\t\t\t<<covered>> <span class=\"pink\">You'll be in danger if you're caught like this.</span>",
+   "\t\t<</if>>"
+  ],
+  "context": "\t<<if $exposed gte 1>>"
+ }
+]

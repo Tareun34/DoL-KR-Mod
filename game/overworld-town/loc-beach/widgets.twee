@@ -1,11 +1,11 @@
 :: Widgets Beach [widget]
-<<widget "beachday1">>
-	<<generatey1>>뒤에서 누군가의 발소리가 들린다. 당신이 뒤돌아보는 찰나 <<person1>><<person>>【이가】 당신에게 달려든다. <<He>>【은는】 모래밭에 당신을 때려 눕히곤 당신의 옷을 벗기려 든다!
+<<widget "beachDayTackle">>
+	<<generatey1>>You hear someone behind you. You turn just in time to see a <<person1>><<person>> rushing into you. <<He>> tackles you to the sand and tries to remove your clothes!
 	<br><br>
 	<<link [[다음|Beach Day Molestation]]>><<set $molestationstart to 1>><<set $eventskip to 1>><</link>>
 <</widget>>
 
-<<widget "beachday2">>
+<<widget "beachDayDogTug">>
 	<<outfitChecks>>
 	<<beastNEWinit 1 dog>>
 	누군가 당신의 _bottom.name【을를】 확 잡아당기는 게 느껴진다. 어깨너머로 돌아보니, <<bhis>> 이빨로 당신의 옷을 물고 있는 작은 <<beasttype>>【이가】 보인다.
@@ -29,8 +29,8 @@
 	<<destinationBeach "다음">><<set $eventskip to 1>><<endevent>><</destinationBeach>>
 <</widget>>
 
-<<widget "beachday3">>
-	<<generate1>><<set $NPCList[0].virginity.penile to false>><<set $NPCList[0].virginity.vaginal to false>><<person1>><<person>>【이가】 당신을 쳐다보는 게 보인다. <<He>>【은는】 저만치에서 모래놀이를 하는 <<his>> 아이들과 함께 여기 온 것 같다. 당신과 눈이 마주치자 <<He>>【은는】 시선을 돌려버린다.
+<<widget "beachDayParent">>
+	<<generate1>><<set $NPCList[0].virginity.penile to false>><<set $NPCList[0].virginity.vaginal to false>>You see a <<person1>><<person>> watching you. <<He>> seems to be here with <<his>> kids who are playing in the sand some way away. <<He>> looks away as you make eye contact.
 	<br><br>
 
 	<<link [[접근한다|Beach Day Encounter]]>><<set $phase to 0>><</link>>
@@ -39,8 +39,8 @@
 	<br>
 <</widget>>
 
-<<widget "beachday4">>
-	바다에서 돌풍이 불어와, 당신의 피부를 기분 좋게 어루만진다.
+<<widget "beachDayWind">>
+	A gust of wind blows in from the ocean, pleasantly caressing your skin.
 	<<lstress>><<stress -2>>
 	<br><br>
 
@@ -137,14 +137,14 @@
 	<</if>>
 <</widget>>
 
-<<widget "beachday5">>
-	당신이 해안가를 걷고 있을 때 등 뒤에서 소란스러운 소리가 들린다. 어깨너머로 돌아보자, 당신의 반 친구 몇 명이 당신을 향해 달려오는 게 보인다.
+<<widget "beachDayClassmates">>
+	You are walking along the shoreline when you hear a commotion behind you. Looking over your shoulder, you see a few of your classmates running towards you.
 	<br><br>
 	<<link [[멈춰서 기다린다|Beach Day Classmates]]>><<set $phase to 0>><</link>><br>
 	<<link [[도망친다|Beach Day Classmates]]>><<set $phase to 1>><</link>><<athleticsdifficulty 1 800>>
 <</widget>>
 
-<<widget "beachday6">>
+<<widget "beachDaySandPrank">>
 	<<if setup.clothes.lower[clothesIndex('lower', $worn.lower)].skirt isnot 1 and !$worn.lower.type.includes("naked")>>
 	<<generatey1>><<person1>>
 	당신이 해안가를 거닐고 있을 때 <<person>>【이가】 당신의 허리띠를 잡아당겨 당신의 <<bottom>>【을를】 노출시킨다. 당신이 반응하기도 전에, <<he>>【은는】 모래가 가득 든 커다란 양동이를 당신의 <<if $worn.under_lower.name is "naked" or $worn.under_lower.one_piece is 1>>$worn.lower.name<<else>>$worn.under_lower.name<</if>> 안으로 부어 버린다. <<He>>【은는】 아마 다른 장난 칠 희생양을 찾아다니기 위해, 당신의 엉덩이를 철썩 때리고 도망친다.
@@ -160,7 +160,7 @@
 <</if>>
 <</widget>>
 
-<<widget "beachnight1">>
+<<widget "beachNightDog">>
 	<<beastNEWinit 1 dog>>
 	<<if $monster is 1>>
 		어둠 속에서 <<beasttype>>【이가】 나타난다. 더부룩하게 털이 자란 <<bhis>> 몸이 야만적인 분위기를 풍긴다. <<bHe>>【은는】 <<bhis>> 송곳니를 드러내며, <span class="red">굶주림으로 번뜩이는 눈</span>으로 당신을 쳐다본다.
@@ -169,8 +169,8 @@
 	<</if>>
 	<br><br>
 	<!-- Modified for Beast People -->
-	<<if $monster is 1 or $settings.bestialityEnabled>>
-		<<link [[다음|Beach Night Dog]]>><<set $eventskip to 1>><<set $molestationstart to 1>><</link>>
+	<<if beastSexEnabledForType("dog", $monster is 1)>>
+		<<link [[Next|Beach Night Dog]]>><<set $eventskip to 1>><<set $molestationstart to 1>><</link>>
 		<br>
 	<<else>>
 		당신은 간신히 도망치지만, 상처를 입고 만다.<<beastescape>>
@@ -179,14 +179,14 @@
 	<</if>>
 <</widget>>
 
-<<widget "beachnight2">>
-	<<generate1>>사방이 너무 어두워서, 모래 위에 누워있던 <<person1>><<person>>【이가】 당신의 발목을 붙잡아 바닥으로 넘어뜨릴 때까지 눈치채지 못했다.
+<<widget "beachNightAmbush">>
+	<<generate1>>It's so dark, you don't see the <<person1>><<person>> lying on the sand until <<he>> grasps you by the ankle and pulls you to the ground.
 	<br><br>
 	<<link [[다음|Beach Night Molestation]]>><<set $molestationstart to 1>><</link>>
 <</widget>>
 
-<<widget "beachex1">>
-	<<generatey1>>한 <<person1>><<person>>【이가】 불안해 보이는 당신을 발견하고는 소리친다, <<catcalllewd>> 그 소리에 고개를 돌린 다른 사람들에 의해 당신은 순식간에 시선의 중심이 된다.
+<<widget "beachExposedNoticed">>
+	<<generatey1>>A <<person1>><<person>> spots you in your fragile state and calls out, <<catcalllewd>> Other heads turn in response and you quickly find yourself the centre of attention.
 	<<if $panicattacks gte 1>>
 		당신은 압도적인 불안감에 휩싸인다. 이성적인 생각을 잃은 채 조롱 섞인 웃음소리에 쫓기며 무리에게서 달아나는 것 말고는 아무것도 할 수 없다.
 		<<fameexhibitionism 30>><<gstress>><<gtrauma>><<stress 6>><<trauma 6>>
@@ -203,8 +203,8 @@
 	<</if>>
 <</widget>>
 
-<<widget "beachex2">>
-	<<generatey1>><<person1>><<person>>【이가】 이 위태로운 상태의 당신을 발견하곤 <<his>> 친구들을 부른다. 당신은 순식간에 포위된다. <<person>>【이가】 말한다. "여기 누드 비치 아닌 거 알지? 경찰에 신고해야 할 거 같은데." <<he>>【이가】 마치 큰 소리를 지르려는 듯 숨을 크게 들이켜자 당신은 곤경에 빠진 자신에게 시선이 더 몰릴 거란 예상에 몸을 움츠린다. 하지만 그 대신, <<he>>【와과】 <<his>> 친구들은 조소 섞인 웃음을 터뜨린다. "아니면, 내가 옷 같은 걸 줘서 도와줄 수도 있고. 당연히, 공짜는 아니지. 무릎 꿇어."
+<<widget "beachExposedMolestation">>
+	<<generatey1>>A <<person1>><<person>> spots you in your fragile state and calls out to <<his>> friends. You quickly find yourself surrounded. The <<person>> speaks, "You know this isn't a nudist beach right? In fact, I think I should report you." You tense as <<he>> visibly inhales as if to shout, anticipating even more attention drawn to your predicament. Instead however, <<he>> and <<his>> friends burst into derisive laughter. "Or, you know, I could help you out, give you something to cover up with. Of course, I'll want something in return. Get on your knees."
 	<<fameexhibitionism 20>>
 	<br><br>
 	<<if hasSexStat("promiscuity", 3)>>
@@ -314,39 +314,76 @@
 	<span class="gold">측정한 <<personpenis>> 치수는 방이나 학교 도서관에서 프로젝트에 추가할 수 있습니다.</span>
 <</widget>>
 
-:: Widgets Events Beach [widget]
-/* TODO: replace with eventpool */
-<<widget "eventsbeach">>
-	<<set $dangerevent to random(1, 100)>>
-	<<if Time.dayState is "night">>
-		<<if $dangerevent lte 15>>
-			<<beachnight1>>
-		<<elseif $dangerevent lte 30>>
-			<<beachnight2>>
-		<<elseif $dangerevent lte 100>>
-			<<beachday4>>
-		<</if>>
-	<<elseif $exposed gte 1>>
-		<<if $dangerevent lte 80>>
-			<<beachex1>>
-		<<elseif $dangerevent lte 100>>
-			<<beachex2>>
-		<</if>>
-	<<else>>
-		<<if $dangerevent lte 10>>
-			<<beachday1>>
-		<<elseif $dangerevent lte 20 and !$worn.lower.type.includes("naked")>>
-			<<beachday2>>
-		<<elseif $dangerevent lte 50>>
-			<<beachday3>>
-		<<elseif $dangerevent lte 70>>
-			<<beachday4>>
-		<<elseif $dangerevent lte 90>>
-			<<beachday5>>
-		<<elseif $dangerevent lte 100>>
-			<<beachday6>>
-		<</if>>
+<<widget "bloodmoonTourist1">>
+	You see a trio gazing at the red moon in the distance. You catch a bit of their conversation.
+	<br><br>
+	"It's strange how they get blood moons every month here, right?"<br>
+	"It's just light pollution."<br>
+	"Or... What if it's something supernatural?"<br>
+	"Don't be absurd."
+<</widget>>
+
+<<widget "bloodmoonTourist2">>
+	You see a couple gazing at the red moon in the distance. You catch a bit of their conversation.
+	<br><br>
+	"How romantic. If I lived here, I'd come to look at this sight every time."<br>
+	"You'd probably get sick of it rather quickly."<br>
+	"Do you have any romantic bone in your body?"
+<</widget>>
+
+<<widget "bloodmoonTourist3">>
+	You see a group gazing at the red moon in the distance. You catch a bit of their conversation.
+	<br><br>
+	"Oh, what the hell is that-"<br>
+	"Wow, that's amazing!"<br>
+	"Didn't expect this place to have anything pretty to look at beyond the people."<br>
+	"Don't look at it for too long, you're so drunk that you might lose your balance tilting your neck so far up."
+<</widget>>
+
+<<widget "bloodmoonTourist4">>
+	You see a couple gazing at the red moon in the distance. You catch a bit of their conversation.
+	<br><br>
+	"Look at that. See, I told you the brochure was right!"<br>
+	"Uh. Wow."<br>
+	"I don't know why you keep insisting that I'm always wrong-"<br>
+	"Oh, shut it."
+<</widget>>
+
+
+<<widget "bloodmoonTouristBeach">>
+	<<if random(0,10) is 0>>
+		<<cleareventpool>>
+		<<addevent "bloodmoonTourist1">>
+		<<addevent "bloodmoonTourist2">>
+		<<addevent "bloodmoonTourist3">>
+		<<addevent "bloodmoonTourist4">>
+		<<runeventpool>>
+		<br><br>
 	<</if>>
+<</widget>>
+
+
+:: Widgets Events Beach [widget]
+<<widget "eventsbeach">>
+	<<cleareventpool>>
+	<<if Time.dayState is "night">>
+		<<addevent "beachNightDog" 15>>
+		<<addevent "beachNightAmbush" 15>>
+		<<addevent "beachDayWind" 70>>
+	<<elseif $exposed gte 1>>
+		<<addevent "beachExposedNoticed" 80>>
+		<<addevent "beachExposedMolestation" 20>>
+	<<else>>
+		<<addevent "beachDayTackle" 10>>
+		<<if !$worn.lower.type.includes("naked")>>
+			<<addevent "beachDayDogTug" 10>>
+		<</if>>
+		<<addevent "beachDayParent" 30>>
+		<<addevent "beachDayWind" 20>>
+		<<addevent "beachDayClassmates" 20>>
+		<<addevent "beachDaySandPrank" 10>>
+	<</if>>
+	<<runeventpool>>
 <</widget>>
 
 <<widget "eventsbeachphallus">>
@@ -562,7 +599,7 @@
 			<<generate1>><<person1>>
 			<<fameexhibitionism 10>>
 
-			물장구를 치고 있을 때, 당신 또래의 한 무리가 당신을 빤히 쳐다보는 것을 알아차린다. 그들의 이름은 모르지만, 학교에서 본 얼굴들이다. 당신은 해변에 특이한 성기를 가진 알몸의 <<girl>><<if $player.penisExist and $player.vaginaExist>> <<schoolrep herm 1>><</if>>【이가】 있다는 이야기가 금방 퍼질 거라고 짐작한다.
+			You are splashing through the water when you notice a group of people your age staring at you. You don't know their names, but you recognise them from school. You suspect that the story of the naked <<girl>><<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>> <<schoolrep herm 1>>with unusual genitalia<</if>> at the beach will quickly spread.
 			<br><br>
 
 			한 <<person>>【이가】 당신에게 소리친다. 구조대원이다. "옷을 좀 입으셔야겠습니다," <<he>>【이가】 말한다. "여기는 누드 비치가 아닙니다."

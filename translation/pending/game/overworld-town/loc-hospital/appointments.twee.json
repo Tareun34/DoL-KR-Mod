@@ -1,0 +1,24 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if isBeastSceneAllowed() and $harper_appointments.last isnot \"dog\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"dog\") and $harper_appointments.last isnot \"dog\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if V.settings.bestialityEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if animalSexEnabledForType(\"dog\")>>"
+  ],
+  "context": "<<generate2>>"
+ }
+]

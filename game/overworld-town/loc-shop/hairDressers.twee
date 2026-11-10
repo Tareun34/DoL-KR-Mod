@@ -201,8 +201,8 @@
 				<<set _hairNames to ["귀", "턱", "어깨", "윗가슴", "가슴 중앙", "윗배", "배꼽", "허벅지", "무릎", "발목"]>>
 				<<set _hairOptions to {"자르지 않는다":$hairlength}>>
 				<<for _i to 9; _i gte 0; _i-->>
-					<<set $_length to (_i * 100) + 100>>
-					<<if $_length + 50 lt $hairlength>> /* + 50 to ensure it's not cut too early */
+					<<set $_length to (_i * 100) + 50>>
+					<<if $_length + 25 lt $hairlength>> /* + 25 to ensure it's not cut too early */
 						<<set _hairOptions[_hairNames[_i]] to $_length>>
 					<</if>>
 				<</for>>
@@ -238,6 +238,7 @@
 				<br><br>
 			<</if>>
 
+			<<set _dyeNames to ["Red", "Ebony","Jet black", "Black", "Blond", "Soft blond", "Platinum blond", "Golden", "Ashy blond", "Strawberry blond", "Dark brown", "Brown", "Copper brown", "Soft brown", "Light brown", "Burnt orange", "Ginger", "Blood orange", "Blue", "Deep blue", "Neon blue", "Frost blue", "Green", "Dark lime", "Toxic green", "Teal", "Aquamarine", "Pink", "Bright pink", "Hot pink", "Soft pink", "Rose gold", "Crimson", "Wine", "Purple", "Medium purple", "Bright purple", "Grey", "White", "Snow white"]>>
 			<<set $hairdressersHairColour to ["red", "ebony", "jetblack", "black", "blond", "softblond", "platinumblond", "golden", "ashyblond", "strawberryblond", "darkbrown", "brown", "copperbrown", "softbrown", "lightbrown", "burntorange", "ginger", "bloodorange", "blue", "deepblue", "neonblue", "frostblue", "green", "darklime", "toxicgreen", "teal", "aquamarine", "pink", "brightpink", "hotpink", "softpink", "rosegold", "crimson", "wine", "purple", "mediumpurple", "brightpurple", "grey", "white", "snowwhite"]>>
 			<<set _dyeNames to $hairdressersHairColour.map(clr => setup.colours.hair_map[clr] ? setup.colours.hair_map[clr].name_cap : clr)>>
 
@@ -264,8 +265,8 @@
 
 				<<set _dyeOptions to {"염색하지 않음":"noChange"}>>
 				<<set _twotoneDyeOptions to {}>>
-				<<if $haircolour isnot $naturalhaircolour>>
-					<<set _dyeOptions["염색 빼기"] to "removeDye">>
+				<<if $haircolour isnot $naturalhaircolour or $hairColourStyle is "gradient">>
+					<<set _dyeOptions["Remove dye"] to "removeDye">>
 				<</if>>
 				<<if $money gte _currentCost + 6000 or ($dyeOption isnot "noChange" and $dyeOption isnot "removeDye")>>
 					<<for _i to 0; _i lt _dyeNames.length; _i++>>
@@ -575,7 +576,7 @@
 				<<set _modeloptions.skin_type = Skin.color.natural>>
 				<<set _modeloptions.skin_tone = Skin.color.tan>>
 				<<set _modeloptions.scars to false>>
-				<<set _modeloptions.freckles = $player.freckles == true and $makeup.concealer != 1>>
+				<<set _modeloptions.freckles = $player.skin.faceFreckles == true and $makeup.concealer != 1>>
 				<<set _modeloptions.mouth to 'neutral'>>
 				<<set _modeloptions.facevariant = $facevariant>>
 				<<set _modeloptions.left_eye = $makeup.eyelenses.left != 0 ? $makeup.eyelenses.left : $leftEyeColour>>

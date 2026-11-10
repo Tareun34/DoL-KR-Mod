@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t`<div id=\"stiCursedText\" class=\"ssm_fade_in\">You can't push the ` + toy.name + ` past the ` + V.worn.genitals.name + `'s anal shield</div>`;"
+  ],
+  "old_kr": [
+   "\t\t\t\t`<div id=\"stiCursedText\" class=\"ssm_fade_in\">` + toy.name + `【을를】 ` + V.worn.genitals.name + `의 애널 실드 너머로 밀어 넣을 수 없다.</div>`;"
+  ],
+  "new_en": [
+   "\t\t\t\t`<div id=\"stiCursedText\" class=\"ssm_fade_in\">You can't get the ` + toy.name + ` past the ` + V.worn.genitals.name + `'s anal shield</div>`;"
+  ],
+  "context": "\t\t\tdocument.getElementById(\"stiCursedText\").outerHTML ="
+ }
+]

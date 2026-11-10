@@ -1,0 +1,28 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tDoren stops by the stall. \"Good <<= Time.hour lt 12 ? \"morning\" : \"afternoon\">>. I know this is a tall order, but could you make me $dorenhotchocoamount cups of hot chocolate? I'm planning to give them out to the homeless.\" <<he>> hands Robin £$dorenhotchocoprice."
+  ],
+  "old_kr": [
+   "\t\t도렌이 가판대에 들른다. \"좋은 <<= Time.hour lt 12 ? \"아침이야\" : \"오후네\">>. 무리한 부탁인 건 알지만, 핫초코 $dorenhotchocoamount잔만 만들어 줄 수 있을까? 노숙자들한테 좀 나눠줄 생각이거든.\" <<he>>【은는】 로빈에게 £$dorenhotchocoprice【을를】 건넨다."
+  ],
+  "new_en": [
+   "\t\tDoren stops by the stall. \"Good <<= Time.hour lt 12 ? \"morning\" : \"afternoon\">>. I know this is a tall order, but could you make me $dorenhotchocoamount cups of hot chocolate? I'm planning to give them out to the homeless.\" <<He>> hands Robin £$dorenhotchocoprice."
+  ],
+  "context": "\t\t<<npc \"Doren\" 2>><<person2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\"<<person2>><<Hes>> right, Robin. You need the money yourself. That's why you're out here, selling hot chocolate.\""
+  ],
+  "old_kr": [
+   "\t\t\"<<person2>><<He>> 선생님 말씀이 맞아, 로빈. 너도 돈이 필요하잖아. 그러니까 여기서 핫초코를 팔고 있는 거고.\""
+  ],
+  "new_en": [
+   "\t\t<<person2>>\"<<Hes>> right, Robin. You need the money yourself. That's why you're out here, selling hot chocolate.\""
+  ],
+  "context": "\t<<else>>"
+ }
+]

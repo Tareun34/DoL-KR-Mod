@@ -1,0 +1,34 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\tThe scaled face of a <<beasttype>> eyes you hungrily. <<bHe>> leaps at you, dragging you under the surface."
+  ],
+  "old_kr": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\t<<beasttype>>의 비늘 덮인 얼굴이 굶주린 듯 당신을 쳐다본다. <<bHe>>【이가】 당신에게 뛰어들어, 수면 아래로 끌어당긴다."
+  ],
+  "new_en": [
+   "\t\t\t<<if beastSexEnabledForType(\"lizard\", $monster is 1)>>",
+   "\t\t\t\tThe scaled face of a <<beasttype>> eyes you hungrily. <<bHe>> leaps at you, dragging you under the surface."
+  ],
+  "context": "\t\t\t<<beastNEWinit 1 lizard>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\tThe scaled face of a <<beasttype>> eyes you hungrily."
+  ],
+  "old_kr": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\t<<beasttype>>【이가】 굶주린 듯 당신을 쳐다본다."
+  ],
+  "new_en": [
+   "\t\t\t<<if beastSexEnabledForType(\"lizard\", $monster is 1)>>",
+   "\t\t\t\tThe scaled face of a <<beasttype>> eyes you hungrily."
+  ],
+  "context": "\t\t\t<<beastNEWinit 1 lizard>>"
+ }
+]

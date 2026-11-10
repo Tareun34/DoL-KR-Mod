@@ -216,6 +216,7 @@
 
 :: Prison Wren Clothes Buy
 <<effects>>
+<<clearsinglenpc 0>>
 <<npc Wren>><<person1>>
 <<switch $phase>>
 	<<case "panties" "briefs">>

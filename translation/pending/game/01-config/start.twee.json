@@ -1,0 +1,29 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $debug is 1>>",
+   "\tThese options start with cheats enabled and £5000"
+  ],
+  "old_kr": [
+   "<<if $debug is 1>>",
+   "\t이 옵션들은 치트가 활성화되고 £5000를 가진 상태로 시작됩니다"
+  ],
+  "new_en": [
+   "<<if $debug>>",
+   "\tThese options start with cheats enabled and £5000"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\"format-version\": \"2.23.4\""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\"format-version\": \"2.36.1\""
+  ],
+  "context": "\"format\": \"SugarCube\","
+ }
+]

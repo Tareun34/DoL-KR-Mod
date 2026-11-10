@@ -1,0 +1,159 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $sexStats?.pills>>",
+   "\t\t<<set _pills to $sexStats.pills.pills>>",
+   "\t<</if>>"
+  ],
+  "context": "<<widget \"physicalAdjustments\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set _breastMulti to 1 + (2.25 * $sexStats.pills[\"pills\"][\"breast growth\"].doseTaken)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if _pills[\"breast growth\"].doseTaken gte 1>>",
+   "\t\t\t\t<<set _breastMulti to 1 + (2.25 * $sexStats.pills[\"pills\"][\"breast growth\"].doseTaken)>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _breastMulti to 1>>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t<<case \"growth\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set _breastMulti to -1 + (-2.25 * $sexStats.pills[\"pills\"][\"breast reduction\"].doseTaken)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if _pills[\"breast reduction\"].doseTaken gte 1>>",
+   "\t\t\t\t<<set _breastMulti to -1 + (-2.25 * $sexStats.pills[\"pills\"][\"breast reduction\"].doseTaken)>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _breastMulti to 1>>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t<<case \"reduction\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set _breastMulti to 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if _pills[\"breast blocker\"].doseTaken gte 1>>",
+   "\t\t\t\t<<set _breastMulti to 0>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _breastMulti to 1>>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t<<case \"blocker\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set _penisMulti to 1 + (2.25 * $sexStats.pills[\"pills\"][\"penis growth\"].doseTaken)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if _pills[\"penis growth\"].doseTaken gte 1>>",
+   "\t\t\t\t<<set _penisMulti to 1 + (2.25 * $sexStats.pills[\"pills\"][\"penis growth\"].doseTaken)>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _penisMulti to 1>>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t<<case \"growth\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set _penisMulti to -1 + (-2.25 * $sexStats.pills[\"pills\"][\"penis reduction\"].doseTaken)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if _pills[\"penis reduction\"].doseTaken gte 1>>",
+   "\t\t\t\t<<set _penisMulti to -1 + (-2.25 * $sexStats.pills[\"pills\"][\"penis reduction\"].doseTaken)>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _penisMulti to 1>>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t<<case \"reduction\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set _penisMulti to 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if _pills[\"penis blocker\"].doseTaken gte 1>>",
+   "\t\t\t\t<<set _penisMulti to 0>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _penisMulti to 1>>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t<<case \"blocker\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $penisgrowthtimer to Math.clamp($penisgrowthtimer, 0, 1000)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $penisgrowthtimer to Math.clamp($penisgrowthtimer, -400, 1500)>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set _bottomMulti to 1 + (2.25 * $sexStats.pills[\"pills\"][\"bottom growth\"].doseTaken)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if _pills[\"bottom blocker\"].doseTaken gte 1>>",
+   "\t\t\t\t<<set _bottomMulti to 1 + (2.25 * $sexStats.pills[\"pills\"][\"bottom growth\"].doseTaken)>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _penisMulti to 1>>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t<<case \"growth\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set _bottomMulti to -1 + (-2.25 * $sexStats.pills[\"pills\"][\"bottom reduction\"].doseTaken)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if _pills[\"bottom blocker\"].doseTaken gte 1>>",
+   "\t\t\t\t<<set _bottomMulti to -1 + (-2.25 * $sexStats.pills[\"pills\"][\"bottom reduction\"].doseTaken)>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _penisMulti to 1>>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t<<case \"reduction\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set _bottomMulti to 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if _pills[\"bottom blocker\"].doseTaken gte 1>>",
+   "\t\t\t\t<<set _bottomMulti to 0>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _penisMulti to 1>>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t<<case \"blocker\">>"
+ }
+]

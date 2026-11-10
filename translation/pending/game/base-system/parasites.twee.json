@@ -1,0 +1,24 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $daily and $daily.corruptionSlimeClothes>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $daily?.corruptionSlimeClothes>>"
+  ],
+  "context": "\t}>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $parasite.breasts and $parasite.breasts.name is \"parasite\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $parasite.breasts?.name is \"parasite\">>"
+  ],
+  "context": "\t<</if>>"
+ }
+]

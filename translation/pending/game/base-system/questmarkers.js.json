@@ -1,0 +1,17 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tfailuretext:",
+   "\t\t\t\"You have missed <<print Object.keys(V.daily.school.attended).length === 4 ? 'a lesson' : `<<number ${5 - Object.keys(V.daily.school.attended).length}>>` + ' lessons'>> today.\","
+  ],
+  "old_kr": [
+   "\t\tfailuretext: \"오늘 수업을 <<print 5 - Object.keys(V.daily.school.attended).length>>번 빠졌습니다.\","
+  ],
+  "new_en": [
+   "\t\tfailuretext:",
+   "\t\t\t\"You have missed <<print Object.keys(V.daily.school.attended).length === 4 ? 'a lesson' : ('<<number ' + (5 - Object.keys(V.daily.school.attended).length) + '>> lessons')>> today.\","
+  ],
+  "context": "\t\t// text shown if condition() is still met, but it's past the time to attend"
+ }
+]

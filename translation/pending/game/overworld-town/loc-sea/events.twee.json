@@ -1,0 +1,13 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechdisable to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechDisable to 1>>"
+  ],
+  "context": "\t<<set $noBodyWriting to 1>>"
+ }
+]

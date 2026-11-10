@@ -1,0 +1,203 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou hear footsteps running <span class=\"pink\">right behind</span> you!"
+  ],
+  "old_kr": [
+   "\t\t\t당신 <span class=\"pink\">바로 뒤에서</span> 달려오는 발자국 소리가 들린다!"
+  ],
+  "new_en": [
+   "\t\t\t\tYou hear footsteps running <span class=\"pink\">right behind</span> you!"
+  ],
+  "context": "\t\t\t<<elseif $NPCList[_n].distance is 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $NPCList[_n].legs is \"walk\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $NPCList[_n].legs is \"walk\" and $NPCList[_n].type is \"human\">>"
+  ],
+  "context": "\t<<if _n is 0 and $stalk_end isnot \"escaped\" and $stalk_end isnot \"hide\" and $stalk_end isnot \"confront\" and $stalk_end isnot \"ambush\">>/*Only triggers on first NPC in a group. */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $_stalkerno to $enemyno is 1 ? \"\" : \"-\" + Math.clamp($enemyno, 2, 4)>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if [\"run\", \"strut\"].includes($feetactiondefault)>>",
+   "\t\t\t\t\t<<set $_pcAction += \"-\" + $feetactiondefault>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t\t<<if [\"down\", \"up\", \"turn\"].includes($mouthactiondefault) and ($feetuse isnot \"run\" or $mouthactiondefault is \"turn\")>>",
+   "\t\t\t\t\t<<set $_pcAction += \"-\" + $mouthactiondefault>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t\t<<if ($exposed is 1 and $uncomfortable.underwear) or ($exposed gte 2 and $uncomfortable.nude)>>",
+   "\t\t\t\t\t<<set $_pcAction += \"-exposed\">>",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<<set $_pcAction to \"\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<img class=\"stalk_4\" @src=\"'img/misc/stalk/confront-npc' + $_stalker + '.png'\">"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<img class=\"stalk_4\" @src=\"'img/misc/stalk/confront-npc' + $_stalker + $_stalkerno + '.png'\">"
+  ],
+  "context": "\t\t\t\t\t\t/* PC Confronting NPC */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<img class=\"stalk_4\" @src=\"'img/misc/stalk/grabbed' + $_stalker + '.png'\">"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<img class=\"stalk_4\" @src=\"'img/misc/stalk/grabbed' + $_stalker + $_stalkerno + '.png'\">"
+  ],
+  "context": "\t\t\t\t\t\t/* NPC grabs PC */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<img class=\"stalk_4\" @src=\"'img/misc/stalk/npc-theft-caught' + $_stalker + '.png'\">"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<img class=\"stalk_4\" @src=\"'img/misc/stalk/npc-theft-caught' + $_stalker + $_stalkerno + '.png'\">"
+  ],
+  "context": "\t\t\t\t\t\t/* PC caught up to NPC who stole clothes*/"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<img class=\"stalk_4\" @src=\"'img/misc/stalk/npc-caught' + $_stalker + '.png'\">"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<img class=\"stalk_4\" @src=\"'img/misc/stalk/npc-caught' + $_stalker + $_stalkerno + '.png'\">"
+  ],
+  "context": "\t\t\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<img class=\"stalk_4\" @src=\"'img/misc/stalk/ambush' + $_stalker + '.png'\">"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<img class=\"stalk_4\" @src=\"'img/misc/stalk/ambush' + $_stalker + $_stalkerno + '.png'\">"
+  ],
+  "context": "\t\t\t\t\t/* PC ambush success */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<if $feetaction is \"confront\" or $mouthaction is \"taunt\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if $stalk_end is \"hide\">>",
+   "\t\t\t\t\t\t<img class=\"stalk_4\" src=\"img/misc/stalk/pc-hide.png\">",
+   "\t\t\t\t\t<<else>>"
+  ],
+  "context": "\t\t\t\t\t/* NPC passing by, either because PC successfully hid or confronted an NPC who didn't intend to attack */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t<<if _stalked or $_stalker.includes(\"-gwylan\") or $_stalker is \"-wraith\">>",
+   "\t\t\t\t\t\t<img class=\"stalk_5\" @src=\"'img/misc/stalk/npc-pass' + $_stalker + $_stalkerno + '.png'\">"
+  ],
+  "context": "\t\t\t\t\t\t<img class=\"stalk_4\" src=\"img/misc/stalk/confront-npc-safe.png\">"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<img class=\"stalk_4\" src=\"img/misc/stalk/pc.png\">"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<img class=\"stalk_5\" @src=\"'img/misc/stalk/npc-pass-safe' + $_stalker + $_stalkerno + '.png'\">"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<img class=\"stalk_4\" @src=\"'img/misc/stalk/caught' + $_stalker + '.png'\">"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<img class=\"stalk_4\" @src=\"'img/misc/stalk/caught' + $_stalker + $_stalkerno + '.png'\">"
+  ],
+  "context": "\t\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<img @class=\"'stalk_' + _stalk_position\" @src=\"'img/misc/stalk/npc-theft' + $_stalker + '.png'\">"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<img @class=\"'stalk_' + _stalk_position\" @src=\"'img/misc/stalk/npc-theft' + $_stalker + $_stalkerno + '.png'\">"
+  ],
+  "context": "\t\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<elseif $consensual is 1 and $NPCList[0].legs is \"run\">>",
+   "\t\t\t\t\t\t\t<img @class=\"'stalk_' + _stalk_position\" @src=\"'img/misc/stalk/npc-run' + $_stalker + '.png'\">"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<elseif $consensual is 1 and $NPCList[0].legs is \"run\" or $_stalker.includes(\"-gwylan\")>>",
+   "\t\t\t\t\t\t\t<img @class=\"'stalk_' + _stalk_position\" @src=\"'img/misc/stalk/npc-chased' + $_stalker + $_stalkerno + '.png'\">"
+  ],
+  "context": "\t\t\t\t\t\t\t<img @class=\"'stalk_' + _stalk_position\" @src=\"'img/misc/stalk/npc-close' + $_stalker + '.png'\">"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<img @class=\"'stalk_' + _stalk_position\" @src=\"'img/misc/stalk/npc' + $_stalker + '.png'\">"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<img @class=\"'stalk_' + _stalk_position\" @src=\"'img/misc/stalk/npc' + $_stalker + $_stalkerno + '.png'\">"
+  ],
+  "context": "\t\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<img @class=\"'stalk_' + _stalk_position\" @src=\"'img/misc/stalk/npc' + $_stalker + '.png'\">"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $NPCList[0].legs is \"run\" and !$_stalker.includes(\"-gwylan\") and $_stalker isnot \"-wraith\">>",
+   "\t\t\t\t\t\t\t<img @class=\"'stalk_' + _stalk_position\" @src=\"'img/misc/stalk/npc-run' + $_stalker + $_stalkerno + '.png'\">",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t<img @class=\"'stalk_' + _stalk_position\" @src=\"'img/misc/stalk/npc' + $_stalker + $_stalkerno + '.png'\">",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t\t<<set _stalk_position to 4 - $NPCList[0].distance>>"
+ }
+]

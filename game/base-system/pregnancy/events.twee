@@ -336,8 +336,8 @@
 		<</if>>
 	<</for>>
 
-	<<if $debug is 1>>
-		디버그 - 선택된 아기 유지 결과 (ID - 체크박스 - 결과)
+	<<if $debug>>
+		Debug - Keep selected babies result (ID - Checkbox - Result)
 		<br>
 		<<for _i to 0; _i lt $pregResult.length;_i++>>
 			<<if $checkboxResult[$pregResult[_i]] is true>>
@@ -487,9 +487,7 @@
 	<<case "town">><<set _time to 15>>
 	<<default>><<set _time to 30>>
 <</switch>>
-<<set _hours to Math.floor(_time / 60)>>
-<<set _minutes to _time % 60>>
-<<link [[다음 (<<print getTimeString(_time)>>)| Pregnancy Birth Hospital]]>><<pass _time>><<set $phase to 1>><</link>>
+<<link [["Next " + printTime(_time, true)| Pregnancy Birth Hospital]]>><<pass _time>><<set $phase to 1>><</link>>
 
 /*Rescued by someone*/
 
@@ -505,9 +503,7 @@
 	<<case "town">><<set _time to 15>>
 	<<default>><<set _time to 30>>
 <</switch>>
-<<set _hours to Math.floor(_time / 60)>>
-<<set _minutes to _time % 60>>
-<<link [[다음 (<<print getTimeString(_time)>>)| Pregnancy Birth Hospital]]>><<pass _time>><<set $phase to 1>><</link>>
+<<link [["Next " + printTime(_time, true)| Pregnancy Birth Hospital]]>><<pass _time>><<set $phase to 1>><</link>>
 
 :: Pregnancy Birth Hospital
 /* Hospital birth (human). 2-4 = the birth, 6-8 = Bailey drives you home; if Alex
@@ -603,7 +599,7 @@
 			<<birthDissociationVision>>
 		<</if>>
 
-		<<link [[다음 (<<print getTimeString(_timeCalc)>>)|Pregnancy Birth Hospital 3]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>
+		<<link [[Next (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Hospital 3]]>><<endevent>><<run setPlayerLitterBorn()>><<pass _timeCalc>><</link>>
 	<<case "wolf">>
 		하퍼의 목소리가 안개 속에서 들려온다. "인간이 아니군. 비정상적인 분만이 될 거다. 내 지시를 글자 하나 틀리지 말고 따르도록..."
 		<br><br>
@@ -682,7 +678,7 @@
 	<br><br>
 <</if>>
 
-<<link [[다음|Pregnancy Birth Hospital 5]]>><<storeon "hospital_birth">><<pass 24 hour>><<stress -40>><</link>>
+<<link [[Next|Pregnancy Birth Hospital 5]]>><<storeon "hospital_birth">><<pass 24 hour>><<stress -40>><<set $tiredness to 0>><</link>>
 <br><br>
 
 
@@ -868,7 +864,11 @@
 	<br><br>
 <</if>>
 
-<<link [[다음|Orphanage]]>><<unset $litter_size>><<unset $first_birth>><<endevent>><<set $ward_unlocked to true>><<unset $bornChildrenIds>><</link>>
+<<if isRentDue() or isBaileyLookingForPlayer() or $rentPregInterruption>>
+	<<link [[Next|Rent Pregnant Return]]>><<unset $first_birth>><<endevent>><<set $ward_unlocked to true>><<unset $bornChildrenIds>><</link>>
+<<else>>
+	<<link [[Next|Orphanage]]>><<unset $litter_size>><<unset $first_birth>><<endevent>><<set $ward_unlocked to true>><<unset $bornChildrenIds>><</link>>
+<</if>>
 
 :: Pregnancy Birth Hospital Wolf
 <<set $outside to 0>><<set $location to "hospital">><<effects>>
@@ -958,9 +958,9 @@
 <<npc Gwylan>><<person1>>
 <<setKnowsAboutPregnancy "pc" "Gwylan">>
 
-최대한 침착하려 애쓰지만, 공황 상태에 빠지기 시작한다.
-<<if $gwylanSeen.includes("beast_ritual")>>
-	그윌란이 서툴다는 건 알지만, <<he>>【은는】 항상 자기가 뭘 하는지 아는 것 같다.
+You do your best to stay calm, but panic starts to set in.
+<<if $gwylanSeen.includes("ritual_beast")>>
+	You know Gwylan can be clumsy, but <<he>> always seems to know what <<hes>> doing.
 <<else>>
 	그윌란이 정말 이걸 어떻게 하는지 알긴 하는 걸까?
 <</if>>
@@ -1070,9 +1070,9 @@
 
 <<switch playerNormalPregnancyType()>>
 	<<case "human">>
-		<<link [[다음 (<<print getTimeString(_timeCalc)>>)|Pregnancy Birth Forest Shop 4]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>
+		<<link [[Next (<<print getTimeString(_timeCalc)>>)|Pregnancy Birth Forest Shop 4]]>><<endevent>><<run setPlayerLitterBorn()>><<pass _timeCalc>><</link>>
 	<<case "wolf">>
-		<<link [[다음 (<<print getTimeString(_timeCalc)>>)|Pregnancy Birth Forest Shop Wolf]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>
+		<<link [[Next (<<print getTimeString(_timeCalc)>>)|Pregnancy Birth Forest Shop Wolf]]>><<endevent>><<run setPlayerLitterBorn()>><<pass _timeCalc>><</link>>
 <</switch>>
 
 :: Pregnancy Birth Forest Shop 4
@@ -1388,8 +1388,8 @@
 <<clotheson>>
 <br><br>
 <<if $syndromewolves isnot 1>>
-	<<if $settings.bestialityEnabled>>
-		<span class="red"><i>스스로 새끼를 낳고 나니, 그들이 그저 귀여운 동물로 보이기 시작합니다.</i> "스톡홀름 증후군: 늑대" 특성을 얻었습니다.</span>
+	<<if animalSexEnabledForType("wolf")>>
+		<span class="red"><i>After giving birth to pups of your own, you see they're just cute animals.</i> You've gained the "Stockholm Syndrome: Wolves" trait.</span>
 		<br><br>
 	<<else>>
 		<span class="red"><i>스스로 새끼를 낳고 나니, 그들이 그저 귀여운 수인으로 보이기 시작합니다.</i> "스톡홀름 증후군: 늑대인간" 특성을 얻었습니다.</span>
@@ -1553,29 +1553,6 @@
 		<<set _multiple to true>>
 	<<else>>
 		<<set _multiple to false>>
-		<<switch _litter[0].gender>>
-			<<case "m">>
-				<<set _he to "아이">>
-				<<set _He to "아이">>
-				<<set _his to "아이의">>
-				<<set _His to "아이의">>
-				<<set _him to "아이">>
-				<<set _gender to "male">>
-			<<case "f">>
-				<<set _he to "아이">>
-				<<set _He to "아이">>
-				<<set _his to "아이의">>
-				<<set _His to "아이의">>
-				<<set _him to "아이">>
-				<<set _gender to "female">>
-			<<case "h">>
-				<<set _he to "아이">>
-				<<set _He to "아이">>
-				<<set _his to "아이의">>
-				<<set _His to "아이의">>
-				<<set _him to "아이">>
-				<<set _gender to "hermaphrodite">>
-		<</switch>>
 	<</if>>
 	<<if childBaseSpecies(_pregnancy.donorSpecies) isnot "human" and _litter[0].features.monster>>
 		<<if childBaseSpecies(_pregnancy.donorSpecies) is "hawk">>
@@ -1612,7 +1589,7 @@
 					<<pregnancyGendersText>>
 					<br><br>
 				<<else>>
-					"성별을 알게 되어 기대되시나요?" <<he>>【이가】 묻는다.
+					"I hope you're excited to know your child's sex," <<he>> says.
 					<br><br>
 
 					<<He>>【이가】 둥그렇게 부푼 당신의 배 위로 탐촉자를 미끄러뜨린다. 압박감이 불편하게 느껴진다.
@@ -1644,14 +1621,14 @@
 			<<elseif pregnancyProgress(_pregnancy) gte 0.7>>
 			/*28-32 weeks */
 				<<if !_multiple>>
-					"보세요, <<print _he>>【이가】 움직이고 있어요," 의사가 말한다. "손가락이 보이나요?" 마치 <<print _his>> 손이 화면에 대고 손을 흔드는 것처럼 보인다. 동시에 안에서 움직임이 느껴진다.<<llstress>><<stress -7>>
+					"Look, there's movement," the doctor says. "Can you see the fingers?" You look at the screen, and see a hand. It almost looks like it is waving at you. You can feel what you see on the screen as well, happening inside your body. <<llstress>><<stress -7>>
 					<br><br>
 
-					"아이는 건강해 보입니다," 하퍼가 말을 잇는다. "<<print _He>>【은는】 계속 자라면서 체중을 늘리고 <<print _his>> 폐를 성숙시키기만 하면 됩니다. 지금은 아이가 모든 것을 당신의 몸에 의존하고 있으니, 건강한 선택을 하는 것이 매우 중요합니다."
+					"Your child is growing well," Harper continues. "Make sure to take healthy choices right now. The baby's growth depends entirely on your body, and taking care of it will assure a healthy development."
 				<<else>>
-					"보세요, 아이들이 움직이고 있어요," 의사가 말한다. "손가락이 보이나요?" 마치 아이들 중 하나의 손이 화면에 대고 손을 흔드는 것처럼 보인다. 동시에 안에서 움직임이 느껴진다.<<llstress>><<stress -7>>
+					"Look, there's movement," the doctor says. "Can you see the fingers?" You look at the screen, and see a pair of hands. It almost looks like one of them is waving at you. You can feel what you see on the screen as well, happening inside your body.<<llstress>><<stress -7>>
 					<br><br>
-					하퍼가 말을 잇는다. "아이들은 건강해 보입니다. 계속 자라면서 체중을 늘리고 폐를 성숙시키기만 하면 됩니다. 지금은 아이들이 모든 것을 당신의 몸에 의존하고 있으니, 건강한 선택을 하는 것이 매우 중요합니다."
+					"Your children are growing well," Harper continues. "Make sure to take healthy choices right now. The babies' growth depends entirely on your body, and taking care of it will assure a healthy development."
 				<</if>>
 				<br><br>
 			<<elseif pregnancyProgress(_pregnancy) gte 0.6>>
@@ -1670,28 +1647,28 @@
 			<<elseif pregnancyProgress(_pregnancy) gte 0.4>>
 			/* 16-24 weeks */
 				<<if _multiple>>
-					"아기들은 괜찮습니다," 의사가 말한다. "하나만 가졌을 때보다는 조금 작지만, 반응도 좋고 잘 움직입니다. 양수도 충분해서 정상적인 임신이 될 겁니다."
+					"Your babies are doing fine," the doctor says. "They're a little smaller than if you just had the one, but there's responsiveness, with plenty of activity. There's ample fluid as well, so it should be a normal pregnancy."
 					<<llstress>> <<stress -8>>
 					<br><br>
-					화면에는 아기들이 움직이는 모습이 보인다. 다리와 팔이 자리를 바꾼다. 한 아기가 움찔한다. "딸꾹질입니다." 하퍼가 당신을 안심시킨다.
+					On the screen you can see them moving around, arms and legs switching positions. There's a sudden jerk from one of them. "Hiccups," Harper assures you.
 					<br><br>
 				<<else>>
-					"아기는 아주 잘 자라고 있습니다. <<print _He>>【은는】 반응도 좋고 잘 움직여요." 의사가 말한다. "양수도 충분하니, 정상적인 임신이 될 겁니다."
+					"Your baby is doing fine," the doctor says. "There's responsiveness, with plenty of activity. There's ample fluid as well, so it should be a normal pregnancy."
 					<<llstress>> <<stress -8>>
 					<br><br>
-					화면에는 <<print _him>>【이가】 움직이는 모습이 보인다. 다리와 팔이 자리를 바꾼다. <<print _He>>【이가】 움찔한다. "딸꾹질입니다." 하퍼가 당신을 안심시킨다.
+					On the screen you can see your child moving around, arms and legs shifting positions. There's a sudden jerk. "Hiccups," Harper assures you.
 					<br><br>
 				<</if>>
 			<<elseif pregnancyProgress(_pregnancy) gte 0.3>>
 			/* 12-16 weeks */
 				<<if _multiple>>
-					"아기들은 건강합니다." 의사가 말한다. "반응도 좋고 잘 움직여요. 양수도 충분하니, 정상적인 임신이 될 겁니다."<<llstress>><<stress -8>>
+					"Your babies are healthy," the doctor says. "There's responsiveness, with plenty of activity from all of them. There's ample fluid as well, so it should be a normal pregnancy."<<llstress>><<stress -8>>
 					<br><br>
-					화면에는 아기들이 움직이는 모습이 보인다. 다리와 팔이 자리를 바꾼다. 한 아기가 움찔한다. "딸꾹질입니다." 하퍼가 당신을 안심시킨다.
+					You can see them moving around on the screen, arms and legs switching positions. There's a sudden jerk coming from one of them. "Hiccups," Harper assures you.
 				<<else>>
-					"아기는 건강합니다." 의사가 말한다. "<<print _He>>【은는】 반응도 좋고 잘 움직여요. 양수도 충분하니, 정상적인 임신이 될 겁니다."<<llstress>><<stress -8>>
+					"Your baby is healthy," the doctor says. "There's responsiveness, with plenty of activity. There's ample fluid as well, so it should be a normal pregnancy."<<llstress>><<stress -8>>
 					<br><br>
-					화면에는 <<print _him>>【이가】 움직이는 모습이 보인다. 다리와 팔이 자리를 바꾼다. <<print _He>>【이가】 움찔한다. "딸꾹질입니다." 하퍼가 당신을 안심시킨다.
+					On the screen you can see your child moving around, arms and legs switching positions. There's a sudden jerk. "Hiccups," Harper assures you.
 				<</if>>
 				<br><br>
 			<<else>>
@@ -1732,7 +1709,7 @@
 					<<pregnancyGendersText>>
 					<br><br>
 				<<else>>
-					"성별을 알게 되어 기대되시나요?" <<he>>【이가】 묻는다.
+					"I hope you're excited to know your child's sex," <<he>> says.
 					<br><br>
 
 					<<He>>【이가】 둥그렇게 부푼 당신의 배 위로 탐촉자를 미끄러뜨린다. 압박감이 불편하게 느껴진다.
@@ -1764,15 +1741,14 @@
 			<<elseif pregnancyProgress(_pregnancy) gte 0.7>>
 			/*28-32 weeks */
 				<<if !_multiple>>
-					"보세요, <<print _he>>【이가】 움직이고 있어요." 의사가 말한다. "발가락이 보이나요?" 마치 <<print _his>> 발이 화면을 향해 손을 흔드는 것처럼 보인다. 동시에 뱃속에서 움직임이 느껴진다.<<llstress>><<stress -7>>
+					"Look, there's movement," the doctor says. "Can you see the toes?" You look at the screen, and see a paw. It almost looks like it is waving at you. You can feel what you see on the screen as well, happening inside your body. <<llstress>><<stress -7>>
 					<br><br>
 
-					"새끼는 건강해 보입니다." 하퍼가 말을 잇는다. "<<print _He>>【은는】 계속 자라면서 체중을 늘리고 <<print _his>> 폐를 성숙시키기만 하면 됩니다. 지금은 아이가 모든 것을 당신의 몸에 의존하고 있으니, 건강한 선택을 하는 것이 매우 중요합니다."
+					"Your child is growing well," Harper continues. "Make sure to take healthy choices right now. The baby's growth depends entirely on your body, and taking care of it will assure a healthy development. It's especially important that you take care with such an unusual pregnancy."
 				<<else>>
-					"보세요, 아기들이 움직이고 있어요." 의사가 말한다. "발가락이 보이나요?" 마치 아기들 중 하나의 발이 화면을 향해 손을 흔드는 것처럼 보인다. 동시에 뱃속에서 움직임이 느껴진다.<<llstress>><<stress -7>>
+					"Look, there's movement," the doctor says. "Can you see the toes?" You look at the screen, and see a pair of paws. It almost looks like one of them is waving at you. You can feel what you see on the screen as well, happening inside your body.<<llstress>><<stress -7>>
 					<br><br>
-					하퍼가 말을 잇는다. "아이들은 건강해 보입니다. 계속 자라면서 체중을 늘리고 폐를 성숙시키기만 하면 됩니다.
-					지금은 아이들이 모든 것을 당신의 몸에 의존하고 있으니, 건강한 선택을 하는 것이 매우 중요합니다. 특히 이렇게 특이한 임신인 만큼 몸조리를 잘하는 것이 중요합니다."
+					"Your children are growing well," Harper continues. "Make sure to take healthy choices right now. The babies' growth depends entirely on your body, and taking care of it will assure a healthy development. It's especially important that you take care with such an unusual pregnancy."
 				<</if>>
 				<br><br>
 			<<elseif pregnancyProgress(_pregnancy) gte 0.6>>
@@ -1791,28 +1767,28 @@
 			<<elseif pregnancyProgress(_pregnancy) gte 0.4>>
 			/* 16-24 weeks */
 				<<if _multiple>>
-					"아... 아니, 새끼들은 괜찮습니다." 의사가 말한다. "한 마리만 가졌을 때보다는 조금 작지만, 반응도 좋고 잘 움직입니다. 양수도 충분해서 정상적인 임신이 될 겁니다. 이런 임신이 정상일 수 있는 한에서 말이죠."
+					"Your ba... litter, is doing fine," the doctor says. "They're a little smaller than if you just had the one, but there's responsiveness, with plenty of activity. There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be."
 					<<llstress>> <<stress -8>>
 					<br><br>
-					화면에서 새끼들이 다리를 교차하며 움직이는 것을 볼 수 있다. 한 마리가 움찔한다. "딸꾹질입니다." 하퍼가 당신을 안심시킨다.
+					On the screen you can see them moving around, legs switching positions. There's a sudden jerk from one of them. "Hiccups," Harper assures you.
 					<br><br>
 				<<else>>
-					"새끼는 아주 잘 자라고 있습니다. <<print _He>>【은는】 반응도 좋고 잘 움직입니다." 의사가 말한다. "양수도 충분해서 정상적인 임신이 될 겁니다. 이런 임신이 정상일 수 있는 한에서 말이죠."
+					"Your pup is doing fine," the doctor says. "There's responsiveness, with plenty of activity. There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be."
 					<<llstress>> <<stress -8>>
 					<br><br>
-					화면에서 <<print _him>>【이가】 다리를 교차하며 움직이는 것을 볼 수 있다. <<print _He>>【이가】 움찔한다. "딸꾹질입니다." 하퍼가 당신을 안심시킨다.
+					On the screen you can see your child moving around, legs shifting positions. There's a sudden jerk. "Hiccups," Harper assures you.
 					<br><br>
 				<</if>>
 			<<elseif pregnancyProgress(_pregnancy) gte 0.3>>
 			/* 12-16 weeks */
 				<<if _multiple>>
-					"새끼들은 건강합니다." 의사가 말한다. "반응도 좋고 잘 움직입니다. 양수도 충분해서 정상적인 임신이 될 겁니다. 이런 임신이 정상일 수 있는 한에서 말이죠."<<llstress>><<stress -8>>
+					"Your pups are healthy," the doctor says. "There's responsiveness, with plenty of activity. There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be."<<llstress>><<stress -8>>
 					<br><br>
-					화면에서 새끼들이 다리를 교차하며 움직이는 것을 볼 수 있다. 한 마리가 움찔한다. "딸꾹질입니다." 하퍼가 당신을 안심시킨다.
+					On the screen you can see them moving around, legs switching positions. There's a sudden jerk from one of them. "Hiccups," Harper assures you.
 				<<else>>
-					"새끼는 건강합니다." 의사가 말한다. "<<print _He>>【은는】 반응도 좋고 잘 움직입니다. 양수도 충분해서 정상적인 임신이 될 겁니다. 이런 임신이 정상일 수 있는 한에서 말이죠."<<llstress>><<stress -8>>
+					"Your pup is healthy," the doctor says. "There's responsiveness, with plenty of activity. There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be."<<llstress>><<stress -8>>
 					<br><br>
-					화면에서 <<print _him>>【이가】 다리를 교차하며 움직이는 것을 볼 수 있다. <<print _He>>【이가】 움찔한다. "딸꾹질입니다." 하퍼가 당신을 안심시킨다.
+					On the screen you can see your child moving around, legs switching positions. There's a sudden jerk. "Hiccups," Harper assures you.
 				<</if>>
 				<br><br>
 			<<else>>
@@ -1844,7 +1820,7 @@
 			<br><br>
 
 			<<if !knowsGender(_litter[0].childId, "pc")>>
-				"안타깝게도, 껍데기가 단단해지고 있어서 성별을 알아내는 것이 거의 불가능합니다. 하지만 직접 확인하기까지 그리 오래 기다릴 필요는 없을 것 같군요." <<He>>【은는】 더 나은 각도를 잡으려고 탐촉자를 계속 움직이지만, 화면이 너무 작고 왜곡되어 있다.
+				"Unfortunately, the hardening shell is making it nearly impossible to tell the sex. I suspect you won't have to wait too long to find out for yourself, though." <<He>> continues moving the wand, trying to get a better angle, but the picture is too small and distorted.
 				<br><br>
 			<</if>>
 			<<if pregnancyProgress(_pregnancy) gte 0.8>>
@@ -1861,20 +1837,20 @@
 			<<elseif pregnancyProgress(_pregnancy) gte 0.4>>
 			/* 16-24 weeks */
 				<<if _multiple>>
-					"아... 아니, 알들은 괜찮습니다." 의사가 말한다. "반응도 좋고 잘 움직입니다. 양수도 충분해서 정상적인 임신이 될 겁니다. 이런 임신이 정상일 수 있는 한에서 말이죠."
+					"Your ba... eggs, are doing fine," the doctor says. "They are responsive and moving well. There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be."
 					<<llstress>> <<stress -8>>
 					<br><br>
 				<<else>>
-					"알은 아주 잘 자라고 있습니다. 안의 아기는 반응도 좋고 잘 움직입니다." 의사가 말한다. "양수도 충분해서 정상적인 임신이 될 겁니다. 이런 임신이 정상일 수 있는 한에서 말이죠."
+					"Your egg is doing great. The baby inside is responsive and moving well," the doctor says. "There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be."
 					<<llstress>> <<stress -8>>
 					<br><br>
 				<</if>>
 			<<elseif pregnancyProgress(_pregnancy) gte 0.3>>
 				<<if _multiple>>
-					"알들은 건강합니다." 의사가 말한다. "반응도 좋고 잘 움직입니다. 양수도 충분해서 정상적인 임신이 될 겁니다. 이런 임신이 정상일 수 있는 한에서 말이죠."<<llstress>><<stress -8>>
+					"Your eggs are healthy," the doctor says. "There's responsiveness, with plenty of activity. There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be."<<llstress>><<stress -8>>
 					<br><br>
 				<<else>>
-					"알은 건강합니다." 의사가 말한다. "반응도 좋고 잘 움직입니다. 양수도 충분해서 정상적인 임신이 될 겁니다. 이런 임신이 정상일 수 있는 한에서 말이죠."<<llstress>><<stress -8>>
+					"Your egg is healthy," the doctor says. "It is responsive and moving well. There's ample fluid as well, so it should be a normal pregnancy. As normal as a pregnancy like this can be."<<llstress>><<stress -8>>
 					<br><br>
 				<</if>>
 				<br><br>
@@ -1900,8 +1876,7 @@
 
 :: Pregnancy Birth Hospital Alex
 /* Alex drive-home. Branches in from Hospital 5 when Alex is the father; reuses the
-   hospital birth passages, only the drive home differs. Not merged with Bailey's
-   drive-home (it's a separate scene, not duplicated prose). */
+   hospital birth passages, only the drive home differs. */
 <<effects>>
 <<npc "Alex">>
 <<childSelect `getChildrenOf($recentBirthId).last().childId`>>

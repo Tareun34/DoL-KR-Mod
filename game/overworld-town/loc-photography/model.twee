@@ -96,8 +96,8 @@
 <<set _colour to _colour || 0>>
 
 <<if $worn.face.type.includes("mask")>>
-	<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is "m">>
-		<span class="red">귀 슬라임이 여성스러운 의상을 입는 것을 거부합니다.</span>
+	<<if $earSlime.forcedDressing?.type is "m">>
+		<span class="red">The ear slime refuses to allow you to wear a feminine outfit.</span>
 	<<else>>
 		<<link [[가면을 쓰고 여성스러운 의상을 입는다|Photo Model 2]]>>
 			<<undressKeepSlot "photo" "face">>
@@ -110,8 +110,8 @@
 		<</link>>
 	<</if>>
 	<br>
-	<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is "f">>
-		<span class="red">귀 슬라임이 남성스러운 의상을 입는 것을 거부합니다.</span>
+	<<if $earSlime.forcedDressing?.type is "f">>
+		<span class="red">The ear slime refuses to allow you to wear a masculine outfit.</span>
 	<<else>>
 		<<link [[가면을 쓰고 남성스러운 의상을 입는다|Photo Model 2]]>>
 			<<undressKeepSlot "photo" "face">>
@@ -125,8 +125,8 @@
 	<</if>>
 	<br><br>
 <</if>>
-<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is "m">>
-	<span class="red">귀 슬라임이 여성스러운 의상을 입는 것을 거부합니다.</span>
+<<if $earSlime.forcedDressing?.type is "m">>
+	<span class="red">The ear slime refuses to allow you to wear a feminine outfit.</span>
 <<else>>
 	<<link [[옷을 벗고 여성스러운 의상을 입는다|Photo Model 2]]>>
 		<<undress "photo">>
@@ -139,8 +139,8 @@
 	<</link>>
 <</if>>
 <br>
-<<if $earSlime.forcedDressing and $earSlime.forcedDressing.type is "f">>
-	<span class="red">귀 슬라임이 남성스러운 의상을 입는 것을 거부합니다.</span>
+<<if $earSlime.forcedDressing?.type is "f">>
+	<span class="red">The ear slime refuses to allow you to wear a masculine outfit.</span>
 <<else>>
 	<<link [[옷을 벗고 남성스러운 의상을 입는다|Photo Model 2]]>>
 		<<undress "photo">>

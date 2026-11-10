@@ -1,0 +1,13 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $kylarSeen.pushUnique(\"saidLove\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $alexSeen.pushUnique(\"saidLove\")>>"
+  ],
+  "context": ""
+ }
+]

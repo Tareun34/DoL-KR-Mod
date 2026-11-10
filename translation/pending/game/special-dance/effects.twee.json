@@ -1,0 +1,504 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> grasps it and tugs, to no avail. The pressure on your <<genitals 1>> makes you squirm. \"You're such a tease,\" <<he>> says. \"All these people slavering over you, but they haven't a chance.\" <<He>> steps aside to give the rest of the audience a better look, but doesn't stop fondling you. <<He>> leans close and whispers. \"Maybe I should lift this cute skirt of yours. Then everyone will see.\"",
+   "\t\t\t<<elseif $player.penisExist and $player.vaginaExist>>",
+   "\t\t\t\t<<He>> pulls <<his>> hand away in surprise, but soon recovers, reaching in again. The light touch is enough to make you squirm. \"You have a special secret indeed,\" <<he>> teases. <<He>> steps aside to give the rest of the audience a better look, but doesn't stop fondling you. <<He>> leans close and whispers. \"Maybe I should lift this cute skirt of yours. Then everyone will see.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 그것을 움켜쥐고 당기지만 소용이 없다. 당신의 <<genitals 1>>에 가해지는 압박감에 당신은 몸을 뒤틀게 된다. \"정말 애태우는 녀석이군.\" <<he>>【이가】 말한다. \"이 모든 사람들이 널 보며 침을 흘리고 있지만, 그들에겐 기회가 없지.\" <<He>>【은는】 나머지 관객들이 더 잘 볼 수 있도록 옆으로 비켜서지만, 당신을 애무하는 것은 멈추지 않는다. <<He>>【은는】 가까이 다가와 속삭인다. \"네 이 귀여운 치마를 들어 올려야겠어. 그러면 모두가 볼 수 있겠지.\"",
+   "\t\t\t<<elseif $player.penisExist and $player.vaginaExist>>",
+   "\t\t\t\t<<He>>【은는】 놀라서 <<his>> 손을 떼지만, 곧 평정을 되찾고 다시 손을 뻗는다. 그 가벼운 손길만으로도 당신은 몸을 뒤틀게 된다. \"정말 특별한 비밀을 가지고 있네.\" <<he>>【이가】 놀린다. <<He>>【은는】 나머지 관객들이 더 잘 볼 수 있도록 옆으로 비켜서지만, 당신을 애무하는 것은 멈추지 않는다. <<He>>【은는】 가까이 다가와 속삭인다. \"네 이 귀여운 치마를 들어 올려야겠어. 그러면 모두가 볼 수 있겠지.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> grasps it and tugs, to no avail. The pressure on your <<genitals 1>> makes you squirm. \"You're such a tease,\" <<he>> says. \"All these people slavering over you, but they haven't a chance.\" <<He>> steps aside to give the rest of the audience a better look, but doesn't stop fondling you. <<He>> leans close and whispers. \"Maybe I should lift this cute skirt of yours. Then everyone will see.\"",
+   "\t\t\t<<elseif $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>",
+   "\t\t\t\t<<He>> pulls <<his>> hand away in surprise, but soon recovers, reaching in again. The light touch is enough to make you squirm. \"You have a special secret indeed,\" <<he>> teases. <<He>> steps aside to give the rest of the audience a better look, but doesn't stop fondling you. <<He>> leans close and whispers. \"Maybe I should lift this cute skirt of yours. Then everyone will see.\""
+  ],
+  "context": "\t\t\t<<if playerChastity(\"hidden\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\"I never thought I'd see a hermaphrodite. I don't think I can hold back.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\"양성구유를 보게 될 줄이야. 못 참겠는데.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\"I never thought I'd see this in real life. I don't think I can hold back.\""
+  ],
+  "context": "\t\t\t<<elseif $rng gte 51>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\"Hermaphrodite freaks like <<phim>> should be sex slaves.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\"저런 양성구유 괴물은 성노예로 굴려야 제맛이지.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\"I bet <<pshe>> loves flaunting <<pher>> penis and pussy.\""
+  ],
+  "context": "\t\t\t\t\t\t\t<<case 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\"I didn't know hermaphrodites were real.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\"양성구유가 진짜 있는 줄 몰랐어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\"Two lickable sets of genitals.\""
+  ],
+  "context": "\t\t\t\t\t\t\t<<case 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\"I bet <<pshe>> loves flaunting <<pher>> penis and pussy.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\"<<pshe>> 분명히 자기 자지랑 보지를 내놓고 과시하는 걸 즐길 거야.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\"I don't know if I want to taste <<pher>> cock or pussy more.\""
+  ],
+  "context": "\t\t\t\t\t\t\t<<case 3>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\"Two lickable sets of genitals.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\"핥기 좋은 성기가 두 개나 달려있잖아.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\"I wonder if <<pshes>> ever used both cock and pussy at the same time.\""
+  ],
+  "context": "\t\t\t\t\t\t\t<<case 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\"Both? I bet <<pshe>> can charge extra.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\"둘 다? <<pshe>>【은는】 아마 추가 요금을 받아도 될 거야.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\"Both a pussy and cock? I'm glad I didn't miss this.\""
+  ],
+  "context": "\t\t\t\t\t\t\t<<case 5>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\"I wonder if <<pshes>> ever used both cock and pussy at the same time.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\"<<pshe>>【이가】 자지랑 보지를 동시에 써본 적이 있는지 궁금하네.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\"Do you think <<pshe>> was born with both genitals?\""
+  ],
+  "context": "\t\t\t\t\t\t\t<<case 6>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\"Both a pussy and cock? I'm glad I didn't miss this.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\"자지랑 보지가 둘 다 있다고? 여길 놓치지 않아서 다행이네.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\"Freaks like <<phim>> should be sex slaves.\""
+  ],
+  "context": "\t\t\t\t\t\t\t<<case 7>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\"I don't know if I want to taste <<pher>> cock or pussy more.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\"<<pher>> 자지를 맛보고 싶은지 보지를 맛보고 싶은지 잘 모르겠어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\"I didn't know <<girls>> like that were real.\""
+  ],
+  "context": "\t\t\t\t\t\t\t<<case 8>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\"I thought hermaphrodites were a myth.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\"양성구유는 신화 속에나 있는 건 줄 알았지.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\"<<pShe>> has both? I thought <<girls>> like <<pher>> were a myth.\"",
+   "\t\t\t\t\t\t\t<<case 10>>",
+   "\t\t\t\t\t\t\t\t\"Both? I bet <<pshe>> can charge extra.\""
+  ],
+  "context": "\t\t\t\t\t\t\t<<case 9>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\"Do you think <<pshe>> was born with both genitals?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\"<<pshe>>【은는】 두 성기를 다 가지고 태어난 걸까?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<error { message: \"rng got a bad roll for dance speech\"}>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<default>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\"Look at <<pher>> gigantic penis flop around!\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\"<<pher>> 저 거대한 자지가 덜렁거리는 것 좀 봐!\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\"Look at <<pher>> gigantic penis flop around!\""
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<if $rng gte 76>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\"<<pHer>> penis is so big. I can't look away.\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\"<<pher>> 자지가 너무 커서 눈을 뗄 수가 없네.\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\"<<pHer>> penis is so big. I can't look away.\""
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<elseif $rng gte 51>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\"I want to suck that <<penis>>, but I don't think it would fit.\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\"저 <<penis>>【을를】 빨아주고 싶지만 입에 들어가지도 않겠는걸.\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\"I want to suck that <<penis>>, but I don't think it would fit.\""
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<elseif $rng gte 26>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\"I bet you love showing off your <<penis>>.\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\"니 <<penis>>【을를】 자랑하는 거 엄청 좋아하는구나.\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\"I bet you love showing off your <<penis>>.\""
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\"Look at <<pher>> <<penis>> flop around!\"",
+   "\t\t\t\t\t\t\t\t\t<<if $player.penisExist and $player.vaginaExist>><<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">><</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\"<<pher>> <<penis>>【이가】 덜렁거리는 것 좀 봐!\"",
+   "\t\t\t\t\t\t\t\t\t<<if $player.penisExist and $player.vaginaExist>><<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">><</if>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\"Look at <<pher>> <<penis>> flop around!\""
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<if $rng gte 76>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\"What's it like having your <<penis>> out in front of all these strangers?\"",
+   "\t\t\t\t\t\t\t\t\t<<if $player.penisExist and $player.vaginaExist>><<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">><</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\"모르는 사람들 앞에서 니 <<penis>>【을를】 내놓고 있으니 기분이 어때?\"",
+   "\t\t\t\t\t\t\t\t\t<<if $player.penisExist and $player.vaginaExist>><<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">><</if>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\"What's it like having your <<penis>> out in front of all these strangers?\""
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<elseif $rng gte 51>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\"Your <<penis>> is so cute. I want to taste it.\"",
+   "\t\t\t\t\t\t\t\t\t<<if $player.penisExist and $player.vaginaExist>><<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">><</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\"니 <<penis>> 너무 귀엽다. 한번 맛보고 싶네.\"",
+   "\t\t\t\t\t\t\t\t\t<<if $player.penisExist and $player.vaginaExist>><<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">><</if>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\"Your <<penis>> is so cute. I want to taste it.\""
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<elseif $rng gte 26>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\"I bet you love having your <<penis>> ogled.\"",
+   "\t\t\t\t\t\t\t\t\t<<if $player.penisExist and $player.vaginaExist>><<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">><</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\"니 <<penis>>에 끈적한 시선이 박히는 걸 즐기고 있지.\"",
+   "\t\t\t\t\t\t\t\t\t<<if $player.penisExist and $player.vaginaExist>><<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">><</if>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\"I bet you love having your <<penis>> ogled.\""
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\"<<pHer>> penis is so small!\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 1>><<ginsecurity \"penis_small\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\"<<pher>> 자지 정말 쪼그맣네!\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 1>><<ginsecurity \"penis_small\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\"<<pHer>> penis is so small!\""
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<if $rng gte 76>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\"What's it like having your <<penis>> out in front of all these strangers?\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 1>><<ginsecurity \"penis_small\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\"이 낯선 사람들 앞에서 니 <<penis>>【을를】 내놓고 있는 기분이 어때?\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 1>><<ginsecurity \"penis_small\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\"What's it like having your <<penis>> out in front of all these strangers?\""
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<elseif $rng gte 51>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\"You've such a cute <<penis>>, I want to taste it.\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 1>><<ginsecurity \"penis_small\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\"참 귀여운 <<penis>>【을를】 가졌네. 맛 좀 보고 싶은걸.\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 1>><<ginsecurity \"penis_small\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\"You've such a cute <<penis>>, I want to taste it.\""
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<elseif $rng gte 26>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\"I bet you love having your <<penis>> ogled.\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 1>><<ginsecurity \"penis_small\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\"니 <<penis>>에 사람들이 눈독 들이는 걸 즐기고 있지.\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 1>><<ginsecurity \"penis_small\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\"I bet you love having your <<penis>> ogled.\""
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\"<<pHer>> penis is so tiny!\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 2>><<ginsecurity \"penis_small\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\"<<pher>> 자지가 너무 앙증맞은데!\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 2>><<ginsecurity \"penis_small\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\"<<pHer>> penis is so tiny!\""
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<if $rng gte 76>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\"What's it like having your <<penis>> out in front of all these strangers?\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 2>><<ginsecurity \"penis_small\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\"이 모르는 사람들 앞에서 네 <<penis>>【을를】 까발리고 있는 기분이 어때?\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 2>><<ginsecurity \"penis_small\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\"What's it like having your <<penis>> out in front of all these strangers?\""
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<elseif $rng gte 51>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\"I've never seen such a tiny cock.\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 2>><<ginsecurity \"penis_small\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\"이렇게 좆만 한 자지는 처음 봐.\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 2>><<ginsecurity \"penis_small\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\"I've never seen such a tiny cock.\""
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<elseif $rng gte 26>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\"I bet you love having your <<penis>> ogled.\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 2>><<ginsecurity \"penis_small\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\"네 <<penis>>【이가】 구경거리가 되는 걸 퍽이나 즐기고 있구나.\"",
+   "\t\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 2>><<ginsecurity \"penis_small\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\"I bet you love having your <<penis>> ogled.\""
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<physique>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<physique 1>>"
+  ],
+  "context": "\t\t\t<<set $dancephysique -= 10>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<physique>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<physique 1>>"
+  ],
+  "context": "\t\t\t<<set $dancephysique -= 10>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<physique>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<physique 1>>"
+  ],
+  "context": "\t\t\t<<set $dancephysique -= 10>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<physique>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<physique 1>>"
+  ],
+  "context": "\t\t\t<<set $dancephysique -= 10>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $player.penisExist and $player.vaginaExist and random(1, 2) is 2>>",
+   "\t\t\t\t\t\t\t<<rng 10>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $player.penisExist and $player.vaginaExist and random(1, 4 - V.settings.nudeGenderPerception) is 1>>",
+   "\t\t\t\t\t\t\t<<if $settings.nudeGenderPerception !== 0>>",
+   "\t\t\t\t\t\t\t\t<<rng 10>>",
+   "\t\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t\t<<rng 5>>",
+   "\t\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<if $worn.under_lower.type.includes(\"naked\") and !playerChastity(\"hidden\")>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<if $player.penisExist and $player.vaginaExist>><<insecurity \"penis_big\" 1>><<ginsecurity \"penis_big\">><</if>>",
+   "\t\t\t\t\t\t\t\t"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 1>><<ginsecurity \"penis_small\">>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<insecurity \"penis_small\" 2>><<ginsecurity \"penis_small\">>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<</if>>"
+ }
+]

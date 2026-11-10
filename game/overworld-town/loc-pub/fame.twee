@@ -242,8 +242,8 @@
 	<!-- wrong: at least one of the words will be wrong; the others may or may not be correct -->
 	<!-- default: all three words are correct -->
 
-	<<if $pubfame and $pubfame.task is "remy">>
-		<<set _text_output to "">>
+	<<if $pubfame?.task is "remy">>
+		<<set _text_output to "in the ">>
 		<<set $_wrong to random(0,2)>>
 		<<set $_possible to [
 			["field","forest","park","yard","moor","garden"],

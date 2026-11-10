@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $debug is 1>>",
+   "\t<<icon \"small-up-arrow.png\" \"infront\">><<mericon>><<link [[(debug) Max dock status|Docks]]>><<set $docks.status to 100>><</link>>"
+  ],
+  "old_kr": [
+   "<<if $debug is 1>>",
+   "\t<<icon \"small-up-arrow.png\" \"infront\">><<mericon>><<link [[(debug) 부두 평판 최대|Docks]]>><<set $docks.status to 100>><</link>>"
+  ],
+  "new_en": [
+   "<<if $debug>>",
+   "\t<<icon \"small-up-arrow.png\" \"infront\">><<mericon>><<link [[(debug) Max dock status|Docks]]>><<set $docks.status to 100>><</link>>"
+  ],
+  "context": ""
+ }
+]

@@ -1,0 +1,34 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $rng gte 81 and $settings.bestialityEnabled and $settings.voreEnabled>>",
+   "\t\t\tYou round a tree and come face to face with a pair of eyes, hovering just inches from your face. All strength drains from your muscles, and you collapse to the ground. The snake slithers onto the forest floor."
+  ],
+  "old_kr": [
+   "\t\t<<if $rng gte 81 and $settings.bestialityEnabled and $settings.voreEnabled>>",
+   "\t\t\t나무를 돌자마자 당신의 얼굴 바로 몇 센티미터 앞에서 떠다니는 한 쌍의 눈과 마주친다. 온몸의 힘이 빠져나가고, 당신은 땅바닥에 쓰러진다. 뱀이 숲 바닥으로 스르르 기어 나온다."
+  ],
+  "new_en": [
+   "\t\t<<if $rng gte 81 and $settings.voreEnabled and animalSexEnabledForType(\"snake\")>>",
+   "\t\t\tYou round a tree and come face to face with a pair of eyes, hovering just inches from your face. All strength drains from your muscles, and you collapse to the ground. The snake slithers onto the forest floor."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\tA <<beasttype>> emerges from between the trees, teeth bared."
+  ],
+  "old_kr": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\t<<beasttype>> 한 마리가 나무 사이에서 이빨을 드러내며 나타난다."
+  ],
+  "new_en": [
+   "\t\t\t<<if beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\t\t\t\tA <<beasttype>> emerges from between the trees, teeth bared."
+  ],
+  "context": "\t\t\t<<beastNEWinit 1 wolf>>"
+ }
+]

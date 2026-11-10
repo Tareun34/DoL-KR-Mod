@@ -1,0 +1,72 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if !$adultshopclerk and $debug is 1>>",
+   "\t\t<<ind>><<link [[Debug unlock clerk job|$passage]]>><<set $adultshopclerk to true>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if !$adultshopclerk and $debug is 1>>",
+   "\t\t<<ind>><<link [[디버그: 점원 직업 해금|$passage]]>><<set $adultshopclerk to true>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if !$adultshopclerk and $debug>>",
+   "\t\t<<ind>><<link [[Debug unlock clerk job|$passage]]>><<set $adultshopclerk to true>><</link>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $adultshopstate is \"sydney\" and $debug is 1>>",
+   "\t\t<<socialiseicon>><<link [[Approach Sydney (0:01)|Adult Shop Approach Sydney]]>><<pass 1>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if $adultshopstate is \"sydney\" and $debug is 1>>",
+   "\t\t<<socialiseicon>><<link [[시드니에게 다가간다 (0:01)|Adult Shop Approach Sydney]]>><<pass 1>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if $adultshopstate is \"sydney\" and $debug>>",
+   "\t\t<<socialiseicon>><<link [[Approach Sydney (0:01)|Adult Shop Approach Sydney]]>><<pass 1>><<endevent>><</link>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<icon \"adult-clothing.png\">><<link [[Browse clothing (0:01)|Adult Shop Store]]>><<pass 1>><</link>>",
+   "\t<<if $adultshopstate isnot \"closed\" or $debug is 1>>"
+  ],
+  "old_kr": [
+   "\t<<icon \"adult-clothing.png\">><<link [[의류 둘러보기 (0:01)|Adult Shop Store]]>><<pass 1>><</link>>",
+   "\t<<if $adultshopstate isnot \"closed\" or $debug is 1>>"
+  ],
+  "new_en": [
+   "\t<<icon \"adult-clothing.png\">><<link [[Browse clothing (0:01)|Adult Shop Store]]>><<pass 1>><</link>>",
+   "\t<<if $adultshopstate isnot \"closed\" or $debug>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $brothelVending and $brothelVending.status is \"set\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $brothelVending?.status is \"set\">>"
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $debug>>"
+  ],
+  "context": "<<adultshopclerkevents>>"
+ }
+]

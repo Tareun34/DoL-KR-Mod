@@ -1711,8 +1711,8 @@ _bottom.name에서 멀리 떨어진 곳에 넓은 호를 그리며 곡물을 흩
 <<else>>
 	당신은 <<farm_text horse>>【을를】 안으로 유도하려 했지만, <span class="red"><<farm_he horse>>【은는】 고집을 부린다.</span> 당신은 <<farm_him horse>>【을를】 끌어당기고, 뒤에서 <<farm_him horse>>【을를】 밀고, 당근으로 <<farm_him horse>>【을를】 유인해 보지만 아무 소용이 없다.<<lrespect>><<farm_horses -1>><<pass 20>><<farm_count 20>>
 	<br><br>
-	<<if $farm.beasts.horses lte -5 and $rng gte 51 and $settings.horsesEnabled and ($settings.bestialityEnabled or ($farm_work.horse.monster_roll is true and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)))>>
-		당신이 마방 안에서 <<farm_him horse>>【을를】 달래려 할 때, <<farm_he horse>>【이가】 덮쳐온다. <<farm_He horse>>【이가】 당신에게 달려들어, 당신은 <<farm_his horse>> 길을 피하기 위해 옆으로 뛰어오를 수밖에 없었다. 당신은 마방 사이의 울타리에 걸쳐진 채로 남겨진다.
+	<<if $farm.beasts.horses lte -5 and $rng gte 51 and beastSexEnabledForType("horse", $farm_work.horse.monster)>>
+		You're stood inside the stall, trying to coax <<farm_him horse>> in, when <<farm_he horse>> strikes. <<farm_He horse>> runs at you, forcing you to leap aside to get out of <<farm_his horse>> way. You're left slung over the fence between stalls.
 		<br><br>
 
 		당신이 움직이기 전에, <<farm_text horse>>【은는】 당신의 양옆으로 <<farm_his horse>> 앞다리를 들어 올리고, 당신의 <<bottom>>에 몸을 밀어붙인다.
@@ -3522,14 +3522,14 @@ _bottom.name에서 멀리 떨어진 곳에 넓은 호를 그리며 곡물을 흩
 :: Farm Meadow Date
 <<effects>>
 
-<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>
+<<if monsterCanAppearForType("horse")>>
 	<<if maleChance() lt random(1, 100)>>
 		<<set $steed to "female">>
 	<<else>>
 		<<set $steed to "male">>
 	<</if>>
 <<else>>
-	<<if beastMaleChance() lt random(1, 100)>>
+	<<if beastMaleChanceForType("horse") lt random(1, 100)>>
 		<<set $steed to "mare">>
 	<<else>>
 		<<set $steed to "stallion">>

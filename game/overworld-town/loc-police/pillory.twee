@@ -73,7 +73,7 @@
 	<<clotheson>>
 	<<endcombat>>
 
-	<<cliffquick>>
+	<<cliffQuick>>
 
 <<elseif $enemyhealth lte 0>>
 
@@ -84,7 +84,7 @@
 	<<clotheson>>
 	<<endcombat>>
 
-	<<cliffquick>>
+	<<cliffQuick>>
 
 <<else>>
 
@@ -184,8 +184,8 @@
 	<<if $pillory.audience + $exposed + $rng gte 10>>
 	<<rng>>
 		<<beastNEWinit 1 dog>>
-		<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>><!-- Modified for Monster People -->
-			무언가 당신의 <<bottom>>【을를】 찌르는 것이 느껴진다. <<beasttype>> 한 마리가 호기심에 당신의 냄새를 맡고 있다.
+		<<if $rng gte 51 and beastSexEnabledForType("dog", $monster is 1)>><!-- Modified for Monster People -->
+			You feel something prod your <<bottom>>. A <<beasttype>> is sniffing you curiously.
 			<br><br>
 
 			<<link [[다음|Pillory Dog]]>><<set $molestationstart to 1>><</link>>

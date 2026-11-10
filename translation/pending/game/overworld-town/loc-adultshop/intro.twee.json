@@ -1,0 +1,29 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $cheatsEnabled is true or $debug is 1>>",
+   "\t\t<<lockicon \"unlock\">><<link [[Unlock shop|Elk Street]]>><<set $adultshopunlocked to true>><</link>> | <i>Cheat option</i> <!-- Appears even with blind stats enabled. Intentional -->"
+  ],
+  "old_kr": [
+   "\t<<if $cheatsEnabled is true or $debug is 1>>",
+   "\t\t<<lockicon \"unlock\">><<link [[가게 잠금 해제|Elk Street]]>><<set $adultshopunlocked to true>><</link>> | <i>치트 옵션</i> <!-- Appears even with blind stats enabled. Intentional -->"
+  ],
+  "new_en": [
+   "\t<<if $cheatsEnabled is true or $debug>>",
+   "\t\t<<lockicon \"unlock\">><<link [[Unlock shop|Elk Street]]>><<set $adultshopunlocked to true>><</link>> | <i>Cheat option</i> <!-- Appears even with blind stats enabled. Intentional -->"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $debug>>"
+  ],
+  "context": "\t<br>"
+ }
+]

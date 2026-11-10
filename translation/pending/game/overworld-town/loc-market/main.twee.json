@@ -1,0 +1,13 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<set _supermarketItem to (V.foodstuff[V.stall_foodstuff]?.supermarket >= 0)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set _supermarketItem to (V.foodstuff[V.stall_foodstuff]?.supermarket lt Math.trunc(3000 / setup.foodstuff[$stall_foodstuff].shop.sell_price))>>"
+  ],
+  "context": ""
+ }
+]

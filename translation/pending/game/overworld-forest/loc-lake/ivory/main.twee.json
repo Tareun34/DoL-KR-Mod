@@ -1,0 +1,61 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You're in the middle of a large cathedral. Tables are set up for a great feast.",
+   "All around you, faces you",
+   "<<if $wraithPrison and $wraithPrison.vision is true>>",
+   "\tvaguely"
+  ],
+  "old_kr": [
+   "당신은 거대한 성당 한가운데에 있다. 성대한 연회를 위해 테이블이 차려져 있다.",
+   "<<if $wraithPrison and $wraithPrison.vision is true>>",
+   "\t사방에서 어렴풋이 아는 얼굴들이 미소 지으며 즐거워하고 있다."
+  ],
+  "new_en": [
+   "You're in the middle of a large cathedral. Tables are set up for a great feast.",
+   "All around you, faces you",
+   "<<if $wraithPrison?.vision is true>>",
+   "\tvaguely"
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $wraithPrison and $wraithPrison.vision is true>>",
+   "\t<<link [[Apologise|Christmas Mirror 5]]>><<set $phase to 1>><</link>>"
+  ],
+  "old_kr": [
+   "<<if $wraithPrison and $wraithPrison.vision is true>>",
+   "\t<<link [[사과한다|Christmas Mirror 5]]>><<set $phase to 1>><</link>>"
+  ],
+  "new_en": [
+   "<<if $wraithPrison?.vision is true>>",
+   "\t<<link [[Apologise|Christmas Mirror 5]]>><<set $phase to 1>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechdisable to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechDisable to 1>>"
+  ],
+  "context": "\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechdisable to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechDisable to 1>>"
+  ],
+  "context": "\t<</if>>"
+ }
+]

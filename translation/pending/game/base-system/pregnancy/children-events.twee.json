@@ -1,0 +1,72 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\tYou spot <<childrenNames $childrenIds>> tumbling over one another.",
+   "\t\t\t\t<<set _child1 to _childrenIds.pluck()>>",
+   "\t\t\t\t<<set _child2 to _childrenIds.pluck()>>",
+   "\t\t\t\tEvery now and again they stop to stare at each other. After a moment, <<childname _child1>> moves behind <<childSelect _child2>><<childname>> and starts to groom <<childhim>>."
+  ],
+  "old_kr": [
+   "\t\t\t\t당신은 <<childrenNames $childrenIds>>【이가】 서로의 위를 구르며 뒤엉켜 있는 것을 발견한다.",
+   "\t\t\t\t<<set _child1 to _childrenIds.pluck()>>",
+   "\t\t\t\t<<set _child2 to _childrenIds.pluck()>>",
+   "\t\t\t\t녀석들은 이따금 행동을 멈추고 서로를 빤히 쳐다본다. 잠시 후, <<childname _child1>>【이가】 <<childSelect _child2>><<childname>> 뒤로 다가가 <<childhim>>【을를】 핥아주기 시작한다."
+  ],
+  "new_en": [
+   "\t\t\t\tYou spot <<childrenNames $childrenIds>> tumbling over one another.",
+   "\t\t\t\t<<set _child1 to $childrenIds.random()>>",
+   "\t\t\t\t<<set _child2 to $childrenIds.filter(id => id !== _child1).random()>>",
+   "\t\t\t\tEvery now and again they stop to stare at each other. After a moment, <<childname _child1>> moves behind <<childSelect _child2>><<childname>> and starts to groom <<childhim>>."
+  ],
+  "context": "\t\t\t<<case 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"<<childHe>>'s hurt,\" <<bHe>> says, gesturing at your <<childtype>>. \"Tripped.\" <<bHe>> insistently points to something on the cave floor. A jagged rock lies not too far away from your <<childtype>>."
+  ],
+  "old_kr": [
+   "\t\"<<childHe>>【이가】 다쳤어.\" <<bHe>>【이가】 당신의 <<childtype>>【을를】 가리키며 말한다. \"넘어졌어.\" <<bHe>>【은는】 집요하게 동굴 바닥의 무언가를 가리킨다. 당신의 <<childtype>>에게서 멀지 않은 곳에 뾰족한 바위가 놓여 있다."
+  ],
+  "new_en": [
+   "\t\"<<childHe>>'s hurt,\" <<bhe>> says, gesturing at your <<childtype>>. \"Tripped.\" <<bHe>> insistently points to something on the cave floor. A jagged rock lies not too far away from your <<childtype>>."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou sit beside <<childname>>. <<childHe>>'s looking down at a <<childtoy $location $childActivityEvent.toyid \"lowercase\">>. You take it in hand and give it a shake, causing a cacophany of rattles. The <<childtype>> looks bewildered and intrigued and reaches for this strange object. You give the <<childtoy $location $childActivityEvent.toyid \"lowercase\">> one last shake before handing it over for the <<childtype>> to experiment with."
+  ],
+  "old_kr": [
+   "\t\t당신은 <<childname>> 옆에 앉는다. <<childHe>>【은는】 <<childtoy $location $childActivityEvent.toyid \"lowercase\">>【을를】 내려다보고 있다. 당신은 그것을 손에 들고 흔들어, 시끄러운 딸랑이 소리를 낸다. 그 <<childtype>>【은는】 어리둥절하고 흥미로워하며 이 이상한 물건에 손을 뻗는다. 당신은 그 <<childtype>>【이가】 가지고 실험해볼 수 있도록 <<childtoy $location $childActivityEvent.toyid \"lowercase\">>【을를】 마지막으로 한 번 흔들어준 후 건네준다."
+  ],
+  "new_en": [
+   "\t\tYou sit beside <<childname>>. <<childHe>>'s looking down at a <<childtoy $location $childActivityEvent.toyid \"lowercase\">>. You take it in hand and give it a shake, causing a cacophony of rattles. The <<childtype>> looks bewildered and intrigued and reaches for this strange object. You give the <<childtoy $location $childActivityEvent.toyid \"lowercase\">> one last shake before handing it over for the <<childtype>> to experiment with."
+  ],
+  "context": "\t\t<<wearProp \"rattle\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<childInteratedWith>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<childInteractedWith>>"
+  ],
+  "context": "<<childAge $childActivityEvent.childid>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<childInteratedWith _otherChildId>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<childInteractedWith _otherChildId>>"
+  ],
+  "context": "\t\t\t<<for _otherChildId range $childActivityEvent.otherChildrenIds>>"
+ }
+]

@@ -1,0 +1,17 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<historyicon>><<link [[Study history|History Classroom Study]]>><<set $phase to 1>><</link>><<gstress>><<ghistory>>"
+  ],
+  "old_kr": [
+   "\t\t<<historyicon>><<link [[역사 공부하기|History Classroom Study]]>><<set $phase to 1>><</link>><<gstress>><<ghistory>>"
+  ],
+  "new_en": [
+   "\t\t<<historyicon>><<link [[Study history|History Classroom Study]]>><<set $phase to 1>><</link>><<gstress>><<ghistory>>",
+   "\t\t<br>",
+   "\t\t<<historyicon>><<link [[Relax before class|History Classroom Study]]>><<set $phase to 0>><</link>><<lstress>>"
+  ],
+  "context": "\t<<else>>"
+ }
+]

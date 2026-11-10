@@ -1176,7 +1176,7 @@
 	당신은 눈물을 흘리면서도 미소를 지으며, 관중을 향해 손바닥을 보이고 검지와 중지로 브이 사인을 만든다. 모두가 사진을 찍기 시작한다.
 	<br><br>
 
-	"<<pShes>> 대단한 녀석이네."
+	"<<pShes>> a trouper."
 	<br>
 	"아직도 용감한 척하네."
 	<br>
@@ -1187,7 +1187,7 @@
 	당신은 미소를 지으며, 관중을 향해 손바닥을 보이고 검지와 중지로 브이 사인을 만든다. 모두가 사진을 찍기 시작한다.
 	<br><br>
 
-	"<<pShes>> 대단한 녀석이네."
+	"<<pShes>> a trouper."
 	<br>
 	"아직도 용감한 척하네."
 	<br>
@@ -1702,8 +1702,8 @@
 <<else>>
 
 <</if>>
-<<if $avery_mansion and $avery_mansion.attend.maths>>
-	관중 속에서 에이버리도 발견한다<<if $mathsprojectwhitney is 1>>.<<else>>. <</if>><<if $mathsprojectwhitney is 1>> <<else>><</if>><<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 40>> <<nnpc_His "Avery">> 표정은 이 거리에서 알아보기 어렵다<<else>> <<nnpc_He "Avery">>【이가】 당신을 향해 미소 짓는다<</if>>.
+<<if $avery_mansion?.attend.maths>>
+	You spot Avery amongst the crowd<<if $mathsprojectwhitney is 1>> as well<</if>>. <<= $averyragerevealed gte 1 and C.npc.Avery.rage gte 40 ? `<<nnpc_His "Avery">> expression is difficult to make out from this distance` : `<<nnpc_He "Avery">> smiles at you`>>.
 <</if>>
 <br><br>
 
@@ -1924,8 +1924,8 @@
 숨을 헐떡이는 소리와 웃음소리가 강당을 채웠다. 고개를 돌리는 사람도 있었지만, 대부분은 놀란 눈으로 쳐다보거나 주머니에서 휴대폰을 꺼냈다. 리버는 기절한 것 같다.
 <br><br>
 
-<<if $player.penisExist and $player.vaginaExist and !playerChastity("hidden")>>
-	"<<pShe>>【은는】 둘 다 달렸어!" 누군가 소리쳤다.
+<<if $player.penisExist and $player.vaginaExist and !playerChastity("hidden") and $settings.nudeGenderPerception !== 0>>
+	"<<pShe>> has both!" someone shouts.
 	<br>
 	"믿을 수가 없네."
 	<br>
@@ -1941,7 +1941,7 @@
 		<<famepregnancy 1>>
 	<</if>>
 	<<schoolrep herm 1>>
-<<elseif isCrossdressing() and !playerChastity("hidden")>>
+<<elseif isCrossdressing() and !playerChastity("hidden") and $settings.nudeGenderPerception !== 0>>
 	<<set $player.gender_appearance to $player.sex>>
 	"<<pShes>> <<girl>>【이】잖아!" 누군가 소리쳤다.
 	<br>
@@ -1987,8 +1987,8 @@
 숨을 헐떡이는 소리와 웃음소리가 강당을 채웠다. 고개를 돌리는 사람도 있었지만, 대부분은 놀란 눈으로 쳐다보거나 주머니에서 휴대폰을 꺼냈다. 리버는 기절한 것 같다.
 <br><br>
 
-<<if $player.penisExist and $player.vaginaExist and !playerChastity("hidden")>>
-	"<<pShe>>【은는】 둘 다 달렸어!" 누군가 소리쳤다.
+<<if $player.penisExist and $player.vaginaExist and !playerChastity("hidden") and $settings.nudeGenderPerception !== 0>>
+	"<<pShe>> has both!" someone shouts.
 	<br>
 	"믿을 수가 없네."
 	<br>
@@ -2004,7 +2004,7 @@
 		<<famepregnancy 1>>
 	<</if>>
 	<<schoolrep herm 1>>
-<<elseif isCrossdressing() and !playerChastity("hidden")>>
+<<elseif isCrossdressing() and !playerChastity("hidden") and $settings.nudeGenderPerception !== 0>>
 	<<if $player.sex is "m">>
 		"남자애잖아!" 누군가 소리쳤다.
 		<br>

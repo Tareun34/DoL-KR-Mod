@@ -375,7 +375,7 @@
 		그들은 모두 자신들의 페티시에 대해 이야기하고, 대부분이 흥분해 있는 것을 볼 수 있다.
 		<br><br>
 		<<if hasSexStat("deviancy", 5)>>
-			당신은 <<if !$settings.bestialityEnabled>>괴물<<else>>짐승<</if>>들과의 다양한 만남에 대해 이야기한다. 그들은 매혹과 공포가 뒤섞인 채 듣는다.<<status 5>><<gcool>>
+			You talk about your various encounters with <<if !isBestialityOnForAnyCreature()>>monsters<<else>>beasts<</if>>. They listen with a mixture of fascination and horror.<<status 5>><<gcool>>
 		<<else>>
 			당신은 대화에 덧붙일 말이 별로 없지만, 그들의 이야기를 즐기며 조용히 있는다.
 		<</if>>

@@ -1,0 +1,78 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"lblue\">You press your <<penis>> against <<combatpersons>> <<npcVagina $penistarget>>.</span>",
+   "\t\t\t\t<<if $NPCList[$penistarget].condom and $NPCList[$penistarget].condom.willUse is true and !$player.condom and $parasite.penis.name is undefined>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"lblue\">당신은 <<penis>>【을를】 <<combatpersons>>의 <<npcVagina $penistarget>>에 밀착한다.</span>",
+   "\t\t\t\t<<if $NPCList[$penistarget].condom and $NPCList[$penistarget].condom.willUse is true and !$player.condom and $parasite.penis.name is undefined>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"lblue\">You press your <<penis>> against <<combatpersons>> <<npcVagina $penistarget>>.</span>",
+   "\t\t\t\t<<if $NPCList[$penistarget].condom?.willUse is true and !$player.condom and $parasite.penis.name is undefined>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<penis_lube_text>> <span class=\"pink\">you <<peniletext>> thrust your virgin penis into <<combatpersons>> pussy.</span>",
+   "\t\t\t\t<span class=\"red\">You feel your foreskin separate from your glans, <<virginitylosttext $NPCList[_n].fullDescription>></span>",
+   "\t\t\t\t<<sex 100 \"genitals\" $penistarget>><<violence 30>><<bruise penis>><<set $speechpenisvirgin to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<penis_lube_text>> <span class=\"pink\">당신은 <<combatpersons>>의 보지에 당신의 동정 자지를 <<peniletext>> 들이박는다.</span>",
+   "\t\t\t\t<span class=\"red\">귀두에서 포피가 벗겨지는 것이 느껴지며, <<virginitylosttext $NPCList[_n].fullDescription>></span>",
+   "\t\t\t\t<<sex 100 \"genitals\" $penistarget>><<violence 30>><<bruise penis>><<set $speechpenisvirgin to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<penis_lube_text>> <span class=\"pink\">you <<peniletext>> thrust your virgin penis into <<combatpersons>> pussy.</span>",
+   "\t\t\t\t<span class=\"red\">You feel your foreskin separate from your glans, <<virginitylosttext $NPCList[_n].fullDescription>></span>",
+   "\t\t\t\t<<sex 100 \"genitals\" $penistarget>><<violence 30>><<bruise penis>><<set $speechPenisVirgin to 1>>"
+  ],
+  "context": "\t\t\t<<elseif $player.virginity.penile is true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<penis_lube_text>> <span class=\"pink\">you <<peniletext>> thrust your virgin penis into <<combatpersons>> ass.</span>",
+   "\t\t\t\t<span class=\"red\">You feel your foreskin separate from your glans, <<virginitylosttext $NPCList[_n].fullDescription>></span>",
+   "\t\t\t\t<<sex 100 \"genitals\" $penistarget>><<violence 30>><<bruise penis>><<set $speechpenisvirgin to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<penis_lube_text>> <span class=\"pink\">당신은 <<combatpersons>>의 항문에 당신의 동정 자지를 <<peniletext>> 들이박는다.</span>",
+   "\t\t\t\t<span class=\"red\">귀두에서 포피가 벗겨지는 것이 느껴지며, <<virginitylosttext $NPCList[_n].fullDescription>></span>",
+   "\t\t\t\t<<sex 100 \"genitals\" $penistarget>><<violence 30>><<bruise penis>><<set $speechpenisvirgin to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<penis_lube_text>> <span class=\"pink\">you <<peniletext>> thrust your virgin penis into <<combatpersons>> ass.</span>",
+   "\t\t\t\t<span class=\"red\">You feel your foreskin separate from your glans, <<virginitylosttext $NPCList[_n].fullDescription>></span>",
+   "\t\t\t\t<<sex 100 \"genitals\" $penistarget>><<violence 30>><<bruise penis>><<set $speechPenisVirgin to 1>>"
+  ],
+  "context": "\t\t\t<<elseif $player.virginity.penile is true>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $NPCList[$penistarget].condom and $NPCList[$penistarget].condom.willUse is true and !$player.condom and $parasite.penis.name is undefined>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $NPCList[$penistarget].condom?.willUse is true and !$player.condom and $parasite.penis.name is undefined>>"
+  ],
+  "context": "\t\t\t\t<<set $penisactiondefault to \"penistoanus\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $NPCList[$penistarget].condom and $NPCList[$penistarget].condom.willUse is true and !$player.condom and $parasite.penis.name is undefined>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $NPCList[$penistarget].condom?.willUse is true and !$player.condom and $parasite.penis.name is undefined>>"
+  ],
+  "context": "\t\t\t<<set $penisactiondefault to \"penistoanus\">>"
+ }
+]

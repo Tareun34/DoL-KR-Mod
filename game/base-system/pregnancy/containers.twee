@@ -437,15 +437,15 @@
 			항문 보호대를 착용하고 있는 동안에는 <<if $pregnancyStats.namesParasitesChild is true>>당신의 기생충 아이들을<<else>>기생충들을<</if>> 출산할 수 없습니다.
 		<<else>>
 			<<if $pregnancyStats.namesParasitesChild is true>>
-				<<link [[항문 속 기생충 아이 출산 시도 (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to "anus">><</link>>
+				<<ind>><<link [[Attempt to deliver your anus parasite children (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to "anus">><</link>>
 			<<else>>
-				<<link [[항문 속 기생충 출산 시도 (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to "anus">><</link>>
+				<<ind>><<link [[Attempt to deliver the anus parasite (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to "anus">><</link>>
 			<</if>>
 		<</if>>
-		<br><br>
+		<br>
 	<<elseif _aPregnancy.fetus.length - (_aPregnancy.motherStatus is 2 ? 1 : 0) gt 0>>
-		항문 속의 <<print ($pregnancyStats.namesParasitesChild is true ? "기생충 아이들이" : "기생충들이")>> 아직 태어날 준비가 되지 않은 것 같다.
-		<br><br>
+		You don't think <<print ($pregnancyStats.namesParasitesChild is true ? "your parasite children" : "the parasites")>> in your anus are ready for delivery.
+		<br>
 	<</if>>
 	<<if _vPregnancy.type !== "parasite">>
 	<<elseif _vPregnancy.parasiteFeltMovement>>
@@ -453,15 +453,15 @@
 			정조대를 착용하고 있는 동안에는 <<if $pregnancyStats.namesParasitesChild is true>>당신의 기생충 아이들을<<else>>기생충들을<</if>> 출산할 수 없습니다.
 		<<else>>
 			<<if $pregnancyStats.namesParasitesChild is true>>
-				<<link [[질 속 기생충 아이 출산 시도 (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to "vagina">><</link>>
+				<<ind>><<link [[Attempt to deliver your vagina parasite children (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to "vagina">><</link>>
 			<<else>>
-				<<link [[질 속 기생충 출산 시도 (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to "vagina">><</link>>
+				<<ind>><<link [[Attempt to deliver the vagina parasite (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to "vagina">><</link>>
 			<</if>>
 		<</if>>
-		<br><br>
+		<br>
 	<<elseif _vPregnancy.fetus.length - (_aPregnancy.motherStatus is 2 ? 1 : 0) gt 0>>
-		질 속의 <<print ($pregnancyStats.namesParasitesChild is true ? "기생충 아이들이" : "기생충들이")>> 아직 태어날 준비가 되지 않은 것 같다.
-		<br><br>
+		You don't think <<print ($pregnancyStats.namesParasitesChild is true ? "your parasite children" : "the parasites")>> in your vagina are ready for delivery.
+		<br>
 	<</if>>
 	<<if _container.count gt 0>>
 		<<ind>><<link [[선택한 것을 판매용으로 옮기기|$passage]]>>

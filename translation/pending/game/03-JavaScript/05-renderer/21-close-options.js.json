@@ -1,0 +1,37 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   " * @property {boolean} faceFreckles Player has face freckles, used in mouth closeup.",
+   " * @property {\"none\"|\"upper\"|\"full\"} bodyFreckles Player body freckles. Upper shows on chest closeup, full shows on all body closeups."
+  ],
+  "context": " * @property {boolean} topdownDemo Options -> Performance toggle for changing breastjob sprites to topdown view"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\t\t// Freckles",
+   "\t\toptions.faceFreckles = V.player.skin.faceFreckles === true;",
+   "\t\toptions.bodyFreckles = V.player.skin.bodyFreckles || \"none\";"
+  ],
+  "context": "\t\toptions.showMouth = combat.isMouthActive() && !V.worn.face.type.includes(\"gag\");"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\toptions.penis.npcTone =",
+   "\t\t\t\tV.NPCList[V.penistarget].skincolour === \"ghost\" ? \"ghost\" : V.NPCList[V.penistarget].skincolour === \"black\" ? \"dark\" : \"light\";",
+   "\t\t\toptions.filters.penisNpc = setup.colours.getSkinFilter(options.penis.npcTone, 0);"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\toptions.filters.penisNpc = NpcCombatMapper.getNpcSkinFilter(V.NPCList[V.penistarget]);"
+  ],
+  "context": "\t\t\t/* skin colour of npc targeting penis */"
+ }
+]

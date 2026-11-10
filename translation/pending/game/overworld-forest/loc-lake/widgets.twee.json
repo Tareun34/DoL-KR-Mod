@@ -1,0 +1,50 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if hasSexStat(\"deviancy\", 2) and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\t<<link [[Deal with <<bhim>>|Lake Wolf Sex]]>><<set $sexstart to 1>><</link>><<deviant2>><<status 2>><<gcool>>"
+  ],
+  "old_kr": [
+   "\t<<if hasSexStat(\"deviancy\", 2) and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\t<<link [[<<bhim>>【와과】 상대한다|Lake Wolf Sex]]>><<set $sexstart to 1>><</link>><<deviant2>><<status 2>><<gcool>>"
+  ],
+  "new_en": [
+   "\t<<if hasSexStat(\"deviancy\", 2) and beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\t\t<<link [[Deal with <<bhim>>|Lake Wolf Sex]]>><<set $sexstart to 1>><</link>><<deviant2>><<status 2>><<gcool>>"
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $rng gte 91 and Weather.precipitation is \"rain\" and $settings.bestialityEnabled and $settings.voreEnabled and $hallucinations gte 2 and $controlled is 0>>",
+   "\t\tSomething large surges through the water beneath you. A gaping maw grips your thighs."
+  ],
+  "old_kr": [
+   "\t\t<<if $rng gte 91 and Weather.precipitation is \"rain\" and $settings.bestialityEnabled and $settings.voreEnabled and $hallucinations gte 2 and $controlled is 0>>",
+   "\t\t발밑의 물속에서 무언가 커다란 것이 솟구쳐 오른다. 크게 벌어진 아가리가 당신의 허벅지를 콱 움켜쥔다."
+  ],
+  "new_en": [
+   "\t\t<<if $rng gte 91 and Weather.precipitation is \"rain\" and $settings.voreEnabled and $hallucinations gte 2 and $controlled is 0>>",
+   "\t\tSomething large surges through the water beneath you. A gaping maw grips your thighs."
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t<<link [[Stand your ground|Lake Boar Stand]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t<<link [[물러서지 않는다|Lake Boar Stand]]>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"boar\", $monster is 1)>>",
+   "\t\t\t<<link [[Stand your ground|Lake Boar Stand]]>><</link>>"
+  ],
+  "context": "\t\t<br><br>"
+ }
+]

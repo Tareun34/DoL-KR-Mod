@@ -270,7 +270,7 @@
 						<<if $NPCList[$anustarget].type is "plant" and $NPCList[$anustarget].penissize gte 4 and canImpregnateParasite("anus")>>
 							<span class="red">그것에게서 느껴지는 무언가에 겁이 난다.</span>
 						<</if>>
-						<<if $NPCList[$anustarget].condom and $NPCList[$anustarget].condom.willUse is true and $NPCList[$anustarget].condom.worn is false and !$NPCList[$anustarget].penisdesc.includes("strap-on")>>
+						<<if $NPCList[$anustarget].condom?.willUse is true and $NPCList[$anustarget].condom.worn is false and !$NPCList[$anustarget].penisdesc.includes("strap-on")>>
 							<<if $NPCList[$anustarget].chastity.penis.includes("chastity")>>
 								<<He>>【은는】 콘돔을 끼우려 하지만, <<his>> $NPCList[$anustarget].chastity.penis 위로 잘 씌워지지 않는 것 같다. <span class="red"><<He>>【은는】 이내 포기해버린다.</span>
 								<<set $NPCList[$anustarget].condom.willUse to false>>
@@ -325,7 +325,7 @@
 					<<case 1>><span class="red">당신의 <<bottom>>【이가】 그렇게 유린당한 건 처음일지 몰라도, <<his>> 자지는 너무 작아서 거의 느껴지지도 않는다.</span>
 					<<default>><span class="red">당신의 <<bottom>>【이가】 처음으로 유린당하자 당신은 숨을 헐떡인다.</span>
 				<</switch>>
-				<<sex 100 "anus" $anustarget>><<takeVirginity $NPCList[$anustarget].fullDescription "anal">><<bruise anus>><<violence 30>><<set $speechanusvirgin to 1>>
+				<<sex 100 "anus" $anustarget>><<takeVirginity $NPCList[$anustarget].fullDescription "anal">><<bruise anus>><<violence 30>><<set $speechAnusVirgin to 1>>
 			<</if>>
 			<<takeNPCVirginity $anustarget "penile">><<analstat>><<raped>><<anusraped>><<set $anusstate to _dub + "penetrated">>
 			<<unset _dub>>
@@ -350,8 +350,8 @@
 				<<if $rightarm is "anus">>
 					<<set $rightarm to 0>>
 				<</if>>
-				<span class="lblue">당신은 <<personselect $anusdoubletarget>><<combatperson>> 위로 올라타 당신의 <<bottom>>【으로로】 <<his>> <<npcPenis $anusdoubletarget>>【을를】 누르고, <<personselect $anustarget>><<combatpersons>> <<npcPenisSimple $anustarget>> 옆으로 밀어 넣는다.</span>
-				<<if $NPCList[$anusdoubletarget].condom and $NPCList[$anusdoubletarget].condom.willUse is true and $NPCList[$anusdoubletarget].condom.worn is false and !$NPCList[$anusdoubletarget].penisdesc.includes("strap-on")>>
+				<span class="lblue">You straddle <<personselect $anusdoubletarget>><<combatperson>> and press <<his>> <<npcPenis $anusdoubletarget>> with your <<bottom>>, joining <<personselect $anustarget>><<combatpersons>> <<npcPenisSimple $anustarget>>.</span>
+				<<if $NPCList[$anusdoubletarget].condom?.willUse is true and $NPCList[$anusdoubletarget].condom.worn is false and !$NPCList[$anusdoubletarget].penisdesc.includes("strap-on")>>
 					<<if $NPCList[$anusdoubletarget].chastity.penis.includes("chastity")>>
 						<<He>>【은는】 콘돔을 끼우려 하지만, <<his>> $NPCList[$anusdoubletarget].chastity.penis 위로 잘 씌워지지 않는 것 같다. <span class="red"><<He>>【은는】 이내 포기해버린다.</span>
 						<<set $NPCList[$anusdoubletarget].condom.willUse to false>>
@@ -399,7 +399,7 @@
 					<<default>><span class="red">처음으로 <<bottom>>【이가】 유린당하자 당신은 숨을 헐떡인다.</span>
 				<</switch>>
 				<<set _mydesc to ($NPCList[$anustarget].fullDescription + " and " + $NPCList[$anusdoubletarget].fullDescription)>>
-				<<sex 50 "anus" $anustarget>><<sex 50 "anus" $anusdoubletarget>><<takeVirginity `[$anustarget, $anusdoubletarget]` "anal">><<bruise anus>><<violence 30>><<set $speechanusvirgin to 1>>
+				<<sex 50 "anus" $anustarget>><<sex 50 "anus" $anusdoubletarget>><<takeVirginity `[$anustarget, $anusdoubletarget]` "anal">><<bruise anus>><<violence 30>><<set $speechAnusVirgin to 1>>
 			<</if>>
 			<<takeNPCVirginity $anustarget "penile">><<takeNPCVirginity $anusdoubletarget "penile">><<analstat>><<analdoublestat>><<raped>><<anusraped>><<set $anusstate to "doublepenetrated">>
 			<span class="pink">두 개의 자지를 받아들인 충격에 몸을 떠는 동안 당신의 유두가 단단해진다.</span>

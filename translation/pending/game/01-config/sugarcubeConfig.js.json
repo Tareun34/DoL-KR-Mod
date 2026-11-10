@@ -1,0 +1,92 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tversion: \"0.5.12.13\",",
+   "\tversionName: `\"Abyssal\" edition`,"
+  ],
+  "old_kr": [
+   "\tversion: \"0.5.12.13\",",
+   "\tversionName: `\"Abyssal\" 에디션`,"
+  ],
+  "new_en": [
+   "\tversion: \"0.5.13.8\",",
+   "\tversionName: `\"Dark History\" edition`,"
+  ],
+  "context": "\tenableLinkNumberify: true,"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "Config.history.maxStates = 5;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "Config.history.maxStates = 20;"
+  ],
+  "context": "Config.saves.slots = 9;"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tcase \"Street Dog Growl\":",
+   "\t\t\t\tV.phase = 0;",
+   "\t\t\t\treturn \"Street Dog TF React\";",
+   "\t\t\tcase \"Street Dog Hiss\":",
+   "\t\t\t\tV.phase = 1;",
+   "\t\t\t\treturn \"Street Dog TF React\";",
+   "\t\t\tcase \"Street Dog Yipp\":",
+   "\t\t\t\tV.phase = 2;",
+   "\t\t\t\treturn \"Street Dog TF React\";",
+   "\t\t\tcase \"Street Dog Screech\":",
+   "\t\t\t\tV.phase = 3;",
+   "\t\t\t\treturn \"Street Dog TF React\";",
+   "\t\t\tcase \"Street Dog Growl 2\":",
+   "\t\t\t\treturn \"Street Dog TF React Growl 2\";",
+   "",
+   "\t\t\tcase \"Mines Intro\":",
+   "\t\t\tcase \"Mines Intro 2\":",
+   "\t\t\tcase \"Mines Intro Kiss\":",
+   "\t\t\tcase \"Mines Intro Kiss Refuse\":",
+   "\t\t\tcase \"Mines Guards\":",
+   "\t\t\tcase \"Mines Guards Kiss\":",
+   "\t\t\tcase \"Mines Guards Beer\":",
+   "\t\t\tcase \"Mines Guards Climb\":",
+   "\t\t\tcase \"Mines Guards Skirt\":",
+   "\t\t\tcase \"Mines Guards Skirt Endure\":",
+   "\t\t\tcase \"Mines Guards Skirt Endure 2\":",
+   "\t\t\tcase \"Mines Guards Bondage\":",
+   "\t\t\tcase \"Mines Guards Bondage Endure\":",
+   "\t\t\tcase \"Mines Guards Bondage Overpower\":",
+   "\t\t\tcase \"Mines Guards Room\":",
+   "\t\t\tcase \"Mines Guards Rape\":",
+   "\t\t\tcase \"Mines Guards Rape Finish\":",
+   "\t\t\tcase \"Mines Guards Refuse\":",
+   "\t\t\tcase \"Mines Guards Gangrape\":",
+   "\t\t\tcase \"Mines Guards Gangrape Finish\":",
+   "\t\t\tcase \"Mines Guards Clean\":",
+   "\t\t\tcase \"Mines Guards Dig\":",
+   "\t\t\tcase \"Mines Guards Escape\":",
+   "\t\t\tcase \"Mines\":",
+   "\t\t\tcase \"Mines Sleeping Quarters\":",
+   "\t\t\tcase \"Mines Canteen\":",
+   "\t\t\tcase \"Mines Passout\":",
+   "\t\t\tcase \"Mines Passout Rape\":",
+   "\t\t\tcase \"Mines Passout Rape Finish\":",
+   "\t\t\tcase \"Mines Passout Rape Finish 2\":",
+   "\t\t\tcase \"Mines Passout Tentacles\":",
+   "\t\t\tcase \"Mines Passout Tentacles Finish\":",
+   "\t\t\tcase \"Mines Passout Warn\":",
+   "\t\t\tcase \"Mines Passout Warn 2\":",
+   "\t\t\tcase \"Mines Passout Warn 3\":",
+   "\t\t\tcase \"Mines Passout Run\":",
+   "\t\t\tcase \"Mines Passout Run 2\":",
+   "\t\t\tcase \"Mines Escape\":",
+   "\t\t\t\treturn \"Flats Auction\";",
+   ""
+  ],
+  "context": ""
+ }
+]

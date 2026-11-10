@@ -1,0 +1,62 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "<<if !$mine?.freed>>",
+   "\t<<addinlineevent \"flats_sneak_11\" 1.5>>",
+   "\t\t<<generate1>><<generate2>>",
+   "",
+   "\t\tThe flat has several crates and piles of clothing strewn about. A light comes out of a cracked door. You hear two voices behind it. As you look around the room, you see a tiny glint in one of the piles.",
+   "",
+   "\t\t<br><br>",
+   "\t\t<<link [[Take it|Flats Sneak Mine]]>><</link>><<difficulty 30>>",
+   "\t\t<br>",
+   "\t\t<<link [[Leave|Flats]]>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t<</addinlineevent>>",
+   "<</if>>"
+  ],
+  "context": "<</addinlineevent>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   ":: Flats Sneak Mine",
+   "<<effects>>",
+   "",
+   "You sneak across the room, trying not to make noise.",
+   "<<if $rng gte 31>>",
+   "\t<!-- Fail -->",
+   "\t<span class=\"red\">The door swings open, bathing the room in light.</span> \"What do we have here?\" a <<person1>><<person>> says as <<he>> walks behind you.",
+   "\t<br>",
+   "\t\"<<pShes>> a perfect candidate,\" a <<person2>><<person>> says as <<he>> pulls a rag out of <<his>> pocket. The <<person1>><<person>> grabs you from behind as the <<person2>><<person>> presses the rag against your face.",
+   "\t<br><br>",
+   "\t\"I think we'll get more money selling <<pher>>, <<pshe>>'ll end up in the same place anyways,\" a voice says <span class=\"red\">as the world fades to black.</span>",
+   "",
+   "\t<br><br>",
+   "\t<<passout>>",
+   "\t<<link [[Next|Flats Auction]]>><<endevent>><</link>>",
+   "<<else>>",
+   "\t<!-- Success -->",
+   "\tYou reach your hand into the pile and pull out a <span class=\"green\">small gem.</span> It could be worth something.<<set $blackmoney += 400>>",
+   "\t<<if !$mine>>",
+   "\t\t<<set $foundMineGem to 1>>",
+   "\t<<else>>",
+   "\t\t<<set $mine.heldGem to \"small gem\">>",
+   "\t<</if>>",
+   "\t<br><br>",
+   "\tYou don't hesitate to make your way out of the room.",
+   "",
+   "\t<br><br>",
+   "\t<<link [[Leave|Flats]]>><<endevent>><</link>>",
+   "<</if>>"
+  ],
+  "context": "<br>"
+ }
+]

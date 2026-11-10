@@ -1,0 +1,35 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $phaseWraith lt 1 and $container and $container.home and $container.home.count gte 1 and !$wraithPaleVisit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $phaseWraith lt 1 and $container?.home?.count gte 1 and !$wraithPaleVisit>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<if $phaseWraith lt 1 and $container and $container.lake and $container.lake.count gte 1 and !$wraithPaleVisit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if $phaseWraith lt 1 and $container?.lake?.count gte 1 and !$wraithPaleVisit>>"
+  ],
+  "context": "\t\t\t\t\t<<pass 5>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<if $phaseWraith lt 1 and $container and $container.lake and $container.lake.count gte 1 and !$wraithPaleVisit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if $phaseWraith lt 1 and $container?.lake?.count gte 1 and !$wraithPaleVisit>>"
+  ],
+  "context": "\t\t\t\t\t<<pass 5>>"
+ }
+]

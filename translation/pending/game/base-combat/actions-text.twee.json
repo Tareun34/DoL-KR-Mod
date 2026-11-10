@@ -1,0 +1,2254 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $avery_fate is undefined>>",
+   "\t\t\t\t\t\t\t\"You're just angry,\" you say. \"Everyone gets angry sometimes. I forgive you.\"",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t\"Now I understand why you get so angry, Avery,\" you say. \"And I forgive you.\"",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<if $avery_fate is undefined>>",
+   "\t\t\t\t\t\t\t\"그저 화가 났을 뿐이잖아요.\" 당신이 말한다. \"누구나 가끔 화를 내요. 용서할게요.\"",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t\"이제 왜 그렇게 화를 내는지 알겠어요, 에이버리.\" 당신이 말한다. \"그리고 당신을 용서할게요.\"",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-avery-forgive>>",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<<case \"Whitney\">>",
+   "\t\t\t\t\t<<if $npc.includes(\"Whitney\")>>",
+   "\t\t\t\t\t\t<<pc-line-whitney-forgive>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Avery\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t\"Even though you're doing such a horrible thing, don't worry,\" you say. \"I forgive you.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<default>>",
+   "\t\t\t\t\t\"이런 끔찍한 짓을 저지르고 있지만, 걱정하지 마.\" 당신이 말한다. \"널 용서할게.\""
+  ],
+  "new_en": [],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<set $speechnamedrop to $npc.includes(_loveInterest) ? 0 : 1>>",
+   "\t\t\t<<if $speechnamedrop is 0>>",
+   "\t\t\t\tYou speak."
+  ],
+  "old_kr": [
+   "\t\t\t<<set $speechnamedrop to $npc.includes(_loveInterest) ? 0 : 1>>",
+   "\t\t\t<<if $speechnamedrop is 0>>",
+   "\t\t\t\t당신은 말한다."
+  ],
+  "new_en": [
+   "\t\t\t<<set $speechLINameDrop to $npc.includes(_loveInterest) ? 0 : 1>>",
+   "\t\t\t<<if $speechLINameDrop is 0>>",
+   "\t\t\t\tYou speak."
+  ],
+  "context": "\t\t<<if _loveInterest isnot undefined and random(0, 100) lte 15>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\"Robin, please stop!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\"로빈, 제발 그만해!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-robin-plead>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Robin\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\"Kylar... I thought you loved me...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\"카일라... 날 사랑하는 줄 알았는데...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-kylar-plead>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Kylar\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\"Please be gentle, Whitney...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\"제발 부드럽게 해줘, 휘트니...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-whitney-plead>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Whitney\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\"N...not so rough, Eden...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\"너... 너무 거칠어, 에덴...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-eden-plead>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Eden\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\"Gently, please...\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\"부드럽게, 제발...\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-blackwolf-plead>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Black Wolf\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<set _possibleSentences to []>>",
+   "\t\t\t\t\t\t<<if !$avery_mansion>>",
+   "\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"Was this all the date was for...?\"`, dialogueID: \"avery_plead_premansion\" })>>",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t<<if isAveryHuntingPlayer()>>",
+   "\t\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"I'm sorry! I didn't mean to!\"`, dialogueID: \"avery_plead_hunting_1\" })>>",
+   "\t\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"Please, I promise I'll do better! I promise...!\"`, dialogueID: \"avery_plead_hunting_2\" })>>",
+   "\t\t\t\t\t\t\t<<elseif $averyromance is 1>>",
+   "\t\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"I love you, Avery. Please don't do this to me!\"`, dialogueID: \"avery_plead_romance\" })>>",
+   "\t\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"I'm sorry, Avery, please forgive me...!\"`, dialogueID: \"avery_plead_mansion\" })>>",
+   "\t\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t\t<<set _chosenSentence to _possibleSentences.random()>>",
+   "\t\t\t\t\t\t<<set $speechspecialdialogue to _chosenSentence.dialogueID>>",
+   "\t\t\t\t\t\t<<print _chosenSentence.sentence>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<set _possibleSentences to []>>",
+   "\t\t\t\t\t\t<<if !$avery_mansion>>",
+   "\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"이러려고 데이트한 거예요...?\"`, dialogueID: \"avery_plead_premansion\" })>>",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t<<if isAveryHuntingPlayer()>>",
+   "\t\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"죄송해요! 일부러 그런 게 아니에요!\"`, dialogueID: \"avery_plead_hunting_1\" })>>",
+   "\t\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"제발요, 앞으로 잘할게요! 약속해요...!\"`, dialogueID: \"avery_plead_hunting_2\" })>>",
+   "\t\t\t\t\t\t\t<<elseif $averyromance is 1>>",
+   "\t\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"사랑해요, 에이버리. 제발 나한테 이러지 마요!\"`, dialogueID: \"avery_plead_romance\" })>>",
+   "\t\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"죄송해요, 에이버리, 제발 용서해 줘요...!\"`, dialogueID: \"avery_plead_mansion\" })>>",
+   "\t\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t\t<<set _chosenSentence to _possibleSentences.random()>>",
+   "\t\t\t\t\t\t<<set $speechspecialdialogue to _chosenSentence.dialogueID>>",
+   "\t\t\t\t\t\t<<print _chosenSentence.sentence>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-avery-plead>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Avery\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\"Y-you're going to take care of me, right?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\"나, 날 보살펴줄 거지, 그렇지?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-greathawk-plead>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Great Hawk\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\"Alex, control yourself!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\"알렉스, 이성 좀 차려!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-alex-plead>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Alex\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t\t\t\"I thought... you said lust was a sin...\"",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t\"I'm sorry, I'll be pure! Please stop!\"",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t\t\t\"당신이... 색욕은 죄악이라고 했잖아요...\"",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t\"잘못했어요, 순결하게 지낼게요! 제발 멈춰주세요!\"",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-sydney-plead>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Sydney\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $abomination is 1>>",
+   "\t\t\t\t\t\t\t\"Gwylan, come back! I'm scared!\"",
+   "\t\t\t\t\t\t<<elseif $hypnosis_traits.devotion gte 1 or $combat_hypnosis>>",
+   "\t\t\t\t\t\t\t\"Gwylan, please, I can't think straight!\"",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t\"Gwylan, please, this doesn't feel right!\"",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<if $abomination is 1>>",
+   "\t\t\t\t\t\t\t\"그윌란, 돌아와! 나 무서워!\"",
+   "\t\t\t\t\t\t<<elseif $hypnosis_traits.devotion gte 1 or $combat_hypnosis>>",
+   "\t\t\t\t\t\t\t\"그윌란, 제발, 머리가 어떻게 된 것 같아!\"",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t\"그윌란, 제발, 기분이 이상해!\"",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-gwylan-plead>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Gwylan\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte $rng and $hallucinations gte 1) or ($settings.monsterChance gte $rng and !$settings.monsterHallucinationsOnly) or ($greathawkmonster is 2) or (!$settings.bestialityEnabled)>>",
+   "\t\t<<set _text_output to \"harpy\">>"
+  ],
+  "old_kr": [
+   "\t<<if ($settings.monsterChance gte $rng and $hallucinations gte 1) or ($settings.monsterChance gte $rng and !$settings.monsterHallucinationsOnly) or ($greathawkmonster is 2) or (!$settings.bestialityEnabled)>>",
+   "\t\t<<set _text_output to \"하피\">>"
+  ],
+  "new_en": [
+   "\t<<if resolveIfNamedBeastIsMonster(\"greathawk\")>>",
+   "\t\t<<set _text_output to \"harpy\">>"
+  ],
+  "context": "<<widget \"hawkText\">><<silently>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if C.npc.Robin.dom gte 70>>",
+   "\t\t\t\t\t<<set $speechspecialdialogue to \"robin_moan_dom\">>",
+   "\t\t\t\t\t\"You know just how to turn me on.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<set $speechspecialdialogue to \"robin_moan_default\">>",
+   "\t\t\t\t\t\"I'm gonna melt, you're making me so happy.\"",
+   "\t\t\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if C.npc.Robin.dom gte 70>>",
+   "\t\t\t\t\t<<set $speechspecialdialogue to \"robin_moan_dom\">>",
+   "\t\t\t\t\t\"넌 날 어떻게 흥분시키는지 아는구나.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<set $speechspecialdialogue to \"robin_moan_default\">>",
+   "\t\t\t\t\t\"녹아버릴 것 같아, 네가 날 너무 행복하게 만들어.\"",
+   "\t\t\t\t<</if>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<pc-line-robin-moan>>"
+  ],
+  "context": "\t\t\t<<case \"Robin\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<run statusCheck(\"Sydney\")>>",
+   "\t\t\t\t<<if !_sydneyChastity>>",
+   "\t\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t\t\"You're the most delicious sin of all.\"",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\"Forever, as one.\"",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t\"You make me so lustful.\"",
+   "\t\t\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<run statusCheck(\"Sydney\")>>",
+   "\t\t\t\t<<if !_sydneyChastity>>",
+   "\t\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t\t\"넌 모든 죄악 중에서 가장 달콤해.\"",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\"영원히, 하나로서.\"",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t\"넌 날 너무 음탕하게 만들어.\"",
+   "\t\t\t\t<</if>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<pc-line-sydney-moan>>"
+  ],
+  "context": "\t\t\t<<case \"Sydney\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\"Use me, Whitney. I'm yours.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\"날 사용해줘, 휘트니. 난 네 거야.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<pc-line-whitney-moan>>"
+  ],
+  "context": "\t\t\t<<case \"Whitney\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $wolfpackleader is 1>>",
+   "\t\t\t\t\t\"Good <<nnpc_gendery \"Black Wolf\">>. Keep going.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t\"<<print ($settings.pregnancySpeechEnabled ? \"Breed\" : \"Fuck\")>> me, alpha!\"",
+   "\t\t\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $wolfpackleader is 1>>",
+   "\t\t\t\t\t\"착하다, <<nnpc_gendery \"Black Wolf\">>. 계속해.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t\"<<print ($settings.pregnancySpeechEnabled ? \"임신시켜\" : \"박아\")>>줘, 알파!\"",
+   "\t\t\t\t<</if>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<pc-line-blackwolf-moan>>"
+  ],
+  "context": "\t\t\t<<case \"Black Wolf\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\"You're not a terror. You're all I need.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\"넌 공포가 아니야. 넌 내게 필요한 전부야.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<pc-line-greathawk-moan>>"
+  ],
+  "context": "\t\t\t<<case \"Great Hawk\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\"I belong to you, and you alone.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\"난 네 것이고, 오직 너만의 것이야.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<pc-line-eden-moan>>"
+  ],
+  "context": "\t\t\t<<case \"Eden\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<set _possibleSentences to []>>",
+   "\t\t\t\t/* Daddy variable is set if PC is submissive and the odds are 1-to-4 */",
+   "\t\t\t\t<<set _daddy to $submissive gte 1150 and random(1, 4) is 1>>",
+   "\t\t\t\t<<if $avery_fate is \"ascended\">>",
+   "\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"I'm all yours, Hound.\"`, dialogueID: \"avery_moan_ascended\"})>>",
+   "\t\t\t\t<<elseif $averyromance>>",
+   "\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"I love you, Avery.\"`, dialogueID: \"avery_moan_romance\"})>>",
+   "\t\t\t\t<<elseif _daddy>>",
+   "\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"Put me in my place, <<nnpc_mummy \"Avery\">>.\"`, dialogueID: \"avery_moan_daddy\"})>>",
+   "\t\t\t\t<<elseif isLoveInterest(\"Avery\")>> ",
+   "\t\t\t\t\t<<if !$avery_mansion>>",
+   "\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"Take me away from that place, take me with you.\"`, dialogueID: \"avery_moan_premansion\"})>>",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"Let me show you how grateful I am, use me as much as you want.\"`, dialogueID: \"avery_moan_mansion\"})>>",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"You're worth more than any payout.\"`, dialogueID: \"avery_moan_default\"})>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t\t<<set _chosenSentence to _possibleSentences.random()>>",
+   "\t\t\t\t<<set $speechspecialdialogue to _chosenSentence.dialogueID>>",
+   "\t\t\t\t<<print _chosenSentence.sentence>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<set _possibleSentences to []>>",
+   "\t\t\t\t/* Daddy variable is set if PC is submissive and the odds are 1-to-4 */",
+   "\t\t\t\t<<set _daddy to $submissive gte 1150 and random(1, 4) is 1>>",
+   "\t\t\t\t<<if $avery_fate is \"ascended\">>",
+   "\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"전부 당신 거예요, 하운드.\"`, dialogueID: \"avery_moan_ascended\"})>>",
+   "\t\t\t\t<<elseif $averyromance>>",
+   "\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"사랑해요, 에이버리.\"`, dialogueID: \"avery_moan_romance\"})>>",
+   "\t\t\t\t<<elseif _daddy>>",
+   "\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"제 분수를 가르쳐주세요, <<nnpc_mummy \"Avery\">>.\"`, dialogueID: \"avery_moan_daddy\"})>>",
+   "\t\t\t\t<<elseif isLoveInterest(\"Avery\")>> ",
+   "\t\t\t\t\t<<if !$avery_mansion>>",
+   "\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"그곳에서 절 꺼내주세요, 당신 곁으로 데려가 줘요.\"`, dialogueID: \"avery_moan_premansion\"})>>",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"제가 얼마나 감사하고 있는지 보여드릴게요, 절 원하는 만큼 마음껏 다뤄주세요.\"`, dialogueID: \"avery_moan_mansion\"})>>",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"당신은 그 어떤 보수보다도 가치 있어요.\"`, dialogueID: \"avery_moan_default\"})>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t\t<<set _chosenSentence to _possibleSentences.random()>>",
+   "\t\t\t\t<<set $speechspecialdialogue to _chosenSentence.dialogueID>>",
+   "\t\t\t\t<<print _chosenSentence.sentence>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<pc-line-avery-moan>>"
+  ],
+  "context": "\t\t\t<<case \"Avery\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\"I couldn't ask for a better partner.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\"더 좋은 파트너는 바랄 수도 없어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<pc-line-alex-moan>>"
+  ],
+  "context": "\t\t\t<<case \"Alex\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\"You're the only one I need, Kylar.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\"내게 필요한 건 오직 너뿐이야, 카일라.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<pc-line-kylar-moan>>"
+  ],
+  "context": "\t\t\t<<case \"Kylar\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\"I think I'm bewitched.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\"나 홀린 것 같아.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<pc-line-gwylan-moan>>"
+  ],
+  "context": "\t\t\t<<case \"Gwylan\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<case 0>> \"Choke me<<if _daddy>>, _daddy_text<</if>>.\"",
+   "\t\t\t<<case 1>> \"Put your hand on my neck, please.\"",
+   "\t\t\t<<case 2>> \"Harder<<if _daddy>>, _daddy_text<</if>>! Choke me harder!\"",
+   "\t\t\t<<case 3>> \"<<if _daddy>>Daddy, I<<else>>I<</if>> want you to choke me.\"",
+   "\t\t\t<<case 4>> \"Please, squeeze my throat!\"",
+   "\t\t\t<<case 5>> \"Grab my neck<<if _daddy>>, _daddy_text<</if>>.\"",
+   "\t\t\t<<default>> \"Choke me hard.\""
+  ],
+  "old_kr": [
+   "\t\t\t<<case 0>> \"내 목을 졸라 줘<<if _daddy>>, _daddy_text<</if>>.\"",
+   "\t\t\t<<case 1>> \"내 목에 손을 올려 줘, 제발.\"",
+   "\t\t\t<<case 2>> \"더 세게<<if _daddy>>, _daddy_text<</if>>! 더 세게 졸라 줘!\"",
+   "\t\t\t<<case 3>> \"<<if _daddy>>아빠, <</if>>내 목을 졸라 줬으면 좋겠어.\"",
+   "\t\t\t<<case 4>> \"제발, 내 목을 조여 줘!\"",
+   "\t\t\t<<case 5>> \"내 목을 잡아 줘<<if _daddy>>, _daddy_text<</if>>.\"",
+   "\t\t\t<<default>> \"목을 세게 졸라 줘.\""
+  ],
+  "new_en": [
+   "\t\t\t<<case 0>> \"Choke me<<if _daddy>>, _daddy_text<</if>>.\"",
+   "\t\t\t<<case 1>> \"Put your hand on my neck, please.\"",
+   "\t\t\t<<case 2>> \"Harder<<if _daddy>>, _daddy_text<</if>>! Choke me harder!\"",
+   "\t\t\t<<case 3>> \"<<if _daddy>>_daddy_text, I<<else>>I<</if>> want you to choke me.\"",
+   "\t\t\t<<case 4>> \"Please, squeeze my throat!\"",
+   "\t\t\t<<case 5>> \"Grab my neck<<if _daddy>>, _daddy_text<</if>>.\"",
+   "\t\t\t<<default>> \"Choke me hard.\""
+  ],
+  "context": "\t\t<<switch $speechcycle>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<set $speechnamedrop to $npc.includes(_loveInterest) ? 0 : 1>>",
+   "\t\t\t<<if $speechnamedrop is 0>>",
+   "\t\t\t\tYou speak."
+  ],
+  "old_kr": [
+   "\t\t\t<<set $speechnamedrop to $npc.includes(_loveInterest) ? 0 : 1>>",
+   "\t\t\t<<if $speechnamedrop is 0>>",
+   "\t\t\t\t당신은 말한다."
+  ],
+  "new_en": [
+   "\t\t\t<<set $speechLINameDrop to $npc.includes(_loveInterest) ? 0 : 1>>",
+   "\t\t\t<<if $speechLINameDrop is 0>>",
+   "\t\t\t\tYou speak."
+  ],
+  "context": "\t\t<<elseif _loveInterest isnot undefined and random(0,100) lte 15>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\"Robin, stop! I don't want this!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\"로빈, 그만해! 난 이거 원하지 않아!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-robin-demand>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Robin\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\"I'm not in the mood for your shit right now, Kylar.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\"지금 네 헛소리 들어줄 기분 아니야, 카일라.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-kylar-demand>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Kylar\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\"You can't just fuck me whenever you want, Whitney!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\"네가 원할 때마다 날 박을 순 없어, 휘트니!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-whitney-demand>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Whitney\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\"I'm not your prey today, leave me alone.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\"오늘은 네 사냥감이 아니야, 날 내버려 둬.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-eden-demand>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Eden\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\"Down. DOWN!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\"엎드려. 엎드려!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-blackwolf-demand>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Black Wolf\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<set _possibleSentences to []>>",
+   "\t\t\t\t\t\t<<if !$avery_mansion>>",
+   "\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"You don't pay me enough to treat me like this!\"`, dialogueID: \"avery_demand_default\"})>>",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t<<if isAveryHuntingPlayer()>>",
+   "\t\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"Get the hell away from me! You're taking this too far, Avery!\"`, dialogueID: \"avery_demand_hunting\"})>>",
+   "\t\t\t\t\t\t\t<<elseif $averyromance is 1>>",
+   "\t\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"I told you I loved you, but I won't hesitate to leave if you don't stop this right now!\"`, dialogueID: \"avery_demand_romance\"})>>",
+   "\t\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"Stop it, Avery! I'm<<if $averySeen.includes(\"walkParkSOYes\") or $averyromance>> your <<girlfriend>>,<</if>> not your punching bag!\"`, dialogueID: \"avery_demand_mansion\"})>>",
+   "\t\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t\t<<set _chosenSentence to _possibleSentences.random()>>",
+   "\t\t\t\t\t\t<<set $speechspecialdialogue to _chosenSentence.dialogueID>>",
+   "\t\t\t\t\t\t<<print _chosenSentence.sentence>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<set _possibleSentences to []>>",
+   "\t\t\t\t\t\t<<if !$avery_mansion>>",
+   "\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"날 이렇게 대할 만큼 돈을 많이 주는 것도 아니잖아요!\"`, dialogueID: \"avery_demand_default\"})>>",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t<<if isAveryHuntingPlayer()>>",
+   "\t\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"내게서 당장 떨어져요! 이건 너무 지나치잖아요, 에이버리!\"`, dialogueID: \"avery_demand_hunting\"})>>",
+   "\t\t\t\t\t\t\t<<elseif $averyromance is 1>>",
+   "\t\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"사랑한다고는 했지만, 당장 이걸 멈추지 않으면 미련 없이 떠날 거예요!\"`, dialogueID: \"avery_demand_romance\"})>>",
+   "\t\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t\t<<set _possibleSentences.push({ sentence: `\"그만해요, 에이버리! 난<<if $averySeen.includes(\"walkParkSOYes\") or $averyromance>> 당신의 <<girlfriend>>【이】지,<</if>> 당신 샌드백이 아니라고요!\"`, dialogueID: \"avery_demand_mansion\"})>>",
+   "\t\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t\t<<set _chosenSentence to _possibleSentences.random()>>",
+   "\t\t\t\t\t\t<<set $speechspecialdialogue to _chosenSentence.dialogueID>>",
+   "\t\t\t\t\t\t<<print _chosenSentence.sentence>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-avery-demand>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Avery\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\"Stop pecking me!\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\"그만 쪼아!\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-greathawk-demand>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Great Hawk\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\"Alex, you idiot! Control yourself.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\"알렉스, 이 바보야! 정신 차려.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-alex-demand>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Alex\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t\t\t\"I miss when you were pure. At least you didn't pull shit like this.\"",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t\"What sort of punishment is this? Get off me!\"",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<if _sydneyStatus.includes(\"corrupt\")>>",
+   "\t\t\t\t\t\t\t\"네가 순수했을 때가 그리워. 적어도 이런 짓은 안 했잖아.\"",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t\"이게 무슨 벌이야? 나한테서 떨어져!\"",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-sydney-demand>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Sydney\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $abomination is 1>>",
+   "\t\t\t\t\t\t\t\"Gwylan, I know you're in there! Take control!\"",
+   "\t\t\t\t\t\t<<elseif $hypnosis_traits.devotion gte 4 or $combat_hypnosis>>",
+   "\t\t\t\t\t\t\t\"Gwylan, stop! Get out of my head!\"",
+   "\t\t\t\t\t\t<<elseif $gwylanSeen.includes(\"romance\")>>",
+   "\t\t\t\t\t\t\t\"Gwylan, stop this! You promised!\"",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t\"Gwylan, stop this!\"",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<if $abomination is 1>>",
+   "\t\t\t\t\t\t\t\"그윌란, 거기 있는 거 알아! 정신 차려!\"",
+   "\t\t\t\t\t\t<<elseif $hypnosis_traits.devotion gte 4 or $combat_hypnosis>>",
+   "\t\t\t\t\t\t\t\"그윌란, 그만해! 내 머릿속에서 나가!\"",
+   "\t\t\t\t\t\t<<elseif $gwylanSeen.includes(\"romance\")>>",
+   "\t\t\t\t\t\t\t\"그윌란, 그만해! 약속했잖아!\"",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t\"그윌란, 그만해!\"",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<pc-line-gwylan-demand>>"
+  ],
+  "context": "\t\t\t\t\t<<if $npc.includes(\"Gwylan\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $mockaction is \"penis\">>",
+   "\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"I can barely feel it,\"",
+   "\t\t\t\t\t<<case 1>> \"The last cock was much larger,\"",
+   "\t\t\t\t\t<<case 2>> \"Is it even in yet?\"",
+   "\t\t\t\t\t<<case 3>> \"Don't you have something bigger?\"",
+   "\t\t\t\t\t<<case 4>> \"How disappointing,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"I bet the thought of entering my pussy is driving you mad,\"",
+   "\t\t\t\t\t<<case 1>> \"I'm not sure you're big enough,\"",
+   "\t\t\t\t\t<<case 2>> \"What are you waiting for?\"",
+   "\t\t\t\t\t<<case 3>> \"I bet you cum before you get it in,\"",
+   "\t\t\t\t\t<<case 4>> \"Do you even know how to use that thing?\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"I can barely feel it,\"",
+   "\t\t\t\t\t<<case 1>> \"The last cock was much larger,\"",
+   "\t\t\t\t\t<<case 2>> \"Is it even in yet?\"",
+   "\t\t\t\t\t<<case 3>> \"Don't you have something bigger?\"",
+   "\t\t\t\t\t<<case 4>> \"How disappointing,\"",
+   "\t\t\t\t<</switch>>"
+  ],
+  "old_kr": [
+   "\t<<if $mockaction is \"penis\">>",
+   "\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"거의 안 느껴지는데,\"",
+   "\t\t\t\t\t<<case 1>> \"저번 자지가 훨씬 컸어,\"",
+   "\t\t\t\t\t<<case 2>> \"들어오긴 한 거야?\"",
+   "\t\t\t\t\t<<case 3>> \"좀 더 큰 거 없어?\"",
+   "\t\t\t\t\t<<case 4>> \"실망스럽네,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"내 보지에 들어갈 생각만 해도 미치겠지,\"",
+   "\t\t\t\t\t<<case 1>> \"네가 충분히 큰지 모르겠어,\"",
+   "\t\t\t\t\t<<case 2>> \"뭘 기다리는 거야?\"",
+   "\t\t\t\t\t<<case 3>> \"넣기도 전에 쌀 것 같은데,\"",
+   "\t\t\t\t\t<<case 4>> \"그거 어떻게 쓰는지나 알아?\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"거의 안 느껴지는데,\"",
+   "\t\t\t\t\t<<case 1>> \"저번 자지가 훨씬 컸어,\"",
+   "\t\t\t\t\t<<case 2>> \"들어오긴 한 거야?\"",
+   "\t\t\t\t\t<<case 3>> \"좀 더 큰 거 없어?\"",
+   "\t\t\t\t\t<<case 4>> \"실망스럽네,\"",
+   "\t\t\t\t<</switch>>"
+  ],
+  "new_en": [
+   "\t<<speechPool \"pc\">>",
+   "\t<<rng>>",
+   "\t<<if $rng lte 15>>",
+   "\t\t<<switch $NPCList[$mouthtarget].fullDescription>>",
+   "\t\t\t<<case \"Whitney\">><<pc-line-whitney-mock $mockaction>>",
+   "\t\t<</switch>>",
+   "\t<</if>>",
+   "\t<<if hasSpeechLines()>>",
+   "\t\t<<speechSay>>",
+   "\t<<else>>",
+   "\t\t<<if $mockaction is \"penis\">>",
+   "\t\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"I can barely feel it,\"",
+   "\t\t\t\t\t\t<<case 1>> \"The last cock was much larger,\"",
+   "\t\t\t\t\t\t<<case 2>> \"Is it even in yet?\"",
+   "\t\t\t\t\t\t<<case 3>> \"Don't you have something bigger?\"",
+   "\t\t\t\t\t\t<<case 4>> \"How disappointing,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"I bet the thought of entering my pussy is driving you mad,\"",
+   "\t\t\t\t\t\t<<case 1>> \"I'm not sure you're big enough,\"",
+   "\t\t\t\t\t\t<<case 2>> \"What are you waiting for?\"",
+   "\t\t\t\t\t\t<<case 3>> \"I bet you cum before you get it in,\"",
+   "\t\t\t\t\t\t<<case 4>> \"Do you even know how to use that thing?\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"I can barely feel it,\"",
+   "\t\t\t\t\t\t<<case 1>> \"The last cock was much larger,\"",
+   "\t\t\t\t\t\t<<case 2>> \"Is it even in yet?\"",
+   "\t\t\t\t\t\t<<case 3>> \"Don't you have something bigger?\"",
+   "\t\t\t\t\t\t<<case 4>> \"How disappointing,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"I bet the thought of entering my ass is driving you mad,\"",
+   "\t\t\t\t\t\t<<case 1>> \"I'm not sure you're big enough,\"",
+   "\t\t\t\t\t\t<<case 2>> \"What are you waiting for?\"",
+   "\t\t\t\t\t\t<<case 3>> \"I bet you cum before you get it in,\"",
+   "\t\t\t\t\t\t<<case 4>> \"Do you even know how to use that thing?\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t<<set $mockcycle to $mockcycle gt -1 ? ($mockcycle + 1) % 5 : 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<case 0>> \"I bet the thought of entering my ass is driving you mad,\"",
+   "\t\t\t\t\t<<case 1>> \"I'm not sure you're big enough,\"",
+   "\t\t\t\t\t<<case 2>> \"What are you waiting for?\"",
+   "\t\t\t\t\t<<case 3>> \"I bet you cum before you get it in,\"",
+   "\t\t\t\t\t<<case 4>> \"Do you even know how to use that thing?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<case 0>> \"내 엉덩이에 들어갈 생각만 해도 미치겠지,\"",
+   "\t\t\t\t\t<<case 1>> \"네가 충분히 큰지 모르겠어,\"",
+   "\t\t\t\t\t<<case 2>> \"뭘 기다리는 거야?\"",
+   "\t\t\t\t\t<<case 3>> \"넣기도 전에 쌀 것 같은데,\"",
+   "\t\t\t\t\t<<case 4>> \"그거 어떻게 쓰는지나 알아?\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 0>> \"How disappointing,\"",
+   "\t\t\t\t\t<<case 1>> \"You're pathetic,\"",
+   "\t\t\t\t\t<<case 2>> \"Is that all you've got?\"",
+   "\t\t\t\t\t<<case 3>> \"Your little thing doesn't frighten me,\"",
+   "\t\t\t\t\t<<case 4>> \"Your cock is so small,\""
+  ],
+  "context": "\t\t\t\t<<switch $mockcycle>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<else>>",
+   "\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t<<case 0>> \"How disappointing,\"",
+   "\t\t\t\t<<case 1>> \"You're pathetic,\"",
+   "\t\t\t\t<<case 2>> \"Is that all you've got?\"",
+   "\t\t\t\t<<case 3>> \"Your little thing doesn't frighten me,\"",
+   "\t\t\t\t<<case 4>> \"Your cock is so small,\"",
+   "\t\t\t<</switch>>",
+   "\t\t<</if>>",
+   "\t<<elseif $mockaction is \"vagina\">>",
+   "\t\t<<if $penisuse is \"othervagina\">>",
+   "\t\t\t<<if $penisstate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"You're confident for someone getting pounded,\"",
+   "\t\t\t\t\t<<case 1>> \"I'm gonna fill your womb,\"",
+   "\t\t\t\t\t<<case 2>> \"Your pussy feels weird,\"",
+   "\t\t\t\t\t<<case 3>> \"I think you've had one too many cocks in you,\"",
+   "\t\t\t\t\t<<case 4>> \"What's it like getting fucked like this?\"",
+   "\t\t\t\t<</switch>>"
+  ],
+  "old_kr": [
+   "\t\t<<else>>",
+   "\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t<<case 0>> \"실망스럽네,\"",
+   "\t\t\t\t<<case 1>> \"애처롭네,\"",
+   "\t\t\t\t<<case 2>> \"그게 다야?\"",
+   "\t\t\t\t<<case 3>> \"네 조그만 물건은 하나도 안 무서워,\"",
+   "\t\t\t\t<<case 4>> \"네 자지 정말 작다,\"",
+   "\t\t\t<</switch>>",
+   "\t\t<</if>>",
+   "\t<<elseif $mockaction is \"vagina\">>",
+   "\t\t<<if $penisuse is \"othervagina\">>",
+   "\t\t\t<<if $penisstate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"박히고 있는 주제에 자신만만하네,\"",
+   "\t\t\t\t\t<<case 1>> \"네 자궁을 가득 채워주지,\"",
+   "\t\t\t\t\t<<case 2>> \"네 보지 느낌이 이상해,\"",
+   "\t\t\t\t\t<<case 3>> \"너한테 들어간 자지가 너무 많은 것 같은데,\"",
+   "\t\t\t\t\t<<case 4>> \"이렇게 박히는 기분이 어때?\"",
+   "\t\t\t\t<</switch>>"
+  ],
+  "new_en": [
+   "\t\t<<elseif $mockaction is \"vagina\">>",
+   "\t\t\t<<if $penisuse is \"othervagina\">>",
+   "\t\t\t\t<<if $penisstate is \"penetrated\">>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"You're confident for someone getting pounded,\"",
+   "\t\t\t\t\t\t<<case 1>> \"I'm gonna fill your womb,\"",
+   "\t\t\t\t\t\t<<case 2>> \"Your pussy feels weird,\"",
+   "\t\t\t\t\t\t<<case 3>> \"I think you've had one too many cocks in you,\"",
+   "\t\t\t\t\t\t<<case 4>> \"What's it like getting fucked like this?\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"You're such a <<slut>>,\"",
+   "\t\t\t\t\t\t<<case 1>> \"I don't think you're ready for my cock,\"",
+   "\t\t\t\t\t\t<<case 2>> \"You think you can handle it?\"",
+   "\t\t\t\t\t\t<<case 3>> \"I bet you try to ride every cock you see,\"",
+   "\t\t\t\t\t\t<<case 4>> \"You're very eager to take me inside you,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<case 0>> \"You're such a <<slut>>,\"",
+   "\t\t\t\t\t<<case 1>> \"I don't think you're ready for my cock,\"",
+   "\t\t\t\t\t<<case 2>> \"You think you can handle it?\"",
+   "\t\t\t\t\t<<case 3>> \"I bet you try to ride every cock you see,\"",
+   "\t\t\t\t\t<<case 4>> \"You're very eager to take me inside you,\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<case 0>> \"넌 너무 <<slut>> 같아,\"",
+   "\t\t\t\t\t<<case 1>> \"넌 아직 내 자지를 받을 준비가 안 된 것 같아,\"",
+   "\t\t\t\t\t<<case 2>> \"감당할 수 있을 것 같아?\"",
+   "\t\t\t\t\t<<case 3>> \"눈에 띄는 자지는 다 타보려고 할 것 같은데,\"",
+   "\t\t\t\t\t<<case 4>> \"나를 안에 들이려고 아주 안달이 났네,\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 0>> \"You're so wet already,\"",
+   "\t\t\t\t\t<<case 1>> \"You're eager to get fucked,\"",
+   "\t\t\t\t\t<<case 2>> \"I bet your pussy has had lots of use,\"",
+   "\t\t\t\t\t<<case 3>> \"You might be too wide for me,\"",
+   "\t\t\t\t\t<<case 4>> \"Your pussy looks weird,\""
+  ],
+  "context": "\t\t\t\t<<switch $mockcycle>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<else>>",
+   "\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t<<case 0>> \"You're so wet already,\"",
+   "\t\t\t\t<<case 1>> \"You're eager to get fucked,\"",
+   "\t\t\t\t<<case 2>> \"I bet your pussy has had lots of use,\"",
+   "\t\t\t\t<<case 3>> \"You might be too wide for me,\"",
+   "\t\t\t\t<<case 4>> \"Your pussy looks weird,\"",
+   "\t\t\t<</switch>>",
+   "\t\t<</if>>",
+   "\t<<elseif $mockaction is \"skill\">>",
+   "\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"At least you're trying,\"",
+   "\t\t\t\t\t<<case 1>> \"You're boring me,\"",
+   "\t\t\t\t\t<<case 2>> \"Your cock is so clumsy,\"",
+   "\t\t\t\t\t<<case 3>> \"Do you even know how to use that thing?\"",
+   "\t\t\t\t\t<<case 4>> \"Is this your first time?\"",
+   "\t\t\t\t<</switch>>"
+  ],
+  "old_kr": [
+   "\t\t<<else>>",
+   "\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t<<case 0>> \"벌써 이렇게 젖었잖아,\"",
+   "\t\t\t\t<<case 1>> \"박히고 싶어서 안달이 났네,\"",
+   "\t\t\t\t<<case 2>> \"네 보지는 아주 많이 쓰였나봐,\"",
+   "\t\t\t\t<<case 3>> \"넌 나한테 너무 헐렁할지도 몰라,\"",
+   "\t\t\t\t<<case 4>> \"네 보지 이상하게 생겼어,\"",
+   "\t\t\t<</switch>>",
+   "\t\t<</if>>",
+   "\t<<elseif $mockaction is \"skill\">>",
+   "\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"그래도 노력은 하네,\"",
+   "\t\t\t\t\t<<case 1>> \"지루해,\"",
+   "\t\t\t\t\t<<case 2>> \"네 자지 정말 서투르다,\"",
+   "\t\t\t\t\t<<case 3>> \"그거 어떻게 쓰는지나 알아?\"",
+   "\t\t\t\t\t<<case 4>> \"이거 처음이야?\"",
+   "\t\t\t\t<</switch>>"
+  ],
+  "new_en": [
+   "\t\t<<elseif $mockaction is \"skill\">>",
+   "\t\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"At least you're trying,\"",
+   "\t\t\t\t\t\t<<case 1>> \"You're boring me,\"",
+   "\t\t\t\t\t\t<<case 2>> \"Your cock is so clumsy,\"",
+   "\t\t\t\t\t\t<<case 3>> \"Do you even know how to use that thing?\"",
+   "\t\t\t\t\t\t<<case 4>> \"Is this your first time?\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"Careful where you point that,\"",
+   "\t\t\t\t\t\t<<case 1>> \"You won't last long,\"",
+   "\t\t\t\t\t\t<<case 2>> \"I bet this is new to you,\"",
+   "\t\t\t\t\t\t<<case 3>> \"You're not good enough for my pussy,\"",
+   "\t\t\t\t\t\t<<case 4>> \"I don't expect much,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"At least you're trying,\"",
+   "\t\t\t\t\t\t<<case 1>> \"You're boring me,\"",
+   "\t\t\t\t\t\t<<case 2>> \"Your cock is so clumsy,\"",
+   "\t\t\t\t\t\t<<case 3>> \"Do you even know how to use that thing?\"",
+   "\t\t\t\t\t\t<<case 4>> \"Is this your first time?\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"Careful where you point that,\"",
+   "\t\t\t\t\t\t<<case 1>> \"You won't last long,\"",
+   "\t\t\t\t\t\t<<case 2>> \"I bet this is new to you,\"",
+   "\t\t\t\t\t\t<<case 3>> \"You're not good enough for my ass,\"",
+   "\t\t\t\t\t\t<<case 4>> \"I don't expect much,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $penisuse is \"othervagina\" or $penisuse is \"otheranus\">>",
+   "\t\t\t\t<<if $penisstate is \"penetrated\" or $penisstate is \"otheranus\">>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"At least you're trying,\"",
+   "\t\t\t\t\t\t<<case 1>> \"You're not making me cum,\"",
+   "\t\t\t\t\t\t<<case 2>> \"Move your hips more. Do I have to do everything?\"",
+   "\t\t\t\t\t\t<<case 3>> \"Do you even know what you're doing?\"",
+   "\t\t\t\t\t\t<<case 4>> \"Is this your first time?\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"Careful where you point that,\"",
+   "\t\t\t\t\t\t<<case 1>> \"You won't last long,\"",
+   "\t\t\t\t\t\t<<case 2>> \"I doubt you know how handle it,\"",
+   "\t\t\t\t\t\t<<case 3>> \"You're not good enough for my penis,\"",
+   "\t\t\t\t\t\t<<case 4>> \"I don't expect much,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<case 0>> \"Careful where you point that,\"",
+   "\t\t\t\t\t<<case 1>> \"You won't last long,\"",
+   "\t\t\t\t\t<<case 2>> \"I bet this is new to you,\"",
+   "\t\t\t\t\t<<case 3>> \"You're not good enough for my pussy,\"",
+   "\t\t\t\t\t<<case 4>> \"I don't expect much,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"At least you're trying,\"",
+   "\t\t\t\t\t<<case 1>> \"You're boring me,\"",
+   "\t\t\t\t\t<<case 2>> \"Your cock is so clumsy,\"",
+   "\t\t\t\t\t<<case 3>> \"Do you even know how to use that thing?\"",
+   "\t\t\t\t\t<<case 4>> \"Is this your first time?\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"Careful where you point that,\"",
+   "\t\t\t\t\t<<case 1>> \"You won't last long,\"",
+   "\t\t\t\t\t<<case 2>> \"I bet this is new to you,\"",
+   "\t\t\t\t\t<<case 3>> \"You're not good enough for my ass,\"",
+   "\t\t\t\t\t<<case 4>> \"I don't expect much,\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<case 0>> \"어디다 들이대는지 조심해,\"",
+   "\t\t\t\t\t<<case 1>> \"얼마 못 갈 것 같은데,\"",
+   "\t\t\t\t\t<<case 2>> \"이런 건 처음이지,\"",
+   "\t\t\t\t\t<<case 3>> \"넌 내 보지에 들어가기엔 한참 모자라,\"",
+   "\t\t\t\t\t<<case 4>> \"별로 기대도 안 해,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"그래도 노력은 하네,\"",
+   "\t\t\t\t\t<<case 1>> \"지루해,\"",
+   "\t\t\t\t\t<<case 2>> \"네 자지 정말 서투르다,\"",
+   "\t\t\t\t\t<<case 3>> \"그거 어떻게 쓰는지나 알아?\"",
+   "\t\t\t\t\t<<case 4>> \"이거 처음이야?\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"어디다 들이대는지 조심해,\"",
+   "\t\t\t\t\t<<case 1>> \"얼마 못 갈 것 같은데,\"",
+   "\t\t\t\t\t<<case 2>> \"이런 건 처음이지,\"",
+   "\t\t\t\t\t<<case 3>> \"넌 내 엉덩이에 들어가기엔 한참 모자라,\"",
+   "\t\t\t\t\t<<case 4>> \"별로 기대도 안 해,\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 0>> \"At least you're trying,\"",
+   "\t\t\t\t\t<<case 1>> \"Wake me when it's over,\"",
+   "\t\t\t\t\t<<case 2>> \"I'd be better off using my hand,\"",
+   "\t\t\t\t\t<<case 3>> \"You don't know what you're doing, do you?\"",
+   "\t\t\t\t\t<<case 4>> \"You're bad at this,\""
+  ],
+  "context": "\t\t\t\t<<switch $mockcycle>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<elseif $penisuse is \"othervagina\" or $penisuse is \"otheranus\">>",
+   "\t\t\t<<if $penisstate is \"penetrated\" or $penisstate is \"otheranus\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"At least you're trying,\"",
+   "\t\t\t\t\t<<case 1>> \"You're not making me cum,\"",
+   "\t\t\t\t\t<<case 2>> \"Move your hips more. Do I have to do everything?\"",
+   "\t\t\t\t\t<<case 3>> \"Do you even know what you're doing?\"",
+   "\t\t\t\t\t<<case 4>> \"Is this your first time?\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"Careful where you point that,\"",
+   "\t\t\t\t\t<<case 1>> \"You won't last long,\"",
+   "\t\t\t\t\t<<case 2>> \"I doubt you know how handle it,\"",
+   "\t\t\t\t\t<<case 3>> \"You're not good enough for my penis,\"",
+   "\t\t\t\t\t<<case 4>> \"I don't expect much,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<else>>",
+   "\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t<<case 0>> \"At least you're trying,\"",
+   "\t\t\t\t<<case 1>> \"Wake me when it's over,\"",
+   "\t\t\t\t<<case 2>> \"I'd be better off using my hand,\"",
+   "\t\t\t\t<<case 3>> \"You don't know what you're doing, do you?\"",
+   "\t\t\t\t<<case 4>> \"You're bad at this,\"",
+   "\t\t\t<</switch>>",
+   "\t\t<</if>>",
+   "\t<<elseif $mockaction is \"weak\">>",
+   "\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"Tired already?\"",
+   "\t\t\t\t\t<<case 1>> \"I don't normally let such weaklings inside me,\"",
+   "\t\t\t\t\t<<case 2>> \"Careful you don't have a heart attack,\"",
+   "\t\t\t\t\t<<case 3>> \"You're too weak to keep this up,\"",
+   "\t\t\t\t\t<<case 4>> \"You're wearing out fast,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"I don't think you're strong enough to push it in,\"",
+   "\t\t\t\t\t<<case 1>> \"It goes in when I say so,\"",
+   "\t\t\t\t\t<<case 2>> \"You gonna faint on me?\"",
+   "\t\t\t\t\t<<case 3>> \"I could keep you away forever,\"",
+   "\t\t\t\t\t<<case 4>> \"If you want my pussy, you'll need to work harder than that,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"Tired already?\"",
+   "\t\t\t\t\t<<case 1>> \"I don't normally let such weaklings inside me,\"",
+   "\t\t\t\t\t<<case 2>> \"Careful you don't have a heart attack,\"",
+   "\t\t\t\t\t<<case 3>> \"You're too weak to keep this up,\"",
+   "\t\t\t\t\t<<case 4>> \"You're wearing out fast,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"I don't think you're strong enough to push it in,\"",
+   "\t\t\t\t\t<<case 1>> \"It goes in when I say so,\"",
+   "\t\t\t\t\t<<case 2>> \"You gonna faint on me?\"",
+   "\t\t\t\t\t<<case 3>> \"I could keep you away forever,\"",
+   "\t\t\t\t\t<<case 4>> \"If you want my ass, you'll need to work harder than that,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $penisuse is \"othervagina\" or $penisuse is \"otheranus\">>",
+   "\t\t\t<<if $penisstate is \"penetrated\" or $penisstate is \"otheranus\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"Tired already?\"",
+   "\t\t\t\t\t<<case 1>> \"I don't normally fuck such weaklings,\"",
+   "\t\t\t\t\t<<case 2>> \"Careful you don't have a heart attack,\"",
+   "\t\t\t\t\t<<case 3>> \"You're too weak to keep this up,\"",
+   "\t\t\t\t\t<<case 4>> \"You're wearing out fast,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"I don't think you're strong enough to push it in,\"",
+   "\t\t\t\t\t<<case 1>> \"It goes in when I say so,\"",
+   "\t\t\t\t\t<<case 2>> \"You gonna faint on me?\"",
+   "\t\t\t\t\t<<case 3>> \"I could keep you away forever,\"",
+   "\t\t\t\t\t<<case 4>> \"If you want my penis, you'll need to work harder than that,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<else>>",
+   "\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t<<case 0>> \"You're so weak,\"",
+   "\t\t\t\t<<case 1>> \"This is only happening because I let it,\"",
+   "\t\t\t\t<<case 2>> \"I'm doing this out of pity,\"",
+   "\t\t\t\t<<case 3>> \"You couldn't even force someone to fuck you,\"",
+   "\t\t\t\t<<case 4>> \"Is that all you've got?\"",
+   "\t\t\t<</switch>>",
+   "\t\t<</if>>",
+   "\t<<elseif $mockaction is \"looks\">>",
+   "\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"At least don't make me look at your face,\"",
+   "\t\t\t\t\t<<case 1>> \"You could only ever get someone to fuck you through force,\"",
+   "\t\t\t\t\t<<case 2>> \"Hurry up. I don't want to look at you any more,\"",
+   "\t\t\t\t\t<<case 3>> \"I hope I don't have to fuck anyone as ugly as you again,\"",
+   "\t\t\t\t\t<<case 4>> \"I hope you're enjoying this. It's more than you deserve,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"The thought of someone so revolting fucking me is making me queasy,\"",
+   "\t\t\t\t\t<<case 1>> \"You want me to pity fuck you?\"",
+   "\t\t\t\t\t<<case 2>> \"I don't want any part of your disgusting body inside me,\"",
+   "\t\t\t\t\t<<case 3>> \"I've never fucked anyone as ugly as you,\"",
+   "\t\t\t\t\t<<case 4>> \"I look too good for you,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"At least don't make me look at your face,\"",
+   "\t\t\t\t\t<<case 1>> \"You could only ever get someone to fuck you through force,\"",
+   "\t\t\t\t\t<<case 2>> \"Hurry up. I don't want to look at you any more,\"",
+   "\t\t\t\t\t<<case 3>> \"I hope I don't have to fuck anyone as ugly as you again,\"",
+   "\t\t\t\t\t<<case 4>> \"I hope you're enjoying this. It's more than you deserve,\"",
+   "\t\t\t\t<</switch>>"
+  ],
+  "old_kr": [
+   "\t\t<<elseif $penisuse is \"othervagina\" or $penisuse is \"otheranus\">>",
+   "\t\t\t<<if $penisstate is \"penetrated\" or $penisstate is \"otheranus\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"그래도 노력은 하네,\"",
+   "\t\t\t\t\t<<case 1>> \"나 하나도 안 가는데,\"",
+   "\t\t\t\t\t<<case 2>> \"허리 좀 더 움직여봐. 내가 다 해줘야 돼?\"",
+   "\t\t\t\t\t<<case 3>> \"지금 네가 뭘 하고 있는지 알기는 해?\"",
+   "\t\t\t\t\t<<case 4>> \"이거 처음이야?\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"어디다 들이대는지 조심해,\"",
+   "\t\t\t\t\t<<case 1>> \"얼마 못 갈 것 같은데,\"",
+   "\t\t\t\t\t<<case 2>> \"네가 어떻게 다뤄야 할지 알기나 할까,\"",
+   "\t\t\t\t\t<<case 3>> \"넌 내 자지를 받기엔 한참 모자라,\"",
+   "\t\t\t\t\t<<case 4>> \"별로 기대도 안 해,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<else>>",
+   "\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t<<case 0>> \"그래도 노력은 하네,\"",
+   "\t\t\t\t<<case 1>> \"끝나면 깨워줘,\"",
+   "\t\t\t\t<<case 2>> \"내 손을 쓰는 게 낫겠어,\"",
+   "\t\t\t\t<<case 3>> \"지금 뭘 하는지도 모르지?\"",
+   "\t\t\t\t<<case 4>> \"정말 못하네,\"",
+   "\t\t\t<</switch>>",
+   "\t\t<</if>>",
+   "\t<<elseif $mockaction is \"weak\">>",
+   "\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"벌써 지쳤어?\"",
+   "\t\t\t\t\t<<case 1>> \"원래 이런 약골은 내 안에 안 들이는데,\"",
+   "\t\t\t\t\t<<case 2>> \"심장마비 안 오게 조심해,\"",
+   "\t\t\t\t\t<<case 3>> \"넌 너무 약해서 이걸 계속 못 할 거야,\"",
+   "\t\t\t\t\t<<case 4>> \"금방 닳아버리네,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"넌 밀어넣을 힘도 없을 것 같은데,\"",
+   "\t\t\t\t\t<<case 1>> \"내가 넣으라고 할 때 넣는 거야,\"",
+   "\t\t\t\t\t<<case 2>> \"이러다 기절하는 거 아니야?\"",
+   "\t\t\t\t\t<<case 3>> \"평생 못 들어오게 막을 수도 있어,\"",
+   "\t\t\t\t\t<<case 4>> \"내 보지를 원한다면 그보다 더 노력해야 할 걸,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"벌써 지쳤어?\"",
+   "\t\t\t\t\t<<case 1>> \"원래 이런 약골은 내 안에 안 들이는데,\"",
+   "\t\t\t\t\t<<case 2>> \"심장마비 안 오게 조심해,\"",
+   "\t\t\t\t\t<<case 3>> \"넌 너무 약해서 이걸 계속 못 할 거야,\"",
+   "\t\t\t\t\t<<case 4>> \"금방 닳아버리네,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"넌 밀어넣을 힘도 없을 것 같은데,\"",
+   "\t\t\t\t\t<<case 1>> \"내가 넣으라고 할 때 넣는 거야,\"",
+   "\t\t\t\t\t<<case 2>> \"이러다 기절하는 거 아니야?\"",
+   "\t\t\t\t\t<<case 3>> \"평생 못 들어오게 막을 수도 있어,\"",
+   "\t\t\t\t\t<<case 4>> \"내 엉덩이를 원한다면 그보다 더 노력해야 할 걸,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $penisuse is \"othervagina\" or $penisuse is \"otheranus\">>",
+   "\t\t\t<<if $penisstate is \"penetrated\" or $penisstate is \"otheranus\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"벌써 지쳤어?\"",
+   "\t\t\t\t\t<<case 1>> \"원래 이런 약골하곤 안 떡치는데,\"",
+   "\t\t\t\t\t<<case 2>> \"심장마비 안 오게 조심해,\"",
+   "\t\t\t\t\t<<case 3>> \"넌 너무 약해서 이걸 계속 못 할 거야,\"",
+   "\t\t\t\t\t<<case 4>> \"금방 닳아버리네,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"넌 밀어넣을 힘도 없을 것 같은데,\"",
+   "\t\t\t\t\t<<case 1>> \"내가 넣으라고 할 때 넣는 거야,\"",
+   "\t\t\t\t\t<<case 2>> \"이러다 기절하는 거 아니야?\"",
+   "\t\t\t\t\t<<case 3>> \"평생 못 들어오게 막을 수도 있어,\"",
+   "\t\t\t\t\t<<case 4>> \"내 자지를 원한다면 그보다 더 노력해야 할 걸,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<else>>",
+   "\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t<<case 0>> \"넌 너무 약해,\"",
+   "\t\t\t\t<<case 1>> \"이건 순전히 내가 허락해서 일어나는 일이야,\"",
+   "\t\t\t\t<<case 2>> \"불쌍해서 해주는 거야,\"",
+   "\t\t\t\t<<case 3>> \"넌 강제로라도 남한테 떡치게 못 만들 거야,\"",
+   "\t\t\t\t<<case 4>> \"그게 다야?\"",
+   "\t\t\t<</switch>>",
+   "\t\t<</if>>",
+   "\t<<elseif $mockaction is \"looks\">>",
+   "\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"적어도 네 얼굴은 안 보게 해줘,\"",
+   "\t\t\t\t\t<<case 1>> \"넌 억지로가 아니면 누구랑 떡칠 일도 없겠지,\"",
+   "\t\t\t\t\t<<case 2>> \"빨리 끝내. 네 꼴 더 이상 보기 싫으니까,\"",
+   "\t\t\t\t\t<<case 3>> \"너같이 못생긴 놈이랑은 다시는 떡치고 싶지 않아,\"",
+   "\t\t\t\t\t<<case 4>> \"네가 즐기고 있길 바라. 네 분수에 넘치는 호사니까,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"이렇게 역겨운 놈이 나랑 떡친다고 생각하니까 구역질 나네,\"",
+   "\t\t\t\t\t<<case 1>> \"내가 널 동정해서 떡쳐주길 바라?\"",
+   "\t\t\t\t\t<<case 2>> \"네 끔찍한 몸뚱이가 내 안에 조금이라도 들어오는 건 사양이야,\"",
+   "\t\t\t\t\t<<case 3>> \"너처럼 못생긴 놈이랑은 떡쳐본 적도 없어,\"",
+   "\t\t\t\t\t<<case 4>> \"내가 널 상대하기엔 너무 아깝지,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"적어도 네 얼굴은 안 보게 해줘,\"",
+   "\t\t\t\t\t<<case 1>> \"넌 억지로가 아니면 누구랑 떡칠 일도 없겠지,\"",
+   "\t\t\t\t\t<<case 2>> \"빨리 끝내. 네 꼴 더 이상 보기 싫으니까,\"",
+   "\t\t\t\t\t<<case 3>> \"너같이 못생긴 놈이랑은 다시는 떡치고 싶지 않아,\"",
+   "\t\t\t\t\t<<case 4>> \"네가 즐기고 있길 바라. 네 분수에 넘치는 호사니까,\"",
+   "\t\t\t\t<</switch>>"
+  ],
+  "new_en": [
+   "\t\t<<elseif $mockaction is \"weak\">>",
+   "\t\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"Tired already?\"",
+   "\t\t\t\t\t\t<<case 1>> \"I don't normally let such weaklings inside me,\"",
+   "\t\t\t\t\t\t<<case 2>> \"Careful you don't have a heart attack,\"",
+   "\t\t\t\t\t\t<<case 3>> \"You're too weak to keep this up,\"",
+   "\t\t\t\t\t\t<<case 4>> \"You're wearing out fast,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"I don't think you're strong enough to push it in,\"",
+   "\t\t\t\t\t\t<<case 1>> \"It goes in when I say so,\"",
+   "\t\t\t\t\t\t<<case 2>> \"You gonna faint on me?\"",
+   "\t\t\t\t\t\t<<case 3>> \"I could keep you away forever,\"",
+   "\t\t\t\t\t\t<<case 4>> \"If you want my pussy, you'll need to work harder than that,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"Tired already?\"",
+   "\t\t\t\t\t\t<<case 1>> \"I don't normally let such weaklings inside me,\"",
+   "\t\t\t\t\t\t<<case 2>> \"Careful you don't have a heart attack,\"",
+   "\t\t\t\t\t\t<<case 3>> \"You're too weak to keep this up,\"",
+   "\t\t\t\t\t\t<<case 4>> \"You're wearing out fast,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"I don't think you're strong enough to push it in,\"",
+   "\t\t\t\t\t\t<<case 1>> \"It goes in when I say so,\"",
+   "\t\t\t\t\t\t<<case 2>> \"You gonna faint on me?\"",
+   "\t\t\t\t\t\t<<case 3>> \"I could keep you away forever,\"",
+   "\t\t\t\t\t\t<<case 4>> \"If you want my ass, you'll need to work harder than that,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $penisuse is \"othervagina\" or $penisuse is \"otheranus\">>",
+   "\t\t\t\t<<if $penisstate is \"penetrated\" or $penisstate is \"otheranus\">>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"Tired already?\"",
+   "\t\t\t\t\t\t<<case 1>> \"I don't normally fuck such weaklings,\"",
+   "\t\t\t\t\t\t<<case 2>> \"Careful you don't have a heart attack,\"",
+   "\t\t\t\t\t\t<<case 3>> \"You're too weak to keep this up,\"",
+   "\t\t\t\t\t\t<<case 4>> \"You're wearing out fast,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"I don't think you're strong enough to push it in,\"",
+   "\t\t\t\t\t\t<<case 1>> \"It goes in when I say so,\"",
+   "\t\t\t\t\t\t<<case 2>> \"You gonna faint on me?\"",
+   "\t\t\t\t\t\t<<case 3>> \"I could keep you away forever,\"",
+   "\t\t\t\t\t\t<<case 4>> \"If you want my penis, you'll need to work harder than that,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<case 0>> \"The thought of someone so revolting fucking me is making me queasy,\"",
+   "\t\t\t\t\t<<case 1>> \"You want me to pity fuck you?\"",
+   "\t\t\t\t\t<<case 2>> \"I don't want any part of your disgusting body inside me,\"",
+   "\t\t\t\t\t<<case 3>> \"I've never fucked anyone as ugly as you,\"",
+   "\t\t\t\t\t<<case 4>> \"I look too good for you,\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<case 0>> \"이렇게 역겨운 놈이 나랑 떡친다고 생각하니까 구역질 나네,\"",
+   "\t\t\t\t\t<<case 1>> \"내가 널 동정해서 떡쳐주길 바라?\"",
+   "\t\t\t\t\t<<case 2>> \"네 끔찍한 몸뚱이가 내 안에 조금이라도 들어오는 건 사양이야,\"",
+   "\t\t\t\t\t<<case 3>> \"너처럼 못생긴 놈이랑은 떡쳐본 적도 없어,\"",
+   "\t\t\t\t\t<<case 4>> \"내가 널 상대하기엔 너무 아깝지,\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 0>> \"You're so weak,\"",
+   "\t\t\t\t\t<<case 1>> \"This is only happening because I let it,\"",
+   "\t\t\t\t\t<<case 2>> \"I'm doing this out of pity,\"",
+   "\t\t\t\t\t<<case 3>> \"You couldn't even force someone to fuck you,\"",
+   "\t\t\t\t\t<<case 4>> \"Is that all you've got?\""
+  ],
+  "context": "\t\t\t\t<<switch $mockcycle>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<elseif $penisuse is \"othervagina\" or $penisuse is \"otheranus\">>",
+   "\t\t\t<<if $penisstate is \"penetrated\" or $penisstate is \"otheranus\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"At least don't make me look at your face,\"",
+   "\t\t\t\t\t<<case 1>> \"You could only ever get someone to fuck you through force,\"",
+   "\t\t\t\t\t<<case 2>> \"Hurry up. I don't want to look at you any more,\"",
+   "\t\t\t\t\t<<case 3>> \"I hope I don't have to fuck anyone as ugly as you again,\"",
+   "\t\t\t\t\t<<case 4>> \"I hope you're enjoying this. It's more than you deserve,\"",
+   "\t\t\t\t<</switch>>"
+  ],
+  "old_kr": [
+   "\t\t<<elseif $penisuse is \"othervagina\" or $penisuse is \"otheranus\">>",
+   "\t\t\t<<if $penisstate is \"penetrated\" or $penisstate is \"otheranus\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"적어도 네 얼굴은 안 보게 해줘,\"",
+   "\t\t\t\t\t<<case 1>> \"넌 억지로가 아니면 누구랑 떡칠 일도 없겠지,\"",
+   "\t\t\t\t\t<<case 2>> \"빨리 끝내. 네 꼴 더 이상 보기 싫으니까,\"",
+   "\t\t\t\t\t<<case 3>> \"너같이 못생긴 놈이랑은 다시는 떡치고 싶지 않아,\"",
+   "\t\t\t\t\t<<case 4>> \"네가 즐기고 있길 바라. 네 분수에 넘치는 호사니까,\"",
+   "\t\t\t\t<</switch>>"
+  ],
+  "new_en": [
+   "\t\t<<elseif $mockaction is \"looks\">>",
+   "\t\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"At least don't make me look at your face,\"",
+   "\t\t\t\t\t\t<<case 1>> \"You could only ever get someone to fuck you through force,\"",
+   "\t\t\t\t\t\t<<case 2>> \"Hurry up. I don't want to look at you any more,\"",
+   "\t\t\t\t\t\t<<case 3>> \"I hope I don't have to fuck anyone as ugly as you again,\"",
+   "\t\t\t\t\t\t<<case 4>> \"I hope you're enjoying this. It's more than you deserve,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"The thought of someone so revolting fucking me is making me queasy,\"",
+   "\t\t\t\t\t\t<<case 1>> \"You want me to pity fuck you?\"",
+   "\t\t\t\t\t\t<<case 2>> \"I don't want any part of your disgusting body inside me,\"",
+   "\t\t\t\t\t\t<<case 3>> \"I've never fucked anyone as ugly as you,\"",
+   "\t\t\t\t\t\t<<case 4>> \"I look too good for you,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"At least don't make me look at your face,\"",
+   "\t\t\t\t\t\t<<case 1>> \"You could only ever get someone to fuck you through force,\"",
+   "\t\t\t\t\t\t<<case 2>> \"Hurry up. I don't want to look at you any more,\"",
+   "\t\t\t\t\t\t<<case 3>> \"I hope I don't have to fuck anyone as ugly as you again,\"",
+   "\t\t\t\t\t\t<<case 4>> \"I hope you're enjoying this. It's more than you deserve,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"The thought of someone so revolting fucking me is making me queasy,\"",
+   "\t\t\t\t\t\t<<case 1>> \"You want me to pity fuck you?\"",
+   "\t\t\t\t\t\t<<case 2>> \"I don't want any part of your disgusting body inside me,\"",
+   "\t\t\t\t\t\t<<case 3>> \"I've never fucked anyone as ugly as you,\"",
+   "\t\t\t\t\t\t<<case 4>> \"I look too good for you,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $penisuse is \"othervagina\" or $penisuse is \"otheranus\">>",
+   "\t\t\t\t<<if $penisstate is \"penetrated\" or $penisstate is \"otheranus\">>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"At least don't make me look at your face,\"",
+   "\t\t\t\t\t\t<<case 1>> \"You could only ever get someone to fuck you through force,\"",
+   "\t\t\t\t\t\t<<case 2>> \"Hurry up. I don't want to look at you any more,\"",
+   "\t\t\t\t\t\t<<case 3>> \"I hope I don't have to fuck anyone as ugly as you again,\"",
+   "\t\t\t\t\t\t<<case 4>> \"I hope you're enjoying this. It's more than you deserve,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"The thought of someone so revolting fucking me is making me queasy,\"",
+   "\t\t\t\t\t\t<<case 1>> \"You want me to pity fuck you?\"",
+   "\t\t\t\t\t\t<<case 2>> \"I don't want any part of me inside your disgusting body,\"",
+   "\t\t\t\t\t\t<<case 3>> \"I've never fucked anyone as ugly as you,\"",
+   "\t\t\t\t\t\t<<case 4>> \"I look too good for you,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<case 0>> \"The thought of someone so revolting fucking me is making me queasy,\"",
+   "\t\t\t\t\t<<case 1>> \"You want me to pity fuck you?\"",
+   "\t\t\t\t\t<<case 2>> \"I don't want any part of me inside your disgusting body,\"",
+   "\t\t\t\t\t<<case 3>> \"I've never fucked anyone as ugly as you,\"",
+   "\t\t\t\t\t<<case 4>> \"I look too good for you,\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<case 0>> \"이렇게 역겨운 놈이 나랑 떡친다고 생각하니까 구역질 나네,\"",
+   "\t\t\t\t\t<<case 1>> \"내가 널 동정해서 떡쳐주길 바라?\"",
+   "\t\t\t\t\t<<case 2>> \"내 몸의 어떤 부분도 네 끔찍한 몸뚱이 안에 넣기 싫어,\"",
+   "\t\t\t\t\t<<case 3>> \"너처럼 못생긴 놈이랑은 떡쳐본 적도 없어,\"",
+   "\t\t\t\t\t<<case 4>> \"내가 널 상대하기엔 너무 아깝지,\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 0>> \"I'm out of your league,\"",
+   "\t\t\t\t\t<<case 1>> \"I don't want to see your face again,\"",
+   "\t\t\t\t\t<<case 2>> \"You're plain, at best,\"",
+   "\t\t\t\t\t<<case 3>> \"Ew, gross,\"",
+   "\t\t\t\t\t<<case 4>> \"Your body looks weird,\""
+  ],
+  "context": "\t\t\t\t<<switch $mockcycle>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t<<case 0>> \"I'm out of your league,\"",
+   "\t\t\t\t<<case 1>> \"I don't want to see your face again,\"",
+   "\t\t\t\t<<case 2>> \"You're plain, at best,\"",
+   "\t\t\t\t<<case 3>> \"Ew, gross,\"",
+   "\t\t\t\t<<case 4>> \"Your body looks weird,\"",
+   "\t\t\t<</switch>>",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"I hope you're happy defiling me like this,\"",
+   "\t\t\t\t\t<<case 1>> \"You're ravaging an innocent <<girl>>. Shame on you,\"",
+   "\t\t\t\t\t<<case 2>> \"You'll be punished for this,\"",
+   "\t\t\t\t\t<<case 3>> \"You're a bad person to be doing such things to my pussy,\"",
+   "\t\t\t\t\t<<case 4>> \"You're so cruel,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"Are you really going to defile my innocent pussy?\"",
+   "\t\t\t\t\t<<case 1>> \"Do you like being rough with <<girls>> like me?\"",
+   "\t\t\t\t\t<<case 2>> \"You might hurt me with that,\"",
+   "\t\t\t\t\t<<case 3>> \"Do you still think you're a good person?\"",
+   "\t\t\t\t\t<<case 4>> \"My pussy might not be able to take it,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"I hope you're happy defiling me like this,\"",
+   "\t\t\t\t\t<<case 1>> \"You're ravaging an innocent <<girl>>. Shame on you,\"",
+   "\t\t\t\t\t<<case 2>> \"You'll be punished for this,\"",
+   "\t\t\t\t\t<<case 3>> \"You're a bad person to be doing such things to my ass,\"",
+   "\t\t\t\t\t<<case 4>> \"You're so cruel,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"Are you really going to defile my innocent ass?\"",
+   "\t\t\t\t\t<<case 1>> \"Do you like being rough with <<girls>> like me?\"",
+   "\t\t\t\t\t<<case 2>> \"You might hurt me with that,\"",
+   "\t\t\t\t\t<<case 3>> \"Do you still think you're a good person?\"",
+   "\t\t\t\t\t<<case 4>> \"My ass might not be able to take it,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $penisuse is \"othervagina\" or $penisuse is \"otheranus\">>",
+   "\t\t\t<<if $penisstate is \"penetrated\" or $penisstate is \"otheranus\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"I hope you're happy defiling me like this,\"",
+   "\t\t\t\t\t<<case 1>> \"You're ravaging an innocent <<girl>>. Shame on you,\"",
+   "\t\t\t\t\t<<case 2>> \"You'll be punished for this,\"",
+   "\t\t\t\t\t<<case 3>> \"You're a bad person to be doing such things to my penis,\"",
+   "\t\t\t\t\t<<case 4>> \"You're so cruel,\"",
+   "\t\t\t\t<</switch>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t<<case 0>> \"난 네가 넘볼 수준이 아니야,\"",
+   "\t\t\t\t<<case 1>> \"다시는 네 얼굴 보고 싶지 않아,\"",
+   "\t\t\t\t<<case 2>> \"잘 쳐줘야 평범하네,\"",
+   "\t\t\t\t<<case 3>> \"으, 징그러,\"",
+   "\t\t\t\t<<case 4>> \"네 몸뚱이 이상하게 생겼어,\"",
+   "\t\t\t<</switch>>",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"이렇게 날 더럽히니까 기분 좋지?\"",
+   "\t\t\t\t\t<<case 1>> \"이런 순수한 <<girl>>【을를】 유린하다니. 부끄러운 줄 알아,\"",
+   "\t\t\t\t\t<<case 2>> \"이러면 벌 받을 거야,\"",
+   "\t\t\t\t\t<<case 3>> \"내 보지에 이런 짓을 하다니 넌 나쁜 사람이야,\"",
+   "\t\t\t\t\t<<case 4>> \"정말 잔인해,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"내 순결한 보지를 정말로 더럽힐 셈이야?\"",
+   "\t\t\t\t\t<<case 1>> \"나 같은 <<girls>>한테 거칠게 구는 게 좋아?\"",
+   "\t\t\t\t\t<<case 2>> \"그거 때문에 다칠지도 몰라,\"",
+   "\t\t\t\t\t<<case 3>> \"그러고도 네가 좋은 사람이라고 생각해?\"",
+   "\t\t\t\t\t<<case 4>> \"내 보지는 그걸 다 받아들이지 못할 텐데,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"이렇게 날 더럽히니까 기분 좋지?\"",
+   "\t\t\t\t\t<<case 1>> \"이런 순수한 <<girl>>【을를】 유린하다니. 부끄러운 줄 알아,\"",
+   "\t\t\t\t\t<<case 2>> \"이러면 벌 받을 거야,\"",
+   "\t\t\t\t\t<<case 3>> \"내 엉덩이에 이런 짓을 하다니 넌 나쁜 사람이야,\"",
+   "\t\t\t\t\t<<case 4>> \"정말 잔인해,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"내 순결한 엉덩이를 정말로 더럽힐 셈이야?\"",
+   "\t\t\t\t\t<<case 1>> \"나 같은 <<girls>>한테 거칠게 구는 게 좋아?\"",
+   "\t\t\t\t\t<<case 2>> \"그거 때문에 다칠지도 몰라,\"",
+   "\t\t\t\t\t<<case 3>> \"그러고도 네가 좋은 사람이라고 생각해?\"",
+   "\t\t\t\t\t<<case 4>> \"내 엉덩이는 그걸 다 받아들이지 못할 텐데,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $penisuse is \"othervagina\" or $penisuse is \"otheranus\">>",
+   "\t\t\t<<if $penisstate is \"penetrated\" or $penisstate is \"otheranus\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"이렇게 날 더럽히니까 기분 좋지?\"",
+   "\t\t\t\t\t<<case 1>> \"이런 순수한 <<girl>>【을를】 유린하다니. 부끄러운 줄 알아,\"",
+   "\t\t\t\t\t<<case 2>> \"이러면 벌 받을 거야,\"",
+   "\t\t\t\t\t<<case 3>> \"내 자지에 이런 짓을 하다니 넌 나쁜 사람이야,\"",
+   "\t\t\t\t\t<<case 4>> \"정말 잔인해,\"",
+   "\t\t\t\t<</switch>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"I hope you're happy defiling me like this,\"",
+   "\t\t\t\t\t\t<<case 1>> \"You're ravaging an innocent <<girl>>. Shame on you,\"",
+   "\t\t\t\t\t\t<<case 2>> \"You'll be punished for this,\"",
+   "\t\t\t\t\t\t<<case 3>> \"You're a bad person to be doing such things to my pussy,\"",
+   "\t\t\t\t\t\t<<case 4>> \"You're so cruel,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"Are you really going to defile my innocent pussy?\"",
+   "\t\t\t\t\t\t<<case 1>> \"Do you like being rough with <<girls>> like me?\"",
+   "\t\t\t\t\t\t<<case 2>> \"You might hurt me with that,\"",
+   "\t\t\t\t\t\t<<case 3>> \"Do you still think you're a good person?\"",
+   "\t\t\t\t\t\t<<case 4>> \"My pussy might not be able to take it,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"I hope you're happy defiling me like this,\"",
+   "\t\t\t\t\t\t<<case 1>> \"You're ravaging an innocent <<girl>>. Shame on you,\"",
+   "\t\t\t\t\t\t<<case 2>> \"You'll be punished for this,\"",
+   "\t\t\t\t\t\t<<case 3>> \"You're a bad person to be doing such things to my ass,\"",
+   "\t\t\t\t\t\t<<case 4>> \"You're so cruel,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"Are you really going to defile my innocent ass?\"",
+   "\t\t\t\t\t\t<<case 1>> \"Do you like being rough with <<girls>> like me?\"",
+   "\t\t\t\t\t\t<<case 2>> \"You might hurt me with that,\"",
+   "\t\t\t\t\t\t<<case 3>> \"Do you still think you're a good person?\"",
+   "\t\t\t\t\t\t<<case 4>> \"My ass might not be able to take it,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $penisuse is \"othervagina\" or $penisuse is \"otheranus\">>",
+   "\t\t\t\t<<if $penisstate is \"penetrated\" or $penisstate is \"otheranus\">>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"I hope you're happy defiling me like this,\"",
+   "\t\t\t\t\t\t<<case 1>> \"You're ravaging an innocent <<girl>>. Shame on you,\"",
+   "\t\t\t\t\t\t<<case 2>> \"You'll be punished for this,\"",
+   "\t\t\t\t\t\t<<case 3>> \"You're a bad person to be doing such things to my penis,\"",
+   "\t\t\t\t\t\t<<case 4>> \"You're so cruel,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t\t<<case 0>> \"Are you really going to defile my innocent penis?\"",
+   "\t\t\t\t\t\t<<case 1>> \"Do you like being rough with <<girls>> like me?\"",
+   "\t\t\t\t\t\t<<case 2>> \"You might hurt me with that,\"",
+   "\t\t\t\t\t\t<<case 3>> \"Do you still think you're a good person?\"",
+   "\t\t\t\t\t\t<<case 4>> \"My penis might not be able to take it,\"",
+   "\t\t\t\t\t<</switch>>",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<case 0>> \"Are you really going to defile my innocent penis?\"",
+   "\t\t\t\t\t<<case 1>> \"Do you like being rough with <<girls>> like me?\"",
+   "\t\t\t\t\t<<case 2>> \"You might hurt me with that,\"",
+   "\t\t\t\t\t<<case 3>> \"Do you still think you're a good person?\"",
+   "\t\t\t\t\t<<case 4>> \"My penis might not be able to take it,\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<case 0>> \"내 순결한 자지를 정말로 더럽힐 셈이야?\"",
+   "\t\t\t\t\t<<case 1>> \"나 같은 <<girls>>한테 거칠게 구는 게 좋아?\"",
+   "\t\t\t\t\t<<case 2>> \"그거 때문에 다칠지도 몰라,\"",
+   "\t\t\t\t\t<<case 3>> \"그러고도 네가 좋은 사람이라고 생각해?\"",
+   "\t\t\t\t\t<<case 4>> \"내 자지는 그걸 다 받아들이지 못할 텐데,\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<case 0>> \"You're so mean,\"",
+   "\t\t\t\t\t<<case 1>> \"Are you really the sort of person who treats innocent <<girls>> this way?\"",
+   "\t\t\t\t\t<<case 2>> \"What you're doing is wrong,\"",
+   "\t\t\t\t\t<<case 3>> \"How will you live with yourself?\"",
+   "\t\t\t\t\t<<case 4>> \"You're a bad person,\""
+  ],
+  "context": "\t\t\t\t<<switch $mockcycle>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<else>>",
+   "\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t<<case 0>> \"You're so mean,\"",
+   "\t\t\t\t<<case 1>> \"Are you really the sort of person who treats innocent <<girls>> this way?\"",
+   "\t\t\t\t<<case 2>> \"What you're doing is wrong,\"",
+   "\t\t\t\t<<case 3>> \"How will you live with yourself?\"",
+   "\t\t\t\t<<case 4>> \"You're a bad person,\"",
+   "\t\t\t<</switch>>"
+  ],
+  "old_kr": [
+   "\t\t<<else>>",
+   "\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t<<case 0>> \"정말 너무해,\"",
+   "\t\t\t\t<<case 1>> \"순수한 <<girls>>【을를】 이런 식으로 대하는 사람이었어?\"",
+   "\t\t\t\t<<case 2>> \"네가 하는 짓은 잘못됐어,\"",
+   "\t\t\t\t<<case 3>> \"그러고도 마음이 편해?\"",
+   "\t\t\t\t<<case 4>> \"넌 나쁜 사람이야,\"",
+   "\t\t\t<</switch>>"
+  ],
+  "new_en": [],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tyou say in a <<if $consensual is 1>>teasing<<else>>mocking<</if>> tone."
+  ],
+  "old_kr": [
+   "\t당신은 <<if $consensual is 1>>장난스러운<<else>>조롱하는<</if>> 말투로 말한다."
+  ],
+  "new_en": [],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\"Your fangs tear into their hand.\",",
+   "\t\t\t\"Your fangs dig deep into their hand.\",",
+   "\t\t\t\"You tear at the hand with your fangs.\",",
+   "\t\t\t\"You sink your fangs into the hand.\",",
+   "\t\t\t\"You puncture the hand with your fangs.\","
+  ],
+  "old_kr": [
+   "\t\t\t\"당신의 송곳니가 상대의 손을 찢고 파고든다.\",",
+   "\t\t\t\"당신의 송곳니가 상대의 손 깊숙이 박힌다.\",",
+   "\t\t\t\"당신은 송곳니로 그 손을 물어뜯는다.\",",
+   "\t\t\t\"당신은 송곳니를 그 손에 박아 넣는다.\",",
+   "\t\t\t\"당신은 송곳니로 그 손에 구멍을 낸다.\","
+  ],
+  "new_en": [
+   "\t\t\t\"Your fangs tear into <<his>> hand.\",",
+   "\t\t\t\"Your fangs dig deep into <<his>> hand.\",",
+   "\t\t\t\"You tear at <<his>> hand with your fangs.\",",
+   "\t\t\t\"You sink your fangs into <<his>> hand.\",",
+   "\t\t\t\"You puncture <<his>> hand with your fangs.\","
+  ],
+  "context": "\t\t<<print either("
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\"You bite the hand gagging you.\",",
+   "\t\t\t\"You gnaw at the hand gagging you.\",",
+   "\t\t\t\"You sink your teeth into their hand.\",",
+   "\t\t\t\"You chomp at their hand.\",",
+   "\t\t\t\"You crunch their hand with your teeth.\","
+  ],
+  "old_kr": [
+   "\t\t\t\"당신은 입을 틀어막은 손을 문다.\",",
+   "\t\t\t\"당신은 입을 틀어막은 손을 갉아문다.\",",
+   "\t\t\t\"당신은 상대의 손에 이를 박아 넣는다.\",",
+   "\t\t\t\"당신은 상대의 손을 꽉 깨문다.\",",
+   "\t\t\t\"당신은 이로 상대의 손을 으스러질 듯 깨문다.\","
+  ],
+  "new_en": [
+   "\t\t\t\"You bite the hand gagging you.\",",
+   "\t\t\t\"You gnaw at the hand gagging you.\",",
+   "\t\t\t\"You sink your teeth into <<his>> hand.\",",
+   "\t\t\t\"You chomp at <<his>> hand.\",",
+   "\t\t\t\"You crunch <<his>> hand with your teeth.\","
+  ],
+  "context": "\t\t<<print either("
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $wraith.state is \"haunt\" and $wraithPrison and $wraithPrison.vision>>",
+   "\t\t\t\t\"I've got your stupid necklace right here,\" you say. \"Come get it.\""
+  ],
+  "old_kr": [
+   "\t\t\t<<if $wraith.state is \"haunt\" and $wraithPrison and $wraithPrison.vision>>",
+   "\t\t\t\t\"네 멍청한 목걸이 여기 있어,\" 당신이 말한다. \"와서 가져가 봐.\""
+  ],
+  "new_en": [
+   "\t\t\t<<if $wraith.state is \"haunt\" and $wraithPrison?.vision>>",
+   "\t\t\t\t\"I've got your stupid necklace right here,\" you say. \"Come get it.\""
+  ],
+  "context": "\t\t<<case \"Ivory Wraith\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if _loveInterest isnot undefined>> ",
+   "\t\t\t/* Removing RNG since it's straightforward. Might add `and random(0, 100) lte 15` back if the situation calls for it */",
+   "\t\t\t<<set $speechnamedrop to $npc.includes(_loveInterest) ? 0 : 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if _loveInterest isnot undefined>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<speechPool \"pc\">>"
+  ],
+  "context": "\t\t\t<<rng>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if hasSpeechLines()>>",
+   "\t\t\t\t<<speechSay>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t\"Even though you're doing such a horrible thing, don't worry,\" you say. \"I forgive you.\"",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<speechPool \"pc\">>"
+  ],
+  "context": "\t\t\t<<rng>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<if $location is \"school\" and $speechnamedrop is 1 and Time.schoolDay>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if $location is \"school\" and $speechLINameDrop is 1 and Time.schoolDay>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<speechSay>>"
+  ],
+  "context": "\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<speechPool \"pc\">>"
+  ],
+  "context": "\t<<if $npc.includes(_loveInterest) and random(0,100) lte 45>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<speechSay>>"
+  ],
+  "context": "\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<speechPool \"pc\">>"
+  ],
+  "context": "\t\t\t<<rng>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<if $location is \"school\" and $speechnamedrop is 1 and Time.schoolDay>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if $location is \"school\" and $speechLINameDrop is 1 and Time.schoolDay>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<speechSay>>"
+  ],
+  "context": "\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $mockaction is \"skill\">>",
+   "\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"At least you're trying,\"",
+   "\t\t\t\t\t<<case 1>> \"You're boring me,\"",
+   "\t\t\t\t\t<<case 2>> \"Your cock is so clumsy,\"",
+   "\t\t\t\t\t<<case 3>> \"Do you even know how to use that thing?\"",
+   "\t\t\t\t\t<<case 4>> \"Is this your first time?\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"Careful where you point that,\"",
+   "\t\t\t\t\t<<case 1>> \"You won't last long,\"",
+   "\t\t\t\t\t<<case 2>> \"I bet this is new to you,\"",
+   "\t\t\t\t\t<<case 3>> \"You're not good enough for my pussy,\"",
+   "\t\t\t\t\t<<case 4>> \"I don't expect much,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"At least you're trying,\"",
+   "\t\t\t\t\t<<case 1>> \"You're boring me,\"",
+   "\t\t\t\t\t<<case 2>> \"Your cock is so clumsy,\"",
+   "\t\t\t\t\t<<case 3>> \"Do you even know how to use that thing?\"",
+   "\t\t\t\t\t<<case 4>> \"Is this your first time?\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"Careful where you point that,\"",
+   "\t\t\t\t\t<<case 1>> \"You won't last long,\"",
+   "\t\t\t\t\t<<case 2>> \"I bet this is new to you,\"",
+   "\t\t\t\t\t<<case 3>> \"You're not good enough for my ass,\"",
+   "\t\t\t\t\t<<case 4>> \"I don't expect much,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $penisuse is \"othervagina\" or $penisuse is \"otheranus\">>",
+   "\t\t\t<<if $penisstate is \"penetrated\" or $penisstate is \"otheranus\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"At least you're trying,\"",
+   "\t\t\t\t\t<<case 1>> \"You're not making me cum,\"",
+   "\t\t\t\t\t<<case 2>> \"Move your hips more. Do I have to do everything?\"",
+   "\t\t\t\t\t<<case 3>> \"Do you even know what you're doing?\"",
+   "\t\t\t\t\t<<case 4>> \"Is this your first time?\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"Careful where you point that,\"",
+   "\t\t\t\t\t<<case 1>> \"You won't last long,\"",
+   "\t\t\t\t\t<<case 2>> \"I doubt you know how handle it,\"",
+   "\t\t\t\t\t<<case 3>> \"You're not good enough for my penis,\"",
+   "\t\t\t\t\t<<case 4>> \"I don't expect much,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<else>>",
+   "\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t<<case 0>> \"At least you're trying,\"",
+   "\t\t\t\t<<case 1>> \"Wake me when it's over,\"",
+   "\t\t\t\t<<case 2>> \"I'd be better off using my hand,\"",
+   "\t\t\t\t<<case 3>> \"You don't know what you're doing, do you?\"",
+   "\t\t\t\t<<case 4>> \"You're bad at this,\"",
+   "\t\t\t<</switch>>",
+   "\t\t<</if>>",
+   "\t<<elseif $mockaction is \"weak\">>",
+   "\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"Tired already?\"",
+   "\t\t\t\t\t<<case 1>> \"I don't normally let such weaklings inside me,\"",
+   "\t\t\t\t\t<<case 2>> \"Careful you don't have a heart attack,\"",
+   "\t\t\t\t\t<<case 3>> \"You're too weak to keep this up,\"",
+   "\t\t\t\t\t<<case 4>> \"You're wearing out fast,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"I don't think you're strong enough to push it in,\"",
+   "\t\t\t\t\t<<case 1>> \"It goes in when I say so,\"",
+   "\t\t\t\t\t<<case 2>> \"You gonna faint on me?\"",
+   "\t\t\t\t\t<<case 3>> \"I could keep you away forever,\"",
+   "\t\t\t\t\t<<case 4>> \"If you want my pussy, you'll need to work harder than that,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"Tired already?\"",
+   "\t\t\t\t\t<<case 1>> \"I don't normally let such weaklings inside me,\"",
+   "\t\t\t\t\t<<case 2>> \"Careful you don't have a heart attack,\"",
+   "\t\t\t\t\t<<case 3>> \"You're too weak to keep this up,\"",
+   "\t\t\t\t\t<<case 4>> \"You're wearing out fast,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"I don't think you're strong enough to push it in,\"",
+   "\t\t\t\t\t<<case 1>> \"It goes in when I say so,\"",
+   "\t\t\t\t\t<<case 2>> \"You gonna faint on me?\"",
+   "\t\t\t\t\t<<case 3>> \"I could keep you away forever,\"",
+   "\t\t\t\t\t<<case 4>> \"If you want my ass, you'll need to work harder than that,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $penisuse is \"othervagina\" or $penisuse is \"otheranus\">>",
+   "\t\t\t<<if $penisstate is \"penetrated\" or $penisstate is \"otheranus\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"Tired already?\"",
+   "\t\t\t\t\t<<case 1>> \"I don't normally fuck such weaklings,\"",
+   "\t\t\t\t\t<<case 2>> \"Careful you don't have a heart attack,\"",
+   "\t\t\t\t\t<<case 3>> \"You're too weak to keep this up,\"",
+   "\t\t\t\t\t<<case 4>> \"You're wearing out fast,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"I don't think you're strong enough to push it in,\"",
+   "\t\t\t\t\t<<case 1>> \"It goes in when I say so,\"",
+   "\t\t\t\t\t<<case 2>> \"You gonna faint on me?\"",
+   "\t\t\t\t\t<<case 3>> \"I could keep you away forever,\"",
+   "\t\t\t\t\t<<case 4>> \"If you want my penis, you'll need to work harder than that,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<else>>",
+   "\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t<<case 0>> \"You're so weak,\"",
+   "\t\t\t\t<<case 1>> \"This is only happening because I let it,\"",
+   "\t\t\t\t<<case 2>> \"I'm doing this out of pity,\"",
+   "\t\t\t\t<<case 3>> \"You couldn't even force someone to fuck you,\"",
+   "\t\t\t\t<<case 4>> \"Is that all you've got?\"",
+   "\t\t\t<</switch>>",
+   "\t\t<</if>>",
+   "\t<<elseif $mockaction is \"looks\">>",
+   "\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"At least don't make me look at your face,\"",
+   "\t\t\t\t\t<<case 1>> \"You could only ever get someone to fuck you through force,\"",
+   "\t\t\t\t\t<<case 2>> \"Hurry up. I don't want to look at you any more,\"",
+   "\t\t\t\t\t<<case 3>> \"I hope I don't have to fuck anyone as ugly as you again,\"",
+   "\t\t\t\t\t<<case 4>> \"I hope you're enjoying this. It's more than you deserve,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"The thought of someone so revolting fucking me is making me queasy,\"",
+   "\t\t\t\t\t<<case 1>> \"You want me to pity fuck you?\"",
+   "\t\t\t\t\t<<case 2>> \"I don't want any part of your disgusting body inside me,\"",
+   "\t\t\t\t\t<<case 3>> \"I've never fucked anyone as ugly as you,\"",
+   "\t\t\t\t\t<<case 4>> \"I look too good for you,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"At least don't make me look at your face,\"",
+   "\t\t\t\t\t<<case 1>> \"You could only ever get someone to fuck you through force,\"",
+   "\t\t\t\t\t<<case 2>> \"Hurry up. I don't want to look at you any more,\"",
+   "\t\t\t\t\t<<case 3>> \"I hope I don't have to fuck anyone as ugly as you again,\"",
+   "\t\t\t\t\t<<case 4>> \"I hope you're enjoying this. It's more than you deserve,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"The thought of someone so revolting fucking me is making me queasy,\"",
+   "\t\t\t\t\t<<case 1>> \"You want me to pity fuck you?\"",
+   "\t\t\t\t\t<<case 2>> \"I don't want any part of your disgusting body inside me,\"",
+   "\t\t\t\t\t<<case 3>> \"I've never fucked anyone as ugly as you,\"",
+   "\t\t\t\t\t<<case 4>> \"I look too good for you,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $penisuse is \"othervagina\" or $penisuse is \"otheranus\">>",
+   "\t\t\t<<if $penisstate is \"penetrated\" or $penisstate is \"otheranus\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"At least don't make me look at your face,\"",
+   "\t\t\t\t\t<<case 1>> \"You could only ever get someone to fuck you through force,\"",
+   "\t\t\t\t\t<<case 2>> \"Hurry up. I don't want to look at you any more,\"",
+   "\t\t\t\t\t<<case 3>> \"I hope I don't have to fuck anyone as ugly as you again,\"",
+   "\t\t\t\t\t<<case 4>> \"I hope you're enjoying this. It's more than you deserve,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"The thought of someone so revolting fucking me is making me queasy,\"",
+   "\t\t\t\t\t<<case 1>> \"You want me to pity fuck you?\"",
+   "\t\t\t\t\t<<case 2>> \"I don't want any part of me inside your disgusting body,\"",
+   "\t\t\t\t\t<<case 3>> \"I've never fucked anyone as ugly as you,\"",
+   "\t\t\t\t\t<<case 4>> \"I look too good for you,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<else>>",
+   "\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t<<case 0>> \"I'm out of your league,\"",
+   "\t\t\t\t<<case 1>> \"I don't want to see your face again,\"",
+   "\t\t\t\t<<case 2>> \"You're plain, at best,\"",
+   "\t\t\t\t<<case 3>> \"Ew, gross,\"",
+   "\t\t\t\t<<case 4>> \"Your body looks weird,\"",
+   "\t\t\t<</switch>>",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\t<<if $vaginause is \"penis\">>",
+   "\t\t\t<<if $vaginastate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"I hope you're happy defiling me like this,\"",
+   "\t\t\t\t\t<<case 1>> \"You're ravaging an innocent <<girl>>. Shame on you,\"",
+   "\t\t\t\t\t<<case 2>> \"You'll be punished for this,\"",
+   "\t\t\t\t\t<<case 3>> \"You're a bad person to be doing such things to my pussy,\"",
+   "\t\t\t\t\t<<case 4>> \"You're so cruel,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"Are you really going to defile my innocent pussy?\"",
+   "\t\t\t\t\t<<case 1>> \"Do you like being rough with <<girls>> like me?\"",
+   "\t\t\t\t\t<<case 2>> \"You might hurt me with that,\"",
+   "\t\t\t\t\t<<case 3>> \"Do you still think you're a good person?\"",
+   "\t\t\t\t\t<<case 4>> \"My pussy might not be able to take it,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $anususe is \"penis\">>",
+   "\t\t\t<<if $anusstate is \"penetrated\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"I hope you're happy defiling me like this,\"",
+   "\t\t\t\t\t<<case 1>> \"You're ravaging an innocent <<girl>>. Shame on you,\"",
+   "\t\t\t\t\t<<case 2>> \"You'll be punished for this,\"",
+   "\t\t\t\t\t<<case 3>> \"You're a bad person to be doing such things to my ass,\"",
+   "\t\t\t\t\t<<case 4>> \"You're so cruel,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"Are you really going to defile my innocent ass?\"",
+   "\t\t\t\t\t<<case 1>> \"Do you like being rough with <<girls>> like me?\"",
+   "\t\t\t\t\t<<case 2>> \"You might hurt me with that,\"",
+   "\t\t\t\t\t<<case 3>> \"Do you still think you're a good person?\"",
+   "\t\t\t\t\t<<case 4>> \"My ass might not be able to take it,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif $penisuse is \"othervagina\" or $penisuse is \"otheranus\">>",
+   "\t\t\t<<if $penisstate is \"penetrated\" or $penisstate is \"otheranus\">>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"I hope you're happy defiling me like this,\"",
+   "\t\t\t\t\t<<case 1>> \"You're ravaging an innocent <<girl>>. Shame on you,\"",
+   "\t\t\t\t\t<<case 2>> \"You'll be punished for this,\"",
+   "\t\t\t\t\t<<case 3>> \"You're a bad person to be doing such things to my penis,\"",
+   "\t\t\t\t\t<<case 4>> \"You're so cruel,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t\t<<case 0>> \"Are you really going to defile my innocent penis?\"",
+   "\t\t\t\t\t<<case 1>> \"Do you like being rough with <<girls>> like me?\"",
+   "\t\t\t\t\t<<case 2>> \"You might hurt me with that,\"",
+   "\t\t\t\t\t<<case 3>> \"Do you still think you're a good person?\"",
+   "\t\t\t\t\t<<case 4>> \"My penis might not be able to take it,\"",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<</if>>",
+   "\t\t<<else>>",
+   "\t\t\t<<switch $mockcycle>>",
+   "\t\t\t\t<<case 0>> \"You're so mean,\"",
+   "\t\t\t\t<<case 1>> \"Are you really the sort of person who treats innocent <<girls>> this way?\"",
+   "\t\t\t\t<<case 2>> \"What you're doing is wrong,\"",
+   "\t\t\t\t<<case 3>> \"How will you live with yourself?\"",
+   "\t\t\t\t<<case 4>> \"You're a bad person,\"",
+   "\t\t\t<</switch>>",
+   "\t\t<</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tyou say in a <<if $consensual is 1>>teasing<<else>>mocking<</if>> tone."
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechkissvirgin to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechKissVirgin to 1>>"
+  ],
+  "context": "\t\t<<if $player.virginity.kiss is true>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<personselect $mouthtarget>>"
+  ],
+  "context": "<<widget \"actionshandbite\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $wraith and $wraith.mimic>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $wraith?.mimic>>"
+  ],
+  "context": "<<widget \"actionsconfrontNNPC\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $wraith.state is \"haunt\" and $wraithPrison and $wraithPrison.vision>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $wraith.state is \"haunt\" and $wraithPrison?.vision>>"
+  ],
+  "context": "\t\t\t<<case \"Ivory Wraith\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $wraith and $wraith.mimic>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $wraith?.mimic>>"
+  ],
+  "context": "<<widget \"actionstauntNNPC\">>"
+ }
+]

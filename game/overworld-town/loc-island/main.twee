@@ -508,8 +508,8 @@
 		<<islandicon "mask">><<link [[가면을 되찾는다|Island]]>><<set $island.mask_stored to undefined>><<facewear "islander mask">><</link>>
 		<br>
 	<</if>>
-	<<if $debug is 1>>
-		<<ind>><<link [[목재 얻기|$passage]]>><<set $island.wood += 100>><</link>> (debug)
+	<<if $debug>>
+		<<ind>><<link [[Get wood|$passage]]>><<set $island.wood += 100>><</link>> (debug)
 		<br>
 	<</if>>
 <</if>>
@@ -2166,7 +2166,7 @@
 	<<addevent "island_events_tear" 1>>
 	<<addevent "island_events_flower" 1>>
 	<<addevent "island_events_rope" 0.5>>
-	<<if $settings.bestialityEnabled and $settings.slugsEnabled>>
+	<<if $settings.slugsEnabled>>
 		<<addevent "island_events_slugs" 0.5>>
 	<</if>>
 
@@ -2739,7 +2739,4 @@
 당신은 가면을 쓴 인물들에게 둘러싸여 깨어난다. 이 가면들은 당신이 섬에서 본 다른 것들과는 다르다. 더 높고, 조각을 통해 보존된 야생의 성장이 있다. 각 인물은 횃불을 들고 있고, 불꽃이 바람에 흔들린다. 그들은 부자연스러운 안정감으로 움직인다. 당신은 하늘을 바라보고, 물이 튀는 소리를 듣고, 다시 정신을 잃는다.
 <br><br>
 
-<<set _time to 60>>
-<<set _hours to Math.floor(_time / 60)>>
-<<set _minutes to _time % 60>>
-<<link [["다음 ("+_hours+":"+(_minutes lt 10 ? "0": "")+_minutes+")"| Pregnancy Birth Hospital]]>><<island_end>><<pass _time>><<set $phase to 1>><</link>>
+<<link [["Next " + printTime(_time, true)| Pregnancy Birth Hospital]]>><<island_end>><<pass _time>><<set $phase to 1>><</link>>

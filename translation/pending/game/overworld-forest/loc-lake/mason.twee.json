@@ -1,0 +1,148 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<icon \"actions/swim.png\">><<link [[Sit in the pond|Mason In Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist5>><</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<icon \"actions/swim.png\">><<link [[연못에 앉는다|Mason In Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist5>><</if>>"
+  ],
+  "new_en": [
+   "\t\t\t<<icon \"actions/swim.png\">><<link [[Sit in the pond|Mason In Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist5>><<set $phase to \"in\">><</if>>"
+  ],
+  "context": "\t\t<<if hasSexStat(\"exhibitionism\", 5)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<icon \"actions/perch-get-up.png\">><<link [[Sit beside the pond|Mason Beside Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist5>><</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<icon \"actions/perch-get-up.png\">><<link [[연못 옆에 앉는다|Mason Beside Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist5>><</if>>"
+  ],
+  "new_en": [
+   "\t\t\t<<icon \"actions/perch-get-up.png\">><<link [[Sit beside the pond|Mason Beside Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist5>><<set $phase to \"beside\">><</if>>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<icon \"actions/swim.png\">><<link [[Sit in the pond|Mason In Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist3>><</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<icon \"actions/swim.png\">><<link [[연못에 앉는다|Mason In Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist3>><</if>>"
+  ],
+  "new_en": [
+   "\t\t\t<<icon \"actions/swim.png\">><<link [[Sit in the pond|Mason In Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist3>><<set $phase to \"in\">><</if>>"
+  ],
+  "context": "\t\t<<if hasSexStat(\"exhibitionism\", 3)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<icon \"actions/perch-get-up.png\">><<link [[Sit beside the pond|Mason Beside Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist3>><</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<icon \"actions/perch-get-up.png\">><<link [[연못 옆에 앉는다|Mason Beside Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist3>><</if>>"
+  ],
+  "new_en": [
+   "\t\t\t<<icon \"actions/perch-get-up.png\">><<link [[Sit beside the pond|Mason Beside Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist3>><<set $phase to \"beside\">><</if>>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<icon \"actions/swim.png\">><<link [[Sit in the pond|Mason In Pond]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<icon \"actions/swim.png\">><<link [[연못에 앉는다|Mason In Pond]]>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<icon \"actions/swim.png\">><<link [[Sit in the pond|Mason In Pond]]>><<set $phase to \"in\">><</link>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<icon \"actions/perch-get-up.png\">><<link [[Sit beside the pond|Mason Beside Pond]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<icon \"actions/perch-get-up.png\">><<link [[연못 옆에 앉는다|Mason Beside Pond]]>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<icon \"actions/perch-get-up.png\">><<link [[Sit beside the pond|Mason Beside Pond]]>><<set $phase to \"beside\">><</link>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You chat with Mason."
+  ],
+  "old_kr": [
+   "당신은 메이슨과 대화한다."
+  ],
+  "new_en": [
+   "<<if $phase is \"in\">>",
+   "\t<<water>><<waterbr 2>>",
+   "<</if>>",
+   "",
+   "You chat with Mason."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Next|Domus Street]]>><<set $eventskip to 1>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[다음|Domus Street]]>><<set $eventskip to 1>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Next|Domus Street]]>><<set $eventskip to 1>><<unset $phase>><<endevent>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Next|Lake Waterfall]]>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[다음|Lake Waterfall]]>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Next|Lake Waterfall]]>><<unset $phase>><<endevent>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<getouticon>><<link [[Leave|Lake Waterfall]]>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<getouticon>><<link [[떠난다|Lake Waterfall]]>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<getouticon>><<link [[Leave|Lake Waterfall]]>><<unset $phase>><<endevent>><</link>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<if $phase is \"in\">>",
+   "\t<<water>><<waterbr 2>>",
+   "<</if>>",
+   ""
+  ],
+  "context": ""
+ }
+]

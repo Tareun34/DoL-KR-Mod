@@ -203,15 +203,24 @@ Some events are replaced with more severe events if PC is deemed (randomly) to b
 
 				<<if $worn.under_lower.name is "naked" and !playerChastity("hidden")>>
 					<<set $genderknown.pushUnique("Leighton")>>
-					레이튼은 자리에서 일어나, 당신의 <<genitals>>【을를】 뚫어져라 쳐다보며 눈을 크게 뜬다. "오, 이런, 넌 정말 버릇없는<<if $player.sex is "m">> 녀석이구나,<<elseif $player.penisExist and $player.vaginaExist and $player.gender_appearance is "m">>... 음, 녀석...<<elseif $player.penisExist and $player.vaginaExist and $player.gender_appearance is "f">>... 음, 년...<<else>> 년이구나,<</if>> 그렇지 않나? 네 <<nnpc_title "Leighton">>에게 이렇게 과시하다니."
+					Leighton gets to <<his>> feet, eyes wide as <<he>> ogles your <<genitals>>. "Oh my, you are a naughty 
+					<<if $settings.nudeGenderPerception is 0>>
+						<<girl>>,
+					<<elseif $settings.nudeGenderPerception is 2 and $player.sex isnot "h">>
+						 <<pcSex>>,
+					<<elseif $player.penisExist and $player.vaginaExist>>...um, <<girl>>...
+					<<else>> 
+						<<girl>>,
+					<</if>> 
+					aren't you? Showing off to your <<nnpc_title "Leighton">> like this."
 					<<if $player.penisExist and $player.penissize isnot 4>>
 						<<if $player.penissize gte 5>>
 							<<He>>【은는】 굶주린 듯 <<his>> 입술을 핥는다. "특히나 그렇게... 타고났으니 말이다."
 							<<stress 6>><<trauma 6>><<gstress>><<gtrauma>>
 
-							<<if $player.penissize is 5 and $player.penisExist and $player.vaginaExist>>
+							<<if $player.penissize gte 5 and $player.penisExist and $player.vaginaExist>>
 								<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
-							<<elseif $player.penissize is 6>>
+							<<elseif $player.penissize gte 6>>
 								<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
 							<</if>>
 						<<elseif $player.penissize lte 3>>
@@ -328,9 +337,9 @@ Some events are replaced with more severe events if PC is deemed (randomly) to b
 					<br><br>
 					<<underlowerruined>><<underupperruined>><<set $phase to 4>>
 				<<else>>
-					"속옷이 없다고?" <<he>>【이가】 말한다. "그건 규칙 위반이다,
-					<<if $player.penisExist and $player.vaginaExist>>
-						이런... <<lady>>?"
+					"No underwear?" <<he>> comments. "That's against the rules,
+					<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>
+						young... <<lady>>?"
 					<<else>>
 						<<lady>>."
 					<</if>>
@@ -383,9 +392,9 @@ Some events are replaced with more severe events if PC is deemed (randomly) to b
 				<<Penisremarkquote>> <<person3>><<person>>【이가】 말하자 다른 두 학생이 낄낄거린다.
 				<<stress 6>><<trauma 6>><<gstress>><<gtrauma>>
 
-				<<if $player.penissize is 5 and $player.penisExist and $player.vaginaExist>>
+				<<if $player.penissize gte 5 and $player.penisExist and $player.vaginaExist>>
 					<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
-				<<elseif $player.penissize is 6>>
+				<<elseif $player.penissize gte 6>>
 					<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
 				<</if>>
 				<br><br>
@@ -589,7 +598,7 @@ Some events are replaced with more severe events if PC is deemed (randomly) to b
 당신은 사무실을 나오지만, 벌을 받으러 가는 대신 출구로 향한다. 나중에 대가를 치르겠지만, 지금 당장은 무사하다.
 <br><br>
 <<endevent>>
-<<oxfordquick>>
+<<oxfordQuick>>
 
 :: School Detention Car2
 <<set $outside to 1>><<set $location to "school">><<schooleffects>><<effects>>
@@ -605,8 +614,8 @@ Some events are replaced with more severe events if PC is deemed (randomly) to b
 	당신은 몸을 숙여 흙을 닦아내며, 레이튼을 향해 맨 <<bottom>>【을를】 내민다. 차를 문지르자 엉덩이가 흔들리는 것이 느껴진다. 레이튼의 얼굴이 붉어진다. "ㅃ-빠짐없이 다 닦도록 해라." <<he>>【은는】 말을 더듬으며 창문을 닫고 시야에서 사라진다.
 	<<exhibitionism3>>
 
-	스스로에게 만족하며, 당신은 그 성가신 부분을 닦는 데 1분 더 할애한다. 레이튼이 여전히 몰래 보고 있을지도 모르니, 엉덩이를 한 번 더 흔들어주는 것도 잊지 않는다.
-	<<if random(0, 100) lt 5 and ($settings.bestialityEnabled or $monster is 1)>>
+	Pleased with yourself, you spend another minute polishing the troublesome spot. You make sure to put an extra wiggle in your hips, in case Leighton is still secretly watching.
+	<<if random(0, 100) lt 5 and beastSexEnabledForType("dog", $monster is 1)>>
 		<<endevent>><<wearProp "sponge">>
 		<<beastNEWinit 1 dog>>
 		<<nnpc_his "Leighton">> 당황한 얼굴을 상상하는 데 너무 집중한 나머지, 등 뒤에서 들려오는 부드럽고 빠른 발소리를 알아차리지 못한다. 마침내 숙인 등 위로 갑작스러운 무게가 느껴지고 귓가에 으르렁거리는 소리가 들릴 때까지.
@@ -1859,7 +1868,7 @@ Some events are replaced with more severe events if PC is deemed (randomly) to b
 	<<if $phase is 1>>
 		<<set $NPCList[0].lefthand to "anusentrance">><<set $anususe to 1>>
 	<<else>>
-		<<set $anususe to "penis">><<set $NPCList[0].penis to "anusentrance">><<set $anusstate to "entrance">><<set $speechanusentrance to 1>>
+		<<set $anususe to "penis">><<set $NPCList[0].penis to "anusentrance">><<set $anusstate to "entrance">><<set $speechAnusEntrance to 1>>
 		<<set $NPCList[0].location.genitals = "genitals">><<set $anustarget to 0>>
 	<</if>>
 <<elseif $sexstart is 1>>
@@ -1873,7 +1882,7 @@ Some events are replaced with more severe events if PC is deemed (randomly) to b
 	<<if $phase is 1>>
 		<<set $NPCList[0].lefthand to "anusentrance">><<set $anususe to 1>>
 	<<elseif $phase is 0>>
-		<<set $anususe to "penis">><<set $NPCList[0].penis to "anusentrance">><<set $anusstate to "entrance">><<set $speechanusentrance to 1>>
+		<<set $anususe to "penis">><<set $NPCList[0].penis to "anusentrance">><<set $anusstate to "entrance">><<set $speechAnusEntrance to 1>>
 		<<set $NPCList[0].location.genitals = "genitals">><<set $anustarget to 0>>
 	<</if>>
 <</if>>

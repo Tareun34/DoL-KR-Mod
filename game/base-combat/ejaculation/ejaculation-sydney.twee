@@ -1244,7 +1244,7 @@
 		<<elseif $NPCList[_nn].penis is "mouthimminent">>
 			<<switch random(1, 7)>>
 				<<case 1 2 3>>
-					<<He>>【이가】 목덜미의 머리카락을 쥐고, 당신의 입술이 <<his>> 자지 끝에 간신히 닿은 채 당신의 입술에 사정한다. <<His>> 얼굴이 욕구불만으로 붉어진다.
+					<<He>> grips hair at the nape of your neck, ejaculating onto your lips as you barely brush against the tip of <<his>> penis. <<His>> face reddens in frustration.
 					<br><br>
 				<<case 4 5 6>>
 					<<He>>【이가】 당신의 얼굴에 <<his>> 자지를 문지르다 일찍 사정해 버린다. 정액이 당신의 입술과 턱을 타고 흘러내린다. <<he>>【은는】 불만스러운 듯 발을 구른다.

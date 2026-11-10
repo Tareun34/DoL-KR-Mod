@@ -1,0 +1,292 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $debug is 1>>",
+   "\t\t\t\tPheromones (DEBUG): <span id=\"statsalluretest\"><<= $alluretest ? \"On\" : \"Off\">></span> |",
+   "\t\t\t\t<<link \"Change\">>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $debug is 1>>",
+   "\t\t\t\t페로몬 (디버그): <span id=\"statsalluretest\"><<= $alluretest ? \"켜짐\" : \"꺼짐\">></span> |",
+   "\t\t\t\t<<link \"변경\">>"
+  ],
+  "new_en": [
+   "\t\t\t<<if $debug>>",
+   "\t\t\t\tPheromones (DEBUG): <span id=\"statsalluretest\"><<= $alluretest ? \"On\" : \"Off\">></span> |",
+   "\t\t\t\t<<link \"Change\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<label>Enabled <<radiobutton \"$player.freckles\" true autocheck>></label>",
+   "\t\t\t| <label>Disabled <<radiobutton \"$player.freckles\" false `!$player.freckles ? \"checked\" : \"\"`>></label>"
+  ],
+  "old_kr": [
+   "\t\t\t<label>활성화됨 <<radiobutton \"$player.freckles\" true autocheck>></label>",
+   "\t\t\t| <label>비활성화됨 <<radiobutton \"$player.freckles\" false `!$player.freckles ? \"checked\" : \"\"`>></label>"
+  ],
+  "new_en": [
+   "\t\t\tFace: <label>Disabled <<radiobutton \"$player.skin.faceFreckles\" false autocheck>></label>",
+   "\t\t\t| <label>Enabled <<radiobutton \"$player.skin.faceFreckles\" true autocheck>></label>",
+   "\t\t\t<br>",
+   "\t\t\tBody: <label>Disabled <<radiobutton \"$player.skin.bodyFreckles\" \"none\" autocheck>></label>",
+   "\t\t\t| <label>Upper body <<radiobutton \"$player.skin.bodyFreckles\" \"upper\" autocheck>></label>",
+   "\t\t\t| <label>Full body <<radiobutton \"$player.skin.bodyFreckles\" \"full\" autocheck>></label>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<numberStepper \"Hermaphrodite Fame\" $schoolrep.herm { callback: value => {V.schoolrep.herm = value; Wikifier.wikifyEval(\"<<replace '#repherm'>><<cheatsRep herm>><</replace>>\")}, max: 5, step: 1, percentage: false, reverse: true, activeButtons: [\"single\", \"minMax\"] }>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<numberStepper \"후타나리 소문\" $schoolrep.herm { callback: value => {V.schoolrep.herm = value; Wikifier.wikifyEval(\"<<replace '#repherm'>><<cheatsRep herm>><</replace>>\")}, max: 5, step: 1, percentage: false, reverse: true, activeButtons: [\"single\", \"minMax\"] }>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<numberStepper \"Genitalia Fame\" $schoolrep.herm { callback: value => {V.schoolrep.herm = value; Wikifier.wikifyEval(\"<<replace '#repherm'>><<cheatsRep herm>><</replace>>\")}, max: 5, step: 1, percentage: false, reverse: true, activeButtons: [\"single\", \"minMax\"] }>>"
+  ],
+  "context": "\t\t\t<<if $player.penisExist and $player.vaginaExist>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<lakeicon>><<link [[Lake|Lake Shore]]>><<cheats-teleport-function>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<lakeicon>><<link [[호수|Lake Shore]]>><<cheats-teleport-function>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<lakeicon>><<link [[Lake: Shore|Lake Shore]]>><<cheats-teleport-function>><</link>>"
+  ],
+  "context": "\t\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<numberStepper \"Fog\" `Weather.FogGeneration.getFog()` {",
+   "\t\t\t\tcallback: value => {",
+   "\t\t\t\t\tWeather.FogGeneration.setFog(value);",
+   "\t\t\t\t},",
+   "\t\t\t\tmin: 0, max: 1, step: 0.1, colorArr: [\"--blue\"], percentage: false,",
+   "\t\t\t\tvalueFormat: value => round(value, 1),",
+   "\t\t\t\tactiveButtons: [\"single\", \"double\"]",
+   "\t\t\t}>>",
+   "\t\t\t<span class=\"description\">Changing this setting will change the weather for at least 6 hours, before returning to the original weather simulation.</span>"
+  ],
+  "old_kr": [
+   "\t\t\t<<numberStepper \"안개\" `Weather.FogGeneration.getFog()` {",
+   "\t\t\t\tcallback: value => {",
+   "\t\t\t\t\tWeather.FogGeneration.setFog(value);",
+   "\t\t\t\t},",
+   "\t\t\t\tmin: 0, max: 1, step: 0.1, colorArr: [\"--blue\"], percentage: false,",
+   "\t\t\t\tvalueFormat: value => round(value, 1),",
+   "\t\t\t\tactiveButtons: [\"single\", \"double\"]",
+   "\t\t\t}>>",
+   "\t\t\t<span class=\"description\">이 설정을 변경하면 최소 6시간 동안 날씨가 변경되며, 이후 원래 날씨 시뮬레이션으로 돌아갑니다.</span>"
+  ],
+  "new_en": [
+   "\t\t\t<<cheatsFog>>",
+   "\t\t\t<span class=\"description\">Changing this setting will change the weather for at least 6 hours, before returning to the original weather simulation.</span>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<link [[A wolf|$passage]]>>",
+   "\t\t\t\t\t<<if $settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<link [[늑대|$passage]]>>",
+   "\t\t\t\t\t<<if $settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<link [[A wolf|$passage]]>>",
+   "\t\t\t\t\t<<if monsterChanceForType(\"wolf\") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType(\"wolf\"))>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<link \"A wolf\">>",
+   "\t\t\t\t\t\t\t<<if $settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<link \"늑대\">>",
+   "\t\t\t\t\t\t\t<<if $settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<link \"A wolf\">>",
+   "\t\t\t\t\t\t\t<<if monsterChanceForType(\"wolf\") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType(\"wolf\"))>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<span class=\"gold\"><<= $player.sex is \"m\" ? \"Penis\" : $player.sex is \"f\" ? \"Vagina\" : \"Hermaphrodite\">></span>",
+   "\t\t\t| This setting cannot be changed due to <<= _reasons.join(\" and \")>>."
+  ],
+  "old_kr": [
+   "\t\t\t<span class=\"gold\"><<= $player.sex is \"m\" ? \"자지\" : $player.sex is \"f\" ? \"보지\" : \"양성\">></span>",
+   "\t\t\t| <<= _reasons.join(\", \")>> 이 설정을 변경할 수 없습니다."
+  ],
+  "new_en": [
+   "\t\t\t<span class=\"gold\"><<= $player.sex is \"m\" ? \"Penis\" : $player.sex is \"f\" ? \"Vagina\" : \"Both\">></span>",
+   "\t\t\t| This setting cannot be changed due to <<= _reasons.join(\" and \")>>."
+  ],
+  "context": "\t\t<<if _reasons.length gte 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tHermaphrodite Balls: <span id=\"statsBallsExist\"><<= $player.ballsExist ? \"Present\" : \"Disabled\">></span> |",
+   "\t\t\t<<link \"Change\">>"
+  ],
+  "old_kr": [
+   "\t\t\t양성구유 고환: <span id=\"statsBallsExist\"><<= $player.ballsExist ? \"있음\" : \"비활성화\">></span> |",
+   "\t\t\t<<link \"변경\">>"
+  ],
+  "new_en": [
+   "\t\t\tTesticles: <span id=\"statsBallsExist\"><<= $player.ballsExist ? \"Present\" : \"Disabled\">></span> |",
+   "\t\t\t<<link \"Change\">>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<span class=\"gold\"><<= $player.sex is \"m\" ? \"Penis\" : $player.sex is \"f\" ? \"Vagina\" : \"Hermaphrodite\">></span> | <<if _reasons.length gte 1>>You cannot change your genitals due to <<= _reasons.join(\" and \")>>. Normally, this<<else>>This<</if>> setting can only be changed when accessing your wardrobe."
+  ],
+  "old_kr": [
+   "\t\t<span class=\"gold\"><<= $player.sex is \"m\" ? \"자지\" : $player.sex is \"f\" ? \"보지\" : \"양성\">></span> | <<if _reasons.length gte 1>><<= _reasons.join(\", \")>> 생식기를 변경할 수 없습니다. 일반적으로 이 설정은 옷장에 접근 중일 때만 변경할 수 있습니다.<<else>>이 설정은 옷장에 접근 중일 때만 변경할 수 있습니다.<</if>>"
+  ],
+  "new_en": [
+   "\t\t<span class=\"gold\"><<= $player.sex is \"m\" ? \"Penis\" : $player.sex is \"f\" ? \"Vagina\" : \"Both\">></span> | <<if _reasons.length gte 1>>You cannot change your genitals due to <<= _reasons.join(\" and \")>>. Normally, this<<else>>This<</if>> setting can only be changed when accessing your wardrobe."
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $debug>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $debug>>"
+  ],
+  "context": "\t\t\t}>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if playerPregnancyPossibleWith(_pregEnabled)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if playerPregnancyPossibleWith(_pregEnabled.nam)>>"
+  ],
+  "context": "\t<<for _pregEnabled range $NPCName.filter(npc => npc.pregnancy and npc.pregnancy.enabled isnot undefined)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<if beastMaleChance() gt 0>> /* checks if there are male wolves, if not a foreigner wolf impregnates PC */"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<if beastMaleChanceForType(\"wolf\") gt 0>> /* checks if there are male wolves, if not a foreigner wolf impregnates PC */"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<if $blackwolfmonster>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<if resolveIfNamedBeastIsMonster(\"blackwolf\")>>"
+  ],
+  "context": "\t\t\t\t\t\t<<case \"Black Wolf\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<if $greathawkmonster>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<if resolveIfNamedBeastIsMonster(\"greathawk\")>>"
+  ],
+  "context": "\t\t\t\t\t\t<<case \"Great Hawk\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<if beastMaleChance() gt 0>> /* checks if there are male wolves, if not a foreigner wolf inseminates PC */"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<if beastMaleChanceForType(\"wolf\") gt 0>> /* checks if there are male wolves, if not a foreigner wolf inseminates PC */"
+  ],
+  "context": "\t\t\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<if $blackwolfmonster>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<if resolveIfNamedBeastIsMonster(\"blackwolf\")>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<case \"Black Wolf\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<if $greathawkmonster>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<if resolveIfNamedBeastIsMonster(\"greathawk\")>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<case \"Great Hawk\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"cheatsFog\">>",
+   "\t<<numberStepper \"Fog\" `Weather.FogGeneration.getFog()` {",
+   "\t\tcallback: value => {",
+   "\t\t\tWeather.FogGeneration.setFog(value);",
+   "\t\t},",
+   "\t\tmin: 0, max: 1, step: 0.1, colorArr: [\"--blue\"], percentage: false,",
+   "\t\tvalueFormat: value => round(value, 1),",
+   "\t\tactiveButtons: [\"single\", \"double\"]",
+   "\t}>>",
+   "<</widget>>",
+   ""
+  ],
+  "context": ""
+ }
+]

@@ -1,0 +1,34 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[Tease|Residential Tease]]>><</link>><<deviant1>>"
+  ],
+  "old_kr": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[장난친다|Residential Tease]]>><</link>><<deviant1>>"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"cat\", $monster is 1)>>",
+   "\t\t<<link [[Tease|Residential Tease]]>><</link>><<deviant1>>"
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>><!-- Modified for Monster People -->",
+   "\t\t<<link [[Tease|Residential Big Tease]]>><</link>><<deviant1>>"
+  ],
+  "old_kr": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>><!-- Modified for Monster People -->",
+   "\t\t<<link [[장난친다|Residential Big Tease]]>><</link>><<deviant1>>"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"cat\", $monster is 1)>><!-- Modified for Monster People -->",
+   "\t\t<<link [[Tease|Residential Big Tease]]>><</link>><<deviant1>>"
+  ],
+  "context": "\t<br>"
+ }
+]

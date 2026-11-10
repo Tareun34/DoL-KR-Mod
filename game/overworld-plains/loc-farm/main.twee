@@ -229,11 +229,11 @@
 
 알렉스가 당신을 닭장 주변으로 이끌어 길쭉한 돌 건물 쪽으로 향한다. 꿀꿀거리는 소리가 들린다. "돼지들은 먹이 주기가 더 힘들어요. 배고픈 녀석들이라. 그걸 다 나르는 게 일이죠." 돼지우리에 들어간다.
 <!-- Modified for monster people -->
-<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or (!$settings.bestialityEnabled)>>
-	<<if beastMaleChance() gte 100>>
-		여러 돼지 소년들이 우리 안에 앉아 있다.
-	<<elseif beastMaleChance() gte 1>>
-		여러 돼지 소년 소녀들이 우리 안에 앉아 있다.
+<<if monsterChanceForType("pig") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType("pig"))>>
+	<<if beastMaleChanceForType("pig") gte 100>>
+		Several pigboys sit in pens.
+	<<elseif beastMaleChanceForType("pig") gte 1>>
+		Several pigboys and girls sit in pens.
 	<<else>>
 		여러 돼지 소녀들이 우리 안에 앉아 있다.
 	<</if>>
@@ -254,8 +254,8 @@
 
 <<He>>【이가】 당신을 돼지우리에서 멀리 이끌어, 낡은 나무 문을 지나 포장된 길로 들어선다. 저 앞에 마구간이 보인다.
 <!-- Modified for monster people -->
-<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or (!$settings.bestialityEnabled)>>
-	<<if beastMaleChance() lte $rng>>
+<<if monsterChanceForType("horse") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType("horse"))>>
+	<<if beastMaleChanceForType("horse") lte $rng>>
 		<<set _horse_gender to "f">>
 	<<else>>
 		<<set _horse_gender to "m">>
@@ -293,20 +293,20 @@
 알렉스를 따라 들판을 가로질러 헛간으로 향한다. 개 한 마리가 입을 벌리고 혀를 내민 채 밖에 앉아 있다.
 <br><br>
 <!-- Modified for monster people -->
-<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or (!$settings.bestialityEnabled)>>
-	<<if beastMaleChance() gte 100>>
-		안에는 여러 황소 소년들이 네 발로 서 있고, 각각의 자지에 튜브가 연결되어 있다. 그들은 쾌감에 음메 소리를 낸다.
-	<<elseif beastMaleChance() lte 0>>
-		안에는 여러 암소 소녀들이 네 발로 서 있고, 각각의 가슴에 두 개의 튜브가 연결되어 있다. 그들은 쾌감에 음메 소리를 낸다.
+<<if monsterChanceForType("cow") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType("cow"))>>
+	<<if beastMaleChanceForType("cow") gte 100>>
+		Inside, a number of bullboys stand on all fours, each with a tube attached to his penis. They moo in pleasure.
+	<<elseif beastMaleChanceForType("cow") lte 0>>
+		Inside, a number of cowgirls stand on all fours, each with two tubes attached to her breasts. They moo in pleasure.
 	<<else>>
 		안에는 여러 암소 소녀들과 황소 소년들이 네 발로 서 있고, 각각 착유기에 연결되어 있다. 그들은 쾌감에 음메 소리를 낸다.
 	<</if>>
 
 <<else>>
-	<<if beastMaleChance() gte 100>>
-		안에는 여러 황소들이 서 있고, 각각 착유기에 연결되어 있다.
-	<<elseif beastMaleChance() lte 0>>
-		안에는 여러 암소들이 서 있고, 각각 착유기에 연결되어 있다.
+	<<if beastMaleChanceForType("cow") gte 100>>
+		A number of bulls stand inside, each attached to a milking machine.
+	<<elseif beastMaleChanceForType("cow") lte 0>>
+		A number of cows stand inside, each attached to a milking machine.
 	<<else>>
 		안에는 여러 소들이 서 있고, 각각 착유기에 연결되어 있다.
 	<</if>>

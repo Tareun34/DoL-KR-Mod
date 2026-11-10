@@ -1,0 +1,26 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "/* Shared helper widgets for the pregnancy/birth scenes. Prose and logic that used",
+   "   to be copy-pasted across the birth chains, kept in one place. */"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "/* Shared helper widgets for the pregnancy and birth scenes. */"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "/* The dream the player has during birth when dissociating (trauma is high).",
+   "   Same in every birth location, so it lives here once. */"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "/* The dream the player has during birth when dissociating (trauma is high). */"
+  ],
+  "context": ""
+ }
+]

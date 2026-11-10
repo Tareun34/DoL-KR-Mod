@@ -1,0 +1,376 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t<<npc Whitney>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t<<npc Whitney>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyExit>>"
+  ],
+  "context": "\t\t\t<<endevent>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyExit>>"
+  ],
+  "context": "\t\t<<endevent>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyExit>>"
+  ],
+  "context": "\t<<endcombat>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyExit>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyExit>>"
+  ],
+  "context": "\t\t<<endcombat>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyExit>>"
+  ],
+  "context": "\t<<endcombat>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyExit>>"
+  ],
+  "context": "\t<<endcombat>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyExit>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyExit>>"
+  ],
+  "context": "\t<<endcombat>><<clotheson>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyOptions>>"
+  ],
+  "context": "\t<<endevent>><<clearNPC \"park_whore1\">><<clearNPC \"park_whore2\">><<npc Whitney>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyExit>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<whitneyExit>>"
+  ],
+  "context": ""
+ }
+]

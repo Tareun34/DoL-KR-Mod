@@ -380,7 +380,7 @@
 당신이 끝마칠 때쯤, 학교는 문을 닫기 시작했다. 당신은 카일라와 함께 밖으로 걸어 나간다.
 <br><br>
 
-<<kylaroptions "notext">>
+<<kylarOptions "notext">>
 
 :: English Play Rehearse Sydney
 <<schooleffects>><<effects>><<set $bus to "rehearsal">>

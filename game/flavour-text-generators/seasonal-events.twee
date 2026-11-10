@@ -14,9 +14,9 @@
 		<<case "snow">>
 			<<if Time.season is "winter">>
 				<<if Weather.isFreezing>>
-				<<addinlineevent "winter_anywhere_1">>
-					매섭게 차가운 바람이 불어온다. 바람이 잦아들 때까지 팔로 몸을 감싸며 버틴다. <<stress 3>><<gstress>>
-				<</addinlineevent>>
+					<<addinlineevent "winter_anywhere_1">>
+						A brutally cold wind surges. You hug yourself for warmth until it dies down. <<stress 3>><<gstress>>
+					<</addinlineevent>>
 				<</if>>
 				<<addinlineevent "winter_anywhere_2" 0.5>>
 					<<dancedifficulty 1 1000 true>>
@@ -377,8 +377,8 @@
 						<</if>>
 					<</addinlineevent>>
 					<<addinlineevent "rain_anystreet_2" 0.33>>
-					<<dancedifficulty 1 500 true>>
-						비에 젖어 미끄러운 길에서 넘어질 뻔하지만,
+						<<dancedifficulty 1 500 true>>
+						The rain-slicked pavement causes you to slip,
 						<<if $danceSuccess>>
 							<span class="green">가까스로 몸을 가누고 중심을 잡는다.</span>
 						<<else>>
@@ -442,11 +442,11 @@
 						빗속에서 키스하는 커플을 발견한다. <<stress -3>><<lstress>>
 					<</addinlineevent>>
 					<<addinlineevent "rain_park_3" 0.5>>
-							당신은 미끄러져 젖은 잔디 위로 넘어지고 만다.
-							<<if playerIsPregnant() and playerAwareTheyArePregnant()>>
-								엉덩방아를 찧으면서 당신의 두 손은 피해를 막고자 본능적으로 <<bellyDescription "pc">>【을를】 감싼다. 다시 미끄러지지 않도록 조심하며 근처의 벤치를 짚고 일어선다.
-							<</if>>
-							엉덩이가 아프고 축축해진다. <<if !$worn.lower.type.includes("swim") and !$worn.lower.type.includes("naked")>><<lowerwet 75>><<elseif $worn.lower.type.includes("naked") and !$worn.under_lower.type.includes("swim") and !$worn.under_lower.type.includes("naked") and !playerChastity()>><<underlowerwet 75>><</if>><<stress 6>><<pain 4>><<gstress>><<gpain>>
+						You slip and fall onto a patch of wet grass.
+						<<if playerIsPregnant() and playerAwareTheyArePregnant()>>
+							Your hands instinctively curl around your <<bellyDescription "pc">> to protect it from harm as you fall flat on your ass. You use a nearby bench to safely haul yourself to your feet, careful not to slip again.
+						<</if>>
+						Your bottom is left sore and damp. <<if !$worn.lower.type.includes("swim") and !$worn.lower.type.includes("naked")>><<lowerwet 75>><<elseif $worn.lower.type.includes("naked") and !$worn.under_lower.type.includes("swim") and !$worn.under_lower.type.includes("naked") and !playerChastity()>><<underlowerwet 75>><</if>><<stress 6>><<pain 4>><<gstress>><<gpain>>
 					<</addinlineevent>>
 				<<case "forest">>
 					<<addinlineevent "rain_forest_1">>
@@ -573,6 +573,9 @@
 						<</addinlineevent>>
 					<</if>>
 				<<case "park">>
+					<<if Weather.bloodMoon and !Weather.isOvercast>>
+						<<bloodmoonTouristParkWidget>>
+					<</if>>
 					<<if Time.season is "autumn">>
 						<<addinlineevent "autumn_park_1">>
 							공원을 내려다보며 가을의 다채로운 색감에 감탄한다. <<stress -3>><<lstress>>
@@ -702,6 +705,9 @@
 						<</addinlineevent>>
 					<</if>>
 				<<case "park">>
+					<<if Weather.bloodMoon and !Weather.isOvercast>>
+						<<bloodmoonTouristParkWidget>>
+					<</if>>
 					<<addinlineevent "summer_park_1">>
 						근처에서 젊은이들 몇 명이 서로 물풍선을 던지며 노는 것을 본다. <<stress -3>><<lstress>>
 					<</addinlineevent>>
@@ -816,13 +822,16 @@
 						<</addinlineevent>>
 						<<if $hallucinogen gt 0>>
 							<<addinlineevent "spring_anyalley_3" 0.1>>
-							<<beastNEWinit 2 dog>>
-							쓰레기통 옆에서 한 쌍의 <<if $monster is 1>>개 수인<<else>>개<</if>>들이 파스타 한 무더기를 같이 먹고 있는 것을 본다. 근처 건물에서는 로맨틱한 이탈리아 음악이 흘러나온다. 당신은 고개를 가로저으며 그곳을 뜬다. <<stress -24>><<lllstress>>
-							<<endevent>>
+								<<beastNEWinit 2 dog>>
+								You see a pair of <<if $monster is 1>>dogpeople<<else>>dogs<</if>> eating a pile of spaghetti together next to a trash can. Romantic Italian music plays from a nearby building. You shake your head and leave. <<stress -24>><<lllstress>>
+								<<endevent>>
 							<</addinlineevent>>
 						<</if>>
 					<</if>>
 				<<case "park">>
+					<<if Weather.bloodMoon and !Weather.isOvercast>>
+						<<bloodmoonTouristParkWidget>>
+					<</if>>
 					<<addinlineevent "spring_park_1">>
 						공원에 심어둔 꽃들이 다시 꽃을 피우기 시작한 것을 알아차린다. <<stress -3>><<lstress>>
 					<</addinlineevent>>
@@ -879,9 +888,24 @@
 					<</if>>
 				<<default>>
 			<</switch>>
-		<<default>>
-			<span class="red">ERROR: 당신은 어떤 식으로든 시간과 날씨의 개념을 뛰어넘었습니다. 치트를 쓴 게 아니라면 Vrelnir에게 제보해 주세요.</span>
+			<<default>>
+			<span class="red">ERROR: You have somehow managed to pass beyond the concepts of time and weather. Please inform Vrelnir unless you just used a cheat.</span>
 	<</switch>>
 	<<runeventpool>>
 	<br><br>
+<</widget>>
+
+
+<<widget "bloodmoonTouristParkWidget">>
+	<<addinlineevent "bloodmoonTouristPark" 15>>
+		<<if random(0,3) is 0>>
+			<<bloodmoonTourist1>>
+		<<elseif random(0,3) is 1>>
+			<<bloodmoonTourist2>>
+		<<elseif random(0,3) is 2>>
+			<<bloodmoonTourist3>>
+		<<else>>
+			<<bloodmoonTourist4>>
+		<</if>>
+	<</addinlineevent>>
 <</widget>>

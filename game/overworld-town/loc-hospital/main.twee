@@ -114,8 +114,8 @@
 			<br>
 		<</if>>
 
-		<<if C.npc.Alex.pregnancy.sample is true and playerIsPregnant() and !isPregnancyEnding()>>
-			<<procedureicon "paternity">><<link [[친자 확인 검사에 대해 문의한다 (0:10)|Hospital Paternity Test]]>><<pass 10>><</link>>
+		<<if C.npc.Alex.pregnancy.sample is true and playerIsPregnant() and !isPregnancyEnding() and (getPlayerPregnancy().donor is "Alex" or !knowsDonor(getPlayerPregnancy().pregnancyId, "pc"))>>
+			<<procedureicon "paternity">><<link [[Enquire about a paternity test (0:10)|Hospital Paternity Test]]>><<pass 10>><</link>>
 			<br><br>
 		<</if>>
 
@@ -189,9 +189,9 @@
 문을 지나 왼쪽으로 가면 아찔한 낭떠러지가 있다. 아래를 내려다보니 어두운 물이 흐르고 있다. 바닥에서부터 뻗어 나가는 넓은 터널이 어렴풋이 보인다. 오른쪽에는 긴 복도가 있다. 복도 다른 쪽 끝에는 문이 굳게 닫혀 있다. 정면 벽에는 작은 구멍이 있는데, 비집고 들어갈 수 있을지도 모른다.
 <br><br>
 
-<<beastNEWinit 2 wolf>>
-<<if $monster is 1 or $settings.bestialityEnabled>>
-	<<link [[물가로 내려간다 (0:01)|Abduction Hospital Water]]>><<set $molestationstart to 1>><<pass 1>><</link>>
+<<generateBeastVictim 2 wolf>>
+<<if beastSexEnabledForType("wolf", $monster is 1)>>
+	<<link [[Climb down to the water (0:01)|Abduction Hospital Water]]>><<set $molestationstart to 1>><<pass 1>><</link>>
 	<br>
 <</if>>
 <<link [[복도를 따라간다 (0:01)|Abduction Hospital Corridor]]>><<pass 1>><<endevent>><</link>>
@@ -429,8 +429,8 @@
 
 		<<link [[기다린다|Hospital Wait]]>><<pass 10>><<endevent>><</link>><<ltiredness>>
 		<br>
-		<<if $renttime lte 0>>
-			<<link [[지금 떠난다 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
+		<<if $rentTime lte 0>>
+			<<link [[Leave now (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
 			<br>
 		<<elseif crimeSumCurrent() gte 1000>>
 			<<link [[지금 떠난다 (0:10)|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
@@ -443,8 +443,8 @@
 			<br>
 		<</if>>
 	<<else>>
-		<<if $renttime lte 0>>
-			<<link [[다음 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
+		<<if $rentTime lte 0>>
+			<<link [[Next (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
 			<br>
 		<<elseif crimeSumCurrent() gte 1000>>
 			<<link [[다음 (0:10)|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
@@ -471,8 +471,8 @@
 
 		<<link [[기다린다|Hospital Wait]]>><<pass 10>><<endevent>><</link>><<ltiredness>>
 		<br>
-		<<if $renttime lte 0>>
-			<<link [[지금 떠난다 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
+		<<if $rentTime lte 0>>
+			<<link [[Leave now (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
 			<br>
 		<<elseif crimeSumCurrent() gte 1000>>
 			<<link [[지금 떠난다 (0:10)|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
@@ -485,8 +485,8 @@
 			<br>
 		<</if>>
 	<<else>>
-		<<if $renttime lte 0>>
-			<<link [[다음 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
+		<<if $rentTime lte 0>>
+			<<link [[Next (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
 			<br>
 		<<elseif crimeSumCurrent() gte 1000>>
 			<<link [[다음 (0:10)|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
@@ -525,8 +525,8 @@
 		<<link [[기다린다|Hospital Wait]]>><<pass 10>><<endevent>><</link>><<ltiredness>>
 		<br>
 
-		<<if $renttime lte 0>>
-			<<link [[지금 떠난다 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
+		<<if $rentTime lte 0>>
+			<<link [[Leave now (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
 			<br>
 		<<elseif crimeSumCurrent() gte 1000>>
 			<<link [[지금 떠난다 (0:10)|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
@@ -539,8 +539,8 @@
 			<br>
 		<</if>>
 	<<else>>
-		<<if $renttime lte 0>>
-			<<link [[다음 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
+		<<if $rentTime lte 0>>
+			<<link [[Next (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
 			<br>
 		<<elseif crimeSumCurrent() gte 1000>>
 			<<link [[다음 (0:10)|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
@@ -619,7 +619,7 @@
 육중한 문이 쾅 닫힌다. 당신은 어둠 속으로 이어지는 계단 꼭대기에 서 있다.
 <br><br>
 <<run statusCheck("Robin")>>
-<<if $robinfirstrentfight and ($baileypaychain lt 2 or $renttime lte -1) and ["orphanage","bath","sleep"].includes(_robin_location)>>
+<<if $robinfirstrentfight and ($baileypaychain lt 2 or $rentTime lte -1) and ["orphanage","bath","sleep"].includes(_robin_location)>>
 	<<rentduerobin 0>>
 <<else>>
 	<<rentdue 0>>
@@ -885,8 +885,8 @@
 간호사는 해가 뜰 때까지 당신이 대기실에 머물도록 해준다.
 <br><br>
 
-<<if $renttime lte 0>>
-	<<link [[다음|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
+<<if $rentTime lte 0>>
+	<<link [[Next|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
 	<br>
 <<elseif crimeSumCurrent() gte 1000>>
 	<<link [[다음|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
@@ -1697,6 +1697,7 @@
 <</if>>
 <<set $player.virginity.temple to true>>
 <<set C.npc.Sydney.virginity.temple to true>>
+<<set $temple_chastity_timer to 30>>
 
 <<link [[잠든다|Hospital Bed Sydney]]>><</link>>
 <br>

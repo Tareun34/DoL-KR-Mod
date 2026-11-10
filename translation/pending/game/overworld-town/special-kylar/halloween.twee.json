@@ -1,0 +1,108 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Go with Kylar (1:00)|Kylar Halloween]]>><<npcincr Kylar love 1>><<pass 10>><</link>><<glove>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[카일라와 함께 간다 (1:00)|Kylar Halloween]]>><<npcincr Kylar love 1>><<pass 10>><</link>><<glove>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Go with Kylar (1:00)|Kylar Halloween]]>><<npcincr Kylar love 1>><<pass 60>><</link>><<glove>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Go with Kylar (1:00)|Kylar Halloween]]>><<npcincr Kylar love 1>><<pass 10>><</link>><<glove>>"
+  ],
+  "old_kr": [
+   "<<link [[카일라와 함께 간다 (1:00)|Kylar Halloween]]>><<npcincr Kylar love 1>><<pass 10>><</link>><<glove>>"
+  ],
+  "new_en": [
+   "<<link [[Go with Kylar (1:00)|Kylar Halloween]]>><<npcincr Kylar love 1>><<pass 60>><</link>><<glove>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Go with Kylar (1:00)|Kylar Halloween]]>><<npcincr Kylar love 1>><<pass 10>><</link>><<glove>>"
+  ],
+  "old_kr": [
+   "<<link [[카일라와 함께 간다 (1:00)|Kylar Halloween]]>><<npcincr Kylar love 1>><<pass 10>><</link>><<glove>>"
+  ],
+  "new_en": [
+   "<<link [[Go with Kylar (1:00)|Kylar Halloween]]>><<npcincr Kylar love 1>><<pass 60>><</link>><<glove>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou grasp Whitney's arms, <span class=\"green\">and pull <<him>> away from Kylar.</span> Together, you escape down the stairs and through the now-open front doors, into the red moonlight. You run into the forest.<<ldom>><<npcincr Whitney dom -1>>"
+  ],
+  "old_kr": [
+   "\t당신은 휘트니의 팔을 붙잡고, <span class=\"green\"><<him>>【을를】 카일라에게서 떼어낸다.</span> 당신들은 함께 계단을 내려가, 이제 열린 현관문을 지나 붉은 달빛 속으로 탈출한다. 당신은 숲으로 달려 들어간다.<<ldom>><<npcincr Whitney dom -1>>"
+  ],
+  "new_en": [
+   "\tYou grasp Whitney's arms, <span class=\"green\">and pull <<him>> away from Kylar.</span> Together, you escape down the stairs and through the now-open front doors, into the red moonlight. You run into the forest.<<ldom>><<npcincr Whitney dom -1>><<set $whitneySeen.delete(\"halloweenWhitneyWon\")>><<set $whitneySeen.pushUnique(\"halloweenKylarWon\")>>"
+  ],
+  "context": "<<if $physiqueSuccess>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Kylar grasps your hand, and together you escape down the stairs and through the now-open front doors, into the red moonlight. <<takeHandholdingVirginity \"Kylar\" \"romantic\" null true>> You run into the forest.<<ldom>><<npcincr Whitney dom -1>>"
+  ],
+  "old_kr": [
+   "카일라는 당신의 손을 붙잡고, 둘은 함께 계단을 내려가 이제 열린 현관문을 지나 붉은 달빛 속으로 탈출한다. <<takeHandholdingVirginity \"Kylar\" \"romantic\" null true>> 당신은 숲으로 달려 들어간다.<<ldom>><<npcincr Whitney dom -1>>"
+  ],
+  "new_en": [
+   "Kylar grasps your hand, and together you escape down the stairs and through the now-open front doors, into the red moonlight. <<takeHandholdingVirginity \"Kylar\" \"romantic\" null true>> You run into the forest.<<ldom>><<npcincr Whitney dom -1>><<set $whitneySeen.delete(\"halloweenWhitneyWon\")>><<set $whitneySeen.pushUnique(\"halloweenKylarWon\")>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Kylar jumps to <<his>> feet, and grasps your arm. You dodge a weak grasp by Whitney, and together escape down the stairs and into the red moonlight."
+  ],
+  "old_kr": [
+   "카일라는 <<his>> 발로 벌떡 일어나 당신의 팔을 붙잡는다. 당신은 휘트니가 힘없이 뻗은 손을 피하고, 함께 계단을 내려가 붉은 달빛 속으로 탈출한다."
+  ],
+  "new_en": [
+   "<<set $whitneySeen.delete(\"halloweenWhitneyWon\")>><<set $whitneySeen.pushUnique(\"halloweenKylarWon\")>>",
+   "Kylar jumps to <<his>> feet, and grasps your arm. You dodge a weak grasp by Whitney, and together escape down the stairs and into the red moonlight."
+  ],
+  "context": "<<pass 15>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<set $whitneySeen.delete(\"halloweenWhitneyWon\")>><<set $whitneySeen.pushUnique(\"halloweenKylarWon\")>>"
+  ],
+  "context": "<<pass 15>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<set $whitneySeen.delete(\"halloweenKylarWon\")>><<set $whitneySeen.pushUnique(\"halloweenWhitneyWon\")>>"
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<set $whitneySeen.delete(\"halloweenKylarWon\")>><<set $whitneySeen.pushUnique(\"halloweenWhitneyWon\")>>"
+  ],
+  "context": "<<effects>>"
+ }
+]

@@ -9,7 +9,6 @@
 	<<if C.npc["Ivory Wraith"].init isnot 1>>
 		<<set _strapIgnore to true>><<set _condomIgnore to true>>
 		<<generateNPC _w a n n 20>>
-		<<set $NPCList[_n].skincolour to "ghost">>
 		<<saveNPC _n "temp_wraith">>
 		<<clearsinglenpc _n>>
 		<<initnpc "Ivory Wraith">>
@@ -47,7 +46,7 @@
 				<<set $enemytrust -= (C.npc["Ivory Wraith"].lust * 2)>>
 				<<npcexpose>>
 			<<case "slimetentacles">>
-				<<if $debug is 1>>
+				<<if $debug>>
 					/* Unreachable until swarms are un-fucked */
 					<<if $settings.slimesEnabled and $settings.tentaclesEnabled>>
 						<<set $molestationstart to 1>>
@@ -155,7 +154,7 @@
 				<<initWraith "arms">>
 		<</switch>>
 	<</if>>
-	<<set $speechdisable to 1>><<set $enemynomax to 1>>
+	<<set $speechDisable to 1>><<set $enemynomax to 1>>
 <</widget>>
 
 <<widget "statsWraith">>
@@ -837,7 +836,7 @@
 				"잘못된 길로 접어든, 두 개의 심장 박동."
 			)>>
 		<</if>>
-		<<if $wraithPrison and $wraithPrison.vision is true>>
+		<<if $wraithPrison?.vision is true>>
 			<<run _linePool.pushUnique(
 				"다른 장소, 똑같은 수치.",
 				"우리가 그 공통점을 가졌다는 게 참 위안이 되네.",
@@ -872,7 +871,7 @@
 		<<if $museumAntiques.antiques.antiquebell isnot "notFound">>
 			<<run _linePool.pushUnique("차가운 무쇠 종소리가 다시 울린다.")>>
 		<</if>>
-		<<if $town_projects and $town_projects.road gte 3>>
+		<<if $town_projects?.road gte 3>>
 			<<run _linePool.pushUnique(
 				"길들은 영영 파묻힌 채로 내버려둬라.",
 				"침입자들. 침입자들. 바로 너였지, 안 그런가?",
@@ -1266,15 +1265,15 @@
 	얼굴마저도 차가워질 때까지. 당신은 당신의 일부분이 빠져나간 듯한 느낌을 받는다.
 	<<takeKissVirginity "Ivory Wraith" "rape">>
 	<<arousal 2000 "mouth">><<gggarousal>>
-	<<trauma 30>><<gggtrauma>><<purity -50>><<lllpurity>><<physique_loss 16>><<llphysique>>
+	<<trauma 30>><<gggtrauma>><<purity -50>><<lllpurity>><<physique -16>><<llphysique>>
 	<<if $pain lt 100>>
 		<<pain -15>><<llpain>>
 	<</if>>
 	<<if $arousal gte $arousalmax>>
 		<br><br>
 		<<orgasm>>
-		당신이 <<him>>에게 맞서 몸부림치자 절정은 고문 같고 고통스럽다. <<his>> 공격은 그저 더 격렬해질 뿐이다. 당신은 몸에 힘이 빠지는 것을 느낀다.
-		<<trauma 30>><<gggtrauma>><<purity -25>><<llpurity>><<physique_loss 8>><<lphysique>><<awareness -20>><<lllawareness>><<gobsession>>
+		Your climax is torturous and painful as you writhe against <<him>>. <<His>> assault only grows more intense. You feel weak.
+		<<trauma 30>><<gggtrauma>><<purity -25>><<llpurity>><<physique -8>><<lphysique>><<awareness -20>><<lllawareness>><<gobsession>>
 		<<if $_wraithStress>>
 			<<set $stress to $stressmax>>
 		<</if>>
@@ -2154,7 +2153,7 @@
 			<</if>>
 		<</if>>
 	<</if>>
-	<<relationshipclamp>>
+	<<relationshipClamp>>
 <</widget>>
 
 <<widget "lobsession">>
@@ -2178,7 +2177,7 @@
 			<</if>>
 		<</if>>
 	<</if>>
-	<<relationshipclamp>>
+	<<relationshipClamp>>
 <</widget>>
 
 <<widget "possessedWord">><<set $_colour to _args[1] ? _args[1] : "">><span @class="$possessed ? 'wraith ' + $_colour : '$_colour'"><<print _args[0]>></span><</widget>>

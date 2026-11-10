@@ -192,17 +192,19 @@
 
 <<widget "beastNEWinit">>
 	<!-- NEW beast intitiation widget v2.6. Replaces beast(1-6)init widgets -->
-	<!-- Args are number of beasts(1-6), Type, Gender, Genitals and Monster status-->
-	<!-- Last three args are optional and override generation based on settings. Use with care -->
+	<!-- Args are number of beasts(1-6), Type, Gender, Genitals, Monster status and Victim status-->
+	<!-- Gender, Genitals and Monster status are optional and override generation based on settings. Use with care -->
+	<!-- Victim status is optional. When true, the beasts use the "victims always generate as monster people" setting. Use <<generateBeastVictim>> rather than passing it directly -->
 	<!-- Example: <<beastNEWinit 1 dog m>> would generate 1 male dog -->
 	<!-- Example: <<beastNEWinit 2 wolf f>> would generate 2 female wolves -->
-	<!-- Example: <<beastNEWinit 1 horse f penis monster>> would generate 1 dickgirl centaur -->
+	<!-- Example: <<beastNEWinit 1 horse f penis monster>> would generate 1 female centaur with a penis -->
 
 	<<set _nn to _args[0]>> <!-- Number of Beasts -->
 	<<set _tpe to _args[1]>> <!-- Type -->
 	<<set _gnn to _args[2]>> <!-- Gender -->
 	<<set _beast_genitals to _args[3]>>
 	<<set _beast_monster to _args[4]>>
+	<<set _beast_victim to _args[5]>>
 	<<set $active_enemy to 0>>
 	<!-- Error Checking -->
 	<<if !$BeastList.includes(_tpe)>>
@@ -210,7 +212,7 @@
 	<</if>>
 
 	<<for _xx = 1; _xx < _nn+1; _xx++>>
-		<<generateBEAST _xx _tpe _gnn _beast_genitals _beast_monster>>
+		<<generateBEAST _xx _tpe _gnn _beast_genitals _beast_monster _beast_victim>>
 	<</for>>
 
 	<<set $enemyno to _nn>>
@@ -221,18 +223,21 @@
 	<<set $monster to ($NPCList[0].monster is "monster" ? 1 : 0)>>
 <</widget>>
 
+<<widget "generateBeastVictim">>
+	<<beastNEWinit _args[0] _args[1] _args[2] _args[3] _args[4] true>>
+<</widget>>
+
 <<widget "beastPARTNERinit">>
 	<!-- Widget to force a beast to generate as a partner for an NPC, whether it be a human or beast. -->
 	<!-- This will probably brick any combat it's called into. -->
-	<!-- Args are number of beasts(1-6), Type, Gender, Genitals and Monster status-->
-	<!-- Last three args are optional and override generation based on settings. Use with care -->
-	<!-- Example: <<beastNEWinit 1 dog m>> would generate 1 male dog -->
-	<!-- Example: <<beastNEWinit 2 wolf f>> would generate 2 female wolves -->
-	<!-- Example: <<beastNEWinit 1 horse f penis monster>> would generate 1 dickgirl centaur -->
+	<!-- Args are NPC slot of beast, Type, NPC slot of partner and Victim status-->
+	<!-- Victim status is optional. When true, the beast uses the "victims always generate as monster people" setting. Use <<generateBeastPartnerVictim>> rather than passing it directly -->
+	<!-- Example: <<beastNEWinit 1 horse>><<beastPARTNERinit 1 horse 0>> would generate a horse in slot 2 as a partner for the horse in slot 1 -->
 
 	<<set _nn to _args[0]>> <!-- NPC Slot of beast -->
 	<<set _tpe to _args[1]>> <!-- Type -->
 	<<set _partner to _args[2]>> <!-- NPC slot of partner -->
+	<<set _beast_victim to _args[3]>> <!-- If the NPC is a victim -->
 	<<set $active_enemy to 0>>
 	<<set _generate_partner to _partner || _nn -1>>
 	<!-- Error Checking -->
@@ -241,10 +246,15 @@
 	<</if>>
 
 	<<set _xx to _nn +1>>
-	<<generateBEAST _xx _tpe>>
+	<<generateBEAST _xx _tpe undefined undefined undefined _beast_victim>>
 	<<set $enemyno++>>
 
 	<<set $monster to ($NPCList[_partner].monster is "monster" ? 1 : 0)>>
+<</widget>>
+
+<<widget "generateBeastPartnerVictim">>
+	<!-- Generates a beast partner that is a victim. Same args as beastPARTNERinit, minus Victim status -->
+	<<beastPARTNERinit _args[0] _args[1] _args[2] true>>
 <</widget>>
 
 <<widget "beastNOGENinit">>
@@ -834,6 +844,9 @@
 	<<else>>
 		<<set $crossdressing to 0>>
 	<</if>>
+	<<if $settings.nudeGenderPerception is 0>>
+		<<set $crossdressing to 0>>
+	<</if>>
 <</widget>>
 
 <<widget "danceinit">>
@@ -850,7 +863,7 @@
 	<<set $arousalmasochism to 0>>
 
 	<<set $combatgoal to 0>>
-	<!-- <<set $turnCount to 0>> -->
+	<<set $turnCount to 0>>
 
 	<<set _genderexposed to $exposed gte 2 and !($worn.genitals.type.includesAll("chastity", "hidden"))>>
 	<<if $npc.length gt 0>>
@@ -955,13 +968,15 @@
 			<<for _mancombatcontrol = 0; _mancombatcontrol lt $enemynomax; _mancombatcontrol++>>
 				<<if $NPCList[_mancombatcontrol].active is "active" and $NPCList[_mancombatcontrol].stance isnot "defeated">>
 					<<man-combat _mancombatcontrol>>
-					<<if $position isnot "stalk" and !$breakIgnore>>
+					<<if $position is "stalk">>
+						<<break>>
+					<<elseif !$breakIgnore>>
 						<br><br>
 					<</if>>
-				<<elseif $debug is 1 and $NPCList[_mancombatcontrol].active isnot "active">>
-					<br>디버그 메시지:<br>NPC _mancombatcontrol, <<print window.KR.getDescriptionKr($NPCList[_mancombatcontrol].fullDescription)>>【이가】 활성화되어 있지 않습니다.<br>
-				<<elseif $debug is 1 and $NPCList[_mancombatcontrol].stance is "defeated">>
-					<br>디버그 메시지:<br>NPC _mancombatcontrol, <<print window.KR.getDescriptionKr($NPCList[_mancombatcontrol].fullDescription)>>【이가】 패배했습니다.<br>
+				<<elseif $debug and $NPCList[_mancombatcontrol].active isnot "active">>
+					<br>Debug Message:<br>NPC _mancombatcontrol, $NPCList[_mancombatcontrol].fullDescription is not active.<br>
+				<<elseif $debug and $NPCList[_mancombatcontrol].stance is "defeated">>
+					<br>Debug Message:<br>NPC _mancombatcontrol, $NPCList[_mancombatcontrol].fullDescription is defeated.<br>
 				<</if>>
 			<</for>>
 			<<if $oxygen lt $oxygenmax and $underwater isnot 1 and _strangle is 1>>
@@ -979,7 +994,7 @@
 	<</if>>
 
 	<<if $worn.genitals.type.includesAll("chastity", "hidden") or $NPCList[0].state is "stalk" or $NPCList[0].state is "pursuit" or $NPCList[0].state is "chased" or $gloryhole>>
-	<<elseif $crossdressing gte 1 and $worn.over_lower.vagina_exposed gte 1 and $worn.under_lower.vagina_exposed gte 1 and $worn.lower.vagina_exposed gte 1>>
+	<<elseif $crossdressing gte 1 and $worn.over_lower.vagina_exposed gte 1 and $worn.under_lower.vagina_exposed gte 1 and $worn.lower.vagina_exposed gte 1 and $settings.nudeGenderPerception !== 0>>
 		<<exposedcheck true>>
 		<<if $NPCList[0].teen is 1 and $location is "school" and !($npc.length is 1 and (["Kylar","Sydney"].includes($npc[0])))>>
 			<<schoolrep_naked>>
@@ -1004,20 +1019,20 @@
 					<<else>>
 						<<He>>【이가】 큰 호기심을 보이며 당신의 <<genitals>>【을를】 응시한다.
 					<</if>>
-					<<npcincr Sydney purity -2>><<lspurity>><<set $speechhermaroused to 2>>
+					<<npcincr Sydney purity -2>><<lspurity>><<set $speechHermAroused to 2>>
 				<<elseif $npc[0] is "Kylar" and !$kylarSeen.includes("herm")>>
 					<<set $kylarSeen.pushUnique("herm")>>
-					<span class="purple">당신의 <<genitals>>【을를】 보자 <<his>> 눈이 휘둥그레진다. <<He>>【은는】 숨을 들이켜더니 온몸을 부들부들 떨기 시작한다.</span>
-					<<set $enemyarousal += 50>><<set $speechhermaroused to 2>>
+					<span class="purple"><<His>> eyes go wide at the sight of your <<genitals>>. <<His>> breath catches and <<his>> entire body seems to shake.</span>
+					<<set $enemyarousal += 50>><<set $speechHermAroused to 2>>
 				<<elseif $npc[0] is "Gwylan" and !$gwylanSeen.includes("herm")>>
 					<<set $gwylanSeen.pushUnique("herm")>>
-					당신의 <<genitals>>【을를】 보자 <<his>> 눈썹이 치켜 올라간다.
-					<<set $speechhermaroused to 2>>
+					<<His>> eyebrows raise upon seeing your <<genitals>>.
+					<<set $speechHermAroused to 2>>
 				<<elseif $npc[0] is "Avery" and !$averySeen.includes("herm")>>
 					<<set $averySeen.pushUnique("herm")>>
 					<span class="purple">당신의 <<genitals>>【을를】 쳐다보는 <<his>> 눈이 크게 뜨이더니, 불현듯 짙은 욕망으로 물든다.</span>
 					<<set $enemyarousal += 50>>
-					<<set $speechhermaroused to 2>>
+					<<set $speechHermAroused to 2>>
 				<</if>>
 			<<elseif $NPCList[0].type is "plant" or $rng lte 30>>
 				<<if $enemyno gte 2>>
@@ -1031,29 +1046,30 @@
 				<<else>>
 					<<He>>【은는】 당신의 <<genitals>>에 당황했다. 최소한 화가 난 것처럼 보이지는 않는다.
 				<</if>>
-				<<set $enemyarousal -= 100>><<set $enemytrust -= 50>><<set $speechhermdisappointed to 2>>
+				<<set $enemyarousal -= 100>><<set $enemytrust -= 50>><<set $speechHermDisappointed to 2>>
 			<<elseif $rng lte 85>>
 				<<if $enemyno gte 2>>
 					<span class="blue">그들은 당신의 <<genitals>>【을를】 보자 충격에 뒤로 물러선다.</span>
 				<<else>>
 					<span class="blue"><<He>>【은는】 당신의 <<genitals>>【을를】 보자 충격에 뒤로 물러선다.</span>
 				<</if>>
-				<<set $enemyanger -= 50>><<set $enemytrust -= 50>><<set $speechhermshock to 2>>
+				<<set $enemyanger -= 50>><<set $enemytrust -= 50>><<set $speechHermShock to 2>>
 			<<elseif $rng lte 95>>
 				<<if $enemyno gte 2>>
 					<span class="purple">당신의 <<genitals>>【을를】 보자 그들의 손이 떨리고 숨이 가빠진다.</span>
 				<<else>>
 					<span class="purple">당신의 <<genitals>>【을를】 보자 <<his>> 손이 떨리고 숨이 가빠진다.</span>
 				<</if>>
-				<<set $enemyarousal += (50 * $enemyno)>><<set $speechhermaroused to 2>>
+				<<set $enemyarousal += (50 * $enemyno)>><<set $speechHermAroused to 2>>
 			<<else>>
 				<<if $enemyno gte 2>>
 					<span class="red">그들은 당신의 <<genitals>>【을를】 보자 공포와 역겨움에 뒤로 물러난다!</span>
 				<<else>>
 					<span class="red"><<He>>【은는】 당신의 <<genitals>>【을를】 보자 공포와 역겨움에 뒤로 물러난다!</span>
 				<</if>>
-				<<set $enemyanger += 200>><<set $enemytrust -= 100>><<set $speechhermangry to 2>>
+				<<set $enemyanger += 200>><<set $enemytrust -= 100>><<set $speechHermAngry to 2>>
 			<</if>>
+			<br><br>
 		<<else>> <!-- Crossdressing PC -->
 			<<if $npc.length is 1 and (["Kylar","Sydney","Gwylan","Avery"].includes($npc[0]))>>
 				<<if $npc[0] is "Sydney" and !$sydneySeen.includes("crossdress")>>
@@ -1064,25 +1080,25 @@
 					<<else>>
 						<<He>>【은는】 혼란스러운 표정으로 당신의 <<genitals>>【을를】 응시한다. <<he>>【이가】 예상했던 것은 아니었지만, 개의치 않는 듯하다.
 					<</if>>
-					<<npcincr Sydney purity -2>><<lspurity>><<set $speechcrossdressaroused to 2>>
+					<<npcincr Sydney purity -2>><<lspurity>><<set $speechCrossdressAroused to 2>>
 				<<elseif $npc[0] is "Kylar" and !$kylarSeen.includes("crossdress")>>
 					<<set $kylarSeen.pushUnique("crossdress")>>
 					<<set _kylar to statusCheck("Kylar")>>
-					<<if _kylar.gender isnot $player.sex or _kylar.gender is "h">>
-						당신의 <<genitals 1>>【은는】 분명 <<he>>【이가】 예상했던 것이 아니었다. <<if _kylar.gender isnot "h">><span class="purple"><<He>>【이가】 눈을 크게 뜬 채 당신을 바라보며 손을 부들부들 떤다. 몹시 흥분한 모양이다.</span><</if>>
-						<<set $enemyarousal += 50>><<set $speechcrossdressaroused to 2>>
+					<<if playerCanBreedWith("Kylar") or ($player.penisExist and $settings.npcAnalPregnancyEnabled)>>
+						Your <<genitals 1>> was clearly not what <<he>> was expecting. <<if _kylar.gender isnot "h">><span class="purple"><<His>> hands shake as <<he>> looks at you with wide eyes. <<He>> seems thrilled.</span><</if>>
+						<<set $enemyarousal += 50>><<set $speechCrossdressAroused to 2>>
 					<<else>>
-						<<He>>【은는】 당신의 <<genitals>>【을를】 보고 경악한 표정을 짓는다. <<he>>【이가】 예상했던 것이 아니었다.
-						<<set $enemyarousal -= 100>><<set $enemytrust -= 50>><<set $speechcrossdressdisappointed to 2>>
+						<<He>> sees your <<genitals>> and looks aghast. It wasn't what <<he>> was expecting.
+						<<set $enemyarousal -= 100>><<set $enemytrust -= 50>><<set $speechCrossdressDisappointed to 2>>
 					<</if>>
 				<<elseif $npc[0] is "Gwylan" and !$gwylanSeen.includes("crossdress")>>
 					<<set $gwylanSeen.pushUnique("crossdress")>>
-					<<He>>【은는】 당신의 <<genitals>>【을를】 보고 머리를 긁적인다. <<he>>【이가】 원하던 것은 아니었지만, 개의치 않는 듯하다.
-					<<set $speechcrossdressaroused to 2>>
+					<<He>> scratches <<his>> head upon seeing your <<genitals>>. It wasn't what <<he>> was expecting, but <<he>> doesn't seem to mind.
+					<<set $speechCrossdressAroused to 2>>
 				<<elseif $npc[0] is "Avery" and !$averySeen.includes("crossdress")>>
 					<<set $averySeen.pushUnique("crossdress")>>
-					당신의 <<genitals>>【을를】 내려다보는 <<his>> 눈이 놀라움으로 크게 뜨인다.
-					<<set $speechcrossdressshock to 2>>
+					<<His>> eyes widen in surprise as <<he>> looks down at your <<genitals>>.
+					<<set $speechCrossdressShock to 2>>
 				<</if>>
 			<<elseif $NPCList[0].type is "plant" or $rng lte 30>>
 				<<if $enemyno gte 2>>
@@ -1096,28 +1112,28 @@
 				<<else>>
 					<<He>>【은는】 당신의 <<genitals>>에 실망한 기색이다. <<he>>【이가】 기대했던 것이 아니었다.
 				<</if>>
-				<<set $enemyarousal -= 100>><<set $enemytrust -= 50>><<set $speechcrossdressdisappointed to 2>>
+				<<set $enemyarousal -= 100>><<set $enemytrust -= 50>><<set $speechCrossdressDisappointed to 2>>
 			<<elseif $rng lte 85>>
 				<<if $enemyno gte 2>>
 					당신의 <<genitals>>【을를】 보자 그들은 충격에 눈이 휘둥그레진다. 어떻게 해야 할지 몰라 하는 것 같다.
 				<<else>>
 					당신의 <<genitals>>【을를】 보자 <<his>> 눈이 충격에 휘둥그레진다. <<He>>【은는】 어떻게 해야 할지 몰라 하는 것 같다.
 				<</if>>
-				<<set $enemyanger -= 50>><<set $enemytrust -= 50>><<set $speechcrossdressshock to 2>>
+				<<set $enemyanger -= 50>><<set $enemytrust -= 50>><<set $speechCrossdressShock to 2>>
 			<<elseif $rng lte 95>>
 				<<if $enemyno gte 2>>
 					당신의 <<genitals>>【은는】 분명 그들이 예상한 것은 아니었지만, 그들은 크게 신경 쓰지 않는 듯하다. <span class="purple">오히려, 떨리는 손으로 미루어보아 꽤나 만족한 듯하다.</span>
 				<<else>>
 					당신의 <<genitals 1>>【은는】 분명 <<he>>【이가】 예상한 것은 아니었지만, <<he>>【은는】 크게 신경 쓰지 않는 듯하다. <span class="purple">오히려, 떨리는 손으로 미루어보아 꽤나 만족한 듯하다.</span>
 				<</if>>
-				<<set $enemyarousal += (50 * $enemyno)>><<set $speechcrossdressaroused to 2>>
+				<<set $enemyarousal += (50 * $enemyno)>><<set $speechCrossdressAroused to 2>>
 			<<else>>
 				<<if $enemyno gte 2>>
 					<span class="red">당신의 <<genitals>>【을를】 본 그들은 공포에 질려 물러선다. 속았다는 사실에 분노하여 미쳐 날뛴다!</span>
 				<<else>>
 					<span class="red">당신의 <<genitals>>【을를】 본 <<he>>【은는】 공포에 질려 물러선다. 속았다는 사실에 분노하여 미쳐 날뛴다!</span>
 				<</if>>
-				<<set $enemyanger += 200>><<set $enemytrust -= 100>><<set $speechcrossdressangry to 2>>
+				<<set $enemyanger += 200>><<set $enemytrust -= 100>><<set $speechCrossdressAngry to 2>>
 			<</if>>
 			<<if !$backgroundTraits.includes("crossdresser")>>
 				<<set $crossdressingTrait to ($crossdressingTrait gte 1 ? $crossdressingTrait + 1 : 1)>>
@@ -1128,9 +1144,9 @@
 					<span class="gold">여장한 모습을 들킨 것에 내심 기쁨을 느낀다.</span>
 				<</if>>
 			<</if>>
+			<br><br>
 		<</if>>
 		<<set $crossdressing to 0>>
-		<br><br>
 
 	<</if>>
 
@@ -1141,9 +1157,9 @@
 		<<set $_was to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "이었다" : "이었다")>>
 
 		<<if $enemyno gte 2>>
-			<<set $speechSextoyState to $speechSextoyState || either("aroused", "neutral", "disappointed", "shocked", "angry")>>
+			<<set $speechSexToyState to $speechSexToyState || either("aroused", "neutral", "disappointed", "shocked", "angry")>>
 			<<cleareventpool>>
-			<<switch $speechSextoyState>>
+			<<switch $speechSexToyState>>
 				<<case "aroused">>
 					<<addinlineevent>>
 						당신의 $_sexToy【을를】 보자 그들의 숨결이 가빠진다.
@@ -1184,28 +1200,28 @@
 		<<else>>
 			<<switch $NPCList[0].fullDescription>>
 				<<case "Robin">>
-					<<set $speechsextoy to 1>>
+					<<set $speechNoticeSexToy to 1>>
 				<<case "Kylar">>
-					<<set $speechsextoy to 1>>
+					<<set $speechNoticeSexToy to 1>>
 				<<case "Whitney">>
-					<<set $speechsextoy to 1>>
+					<<set $speechNoticeSexToy to 1>>
 				<<case "Sydney">>
-					<<set $speechsextoy to 1>>
+					<<set $speechNoticeSexToy to 1>>
 				<<case "Alex">>
-					<<set $speechsextoy to 1>>
+					<<set $speechNoticeSexToy to 1>>
 				<<case "Eden">>
-					<<set $speechsextoy to 1>>
+					<<set $speechNoticeSexToy to 1>>
 					<<set $enemytrust -=25>>
 				<<case "Avery">>
-					<<set $speechsextoy to 1>>
+					<<set $speechNoticeSexToy to 1>>
 				<<case "Gwylan">>
-					<<set $speechsextoy to 1>>
+					<<set $speechNoticeSexToy to 1>>
 				<<case "Leighton">>
-					<<set $speechsextoy to 1>>
+					<<set $speechNoticeSexToy to 1>>
 				<<default>>
-					<<set $speechSextoyState to $speechSextoyState || either("aroused", "neutral", "disappointed", "shocked", "angry")>>
+					<<set $speechSexToyState to $speechSexToyState || either("aroused", "neutral", "disappointed", "shocked", "angry")>>
 					<<cleareventpool>>
-					<<switch $speechSextoyState>>
+					<<switch $speechSexToyState>>
 						<<case "aroused">>
 							<<addinlineevent>>
 								당신의 $_sexToy【을를】 보자 <<his>> 숨결이 가빠진다.

@@ -1,0 +1,207 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<span class=\"pink\">Milk $_milkText from your <<breasts>> into your $_milkedName.</span>",
+   "\t\t\t<<if $combat is 1>><<set $speechmilk to 1>><</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t<span class=\"pink\">당신의 <<breasts>>에서 우유가 $_milkText. 그것이 당신의 $_milkedName 안쪽을 적신다.</span>",
+   "\t\t\t<<if $combat is 1>><<set $speechmilk to 1>><</if>>"
+  ],
+  "new_en": [
+   "\t\t\t<span class=\"pink\">Milk $_milkText from your <<breasts>> into your $_milkedName.</span>",
+   "\t\t\t<<if $combat is 1>><<set $speechLactate to 1>><</if>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<set _orgasmText to either(\"You grab the pier railing with your free hand\", \"You press yourself hard against the railing\")>>",
+   "\t"
+  ],
+  "old_kr": [
+   "\t<<set _orgasmText to either(\"당신은 비어 있는 손으로 부두 난간을 붙잡는다\", \"당신은 난간에 몸을 바싹 밀착시킨다\")>>",
+   "\t"
+  ],
+  "new_en": [
+   "\t<<set _orgasmText to either(\"You grab the pier railing with your free hand\", \"You press yourself hard against the railing\")>>",
+   ""
+  ],
+  "context": "\t<<orgasm>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<set _orgasmText to either(\"You dig the end of your rod into the sand to keep upright\", \"Your knees nearly buckle, your rod dragging furrows in the wet sand\")>>",
+   "\t"
+  ],
+  "old_kr": [
+   "\t<<set _orgasmText to either(\"당신은 낚싯대 끝을 모래에 박아 몸을 지탱한다\", \"무릎이 풀릴 뻔하며, 낚싯대가 젖은 모래에 고랑을 남긴다\")>>",
+   "\t"
+  ],
+  "new_en": [
+   "\t<<set _orgasmText to either(\"You dig the end of your rod into the sand to keep upright\", \"Your knees nearly buckle, your rod dragging furrows in the wet sand\")>>",
+   ""
+  ],
+  "context": "\t<<orgasm>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<= _orgasmText>> as your spasms peak. As you regain control, you find yourself stared at from all across the beach. <<gtrauma>><<gstress>><<trauma 6>><<stress 6>><<fameexhibitionism 10>>\t"
+  ],
+  "old_kr": [
+   "\t\t<<= _orgasmText>>, 경련이 절정에 달한다. 정신을 차리고 보니 해변 곳곳의 시선이 당신에게 쏠려 있다. <<gtrauma>><<gstress>><<trauma 6>><<stress 6>><<fameexhibitionism 10>>\t"
+  ],
+  "new_en": [
+   "\t\t<<= _orgasmText>> as your spasms peak. As you regain control, you find yourself stared at from all across the beach. <<gtrauma>><<gstress>><<trauma 6>><<stress 6>><<fameexhibitionism 10>>"
+  ],
+  "context": "\t<<elseif Time.dayState isnot \"night\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<set _orgasmText to either(\"You brace against the rock beneath you\", \"You clutch at the mossy ground to keep yourself steady\")>>",
+   "\t"
+  ],
+  "old_kr": [
+   "\t<<set _orgasmText to either(\"당신은 밑에 있는 바위를 짚어 몸을 지탱한다\", \"당신은 이끼 낀 땅을 움켜쥐어 몸을 가눈다\")>>",
+   "\t"
+  ],
+  "new_en": [
+   "\t<<set _orgasmText to either(\"You brace against the rock beneath you\", \"You clutch at the mossy ground to keep yourself steady\")>>",
+   ""
+  ],
+  "context": "\t<<orgasm>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<= _orgasmText>> when the climax hits, and as you regain control you see people looking at you from accross the lake. <<gtrauma>><<gstress>><<trauma 6>><<stress 6>><<fameexhibitionism 10>>"
+  ],
+  "old_kr": [
+   "\t\t<<= _orgasmText>>, 절정이 몰려온다. 정신을 차리고 보니 호수 건너편에서 사람들이 당신을 바라보고 있다. <<gtrauma>><<gstress>><<trauma 6>><<stress 6>><<fameexhibitionism 10>>"
+  ],
+  "new_en": [
+   "\t\t<<= _orgasmText>> when the climax hits, and as you regain control you see people looking at you from across the lake. <<gtrauma>><<gstress>><<trauma 6>><<stress 6>><<fameexhibitionism 10>>"
+  ],
+  "context": "\t<<if teensPresentCheck(\"lake\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<set _orgasmText to either(\"You stagger on the uneven boggy ground\", \"You drive the end of your rod into the earth to keep from falling\")>>",
+   "\t"
+  ],
+  "old_kr": [
+   "\t<<set _orgasmText to either(\"당신은 고르지 못한 늪지대 위에서 비틀거린다\", \"당신은 쓰러지지 않으려 낚싯대 끝을 땅에 박는다\")>>",
+   "\t"
+  ],
+  "new_en": [
+   "\t<<set _orgasmText to either(\"You stagger on the uneven boggy ground\", \"You drive the end of your rod into the earth to keep from falling\")>>",
+   ""
+  ],
+  "context": "\t<<orgasm>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $speechcum to 1>><<set $speechorgasmcount += 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $speechPlayerOrgasm to 1>><<set $speechorgasmcount += 1>>"
+  ],
+  "context": "\t<<if $combat is 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<npcPregnancyRoll $NPCList[$penistarget].fullDescription `($enemytype is \"man\" ? \"human\" : $NPCList[$penistarget].type)` \"pc\" \"human\" \"vagina\" \"deep\" $location `_orgasmSpermRng / 100` $penistarget>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<npcPregnancyRoll $NPCList[$penistarget].fullDescription `($enemytype is \"man\" ? \"human\" : $NPCList[$penistarget].type)` \"pc\" \"human\" \"vagina\" \"deep\" $location `_orgasmSpermRng / 100` $penistarget _npcForceImpregnation>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<npcPregnancyRoll $NPCList[$_i].fullDescription `($enemytype is \"man\" ? \"human\" : $NPCList[$_i].type)` \"pc\" \"human\" \"anus\" \"deep\" $location `_orgasmSpermRng / 100` $_i>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<npcPregnancyRoll $NPCList[$_i].fullDescription `($enemytype is \"man\" ? \"human\" : $NPCList[$_i].type)` \"pc\" \"human\" \"anus\" \"deep\" $location `_orgasmSpermRng / 100` $_i _npcForceImpregnation>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $combat is 1>><<set $speechmilk to 1>><</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $combat is 1>><<set $speechLactate to 1>><</if>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t<</if>>"
+ }
+]

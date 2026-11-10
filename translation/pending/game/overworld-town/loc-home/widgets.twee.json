@@ -1,0 +1,50 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $exposed gte 1>>",
+   "\t\t<<set _ex to ($exposed >= 2 ? (Time.dayState == \"night\" ? 4 : 5) : (Time.dayState == \"night\" ? 2 : 3))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $exposedRaw gte 1>>",
+   "\t\t<<set _ex to ($exposedRaw >= 2 ? (Time.dayState == \"night\" ? 4 : 5) : (Time.dayState == \"night\" ? 2 : 3))>>"
+  ],
+  "context": "<<widget \"home_outside\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $debug is 1 or $ward_unlocked>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $debug or $ward_unlocked>>"
+  ],
+  "context": "<<widget \"orphanageWard\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "<<widget \"bedroomEntryEvent\">>",
+   "\t<<set _forcedBedroomEntry to _args[0] is \"forced\">>",
+   "\t<<set _linkText to _forcedBedroomEntry ? \"Next\" : \"Bedroom (0:01)\">>",
+   "\t<<if !_forcedBedroomEntry and Time.hour gte 18 and Time.hour lte 20 and statusCheck(\"Robin\").trauma gte 40 and $robinmissing is 0 and !$robinTraumaVisit>>",
+   "\t\t<<bedicon>><<link _linkText \"Robin Trauma Visit\">><<set $phase to 0>><<pass 1>><</link>>",
+   "\t<<elseif $kylar.timer.home gte 100 and $kylar.home is undefined>>",
+   "\t\t<<bedicon>><<link _linkText \"Kylar Bedroom 1\">><<pass 1>><<set $kylar.timer.home to 0>><<set $kylar.home to 0>><</link>>",
+   "\t<<elseif $kylar.timer.home gte 100 and $kylar.home is 0 and C.npc.Kylar.state is \"active\">>",
+   "\t\t<<bedicon>><<link _linkText \"Kylar Bedroom 2\">><<pass 1>><<set $kylar.timer.home to 0>><<set $kylar.home to 1>><</link>>",
+   "\t<<elseif (Time.hour gte 18 or Time.hour lte 3) and $kylarenglish gte 1 and !$kylar.timer.letter and C.npc.Kylar.state is \"active\" and $rng gte 96>>",
+   "\t\t<<bedicon>><<link _linkText \"Kylar Bedroom Letter\">><<pass 1>><<set $kylar.timer.letter to 30>><</link>>",
+   "\t<<else>>",
+   "\t\t<<bedicon>><<link _linkText \"Bedroom\">><<pass 1>><</link>>",
+   "\t<</if>>",
+   "<</widget>>"
+  ],
+  "context": "<</widget>>"
+ }
+]

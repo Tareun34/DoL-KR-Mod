@@ -18,9 +18,9 @@
 		<<if $worn.under_lower.type.includes("naked") and _skirtExposed>>
 			<<His>> 손이 당신의 치마 밑으로 기어들어 가, 드러난 당신의 <<genitals>>【을를】 찾아낸다.
 			<<if playerChastity("hidden")>>
-				<<He>>【이가】 그것을 움켜쥐고 당기지만 소용이 없다. 당신의 <<genitals 1>>에 가해지는 압박감에 당신은 몸을 뒤틀게 된다. "정말 애태우는 녀석이군." <<he>>【이가】 말한다. "이 모든 사람들이 널 보며 침을 흘리고 있지만, 그들에겐 기회가 없지." <<He>>【은는】 나머지 관객들이 더 잘 볼 수 있도록 옆으로 비켜서지만, 당신을 애무하는 것은 멈추지 않는다. <<He>>【은는】 가까이 다가와 속삭인다. "네 이 귀여운 치마를 들어 올려야겠어. 그러면 모두가 볼 수 있겠지."
-			<<elseif $player.penisExist and $player.vaginaExist>>
-				<<He>>【은는】 놀라서 <<his>> 손을 떼지만, 곧 평정을 되찾고 다시 손을 뻗는다. 그 가벼운 손길만으로도 당신은 몸을 뒤틀게 된다. "정말 특별한 비밀을 가지고 있네." <<he>>【이가】 놀린다. <<He>>【은는】 나머지 관객들이 더 잘 볼 수 있도록 옆으로 비켜서지만, 당신을 애무하는 것은 멈추지 않는다. <<He>>【은는】 가까이 다가와 속삭인다. "네 이 귀여운 치마를 들어 올려야겠어. 그러면 모두가 볼 수 있겠지."
+				<<He>> grasps it and tugs, to no avail. The pressure on your <<genitals 1>> makes you squirm. "You're such a tease," <<he>> says. "All these people slavering over you, but they haven't a chance." <<He>> steps aside to give the rest of the audience a better look, but doesn't stop fondling you. <<He>> leans close and whispers. "Maybe I should lift this cute skirt of yours. Then everyone will see."
+			<<elseif $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>
+				<<He>> pulls <<his>> hand away in surprise, but soon recovers, reaching in again. The light touch is enough to make you squirm. "You have a special secret indeed," <<he>> teases. <<He>> steps aside to give the rest of the audience a better look, but doesn't stop fondling you. <<He>> leans close and whispers. "Maybe I should lift this cute skirt of yours. Then everyone will see."
 				<<ggarousal>><<arousal 1200 "genitals">>
 				<br><br>
 			<<else>>
@@ -446,12 +446,11 @@
 		<<else>>
 			당신은 당신의 몸짓으로 그 일대를 압도한다.
 		<</if>>
-		<br><br>
 		<<danceskilluse>><<pass 1>>
 		<<set $dancephysique += 1>>
 		<<if $dancephysique gte 10>>
 			<<set $dancephysique -= 10>>
-			<<physique>>
+			<<physique 1>>
 		<</if>>
 	<<elseif $danceaction is "sophisticated">>
 		<<set $danceaction to 0>><<set $danceactiondefault to "sophisticated">>
@@ -473,12 +472,11 @@
 		<<else>>
 			당신이 피루엣을 도는 모습은 기품의 표본 그 자체다.
 		<</if>>
-		<br><br>
 		<<danceskilluse>><<pass 1>>
 		<<set $dancephysique += 1>>
 		<<if $dancephysique gte 10>>
 			<<set $dancephysique -= 10>>
-			<<physique>>
+			<<physique 1>>
 		<</if>>
 	<<elseif $danceaction is "seductive">>
 		<<set $danceaction to 0>><<set $danceactiondefault to "seductive">>
@@ -500,12 +498,11 @@
 		<<else>>
 			당신의 매혹적인 몸짓은 은근슬쩍 내비치면서도, 숱한 상상을 자극한다.
 		<</if>>
-		<br><br>
 		<<danceskilluse>><<pass 1>>
 		<<set $dancephysique += 1>>
 		<<if $dancephysique gte 10>>
 			<<set $dancephysique -= 10>>
-			<<physique>>
+			<<physique 1>>
 		<</if>>
 	<<elseif $danceaction is "sexual">>
 		<<set $danceaction to 0>><<set $danceactiondefault to "sexual">>
@@ -532,7 +529,7 @@
 		<<set $dancephysique += 1>>
 		<<if $dancephysique gte 10>>
 			<<set $dancephysique -= 10>>
-			<<physique>>
+			<<physique 1>>
 		<</if>>
 	<<elseif $danceaction is "orgasm">>
 			<<orgasmstage>>
@@ -742,7 +739,7 @@
 			<<if $rng gte 76>>
 				"자지랑 보지가 둘 다 있다고? 꼴리네."
 			<<elseif $rng gte 51>>
-				"양성구유를 보게 될 줄이야. 못 참겠는데."
+				"I never thought I'd see this in real life. I don't think I can hold back."
 			<<elseif $rng gte 26>>
 				"<<pher>> 자지랑 보지 둘 다 박아버리고 싶어."
 			<<else>>
@@ -1021,29 +1018,35 @@
 			<<elseif $rng gte 1>>
 				<<if $worn.over_lower.type.includes("naked") and $worn.lower.type.includes("naked")>>
 					<<if $worn.under_lower.type.includes("naked") and !playerChastity("hidden")>>
-						<<if $player.penisExist and $player.vaginaExist and random(1, 2) is 2>>
-							<<rng 10>>
+						<<if $player.penisExist and $player.vaginaExist and random(1, 4 - V.settings.nudeGenderPerception) is 1>>
+							<<if $settings.nudeGenderPerception !== 0>>
+								<<rng 10>>
+							<<else>>
+								<<rng 5>>
+							<</if>>
 							<<switch $rng>>
 							<<case 1>>
-								"저런 양성구유 괴물은 성노예로 굴려야 제맛이지."
+								"I bet <<pshe>> loves flaunting <<pher>> penis and pussy."
 							<<case 2>>
-								"양성구유가 진짜 있는 줄 몰랐어."
+								"Two lickable sets of genitals."
 							<<case 3>>
-								"<<pshe>> 분명히 자기 자지랑 보지를 내놓고 과시하는 걸 즐길 거야."
+								"I don't know if I want to taste <<pher>> cock or pussy more."
 							<<case 4>>
-								"핥기 좋은 성기가 두 개나 달려있잖아."
+								"I wonder if <<pshes>> ever used both cock and pussy at the same time."
 							<<case 5>>
-								"둘 다? <<pshe>>【은는】 아마 추가 요금을 받아도 될 거야."
+								"Both a pussy and cock? I'm glad I didn't miss this."
 							<<case 6>>
-								"<<pshe>>【이가】 자지랑 보지를 동시에 써본 적이 있는지 궁금하네."
+								"Do you think <<pshe>> was born with both genitals?"
 							<<case 7>>
-								"자지랑 보지가 둘 다 있다고? 여길 놓치지 않아서 다행이네."
+								"Freaks like <<phim>> should be sex slaves."
 							<<case 8>>
-								"<<pher>> 자지를 맛보고 싶은지 보지를 맛보고 싶은지 잘 모르겠어."
+								"I didn't know <<girls>> like that were real."
 							<<case 9>>
-								"양성구유는 신화 속에나 있는 건 줄 알았지."
+								"<<pShe>> has both? I thought <<girls>> like <<pher>> were a myth."
+							<<case 10>>
+								"Both? I bet <<pshe>> can charge extra."
 							<<default>>
-								"<<pshe>>【은는】 두 성기를 다 가지고 태어난 걸까?"
+								<<error { message: "rng got a bad roll for dance speech"}>>
 							<</switch>>
 						<<elseif $player.penisExist>>
 							<<rng>>
@@ -1059,32 +1062,27 @@
 								<</if>>
 							<<elseif $player.penissize gte 6>>
 								<<if $rng gte 76>>
-									"<<pher>> 저 거대한 자지가 덜렁거리는 것 좀 봐!"
-									<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
+									"Look at <<pher>> gigantic penis flop around!"
 								<<elseif $rng gte 51>>
-									"<<pher>> 자지가 너무 커서 눈을 뗄 수가 없네."
-									<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
+									"<<pHer>> penis is so big. I can't look away."
 								<<elseif $rng gte 26>>
-									"저 <<penis>>【을를】 빨아주고 싶지만 입에 들어가지도 않겠는걸."
-									<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
+									"I want to suck that <<penis>>, but I don't think it would fit."
 								<<else>>
-									"니 <<penis>>【을를】 자랑하는 거 엄청 좋아하는구나."
-									<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
+									"I bet you love showing off your <<penis>>."
 								<</if>>
+								<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
 							<<elseif $player.penissize is 5>>
 								<<if $rng gte 76>>
-									"<<pher>> <<penis>>【이가】 덜렁거리는 것 좀 봐!"
-									<<if $player.penisExist and $player.vaginaExist>><<insecurity "penis_big" 1>><<ginsecurity "penis_big">><</if>>
+									"Look at <<pher>> <<penis>> flop around!"
 								<<elseif $rng gte 51>>
-									"모르는 사람들 앞에서 니 <<penis>>【을를】 내놓고 있으니 기분이 어때?"
-									<<if $player.penisExist and $player.vaginaExist>><<insecurity "penis_big" 1>><<ginsecurity "penis_big">><</if>>
+									"What's it like having your <<penis>> out in front of all these strangers?"
 								<<elseif $rng gte 26>>
-									"니 <<penis>> 너무 귀엽다. 한번 맛보고 싶네."
-									<<if $player.penisExist and $player.vaginaExist>><<insecurity "penis_big" 1>><<ginsecurity "penis_big">><</if>>
+									"Your <<penis>> is so cute. I want to taste it."
 								<<else>>
-									"니 <<penis>>에 끈적한 시선이 박히는 걸 즐기고 있지."
-									<<if $player.penisExist and $player.vaginaExist>><<insecurity "penis_big" 1>><<ginsecurity "penis_big">><</if>>
+									"I bet you love having your <<penis>> ogled."
 								<</if>>
+								<<if $player.penisExist and $player.vaginaExist>><<insecurity "penis_big" 1>><<ginsecurity "penis_big">><</if>>
+								
 							<<elseif $player.penissize is 4>>
 								<<if $rng gte 76>>
 									"<<pher>> <<penis>>【이가】 덜렁거리는 것 좀 봐!"
@@ -1097,32 +1095,26 @@
 								<</if>>
 							<<elseif $player.penissize is 3>>
 								<<if $rng gte 76>>
-									"<<pher>> 자지 정말 쪼그맣네!"
-									<<insecurity "penis_small" 1>><<ginsecurity "penis_small">>
+									"<<pHer>> penis is so small!"
 								<<elseif $rng gte 51>>
-									"이 낯선 사람들 앞에서 니 <<penis>>【을를】 내놓고 있는 기분이 어때?"
-									<<insecurity "penis_small" 1>><<ginsecurity "penis_small">>
+									"What's it like having your <<penis>> out in front of all these strangers?"
 								<<elseif $rng gte 26>>
-									"참 귀여운 <<penis>>【을를】 가졌네. 맛 좀 보고 싶은걸."
-									<<insecurity "penis_small" 1>><<ginsecurity "penis_small">>
+									"You've such a cute <<penis>>, I want to taste it."
 								<<else>>
-									"니 <<penis>>에 사람들이 눈독 들이는 걸 즐기고 있지."
-									<<insecurity "penis_small" 1>><<ginsecurity "penis_small">>
+									"I bet you love having your <<penis>> ogled."
 								<</if>>
+								<<insecurity "penis_small" 1>><<ginsecurity "penis_small">>
 							<<else>>
 								<<if $rng gte 76>>
-									"<<pher>> 자지가 너무 앙증맞은데!"
-									<<insecurity "penis_small" 2>><<ginsecurity "penis_small">>
+									"<<pHer>> penis is so tiny!"
 								<<elseif $rng gte 51>>
-									"이 모르는 사람들 앞에서 네 <<penis>>【을를】 까발리고 있는 기분이 어때?"
-									<<insecurity "penis_small" 2>><<ginsecurity "penis_small">>
+									"What's it like having your <<penis>> out in front of all these strangers?"
 								<<elseif $rng gte 26>>
-									"이렇게 좆만 한 자지는 처음 봐."
-									<<insecurity "penis_small" 2>><<ginsecurity "penis_small">>
+									"I've never seen such a tiny cock."
 								<<else>>
-									"네 <<penis>>【이가】 구경거리가 되는 걸 퍽이나 즐기고 있구나."
-									<<insecurity "penis_small" 2>><<ginsecurity "penis_small">>
+									"I bet you love having your <<penis>> ogled."
 								<</if>>
+								<<insecurity "penis_small" 2>><<ginsecurity "penis_small">>
 							<</if>>
 						<<else>>
 							<<rng>>

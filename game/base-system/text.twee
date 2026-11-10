@@ -1468,17 +1468,22 @@
 	<</if>>
 <</silently>>_text_output<</widget>>
 
-<<widget "breasts">><<silently>>
-	<<if Number.isInteger($player.breastsize)>>
-		<<if $player.breastsize lte 0>>
-			<<set _text_output to "유두만 있는 가슴">>
-		<<else>>
-			<<set _text_output to window.KR.getBreastSizeKr(setup.breastsizes[$player.breastsize]) + " 가슴">>
+<<widget "breasts">>
+	<<silently>>
+		<<if Number.isInteger($player.breastsize)>>
+			<<if $player.breastsize lte 0>>
+				<<set _text_output to "nipples">>
+			<<else>>
+				<<set _text_output to `${setup.breastsizes[$player.breastsize]} `>>
+				<<if !_breastSensitivityDescribed or _args[0]>><<silently>><<breastsensitivity>><</silently>><<set _text_output += _text_output2>><</if>>
+				<<set _text_output += "breasts">>
+			<</if>>
+		<<elseif $options.debugdisable is "f">>
+			<<set _text_output to "ERROR - $$player.breastsize is not a number: $player.breastsize">>
 		<</if>>
-	<<elseif $options.debugdisable is "f">>
-		<<set _text_output to "오류 - $player.breastsize 값이 숫자가 아닙니다">>
-	<</if>>
-<</silently>><<if !_breastSensitivityDescribed or _args[0]>><<breastsensitivity>><</if>><<print _text_output>><</widget>>
+	<</silently>>
+	<<print _text_output>>
+<</widget>>
 
 <<widget "breastssimple">><<silently>>
 	<<if Number.isInteger($player.breastsize)>>
@@ -1536,8 +1541,8 @@
 	<<undertop>>
 	<!-- _text_output now has top (either worn under_upper name, or breasts desc) -->
 
-	<<if !_underOutfit>> <!-- Two separate items, not an outfit -->
-		<<set _text_output += "【와과】 " + $_secondhalf>>
+	<<if !_underOutfit and $worn.under_lower.name isnot "naked">> <!-- Two separate items, not an outfit -->
+		<<set _text_output += " and " + $_secondhalf>>
 	<</if>>
 <</silently>><<print _text_output>><</widget>>
 
@@ -1835,8 +1840,8 @@
 		<<else>>
 			<<set _text_output to window.KR.getDescriptionKr(window.KR.getNpcTitleKr($description))>>
 		<</if>>
-	<<elseif $NPCList[$index].name_known is 1>>
-		<<set _text_output to window.KR.gatPersonNameDictKR($NPCList[$index].name)>>
+	<<elseif $NPCList[$index].name_known is 1 and $NPCList[$index].name>>
+		<<set _text_output to $NPCList[$index].name>>
 	<<elseif $enemytype is "beast">>
 		<<set _text_output to window.KR.getBeastTypeKr($NPCList[$index].type)>>
 	<<elseif $role and $role isnot "normal">>
@@ -2107,7 +2112,7 @@
 
 <<widget "friend">><<silently>>
 	<<if $robinromance is 1>>
-		<<woman>><<set _text_output to _text_output + "친구">>
+		<<girlfriend>>
 	<<elseif _args[0] is "bff">>
 		<<set _text_output to "가장 친한 친구">>
 	<<else>>
@@ -2223,9 +2228,9 @@
 
 <<widget "pcSex">><<silently>>
 	<<switch $player.sex>>
-	<<case "f">><<set _text_output to "소녀">>
-	<<case "m">><<set _text_output to "소년">>
-	<<case "h">><<set _text_output to "후타나리">>
+	<<case "f">><<set _text_output to "girl">>
+	<<case "m">><<set _text_output to "boy">>
+	<<case "h">><<set _text_output to "hermaphrodite">><<error { message: "pcSex got a bad case: scenes should have unique exceptions for case h!" } >>
 	<</switch>>
 <</silently>><<print _text_output>><</widget>>
 
@@ -3977,6 +3982,10 @@
 	<</if>>
 <</silently>>_text_output<</widget>>
 
+<<widget "Bitch">><<silently>>
+	<<bitch>><<capitalise>>
+<</silently>>_text_output<</widget>>
+
 <<widget "bitch_pirate">><<silently>>
 	<<if $player.gender_appearance is "m">>
 		<<set _text_output to "개">>
@@ -4431,7 +4440,7 @@
 <</widget>>
 
 <<widget "wallet">><<silently>>
-	<<if !isNaN(_args[0]) and $NPCList[_args[0]] and $NPCList[_args[0]].clothes and $NPCList[_args[0]].clothes.set>>
+	<<if !isNaN(_args[0]) and $NPCList[_args[0]]?.clothes?.set>>
 		<<set $_clothesSet to $NPCList[_args[0]].clothes.set>>
 	<</if>>
 	<<if $location is "island">>
@@ -4842,8 +4851,8 @@
 
 <<widget "harpy">>
 	<<if !$settings.blindStatsEnabled>> |
-		<<if $hallucinations gte 2 or !$settings.bestialityEnabled>>
-			<span class="gold">하피</span>
+		<<if resolveIfNamedBeastIsMonster("greathawk")>>
+			<span class="gold">Harpy</span>
 		<<else>>
 			<span class="gold">새</span>
 		<</if>>
@@ -5000,7 +5009,11 @@
 	<<else>>
 		<<set _na to 0>>
 	<</if>>
-	<<set _text_output to window.KR.getBeastTypeKr($NPCList[_na].type)>>
+	<<if $NPCList[_na].name_known is 1 and $NPCList[_na].fullDescription is "Black Wolf">>
+		<<set _text_output to $NPCList[_na].fullDescription>>
+	<<else>>
+		<<set _text_output to $NPCList[_na].type>>
+	<</if>>
 <</silently>><<print _text_output>><</widget>>
 
 <<widget "beasttypes">><<beasttype>>의<</widget>>
@@ -5034,18 +5047,19 @@
 			<<set _text_output to window.KR.getBeastTypeKr($NPCList[0].type) + "【와과】 " + window.KR.getBeastTypeKr($NPCList[1].type)>>
 		<<else>>
 			<<switch $NPCList[_na].type>>
-				<<case "lizardgirl" "lizardboy">><<set _text_output to "리자드걸과 리자드보이들">>
-				<<case "wolfgirl" "wolfboy">><<set _text_output to "늑대소녀와 늑대소년들">>
-				<<case "doggirl" "dogboy">><<set _text_output to "개소녀와 개소년들">>
-				<<case "dolphingirl" "dolphinboy">><<set _text_output to "돌고래소녀와 돌고래소년들">>
-				<<case "beargirl" "bearboy">><<set _text_output to "곰소녀와 곰소년들">>
-				<<case "catgirl" "catboy">><<set _text_output to "고양이소녀와 고양이소년들">>
-				<<case "piggirl" "pigboy">><<set _text_output to "돼지소녀와 돼지소년들">>
-				<<case "boargirl" "boarboy">><<set _text_output to "멧돼지소녀와 멧돼지소년들">>
-				<<case "cowgirl" "bullboy">><<set _text_output to "소 소녀와 소 소년들">>
-				<<case "foxgirl" "foxboy">><<set _text_output to "여우소녀와 여우소년들">>
-				<<case "spidergirl" "spiderboy">><<set _text_output to "거미소녀와 거미소년들">>
-				<<default>><<set _text_output to "생물들">>
+				<<case "lizardgirl" "lizardboy">><<set _text_output to "lizardgirls and lizardboys">>
+				<<case "wolfgirl" "wolfboy">><<set _text_output to "wolfgirls and wolfboys">>
+				<<case "doggirl" "dogboy">><<set _text_output to "doggirls and dogboys">>
+				<<case "dolphingirl" "dolphinboy">><<set _text_output to "dolphingirls and dolphinboys">>
+				<<case "beargirl" "bearboy">><<set _text_output to "beargirls and bearboys">>
+				<<case "catgirl" "catboy">><<set _text_output to "catgirls and catboys">>
+				<<case "piggirl" "pigboy">><<set _text_output to "piggirls and pigboys">>
+				<<case "boargirl" "boarboy">><<set _text_output to "boargirls and boarboys">>
+				<<case "cowgirl" "bullboy">><<set _text_output to "cowgirls and bullboys">>
+				<<case "foxgirl" "foxboy">><<set _text_output to "foxgirls and foxboys">>
+				<<case "spidergirl" "spiderboy">><<set _text_output to "spidergirls and spiderboys">>
+				<<case "snakegirl" "snakeboy">><<set _text_output to "snakegirls and snakeboys">>
+				<<default>><<set _text_output to "creatures">>
 			<</switch>>
 		<</if>>
 	<</if>>
@@ -5448,26 +5462,9 @@
 	<<print _text_output>>
 <</widget>>
 
-<<widget "monster_passage">>
-	<!-- Unused widget -->
-	<<if _monster_passage is undefined>>
-		<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>
-			<<if maleChance() gte 100>>
-				<<set _monster_passage to "m">>
-			<<elseif maleChance() lte 0>>
-				<<set _monster_passage to "f">>
-			<<else>>
-				<<set _monster_passage to "b">>
-			<</if>>
-		<<else>>
-			<<set _monster_passage to "n">>
-		<</if>>
-	<</if>>
-<</widget>>
-
 <<widget "farm_text_many">>
 	<<set $_bgender to _args[1] ? _args[1] : $farm_work[_args[0]].gender_plural>>
-	<<set $_bperson to ($farm_work[_args[0]].monster_roll is true and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>
+	<<set $_bperson to $farm_work[_args[0]].monster>>
 	<<if _args[0] is "horse">>
 		<<if $_bperson>>
 			<<set _text_output to "켄타우로스들">>
@@ -5522,7 +5519,7 @@
 
 <!-- No change for horses and cattle. Pigs, dogs, and cows get called "pigperson", "dogperson", and "cowperson". -->
 <<widget "farm_text_neutral">>
-	<<set $_bperson to ($farm_work[_args[0]].monster_roll is true and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>
+	<<set $_bperson to $farm_work[_args[0]].monster>>
 	<<if _args[0] is "horse">>
 		<<if $_bperson>>
 			<<set _text_output to "켄타우로스">>
@@ -5554,7 +5551,7 @@
 
 <<widget "farm_text">>
 	<<set $_bgender to _args[1] ? _args[1] : $farm_work[_args[0]].gender>>
-	<<set $_bperson to ($farm_work[_args[0]].monster_roll is true and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>
+	<<set $_bperson to $farm_work[_args[0]].monster>>
 	<<if _args[0] is "horse">>
 		<<if $_bperson>>
 			<<set _text_output to "켄타우로스">>
@@ -5647,6 +5644,20 @@
 		<<set _text_output to "그것의">>
 	<</if>>
 <</silently>>_text_output<</widget>>
+
+<<widget "farm_himself">>
+	<<set $_bgender to _args[1] ? _args[1] : $farm_work[_args[0]].gender>>
+	<<if $farm_work[_args[0]].monster>>
+		<<if $_bgender is "m">>
+			<<set _text_output to "himself">>
+		<<else>>
+			<<set _text_output to "herself">>
+		<</if>>
+	<<else>>
+		<<set _text_output to "itself">>
+	<</if>>
+	<<print _text_output>>
+<</widget>>
 
 <<widget "master">><<silently>>
 	<<set _text_output to ($pronoun is "m" ? "주인님" : "주인님")>>
@@ -6438,8 +6449,8 @@ Argument 2, where appropriate, determines whether it's the player undressing the
 
 <<widget "nightMonsterText">>
 	<<silently>>
-	<<if ($settings.monsterChance gte $rng and $hallucinations gte 1) or ($settings.monsterChance gte $rng and !$settings.monsterHallucinationsOnly) or ($nightmonstermonster is 2) or (!$settings.bestialityEnabled)>>
-		<<set _text_output to "뿔 달린 " + ($NPCList[0].pronoun is "m" ? "남자" : "여자")>>
+	<<if resolveIfNamedBeastIsMonster("nightmonster")>>
+		<<set _text_output to "horned " + ($NPCName[31].pronoun is "m" ? "man" : "woman")>>
 	<<else>>
 		<<set _text_output to either("크리처", "괴물", "야수")>>
 	<</if>>

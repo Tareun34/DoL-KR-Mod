@@ -161,8 +161,8 @@
 <<effects>>
 <<set $baileypaychain to 0>>
 <<set $baileyRefusedToPay += 1>>
-<<set $baileyRefusedToPayTotal += $rentmoney + ($babyRent || 0)>>
-<<set $baileyRefusedToPayTotalStat += $rentmoney + ($babyRent || 0)>>
+<<set $baileyRefusedToPayTotal += $rentMoney + ($babyRent || 0)>>
+<<set $baileyRefusedToPayTotalStat += $rentMoney + ($babyRent || 0)>>
 
 <<if $speech_attitude is "meek">>
 	"돈 안 낼 거예요." 당신은 말한다. "강요할 수 없어요. 여기선 안 돼요."

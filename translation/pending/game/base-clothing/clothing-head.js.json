@@ -1,0 +1,155 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\tshopGroup: \"nun\","
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tshopGroup: \"nunveil\","
+  ],
+  "context": "\t\t\tshop: [\"forest\", \"temple\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\tshopGroup: \"nun\","
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tshopGroup: \"nunveil\","
+  ],
+  "context": "\t\t\tshop: [\"forest\", \"temple\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\tshopGroup: \"nun\","
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tshopGroup: \"nunveil\","
+  ],
+  "context": "\t\t\tshop: [\"forest\", \"temple\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\tshopGroup: \"nun\","
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tshopGroup: \"nunveil\","
+  ],
+  "context": "\t\t\tshop: [\"forest\", \"temple\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\tshopGroup: \"nun\","
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tshopGroup: \"nunveil\","
+  ],
+  "context": "\t\t\tshop: [\"forest\", \"temple\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tpattern_name: \"flowers\","
+  ],
+  "context": "\t\t\tpattern_options: [\"casa blanca lily\", \"daffodil\", \"hibiscus\", \"pansy\", \"primrose\", \"sunflower\", \"tulip\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tpattern_name: \"position\","
+  ],
+  "context": "\t\t\tpattern_options: [\"high\", \"low\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tpattern_name: \"position\","
+  ],
+  "context": "\t\t\tpattern_options: [\"high\", \"low\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tpattern_name: \"detail\","
+  ],
+  "context": "\t\t\tpattern_layer: \"secondary\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\tnew ClothesItem({",
+   "\t\t\tindex: 126,",
+   "\t\t\tslot: \"head\",",
+   "\t\t\tname: \"mining helmet\",",
+   "\t\t\tvariable: \"mininghelmet\",",
+   "\t\t\tstate: 0,",
+   "\t\t\tstate_base: 0,",
+   "\t\t\tintegrity: 200,",
+   "\t\t\tintegrity_max: 200,",
+   "\t\t\tfabric_strength: 60,",
+   "\t\t\treveal: 1,",
+   "\t\t\tword: \"a\",",
+   "\t\t\tplural: 0,",
+   "\t\t\tmask_img: 1,",
+   "\t\t\tmask_img_ponytail: 1,",
+   "\t\t\tcolour: 0,",
+   "\t\t\tcolour_options: [\"blue steel\", \"brass\", \"steel\", \"grey\", \"white\", \"bronze\", \"dusty orange\", \"jewel red\", \"navy\", \"navy blue\", \"custom\"],",
+   "\t\t\tcolour_sidebar: 1,",
+   "\t\t\ttype: [\"costume\", \"hat\"],",
+   "\t\t\tgender: \"m\",",
+   "\t\t\tfemininity: -200,",
+   "\t\t\twarmth: 3,",
+   "\t\t\tcost: 2000,",
+   "\t\t\tdescription: \"Protective headwear. Used for mining.\",",
+   "\t\t\tshop: [\"forest\"],",
+   "\t\t\taccessory: 1,",
+   "\t\t\taccessory_colour: 0,",
+   "\t\t\taccessory_colour_options: [",
+   "\t\t\t\t\"black\",",
+   "\t\t\t\t\"navy\",",
+   "\t\t\t\t\"navy blue\",",
+   "\t\t\t\t\"blue steel\",",
+   "\t\t\t\t\"sterling silver\",",
+   "\t\t\t\t\"brown\",",
+   "\t\t\t\t\"khaki\",",
+   "\t\t\t\t\"sand\",",
+   "\t\t\t\t\"wine\",",
+   "\t\t\t\t\"russet\",",
+   "\t\t\t\t\"dusty orange\",",
+   "\t\t\t\t\"jewel red\",",
+   "\t\t\t\t\"olive\",",
+   "\t\t\t\t\"forest green\",",
+   "\t\t\t\t\"custom\",",
+   "\t\t\t],",
+   "\t\t\taccessory_colour_sidebar: 1,",
+   "\t\t\tpattern: 0,",
+   "\t\t\tpattern_options: [\"detail\"],",
+   "\t\t\tpattern_layer: \"tertiary\",",
+   "\t\t\tcursed: 0,",
+   "\t\t\tlocation: 0,",
+   "\t\t\ticonFile: \"mining-helmet.png\",",
+   "\t\t\taccIcon: \"mining-helmet-acc.png\",",
+   "\t\t\tdetailIcon: \"mining-helmet-detail.png\",",
+   "\t\t}),"
+  ],
+  "context": "\t\t}),"
+ }
+]

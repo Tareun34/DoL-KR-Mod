@@ -60,11 +60,11 @@
 			<<set $speechorgasmrepeat += 1>>
 		<</if>>
 	<<else>> <!-- gender appearance is female and either the player does not have a dick or the npc is not aware of it -->
-		<<if $speechmilk and $rng gte 71>>
-			<<switch $speechmilk>>
-				<<case 1>>"젖을 짜고 있어!"
-				<<case 2>>"내가 먼저 입술을 대기 전까지 못 참은 거야?"
-				<<default>>"세상에, 엄청나게 싸댔군."
+		<<if $speechLactate and $rng gte 71>>
+			<<switch $speechLactate>>
+				<<case 1>>"<<pShes>> milking!"
+				<<case 2>>"Couldn't wait for me to put my mouth on it first?"
+				<<default>>"Holy shit, that was so much."
 			<</switch>>
 		<<elseif $speechorgasmrepeat is 0>>
 			<<switch $speechorgasmcount>>
@@ -257,8 +257,8 @@
 			<<default>>
 				<<basespeech>>
 		<</switch>>
-	<<elseif $speechcrossdressangry is 1>>
-		<<He>>【이가】 방금 드러난 당신의 <<genitals>>【을를】 노려본다.
+	<<elseif $speechCrossdressAngry is 1>>
+		<<He>> glares at your newly-exposed <<genitals>>.
 		<<print [
 			`"날 속일 수 있을 줄 알았냐? 네 분수를 알려줄 때가 왔군."`,
 			`"날 속여서 엄청 기뻤겠지. 내가 널 끝장내고 나면 다신 웃지 못할 거다."`,
@@ -266,8 +266,8 @@
 			`"이게 웃긴 줄 아냐? 어차피 정신 나갈 때까지 박아줄 테니까."`,
 			`"이 대가를 치르게 해주지, 걸레년."`,
 		][random(0,4)]>>
-	<<elseif $speechcrossdressaroused is 1>>
-		<<He>>【이가】 방금 드러난 당신의 <<genitals>>【을를】 굶주린 시선으로 바라본다.
+	<<elseif $speechCrossdressAroused is 1>>
+		<<He>> gazes with hunger at your newly exposed <<genitals>>.
 		<<print [
 			`"이게 웬 횡재야!"`,
 			`"넌 정말 놀라움으로 가득하구나."`,
@@ -275,8 +275,8 @@
 			`"선물 포장을 뜯는 기분인걸."`,
 			`"교활한 걸레년, 널 어떻게 다뤄야 할지 딱 알겠군."`,
 		][random(0,4)]>>
-	<<elseif $speechcrossdressshock is 1>>
-		<<He>>【이가】 충격에 빠져 당신의 <<genitals>>【을를】 쳐다본다.
+	<<elseif $speechCrossdressShock is 1>>
+		<<He>> stares at your <<genitals>> in shock.
 		<<print [
 			`"난 보통 이런 쪽 취향은 아닌데. 그래도 넌 꽤 귀엽네."`,
 			`"이게 이렇게 맛있어 보일 줄은 몰랐는걸."`,
@@ -284,8 +284,8 @@
 			`"이것도 꽤 괜찮네."`,
 			`"완전히 깜빡 속았어."`,
 		][random(0,4)]>>
-	<<elseif $speechcrossdressdisappointed is 1>>
-		<<He>>【이가】 당신의 <<genitals>>【을를】 보며 한숨을 쉰다.
+	<<elseif $speechCrossdressDisappointed is 1>>
+		<<He>> looks at your <<genitals>> and sighs.
 		<<print [
 			`"이런 걸 원한 건 아니었는데."`,
 			`"여기까지 온 이상 어쩔 수 없지."`,
@@ -293,8 +293,8 @@
 			`"분명 이 상황이 웃기다고 생각하고 있겠지."`,
 			`"난 왜 맨날 이런 거에 넘어가는 거지?"`,
 		][random(0,4)]>>
-	<<elseif $speechhermangry is 1>>
-		<<He>>【이가】 방금 드러난 당신의 <<genitals>>【을를】 노려본다.
+	<<elseif $speechHermAngry is 1>>
+		<<He>> glares at your newly-exposed <<genitals>>.
 		<<print [
 			`"괴물 같은 녀석. 네 분수를 알려줄 때가 왔군."`,
 			`"내가 씨발 존나 놀란 걸 보니까 아주 맘에 들겠지. 내가 널 끝내고 나면 웃음기도 싹 가실 거다."`,
@@ -302,8 +302,8 @@
 			`"존나 변태 같지만, 어찌 됐든 정신 나갈 때까지 박아주마."`,
 			`"정상인인 척 날 속이다니 믿을 수가 없군. 대가를 치러야 할 거다."`,
 		][random(0,4)]>>
-	<<elseif $speechhermaroused is 1>>
-		<<He>>【이가】 방금 드러난 당신의 <<genitals>>【을를】 굶주린 시선으로 쳐다본다.
+	<<elseif $speechHermAroused is 1>>
+		<<He>> gazes with hunger at your newly exposed <<genitals>>.
 		<<print [
 			`"이게 웬 떡이야!"`,
 			`"놀라움이 끝이 없네."`,
@@ -311,8 +311,8 @@
 			`"마치 선물 포장을 푸는 기분이군."`,
 			`"교활한 걸레년, 널 어떻게 다뤄야 할지 딱 알겠어."`,
 		][random(0,4)]>>
-	<<elseif $speechhermshock is 1>>
-		<<He>>【이가】 충격에 빠져 당신의 <<genitals>>【을를】 쳐다본다.
+	<<elseif $speechHermShock is 1>>
+		<<He>> stares at your <<genitals>> in shock.
 		<<print [
 			`"이런 건 한 번도 본 적이 없는데. 그래도 넌 꽤 귀엽긴 하네."`,
 			`"뭐 어때, 여전히 맛있어 보이는데."`,
@@ -320,8 +320,8 @@
 			`"이것도 나쁘지 않네."`,
 			`"이런 걸 보게 될 줄은 몰랐어."`,
 		][random(0,4)]>>
-	<<elseif $speechhermdisappointed is 1>>
-		<<He>>【이가】 당신의 <<genitals>>【을를】 보며 한숨을 쉰다.
+	<<elseif $speechHermDisappointed is 1>>
+		<<He>> looks at your <<genitals>> and sighs.
 		<<print [
 			`"이런 걸 기대한 게 아니었는데."`,
 			`"뭐 여기까지 온 이상 어쩔 수 없지."`,
@@ -329,7 +329,7 @@
 			`"둘 다 있다고? 네 몸에 다른 문제라도 없으면 좋겠는데."`,
 			`"난 왜 맨날 정상인 애들이랑 못 엮이는 걸까?"`,
 		][random(0,4)]>>
-	<<elseif ($speechSextoyState is "aroused" or $speechsextoy is 1) and random(0,2) isnot 0 and ($rightarm is "heldSexToy" or $leftarm is "heldSexToy")>>
+	<<elseif ($speechSexToyState is "aroused" or $speechNoticeSexToy is 1) and random(0,2) isnot 0 and ($rightarm is "heldSexToy" or $leftarm is "heldSexToy")>>
 		<<if $rightarm is "heldSexToy" and $leftarm is "heldSexToy">>
 			<<set $_sexToy to "섹스 토이들">>
 		<<elseif $rightarm is "heldSexToy">>
@@ -345,7 +345,7 @@
 			`"네가 이거 쓰는 꼴을 당장 보고 싶어."`,
 			`"정말 엄청난 걸레구나. 널 어떻게 다뤄야 할지 딱 알겠어."`,
 		][random(0,4)]>>
-	<<elseif $speechSextoyState is "shocked" and ($rightarm is "heldSexToy" or $leftarm is "heldSexToy")>>
+	<<elseif $speechSexToyState is "shocked" and ($rightarm is "heldSexToy" or $leftarm is "heldSexToy")>>
 		<<if $rightarm is "heldSexToy" and $leftarm is "heldSexToy">>
 			<<set $_sexToy to "섹스 토이들">>
 		<<elseif $rightarm is "heldSexToy">>
@@ -361,7 +361,7 @@
 			`"이것도 꽤 괜찮지."`,
 			`"이런 걸 보게 될 줄은 상상도 못 했어."`,
 		][random(0,4)]>>
-	<<elseif $speechSextoyState is "disappointed" and ($rightarm is "heldSexToy" or $leftarm is "heldSexToy")>>
+	<<elseif $speechSexToyState is "disappointed" and ($rightarm is "heldSexToy" or $leftarm is "heldSexToy")>>
 		<<if $rightarm is "heldSexToy" and $leftarm is "heldSexToy">>
 			<<set $_sexToy to "섹스 토이들">>
 		<<elseif $rightarm is "heldSexToy">>
@@ -377,7 +377,7 @@
 			`"난 그저 우리가 함께 있기를 바랐을 뿐이야."`,
 			`"난 왜 정상을 만난 적이 없는 거냐?"`,
 		][random(0,4)]>>
-	<<elseif $speechSextoyState is "angry" and ($rightarm is "heldSexToy" or $leftarm is "heldSexToy")>>
+	<<elseif $speechSexToyState is "angry" and ($rightarm is "heldSexToy" or $leftarm is "heldSexToy")>>
 		<<if $rightarm is "heldSexToy" and $leftarm is "heldSexToy">>
 			<<set $_sexToy to "섹스 토이들">>
 		<<elseif $rightarm is "heldSexToy">>
@@ -393,7 +393,7 @@
 			`"내가 씨발 존나 놀란 게 아주 만족스럽겠지. 내 손에 끝날 때쯤이면 절대 못 웃을 거다."`,
 			`"그딴 건 치워버려, 빌어먹을 걸레년아."`,
 		][random(0,4)]>>
-	<<elseif $speechgenitals is 1>>
+	<<elseif $speechExposeGenitals is 1>>
 		/* ToDo: Strapon - check if any one this needs its own strapon text */
 		<<if $worn.genitals.type.includesAll("chastity", "hidden")>>
 			<<if $enemyanger lte 0>>
@@ -486,7 +486,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechpregnant is 1 and $settings.pregnancySpeechEnabled>>
+	<<elseif $speechPregnant is 1 and $settings.pregnancySpeechEnabled>>
 		<<if $enemyanger lte 20>>
 			<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
 				<<if $NPCList[_n].penis isnot "none">>
@@ -519,7 +519,7 @@
 			<<insecurity "pregnancy" 2>><<ginsecurity "pregnancy">>
 		<</if>>
 
-	<<elseif $speechleglock is 1>>
+	<<elseif $speechLegLock is 1>>
 		<<if $enemyanger lte 20>>
 			<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
 				<<if $NPCList[_n].pregnancyAvoidance gte 80>>
@@ -578,7 +578,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechbreasts is 1>>
+	<<elseif $speechExposeBreasts is 1>>
 		<<if $player.gender_appearance is "m">>
 			<<if $player.breastsize lte 0>>
 				<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires.
@@ -605,9 +605,9 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechscream is 1>>
-		<<set $speechscream to 0>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechScreamForHelp is 1>>
+		<<set $speechScreamForHelp to 0>>
+		<<He>> speaks.
 		<<print [
 			`"씨발 그 주둥이 닥쳐."`,
 			`"내가 널 쥐어패길 바라는 거야? 조용히 해!"`,
@@ -615,9 +615,9 @@
 			`"멍청한 걸레년, 널 도와줄 사람은 아무도 없어."`,
 			`"살려달라고 소리쳐? 아무도 좆도 신경 안 쓴다고."`,
 		][random(0,4)]>>
-	<<elseif $speechsteal is 1>>
-		<<set $speechsteal to 0>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechSteal is 1>>
+		<<set $speechSteal to 0>>
+		<<He>> speaks.
 		<<if $enemyanger lte 100>>
 			<<switch $npcspeechcycle>>
 				<<case 0>> "손가락은 내가 볼 수 있는 곳에 둬."
@@ -640,8 +640,8 @@
 			<</switch>>
 		<</if>>
 
-	<<elseif $speechwheeze is 1>>
-		<<set $speechwheeze to 0>>
+	<<elseif $speechChokedWheeze is 1>>
+		<<set $speechChokedWheeze to 0>>
 		<<if $enemyanger lte 20>>
 			<<if $rng lte 7>>
 				<<He>>【이가】 말한다. "조금만 더 버텨, 아가야."
@@ -671,10 +671,10 @@
 			][random(0,4)]>>
 		<</if>>
 
-	<<elseif $speechpenisbig is 1>>
+	<<elseif $speechPenisBig is 1>>
 		/* ToDo: Strapon - check if this is reachable and replace with strapon variant */
-		<<set $speechpenisbig to 0>>
-		<<He>>【이가】 말한다.
+		<<set $speechPenisBig to 0>>
+		<<He>> speaks.
 		<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>>
 			<<switch $npcspeechcycle>>
 				<<case 0>> "어떻게 이렇게 존나 큰 거야?"
@@ -698,8 +698,8 @@
 		<</if>>
 		<<ginsecurity "penis_big">><<insecurity "penis_big" 1>>
 
-	<<elseif $speechnamedrop is 1>>
-		<<set $speechnamedrop to 0>>
+	<<elseif $speechLINameDrop is 1>>
+		<<set $speechLINameDrop to 0>>
 		<<if _loveInterest is "Black Wolf">>
 			<<if $enemyanger lte 20>>
 				<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
@@ -778,7 +778,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechmasturbate is 1 and random(1,2) is 1 and not $gloryhole>>
+	<<elseif $speechMasturbate is 1 and random(1,2) is 1 and not $gloryhole>>
 		<<if $enemyanger lt 20>>
 			<<He>>【이가】 <<print ["말한다","말한다","다정하게 말한다","속삭인다"][random(0,3)]>>.
 			<<print [
@@ -807,8 +807,8 @@
 			][random(0,4)]>>
 		<</if>>
 
-	<<elseif $speechhandjobpenis is 1 and random(1, 2) is 2>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechHandjobPenis is 1 and random(1, 2) is 2>>
+		<<He>> speaks.
 		<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>>
 			<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
 				<<switch $npcspeechcycle>>
@@ -855,8 +855,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechhandjobvagina is 1 and random(1, 2) is 2>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechHandjobVagina is 1 and random(1, 2) is 2>>
+		<<He>> speaks.
 		<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>>
 			<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
 				<<switch $npcspeechcycle>>
@@ -903,7 +903,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechdildovagina is 1 and random(1, 2) is 2>>
+	<<elseif $speechDildoVagina is 1 and random(1, 2) is 2>>
 		<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>>
 			<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
 				<<He>>【이가】 <<print ["말한다","말한다","으르렁거린다","비웃는다"][random(0,3)]>>.
@@ -954,8 +954,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechdildoanus is 1 and random(1, 2) is 2>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechDildoAnus is 1 and random(1, 2) is 2>>
+		<<He>> speaks.
 		<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>>
 			<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
 				<<switch $npcspeechcycle>>
@@ -1002,8 +1002,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechstroker is 1 and random(1, 2) is 2>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechStroker is 1 and random(1, 2) is 2>>
+		<<He>> speaks.
 		<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>> /* High arousal */
 			<<if (($enemyanger / $enemyangermax) * 100) gte 10>> /* high anger */
 				<<switch $npcspeechcycle>>
@@ -1050,8 +1050,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechcheeks is 1 and random(1, 2) is 2>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechCheeks is 1 and random(1, 2) is 2>>
+		<<He>> speaks.
 		<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>>
 			<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
 				<<switch $npcspeechcycle>>
@@ -1098,8 +1098,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechthigh is 1 and random(1, 2) is 2>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechThigh is 1 and random(1, 2) is 2>>
+		<<He>> speaks.
 		<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>>
 			<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
 				<<switch $npcspeechcycle>>
@@ -1146,8 +1146,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechfeet is 1 and random(1, 2) is 2>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechFeet is 1 and random(1, 2) is 2>>
+		<<He>> speaks.
 		<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>>
 			<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
 				<<switch $npcspeechcycle>>
@@ -1194,7 +1194,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechheadsuckle is 1 and random(1, 2) is 2>>
+	<<elseif $speechHeadSuckle is 1 and random(1, 2) is 2>>
 		<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>>
 			<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
 				<<He>>【이가】 말한다.
@@ -1245,7 +1245,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechheadnipple is 1 and random(1, 2) is 2>>
+	<<elseif $speechHeadNipple is 1 and random(1, 2) is 2>>
 		<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>>
 			<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
 				<<He>>【이가】 말한다.
@@ -1296,7 +1296,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechheadnippleclosed is 1 and random(1, 2) is 2>>
+	<<elseif $speechHeadNippleClosed is 1 and random(1, 2) is 2>>
 		<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>>
 			<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
 				<<He>>【이가】 말한다.
@@ -1347,7 +1347,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechheadsuckleclosed is 1 and random(1, 2) is 2>>
+	<<elseif $speechHeadSuckleClosed is 1 and random(1, 2) is 2>>
 		<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>>
 			<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
 				<<He>>【이가】 말한다.
@@ -1398,7 +1398,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechheadbreasts is 1 and random(1, 2) is 2>>
+	<<elseif $speechHeadBreasts is 1 and random(1, 2) is 2>>
 		<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>>
 			<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
 				<<He>>【이가】 말한다.
@@ -1449,7 +1449,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechheadchest is 1 and random(1, 2) is 2>>
+	<<elseif $speechHeadChest is 1 and random(1, 2) is 2>>
 		<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>>
 			<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
 				<<He>>【이가】 말한다.
@@ -1500,9 +1500,9 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechvaginaescape is 1>>
-		<<set $speechvaginaescape to 0>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechVaginaEscape is 1>>
+		<<set $speechVaginaEscape to 0>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			<<print [
 				`"계속 그렇게 버둥거리면 제대로 즐길 수가 없잖아."`,
@@ -1523,9 +1523,9 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechpenisescape is 1>>
-		<<set $speechpenisescape to 0>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechNPCVaginaEscape is 1>>
+		<<set $speechNPCVaginaEscape to 0>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			<<print [
 				`"계속 그렇게 버둥거리면 제대로 즐길 수가 없잖아."`,
@@ -1546,9 +1546,9 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechotheranusescape is 1>>
-		<<set $speechotheranusescape to 0>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechNPCAnusEscape is 1>>
+		<<set $speechNPCAnusEscape to 0>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			<<print [
 				`"계속 그렇게 버둥거리면 제대로 즐길 수가 없잖아."`,
@@ -1569,9 +1569,9 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechanusescape is 1>>
-		<<set $speechanusescape to 0>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechAnusEscape is 1>>
+		<<set $speechAnusEscape to 0>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			<<print [
 				`"계속 그렇게 버둥거리면 제대로 즐길 수가 없잖아."`,
@@ -1592,7 +1592,7 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechpenispenetrated is 1>>
+	<<elseif $speechNPCVaginaPenetrated is 1>>
 		<<if $dissociation lt 2>>
 			<<if $enemyanger lte 20>>
 				<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
@@ -1655,7 +1655,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechotheranuspenetrated is 1>>
+	<<elseif $speechNPCAnusPenetrated is 1>>
 		<<if $dissociation lt 2>>
 			<<if playerHasStrapon()>>
 				<<if $enemyanger lte 20>>
@@ -1738,7 +1738,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechvaginapenetrated is 1>>
+	<<elseif $speechVaginaPenetrated is 1>>
 		<<if $dissociation lt 2>>
 			<<if $vaginatarget isnot undefined and npcHasStrapon($vaginatarget)>> <!-- NPC strap-on -->
 				<<if $enemyanger lte 20>>
@@ -1827,7 +1827,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechanuspenetrated is 1>>
+	<<elseif $speechAnusPenetrated is 1>>
 		<<if $dissociation lt 2>>
 			<<if $anustarget isnot undefined and npcHasStrapon($anustarget)>> <!-- NPC strap-on -->
 				<<if $enemyanger lte 20>>
@@ -1910,7 +1910,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechmouthpenetrated is 1>>
+	<<elseif $speechMouthPenetrated is 1>>
 		<<if $dissociation lt 2>>
 			<<if $mouthtarget isnot undefined and npcHasStrapon($mouthtarget)>> <!-- NPC strap-on -->
 				<<if $enemyanger lte 20>>
@@ -1994,8 +1994,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechvaginaimminent is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechVaginaImminent is 1>>
+		<<He>> speaks.
 		<<if npcHasStrapon($vaginatarget)>>
 			<<if $player.virginity.vaginal is true>>
 				<<if $enemyanger lte 60>>
@@ -2052,8 +2052,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechpenisimminent is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechNPCVaginaImminent is 1>>
+		<<He>> speaks.
 		<<if playerHasStrapon()>>
 			<<if $enemyanger lte 60>>
 				<<print [
@@ -2097,8 +2097,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechotheranusimminent is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechNPCAnusImminent is 1>>
+		<<He>> speaks.
 		<<if playerHasStrapon()>>
 			<<if $enemyanger lte 60>>
 				<<print [
@@ -2130,8 +2130,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechanusimminent is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechAnusImminent is 1>>
+		<<He>> speaks.
 		<<if $anustarget isnot undefined and npcHasStrapon($anustarget)>>
 			<<if $player.virginity.anal is true>>
 				<<if $enemyanger lte 60>>
@@ -2164,8 +2164,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechmouthimminent is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechMouthImminent is 1>>
+		<<He>> speaks.
 		<<if $player.virginity.oral is true>>
 			<<if $enemyanger lte 60>>
 				"한 번도 <<= npcHasStrapon(_n) ? "입으로 해본 적" : "자지 맛을 본 적">> 없지, 그렇지? 기대해도 좋아!"
@@ -2180,8 +2180,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechapologise is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechApologise is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			"너 같은 귀여운 꼬맹이한테 어떻게 화를 낼 수 있겠어?"
 		<<elseif $enemyanger lte 100>>
@@ -2190,8 +2190,8 @@
 			"거짓말이 아니길 바랄게, 안 그러면 진짜 후회하게 될 테니까."
 		<</if>>
 
-	<<elseif $speechvaginaentrance is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechVaginaEntrance is 1>>
+		<<He>> speaks.
 		<<if $player.gender_appearance is "m">>
 			<<if $enemyanger lte 20>>
 				"걱정 마, 부드럽게 해줄게."
@@ -2210,8 +2210,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechanusentrance is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechAnusEntrance is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			"걱정 마, 네 엉덩이는 부드럽게 다뤄줄 테니까."
 		<<elseif $enemyanger lte 100>>
@@ -2220,8 +2220,8 @@
 			"발버둥치며 도망갈 생각 마, 네 엉덩이는 내 거니까."
 		<</if>>
 
-	<<elseif $speechmouthentrance is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechMouthEntrance is 1>>
+		<<He>> speaks.
 		<<if $mouthtarget isnot undefined and npcHasStrapon($mouthtarget)>>
 			<<if $enemyanger lte 20>>
 				"네 그 혀 좀 한 번 보자."
@@ -2240,8 +2240,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechpenisentrance is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechNPCVaginaEntrance is 1>>
+		<<He>> speaks.
 		<<if playerHasStrapon()>>
 			<<if $enemyanger lte 20>>
 				"기대감에 미쳐버릴 것 같아!"
@@ -2271,8 +2271,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechotheranusentrance is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechNPCAnusEntrance is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			"내 엉덩이 때문에 기분이 좋아졌어?"
 		<<elseif $enemyanger lte 100>>
@@ -2281,8 +2281,8 @@
 			"너를 위해서라도, 날 만족시켜 줬으면 좋겠네."
 		<</if>>
 
-	<<elseif $speechvaginawithhold is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechVaginaWithhold is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			"진짜로 널 박아주고 싶지만, 이걸로 참아야겠네."
 		<<elseif $enemyanger lte 100>>
@@ -2291,8 +2291,8 @@
 			"씨발, 이 상태로는 오래 버티지 못할 거 같아."
 		<</if>>
 
-	<<elseif $speechanuswithhold is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechAnusWithhold is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			"네 엉덩이에 진짜로 박아주고 싶지만, 이걸로 참아야겠네."
 		<<elseif $enemyanger lte 100>>
@@ -2301,8 +2301,8 @@
 			"씨발, 이 상태로는 오래 버티지 못할 거 같아."
 		<</if>>
 
-	<<elseif $speechpeniswithhold is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechNPCVaginaWithhold is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			"더는 못 참겠어, 네가 내 안에 들어와 줬으면 해!"
 		<<elseif $enemyanger lte 100>>
@@ -2311,8 +2311,8 @@
 			"씨발, 이 상태로는 오래 버티지 못할 거 같아."
 		<</if>>
 
-	<<elseif $speechotheranuswithhold is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechNPCAnusWithhold is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			"더는 못 참겠어, 네가 내 안에 들어와 줬으면 해!"
 		<<elseif $enemyanger lte 100>>
@@ -2321,8 +2321,8 @@
 			"씨발, 이 상태로는 오래 버티지 못할 거 같아."
 		<</if>>
 
-	<<elseif $speechvagina is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechVagina is 1>>
+		<<He>> speaks.
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			<<if $enemyanger lte 20>>
 				"네 보지, 질척거리는 거 봐! 간절하게 원하고 있잖아, 안 그래?"
@@ -2341,8 +2341,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechpenis is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechPenis is 1>>
+		<<He>> speaks.
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			<<if $enemyanger lte 20>>
 				"네 자지, 엄청 빳빳한 거 봐! 간절하게 원하고 있잖아, 안 그래?"
@@ -2361,7 +2361,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechanus is 1>>
+	<<elseif $speechAnus is 1>>
 		<<if $NPCList[_n].lefthand is "anusdildo" or $NPCList[_n].righthand is "anusdildo">>
 			<<set $_toyOrFinger to ($NPCList[_n].lefthand is "anusdildo" ? $NPCList[_n].lefttool : $NPCList[_n].righttool)>>
 		<<else>>
@@ -2376,7 +2376,7 @@
 			"얌전히 구는 게 좋을 거야, 이것보다 훨씬 거칠게 다룰 수도 있으니까." <<He>>【이가】 본보기를 보여주기 위해 당신의 항문 안에서 <<print ($_toyOrFinger is "finger" ? "손가락" : window.KR.getToolKr($_toyOrFinger))>>【을를】 더 격렬하게 움직인다.
 		<</if>>
 
-	<<elseif $speechvaginamouth is 1>>
+	<<elseif $speechMouthNPCVagina is 1>>
 		<<if $enemyanger lte 20>>
 			<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
 				<<He>>【은는】 쾌감에 취해 있다. "오오! 이제 얼마 안 남았어!"
@@ -2403,7 +2403,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechvaginavagina is 1>>
+	<<elseif $speechTrib is 1>>
 		<<if $enemyanger lte 20>>
 			<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
 				<<He>>【은는】 쾌감에 취해 있다. "오오! 이제 얼마 안 남았어!"
@@ -2430,7 +2430,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechtribentrance is 1>>
+	<<elseif $speechTribEntrance is 1>>
 		<<if $enemyanger lte 20>>
 			<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
 				<<He>>【은는】 쾌감에 취해 있다. "더는 못 참아. 네 보지를 느껴야겠어."
@@ -2457,7 +2457,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechpenispenis is 1>>
+	<<elseif $speechFencing is 1>>
 		<<if playerChastity("penis")>>
 			<<if $enemyanger lte 20>>
 				<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
@@ -2520,7 +2520,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechfencingentrance is 1>>
+	<<elseif $speechFencingEntrance is 1>>
 		<<if $enemyanger lte 20>>
 			<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
 				<<He>>【은는】 쾌감에 취해 있다. "더는 못 참아. 네 <<penis>>【을를】 느껴야겠어."
@@ -2547,8 +2547,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechbeat is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechPlayerBeaten is 1>>
+		<<He>> speaks.
 		<<print [
 			`"그건 네가 당연히 받아야 할 최소한의 벌이야, <<bitch>>!"`,
 			`"이거 더 맞고 싶어? 엉?"`,
@@ -2562,7 +2562,7 @@
 			`"이제 좀 내가 무서워?"`,
 		][random(0,9)]>>
 
-	<<elseif $speechhit is 1>>
+	<<elseif $speechPlayerHits is 1>>
 		<<if $enemyanger lte 20>>
 			<<He>>【은는】 당신의 공격에 짜증이 난 듯하다.
 			<<print [
@@ -2586,8 +2586,8 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechthroat is 1>>
-		<<He>>【이가】 당신의 목을 쥔 손에 힘을 준다.
+	<<elseif $speechChoke is 1>>
+		<<He>> tightens <<his>> grip around your throat.
 		<<if $consensual and $enemyanger lt 100>>
 			<<print [
 				`"그래, 내 손에 목이 졸려 헐떡거리라고."`,
@@ -2606,8 +2606,8 @@
 			][random(0,4)]>>
 		<</if>>
 
-	<<elseif $speechvaginafoot is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechVaginaFoot is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			"네 애액이 내 발가락에 흘러내리는 게 느껴져."
 		<<elseif $enemyanger lte 100>>
@@ -2616,8 +2616,8 @@
 			"네 그 걸레 같은 구멍이 어디서 구르다 왔는지 모르니, 그냥 발로 하는 게 낫겠어."
 		<</if>>
 
-	<<elseif $speechpenisfoot is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechPenisFoot is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			"내 발 느낌이 좋아?"
 		<<elseif $enemyanger lte 100>>
@@ -2648,8 +2648,8 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechchastity is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechChastity is 1>>
+		<<He>> speaks.
 		<<if $worn.genitals.name is "chastity parasite">>
 			<<if $enemyanger lte 20>>
 				<<print [
@@ -2692,8 +2692,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechstripstruggle is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechStripStruggle is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			<<print [
 				`"이리 와, 부끄러워하지 말고."`,
@@ -2714,8 +2714,8 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechstruggle is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechStruggle is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			<<print [
 				`"이거 성깔 있는 꼬맹이네!"`,
@@ -2736,7 +2736,7 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechspank is 1>>
+	<<elseif $speechSpank is 1>>
 		<<if ["dildo","riding crop","length of anal beads","flog"].includes($NPCList[_n].lefttool) or ["dildo","riding crop","length of anal beads","flog"].includes($NPCList[_n].righttool)>>
 			<<He>>【이가】 말한다.
 			<<print [
@@ -2770,8 +2770,8 @@
 			][random(0,3)]>>
 		<</if>>
 
-	<<elseif $speecharms is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechArms is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			<<print [
 				`"팔을 풀어주면, 얌전히 굴 거야?"`,
@@ -2792,8 +2792,8 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechclit is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechClit is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			<<print [
 				`"네 클리토리스를 희롱해 주니까 기분 좋아?"`,
@@ -2814,8 +2814,8 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechfutapenis is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechFutaPenis is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			<<print [
 				`"만져주면 자지랑 보지 중에 어디가 더 기분 좋아?"`,
@@ -2836,8 +2836,8 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechglans is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechGlans is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			<<print [
 				`"자지를 만져주니까 기분 좋아?"`,
@@ -2858,8 +2858,8 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechbottom is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechBottom is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			<<print [
 				`"엉덩이를 쓰다듬어 주니까 기분 좋아?"`,
@@ -2880,8 +2880,8 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechhair is 1>>
-		<<He>>【이가】 말한다.
+	<<elseif $speechHair is 1>>
+		<<He>> speaks.
 		<<if $hairlength gte 400>>
 			<<if $enemyanger lte 20>>
 				<<print [
@@ -2924,7 +2924,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechchestrub is 1>>
+	<<elseif $speechChestRub is 1>>
 		<<if $player.gender_appearance is "m">>
 			<<if $enemyanger lte 20>>
 				<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
@@ -2979,8 +2979,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechbreastrub is 1>>
-		<<He>>【은는】 말한다.
+	<<elseif $speechBreastRub is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
 				"네 탐스러운 가슴에 잔뜩 싸질러주마!"
@@ -3007,8 +3007,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechgrowl is 1>>
-		<<He>>【은는】 말한다.
+	<<elseif $speechGrowl is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			<<if $npcspeechcycle is 0>>
 				"제법 성깔이 있는 모양이네!"
@@ -3059,8 +3059,8 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechgrowlheat is 1 or $speechgrowlrut is 1>>
-		<<He>>【은는】 말한다.
+	<<elseif $speechGrowlHeat is 1 or $speechGrowlRut is 1>>
+		<<He>> speaks.
 		<<if $npcspeechcycle is 0>>
 			"누군가 아주 <<print ($settings.pregnancySpeechEnabled ? "임신시키기" : "박기")>> 딱 좋은 기분이 된 모양이네!"
 		<<elseif $npcspeechcycle is 1>>
@@ -3077,7 +3077,7 @@
 			"<<bred>> 되기 위해서라면 뭐든 할 거 같은데."
 		<</if>>
 
-	<<elseif $speechplead is 1>>
+	<<elseif $speechPlead is 1>>
 		<<if $enemyanger lte 20>>
 			<<He>>【은는】 말한다.
 			<<print [
@@ -3107,7 +3107,7 @@
 			][random(0,4)]>>
 		<</if>>
 
-	<<elseif $speechmoan is 1>>
+	<<elseif $speechMoan is 1>>
 		<<if random(0,2) isnot 0 and (($vaginastate is "doublepenetrated" and $NPCList[$vaginatarget].penis is "vaginadouble" and $NPCList[$vaginadoubletarget].penis is "vaginadouble")
 			or ($anusstate is "doublepenetrated" and $NPCList[$anustarget].penis is "anusdouble" and $NPCList[$anusdoubletarget].penis is "anusdouble"))>>
 			<<He>>【이가】 <<print ["말한다","말한다","속삭인다","다정하게 말한다","웃는다","낄낄거린다","비웃는다"][random(0,6)]>>.
@@ -3149,7 +3149,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechdemand is 1>>
+	<<elseif $speechDemand is 1>>
 		<<if $enemyanger lte 20>>
 			<<He>>【은는】 말한다.
 			<<print [
@@ -3179,7 +3179,7 @@
 			][random(0,4)]>>
 		<</if>>
 
-	<<elseif $speechforgive is 1>>
+	<<elseif $speechForgive is 1>>
 		<<if $enemyanger lte 20>>
 			<<print [
 				`<<He>>【은는】 웃는다. "날 용서한다고? 귀엽기도 하지."`,
@@ -3208,8 +3208,8 @@
 			][random(0,4)]>>
 		<</if>>
 
-	<<elseif $speechvaginaflaunt is 1>>
-		<<He>>【은는】 다정하게 속삭인다.
+	<<elseif $speechVaginaFlaunt is 1>>
+		<<He>> coos.
 		<<if $player.gender_appearance is "m">>
 			<<print [
 				`"빨리 네 자지를 꿀꺽 삼키고 싶어."`,
@@ -3224,8 +3224,8 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechcoverface is 1>>
-		<<He>>【은는】 말한다.
+	<<elseif $speechCoverFace is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			<<print [
 				`"어머, 부끄럼쟁이 <<girl>>【이가】 얼굴을 가리네."`,
@@ -3246,8 +3246,8 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechcoverpenis is 1>>
-		<<He>>【은는】 말한다.
+	<<elseif $speechCoverPenis is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			<<print [
 				`"네 자지 그만 가리고 보여줘, 그럼 기분 좋게 해 줄게."`,
@@ -3268,8 +3268,8 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechcovervagina is 1>>
-		<<He>>【은는】 말한다.
+	<<elseif $speechCoverVagina is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			<<print [
 				`"네 보지 그만 가리고 보여줘, 그럼 기분 좋게 해 줄게."`,
@@ -3290,8 +3290,8 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechapologiseno is 1>>
-		<<He>>【은는】 말한다.
+	<<elseif $speechApologiseRejected is 1>>
+		<<He>> speaks.
 		<<if $enemyanger lte 20>>
 			<<print [
 				`"쉿, 네 사과는 이미 받았어."`,
@@ -3312,15 +3312,15 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechapologiseunforgiving is 1>>
-		<<He>>【은는】 말한다.
+	<<elseif $speechApologiseUnforgiving is 1>>
+		<<He>> speaks.
 		<<print [
 			`"입 닥쳐, <<bitch>>."`,
 			`"네 목구멍에 쑤셔 넣어버리기 전에 입 다물어."`,
 			`"내가 입 놀려도 좋다고 허락했나, 이 <<slut>>【아야】?"`,
 		][random(0,2)]>>
 
-	<<elseif $speechfacesit is 1>>
+	<<elseif $speechFaceSit is 1>>
 		<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>>
 			<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
 				<<print [
@@ -3351,7 +3351,7 @@
 			<</if>>
 		<</if>>
 
-	<<elseif $speechanallick is 1>>
+	<<elseif $speechAnalLick is 1>>
 		<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>>
 			<<print [
 				`<<He>>【은는】 신음한다. "그래! 계속 혀를 놀려보라고!"`,
@@ -3372,7 +3372,7 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechanalkiss is 1>>
+	<<elseif $speechAnalKiss is 1>>
 		<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
 			<<print [
 				"<<He>>【은는】 말한다. \"항문에 입이나 맞추는 것. 그게 네 진짜 주제지.\"",
@@ -3387,7 +3387,7 @@
 			][random(0,2)]>>
 		<</if>>
 
-	<<elseif $speechmouthotheranus is 1>>
+	<<elseif $speechMouthNPCAnus is 1>>
 		<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
 			<<print [
 				"<<He>>【은는】 말한다. \"내 엉덩이에 입이나 맞춰!\"",
@@ -3405,7 +3405,7 @@
 				"<<He>>【은는】 말한다. \"네 그 천박한 입으로, 내 엉덩이에 온갖 짓을 다 해보라고.\""
 			][random(0,4)]>>
 		<</if>>
-	<<elseif $speechaskrough is 1>>
+	<<elseif $speechAskRough is 1>>
 		<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
 			<<print [
 				"<<He>>【은는】 말한다. \"좀 더 거친 걸 원해? 정 원한다면야, 이 창녀년아.\"",
@@ -3705,17 +3705,17 @@
 <</widget>>
 
 <<widget "sprayspeech">>
-	<<He>>【이가】 외친다.
-	<<switch $speechspraycycle>>
-		<<case 0>> "그딴 건 씨발 어디서 났어?"
-		<<case 1>> "넌 재미없어."
-		<<case 2>> "이 사디스트 <<bitch>>【아야】!"
-		<<case 3>> "씨발! 좆같네!"
-		<<case 4>> "아악!"
-		<<case 5>> "제기랄. 제법 반항할 줄 아네."
-		<<default>> "내 눈!"
+	<<He>> shouts.
+	<<switch $speechSprayCycle>>
+		<<case 0>> "Where the fuck did you get that?"
+		<<case 1>> "You're no fun."
+		<<case 2>> "You sadistic <<bitch>>!"
+		<<case 3>> "Fuck! Shit!"
+		<<case 4>> "Argh!"
+		<<case 5>> "Shit. You've some fight in you."
+		<<default>> "My eyes!"
 	<</switch>>
-	<<set $speechspraycycle to $speechspraycycle isnot undefined ? ($speechspraycycle + 1) % 7 : 0>>
+	<<set $speechSprayCycle to $speechSprayCycle isnot undefined ? ($speechSprayCycle + 1) % 7 : 0>>
 <</widget>>
 
 <<widget "beastspeech">>
@@ -3732,7 +3732,9 @@
 	<<case "cowgirl" "bullboy">>
 		<<bHe>>【이가】 음메 하고 운다.
 	<<case "spidergirl" "spiderboy">>
-		<<bHe>>【이가】 찍찍거린다.
+		<<bHe>> chitters.
+	<<case "snakegirl" "snakeboy">>
+		<<bHe>> hisses.
 	<<case "foxgirl" "foxboy">>
 		<<bHe>>【이가】 깽깽거린다.
 	<<default>>
@@ -4004,13 +4006,13 @@
 				<<else>>
 					<<if $NPCList[_n].type is "wolfgirl" or $NPCList[_n].type is "wolfboy">>
 						<<switch $npcspeechcycle>>
-							<<case 0>> "좋은 냄새가 난다."
-							<<case 1>> "너와 짝짓기할 거다. 알았나?"
-							<<case 2>> "나와 짝짓기해라."
-							<<case 3>> "사냥감이 맛있을 거라 장담한다."
-							<<case 4>> "가임기의 냄새다."
-							<<case 5>> "밖은 춥다. 내가 널 따뜻하게 해주지."
-							<<default>> "내 짝은 나만을 위한 거다. 넌 안 돼. 빼앗지 마라."
+							<<case 0>> "You smell nice."
+							<<case 1>> "Going to mate with you. Okay?"
+							<<case 2>> "Mate with me."
+							<<case 3>> "Bet prey tastes nice."
+							<<case 4>> "Smell fertile."
+							<<case 5>> "Cold out. I keep you warm."
+							<<default>> "My mate's for me only. Not for you. No taking."
 						<</switch>>
 					<<else>>
 						<<switch $npcspeechcycle>>
@@ -4098,13 +4100,13 @@
 				<<else>>
 					<<if $NPCList[_n].type is "wolfgirl" or $NPCList[_n].type is "wolfboy">>
 						<<switch $npcspeechcycle>>
-							<<case 0>> "좋은 냄새가 난다."
-							<<case 1>> "너와 짝짓기할 거다. 알았나?"
-							<<case 2>> "나와 짝짓기해라."
-							<<case 3>> "사냥감이 맛있을 거라 장담한다."
-							<<case 4>> "가임기의 냄새다."
-							<<case 5>> "밖은 춥다. 내가 널 따뜻하게 해주지."
-							<<default>> "내 짝은 나만을 위한 거다. 넌 안 돼. 빼앗지 마라."
+							<<case 0>> "You smell nice."
+							<<case 1>> "Going to mate with you. Okay?"
+							<<case 2>> "Mate with me."
+							<<case 3>> "Bet prey tastes nice."
+							<<case 4>> "Smell fertile."
+							<<case 5>> "Cold out. I keep you warm."
+							<<default>> "My mate's for me only. Not for you. No taking."
 						<</switch>>
 					<<else>>
 						<<switch $npcspeechcycle>>
@@ -4812,29 +4814,29 @@
 <</widget>>
 
 <<widget "plantspeech">>
-	<<if $speechpenisvirgin is 1 or $speechvaginavirgin is 1>>
-		<<He>>【은는】 씩 웃는다. "이런 건 처음이야? 운이 좋네!"
-	<<elseif $speechanusvirgin gte 1>>
-		<<He>>【은는】 씩 웃는다. "이 구멍으로 받는 건 처음인가 보지? 얼마나 기분 좋은지 보여줄게!"
-	<<elseif $speechmouthvirgin gte 1>>
-		<<He>>【은는】 씩 웃는다. "이런 식으로 입을 써본 적 없지? 널 위해 특별히 더 달콤하게 해줄게."
-	<<elseif $speechkissvirgin is 1>>
-		<<He>>【은는】 당신의 입술 안으로 신음한다. "키스에 중독되게 만들어 줄게. 아니면 나한테 중독되려나."
-		<span class="pink">달콤한 넥타르가 입안에 가득 차오르고, <<he>>【은는】 윙크한다.</span>
+	<<if $speechPenisVirgin is 1 or $speechVaginaVirgin is 1>>
+		<<He>> grins. "Is this your first time? Lucky break!"
+	<<elseif $speechAnusVirgin gte 1>>
+		<<He>> grins. "First time taking it up this hole, huh? I'll show you how great it is!"
+	<<elseif $speechOralVirgin gte 1>>
+		<<He>> grins. "You've never used your mouth like this before, have you? I'll make it extra sweet, just for you."
+	<<elseif $speechKissVirgin is 1>>
+		<<He>> moans into your mouth. "I'll get you addicted to kissing. Or maybe you'll just be addicted to me."
+		<span class="pink">Sweet nectar floods your mouth, and <<he>> winks.</span>
 		<<nectarfed 50>>
-	<<elseif $speechvaginavirgin is 2 and $NPCList[0].penis isnot "none">>
-		<<He>>【은는】 칭얼거린다. "아, 너 처녀였어? 에이! 내 자지를 썼어야 했는데."
-	<<elseif $speechpenisvirgin is 2>>
-		<<He>>【은는】 칭얼거린다. "아, 너 처녀였어? 에이! 내 <<if $NPCList[0].vagina isnot "none">>보지<<else>>엉덩이<</if>>【을를】 썼어야 했는데."
-	<<elseif $speechspray is 1>>
-		<<He>>【은는】 비명을 지른다.
-		<<if $speechspraycycleplant is 1>>
-			"그만해!"
+	<<elseif $speechVaginaVirgin is 2 and $NPCList[0].penis isnot "none">>
+		<<He>> whines. "Oh, you were a virgin? Come on! I knew I should've used my dick."
+	<<elseif $speechPenisVirgin is 2>>
+		<<He>> whines. "Oh, you were a virgin? Come on! I knew I should've used my <<if $NPCList[0].vagina isnot "none">>pussy<<else>>ass<</if>>."
+	<<elseif $speechPepperSpray is 1>>
+		<<He>> yelps.
+		<<if $speechSprayCyclePlant is 1>>
+			"Cut that out!"
 		<<else>>
-			<<set $speechspraycycleplant to 1>>
-			"아악! 그건 뭐야, 공격용 꽃가루야? 인간도 그런 걸 할 수 있어?!"
+			<<set $speechSprayCyclePlant to 1>>
+			"Agh! What is that, attack pollen? Can humans do that?!"
 		<</if>>
-	<<elseif $speechcum is 1>>
+	<<elseif $speechPlayerOrgasm is 1>>
 		<<if $exposed gte 2 and $player.penisExist>>
 			<<if $semen_amount lte (($semen_volume / 24) * 6) or $orgasmcount gte 24 or $femaleclimax or _deniedOrgasm>>
 				<<He>>【은는】 눈을 깜박인다. "그, 알잖아... 정액은 어딨어? 그게 다야?"
@@ -4884,18 +4886,18 @@
 	<<elseif $alarm is 1 and isLoveInterest("Eden") and $location is "forest">>
 		<<He>>【은는】 비명을 지른다. "뭐 하는 거야, 왜 그 괴물을 부르는 건데? <<nnpc_he "Eden">>【이가】 얼마나 위험한지 몰라?!"
 		<<set $enemytrust -= 30>>
-	<<elseif $speechnamedrop is 1 and _loveInterest is "Eden" and $location is "forest">>
-		<<He>>【은는】 당신의 말에 움찔한다. "아 젠장, <<nnpc_title "Eden">>【을를】 안다고? 이거... 위험한데."
+	<<elseif $speechLINameDrop is 1 and _loveInterest is "Eden" and $location is "forest">>
+		<<He>> flinches at your words. "Oh shit, you know the <<nnpc_title "Eden">>? This is... dangerous."
 		<<set $enemytrust -= 20>>
-	<<elseif $speechnamedrop is 1 and _loveInterest is "Black Wolf" and $location is "forest">>
-		<<He>>【은는】 씩 웃는다. "내가 널 다 가지고 놀고 나면 네 알파도 널 못 알아볼걸!"
-	<<elseif $speechnamedrop is 1 and _loveInterest is "Alex" and $location is "moor">>
-		<<He>>【은는】 씩 웃는다. "농부라고? 널 한 번 재배해 볼까, 암소 <<girl>>."
-	<<elseif $speechnamedrop is 1 and _loveInterest is "Great Hawk" and $location is "moor">>
-		<<He>>【은는】 당신의 말에 움찔한다. "아 젠장, 하늘의 공포를 안다고? 이거... 위험한데."
+	<<elseif $speechLINameDrop is 1 and _loveInterest is "Black Wolf" and $location is "forest">>
+		<<He>> grins. "The alpha won't even recognise you when I'm done with you!"
+	<<elseif $speechLINameDrop is 1 and _loveInterest is "Alex" and $location is "moor">>
+		<<He>> grins. "A farmer, huh? Maybe I'll cultivate you, cow<<girl>>."
+	<<elseif $speechLINameDrop is 1 and _loveInterest is "Great Hawk" and $location is "moor">>
+		<<He>> flinches at your words. "Oh shit, you know the sky terror? This is... dangerous."
 		<<set $enemytrust -= 20>>
-	<<elseif $speechnamedrop is 1 and _loveInterest is "Gwylan">>
-		<<His>> 식물들이 창백하게 변한다. "마-마녀라고? 네가 <<nnpc_his "Gwylan">> 보호를 받고 있다고? 젠장."
+	<<elseif $speechLINameDrop is 1 and _loveInterest is "Gwylan">>
+		<<His>> vegetation turns pale. "Th-the witch? You're <<nnpc_his "Gwylan">> charge? Shit."
 		<<set $enemytrust -= 20>>
 	<<elseif random(1,10) is 10 and $NPCList[_n].penis isnot "chest" and $NPCList[_n].location.genitals isnot "head" and $mouthstate is 0 and !$worn.face.type.includes("face_covering") and !$worn.face.type.includes("gag")>>
 		<span class="blue"><<He>>【은는】 키스하려는 듯 입술을 당신의 입술 가까이 가져온다.</span>
@@ -4912,7 +4914,7 @@
 	<<elseif random(1,3) is 3>>
 		<<basespeech "low">>
 	<<else>>
-		<<if $speechheadsuckle is 1 or $speechmouthpenetrated is 1 or $speechvaginamouth is 1 or $speechfacesit is 1>>
+		<<if $speechHeadSuckle is 1 or $speechMouthPenetrated is 1 or $speechMouthNPCVagina is 1 or $speechFaceSit is 1>>
 			<<switch $npcspeechcycle>>
 				<<case 0>> <<He>>【이가】 다정하게 말한다. "네가 맛본 것 중 제일 달콤하지 않아?"
 				<<case 1>> <<He>>【이가】 다정하게 말한다. "마셔, 네게 좋은 거야!"
@@ -4922,7 +4924,7 @@
 				<<case 5>> <<He>>【은는】 <<if $NPCList[_n].lefthand is 0 or $NPCList[_n].righthand is 0>>당신의 머리카락을 쓰다듬는다<<else>>당신에게 미소 짓는다<</if>>. "걱정할 필요 없어. 내가 돌봐줄게."
 				<<default>> <<He>>【은는】 낄낄거린다. "다른 걸로는 돌아갈 수 없게 될 거야."
 			<</switch>>
-		<<elseif $speechheadsuckleclosed is 1 or $speechmouthentrance is 1 or $speechmouthimminent is 1 or ($speechheadnippleclosed is 1 and $NPCList[_n].pronoun is "f")>>
+		<<elseif $speechHeadSuckleClosed is 1 or $speechMouthEntrance is 1 or $speechMouthImminent is 1 or ($speechHeadNippleClosed is 1 and $NPCList[_n].pronoun is "f")>>
 			<<switch $npcspeechcycle>>
 				<<case 0>> <<He>>【이가】 칭얼거린다. "먹어봐, 맛있다니까!"
 				<<case 1>> <<He>>【이가】 다정하게 말한다. "내 넥타르가 마음에 들 거야. 자, 한 번만 핥아봐."
@@ -4961,8 +4963,8 @@
 						<<He>>【은는】 말한다. "우린 완벽하게 들어맞아!"
 					<</if>>
 				<<case 2>>
-					<<if $speechcoverface is 1 or $speechcoverpenis is 1 or $speechcovervagina is 1>>
-						<<He>>【은는】 낄낄거린다. "부끄러워할 필요 없어! 여긴 나밖에 없는걸."
+					<<if $speechCoverFace is 1 or $speechCoverPenis is 1 or $speechCoverVagina is 1>>
+						<<He>> giggles. "You don't need to be shy! I'm the only one here."
 					<<elseif ["othervagina","otheranus","tentacle","tentacledeep"].includes($penisuse) and $orgasmcurrent gte 1>>
 						<<He>>【은는】 신음한다. "네가 <<if $location is "forest">>저 거대한 말벌들<<else>>럴커들<</if>>보다 훨씬 나은 수분 매개자야!"
 						<<He>>【은는】 쑥스러운 듯이 <<if $NPCList[_n].lefthand is 0 or $NPCList[_n].righthand is 0>>머리를 긁적인다<<else>>미소를 짓는다<</if>>. "그게, 어, 칭찬이야."

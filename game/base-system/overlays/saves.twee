@@ -247,7 +247,7 @@
 			.prependTo("#idbToggleSaves"))>> IndexedDB 활성화<<if $ironmanmode>> (철인 모드에서는 사용 불가)<</if>>
 	</label>
 	<br><br>
-	<<if $debug is 1>>
+	<<if $debug>>
 		<br>
 		<label><<print '<<checkbox "$prepareSaveDetails" false true '+($prepareSaveDetails is true ? "checked" : "")+'>>'>>
 			`prepareSaveDetails`를 실행합니다. 비활성화하면 구버전에서 저장/삭제한 내용이 신버전의 세이브 목록에 반영되지 않을 수 있지만, 새로고침 로딩 속도가 빨라질 수 있습니다.

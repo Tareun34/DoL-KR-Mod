@@ -1,0 +1,64 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $averyschoolpickupintro is 1 and $fame.business gte 400 and random(1,10) is 1 and !Weather.isOvercast>>",
+   "\t\tAs you are about to leave the building, you hear a great uproar. Dozens of students are gathering outside as a helicopter descends upon the school precincts. One of the passenger doors swings open. Avery beckons from inside."
+  ],
+  "old_kr": [
+   "\t<<elseif $averyschoolpickupintro is 1 and $fame.business gte 400 and random(1,10) is 1 and !Weather.isOvercast>>",
+   "\t\t건물을 막 나서려는데, 엄청난 소란이 들린다. 헬리콥터 한 대가 학교 구내로 하강하자 수십 명의 학생들이 밖으로 모여든다. 조수석 문이 활짝 열린다. 안에서 에이버리가 손짓한다."
+  ],
+  "new_en": [
+   "\t<<elseif $averyschoolpickupintro is 1 and ($fame.business gte 400 or C.npc.Avery.love gte 50) and $avery_helicopter.timer lte 0 and Weather.precipitation is \"none\">>",
+   "\t\t<<set $avery_helicopter.timer to 60>>",
+   "\t\tAs you are about to leave the building, you hear a great uproar. Dozens of students are gathering outside as a helicopter hovers over the school precincts. One of the doors swings open, and a ladder rolls down with loud clanks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "",
+   "\t\t\"Come on, get a move on, I haven't got all day! Important business awaits!\""
+  ],
+  "old_kr": [
+   "",
+   "\t\t\"자, 어서 타. 하루 종일 기다려 줄 순 없어! 중요한 일이 기다리고 있다고!\""
+  ],
+  "new_en": [
+   "\t\tYou see Avery lean out, beckoning from above. <<He>> says something, but the only thing you can hear over the noise is your name."
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "",
+   "\t\t<<link [[Board helicopter (0:20)|Avery Helicopter]]>><<npcincr Avery love 2>><</link>><<gglove>>"
+  ],
+  "old_kr": [
+   "",
+   "\t\t<<link [[헬리콥터에 탑승한다 (0:20)|Avery Helicopter]]>><<npcincr Avery love 2>><</link>><<gglove>>"
+  ],
+  "new_en": [
+   "\t\tYou hear murmuring of fellow classmates around you. They seem impressed by the extravagance. <<gcool>><<status 1>>",
+   "\t\t<br><br>",
+   "\t\t<<link [[Board helicopter (0:20)|Avery Helicopter]]>><<pass 20>><</link>><<glove>><<if $avery_mansion>><<gdom>><</if>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Walk away|Avery Helicopter Walk]]>><<npcincr Avery love -1>><<npcincr Avery rage 5>><</link>><<garage>><<llove>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[걸어간다|Avery Helicopter Walk]]>><<npcincr Avery love -1>><<npcincr Avery rage 5>><</link>><<garage>><<llove>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Walk away|Avery Helicopter Walk]]>><<npcincr Avery love -1>><<npcincr Avery rage 1>><</link>><<garage>><<llove>>"
+  ],
+  "context": "\t\t<br>"
+ }
+]

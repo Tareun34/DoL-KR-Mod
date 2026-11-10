@@ -1,0 +1,35 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\t\t<<link [[Wake up|Passout Beast Drain]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\t\t<<link [[깨어난다|Passout Beast Drain]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<beastNEWinit 4 lizard>>",
+   "\t\t<<if $rng gte 51 and beastSexEnabledForType(\"lizard\", $monster is 1)>>",
+   "\t\t\t<<link [[Wake up|Passout Beast Drain]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": "\t<<if dangerEvent()>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\tA shadow in the water moves towards you."
+  ],
+  "old_kr": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\t물속의 그림자가 당신을 향해 움직인다."
+  ],
+  "new_en": [
+   "\t\t\t<<if beastSexEnabledForType(\"lizard\", $monster is 1)>>",
+   "\t\t\t\tA shadow in the water moves towards you."
+  ],
+  "context": "\t\t\t<<beastNEWinit 1 lizard>>"
+ }
+]

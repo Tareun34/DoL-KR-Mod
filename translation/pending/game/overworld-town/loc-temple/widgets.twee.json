@@ -1,0 +1,1063 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<templeicon \"pray\">><<link [[Pray for salvation (1:00)|_prayPassage]]>>",
+   "\t\t\t<<pass 60>><<set $phase to 2>>"
+  ],
+  "old_kr": [
+   "\t\t<<templeicon \"pray\">><<link [[구원을 위해 기도한다 (1:00)|_prayPassage]]>>",
+   "\t\t\t<<pass 60>><<set $phase to 2>>"
+  ],
+  "new_en": [
+   "\t<<templeicon \"pray\">><<link [[Pray for salvation (1:00)|_prayPassage]]>>",
+   "\t\t<<pass 60>><<set $phase to 2>>",
+   "\t\t<<if $purity gte ((1000 / 7) * 7)>>",
+   "\t\t\t<<stress -6>><<awareness -2>><<arousal -1200>>",
+   "\t\t<<elseif $purity gte ((1000 / 7) * 6)>>",
+   "\t\t\t<<stress -6>><<awareness -1>><<arousal -1000>>",
+   "\t\t<<elseif $purity gte ((1000 / 7) * 5)>>",
+   "\t\t\t<<stress -5>><<awareness -1>><<arousal -800>>",
+   "\t\t<<elseif $purity gte ((1000 / 7) * 4)>>",
+   "\t\t\t<<stress -4>><<awareness -1>><<arousal -600>>",
+   "\t\t<<elseif $purity gte ((1000 / 7) * 3)>>",
+   "\t\t\t<<stress -3>><<awareness -1>><<arousal -500>>",
+   "\t\t<<elseif $purity gte ((1000 / 7) * 2)>>",
+   "\t\t\t<<stress -2>><<awareness -1>><<arousal -400>>",
+   "\t\t<<else>>",
+   "\t\t\t<<stress -1>><<awareness -1>><<arousal -300>>",
+   "\t\t<</if>>",
+   "\t<</link>>",
+   "\t<<lawareness>><<lstress>><<larousal>>",
+   "\t<br>",
+   "\t<<if insecurityExists(\"penis_small\") and $daily.templePray isnot 1>>",
+   "\t\t<<templeicon \"pray\">><<link [[Pray for a bigger penis (1:00)|_prayPassage]]>>",
+   "\t\t\t<<pass 60>><<set $phase to $player.penissize lt 2 ? 4 : 5>><<set $daily.templePray to 1>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if insecurityExists(\"penis_small\") and $daily.templePray isnot 1>>",
+   "\t\t\t<<templeicon \"pray\">><<link [[Pray for a bigger penis (1:00)|_prayPassage]]>>",
+   "\t\t\t\t<<pass 60>><<set $phase to $player.penissize lt 2 ? 4 : 5>><<set $daily.templePray to 1>>",
+   "\t\t\t\t<<if $purity gte ((1000 / 7) * 7)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"penis_small\" 20>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 6)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"penis_small\" 18>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 5)>>",
+   "\t\t\t\t\t<<stress 6>><<acceptance \"penis_small\" 16>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 4)>>",
+   "\t\t\t\t\t<<stress 7>><<acceptance \"penis_small\" 14>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 3)>>",
+   "\t\t\t\t\t<<stress 8>><<acceptance \"penis_small\" 12>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 2)>>",
+   "\t\t\t\t\t<<stress 10>><<acceptance \"penis_small\" 10>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<stress 12>><<acceptance \"penis_small\" 8>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</link>>",
+   "\t\t\t<<gstress>><<gacceptance>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if insecurityExists(\"penis_big\") and $daily.templePray isnot 1>>",
+   "\t\t\t<<templeicon \"pray\">><<link [[Pray for a smaller penis (1:00)|_prayPassage]]>>",
+   "\t\t\t\t<<pass 60>><<set $phase to 6>><<set $daily.templePray to 1>>",
+   "\t\t\t\t<<if $purity gte ((1000 / 7) * 7)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"penis_big\" 20>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 6)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"penis_big\" 18>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 5)>>",
+   "\t\t\t\t\t<<stress 6>><<acceptance \"penis_big\" 16>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 4)>>",
+   "\t\t\t\t\t<<stress 7>><<acceptance \"penis_big\" 14>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 3)>>",
+   "\t\t\t\t\t<<stress 8>><<acceptance \"penis_big\" 12>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 2)>>",
+   "\t\t\t\t\t<<stress 10>><<acceptance \"penis_big\" 10>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<stress 12>><<acceptance \"penis_big\" 8>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</link>>",
+   "\t\t\t<<gstress>><<gacceptance>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if insecurityExists(\"breasts_small\") and $daily.templePray isnot 1>>",
+   "\t\t\t<<templeicon \"pray\">><<link [[Pray for bigger breasts (1:00)|_prayPassage]]>>",
+   "\t\t\t\t<<pass 60>><<set $phase to !$player.breastsize ? 7 : 8>><<set $daily.templePray to 1>>",
+   "\t\t\t\t<<if $purity gte ((1000 / 7) * 7)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"breasts_small\" 20>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 6)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"breasts_small\" 18>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 5)>>",
+   "\t\t\t\t\t<<stress 6>><<acceptance \"breasts_small\" 16>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 4)>>",
+   "\t\t\t\t\t<<stress 7>><<acceptance \"breasts_small\" 14>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 3)>>",
+   "\t\t\t\t\t<<stress 8>><<acceptance \"breasts_small\" 12>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 2)>>",
+   "\t\t\t\t\t<<stress 10>><<acceptance \"breasts_small\" 10>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<stress 12>><<acceptance \"breasts_small\" 8>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</link>>",
+   "\t\t\t<<gstress>><<gacceptance>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if insecurityExists(\"breasts_big\") and $daily.templePray isnot 1>>",
+   "\t\t\t<<templeicon \"pray\">><<link [[Pray for smaller breasts (1:00)|_prayPassage]]>>",
+   "\t\t\t\t<<pass 60>><<set $phase to 9>><<set $daily.templePray to 1>>",
+   "\t\t\t\t<<if $purity gte ((1000 / 7) * 7)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"breasts_big\" 20>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 6)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"breasts_big\" 18>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 5)>>",
+   "\t\t\t\t\t<<stress 6>><<acceptance \"breasts_big\" 16>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 4)>>",
+   "\t\t\t\t\t<<stress 7>><<acceptance \"breasts_big\" 14>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 3)>>",
+   "\t\t\t\t\t<<stress 8>><<acceptance \"breasts_big\" 12>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 2)>>",
+   "\t\t\t\t\t<<stress 10>><<acceptance \"breasts_big\" 10>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<stress 12>><<acceptance \"breasts_big\" 8>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</link>>",
+   "\t\t\t<<gstress>><<gacceptance>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if insecurityExists(\"pregnancy\") and $daily.templePray isnot 1>>",
+   "\t\t\t<<set _pregnancyLink to (playerAwareTheyArePregnant() ? \"Pray about your pregnant belly (1:00)\" : \"Pray about your pregnant looking belly (1:00)\")>>",
+   "\t\t\t<<templeicon \"pray\">><<link [[_pregnancyLink|_prayPassage]]>>",
+   "\t\t\t\t<<pass 60>><<set $phase to 10>><<set $daily.templePray to 1>>",
+   "\t\t\t\t<<if $purity gte ((1000 / 7) * 7)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"pregnancy\" 20>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 6)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"pregnancy\" 18>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 5)>>",
+   "\t\t\t\t\t<<stress 6>><<acceptance \"pregnancy\" 16>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 4)>>",
+   "\t\t\t\t\t<<stress 7>><<acceptance \"pregnancy\" 14>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 3)>>",
+   "\t\t\t\t\t<<stress 8>><<acceptance \"pregnancy\" 12>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 2)>>",
+   "\t\t\t\t\t<<stress 10>><<acceptance \"pregnancy\" 10>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<stress 12>><<acceptance \"pregnancy\" 8>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</link>>",
+   "\t\t\t<<gstress>><<gacceptance>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<crimeicon \"mark\">><<link [[Watch (1:00)|_prayPassage]]>>",
+   "\t\t\t<<pass 60>><<set $phase to 3>>"
+  ],
+  "old_kr": [
+   "\t\t<<if insecurityExists(\"penis_small\") and $daily.templePray isnot 1>>",
+   "\t\t\t<<templeicon \"pray\">><<link [[더 큰 자지를 위해 기도한다 (1:00)|_prayPassage]]>>",
+   "\t\t\t\t<<pass 60>><<set $phase to $player.penissize lt 2 ? 4 : 5>><<set $daily.templePray to 1>>",
+   "\t\t\t\t<<if $purity gte ((1000 / 7) * 7)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"penis_small\" 20>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 6)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"penis_small\" 18>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 5)>>",
+   "\t\t\t\t\t<<stress 6>><<acceptance \"penis_small\" 16>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 4)>>",
+   "\t\t\t\t\t<<stress 7>><<acceptance \"penis_small\" 14>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 3)>>",
+   "\t\t\t\t\t<<stress 8>><<acceptance \"penis_small\" 12>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 2)>>",
+   "\t\t\t\t\t<<stress 10>><<acceptance \"penis_small\" 10>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<stress 12>><<acceptance \"penis_small\" 8>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</link>>",
+   "\t\t\t<<gstress>><<gacceptance>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if insecurityExists(\"penis_big\") and $daily.templePray isnot 1>>",
+   "\t\t\t<<templeicon \"pray\">><<link [[더 작은 자지를 위해 기도한다 (1:00)|_prayPassage]]>>",
+   "\t\t\t\t<<pass 60>><<set $phase to 6>><<set $daily.templePray to 1>>",
+   "\t\t\t\t<<if $purity gte ((1000 / 7) * 7)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"penis_big\" 20>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 6)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"penis_big\" 18>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 5)>>",
+   "\t\t\t\t\t<<stress 6>><<acceptance \"penis_big\" 16>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 4)>>",
+   "\t\t\t\t\t<<stress 7>><<acceptance \"penis_big\" 14>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 3)>>",
+   "\t\t\t\t\t<<stress 8>><<acceptance \"penis_big\" 12>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 2)>>",
+   "\t\t\t\t\t<<stress 10>><<acceptance \"penis_big\" 10>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<stress 12>><<acceptance \"penis_big\" 8>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</link>>",
+   "\t\t\t<<gstress>><<gacceptance>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if insecurityExists(\"breasts_small\") and $daily.templePray isnot 1>>",
+   "\t\t\t<<templeicon \"pray\">><<link [[더 큰 가슴을 위해 기도한다 (1:00)|_prayPassage]]>>",
+   "\t\t\t\t<<pass 60>><<set $phase to !$player.breastsize ? 7 : 8>><<set $daily.templePray to 1>>",
+   "\t\t\t\t<<if $purity gte ((1000 / 7) * 7)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"breasts_small\" 20>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 6)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"breasts_small\" 18>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 5)>>",
+   "\t\t\t\t\t<<stress 6>><<acceptance \"breasts_small\" 16>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 4)>>",
+   "\t\t\t\t\t<<stress 7>><<acceptance \"breasts_small\" 14>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 3)>>",
+   "\t\t\t\t\t<<stress 8>><<acceptance \"breasts_small\" 12>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 2)>>",
+   "\t\t\t\t\t<<stress 10>><<acceptance \"breasts_small\" 10>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<stress 12>><<acceptance \"breasts_small\" 8>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</link>>",
+   "\t\t\t<<gstress>><<gacceptance>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if insecurityExists(\"breasts_big\") and $daily.templePray isnot 1>>",
+   "\t\t\t<<templeicon \"pray\">><<link [[더 작은 가슴을 위해 기도한다 (1:00)|_prayPassage]]>>",
+   "\t\t\t\t<<pass 60>><<set $phase to 9>><<set $daily.templePray to 1>>",
+   "\t\t\t\t<<if $purity gte ((1000 / 7) * 7)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"breasts_big\" 20>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 6)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"breasts_big\" 18>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 5)>>",
+   "\t\t\t\t\t<<stress 6>><<acceptance \"breasts_big\" 16>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 4)>>",
+   "\t\t\t\t\t<<stress 7>><<acceptance \"breasts_big\" 14>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 3)>>",
+   "\t\t\t\t\t<<stress 8>><<acceptance \"breasts_big\" 12>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 2)>>",
+   "\t\t\t\t\t<<stress 10>><<acceptance \"breasts_big\" 10>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<stress 12>><<acceptance \"breasts_big\" 8>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</link>>",
+   "\t\t\t<<gstress>><<gacceptance>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if insecurityExists(\"pregnancy\") and $daily.templePray isnot 1>>",
+   "\t\t\t<<set _pregnancyLink to (playerAwareTheyArePregnant() ? \"Pray about your pregnant belly (1:00)\" : \"Pray about your pregnant looking belly (1:00)\")>>",
+   "\t\t\t<<templeicon \"pray\">><<link [[_pregnancyLink|_prayPassage]]>>",
+   "\t\t\t\t<<pass 60>><<set $phase to 10>><<set $daily.templePray to 1>>",
+   "\t\t\t\t<<if $purity gte ((1000 / 7) * 7)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"pregnancy\" 20>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 6)>>",
+   "\t\t\t\t\t<<stress 5>><<acceptance \"pregnancy\" 18>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 5)>>",
+   "\t\t\t\t\t<<stress 6>><<acceptance \"pregnancy\" 16>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 4)>>",
+   "\t\t\t\t\t<<stress 7>><<acceptance \"pregnancy\" 14>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 3)>>",
+   "\t\t\t\t\t<<stress 8>><<acceptance \"pregnancy\" 12>>",
+   "\t\t\t\t<<elseif $purity gte ((1000 / 7) * 2)>>",
+   "\t\t\t\t\t<<stress 10>><<acceptance \"pregnancy\" 10>>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<<stress 12>><<acceptance \"pregnancy\" 8>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</link>>",
+   "\t\t\t<<gstress>><<gacceptance>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<crimeicon \"mark\">><<link [[지켜본다 (1:00)|_prayPassage]]>>",
+   "\t\t\t<<pass 60>><<set $phase to 3>>"
+  ],
+  "new_en": [
+   "\t<</if>>",
+   "\t<<if insecurityExists(\"penis_big\") and $daily.templePray isnot 1>>",
+   "\t\t<<templeicon \"pray\">><<link [[Pray for a smaller penis (1:00)|_prayPassage]]>>",
+   "\t\t\t<<pass 60>><<set $phase to 6>><<set $daily.templePray to 1>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if !_sydneyPray>>",
+   "\t\t\t<<refuseicon>><<link [[Stop|Temple]]>><</link>>",
+   "\t\t\t<br>"
+  ],
+  "old_kr": [
+   "\t\t<<if !_sydneyPray>>",
+   "\t\t\t<<refuseicon>><<link [[멈춘다|Temple]]>><</link>>",
+   "\t\t\t<br>"
+  ],
+  "new_en": [
+   "\t<</if>>",
+   "\t<<if insecurityExists(\"breasts_small\") and $daily.templePray isnot 1>>",
+   "\t\t<<templeicon \"pray\">><<link [[Pray for bigger breasts (1:00)|_prayPassage]]>>",
+   "\t\t\t<<pass 60>><<set $phase to !$player.breastsize ? 7 : 8>><<set $daily.templePray to 1>>",
+   "\t\t\t<<if $purity gte ((1000 / 7) * 7)>>",
+   "\t\t\t\t<<stress 5>><<acceptance \"breasts_small\" 20>>",
+   "\t\t\t<<elseif $purity gte ((1000 / 7) * 6)>>",
+   "\t\t\t\t<<stress 5>><<acceptance \"breasts_small\" 18>>",
+   "\t\t\t<<elseif $purity gte ((1000 / 7) * 5)>>",
+   "\t\t\t\t<<stress 6>><<acceptance \"breasts_small\" 16>>",
+   "\t\t\t<<elseif $purity gte ((1000 / 7) * 4)>>",
+   "\t\t\t\t<<stress 7>><<acceptance \"breasts_small\" 14>>",
+   "\t\t\t<<elseif $purity gte ((1000 / 7) * 3)>>",
+   "\t\t\t\t<<stress 8>><<acceptance \"breasts_small\" 12>>",
+   "\t\t\t<<elseif $purity gte ((1000 / 7) * 2)>>",
+   "\t\t\t\t<<stress 10>><<acceptance \"breasts_small\" 10>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<stress 12>><<acceptance \"breasts_small\" 8>>",
+   "\t\t\t<</if>>",
+   "\t\t<</link>>",
+   "\t\t<<gstress>><<gacceptance>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<if insecurityExists(\"breasts_big\") and $daily.templePray isnot 1>>",
+   "\t\t<<templeicon \"pray\">><<link [[Pray for smaller breasts (1:00)|_prayPassage]]>>",
+   "\t\t\t<<pass 60>><<set $phase to 9>><<set $daily.templePray to 1>>",
+   "\t\t\t<<if $purity gte ((1000 / 7) * 7)>>",
+   "\t\t\t\t<<stress 5>><<acceptance \"breasts_big\" 20>>",
+   "\t\t\t<<elseif $purity gte ((1000 / 7) * 6)>>",
+   "\t\t\t\t<<stress 5>><<acceptance \"breasts_big\" 18>>",
+   "\t\t\t<<elseif $purity gte ((1000 / 7) * 5)>>",
+   "\t\t\t\t<<stress 6>><<acceptance \"breasts_big\" 16>>",
+   "\t\t\t<<elseif $purity gte ((1000 / 7) * 4)>>",
+   "\t\t\t\t<<stress 7>><<acceptance \"breasts_big\" 14>>",
+   "\t\t\t<<elseif $purity gte ((1000 / 7) * 3)>>",
+   "\t\t\t\t<<stress 8>><<acceptance \"breasts_big\" 12>>",
+   "\t\t\t<<elseif $purity gte ((1000 / 7) * 2)>>",
+   "\t\t\t\t<<stress 10>><<acceptance \"breasts_big\" 10>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<stress 12>><<acceptance \"breasts_big\" 8>>",
+   "\t\t\t<</if>>",
+   "\t\t<</link>>",
+   "\t\t<<gstress>><<gacceptance>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<if insecurityExists(\"pregnancy\") and $daily.templePray isnot 1>>",
+   "\t\t<<set _pregnancyLink to (playerAwareTheyArePregnant() ? \"Pray about your pregnant belly (1:00)\" : \"Pray about your pregnant looking belly (1:00)\")>>",
+   "\t\t<<templeicon \"pray\">><<link [[_pregnancyLink|_prayPassage]]>>",
+   "\t\t\t<<pass 60>><<set $phase to 10>><<set $daily.templePray to 1>>",
+   "\t\t\t<<if $purity gte ((1000 / 7) * 7)>>",
+   "\t\t\t\t<<stress 5>><<acceptance \"pregnancy\" 20>>",
+   "\t\t\t<<elseif $purity gte ((1000 / 7) * 6)>>",
+   "\t\t\t\t<<stress 5>><<acceptance \"pregnancy\" 18>>",
+   "\t\t\t<<elseif $purity gte ((1000 / 7) * 5)>>",
+   "\t\t\t\t<<stress 6>><<acceptance \"pregnancy\" 16>>",
+   "\t\t\t<<elseif $purity gte ((1000 / 7) * 4)>>",
+   "\t\t\t\t<<stress 7>><<acceptance \"pregnancy\" 14>>",
+   "\t\t\t<<elseif $purity gte ((1000 / 7) * 3)>>",
+   "\t\t\t\t<<stress 8>><<acceptance \"pregnancy\" 12>>",
+   "\t\t\t<<elseif $purity gte ((1000 / 7) * 2)>>",
+   "\t\t\t\t<<stress 10>><<acceptance \"pregnancy\" 10>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<stress 12>><<acceptance \"pregnancy\" 8>>",
+   "\t\t\t<</if>>",
+   "\t\t<</link>>",
+   "\t\t<<gstress>><<gacceptance>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<crimeicon \"mark\">><<link [[Watch (1:00)|_prayPassage]]>>",
+   "\t\t<<pass 60>><<set $phase to 3>>",
+   "\t\t<<if $purity gte ((1000 / 7) * 7)>>",
+   "\t\t\t<<stress 5>><<awareness 2>>",
+   "\t\t<<elseif $purity gte ((1000 / 7) * 6)>>",
+   "\t\t\t<<stress 5>><<awareness 1>>",
+   "\t\t<<elseif $purity gte ((1000 / 7) * 5)>>",
+   "\t\t\t<<stress 6>><<awareness 1>>",
+   "\t\t<<elseif $purity gte ((1000 / 7) * 4)>>",
+   "\t\t\t<<stress 7>><<awareness 1>>",
+   "\t\t<<elseif $purity gte ((1000 / 7) * 3)>>",
+   "\t\t\t<<stress 8>><<awareness 1>>",
+   "\t\t<<elseif $purity gte ((1000 / 7) * 2)>>",
+   "\t\t\t<<stress 10>><<awareness 1>>",
+   "\t\t<<else>>",
+   "\t\t\t<<stress 12>><<awareness 1>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $temple_sneak is 1>>",
+   "\t\t\t\t<<He>> frowns. \"Didn't know anyone was in here. It's a bad idea to pray here so late at night. You can continue in the morning. The incense is running low anyway.\"",
+   "\t\t\t<<else>>",
+   "\t\t\t\t\"It's a bad idea to pray in here so late at night. You can continue in the morning. The incense is running low anyway.\"",
+   "\t\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $temple_sneak is 1>>",
+   "\t\t\t\t<<He>>【은는】 얼굴을 찌푸린다. \"여기에 누가 계신 줄은 몰랐습니다. 이렇게 늦은 밤에 기도하는 것은 바람직하지 않습니다. 아침에 계속하시지요. 향도 거의 다 떨어졌습니다.\"",
+   "\t\t\t<<else>>",
+   "\t\t\t\t\"이렇게 늦은 밤에 여기서 기도하는 건 좋지 않습니다. 아침에 계속할 수 있습니다. 어차피 향도 거의 다 떨어졌고요.\"",
+   "\t\t\t<</if>>"
+  ],
+  "new_en": [
+   "\t\t<<if $temple_sneak is 1>>",
+   "\t\t\t<<He>> frowns. \"Didn't know anyone was in here. It's a bad idea to pray here so late at night. You can continue in the morning. The incense is running low anyway.\"",
+   "\t\t<<else>>",
+   "\t\t\t\"It's a bad idea to pray in here so late at night. You can continue in the morning. The incense is running low anyway.\"",
+   "\t\t<</if>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $rng gte 71>>",
+   "\t\tYou see a group of initiates chatting beneath a flight of stairs."
+  ],
+  "old_kr": [
+   "\t<<elseif $rng gte 71>>",
+   "\t\t계단 아래에서 한 무리의 수습생들이 잡담을 나누고 있는 것이 보인다."
+  ],
+  "new_en": [
+   "\t<</addinlineevent>>",
+   "\t\t",
+   "\t<<addinlineevent \"initiates_stairs\">>",
+   "\t\tYou see a group of initiates chatting beneath a flight of stairs."
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $rng gte 63 and playerBellyVisible() and $settings.pregnancySpeechEnabled>>",
+   "\t\t<<generatey1>><<generate2>>",
+   "\t\tYou spot a <<person1>><<person>> taking glances at your belly. <<He>> turns to a <<person2>><<person>>, seemingly <<person1>><<his>> <<person2>><<father>>, and asks, \"Is <<pshe>> pregnant?\"",
+   "\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t<<elseif $rng gte 63 and playerBellyVisible() and $settings.pregnancySpeechEnabled>>",
+   "\t\t<<generatey1>><<generate2>>",
+   "\t\t<<person1>><<person>>【이가】 당신의 배를 힐끗힐끗 보는 것을 포착한다. <<He>>【은는】 <<person1>><<his>> <<person2>><<father>>처럼 보이는 <<person2>><<person>>에게 고개를 돌려 묻는다. \"임신하신 걸까요?\"",
+   "\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t<</addinlineevent>>",
+   "\t\t",
+   "\t<<if playerBellyVisible() and $settings.pregnancySpeechEnabled>>",
+   "\t\t<<addinlineevent \"pregnant\">>",
+   "\t\t\t<<generatey1>><<generate2>>",
+   "\t\t\tYou spot a <<person1>><<person>> taking glances at your belly. <<He>> turns to a <<person2>><<person>>, seemingly <<person1>><<his>> <<person2>><<father>>, and asks, \"Is <<pshe>> pregnant?\"",
+   "\t\t\t<br><br>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $templePromised isnot \"\">>",
+   "\t\t\t<<He>> replies, saying, \"Looks like it. Remember, procreation within wedlock isn't a sin.\" <<He>> points to your ring. \"Perhaps this town has some hope after all.\"",
+   "\t\t\t<<ltrauma>><<trauma -6>><<lstress>><<stress -6>>",
+   "\t\t<<else>>",
+   "\t\t\t<<He>> replies, saying, \"Looks like it. No wedding ring,",
+   "\t\t\t<<if $worn.hands.name isnot \"naked\">>",
+   "\t\t\t\tit might just be under <<pher>> <<print $worn.hands.name>> though.\""
+  ],
+  "old_kr": [
+   "\t\t<<if $templePromised isnot \"\">>",
+   "\t\t\t<<He>>【은는】 대답한다, \"그런 것 같구나. 명심하렴, 결혼 후 아이를 갖는 것은 죄가 아니란다.\" <<He>>【은는】 당신의 반지를 가리킨다. \"어쩌면 이 마을에도 아직 희망이 있을지 모르겠군.\"",
+   "\t\t\t<<ltrauma>><<trauma -6>><<lstress>><<stress -6>>",
+   "\t\t<<else>>",
+   "\t\t\t<<He>>【은는】 대답한다. \"그런 것 같구나. 결혼 반지가 없지만,",
+   "\t\t\t<<if $worn.hands.name isnot \"naked\">>",
+   "\t\t\t\t단지 <<pher>> <<print $worn.hands.name>> 밑에 가려진 걸 수도 있지.\""
+  ],
+  "new_en": [
+   "\t\t\t<<if $templePromised isnot \"\">>",
+   "\t\t\t\t<<He>> replies, saying, \"Looks like it. Remember, procreation within wedlock isn't a sin.\" <<He>> points to your ring. \"Perhaps this town has some hope after all.\"",
+   "\t\t\t\t<<ltrauma>><<trauma -6>><<lstress>><<stress -6>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\tthough. We should say a prayer for <<phim>>.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\"어쨌든, <<phim>>【을를】 위해 기도해야겠구나.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> replies, saying, \"Looks like it. No wedding ring,",
+   "\t\t\t\t<<if $worn.hands.name isnot \"naked\">>",
+   "\t\t\t\t\tit might just be under <<pher>> <<print $worn.hands.name>> though.\"",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\tthough. We should say a prayer for <<phim>>.\"",
+   "\t\t\t\t<</if>>",
+   "\t\t\t\t<<gtrauma>><<trauma 6>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Next|Temple]]>><</link>>",
+   "\t\t<br>",
+   "\t<<elseif $rng gte 59>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[다음|Temple]]>><</link>>",
+   "\t\t<br>",
+   "\t<<elseif $rng gte 59>>"
+  ],
+  "new_en": [
+   "\t\t\t<<link [[Next|Temple]]>><</link>>",
+   "\t\t\t<br>",
+   "\t\t<</addinlineevent>>",
+   "\t<</if>>",
+   "\t\t",
+   "\t<<addinlineevent \"purity\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $rng gte 41>>",
+   "\t\t<<generate1>><<person1>><<generate2>> You overhear a <<priest>> talking to a <<person2>><<monk>>."
+  ],
+  "old_kr": [
+   "\t<<elseif $rng gte 41>>",
+   "\t\t<<generate1>><<person1>><<generate2>> 당신은 <<priest>>【이가】 <<person2>><<monk>>【와과】 나누는 대화를 우연히 엿듣는다."
+  ],
+  "new_en": [
+   "\t<</addinlineevent>>",
+   "\t\t",
+   "\t<<addinlineevent \"invasion\">>",
+   "\t\t<<generate1>><<person1>><<generate2>> You overhear a <<priest>> talking to a <<person2>><<monk>>."
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $rng gte 31>>",
+   "\t\t<<generate1>><<person1>><<generate2>>",
+   "\t\tYou overhear two initiates.",
+   "\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t<<elseif $rng gte 31>>",
+   "\t\t<<generate1>><<person1>><<generate2>>",
+   "\t\t당신은 두 수습생의 대화를 엿듣는다.",
+   "\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t<</addinlineevent>>",
+   "\t\t",
+   "\t<<if $temple_quarters lt 40>>",
+   "\t\t<<addinlineevent \"mess\">>",
+   "\t\t\t<<generate1>><<person1>><<generate2>>",
+   "\t\t\tYou overhear two initiates.",
+   "\t\t\t<br><br>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\"The living quarters are a mess,\" one says. \"It's like the <<person2>><<monks>> in there threw a party overnight. They got mud everywhere somehow too.\"",
+   "\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\"숙소가 엉망진창이야,\" 한 명이 말한다. \"마치 안에서 <<person2>><<monks>>【이가】 밤새 파티라도 한 것 같아. 어떻게 했는지는 몰라도 사방에 진흙을 잔뜩 묻혀놨더라고.\"",
+   "\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t\t\"The living quarters are a mess,\" one says. \"It's like the <<person2>><<monks>> in there threw a party overnight. They got mud everywhere somehow too.\"",
+   "\t\t\t<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\"They wouldn't be so messy if they had to clean it up,\" the other responds. \"You'd think they'd take their vows more seriously.\"",
+   "\t\t<br><br>",
+   "\t\t<<if $temple_rank is undefined or $temple_rank is \"prospective\">>",
+   "\t\t<<else>>",
+   "\t\t\t<<set $temple_quarters -= 10>>",
+   "\t\t<</if>>",
+   "\t\t<<endevent>>"
+  ],
+  "old_kr": [
+   "\t\t\"직접 청소해야 했다면 그렇게 더럽히진 않았을 텐데,\" 다른 한 명이 대답한다. \"서약을 좀 더 진지하게 받아들일 거라고 생각했는데 말이야.\"",
+   "\t\t<br><br>",
+   "\t\t<<if $temple_rank is undefined or $temple_rank is \"prospective\">>",
+   "\t\t<<else>>",
+   "\t\t\t<<set $temple_quarters -= 10>>",
+   "\t\t<</if>>",
+   "\t\t<<endevent>>"
+  ],
+  "new_en": [
+   "\t\t\t\"They wouldn't be so messy if they had to clean it up,\" the other responds. \"You'd think they'd take their vows more seriously.\"",
+   "\t\t\t<br><br>",
+   "\t\t\t<<if $temple_rank is undefined or $temple_rank is \"prospective\">>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set $temple_quarters -= 10>>",
+   "\t\t\t<</if>>",
+   "\t\t\t<<endevent>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Next|Temple]]>><</link>>",
+   "\t\t<br>",
+   "\t<<elseif $rng gte 21>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[다음|Temple]]>><</link>>",
+   "\t\t<br>",
+   "\t<<elseif $rng gte 21>>"
+  ],
+  "new_en": [
+   "\t\t\t<<link [[Next|Temple]]>><</link>>",
+   "\t\t\t<br>",
+   "\t\t<</addinlineevent>>",
+   "\t<</if>>",
+   "\t\t",
+   "\t<<addinlineevent \"hymn\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<else>>",
+   "\t\tAn overworked initiate rushes by, carrying a bundle of scrolls."
+  ],
+  "old_kr": [
+   "\t<<else>>",
+   "\t\t과로에 찌든 수습생 하나가 두루마리 다발을 든 채 서둘러 지나간다."
+  ],
+  "new_en": [
+   "\t<</addinlineevent>>",
+   "\t\t",
+   "\t<<addinlineevent>>",
+   "\t\tAn overworked initiate rushes by, carrying a bundle of scrolls."
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $money gte $rentmoney + ($babyRent or 0)>>",
+   "\t\t<<link [[Pay up|Temple Bailey Pay]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if $money gte $rentmoney + ($babyRent or 0)>>",
+   "\t\t<<link [[돈을 지불한다|Temple Bailey Pay]]>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if $money gte $rentMoney + ($babyRent or 0)>>",
+   "\t\t<<link [[Pay up|Temple Bailey Pay]]>><</link>>"
+  ],
+  "context": "\t<<babyRent>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<stress -6>><<awareness -2>><<arousal -1200>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<stress 5>><<acceptance \"penis_small\" 20>>"
+  ],
+  "context": "\t\t\t<<if $purity gte ((1000 / 7) * 7)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<stress -6>><<awareness -1>><<arousal -1000>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<stress 5>><<acceptance \"penis_small\" 18>>"
+  ],
+  "context": "\t\t\t<<elseif $purity gte ((1000 / 7) * 6)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<stress -5>><<awareness -1>><<arousal -800>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<stress 6>><<acceptance \"penis_small\" 16>>"
+  ],
+  "context": "\t\t\t<<elseif $purity gte ((1000 / 7) * 5)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<stress -4>><<awareness -1>><<arousal -600>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<stress 7>><<acceptance \"penis_small\" 14>>"
+  ],
+  "context": "\t\t\t<<elseif $purity gte ((1000 / 7) * 4)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<stress -3>><<awareness -1>><<arousal -500>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<stress 8>><<acceptance \"penis_small\" 12>>"
+  ],
+  "context": "\t\t\t<<elseif $purity gte ((1000 / 7) * 3)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<stress -2>><<awareness -1>><<arousal -400>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<stress 10>><<acceptance \"penis_small\" 10>>"
+  ],
+  "context": "\t\t\t<<elseif $purity gte ((1000 / 7) * 2)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<stress -1>><<awareness -1>><<arousal -300>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<stress 12>><<acceptance \"penis_small\" 8>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<lawareness>><<lstress>><<larousal>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<gstress>><<gacceptance>>"
+  ],
+  "context": "\t\t<</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<stress 5>><<awareness 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<stress 5>><<acceptance \"penis_big\" 20>>"
+  ],
+  "context": "\t\t\t<<if $purity gte ((1000 / 7) * 7)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<stress 5>><<awareness 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<stress 5>><<acceptance \"penis_big\" 18>>"
+  ],
+  "context": "\t\t\t<<elseif $purity gte ((1000 / 7) * 6)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<stress 6>><<awareness 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<stress 6>><<acceptance \"penis_big\" 16>>"
+  ],
+  "context": "\t\t\t<<elseif $purity gte ((1000 / 7) * 5)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<stress 7>><<awareness 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<stress 7>><<acceptance \"penis_big\" 14>>"
+  ],
+  "context": "\t\t\t<<elseif $purity gte ((1000 / 7) * 4)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<stress 8>><<awareness 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<stress 8>><<acceptance \"penis_big\" 12>>"
+  ],
+  "context": "\t\t\t<<elseif $purity gte ((1000 / 7) * 3)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<stress 10>><<awareness 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<stress 10>><<acceptance \"penis_big\" 10>>"
+  ],
+  "context": "\t\t\t<<elseif $purity gte ((1000 / 7) * 2)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<stress 12>><<awareness 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<stress 12>><<acceptance \"penis_big\" 8>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<gawareness>><<gstress>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<gstress>><<gacceptance>>"
+  ],
+  "context": "\t\t<</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<</link>>",
+   "\t<<gawareness>><<gstress>>",
+   "\t<br>",
+   "\t<<if !_sydneyPray>>",
+   "\t\t<<refuseicon>><<link [[Stop|Temple]]>><</link>>",
+   "\t\t<br>",
+   "\t<</if>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t/* ToDo: eventpoolify */",
+   "\t<<if $rng gte 91>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<cleareventpool>>",
+   "",
+   "\t<<addinlineevent \"divine_tf_event\">>"
+  ],
+  "context": "<<widget \"eventstemple\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $rng gte 81>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<</addinlineevent>>",
+   "\t",
+   "\t<<addinlineevent \"initiates_garden\">>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<gtrauma>><<trauma 6>>",
+   "\t\t<</if>>",
+   "\t\t<br><br>",
+   "\t\t<<endevent>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<br><br>",
+   "\t\t\t<<endevent>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $rng gte 51>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<</addinlineevent>>",
+   "\t\t",
+   "\t<<addinlineevent \"battle_monks\">>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $rng gte 36>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<</addinlineevent>>",
+   "\t\t",
+   "\t<<addinlineevent \"clink\">>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $rng gte 16>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<</addinlineevent>>",
+   "\t\t",
+   "\t<<addinlineevent \"sweet\">>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $rng gte 11>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<</addinlineevent>>",
+   "\t\t",
+   "\t<<addinlineevent \"solicitation\">>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<</addinlineevent>>",
+   "",
+   "\t<<addinlineevent \"mines\">>",
+   "\t\t<<generate1>><<generate2>>",
+   "\t\tYou overhear a <<person1>><<priest>> talking to a <<person2>><<monk>>.",
+   "\t\t<br><br>",
+   "\t\t<<if $mine?.freed isnot 1>>",
+   "\t\t\t<<if $town_projects.bridge gte 4>>",
+   "\t\t\t\t\"Have you noticed that the amount of initiates going missing has gone down recently?\" the <<monk>> asks.",
+   "\t\t\t\t<br>",
+   "\t\t\t\t\"Virgo has blessed us and protected them,\" the <<person1>><<priest>> claims.",
+   "\t\t\t\t<br>",
+   "\t\t\t\t\"I think it's more so a result of the recent construction of a bridge to the flats,\" the <<person2>><<monk>> says.",
+   "\t\t\t\t<br><br>",
+   "\t\t\t\tThe <<person1>><<priest>> gives <<person2>><<him>> a dirty look.",
+   "\t\t\t<<else>>",
+   "\t\t\t\t\"Have you noticed that the amount of initiates going missing around Barb Street has gone up recently?\" the <<monk>> asks.",
+   "\t\t\t\t<br>",
+   "\t\t\t\t\"Aye, I'm planning on recommending that initiates steer clear of that area,\" the <<person1>><<priest>> answers.",
+   "\t\t\t\t<br>",
+   "\t\t\t\t\"I wonder what happened to them,\" the <<person2>><<monk>> muses.",
+   "\t\t\t<</if>>",
+   "\t\t<<else>>",
+   "\t\t\t\"Have you noticed that the cloister has been more active as of late?\" the <<monk>> asks.",
+   "\t\t\t<br>",
+   "\t\t\t\"Well, most of the missing initiates have turned up,\" the <<person1>><<priest>> says.<<gggrace>><<grace 5>>",
+   "\t\t\t<br>",
+   "\t\t\t\"Though some are still missing I'm afraid.\" <<He>> looks sad. \"I pray they turn up one day.\" <<gstress>><<stress 5>>",
+   "\t\t<</if>>",
+   "\t\t<br><br>",
+   "\t\t<<endevent>>",
+   "\t\t<<link [[Next|Temple]]>><</link>>",
+   "",
+   "\t<</addinlineevent>>",
+   "\t",
+   "\t<<runeventpool>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $baileyRefusedToPayTotal += $rentmoney + ($babyRent || 0)>>",
+   "\t\t<<set $baileyRefusedToPayTotalStat += $rentmoney + ($babyRent || 0)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $baileyRefusedToPayTotal += $rentMoney + ($babyRent || 0)>>",
+   "\t\t<<set $baileyRefusedToPayTotalStat += $rentMoney + ($babyRent || 0)>>"
+  ],
+  "context": "\t\t<<set $baileyRefusedToPay += 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $renttime to 7>><<set $rentday to Time.weekDay>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $rentTime to 7>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "<<widget \"temple_scriptorium_options\">>",
+   "\t<<if $daily.temple_calligraphy is undefined>>",
+   "\t\t<<if $temple_calligraphy is undefined>>",
+   "\t\t\t<<templeicon \"calligraphy\">><<link [[Sit at a desk|Temple Calligraphy Intro]]>><<set $temple_calligraphy to 1>><</link>>",
+   "\t\t\t<br>",
+   "\t\t<<elseif $temple_calligraphy gte 11>>",
+   "\t\t\t<<templeicon \"calligraphy\">><<link [[Practise calligraphy (1:00)|Temple Scribe]]>><<pass 60>><<handskill 5>><<set $daily.temple_calligraphy to 1>><</link>><<ghandskill>>",
+   "\t\t\t<br>",
+   "\t\t<<else>>",
+   "\t\t\t<<templeicon \"calligraphy\">><<link [[Practise calligraphy (1:00)|Temple Calligraphy]]>><<pass 60>><<handskill 5>><<set $daily.temple_calligraphy to 1>><</link>><<ghandskill>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\t<<ind>><span class=\"blue\">You can only practise calligraphy once a day.</span>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<if $pumpkin_carving_knowledge and !$pumpkin_carving_knowledge.includes(\"scriptorium\")>>",
+   "\t\t<<icon \"pumpkin-carving.png\">><<link [[Search for esoteric pumpkin carving knowledge (2:00)|Temple Scriptorium Pumpkin]]>><<pass 120>><<set $pumpkin_carving_knowledge.pushUnique(\"scriptorium\")>><</link>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<if $kylar_altar_research and $kylar_altar_research.includes(\"library\") and !$kylar_altar_research.includes(\"temple\")>>",
+   "\t\t<<templeicon \"candle\">><<link [[Search for the pages missing from the school library|Temple Scriptorium Altar]]>><<set $kylar_altar_research.pushUnique(\"temple\")>><</link>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<br>",
+   "<</widget>>",
+   "",
+   "<<widget \"temple_scriptorium_leave_options\">>",
+   "\t<<if $temple_rank is \"monk\" or $temple_rank is \"priest\">>",
+   "\t\t<<templeicon \"cloister\">><<link [[Exit to the cloister|Temple Cloister]]>><</link>>",
+   "\t\t<br>",
+   "\t\t<<templeicon>><<link [[Exit to the public hall|Temple]]>><</link>>",
+   "\t\t<br>",
+   "\t<<else>>",
+   "\t\t<<templeicon>><<link [[Leave|Temple]]>><</link>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "<</widget>>"
+  ],
+  "context": "<</widget>>"
+ }
+]

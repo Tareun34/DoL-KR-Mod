@@ -1,0 +1,91 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if hasSexStat(\"deviancy\", 3) and ($settings.bestialityEnabled or $monster is 1)>>",
+   "\t\t\t<<link [[Reward|Wolf Cave Spar Sex]]>><<set $sexstart to 1>><<set $phase to 2>><<sub 1>><</link>><<deviant3>>"
+  ],
+  "old_kr": [
+   "\t\t<<if hasSexStat(\"deviancy\", 3) and ($settings.bestialityEnabled or $monster is 1)>>",
+   "\t\t\t<<link [[보상을 받는다|Wolf Cave Spar Sex]]>><<set $sexstart to 1>><<set $phase to 2>><<sub 1>><</link>><<deviant3>>"
+  ],
+  "new_en": [
+   "\t\t<<if hasSexStat(\"deviancy\", 3) and beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\t\t\t<<link [[Reward|Wolf Cave Spar Sex]]>><<set $sexstart to 1>><<set $phase to 2>><<sub 1>><</link>><<deviant3>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $settings.monsterChance gt 0 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)>>",
+   "\t\t\tYou hear <<wolf_cave_plural>> calling out for you to deal with <<bhim>><<if $settings.monsterChance lt 100>>, alongside whines and growls of encouragement<</if>>."
+  ],
+  "old_kr": [
+   "\t\t<<if $settings.monsterChance gt 0 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)>>",
+   "\t\t\t당신은 <<wolf_cave_plural>>이 당신에게 <<bhim>>【을를】 처리하라고 외치는 소리를 듣는다<<if $settings.monsterChance lt 100>>, 격려하는 낑낑거림과 으르렁거림과 함께<</if>>."
+  ],
+  "new_en": [
+   "\t\t<<if monsterCanAppearForType(\"wolf\")>>",
+   "\t\t\tYou hear <<wolf_cave_plural>> calling out for you to deal with <<bhim>><<if monsterChanceForType(\"wolf\") lt 100>>, alongside whines and growls of encouragement<</if>>."
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Try to calm the <<beasttype>>|Wolf Cave Bear Calm]]>><</link>><<tendingdifficulty 600 1200>><br>",
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t<<link [[Fight|Wolf Cave Bear Fight]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>><br>"
+  ],
+  "old_kr": [
+   "<<link [[<<beasttype>>【을를】 진정시키려 시도한다|Wolf Cave Bear Calm]]>><</link>><<tendingdifficulty 600 1200>><br>",
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t<<link [[싸운다|Wolf Cave Bear Fight]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>><br>"
+  ],
+  "new_en": [
+   "<<link [[Try to calm the <<beasttype>>|Wolf Cave Bear Calm]]>><</link>><<tendingdifficulty 600 1200>><br>",
+   "<<if beastSexEnabledForType(\"bear\", $monster is 1)>>",
+   "\t<<link [[Fight|Wolf Cave Bear Fight]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>><br>"
+  ],
+  "context": "<<set $bus to \"wolfcaveclearing\">> /* when event is resolved, player will be deposited in the clearing regardless of where they started */"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[Fight|Wolf Cave Bear Fight]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>><br>"
+  ],
+  "old_kr": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[싸운다|Wolf Cave Bear Fight]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>><br>"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"bear\", $monster is 1)>>",
+   "\t\t<<link [[Fight|Wolf Cave Bear Fight]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $settings.bestialityEnabled or $monster is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"wolf\", $monster is 1)>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $settings.bestialityEnabled or $monster is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"wolf\", $monster is 1)>>"
+  ],
+  "context": "\t\t<br><br>"
+ }
+]

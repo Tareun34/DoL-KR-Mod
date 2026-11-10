@@ -1,0 +1,549 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tGo deeper into the forest",
+   "\t<br>"
+  ],
+  "old_kr": [
+   "\t숲속으로 더 깊이 들어간다",
+   "\t<br>"
+  ],
+  "new_en": [],
+  "context": "<<widget \"forestdeeper\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<heelsicon \"hobble\">><<link [[Hobble in heels (0:30)|Forest]]>><<set $forestmod to 3>><<set $forest += 5>><<pass 30>><<set $forestmove to \"hobble\">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<gharass>>",
+   "\t\t<<if $town_projects.road gte 4 and $forest lte 24>>",
+   "\t\t\t<br>",
+   "\t\t\t<<forestroadicon \"deep\">><<link [[Follow road (0:10)|Forest]]>><<set $forestmod to 1>><<set $forest += 5>><<set $forestmove to \"road\">><<pass 10>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><<set $eventskip to 1>><</link>><<noharass>>",
+   "\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t\t<<heelsicon \"hobble\">><<link [[하이힐을 신고 절뚝인다 (0:30)|Forest]]>><<set $forestmod to 3>><<set $forest += 5>><<pass 30>><<set $forestmove to \"hobble\">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<gharass>>",
+   "\t\t<<if $town_projects.road gte 4 and $forest lte 24>>",
+   "\t\t\t<br>",
+   "\t\t\t<<forestroadicon \"deep\">><<link [[길을 따라간다 (0:10)|Forest]]>><<set $forestmod to 1>><<set $forest += 5>><<set $forestmove to \"road\">><<pass 10>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><<set $eventskip to 1>><</link>><<noharass>>",
+   "\t\t<</if>>"
+  ],
+  "new_en": [
+   "\t\t<<heelsicon \"hobble\">><<link [[Hobble deeper into the forest (0:30)|Forest]]>><<set $forestmod to 3>><<set $forest += 5>><<pass 30>><<set $forestmove to \"hobble\">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<gharass>>"
+  ],
+  "context": "\t<<if $worn.feet.type.includes(\"heels\") and !$possessed>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if !$worn.feet.type.includes(\"shackle\")>>",
+   "\t\t\t<<runicon>><<link [[Quickly (0:05)|Forest]]>><<set $forestmod to 3>><<set $forest += 5>><<pass 5>><<set $forestmove to \"quickly\">><<if $foresthunt gte 1>><<set $foresthunt += 0.5>><</if>><</link>><<gharass>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t\t<<if !$worn.feet.type.includes(\"shackle\")>>",
+   "\t\t\t<<runicon>><<link [[빠르게 간다 (0:05)|Forest]]>><<set $forestmod to 3>><<set $forest += 5>><<pass 5>><<set $forestmove to \"quickly\">><<if $foresthunt gte 1>><<set $foresthunt += 0.5>><</if>><</link>><<gharass>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>"
+  ],
+  "new_en": [
+   "\t\t<<travelSpeedInfo>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<walkicon>><<link [[Normally (0:10)|Forest]]>><<set $forestmod to 1.5>><<set $forest += 5>><<set $forestmove to \"normally\">><<pass 10>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><</link>>",
+   "\t\t<</if>>",
+   "\t\t<br>",
+   "\t\t<<sneakicon>><<link [[Carefully (0:30)|Forest]]>><<set $forestmod to 1>><<set $forest += 5>><<pass 30>><<set $forestmove to \"carefully\">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<lharass>>",
+   "\t\t<<if $town_projects.road gte 4 and $forest lte 24>>",
+   "\t\t\t<br>",
+   "\t\t\t<<forestroadicon \"deep\">><<link [[Follow road (0:05)|Forest]]>><<set $forestmod to 1>><<set $forest += 5>><<set $forestmove to \"road\">><<pass 5>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><<set $eventskip to 1>><</link>><<noharass>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<walkicon>><<link [[평소처럼 걷는다 (0:10)|Forest]]>><<set $forestmod to 1.5>><<set $forest += 5>><<set $forestmove to \"normally\">><<pass 10>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><</link>>",
+   "\t\t<</if>>",
+   "\t\t<br>",
+   "\t\t<<sneakicon>><<link [[조심스럽게 간다 (0:30)|Forest]]>><<set $forestmod to 1>><<set $forest += 5>><<pass 30>><<set $forestmove to \"carefully\">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<lharass>>",
+   "\t\t<<if $town_projects.road gte 4 and $forest lte 24>>",
+   "\t\t\t<br>",
+   "\t\t\t<<forestroadicon \"deep\">><<link [[길을 따라간다 (0:05)|Forest]]>><<set $forestmod to 1>><<set $forest += 5>><<set $forestmove to \"road\">><<pass 5>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><<set $eventskip to 1>><</link>><<noharass>>"
+  ],
+  "new_en": [
+   "\t\t\t<<forestTravelIcon \"forest\">><<link `'Go deeper into the forest (<span class=\"travelTime\">' + _travelTimeString + '</span>)'` \"Forest\">><<forestTravel \"deeper\">><</link>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tSearch this area <<gtreasure>>",
+   "\t<br>",
+   "\t<<if !$worn.feet.type.includes(\"shackle\")>>",
+   "\t\t<<runicon>><<link [[Quickly (0:05)|Forest]]>><<set $forest_search to true>><<set $forestmod to 3>><<pass 5>><<set $forestmove to \"quick_search\">><<if $foresthunt gte 1>><<set $foresthunt += 0.5>><</if>><</link>><<gharass>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<walkicon>><<link [[Normally (0:10)|Forest]]>><<set $forest_search to true>><<set $forestmod to 1.5>><<set $forestmove to \"normal_search\">><<pass 10>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><</link>>",
+   "\t<br>",
+   "\t<<sneakicon>><<link [[Carefully (0:30)|Forest]]>><<set $forest_search to true>><<set $forestmod to 1>><<pass 30>><<set $forestmove to \"careful_search\">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<lharass>>"
+  ],
+  "old_kr": [
+   "\t이 구역을 수색한다 <<gtreasure>>",
+   "\t<br>",
+   "\t<<if !$worn.feet.type.includes(\"shackle\")>>",
+   "\t\t<<runicon>><<link [[빠르게 (0:05)|Forest]]>><<set $forest_search to true>><<set $forestmod to 3>><<pass 5>><<set $forestmove to \"quick_search\">><<if $foresthunt gte 1>><<set $foresthunt += 0.5>><</if>><</link>><<gharass>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<walkicon>><<link [[보통 속도로 (0:10)|Forest]]>><<set $forest_search to true>><<set $forestmod to 1.5>><<set $forestmove to \"normal_search\">><<pass 10>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><</link>>",
+   "\t<br>",
+   "\t<<sneakicon>><<link [[조심스럽게 (0:30)|Forest]]>><<set $forest_search to true>><<set $forestmod to 1>><<pass 30>><<set $forestmove to \"careful_search\">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<lharass>>"
+  ],
+  "new_en": [
+   "\t<<travelSpeedInfo>>",
+   "\t<<foresticon \"search\">><<link `'Search this area (<span class=\"travelTime\">' + _travelTimeString + '</span>)'` \"Forest\">><<forestTravel \"search\">><</link>><<gtreasure>>"
+  ],
+  "context": "<<widget \"forestsearch\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tGo towards town",
+   "\t<br>"
+  ],
+  "old_kr": [
+   "\t마을 방향으로 간다",
+   "\t<br>"
+  ],
+  "new_en": [],
+  "context": "<<widget \"forestlessdeep\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<heelsicon \"hobble\">><<link [[Hobble in heels (0:30)|Forest]]>><<set $forestmod to 3>><<set $forest -= 5>><<pass 30>><<set $forestmove to \"hobble\">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<gharass>>",
+   "\t\t<<if $town_projects.road gte 4 and $forest lte 25 and $forest gte 1>>",
+   "\t\t\t<br>",
+   "\t\t\t<<forestroadicon \"town\">><<link [[Follow road (0:10)|Forest]]>><<set $forestmod to 1>><<set $forest -= 5>><<set $forestmove to \"road\">><<pass 10>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><<set $eventskip to 1>><</link>><<noharass>>",
+   "\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t\t<<heelsicon \"hobble\">><<link [[하이힐을 신고 절뚝인다 (0:30)|Forest]]>><<set $forestmod to 3>><<set $forest -= 5>><<pass 30>><<set $forestmove to \"hobble\">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<gharass>>",
+   "\t\t<<if $town_projects.road gte 4 and $forest lte 25 and $forest gte 1>>",
+   "\t\t\t<br>",
+   "\t\t\t<<forestroadicon \"town\">><<link [[길을 따라간다 (0:10)|Forest]]>><<set $forestmod to 1>><<set $forest -= 5>><<set $forestmove to \"road\">><<pass 10>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><<set $eventskip to 1>><</link>><<noharass>>",
+   "\t\t<</if>>"
+  ],
+  "new_en": [
+   "\t\t<<heelsicon \"hobble\">><<link [[Hobble towards town (0:30)|Forest]]>><<set $forestmod to 3>><<set $forest -= 5>><<pass 30>><<set $forestmove to \"hobble\">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<gharass>>"
+  ],
+  "context": "\t<<if $worn.feet.type.includes(\"heels\") and !$possessed>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if !$worn.feet.type.includes(\"shackle\")>>",
+   "\t\t\t<<runicon>><<link [[Quickly (0:05)|Forest]]>><<set $forestmod to 3>><<set $forest -= 5>><<pass 5>><<set $forestmove to \"quickly\">><<if $foresthunt gte 1>><<set $foresthunt += 0.5>><</if>><</link>><<gharass>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t\t<<if !$worn.feet.type.includes(\"shackle\")>>",
+   "\t\t\t<<runicon>><<link [[빠르게 간다 (0:05)|Forest]]>><<set $forestmod to 3>><<set $forest -= 5>><<pass 5>><<set $forestmove to \"quickly\">><<if $foresthunt gte 1>><<set $foresthunt += 0.5>><</if>><</link>><<gharass>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>"
+  ],
+  "new_en": [
+   "\t\t<<travelSpeedInfo>>",
+   "\t\t<<forestTravelIcon \"town\">><<link `'Go towards town (<span class=\"travelTime\">' + _travelTimeString + '</span>)'` \"Forest\">><<forestTravel \"town\">><</link>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<span class=\"nextLink\"><<walkicon>><<link [[The lake.|Forest Blood Less Deep]]>><<set $forestmod to 1.5>><<set $forest -= 5>><<set $forestmove to \"normally\">><</link>></span>",
+   "\t\t<<else>>",
+   "\t\t\t<<walkicon>><<link [[Normally (0:10)|Forest]]>><<set $forestmod to 1.5>><<set $forest -= 5>><<set $forestmove to \"normally\">><<pass 10>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><</link>>",
+   "\t\t<</if>>",
+   "\t\t<br>",
+   "\t\t<<sneakicon>><<link [[Carefully (0:30)|Forest]]>><<set $forestmod to 1>><<set $forest -= 5>><<pass 30>><<set $forestmove to \"carefully\">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<lharass>>",
+   "\t\t<<if $town_projects.road gte 4 and $forest lte 25 and $forest gte 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t<span class=\"nextLink\"><<walkicon>><<link [[호수.|Forest Blood Less Deep]]>><<set $forestmod to 1.5>><<set $forest -= 5>><<set $forestmove to \"normally\">><</link>></span>",
+   "\t\t<<else>>",
+   "\t\t\t<<walkicon>><<link [[평소처럼 걷는다 (0:10)|Forest]]>><<set $forestmod to 1.5>><<set $forest -= 5>><<set $forestmove to \"normally\">><<pass 10>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><</link>>",
+   "\t\t<</if>>",
+   "\t\t<br>",
+   "\t\t<<sneakicon>><<link [[조심스럽게 간다 (0:30)|Forest]]>><<set $forestmod to 1>><<set $forest -= 5>><<pass 30>><<set $forestmove to \"carefully\">><<if $foresthunt gte 1>><<set $foresthunt += 2>><</if>><</link>><<lharass>>",
+   "\t\t<<if $town_projects.road gte 4 and $forest lte 25 and $forest gte 1>>"
+  ],
+  "new_en": [],
+  "context": "\t\t<<if $nextPassageCheck is \"Forest Blood Less Deep\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<forestroadicon \"town\">><<link [[Follow road (0:05)|Forest]]>><<set $forestmod to 1>><<set $forest -= 5>><<set $forestmove to \"road\">><<pass 5>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><<set $eventskip to 1>><</link>><<noharass>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<forestroadicon \"town\">><<link [[길을 따라간다 (0:05)|Forest]]>><<set $forestmod to 1>><<set $forest -= 5>><<set $forestmove to \"road\">><<pass 5>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><<set $eventskip to 1>><</link>><<noharass>>"
+  ],
+  "new_en": [
+   "\t\t\t<span class=\"nextLink\"><<walkicon>><<link [[The lake.|Forest Blood Less Deep]]>><<set $forestmod to 1.5>><<set $forest -= 5>><<set $forestmove to \"normally\">><</link>></span>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\t<<link [[Next|Forest Wolf2]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\t<<link [[다음|Forest Wolf2]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\t\t\t\t<<link [[Next|Forest Wolf2]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": "\t\t\t<!-- Modified for monster people -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $settings.bestialityEnabled and $settings.beesEnabled>>",
+   "\t\t\t\tYou hear a gentle buzz up ahead. A large beehive hangs from a tree. Workers fly in and out in a quest for pollen. The honey would be valuable."
+  ],
+  "old_kr": [
+   "\t\t\t<<if $settings.bestialityEnabled and $settings.beesEnabled>>",
+   "\t\t\t\t앞에서 부드러운 윙윙거리는 소리가 들린다. 커다란 벌집이 나무에 매달려 있다. 일벌들이 꽃가루를 찾아 안팎으로 날아다닌다. 꿀은 꽤 가치가 있을 것이다."
+  ],
+  "new_en": [
+   "\t\t\t<<if $settings.beesEnabled>>",
+   "\t\t\t\tYou hear a gentle buzz up ahead. A large beehive hangs from a tree. Workers fly in and out in a quest for pollen. The honey would be valuable."
+  ],
+  "context": "\t\t<<addinlineevent \"eventforestitem_bees\" 4>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if numberOfEarSlime() and ($settings.bestialityEnabled or $monster is 1) and ($earSlime.growth gte 80 - ($earSlime.deviancy * 10))>>",
+   "\t\t<span class=\"lewd\">You feel the slime in your head command you to drop to all fours.</span> It promises rewards if you comply, and threatens consequences if you do not."
+  ],
+  "old_kr": [
+   "\t<<if numberOfEarSlime() and ($settings.bestialityEnabled or $monster is 1) and ($earSlime.growth gte 80 - ($earSlime.deviancy * 10))>>",
+   "\t\t<span class=\"lewd\">머릿속 슬라임이 네 발로 엎드리라고 명령하는 것이 느껴진다.</span> 순순히 따르면 보상을 주겠다고 약속하고, 따르지 않으면 대가를 치르게 하겠다고 협박한다."
+  ],
+  "new_en": [
+   "\t<<if numberOfEarSlime() and beastSexEnabledForType(\"wolf\", $monster is 1) and ($earSlime.growth gte 80 - ($earSlime.deviancy * 10))>>",
+   "\t\t<span class=\"lewd\">You feel the slime in your head command you to drop to all fours.</span> It promises rewards if you comply, and threatens consequences if you do not."
+  ],
+  "context": "\t<!-- Modified for monster people -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if hasSexStat(\"deviancy\", 2) and ($settings.bestialityEnabled or $monster is 1)>>",
+   "\t\t\t<<link [[Adopt mating posture|Forest Wolf Mate]]>><</link>><<deviant2>>"
+  ],
+  "old_kr": [
+   "\t\t<<if hasSexStat(\"deviancy\", 2) and ($settings.bestialityEnabled or $monster is 1)>>",
+   "\t\t\t<<link [[교미 자세를 취한다|Forest Wolf Mate]]>><</link>><<deviant2>>"
+  ],
+  "new_en": [
+   "\t\t<<if hasSexStat(\"deviancy\", 2) and beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\t\t\t<<link [[Adopt mating posture|Forest Wolf Mate]]>><</link>><<deviant2>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if hasSexStat(\"deviancy\", 3) and ($settings.bestialityEnabled or $monster is 1)>>",
+   "\t\t<<link [[Adopt mating posture|Forest Wolf Mate2]]>><</link>><<deviant3>>"
+  ],
+  "old_kr": [
+   "\t<<if hasSexStat(\"deviancy\", 3) and ($settings.bestialityEnabled or $monster is 1)>>",
+   "\t\t<<link [[교미 자세를 취한다|Forest Wolf Mate2]]>><</link>><<deviant3>>"
+  ],
+  "new_en": [
+   "\t<<if hasSexStat(\"deviancy\", 3) and beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\t\t<<link [[Adopt mating posture|Forest Wolf Mate2]]>><</link>><<deviant3>>"
+  ],
+  "context": "\t<<beastNEWinit 2 wolf>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled or $monster is 1>>",
+   "\t\t<<link [[Brace|Forest Boar Brace]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if $settings.bestialityEnabled or $monster is 1>>",
+   "\t\t<<link [[버틴다|Forest Boar Brace]]>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"boar\", $monster is 1)>>",
+   "\t\t<<link [[Brace|Forest Boar Brace]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if random(1, 5) is 5 and ($settings.bestialityEnabled or $monster is 1)>>",
+   "\t\t<<link [[Ignore them|Forest Bear Molestation]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if random(1, 5) is 5 and ($settings.bestialityEnabled or $monster is 1)>>",
+   "\t\t<<link [[무시한다|Forest Bear Molestation]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if random(1, 5) is 5 and beastSexEnabledForType(\"bear\", $monster is 1)>>",
+   "\t\t<<link [[Ignore them|Forest Bear Molestation]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[Next|Forest Wolf]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[다음|Forest Wolf]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\t\t<<link [[Next|Forest Wolf]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\t\tThe Black Wolf bounds towards you!"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\t\t검은 늑대가 당신을 향해 달려온다!"
+  ],
+  "new_en": [
+   "\t\t\t\t<<if beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\t\t\t\t\tThe Black Wolf bounds towards you!"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<elseif $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\tYou hear rustling nearby. A pair of glowing yellow eyes watch you from the canopy."
+  ],
+  "old_kr": [
+   "\t\t<<elseif $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t근처에서 바스락거리는 소리가 들린다. 한 쌍의 빛나는 노란 눈이 숲 한가운데서 당신을 지켜본다."
+  ],
+  "new_en": [
+   "\t\t<<elseif beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\t\t\tYou hear rustling nearby. A pair of glowing yellow eyes watch you from the canopy."
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<elseif _snakeKnown and hasSexStat(\"deviancy\", 4) and $settings.voreEnabled>>",
+   "\t\t\t<<link [[Present yourself as food|Forest Nest Snake Vore 1]]>><</link>><<deviant4>>"
+  ],
+  "old_kr": [
+   "\t\t<<elseif _snakeKnown and hasSexStat(\"deviancy\", 4) and $settings.voreEnabled>>",
+   "\t\t\t<<link [[스스로를 먹잇감으로 바친다|Forest Nest Snake Vore 1]]>><</link>><<deviant4>>"
+  ],
+  "new_en": [
+   "\t\t<<elseif _snakeKnown and hasSexStat(\"deviancy\", 4) and $settings.voreEnabled and animalSexEnabledForType(\"snake\")>>",
+   "\t\t\t<<link [[Present yourself as food|Forest Nest Snake Vore 1]]>><</link>><<deviant4>>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[Next|Forest Fox Revenge]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[다음|Forest Fox Revenge]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"fox\", $monster is 1)>>",
+   "\t\t<<link [[Next|Forest Fox Revenge]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $settings.voreEnabled and $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $settings.voreEnabled and animalSexEnabledForType(\"snake\")>>"
+  ],
+  "context": "\t\t<</addinlineevent>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $settings.bestialityEnabled and $settings.waspsEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $settings.waspsEnabled>>"
+  ],
+  "context": "\t\t<<addevent \"forestrock\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<addevent \"foresttrail\" 0.33>>"
+  ],
+  "context": "\t\t<<addevent \"forestriver\" 0.33>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $forest_nest and $forest_nest.type>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $forest_nest?.type>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "<<widget \"forestTravel\">>",
+   "\t<<travelSpeedInfo>>",
+   "\t<<switch _speedNow>>",
+   "\t\t<<case \"quickly\">><<set $forestmod to 3>><<set _huntGain to 0.5>><<set _move to \"quickly\">><<set _searchMove to \"quick_search\">>",
+   "\t\t<<case \"normally\">><<set $forestmod to 1.5>><<set _huntGain to 1>><<set _move to \"normally\">><<set _searchMove to \"normal_search\">>",
+   "\t\t<<case \"carefully\">><<set $forestmod to 1>><<set _huntGain to 2>><<set _move to \"carefully\">><<set _searchMove to \"careful_search\">>",
+   "\t<</switch>>",
+   "\t<<switch _args[0]>>",
+   "\t\t<<case \"search\">><<set $forest_search to true>><<set _move to _searchMove>>",
+   "\t\t<<case \"deeper\">><<set $forest += 5>>",
+   "\t\t<<case \"town\">><<set $forest -= 5>>",
+   "\t<</switch>>",
+   "\t<<set $forestmove to _move>>",
+   "\t<<pass _travelTime>>",
+   "\t<<if $foresthunt gte 1>><<set $foresthunt += _huntGain>><</if>>",
+   "<</widget>>",
+   "",
+   "<<widget \"forestShortcuts\">>",
+   "\t<<set _heeled to $worn.feet.type.includes(\"heels\") and !$possessed>>",
+   "\t<<set _roadTime to _heeled ? 10 : 5>>",
+   "\t<<set _roadDeep to $town_projects.road gte 4 and $forest lte 24>>",
+   "\t<<set _roadTown to $town_projects.road gte 4 and $forest lte 25 and $forest gte 1>>",
+   "\t<<set _tunnel to _args[0] is \"in\" and $historytrait gte 2 and $thicket_tunnel_intro is 1>>",
+   "\t<<set _pathIn to _args[0] is \"in\" and $historytrait gte 3>>",
+   "\t<<set _pathOut to _args[0] is \"out\" and $historytrait gte 3>>",
+   "",
+   "\t<<if _roadDeep or _roadTown or _tunnel or _pathIn or _pathOut>>",
+   "\t\tShortcuts",
+   "\t\t<br>",
+   "\t\t<<if _roadDeep>>",
+   "\t\t\t<<forestroadicon \"deep\">><<link [[Follow road deeper (<<print getTimeString(_roadTime)>>)|Forest]]>><<set $forestmod to 1>><<set $forest += 5>><<set $forestmove to \"road\">><<pass _roadTime>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><<set $eventskip to 1>><</link>><<noharass>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if _roadTown>>",
+   "\t\t\t\t<<forestroadicon \"town\">><<link [[Follow road towards town (<<print getTimeString(_roadTime)>>)|Forest]]>><<set $forestmod to 1>><<set $forest -= 5>><<set $forestmove to \"road\">><<pass _roadTime>><<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>><<set $eventskip to 1>><</link>><<noharass>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if _tunnel>>",
+   "\t\t\t<<foresticon \"bush\">><<link [[Take the secret tunnel to the Residential alleyways (0:05)|Residential Thicket]]>><<pass 5>><<set $foresthunt to 0>><</link>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if _pathIn>>",
+   "\t\t\t<<forestroadicon \"secret\">>",
+   "\t\t\t<<link [[Take secret path deeper into the woods (0:10)|Forest]]>>",
+   "\t\t\t\t<<set $forestmod to 1.5>><<set $forest += 50>><<set $forestmove to \"secretin\">><<pass 10>>",
+   "\t\t\t\t<<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>>",
+   "\t\t\t\t<<if $forestHunter is \"Gwylan\" and $foresthunt gte 1>><<set $foresthunt += 5>><</if>>",
+   "\t\t\t<</link>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if _pathOut>>",
+   "\t\t\t<<forestroadicon \"secret\">>",
+   "\t\t\t<<link [[Take secret path out of the woods (0:10)|Forest]]>>",
+   "\t\t\t\t<<set $forestmod to 1.5>><<set $forest -= 50>><<set $forestmove to \"secretout\">><<pass 10>>",
+   "\t\t\t\t<<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>>",
+   "\t\t\t\t<<if $forestHunter is \"Gwylan\" and $foresthunt gte 1>><<set $foresthunt += 5>><</if>>",
+   "\t\t\t<</link>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "<</widget>>",
+   "",
+   "",
+   "/* TODO: Forest Travel Icons */",
+   "<<widget \"forestTravelIcon\">>",
+   "\t<<if _args[0] is \"town\">>",
+   "\t\t<<if $forest lte 50>>",
+   "\t\t\t<<icon \"forest-outskirts.png\">>",
+   "\t\t<<else>>",
+   "\t\t\t<<icon \"town-canopy.png\">>",
+   "\t\t<</if>>",
+   "\t<<elseif $forest lte 50>>",
+   "\t\t<<icon \"forest-nature.png\">>",
+   "\t<<else>>",
+   "\t\t<<icon \"town-asylum.png\">>",
+   "\t<</if>>",
+   "<</widget>>",
+   "",
+   "<<widget \"foresttrail\">>",
+   "\t<<generate1>><<person1>>",
+   "\tYou cautiously step through the undergrowth when you hear heavy treading ahead.",
+   "\t<br><br>",
+   "",
+   "\t<<if isLoveInterest(\"Eden\") or isLoveInterest(\"Black Wolf\")>>",
+   "\t\tYou glance up expecting <<= isLoveInterest(\"Eden\") is true ? \"Eden\" : \"Black Wolf\">>, but are quickly proven wrong.",
+   "\t\t<br><br>",
+   "\t<</if>>",
+   "",
+   "\tA <<person>> trudges your way, a heavy bag slung over <<his>> shoulder. <<He>> looks out of breath, brows scrunched in frustration as <<he>> spots you and approaches. Facing <<him>> alone unnerves you slightly. <<gstress>><<stress 6>>",
+   "\t<br><br>",
+   "",
+   "\t\"Hey, <<girl>>, you wouldn't happen to know which way the lake is, would you?\"",
+   "\t<br><br>",
+   "",
+   "\t<<link [[Give directions|Forest Trail Encounter]]>><<set $phase to \"truth\">><</link>>",
+   "\t<br>",
+   "\t<<link [[Trick the stranger|Forest Trail Encounter]]>><<set $phase to \"trick\">><</link>>",
+   "\t<br>",
+   "\t<<link [[Say you aren't sure|Forest Trail Encounter]]>><<set $phase to \"unsure\">><</link>>",
+   "\t<br>",
+   "\t<<if $anxiety gte 2>>",
+   "\t\t<<link [[Run away|Forest Trail Encounter]]>><<set $phase to \"run\">><</link>><<athleticsdifficulty 400 1000>> <<severe_anxiety_disorder_text>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "<</widget>>"
+  ],
+  "context": "<</widget>>"
+ }
+]

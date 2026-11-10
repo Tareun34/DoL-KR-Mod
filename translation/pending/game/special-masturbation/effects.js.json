@@ -1,0 +1,77 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\tsWikifier('Your <<penis>> bucks eagerly, and <span class=\"pink\">precum leaks from the tip</span>.');"
+  ],
+  "old_kr": [
+   "\t\t\t\tsWikifier('당신의 <<penis>>【이가】 간절하게 꿈틀대고, <span class=\"pink\">끝에서 쿠퍼액이 새어 나온다</span>.');"
+  ],
+  "new_en": [
+   "\t\t\t\tsWikifier('Your <<penis>> bucks eagerly, and <span class=\"pink\">precum leaks from the tip</span>.');",
+   "\t\t\t} else if (waterproofLower) {",
+   "\t\t\t\tsWikifier(`Your <<penis>> bucks eagerly, and <span class=\"pink\">precum is trapped by your ${waterproofLower}.</span>`);"
+  ],
+  "context": "\t\t\tif (genitalsExposed()) {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\tsWikifier('Your <<penis>> bucks eagerly, and <span class=\"pink\">precum beads at the tip.</span>');"
+  ],
+  "old_kr": [
+   "\t\t\t\tsWikifier('당신의 <<penis>>【이가】 간절하게 꿈틀대고, <span class=\"pink\">끝에 쿠퍼액이 맺힌다.</span>');"
+  ],
+  "new_en": [
+   "\t\t\t\tsWikifier('Your <<penis>> bucks eagerly, and <span class=\"pink\">precum beads at the tip.</span>');",
+   "\t\t\t} else if (waterproofLower) {",
+   "\t\t\t\tsWikifier(`Your <<penis>> bucks eagerly, and <span class=\"pink\">precum beads in your ${waterproofLower}.</span>`);"
+  ],
+  "context": "\t\t\tif (genitalsExposed()) {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tfragment.append(span(\"You let it take you.\", \"pink\"));",
+   "\t\tsWikifier(\"<<pain -2>><<stress -12>><<sub 2>><<lpain>><<llstress>><<set V.wraith.will += 30>>\");"
+  ],
+  "old_kr": [
+   "\t\tfragment.append(span(\"그것에 몸을 맡긴다.\", \"pink\"));",
+   "\t\tsWikifier(\"<<pain -2>><<stress -12>><<sub 2>><<lpain>><<llstress>><<set V.wraith.will += 30>>\");"
+  ],
+  "new_en": [
+   "\t\tfragment.append(span(\"You let it take you.\", \"pink\"));",
+   "\t\tsWikifier(\"<<pain -2>><<stress -12>><<sub 2>><<lpain>><<llstress>><<set V.wraith.will += 30>><br>\");"
+  ],
+  "context": "\tif (resist === 0) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\tconst waterproofLower = [V.worn.over_lower, V.worn.lower].find(garment => garment.type.includes(\"waterproof\"))?.name;"
+  ],
+  "context": "\tconst genitalsExposed = () => V.worn.over_lower.vagina_exposed >= 1 && V.worn.lower.vagina_exposed >= 1 && V.worn.under_lower.vagina_exposed >= 1;"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t} else if (waterproofLower) {",
+   "\t\t\t\tsWikifier(`Your <<penis \"strap-on\">> bucks eagerly, and <span class=\"pink\">precum is trapped by your ${waterproofLower}.</span>`);"
+  ],
+  "context": "\t\t\t\t);"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t} else if (waterproofLower) {",
+   "\t\t\t\tsWikifier(`Your <<penis \"strap-on\">> bucks eagerly, and <span class=\"pink\">precum beads in your ${waterproofLower}.</span>`);"
+  ],
+  "context": "\t\t\t\t);"
+ }
+]

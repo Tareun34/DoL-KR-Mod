@@ -1,0 +1,442 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\tA large <<beasttype>> rears out of the water!"
+  ],
+  "old_kr": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t거대한 <<beasttype>>【이가】 물 밖으로 솟구쳐 오른다!"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"lizard\", $monster is 1)>>",
+   "\t\tA large <<beasttype>> rears out of the water!"
+  ],
+  "context": "\t<<beastNEWinit 1 lizard>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tThe <<person>> comes back to <<his>> senses, and wraps <<his>> vines around you. With a gentle, almost teasing push, <<he>> sends you to the forest floor and lowers <<himself>> to lie on top of you.",
+   "\t\"If I'd know you loved it so much,\" <<he>> whispers, \"I'd have offered more than a kiss. Way more.\""
+  ],
+  "old_kr": [
+   "\t<<person>>【이가】 정신을 차리고는, 당신을 덩굴로 감싼다. 거의 장난치듯 부드럽게 밀어, <<he>>【은는】 당신을 숲 바닥에 넘어뜨리고 그 위에 눕는다.",
+   "\t\"그렇게 좋아하는 줄 알았더라면,\" <<he>>【이가】 속삭인다, \"키스보다 더한 걸 제안했을 텐데. 훨씬 더한 걸 말이야.\""
+  ],
+  "new_en": [
+   "\tThe <<person>> comes back to <<his>> senses, and wraps <<his>> vines around you. With a gentle, almost teasing push, <<he>> sends you to the forest floor and lowers <<himself>> to lie on top of you.",
+   "\t\"If I'd known you loved it so much,\" <<he>> whispers, \"I'd have offered more than a kiss. Way more.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<bHe>> knocks you over easily despite <<bhis>> relatively small size.",
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [
+   "\t\t<<bHe>>【은는】 비교적 작은 덩치에도 불구하고 당신을 쉽게 넘어뜨린다.",
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "new_en": [
+   "\t\t<<bHe>> knocks you over easily despite <<bhis>> relatively small size.",
+   "\t\t<<if beastSexEnabledForType(\"fox\", $monster is 1)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $fox gte 6 and $monster is 1>>",
+   "\t\t\t<<link [[Lick <<bhim>> clean|Forest Fox Nest Lick]]>><<set $phase2 to 1>><</link>><<deviant1>><<fox>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $fox gte 6 and $monster is 1>>",
+   "\t\t\t<<link [[<<bhim>>【을를】 핥아서 깨끗하게 해주기|Forest Fox Nest Lick]]>><<set $phase2 to 1>><</link>><<deviant1>><<fox>>"
+  ],
+  "new_en": [
+   "\t\t<<if $fox gte 6 and $monster is 1 and monsterSexEnabledForType(\"fox\")>>",
+   "\t\t\t<<link [[Lick <<bhim>> clean|Forest Fox Nest Lick]]>><<set $phase2 to 1>><</link>><<deviant1>><<fox>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tThe same <<beasttype>> is now on top of you.",
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [
+   "\t\t바로 그 <<beasttype>>【이가】 이제 당신 위에 올라타 있다.",
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "new_en": [
+   "\t\tThe same <<beasttype>> is now on top of you.",
+   "\t\t<<if beastSexEnabledForType(\"fox\", $monster is 1)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $fox gte 6 and $monster is 1>>",
+   "\t\t<<link [[Lick <<bhim>> clean|Forest Fox Nest Lick]]>><<set $phase2 to 1>><</link>><<deviant1>><<fox>>"
+  ],
+  "old_kr": [
+   "\t<<if $fox gte 6 and $monster is 1>>",
+   "\t\t<<link [[<<bhim>>【을를】 핥아서 깨끗하게 해준다|Forest Fox Nest Lick]]>><<set $phase2 to 1>><</link>><<deviant1>><<fox>>"
+  ],
+  "new_en": [
+   "\t<<if $fox gte 6 and $monster is 1 and monsterSexEnabledForType(\"fox\")>>",
+   "\t\t<<link [[Lick <<bhim>> clean|Forest Fox Nest Lick]]>><<set $phase2 to 1>><</link>><<deviant1>><<fox>>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tThe <<beasttype>> charges at you!",
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<beasttype>>【이가】 당신에게 돌진한다!",
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "new_en": [
+   "\t\t\tThe <<beasttype>> charges at you!",
+   "\t\t\t<<if beastSexEnabledForType(\"fox\", $monster is 1)>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $monster is 1>>",
+   "\t\t\t<<bHe>> stays completely still. <<bHes>> staring at you... longingly?"
+  ],
+  "old_kr": [
+   "\t\t<<if $monster is 1>>",
+   "\t\t\t<<bHe>>【은는】 완전히 가만히 있다. <<bHes>> 당신을... 애타게 쳐다보고 있다?"
+  ],
+  "new_en": [
+   "\t\t<<if $monster is 1 and monsterSexEnabledForType(\"fox\")>>",
+   "\t\t\t<<bHe>> stays completely still. <<bHes>> staring at you... longingly?"
+  ],
+  "context": "\t<<if $phase is 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<elseif $settings.bestialityEnabled>>",
+   "\t\t\t<span class=\"red\"><<bHe>> takes the opportunity to lunge back at you</span>. It seems you've worked <<bhim>> up. <<bHe>> topples you, pinning you down."
+  ],
+  "old_kr": [
+   "\t\t<<elseif $settings.bestialityEnabled>>",
+   "\t\t\t<span class=\"red\"><<bHe>>【은는】 기회를 틈타 당신에게 다시 달려든다</span>. 당신이 <<bhim>>【을를】 흥분시킨 모양이다. <<bHe>>【은는】 당신을 넘어뜨려 꼼짝 못하게 짓누른다."
+  ],
+  "new_en": [
+   "\t\t<<elseif animalSexEnabledForType(\"fox\")>>",
+   "\t\t\t<span class=\"red\"><<bHe>> takes the opportunity to lunge back at you</span>. It seems you've worked <<bhim>> up. <<bHe>> topples you, pinning you down."
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if hasSexStat(\"deviancy\", 2)>>",
+   "\t\t\t<<link [[Show your appreciation|Forest Fox Nest Sex]]>><<set $sexstart to 1>><<set $phase2 to 1>><</link>><<deviant2>>",
+   "\t\t\t<br>",
+   "\t\t<<else>>",
+   "\t\t\t<<insufficientStat \"deviancy\" \"to show your appreciation\">>",
+   "\t\t\t<br>"
+  ],
+  "old_kr": [
+   "\t\t<<if hasSexStat(\"deviancy\", 2)>>",
+   "\t\t\t<<link [[감사를 표한다|Forest Fox Nest Sex]]>><<set $sexstart to 1>><<set $phase2 to 1>><</link>><<deviant2>>",
+   "\t\t\t<br>",
+   "\t\t<<else>>",
+   "\t\t\t<<insufficientStat \"deviancy\" \"감사를 표하기에는\">>",
+   "\t\t\t<br>"
+  ],
+  "new_en": [
+   "\t\t<<if monsterSexEnabledForType(\"fox\")>>",
+   "\t\t\t<<if hasSexStat(\"deviancy\", 2)>>",
+   "\t\t\t\t<<link [[Show your appreciation|Forest Fox Nest Sex]]>><<set $sexstart to 1>><<set $phase2 to 1>><</link>><<deviant2>>",
+   "\t\t\t\t<br>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<insufficientStat \"deviancy\" \"to show your appreciation\">>",
+   "\t\t\t\t<br>",
+   "\t\t\t<</if>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $settings.bestialityEnabled and hasSexStat(\"deviancy\", 2)>>",
+   "\t\t\t<<link [[Show your appreciation|Forest Fox Nest Sex]]>><<set $sexstart to 1>><<set $phase2 to 1>><</link>><<deviant2>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $settings.bestialityEnabled and hasSexStat(\"deviancy\", 2)>>",
+   "\t\t\t<<link [[감사를 표한다|Forest Fox Nest Sex]]>><<set $sexstart to 1>><<set $phase2 to 1>><</link>><<deviant2>>"
+  ],
+  "new_en": [
+   "\t\t<<if animalSexEnabledForType(\"fox\") and hasSexStat(\"deviancy\", 2)>>",
+   "\t\t\t<<link [[Show your appreciation|Forest Fox Nest Sex]]>><<set $sexstart to 1>><<set $phase2 to 1>><</link>><<deviant2>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.voreEnabled>>",
+   "\t\t<<link [[Next|Forest Nest Snake Vore 2]]>><<endevent>><<unset $forest_nest>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if $settings.voreEnabled>>",
+   "\t\t<<link [[다음|Forest Nest Snake Vore 2]]>><<endevent>><<unset $forest_nest>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if $settings.voreEnabled and animalSexEnabledForType(\"snake\")>>",
+   "\t\t<<link [[Next|Forest Nest Snake Vore 2]]>><<endevent>><<unset $forest_nest>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou see the <<beasttype>> darting off into the forest. You bought <<bhim>> enough time to escape, at least.",
+   "\t\t<<if $settings.voreEnabled>>",
+   "\t\t\tThe snake seems irritated at losing its meal and slithers up to you, mouth agape once more."
+  ],
+  "old_kr": [
+   "\t\t<<beasttype>>【이가】 숲속으로 재빨리 달아나는 것이 보인다. 적어도 <<bhim>>【이가】 도망칠 시간은 벌어준 셈이다.",
+   "\t\t<<if $settings.voreEnabled>>",
+   "\t\t\t뱀은 먹이를 놓쳐 짜증이 난 듯, 다시 입을 쩍 벌리고 당신에게 스르르 다가온다."
+  ],
+  "new_en": [
+   "\t\tYou see the <<beasttype>> darting off into the forest. You bought <<bhim>> enough time to escape, at least.",
+   "\t\t<<if $settings.voreEnabled and animalSexEnabledForType(\"snake\")>>",
+   "\t\t\tThe snake seems irritated at losing its meal and slithers up to you, mouth agape once more."
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\tYou fall to the ground, clutching your crotch in agony. The <<beasttype>>, seeing your vulnerability, leaps on top of you!"
+  ],
+  "old_kr": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t당신은 땅에 쓰러져 고통스럽게 가랑이를 움켜쥔다. 당신이 무방비 상태인 것을 본 <<beasttype>>【은는】 당신 위로 뛰어오른다!"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\t\tYou fall to the ground, clutching your crotch in agony. The <<beasttype>>, seeing your vulnerability, leaps on top of you!"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled is true>>",
+   "\t\t\t<<link [[Next|Forest Snow Bear Molestation]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled is true>>",
+   "\t\t\t<<link [[다음|Forest Snow Bear Molestation]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"bear\", $monster is 1)>>",
+   "\t\t\t<<link [[Next|Forest Snow Bear Molestation]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tGwylan lays atop you, kicking <<his>> legs behind <<him>>. \"I just wanted to ask if you needed some clothes,\" <<he>> says with a smile. \"You shouldn't be running around the forest so... openly.",
+   "\t\t<<if $settings.bestialityEnabled and $rng gte 51>>",
+   "\t\t\tYou'll agitate the wolves."
+  ],
+  "old_kr": [
+   "\t\t그윌란이 당신 위에 엎드려 <<him>> 뒤로 <<his>> 다리를 찬다. \"옷이 필요한지 물어보려고 했어.\" <<he>>【은는】 미소 지으며 말한다. \"숲속을 그렇게... 훤히 드러내고 돌아다니면 안 돼.",
+   "\t\t<<if $settings.bestialityEnabled and $rng gte 51>>",
+   "\t\t\t늑대들을 자극할 거야."
+  ],
+  "new_en": [
+   "\t\tGwylan lays atop you, kicking <<his>> legs behind <<him>>. \"I just wanted to ask if you needed some clothes,\" <<he>> says with a smile. \"You shouldn't be running around the forest so... openly.",
+   "\t\t<<if animalSexEnabledForType(\"wolf\") and $rng gte 51>>",
+   "\t\t\tYou'll agitate the wolves."
+  ],
+  "context": "\t<<elseif $exposed gte 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tGwylan lays under you, not seeming to mind this arrangement. \"I just wanted to ask if you needed some clothes,\" <<he>> says with a smile. \"You shouldn't be running around the forest so... openly.",
+   "\t\t<<if $settings.bestialityEnabled and $rng gte 51>>",
+   "\t\t\tYou'll agitate the wolves."
+  ],
+  "old_kr": [
+   "\t\t그윌란은 당신 아래에 누워, 이 자세를 개의치 않는 듯하다. \"옷이 필요한지 물어보려고.\" <<he>>【이가】 웃으며 말한다. \"숲을 그렇게... 훤히 드러내놓고 돌아다니면 안 돼.",
+   "\t\t<<if $settings.bestialityEnabled and $rng gte 51>>",
+   "\t\t\t늑대들을 자극하게 될 거야."
+  ],
+  "new_en": [
+   "\t\tGwylan lays under you, not seeming to mind this arrangement. \"I just wanted to ask if you needed some clothes,\" <<he>> says with a smile. \"You shouldn't be running around the forest so... openly.",
+   "\t\t<<if animalSexEnabledForType(\"wolf\") and $rng gte 51>>",
+   "\t\t\tYou'll agitate the wolves."
+  ],
+  "context": "\t<<elseif $exposed gte 2>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"wolf\", $monster is 1)>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"fox\", $monster is 1)>>"
+  ],
+  "context": "<<if $NPCList[0].traits.includesAny(\"territorial\",\"clever\")>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"fox\", $monster is 1)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled or $monster is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"fox\", $monster is 1)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled or $monster is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"fox\", $monster is 1)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   ":: Forest Trail Encounter",
+   "<<location \"forest\">><<effects>>",
+   "",
+   "<<switch $phase>>",
+   "\t<<case \"truth\">>",
+   "\t\t<<if $speech_attitude is \"meek\">>",
+   "\t\t\tYou timidly point <<him>> towards the lake,",
+   "\t\t<<elseif $speech_attitude is \"bratty\">>",
+   "\t\t\tYou coolly gesture towards the lake,",
+   "\t\t<<else>>",
+   "\t\t\tYou point <<him>> in the direction of the lake, ",
+   "\t\t<</if>>",
+   "\t\tmentioning a shortcut you found while exploring.",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<He>> looks rather impressed, sour expression softening the longer <<he>> listens.",
+   "\t\t<br><br>",
+   "",
+   "\t\t\"I got lucky running into an expert,\" <<he>> nods, fixing the straps of <<his>> backpack and patting you on the shoulder. \"Thanks for the help, I'll be heading off.\"",
+   "\t\t<br><br>",
+   "",
+   "\t\tYou feel somewhat proud, having helped somebody find their way. <<ltrauma>><<trauma -6>>",
+   "\t<<case \"trick\">>",
+   "\t\tBefore you can stop yourself, your hand points in the direction opposite the lake.",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<if $speech_attitude is \"meek\">>",
+   "\t\t\t\"Oh, it's— it's just a couple minutes in that direction.\"",
+   "\t\t<<elseif $speech_attitude is \"bratty\">>",
+   "\t\t\t\"Not very observant, huh? The lake's only a few metres in that direction.\"",
+   "\t\t<<else>>",
+   "\t\t\t\"A couple minutes that way and you'll be right at the lakeside.\" ",
+   "\t\t<</if>>",
+   "\t\t<br><br>",
+   "",
+   "\t\t\"I just came from that direction,\" the <<person>> mutters, confused. \"Must not have seen it. Thanks, I suppose.\"",
+   "\t\t<br><br>",
+   "",
+   "\t\tWith that, <<he>> heads off. You feel an odd satisfaction at having tricked another. <<gcontrol>><<control 10>>",
+   "\t<<case \"unsure\">>",
+   "\t\t<<if $speech_attitude is \"meek\">>",
+   "\t\t\t\"I'm sorry, I'm not really sure,\" you mutter.",
+   "\t\t<<elseif $speech_attitude is \"bratty\">>",
+   "\t\t\t\"Do I look like I would know?\" you sigh.",
+   "\t\t<<else>>",
+   "\t\t\t\"I'm not sure,\" you respond with a brief shrug. ",
+   "\t\t<</if>>",
+   "\t\t<br><br>",
+   "",
+   "\t\tThe <<person>> groans, burying <<his>> face in <<his>> hand.",
+   "\t\t<br><br>",
+   "",
+   "\t\t\"Right. Thanks anyways,\" <<he>> grumbles, heading in an arbitrary direction. Relief washes over you. You expected a more wrathful response.",
+   "\t<<case \"run\">>",
+   "\t\t<<if $athleticsSuccess>>",
+   "\t\t\t<<unset $athleticsSuccess>>",
+   "\t\t\t You make a run for it, <span class=\"green\">successfully evading the stranger</span>. The woods fall quiet again, for now.",
+   "\t\t<<else>>",
+   "\t\t\tYou make a run for it, <span class=\"red\">but the <<person>>'s hand takes your arm in a painful grip</span>. <<gpain>><<pain 6>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t\"I asked you a question,\" <<he>> sputters incredulously. \"Why on earth are you running?\"",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<He>> releases you after a violent",
+   "\t\t\t<<if !$worn.upper.type.includes(\"naked\")>>",
+   "\t\t\t\tstruggle, and <span class=\"red\">your <<print $worn.upper.name>> tears in the process</span>. <<set $worn.upper.integrity -= 10>><<integritycheck>>",
+   "\t\t\t<<elseif !$worn.under_upper.type.includes(\"naked\")>>",
+   "\t\t\t\tstruggle, and <span class=\"red\">your <<print $worn.under_upper.name>> tears in the process</span>. <<set $worn.under_upper.integrity -= 10>><<integritycheck>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\tstruggle.",
+   "\t\t\t<</if>>",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\tYour legs feel weak as you flee the scene. <<gstress>><<gtrauma>><<stress 6>><<trauma 6>>",
+   "\t\t<</if>>",
+   "<</switch>>",
+   "<br><br>",
+   "",
+   "<<link [[Next|Forest]]>><<endevent>><<set $eventskip to 1>><<unset $phase>><</link>>",
+   "<br>"
+  ],
+  "context": "<</if>>"
+ }
+]

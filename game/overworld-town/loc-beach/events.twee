@@ -745,7 +745,7 @@
 <br><br>
 
 <<if $worn.neck.collared>>
-	"벌써 목줄이 채워져 있네," <<person>>【이가】 말한다. "완벽해." 그들이 당신을 향해 다가온다.
+	"Looks like you're already collared," the <<person>> says. "Perfect." They advance on you.
 	<br><br>
 
 	<<link [[다음|Beach Abduction Molestation]]>><<set $molestationstart to 1>><<set $phase to 1>><</link>>
@@ -888,7 +888,7 @@
 	<br><br>
 	당신은 모래 언덕 더 깊은 곳으로 끌려간다. 당신은 몇 분 동안 걸으며, 자신이 얼마나 노출되고 취약한지 의식한다. 당신을 붙잡은 자들은 당신에 대한 권력의 위치를 즐기는 것을 숨기려 하지 않으며, 당신이 막을 수 없다는 것을 알기에 끊임없이 당신의 몸을 음흉하게 쳐다본다.
 	<br><br>
-	<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>
+	<<if $rng gte 51 and beastSexEnabledForType("dog", $monster is 1)>>
 		<!-- Jimmy: Looks terrible, but is the safest way to ensure event history is orderly.
 					A likely plan will be to have a wrapper/macro for this type of shuffle. (TODO) -->
 		<<saveNPC 0 "beach_abduction_dog_1">>

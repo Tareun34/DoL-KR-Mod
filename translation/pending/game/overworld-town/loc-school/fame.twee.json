@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"Good <<girl>>,\" <<he>> says. \"Remember, I want to see you every school day.\""
+  ],
+  "old_kr": [
+   "\t\"착한 <<girl>>.\" <<he>>【이가】 말한다. \"잊지 마, 매일 등교할 때마다 널 보고 싶으니까.\""
+  ],
+  "new_en": [
+   "\t\"Good <<girl>>,\" <<he>> says."
+  ],
+  "context": "\t<<ejaculation>>"
+ }
+]

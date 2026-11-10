@@ -1,0 +1,54 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t{ name: \"rose\", \t\t\t\t\t\tsets: [\"valentines\", \"flowers\"], requirements: () => V.gwylanSeen?.includes(\"rose\"), hint: \"get kissed by a rose\" },"
+  ],
+  "old_kr": [
+   "\t\t{ name: \"rose\", \t\t\t\t\t\tsets: [\"valentines\", \"flowers\"], requirements: () => V.gwylanSeen?.includes(\"rose\"), hint: \"장미에게 키스를 받기\" },"
+  ],
+  "new_en": [
+   "\t\t{ name: \"rose\", \t\t\t\t\t\tsets: [\"valentines\", \"flowers\"], requirements: () => V.gwylanSeen?.includes(\"rose_kiss\"), hint: \"get kissed by a rose\" },"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t{ name: \"mining helmet\", \t\t\t\tsets: [\"bad_end\", \"mine\"] },"
+  ],
+  "context": "\t\t{ name: \"unbound straightjacket\", \t\tsets: [\"bad_end\", \"asylum\"] },"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t},",
+   "\t\tmine: {",
+   "\t\t\ttext: \"mining helmet\",",
+   "\t\t\trequirements: () => V.mine?.freed,",
+   "\t\t\thint: \"break the chains that bind\",",
+   "\t\t\tshop: [\"forest\"],",
+   "\t\t\tsubsetOf: [\"bad_end\"],",
+   "\t\t\tfeat: true,",
+   "\t\t\tfeatCost: 5,",
+   "\t\t\ticon: \"clothes\",",
+   "\t\t\ticonSlot: \"head\",",
+   "\t\t\ticonIndex: 126,",
+   "\t\t\ticonColor: \"black\","
+  ],
+  "context": "\t\t\ticon: \"clothes/straightjacket.png\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\tif (!V.specialClothes.some(item => item.name === \"mining helmet\")) V.specialClothes.push({ name: \"mining helmet\", unlocked: 0 });"
+  ],
+  "context": "\tif (!V.specialClothes.some(item => item.name === \"rose eyepatch\")) V.specialClothes.push({ name: \"rose eyepatch\", unlocked: 0 });"
+ }
+]

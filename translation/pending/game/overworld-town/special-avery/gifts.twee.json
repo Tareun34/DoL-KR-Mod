@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if [\"ghostshroom\",\"wolfshroom\"].includes($phase) or $phase is \"wild_honeycomb\" and (!$settings.beesEnabled or !$settings.bestialityEnabled)>>",
+   "\t\tAvery frowns. \"I'm sorry,"
+  ],
+  "old_kr": [
+   "\t<<if [\"ghostshroom\",\"wolfshroom\"].includes($phase) or $phase is \"wild_honeycomb\" and (!$settings.beesEnabled or !$settings.bestialityEnabled)>>",
+   "\t\t에이버리가 인상을 찌푸린다. \"미안하지만,\""
+  ],
+  "new_en": [
+   "\t<<if [\"ghostshroom\",\"wolfshroom\"].includes($phase) or $phase is \"wild_honeycomb\" and !$settings.beesEnabled>>",
+   "\t\tAvery frowns. \"I'm sorry,"
+  ],
+  "context": "<<else>>"
+ }
+]

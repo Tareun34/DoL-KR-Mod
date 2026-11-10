@@ -1,0 +1,26 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<span class=\"red\">WARNING: This will set all corrupted variables to 0. This may have unintended consequences to your game state. Proeceed with caution!</span>"
+  ],
+  "old_kr": [
+   "\t\t\t<span class=\"red\">경고: 모든 손상된 변수를 0으로 설정합니다. 이는 게임 상태에 예기치 않은 결과를 초래할 수 있습니다. 주의해서 진행하세요!</span>"
+  ],
+  "new_en": [
+   "\t\t\t<span class=\"red\">WARNING: This will set all corrupted variables to 0. This may have unintended consequences to your game state. Proceed with caution!</span>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $debug>>"
+  ],
+  "context": ""
+ }
+]

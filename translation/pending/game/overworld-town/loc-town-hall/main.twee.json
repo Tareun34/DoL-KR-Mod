@@ -1,0 +1,157 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "The <<person>> shrugs. \"The town can't spare the expense,\" <<he>> says. \"But if you were willing to foot part of the bill, I think it could be arranged. It would cost five—\" <<He>> pauses. \"Make that <<printmoney 1000000>>.\""
+  ],
+  "old_kr": [
+   "<<person>>【은는】 어깨를 으쓱한다. \"마을 예산으로는 그만한 비용을 댈 여유가 없습니다,\" <<he>>【이가】 말한다. \"하지만 비용의 일부를 부담해 주신다면, 추진해 볼 수도 있겠군요. 대략 5백—\" <<He>>【은는】 말을 멈춘다. \"<<printmoney 1000000>> 정도로 하지요.\""
+  ],
+  "new_en": [
+   "<<set _fee to 1000000>>",
+   "<<formatmoney _fee>>",
+   "The <<person>> shrugs. \"The town can't spare the expense,\" <<he>> says. \"But if you were willing to foot part of the bill, I think it could be arranged. It would cost five—\" <<He>> pauses. \"Make that <<printmoney _fee>>.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $money gte 1000000>>",
+   "\t<<link [[Pay for the bridge (£10000)|Town Hall Projects Bridge Buy]]>><<money -1000000 \"townProject\">><<set $town_projects.bridge to 3>><<hope 6>><</link>><<ggghope>>"
+  ],
+  "old_kr": [
+   "<<if $money gte 1000000>>",
+   "\t<<link [[다리 공사 비용을 댄다 (£10000)|Town Hall Projects Bridge Buy]]>><<money -1000000 \"townProject\">><<set $town_projects.bridge to 3>><<hope 6>><</link>><<ggghope>>"
+  ],
+  "new_en": [
+   "<<if $money gte _fee>>",
+   "\t<<link [[Pay for the bridge (_printmoney)|Town Hall Projects Bridge Buy]]>><<money `(-_fee)` \"townProject\">><<set $town_projects.bridge to 3>><<hope 6>><</link>><<ggghope>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "The <<person>> drums <<his>> fingers on the table. \"I see your point, but the town can't spare the expense. If you want it restored, it'll cost you <<printmoney 1500000>>.\""
+  ],
+  "old_kr": [
+   "<<person>>【은는】 손가락으로 탁자를 두드린다. \"무슨 말씀인지는 알겠습니다만, 마을에는 그 비용을 댈 여유가 없습니다. 복구를 원하신다면 <<printmoney 2500000>>【이가】 들 겁니다.\""
+  ],
+  "new_en": [
+   "<<set _fee to 1500000>>",
+   "<<formatmoney _fee>>",
+   "The <<person>> drums <<his>> fingers on the table. \"I see your point, but the town can't spare the expense. If you want it restored, it'll cost you <<printmoney _fee>>.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $money gte 1500000>>",
+   "\t<<link [[Pay for the road (£15000)|Town Hall Projects Road Buy]]>><<money -1500000 \"townProject\">><<set $town_projects.road to 3>><<status 25>><</link>><<gggcool>>"
+  ],
+  "old_kr": [
+   "<<if $money gte 1500000>>",
+   "\t<<link [[도로 비용을 낸다 (£25000)|Town Hall Projects Road Buy]]>><<money -2500000 \"townProject\">><<set $town_projects.road to 3>><<status 25>><</link>><<gggcool>>"
+  ],
+  "new_en": [
+   "<<if $money gte _fee>>",
+   "\t<<link [[Pay for the road (_printmoney)|Town Hall Projects Road Buy]]>><<money `(-_fee)`\"townProject\">><<set $town_projects.road to 3>><<status 25>><</link>><<gggcool>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\"There's only one problem.\" <<He>> knocks back <<his>> second drink. \"Money. It'll cost <<printmoney 3000000>> to purchase the land.\""
+  ],
+  "old_kr": [
+   "\"문제가 하나 있습니다.\" <<He>>【은는】 <<his>> 두 번째 잔을 비운다. \"돈이죠. 땅을 사려면 <<printmoney 5000000>>【이가】 들 겁니다.\""
+  ],
+  "new_en": [
+   "<<set _fee to 3000000>>",
+   "<<formatmoney _fee>>",
+   "\"There's only one problem.\" <<He>> knocks back <<his>> second drink. \"Money. It'll cost <<printmoney _fee>> to purchase the land.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $money gte 3000000>>",
+   "\t<<link [[Pay for the field office (£30000)|Town Hall Projects Diving Buy]]>><<money -3000000 \"townProject\">><<set $town_projects.diving to 3>><<npcincr Winter love 15>><</link>><<ggglove \"Winter\">>"
+  ],
+  "old_kr": [
+   "<<if $money gte 3000000>>",
+   "\t<<link [[현장 사무소 비용을 낸다 (£50000)|Town Hall Projects Diving Buy]]>><<money -5000000 \"townProject\">><<set $town_projects.diving to 3>><<npcincr Winter love 15>><</link>><<ggglove \"Winter\">>"
+  ],
+  "new_en": [
+   "<<if $money gte _fee>>",
+   "\t<<link [[Pay for the field office (_printmoney)|Town Hall Projects Diving Buy]]>><<money `(-_fee)` \"townProject\">><<set $town_projects.diving to 3>><<npcincr Winter love 15>><</link>><<ggglove \"Winter\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "The <<person>> sighs. \"Would end the complaints about those brambles invading gardens, I suppose. Doesn't matter though. It'll cost <<printmoney 500000>>, and there's no budget for it.\""
+  ],
+  "old_kr": [
+   "<<person>>【은는】 한숨을 쉰다. \"정원에 침범하는 저 가시덤불 때문에 들어오는 불평은 줄겠군요. 하지만 상관없습니다. 비용은 <<printmoney 1000000>>고, 예산은 없습니다.\""
+  ],
+  "new_en": [
+   "<<set _fee to 500000>>",
+   "<<formatmoney _fee>>",
+   "The <<person>> sighs. \"Would end the complaints about those brambles invading gardens, I suppose. Doesn't matter though. It'll cost <<printmoney _fee>>, and there's no budget for it.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $money gte 500000>>",
+   "\t<<link [[Pay for the thicket (£5000)|Town Hall Projects Thicket Buy]]>><<money -500000 \"townProject\">><<set $town_projects.thicket to 3>><<hope 6>><</link>><<ggghope>>"
+  ],
+  "old_kr": [
+   "<<if $money gte 500000>>",
+   "\t<<link [[덤불 관리 비용을 낸다 (£10000)|Town Hall Projects Thicket Buy]]>><<money -1000000 \"townProject\">><<set $town_projects.thicket to 3>><<hope 6>><</link>><<ggghope>>"
+  ],
+  "new_en": [
+   "<<if $money gte _fee>>",
+   "\t<<link [[Pay for the thicket (_printmoney)|Town Hall Projects Thicket Buy]]>><<money `(-_fee)` \"townProject\">><<set $town_projects.thicket to 3>><<hope 6>><</link>><<ggghope>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\"We can't spare the labour,\" <<he>> says. \"It's hard enough finding the money to keep the roads clear. We'd need an additional <<printmoney 2000000>> before we could spare the effort.\""
+  ],
+  "old_kr": [
+   "\"인력을 뺄 수 없습니다.\" <<he>>【이가】 말한다. \"도로를 깨끗하게 유지할 돈을 찾는 것만으로도 벅찹니다. 그 일에 손을 대려면 추가로 <<printmoney 3000000>>【이가】 필요합니다.\""
+  ],
+  "new_en": [
+   "<<set _fee to 2000000>>",
+   "<<formatmoney _fee>>",
+   "\"We can't spare the labour,\" <<he>> says. \"It's hard enough finding the money to keep the roads clear. We'd need an additional <<printmoney _fee>> before we could spare the effort.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $money gte 2000000>>",
+   "\t<<link [[Pay for the green (£20000)|Town Hall Projects Green Buy]]>><<money -2000000 \"townProject\">><<set $town_projects.green to 3>><<status 25>><</link>><<gggcool>>"
+  ],
+  "old_kr": [
+   "<<if $money gte 2000000>>",
+   "\t<<link [[녹지 관리 비용을 낸다 (£30000)|Town Hall Projects Green Buy]]>><<money -3000000 \"townProject\">><<set $town_projects.green to 3>><<status 25>><</link>><<gggcool>>"
+  ],
+  "new_en": [
+   "<<if $money gte _fee>>",
+   "\t<<link [[Pay for the green (_printmoney)|Town Hall Projects Green Buy]]>><<money `(-_fee)` \"townProject\">><<set $town_projects.green to 3>><<status 25>><</link>><<gggcool>>"
+  ],
+  "context": ""
+ }
+]

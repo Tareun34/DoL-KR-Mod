@@ -1,0 +1,1808 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $speechmilk and $rng gte 71>>",
+   "\t\t\t<<switch $speechmilk>>",
+   "\t\t\t\t<<case 1>>\"<<pShes>> milking!\"",
+   "\t\t\t\t<<case 2>>\"Couldn't wait for me to put my mouth on it first?\"",
+   "\t\t\t\t<<default>>\"Holy shit, that was so much.\""
+  ],
+  "old_kr": [
+   "\t\t<<if $speechmilk and $rng gte 71>>",
+   "\t\t\t<<switch $speechmilk>>",
+   "\t\t\t\t<<case 1>>\"젖을 짜고 있어!\"",
+   "\t\t\t\t<<case 2>>\"내가 먼저 입술을 대기 전까지 못 참은 거야?\"",
+   "\t\t\t\t<<default>>\"세상에, 엄청나게 싸댔군.\""
+  ],
+  "new_en": [
+   "\t\t<<if $speechLactate and $rng gte 71>>",
+   "\t\t\t<<switch $speechLactate>>",
+   "\t\t\t\t<<case 1>>\"<<pShes>> milking!\"",
+   "\t\t\t\t<<case 2>>\"Couldn't wait for me to put my mouth on it first?\"",
+   "\t\t\t\t<<default>>\"Holy shit, that was so much.\""
+  ],
+  "context": "\t<<else>> <!-- gender appearance is female and either the player does not have a dick or the npc is not aware of it -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechcrossdressangry is 1>>",
+   "\t\t<<He>> glares at your newly-exposed <<genitals>>."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechcrossdressangry is 1>>",
+   "\t\t<<He>>【이가】 방금 드러난 당신의 <<genitals>>【을를】 노려본다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechCrossdressAngry is 1>>",
+   "\t\t<<He>> glares at your newly-exposed <<genitals>>."
+  ],
+  "context": "\t\t<</switch>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechcrossdressaroused is 1>>",
+   "\t\t<<He>> gazes with hunger at your newly exposed <<genitals>>."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechcrossdressaroused is 1>>",
+   "\t\t<<He>>【이가】 방금 드러난 당신의 <<genitals>>【을를】 굶주린 시선으로 바라본다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechCrossdressAroused is 1>>",
+   "\t\t<<He>> gazes with hunger at your newly exposed <<genitals>>."
+  ],
+  "context": "\t\t][random(0,4)]>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechcrossdressshock is 1>>",
+   "\t\t<<He>> stares at your <<genitals>> in shock."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechcrossdressshock is 1>>",
+   "\t\t<<He>>【이가】 충격에 빠져 당신의 <<genitals>>【을를】 쳐다본다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechCrossdressShock is 1>>",
+   "\t\t<<He>> stares at your <<genitals>> in shock."
+  ],
+  "context": "\t\t][random(0,4)]>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechcrossdressdisappointed is 1>>",
+   "\t\t<<He>> looks at your <<genitals>> and sighs."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechcrossdressdisappointed is 1>>",
+   "\t\t<<He>>【이가】 당신의 <<genitals>>【을를】 보며 한숨을 쉰다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechCrossdressDisappointed is 1>>",
+   "\t\t<<He>> looks at your <<genitals>> and sighs."
+  ],
+  "context": "\t\t][random(0,4)]>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechhermangry is 1>>",
+   "\t\t<<He>> glares at your newly-exposed <<genitals>>."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechhermangry is 1>>",
+   "\t\t<<He>>【이가】 방금 드러난 당신의 <<genitals>>【을를】 노려본다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechHermAngry is 1>>",
+   "\t\t<<He>> glares at your newly-exposed <<genitals>>."
+  ],
+  "context": "\t\t][random(0,4)]>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechhermaroused is 1>>",
+   "\t\t<<He>> gazes with hunger at your newly exposed <<genitals>>."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechhermaroused is 1>>",
+   "\t\t<<He>>【이가】 방금 드러난 당신의 <<genitals>>【을를】 굶주린 시선으로 쳐다본다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechHermAroused is 1>>",
+   "\t\t<<He>> gazes with hunger at your newly exposed <<genitals>>."
+  ],
+  "context": "\t\t][random(0,4)]>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechhermshock is 1>>",
+   "\t\t<<He>> stares at your <<genitals>> in shock."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechhermshock is 1>>",
+   "\t\t<<He>>【이가】 충격에 빠져 당신의 <<genitals>>【을를】 쳐다본다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechHermShock is 1>>",
+   "\t\t<<He>> stares at your <<genitals>> in shock."
+  ],
+  "context": "\t\t][random(0,4)]>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechhermdisappointed is 1>>",
+   "\t\t<<He>> looks at your <<genitals>> and sighs."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechhermdisappointed is 1>>",
+   "\t\t<<He>>【이가】 당신의 <<genitals>>【을를】 보며 한숨을 쉰다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechHermDisappointed is 1>>",
+   "\t\t<<He>> looks at your <<genitals>> and sighs."
+  ],
+  "context": "\t\t][random(0,4)]>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechscream is 1>>",
+   "\t\t<<set $speechscream to 0>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechscream is 1>>",
+   "\t\t<<set $speechscream to 0>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechScreamForHelp is 1>>",
+   "\t\t<<set $speechScreamForHelp to 0>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechsteal is 1>>",
+   "\t\t<<set $speechsteal to 0>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechsteal is 1>>",
+   "\t\t<<set $speechsteal to 0>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechSteal is 1>>",
+   "\t\t<<set $speechSteal to 0>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": "\t\t][random(0,4)]>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<set $speechpenisbig to 0>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t\t<<set $speechpenisbig to 0>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t\t<<set $speechPenisBig to 0>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": "\t\t/* ToDo: Strapon - check if this is reachable and replace with strapon variant */"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechhandjobpenis is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechhandjobpenis is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechHandjobPenis is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechhandjobvagina is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechhandjobvagina is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechHandjobVagina is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechdildoanus is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechdildoanus is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechDildoAnus is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechstroker is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechstroker is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechStroker is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechcheeks is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechcheeks is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechCheeks is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechthigh is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechthigh is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechThigh is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechfeet is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechfeet is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechFeet is 1 and random(1, 2) is 2>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechvaginaescape is 1>>",
+   "\t\t<<set $speechvaginaescape to 0>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechvaginaescape is 1>>",
+   "\t\t<<set $speechvaginaescape to 0>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechVaginaEscape is 1>>",
+   "\t\t<<set $speechVaginaEscape to 0>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechpenisescape is 1>>",
+   "\t\t<<set $speechpenisescape to 0>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechpenisescape is 1>>",
+   "\t\t<<set $speechpenisescape to 0>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechNPCVaginaEscape is 1>>",
+   "\t\t<<set $speechNPCVaginaEscape to 0>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechotheranusescape is 1>>",
+   "\t\t<<set $speechotheranusescape to 0>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechotheranusescape is 1>>",
+   "\t\t<<set $speechotheranusescape to 0>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechNPCAnusEscape is 1>>",
+   "\t\t<<set $speechNPCAnusEscape to 0>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechanusescape is 1>>",
+   "\t\t<<set $speechanusescape to 0>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechanusescape is 1>>",
+   "\t\t<<set $speechanusescape to 0>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechAnusEscape is 1>>",
+   "\t\t<<set $speechAnusEscape to 0>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechvaginaimminent is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechvaginaimminent is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechVaginaImminent is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechpenisimminent is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechpenisimminent is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechNPCVaginaImminent is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechotheranusimminent is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechotheranusimminent is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechNPCAnusImminent is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechanusimminent is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechanusimminent is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechAnusImminent is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechmouthimminent is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechmouthimminent is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechMouthImminent is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechapologise is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechapologise is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechApologise is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechvaginaentrance is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechvaginaentrance is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechVaginaEntrance is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechanusentrance is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechanusentrance is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechAnusEntrance is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechmouthentrance is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechmouthentrance is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechMouthEntrance is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechpenisentrance is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechpenisentrance is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechNPCVaginaEntrance is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechotheranusentrance is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechotheranusentrance is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechNPCAnusEntrance is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechvaginawithhold is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechvaginawithhold is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechVaginaWithhold is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechanuswithhold is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechanuswithhold is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechAnusWithhold is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechpeniswithhold is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechpeniswithhold is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechNPCVaginaWithhold is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechotheranuswithhold is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechotheranuswithhold is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechNPCAnusWithhold is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechvagina is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechvagina is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechVagina is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechpenis is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechpenis is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechPenis is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechbeat is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechbeat is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechPlayerBeaten is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechthroat is 1>>",
+   "\t\t<<He>> tightens <<his>> grip around your throat."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechthroat is 1>>",
+   "\t\t<<He>>【이가】 당신의 목을 쥔 손에 힘을 준다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechChoke is 1>>",
+   "\t\t<<He>> tightens <<his>> grip around your throat."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechvaginafoot is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechvaginafoot is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechVaginaFoot is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechpenisfoot is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechpenisfoot is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechPenisFoot is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechchastity is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechchastity is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechChastity is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechstripstruggle is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechstripstruggle is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechStripStruggle is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechstruggle is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechstruggle is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechStruggle is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speecharms is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speecharms is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechArms is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechclit is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechclit is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechClit is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechfutapenis is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechfutapenis is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechFutaPenis is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechglans is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechglans is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechGlans is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechbottom is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechbottom is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechBottom is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechhair is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechhair is 1>>",
+   "\t\t<<He>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechHair is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechbreastrub is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechbreastrub is 1>>",
+   "\t\t<<He>>【은는】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechBreastRub is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechgrowl is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechgrowl is 1>>",
+   "\t\t<<He>>【은는】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechGrowl is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechgrowlheat is 1 or $speechgrowlrut is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechgrowlheat is 1 or $speechgrowlrut is 1>>",
+   "\t\t<<He>>【은는】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechGrowlHeat is 1 or $speechGrowlRut is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechvaginaflaunt is 1>>",
+   "\t\t<<He>> coos."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechvaginaflaunt is 1>>",
+   "\t\t<<He>>【은는】 다정하게 속삭인다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechVaginaFlaunt is 1>>",
+   "\t\t<<He>> coos."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechcoverface is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechcoverface is 1>>",
+   "\t\t<<He>>【은는】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechCoverFace is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechcoverpenis is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechcoverpenis is 1>>",
+   "\t\t<<He>>【은는】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechCoverPenis is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechcovervagina is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechcovervagina is 1>>",
+   "\t\t<<He>>【은는】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechCoverVagina is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechapologiseno is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechapologiseno is 1>>",
+   "\t\t<<He>>【은는】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechApologiseRejected is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechapologiseunforgiving is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "old_kr": [
+   "\t<<elseif $speechapologiseunforgiving is 1>>",
+   "\t\t<<He>>【은는】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $speechApologiseUnforgiving is 1>>",
+   "\t\t<<He>> speaks."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<He>> shouts.",
+   "\t<<switch $speechspraycycle>>",
+   "\t\t<<case 0>> \"Where the fuck did you get that?\"",
+   "\t\t<<case 1>> \"You're no fun.\"",
+   "\t\t<<case 2>> \"You sadistic <<bitch>>!\"",
+   "\t\t<<case 3>> \"Fuck! Shit!\"",
+   "\t\t<<case 4>> \"Argh!\"",
+   "\t\t<<case 5>> \"Shit. You've some fight in you.\"",
+   "\t\t<<default>> \"My eyes!\""
+  ],
+  "old_kr": [
+   "\t<<He>>【이가】 외친다.",
+   "\t<<switch $speechspraycycle>>",
+   "\t\t<<case 0>> \"그딴 건 씨발 어디서 났어?\"",
+   "\t\t<<case 1>> \"넌 재미없어.\"",
+   "\t\t<<case 2>> \"이 사디스트 <<bitch>>【아야】!\"",
+   "\t\t<<case 3>> \"씨발! 좆같네!\"",
+   "\t\t<<case 4>> \"아악!\"",
+   "\t\t<<case 5>> \"제기랄. 제법 반항할 줄 아네.\"",
+   "\t\t<<default>> \"내 눈!\""
+  ],
+  "new_en": [
+   "\t<<He>> shouts.",
+   "\t<<switch $speechSprayCycle>>",
+   "\t\t<<case 0>> \"Where the fuck did you get that?\"",
+   "\t\t<<case 1>> \"You're no fun.\"",
+   "\t\t<<case 2>> \"You sadistic <<bitch>>!\"",
+   "\t\t<<case 3>> \"Fuck! Shit!\"",
+   "\t\t<<case 4>> \"Argh!\"",
+   "\t\t<<case 5>> \"Shit. You've some fight in you.\"",
+   "\t\t<<default>> \"My eyes!\""
+  ],
+  "context": "<<widget \"sprayspeech\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<bHe>> chitters."
+  ],
+  "old_kr": [
+   "\t\t<<bHe>>【이가】 찍찍거린다."
+  ],
+  "new_en": [
+   "\t\t<<bHe>> chitters.",
+   "\t<<case \"snakegirl\" \"snakeboy\">>",
+   "\t\t<<bHe>> hisses."
+  ],
+  "context": "\t<<case \"spidergirl\" \"spiderboy\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<case 0>> \"You smell nice.\"",
+   "\t\t\t\t\t\t\t<<case 1>> \"Going to mate with you. Okay?\"",
+   "\t\t\t\t\t\t\t<<case 2>> \"Mate with me.\"",
+   "\t\t\t\t\t\t\t<<case 3>> \"Bet prey tastes nice.\"",
+   "\t\t\t\t\t\t\t<<case 4>> \"Smell fertile.\"",
+   "\t\t\t\t\t\t\t<<case 5>> \"Cold out. I keep you warm.\"",
+   "\t\t\t\t\t\t\t<<default>> \"My mates for me only. Not for you. No taking.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t<<case 0>> \"좋은 냄새가 난다.\"",
+   "\t\t\t\t\t\t\t<<case 1>> \"너와 짝짓기할 거다. 알았나?\"",
+   "\t\t\t\t\t\t\t<<case 2>> \"나와 짝짓기해라.\"",
+   "\t\t\t\t\t\t\t<<case 3>> \"사냥감이 맛있을 거라 장담한다.\"",
+   "\t\t\t\t\t\t\t<<case 4>> \"가임기의 냄새다.\"",
+   "\t\t\t\t\t\t\t<<case 5>> \"밖은 춥다. 내가 널 따뜻하게 해주지.\"",
+   "\t\t\t\t\t\t\t<<default>> \"내 짝은 나만을 위한 거다. 넌 안 돼. 빼앗지 마라.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<case 0>> \"You smell nice.\"",
+   "\t\t\t\t\t\t\t<<case 1>> \"Going to mate with you. Okay?\"",
+   "\t\t\t\t\t\t\t<<case 2>> \"Mate with me.\"",
+   "\t\t\t\t\t\t\t<<case 3>> \"Bet prey tastes nice.\"",
+   "\t\t\t\t\t\t\t<<case 4>> \"Smell fertile.\"",
+   "\t\t\t\t\t\t\t<<case 5>> \"Cold out. I keep you warm.\"",
+   "\t\t\t\t\t\t\t<<default>> \"My mate's for me only. Not for you. No taking.\""
+  ],
+  "context": "\t\t\t\t\t\t<<switch $npcspeechcycle>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<case 0>> \"You smell nice.\"",
+   "\t\t\t\t\t\t\t<<case 1>> \"Going to mate with you. Okay?\"",
+   "\t\t\t\t\t\t\t<<case 2>> \"Mate with me.\"",
+   "\t\t\t\t\t\t\t<<case 3>> \"Bet prey tastes nice.\"",
+   "\t\t\t\t\t\t\t<<case 4>> \"Smell fertile.\"",
+   "\t\t\t\t\t\t\t<<case 5>> \"Cold out. I keep you warm.\"",
+   "\t\t\t\t\t\t\t<<default>> \"My mates for me only. Not for you. No taking.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t<<case 0>> \"좋은 냄새가 난다.\"",
+   "\t\t\t\t\t\t\t<<case 1>> \"너와 짝짓기할 거다. 알았나?\"",
+   "\t\t\t\t\t\t\t<<case 2>> \"나와 짝짓기해라.\"",
+   "\t\t\t\t\t\t\t<<case 3>> \"사냥감이 맛있을 거라 장담한다.\"",
+   "\t\t\t\t\t\t\t<<case 4>> \"가임기의 냄새다.\"",
+   "\t\t\t\t\t\t\t<<case 5>> \"밖은 춥다. 내가 널 따뜻하게 해주지.\"",
+   "\t\t\t\t\t\t\t<<default>> \"내 짝은 나만을 위한 거다. 넌 안 돼. 빼앗지 마라.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<case 0>> \"You smell nice.\"",
+   "\t\t\t\t\t\t\t<<case 1>> \"Going to mate with you. Okay?\"",
+   "\t\t\t\t\t\t\t<<case 2>> \"Mate with me.\"",
+   "\t\t\t\t\t\t\t<<case 3>> \"Bet prey tastes nice.\"",
+   "\t\t\t\t\t\t\t<<case 4>> \"Smell fertile.\"",
+   "\t\t\t\t\t\t\t<<case 5>> \"Cold out. I keep you warm.\"",
+   "\t\t\t\t\t\t\t<<default>> \"My mate's for me only. Not for you. No taking.\""
+  ],
+  "context": "\t\t\t\t\t\t<<switch $npcspeechcycle>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $speechpenisvirgin is 1 or $speechvaginavirgin is 1>>",
+   "\t\t<<He>> grins. \"Is this your first time? Lucky break!\"",
+   "\t<<elseif $speechanusvirgin gte 1>>",
+   "\t\t<<He>> grins. \"First time taking it up this hole, huh? I'll show you how great it is!\"",
+   "\t<<elseif $speechmouthvirgin gte 1>>",
+   "\t\t<<He>> grins. \"You've never used your mouth like this before, have you? I'll make it extra sweet, just for you.\"",
+   "\t<<elseif $speechkissvirgin is 1>>",
+   "\t\t<<He>> moans into your mouth. \"I'll get you addicted to kissing. Or maybe you'll just be addicted to me.\"",
+   "\t\t<span class=\"pink\">Sweet nectar floods your mouth, and <<he>> winks.</span>"
+  ],
+  "old_kr": [
+   "\t<<if $speechpenisvirgin is 1 or $speechvaginavirgin is 1>>",
+   "\t\t<<He>>【은는】 씩 웃는다. \"이런 건 처음이야? 운이 좋네!\"",
+   "\t<<elseif $speechanusvirgin gte 1>>",
+   "\t\t<<He>>【은는】 씩 웃는다. \"이 구멍으로 받는 건 처음인가 보지? 얼마나 기분 좋은지 보여줄게!\"",
+   "\t<<elseif $speechmouthvirgin gte 1>>",
+   "\t\t<<He>>【은는】 씩 웃는다. \"이런 식으로 입을 써본 적 없지? 널 위해 특별히 더 달콤하게 해줄게.\"",
+   "\t<<elseif $speechkissvirgin is 1>>",
+   "\t\t<<He>>【은는】 당신의 입술 안으로 신음한다. \"키스에 중독되게 만들어 줄게. 아니면 나한테 중독되려나.\"",
+   "\t\t<span class=\"pink\">달콤한 넥타르가 입안에 가득 차오르고, <<he>>【은는】 윙크한다.</span>"
+  ],
+  "new_en": [
+   "\t<<if $speechPenisVirgin is 1 or $speechVaginaVirgin is 1>>",
+   "\t\t<<He>> grins. \"Is this your first time? Lucky break!\"",
+   "\t<<elseif $speechAnusVirgin gte 1>>",
+   "\t\t<<He>> grins. \"First time taking it up this hole, huh? I'll show you how great it is!\"",
+   "\t<<elseif $speechOralVirgin gte 1>>",
+   "\t\t<<He>> grins. \"You've never used your mouth like this before, have you? I'll make it extra sweet, just for you.\"",
+   "\t<<elseif $speechKissVirgin is 1>>",
+   "\t\t<<He>> moans into your mouth. \"I'll get you addicted to kissing. Or maybe you'll just be addicted to me.\"",
+   "\t\t<span class=\"pink\">Sweet nectar floods your mouth, and <<he>> winks.</span>"
+  ],
+  "context": "<<widget \"plantspeech\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechvaginavirgin is 2 and $NPCList[0].penis isnot \"none\">>",
+   "\t\t<<He>> whines. \"Oh, you were a virgin? Come on! I knew I should've used my dick.\"",
+   "\t<<elseif $speechpenisvirgin is 2>>",
+   "\t\t<<He>> whines. \"Oh, you were a virgin? Come on! I knew I should've used my <<if $NPCList[0].vagina isnot \"none\">>pussy<<else>>ass<</if>>.\"",
+   "\t<<elseif $speechspray is 1>>",
+   "\t\t<<He>> yelps.",
+   "\t\t<<if $speechspraycycleplant is 1>>",
+   "\t\t\t\"Cut that out!\""
+  ],
+  "old_kr": [
+   "\t<<elseif $speechvaginavirgin is 2 and $NPCList[0].penis isnot \"none\">>",
+   "\t\t<<He>>【은는】 칭얼거린다. \"아, 너 처녀였어? 에이! 내 자지를 썼어야 했는데.\"",
+   "\t<<elseif $speechpenisvirgin is 2>>",
+   "\t\t<<He>>【은는】 칭얼거린다. \"아, 너 처녀였어? 에이! 내 <<if $NPCList[0].vagina isnot \"none\">>보지<<else>>엉덩이<</if>>【을를】 썼어야 했는데.\"",
+   "\t<<elseif $speechspray is 1>>",
+   "\t\t<<He>>【은는】 비명을 지른다.",
+   "\t\t<<if $speechspraycycleplant is 1>>",
+   "\t\t\t\"그만해!\""
+  ],
+  "new_en": [
+   "\t<<elseif $speechVaginaVirgin is 2 and $NPCList[0].penis isnot \"none\">>",
+   "\t\t<<He>> whines. \"Oh, you were a virgin? Come on! I knew I should've used my dick.\"",
+   "\t<<elseif $speechPenisVirgin is 2>>",
+   "\t\t<<He>> whines. \"Oh, you were a virgin? Come on! I knew I should've used my <<if $NPCList[0].vagina isnot \"none\">>pussy<<else>>ass<</if>>.\"",
+   "\t<<elseif $speechPepperSpray is 1>>",
+   "\t\t<<He>> yelps.",
+   "\t\t<<if $speechSprayCyclePlant is 1>>",
+   "\t\t\t\"Cut that out!\""
+  ],
+  "context": "\t\t<<nectarfed 50>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<set $speechspraycycleplant to 1>>",
+   "\t\t\t\"Agh! What is that, attack pollen? Can humans do that?!\""
+  ],
+  "old_kr": [
+   "\t\t\t<<set $speechspraycycleplant to 1>>",
+   "\t\t\t\"아악! 그건 뭐야, 공격용 꽃가루야? 인간도 그런 걸 할 수 있어?!\""
+  ],
+  "new_en": [
+   "\t\t\t<<set $speechSprayCyclePlant to 1>>",
+   "\t\t\t\"Agh! What is that, attack pollen? Can humans do that?!\""
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechnamedrop is 1 and _loveInterest is \"Eden\" and $location is \"forest\">>",
+   "\t\t<<He>> flinches at your words. \"Oh shit, you know the <<nnpc_title \"Eden\">>? This is... dangerous.\""
+  ],
+  "old_kr": [
+   "\t<<elseif $speechnamedrop is 1 and _loveInterest is \"Eden\" and $location is \"forest\">>",
+   "\t\t<<He>>【은는】 당신의 말에 움찔한다. \"아 젠장, <<nnpc_title \"Eden\">>【을를】 안다고? 이거... 위험한데.\""
+  ],
+  "new_en": [
+   "\t<<elseif $speechLINameDrop is 1 and _loveInterest is \"Eden\" and $location is \"forest\">>",
+   "\t\t<<He>> flinches at your words. \"Oh shit, you know the <<nnpc_title \"Eden\">>? This is... dangerous.\""
+  ],
+  "context": "\t\t<<set $enemytrust -= 30>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechnamedrop is 1 and _loveInterest is \"Black Wolf\" and $location is \"forest\">>",
+   "\t\t<<He>> grins. \"The alpha won't even recognise you when I'm done with you!\"",
+   "\t<<elseif $speechnamedrop is 1 and _loveInterest is \"Alex\" and $location is \"moor\">>",
+   "\t\t<<He>> grins. \"A farmer, huh? Maybe I'll cultivate you, cow<<girl>>.\"",
+   "\t<<elseif $speechnamedrop is 1 and _loveInterest is \"Great Hawk\" and $location is \"moor\">>",
+   "\t\t<<He>> flinches at your words. \"Oh shit, you know the sky terror? This is... dangerous.\""
+  ],
+  "old_kr": [
+   "\t<<elseif $speechnamedrop is 1 and _loveInterest is \"Black Wolf\" and $location is \"forest\">>",
+   "\t\t<<He>>【은는】 씩 웃는다. \"내가 널 다 가지고 놀고 나면 네 알파도 널 못 알아볼걸!\"",
+   "\t<<elseif $speechnamedrop is 1 and _loveInterest is \"Alex\" and $location is \"moor\">>",
+   "\t\t<<He>>【은는】 씩 웃는다. \"농부라고? 널 한 번 재배해 볼까, 암소 <<girl>>.\"",
+   "\t<<elseif $speechnamedrop is 1 and _loveInterest is \"Great Hawk\" and $location is \"moor\">>",
+   "\t\t<<He>>【은는】 당신의 말에 움찔한다. \"아 젠장, 하늘의 공포를 안다고? 이거... 위험한데.\""
+  ],
+  "new_en": [
+   "\t<<elseif $speechLINameDrop is 1 and _loveInterest is \"Black Wolf\" and $location is \"forest\">>",
+   "\t\t<<He>> grins. \"The alpha won't even recognise you when I'm done with you!\"",
+   "\t<<elseif $speechLINameDrop is 1 and _loveInterest is \"Alex\" and $location is \"moor\">>",
+   "\t\t<<He>> grins. \"A farmer, huh? Maybe I'll cultivate you, cow<<girl>>.\"",
+   "\t<<elseif $speechLINameDrop is 1 and _loveInterest is \"Great Hawk\" and $location is \"moor\">>",
+   "\t\t<<He>> flinches at your words. \"Oh shit, you know the sky terror? This is... dangerous.\""
+  ],
+  "context": "\t\t<<set $enemytrust -= 20>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechnamedrop is 1 and _loveInterest is \"Gwylan\">>",
+   "\t\t<<His>> vegetation turns pale. \"Th-the witch? You're <<nnpc_his \"Gwylan\">> charge? Shit.\""
+  ],
+  "old_kr": [
+   "\t<<elseif $speechnamedrop is 1 and _loveInterest is \"Gwylan\">>",
+   "\t\t<<His>> 식물들이 창백하게 변한다. \"마-마녀라고? 네가 <<nnpc_his \"Gwylan\">> 보호를 받고 있다고? 젠장.\""
+  ],
+  "new_en": [
+   "\t<<elseif $speechLINameDrop is 1 and _loveInterest is \"Gwylan\">>",
+   "\t\t<<His>> vegetation turns pale. \"Th-the witch? You're <<nnpc_his \"Gwylan\">> charge? Shit.\""
+  ],
+  "context": "\t\t<<set $enemytrust -= 20>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $speechcoverface is 1 or $speechcoverpenis is 1 or $speechcovervagina is 1>>",
+   "\t\t\t\t\t\t<<He>> giggles. \"You don't need to be shy! I'm the only one here.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $speechcoverface is 1 or $speechcoverpenis is 1 or $speechcovervagina is 1>>",
+   "\t\t\t\t\t\t<<He>>【은는】 낄낄거린다. \"부끄러워할 필요 없어! 여긴 나밖에 없는걸.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $speechCoverFace is 1 or $speechCoverPenis is 1 or $speechCoverVagina is 1>>",
+   "\t\t\t\t\t\t<<He>> giggles. \"You don't need to be shy! I'm the only one here.\""
+  ],
+  "context": "\t\t\t\t<<case 2>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif ($speechSextoyState is \"aroused\" or $speechsextoy is 1) and random(0,2) isnot 0 and ($rightarm is \"heldSexToy\" or $leftarm is \"heldSexToy\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif ($speechSexToyState is \"aroused\" or $speechNoticeSexToy is 1) and random(0,2) isnot 0 and ($rightarm is \"heldSexToy\" or $leftarm is \"heldSexToy\")>>"
+  ],
+  "context": "\t\t][random(0,4)]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechSextoyState is \"shocked\" and ($rightarm is \"heldSexToy\" or $leftarm is \"heldSexToy\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechSexToyState is \"shocked\" and ($rightarm is \"heldSexToy\" or $leftarm is \"heldSexToy\")>>"
+  ],
+  "context": "\t\t][random(0,4)]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechSextoyState is \"disappointed\" and ($rightarm is \"heldSexToy\" or $leftarm is \"heldSexToy\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechSexToyState is \"disappointed\" and ($rightarm is \"heldSexToy\" or $leftarm is \"heldSexToy\")>>"
+  ],
+  "context": "\t\t][random(0,4)]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechSextoyState is \"angry\" and ($rightarm is \"heldSexToy\" or $leftarm is \"heldSexToy\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechSexToyState is \"angry\" and ($rightarm is \"heldSexToy\" or $leftarm is \"heldSexToy\")>>"
+  ],
+  "context": "\t\t][random(0,4)]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechgenitals is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechExposeGenitals is 1>>"
+  ],
+  "context": "\t\t][random(0,4)]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechpregnant is 1 and $settings.pregnancySpeechEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechPregnant is 1 and $settings.pregnancySpeechEnabled>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechleglock is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechLegLock is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechbreasts is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechExposeBreasts is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechwheeze is 1>>",
+   "\t\t<<set $speechwheeze to 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechChokedWheeze is 1>>",
+   "\t\t<<set $speechChokedWheeze to 0>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechpenisbig is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechPenisBig is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechnamedrop is 1>>",
+   "\t\t<<set $speechnamedrop to 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechLINameDrop is 1>>",
+   "\t\t<<set $speechLINameDrop to 0>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechmasturbate is 1 and random(1,2) is 1 and not $gloryhole>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechMasturbate is 1 and random(1,2) is 1 and not $gloryhole>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechdildovagina is 1 and random(1, 2) is 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechDildoVagina is 1 and random(1, 2) is 2>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechheadsuckle is 1 and random(1, 2) is 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechHeadSuckle is 1 and random(1, 2) is 2>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechheadnipple is 1 and random(1, 2) is 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechHeadNipple is 1 and random(1, 2) is 2>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechheadnippleclosed is 1 and random(1, 2) is 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechHeadNippleClosed is 1 and random(1, 2) is 2>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechheadsuckleclosed is 1 and random(1, 2) is 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechHeadSuckleClosed is 1 and random(1, 2) is 2>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechheadbreasts is 1 and random(1, 2) is 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechHeadBreasts is 1 and random(1, 2) is 2>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechheadchest is 1 and random(1, 2) is 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechHeadChest is 1 and random(1, 2) is 2>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechpenispenetrated is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechNPCVaginaPenetrated is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechotheranuspenetrated is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechNPCAnusPenetrated is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechvaginapenetrated is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechVaginaPenetrated is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechanuspenetrated is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechAnusPenetrated is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechmouthpenetrated is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechMouthPenetrated is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechanus is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechAnus is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechvaginamouth is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechMouthNPCVagina is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechvaginavagina is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechTrib is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechtribentrance is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechTribEntrance is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechpenispenis is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechFencing is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechfencingentrance is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechFencingEntrance is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechhit is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechPlayerHits is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechspank is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechSpank is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechchestrub is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechChestRub is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechplead is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechPlead is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechmoan is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechMoan is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechdemand is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechDemand is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechforgive is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechForgive is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechfacesit is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechFaceSit is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechanallick is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechAnalLick is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechanalkiss is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechAnalKiss is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechmouthotheranus is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechMouthNPCAnus is 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechaskrough is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechAskRough is 1>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechspraycycle to $speechspraycycle isnot undefined ? ($speechspraycycle + 1) % 7 : 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechSprayCycle to $speechSprayCycle isnot undefined ? ($speechSprayCycle + 1) % 7 : 0>>"
+  ],
+  "context": "\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $speechcum is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $speechPlayerOrgasm is 1>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $speechheadsuckle is 1 or $speechmouthpenetrated is 1 or $speechvaginamouth is 1 or $speechfacesit is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $speechHeadSuckle is 1 or $speechMouthPenetrated is 1 or $speechMouthNPCVagina is 1 or $speechFaceSit is 1>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<elseif $speechheadsuckleclosed is 1 or $speechmouthentrance is 1 or $speechmouthimminent is 1 or ($speechheadnippleclosed is 1 and $NPCList[_n].pronoun is \"f\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<elseif $speechHeadSuckleClosed is 1 or $speechMouthEntrance is 1 or $speechMouthImminent is 1 or ($speechHeadNippleClosed is 1 and $NPCList[_n].pronoun is \"f\")>>"
+  ],
+  "context": "\t\t\t<</switch>>"
+ }
+]

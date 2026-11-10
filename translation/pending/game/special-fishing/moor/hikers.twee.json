@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\"Does it look like I care?\" <<He>> says as <<he>> grabs your arm, pulling you toward <<him>>."
+  ],
+  "old_kr": [
+   "\"내가 신경 쓸 것 같아?\" <<He>>【이가】 당신의 팔을 움켜잡고 자기 쪽으로 끌어당기며 말한다."
+  ],
+  "new_en": [
+   "\"Does it look like I care?\" <<he>> says as <<he>> grabs your arm, pulling you toward <<him>>."
+  ],
+  "context": ""
+ }
+]

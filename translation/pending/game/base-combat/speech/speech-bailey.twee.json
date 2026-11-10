@@ -1,0 +1,1058 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<set $_stringsPre to ($enemyanger lte 60 ? \"<<He>> snickers. \":\"<<He>> snarls. \")>>",
+   "\t<<if ($speechpenisvirgin is 1 and $player.virginity.penile is \"Bailey\") or ($speechvaginavirgin is 1 and $player.virginity.vaginal is \"Bailey\")>>",
+   "\t\t<<print $_stringsPre + `\"Fuck. Your value just depreciated a little.\"`>>",
+   "\t<<elseif $speechanusvirgin is 1 and $player.virginity.anal is \"Bailey\">>",
+   "\t\t<<print $_stringsPre + `\"You should be putting out more if you're this tight. What do you think you're good for?\"`>>",
+   "\t<<elseif $speechmouthvirgin is 1 and $player.virginity.oral is \"Bailey\">>",
+   "\t\t<<print $_stringsPre + `\"Don't get any funny ideas. Just take it.\"`>>",
+   "\t<<elseif $speechkissvirgin is 1 and $player.virginity.kiss is \"Bailey\">>",
+   "\t\t<<print $_stringsPre + `\"Surprised are you? You'll learn to kiss better soon.\"`>>",
+   "\t<<elseif $speechnamedrop is 1>>",
+   "\t\t<<set $speechnamedrop to 0>>"
+  ],
+  "old_kr": [
+   "\t<<set $_stringsPre to ($enemyanger lte 60 ? \"<<He>>【이가】 낄낄거린다. \":\"<<He>>【이가】 으르렁거린다. \")>>",
+   "\t<<if ($speechpenisvirgin is 1 and $player.virginity.penile is \"Bailey\") or ($speechvaginavirgin is 1 and $player.virginity.vaginal is \"Bailey\")>>",
+   "\t\t<<print $_stringsPre + `\"젠장. 네년 가치가 방금 좀 떨어졌어.\"`>>",
+   "\t<<elseif $speechanusvirgin is 1 and $player.virginity.anal is \"Bailey\">>",
+   "\t\t<<print $_stringsPre + `\"이렇게 조이면 좀 더 자주 대줘야 할 거 아냐. 네가 뭐라도 되는 줄 알아?\"`>>",
+   "\t<<elseif $speechmouthvirgin is 1 and $player.virginity.oral is \"Bailey\">>",
+   "\t\t<<print $_stringsPre + `\"이상한 생각 마라. 얌전히 받아들여.\"`>>",
+   "\t<<elseif $speechkissvirgin is 1 and $player.virginity.kiss is \"Bailey\">>",
+   "\t\t<<print $_stringsPre + `\"놀랐냐? 조만간 키스 더 잘하는 법을 배우게 될 거다.\"`>>",
+   "\t<<elseif $speechnamedrop is 1>>",
+   "\t\t<<set $speechnamedrop to 0>>"
+  ],
+  "new_en": [
+   "\t<<set $_stringsPre to ($enemyanger lte 60 ? \"<<He>> snickers. \":\"<<He>> snarls. \")>>",
+   "\t<<speechPool \"Bailey\" \"noMouthAction\">>",
+   "\t<<if ($speechPenisVirgin and $player.virginity.penile is \"Bailey\") or ($speechVaginaVirgin and $player.virginity.vaginal is \"Bailey\")>>",
+   "\t\t<<addSpeechLine \"virginity\">>",
+   "\t\t\t<<print $_stringsPre>>\"Fuck. Your value just depreciated a little.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $player.virginity.anal is \"Bailey\" and $speechAnusVirgin>>",
+   "\t\t<<addSpeechLine \"virginity\">>",
+   "\t\t\t<<print $_stringsPre>>\"You should be putting out more if you're this tight. What do you think you're good for?\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $player.virginity.oral is \"Bailey\" and $speechOralVirgin>>",
+   "\t\t<<addSpeechLine \"virginity\">>",
+   "\t\t\t<<print $_stringsPre>>\"Don't get any funny ideas. Just take it.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $player.virginity.kiss is \"Bailey\" and $speechKissVirgin>>",
+   "\t\t<<addSpeechLine \"virginity\">>",
+   "\t\t\t<<print $_stringsPre>>\"Surprised are you? You'll learn to kiss better soon.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechLINameDrop>>"
+  ],
+  "context": "\t<<set _npc_speech to true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"You pay <<nnpc_his 'Robin'>> debt and <<nnpc_he 'Robin'>> can't even watch.\"`>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"네가 빚을 대신 갚아줬는데도 <<nnpc_he 'Robin'>>【은는】 구경조차 못 하는 꼴이라니.\"`>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t\t<<print $_stringsPre>>\"You pay <<nnpc_his 'Robin'>> debt and <<nnpc_he 'Robin'>> can't even watch.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $robinpaid is 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"That waif's grown a spine thanks to you. Shame <<nnpc_he 'Robin'>> won't save you.\"`>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"너 덕분에 그 고아 녀석도 제법 배짱이 생겼더군. 애석하게도 <<nnpc_he 'Robin'>>【이가】 널 구해주진 않겠지만 말이야.\"`>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t\t<<print $_stringsPre>>\"That waif's grown a spine thanks to you. Shame <<nnpc_he 'Robin'>> won't save you.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<elseif C.npc.Robin.dom gte 50>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t\t\t`\"That worthless brat can't save you.\"`,",
+   "\t\t\t\t\t\t`\"What do you expect that waif to do? Cry until I stop?\"`",
+   "\t\t\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t\t\t`\"그 쓸모없는 꼬맹이는 널 구해주지 못해.\"`,",
+   "\t\t\t\t\t\t`\"그 고아 녀석이 뭘 할 수 있을 것 같냐? 내가 그만둘 때까지 징징대기라도 할까?\"`",
+   "\t\t\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<print $_stringsPre>>\"That worthless brat can't save you.\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<print $_stringsPre>>\"What do you expect that waif to do? Cry until I stop?\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t\t`\"People would pay extra to see you ${$player.penisExist ? \"fuck\" : \"get fucked by\"} some beast.\"`,",
+   "\t\t\t\t\t`\"Animals get put down. You get put to work.\"`",
+   "\t\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t\t`\"사람들은 네가 짐승 새끼랑 ${$player.penisExist ? \"떡치는\" : \"박히는\"} 꼴을 보려고 기꺼이 웃돈을 낼 거다.\"`,",
+   "\t\t\t\t\t`\"짐승 새끼들은 살처분 당하지만, 넌 몸을 굴려야 할 거다.\"`",
+   "\t\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<print $_stringsPre>>\"People would pay extra to see you <<if $player.penisExist>>fuck<<else>>get fucked by<</if>> some beast.\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<print $_stringsPre>>\"Animals get put down. You get put to work.\"",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"Black Wolf\" \"Great Hawk\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<print $_stringsPre + `\"You'll be going right back to <<nnpc_him 'Eden'>> if you keep this up.\"`>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<print $_stringsPre + `\"계속 이런 식이면 <<nnpc_him 'Eden'>>에게 다시 보내버릴 거다.\"`>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<print $_stringsPre>>\"You'll be going right back to <<nnpc_him 'Eden'>> if you keep this up.\"",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"Eden\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<print `<<He>> pauses, then speaks. \"Careful where you bring that name.\"`>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<print `<<He>>【은는】 잠시 멈칫하더니 입을 연다. \"그 이름은 함부로 들먹이지 않는 게 좋을 거다.\"`>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<He>> pauses, then speaks. \"Careful where you bring that name.\"",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"Gwylan\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"That idiot's useful. Don't confuse that with important.\"`>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"그 멍청이는 쓸모가 있지. 하지만 중요한 놈이라고 착각하진 마라.\"`>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t\t<<print $_stringsPre>>\"That idiot's useful. Don't confuse that with important.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $whitney_bailey_met gte 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"If <<nnpc_he _loveInterest>> cared about you, <<nnpc_he _loveInterest>> would pay for you.\"`>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"만약 <<nnpc_he _loveInterest>>【이가】 널 신경 썼다면, 진작에 네 몸값을 지불했겠지.\"`>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t\t<<print $_stringsPre>>\"If <<nnpc_he _loveInterest>> cared about you, <<nnpc_he _loveInterest>> would pay for you.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t\t\t`\"Call for <<nnpc_him 'Kylar'>> louder. Maybe <<nnpc_hes 'Kylar'>> outside the window.\"`,",
+   "\t\t\t\t\t\t`\"That little freak is probably watching. Let <<nnpc_him 'Kylar'>>.\"`",
+   "\t\t\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t\t\t`\"어디 <<nnpc_him 'Kylar'>>【을를】 더 크게 불러보시지. 창문 밖에 <<nnpc_he 'Kylar'>>【이가】 있을지도 모르잖아.\"`,",
+   "\t\t\t\t\t\t`\"그 변태 새끼는 아마 지켜보고 있을 거다. 맘대로 보라지.\"`",
+   "\t\t\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<print $_stringsPre>>\"Call for <<nnpc_him 'Kylar'>> louder. Maybe <<nnpc_hes 'Kylar'>> outside the window.\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<print $_stringsPre>>\"That little freak is probably watching. Let <<nnpc_him 'Kylar'>>.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $kylar_abduction_bailey is 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"If <<nnpc_he _loveInterest>> cared about you, <<nnpc_he _loveInterest>> would pay for you.\"`>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"만약 <<nnpc_he _loveInterest>>【이가】 널 신경 썼다면, 진작에 네 몸값을 지불했겠지.\"`>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t\t<<print $_stringsPre>>\"If <<nnpc_he _loveInterest>> cared about you, <<nnpc_he _loveInterest>> would pay for you.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t\t\t`\"Save it for confession.\"`,",
+   "\t\t\t\t\t\t`\"That brat would pray for you. I'd rather <<nnpc_he 'Sydney'>> paid for you.\"`",
+   "\t\t\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t\t\t`\"고해성사할 때나 지껄여.\"`,",
+   "\t\t\t\t\t\t`\"그 애송이는 널 위해 기도나 하겠지. 난 차라리 <<nnpc_he 'Sydney'>>【이가】 네 몸값을 냈으면 좋겠군.\"`",
+   "\t\t\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<print $_stringsPre>>\"Save it for confession.\"",
+   "\t\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t\t<<print $_stringsPre>>\"That brat would pray for you. I'd rather <<nnpc_he 'Sydney'>> paid for you.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $temple_bailey>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"If <<nnpc_he _loveInterest>> cared about you, <<nnpc_he _loveInterest>> would pay for you.\"`>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"만약 <<nnpc_he _loveInterest>>【이가】 널 신경 썼다면, 진작에 네 몸값을 지불했겠지.\"`>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t\t<<print $_stringsPre>>\"If <<nnpc_he _loveInterest>> cared about you, <<nnpc_he _loveInterest>> would pay for you.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"<<nnpc_He 'Avery'>>'d have let you fall.\"`>>",
+   "\t\t\t\t<<elseif $avery_mansion and $avery_fate isnot \"fallen\" and $avery_fate isnot \"kicked\" and $renttime lte 0>>",
+   "\t\t\t\t\t<<print $_stringsPre + `\"I had a deal with <<nnpc_him 'Avery'>>, but <<nnpc_he 'Avery'>> dried up. Take it up with <<nnpc_him 'Avery'>>.\"`>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"<<nnpc_He 'Avery'>>【은는】 네가 나락으로 떨어지게 내버려뒀을 거다.\"`>>",
+   "\t\t\t\t<<elseif $avery_mansion and $avery_fate isnot \"fallen\" and $avery_fate isnot \"kicked\" and $renttime lte 0>>",
+   "\t\t\t\t\t<<print $_stringsPre + `\"난 <<nnpc_him 'Avery'>>【와과】 거래를 했지만, <<nnpc_he 'Avery'>>【은는】 돈줄이 말랐더군. 따지려거든 <<nnpc_him 'Avery'>>한테 가서 따져.\"`>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t\t<<print $_stringsPre>>\"<<nnpc_He 'Avery'>>'d have let you fall.\"",
+   "\t\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t\t<<elseif isAveryPayingBailey() is 1 and $rentTime lte 0>>",
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t\t<<print $_stringsPre>>\"I had a deal with <<nnpc_him 'Avery'>>, but <<nnpc_he 'Avery'>> dried up. Take it up with <<nnpc_him 'Avery'>>.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $avery_fate is \"saved\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"Keep calling for that idiot. See if <<nnpc_his 'Avery'>> money reaches this far.\"`>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"그 멍청이를 계속 불러봐. <<nnpc_his 'Avery'>> 돈이 여기까지 닿을 수 있나 보자고.\"`>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t\t<<print $_stringsPre>>\"Keep calling for that idiot. See if <<nnpc_his 'Avery'>> money reaches this far.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<elseif $bailey_avery_met>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"If <<nnpc_he _loveInterest>> cared about you, <<nnpc_he _loveInterest>> would pay for you.\"`>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<print $_stringsPre + `\"만약 <<nnpc_he _loveInterest>>【이가】 널 신경 썼다면, 진작에 네 몸값을 지불했겠지.\"`>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t\t<<print $_stringsPre>>\"If <<nnpc_he _loveInterest>> cared about you, <<nnpc_he _loveInterest>> would pay for you.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t\t`\"What do you think that idiot ${C.npc.Alex.pronoun is \"f\" ? \"cowgirl\" : \"cowboy\"} is going to do?\"`,",
+   "\t\t\t\t\t`\"Your farmer's probably face-down in a bottle somewhere.\"`,",
+   "\t\t\t\t\t`\"That drunk couldn't find you if you were standing in <<nnpc_his 'Alex'>> field.\"`",
+   "\t\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t\t`\"그 멍청한 ${C.npc.Alex.pronoun is \"f\" ? \"카우걸이\" : \"카우보이가\"} 뭘 할 수 있을 것 같냐?\"`,",
+   "\t\t\t\t\t`\"네 농부 녀석은 아마 어딘가에 처박혀서 술이나 퍼마시고 있겠지.\"`,",
+   "\t\t\t\t\t`\"그 술고래는 네가 <<nnpc_his 'Alex'>> 밭 한가운데 서 있어도 널 못 찾을 거다.\"`",
+   "\t\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<print $_stringsPre>>\"What do you think that idiot <<if C.npc.Alex.pronoun is \"f\">>cowgirl<<else>>cowboy<</if>> is going to do?\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<print $_stringsPre>>\"Your farmer's probably face-down in a bottle somewhere.\"",
+   "\t\t\t\t<<speechLine>>",
+   "\t\t\t\t\t<<print $_stringsPre>>\"That drunk couldn't find you if you were standing in <<nnpc_his 'Alex'>> field.\"",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"Alex\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<print $_stringsPre + `\"If <<nnpc_he _loveInterest>> cared about you, <<nnpc_he _loveInterest>> would pay for you.\"`>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<print $_stringsPre + `\"만약 <<nnpc_he _loveInterest>>【이가】 널 신경 썼다면, 진작에 네 몸값을 지불했겠지.\"`>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<print $_stringsPre>>\"If <<nnpc_he _loveInterest>> cared about you, <<nnpc_he _loveInterest>> would pay for you.\"",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<default>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechgenitals is 1>>",
+   "\t\t<<print either(",
+   "\t\t\t`<<He>> looks at your <<genitals>>. \"That'll sell.\"`,",
+   "\t\t\t`<<He>> looks at your <<genitals>>. \"You'll earn your keep.\"`",
+   "\t\t)>>",
+   "\t<<elseif $speechbreasts is 1>>",
+   "\t\t<<print either(",
+   "\t\t\t`<<He>> looks at your <<breasts>>. \"That'll sell.\"`,",
+   "\t\t\t`<<He>> looks at your <<breasts>>. \"You'll earn your keep.\"`",
+   "\t\t)>>",
+   "\t<<elseif $speechpregnant is 1 and $settings.pregnancySpeechEnabled>>",
+   "\t\t<<if getChildrenAt(\"home\").length>>",
+   "\t\t\t<<print `<<He>> sighs at your pregnant belly. \"Knocked up. Typical.\"`>>",
+   "\t\t<<else>>",
+   "\t\t\t<<print `<<He>> looks at your pregnant belly. \"Couldn't keep your legs together, could you?\"`>>"
+  ],
+  "old_kr": [
+   "\t<<elseif $speechgenitals is 1>>",
+   "\t\t<<print either(",
+   "\t\t\t`<<He>>【은는】 당신의 <<genitals>>【을를】 쳐다본다. \"이건 돈이 되겠군.\"`,",
+   "\t\t\t`<<He>>【은는】 당신의 <<genitals>>【을를】 쳐다본다. \"밥값은 충분히 하겠어.\"`",
+   "\t\t)>>",
+   "\t<<elseif $speechbreasts is 1>>",
+   "\t\t<<print either(",
+   "\t\t\t`<<He>>【은는】 당신의 <<breasts>>【을를】 쳐다본다. \"이건 돈이 되겠군.\"`,",
+   "\t\t\t`<<He>>【은는】 당신의 <<breasts>>【을를】 쳐다본다. \"밥값은 충분히 하겠어.\"`",
+   "\t\t)>>",
+   "\t<<elseif $speechpregnant is 1 and $settings.pregnancySpeechEnabled>>",
+   "\t\t<<if getChildrenAt(\"home\").length>>",
+   "\t\t\t<<print `<<He>>【은는】 당신의 불룩한 배를 보며 한숨을 쉰다. \"임신이라니. 뻔하군.\"`>>",
+   "\t\t<<else>>",
+   "\t\t\t<<print `<<He>>【은는】 당신의 불룩한 배를 쳐다본다. \"다리를 함부로 벌리고 다닌 모양이지?\"`>>"
+  ],
+  "new_en": [
+   "\t<</if>>",
+   "\t<<if $speechExposeGenitals>>",
+   "\t\t<<addSpeechLine \"expose\">>",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<He>> looks at your <<genitals>>. \"That'll sell.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<He>> looks at your <<genitals>>. \"You'll earn your keep.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechExposeBreasts>>",
+   "\t\t<<addSpeechLine \"expose\">>",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<He>> looks at your <<breasts>>. \"That'll sell.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<He>> looks at your <<breasts>>. \"You'll earn your keep.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $settings.pregnancySpeechEnabled>>",
+   "\t\t<<if $speechPregnant>>",
+   "\t\t\t<<if getChildrenAt(\"home\").length>>",
+   "\t\t\t\t<<addSpeechLine \"pregnant\">>",
+   "\t\t\t\t\t<<He>> sighs at your pregnant belly. \"Knocked up. Typical.\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<addSpeechLine \"pregnant\">>",
+   "\t\t\t\t\t<<He>> looks at your pregnant belly. \"Couldn't keep your legs together, could you?\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t<</switch>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"Save your breath.\"`,",
+   "\t\t\t\t`\"Quit whining. You'll live.\"`,",
+   "\t\t\t\t`\"Begging won't change what you owe me.\"`,",
+   "\t\t\t\t`\"Beg harder, maybe I'm feeling generous.\"`",
+   "\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"입 아프게 떠들지 마라.\"`,",
+   "\t\t\t\t`\"징징대지 마. 죽이지는 않을 테니까.\"`,",
+   "\t\t\t\t`\"애원한다고 네 빚이 줄어들진 않아.\"`,",
+   "\t\t\t\t`\"더 애절하게 빌어봐. 혹시 내가 자비를 베풀지 뉘 아냐.\"`",
+   "\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t<<addSpeechLine \"plead\">>",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Save your breath.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Quit whining. You'll live.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Begging won't change what you owe me.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Beg harder, maybe I'm feeling generous.\"",
+   "\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t<<if $enemyanger lte 60>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"Every word out of your mouth adds to what you owe.\"`,",
+   "\t\t\t\t`\"You'll shut up and take it if you know what's good for you.\"`,",
+   "\t\t\t\t`\"Begging won't save you, you little shit.\"`",
+   "\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"네 입에서 나오는 말 한마디마다 빚이 늘어날 거다.\"`,",
+   "\t\t\t\t`\"네 목숨이 아깝다면 닥치고 받아들여라.\"`,",
+   "\t\t\t\t`\"빌어봤자 소용없다, 이 새끼야.\"`",
+   "\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t<<addSpeechLine \"plead\">>",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Every word out of your mouth adds to what you owe.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"You'll shut up and take it if you know what's good for you.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Begging won't save you, you little shit.\"",
+   "\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"Keep it down.\"`,",
+   "\t\t\t\t`\"Save the moaning for clients.\"`,",
+   "\t\t\t\t`\"Save the racket for someone who pays.\"`",
+   "\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"조용히 해.\"`,",
+   "\t\t\t\t`\"신음은 손님들 앞에서나 내라고.\"`,",
+   "\t\t\t\t`\"비명은 돈 내는 놈들한테나 질러.\"`",
+   "\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t<<addSpeechLine \"moan\">>",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Keep it down.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Save the moaning for clients.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Save the racket for someone who pays.\"",
+   "\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t<<if $enemyanger lte 60>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"Shut your mouth, brat.\"`,",
+   "\t\t\t\t`\"Not another sound, you little shit.\"`,",
+   "\t\t\t\t`\"One more sound and I'll give you something to moan about.\"`",
+   "\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"입 닥쳐라, 꼬맹아.\"`,",
+   "\t\t\t\t`\"소리 한 번만 더 내봐, 이 새끼야.\"`,",
+   "\t\t\t\t`\"한 번만 더 소리 내면 진짜로 비명을 지르게 만들어 주마.\"`",
+   "\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t<<addSpeechLine \"moan\">>",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Shut your mouth, brat.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Not another sound, you little shit.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"One more sound and I'll give you something to moan about.\"",
+   "\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"You don't give orders here.\"`,",
+   "\t\t\t\t`\"You're in no position to negotiate.\"`,",
+   "\t\t\t\t`\"That mouth is going to cost you, brat.\"`",
+   "\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"여기선 네가 명령하는 게 아니다.\"`,",
+   "\t\t\t\t`\"넌 협상할 처지가 아니야.\"`,",
+   "\t\t\t\t`\"그 주둥아리 때문에 빚만 더 늘어날 거다, 꼬맹아.\"`",
+   "\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t<<addSpeechLine \"demand\">>",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"You don't give orders here.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"You're in no position to negotiate.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"That mouth is going to cost you, brat.\"",
+   "\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t<<if $enemyanger lte 60>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"Mouthy little shit.\"`,",
+   "\t\t\t\t`\"Shut your goddamn mouth.\"`,",
+   "\t\t\t\t`\"You don't get to make demands. You never did.\"`",
+   "\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"입만 산 새끼.\"`,",
+   "\t\t\t\t`\"그 빌어먹을 주둥아리 좀 닥쳐.\"`,",
+   "\t\t\t\t`\"네깟 게 요구할 권리 따윈 없어. 옛날부터 그랬지.\"`",
+   "\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t<<addSpeechLine \"demand\">>",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Mouthy little shit.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Shut your goddamn mouth.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"You don't get to make demands. You never did.\"",
+   "\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"Shut up.\"`,",
+   "\t\t\t\t`\"Be quiet.\"`,",
+   "\t\t\t\t`\"No one's coming.\"`,",
+   "\t\t\t\t`\"Who exactly do you think is going to help you?\"`",
+   "\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"닥쳐.\"`,",
+   "\t\t\t\t`\"조용히 해.\"`,",
+   "\t\t\t\t`\"아무도 안 온다.\"`,",
+   "\t\t\t\t`\"누가 널 도와줄 거라고 생각하나?\"`",
+   "\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t<<addSpeechLine \"screamForHelp\">>",
+   "\t\t\t\t<<set $speechScreamForHelp to 0>>",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Shut up.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Be quiet.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"No one's coming.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Who exactly do you think is going to help you?\"",
+   "\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t<<if $enemyanger lte 60>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"Shut up.\"`,",
+   "\t\t\t\t`\"Be. Quiet.\"`,",
+   "\t\t\t\t`\"Noisy little shit.\"`",
+   "\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"닥쳐.\"`,",
+   "\t\t\t\t`\"조용히. 해라.\"`,",
+   "\t\t\t\t`\"시끄러운 새끼.\"`",
+   "\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t<<addSpeechLine \"screamForHelp\">>",
+   "\t\t\t\t<<set $speechScreamForHelp to 0>>",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Shut up.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Be. Quiet.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Noisy little shit.\"",
+   "\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechforgive is 1>>",
+   "\t\t<<print `<<He>> sneers. ` + either(",
+   "\t\t\t`\"I don't need your forgiveness.\"`,",
+   "\t\t\t`\"Forgive me? For what?\"`,",
+   "\t\t\t`\"Close your damn mouth, or I'll close it for you.\"`",
+   "\t\t)>>",
+   "\t<<elseif $speechapologiseunforgiving is 1>>",
+   "\t\t<<print $_stringsPre + either(",
+   "\t\t\t`\"Shut up. I've heard it all before.\"`,",
+   "\t\t\t`\"Did you really think I would fall for that?\"`,",
+   "\t\t\t`\"Do you think I give a damn, you little shit?\"`,",
+   "\t\t\t`\"Save it. If you were sorry, you'd stop struggling.\"`",
+   "\t\t)>>",
+   "\t<<elseif $speechgrowl is 1 or $speechgrowlheat is 1 or $speechgrowlrut is 1>>",
+   "\t\t<<print $_stringsPre + either(",
+   "\t\t\t`\"You little mutt.\"`,",
+   "\t\t\t`\"I'll muzzle you if I have to.\"`,",
+   "\t\t\t`\"Bite if you want. See what it costs you.\"`,",
+   "\t\t\t`\"This is what I get for taking in strays.\"`",
+   "\t\t)>>",
+   "\t<<elseif $speechstruggle is 1>>"
+  ],
+  "old_kr": [
+   "\t<<elseif $speechforgive is 1>>",
+   "\t\t<<print `<<He>>【은는】 비웃는다. ` + either(",
+   "\t\t\t`\"네 용서 따위 필요 없다.\"`,",
+   "\t\t\t`\"날 용서해? 도대체 뭘?\"`,",
+   "\t\t\t`\"빌어먹을 주둥아리 다물어, 아님 내가 직접 꿰매주지.\"`",
+   "\t\t)>>",
+   "\t<<elseif $speechapologiseunforgiving is 1>>",
+   "\t\t<<print $_stringsPre + either(",
+   "\t\t\t`\"닥쳐. 귀에 딱지가 앉도록 들은 소리니까.\"`,",
+   "\t\t\t`\"내가 그딴 헛소리에 속아 넘어갈 줄 알았나?\"`,",
+   "\t\t\t`\"내가 눈도 깜짝할 것 같냐, 이 새끼야?\"`,",
+   "\t\t\t`\"집어치워. 진짜 미안하다면 반항하지도 않았겠지.\"`",
+   "\t\t)>>",
+   "\t<<elseif $speechgrowl is 1 or $speechgrowlheat is 1 or $speechgrowlrut is 1>>",
+   "\t\t<<print $_stringsPre + either(",
+   "\t\t\t`\"이 똥개 새끼가.\"`,",
+   "\t\t\t`\"필요하면 입마개라도 씌워주마.\"`,",
+   "\t\t\t`\"물어뜯고 싶으면 물어봐. 그 대가가 뭔지 똑똑히 보여줄 테니.\"`,",
+   "\t\t\t`\"길거리 똥개를 거둬준 대가가 이거군.\"`",
+   "\t\t)>>",
+   "\t<<elseif $speechstruggle is 1>>"
+  ],
+  "new_en": [
+   "\t<</if>>",
+   "\t<<if $speechForgive>>",
+   "\t\t<<addSpeechLine \"forgive\">>",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<He>> sneers. \"I don't need your forgiveness.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<He>> sneers. \"Forgive me? For what?\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<He>> sneers. \"Close your damn mouth, or I'll close it for you.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechApologiseUnforgiving>>",
+   "\t\t<<addSpeechLine \"apologise\">>",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"Shut up. I've heard it all before.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"Did you really think I would fall for that?\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"Do you think I give a damn, you little shit?\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"Save it. If you were sorry, you'd stop struggling.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechGrowl or $speechGrowlHeat or $speechGrowlRut>>",
+   "\t\t<<addSpeechLine \"growl\">>",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"You little mutt.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"I'll muzzle you if I have to.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"Bite if you want. See what it costs you.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"This is what I get for taking in strays.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechStruggle>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"Stop struggling.\"`,",
+   "\t\t\t\t`\"You're wasting both our time.\"`,",
+   "\t\t\t\t`\"You're not going anywhere.\"`,",
+   "\t\t\t\t`\"Don't make this difficult.\"`,",
+   "\t\t\t\t`\"Stop fighting me.\"`",
+   "\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"반항하지 마라.\"`,",
+   "\t\t\t\t`\"시간 낭비하게 하지 마.\"`,",
+   "\t\t\t\t`\"넌 아무 데도 못 간다.\"`,",
+   "\t\t\t\t`\"일 귀찮게 만들지 마라.\"`,",
+   "\t\t\t\t`\"저항하지 마.\"`",
+   "\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t<<addSpeechLine \"struggle\">>",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Stop struggling.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"You're wasting both our time.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"You're not going anywhere.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Don't make this difficult.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Stop fighting me.\"",
+   "\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t<<if $enemyanger lte 60>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"Quit moving, you little shit.\"`,",
+   "\t\t\t\t`\"Stop squirming, damn brat.\"`,",
+   "\t\t\t\t`\"That's enough.\"`,",
+   "\t\t\t\t`\"Don't test my patience.\"`,",
+   "\t\t\t\t`\"You're only making it worse for yourself.\"`",
+   "\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"그만 움직여라, 이 새끼야.\"`,",
+   "\t\t\t\t`\"그만 좀 꿈틀거려, 빌어먹을 꼬맹아.\"`,",
+   "\t\t\t\t`\"적당히 해라.\"`,",
+   "\t\t\t\t`\"내 인내심을 시험하지 마라.\"`,",
+   "\t\t\t\t`\"네 무덤만 더 파고 있을 뿐이다.\"`",
+   "\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t<<addSpeechLine \"struggle\">>",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Quit moving, you little shit.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Stop squirming, damn brat.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"That's enough.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Don't test my patience.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"You're only making it worse for yourself.\"",
+   "\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"What have we learned?\"`,",
+   "\t\t\t\t`\"Count it against what you owe.\"`",
+   "\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"뭘 배웠는지 깨달았나?\"`,",
+   "\t\t\t\t`\"네가 진 빚에서 까주마.\"`",
+   "\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t<<addSpeechLine \"spank\">>",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"What have we learned?\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Count it against what you owe.\"",
+   "\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t<<if $enemyanger lte 60>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"Harder? Fine.\"`,",
+   "\t\t\t\t`\"You asked for this.\"`,",
+   "\t\t\t\t`\"This is for wasting my time.\"`,",
+   "\t\t\t\t`\"I'll stop when you've learned your lesson.\"`,",
+   "\t\t\t\t`\"You've been difficult. This is what happens.\"`",
+   "\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"더 세게 쳐달라고? 좋아.\"`,",
+   "\t\t\t\t`\"네가 자초한 일이다.\"`,",
+   "\t\t\t\t`\"이건 내 시간을 낭비하게 만든 대가다.\"`,",
+   "\t\t\t\t`\"네가 주제 파악을 할 때까지 멈추지 않겠다.\"`,",
+   "\t\t\t\t`\"거슬리게 굴면 이렇게 되는 거다.\"`",
+   "\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t\t<<addSpeechLine \"spank\">>",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"Harder? Fine.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"You asked for this.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"This is for wasting my time.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"I'll stop when you've learned your lesson.\"",
+   "\t\t\t<<speechLine>>",
+   "\t\t\t\t<<print $_stringsPre>>\"You've been difficult. This is what happens.\"",
+   "\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechcum is 1>>",
+   "\t\t<<print $_stringsPre + either(",
+   "\t\t\t`\"I hope you appreciate that.\"`,",
+   "\t\t\t`\"Just something to remember me by.\"`,",
+   "\t\t\t`\"We'll call that your going away gift.\"`",
+   "\t\t)>>",
+   "\t<<elseif $arousal gte 9500>>",
+   "\t\t<<print $_stringsPre + either(",
+   "\t\t\t`\"Nice look. Some people would pay big to see you hot and bothered like this.\"`,",
+   "\t\t\t`\"Should've brought a camera. Your profile would look great with this expression.\"`",
+   "\t\t)>>",
+   "\t<<elseif $enemyanger lte 60>>",
+   "\t\t<<if $rng gte 81>>",
+   "\t\t\t<<set $_options to [\"default\"]>>",
+   "\t\t\t<<if $hairlength gte 600>>",
+   "\t\t\t\t<<run $_options.push(\"hair\")>>",
+   "\t\t\t<</if>>",
+   "\t\t\t<<if $player.breastsize gte 6 or $player.penissize gte 4>>",
+   "\t\t\t\t<<run $_options.push(\"cow\")>>",
+   "\t\t\t<</if>>",
+   "\t\t\t<<if $athletics gte 750 or $physique gte $physiquesize * 0.75>>",
+   "\t\t\t\t<<run $_options.push(\"healthy\")>>",
+   "\t\t\t<</if>>",
+   "\t\t\t<<switch $_options[random(0, $_options.length - 1)]>>",
+   "\t\t\t\t<<case \"hair\">><<print $_stringsPre + `\"Kept your hair long? I know someone who will like that.\"`>>",
+   "\t\t\t\t<<case \"cow\">><<print $_stringsPre + `\"Cows fetch a high price these days, you know.\"`>>",
+   "\t\t\t\t<<case \"healthy\">><<print $_stringsPre + `\"You're strong. Good. Some people pay for the fight.\"`>>",
+   "\t\t\t\t<<case \"default\">><<print $_stringsPre + `\"Don't make this harder than it needs to be.\"`>>",
+   "\t\t\t<</switch>>",
+   "\t\t<<else>>",
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"Just relax. I'll handle everything like always.\"`,",
+   "\t\t\t\t`\"You were always the best looking little ` + [\"bastard\",\"shit\",\"<<bitch>>\"][random(0,2)] + `.\"`,",
+   "\t\t\t\t`\"It's easier this way. Trust me.\"`,",
+   "\t\t\t\t`\"Stay still.\"`,",
+   "\t\t\t\t`\"You're learning. Good.\"`,",
+   "\t\t\t\t`\"Keep still. I'm almost done with you.\"`,",
+   "\t\t\t\t`\"Hold still. You're wasting both our time.\"`,",
+   "\t\t\t\t`\"You've always been the most difficult one. I hope you know that.\"`",
+   "\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t<<elseif $speechcum is 1>>",
+   "\t\t<<print $_stringsPre + either(",
+   "\t\t\t`\"감사하게 여기길 바란다.\"`,",
+   "\t\t\t`\"나를 기억하게 만들 기념품이다.\"`,",
+   "\t\t\t`\"작별 선물이라고 쳐두지.\"`",
+   "\t\t)>>",
+   "\t<<elseif $arousal gte 9500>>",
+   "\t\t<<print $_stringsPre + either(",
+   "\t\t\t`\"표정 좋군. 네가 그렇게 달아올라 헐떡이는 꼴을 보려고 큰돈을 낼 놈들이 많을 거다.\"`,",
+   "\t\t\t`\"카메라를 가져왔어야 했는데. 네 프로필 사진으로 쓰면 딱 좋겠군.\"`",
+   "\t\t)>>",
+   "\t<<elseif $enemyanger lte 60>>",
+   "\t\t<<if $rng gte 81>>",
+   "\t\t\t<<set $_options to [\"default\"]>>",
+   "\t\t\t<<if $hairlength gte 600>>",
+   "\t\t\t\t<<run $_options.push(\"hair\")>>",
+   "\t\t\t<</if>>",
+   "\t\t\t<<if $player.breastsize gte 6 or $player.penissize gte 4>>",
+   "\t\t\t\t<<run $_options.push(\"cow\")>>",
+   "\t\t\t<</if>>",
+   "\t\t\t<<if $athletics gte 750 or $physique gte $physiquesize * 0.75>>",
+   "\t\t\t\t<<run $_options.push(\"healthy\")>>",
+   "\t\t\t<</if>>",
+   "\t\t\t<<switch $_options[random(0, $_options.length - 1)]>>",
+   "\t\t\t\t<<case \"hair\">><<print $_stringsPre + `\"머리는 계속 길렀나? 이런 걸 좋아할 놈을 알지.\"`>>",
+   "\t\t\t\t<<case \"cow\">><<print $_stringsPre + `\"요즘은 젖소가 비싼 값에 팔린다는 거 알 거다.\"`>>",
+   "\t\t\t\t<<case \"healthy\">><<print $_stringsPre + `\"체력이 좋군. 마음에 들어. 거칠게 반항하는 걸 돈 주고 볼 놈들도 있거든.\"`>>",
+   "\t\t\t\t<<case \"default\">><<print $_stringsPre + `\"불필요하게 힘 빼지 마라.\"`>>",
+   "\t\t\t<</switch>>",
+   "\t\t<<else>>",
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"긴장 풀어. 평소처럼 내가 알아서 처리할 테니.\"`,",
+   "\t\t\t\t`\"넌 항상 최고로 예쁜 꼬마 ` + [\"새끼\",\"자식\",\"<<bitch>>\"][random(0,2)] + `【이었였】지.\"`,",
+   "\t\t\t\t`\"이러는 게 훨씬 편할 거다. 날 믿어.\"`,",
+   "\t\t\t\t`\"가만히 있어.\"`,",
+   "\t\t\t\t`\"배우는 속도가 빠르군. 좋아.\"`,",
+   "\t\t\t\t`\"가만히 있어라. 거의 다 끝나가니까.\"`,",
+   "\t\t\t\t`\"가만히 있어. 둘 다 시간 낭비일 뿐이다.\"`,",
+   "\t\t\t\t`\"넌 항상 제일 다루기 힘든 녀석이었지. 너도 알고 있길 바란다.\"`",
+   "\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t<</if>>",
+   "\t<<if $speechPlayerOrgasm>>",
+   "\t\t<<addSpeechLine \"playerOrgasm\">>",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"I hope you appreciate that.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"Just something to remember me by.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"We'll call that your going away gift.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $arousal gte 9500>>",
+   "\t\t<<addSpeechLine \"idle\">>",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"Nice look. Some people would pay big to see you hot and bothered like this.\"",
+   "\t\t<<speechLine>>",
+   "\t\t\t<<print $_stringsPre>>\"Should've brought a camera. Your profile would look great with this expression.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $enemyanger lte 60>>",
+   "\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t<<print $_stringsPre>>\"Don't make this harder than it needs to be.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t\t<<if $hairlength gte 600>>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<print $_stringsPre>>\"Kept your hair long? I know someone who will like that.\"",
+   "\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $rng gte 91 and $enemyanger lte 70>>",
+   "\t\t\t<<print $_stringsPre + `\"Maybe I should inspect you before we go.\"`>>",
+   "\t\t<<else>>",
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"Why do you shits have to make it harder on yourselves?\"`,",
+   "\t\t\t\t`\"I told you to hold still.\"`,",
+   "\t\t\t\t`\"You're making it harder on both of us.\"`,",
+   "\t\t\t\t`\"You chose this.\"`,",
+   "\t\t\t\t`\"Are you going to listen to me now?\"`,",
+   "\t\t\t\t`\"I have someone willing to pay big for you.\"`,",
+   "\t\t\t\t`\"You're coming with me, and that's that.\"`,",
+   "\t\t\t\t`\"You owe me for the inconvenience.\"`,",
+   "\t\t\t\t`\"Keep fighting. See where it gets you.\"`,",
+   "\t\t\t\t`\"You're costing me money every time you move.\"`,",
+   "\t\t\t\t`\"This would be over already if you'd just behave.\"`,",
+   "\t\t\t\t`\"Stop squirming, you're not going anywhere.\"`,",
+   "\t\t\t\t`\"Every second you fight me is a second you owe me.\"`",
+   "\t\t\t)>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $rng gte 91 and $enemyanger lte 70>>",
+   "\t\t\t<<print $_stringsPre + `\"가기 전에 물건 상태 좀 확인해 봐야겠군.\"`>>",
+   "\t\t<<else>>",
+   "\t\t\t<<print $_stringsPre + either(",
+   "\t\t\t\t`\"왜 꼭 스스로 일을 꼬이게 만드는 거냐?\"`,",
+   "\t\t\t\t`\"가만히 있으라고 했을 텐데.\"`,",
+   "\t\t\t\t`\"너 때문에 우리 둘 다 힘들어지잖아.\"`,",
+   "\t\t\t\t`\"네가 선택한 길이다.\"`,",
+   "\t\t\t\t`\"이제 내 말 들을 마음이 생겼나?\"`,",
+   "\t\t\t\t`\"널 비싼 값에 사겠다는 호구 새끼가 있거든.\"`,",
+   "\t\t\t\t`\"넌 나랑 같이 가는 거다, 잔말 마.\"`,",
+   "\t\t\t\t`\"이 성가신 상황을 만든 값도 청구하마.\"`,",
+   "\t\t\t\t`\"계속 발악해봐. 그 끝이 어딘지 똑똑히 보여줄 테니.\"`,",
+   "\t\t\t\t`\"네가 움직일 때마다 내 돈이 깎인단 말이다.\"`,",
+   "\t\t\t\t`\"얌전히 굴었으면 진작에 끝났을 일이다.\"`,",
+   "\t\t\t\t`\"그만 꿈틀대. 넌 아무 데도 못 가니까.\"`,",
+   "\t\t\t\t`\"네가 반항하는 매 초마다 네 빚이 늘어날 거다.\"`",
+   "\t\t\t)>>"
+  ],
+  "new_en": [
+   "\t\t<<if $enemyanger lte 70>>",
+   "\t\t\t<<addSpeechLine \"idle\">>",
+   "\t\t\t\t<<print $_stringsPre>>\"Maybe I should inspect you before we go.\"",
+   "\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t<<else>>"
+ }
+]

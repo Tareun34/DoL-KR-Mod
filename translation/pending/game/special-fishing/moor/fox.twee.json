@@ -1,0 +1,61 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t",
+   "\t<<tearful>> you wonder if all that was worth it for a $fishingHookedFish.type."
+  ],
+  "old_kr": [
+   "\t",
+   "\t<<tearful>> 당신은 고작 <<= setup.foodstuff[$fishingHookedFish.type].name>> 한 마리를 두고 이렇게까지 할 가치가 있었는지 의문이 든다."
+  ],
+  "new_en": [
+   "",
+   "\t<<tearful>> you wonder if all that was worth it for a $fishingHookedFish.type."
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $settings.bestialityEnabled>>",
+   "\t<<link [[Next|Fishing Moor Fox Molestation]]>><<set $molestationstart to 1>><<set $fishingMoorFoxPhase to 2>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "<<if $settings.bestialityEnabled>>",
+   "\t<<link [[다음|Fishing Moor Fox Molestation]]>><<set $molestationstart to 1>><<set $fishingMoorFoxPhase to 2>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "<<if animalSexEnabledForType(\"fox\")>>",
+   "\t<<link [[Next|Fishing Moor Fox Molestation]]>><<set $molestationstart to 1>><<set $fishingMoorFoxPhase to 2>><<endevent>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $settings.bestialityEnabled and dangerEvent()>>",
+   "\tAs you toss the $fishingHookedFish.type back, the <<beasttype>>'s eyes follow it into the water. <<bHe>> snaps <<bhis>> gaze to you, ears flat. <<bHe>> snarls, then throws <<bhimself>> at you."
+  ],
+  "old_kr": [
+   "<<if $settings.bestialityEnabled and dangerEvent()>>",
+   "\t당신이 <<= setup.foodstuff[$fishingHookedFish.type].name>>【을를】 물속으로 던지자, <<beasttype>>의 눈이 그것을 따라 물가로 향한다. <<bHe>>【은는】 귀를 바짝 눕히며 날카로운 눈빛으로 당신을 노려본다. 으르렁거리며 당신을 향해 몸을 던진다."
+  ],
+  "new_en": [
+   "<<if animalSexEnabledForType(\"fox\") and dangerEvent()>>",
+   "\tAs you toss the $fishingHookedFish.type back, the <<beasttype>>'s eyes follow it into the water. <<bHe>> snaps <<bhis>> gaze to you, ears flat. <<bHe>> snarls, then throws <<bhimself>> at you."
+  ],
+  "context": "<<loadNPC 0 \"moor_fishing_fox\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<set $daily.fishing.fishingMoor.fox.closeness to 0>>"
+ }
+]

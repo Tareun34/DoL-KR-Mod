@@ -405,7 +405,7 @@
 	<<link [[다음|Smuggler Pub Wren Intro]]>><<set $smuggler_pub_wren to 1>><</link>>
 	<br>
 <<else>>
-	<<if $debug is 1>>
+	<<if $debug>>
 		<<if $exposed lte 0>>
 			<<stripclubicon>><<link [[댄서로 일한다|Smuggler Pub Work Dance]]>><<set $dancestart to 1>><<stress -4>><<tiredness 4>><</link>><<lstress>><<gtiredness>>
 			<br>
@@ -1244,7 +1244,7 @@
 <</if>>
 <br><br>
 
-"미안," 렌이 민망한 듯 웃으며 말한다. "내가 너무 무례했네. 별일 아니니까 걱정 마."
+"Sorry," Wren says with an embarrassed smile. "How rude of me. It's nothing important. Don't worry."
 <br><br>
 
 <<He>>【이가】 다시 대화에 집중한다.

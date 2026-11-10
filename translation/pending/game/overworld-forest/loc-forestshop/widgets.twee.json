@@ -1,0 +1,87 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou tell <<him>> about your time <<badEndProse $badEndStats.last()?.source \"at\">>. <<He>> listens without speaking, stroking your hair as <<he>> does. When you finish, <<he>> kisses your forehead."
+  ],
+  "old_kr": [
+   "\t당신은 <<him>>에게 <<badEndProse $badEndStats.last()?.source \"at\">> 보냈던 시간에 대해 말해준다. <<He>>【은는】 당신의 머리를 쓰다듬으며 아무 말 없이 듣기만 한다. 이야기가 끝나자, <<he>>【이가】 당신의 이마에 입을 맞춘다."
+  ],
+  "new_en": [
+   "\t<<set $gwylan.timer.lastSeen to Time.date.timeStamp>>",
+   "\tYou tell <<him>> about your time <<badEndProse $badEndStats.last()?.source \"at\">>. <<He>> listens without speaking, stroking your hair as <<he>> does. When you finish, <<he>> kisses your forehead."
+  ],
+  "context": "<<widget \"gwylanReunion\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\"The wolves are usually so docile, but the black one has been growing more and more bold,\" <<he>> says. \"I'm so sorry that <<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or $blackwolfmonster is 2>><<nnpc_he \"Black Wolf\">><<else>>it<</if>> put you through that.\""
+  ],
+  "old_kr": [
+   "\t\t\t\"늑대들은 평소엔 참 얌전한데, 그 검은 놈은 점점 대담해지고 있네,\" <<he>>【이가】 말한다. \"<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or $blackwolfmonster is 2>><<nnpc_he \"Black Wolf\">>【이가】 <<else>>그 녀석이<</if>> 널 그렇게 만들다니 정말 유감이야.\""
+  ],
+  "new_en": [
+   "\t\t\t\"The wolves are usually so docile, but the black one has been growing more and more bold,\" <<he>> says. \"I'm so sorry that <<if resolveIfNamedBeastIsMonster(\"blackwolf\")>><<nnpc_he \"Black Wolf\">><<else>>it<</if>> put you through that.\""
+  ],
+  "context": "\t\t<<case \"Wolf Cave\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tYou spend a few minutes drying off before moving on."
+  ],
+  "old_kr": [
+   "\t\t\t\t\t당신은 몇 분간 몸을 말린 후 계속 나아간다."
+  ],
+  "new_en": [
+   "\t\t\t\t\tYou spend a few minutes drying off before moving on.",
+   "\t\t\t\t\t<<dry_full>>",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$gwylanSeen.includes(\"struggles\") and $gwylan.progress gte 15 and _gwylanLovePercent gte 65 and $gwylanSeen.includes(\"ritual_beast\") and $dateCount.GwylanBeast gte 2 and $gwylan.request.event isnot \"meetAtCafe\" and !gwylanRequestMet() and C.npc.Gwylan.dom gte 10 and C.npc.Gwylan.lust gte 25>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$gwylanSeen.includes(\"struggles\") and $gwylan.progress gte 9 and _gwylanLovePercent gte 55 and $gwylanSeen.includes(\"ritual_beast\") and $dateCount.GwylanBeast gte 2 and $gwylan.request.event isnot \"meetAtCafe\" and !gwylanRequestMet() and C.npc.Gwylan.dom gte 10 and C.npc.Gwylan.lust gte 25>>"
+  ],
+  "context": "\t/* Story progress */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $location is \"forest_shop\" and _gwylanLovePercent gte 80 and C.npc.Gwylan.dom gte 75 and $dateCount.GwylanSex gte 5 and $gwylan.sea gte 5 and !$gwylanSeen.includes(\"partners\") and _gwylanStatus.includes(\"lust\") and !$weekly.gwylanLIChance and $exposed is 0 and !Time.isBloodMoon()>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $location is \"forest_shop\" and _gwylanLovePercent gte 70 and C.npc.Gwylan.dom gte 75 and $dateCount.GwylanSex gte 5 and $gwylan.sea gte 5 and !$gwylanSeen.includes(\"partners\") and _gwylanStatus.includes(\"lust\") and !$weekly.gwylanLIChance and $exposed is 0 and !Time.isBloodMoon()>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if !gwylanRequestMet() and !$gwylan.request.command and $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if !gwylanRequestMet() and !$gwylan.request.command and $debug>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<dry_full>>",
+   "\t\t\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t\t\t<<fame 1 \"exhibitionism\">>"
+ }
+]

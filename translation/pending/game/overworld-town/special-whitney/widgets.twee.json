@@ -1,0 +1,193 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $location is \"flats\" and Time.hour gte 9 and [3,6,7].includes(Time.weekDay)>>",
+   "\t\tWhitney glances out the window, and waves at someone. \"We got company,\" <<he>> says."
+  ],
+  "old_kr": [
+   "\t<<elseif $location is \"flats\" and Time.hour gte 9 and [3,6,7].includes(Time.weekDay)>>",
+   "\t\t휘트니가 창밖을 내다보며 누군가에게 손을 흔든다. \"손님이 왔네.\" <<he>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<elseif $location is \"flats\" and whitneyHasFriendsOver()>>",
+   "\t\tWhitney glances out the window, and waves at someone. \"We got company,\" <<he>> says."
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if StartConfig.sneaky and $location is \"park\" and ($whitney_home_stage lt 3 or !$whitney_home_stage)>>",
+   "\t\t\t\t<<ind>><<link [[Progress home events|Whitney Park]]>><<set $whitney_home_timer to 21>><</link>> SNEAKY OPTION"
+  ],
+  "old_kr": [
+   "\t\t\t<<if StartConfig.sneaky and $location is \"park\" and ($whitney_home_stage lt 3 or !$whitney_home_stage)>>",
+   "\t\t\t\t<<ind>><<link [[집 이벤트 진행|Whitney Park]]>><<set $whitney_home_timer to 21>><</link>> 비공식 선택지"
+  ],
+  "new_en": [
+   "\t\t\t<<if (StartConfig.sneaky or $debug) and $location is \"park\" and ($whitney_home_stage lt 3 or !$whitney_home_stage)>>",
+   "\t\t\t\t<<ind>><<link [[Progress home events|Whitney Park]]>><<set $whitney_home_timer to 21>><</link>> SNEAKY OPTION"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<elseif StartConfig.sneaky and $location is \"flats\" and $whitney_home_stage is 3>>",
+   "\t\t\t\t<<ind>><<link [[Progress home events|Whitney Home Hang]]>><<set $whitney_home_timer to 21>><</link>> SNEAKY OPTION"
+  ],
+  "old_kr": [
+   "\t\t\t<<elseif StartConfig.sneaky and $location is \"flats\" and $whitney_home_stage is 3>>",
+   "\t\t\t\t<<ind>><<link [[집 이벤트 진행|Whitney Home Hang]]>><<set $whitney_home_timer to 21>><</link>> 비공식 선택지"
+  ],
+  "new_en": [
+   "\t\t\t<<elseif (StartConfig.sneaky or $debug) and $location is \"flats\" and $whitney_home_stage is 3>>",
+   "\t\t\t\t<<ind>><<link [[Progress home events|Whitney Home Hang]]>><<set $whitney_home_timer to 21>><</link>> SNEAKY OPTION"
+  ],
+  "context": "\t\t\t\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"whitneyoptions\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"whitneyOptions\">>"
+  ],
+  "context": ":: Widgets Whitney [widget]"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyExit>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptionsleave>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptionsLeave>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"whitneyoptionsleave\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"whitneyOptionsLeave\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"whitneyexit\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"whitneyExit\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !$genderknown.includes(\"Whitney\") and (($player.penisExist and $player.vaginaExist) or ($player.gender_appearance is \"m\" and $player.sex isnot \"m\") or ($player.gender_appearance is \"f\" and $player.sex isnot \"f\"))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$genderknown.includes(\"Whitney\") and (($player.penisExist and $player.vaginaExist) or ($player.gender_appearance is \"m\" and $player.sex isnot \"m\") or ($player.gender_appearance is \"f\" and $player.sex isnot \"f\")) and $settings.nudeGenderPerception !== 0>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<whitneyOptions>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<whitneyoptions>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<whitneyOptions>>"
+  ],
+  "context": ""
+ }
+]

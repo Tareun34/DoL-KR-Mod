@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou talk about your various encounters with <<if !$settings.bestialityEnabled>>monsters<<else>>beasts<</if>>. They listen with a mixture of fascination and horror.<<status 5>><<gcool>>"
+  ],
+  "old_kr": [
+   "\t\t\t당신은 <<if !$settings.bestialityEnabled>>괴물<<else>>짐승<</if>>들과의 다양한 만남에 대해 이야기한다. 그들은 매혹과 공포가 뒤섞인 채 듣는다.<<status 5>><<gcool>>"
+  ],
+  "new_en": [
+   "\t\t\tYou talk about your various encounters with <<if !isBestialityOnForAnyCreature()>>monsters<<else>>beasts<</if>>. They listen with a mixture of fascination and horror.<<status 5>><<gcool>>"
+  ],
+  "context": "\t\t<<if hasSexStat(\"deviancy\", 5)>>"
+ }
+]

@@ -164,12 +164,12 @@
 			<br><br>
 		<</if>>
 		<<if $pubtask is "moor" and $pubtask2 isnot 1>>
-			<<if $pubtasksetting is "lurkers" and $settings.bestialityEnabled and $settings.lurkersEnabled>>
-				<<crimeicon "black box">><<link [[랜드리의 블랙박스를 찾는다|Moor Box Lurkers]]>><</link>>
+			<<if $pubtasksetting is "lurkers" and $settings.lurkersEnabled>>
+				<<crimeicon "black box">><<link [[Search for Landry's black box|Moor Box Lurkers]]>><</link>>
 			<<elseif $pubtasksetting is "person">>
-				<<crimeicon "black box">><<link [[랜드리의 블랙박스를 찾는다|Moor Box]]>><</link>>
-			<<elseif random(1, 2) is 2 and $settings.bestialityEnabled and $settings.lurkersEnabled>>
-				<<crimeicon "black box">><<link [[랜드리의 블랙박스를 찾는다|Moor Box Lurkers]]>><</link>>
+				<<crimeicon "black box">><<link [[Search for Landry's black box|Moor Box]]>><</link>>
+			<<elseif random(1, 2) is 2 and $settings.lurkersEnabled>>
+				<<crimeicon "black box">><<link [[Search for Landry's black box|Moor Box Lurkers]]>><</link>>
 			<<else>>
 				<<crimeicon "black box">><<link [[랜드리의 블랙박스를 찾는다|Moor Box]]>><</link>>
 			<</if>>
@@ -187,57 +187,28 @@
 		<<flight_time_check 4>>
 		<br>
 	<</if>>
+	<<moorShortcuts>>
+	<<travelSpeedOptions>>
+	<br><br>
+	<<travelSpeedInfo>>
+
 	<<if $moor lt 100>>
-		황야 깊숙이 들어간다
-		<br>
-		<<if $harpy gte 6 and $birdFly gte 1 and !$plucked>>
-			<<glideicon>><<link [[날아간다 (<<print getTimeString(_hoursPassed, _minutesPassed)>>)|Moor]]>><<set $fatigueMod to _fatigueMod>><<set $flightTime to _flightTime>><<bird_pass _flightTime>><<set $moor += 5>><<set $forestmod to 1>><<set $moormove to "fly">><</link>><<flight_text>><<gtiredness>>
-			<br>
-		<</if>>
 		<<if $worn.feet.type.includes("heels") and !$possessed>>
-			<<heelsicon "hobble">><<link [[하이힐을 신고 절뚝인다 (0:30)|Moor]]>><<bird_pass 30>><<set $moor += 5>><<set $forestmod to 3>><<set $moormove to "hobble">><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<gharass>>
+			<<heelsicon "hobble">><<link [[Hobble deeper into the moor (0:30)|Moor]]>><<bird_pass 30>><<set $moor += 5>><<set $forestmod to 3>><<set $moormove to "hobble">><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<gharass>>
 		<<else>>
-			<<if !$worn.feet.type.includes("shackle")>>
-				<<runicon>><<link [[빠르게 (0:05)|Moor]]>><<bird_pass 5>><<set $moor += 5>><<set $forestmod to 3>><<set $moormove to "quick">><<if $moor_hunt gte 1>><<set $moor_hunt += 0.5>><</if>><</link>><<gharass>>
-				<br>
-			<</if>>
-			<<walkicon>><<link [[보통 속도로 (0:10)|Moor]]>><<bird_pass 10>><<set $moor += 5>><<set $forestmod to 1>><<set $moormove to "normal">><<if $moor_hunt gte 1>><<set $moor_hunt += 1>><</if>><</link>>
-			<br>
-			<<sneakicon>><<link [[조심스럽게 (0:30)|Moor]]>><<bird_pass 30>><<set $moor += 5>><<set $moormove to "careful">><<set $forestmod to 0.5>><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<lharass>>
+			<<moorTravelIcon "moor">><<link `'Go deeper into the moor (<span class="travelTime">' + _travelTimeString + '</span>)'` "Moor">><<moorTravel "deeper">><</link>>
 		<</if>>
 		<br><br>
 	<</if>>
-		근처를 수색한다 <<gtreasure>>
-		<br>
-		<<if $harpy gte 6 and $birdFly gte 1 and !$plucked>>
-			<<glideicon>><<link [[날아간다 (<<print getTimeString(_hoursPassed, _minutesPassed)>>)|Moor]]>><<set $fatigueMod to _fatigueMod>><<set $flightTime to _flightTimeSearch>><<bird_pass _flightTimeSearch>><<set $forestmod to 0.5>><<set $moormove to "fly_search">><</link>><<flight_text>><<gtiredness>><<lharass>>
-			<br>
-		<</if>>
-		<<if !$worn.feet.type.includes("shackle")>>
-			<<runicon>><<link [[빠르게 (0:05)|Moor]]>><<bird_pass 5>><<set $forestmod to 3>><<set $moormove to "quick_search">><<if $moor_hunt gte 1>><<set $moor_hunt += 0.5>><</if>><</link>><<gharass>>
-			<br>
-		<</if>>
-		<<walkicon>><<link [[보통 속도로 (0:10)|Moor]]>><<bird_pass 10>><<set $forestmod to 1>><<set $moormove to "normal_search">><<if $moor_hunt gte 1>><<set $moor_hunt += 1>><</if>><</link>>
-		<br>
-		<<sneakicon>><<link [[조심스럽게 (0:30)|Moor]]>><<bird_pass 30>><<set $forestmod to 0.5>><<set $moormove to "careful_search">><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<lharass>>
-		<br><br>
+
+	<<mooricon "search">><<link `'Search nearby (<span class="travelTime">' + _travelTimeString + '</span>)'` "Moor">><<moorTravel "search">><</link>><<gtreasure>>
+	<br><br>
+
 	<<if $moor gt 0>>
-		해안가로 향한다
-		<br>
-		<<if $harpy gte 6 and $birdFly gte 1 and !$plucked>>
-			<<glideicon>><<link [[날아간다 (<<print getTimeString(_hoursPassed, _minutesPassed)>>)|Moor]]>><<set $fatigueMod to _fatigueMod>><<set $flightTime to _flightTime>><<bird_pass _flightTime>><<set $moor -= 5>><<set $forestmod to 1>><<set $moormove to "fly">><</link>><<flight_text>><<gtiredness>>
-			<br>
-		<</if>>
 		<<if $worn.feet.type.includes("heels") and !$possessed>>
-			<<heelsicon "hobble">><<link [[하이힐을 신고 절뚝인다 (0:30)|Moor]]>><<bird_pass 30>><<set $moor -= 5>><<set $forestmod to 3>><<set $moormove to "hobble">><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<gharass>>
+			<<heelsicon "hobble">><<link [[Hobble towards the coast (0:30)|Moor]]>><<bird_pass 30>><<set $moor -= 5>><<set $forestmod to 3>><<set $moormove to "hobble">><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<gharass>>
 		<<else>>
-			<<if !$worn.feet.type.includes("shackle")>>
-				<<runicon>><<link [[빠르게 (0:05)|Moor]]>><<bird_pass 5>><<set $moor -= 5>><<set $forestmod to 3>><<set $moormove to "quick">><<if $moor_hunt gte 1>><<set $moor_hunt += 0.5>><</if>><</link>><<gharass>>
-				<br>
-			<</if>>
-			<<walkicon>><<link [[보통 속도로 (0:10)|Moor]]>><<bird_pass 10>><<set $moor -= 5>><<set $forestmod to 1>><<set $moormove to "normal">><<if $moor_hunt gte 1>><<set $moor_hunt += 1>><</if>><</link>>
-			<br>
-			<<sneakicon>><<link [[조심스럽게 (0:30)|Moor]]>><<bird_pass 30>><<set $moor -= 5>><<set $forestmod to 0.5>><<set $moormove to "careful">><<if $moor_hunt gte 1>><<set $moor_hunt += 2>><</if>><</link>><<lharass>>
+			<<moorTravelIcon "coast">><<link `'Go towards the coast (<span class="travelTime">' + _travelTimeString + '</span>)'` "Moor">><<moorTravel "coast">><</link>>
 		<</if>>
 		<br><br>
 	<<else>>
@@ -271,8 +242,8 @@
 	<<getouticon "dig">><<link [[보물 파기 (2:00)|Castle Treasure]]>><<pass 120>><<unset $treasure_map>><<tiredness 6>><</link>><<gtiredness>>
 	<br>
 <</if>>
-<<if $bird and $bird.upgrades and $bird.upgrades.snare gte 1>>
-	당신의 덫이 여기에 있다.
+<<if $bird?.upgrades?.snare gte 1>>
+	Your snare is here.
 	<<if $bird.lurkerSnareState is "captured">>
 		<span class="green">럴커 한 마리가 밧줄에 걸려 버둥거리고 있다.</span>
 		<br>
@@ -640,11 +611,11 @@
 <<if playerChastity("hidden")>>
 	"빌어먹을." <<He>>【은는】 얼굴을 찌푸리며 노골적으로 실망한 기색을 드러낸다. "아무것도 안 보이잖아."
 <<else>>
-	<<if $player.penisExist and $player.vaginaExist>>
-		"둘 다 달렸다고?" <<he>>【이가】 묻는다. "오늘 완전 땡잡았네. 카메라가 없는 게 아쉬울 따름이야."
+	<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>
+		"Both?" <<he>> asks. "It's my lucky day. Shame I don't have a camera."
 	<<elseif $player.penisExist>>
-		<<if $player.gender_appearance is "f">>
-			"이거 놀라운데." <<he>>【이가】 말한다.
+		<<if $player.gender_appearance is "f" and $settings.nudeGenderPerception !== 0>>
+			"Now there's a surprise," <<he>> says.
 			<<if $player.penissize gte 6>>
 				"거기다 엄청 크잖아. 카메라가 없는 게 아쉽네."
 				<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
@@ -665,8 +636,8 @@
 			<</if>>
 		<</if>>
 	<<else>>
-		<<if $player.gender_appearance is "m">>
-			"이거 놀라운데." <<he>>【이가】 말한다.
+		<<if $player.gender_appearance is "m" and $settings.nudeGenderPerception !== 0>>
+			"Now there's a surprise," <<he>> says.
 		<<else>>
 			"끝내주는 보지로군." <<he>>【이가】 말한다.
 		<</if>>
@@ -732,11 +703,11 @@
 <<person>>【은는】 당신의 <<genitals>>【을를】 훑어본다.
 <<exhibitionism4>>
 
-<<if $player.penisExist and $player.vaginaExist>>
-	"둘 다 달렸다고?" <<he>>【이가】 묻는다. "오늘 완전 땡잡았네. 카메라가 없는 게 아쉬울 따름이야."
+<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>
+	"Both?" <<he>> asks. "It's my lucky day. Shame I don't have a camera."
 <<elseif $player.penisExist>>
-	<<if $player.gender_appearance is "f">>
-		"이거 놀라운데." <<he>>【이가】 말한다.
+	<<if $player.gender_appearance is "f" and $settings.nudeGenderPerception !== 0>>
+		"Now there's a surprise," <<he>> says.
 		<<if $player.penissize gte 6>>
 			"거기다 엄청 크잖아. 카메라가 없는 게 아쉽네."
 			<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
@@ -759,8 +730,8 @@
 		<</if>>
 	<</if>>
 <<else>>
-	<<if $player.gender_appearance is "m">>
-		"이거 놀라운데." <<he>>【이가】 말한다.
+	<<if $player.gender_appearance is "m" and $settings.nudeGenderPerception !== 0>>
+		"Now there's a surprise," <<he>> says.
 	<<else>>
 		"끝내주는 보지로군." <<he>>【이가】 말한다.
 	<</if>>

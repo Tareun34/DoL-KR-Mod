@@ -1,0 +1,140 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<set _warmClothes to \"some trousers\">>",
+   "\t<<elseif $debug is 1 and $worn.over_upper.name is \"naked\" and $rng gte 46>>",
+   "\t\t<<set _warmClothes to \"a jacket\">>"
+  ],
+  "old_kr": [
+   "\t\t<<set _warmClothes to \"바지\">>",
+   "\t<<elseif $debug is 1 and $worn.over_upper.name is \"naked\" and $rng gte 46>>",
+   "\t\t<<set _warmClothes to \"재킷\">>"
+  ],
+  "new_en": [
+   "\t\t<<set _warmClothes to \"some trousers\">>",
+   "\t<<elseif $debug and $worn.over_upper.name is \"naked\" and $rng gte 46>>",
+   "\t\t<<set _warmClothes to \"a jacket\">>"
+  ],
+  "context": "\t<<elseif !_bottom>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tRemy sets down the bowl and <<= $cow gte 2 and $transformationParts.cow.horns isnot \"hidden\" ? \"rubs the base of your horns\" : \"pets your head\">>. \"That's a good <<girl>>. You'll take care next time, won't you?\"",
+   "\t<br><br>"
+  ],
+  "old_kr": [
+   "\t레미는 그릇을 내려놓고 <<= $cow gte 2 and $transformationParts.cow.horns isnot \"hidden\" ? \"당신 뿔의 밑동을 문지른다\" : \"당신 머리를 쓰다듬는다\">>. \"착한 <<girl>>【이】네. 다음번엔 조심할 거지, 응?\"",
+   "\t<br><br>"
+  ],
+  "new_en": [
+   "\tRemy sets down the bowl and <<= $cow gte 2 and $transformationParts.cow.horns isnot \"hidden\" ? \"rubs the base of your horns\" : \"pets your head\">>. \"That's a good <<girl>>. You'll take care next time, won't you?\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<link [[Listen|Livestock Passout 2]]>><<set $phase to 0>><<livestock_obey 1>><<transform cow 1>><</link>><<gobey>>",
+   "\t<br>",
+   "\t<<link [[Push away|Livestock Passout 2]]>><<set $phase to 1>><<livestock_obey -1>><<trauma -6>><</link>><<lobey>><<ltrauma>>"
+  ],
+  "old_kr": [
+   "\t<<link [[알겠다고 한다|Livestock Passout 2]]>><<set $phase to 0>><<livestock_obey 1>><<transform cow 1>><</link>><<gobey>>",
+   "\t<br>",
+   "\t<<link [[밀쳐낸다|Livestock Passout 2]]>><<set $phase to 1>><<livestock_obey -1>><<trauma -6>><</link>><<lobey>><<ltrauma>>"
+  ],
+  "new_en": [],
+  "context": "\t<<set Weather.bodyTemperature-->>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Wake up|Hospital Bed]]>><<set $passoutReason to \"hypothermia\">><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[일어난다|Hospital Bed]]>><<set $passoutReason to \"hypothermia\">><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Wake up|Hospital Bed]]>><<set $passoutReason to \"hypothermia\">><<endevent>><</link>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<link [[Next|Wolf Cave]]>><<endevent>><</link>>",
+   "<<elseif $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [
+   "\t<<link [[다음|Wolf Cave]]>><<endevent>><</link>>",
+   "<<elseif $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "new_en": [
+   "\t<<link [[Next|Wolf Cave]]>><<endevent>><</link>>",
+   "<<elseif beastSexEnabledForType(\"wolf\", $monster is 1)>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tThe <<persons>> smile turns",
+   "\t<<if $rng gte 81 and $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [
+   "\t<<persons>> 미소가",
+   "\t<<if $rng gte 81 and $settings.bestialityEnabled>>"
+  ],
+  "new_en": [
+   "\tThe <<persons>> smile turns",
+   "\t<<if $rng gte 81 and animalSexEnabledForType(\"dog\")>>"
+  ],
+  "context": "<<if dangerEvent()>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $debug is 1 and $worn.over_upper.name is \"naked\" and $rng gt 100>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $debug and $worn.over_upper.name is \"naked\" and $rng gt 100>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<whitneyexit>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<whitneyExit>>"
+  ],
+  "context": "\t<<clotheson>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $syndromewolves is 1 and $wolfpacktrust gte 24 and ($monster is 1 or $settings.bestialityEnabled)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<elseif $syndromewolves is 1 and $wolfpacktrust gte 24 and beastSexEnabledForType(\"wolf\", $monster is 1)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $syndromewolves is 1 and ($monster is 1 or $settings.bestialityEnabled)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<elseif $syndromewolves is 1 and beastSexEnabledForType(\"wolf\", $monster is 1)>>"
+  ],
+  "context": ""
+ }
+]

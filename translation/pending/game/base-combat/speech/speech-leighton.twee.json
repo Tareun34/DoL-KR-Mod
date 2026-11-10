@@ -1,0 +1,201 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($speechpenisvirgin is 1 and $player.virginity.penile is \"Leighton\") or ($speechvaginavirgin is 1 and $player.virginity.vaginal is \"Leighton\")>>",
+   "\t\t<<He>> smirks. \"Far from satisfactory. Come see me again for further improvement.\"",
+   "\t<<elseif $speechanusvirgin is 1 and $player.virginity.anal is \"Leighton\">>",
+   "\t\t<<He>> smirks. \"You'll need plenty of training.\"",
+   "\t<<elseif $speechmouthvirgin is 1 and $player.virginity.oral is \"Leighton\">>",
+   "\t\t<<He>> smirks. \"You lack skill... For now.\"",
+   "\t<<elseif $speechkissvirgin is 1 and $player.virginity.kiss is \"Leighton\">>",
+   "\t\t<<He>> smirks. \"Not terrible for a first time.\"",
+   "\t<<elseif $speechnamedrop is 1>>",
+   "\t\t<<set $speechnamedrop to 0>>"
+  ],
+  "old_kr": [
+   "\t<<if ($speechpenisvirgin is 1 and $player.virginity.penile is \"Leighton\") or ($speechvaginavirgin is 1 and $player.virginity.vaginal is \"Leighton\")>>",
+   "\t\t<<He>>【이가】 비릿하게 웃는다. \"만족스럽지 못하군. 훈련이 더 필요하면 언제든 내게로 와라.\"",
+   "\t<<elseif $speechanusvirgin is 1 and $player.virginity.anal is \"Leighton\">>",
+   "\t\t<<He>>【이가】 비릿하게 웃는다. \"훈련이 더 필요하겠군.\"",
+   "\t<<elseif $speechmouthvirgin is 1 and $player.virginity.oral is \"Leighton\">>",
+   "\t\t<<He>>【이가】 비릿하게 웃는다. \"아직 실력이 부족하군... 뭐, 지금 당장은 말이지.\"",
+   "\t<<elseif $speechkissvirgin is 1 and $player.virginity.kiss is \"Leighton\">>",
+   "\t\t<<He>>【이가】 비릿하게 웃는다. \"처음치고는 나쁘지 않군.\"",
+   "\t<<elseif $speechnamedrop is 1>>",
+   "\t\t<<set $speechnamedrop to 0>>"
+  ],
+  "new_en": [
+   "\t<<speechPool \"Leighton\">>",
+   "\t<<if $player.virginity.anal is \"Leighton\" and $speechAnusVirgin>>",
+   "\t\t<<addSpeechLine \"virginity\">>",
+   "\t\t\t<<He>> smirks. \"You'll need plenty of training.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $player.virginity.oral is \"Leighton\" and $speechOralVirgin>>",
+   "\t\t<<addSpeechLine \"virginity\">>",
+   "\t\t\t<<He>> smirks. \"You lack skill... For now.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $player.virginity.kiss is \"Leighton\" and $speechKissVirgin>>",
+   "\t\t<<addSpeechLine \"virginity\">>",
+   "\t\t\t<<He>> smirks. \"Not terrible for a first time.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechLINameDrop>>"
+  ],
+  "context": "\t<<set _npc_speech to true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> smirks. \"Another student? Perhaps I should invite <<nnpc_him \"Robin\">> to my office.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 씨익 웃는다. \"다른 학생이라? <<nnpc_him \"Robin\">>도 내 사무실로 한번 불러야겠군.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<He>> smirks. \"Another student? Perhaps I should invite <<nnpc_him \"Robin\">> to my office.\"",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"Robin\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> frowns. \"Kylar? That explains a lot of things.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 눈살을 찌푸린다. \"카일라라고? 그걸로 설명이 다 되는군.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<He>> frowns. \"Kylar? That explains a lot of things.\"",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"Kylar\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> frowns. \"You and that delinquent? I'm not surprised.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 얼굴을 찌푸린다. \"너랑 그 불량배가? 별로 놀랍지도 않군.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<He>> frowns. \"You and that delinquent? I'm not surprised.\"",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"Whitney\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> smirks. \"Sydney? We could do <<nnpc_his \"Sydney\">> punishment in my office next time.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 씨익 웃는다. \"시드니? 다음번엔 내 사무실에서 <<nnpc_his \"Sydney\">> 체벌을 해야겠어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t\t<<He>> smirks. \"Sydney? We could do <<nnpc_his \"Sydney\">> punishment in my office next time.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<if $sydneySeen.includes(\"spank\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> smirks. \"Sydney? I plan to have <<nnpc_him \"Sydney\">> in my office soon.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 씨익 웃는다. \"시드니? 조만간 그 녀석도 내 방에 부를 작정이다.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t\t<<He>> smirks. \"Sydney? I plan to have <<nnpc_him \"Sydney\">> in my office soon.\"",
+   "\t\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> frowns. \"An animal? This requires extra discipline.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 눈살을 찌푸린다. \"동물이라니? 이건 아주 엄격한 훈육이 필요하겠군.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<He>> frowns. \"An animal? This requires extra discipline.\"",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"Black Wolf\" \"Great Hawk\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> smirks. \"I'm not familiar. This is a private matter, anyway.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 씩 웃는다. \"누군지는 모르겠군. 어쨌든 개인적인 일이니 상관없지.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<He>> smirks. \"I'm not familiar. This is a private matter, anyway.\"",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<default>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechsextoy is 1>>",
+   "\t\t<<set $speechsextoy to 0>>",
+   "\t\t<<set $_sexToy to ($rightarm is \"heldSexToy\" and $leftarm is \"heldSexToy\" ? \"sex toys\" : \"sex toy\")>>",
+   "\t\t<<He>> looks at your $_sexToy and smirks. \"I can teach you a thing or two with that.\"",
+   "\t<<else>>",
+   "\t\t<<set _noNameComment to true>>"
+  ],
+  "old_kr": [
+   "\t<<elseif $speechsextoy is 1>>",
+   "\t\t<<set $speechsextoy to 0>>",
+   "\t\t<<set $_sexToy to ($rightarm is \"heldSexToy\" and $leftarm is \"heldSexToy\" ? \"섹스 토이들\" : \"섹스 토이\")>>",
+   "\t\t<<He>>【이가】 당신의 $_sexToy【을를】 보고 씨익 웃는다. \"그걸로 내가 몇 가지 가르쳐 줄 수 있겠군.\"",
+   "\t<<else>>",
+   "\t\t<<set _noNameComment to true>>"
+  ],
+  "new_en": [],
+  "context": "\t\t<</switch>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<</widget>>"
+  ],
+  "old_kr": [
+   "<</widget>>",
+   ""
+  ],
+  "new_en": [
+   "\t<<if $speechNoticeSexToy>>",
+   "\t\t<<addSpeechLine \"sexToy\">>",
+   "\t\t\t<<set $_sexToy to ($rightarm is \"heldSexToy\" and $leftarm is \"heldSexToy\" ? \"sex toys\" : \"sex toy\")>>",
+   "\t\t\t<<He>> looks at your $_sexToy and smirks. \"I can teach you a thing or two with that.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if ($speechPenisVirgin is 1 and $player.virginity.penile is \"Leighton\") or ($speechVaginaVirgin is 1 and $player.virginity.vaginal is \"Leighton\")>>",
+   "\t\t<<addSpeechLine \"virginity\">>",
+   "\t\t\t<<He>> smirks. \"Far from satisfactory. Come see me again for further improvement.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<speechSay>>",
+   "<</widget>>"
+  ],
+  "context": "\t<</if>>"
+ }
+]

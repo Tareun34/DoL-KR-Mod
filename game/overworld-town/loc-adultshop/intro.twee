@@ -75,7 +75,7 @@
 
 	<<elkicon>><<link [[떠난다|Elk Street]]>><</link>>
 	<br>
-	<<if $debug is 1>>
+	<<if $debug>>
 		<br>
 		<i>디버그. 시드니의 스탯 변경 사항은 이 씬 이후에도 유지됩니다.</i>
 		<br><br>
@@ -95,8 +95,8 @@
 		<<link [[개점 (타락한 시드니)|Adult Shop Opening]]>><<npc Sydney>><<person1>><<endevent>><<set C.npc.Sydney.purity to 0>><<set C.npc.Sydney.corruption to 100>><</link>>
 		<br><br>
 	<</if>>
-	<<if $cheatsEnabled is true or $debug is 1>>
-		<<lockicon "unlock">><<link [[가게 잠금 해제|Elk Street]]>><<set $adultshopunlocked to true>><</link>> | <i>치트 옵션</i> <!-- Appears even with blind stats enabled. Intentional -->
+	<<if $cheatsEnabled is true or $debug>>
+		<<lockicon "unlock">><<link [[Unlock shop|Elk Street]]>><<set $adultshopunlocked to true>><</link>> | <i>Cheat option</i> <!-- Appears even with blind stats enabled. Intentional -->
 		<br>
 	<</if>>
 <</if>>

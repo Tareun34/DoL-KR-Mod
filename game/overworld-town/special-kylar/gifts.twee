@@ -19,7 +19,7 @@
 카일라는 당신이 무언가를 고려했다는 것을 알아채고 이상한 표정으로 쳐다본다.
 <br><br>
 
-<<kylaroptions>>
+<<kylarOptions>>
 
 :: Kylar Gifts
 <<effects>>
@@ -54,7 +54,7 @@
 	"...<<nnpc_He "Sydney">>【은는】 예전에 <<nnpc_his "Sydney">> <<sydneyOtherParent>>한테 이걸 만들어 달라고 조르곤 했어," <<he>>【이가】 거의 <<himself>>에게 하듯 중얼거린다.
 	카일라는 고개를 들어 당신을 바라보고, <<his>> 표정은 읽을 수 없다. "고마워. 나-나 먹을게. 나중에." <<He>>【은는】 당신이 대답하기도 전에 돌아서며, 여전히 크럼블을 품에 안고 있다. <<He>>【은는】 확신이 없어 보인다.<<glove>><<npcincr Kylar love 1>>
 	<br><br>
-	<<kylaroptions>>
+	<<kylarOptions>>
 <<elseif $gift is "bakewell_tart">>
 	당신은 베이크웰 타르트를 내민다. "정말 달아 보여," 카일라가 말한다. "내 <<if $pronoun is "m">>어머니<<else>>아버지<</if>>【이가】 예전에 이걸 만들어 주곤 했어."<<lksuspicion>><<npcincr Kylar rage -1>>
 	<br><br>
@@ -125,7 +125,7 @@
 몇 분 후 <<he>>【은는】 다시 더듬거리지 않고 상자를 들어 올릴 만큼 회복했고, 초콜릿 하나를 맛본다. "고마워." <<he>>【이가】 겨우 말한다.
 <br><br>
 
-<<kylaroptions>>
+<<kylarOptions>>
 
 :: Kylar Gifts Valentines Feed
 <<effects>>
@@ -142,7 +142,7 @@
 "고마워," <<he>>【이가】 말한다.
 <br><br>
 
-<<kylaroptions>>
+<<kylarOptions>>
 
 :: Kylar Gifts Chilli Nod
 <<effects>>
@@ -153,7 +153,7 @@
 "너무 빨리 먹어서 미안해." <<he>>【이가】 다 먹고 나서 말한다. "제대로 된 음식을 자주 못 먹거든, 내가 제일 좋아하는 건 말할 것도 없고."
 <br><br>
 
-<<kylaroptions>>
+<<kylarOptions>>
 
 :: Kylar Gifts Chilli Share
 <<effects>>
@@ -169,7 +169,7 @@
 "고마워," <<he>>【이가】 말한다.
 <br><br>
 
-<<kylaroptions>>
+<<kylarOptions>>
 
 :: Kylar Gifts Bakewell Repeat
 <<effects>>
@@ -189,7 +189,7 @@
 "고마워." <<he>>【이가】 다 먹고 나서 말한다. "아주 맛있었어."
 <br><br>
 
-<<kylaroptions>>
+<<kylarOptions>>
 
 :: Kylar Gifts Bakewell Share
 <<effects>>
@@ -209,7 +209,7 @@
 "고마워." <<he>>【이가】 다 먹고 나서 말한다. "아주 맛있었어."
 <br><br>
 
-<<kylaroptions>>
+<<kylarOptions>>
 
 :: Kylar Gifts Suggest
 <<effects>>
@@ -226,7 +226,7 @@
 카일라는 당신의 제안이 신성모독이라도 되는 듯 잠깐 충격받은 얼굴을 하더니, 이상하게 절하는 동작을 한다. "그-그럴게." <<He>>【은는】 멈추지 않고 음식을 <<his>> 입에 퍼 넣고, 어떻게든 씹고 삼키기를 동시에 해낸다. <<He>>【은는】 몇 초 만에 그것을 다 먹고, 당신의 승인을 바라듯 쳐다본다.
 <br><br>
 
-<<kylaroptions>>
+<<kylarOptions>>
 
 :: Kylar Gifts Nod
 <<effects>>
@@ -234,7 +234,7 @@
 카일라는 그것을 챙겨 넣는다. 당신은 그것이 어디로 가게 될지 궁금하다.<<set $kylar_action to "gift">>
 <br><br>
 
-<<kylaroptions>>
+<<kylarOptions>>
 
 :: Kylar Gifts Spicy Ask
 <<effects>>
@@ -251,7 +251,7 @@
 카일라는 열정적으로 고개를 끄덕인다. "응! 완벽해. 내가 먹어본 것 중에 최고야." <<He>>【은는】 더 빨리 먹기 시작하고, 다 먹기 전에 거의 목이 멜 뻔한다.
 <br><br>
 
-<<kylaroptions>>
+<<kylarOptions>>
 
 :: Kylar Gifts Spicy Watch
 <<effects>>
@@ -262,7 +262,7 @@
 다 먹고 나자 <<he>>【은는】 <<himself>> 어떻게 해야 할지 확신이 없어 보인다.
 <br><br>
 
-<<kylaroptions>>
+<<kylarOptions>>
 
 :: Kylar Gifts Drink End
 <<effects>>
@@ -270,4 +270,4 @@
 <<He>>【은는】 그것을 <<his>> 머리 위로 들어 올리고 마지막 한 방울이 <<his>> 혀 위에 떨어지게 한다. "고마워," <<he>>【이가】 다시 말한다. <<He>>【은는】 용기를 챙겨 넣는다. 그것이 어디로 가게 될지 궁금해진다.
 <br><br>
 
-<<kylaroptions>>
+<<kylarOptions>>

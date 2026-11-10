@@ -42,7 +42,7 @@
 
 <!-- Modified for Monster People -->
 <<widget "livestock_cows">>
-	<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>
+	<<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
 		<<if $settings.maleVictimChance is 0>>
 			<<set _text_output to "젖소 소녀들">>
 		<<elseif $settings.maleVictimChance is 100>>
@@ -68,11 +68,11 @@
 <</widget>>
 
 <<widget "livestock_horse">>
-	<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly) or (!$settings.bestialityEnabled)>>
-		<<set _text_output to "켄타우로스">>
+	<<if monsterCanAppearForType("horse")>>
+		<<set _text_output to "centaur">>
 	<<else>>
-		<<if beastMaleChance() gte random(1, 100)>>
-			<<set _text_output to "종마">>
+		<<if beastMaleChanceForType("horse") gte random(1, 100)>>
+			<<set _text_output to "stallion">>
 		<<else>>
 			<<set _text_output to "암말">>
 		<</if>>
@@ -81,8 +81,8 @@
 <</widget>>
 
 <<widget "livestock_horses">>
-	<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly) or (!$settings.bestialityEnabled)>>
-		<<set _text_output to "켄타우로스들">>
+	<<if monsterCanAppearForType("horse")>>
+		<<set _text_output to "centaurs">>
 	<<else>>
 		<<set _text_output to "말들">>
 	<</if>>
@@ -198,8 +198,8 @@
 		<</addinlineevent>>
 
 		<<addinlineevent "livestock_overhear_winter 6">>
-			<<endevent>><<beastNEWinit 1 cow>><<generate2>><<person1>>
-			헛간 앞쪽의 소란에 당신의 시선이 끌린다. 당신은 <<livestock_cows>>도 그곳을 보고 있다는 것을 알아챈다. 몇몇은 호기심과 짜증이 섞인 울음소리를 낸다.
+			<<endevent>><<generateBeastVictim 1 cow>><<generate2>><<person1>>
+			A commotion at the front of the barn draws your attention. You notice the <<livestock_cows>> looking too. A few moo with a mixture of curiosity and annoyance.
 			<br><br>
 			두 명의 농장 일꾼이 <<beasttype>>【을를】 붙잡고 문 쪽으로 끌고 가려 실랑이를 벌이고 있다. <<beasttype>>【은는】 항의하듯 <<if $monster is 1>>비명을 지른다<<else>>울음소리를 낸다<</if>>.
 			<br><br>
@@ -237,8 +237,8 @@
 		<</if>>
 
 		<<addinlineevent "livestock_overhear_winter 8">>
-			<<endevent>><<beastNEWinit 1 cow>><<generate2>><<generate3>><<person2>>
-			한 <<person>>【이가】 헛간 문으로 몰래 들어온다. 근무 중인 농장 일꾼은 <<person3>><<his>> 의자에 앉아 졸고 있다. <<person2>><<person>>【은는】 문을 닫고 주변을 둘러본다. <<His>> 시선이 당신에게 머물렀다가 황급히 시선을 돌린다. 호기심이 생긴 당신은 <<him>>【을를】 지켜본다.
+			<<endevent>><<generateBeastVictim 1 cow>><<generate2>><<generate3>><<person2>>
+			A <<person>> sneaks in through the barn door. The farmhand on duty is dozing in <<person3>><<his>> chair. The <<person2>><<person>> closes the door and looks around. <<His>> eyes land on you, though <<he>> quickly looks away. Curious, you watch <<him>>.
 			<br><br>
 			<<personsimple>>【은는】 무리를 지은 <<livestock_cows>> 중 한 곳으로 다가간다. <<He>>【은는】 그들 사이를 지나 한가운데로 들어간다. 그곳에는 듬성듬성 파인 건초더미가 있다. <<He>>【은는】 그 위에 자리를 잡고 눈을 감는다.
 			<br><br>
@@ -443,7 +443,7 @@
 <<widget "livestockFieldGrassEvents">>
 	<<if $rng gte 81>>
 		<!-- Modified for Monster People -->
-		<<if ($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>
+		<<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
 			<<if maleChance() lt random(1, 100)>>
 				카우걸이 당신의 냄새를 맡고 음매 운다. 당신은 그녀의 머리를 쓰다듬는다.
 				<<lstress>><<stress -6>>

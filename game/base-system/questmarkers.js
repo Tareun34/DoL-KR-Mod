@@ -16,7 +16,8 @@ const events = [
 		// text shown in twine markup while event is scheduled
 		text: "<<schoolday>>",
 		// text shown if condition() is still met, but it's past the time to attend
-		failuretext: "오늘 수업을 <<print 5 - Object.keys(V.daily.school.attended).length>>번 빠졌습니다.",
+		failuretext:
+			"You have missed <<print Object.keys(V.daily.school.attended).length === 4 ? 'a lesson' : ('<<number ' + (5 - Object.keys(V.daily.school.attended).length) + '>> lessons')>> today.",
 	},
 	{
 		// example of a lazy event that will still work

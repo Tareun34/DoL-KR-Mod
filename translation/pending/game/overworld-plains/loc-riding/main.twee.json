@@ -1,0 +1,111 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $money gte 2500>>",
+   "\t\t\t<<animalicon \"horse-pick\">><<link [[Take riding lesson (£25 1:00)|Riding School Lesson]]>><<set $riding_lesson to 0>><<money -2500 \"ridingLessons\">><<thighskill _riding>><</link>><<gtiredness>><<gthighskill>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $money gte 2500>>",
+   "\t\t\t<<animalicon \"horse-pick\">><<link [[승마 수업 듣기 (£25 1:00)|Riding School Lesson]]>><<set $riding_lesson to 0>><<money -2500 \"ridingLessons\">><<thighskill _riding>><</link>><<gtiredness>><<gthighskill>>"
+  ],
+  "new_en": [
+   "\t\t<<if $exposed lte 0>>",
+   "\t\t\t<<if $money gte 2500>>",
+   "\t\t\t\t<<animalicon \"horse-pick\">><<link [[Take riding lesson (£25 1:00)|Riding School Lesson]]>><<set $riding_lesson to 0>><<money -2500 \"ridingLessons\">><<thighskill _riding>><</link>><<gtiredness>><<gthighskill>>",
+   "\t\t\t\t<br>",
+   "\t\t\t<</if>>",
+   "\t\t<<else>>",
+   "\t\t\t<<steedicon>><span class=\"blue\">You're too exposed to go to the riding school!</span>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if beastMaleChance() lt random(1, 100)>>",
+   "\t\t\tRemy assigns you to a mare. You <<thightext>> climb into the saddle."
+  ],
+  "old_kr": [
+   "\t\t<<if beastMaleChance() lt random(1, 100)>>",
+   "\t\t\t레미가 당신에게 암말 한 마리를 배정해준다. 당신은 <<thightext>> 안장에 오른다."
+  ],
+  "new_en": [
+   "\t\t<<if beastMaleChanceForType(\"horse\") lt random(1, 100)>>",
+   "\t\t\tRemy assigns you to a mare. You <<thightext>> climb into the saddle."
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $rng gte 81 and $settings.horsesEnabled>>",
+   "\t\t\tRemy leads you to an open field. The steeds are eager to frolic, and become harder to control."
+  ],
+  "old_kr": [
+   "\t\t<<if $rng gte 81 and $settings.horsesEnabled>>",
+   "\t\t\t레미가 당신을 탁 트인 들판으로 이끈다. 말들은 뛰놀고 싶어 안달이 나서 통제하기가 더 어려워진다."
+  ],
+  "new_en": [
+   "\t\t<<if $rng gte 81>>",
+   "\t\t\tRemy leads you to an open field. The steeds are eager to frolic, and become harder to control."
+  ],
+  "context": "\t<<if dangerEvent()>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.horsesEnabled and $settings.analingusReceivingEnabled and ($steed isnot \"mare\" and $steed isnot \"stallion\" or $settings.bestialityEnabled)>>",
+   "\t\tYou push against the wall and wiggle your hips. You're making progress, but then something wet touches your <<bottom>>. It's a tongue."
+  ],
+  "old_kr": [
+   "\t<<if $settings.horsesEnabled and $settings.analingusReceivingEnabled and ($steed isnot \"mare\" and $steed isnot \"stallion\" or $settings.bestialityEnabled)>>",
+   "\t\t벽을 밀며 엉덩이를 꿈틀거린다. 조금씩 나아가고 있는데, 그때 무언가 축축한 것이 당신의 <<bottom>>에 닿는다. 혀다."
+  ],
+  "new_en": [
+   "\t<<if $settings.analingusReceivingEnabled and beastSexEnabledForType(\"horse\", $steed isnot \"mare\" and $steed isnot \"stallion\")>>",
+   "\t\tYou push against the wall and wiggle your hips. You're making progress, but then something wet touches your <<bottom>>. It's a tongue."
+  ],
+  "context": "<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if Time.hour isnot $closinghour>>",
+   "\t\t<<investigateicon>><<link [[Find someone else (0:20)|Riding School Contact]]>><<pass 20>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if Time.hour isnot $closinghour>>",
+   "\t\t<<investigateicon>><<link [[다른 사람 찾기 (0:20)|Riding School Contact]]>><<pass 20>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if $pubfame.detail is \"remyBetray\">>",
+   "\t\t<<link [[Next|Riding School]]>><<endevent>><</link>>",
+   "\t<<elseif Time.hour isnot $closinghour>>",
+   "\t\t<<investigateicon>><<link [[Find someone else (0:20)|Riding School Contact]]>><<pass 20>><<endevent>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if monsterCanAppearForType(\"horse\")>>"
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $rng gte 81 and $settings.horsesEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $rng gte 81>>"
+  ],
+  "context": "\t<<else>>"
+ }
+]

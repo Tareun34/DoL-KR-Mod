@@ -1,0 +1,306 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tIt will take _avery_mansion_time_bedroom minutes to clean everything, or _avery_mansion_time minutes if you leave the bedroom untouched. Housekeeping skill will speed up indoor work. Tending skill will speed up garden work."
+  ],
+  "old_kr": [
+   "\t침실까지 모두 청소하면 _avery_mansion_time_bedroom분이 걸리고, 침실을 건드리지 않으면 _avery_mansion_time분이 걸린다. 가사 스킬은 실내 작업을 빠르게 해준다. 관리 스킬은 정원 일을 빠르게 해준다."
+  ],
+  "new_en": [
+   "\tIt will take <<printTime _avery_mansion_time_bedroom>> minutes to clean everything, or _avery_mansion_time minutes if you leave the bedroom untouched. Housekeeping skill will speed up indoor work. Tending skill will speed up garden work."
+  ],
+  "context": "\t<<set _avery_mansion_time_bedroom to _avery_mansion_time + $avery_mansion.bedroom * _avery_housekeeping>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<set _avery_mansion_time_bedroom to _avery_mansion_time + $avery_mansion.bedroom * _avery_housekeeping>>",
+   "\tIt will take _avery_mansion_time_bedroom minutes in total to clean everything. Housekeeping skill will speed up indoor work. Tending skill will speed up garden work.",
+   "\t<br><br>"
+  ],
+  "old_kr": [
+   "    <<set _avery_mansion_time_bedroom to _avery_mansion_time + $avery_mansion.bedroom * _avery_housekeeping>>",
+   "    모두 청소하는 데 총 _avery_mansion_time_bedroom분이 소요된다. 가사 기술이 높을수록 실내 작업 속도가 빨라지며, 관리 기술이 높을수록 정원 작업 속도가 빨라진다.",
+   "    <br><br>"
+  ],
+  "new_en": [
+   "\t<<set _avery_mansion_time_bedroom to _avery_mansion_time + $avery_mansion.bedroom * _avery_housekeeping>>",
+   "\tIt will take <<printTime _avery_mansion_time_bedroom>> in total to clean everything. Housekeeping skill will speed up indoor work. Tending skill will speed up garden work.",
+   "\t<br><br>"
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You lick the cream off Avery's finger, curling your tongue as you do. <<He>> dips and holds it out once again, <<his>> face giving nothing away.",
+   "<br><br>"
+  ],
+  "old_kr": [
+   "당신은 혀를 내밀어 에이버리의 손가락에 묻은 크림을 조심스레 핥아낸다. <<He>>【은는】 무표정한 얼굴로 크림에 손가락을 다시 푹 담갔다가 내민다.",
+   "<br><br>"
+  ],
+  "new_en": [
+   "<<if $cat gte 6>>",
+   "\t/*Removed the option to get back to work, due to the like of the cream*/",
+   "\tYou lick the cream off Avery's finger, the sweet taste of cream making you salivate. <<stress -6>><<lstress>>",
+   "\t<br><br>",
+   "\tAvery, seeming to notice your satisfaction, dips <<his>> finger in the cream again, offering you another taste. ",
+   "\t<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Lick|Mansion Housework Cream Lick 2]]>><<npcincr Avery love 1>><</link>><<glove>>",
+   "<br>",
+   "<<link [[Suck|Mansion Housework Cream Suck]]>><<npcincr Avery love 1>><</link>><<promiscuous1>><<glove>>",
+   "<br>",
+   "<<link [[Make excuses|Mansion Housework Cream Excuse]]>><</link>>",
+   "<br>"
+  ],
+  "old_kr": [
+   "<<link [[핥는다|Mansion Housework Cream Lick 2]]>><<npcincr Avery love 1>><</link>><<glove>>",
+   "<br>",
+   "<<link [[빤다|Mansion Housework Cream Suck]]>><<npcincr Avery love 1>><</link>><<promiscuous1>><<glove>>",
+   "<br>",
+   "<<link [[핑계를 댄다|Mansion Housework Cream Excuse]]>><</link>>",
+   "<br>"
+  ],
+  "new_en": [
+   "\t<<link [[Lick|Mansion Housework Cream Lick 2]]>><<npcincr Avery love 1>><</link>><<glove>><<transform cat 1>>",
+   "\t<br>",
+   "\t<<link [[Suck|Mansion Housework Cream Suck]]>><<npcincr Avery love 1>><</link>><<promiscuous1>><<glove>>",
+   "\t<br>",
+   "<<else>>",
+   "\tYou lick the cream off Avery's finger, curling your tongue as you do. <<He>> dips and holds it out once again, <<his>> face giving nothing away. <<transform cat 1>>",
+   "\t<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   ""
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<link [[Lick|Mansion Housework Cream Lick 2]]>><<npcincr Avery love 1>><</link>><<glove>><<transform cat 1>>",
+   "\t<br>",
+   "\t<<link [[Suck|Mansion Housework Cream Suck]]>><<npcincr Avery love 1>><</link>><<promiscuous1>><<glove>>",
+   "\t<br>",
+   "\t<<link [[Make excuses|Mansion Housework Cream Excuse]]>><</link>>",
+   "\t<br>",
+   "<</if>>",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You stick out your tongue, and devour the cream with a succession of quick licks. Avery's smile is satisfied. \"Good <<girl>>. You can get back to work now.\""
+  ],
+  "old_kr": [
+   "당신은 혀를 내밀어 몇 번 날름거리며 남은 크림을 말끔히 핥아낸다. 에이버리의 입가에 만족스러운 미소가 번진다. \"착한 아이네, 자기. 이제 일하러 가봐요.\""
+  ],
+  "new_en": [
+   "<<if $cat gte 6>>",
+   "\tYou stick out your tongue carefully and quickly licking up the cream. You are unable to stop yourself from purring with satisfaction as the cream touches your tongue. <<stress -6>><<lstress>>",
+   "\t<br><br>",
+   "\t\"Adorable,\" Avery purrs. \"Aren't you a good kitty?",
+   "<<else>>",
+   "\tYou stick out your tongue, and devour the cream with a succession of quick licks. Avery's smile is satisfied. \"Good <<girl>>.",
+   "<</if>>",
+   "",
+   "You can get back to work now.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<set $seductiondifficulty to 8000>>",
+   "<<seductioncheck>>",
+   "<<seductionskilluptext>>",
+   "<<seductionskilluse>>",
+   "",
+   "You lead with the tongue, and take the length of Avery's finger into your mouth, half-closing your eyes as you do."
+  ],
+  "old_kr": [
+   "<<set $seductiondifficulty to 8000>>",
+   "<<seductioncheck>>",
+   "<<seductionskilluptext>>",
+   "<<seductionskilluse>>",
+   "",
+   "당신은 눈을 반쯤 내리깐 채, 에이버리의 손가락을 혀로 감싸 쥐며 입안 깊숙이 머금는다."
+  ],
+  "new_en": [
+   "You lead with the tongue, and take the length of Avery's finger into your mouth, half-closing your eyes as you do."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $seductionrating gte $seductionrequired>>",
+   "",
+   "\tYou fix your eyes on Avery's. <span class=\"green\"><<He>> looks mesmerised.</span> You bite <<his>> finger, hard enough to leave a mark. <<He>> remains focused on you as you withdraw.<<gglove>><<npcincr Avery love 1>><<larage>><<npcincr Avery rage -1>>"
+  ],
+  "old_kr": [
+   "<<if $seductionrating gte $seductionrequired>>",
+   "",
+   "\t당신은 에이버리의 눈을 똑바로 응시한다. <span class=\"green\"><<He>>【은는】 넋을 잃고 홀린 듯한 표정이다.</span> 당신은 자국이 남을 만큼 살짝 힘을 주어 <<his>> 손가락을 깨문다. 입에서 손가락을 빼낸 뒤에도 <<he>>【은는】 여전히 당신에게 시선을 고정한 채다.<<gglove>><<npcincr Avery love 1>><<larage>><<npcincr Avery rage -1>>"
+  ],
+  "new_en": [
+   "<<if $cat gte 6>>",
+   "\tYou're unable to stop yourself as you suck onto Avery's finger. The taste of the cream sends pleasure through your body. <<stress -6>><<lstress>>",
+   "\t<br><br>",
+   "\tYou close your eyes, licking <<his>> finger up and down.",
+   "\t<<if $speech_attitude is \"meek\" or $speech_attitude_avery>>",
+   "\t\tYou carefully lap up the length of <<his>> finger, sucking on it gently.",
+   "\t<<elseif $speech_attitude is \"bratty\">>",
+   "\t\tYou nibble onto <<his>> finger, hard enough to leave a mark.",
+   "\t<<else>>",
+   "\t\tYou drag your tongue along the length of <<his>> finger, sucking on it.",
+   "\t<</if>>",
+   "\tYou purr involuntarily as you play around with <<his>> finger in your mouth, eager for more cream. <<transform cat 1>>",
+   "\t<br><br>",
+   "\tYou open your eyes to look up at <<him>>. <span class=\"green\"><<He>> looks mesmerised.</span> <<gglove>><<npcincr Avery love 1>><<larage>><<npcincr Avery rage -1>> "
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou feel a thread of drool dribble down your chin, <span class=\"red\">and you know you've spoiled the effect.</span> Avery chuckles. \"That'll be all.\"",
+   "\t<br><br>",
+   "",
+   "\t<<He>> watches you in silence while <<he>> eats <<his>> dessert.",
+   "\t<br><br>",
+   "",
+   "\t<<endevent>>",
+   "\t<<avery_mansion_end_links \"housework\">>",
+   ""
+  ],
+  "old_kr": [
+   "\t턱을 타고 침 한 줄기가 흘러내리는 순간, <span class=\"red\">분위기를 망쳐버렸다는 것을 깨닫는다.</span> 에이버리가 헛웃음을 짓는다. \"그쯤 해둬요, 자기.\"",
+   "\t<br><br>",
+   "",
+   "\t<<He>>【은는】 디저트를 먹는 동안 말없이 당신을 지켜본다.",
+   "\t<br><br>",
+   "",
+   "\t<<endevent>>",
+   "\t<<avery_mansion_end_links \"housework\">>",
+   ""
+  ],
+  "new_en": [
+   "\t\t<<endevent>>",
+   "\t\t<<avery_mansion_end_links \"housework\">>",
+   "\t<</if>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "",
+   "<<if $speech_attitude is \"meek\" or $speech_attitude_avery>>",
+   "\t\"Are you going to finish that?\" you ask. Avery frowns at the dessert in front of <<him>>, as if seeing it for the first time.",
+   "<<elseif $speech_attitude is \"bratty\">>",
+   "\t\"I'm good aren't I?\" you say. Avery chuckles, and returns to <<his>> dessert."
+  ],
+  "old_kr": [
+   "",
+   "<<if $speech_attitude is \"meek\" or $speech_attitude_avery>>",
+   "\t\"그거 다 드실 건가요?\" 당신이 묻는다. 에이버리는 마치 처음 보는 것처럼 자기 앞의 디저트를 보고 눈살을 찌푸린다.",
+   "<<elseif $speech_attitude is \"bratty\">>",
+   "\t\"저 잘하죠, 그렇죠?\" 당신이 말한다. 에이버리는 씩 웃고는 다시 <<his>> 디저트를 먹기 시작한다."
+  ],
+  "new_en": [
+   "<<if $cat gte 6>>",
+   "\t<<if $speech_attitude is \"meek\" or $speech_attitude_avery>>",
+   "\t\t\"If you aren't going to finish it, could I?\" you ask. Avery frowns at the dessert in front of <<him>>, as if seeing it for the first time.",
+   "\t<<elseif $speech_attitude is \"bratty\">>",
+   "\t\t\"I guess I can see why you like your dessert so much,\" you say, licking your lips. Avery chuckles, and returns to <<his>> plate.",
+   "\t<<else>>",
+   "\t\t\"Why'd you stop?\" you ask. Avery recovers <<his>> senses, and returns to <<his>> dessert.",
+   "\t<</if>>"
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"Is something the matter?\" you ask. Avery recovers <<his>> senses, and returns to <<his>> dessert."
+  ],
+  "old_kr": [
+   "\t\"무슨 문제라도 있어?\" 당신이 묻는다. 에이버리는 정신을 차리고 다시 <<his>> 디저트로 돌아간다."
+  ],
+  "new_en": [
+   "\t<<if $speech_attitude is \"meek\" or $speech_attitude_avery>>",
+   "\t\t\"Are you going to finish that?\" you ask. Avery frowns at the dessert in front of <<him>>, as if seeing it for the first time.",
+   "\t<<elseif $speech_attitude is \"bratty\">>",
+   "\t\t\"I'm good aren't I?\" you say. Avery chuckles, and returns to <<his>> dessert.",
+   "\t<<else>>",
+   "\t\t\"Is something the matter?\" you ask. Avery recovers <<his>> senses, and returns to <<his>> dessert.",
+   "\t<</if>>"
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<effects>><<avery_mansion>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<else>>",
+   "\t<<set $seductiondifficulty to 8000>>",
+   "\t<<seductioncheck>>",
+   "\t<<seductionskilluptext>>",
+   "\t<<seductionskilluse>>",
+   "\t",
+   "\t<<if $seductionrating gte $seductionrequired>>",
+   "\t\tYou fix your eyes on Avery's. <span class=\"green\"><<He>> looks mesmerised.</span>",
+   "\t\t<<if $speech_attitude is \"meek\" or $speech_attitude_avery>>",
+   "\t\t\tYou carefully lick up the length of <<his>> finger, sucking on it gently.",
+   "\t\t<<elseif $speech_attitude is \"bratty\">>",
+   "\t\t\tYou bite <<his>> finger, hard enough to leave a mark.",
+   "\t\t<<else>>",
+   "\t\t\tYou drag your tongue along the length of <<his>> finger, sucking on it.",
+   "\t\t<</if>>",
+   "\t\t<<He>> remains focused on you as you withdraw.<<gglove>><<npcincr Avery love 1>><<larage>><<npcincr Avery rage -1>><<transform cat 1>>",
+   "\t\t<br><br>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<else>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<link [[Tease|Mansion Housework Cream Tease]]>><</link>>",
+   "\t\t<br>",
+   "\t\t<<link [[Just return to work|Mansion Housework Cream Return]]>><</link>>",
+   "\t\t<br>",
+   "\t<<else>>",
+   "\t\tYou feel a thread of drool dribble down your chin, <span class=\"red\">and you know you've spoiled the effect.</span> Avery chuckles. \"That'll be all.\"",
+   "\t\t<br><br>",
+   "\t\t<<He>> watches you in silence while <<he>> eats <<his>> dessert.",
+   "\t\t<br><br>"
+  ],
+  "context": ""
+ }
+]

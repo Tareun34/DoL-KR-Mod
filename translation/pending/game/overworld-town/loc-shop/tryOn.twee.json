@@ -1,0 +1,35 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $debug>>"
+  ],
+  "context": "<<widget \"tryOnStats\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $patternaction2 isnot undefined and $_items[_slotTO].pattern_options and $_items[_slotTO].pattern_options.includes($patternaction2)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $patternaction2 isnot undefined and $_items[_slotTO].pattern_options?.includes($patternaction2)>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $patternaction2 isnot undefined and $_items[_labelTO].pattern_options and $_items[_labelTO].pattern_options.includes($patternaction2)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $patternaction2 isnot undefined and $_items[_labelTO].pattern_options?.includes($patternaction2)>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ }
+]

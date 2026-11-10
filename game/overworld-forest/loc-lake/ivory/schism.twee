@@ -234,7 +234,7 @@
 	<<maninit>><<npcstrip>><<npcidlegenitals>>
 	힘없이 고개를 젓는다. <<He>>【은는】 창살을 쾅 내리치고는 문을 열고 안으로 들이닥친다. <<stress 24>><<ggstress>>
 	<br><br>
-	<<set $speechdisable to 1>>
+	<<set $speechDisable to 1>>
 <</if>>
 
 <<effectsman>>

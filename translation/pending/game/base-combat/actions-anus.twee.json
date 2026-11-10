@@ -1,0 +1,51 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"lblue\">You straddle <<personselect $anusdoubletarget>><<combatperson>> and press <<his>> <<npcPenis $anusdoubletarget>> with your <<bottom>>, joining <<personselect $anustarget>><<combatpersons>> <<npcPenisSimple $anustarget>>.</span>",
+   "\t\t\t\t<<if $NPCList[$anusdoubletarget].condom and $NPCList[$anusdoubletarget].condom.willUse is true and $NPCList[$anusdoubletarget].condom.worn is false and !$NPCList[$anusdoubletarget].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"lblue\">당신은 <<personselect $anusdoubletarget>><<combatperson>> 위로 올라타 당신의 <<bottom>>【으로로】 <<his>> <<npcPenis $anusdoubletarget>>【을를】 누르고, <<personselect $anustarget>><<combatpersons>> <<npcPenisSimple $anustarget>> 옆으로 밀어 넣는다.</span>",
+   "\t\t\t\t<<if $NPCList[$anusdoubletarget].condom and $NPCList[$anusdoubletarget].condom.willUse is true and $NPCList[$anusdoubletarget].condom.worn is false and !$NPCList[$anusdoubletarget].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"lblue\">You straddle <<personselect $anusdoubletarget>><<combatperson>> and press <<his>> <<npcPenis $anusdoubletarget>> with your <<bottom>>, joining <<personselect $anustarget>><<combatpersons>> <<npcPenisSimple $anustarget>>.</span>",
+   "\t\t\t\t<<if $NPCList[$anusdoubletarget].condom?.willUse is true and $NPCList[$anusdoubletarget].condom.worn is false and !$NPCList[$anusdoubletarget].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $NPCList[$anustarget].condom and $NPCList[$anustarget].condom.willUse is true and $NPCList[$anustarget].condom.worn is false and !$NPCList[$anustarget].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $NPCList[$anustarget].condom?.willUse is true and $NPCList[$anustarget].condom.worn is false and !$NPCList[$anustarget].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<sex 100 \"anus\" $anustarget>><<takeVirginity $NPCList[$anustarget].fullDescription \"anal\">><<bruise anus>><<violence 30>><<set $speechanusvirgin to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<sex 100 \"anus\" $anustarget>><<takeVirginity $NPCList[$anustarget].fullDescription \"anal\">><<bruise anus>><<violence 30>><<set $speechAnusVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<sex 50 \"anus\" $anustarget>><<sex 50 \"anus\" $anusdoubletarget>><<takeVirginity `[$anustarget, $anusdoubletarget]` \"anal\">><<bruise anus>><<violence 30>><<set $speechanusvirgin to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<sex 50 \"anus\" $anustarget>><<sex 50 \"anus\" $anusdoubletarget>><<takeVirginity `[$anustarget, $anusdoubletarget]` \"anal\">><<bruise anus>><<violence 30>><<set $speechAnusVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t<<set _mydesc to ($NPCList[$anustarget].fullDescription + \" and \" + $NPCList[$anusdoubletarget].fullDescription)>>"
+ }
+]

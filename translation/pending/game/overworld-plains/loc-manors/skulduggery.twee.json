@@ -1,0 +1,56 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[Defend yourself|Farmland Manors Dog Sex]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t<<link [[스스로를 방어한다|Farmland Manors Dog Sex]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\t<<link [[Defend yourself|Farmland Manors Dog Sex]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<generateRole 0 \"strange\" \"creature\">><<person1>>",
+   "The walls curve away from you, as you hear a sudden dripping up ahead. A succession of numerous drops, then silence. Then you hear a growl, and footsteps growing louder."
+  ],
+  "old_kr": [
+   "<<generateRole 0 \"strange\" \"creature\">><<person1>>",
+   "벽이 당신에게서 멀어지며 휘어지는 가운데, 앞에서 갑자기 물방울 떨어지는 소리가 들린다. 수많은 물방울이 연달아 떨어지더니, 이내 조용해진다. 그러다 으르렁거리는 소리와 함께 발소리가 점점 커진다."
+  ],
+  "new_en": [
+   "<<generateStrangeCreature 1>><<person1>>",
+   "The walls curve away from you, as you hear a sudden dripping up ahead. A succession of numerous drops, then silence. Then you hear a growl, and footsteps growing louder."
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechdisable to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechDisable to 1>>"
+  ],
+  "context": "\t<<maninit>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechdisable to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechDisable to 1>>"
+  ],
+  "context": "\t<<maninit>>"
+ }
+]

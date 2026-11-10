@@ -1,0 +1,180 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<br><br>",
+   "",
+   "\t\t<<if $historytrait gte 2 and $thicket_tunnel_intro is 1>>",
+   "\t\t\t<<foresticon \"bush\">><<link [[Take the secret tunnel to the Residential alleyways (0:05)|Residential Thicket]]>><<pass 5>><<set $foresthunt to 0>><</link>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if $historytrait gte 3>>",
+   "\t\t\t<<forestroadicon \"secret\">>",
+   "\t\t\t<<link [[Take secret path deeper into the woods (0:10)|Forest]]>>",
+   "\t\t\t\t<<set $forestmod to 1.5>><<set $forest += 50>><<set $forestmove to \"secretin\">><<pass 10>>",
+   "\t\t\t\t<<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>>",
+   "\t\t\t\t<<if $forestHunter is \"Gwylan\" and $foresthunt gte 1>><<set $foresthunt += 5>><</if>>",
+   "\t\t\t<</link>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t\t<br><br>",
+   "",
+   "\t\t<<if $historytrait gte 2 and $thicket_tunnel_intro is 1>>",
+   "\t\t\t<<foresticon \"bush\">><<link [[비밀 통로를 통해 거주 지구 골목으로 가기 (0:05)|Residential Thicket]]>><<pass 5>><<set $foresthunt to 0>><</link>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t\t<<if $historytrait gte 3>>",
+   "\t\t\t<<forestroadicon \"secret\">>",
+   "\t\t\t<<link [[비밀 통로를 따라 숲 더 깊은 곳으로 가기 (0:10)|Forest]]>>",
+   "\t\t\t\t<<set $forestmod to 1.5>><<set $forest += 50>><<set $forestmove to \"secretin\">><<pass 10>>",
+   "\t\t\t\t<<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>>",
+   "\t\t\t\t<<if $forestHunter is \"Gwylan\" and $foresthunt gte 1>><<set $foresthunt += 5>><</if>>",
+   "\t\t\t<</link>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>"
+  ],
+  "new_en": [],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<lakeicon>><<link [[Lake (0:10)|Lake Shore]]>><<pass 10>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<lakeicon>><<link [[호수 (0:10)|Lake Shore]]>><<pass 10>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<lakeicon>><<link [[Lake: Shore (0:10)|Lake Shore]]>><<pass 10>><</link>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<lakeicon>><<link [[Lake (0:10)|Lake Waterfall]]>><<pass 10>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<lakeicon>><<link [[호수 (0:10)|Lake Waterfall]]>><<pass 10>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t<<lakeicon>><<link [[Lake: Waterfall (0:10)|Lake Waterfall]]>><<pass 10>><</link>>"
+  ],
+  "context": "\t\t<<elseif $forest lte 40>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<lakeicon>><<link [[Lake (0:10)|Lake Fishing Rock]]>><<pass 10>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<lakeicon>><<link [[호수 (0:10)|Lake Fishing Rock]]>><<pass 10>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<lakeicon>><<link [[Lake: Fishing Rock (0:10)|Lake Fishing Rock]]>><<pass 10>><</link>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<br><br>",
+   "",
+   "\t\t<<if $historytrait gte 3>>",
+   "\t\t\t<<forestroadicon \"secret\">>",
+   "\t\t\t<<link [[Take secret path out of the woods (0:10)|Forest]]>>",
+   "\t\t\t\t<<set $forestmod to 1.5>><<set $forest -= 50>><<set $forestmove to \"secretout\">><<pass 10>>",
+   "\t\t\t\t<<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>>",
+   "\t\t\t\t<<if $forestHunter is \"Gwylan\" and $foresthunt gte 1>><<set $foresthunt += 5>><</if>>",
+   "\t\t\t<</link>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>"
+  ],
+  "old_kr": [
+   "\t\t<br><br>",
+   "",
+   "\t\t<<if $historytrait gte 3>>",
+   "\t\t\t<<forestroadicon \"secret\">>",
+   "\t\t\t<<link [[비밀 통로를 이용해 숲 밖으로 나가기 (0:10)|Forest]]>>",
+   "\t\t\t\t<<set $forestmod to 1.5>><<set $forest -= 50>><<set $forestmove to \"secretout\">><<pass 10>>",
+   "\t\t\t\t<<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>>",
+   "\t\t\t\t<<if $forestHunter is \"Gwylan\" and $foresthunt gte 1>><<set $foresthunt += 5>><</if>>",
+   "\t\t\t<</link>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>"
+  ],
+  "new_en": [],
+  "context": "\t\t<<forestlessdeep>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t<<getinicon>><<link [[Enter|Forest Bear Box Molestation]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t<<getinicon>><<link [[들어간다|Forest Bear Box Molestation]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "<<if beastSexEnabledForType(\"bear\", $monster is 1)>>",
+   "\t<<getinicon>><<link [[Enter|Forest Bear Box Molestation]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<forestShortcuts \"in\">>",
+   "\t\t<<travelSpeedOptions>>",
+   "\t\t<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<forestShortcuts>>",
+   "\t\t<<travelSpeedOptions>>",
+   "\t\t<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<forestShortcuts \"out\">>",
+   "\t\t<<travelSpeedOptions>>",
+   "\t\t<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<travelSpeedOptions>>",
+   "\t\t<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<travelSpeedOptions>>",
+   "\t\t<br><br>"
+  ],
+  "context": ""
+ }
+]

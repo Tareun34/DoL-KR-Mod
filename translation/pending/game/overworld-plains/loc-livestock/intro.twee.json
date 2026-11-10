@@ -1,0 +1,172 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\tRemy leads you halfway down the bar, past dozens of \"cows\" in their stalls."
+  ],
+  "old_kr": [
+   "<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t레미가 당신을 축사 중간쯤으로 이끈다. 칸막이 안에는 수십 마리의 \"소\"들이 있다."
+  ],
+  "new_en": [
+   "<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>",
+   "\tRemy leads you halfway down the barn, past dozens of \"cows\" in their stalls."
+  ],
+  "context": "<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\tRemy leads you halfway down the bar, past dozens of \"cows\" in their stalls."
+  ],
+  "old_kr": [
+   "<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t레미가 당신을 축사 중간쯤으로 이끈다. 칸막이 안에는 수십 마리의 \"소\"들이 있다."
+  ],
+  "new_en": [
+   "<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>",
+   "\tRemy leads you halfway down the barn, past dozens of \"cows\" in their stalls."
+  ],
+  "context": "<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\tit's only fair that they get rewarded for such hard work.\""
+  ],
+  "old_kr": [
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t그 노고에 대한 보상을 받는 게 당연하지 않겠어?\""
+  ],
+  "new_en": [
+   "<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\tit's only fair that they get rewarded for such hard work.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t\tRows of caged cattle line the edge, eating cereal from troughs. It's only as you're pulled closer that you realise they aren't cows, but people with cow ears and tails. They eat from their troughs all the same, their feeding broken only by the occasional moo."
+  ],
+  "old_kr": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t\t우리에 갇힌 가축들이 줄지어 여물통의 곡물을 먹고 있다. 더 가까이 끌려가서야 그것들이 소가 아니라 소의 귀와 꼬리를 단 사람들이라는 사실을 깨닫는다. 그들은 이따금 터져 나오는 음메 소리를 빼면 그저 여물통의 여물을 먹는 데 열중할 뿐이다."
+  ],
+  "new_en": [
+   "\t<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>",
+   "\t\tRows of caged cattle line the edge, eating cereal from troughs. It's only as you're pulled closer that you realise they aren't cows, but people with cow ears and tails. They eat from their troughs all the same, their feeding broken only by the occasional moo."
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t\tRows of caged cattle line the edge, eating cereal from troughs. It's only as you're pulled closer that you realise they aren't cows, but people with cow ears and tails. They eat from their troughs all the same, their feeding broken only by the occasional moo."
+  ],
+  "old_kr": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t\t우리에 갇힌 가축들이 줄지어 여물통의 곡물을 먹고 있다. 더 가까이 끌려가서야 그것들이 소가 아니라 소의 귀와 꼬리를 단 사람들이라는 사실을 깨닫는다. 그들은 이따금 터져 나오는 음메 소리를 빼면 그저 여물통의 여물을 먹는 데 열중할 뿐이다."
+  ],
+  "new_en": [
+   "\t<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>",
+   "\t\tRows of caged cattle line the edge, eating cereal from troughs. It's only as you're pulled closer that you realise they aren't cows, but people with cow ears and tails. They eat from their troughs all the same, their feeding broken only by the occasional moo."
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>"
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>"
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if random(1) and $settings.horsesEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if random(1) and beastSexEnabledForType(\"horse\")>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if _phase is 2 and ($monster is 1 or $settings.bestialityEnabled)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if _phase is 2 and beastSexEnabledForType(\"horse\", $monster is 1)>>"
+  ],
+  "context": "<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif _phase is 1 and ($monster is 1 or $settings.bestialityEnabled)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<elseif _phase is 1 and beastSexEnabledForType(\"dog\", $monster is 1)>>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "/* <<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly) or $settings.bestialityEnabled) and $settings.horsesEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "/* <<if beastSexEnabledForType(\"horse\", monsterChanceForType(\"horse\") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType(\"horse\")))>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $settings.bestialityEnabled>>",
+   "\t<<if beastMaleChance() gte 1 and $settings.horsesEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<elseif animalSexEnabledForType(\"horse\")>>",
+   "\t<<if beastMaleChanceForType(\"horse\") gte 1>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif random(1, 2) is 2 and $settings.horsesEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif random(1, 2) is 2>>"
+  ],
+  "context": "\t\t<br>"
+ }
+]

@@ -45,8 +45,13 @@
 	<<socialiseicon>><<link [[카일라의 부모를 달랜다 (1:00)|Manor Parents Room Soothe]]>><<set $daily.manorParents to 1>><<kylar_parents_trust 1>><<stress 6>><<pass 60>><</link>><<gstress>><<gtrust>>
 	<br><br>
 <</if>>
-
-<<getouticon>><<link [[떠난다|Manor Hall]]>><</link>>
+/*
+<<if $kylar_altar_research and $kylar_altar_research.includes("tape") and !$kylar_altar_research.includes("pages")>>
+	<<link [[Show Kylar's parents the pages you found at the temple (0:10)|Manor Pages Room]]>><<set $kylar_altar_research.pushUnique("pages")>><<pass 10>><</link>>
+	<br>
+<</if>>
+ */
+<<getouticon>><<link [[Leave|Manor Hall]]>><</link>>
 <br>
 
 :: Manor Lab
@@ -148,6 +153,17 @@
 <br><br>
 
 <<set _kylar to statusCheck("Kylar")>>
+<<if $kylar_altar_research and $kylar_altar_research.includes("temple") and !$kylar_altar_research.includes("tape")>>
+	<<if _kylar.state isnot "prison" and (Time.hour gte 18 or Time.hour lte 6)>>
+		There's a video player attached to Kylar's computer via arcane means. It could play the tape you found at the temple.
+		<br><br>
+	<<else>>
+		There's a video player attached to Kylar's computer via arcane means. It could play the tape you found at the temple, <span class="blue">but you'll need Kylar around to operate it.</span>
+		<br><br>
+	<</if>>
+<</if>>
+
+<<set _kylar to statusCheck("Kylar")>>
 <<if _kylar.state isnot "prison">>
 	<<if Time.hour gte 18>>
 		카일라가 <<nnpc_his "Kylar">> 컴퓨터 앞에 앉아 있다.
@@ -166,8 +182,270 @@
 	<</if>>
 <</if>>
 
-<<getouticon>><<link [[떠난다 (0:01)|Manor Hall]]>><<pass 1>><</link>>
+<<if _kylar.state isnot "prison" and $kylar_altar_research and $kylar_altar_research.includes("temple") and !$kylar_altar_research.includes("tape")>>
+	<<if Time.hour lte 6>>
+		<<ind>><<link [[Ask Kylar to play the video tape you found in the temple (0:30)|Manor Tape Wake]]>><<pass 30>><<set $kylar_altar_research.pushUnique("tape")>><</link>>
+		<br>
+	<<elseif Time.hour gte 18>>
+		<<ind>><<link [[Ask Kylar to play the video tape you found in the temple (0:30)|Manor Tape Ask]]>><<pass 30>><<set $kylar_altar_research.pushUnique("tape")>><</link>>
+		<br>
+	<</if>>
+<</if>>
+<<getouticon>><<link [[Leave (0:01)|Manor Hall]]>><<pass 1>><</link>>
 <br>
+
+:: Manor Tape Wake
+<<effects>>
+
+<<npc Kylar>><<person1>>
+"Kylar," you say. <<His>> eyes open at once.
+
+<<if $speech_attitude is "meek">>
+	"I'm sorry to wake you. Can you play this video?"
+<<elseif $speech_attitude is "bratty">>
+	"Play this video for me."
+<<else>>
+	"Sorry to wake you. Can you play this video for me?"
+<</if>>
+<br><br>
+
+Kylar nods, throws off the covers, and stumbles to <<his>> computer. <<He>> fiddles with the jungle of cables, connecting and reconnecting, then slots the tape into the older player.
+<br><br>
+
+<<link [[Next|Manor Tape]]>><</link>>
+<br>
+
+
+:: Manor Tape Ask
+<<effects>>
+
+<<npc Kylar>><<person1>>
+"Kylar," you say. <<He>> swivels on <<his>> chair to face you.
+<br>
+"What is it, <<kylar_pet_name>>?"
+<br>
+<<if $speech_attitude is "meek">>
+	"I have a video tape here. If it's no trouble, could you play it for me?"
+<<elseif $speech_attitude is "bratty">>
+	"Play this tape for me."
+<<else>>
+	"Could you play this video tape for me?"
+<</if>>
+<br><br>
+
+Kylar nods, and almost drops the tape as <<he>> takes it. <<He>> needs your help to lift one of the monitors, then <<he>> reaches towards the back of <<his>> desk to fiddle with the jungle of cables, connecting and reconnecting. <<He>> leans to the side, and slots the tape into the old player.
+<br><br>
+
+<<link [[Next|Manor Tape]]>><</link>>
+<br>
+
+:: Manor Tape
+<<effects>>
+
+The video comes to life. It shows a stage from the point of view of someone in a packed audience. You recognise it as the town hall.
+<br><br>
+
+Kylar looks uneasy, then horrified as several small figures walk onto the stage. One looks particularly nervous. <span class="blue">It's a younger Kylar.</span> <<His>> costume is nice, but <<his>> hair is dishevelled, and <<his>> eyes red.
+<br><br>
+
+The Kylar sat beside you sways. <<He>> sways as if about to faint, then half falls, half stumbles from <<his>> chair. <<He>> scrambles beneath <<his>> bedsheet.<br><br>
+
+<<link [[Ask Kylar to watch|Manor Tape Stay]]>><</link>>
+<br>
+<<link [[Let <<him>> be|Manor Tape Leave]]>><</link>>
+<br>
+
+:: Manor Tape Stay
+<<effects>>
+
+<<if $speech_attitude is "meek">>
+	"Please stay," you say. "I know you don't want to, but it would mean a lot if you watched with me."
+<<elseif $speech_attitude is "bratty">>
+	"Don't be a wuss," you say. "It's just a video."
+<<else>>
+	"I know you don't want to," you say. "But please stay and watch with me."
+<</if>>
+<br><br>
+
+You hear a small weep, then Kylar emerges from beneath the covers, and returns to <<his>> chair, and fixes <<his>> eyes on the screen.
+<br><br>
+
+Back in the video, Kylar lines up with the other figures. They begin speaking rehearsed lines in turn, but something distracts them. You hear murmuring from the front of the audience. One of the figures on stage holds their nose.
+<br><br>
+
+<<link [[Next|Manor Tape 2]]>><<set $phase to 1>><</link>>
+<br>
+
+:: Manor Tape Leave
+<<effects>>
+
+Back in the video, Kylar lines up with the other figures. They begin speaking rehearsed lines in turn, but something distracts them. You hear murmuring from the front of the audience. One of the figures on stage holds their nose.
+<br><br>
+
+<<link [[Next|Manor Tape 2]]>><<set $phase to 0>><</link>>
+<br>
+
+:: Manor Tape 2
+<<effects>>
+
+It's Kylar's turn to speak. <<His>> voice quivers, full of stops and starts.
+<br><br>
+
+"It's Kylar," shouts a young voice from off-camera. The murmuring intensifies, accompanied by some laughter, and the figures on either side of Kylar step away. More than a couple hold their nose.
+<br><br>
+
+Video-Kylar continues <<his>> lines, but <<he>> quivers, and sniffles, more and more. <<He>> trembles so hard even the grainy film can't hide it.
+<<if $phase is 1>>
+	Beside you, Kylar similarly trembles, tears streaming down <<his>> face. <<He>> releases a strange, keening sound, then hides beneath <<his>> bedsheets again.
+<<else>>
+	The bedsheets similarly tremble.
+<</if>>
+<br><br>
+
+<<link [[Continue watching the tape|Manor Tape 3]]>><</link>>
+<br>
+<<link [[Comfort Kylar first|Manor Tape 2 Comfort]]>><</link>>
+<br>
+
+:: Manor Tape 2 Comfort
+<<effects>>
+
+You rest a hand on Kylar, and speak soothing words, but <<hes>> trapped in a nightmare of <<his>> own.
+<br><br>
+
+You turn back to the tape.
+<br><br>
+
+<<link [[Next|Manor Tape 3]]>><</link>>
+<br>
+
+:: Manor Tape 3
+<<effects>>
+
+The tape ends, rewinds, and repeats. Kylar and the others walk onto the stage, but this time you notice something else. A hand with a black sleeve emerges from the curtain alongside Kylar. It reaches into <<his>> pocket, then withdraws.
+<br><br>
+
+You replay the tape again, in case you imagined it. You did not. You watch the rest of the tape. Perhaps there's something else you missed.
+<br><br>
+
+<<link [[Next|Manor Tape 4]]>><</link>>
+<br>
+
+:: Manor Tape 4
+<<effects>>
+<<earnFeat "Sancta Vexatio">>
+After several more rewinds, you notice a figure moving amongst the audience, wearing black, like certain members of the temple. They lean close to people in the audience, whispering in their ear before moving on.
+<br><br>
+
+Some don't respond. Others smirk, or frown. The figure leaves frame right after the voice calls Kylar by name.
+<br><br>
+
+<<link [[Next|Manor Tape 5]]>><</link>>
+<br>
+
+:: Manor Tape 5
+<<effects>>
+
+You feel their presence before you hear them. Kylar's parents stand behind you, watching the screen. They turn towards Kylar, and approach <<his>> shuddering form. Their clawed fingers reach for <<him>>, but hesitate just shy of touching, as if afraid to. Kylar stirs, and they dart from the room without a sound.
+<br><br>
+Kylar's face appears beneath the covers, red eyes resting on you. <<He>> holds out a hand.
+<br><br>
+
+<<link [[Take <<his>> hand|Manor Tape Hand]]>><<npcincr Kylar love 1>><</link>><<glove>>
+<br>
+<<link [[Pull <<him>> into a hug|Manor Tape Hug]]>><<npcincr Kylar love 3>><</link>><<gglove>>
+<br>
+<<link [[Remain motionless|Manor Tape Motionless]]>><</link>>
+<br>
+
+
+:: Manor Tape Hand
+<<effects>>
+
+You take Kylar's hand. <<He>> squeezes it so tight it starts to feel numb, <<his>> gaze locked with yours as if looking away would end the world.
+<br><br>
+
+<<link [[Ask about what you just saw|Manor Tape Ask 2]]>><</link>>
+<br>
+<<link [[Remain silent|Manor Tape Silent]]>><</link>>
+<br>
+
+:: Manor Tape Hug
+<<effects>>
+
+You take Kylar's hand, only to pull <<him>> into a hug. <<Hes>> still trembling. Your chest is soon soaked in <<his>> tears.
+<<upperwet 20>>
+<br><br>
+
+<<link [[Ask about what you just saw|Manor Tape Ask 2]]>><</link>>
+<br>
+<<link [[Remain silent|Manor Tape Silent]]>><</link>>
+<br>
+
+:: Manor Tape Motionless
+<<effects>>
+
+You remain motionless. Kylar withdraws <<his>> hand, and hides <<his>> face again. "Sorry sorry sorry," <<he>> says. "Sorry."
+<br><br>
+
+<<link [[Ask about what you just saw|Manor Tape Ask 2]]>><</link>>
+<br>
+<<link [[Remain silent|Manor Tape Silent]]>><</link>>
+<br>
+
+:: Manor Tape Ask 2
+<<effects>>
+
+<<if $speech_attitude is "meek">>
+	"I hope I'm not prying," you say. "But can you tell me about that video?"
+<<elseif $speech_attitude is "bratty">>
+	"What was that I just witnessed? Looked like it happened a while ago."
+<<else>>
+	"What happened in the video?" you ask.
+<</if>>
+<br><br>
+
+Kylar opens <<his>> mouth to speak, but then tenses, tears streaming. "I'm sorry," <<he>> manages.
+<br><br>
+
+<<link [[Comfort Kylar (0:20)|Manor Tape Comfort]]>><<npcincr Kylar love 1>><<pass 20>><</link>><<glove>>
+<br>
+<<link [[Leave|Manor Tape 6]]>><</link>>
+<br>
+
+:: Manor Tape Silent
+<<effects>>
+
+You remain silent. Kylar sits back, looking even smaller than usual.
+<br><br>
+
+<<link [[Comfort Kylar (0:20)|Manor Tape Comfort]]>><<npcincr Kylar love 1>><<pass 20>><</link>><<glove>>
+<br>
+<<link [[Leave|Manor Tape 6]]>><</link>>
+<br>
+
+
+:: Manor Tape Comfort
+<<effects>>
+
+You stay with Kylar a while. <<He>> leans into you, clinging as if the wind threatened to carry you away. You hold <<him>> until <<his>> shuddering subsides.
+<br><br>
+
+"Thank you," <<he>> says after a while, pulling away and regarding you with worshipful eyes. Then, as if having spent every ounce of <<his>> energy, <<he>> collapses into a nap. You tuck <<him>> into bed, and leave the room.
+<br><br>
+
+<<link [[Next|Manor Tape 6]]>><</link>>
+<br>
+
+:: Manor Tape 6
+<<effects>>
+
+Outside, you feel a presence. You look left and right, but see nothing. Then you look up. Two pairs of eyes bore into you. Then vanish.
+<br><br>
+
+<<link [[Next|Manor Hall]]>><<endevent>><</link>>
+<br>
+
 
 :: Manor Kylar
 <<effects>><<set $bus to "kylarmanor">>
@@ -178,7 +456,7 @@
 당신이 다가가자 카일라는 본능적으로 <<his>> 창을 모두 최소화한 다음, <<his>> 의자를 돌려 당신을 마주 본다.
 <br><br>
 
-<<kylaroptions>>
+<<kylarOptions>>
 
 :: Manor Kylar Word
 <<effects>>
@@ -195,7 +473,7 @@
 카일라는 부끄러워 보인다. "내-내가 어지른 건 내가 치워." <<he>>【은는】 말한다. "조금 밀리긴 했지만. 부-부모님이 많이 어지르셔서."
 <br><br>
 
-<<kylaroptions>>
+<<kylarOptions>>
 <br>
 
 :: Manor Kylar Word 2
@@ -203,7 +481,7 @@
 
 "나-나는..." <<Hes>> 당신을 쳐다보려 애쓴다. "모르겠어. 어느 날 밤 부모님이 엄청 신나셨어. 나를 일찍 재우셨지. 그러다 창문 깨지는 소리가 들렸어. 나-나는 이불 밑에 숨었어. 아침에 일어나니, 이렇게 되어 있었어."
 <br><br>
-<<kylaroptions>>
+<<kylarOptions>>
 
 :: Manor Kylar Secret
 <<effects>>
@@ -658,6 +936,7 @@
 <<link [[다음|Manor Parents Room]]>><</link>>
 <br>
 
+
 :: Manor Kylar Invite
 <<effects>>
 
@@ -683,7 +962,7 @@
 당신은 함께 저택으로 걸어간다. 카일라는 <<his>> 컴퓨터에 앉기 전에 당신을 안아준다.
 <br><br>
 
-<<kylaroptions>>
+<<kylarOptions>>
 
 :: Manor Kylar Wallpaper
 <<effects>>
@@ -711,7 +990,7 @@
 
 당신은 카일라가 작품의 줄거리와 등장인물을 설명하는 동안 계속 듣는다. <<He>>【은는】 한동안 주제를 이리저리 건너뛰며 장황하게 떠든다. 따라가기 어렵다. <<hes>> 끝내자 <<He>>【은는】 당신에게 미소 짓는다.
 <br><br>
-<<kylaroptions>>
+<<kylarOptions>>
 
 :: Manor Kylar Tease
 <<effects>>
@@ -757,4 +1036,4 @@
 	카일라의 눈이 당신의 입술로 향하지만, 당신이 일어서자 <<he>>【은는】 재빨리 <<his>> 시선을 피한다.
 <</if>>
 <br><br>
-<<kylaroptions>>
+<<kylarOptions>>

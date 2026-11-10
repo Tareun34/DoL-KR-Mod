@@ -1,0 +1,98 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tif (isNaN(amount)) paramError(\"control\", \"amount\", amount, \"Expected a number.\");",
+   "\t\tif (V.gamemode === \"soft\") {"
+  ],
+  "old_kr": [
+   "\t\tif (isNaN(amount)) paramError(\"control\", \"amount\", amount, \"숫자를 입력해야 합니다.\");",
+   "\t\tif (V.gamemode === \"soft\") {"
+  ],
+  "new_en": [
+   "\t\tif (isNaN(amount)) paramError(\"control\", \"amount\", amount, \"Expected a number.\");",
+   "\t\tif (V.gamemode === \"soft\" && !V.possessed) {"
+  ],
+  "context": "\tfunction control(amount, combat) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\tfunction transform(type, change) {",
+   "\t\t// Change the PC's transformation progress, depending on the specified type.",
+   "\t\tif (change) {",
+   "\t\t\tswitch (type) {",
+   "\t\t\t\tcase \"wolf\":",
+   "\t\t\t\t\tV.wolfbuild += change;",
+   "\t\t\t\t\tbreak;",
+   "\t\t\t\tcase \"cat\":",
+   "\t\t\t\t\tV.catbuild += change;",
+   "\t\t\t\t\tbreak;",
+   "\t\t\t\tcase \"cow\":",
+   "\t\t\t\t\tV.cowbuild += change;",
+   "\t\t\t\t\tbreak;",
+   "\t\t\t\tcase \"bird\":",
+   "\t\t\t\t\tV.birdbuild += change;",
+   "\t\t\t\t\tbreak;",
+   "\t\t\t\tcase \"fox\":",
+   "\t\t\t\t\tV.foxbuild += change;",
+   "\t\t\t\t\tbreak;",
+   "\t\t\t\tcase \"angel\":",
+   "\t\t\t\t\tV.angelbuild += change;",
+   "\t\t\t\t\tbreak;",
+   "\t\t\t\tcase \"fallen\":",
+   "\t\t\t\t\tV.fallenbuild += change;",
+   "\t\t\t\t\tbreak;",
+   "\t\t\t\tcase \"demon\":",
+   "\t\t\t\t\tV.demonbuild += change;",
+   "\t\t\t\t\tbreak;",
+   "\t\t\t}",
+   "\t\t}",
+   "",
+   "\t\t// If the PC gains points for an animal transformation and isn't wearing a cursed familiar collar.",
+   "\t\tif (![\"angel\", \"fallen\", \"demon\"].includes(type) && change > 0 && !(V.worn.neck.name === \"familiar collar\" && V.worn.neck.cursed === 1)) {",
+   "\t\t\t// Decrease the other animal TF points by an equivalent amount, unless the PC is wearing one of the animal TF's associated eerie items.",
+   "\t\t\tif (type !== \"wolf\" && V.worn.neck.name !== \"spiked collar\" && V.worn.neck.name !== \"spiked collar with leash\") {",
+   "\t\t\t\tV.wolfbuild -= change;",
+   "\t\t\t}",
+   "\t\t\tif (type !== \"cat\" && V.worn.neck.name !== \"cat bell collar\") {",
+   "\t\t\t\tV.catbuild -= change;",
+   "\t\t\t}",
+   "\t\t\tif (type !== \"cow\" && V.worn.neck.name !== \"cow bell\") {",
+   "\t\t\t\tV.cowbuild -= change;",
+   "\t\t\t}",
+   "\t\t\tif (type !== \"bird\" && V.worn.head.name !== \"feathered hair clip\" && V.worn.neck.name !== \"feather necklace\") {",
+   "\t\t\t\tV.birdbuild -= change;",
+   "\t\t\t}",
+   "\t\t\tif (type !== \"fox\" && V.worn.head.name !== \"spirit mask\" && V.worn.neck.name !== \"jasper pendant\") {",
+   "\t\t\t\tV.foxbuild -= change;",
+   "\t\t\t}",
+   "\t\t}",
+   "",
+   "\t\t// Clamps for safety.",
+   "\t\tV.wolfbuild = Math.clamp(V.wolfbuild, 0, 100);",
+   "\t\tV.catbuild = Math.clamp(V.catbuild, 0, 100);",
+   "\t\tV.cowbuild = Math.clamp(V.cowbuild, 0, 100);",
+   "\t\tV.birdbuild = Math.clamp(V.birdbuild, 0, 100);",
+   "\t\tV.foxbuild = Math.clamp(V.foxbuild, 0, 100);",
+   "\t\tV.angelbuild = Math.clamp(V.angelbuild, 0, 100);",
+   "\t\tV.fallenbuild = Math.clamp(V.fallenbuild, 0, 100);",
+   "\t\tV.demonbuild = Math.clamp(V.demonbuild, 0, 100);",
+   "\t}",
+   "\tDefineMacro(\"transform\", transform);",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\ttransform,"
+  ],
+  "context": "\t\tbadEndTrackingEnd,"
+ }
+]

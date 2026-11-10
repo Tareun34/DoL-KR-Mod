@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t * @param canvas",
+   "\t * @param layerCanvas"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t * @param {BaseCanvas} canvas",
+   "\t * @param {BaseCanvas} layerCanvas"
+  ],
+  "context": "\t *"
+ }
+]

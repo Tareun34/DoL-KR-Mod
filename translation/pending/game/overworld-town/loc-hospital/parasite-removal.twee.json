@@ -1,0 +1,21 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You feel hairs stand on end as your gown falls to the floor, unveiling you for the whole audience to see.",
+   "<<if $player.penisExist and $player.vaginaExist>>",
+   "\tThey erupt into inquisitive murmuring. It must be your <<genitals>>."
+  ],
+  "old_kr": [
+   "가운이 바닥으로 떨어지자 온몸의 털이 곤두서는 것 같다. 당신의 몸이 모든 관객에게 공개된다.",
+   "<<if $player.penisExist and $player.vaginaExist>>",
+   "\t그들은 호기심 어린 수군거림으로 술렁인다. 당신의 <<genitals>> 때문인 게 틀림없다."
+  ],
+  "new_en": [
+   "You feel hairs stand on end as your gown falls to the floor, unveiling you for the whole audience to see.",
+   "<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>",
+   "\tThey erupt into inquisitive murmuring. It must be your <<genitals>>."
+  ],
+  "context": "<br>"
+ }
+]

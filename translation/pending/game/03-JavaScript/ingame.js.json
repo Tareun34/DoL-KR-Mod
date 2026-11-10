@@ -1,0 +1,216 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tif (V.debug === 1 || (available[currentPassage].includes(moveTo) && destinationTable.includes(moveTo))) {"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tif (V.debug || (available[currentPassage].includes(moveTo) && destinationTable.includes(moveTo))) {"
+  ],
+  "context": "\t// if(V.debug == 1 || available[currentPassage].includes(moveTo))"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "// A wrapper for wikifyEval, only use for singular macro calls."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "/**",
+   " * A wrapper for wikifyEval, only use for singular macro calls.",
+   " *",
+   " * @param {string} widget Name of the widget.",
+   " * @param {...any} args Potential arguments for the widget.",
+   " */"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tjQuery(document).on(\"change\", \"#settingsDiv .macro-radiobutton,#settingsDiv ,#settingsDiv .macro-checkbox\", () => {"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tjQuery(document).on(\"change\", \"#settingsDiv\", () => {"
+  ],
+  "context": "function startingPlayerImageReset() {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tnpc.clothes = { set: set.name };"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tnpc.clothes = { set: set.name, equippedDay: Time.days, equippedLocation: V.location };"
+  ],
+  "context": "function npcEquipSet(npc, set) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t}",
+   "\t// Outfits made for a specific named NPC are only worn by that NNPC and not by random NPCs in town",
+   "\tclothingOptions = clothingOptions.filter(set => !set.namedNpcOnly || npc.outfits?.includes(set.name));",
+   "\t// NNPC keeps the same outfit on",
+   "\tif (isNNPCOutfitEquippedHereToday(npc) && clothingOptions.some(set => set.name === npc.clothes.set)) {",
+   "\t\treturn npc.clothes.set;"
+  ],
+  "context": "\t\t}"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tif (V.settings.femaleNPCPenisChance <= 0) return SexTypes.ALL_FEMALES;\t\t/* All females, no dickgirls. Always vaginal. */",
+   "\t\tif (V.settings.femaleNPCPenisChance >= 100) return SexTypes.ALL_DICKGIRLS;\t/* All females, all dickgirls. Always penises. */"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tif (V.settings.femaleNPCPenisChance <= 0) return SexTypes.ALL_FEMALES;\t\t/* All females, none with penises. Always vaginal. */",
+   "\t\tif (V.settings.femaleNPCPenisChance >= 100) return SexTypes.ALL_FEMALE_PENISES;\t/* All females, all with penises. Always penises. */"
+  ],
+  "context": "\tif (maleChance() <= 0) { /* Only females. */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tif (V.settings.maleNPCVaginaChance <= 0) return SexTypes.ALL_MALES;\t\t\t/* All males, no cuntboys. Always males. */",
+   "\t\tif (V.settings.maleNPCVaginaChance >= 100) return SexTypes.ALL_CUNTBOYS;\t/* All males, all cuntboys. Always vaginal. */"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tif (V.settings.maleNPCVaginaChance <= 0) return SexTypes.ALL_MALES;\t\t\t/* All males, none with vaginas. Always males. */",
+   "\t\tif (V.settings.maleNPCVaginaChance >= 100) return SexTypes.ALL_MALE_VAGINAS;\t/* All males, all with vaginas. Always vaginal. */"
+  ],
+  "context": "\tif (maleChance() >= 100) { /* Only males. */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tif (V.settings.maleNPCVaginaChance >= 100 && V.settings.femaleNPCPenisChance <= 0) return SexTypes.ALL_VAGINAS;\t/* Both females and males, but all males are cuntboys, and there are no dickgirls. */",
+   "\tif (V.settings.femaleNPCPenisChance >= 100 && V.settings.maleNPCVaginaChance <= 0) return SexTypes.ALL_DICKS;\t/* Both females and males, but all females are dickgirls, and there are no cuntboys. */"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tif (V.settings.maleNPCVaginaChance >= 100 && V.settings.femaleNPCPenisChance <= 0) return SexTypes.ALL_VAGINAS;\t/* Both females and males, but all males have vaginas, and no females have penises. */",
+   "\tif (V.settings.femaleNPCPenisChance >= 100 && V.settings.maleNPCVaginaChance <= 0) return SexTypes.ALL_DICKS;\t/* Both females and males, but all females have penises, and no males have vaginas. */"
+  ],
+  "context": "\t}"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "// Set plots to watered if it rains",
+   "// Temporary solution until a rework",
+   "$(document).on(\":onWeatherChange\", () => {",
+   "\tif (!V.daily || V.daily?.plotsRain || Weather.precipitation !== \"rain\") return;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "function waterPlotsIfRaining() {",
+   "\tif (V.daily.plotsRain || Weather.precipitation !== \"rain\") return;"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tObject.entries(V.plots).forEach(([location, plots]) => {",
+   "\t\t// Don't water greenhouse plants from rain - disabled for now",
+   "\t\t// Alternate text about a rainwater harvester was added, so this may not be needed",
+   "\t\t// if (location === \"garden\" && V.alex_greenhouse === 3) return;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tObject.entries(V.plots).forEach(([_location, plots]) => {"
+  ],
+  "context": "\tV.daily.plotsRain = true;"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "});"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "}",
+   "window.waterPlotsIfRaining = waterPlotsIfRaining;"
+  ],
+  "context": "\t});"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "// Used to determine whether Robin sshould automatically water them"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "// Used to determine whether Robin should automatically water them"
+  ],
+  "context": "// Returns true if one or more orphanage plots have been planted"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tlet irrigation = location === \"farm\" ? V.farm.irrigation || 0 : 0;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tlet irrigation = location === \"farm\" ? V.farm?.irrigation || 0 : 0;"
+  ],
+  "context": "\tObject.entries(V.plots).forEach(([location, plots]) => {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "/**",
+   " * A skin tone for a newly generated NPC from 0 (lightest) to 100 (darkest).",
+   " * Tones cluster around the most common tone the player chose and never fall outside the",
+   " * lightest and darkest skin tones they chose.",
+   " *",
+   " * @returns {number} 0-100",
+   " */",
+   "function randomSkinTone() {",
+   "\tconst min = Math.clamp(V.settings.skinToneMin, 0, 100);",
+   "\tconst max = Math.clamp(V.settings.skinToneMax, 0, 100);",
+   "\tif (max <= min) return min;",
+   "\tconst mean = Math.clamp(V.settings.skinToneMode, min, max);",
+   "\tconst roll = random(0, 10000) / 10000;",
+   "\tconst peak = (mean - min) / (max - min);",
+   "\tconst tone = roll < peak ? min + Math.sqrt(roll * (max - min) * (mean - min)) : max - Math.sqrt((1 - roll) * (max - min) * (max - mean));",
+   "\treturn Math.round(Math.clamp(tone, min, max));",
+   "}",
+   "window.randomSkinTone = randomSkinTone;",
+   "",
+   "/**",
+   " * Whether Whitney's friends are hanging out at Whitney's flat.",
+   " *",
+   " * @returns {boolean}",
+   " */",
+   "function whitneyHasFriendsOver() {",
+   "\treturn Time.dayState === \"day\" && Weather.precipitation === \"none\" && !Time.schoolDay && [3, 6, 7].includes(Time.weekDay);",
+   "}",
+   "window.whitneyHasFriendsOver = whitneyHasFriendsOver;",
+   "",
+   "/**",
+   " * Whether a NNPC put their current outfit on today, at this location.",
+   " * They change when they go somewhere else or a new day starts.",
+   " *",
+   " * @param {object} npc",
+   " * @returns {boolean}",
+   " */",
+   "function isNNPCOutfitEquippedHereToday(npc) {",
+   "\treturn !!npc.nam && npc.clothes?.equippedDay === Time.days && npc.clothes.equippedLocation === V.location;",
+   "}",
+   "window.isNNPCOutfitEquippedHereToday = isNNPCOutfitEquippedHereToday;"
+  ],
+  "context": "window.wearingCondom = wearingCondom;"
+ }
+]

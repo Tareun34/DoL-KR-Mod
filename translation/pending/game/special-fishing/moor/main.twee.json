@@ -1,0 +1,57 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<addinlineevent \"bite\" fishingCatchEventWeight(\"fishingMoor\", 10)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<addinlineevent \"bite\" `fishingCatchEventWeight(\"fishingMoor\", 10)`>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<addinlineevent \"lurkerStart\" fishingDangerEventWeight(0.75)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<addinlineevent \"lurkerStart\" `fishingDangerEventWeight(0.75)`>>"
+  ],
+  "context": "\t<<if $fishing.fishingMoor.event is \"none\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<addinlineevent \"catStart\" fishingDangerEventWeight(0.75)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addinlineevent \"catStart\" `fishingDangerEventWeight(0.75)`>>"
+  ],
+  "context": "<<if $fishing.fishingMoor.event is \"none\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<addinlineevent \"moorHikersAttack\" fishingDangerEventWeight(_moorHikersProbability)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addinlineevent \"moorHikersAttack\" `fishingDangerEventWeight(_moorHikersProbability)`>>"
+  ],
+  "context": "\t<<set _moorHikersProbability to Math.max(0, $fishing.fishingMoor.eventDanger - 1)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Widgets Fishing Moor Wait Flavor [widget]"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ":: Widgets Fishing Moor Wait Flavour [widget]"
+  ],
+  "context": ""
+ }
+]

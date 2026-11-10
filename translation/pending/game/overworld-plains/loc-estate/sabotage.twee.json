@@ -1,0 +1,98 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tCentaur watch from some of the stalls."
+  ],
+  "old_kr": [
+   "\t\t몇몇 마구간 칸에서 켄타우로스들이 지켜보고 있다."
+  ],
+  "new_en": [
+   "\t\tCentaurs watch from some of the stalls."
+  ],
+  "context": "\t<<case \"bulls\" \"cows\" \"both\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tHorses watch from some of the stalls"
+  ],
+  "old_kr": [
+   "\t\t몇몇 마구간 칸에서 말들이 지켜보고 있다."
+  ],
+  "new_en": [
+   "\t\tHorses watch from some of the stalls."
+  ],
+  "context": "\t<<default>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $settings.monsterChance gte 1 and $hallucinations gte 1 or $settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly or !$settings.bestialityEnabled>>",
+   "\t<<if beastMaleChance() is 100>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if monsterCanAppearForType(\"cow\")>>",
+   "\t<<if beastMaleChanceForType(\"cow\") is 100>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif beastMaleChance() is 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif beastMaleChanceForType(\"cow\") is 0>>"
+  ],
+  "context": "\t\t<<set _estate_cards_monsters to \"bulls\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $settings.monsterChance gte 1 and $hallucinations gte 1 or $settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly or !$settings.bestialityEnabled>>",
+   "\t<<if beastMaleChance() is 100>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if monsterCanAppearForType(\"cow\")>>",
+   "\t<<if beastMaleChanceForType(\"cow\") is 100>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif beastMaleChance() is 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif beastMaleChanceForType(\"cow\") is 0>>"
+  ],
+  "context": "\t\t<<set _estate_cards_monsters to \"bulls\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if beastMaleChance() is 100>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastMaleChanceForType(\"cow\") is 100>>"
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif beastMaleChance() is 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif beastMaleChanceForType(\"cow\") is 0>>"
+  ],
+  "context": "\t\t<<set _estate_cards_monsters to \"beast_bulls\">>"
+ }
+]

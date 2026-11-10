@@ -485,8 +485,8 @@
 		<<exit>>
 	<</if>>
 <<else>>
-	<<if ["ghostshroom","wolfshroom"].includes($phase) or $phase is "wild_honeycomb" and (!$settings.beesEnabled or !$settings.bestialityEnabled)>>
-		에이버리가 인상을 찌푸린다. "미안하지만,"
+	<<if ["ghostshroom","wolfshroom"].includes($phase) or $phase is "wild_honeycomb" and !$settings.beesEnabled>>
+		Avery frowns. "I'm sorry,
 		<<if $phase is "wild_honeycomb">>
 			벌집을 원한다고? 신선한 벌집을?
 		<<else>>

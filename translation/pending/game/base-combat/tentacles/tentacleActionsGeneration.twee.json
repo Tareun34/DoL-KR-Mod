@@ -1,0 +1,26 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t</label> |"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t</label>",
+   "\t\t\t\t\t<<if [_i] lt ($tentacles.max - 1)>>|<</if>>"
+  ],
+  "context": "\t\t\t\t\t\t$tentacles[_i].fullDesc"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t</label> |"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t</label>",
+   "\t\t\t\t\t<<if [_i] lt ($tentacles.max - 1)>>|<</if>>"
+  ],
+  "context": "\t\t\t\t\t\t$tentacles[_i].fullDesc"
+ }
+]

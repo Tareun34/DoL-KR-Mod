@@ -1,0 +1,31 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tThe <<person>> emerges from <<his>> alcove, hand outstretched. \"We work hard to maintain this passage,\" <<he>> says. \"So hard, in fact, that we're asking passers by for a larger contribution than normal. <<printmoney 2000>>.\"<<gimpatience>><<flats_canal 3>>"
+  ],
+  "old_kr": [
+   "\t\t<<person>>【이가】 벽감에서 나와 손을 내민다. \"우린 이 통로를 유지하기 위해 열심히 일하고 있어.\" <<he>>【이가】 말한다. \"너무 열심히 일해서, 지나가는 사람들한테 평소보다 더 많은 기부를 요청하고 있지. <<printmoney 2000>>.\"<<gimpatience>><<flats_canal 3>>"
+  ],
+  "new_en": [
+   "\t\tThe <<person>> emerges from <<his>> alcove, hand outstretched. \"We work hard to maintain this passage,\" <<he>> says. \"So hard, in fact, that we're asking passersby for a larger contribution than normal. <<printmoney 2000>>.\"<<gimpatience>><<flats_canal 3>>"
+  ],
+  "context": "\t<<elseif $flats_canal + $rng lte 40>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if random(1, 2) is 2>>",
+   "\tThe <<person>> tightens <<his>> grip further, <<his>> mouth still pressed against yours. Just when you think you're going to pass out, <span class=\"green\"><<he>> releases you.</span> You gasp for air. Stars swarm your vision."
+  ],
+  "old_kr": [
+   "<<if random(1, 2) is 2>>",
+   "\t<<person>>【은는】 <<his>> 입을 당신의 입에 여전히 누른 채로, <<his>> 손아귀에 더욱 힘을 준다. 당신이 기절할 것 같다고 생각하는 바로 그 순간, <span class=\"green\"><<he>>【은는】 당신을 놓아준다.</span> 당신은 숨을 헐떡인다. 시야에 별이 가득하다."
+  ],
+  "new_en": [
+   "<<if random(1, 2) is 2 or $mine?.freed is 1>>",
+   "\tThe <<person>> tightens <<his>> grip further, <<his>> mouth still pressed against yours. Just when you think you're going to pass out, <span class=\"green\"><<he>> releases you.</span> You gasp for air. Stars swarm your vision."
+  ],
+  "context": ""
+ }
+]

@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if dangerEvent()>>",
+   "\t<<link [[Next|Flats Auction]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<if dangerEvent()>>",
+   "\t<<link [[다음|Flats Auction]]>><</link>>"
+  ],
+  "new_en": [
+   "<<if dangerEvent() and $mine?.freed isnot 1>>",
+   "\t<<link [[Next|Flats Auction]]>><</link>>"
+  ],
+  "context": ""
+ }
+]

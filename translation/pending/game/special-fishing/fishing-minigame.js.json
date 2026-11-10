@@ -1,0 +1,13 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tif (V.debug === 1) {"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tif (V.debug) {"
+  ],
+  "context": ""
+ }
+]

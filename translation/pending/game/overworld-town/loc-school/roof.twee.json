@@ -1,0 +1,13 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if _genderUnknown and !playerChastity(\"hidden\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if _genderUnknown and !playerChastity(\"hidden\") and $settings.nudeGenderPerception !== 0>>"
+  ],
+  "context": "<<set _genderUnknown to isHermOrCrossdresser() and !$genderknown.includes(\"Whitney\")>>"
+ }
+]

@@ -1,0 +1,29 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t * @param {number} outsideTemperature The current air temperature.",
+   "\t * @param temperature",
+   "\t * @param warmth"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t * @param {number} temperature The current air temperature.",
+   "\t * @param {number} warmth"
+  ],
+  "context": "\t *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t * @param bodyTemperature",
+   "\t * @param outsideTemperature"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t * @param {number} bodyTemperature",
+   "\t * @param {number} outsideTemperature"
+  ],
+  "context": "\t *"
+ }
+]

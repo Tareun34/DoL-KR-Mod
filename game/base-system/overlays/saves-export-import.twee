@@ -6,8 +6,8 @@
 	<<set $_errorCount to document.querySelectorAll('.error').length>>
 	<<set $_dolErrorCount to document.querySelectorAll('.dol-error').length>>
 	<<set $_customErrorCount to Errors.log.length>>
-	<<set $_bypassRestrictions to $debug is 1 or $_errorCount gt 0 or $_dolErrorCount gt 0 or $_customErrorCount gt 0>>
-	파일에서 불러오기: <input id="saveImport" type="file" value="파일로 불러오기" onchange="importSave(this.files)">
+	<<set $_bypassRestrictions to $debug or $_errorCount gt 0 or $_dolErrorCount gt 0 or $_customErrorCount gt 0>>
+	Load from file: <input id="saveImport" type="file" value="Load from file" onchange="importSave(this.files)">
 	<br><br>
 	<<if tags().includes("nosave")>>
 		여기서는 현재 파일을 내보낼 수 없습니다!
@@ -19,7 +19,7 @@
 		<</if>>
 	<<elseif ($replayScene is undefined) or $_bypassRestrictions>>
 		<<set _exportName to "'degrees-of-lewdity"+($saveName isnot ''?'-'+$saveName:'')+ "'">>
-		<input type="button" class="saveMenuButton" value="파일로 저장" @onclick="'SugarCube.Save.export('+_exportName+')'">
+		<input type="button" class="saveMenuButton" value="Save to file" onclick="SugarCube.Save.export(T.exportName)">
 	<<else>>
 		현재 파일로 저장할 수 없습니다.
 	<</if>>

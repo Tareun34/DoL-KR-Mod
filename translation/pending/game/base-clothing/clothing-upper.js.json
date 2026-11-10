@@ -1,0 +1,149 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tpattern_name: \"prints\","
+  ],
+  "context": "\t\t\tpattern_layer: \"secondary\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tpattern_name: \"prints\","
+  ],
+  "context": "\t\t\tpattern_layer: \"secondary\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tpattern_name: \"prints\","
+  ],
+  "context": "\t\t\tpattern_layer: \"secondary\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tpattern_name: \"prints\","
+  ],
+  "context": "\t\t\tpattern_layer: \"secondary\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tpattern_name: \"weapons\","
+  ],
+  "context": "\t\t\tpattern_layer: \"tertiary\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tpattern_name: \"weapons\","
+  ],
+  "context": "\t\t\tpattern_layer: \"tertiary\","
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\tset: \"rose dress\","
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tset: \"mini rose dress\","
+  ],
+  "context": "\t\t\ttype: [\"formal\", \"costume\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\treference: \"tanktop\","
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\treference: \"tshirt\","
+  ],
+  "context": "\t\t\tcombat: {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\tnew ClothesItem({",
+   "\t\t\tindex: 238,",
+   "\t\t\tslot: \"upper\",",
+   "\t\t\tname: \"boiler suit\",",
+   "\t\t\tvariable: \"boilersuit\",",
+   "\t\t\tcombat: {",
+   "\t\t\t\treference: \"regularshirt\",",
+   "\t\t\t},",
+   "\t\t\tintegrity: 500,",
+   "\t\t\tintegrity_max: 500,",
+   "\t\t\tfabric_strength: 30,",
+   "\t\t\treveal: 100,",
+   "\t\t\tbustresize: -1,",
+   "\t\t\tword: \"a\",",
+   "\t\t\tone_piece: 1,",
+   "\t\t\tstrap: 0,",
+   "\t\t\topen: 0,",
+   "\t\t\tstate: \"waist\",",
+   "\t\t\tstate_base: \"waist\",",
+   "\t\t\tstate_top: \"chest\",",
+   "\t\t\tstate_top_base: \"chest\",",
+   "\t\t\tplural: 0,",
+   "\t\t\tcolour: 0,",
+   "\t\t\tcolour_options: [",
+   "\t\t\t\t\"black\",",
+   "\t\t\t\t\"navy\",",
+   "\t\t\t\t\"navy blue\",",
+   "\t\t\t\t\"denim\",",
+   "\t\t\t\t\"blue steel\",",
+   "\t\t\t\t\"sterling silver\",",
+   "\t\t\t\t\"brown\",",
+   "\t\t\t\t\"khaki\",",
+   "\t\t\t\t\"sand\",",
+   "\t\t\t\t\"wine\",",
+   "\t\t\t\t\"russet\",",
+   "\t\t\t\t\"dusty orange\",",
+   "\t\t\t\t\"jewel red\",",
+   "\t\t\t\t\"olive\",",
+   "\t\t\t\t\"forest green\",",
+   "\t\t\t\t\"custom\",",
+   "\t\t\t],",
+   "\t\t\tcolour_combat: \"navy\",",
+   "\t\t\texposed: 0,",
+   "\t\t\texposed_base: 0,",
+   "\t\t\ttype: [\"normal\"],",
+   "\t\t\tset: \"boilersuit\",",
+   "\t\t\tgender: \"n\",",
+   "\t\t\twarmth: 5,",
+   "\t\t\tcost: 6000,",
+   "\t\t\tdescription: \"Made for heavy labour.\",",
+   "\t\t\tshop: [\"clothing\"],",
+   "\t\t\tsleeve_img: 1,",
+   "\t\t\taltposition: \"none\",",
+   "\t\t\taltdisabled: [\"sleeves\"],",
+   "\t\t\taltsleeve: \"none\",",
+   "\t\t\tbreast_img: { 0: null, 1: null, 2: null, 3: 3, 4: 3, 5: 4, 6: 4 },",
+   "\t\t\tlocation: 0,",
+   "\t\t\ticonFile: \"boiler-suit.png\",",
+   "\t\t\taccIcon: 0,",
+   "\t\t\toutfitPrimary: { lower: \"boiler suit trousers\" },",
+   "\t\t\tnotuck: 1,",
+   "\t\t\tpregType: \"min\",",
+   "\t\t}),"
+  ],
+  "context": "\t\t}),"
+ }
+]

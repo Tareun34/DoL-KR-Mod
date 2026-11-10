@@ -26,11 +26,11 @@
 	너무 무리했다.
 	<br><br>
 	<<passout>>
-	<<beastNEWinit 4 lizard>>
 
 	<<if dangerEvent()>>
-		<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>
-			<<link [[깨어난다|Passout Beast Drain]]>><<set $molestationstart to 1>><</link>>
+		<<beastNEWinit 4 lizard>>
+		<<if $rng gte 51 and beastSexEnabledForType("lizard", $monster is 1)>>
+			<<link [[Wake up|Passout Beast Drain]]>><<set $molestationstart to 1>><</link>>
 		<<elseif $rng gte 1>>
 			<<link [[깨어난다|Passout Drain Abduction]]>><<endevent>><<set $molestationstart to 1>><</link>>
 		<</if>>
@@ -282,8 +282,8 @@
 			<br>
 		<<elseif $rng gte 11>>
 			<<beastNEWinit 1 lizard>>
-			<<if $monster is 1 or $settings.bestialityEnabled>>
-				물속의 그림자가 당신을 향해 움직인다.
+			<<if beastSexEnabledForType("lizard", $monster is 1)>>
+				A shadow in the water moves towards you.
 				<br><br>
 				<<link [[다음|Drain Water Lizard]]>><<set $molestationstart to 1>><</link>>
 				<br>

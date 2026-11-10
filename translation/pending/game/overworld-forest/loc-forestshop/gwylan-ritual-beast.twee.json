@@ -1,0 +1,338 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<i><span class=\"blue\">Beasts, monsterpeople or plantpeople must be enabled to continue.</span></i>"
+  ],
+  "old_kr": [
+   "\t<i><span class=\"blue\">계속하려면 야수, 괴물 인간 또는 인간형 식물이 활성화되어 있어야 합니다.</span></i>"
+  ],
+  "new_en": [
+   "\t<i><span class=\"blue\">Wolves, foxes, plantpeople, or monsterpeople must be enabled to continue.</span></i>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "One has a sketch of a wolf's head.<br>",
+   "Another has a sketch of a fox jumping.<br>"
+  ],
+  "old_kr": [
+   "하나에는 늑대 머리 스케치가 있다.<br>",
+   "다른 하나에는 점프하는 여우 스케치가 있다.<br>"
+  ],
+  "new_en": [
+   "<<if beastSexEnabledForType(\"wolf\")>>",
+   "\tOne has a sketch of a wolf's head.<br>",
+   "<</if>>",
+   "<<if beastSexEnabledForType(\"fox\")>>",
+   "\tAnother has a sketch of a fox jumping.<br>",
+   "<</if>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Wolf|Gwylan Forest Journey 3]]>><<set $beastRitual.lure to \"wolf\">><</link>>",
+   "<br>",
+   "<<link [[Fox|Gwylan Forest Journey 3]]>><<set $beastRitual.lure to \"fox\">><</link>><<if _gwylanTF.known>><<glust>><</if>>",
+   "<br>"
+  ],
+  "old_kr": [
+   "<<link [[늑대|Gwylan Forest Journey 3]]>><<set $beastRitual.lure to \"wolf\">><</link>>",
+   "<br>",
+   "<<link [[여우|Gwylan Forest Journey 3]]>><<set $beastRitual.lure to \"fox\">><</link>><<if _gwylanTF.known>><<glust>><</if>>",
+   "<br>"
+  ],
+  "new_en": [
+   "<<if beastSexEnabledForType(\"wolf\")>>",
+   "\t<<link [[Wolf|Gwylan Forest Journey 3]]>><<set $beastRitual.lure to \"wolf\">><</link>>",
+   "\t<br>",
+   "<</if>>",
+   "<<if beastSexEnabledForType(\"fox\")>>",
+   "\t<<link [[Fox|Gwylan Forest Journey 3]]>><<set $beastRitual.lure to \"fox\">><</link>><<if _gwylanTF.known>><<glust>><</if>>",
+   "\t<br>",
+   "<</if>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tGwylan giggles. \"Bark, like on trees? I'll take it you mean this one, then.\" <<He>> holds up the tincture with leaf sketches.",
+   "\t\t<<else>>"
+  ],
+  "old_kr": [
+   "\t\t\t그윌란이 킥킥 웃는다. \"짖는다고(bark)? 나무껍질(bark) 말이야? 그럼 이걸 말하는 걸로 알게.\" <<He>>【은는】 나뭇잎이 그려진 팅크처를 들어 올린다.",
+   "\t\t<<else>>"
+  ],
+  "new_en": [
+   "\t\t\tGwylan giggles. \"Bark, like on trees? I'll take it you mean this one, then.\" <<He>> holds up the tincture with leaf sketches.",
+   "\t\t<<elseif beastSexEnabledForType(\"wolf\")>>"
+  ],
+  "context": "\t\t\t<<set $beastRitual.lure to \"dryad\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tGwylan giggles. \"Wolves it is.\""
+  ],
+  "old_kr": [
+   "\t\t\t그윌란이 킥킥 웃는다. \"늑대로 하지.\""
+  ],
+  "new_en": [
+   "\t\t\tGwylan giggles. \"Wolves it is.\"",
+   "\t\t<<elseif beastSexEnabledForType(\"fox\")>>",
+   "\t\t\t<<set $beastRitual.lure to \"fox\">>",
+   "\t\t\tGwylan giggles. \"Foxes it is.\"",
+   "\t\t<<else>>",
+   "\t\t\t<<set $beastRitual.lure to \"dryad\">>",
+   "\t\t\tGwylan giggles. \"Bark, like on trees? I'll take it you mean this one, then.\" <<He>> holds up the tincture with leaf sketches."
+  ],
+  "context": "\t\t\t<<set $beastRitual.lure to \"wolf\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou yip. Gwylan giggles. \"Foxes it is.\"",
+   "\t<<default>>You point at Gwylan. <<He>> blinks at you, and picks the wolf tincture. <span class=\"red\">This is a bug, please report.</span> <<set $beastRitual.lure to \"wolf\">>"
+  ],
+  "old_kr": [
+   "\t\t당신은 낑낑거린다. 그윌란이 킥킥 웃는다. \"여우로 하지.\"",
+   "\t<<default>>당신은 그윌란을 가리킨다. <<He>>【은는】 당신을 향해 눈을 깜박이고는 늑대 팅크처를 집는다. <span class=\"red\">이것은 버그입니다, 제보해 주세요.</span> <<set $beastRitual.lure to \"wolf\">>"
+  ],
+  "new_en": [
+   "\t\tYou yip. Gwylan giggles. \"Foxes it is.\"",
+   "\t<<default>>You point at Gwylan. <<He>> blinks at you, and picks a tincture. <span class=\"red\">This is a bug, please report.</span>",
+   "\t\t<<if beastSexEnabledForType(\"wolf\")>>",
+   "\t\t\t<<set $beastRitual.lure to \"wolf\">>",
+   "\t\t<<elseif beastSexEnabledForType(\"fox\")>>",
+   "\t\t\t<<set $beastRitual.lure to \"fox\">>",
+   "\t\t<<else>>",
+   "\t\t\t<<set $beastRitual.lure to \"dryad\">>",
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t<<set $beastRitual.petplay++>><<set $beastRitual.lure to \"fox\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou were already in heat, and <<gwylanHypnoName>> now looks and smells like the perfect mate. <<arousal 2000>><<gggarousal>>",
+   "\t\t<<elseif playerRutMinArousal() gte 1 and _gwylanLovePercent gte 50>>"
+  ],
+  "old_kr": [
+   "\t\t\t당신은 이미 발정기였고, 이제 <<gwylanHypnoName>>【은는】 완벽한 짝처럼 보이고 그런 냄새가 난다. <<arousal 2000>><<gggarousal>>",
+   "\t\t<<elseif playerRutMinArousal() gte 1 and _gwylanLovePercent gte 50>>"
+  ],
+  "new_en": [
+   "\t\t\tYou were already in heat, and <<gwylanHypnoName>> now looks and smells like the perfect mate. <<arousal 2000>><<gggarousal>>",
+   "\t\t<<elseif playerRutMinArousal() gte 1 and _gwylanLovePercent gte 40>>"
+  ],
+  "context": "\t\t\t<<set $beastRitual.lewdOption to true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou were already in rut, and <<gwylanHypnoName>> now looks and smells like the perfect mate. <<arousal 2000>><<gggarousal>>",
+   "\t\t<<elseif hasSexStat(\"deviancy\", 3) and _gwylanLovePercent gte 50>>"
+  ],
+  "old_kr": [
+   "\t\t\t당신은 이미 러트였고, 이제 <<gwylanHypnoName>>【은는】 완벽한 짝처럼 보이고 그런 냄새가 난다. <<arousal 2000>><<gggarousal>>",
+   "\t\t<<elseif hasSexStat(\"deviancy\", 3) and _gwylanLovePercent gte 50>>"
+  ],
+  "new_en": [
+   "\t\t\tYou were already in rut, and <<gwylanHypnoName>> now looks and smells like the perfect mate. <<arousal 2000>><<gggarousal>>",
+   "\t\t<<elseif hasSexStat(\"deviancy\", 3) and _gwylanLovePercent gte 40>>"
+  ],
+  "context": "\t\t\t<<set $beastRitual.lewdOption to true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou try to dodge the <<beasttype>>'s pounce, <span class=\"red\">but you're too slow</span>.",
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t<<bHe>> tackles you to the ground."
+  ],
+  "old_kr": [
+   "\t\t당신은 <<beasttype>>의 덮치기를 피하려 하지만, <span class=\"red\">너무 느리다</span>.",
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t<<bHe>> 당신을 땅으로 넘어뜨린다."
+  ],
+  "new_en": [
+   "\t\tYou try to dodge the <<beasttype>>'s pounce, <span class=\"red\">but you're too slow</span>.",
+   "\t\t<<if beastSexEnabledForType(\"fox\", $monster is 1)>>",
+   "\t\t\t<<bHe>> tackles you to the ground."
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou try to redirect the <<beasttype>>'s pounce, <span class=\"red\">but you're not strong enough</span>.",
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t<<bHe>> tackles you to the ground."
+  ],
+  "old_kr": [
+   "\t\t<<beasttype>>의 돌진을 다른 방향으로 돌려보려 하지만, <span class=\"red\">힘이 부족하다</span>.",
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t<<bHe>> 당신을 땅으로 넘어뜨린다."
+  ],
+  "new_en": [
+   "\t\tYou try to redirect the <<beasttype>>'s pounce, <span class=\"red\">but you're not strong enough</span>.",
+   "\t\t<<if beastSexEnabledForType(\"fox\", $monster is 1)>>",
+   "\t\t\t<<bHe>> tackles you to the ground."
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<His>> hand genty wraps around your <<penis>>. <<His>> fingers slowly run up the shaft."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<His>> 손이 부드럽게 당신의 <<penis>>【을를】 감싼다. <<His>> 손가락이 기둥을 따라 천천히 위로 훑는다."
+  ],
+  "new_en": [
+   "\t\t\t\t<<His>> hand gently wraps around your <<penis>>. <<His>> fingers slowly run up the shaft."
+  ],
+  "context": "\t\t\t<<if $player.penisExist>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<link [[\"Walk back to the shop\" + _timeString|Gwylan Forest Run End]]>><<stress -1>><<pass _timeToPass>><<set $phase to \"walkWith\">><</link>><<lstress>>"
+  ],
+  "old_kr": [
+   "\t<<link [[\"가게로 걸어 돌아간다\" + _timeString|Gwylan Forest Run End]]>><<stress -1>><<pass _timeToPass>><<set $phase to \"walkWith\">><</link>><<lstress>>"
+  ],
+  "new_en": [
+   "\t<<link [[\"Walk back to the shop\" + printTime(_timeToPass, true)|Gwylan Forest Run End]]>><<stress -1>><<pass _timeToPass>><<set $phase to \"walkWith\">><</link>><<lstress>>"
+  ],
+  "context": "<<capture _timeToPass>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if _gwylanLovePercent gte 75>>",
+   "\t\t<<He>> sits down next to you and rests <<his>> head on your shoulder."
+  ],
+  "old_kr": [
+   "\t<<if _gwylanLovePercent gte 75>>",
+   "\t\t<<He>>【은는】 당신 옆에 앉아 <<his>> 머리를 당신 어깨에 기댄다."
+  ],
+  "new_en": [
+   "\t<<if _gwylanLovePercent gte 65>>",
+   "\t\t<<He>> sits down next to you and rests <<his>> head on your shoulder."
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if _gwylanLovePercent gte 75>>",
+   "\t<<He>> sits down next to you and rests <<his>> head on your shoulder."
+  ],
+  "old_kr": [
+   "<<if _gwylanLovePercent gte 75>>",
+   "\t<<He>>【은는】 당신 옆에 앉아 <<his>> 머리를 당신 어깨에 기댄다."
+  ],
+  "new_en": [
+   "<<if _gwylanLovePercent gte 65>>",
+   "\t<<He>> sits down next to you and rests <<his>> head on your shoulder."
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<He>> doesn't seem at all bothered to be exposed."
+  ],
+  "old_kr": [
+   "\t<<He>>【은는】 몸이 드러나는 것에 전혀 개의치 않는 것 같다."
+  ],
+  "new_en": [
+   "\t<<He>> doesn't seem at all bothered to be exposed.",
+   "\t<br><br>"
+  ],
+  "context": "<<if !$gwylanSeen.includes(\"ritual_beast\")>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif !isBeastSceneAllowed() and !$settings.plantsEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<elseif !beastSexEnabledForType(\"wolf\") and !beastSexEnabledForType(\"fox\") and !($settings.plantsEnabled and $settings.tentaclesEnabled)>>"
+  ],
+  "context": "\t<<gwylanOptions>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if playerHeatMinArousal() gte 1 and _gwylanLovePercent gte 50>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if playerHeatMinArousal() gte 1 and _gwylanLovePercent gte 40>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<if beastSexEnabledForType(\"wolf\", $monster is 1)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechdisable to 1>><<set $genitalReactionDisable to true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechDisable to 1>><<set $genitalReactionDisable to true>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $speechbanish gte 1 and $beastRitual.tainted and $beastRitual.gwylan.mouth isnot \"choking\">>",
+   "\t<<set $speechbanish to 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $speechBanish gte 1 and $beastRitual.tainted and $beastRitual.gwylan.mouth isnot \"choking\">>",
+   "\t<<set $speechBanish to 0>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>"
+  ],
+  "context": "\t<<his>> 덩굴이 당신과 그윌란에게서 물러나자, <<persons>> 눈에 초점이 돌아온다. <<gwylanPurgeEffect>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $gwylanSeen.includes(\"ritual_corruption_share\") and _gwylanLovePercent gte 75 and C.npc.Gwylan.dom gte 15 and $beastRitual.poisonAmount gte 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $gwylanSeen.includes(\"ritual_corruption_share\") and _gwylanLovePercent gte 65 and C.npc.Gwylan.dom gte 15 and $beastRitual.poisonAmount gte 2>>"
+  ],
+  "context": "<<else>>"
+ }
+]

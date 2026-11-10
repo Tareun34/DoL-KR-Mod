@@ -1,0 +1,135 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<mouse class=\"tooltip linkBlue\">(?)<span>'Not set' will not change the current hairstyle.</span></mouse>"
+  ],
+  "old_kr": [
+   "\t\t\t<mouse class=\"tooltip linkBlue\">(?)<span>'설정하지 않음'은 현재 헤어스타일을 변경하지 않습니다.</span></mouse>"
+  ],
+  "new_en": [
+   "\t\t\t<mouse class=\"tooltip linkBlue\">(?)<span>'Not set' will not change your hairstyle when you select the outfit.</span></mouse>"
+  ],
+  "context": "\t\t\t<</listbox>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case \"schoolcardigan\">><<set _altLink to [\"Tie cardigan around waist\", \"Wear cardigan normally\"]>>",
+   "\t\t\t\t<<case \"brownleather\" \"blackleather\" \"leathercropjacket\" \"winterjacket\">><<set _altLink to [\"Zip jacket\", \"Unzip jacket\"]>>",
+   "\t\t\t\t<<case \"waistcoat\" \"waistcoatlapel\" \"blazershirt\">><<set _altLink to [\"Tuck in\", \"Untuck\"]>>",
+   "\t\t\t\t<<case \"dress\" \"buttondown\" \"oversizedbuttondown\" \"shortsleevebuttonup\" \"flannel shirt\">><<set _altLink to [\"Unbutton shirt\", \"Button up shirt\"]>>",
+   "\t\t\t\t<<case \"catsuit\">><<set _altLink to [\"Unzip\", \"Zip\"]>>",
+   "\t\t\t\t<<case \"kimono\" \"kimonomini\">><<set _altLink to [\"Loosen\", \"Tighten\"]>>",
+   "\t\t\t\t<<case \"flowy sleeve top\" \"milkmaid dress\">><<set _altLink to [\"Pull sleeves down\", \"Pull sleeves up\"]>>",
+   "\t\t\t\t<<case \"striped sweater\">><<set _altLink to [\"Pull up sleeves\", \"Pull down sleeves\"]>>",
+   "\t\t\t\t<<default>><<exit>>",
+   "\t\t\t<</switch>>",
+   "\t\t<<case \"under_upper\">>",
+   "\t\t\t<<switch $worn.under_upper.variable>>",
+   "\t\t\t\t<<case \"ruffled swimsuit\">><<set _altLink to [\"Take off cardigan\", \"Put on cardigan\"]>>",
+   "\t\t\t\t<<default>><<exit>>",
+   "\t\t\t<</switch>>",
+   "\t\t<<case \"head\">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case \"schoolcardigan\">><<set _altLink to [\"가디건을 허리에 묶기\", \"가디건을 정상적으로 입기\"]>>",
+   "\t\t\t\t<<case \"brownleather\" \"blackleather\" \"leathercropjacket\" \"winterjacket\">><<set _altLink to [\"재킷 지퍼 올리기\", \"재킷 지퍼 내리기\"]>>",
+   "\t\t\t\t<<case \"waistcoat\" \"waistcoatlapel\" \"blazershirt\">><<set _altLink to [\"넣어 입기\", \"빼서 입기\"]>>",
+   "\t\t\t\t<<case \"dress\" \"buttondown\" \"oversizedbuttondown\" \"shortsleevebuttonup\" \"flannel shirt\">><<set _altLink to [\"셔츠 단추 풀기\", \"셔츠 단추 채우기\"]>>",
+   "\t\t\t\t<<case \"catsuit\">><<set _altLink to [\"지퍼 내리기\", \"지퍼 올리기\"]>>",
+   "\t\t\t\t<<case \"kimono\" \"kimonomini\">><<set _altLink to [\"느슨하게 풀기\", \"단단히 조이기\"]>>",
+   "\t\t\t\t<<case \"flowy sleeve top\" \"milkmaid dress\">><<set _altLink to [\"소매 내리기\", \"소매 올리기\"]>>",
+   "\t\t\t\t<<case \"striped sweater\">><<set _altLink to [\"소매를 걷어올린다\", \"소매를 내린다\"]>>",
+   "                <<default>><<exit>>",
+   "            <</switch>>",
+   "        <<case \"under_upper\">>",
+   "            <<switch $worn.under_upper.variable>>",
+   "                <<case \"ruffled swimsuit\">><<set _altLink to [\"가디건 벗기\", \"가디건 입기\"]>>",
+   "                <<default>><<exit>>",
+   "            <</switch>>",
+   "        <<case \"head\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<case \"schoolcardigan\">><<set _altLink to [\"Tie cardigan around waist\", \"Wear cardigan normally\"]>>",
+   "\t\t\t\t<<case \"brownleather\" \"blackleather\" \"leathercropjacket\" \"winterjacket\">><<set _altLink to [\"Zip jacket\", \"Unzip jacket\"]>>",
+   "\t\t\t\t<<case \"waistcoat\" \"waistcoatlapel\" \"blazershirt\">><<set _altLink to [\"Tuck in\", \"Untuck\"]>>",
+   "\t\t\t\t<<case \"dress\" \"buttondown\" \"oversizedbuttondown\" \"shortsleevebuttonup\" \"flannel shirt\">><<set _altLink to [\"Unbutton shirt\", \"Button up shirt\"]>>",
+   "\t\t\t\t<<case \"catsuit\">><<set _altLink to [\"Unzip\", \"Zip\"]>>",
+   "\t\t\t\t<<case \"kimono\" \"kimonomini\">><<set _altLink to [\"Loosen\", \"Tighten\"]>>",
+   "\t\t\t\t<<case \"flowy sleeve top\" \"milkmaid dress\">><<set _altLink to [\"Pull sleeves down\", \"Pull sleeves up\"]>>",
+   "\t\t\t\t<<case \"striped sweater\">><<set _altLink to [\"Pull up sleeves\", \"Pull down sleeves\"]>>",
+   "\t\t\t\t<<case \"boilersuit\">><<set _altLink to [\"Unzip\", \"Zip\"]>>",
+   "\t\t\t\t<<default>><<exit>>",
+   "\t\t\t<</switch>>",
+   "\t\t<<case \"under_upper\">>",
+   "\t\t\t<<switch $worn.under_upper.variable>>",
+   "\t\t\t\t<<case \"ruffled swimsuit\">><<set _altLink to [\"Take off cardigan\", \"Put on cardigan\"]>>",
+   "\t\t\t\t<<default>><<exit>>",
+   "\t\t\t<</switch>>",
+   "\t\t<<case \"head\">>"
+  ],
+  "context": "\t\t\t<<switch $worn.upper.variable>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<div>",
+   "\t\tDemeanour:",
+   "\t\t<<listbox \"_demeanour\" autoselect>>",
+   "\t\t\t<<option \"Not set\" undefined>>",
+   "\t\t\t<<optionsfrom setup.faceVariantOptions[$facestyle]>>",
+   "\t\t<</listbox>>",
+   "\t\t<mouse class=\"tooltip linkBlue\">(?)<span>'Not set' will not change your demeanour when you select the outfit.</span></mouse>",
+   "\t</div>",
+   "\t<div>",
+   "\t\tDefault expression:",
+   "\t\t<<listbox \"_defaultSidebarMouth\" autoselect>>",
+   "\t\t\t<<option \"Not set\" undefined>>",
+   "\t\t\t<<option \"Smile\" \"smile\">>",
+   "\t\t\t<<option \"Neutral\" \"neutral\">>",
+   "\t\t<</listbox>>",
+   "\t\t<mouse class=\"tooltip linkBlue\">(?)<span>'Not set' will not change your expression when you select the outfit.</span></mouse>",
+   "\t</div>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</if>>",
+   "\t\t\t<<if _demeanour>>",
+   "\t\t\t\t<<set _newOutfit.facevariant to _demeanour>>",
+   "\t\t\t<</if>>",
+   "\t\t\t<<if _defaultSidebarMouth>>",
+   "\t\t\t\t<<set _newOutfit.defaultSidebarMouth to _defaultSidebarMouth>>"
+  ],
+  "context": "\t\t\t\t<<set _newOutfit.hairStyle to _hairStyle>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $debug>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $debug>>"
+  ],
+  "context": "\t</div>"
+ }
+]

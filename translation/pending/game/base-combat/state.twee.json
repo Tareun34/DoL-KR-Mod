@@ -1,0 +1,13 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechcamerapose>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechCameraPose>>"
+  ],
+  "context": ""
+ }
+]

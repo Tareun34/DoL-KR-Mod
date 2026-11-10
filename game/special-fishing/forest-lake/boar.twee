@@ -2,7 +2,7 @@
 :: Fishing Forest Lake Boar Attack
 <<effects>>
 <<beastNEWinit 1 boar>>
-<<if $settings.bestialityEnabled>>
+<<if animalSexEnabledForType("boar")>>
 	<<set $fishingBoarMouthTarget to random(1, 3)>>
 	덤불 속에서 우당탕하는 소리가 터져 나오며, 엄니를 번뜩이는 <<beasttype>>【이가】 숲 밖으로 튀어나온다. <<bHe>>【은는】 곧장 당신을 향해 돌진하고,
 	<<if $fishingBoarMouthTarget is 1>>

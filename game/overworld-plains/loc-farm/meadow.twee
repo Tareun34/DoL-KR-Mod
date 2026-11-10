@@ -409,15 +409,17 @@
 		<br>
 	<</if>>
 
-	<<if $fox gte 3>>
-		<<link [[몸을 내준다|Meadow Cave Sex]]>><<set $sexstart to 1>><</link>><<deviant1>><<fox>>
-		<br>
-	<<elseif hasSexStat("deviancy", 4)>>
-		<<link [[몸을 내준다|Meadow Cave Sex]]>><<set $sexstart to 1>><</link>><<deviant4>>
-		<br>
+	<<if monsterSexEnabledForType("fox")>>
+		<<if $fox gte 3>>
+			<<link [[Present yourself|Meadow Cave Sex]]>><<set $sexstart to 1>><</link>><<deviant1>><<fox>>
+			<br>
+		<<elseif hasSexStat("deviancy", 4)>>
+			<<link [[Present yourself|Meadow Cave Sex]]>><<set $sexstart to 1>><</link>><<deviant4>>
+			<br>
+		<</if>>
 	<</if>>
-	<<if (displayDefiantOption(500)) and hasSexStat("deviancy", 2)>>
-		<<link [[벌을 준다|Meadow Cave Punish]]>><<wolfDefiant 500>><<def 1>><<trauma -6>><<stress -6>><</link>><<deviant2>><<defianttext 500>><<ltrauma>><<lstress>>
+	<<if (displayDefiantOption(500)) and hasSexStat("deviancy", 2) and monsterSexEnabledForType("fox")>>
+		<<link [[Punish|Meadow Cave Punish]]>><<wolfDefiant 500>><<def 1>><<trauma -6>><<stress -6>><</link>><<deviant2>><<defianttext 500>><<ltrauma>><<lstress>>
 		<br>
 	<</if>>
 <<else>>
@@ -429,7 +431,7 @@
 
 	<<link [[용서한다|Meadow Cave Accept]]>><</link>>
 	<br>
-	<<if $settings.bestialityEnabled>>
+	<<if animalSexEnabledForType("fox")>>
 		<<if $fox gte 3>>
 			<<link [[몸을 내준다|Meadow Cave Sex]]>><<set $sexstart to 1>><</link>><<deviant1>><<fox>>
 			<br>
@@ -623,15 +625,17 @@
 				<br>
 			<</if>>
 
-			<<if $fox gte 3>>
-				<<link [[몸을 내준다|Meadow Chase Hill Sex]]>><<set $sexstart to 1>><</link>><<deviant1>><<fox>>
-				<br>
-			<<elseif hasSexStat("deviancy", 4)>>
-				<<link [[몸을 내준다|Meadow Chase Hill Sex]]>><<set $sexstart to 1>><</link>><<deviant4>>
-				<br>
+			<<if monsterSexEnabledForType("fox")>>
+				<<if $fox gte 3>>
+					<<link [[Present yourself|Meadow Chase Hill Sex]]>><<set $sexstart to 1>><</link>><<deviant1>><<fox>>
+					<br>
+				<<elseif hasSexStat("deviancy", 4)>>
+					<<link [[Present yourself|Meadow Chase Hill Sex]]>><<set $sexstart to 1>><</link>><<deviant4>>
+					<br>
+				<</if>>
 			<</if>>
-			<<if (displayDefiantOption(500)) and hasSexStat("deviancy", 2)>>
-				<<link [[벌을 준다|Meadow Chase Hill Punish]]>><<wolfDefiant 500>><<def 1>><<trauma -6>><<stress -6>><</link>><<deviant2>><<defianttext 500>><<ltrauma>><<lstress>>
+			<<if (displayDefiantOption(500)) and hasSexStat("deviancy", 2) and monsterSexEnabledForType("fox")>>
+				<<link [[Punish|Meadow Chase Hill Punish]]>><<wolfDefiant 500>><<def 1>><<trauma -6>><<stress -6>><</link>><<deviant2>><<defianttext 500>><<ltrauma>><<lstress>>
 				<br>
 			<</if>>
 		<<else>>
@@ -643,7 +647,7 @@
 
 			<<link [[용서한다|Meadow Chase Hill Accept]]>><</link>>
 			<br>
-			<<if $settings.bestialityEnabled>>
+			<<if animalSexEnabledForType("fox")>>
 				<<if $fox gte 3>>
 					<<link [[몸을 내준다|Meadow Chase Hill Sex]]>><<set $sexstart to 1>><</link>><<deviant1>><<fox>>
 					<br>

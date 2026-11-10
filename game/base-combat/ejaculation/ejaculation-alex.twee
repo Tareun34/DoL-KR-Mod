@@ -648,7 +648,7 @@
 				<<case 1 2 3>>
 					<<He>>【은는】 당신이 <<his>> 입을 범하자 가버리며, 당신의 자지에 대고 숨을 몰아쉰다. "세상에, 너를 너무너무 사랑해."
 
-					<<set $kylarSeen.pushUnique("saidLove")>>
+					<<set $alexSeen.pushUnique("saidLove")>>
 				<<case 4 5>>
 					<<He>>【은는】 당신이 <<his>> 입을 범하는 동안 바닥에 사정한다. <<He>>【은는】 뒤로 물러서며 말한다. "미안해, 더는 못 하겠어. 제발 용서해 줘."
 

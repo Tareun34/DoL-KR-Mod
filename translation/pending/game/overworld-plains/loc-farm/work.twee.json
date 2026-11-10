@@ -1,0 +1,349 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $farm_work.horse.monster_roll is true and (($hallucinations gte 1 or !$settings.monsterHallucinationsOnly) or !$settings.bestialityEnabled)>>",
+   "\t\t\"This is more suitable,\" a <<farm_text horse>> says as you pass. \"Thank you.\""
+  ],
+  "old_kr": [
+   "\t<<if $farm_work.horse.monster_roll is true and (($hallucinations gte 1 or !$settings.monsterHallucinationsOnly) or !$settings.bestialityEnabled)>>",
+   "\t\t\"이게 더 적합하군.\" 당신이 지나가자 <<farm_text horse>>【이가】 말한다. \"고맙다.\""
+  ],
+  "new_en": [
+   "\t<<if $farm_work.horse.monster>>",
+   "\t\t\"This is more suitable,\" a <<farm_text horse>> says as you pass. \"Thank you.\""
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\tYou're just finishing up, when something leaps from the pile of <<if Weather.isSnow>>snow<<else>>leaves<</if>>!<<gstress>><<stress 6>>"
+  ],
+  "old_kr": [
+   "\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\t막 일을 끝내려던 참에, <<if Weather.isSnow>>눈<<else>>낙엽<</if>> 더미에서 무언가 튀어나온다!<<gstress>><<stress 6>>"
+  ],
+  "new_en": [
+   "\t<<if $settings.lurkersEnabled>>",
+   "\t\tYou're just finishing up, when something leaps from the pile of <<if Weather.isSnow>>snow<<else>>leaves<</if>>!<<gstress>><<stress 6>>"
+  ],
+  "context": "<<if dangerEvent()>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($settings.bestialityEnabled or $farm_work.pig.monster is true)>>"
+  ],
+  "old_kr": [
+   "   <<if ($settings.bestialityEnabled or $farm_work.pig.monster is true)>>"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"pig\", $farm_work.pig.monster)>>"
+  ],
+  "context": "<!-- Modified for monster people -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if ($settings.bestialityEnabled or $farm_work.pig.monster is true) and _checkResults[_attemptOne]>>",
+   "\t\t\tSomething catches your"
+  ],
+  "old_kr": [
+   "\t\t<<if ($settings.bestialityEnabled or $farm_work.pig.monster is true) and _checkResults[_attemptOne]>>",
+   "\t\t\t구유에서 돌아서는데 무언가 당신의"
+  ],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"pig\", $farm_work.pig.monster) and _checkResults[_attemptOne]>>",
+   "\t\t\tSomething catches your"
+  ],
+  "context": "\t\t<<set _attemptOne to random(0, 2)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($settings.bestialityEnabled or $farm_work.pig.monster is true) and !$weekly.farmNauseaEvent and $rng gte 86 and playerIsPregnant() and playerAwareTheyArePregnant() and between(pregnancyProgress(getPlayerPregnancy()), 0.1, 0.3)>>",
+   "\t\tAs you lift the bucket, you catch a strong whiff of the slop within. Immediately, your stomach churns, and you all but drop the bucket in your haste to get away from the smell. You stumble back a few steps, trying to will your stomach to settle."
+  ],
+  "old_kr": [
+   "\t<<if ($settings.bestialityEnabled or $farm_work.pig.monster is true) and !$weekly.farmNauseaEvent and $rng gte 86 and playerIsPregnant() and playerAwareTheyArePregnant() and between(pregnancyProgress(getPlayerPregnancy()), 0.1, 0.3)>>",
+   "\t\t양동이를 들어 올리자 그 안의 음식물 쓰레기에서 지독한 냄새가 훅 끼친다. 즉시 속이 뒤틀리고, 냄새에서 벗어나려 서두르다 양동이를 거의 떨어뜨릴 뻔한다. 진정하려고 애쓰며 두어 걸음 뒷걸음질 친다."
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"pig\", $farm_work.pig.monster) and !$weekly.farmNauseaEvent and $rng gte 86 and playerIsPregnant() and playerAwareTheyArePregnant() and between(pregnancyProgress(getPlayerPregnancy()), 0.1, 0.3)>>",
+   "\t\tAs you lift the bucket, you catch a strong whiff of the slop within. Immediately, your stomach churns, and you all but drop the bucket in your haste to get away from the smell. You stumble back a few steps, trying to will your stomach to settle."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled or $farm_work.pig.monster is true>>",
+   "\t\tYou manage to get the last to stand. You're leading <<farm_him pig>> inside when <<farm_he pig>>",
+   "\t\t<<= $farm_work.pig.monster is true ? \"grasps your arms\" : \"rears on its hind legs\">> and tries to force you to the ground.",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<link [[Scold|Farm Pigs Scold]]>><</link>><<tendingdifficulty 1 600>>",
+   "\t\t<br>",
+   "\t\t<<link [[Shove <<farm_him pig>> away|Farm Pigs Shove]]>><</link>><<physiquedifficulty 1 12000>>",
+   "\t\t<br>",
+   "\t\t<<link [[Endure|Farm Pigs Endure]]>><<trauma 6>><<stress 6>><<farm_pigs -1>><</link>><<gtrauma>><<gstress>><<lrespect>>",
+   "\t\t<br>",
+   "\t\t<<if hasSexStat(\"deviancy\", 3)>>",
+   "\t\t\t<<link [[Give <<farm_him pig>> a hand|Farm Pigs Hand]]>><<set $sexstart to 1>><</link>><<deviant3>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\tThe <<farm_text_many pig>> seem agitated. It's a little scary.<<gstress>><<stress 6>>",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<link [[Next|Farm Work]]>><</link>>"
+  ],
+  "old_kr": [
+   "   <<if $settings.bestialityEnabled or $farm_work.pig.monster is true>>",
+   "       당신은 간신히 마지막 녀석을 일으켜 세운다. 당신이 <<farm_him pig>>【을를】 안으로 이끌려 할 때, <<farm_he pig>>【이가】",
+   "       <<= $farm_work.pig.monster is true ? \"당신의 팔을 움켜쥐고는\" : \"뒷다리로 일어서더니\">> 억지로 당신을 바닥에 눕히려 한다.",
+   "       <br><br>",
+   "",
+   "       <<link [[꾸짖기|Farm Pigs Scold]]>><</link>><<tendingdifficulty 1 600>>",
+   "       <br>",
+   "       <<link [[<<farm_him pig>>【을를】 밀쳐내기|Farm Pigs Shove]]>><</link>><<physiquedifficulty 1 12000>>",
+   "       <br>",
+   "       <<link [[견뎌내기|Farm Pigs Endure]]>><<trauma 6>><<stress 6>><<farm_pigs -1>><</link>><<gtrauma>><<gstress>><<lrespect>>",
+   "       <br>",
+   "       <<if hasSexStat(\"deviancy\", 3)>>",
+   "           <<link [[<<farm_him pig>>【을를】 손으로 도와주기|Farm Pigs Hand]]>><<set $sexstart to 1>><</link>><<deviant3>>",
+   "           <br>",
+   "       <</if>>",
+   "   <<else>>",
+   "       <<farm_text_many pig>>【은는】 흥분한 것 같다. 조금 무섭다.<<gstress>><<stress 6>>",
+   "       <br><br>",
+   "",
+   "       <<link [[다음|Farm Work]]>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"pig\", $farm_work.pig.monster)>>",
+   "\t\tYou manage to get the last to stand. You're leading <<farm_him pig>> inside when <<farm_he pig>>",
+   "\t\t<<= $farm_work.pig.monster is true ? \"grasps your arms\" : \"rears on its hind legs\">> and tries to force you to the ground.",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<link [[Scold|Farm Pigs Scold]]>><</link>><<tendingdifficulty 1 600>>",
+   "\t\t<br>",
+   "\t\t<<link [[Shove <<farm_him pig>> away|Farm Pigs Shove]]>><</link>><<physiquedifficulty 1 12000>>",
+   "\t\t<br>",
+   "\t\t<<link [[Endure|Farm Pigs Endure]]>><<trauma 6>><<stress 6>><<farm_pigs -1>><</link>><<gtrauma>><<gstress>><<lrespect>>",
+   "\t\t<br>",
+   "\t\t<<if hasSexStat(\"deviancy\", 3)>>",
+   "\t\t\t<<link [[Give <<farm_him pig>> a hand|Farm Pigs Hand]]>><<set $sexstart to 1>><</link>><<deviant3>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\tThe <<farm_text_many pig>> seem agitated. It's a little scary.<<gstress>><<stress 6>>",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<link [[Next|Farm Work]]>><</link>>"
+  ],
+  "context": "<<if _fullyNaked or dangerEvent(1.25)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "",
+   "<<if dangerEvent() and $settings.horsesEnabled>>"
+  ],
+  "old_kr": [
+   "<<if dangerEvent() and $settings.horsesEnabled>>"
+  ],
+  "new_en": [
+   "",
+   "<<if dangerEvent() and beastSexEnabledForType(\"horse\")>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled or $farm_work.pig.monster is true>>",
+   "\t\tMost run by, eager to stretch their legs, but a couple hang back."
+  ],
+  "old_kr": [
+   "\t<<if $settings.bestialityEnabled or $farm_work.pig.monster is true>>",
+   "\t\t대부분은 다리를 뻗고 싶어 안달이 나 달려갔지만, 두어 마리는 뒤에 남았다."
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"horse\", $farm_work.horse.monster)>>",
+   "\t\tMost run by, eager to stretch their legs, but a couple hang back."
+  ],
+  "context": "<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if hasSexStat(\"deviancy\", 2) and $settings.horsesEnabled and ($settings.bestialityEnabled or $farm_work.horse.monster is true)>>",
+   "\t\t<<link [[Seduce|Farm Horses Seduce]]>><</link>><<deviant2>>"
+  ],
+  "old_kr": [
+   "\t<<if hasSexStat(\"deviancy\", 2) and $settings.horsesEnabled and ($settings.bestialityEnabled or $farm_work.horse.monster is true)>>",
+   "\t\t<<link [[유혹한다|Farm Horses Seduce]]>><</link>><<deviant2>>"
+  ],
+  "new_en": [
+   "\t<<if hasSexStat(\"deviancy\", 2) and beastSexEnabledForType(\"horse\", $farm_work.horse.monster)>>",
+   "\t\t<<link [[Seduce|Farm Horses Seduce]]>><</link>><<deviant2>>"
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if hasSexStat(\"deviancy\", 2) and $settings.horsesEnabled and ($settings.bestialityEnabled or $farm_work.horse.monster is true)>>",
+   "\t\t<<link [[Seduce|Farm Horses In Seduce]]>><</link>><<deviant2>>"
+  ],
+  "old_kr": [
+   "\t<<if hasSexStat(\"deviancy\", 2) and $settings.horsesEnabled and ($settings.bestialityEnabled or $farm_work.horse.monster is true)>>",
+   "\t\t<<link [[유혹한다|Farm Horses In Seduce]]>><</link>><<deviant2>>"
+  ],
+  "new_en": [
+   "\t<<if hasSexStat(\"deviancy\", 2) and beastSexEnabledForType(\"horse\", $farm_work.horse.monster)>>",
+   "\t\t<<link [[Seduce|Farm Horses In Seduce]]>><</link>><<deviant2>>"
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<elseif C.npc.Alex.love gte 60 and $phase isnot 5 and Weather.precipitation isnot \"rain\" and $rng gte 81 and $exposed lte 0>>",
+   "\t\"Want to go out somewhere today? Might be good to stretch our legs.\""
+  ],
+  "old_kr": [
+   "<<elseif C.npc.Alex.love gte 60 and $phase isnot 5 and Weather.precipitation isnot \"rain\" and $rng gte 81 and $exposed lte 0>>",
+   "\t\"오늘 어디 좀 나가볼래? 다리도 좀 풀 겸 괜찮을 것 같은데.\""
+  ],
+  "new_en": [
+   "<<elseif C.npc.Alex.love gte 60 and $phase isnot 5 and Weather.precipitation isnot \"rain\" and $rng gte 81 and $exposed lte 0 and !$daily.alexMeadowDate>>",
+   "\t<<set $daily.alexMeadowDate to true>>",
+   "\t\"Want to go out somewhere today? Might be good to stretch our legs.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if dangerEvent() and $farm.beasts.dogs lte -20 and ($settings.bestialityEnabled or $farm_work.dog.monster is true)>>",
+   "\tYou leave the <<farm_text_many dog>> to feed, but hear footsteps approach as you walk from the field."
+  ],
+  "old_kr": [
+   "<<if dangerEvent() and $farm.beasts.dogs lte -20 and ($settings.bestialityEnabled or $farm_work.dog.monster is true)>>",
+   "\t당신은 <<farm_text_many dog>>【이가】 먹도록 두고 들판에서 걸어 나오지만, 발소리가 다가오는 것을 듣는다."
+  ],
+  "new_en": [
+   "<<if dangerEvent() and $farm.beasts.dogs lte -20 and beastSexEnabledForType(\"dog\", $farm_work.dog.monster)>>",
+   "\tYou leave the <<farm_text_many dog>> to feed, but hear footsteps approach as you walk from the field."
+  ],
+  "context": "<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<elseif (dangerEvent() or $farm.beasts.dogs lte -5) and ($settings.bestialityEnabled or $farm_work.dog.monster is true)>>",
+   "\tYou leave the <<farm_text_many dog>> to feed, but hear footsteps approach as you walk from the field."
+  ],
+  "old_kr": [
+   "<<elseif (dangerEvent() or $farm.beasts.dogs lte -5) and ($settings.bestialityEnabled or $farm_work.dog.monster is true)>>",
+   "\t당신은 <<farm_text_many dog>>【이가】 먹도록 두고 들판에서 걸어 나오지만, 발소리가 다가오는 것을 듣는다."
+  ],
+  "new_en": [
+   "<<elseif (dangerEvent() or $farm.beasts.dogs lte -5) and beastSexEnabledForType(\"dog\", $farm_work.dog.monster)>>",
+   "\tYou leave the <<farm_text_many dog>> to feed, but hear footsteps approach as you walk from the field."
+  ],
+  "context": "<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"dog\", $farm_work.dog.monster)>>"
+  ],
+  "context": "\t<<farm_gen dog>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tPC's  with at least 14,000 Physique will be able to feed the pigs twice as fast, halving their number of required interactions. This reduces the number of times the PC can interact with them to raise their respect, so they also gain +1 Pig's Respect as compensation."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tPC's with at least 14,000 Physique will be able to feed the pigs twice as fast, halving their number of required interactions. This reduces the number of times the PC can interact with them to raise their respect, so they also gain +1 Pig's Respect as compensation."
+  ],
+  "context": "<!--"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif ($settings.bestialityEnabled or $farm_work.pig.monster is true) and _grabbed>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif beastSexEnabledForType(\"pig\", $farm_work.pig.monster) and _grabbed>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $settings.bestialityEnabled or $farm_work.cattle.monster is true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if beastSexEnabledForType(\"cow\", $farm_work.cattle.monster)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $farm_work.cattle.monster_roll is true and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $farm_work.cattle.monster>>"
+  ],
+  "context": "\t<<if $cattle_milked lte 6>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $farm_work.cattle.monster_roll is true and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $farm_work.cattle.monster>>"
+  ],
+  "context": "\t<<elseif $cattle_milked lte 1200>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $farm_work.cattle.monster_roll is true and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $farm_work.cattle.monster>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled or $farm_work.dog.monster is true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"dog\", $farm_work.dog.monster)>>"
+  ],
+  "context": "\t<br>"
+ }
+]

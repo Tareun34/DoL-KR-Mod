@@ -1,0 +1,52 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br>",
+   "\t\t<<for _clothingName range Object.keys(setup.fishing.lootTables.fishingClothing)>>",
+   "\t\t\t<<capture _clothingName>>",
+   "\t\t\t\t<<link [[\"Clothing: \" + _clothingName|Fishing Pier Clothing Catch]]>>",
+   "\t\t\t\t\t<<set $clothingItem to generateClothingItem(_clothingName)>>",
+   "\t\t\t\t<</link>>",
+   "\t\t\t<</capture>>",
+   "\t\t\t<br>",
+   "\t\t<</for>>"
+  ],
+  "context": "\t\t<</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<beachday3>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<beachDayParent>>"
+  ],
+  "context": ":: Fishing Debug Beach Parent"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<beachnight1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<beachNightDog>>"
+  ],
+  "context": ":: Fishing Debug Beach Night Dog"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<beachnight2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<beachNightAmbush>>"
+  ],
+  "context": ":: Fishing Debug Beach Night Molestation"
+ }
+]

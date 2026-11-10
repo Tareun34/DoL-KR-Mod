@@ -28,11 +28,13 @@
 	<br>
 
 <<elseif $brothelshowdata.missed>>
+	<<set _fee to 100000>>
+	<<formatmoney _fee>>
 	<<set $brothelshowdata.missed to false>><<npcincr Briar love -1>>
-	<<npc Briar>><<generate2>><<generate3>><<person1>>브라이어가 당신을 향해 돌진하고, <<his>> 부하 두 명이 입구를 막는다. "어디 있었어?" <<he>>【이가】 묻는다. "관객들은 쇼를 기대하고 있었다고. 나한테 손해가 막심했지만, 네가 그 대가를 치르게 될 거야." <<He>>【은는】 <<his>> 손을 내민다. "£1000. 당장 내놔."
+	<<npc Briar>><<generate2>><<generate3>><<person1>>Briar storms towards you as two of <<his>> thugs block the entrance. "Where were you?" <<he>> asks. "The crowd were expecting a show. It cost me, but you'll pay for it." <<He>> holds out <<his>> hand. "_printmoney. Now."
 	<br><br>
-	<<if $money gte 100000>>
-		<<link [[지불한다 (£1000)|Brothel Pay]]>><<npcincr Briar dom 1>><<money -100000 "brothelShow">><<sub 1>><</link>>
+	<<if $money gte _fee>>
+		<<link [[Pay (_printmoney)|Brothel Pay]]>><<npcincr Briar dom 1>><<money _fee "brothelShow">><<sub 1>><</link>>
 		<br>
 	<</if>>
 	<<link [["돈이 없다고 말한다"|Brothel Pay Refuse]]>><</link>>
@@ -233,9 +235,9 @@
 			<</if>>
 			<br>
 		<<else>>
-			자판기가 설치되어 있다.
-			<<if $brothelVending and $brothelVending.status is "set" and $settings.condomLevel gte 1 and !($brothelVending.products % 2)>>
-				콘돔 대량 구매에 대해 <span class="gold">약국</span>에 이야기해야 한다.
+			Your vending machine is installed.
+			<<if $brothelVending?.status is "set" and $settings.condomLevel gte 1 and !($brothelVending.products % 2)>>
+				You should talk to the <span class="gold">pharmacy</span> about buying condoms in bulk.
 			<</if>>
 			<<if $brothelVending.products lt 2>>
 				<<= $adultshopunlocked is undefined ? "성인용품점이 열리면, " : "">><span class="gold">시리스</span>【이가】 윤활제를 할인된 가격에 팔 수도 있다.
@@ -1201,7 +1203,7 @@
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
-	<<harvestquick>>
+	<<harvestQuick>>
 <<elseif $enemyhealth lte 0>>
 	<<unset $briarPunishment>>
 	당신은 <<person2>><<person>>【을를】 옆으로 밀쳐내고 필요한 기회를 잡는다. <<tearful>> 당신은 생긴 틈으로 달려나가 길 아래로 도망친다. 브라이어가 <<person1>><<his>> 부하들에게 소리치는 것이 들린다.
@@ -1209,7 +1211,7 @@
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
-	<<harvestquick>>
+	<<harvestQuick>>
 <<else>>
 	브라이어가 다시 웃는다. "어이구, <<girl>>【이가】 다쳤나?" 당신은 너무 심하게 다쳐 더 이상 저항할 수 없다. <<person2>><<person>>【와과】 <<person3>><<person>>【이가】 당신을 계단 아래로 끌고 간다.
 	<br><br>
@@ -1566,8 +1568,8 @@
 
 	<<if $brothelshowdata.type is "horse">>
 		<<if $farm.steed>>
-			<<if $settings.bestialityEnabled or $per_npc.saddled_steed.monster is "monster">>
-				당신의 <<horseHairKr $farm.steed>> 말이 당신을 기다리고 있다.
+			<<if beastSexEnabledForType("horse", $per_npc.saddled_steed.monster is "monster")>>
+				Your $farm.steed steed awaits you.
 				<br><br>
 				<img class="icon" src="img/ui/star-gold.png"><<link [[쇼에 출연한다|Brothel Show]]>><</link>>
 				<br>

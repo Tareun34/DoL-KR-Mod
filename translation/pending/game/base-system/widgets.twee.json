@@ -1,0 +1,1290 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if _args[0]>><<set _temp to _args[0]>><<set $workouts += _args[0]>><<else>><<set _temp to 1>><<set $workouts += 1>><</if>>",
+   "\t<<if $exposed gte 2>>",
+   "\t\t<<set _temp *= 1.2>>",
+   "\t<<elseif $exposed is 1>>",
+   "\t\t<<set _temp *= 1.1>>",
+   "\t<</if>>",
+   "\t<<set $physique += 10 * _temp>><<set $physiqueuse += _temp>>",
+   "\t<<if _args[1]>>",
+   "\t\t<<if _args[1] isnot \"noMessage\">>",
+   "\t\t\t<<if ($combat is 1 and _args[1] isnot \"workout\") or _args[1] is \"invig\">>",
+   "\t\t\t\t<span class=\"gold\"> It invigorates you.</span>"
+  ],
+  "old_kr": [
+   "\t<<if _args[0]>><<set _temp to _args[0]>><<set $workouts += _args[0]>><<else>><<set _temp to 1>><<set $workouts += 1>><</if>>",
+   "\t<<if $exposed gte 2>>",
+   "\t\t<<set _temp *= 1.2>>",
+   "\t<<elseif $exposed is 1>>",
+   "\t\t<<set _temp *= 1.1>>",
+   "\t<</if>>",
+   "\t<<set $physique += 10 * _temp>><<set $physiqueuse += _temp>>",
+   "\t<<if _args[1]>>",
+   "\t\t<<if _args[1] isnot \"noMessage\">>",
+   "\t\t\t<<if ($combat is 1 and _args[1] isnot \"workout\") or _args[1] is \"invig\">>",
+   "\t\t\t\t<span class=\"gold\"> 활기가 솟는다.</span>"
+  ],
+  "new_en": [
+   "\t<<set _change to _args[0]>>",
+   "\t<<set _type to _args[1]>>",
+   "",
+   "\t<<if _change>>",
+   "\t\t<!-- Change the PC's butt size based on how much exercise they're getting. -->",
+   "\t\t<<set $workouts += _change>>",
+   "",
+   "\t\t<<if _change gt 0>>",
+   "\t\t\t<!-- Increase the PC's physique gains based on their exposure. -->",
+   "\t\t\t<<if $exposed gte 2>>",
+   "\t\t\t\t<<set _change *= 1.2>>",
+   "\t\t\t<<elseif $exposed is 1>>",
+   "\t\t\t\t<<set _change *= 1.1>>",
+   "\t\t\t<</if>>",
+   "",
+   "\t\t\t<!--",
+   "\t\t\t\tTrack how much the PC exercised today. Used to decide if they should gain or lose physique at the end of the day.",
+   "",
+   "\t\t\t\tNOTE: The current physique code does NOT do this, and only prints a message that claims this happens. Instead, the PC simply loses X% of their physique each day.",
+   "\t\t\t-->",
+   "\t\t\t<<set $physiqueuse += _change>>",
+   "",
+   "\t\t\t<<set Weather.BodyTemperature.addActivity(\"physique\")>>",
+   "\t\t<</if>>",
+   "",
+   "\t\t<!-- 1 point of change = 10 points of $physique. -->",
+   "\t\t<<set $physique += 10 * _change>>",
+   "",
+   "\t\t<<if _change gt 0>>",
+   "\t\t\t<<if _type>>",
+   "\t\t\t\t<<if _type isnot \"noMessage\">>",
+   "\t\t\t\t\t<<if ($combat is 1 and _type isnot \"workout\") or _type is \"invig\">>",
+   "\t\t\t\t\t\t<span class=\"gold\"> It invigorates you.</span>",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t<span class=\"gold\"> You get a good workout.</span>",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<<elseif $combat is 1>>",
+   "\t\t\t\t<span class=\"gold\"> It invigorates you.</span>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $combat is 1>>",
+   "\t\t<span class=\"gold\"> It invigorates you.</span>",
+   "\t<<else>>",
+   "\t\t<span class=\"gold\"> You get a good workout.</span>",
+   "\t<</if>>",
+   "\t<<set $physique = Math.clamp($physique, 0, $physiquesize)>>",
+   "\t<<set Weather.BodyTemperature.addActivity(\"physique\")>>",
+   "<</widget>>"
+  ],
+  "old_kr": [
+   "\t<<elseif $combat is 1>>",
+   "\t\t<span class=\"gold\"> 활기가 솟는다.</span>",
+   "\t<<else>>",
+   "\t\t<span class=\"gold\"> 좋은 운동이 되었다.</span>",
+   "\t<</if>>",
+   "\t<<set $physique = Math.clamp($physique, 0, $physiquesize)>>",
+   "\t<<set Weather.BodyTemperature.addActivity(\"physique\")>>",
+   "<</widget>>"
+  ],
+  "new_en": [],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<widget \"rentday\">>",
+   "\t<<set $_text_output to [\"Sunday\",\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\"][$rentday-1]>>",
+   "\t<<print $_text_output>>",
+   "<</widget>>"
+  ],
+  "old_kr": [
+   "<<widget \"rentday\">>",
+   "\t<<set $_text_output to [\"일요일\",\"월요일\",\"화요일\",\"수요일\",\"목요일\",\"금요일\",\"토요일\"][$rentday-1]>>",
+   "\t<<print $_text_output>>",
+   "<</widget>>"
+  ],
+  "new_en": [
+   "<<widget \"rentday\">><<print new DateTime(Time.date).addDays($rentTime).weekDayName>><</widget>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tThe <<= $settings.monsterChance is 100 ? \"wolfgirls and wolfboys\" : \"wolves\">>",
+   "\t\t\t<<if $wolfpackleader gte 1>> view you as <span class=\"green\">the leader of the pack.</span>",
+   "\t\t\t\t<<elseif $syndromewolves gte 1>> view you as <span class=\"green\">their <<ppackbrother>>.</span>",
+   "\t\t\t\t<<elseif $wolfpacktrust gte 12>> <span class=\"green\">trust you.</span>",
+   "\t\t\t\t<<elseif $wolfpacktrust gte 6>> are <span class=\"teal\">starting to accept you.</span>",
+   "\t\t\t\t<<elseif $wolfpackfear gte 12>> <span class=\"red\">fear you.</span>",
+   "\t\t\t\t<<elseif $wolfpackfear gte 6>> are <span class=\"purple\">starting to fear you.</span>",
+   "\t\t\t\t<<else>><span class=\"pink\"> view you as prey.</span>"
+  ],
+  "old_kr": [
+   "\t\t\t<<= $settings.monsterChance is 100 ? \"늑대 소녀들과 늑대 소년들은\" : \"늑대들은\">>",
+   "\t\t\t<<if $wolfpackleader gte 1>> 당신을 <span class=\"green\">무리의 우두머리로 본다.</span>",
+   "\t\t\t\t<<elseif $syndromewolves gte 1>> 당신을 <span class=\"green\">그들의 <<ppackbrother>>【으로로】 본다.</span>",
+   "\t\t\t\t<<elseif $wolfpacktrust gte 12>> <span class=\"green\">당신을 신뢰한다.</span>",
+   "\t\t\t\t<<elseif $wolfpacktrust gte 6>> <span class=\"teal\">당신을 받아들이기 시작했다.</span>",
+   "\t\t\t\t<<elseif $wolfpackfear gte 12>> <span class=\"red\">당신을 두려워한다.</span>",
+   "\t\t\t\t<<elseif $wolfpackfear gte 6>> <span class=\"purple\">당신을 두려워하기 시작했다.</span>",
+   "\t\t\t\t<<else>><span class=\"pink\">당신을 먹잇감으로 본다.</span>"
+  ],
+  "new_en": [
+   "\t\t\tThe <<wolf_cave_plural>>",
+   "\t\t\t<<if $wolfpackleader gte 1>> view you as <span class=\"green\">the leader of the pack.</span>",
+   "\t\t\t\t<<elseif $syndromewolves gte 1>> view you as <span class=\"green\">their <<ppackbrother>>.</span>",
+   "\t\t\t\t<<elseif $wolfpacktrust gte 12>> <span class=\"green\">trust you.</span>",
+   "\t\t\t\t<<elseif $wolfpacktrust gte 6>> are <span class=\"teal\">starting to accept you.</span>",
+   "\t\t\t\t<<elseif $wolfpackfear gte 12>> <span class=\"red\">fear you.</span>",
+   "\t\t\t\t<<elseif $wolfpackfear gte 6>> are <span class=\"purple\">starting to fear you.</span>",
+   "\t\t\t\t<<else>><span class=\"pink\"> view you as prey.</span>"
+  ],
+  "context": "\t\t<div class=\"relation-description\">"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t<img class=\"love-interest-icon\" src=\"img/ui/love-interest.png\" alt=\"Love Interest\" title=\"Love Interest\"/>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t<img class=\"love-interest-icon\" src=\"img/ui/love-interest.png\" alt=\"연애 관심 대상\" title=\"연애 관심 대상\"/>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<if $options.images>>",
+   "\t\t\t\t\t\t\t\t<img class=\"love-interest-icon\" src=\"img/ui/love-interest.png\" alt=\"Love Interest\" title=\"Love Interest\"/>",
+   "\t\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t\t<span class=\"lewd\" alt=\"Love Interest\" title=\"Love Interest\"><b>LI</b></span>",
+   "\t\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t\t<<if _loveInterest>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<img class=\"love-interest-icon\" src=\"img/ui/love-interest.png\" alt=\"Love Interest\" title=\"Love Interest\"/>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<img class=\"love-interest-icon\" src=\"img/ui/love-interest.png\" alt=\"연애 관심 대상\" title=\"연애 관심 대상\"/>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $options.images>>",
+   "\t\t\t\t\t\t\t<img class=\"love-interest-icon\" src=\"img/ui/love-interest.png\" alt=\"Love Interest\" title=\"Love Interest\"/>",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t<span class=\"lewd\" alt=\"Love Interest\" title=\"Love Interest\"><b>LI</b></span>",
+   "\t\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t\t<<if _loveInterest>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<span class=\"green\">You feel an overwhelming sense of relief.</span> <<stress -12>><<llstress>><<pain -4>><<lpain>>"
+  ],
+  "old_kr": [
+   "\t\t\t<span class=\"green\">당신은 압도적인 안도감을 느낀다.</span> <<stress -12>><<llstress>><<pain -4>><<lpain>>"
+  ],
+  "new_en": [
+   "\t\t\t<span class=\"green\">You feel an overwhelming sense of relief.</span>",
+   "\t\t\t<<pain -4>><<lpain>>",
+   "\t\t\t<<stress -12>><<llstress>>"
+  ],
+  "context": "\t\t<<if $nectar_timer lte 14>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [],
+  "old_kr": [
+   ""
+  ],
+  "new_en": [
+   "",
+   "<<widget \"travelSpeedInfo\">>",
+   "\t<<set _travelTimes to {quickly: 5, normally: 10, carefully: 30}>>",
+   "\t<<if $worn.feet.type.includes(\"shackle\") and $travelSpeed is \"quickly\">>",
+   "\t\t<<set $travelSpeed to \"normally\">>",
+   "\t<</if>>",
+   "\t<<set _speedNow to $travelSpeed>>",
+   "\t<<set _travelTime to _travelTimes[_speedNow]>>",
+   "\t<<set _travelTimeString to getTimeString(_travelTime)>>",
+   "<</widget>>",
+   "",
+   "<<widget \"travelSpeedOptions\">>",
+   "\t<<travelSpeedInfo>>",
+   "\tHow do you want to proceed?",
+   "\t<br>",
+   "\t<<if $worn.feet.type.includes(\"shackle\")>>",
+   "\t\t<<runicon>><span class=\"red\">Your shackles stop you from running.</span>",
+   "\t<<else>>",
+   "\t\t<<runicon>><label><<radiovar \"$travelSpeed\" \"quickly\">><<travelSpeedInfo>><<replace \".travelTime\">><<print _travelTimeString>><</replace>><</radiovar>> Quickly (<<print getTimeString(_travelTimes.quickly)>>)</label><<gharass>>",
+   "\t<</if>>",
+   "\t<br>",
+   "\t<<walkicon>><label><<radiovar \"$travelSpeed\" \"normally\">><<travelSpeedInfo>><<replace \".travelTime\">><<print _travelTimeString>><</replace>><</radiovar>> Normally (<<print getTimeString(_travelTimes.normally)>>)</label>",
+   "\t<br>",
+   "\t<<sneakicon>><label><<radiovar \"$travelSpeed\" \"carefully\">><<travelSpeedInfo>><<replace \".travelTime\">><<print _travelTimeString>><</replace>><</radiovar>> Carefully (<<print getTimeString(_travelTimes.carefully)>>)</label><<lharass>>",
+   "\t<<if $worn.feet.type.includes(\"heels\") and !$possessed>>",
+   "\t\t<br>",
+   "\t\t<span class=\"red\">Your heels only let you hobble, except when searching.</span>",
+   "\t<</if>>",
+   "<</widget>>",
+   "",
+   "<<widget \"thuganger\">>",
+   "\t<<if $rentThug>>",
+   "\t\t<<if _args[0] is \"passive\" and $rentTime lt -1>>",
+   "\t\t\t<<if $rentThug.anger lt 4 and $rentThug.angerCountdown lte 0>>",
+   "\t\t\t\t<<set $rentThug.anger++>>",
+   "\t\t\t\t<<switch $rentThug.anger>>",
+   "\t\t\t\t\t<<case 2>>",
+   "\t\t\t\t\t\t<<set $rentThug.angerCountdown to 1>>",
+   "\t\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t\t<<set $rentThug.angerCountdown to 2>>",
+   "\t\t\t\t\t<<default>>",
+   "\t\t\t\t<</switch>>",
+   "\t\t\t<<elseif $rentThug.angerCountdown gt 0>>",
+   "\t\t\t\t<<set $rentThug.angerCountdown-->>",
+   "\t\t\t<</if>>",
+   "\t\t<<elseif Number.isInteger(_args[0])>>",
+   "\t\t\t<<set $rentThug.anger to Math.clamp($rentThug.anger + _args[0], 0, 5)>>",
+   "\t\t\t<<switch $rentThug.anger>>",
+   "\t\t\t\t<<case 1 2>>",
+   "\t\t\t\t\t<<set $rentThug.angerCountdown to 1>>",
+   "\t\t\t\t<<case 3>>",
+   "\t\t\t\t\t<<set $rentThug.angerCountdown to 2>>",
+   "\t\t\t\t<<default>>",
+   "\t\t\t<</switch>>",
+   "\t\t\t<<set $rentThug.traps to []>>",
+   "\t\t<</if>>",
+   "\t<</if>>",
+   "<</widget>>",
+   "",
+   "<<widget \"createThugTrap\">>",
+   "\t<<if $rentThug>>",
+   "\t\t<<set _location to _args[0] or $bus>>",
+   "\t\t/* Deletes existing trap at location */",
+   "\t\t<<if $rentThug.traps.find(trap => trap.location === _location)>>",
+   "\t\t\t<<set _refreshTrap to true>>",
+   "\t\t\t<<set $rentThug.traps.deleteAt([$rentThug.traps.findIndex(trap => trap.location === _location)])>>",
+   "\t\t<</if>>",
+   "\t\t/* Sets new trap */",
+   "\t\t<<set $rentThug.traps.push({",
+   "\t\t\tlocation: _location,",
+   "\t\t\tendTime: new DateTime(Time.date).addHours(($rentThug.anger is 5 ? 3 : 2) / (Time.dayState is \"night\" ? 2 : 1)).timeStamp",
+   "\t\t})>>",
+   "\t\t/* Clears old traps if needed */",
+   "\t\t<<if $rentThug.traps.length gte 4>><<set $rentThug.traps.deleteAt([0])>><</if>>",
+   "",
+   "\t\t<<if !$settings.blindStatsEnabled>>",
+   "\t\t\t<<if _refreshTrap>>",
+   "\t\t\t\t<span class=\"blue\"><i>Bailey's thugs are now actively looking for you on <<print _location.toUpperFirst()>> Street. You probably shouldn't return here for some time.</i></span>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<span class=\"blue\"><i>Since you were seen by Bailey's thugs on <<print _location.toUpperFirst()>> Street, they are likely to be looking for you around here for some time.</i></span>",
+   "\t\t\t<</if>>",
+   "\t\t\t<br><br>",
+   "\t\t<</if>>",
+   "\t<</if>>",
+   "<</widget>>"
+  ],
+  "context": "<</widget>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $drunk gt 0>>",
+   "\t\t\t\t<<set $_drunk_level to Math.clamp(Math.floor($drunk / 120), 0, 4)>>",
+   "\t\t\t\t<<set $_stress_multiplier to [9,8,6,4,3][$_drunk_level]>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if _args[0] gt 0>>",
+   "\t\t\t\t<<stress `0.25 * _args[0]`>>"
+  ],
+  "context": "\t\t<<if $consensual isnot 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $_stress_multiplier to 10>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<stress `0.125 * _args[0]`>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<stress _args[0] $_stress_multiplier>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $drunk gt 0>>",
+   "\t\t\t\t<<set $_drunk_level to Math.clamp(Math.floor($drunk / 120), 0, 4)>>",
+   "\t\t\t\t<<set $_stress_multiplier to [9,8,6,4,3][$_drunk_level]>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if _args[0] gt 0>>",
+   "\t\t\t\t<<stress `0.25 * _args[0]`>>"
+  ],
+  "context": "\t\t<<if $consensual isnot 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $_stress_multiplier to 10>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<stress `0.125 * _args[0]`>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<stress _args[0] $_stress_multiplier>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<stress _args[0] -10>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if _args[0] gt 0>>",
+   "\t\t\t\t<<stress `-0.125 * _args[0]`>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<stress `-0.25 * _args[0]`>>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $stress += (_violence * _drunkMod * _stressMod) * (1 - ($masochism / 1200))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\t\t\t<<if _violence gt 0>>",
+   "\t\t\t\t<!-- Further reduce stress gains if the PC is a masochist. -->",
+   "\t\t\t\t<<set _stressChange to 0.25 * _violence * _stressMod * (1 - ($masochism / 1200))>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _stressChange to 0.125 * _violence * _stressMod>>",
+   "\t\t\t<</if>>",
+   "\t\t\t<<stress _stressChange>>",
+   ""
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $drunk gt 0>>",
+   "\t\t\t\t<<set $_drunk_level to Math.clamp(Math.floor($drunk / 120), 0, 4)>>",
+   "\t\t\t\t<<set _drunkMod to [9,8,6,4,3][$_drunk_level]>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if _violence gt 0>>",
+   "\t\t\t\t<!-- Further reduce stress gains if the PC is a masochist. -->",
+   "\t\t\t\t<<set _stressChange to 0.25 * _violence * _stressMod * (1 - ($masochism / 1200))>>"
+  ],
+  "context": "\t\t<<if _violence gt 0 or _violence lt 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set _drunkMod to 10>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set _stressChange to 0.125 * _violence * _stressMod>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $stress += (_violence * _drunkMod * _stressMod) * (1 - ($masochism / 1200))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<stress _stressChange>>",
+   ""
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $drunk gt 0>>",
+   "\t\t\t\t<<set $_drunk_level to Math.clamp(Math.floor($drunk / 120), 0, 4)>>",
+   "\t\t\t\t<<set $_stress_multiplier to [9,8,6,4,3][$_drunk_level]>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if _args[0] gt 0>>",
+   "\t\t\t\t<<stress `0.25 * _args[0]`>>"
+  ],
+  "context": "\t\t<<if $consensual isnot 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $_stress_multiplier to 10>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<stress `0.125 * _args[0]`>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<stress _args[0] $_stress_multiplier>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $drunk gt 0>>",
+   "\t\t\t<<set $_drunk_level to Math.clamp(Math.floor($drunk / 120), 0, 4)>>",
+   "\t\t\t<<set $_stress_multiplier to [9,8,6,4,3][$_drunk_level]>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if _args[0] gt 0>>",
+   "\t\t\t<<stress `0.25 * _args[0]`>>"
+  ],
+  "context": "\t<<if _args[0]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $_stress_multiplier to 10>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<stress `0.125 * _args[0]`>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<stress _args[0] $_stress_multiplier>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $_crimemod to Number(_args[0])>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $_crimeMod to Number(_args[0])>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $_stealthfactor to ( 0.15 * ( 1 - normalise($crime[_crimeType].current, C.crime.max ) ) )>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $_stealthFactor to ( 0.15 * ( 1 - normalise($crime[_crimeType].current, C.crime.max ) ) )>>"
+  ],
+  "context": "\t\t\t\t*/"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $_crimeMult -= $_stealthfactor * $_stealthMult>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $_crimeMult -= $_stealthFactor * $_stealthMult>>"
+  ],
+  "context": "\t\t\t\t<<set $_stealthMult to Object.values($worn).filter(item => item.type.includes(\"stealthy\")).length>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $_unstealthMult to Object.values($worn).filter(item => item.type.includes(\"unstealthy\")).length>>",
+   "\t\t\t\t<<set $_crimeMult += 0.15 * $_unstealthMult>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $_unstealthyMult to Object.values($worn).filter(item => item.type.includes(\"unstealthy\")).length>>",
+   "\t\t\t\t<<set $_crimeMult += 0.15 * $_unstealthyMult>>"
+  ],
+  "context": "\t\t\t\t<!-- Filter to all items with type \"unstealthy\" and count them -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $_crimemod to Math.ceil($_crimemod * $_crimeMult)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $_crimeMod to Math.ceil($_crimeMod * $_crimeMult)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $_crimemod -= Math.floor($skulduggery / 10)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $_crimeMod -= Math.floor($skulduggery / 10)>>"
+  ],
+  "context": "\t\t\t\t\t<!-- Petty thievery has extra flat reduction if skulduggery skill above 500 (C+), possibly negating the crime gain entirely -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $_crimemod to Math.clamp($_crimemod, 0, C.crime.max)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $_crimeMod to Math.clamp($_crimeMod, 0, C.crime.max)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $_crimemod gt 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $_crimeMod gt 0>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<!-- crimemod lte 0 represents a crime the player completely got away with, so nothing is recorded-->",
+   "\t\t\t\t<<set C.crime[_crimeType] += $_crimemod>>",
+   "\t\t\t\t<<set C.crime[_crimeType + \"History\"] += $_crimemod>>",
+   "\t\t\t\t<<set C.crime[_crimeType + \"Daily\"] += $_crimemod>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<!-- crimeMod lte 0 represents a crime the player completely got away with, so nothing is recorded-->",
+   "\t\t\t\t<<set C.crime[_crimeType] += $_crimeMod>>",
+   "\t\t\t\t<<set C.crime[_crimeType + \"History\"] += $_crimeMod>>",
+   "\t\t\t\t<<set C.crime[_crimeType + \"Daily\"] += $_crimeMod>>"
+  ],
+  "context": "\t\t\t\t<!-- If crime gain is still greater than 0, add to crime daily, history, count, and Avery crimetracker-->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $averyCrimeTracker += $_crimemod>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $averyCrimeTracker += $_crimeMod>>"
+  ],
+  "context": "\t\t\t\t<<if $averyCrimeTracker neq null>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set C.crime.exposure += $_crimemod>>",
+   "\t\t\t\t\t<<set C.crime.exposureHistory += $_crimemod>>",
+   "\t\t\t\t\t<<set C.crime.exposureDaily += $_crimemod>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set C.crime.exposure += $_crimeMod>>",
+   "\t\t\t\t\t<<set C.crime.exposureHistory += $_crimeMod>>",
+   "\t\t\t\t\t<<set C.crime.exposureDaily += $_crimeMod>>"
+  ],
+  "context": "\t\t\t\t<<if $exposed gte 1 and _crimeType isnot \"exposure\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $foxCrimeProgress += $_crimemod>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $foxCrimeProgress += $_crimeMod>>"
+  ],
+  "context": "\t\t\t\t\t<<set $foxCrimeLimit ||= 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<run C.crime.logEvent($_crimemod, _crimeType, _description)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<run C.crime.logEvent($_crimeMod, _crimeType, _description)>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $_crimemod to Number(_args[0])>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $_crimeMod to Number(_args[0])>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set C.crime[_crimeType] += $_crimemod>>",
+   "\t\t\t\t<<set C.crime[_crimeType + \"History\"] += $_crimemod>>",
+   "\t\t\t\t<<set C.crime[_crimeType + \"Daily\"] += $_crimemod>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set C.crime[_crimeType] += $_crimeMod>>",
+   "\t\t\t\t<<set C.crime[_crimeType + \"History\"] += $_crimeMod>>",
+   "\t\t\t\t<<set C.crime[_crimeType + \"Daily\"] += $_crimeMod>>"
+  ],
+  "context": "\t\t\t<<if _args[0] gt 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"schoolskillgeneral\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"schoolSkillGeneral\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<schoolskillgeneral \"science\" _args[0] _args[1]>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<schoolSkillGeneral \"science\" _args[0] _args[1]>>"
+  ],
+  "context": "<<widget \"scienceskill\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<schoolskillgeneral \"maths\" `_args[0] * (V.location === \"school\" ? 1.2 : 1)` _args[1]>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<schoolSkillGeneral \"maths\" `_args[0] * (V.location === \"school\" ? 1.2 : 1)` _args[1]>>"
+  ],
+  "context": "<<widget \"mathsskill\">>/* Faster in school to account for fewer lessons */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<schoolskillgeneral \"english\" _args[0] _args[1]>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<schoolSkillGeneral \"english\" _args[0] _args[1]>>"
+  ],
+  "context": "<<widget \"englishskill\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<schoolskillgeneral \"history\" _args[0] _args[1]>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<schoolSkillGeneral \"history\" _args[0] _args[1]>>"
+  ],
+  "context": "<<widget \"historyskill\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"physique_loss\">>",
+   "\t<<if _args[0] and $statFreeze isnot true>>",
+   "\t\t<<set $physique -= (_args[0] * 10)>>",
+   "\t\t<<set $physique to Math.clamp($physique, 0, $physiquesize)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<!-- Clamps for safety. -->",
+   "\t\t<<set $physique = Math.clamp($physique, 0, $physiquesize)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $npc.length is 1 and ($npc[0] is \"Robin\" and C.npc.Robin.dom lte 10 and $debug is 1) or ($npc[0] is \"Sydney\" and C.npc.Sydney.purity gte 50)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $npc.length is 1 and ($npc[0] is \"Robin\" and C.npc.Robin.dom lte 10 and $debug) or ($npc[0] is \"Sydney\" and C.npc.Sydney.purity gte 50)>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set _isNpcRelationBoxCollapsed = V.collapsedRelationBoxes.includes(_npcData.nam)>>"
+  ],
+  "context": "\t\t<<set _npcOverrides = _args[1] || {}>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\tlet baseConfig = statDefaults[stat] || {};",
+   "",
+   "\t\t\t\treturn Object.assign({}, baseConfig, T.npcOverrides[stat]);"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\treturn Object.assign({}, statDefaults[stat], T.npcOverrides[stat]);"
+  ],
+  "context": "\t\t\tT.getStatConfig = function(stat) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<div class=\"relation-box\">",
+   "\t\t\t\t\t<div class=\"relation-top-line\">"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<div @class=\"'relation-box' + (_isNpcRelationBoxCollapsed ? ' is-collapsed' : '')\" @data-npc=\"_npcData.nam\">",
+   "\t\t\t\t\t<div class=\"relation-top-line\" onclick=\"toggleRelationCollapse(this)\">"
+  ],
+  "context": "\t\t\t<<if _npcData.nam is (\"Ivory Wraith\") and ($wraith.mimic is \"\" and (_wraithEventSocial or $wraith.type)) and $wraithIntro>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<relation-box-collapsed _npcData _npcOverrides>>"
+  ],
+  "context": "\t\t\t\t\t</div>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<div class=\"relation-box\">",
+   "\t\t\t\t\t<div class=\"relation-top-line\">"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<div @class=\"'relation-box' + (_isNpcRelationBoxCollapsed ? ' is-collapsed' : '')\" @data-npc=\"_npcData.nam\">",
+   "\t\t\t\t\t<div class=\"relation-top-line\" onclick=\"toggleRelationCollapse(this)\">"
+  ],
+  "context": "\t\t\t<<elseif $wraithIntro and $wraith.mimic is _npcData.nam and $wraith.revealed and _npcOverrides and _npcOverrides.important>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<for _j = 0; _j lt _importantNpcStats.length-2; _j++>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<for _j = 0; _j lt _importantNpcStats.length; _j++>>"
+  ],
+  "context": "\t\t\t\t\t\t<<set $_statCount to 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<relation-box-collapsed _npcData _npcOverrides>>"
+  ],
+  "context": "\t\t\t\t\t</div>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<div class=\"relation-box\">",
+   "\t\t\t\t<div class=\"relation-top-line\">"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<div @class=\"'relation-box' + (_isNpcRelationBoxCollapsed ? ' is-collapsed' : '')\" @data-npc=\"_npcData.nam\">",
+   "\t\t\t\t<div class=\"relation-top-line\" onclick=\"toggleRelationCollapse(this)\">"
+  ],
+  "context": "\t\t<<elseif _npcOverrides and _npcOverrides.important>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<if _importantNPCs[_k].nam is \"Black Wolf\">><<set _npcStats to _importantNpcStats.length>>",
+   "\t\t\t\t\t\t<<else>><<set _npcStats to _importantNpcStats.length-2>>",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t<<for _j = 0; _j lt _npcStats; _j++>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<for _j = 0; _j lt _importantNpcStats.length; _j++>>"
+  ],
+  "context": "\t\t\t\t\t<<set $_statCount to 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<relation-box-collapsed _npcData _npcOverrides>>"
+  ],
+  "context": "\t\t\t\t</div>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<div class=\"relation-box\">",
+   "\t\t\t\t<div class=\"relation-top-line\">"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<div @class=\"'relation-box' + (_isNpcRelationBoxCollapsed ? ' is-collapsed' : '')\" @data-npc=\"_npcData.nam\">",
+   "\t\t\t\t<div class=\"relation-top-line\" onclick=\"toggleRelationCollapse(this)\">"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<relation-box-collapsed _npcData _npcOverrides>>"
+  ],
+  "context": "\t\t\t\t</div>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<</widget>>",
+   "",
+   "<<widget \"relation-box-collapsed\">>",
+   "\t<<silently>>",
+   "\t\t<<set _npcData = _args[0]>>",
+   "\t\t<<set _npcOverrides = _args[1]>>",
+   "",
+   "\t\t<<script>>",
+   "\t\t\tlet npcStats;",
+   "\t\t\tif (T.npcOverrides.important) {",
+   "\t\t\t\tnpcStats = T.importantNpcStats;",
+   "\t\t\t\tT.collapsedStatSlots = 4;",
+   "\t\t\t} else {",
+   "\t\t\t\tnpcStats = T.otherNpcStats;",
+   "\t\t\t\tT.collapsedStatSlots = 2;",
+   "\t\t\t}",
+   "",
+   "\t\t\tT.collapsedVisibleStats = npcStats",
+   "\t\t\t\t.filter(function(stat) { return T.npcData[stat] > 0 && T.checkRequirements(stat); })",
+   "\t\t\t\t.map(function(stat) {",
+   "\t\t\t\t\tlet config = T.getStatConfig(stat);",
+   "\t\t\t\t\tlet min = config.minValue || 0;",
+   "\t\t\t\t\tlet max = config.maxValue || 100;",
+   "\t\t\t\t\tlet icon = config.activeIcon;",
+   "\t\t\t\t\tlet name = \"\";",
+   "\t\t\t\t\tswitch (config.name) {",
+   "\t\t\t\t\t\tcase \"Respect\":",
+   "\t\t\t\t\t\tcase \"Affection\":",
+   "\t\t\t\t\t\tcase \"Interest\": name = \"Lo\"; break;",
+   "\t\t\t\t\t\tcase \"Confidence\": name = \"Cd\"; break;",
+   "\t\t\t\t\t\tcase \"Corruption\": name = \"Cr\"; break;",
+   "\t\t\t\t\t\tcase \"Rage\": name = \"Rg\"; break;",
+   "\t\t\t\t\t\tcase \"Yearning\": name = \"Yr\"; break;",
+   "\t\t\t\t\t\tcase \"Wolf Pack Harmony\": name = \"Hm\"; break;",
+   "\t\t\t\t\t\tcase \"Wolf Pack Ferocity\": name = \"Fr\"; break;",
+   "\t\t\t\t\t\tdefault: name = config.name.slice(0, 2);",
+   "\t\t\t\t\t};",
+   "\t\t\t\t\treturn {",
+   "\t\t\t\t\t\tname : (stat === \"love\" && T.loveInterest ? \"<span class='lewd'><b>\" + name + \"</b></span>\" : name),",
+   "\t\t\t\t\t\tactiveIcon : (stat === \"love\" && T.loveInterest ? \"img/ui/love-interest.png\" : icon),",
+   "\t\t\t\t\t\tprogress : Math.clamp(Math.round(100*((config.value - min) / (max - min))), 0, 100)",
+   "\t\t\t\t\t};",
+   "\t\t\t\t})",
+   "\t\t\t\t.slice(0, T.collapsedStatSlots);",
+   "\t\t<</script>>",
+   "\t<</silently>>",
+   "\t<div class=\"relation-box-collapsed\" onclick=\"toggleRelationCollapse(this)\">",
+   "\t\t<span class=\"relation-box-collapsed-name\">_npcData.nam</span>",
+   "\t\t<span class=\"relation-box-collapsed-stats\">",
+   "\t\t\t<<for _ci = 0; _ci lt _collapsedStatSlots; _ci++>>",
+   "\t\t\t\t<<if _ci lt _collapsedVisibleStats.length>>",
+   "\t\t\t\t\t<span class=\"relation-box-collapsed-icon-pair\">",
+   "\t\t\t\t\t\t<<if $options.images>>",
+   "\t\t\t\t\t\t\t<img class=\"relation-box-collapsed-icon\" @src=\"_collapsedVisibleStats[_ci].activeIcon\">",
+   "\t\t\t\t\t\t\t<span>_collapsedVisibleStats[_ci].progress</span>",
+   "\t\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t\t<span class=\"relation-box-collapsed-icon\">_collapsedVisibleStats[_ci].name</span>",
+   "\t\t\t\t\t\t\t<small>_collapsedVisibleStats[_ci].progress</small>",
+   "\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t</span>",
+   "\t\t\t\t<<else>>",
+   "\t\t\t\t\t<span class=\"relation-box-collapsed-icon-pair\"></span>",
+   "\t\t\t\t<</if>>",
+   "\t\t\t<</for>>",
+   "\t\t</span>",
+   "\t</div>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if _important>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<div class=\"relation-stat\">",
+   "\t\t\t\t<<if !_important>>",
+   "\t\t\t\t\t<span class=\"relation-stat-name\">",
+   "\t\t\t\t\t\t<small>_config.name</small>",
+   "\t\t\t\t\t</span>",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t<<if $options.images>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t</div>"
+  ],
+  "context": "\t\t\t\t<span class=\"relation-stat-percent black\">_config.progress<small>%</small></span>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"relationshipclamp\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"relationshipClamp\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if _args[0]>>",
+   "\t\t<<set $milk_drank_stat += _args[0]>>",
+   "\t\t<<set $hunger -= _args[0]>><<set $thirst -= _args[0]>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<!-- 1 point of \"change\" = 1 mL of milk. The PC drinks an average of ~30 mL of milk each time \"breastfed\" is called. -->",
+   "\t<<set _change to _args[0]>>",
+   "",
+   "\t<<if _change>>",
+   "\t\t<<set $milk_drank_stat += _change>>",
+   "",
+   "\t\t<!-- 1 mL of milk = -1 point of $hunger. -->",
+   "\t\t<<set $hunger -= _change>>",
+   "",
+   "\t\t<!-- 1 mL of milk = -1 point of $thirst. -->",
+   "\t\t<<set $thirst -= _change>>"
+  ],
+  "context": "<<widget \"breastfed\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $milk_drank_stat += random(1, 5)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<!-- Add 10-50 mL to the PC's \"milk_drank_stat\". -->",
+   "\t\t<<set _milkDrank to random(10, 50)>>",
+   "\t\t<<set $milk_drank_stat += _milkDrank>>",
+   "",
+   "\t\t<!-- The PC has a 30% chance of gaining transformation points when being breastfed. The point's type depends on the breast milk's source. -->"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $milkdranktrait is 1>><<physique 1>><</if>>",
+   "\t\t<<purity -1>>",
+   "\t\t<<set $hunger -= 200>><<set $thirst -= 200>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\t\t<!--",
+   "\t\t\tIf they have the \"Milk Addict\" / \"Milk Enthusiast\" trait, 3 mL of milk = 1 point of $physique.",
+   "",
+   "\t\t\tSince physique(1) = 10 $physique, divide \"milkDrank\" by 30.",
+   "\t\t-->",
+   "\t\t<<if $milkdranktrait is 1>><<physique `(1 / 30) * _milkDrank` \"invig\">><</if>>",
+   "",
+   "\t\t<!-- 30 mL of milk = -1 points of $purity. -->",
+   "\t\t<<purity `(-1 / 30) * _milkDrank`>>",
+   "",
+   "\t\t<!-- 1 mL of milk = -1 point of $hunger. -->",
+   "\t\t<<set $hunger -= _milkDrank>>",
+   "",
+   "\t\t<!-- 1 mL of milk = -1 point of $thirst. -->",
+   "\t\t<<set $thirst -= _milkDrank>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set _nectarGain to 0>>",
+   "\t<<set _nectarGain += (Math.ceil(_args[0] / 10) + random(0,2))>>",
+   "\t<<set $nectar_drank_stat += _nectarGain>>",
+   "\t<<set $nectar_addiction += _nectarGain>>",
+   "\t<<if _args[0] gte 11>>",
+   "\t\t<<purity -1>>",
+   "\t<</if>>",
+   "\t<<set $hunger -= (_args[0] * 5)>><<set $thirst -= (_args[0] * 5)>>",
+   "\t<<drugs _args[0]>><<set $arousal += _args[0]>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<!-- 1 point of \"change\" = 1 mL of nectar. The PC drinks an average of ~10 mL of nectar each time \"nectarfed\" is called. -->",
+   "\t<<set _change to _args[0]>>",
+   "",
+   "\t<<set $nectar_drank_stat += _change>>",
+   "",
+   "\t<!--",
+   "\t\tThe PC needs to drink 750 mL of nectar to become an addict.",
+   "",
+   "\t\tSince the PC gains the \"Nectar Addict\" trait when V.nectar_addiction >= 150, 1 mL of nectar = 0.2 points of nectar addiction.",
+   "\t-->",
+   "\t<<set $nectar_addiction += 0.2 * _change>>",
+   "",
+   "\t<!-- 1 mL of nectar = -1 / 20 points of $purity. The ratio for nectar (1-to-20) is slightly higher than the ratio for milk (1-to-30) because plantpeople are more susceptible to corruption than humans. -->",
+   "\t<<purity `(-1 / 20) * _change`>>",
+   "",
+   "\t<!-- 1 mL of nectar = -5 points of $hunger. -->",
+   "\t<<set $hunger -= (_change * 5)>>",
+   "",
+   "\t<!-- 1 mL of nectar = -5 points of $thirst. -->",
+   "\t<<set $thirst -= (_change * 5)>>",
+   "",
+   "\t<!--",
+   "\t\tNectar is ~20% ABV, and 1 mL alcohol = 3 points of $drunk.",
+   "",
+   "\t\t1 mL of nectar = 0.2 mL alcohol = 0.6 points of $drunk.",
+   "\t-->",
+   "\t<<drunk `0.6 * _change`>>",
+   "",
+   "\t<!-- 1 mL of nectar = 1 point of $drugged. -->",
+   "\t<<drugs _change>>",
+   "",
+   "\t<!-- 1 mL of nectar = 1 point of $arousal. -->",
+   "\t<<set $arousal += _change>>",
+   "",
+   "\t<!-- Print a special message if the nectar source is ejaculating. -->"
+  ],
+  "context": "<<widget \"nectarfed\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\t<!-- Print text and change the PC's condition if they have the \"Dendrophile\" / \"Plank Lover\" trait (Not the \"Nectar Addict\" trait). -->"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set _nectarStress to (-1 * _nectarGain)>>",
+   "\t\t\t<<physique 1 \"invig\">><<stress _nectarStress>><<lstress>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<!--",
+   "\t\t\t\t1 mL of nectar = 1 point of $physique.",
+   "",
+   "\t\t\t\tSince physique(1) = 10 $physique, divide \"change\" by 10.",
+   "\t\t\t-->",
+   "\t\t\t<<physique `(1 / 10) * _change` \"invig\">>",
+   "\t\t\t<!--",
+   "\t\t\t\tReduce the PC's stress by the amount of addiction that they've gained.",
+   "",
+   "\t\t\t\t1 mL of nectar = 0.2 points of addiction = -16 points of $stress.",
+   "\t\t\t-->",
+   "\t\t\t<<stress `(-0.2 * _change)`>><<lstress>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\t<!-- Clamps for safety. -->"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $settings.bestialityEnabled and ($settings.monsterChance lt 100 or $settings.monsterHallucinationsOnly)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if animalSexEnabledForType(\"dog\") and (monsterChanceForType(\"dog\") lt 100 or monsterHallucinationsOnlyForType(\"dog\"))>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $settings.bestialityEnabled and ($settings.monsterChance lt 100 or $settings.monsterHallucinationsOnly) and (($_hasvagina and ($pillory.tenant.special.name is \"\" or $pillory.tenant.person.virginity.vaginal isnot true)) or ($settings.analEnabled and ($pillory.tenant.special.name is \"\" or $pillory.tenant.person.virginity.anal isnot true))) and ((settings.beastMaleChance gt 0 and $settings.maleNPCVaginaChance lt 100) or (settings.beastMaleChance lt 100 and $settings.femaleNPCPenisChance gt 0))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if animalSexEnabledForType(\"dog\") and (monsterChanceForType(\"dog\") lt 100 or monsterHallucinationsOnlyForType(\"dog\")) and (($_hasvagina and ($pillory.tenant.special.name is \"\" or $pillory.tenant.person.virginity.vaginal isnot true)) or ($settings.analEnabled and ($pillory.tenant.special.name is \"\" or $pillory.tenant.person.virginity.anal isnot true))) and ((beastMaleChanceForType(\"dog\") gt 0 and $settings.maleNPCVaginaChance lt 100) or (beastMaleChanceForType(\"dog\") lt 100 and $settings.femaleNPCPenisChance gt 0))>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $pillory.tenant and $pillory.tenant.special.name is \"Whitney\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $pillory.tenant?.special.name is \"Whitney\">>"
+  ],
+  "context": "<<widget \"clear_pillory\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $rentmoney to 10000>><<rentmod>>",
+   "\t<<set $renttime to 7>><<set $rentday to Time.weekDay>>",
+   "\t<<set $rentstage to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $rentMoney to 10000>><<rentmod>>",
+   "\t<<set $rentTime to 7>>",
+   "\t<<set $rentStage to 1>>"
+  ],
+  "context": "\t<<set $cheatsEnabled to true>><<money 500000 \"debug\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $_val gt 0 and !$daily.school[$_rep] and !$worn.face.type.includes(\"mask\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $_val gt 0 and !$daily.school[$_rep] and !$worn.face.type.includes(\"mask\") and $settings.nudeGenderPerception !== 0>> <!-- can only happen if genitals aren't ignored, otherwise people don't care -->"
+  ],
+  "context": "\t\t<<set $schoolrep[$_rep] to Math.max(0, $schoolrep[$_rep] + $_val)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\t\t<!-- messages shouldn't be sent for a rep increase if rep is already 5 -->",
+   "\t\t<<if $schoolrep[$_rep] lt 5>>",
+   "\t\t\t<!-- cap max rep at 5 -->",
+   "\t\t\t<<set $schoolrep[$_rep] to Math.min($schoolrep[$_rep] + $_val, 5)>>",
+   "\t\t\t",
+   "\t\t\t<!-- cue the appropriate rep increase message -->",
+   "\t\t\t<<if $_rep is \"herm\">>",
+   "\t\t\t\t<<set $school_herm_message to $schoolrep.herm>>",
+   "\t\t\t<<elseif $rep is \"crossdress\">>",
+   "\t\t\t\t<<set $school_crossdress_message to $schoolrep.crossdress>>",
+   "\t\t\t<</if>>",
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t<<set $schoolrep.crossdress to Math.min(5 - $schoolrep.herm, $schoolrep.crossdress)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $prof.spray>>",
+   "\t<<unset $prof.net  >>",
+   "\t<<unset $prof.baton>>",
+   "\t<<unset $prof.whip >>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $prof.spray  >>",
+   "\t<<unset $prof.net    >>",
+   "\t<<unset $prof.baton  >>",
+   "\t<<unset $prof.whip   >>",
+   "\t<<unset $prof.pickaxe>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $player.skin.bodyFreckles to \"none\">>",
+   "\t<<set $player.skin.faceFreckles to false>>"
+  ],
+  "context": "\t<<set $facevariant to \"default\">>"
+ }
+]

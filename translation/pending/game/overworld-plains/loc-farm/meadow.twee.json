@@ -1,0 +1,116 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $fox gte 3>>",
+   "\t\t<<link [[Present yourself|Meadow Cave Sex]]>><<set $sexstart to 1>><</link>><<deviant1>><<fox>>",
+   "\t\t<br>",
+   "\t<<elseif hasSexStat(\"deviancy\", 4)>>",
+   "\t\t<<link [[Present yourself|Meadow Cave Sex]]>><<set $sexstart to 1>><</link>><<deviant4>>",
+   "\t\t<br>"
+  ],
+  "old_kr": [
+   "\t<<if $fox gte 3>>",
+   "\t\t<<link [[몸을 내준다|Meadow Cave Sex]]>><<set $sexstart to 1>><</link>><<deviant1>><<fox>>",
+   "\t\t<br>",
+   "\t<<elseif hasSexStat(\"deviancy\", 4)>>",
+   "\t\t<<link [[몸을 내준다|Meadow Cave Sex]]>><<set $sexstart to 1>><</link>><<deviant4>>",
+   "\t\t<br>"
+  ],
+  "new_en": [
+   "\t<<if monsterSexEnabledForType(\"fox\")>>",
+   "\t\t<<if $fox gte 3>>",
+   "\t\t\t<<link [[Present yourself|Meadow Cave Sex]]>><<set $sexstart to 1>><</link>><<deviant1>><<fox>>",
+   "\t\t\t<br>",
+   "\t\t<<elseif hasSexStat(\"deviancy\", 4)>>",
+   "\t\t\t<<link [[Present yourself|Meadow Cave Sex]]>><<set $sexstart to 1>><</link>><<deviant4>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if (displayDefiantOption(500)) and hasSexStat(\"deviancy\", 2)>>",
+   "\t\t<<link [[Punish|Meadow Cave Punish]]>><<wolfDefiant 500>><<def 1>><<trauma -6>><<stress -6>><</link>><<deviant2>><<defianttext 500>><<ltrauma>><<lstress>>"
+  ],
+  "old_kr": [
+   "\t<<if (displayDefiantOption(500)) and hasSexStat(\"deviancy\", 2)>>",
+   "\t\t<<link [[벌을 준다|Meadow Cave Punish]]>><<wolfDefiant 500>><<def 1>><<trauma -6>><<stress -6>><</link>><<deviant2>><<defianttext 500>><<ltrauma>><<lstress>>"
+  ],
+  "new_en": [
+   "\t<<if (displayDefiantOption(500)) and hasSexStat(\"deviancy\", 2) and monsterSexEnabledForType(\"fox\")>>",
+   "\t\t<<link [[Punish|Meadow Cave Punish]]>><<wolfDefiant 500>><<def 1>><<trauma -6>><<stress -6>><</link>><<deviant2>><<defianttext 500>><<ltrauma>><<lstress>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $fox gte 3>>",
+   "\t\t\t\t<<link [[Present yourself|Meadow Chase Hill Sex]]>><<set $sexstart to 1>><</link>><<deviant1>><<fox>>",
+   "\t\t\t\t<br>",
+   "\t\t\t<<elseif hasSexStat(\"deviancy\", 4)>>",
+   "\t\t\t\t<<link [[Present yourself|Meadow Chase Hill Sex]]>><<set $sexstart to 1>><</link>><<deviant4>>",
+   "\t\t\t\t<br>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $fox gte 3>>",
+   "\t\t\t\t<<link [[몸을 내준다|Meadow Chase Hill Sex]]>><<set $sexstart to 1>><</link>><<deviant1>><<fox>>",
+   "\t\t\t\t<br>",
+   "\t\t\t<<elseif hasSexStat(\"deviancy\", 4)>>",
+   "\t\t\t\t<<link [[몸을 내준다|Meadow Chase Hill Sex]]>><<set $sexstart to 1>><</link>><<deviant4>>",
+   "\t\t\t\t<br>"
+  ],
+  "new_en": [
+   "\t\t\t<<if monsterSexEnabledForType(\"fox\")>>",
+   "\t\t\t\t<<if $fox gte 3>>",
+   "\t\t\t\t\t<<link [[Present yourself|Meadow Chase Hill Sex]]>><<set $sexstart to 1>><</link>><<deviant1>><<fox>>",
+   "\t\t\t\t\t<br>",
+   "\t\t\t\t<<elseif hasSexStat(\"deviancy\", 4)>>",
+   "\t\t\t\t\t<<link [[Present yourself|Meadow Chase Hill Sex]]>><<set $sexstart to 1>><</link>><<deviant4>>",
+   "\t\t\t\t\t<br>",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if (displayDefiantOption(500)) and hasSexStat(\"deviancy\", 2)>>",
+   "\t\t\t\t<<link [[Punish|Meadow Chase Hill Punish]]>><<wolfDefiant 500>><<def 1>><<trauma -6>><<stress -6>><</link>><<deviant2>><<defianttext 500>><<ltrauma>><<lstress>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if (displayDefiantOption(500)) and hasSexStat(\"deviancy\", 2)>>",
+   "\t\t\t\t<<link [[벌을 준다|Meadow Chase Hill Punish]]>><<wolfDefiant 500>><<def 1>><<trauma -6>><<stress -6>><</link>><<deviant2>><<defianttext 500>><<ltrauma>><<lstress>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if (displayDefiantOption(500)) and hasSexStat(\"deviancy\", 2) and monsterSexEnabledForType(\"fox\")>>",
+   "\t\t\t\t<<link [[Punish|Meadow Chase Hill Punish]]>><<wolfDefiant 500>><<def 1>><<trauma -6>><<stress -6>><</link>><<deviant2>><<defianttext 500>><<ltrauma>><<lstress>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if animalSexEnabledForType(\"fox\")>>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if animalSexEnabledForType(\"fox\")>>"
+  ],
+  "context": "\t\t\t<br>"
+ }
+]

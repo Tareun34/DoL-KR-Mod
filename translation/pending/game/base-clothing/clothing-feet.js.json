@@ -1,0 +1,35 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tdescription: \"Every step feels flightless\","
+  ],
+  "old_kr": [
+   "\t\t\tdescription: \"걸음마다 날지 못하는 기분이 듭니다.\","
+  ],
+  "new_en": [
+   "\t\t\tdescription: \"Every step feels flightless.\","
+  ],
+  "context": "\t\t\tcost: 8000,"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tpattern_name: \"species\","
+  ],
+  "context": "\t\t\tpattern_options: [\"bunny\", \"ducky\", \"foxy\", \"kitty\", \"moomoo\", \"puppy\", \"teddy bear\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\ttype: [\"normal\"],"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\ttype: [\"normal\", \"heels\"],"
+  ],
+  "context": "\t\t\tshop: [\"clothing\"],"
+ }
+]

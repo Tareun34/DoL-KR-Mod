@@ -335,7 +335,7 @@
 					<<if $rightarm is "vagina">>
 						<<set $rightarm to 0>>
 					<</if>>
-					<<if $NPCList[$vaginatarget].condom and $NPCList[$vaginatarget].condom.willUse is true and $NPCList[$vaginatarget].condom.worn is false and !$NPCList[$vaginatarget].penisdesc.includes("strap-on")>>
+					<<if $NPCList[$vaginatarget].condom?.willUse is true and $NPCList[$vaginatarget].condom.worn is false and !$NPCList[$vaginatarget].penisdesc.includes("strap-on")>>
 						<<if $NPCList[$vaginatarget].chastity.penis.includes("chastity")>>
 							<<He>>【은는】 콘돔을 쓰려 애쓰지만, <<his>> $NPCList[$vaginatarget].chastity.penis 너머로 씌울 수 없었다. <span class="red"><<He>>【은는】 재빨리 포기한다.</span>
 							<<set $NPCList[$vaginatarget].condom.willUse to false>>
@@ -439,7 +439,7 @@
 							<<violence 30>>
 					<</switch>>
 				<</if>>
-				<<sex 100 "genitals" $vaginatarget>><<bruise vagina>><<vaginalstat>><<raped>><<vaginaraped>><<takeVirginity $NPCList[$vaginatarget].fullDescription "vaginal">><<takeNPCVirginity $vaginatarget "penile">><<set $vaginastate to "penetrated">><<set $speechvaginavirgin to 1>>
+				<<sex 100 "genitals" $vaginatarget>><<bruise vagina>><<vaginalstat>><<raped>><<vaginaraped>><<takeVirginity $NPCList[$vaginatarget].fullDescription "vaginal">><<takeNPCVirginity $vaginatarget "penile">><<set $vaginastate to "penetrated">><<set $speechVaginaVirgin to 1>>
 			<</if>>
 		<<else>>
 			당신은 <<personselect $vaginatarget>><<combatpersons>> <<print window.KR.getPenisDescKr($NPCList[$vaginatarget].penisdesc)>>에 <<pussy>>【을를】 <<vaginaltext>> 들이밀지만, <span class="blue">감싸는 데 실패한다.</span> <<His>> 자지가 각도를 틀어 당신의 <<if $player.penisExist>><<penis>><<else>>클리토리스<</if>>【을를】 문지른다.
@@ -469,7 +469,7 @@
 			<<if $rightarm is "vagina">>
 				<<set $rightarm to 0>>
 			<</if>>
-			<<if $NPCList[$vaginadoubletarget].condom and $NPCList[$vaginadoubletarget].condom.willUse is true and $NPCList[$vaginadoubletarget].condom.worn is false and !$NPCList[$vaginadoubletarget].penisdesc.includes("strap-on")>>
+			<<if $NPCList[$vaginadoubletarget].condom?.willUse is true and $NPCList[$vaginadoubletarget].condom.worn is false and !$NPCList[$vaginadoubletarget].penisdesc.includes("strap-on")>>
 				<<if $NPCList[$vaginadoubletarget].chastity.penis.includes("chastity")>>
 					<<He>>【은는】 콘돔을 씌우려 애쓰지만, <<his>> $NPCList[$vaginadoubletarget].chastity.penis 너머로 제대로 덮을 수 없다. <span class="red"><<He>>【은는】 이내 체념한다.</span>
 					<<set $NPCList[$vaginadoubletarget].condom.willUse to false>>
@@ -544,7 +544,7 @@
 				<</if>>
 				<span class="pink">당신의 젖꼭지가 딱딱하게 서고, 두 자지를 받아들인 충격에 몸이 잘게 떨린다.</span>
 				<<set _mydesc to ($NPCList[_npcA].fullDescription + " and " + $NPCList[_npcB].fullDescription)>>
-				<<sex 50 "genitals" $vaginatarget>><<sex 50 "genitals" $vaginadoubletarget>><<bruise vagina>><<vaginalstat>><<vaginaldoublestat>><<raped>><<vaginaraped>><<takeVirginity `[_npcA, _npcB]` "vaginal">><<takeNPCVirginity _npcA "penile">><<takeNPCVirginity _npcB "penile">><<set $vaginastate to "doublepenetrated">><<set $speechvaginavirgin to 1>>
+				<<sex 50 "genitals" $vaginatarget>><<sex 50 "genitals" $vaginadoubletarget>><<bruise vagina>><<vaginalstat>><<vaginaldoublestat>><<raped>><<vaginaraped>><<takeVirginity `[_npcA, _npcB]` "vaginal">><<takeNPCVirginity _npcA "penile">><<takeNPCVirginity _npcB "penile">><<set $vaginastate to "doublepenetrated">><<set $speechVaginaVirgin to 1>>
 			<</if>>
 		<<else>>
 			당신은 <<personselect $vaginatarget>><<combatpersons>> <<print window.KR.getPenisDescKr($NPCList[$vaginatarget].penisdesc)>>에 <<pussy>>【을를】 <<vaginaltext>> 갖다 대지만, <span class="blue">감싸는 데는 실패한다.</span> <<His>> 자지가 각도를 틀어 당신의 <<if $player.penisExist>><<penis>><<else>>클리토리스<</if>>【을를】 문지른다.

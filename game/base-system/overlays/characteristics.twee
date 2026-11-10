@@ -31,8 +31,8 @@
 				젖소
 			<</if>>
 		<<elseif $harpy gte 6>>
-			<<if $hallucinations gte 2 or !$settings.bestialityEnabled>>
-				하피
+			<<if resolveIfNamedBeastIsMonster("greathawk")>>
+				harpy
 			<<else>>
 				새
 			<</if>>
@@ -218,9 +218,17 @@
 	<</if>>
 
 	<!--Semen Details-->
-	<<if $player.penisExist and $player.penissize gte 1>>
-		<<set _semenCapacityTextConfig = { currentValue : $semen_volume, preText: '당신은 ', states : [
-{ requiredValue: 0, color: '', description: '정액을', postText: ' 생산하지 않는다.' },{ requiredValue: 1, color: 'red', description: '아주 적은', postText: ' 양의 정액을 생산하며, ' },{ requiredValue: 100, color: 'pink', description: '적은', postText: ' 양의 정액을 생산하며, ' },{ requiredValue: 300, color: 'purple', description: '적당한', postText: ' 양의 정액을 생산하며, ' },{ requiredValue: 500, color: 'blue', description: '꽤 많은', postText: ' 양의 정액을 생산하며, ' },{ requiredValue: 1000, color: 'lblue', description: '많은', postText: ' 양의 정액을 생산하며, ' },{ requiredValue: 1500, color: 'teal', description: '엄청난', postText: ' 양의 정액을 생산하며, ' },{ requiredValue: 2000, color: 'green', description: '경이로운', postText: ' 양의 정액을 생산하며, ' }			]
+	<<if $player.penisExist and $player.penissize gte 0>>
+		<<set _semenCapacityTextConfig = { currentValue : $semen_volume, preText: 'You produce ', states : [
+				{ requiredValue: 0,		color: '',			description: '',				postText: ' no cum.' },
+				{ requiredValue: 1,		color: 'red',		description: 'a tiny',			postText: ' amount of cum, ' },
+				{ requiredValue: 100,	color: 'pink',		description: 'a small',			postText: ' amount of cum, ' },
+				{ requiredValue: 300,	color: 'purple',	description: 'a limited',		postText: ' amount of cum, ' },
+				{ requiredValue: 500,	color: 'blue',		description: 'a decent',		postText: ' amount of cum, ' },
+				{ requiredValue: 1000,	color: 'lblue',		description: 'a large',			postText: ' amount of cum, ' },
+				{ requiredValue: 1500,	color: 'teal',		description: 'a huge',			postText: ' amount of cum, ' },
+				{ requiredValue: 2000,	color: 'green',		description: 'a prodigious',	postText: ' amount of cum, ' }
+			]
 		}>>
 		<<set _semenVolumeTextConfig = { currentValue : $semen_amount, states : [
 { requiredValue: 0, color: 'red', preText: "", description: "완전히 짜내 말랐습니다."},{ requiredValue: 1, color: 'pink', preText: "현재는 ", description: '거의 텅 비었습니다. '},{ requiredValue: ($semen_volume / 7) * 2, color: 'pink', preText: "현재는 ", description: '거의 바닥났습니다. '},{ requiredValue: ($semen_volume / 7) * 3, color: 'purple', preText: "현재는 ", description: '얼마 남지 않았습니다. '},{ requiredValue: ($semen_volume / 7) * 4, color: 'blue', preText: "현재는 ", description: '절반쯤 남아 있습니다. '},{ requiredValue: ($semen_volume / 7) * 5, color: 'lblue', preText: "현재는 ", description: '넉넉히 남아 있습니다. '},{ requiredValue: ($semen_volume / 7) * 6, color: 'teal', preText: "현재는 ", description: '거의 가득 차 있습니다. '},{ requiredValue: $semen_volume, color: 'green', preText: "현재는 ", description: '터질듯 가득 차 있습니다. '}			]
@@ -285,7 +293,7 @@
 
 	<br><br>
 	<<bodywriting>>
-	<div id="characteristics-display">
+	<div class="characteristics-display">
 
 		<br>
 		<span class="gold">핵심 특성</span>
@@ -796,10 +804,11 @@
 		<span class="gold">무기 스킬</span>
 		<div id="prof" class="characteristic-box-list">
 			<<silently>>
-				<<set _sprayConfig =		{ name : "후추 스프레이",		displayType : "grade",	currentValue : $prof.spray,		modifier: 100, modTypes: { good: [], bad: [] },		states : _basicSkillGrades}>>
-				<<set _netConfig =			{ name : "그물",		displayType : "grade",	currentValue : $prof.net,		modifier: 100, modTypes: { good: [], bad: [] },		states : _basicSkillGrades}>>
-				<<set _batonConfig =		{ name : "봉",		displayType : "grade",	currentValue : $prof.baton,		modifier: 100, modTypes: { good: [], bad: [] },		states : _basicSkillGrades}>>
-				<<set _whipConfig =			{ name : "채찍",		displayType : "grade",	currentValue : $prof.whip,		modifier: 100, modTypes: { good: [], bad: [] },		states : _basicSkillGrades}>>
+				<<set _sprayConfig =		{ name : "Sprays",		displayType : "grade",	currentValue : $prof.spray,		modifier: 100, modTypes: { good: [], bad: [] },		states : _basicSkillGrades}>>
+				<<set _netConfig =			{ name : "Nets",		displayType : "grade",	currentValue : $prof.net,		modifier: 100, modTypes: { good: [], bad: [] },		states : _basicSkillGrades}>>
+				<<set _batonConfig =		{ name : "Batons",		displayType : "grade",	currentValue : $prof.baton,		modifier: 100, modTypes: { good: [], bad: [] },		states : _basicSkillGrades}>>
+				<<set _whipConfig =			{ name : "Whips",		displayType : "grade",	currentValue : $prof.whip,		modifier: 100, modTypes: { good: [], bad: [] },		states : _basicSkillGrades}>>
+				<<set _pickaxeConfig =		{ name : "Pickaxes",	displayType : "grade",	currentValue : $prof.pickaxe,	modifier: 100, modTypes: { good: [], bad: [] },		states : _basicSkillGrades}>>
 				<<set _hiddenConfig =		{ name : "<i>????</i>",	displayType : "grade",	currentValue : 0,				modifier: 100, modTypes: { good: [], bad: [] },		states : _basicSkillGrades}>>
 			<</silently>>
 			<<characteristic-box _sprayConfig>>
@@ -818,12 +827,11 @@
 			<<else>>
 				<<characteristic-box _hiddenConfig>>
 			<</if>>
-			/*
 			<<if $prof.pickaxe isnot undefined>>
 				<<characteristic-box _pickaxeConfig>>
 			<<else>>
 				<<characteristic-box _hiddenConfig>>
-			<</if>>*/
+			<</if>>
 		</div>
 	</div>
 

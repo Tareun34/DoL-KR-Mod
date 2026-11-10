@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tThe second officer, a <<person3>><<person>> watches you through the rearview mirror."
+  ],
+  "old_kr": [
+   "\t두 번째 경찰관, <<person3>><<person>>【이가】 백미러를 통해 당신을 지켜본다."
+  ],
+  "new_en": [
+   "\tThe second officer, a <<person3>><<person>>, watches you through the rearview mirror."
+  ],
+  "context": "<<else>>"
+ }
+]

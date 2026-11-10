@@ -1,0 +1,50 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<i>You realise there are no more favours you can think of. You could end the game by declaring yourself victorious.</i>",
+   "\t<<if $estate.cards.confiscatedClothes and $estate.cards.confiscatedClothes.length gt 0>>"
+  ],
+  "old_kr": [
+   "\t<i>더 이상 생각나는 소원이 없다는 것을 깨닫는다. 승리를 선언하여 게임을 끝낼 수 있다.</i>",
+   "\t<<if $estate.cards.confiscatedClothes and $estate.cards.confiscatedClothes.length gt 0>>"
+  ],
+  "new_en": [
+   "\t<i>You realise there are no more favours you can think of. You could end the game by declaring yourself victorious.</i>",
+   "\t<<if $estate.cards.confiscatedClothes?.length gt 0>>"
+  ],
+  "context": "<<if _favoursRemaining is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $estate.cards.confiscatedClothes and $estate.cards.confiscatedClothes.length gt 0>>",
+   "\t<span class=\"gold\">Normally, Wren would be feeling too confident to even consider returning your clothing, but this might be your chance.</span>"
+  ],
+  "old_kr": [
+   "<<if $estate.cards.confiscatedClothes and $estate.cards.confiscatedClothes.length gt 0>>",
+   "\t<span class=\"gold\">평소 같았으면 렌은 자신만만해서 당신의 옷을 돌려줄 생각조차 하지 않았겠지만, 지금이 기회일지도 모른다.</span>"
+  ],
+  "new_en": [
+   "<<if $estate.cards.confiscatedClothes?.length gt 0>>",
+   "\t<span class=\"gold\">Normally, Wren would be feeling too confident to even consider returning your clothing, but this might be your chance.</span>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $estate.cards.confiscatedClothes and $estate.cards.confiscatedClothes.length gt 0>>",
+   "\tYou walk outside, leaving your confiscated clothing behind."
+  ],
+  "old_kr": [
+   "<<if $estate.cards.confiscatedClothes and $estate.cards.confiscatedClothes.length gt 0>>",
+   "\t당신은 빼앗긴 옷을 남겨둔 채 밖으로 걸어 나간다."
+  ],
+  "new_en": [
+   "<<if $estate.cards.confiscatedClothes?.length gt 0>>",
+   "\tYou walk outside, leaving your confiscated clothing behind."
+  ],
+  "context": ""
+ }
+]

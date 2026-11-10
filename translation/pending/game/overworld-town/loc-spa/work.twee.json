@@ -1,0 +1,25 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<link [[Accept|Spa Oral Start]]>><<set $desperateaction to 1>><</link>><<promiscuous4>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<link [[수락한다|Spa Oral Start]]>><<set $desperateaction to 1>><</link>><<promiscuous4>>"
+  ],
+  "new_en": [
+   "\t\t\t<<set _desperateaction to 1>>",
+   "\t\t\t<<link [[Accept|Spa Oral Start]]>><<set $desperateaction to 1>><</link>><<promiscuous4>>"
+  ],
+  "context": "\t\t<<elseif $uncomfortable.prostituting is false>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set _desperateaction to 1>>"
+  ],
+  "context": "\t\t<<elseif $uncomfortable.prostituting is false>>"
+ }
+]

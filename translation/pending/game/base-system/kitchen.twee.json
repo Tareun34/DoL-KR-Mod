@@ -1,0 +1,113 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\tMake:",
+   "\t\t\t\t\t\t<<set _hours to Math.floor($_setupItem.recipe.cook_minutes / 60)>>",
+   "\t\t\t\t\t\t<<set _minutes to $_setupItem.recipe.cook_minutes % 60>>",
+   "\t\t\t\t\t\t<<set _timeString to \" (\" + (_hours lt 10 ? \"0\": \"\") +_hours+\":\"+(_minutes lt 10 ? \"0\": \"\")+_minutes+\")\">>",
+   "\t\t\t\t\t\t<<link [[\"1\" + _timeString|$passage]]>><<make_recipe $lastRecipeViewed 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t만들기:",
+   "\t\t\t\t\t\t<<set _hours to Math.floor($_setupItem.recipe.cook_minutes / 60)>>",
+   "\t\t\t\t\t\t<<set _minutes to $_setupItem.recipe.cook_minutes % 60>>",
+   "\t\t\t\t\t\t<<set _timeString to \" (\" + (_hours lt 10 ? \"0\": \"\") +_hours+\":\"+(_minutes lt 10 ? \"0\": \"\")+_minutes+\")\">>",
+   "\t\t\t\t\t\t<<link [[\"1인분\" + _timeString|$passage]]>><<make_recipe $lastRecipeViewed 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\tMake:",
+   "\t\t\t\t\t\t<<link [[\"1 \" + printTime($_setupItem.recipe.cook_minutes, true)|$passage]]>><<make_recipe $lastRecipeViewed 1>><</link>>"
+  ],
+  "context": "\t\t\t\t\t<<elseif $_setupItem.recipe.ingredients.every(ingredient => $foodstuff[ingredientUsed(ingredient, $lastRecipeViewed)].amount gte 1 or _ingredientsSupplied?.includes(ingredientUsed(ingredient, $lastRecipeViewed)))>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t| <<link [[\"3\" + _timeString|$passage]]>><<make_recipe $lastRecipeViewed 3>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t| <<link [[\"3인분\" + _timeString|$passage]]>><<make_recipe $lastRecipeViewed 3>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t| <<link [[\"3 \" + printTime(_wait, true)|$passage]]>><<make_recipe $lastRecipeViewed 3>><</link>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<if (!_hourRestriction or _futureTime.hour lt _hourRestriction or _futureTime.minute lte 15) and !_limitedIngredientRestriction>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\"Do not remove the shells until the prawns have been simmered. This helps the broth gain a lot of flavour you would otherwise lose. The shells are sieved out later.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\"새우를 끓이기 전에는 껍질을 벗기지 마라. 그래야 육수에 그냥 잃어버렸을 맛이 많이 우러난다. 껍질은 나중에 걸러낸다.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\"Do not remove the shells until the prawns have been simmered. This helps the broth gain a lot of flavour you would otherwise lose. The shells are sieved out later.\"",
+   "\t\t\t<<case \"pumpkin_drink\">>",
+   "\t\t\t\t\"With some cinnamon and nutmeg on top, it's quite a treat on a chilly night. Be careful with the sugar. This isn't a latte, so there's no coffee bitterness to counteract.\"",
+   "\t\t\t<<case \"pumpkin_pie\">>",
+   "\t\t\t\t\"A classic autumn dessert in some parts. Make sure the flesh is suitably pulped. The pumpkin custard should be smooth. Served best with fresh whipped cream on top.\""
+  ],
+  "context": "\t\t\t<<case \"prawn_bisque\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\"As with all cakes, be careful not to overbake it. When in doubt, use the toothpick trick.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t\"모든 케이크가 그렇듯, 너무 오래 굽지 않도록 조심해라. 확신이 없으면 이쑤시개 요령을 써라.\""
+  ],
+  "new_en": [
+   "\t\t\t\t\"As with all cakes, be careful not to overbake it. When in doubt, use the toothpick trick.\"",
+   "\t\t\t<<case \"stuffed pumpkin\">>",
+   "\t\t\t\t\"You could stuff it with all sorts of ingredients, but we'll keep it simple. Make sure you rub enough oil into the skin. It'll need the encouragement.\""
+  ],
+  "context": "\t\t\t<<case \"sticky_toffee_pudding\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\"Let's get right into it.\"",
+   "\t\t\t\t<<if $debug is 1 or $options.debugdisable is \"f\">>",
+   "\t\t\t\t\t<span class=\"black\">Food item \"_args[0]\" does not have an exam description!</span>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\"바로 시작하지.\"",
+   "\t\t\t\t<<if $debug is 1 or $options.debugdisable is \"f\">>",
+   "\t\t\t\t\t<span class=\"black\">음식 항목 \"_args[0]\"에는 시험 설명이 없습니다!</span>"
+  ],
+  "new_en": [
+   "\t\t\t\t\"Let's get right into it.\"",
+   "\t\t\t\t<<if $debug or $options.debugdisable is \"f\">>",
+   "\t\t\t\t\t<span class=\"black\">Food item \"_args[0]\" does not have an exam description!</span>"
+  ],
+  "context": "\t\t\t<<default>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<set _hours to Math.floor(($_setupItem.recipe.cook_minutes * 3) / 60)>>",
+   "\t\t\t\t\t\t\t<<set _minutes to ($_setupItem.recipe.cook_minutes * 3) % 60>>",
+   "\t\t\t\t\t\t\t<<set _timeString to \" (\" + (_hours lt 10 ? \"0\": \"\") +_hours+\":\"+(_minutes lt 10 ? \"0\": \"\")+_minutes+\")\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<set _wait to $_setupItem.recipe.cook_minutes*3>>"
+  ],
+  "context": "\t\t\t\t\t\t<<if $_setupItem.recipe.ingredients.every(ingredient => $foodstuff[ingredientUsed(ingredient, $lastRecipeViewed)].amount gte 3 or _ingredientsSupplied?.includes(ingredientUsed(ingredient, $lastRecipeViewed)))>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<set _futureTime to _futureTime.addHours(_hours)>>",
+   "\t\t\t\t\t\t\t<<set _futureTime to _futureTime.addMinutes(_minutes)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<set _futureTime to _futureTime.addMinutes(_wait)>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<set _futureTime to new DateTime(Time.date.timeStamp)>>"
+ }
+]

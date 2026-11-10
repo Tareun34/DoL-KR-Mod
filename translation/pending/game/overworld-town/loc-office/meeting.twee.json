@@ -1,0 +1,65 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $rng gte 51 or (!$settings.bestialityEnabled and $monster isnot 1)>>",
+   "\t\tA <<person3>><<person>> enters the room and sits down next to you."
+  ],
+  "old_kr": [
+   "\t<<if $rng gte 51 or (!$settings.bestialityEnabled and $monster isnot 1)>>",
+   "\t\t<<person3>><<person>>【이가】 방으로 들어와 당신 옆에 앉는다."
+  ],
+  "new_en": [
+   "\t<<if $rng gte 51 or !beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\tA <<person3>><<person>> enters the room and sits down next to you."
+  ],
+  "context": "<<if dangerEvent(1, 8000, 300*$officeFloor)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tslips <<his>> hand under your $worn.lower.name, rubbing you through your <<undies>>."
+  ],
+  "old_kr": [
+   "\t\t\t당신의 $worn.lower.name 아래로 <<his>> 손을 슬쩍 넣어 <<undies>> 위로 당신을 문지른다."
+  ],
+  "new_en": [
+   "\t\t\tslips <<his>> hand under your $worn.lower.name and begins rubbing your <<undies>>."
+  ],
+  "context": "\t\t<<if setup.clothes.lower[clothesIndex('lower', $worn.lower)].skirt is 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tshoves <<his>> hand down your $worn.lower.name, rubbing you through your <<undies>>."
+  ],
+  "old_kr": [
+   "\t\t\t당신의 $worn.lower.name 안으로 <<his>> 손을 쑤셔 넣어 <<undies>> 위로 당신을 문지른다."
+  ],
+  "new_en": [
+   "\t\t\tshoves <<his>> hand down your $worn.lower.name and begins rubbing your <<undies>>."
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tThe <<person>> vigorously",
+   "\t\t<<if $player.penisExist>>",
+   "\t\t\tjerks your <<genitals>>."
+  ],
+  "old_kr": [
+   "\t\t<<person>>【은는】 격렬하게",
+   "\t\t<<if $player.penisExist>>",
+   "\t\t\t당신의 <<genitals>>【을를】 흔든다."
+  ],
+  "new_en": [
+   "\t\tThe <<person>> vigorously",
+   "\t\t<<if $player.penisExist and $player.vaginaExist>>",
+   "\t\t\tstrokes your <<genitals>>.",
+   "\t\t<<elseif $player.penisExist>>",
+   "\t\t\tjerks your <<genitals>>."
+  ],
+  "context": "\t<<else>>"
+ }
+]

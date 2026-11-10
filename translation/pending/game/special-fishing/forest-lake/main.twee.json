@@ -1,0 +1,90 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<addinlineevent \"bite\" fishingCatchEventWeight(\"fishingForestLake\", 10)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<addinlineevent \"bite\" `fishingCatchEventWeight(\"fishingForestLake\", 10)`>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<addinlineevent \"wolfStart\" fishingDangerEventWeight(0.75)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addinlineevent \"wolfStart\" `fishingDangerEventWeight(0.75)`>>"
+  ],
+  "context": "<<if $fishing.fishingForestLake.event is \"none\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<addinlineevent \"bearStart\" fishingDangerEventWeight(0.75)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addinlineevent \"bearStart\" `fishingDangerEventWeight(0.75)`>>"
+  ],
+  "context": "<<if $fishing.fishingForestLake.event is \"none\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<addinlineevent \"plantPersonStart\" fishingDangerEventWeight(0.75)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<addinlineevent \"plantPersonStart\" `fishingDangerEventWeight(0.75)`>>"
+  ],
+  "context": "\t<<if $fishing.fishingForestLake.event is \"none\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<addinlineevent \"plantStart\" fishingDangerEventWeight(0.75)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<addinlineevent \"plantStart\" `fishingDangerEventWeight(0.75)`>>"
+  ],
+  "context": "\t<<if $fishing.fishingForestLake.event is \"none\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<addinlineevent \"boarStart\" fishingDangerEventWeight(0.75)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addinlineevent \"boarStart\" `fishingDangerEventWeight(0.75)`>>"
+  ],
+  "context": "<<if $fishing.fishingForestLake.event is \"none\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<addinlineevent \"lakeSwarm\" fishingDangerEventWeight(0.75)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addinlineevent \"lakeSwarm\" `fishingDangerEventWeight(0.75)`>>"
+  ],
+  "context": "<<if $settings.swarmsEnabled>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Widgets Fishing Forest Lake Wait Flavor [widget]"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ":: Widgets Fishing Forest Lake Wait Flavour [widget]"
+  ],
+  "context": ""
+ }
+]

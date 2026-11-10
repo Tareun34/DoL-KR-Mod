@@ -1,0 +1,31 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You slap the grin off the <<person2>><<persons>> face, and shove by. \"I'm telling the head you hit me!\" <<He>> shouts after you. <<His>> friend laughs, you're not sure at whom."
+  ],
+  "old_kr": [
+   "당신은 <<person2>><<persons>> 얼굴에서 미소를 지워버리듯 뺨을 때리고 밀치며 지나간다. \"네가 나 때렸다고 교장한테 이를 거야!\" <<He>>【이가】 당신 뒤에서 소리친다. <<His>> 친구는 웃는다. 누구를 비웃는 건지는 확실하지 않다."
+  ],
+  "new_en": [
+   "You slap the grin off the <<person2>><<persons>> face, and shove by. \"I'm telling the head you hit me!\" <<he>> shouts after you. <<His>> friend laughs, you're not sure at whom."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if dangerEvent()>>",
+   "\t<span class=\"red\">It's no use.</span> A few moments later, the group surrounds you."
+  ],
+  "old_kr": [
+   "<<if dangerEvent()>>",
+   "\t<span class=\"red\">소용없다.</span> 잠시 후, 무리가 당신을 둘러싼다."
+  ],
+  "new_en": [
+   "<<if dangerEvent() and !$worn.under_lower.type.includes(\"naked\")>>",
+   "\t<span class=\"red\">It's no use.</span> A few moments later, the group surrounds you."
+  ],
+  "context": ""
+ }
+]

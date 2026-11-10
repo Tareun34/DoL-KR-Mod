@@ -582,8 +582,8 @@
 		<</if>>
 		<<set _passageStart to _standType is "Chocolate" ? "Robin " : "Robin's ">>
 		<<if $exposed lte 0 or _anyItemsInRoom>>
-			<<if $tutorial is 0 and $debug is 0>>
-				<<robinicon `_standType is "Chocolate" ? "cocoa" : "lemonade"`>><<link [[_linkStart + "준비를 돕는다 (0:30)"|_passageStart + _standType + " Set Tutorial"]]>>
+			<<if $tutorial is 0 and !$debug>>
+				<<robinicon `_standType is "Chocolate" ? "cocoa" : "lemonade"`>><<link [[_linkStart + " to help set up (0:30)"|_passageStart + _standType + " Set Tutorial"]]>>
 					<<pass 30>><<npcincr Robin love 1>><<set $tutorial to 1>>
 					<<if $exposed gte 1 and _anyItemsInRoom>><<storeon "Robin's Room">><</if>>
 				<</link>><<glove>>
@@ -1000,9 +1000,9 @@
 <</widget>>
 
 <<widget "robinRentUnsafeMessage">>
-	<<set $rentsale to 0>>
-	<i>당신은 <<nnpc_he "Bailey">>【이가】 당신이 제때 <<nnpc_him "Bailey">>에게 돈을 낼 거라고 단순히 기대할 수 없다는 것을 베일리에게 증명했다.
-	<span class="red">당신이 베일리를 막아내지 못하면, 로빈은 더 이상 베일리에게서 안전하지 않을 것이다.</span></i>
+	<<set $rentSale to 0>>
+	<i>You've proven to Bailey that <<nnpc_he "Bailey">> can't simply expect you to pay <<nnpc_him "Bailey">> on time.
+	<span class="red">Robin will no longer be safe from Bailey, unless you can hold Bailey off.</span></i>
 	<br><br>
 <</widget>>
 
@@ -1026,18 +1026,18 @@
 
 <<widget "robinroom_link">>
 	<<if C.npc.Robin.init is 1>>
-		<<if Time.dayState isnot "night" and $exposed gte 1 and getRobinLocation() is "orphanage">>
-			<<if hasSexStat("exhibitionism", 5) and $exposed is 2>>
-				<<bedroomicon>><<link [[로빈의 방 (0:01)|Robin Room Naked]]>><<pass 1>><</link>><<exhibitionist5>>
+		<<if Time.dayState isnot "night" and ($exposed gte 1 or $exposedRaw gte 1) and getRobinLocation() is "orphanage">>
+			<<if hasSexStat("exhibitionism", 5) and ($exposed is 2 or $exposedRaw is 2)>>
+				<<bedroomicon>><<link [[Robin's room (0:01)|Robin Room Naked]]>><<pass 1>><</link>><<exhibitionist5>>
 				<br>
 
-			<<elseif hasSexStat("exhibitionism", 4) and $exposed is 1>>
-				<<bedroomicon>><<link [[로빈의 방 (0:01)|Robin Room Naked]]>><<pass 1>><</link>><<exhibitionist4>>
+			<<elseif hasSexStat("exhibitionism", 4) and ($exposed is 1 or $exposedRaw is 1)>>
+				<<bedroomicon>><<link [[Robin's room (0:01)|Robin Room Naked]]>><<pass 1>><</link>><<exhibitionist4>>
 				<br>
 			<</if>>
 
-		<<elseif $exposed lte 0>>
-			<<bedroomicon>><<link [[로빈의 방 (0:01)|Robin's Room Entrance]]>><<pass 1>><</link>>
+		<<elseif $exposed lte 0 or $exposedRaw lte 0>>
+			<<bedroomicon>><<link [[Robin's room (0:01)|Robin's Room Entrance]]>><<pass 1>><</link>>
 			<br>
 
 		<</if>>

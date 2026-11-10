@@ -1,0 +1,110 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<peppersprayicon>><<link [[Buy pepper spray charge (£2500)|Pub Spray]]>><<spray 1>><<money -250000 \"pubPepperSpray\">><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<peppersprayicon>><<link [[후추 스프레이 충전을 산다 (£2500)|Pub Spray]]>><<spray 1>><<money -250000 \"pubPepperSpray\">><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<peppersprayicon>><<link [[Buy pepper spray charge (<<printmoney 250000>>)|Pub Spray]]>><<spray 1>><<money -250000 \"pubPepperSpray\">><</link>>"
+  ],
+  "context": "\t<<if $spray lt $spraymax and $money gte 250000>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You make <span class=\"gold\">£<<print $blackmoney>></span>.",
+   "<<money `$blackmoney * 100` \"pubStolenGoods\">><<set $blackmoney to 0>>"
+  ],
+  "old_kr": [
+   "당신은 <span class=\"gold\">£<<print $blackmoney>></span>【을를】 법니다.",
+   "<<money `$blackmoney * 100` \"pubStolenGoods\">><<set $blackmoney to 0>>"
+  ],
+  "new_en": [
+   "You make <span class=\"gold\">£<<print $blackmoney>></span>.",
+   "<<money `$blackmoney * 100` \"pubStolenGoods\">><<set $blackmoney to 0>><<unset $mine?.heldGem>>"
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\"Hacking a police computer?\" Landry asks, reclining. \"I like your style. But if you're looking for my help with cyber stuff, you're out of luck.\" <<He>> rubs <<his>> chin in thought. \"There is someone.",
+   "\t\t<<if $pubfame and $pubfame.intro>>",
+   "\t\t\tRemember Mickey? The hacker I pointed you to for your fame issue. They should be able to get things done.\""
+  ],
+  "old_kr": [
+   "\t\t\"경찰 컴퓨터를 해킹한다고?\" 랜드리가 몸을 뒤로 젖히며 묻는다. \"네 스타일 마음에 드는군. 하지만 사이버 관련으로 내 도움을 바란다면, 운이 없네.\" <<He>>【은는】 생각에 잠겨 턱을 문지른다. \"적임자가 한 명 있긴 하지.",
+   "\t\t<<if $pubfame and $pubfame.intro>>",
+   "\t\t\t미키 기억나? 네 명성 문제 때문에 내가 소개해줬던 해커 말이야. 그 친구라면 해결할 수 있을 거야.\""
+  ],
+  "new_en": [
+   "\t\t\"Hacking a police computer?\" Landry asks, reclining. \"I like your style. But if you're looking for my help with cyber stuff, you're out of luck.\" <<He>> rubs <<his>> chin in thought. \"There is someone.",
+   "\t\t<<if $pubfame?.intro>>",
+   "\t\t\tRemember Mickey? The hacker I pointed you to for your fame issue. They should be able to get things done.\""
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou lounge around for twenty minutes at the other table. You never hear <<him>> enter, but <<say_brown_fox>> approaches your table and",
+   "\t<<if $avery_mansion.fox.friend or $brownFoxRevealed and _gwylanLovePercent gte 75>>",
+   "\t\tsits next to you,"
+  ],
+  "old_kr": [
+   "\t당신은 다른 테이블에서 20분 동안 빈둥거린다. <<him>>【이가】 들어오는 소리는 듣지 못했지만, <<say_brown_fox>>【이가】 당신의 테이블로 다가와",
+   "\t<<if $avery_mansion.fox.friend or $brownFoxRevealed and _gwylanLovePercent gte 75>>",
+   "\t\t당신 옆에 앉고,"
+  ],
+  "new_en": [
+   "\tYou lounge around for twenty minutes at the other table. You never hear <<him>> enter, but <<say_brown_fox>> approaches your table and",
+   "\t<<if $avery_mansion.fox.friend or $brownFoxRevealed and _gwylanLovePercent gte 65>>",
+   "\t\tsits next to you,"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou lounge around for ten minutes at the other table. You never hear <<him>> enter, but <<say_brown_fox>> approaches your table and",
+   "\t<<if $avery_mansion.fox.friend or $brownFoxRevealed and _gwylanLovePercent gte 75>>",
+   "\t\tsits next to you,"
+  ],
+  "old_kr": [
+   "\t당신은 다른 테이블에서 10분 동안 빈둥거린다. <<him>>【이가】 들어오는 소리는 듣지 못했지만, <<say_brown_fox>>【이가】 당신의 테이블로 다가와",
+   "\t<<if $avery_mansion.fox.friend or $brownFoxRevealed and _gwylanLovePercent gte 75>>",
+   "\t\t당신 옆에 앉고,"
+  ],
+  "new_en": [
+   "\tYou lounge around for ten minutes at the other table. You never hear <<him>> enter, but <<say_brown_fox>> approaches your table and",
+   "\t<<if $avery_mansion.fox.friend or $brownFoxRevealed and _gwylanLovePercent gte 65>>",
+   "\t\tsits next to you,"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $fake_artefact is undefined and $skulduggery gte 600 and C.npc.Avery.init is 1 and !$avery_fate or ($avery_mansion and $avery_mansion.landry is 1 and !$avery_fate)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<elseif $fake_artefact is undefined and $skulduggery gte 600 and C.npc.Avery.init is 1 and !$avery_fate or ($avery_mansion?.landry is 1 and !$avery_fate)>>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $avery_mansion and $avery_mansion.landry is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $avery_mansion?.landry is 1>>"
+  ],
+  "context": "<<effects>>"
+ }
+]

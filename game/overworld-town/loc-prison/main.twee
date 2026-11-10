@@ -352,8 +352,8 @@
 	<<nightmareWake>>
 <<else>>
 	<<if ["dryheaving","nausea"].includes(_wakingEffect)>>
-		<br><br>
-		푹 잤지만, 지금은 몸이 좀 찌뿌둥하다.
+		<br>
+		You slept soundly, but now feel a little rough.
 		<br><br>
 	<<elseif ($specialClothesEffects.bimbo.total gte random(100,1000) || $specialClothesEffects.pimp.total gte random(100,1000)) or $arousal gte ($arousalmax / 10) * 9>>
 		<<wetDream>>
@@ -361,7 +361,7 @@
 		푹 잔다.
 		<br><br>
 	<<else>>
-		<br><br>
+		<br>
 	<</if>>
 <</if>>
 <<sleepeffects>>
@@ -2068,7 +2068,7 @@
 		시간이 빠르게 흘렀다 느려졌다 하는 것처럼 느껴지면서 고통이 커진다. "숨 쉬어"와 "힘줘"라는 말을 여러 번 듣고, 당신은 최선을 다해 따른다.
 		<br><br>
 
-		<<link [[다음 (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Prison 3]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>
+		<<link [[Next (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Prison 3]]>><<endevent>><<run setPlayerLitterBorn()>><<pass _timeCalc>><</link>>
 	<<case "wolf">>
 		<<methodical_guard 0 capo>> 목소리가 안개 속에서 떠다닌다. "이건... 예상 밖이군. 인간이 아닌 임신이야. 집중해..."
 		<br><br>
@@ -2076,7 +2076,7 @@
 		시간이 빠르게 흘렀다 느려졌다 하는 것처럼 느껴지면서 고통이 커진다. "숨 쉬어"와 "힘줘"라는 말을 여러 번 듣고, 당신은 최선을 다해 따른다.
 		<br><br>
 
-		<<link [[다음 (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Prison Wolf]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>
+		<<link [[Next (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Prison Wolf]]>><<endevent>><<run setPlayerLitterBorn()>><<pass _timeCalc>><</link>>
 <</switch>>
 
 :: Pregnancy Birth Prison 3
@@ -2171,7 +2171,7 @@
 	<br><br>
 <</if>>
 
-<<link [[다음|Pregnancy Birth Prison 5]]>><<storeon "prison_birth">><<pass 24 hour>><<stress -40>><</link>>
+<<link [[Next|Pregnancy Birth Prison 5]]>><<storeon "prison_birth">><<pass 24 hour>><<stress -40>><<set $tiredness to 0>><</link>>
 <br><br>
 
 :: Pregnancy Birth Prison 5
@@ -2291,7 +2291,7 @@
 	<br><br>
 <</if>>
 
-<<link [[다음|Pregnancy Birth Prison Wolf 3]]>><<storeon "prison_birth">><<pass 24 hour>><<stress -40>><</link>>
+<<link [[Next|Pregnancy Birth Prison Wolf 3]]>><<storeon "prison_birth">><<pass 24 hour>><<stress -40>><<set $tiredness to 0>><</link>>
 <br>
 
 :: Pregnancy Birth Prison Wolf 3

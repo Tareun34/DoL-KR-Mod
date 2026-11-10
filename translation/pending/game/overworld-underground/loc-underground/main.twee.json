@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $wraithPrison and $wraithPrison.vision is true>>",
+   "\t\t\t\"<span class=\"wraith\">Disappear. Drown. Don't make me repeat myself.</span>\""
+  ],
+  "old_kr": [
+   "\t\t<<if $wraithPrison and $wraithPrison.vision is true>>",
+   "\t\t\t\"<span class=\"wraith\">사라져라. 물에 빠져라. 두 번 말하게 하지 마라.</span>\""
+  ],
+  "new_en": [
+   "\t\t<<if $wraithPrison?.vision is true>>",
+   "\t\t\t\"<span class=\"wraith\">Disappear. Drown. Don't make me repeat myself.</span>\""
+  ],
+  "context": "\t<<if $wraith.state is \"haunt\">>"
+ }
+]

@@ -1,0 +1,99 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if _store_check is 1>>",
+   "\t<<getinicon>><<link [[Enter|Yoga Classes Enter]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<if _store_check is 1>>",
+   "\t<<getinicon>><<link [[들어가기|Yoga Classes Enter]]>><</link>>"
+  ],
+  "new_en": [
+   "<<if _store_check is 1 and $exposed is 0>>",
+   "\t<<getinicon>><<link [[Enter|Yoga Classes Enter]]>><</link>>"
+  ],
+  "context": "<<dancingclothes>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<getouticon>><<link [[Leave|Dance Studio]]>><</link>>",
+   "<br>"
+  ],
+  "old_kr": [
+   "<<getouticon>><<link [[나가기|Dance Studio]]>><</link>>",
+   "<br>"
+  ],
+  "new_en": [],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<getinicon>><<link [[Go naked|Yoga Classes Enter]]>><<strip>><</link>><<exhibitionist5>>"
+  ],
+  "old_kr": [
+   "\t<<getinicon>><<link [[알몸으로 가기|Yoga Classes Enter]]>><<strip>><</link>><<exhibitionist5>>"
+  ],
+  "new_en": [
+   "\t<<getinicon>><<link [[Go naked|Yoga Classes Enter]]>><<strip>><<set $danceStudio.nudeYoga to 1>><</link>><<exhibitionist5>>"
+  ],
+  "context": "<<if hasSexStat(\"exhibitionism\", 5)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou make your assailants practise a much more painful type of yoga as you lay them all low.",
+   "\t<<clotheson>>"
+  ],
+  "old_kr": [
+   "\t당신은 공격자들을 모두 쓰러뜨리며 훨씬 더 고통스러운 종류의 요가를 연습하게 만든다.",
+   "\t<<clotheson>>"
+  ],
+  "new_en": [
+   "\tYou make your assailants practise a much more painful type of yoga as you lay them all low.",
+   "\t<<if !$danceStudio.nudeYoga>>",
+   "\t\t<<clotheson>>",
+   "\t<</if>>"
+  ],
+  "context": "<<if $enemyhealth lte 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<set $danceStudio.stage to 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set $danceStudio.stage to 0>><<unset $danceStudio.nudeYoga>>"
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<clotheson>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$danceStudio.nudeYoga>>",
+   "\t\t<<clotheson>>",
+   "\t<</if>>"
+  ],
+  "context": "\t<<ejaculation>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<clotheson>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !$danceStudio.nudeYoga>>",
+   "\t\t<<clotheson>>",
+   "\t<</if>>"
+  ],
+  "context": "<<else>>"
+ }
+]

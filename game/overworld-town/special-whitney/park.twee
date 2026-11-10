@@ -92,7 +92,7 @@
 		<<if $location is "park">>
 			<<link [[다음|Park]]>><<endevent>><</link>>
 		<<else>>
-			<<whitneyoptions>>
+			<<whitneyOptions>>
 		<</if>>
 	<<else>>
 		휘트니가 갑자기 당신을 보며 음흉하게 웃는다. 당신은 <<his>> 머릿속에 무슨 생각이 떠올랐는지 대충 짐작할 수 있다. 한 번 거칠게 잡아당겨, <<npcUndressText $NPCList[0] "lower" true>>.
@@ -180,7 +180,7 @@
 		당신이 고개를 들려 하자, 휘트니는 당신을 바닥으로 거칠게 밀치며 뒤돌아선다. 얼굴이 붉어진 것처럼 보이는데, 기분 탓일까?<<npcincr Whitney love 1>><<npcincr Whitney lust -5>><<glove>><<llust>>
 		<br><br>
 
-		<<whitneyoptions>>
+		<<whitneyOptions>>
 		<br>
 	<</if>>
 
@@ -285,7 +285,7 @@
 		<br>
 	<<else>>
 		<<npc Whitney>>
-		<<whitneyoptions>>
+		<<whitneyOptions>>
 		<br>
 	<</if>>
 
@@ -308,7 +308,7 @@
 		<<link [[다음|Whitney Park]]>><</link>>
 	<<else>>
 		<<npc Whitney>>
-		<<whitneyoptions>>
+		<<whitneyOptions>>
 	<</if>>
 	<br>
 
@@ -353,7 +353,7 @@
 	<<npcincr Whitney love 2>><<npcincr Whitney lust 10>><<gglove>><<gglust>>
 	<br><br>
 
-	<<whitneyoptions>>
+	<<whitneyOptions>>
 
 :: Whitney Milkshake Give
 휘트니는 당신이 <<him>>에게 밀크쉐이크를 건네자 깜짝 놀란 표정을 짓더니, 거칠게 <<his>> 팔을 당신의 어깨에 두른다.
@@ -365,7 +365,7 @@
 	<<npcincr Whitney love 1>><<glove>>
 	<br><br>
 
-	<<whitneyoptions>>
+	<<whitneyOptions>>
 
 :: Whitney Milkshake Fail
 	<<set _whitney to C.npc.Whitney>>
@@ -379,7 +379,7 @@
 	<<npcincr Whitney love 2>><<npcincr Whitney lust 10>><<gglove>><<gglust>>
 	<br><br>
 
-	<<whitneyoptions>>
+	<<whitneyOptions>>
 	<br>
 
 :: Whitney Milkshake Cherry
@@ -431,7 +431,7 @@
 		<<link [[다음|Whitney Park]]>><<endevent>><</link>>
 		<br>
 	<<else>>
-		<<whitneyoptions>>
+		<<whitneyOptions>>
 	<</if>>
 <<elseif $phase is 1>> /* Ask for the cherry */
 	<<if $speech_attitude is "meek">>
@@ -483,7 +483,7 @@
 		<<link [[다음|Whitney Park]]>><<endevent>><</link>>
 		<br>
 	<<else>>
-		<<whitneyoptions>>
+		<<whitneyOptions>>
 	<</if>>
 <</if>>
 
@@ -526,7 +526,7 @@
 			<<link [[다음|Whitney Park]]>><<endevent>><</link>>
 			<br>
 		<<else>>
-			<<whitneyoptions>>
+			<<whitneyOptions>>
 		<</if>>
 	<<else>>
 		당신은 혀로 꼭지를 이리저리 굴린다. 휘트니는 미심쩍은 표정으로 실실 웃으며 쳐다본다. <<him>>【이가】 이토록 빤히 쳐다보는 것은 꽤나 부담스럽다.<<stress 6>><<gstress>>
@@ -562,7 +562,7 @@
 				<<link [[다음|Whitney Park]]>><<endevent>><</link>>
 				<br>
 			<<else>>
-				<<whitneyoptions>>
+				<<whitneyOptions>>
 			<</if>>
 		<</if>>
 	<</if>>
@@ -634,7 +634,7 @@
 				휘트니는 만족스러운 미소를 지으며 계속해서 밀크셰이크를 빨아먹는다. <<He>>【은는】 당신의 어깨에 팔을 얹고 머리카락을 가지고 놀더니, 이내 당신의 관자놀이에 키스한다. "이건 고마워, 걸레야," <<he>>【이가】 말한다.
 				<br><br>
 
-				<<whitneyoptions>>
+				<<whitneyOptions>>
 			<</if>>
 		<</if>>
 	<<else>>
@@ -677,7 +677,7 @@
 		<<else>>
 			당신들은 몇 분 동안 침묵 속에서 남은 밀크셰이크를 나눠 먹는다. 다 먹고 나자, <<he>>【은는】 빈 컵을 쓰레기통에 쳐넣는다.
 			<br><br>
-			<<whitneyoptions>>
+			<<whitneyOptions>>
 		<</if>>
 	<</if>>
 
@@ -714,7 +714,7 @@
 			<br>
 		<<else>>
 			<br><br>
-			<<whitneyoptions>>
+			<<whitneyOptions>>
 		<</if>>
 	<<else>>
 		휘트니의 눈이 동그래진다. <<He>>【은는】 당신 생각보다 훨씬 재빠르게 반응하여, 당신이 가리킨 곳을 보려고 몸을 돌리는 동시에 당신을
@@ -736,9 +736,9 @@
 			<br><br>
 
 			<<endevent>>
-			<<whitneyexit>>
+			<<whitneyExit>>
 		<<else>>
-			<<whitneyoptions>>
+			<<whitneyOptions>>
 		<</if>>
 	<</if>>
 
@@ -774,7 +774,7 @@
 			<<link [[다음|Whitney Park]]>><<endevent>><</link>>
 			<br>
 		<<else>>
-			<<whitneyoptions>>
+			<<whitneyOptions>>
 		<</if>>
 	<</if>>
 <</if>>
@@ -829,9 +829,9 @@
 		<br><br>
 
 		<<endevent>>
-		<<whitneyexit>>
+		<<whitneyExit>>
 	<<else>>
-		<<whitneyoptions>>
+		<<whitneyOptions>>
 	<</if>>
 <<else>> /* Refuse */
 	휘트니가 <<his>> 눈을 굴리지만, 당신의 손을 놓아준다. "됐어. 그냥 도와주려고 한 거야."
@@ -846,7 +846,7 @@
 		<<link [[다음|Whitney Park]]>><<endevent>><</link>>
 		<br>
 	<<else>>
-		<<whitneyoptions>>
+		<<whitneyOptions>>
 	<</if>>
 <</if>>
 
@@ -914,7 +914,7 @@
 
 	<<clotheson>>
 	<<endcombat>>
-	<<whitneyexit>>
+	<<whitneyExit>>
 <<elseif $enemyarousal gte $enemyarousalmax>>
 	<<ejaculation>>
 	휘트니는 만족스러운 한숨을 쉬며 <<= Weather.precipitation is "snow" ? "분수 턱" : "공원 벤치">>에 도로 앉는다.
@@ -953,7 +953,7 @@
 			"거래해서 즐거웠어, 걸레야." <<He>>【은는】 다른 말 없이 공원을 나간다.
 			<br><br>
 
-			<<whitneyexit>>
+			<<whitneyExit>>
 		<</if>>
 	<<else>>
 		<<npcincr Whitney lust -20>><<llust>>
@@ -971,7 +971,7 @@
 		<</if>>
 		<br><br>
 		<<endcombat>>
-		<<whitneyexit>>
+		<<whitneyExit>>
 	<</if>>
 <<elseif $alarm is 1 and $rescue is 1>>
 	당신 쪽을 바라보는 공원 이용객 몇 명을 <<he>>【이가】 발견하자 휘트니가 고개를 번쩍 든다. "젠장, 폐활량 하나는 끝내주네," 휘트니는 <<he>>【이가】 당신 위에서 <<= $phase is 0 ? "기어내려오며" : "기어가듯 내려오며">> <<his>> 옷을 추스르며 투덜댄다. "다음엔 각오해."
@@ -980,7 +980,7 @@
 
 	<<clotheson>>
 	<<endcombat>>
-	<<whitneyexit>>
+	<<whitneyExit>>
 <<else>>
 	휘트니가 <<his>> 눈을 굴리고 당신 위에서 내려온다. "좋아. 앞으로 내가 너한테 뭘 주나 봐." <<He>>【은는】 <<his>> 옷을 추스르고 불붙이지 않은 담배를 <<his>> 입술 사이에 문다. "나중에 갚게 될 거야. 기대해."
 	<<He>>【은는】 당신을 벤치에서 밀어내고 뒤도 돌아보지 않은 채 공원 밖으로 성큼성큼 나간다.<<npcincr Whitney love -1>><<npcincr Whitney dom -1>><<llove>><<ldom>>
@@ -988,9 +988,8 @@
 
 	<<clotheson>>
 	<<endcombat>>
-	<<whitneyexit>>
+	<<whitneyExit>>
 <</if>>
-<<endcombat>>
 
 :: Whitney Milkshake Cherry Sex Exposed
 <<effects>><<set $outside to 1>><<set $location to "town">><<pass 20>>
@@ -1027,7 +1026,7 @@
 		<<link [[다음|Whitney Park]]>><<endevent>><</link>>
 		<br>
 	<<else>>
-		<<whitneyoptions>>
+		<<whitneyOptions>>
 	<</if>>
 <<else>>
 	<<if $player.penisExist and (!$player.vaginaExist or random(1, 2) is 2)>>
@@ -1067,9 +1066,9 @@
 		휘트니는 <<his>> 우산을 챙겨 들고 공원을 어슬렁거리며 나간다. 당신의 다리는 너무 떨려서 <<him>>【을를】 따라갈 수 없다.
 		<br><br>
 
-		<<whitneyexit>>
+		<<whitneyExit>>
 	<<else>>
-		<<whitneyoptions>>
+		<<whitneyOptions>>
 	<</if>>
 <</if>>
 
@@ -1170,7 +1169,7 @@
 	<<npcincr Whitney dom -1>><<ldom>>
 	<br><br>
 	<<endcombat>><<clotheson>>
-	<<whitneyexit>>
+	<<whitneyExit>>
 <<else>> <!-- Defeat -->
 	<<endevent>><<loadNPC 0 "park_whore1">><<loadNPC 1 "park_whore2">>
 	"씩." <<tearful>> 당신은 휘트니에게서 끌려가고, 휘트니는 <<person1>><<person>>【이가】 <<nnpc_him "Whitney">>에게 준 돈을 센다.
@@ -1273,7 +1272,7 @@
 	<br><br>
 
 	<<endevent>><<clearNPC "park_whore1">><<clearNPC "park_whore2">><<npc Whitney>>
-	<<whitneyoptions>>
+	<<whitneyOptions>>
 <<else>>
 	"그딴 말은 신경 쓰는 놈한테나 해," <<he>>【이가】 중얼거린다. <span class="red"><<He>>【은는】 <<his>> 손아귀를 더 세게 조이고 계속 걷는다.</span> 당신의 항의는 전혀 막지 못한다.
 	<br><br>
@@ -1324,7 +1323,7 @@
 <</if>>
 <br><br>
 
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Park Whore Romance
 <<effects>>
@@ -1339,7 +1338,7 @@
 	등 뒤를 더듬어보니 작은 지폐 뭉치가 만져진다. <<printmoney 5000>><<money 5000 "prostitution">>【을를】 얻었다.
 	<br><br>
 
-	<<whitneyoptions>>
+	<<whitneyOptions>>
 <<else>>
 	<<if $speech_attitude is "meek">>
 		"미안해." 당신이 말한다. "오늘은 이만하면 된 것 같아."
@@ -1359,7 +1358,7 @@
 	당신은 버려진 지폐들을 주워 모은다. <<printmoney 5000>><<money 5000 "prostitution">>【을를】 얻었다. 돈을 다 주웠을 때, 휘트니는 이미 사라지고 없었다.
 	<br><br>
 
-	<<whitneyexit>>
+	<<whitneyExit>>
 <</if>>
 
 :: Whitney Park Run Advice
@@ -1420,7 +1419,7 @@
 <<He>>【은는】 한 번도 돌아보지 않고 공원 밖으로 성큼성큼 나간다.
 <br><br>
 
-<<whitneyexit>>
+<<whitneyExit>>
 
 :: Whitney Park Run Advice 2
 <<set $location to "alley">><<set $bus to "commercial">><<set $outside to 0>><<effects>>

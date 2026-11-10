@@ -2435,8 +2435,8 @@
 <<effects>>
 <<endevent>>
 <<beastNEWinit 1 horse>>
-<<if $settings.horsesEnabled and ($monster is 1 or $settings.bestialityEnabled) and random(1, 2) is 2>>
-	"그럴 가치가 있나?" 가면 쓴 손님 중 한 명이 유리창 너머로 당신을 들여다보며 묻는다. "고작 그 돈 때문에 말을 상대하다니." 당신의 <<bottom>>에 털이 눌리는 것이 느껴진다.
+<<if beastSexEnabledForType("horse", $monster is 1) and random(1, 2) is 2>>
+	"Is it worth it?" asks one of the masked guests, peering at you through one of the panes. "Taking a horse for so little money." You feel fur press against your <<bottom>>.
 	<br><br>
 
 	<<link [[다음|Dance Job Stage Cabin Horse]]>><<set $molestationstart to 1>><</link>>

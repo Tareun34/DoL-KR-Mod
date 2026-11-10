@@ -1,0 +1,104 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly) or (!$settings.bestialityEnabled)>>",
+   "\t\t<<set _text_output to \"centaur\">>"
+  ],
+  "old_kr": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly) or (!$settings.bestialityEnabled)>>",
+   "\t\t<<set _text_output to \"켄타우로스\">>"
+  ],
+  "new_en": [
+   "\t<<if monsterCanAppearForType(\"horse\")>>",
+   "\t\t<<set _text_output to \"centaur\">>"
+  ],
+  "context": "<<widget \"livestock_horse\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if beastMaleChance() gte random(1, 100)>>",
+   "\t\t\t<<set _text_output to \"stallion\">>"
+  ],
+  "old_kr": [
+   "\t\t<<if beastMaleChance() gte random(1, 100)>>",
+   "\t\t\t<<set _text_output to \"종마\">>"
+  ],
+  "new_en": [
+   "\t\t<<if beastMaleChanceForType(\"horse\") gte random(1, 100)>>",
+   "\t\t\t<<set _text_output to \"stallion\">>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly) or (!$settings.bestialityEnabled)>>",
+   "\t\t<<set _text_output to \"centaurs\">>"
+  ],
+  "old_kr": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly) or (!$settings.bestialityEnabled)>>",
+   "\t\t<<set _text_output to \"켄타우로스들\">>"
+  ],
+  "new_en": [
+   "\t<<if monsterCanAppearForType(\"horse\")>>",
+   "\t\t<<set _text_output to \"centaurs\">>"
+  ],
+  "context": "<<widget \"livestock_horses\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<endevent>><<beastNEWinit 1 cow>><<generate2>><<person1>>",
+   "\t\t\tA commotion at the front of the barn draws your attention. You notice the <<livestock_cows>> looking too. A few moo with a mixture of curiosity and annoyance."
+  ],
+  "old_kr": [
+   "\t\t\t<<endevent>><<beastNEWinit 1 cow>><<generate2>><<person1>>",
+   "\t\t\t헛간 앞쪽의 소란에 당신의 시선이 끌린다. 당신은 <<livestock_cows>>도 그곳을 보고 있다는 것을 알아챈다. 몇몇은 호기심과 짜증이 섞인 울음소리를 낸다."
+  ],
+  "new_en": [
+   "\t\t\t<<endevent>><<generateBeastVictim 1 cow>><<generate2>><<person1>>",
+   "\t\t\tA commotion at the front of the barn draws your attention. You notice the <<livestock_cows>> looking too. A few moo with a mixture of curiosity and annoyance."
+  ],
+  "context": "\t\t<<addinlineevent \"livestock_overhear_winter 6\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<endevent>><<beastNEWinit 1 cow>><<generate2>><<generate3>><<person2>>",
+   "\t\t\tA <<person>> sneaks in through the barn door. The farmhand on duty is dozing in <<person3>><<his>> chair. The <<person2>><<person>> closes the door and looks around. <<His>> eyes land on you, though <<he>> quickly looks away. Curious, you watch <<him>>."
+  ],
+  "old_kr": [
+   "\t\t\t<<endevent>><<beastNEWinit 1 cow>><<generate2>><<generate3>><<person2>>",
+   "\t\t\t한 <<person>>【이가】 헛간 문으로 몰래 들어온다. 근무 중인 농장 일꾼은 <<person3>><<his>> 의자에 앉아 졸고 있다. <<person2>><<person>>【은는】 문을 닫고 주변을 둘러본다. <<His>> 시선이 당신에게 머물렀다가 황급히 시선을 돌린다. 호기심이 생긴 당신은 <<him>>【을를】 지켜본다."
+  ],
+  "new_en": [
+   "\t\t\t<<endevent>><<generateBeastVictim 1 cow>><<generate2>><<generate3>><<person2>>",
+   "\t\t\tA <<person>> sneaks in through the barn door. The farmhand on duty is dozing in <<person3>><<his>> chair. The <<person2>><<person>> closes the door and looks around. <<His>> eyes land on you, though <<he>> quickly looks away. Curious, you watch <<him>>."
+  ],
+  "context": "\t\t<<addinlineevent \"livestock_overhear_winter 8\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>"
+  ],
+  "context": "<<widget \"livestock_cows\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if ($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>"
+  ],
+  "context": "\t\t<!-- Modified for Monster People -->"
+ }
+]

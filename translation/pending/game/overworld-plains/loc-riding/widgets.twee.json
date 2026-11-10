@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or (!$settings.bestialityEnabled)>>",
+   "\t\t<<set _text_output to \"centaurs\">>"
+  ],
+  "old_kr": [
+   "\t<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or (!$settings.bestialityEnabled)>>",
+   "\t\t<<set _text_output to \"켄타우로스\">>"
+  ],
+  "new_en": [
+   "\t<<if monsterChanceForType(\"horse\") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType(\"horse\"))>>",
+   "\t\t<<set _text_output to \"centaurs\">>"
+  ],
+  "context": "<<widget \"steed_type\">>"
+ }
+]

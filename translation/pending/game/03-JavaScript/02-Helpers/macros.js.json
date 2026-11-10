@@ -1,0 +1,40 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tcase SexTypes.ALL_DICKGIRLS:",
+   "\t\t\t\treturn `${sperm} and milk`;"
+  ],
+  "old_kr": [
+   "\t\t\tcase SexTypes.ALL_DICKGIRLS:",
+   "\t\t\t\treturn `${sperm}【와과】 우유`;"
+  ],
+  "new_en": [
+   "\t\t\tcase SexTypes.ALL_FEMALE_PENISES:",
+   "\t\t\t\treturn `${sperm} and milk`;"
+  ],
+  "context": "\t\tswitch (id) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\tcase SexTypes.ALL_CUNTBOYS:"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tcase SexTypes.ALL_MALE_VAGINAS:"
+  ],
+  "context": "\t\t\t\treturn sperm;"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\tcase SexTypes.ALL_CUNTBOYS:"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tcase SexTypes.ALL_MALE_VAGINAS:"
+  ],
+  "context": "\t\t\t\treturn [\"cum\"];"
+ }
+]

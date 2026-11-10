@@ -50,10 +50,10 @@
 :: Estate Cards Steeds 2
 <<effects>>
 
-<<if $settings.monsterChance gte 1 and $hallucinations gte 1 or $settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly or !$settings.bestialityEnabled>>
-	<<if beastMaleChance() is 100>>
+<<if monsterCanAppearForType("cow")>>
+	<<if beastMaleChanceForType("cow") is 100>>
 		<<set _estate_cards_monsters to "bulls">>
-	<<elseif beastMaleChance() is 0>>
+	<<elseif beastMaleChanceForType("cow") is 0>>
 		<<set _estate_cards_monsters to "cows">>
 	<<else>>
 		<<set _estate_cards_monsters to "both">>
@@ -135,10 +135,10 @@
 
 	<<switch _estate_cards_monsters>>
 	<<case "bulls" "cows" "both">>
-		몇몇 마구간 칸에서 켄타우로스들이 지켜보고 있다.
+		Centaurs watch from some of the stalls.
 		<br><br>
 	<<default>>
-		몇몇 마구간 칸에서 말들이 지켜보고 있다.
+		Horses watch from some of the stalls.
 		<br><br>
 	<</switch>>
 
@@ -375,18 +375,18 @@
 :: Estate Cards Cattle 2
 <<effects>>
 
-<<if $settings.monsterChance gte 1 and $hallucinations gte 1 or $settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly or !$settings.bestialityEnabled>>
-	<<if beastMaleChance() is 100>>
+<<if monsterCanAppearForType("cow")>>
+	<<if beastMaleChanceForType("cow") is 100>>
 		<<set _estate_cards_monsters to "bulls">>
-	<<elseif beastMaleChance() is 0>>
+	<<elseif beastMaleChanceForType("cow") is 0>>
 		<<set _estate_cards_monsters to "cows">>
 	<<else>>
 		<<set _estate_cards_monsters to "both">>
 	<</if>>
 <<else>>
-	<<if beastMaleChance() is 100>>
+	<<if beastMaleChanceForType("cow") is 100>>
 		<<set _estate_cards_monsters to "beast_bulls">>
-	<<elseif beastMaleChance() is 0>>
+	<<elseif beastMaleChanceForType("cow") is 0>>
 		<<set _estate_cards_monsters to "beast_cows">>
 	<<else>>
 		<<set _estate_cards_monsters to "beast_both">>

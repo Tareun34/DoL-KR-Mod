@@ -92,7 +92,7 @@
 	<</if>>
 
 	/* Story progress */
-	<<if !$gwylanSeen.includes("struggles") and $gwylan.progress gte 15 and _gwylanLovePercent gte 65 and $gwylanSeen.includes("ritual_beast") and $dateCount.GwylanBeast gte 2 and $gwylan.request.event isnot "meetAtCafe" and !gwylanRequestMet() and C.npc.Gwylan.dom gte 10 and C.npc.Gwylan.lust gte 25>>
+	<<if !$gwylanSeen.includes("struggles") and $gwylan.progress gte 9 and _gwylanLovePercent gte 55 and $gwylanSeen.includes("ritual_beast") and $dateCount.GwylanBeast gte 2 and $gwylan.request.event isnot "meetAtCafe" and !gwylanRequestMet() and C.npc.Gwylan.dom gte 10 and C.npc.Gwylan.lust gte 25>>
 		<<set $_noLeave to true>>
 		<<if $location is "forest_shop">>
 			<<He>>【은는】 잠시 확신이 없는 표정을 짓더니 불쑥 말을 꺼낸다. "너한테 물어볼 게 있어."
@@ -115,7 +115,7 @@
 		<</if>>
 		<<exit>>
 	<</if>>
-	<<if $location is "forest_shop" and _gwylanLovePercent gte 80 and C.npc.Gwylan.dom gte 75 and $dateCount.GwylanSex gte 5 and $gwylan.sea gte 5 and !$gwylanSeen.includes("partners") and _gwylanStatus.includes("lust") and !$weekly.gwylanLIChance and $exposed is 0 and !Time.isBloodMoon()>>
+	<<if $location is "forest_shop" and _gwylanLovePercent gte 70 and C.npc.Gwylan.dom gte 75 and $dateCount.GwylanSex gte 5 and $gwylan.sea gte 5 and !$gwylanSeen.includes("partners") and _gwylanStatus.includes("lust") and !$weekly.gwylanLIChance and $exposed is 0 and !Time.isBloodMoon()>>
 		<<set $weekly.gwylanLIChance to true>>
 		그윌란의 손이 당신의 손 위로 포개지는 것이 느껴진다.
 		<br><br>
@@ -466,7 +466,7 @@
 			<<lockicon "unlock">><<link [[`정조대가 제거됐다고 <<him>>에게 말한다`|Gwylan Chastity Removed]]>><</link>>
 			<br>
 		<</if>>
-		<<if !gwylanRequestMet() and !$gwylan.request.command and $debug is 1>>
+		<<if !gwylanRequestMet() and !$gwylan.request.command and $debug>>
 			/* ToDo: Gwylan - rerolling requests */
 			<span class="red">개발자 메모: 의뢰 재추첨은 아직 구현되지 않았습니다. 현재 의뢰를 초기화합니다. 부주의하게 사용하면 스토리 진행이 완전히 망가질 수 있습니다.</span>
 			<br>
@@ -1992,7 +1992,8 @@
 <</widget>>
 
 <<widget "gwylanReunion">>
-	당신은 <<him>>에게 <<badEndProse $badEndStats.last()?.source "at">> 보냈던 시간에 대해 말해준다. <<He>>【은는】 당신의 머리를 쓰다듬으며 아무 말 없이 듣기만 한다. 이야기가 끝나자, <<he>>【이가】 당신의 이마에 입을 맞춘다.
+	<<set $gwylan.timer.lastSeen to Time.date.timeStamp>>
+	You tell <<him>> about your time <<badEndProse $badEndStats.last()?.source "at">>. <<He>> listens without speaking, stroking your hair as <<he>> does. When you finish, <<he>> kisses your forehead.
 	<<switch $badEndStats.last()?.source>>
 		<<case "Underground Farm">>
 			<<if $brownFoxRevealed>>
@@ -2010,7 +2011,7 @@
 				<<set _badEndFollowup to true>>
 			<</if>>
 		<<case "Wolf Cave">>
-			"늑대들은 평소엔 참 얌전한데, 그 검은 놈은 점점 대담해지고 있네," <<he>>【이가】 말한다. "<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or $blackwolfmonster is 2>><<nnpc_he "Black Wolf">>【이가】 <<else>>그 녀석이<</if>> 널 그렇게 만들다니 정말 유감이야."
+			"The wolves are usually so docile, but the black one has been growing more and more bold," <<he>> says. "I'm so sorry that <<if resolveIfNamedBeastIsMonster("blackwolf")>><<nnpc_he "Black Wolf">><<else>>it<</if>> put you through that."
 			<<if !$gwylanTalked.includes("loincloth")>>
 				<<set _badEndFollowup to true>>
 			<</if>>
@@ -2167,6 +2168,8 @@
 						당신은 몇 분간 몸을 말린 후 계속 나아간다.
 					<</if>>
 					<<fame 1 "exhibitionism">>
+					<<dry_full>>
+					<br><br>
 				<<elseif $exposed gte 1>>
 					당신은 본능적으로 <<if ["naked", "bellyShow"].includes($worn.upper.type)>>당신의 $worn.upper.name【을를】 아래로 끌어내려 <</if>>당신의 <<exposedlower>>【을를】 숨기려 한다.
 					<br><br>
@@ -2174,10 +2177,10 @@
 					"아구, 미안해, 착하지. 이리 와, 몸 말리러 가자. 날 따라와." <<nnpc_He "Gwylan">>【은는】 당신의 손을 잡고, 비를 피해 골목으로 당신을 이끌며 <<nnpc_his "Gwylan">> 몸으로 당신을 가려준다. <<takeHandholdingVirginity "Gwylan" `(V.gwylanSeen.includes("partners") ? "romantic" : "consensual")`>>
 					<br><br>
 
-					당신은 몇 분간 몸을 말린 후 계속 나아간다.
+					You spend a few minutes drying off before moving on.
+					<<dry_full>>
+					<br><br>
 				<</if>>
-				<br><br>
-				<<dry_full>>
 			<</addinlineevent>>
 		<</if>>
 

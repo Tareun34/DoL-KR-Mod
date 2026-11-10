@@ -1,0 +1,40 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $settings.bestialityEnabled or $monster is 1>>",
+   "\t<<animalicon \"dog\">><<link [[Agree to measure <<his>> <<beasttype>> first|Beach Phallus Dog Agree]]>><</link>><<deviant1>>"
+  ],
+  "old_kr": [
+   "<<if $settings.bestialityEnabled or $monster is 1>>",
+   "\t<<animalicon \"dog\">><<link [[먼저 <<his>> <<beasttype>>【을를】 측정하는 데 동의한다|Beach Phallus Dog Agree]]>><</link>><<deviant1>>"
+  ],
+  "new_en": [
+   "<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t<<animalicon \"dog\">><<link [[Agree to measure <<his>> <<beasttype>> first|Beach Phallus Dog Agree]]>><</link>><<deviant1>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechdisable to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechDisable to 1>>"
+  ],
+  "context": "\t<<set $noBodyWriting to 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechdisable to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechDisable to 1>>"
+  ],
+  "context": "\t<<set $noBodyWriting to 1>>"
+ }
+]

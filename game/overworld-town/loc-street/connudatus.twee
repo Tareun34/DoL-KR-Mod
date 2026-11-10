@@ -562,7 +562,7 @@
 
 :: Fruit Street See Accept
 <<effects>>
-당신은 불쌍한 <<person1>><<personsimple>>【을를】 돕기로 하고 <<recipe_name $streetFruit plural>> 자루를 받아든다. 
+You decide to help the poor <<person1>><<personsimple>> and accept to take the bag of <<recipe_name $streetFruit plural>> off <<his>> hands.
 <br><br>
 
 <<if $fame.rape gte 200>>
@@ -674,7 +674,7 @@
 	"고맙다, <<girl>>【아야】," <<he>>【이가】 말하며 <<recipe_name $streetFruit plural>> 자루를 당신에게 건넨다.
 	<br><br>
 
-	"그, 그래도 어... 혹시라도 우리 <<spouse>>【을를】 보거든 내가 이랬다는 말은 절대 하지 마라." <<tending_pick $streetFruit>>
+	"Don't- don't uh... if you ever see my <<spouse>>, don't tell that I did that, though." <<tending_pick $streetFruit>>
 	<br><br>
 
 	<<clotheson>>
@@ -745,7 +745,7 @@
 <<effects>>
 
 <<if $enemyhealth lte 0>>
-	"씨발, 왜 맨날 다 이따위야..." <<he>>【이가】 고통에 몸을 웅크리며 잇새로 중얼거린다.
+	"God damn it, why are they always like this..." <<he>> mutters under his breath, clutching himself in pain.
 	<br><br>
 
 	그 <<person>>의 손에서 자루가 힘없이 미끄러져 떨어진다. <<He>>【은는】 그걸 주울까 고민하는 눈치더니, 이내 얼굴을 찌푸린다.
@@ -762,7 +762,7 @@
 	"고맙다, <<girl>>【아야】," <<he>>【이가】 말하며 <<recipe_name $streetFruit plural>> 자루를 당신에게 건넨다.
 	<br><br>
 
-	"그, 그래도 어... 혹시라도 <<spouse>>【을를】 보거든 내가 이랬다는 말은 절대 하지 마라." <<tearful>> 당신은 비틀거리며 몸을 일으킨다.
+	"Don't- don't uh... if you ever see <<spouse>>, don't tell that I did that, though." <<tearful>> you struggle to your feet.
 	<<tending_pick $streetFruit>>
 	<br><br>
 
@@ -838,7 +838,7 @@
 :: Fruit Street See Refuse Rape Finish
 <<effects>>
 <<if $enemyhealth lte 0>>
-	"씨발, 왜 맨날 다 이따위야..." <<he>>【이가】 고통에 몸을 웅크리며 잇새로 중얼거린다.
+	"God damn it, why are they always like this..." <<he>> mutters under his breath, clutching himself in pain.
 	<br><br>
 
 	그 <<person>>의 손에서 자루가 힘없이 미끄러져 떨어진다. <<He>>【은는】 그걸 주울까 고민하는 눈치더니, 이내 얼굴을 찌푸린다.

@@ -1,0 +1,90 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $debug is 1>>",
+   "\t\t\t<<lakeicon \"campfire\">><<link [[North to firepit (0:10)|Lake Firepit]]>><<pass 10>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $debug is 1>>",
+   "\t\t\t<<lakeicon \"campfire\">><<link [[북쪽 모닥불로 (0:10)|Lake Firepit]]>><<pass 10>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<if $debug>>",
+   "\t\t\t<<lakeicon \"campfire\">><<link [[North to firepit (0:10)|Lake Firepit]]>><<pass 10>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou swim to the bank beneath the fishing rock and haul yourself up onto the rough surface, dripping water onto the stone. "
+  ],
+  "old_kr": [
+   "\t당신은 낚시 바위 아래의 기슭으로 헤엄쳐 가 거친 표면 위로 몸을 끌어올린다. 바위 위로 물방울이 뚝뚝 떨어진다."
+  ],
+  "new_en": [
+   "\tYou swim to the bank beneath the fishing rock and haul yourself up onto the rough surface, dripping water onto the stone."
+  ],
+  "context": "\t<<set $phase to 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<lakeicon \"campfire\">><<link [[South to campsite (0:20)|Lake Campsite]]>><<pass 20>><</link>>",
+   "\t"
+  ],
+  "old_kr": [
+   "\t<<lakeicon \"campfire\">><<link [[남쪽 캠프장으로 (0:20)|Lake Campsite]]>><<pass 20>><</link>>",
+   ""
+  ],
+  "new_en": [
+   "\t<<lakeicon \"campfire\">><<link [[South to campsite (0:20)|Lake Campsite]]>><<pass 20>><</link>>",
+   ""
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $debug is 1>>",
+   "\t\t<<lakeicon \"dock\">><<link [[Swim to dock (0:10)|Lake Dock]]>><<pass 10>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<elseif $debug is 1>>",
+   "\t\t<<lakeicon \"dock\">><<link [[부두로 헤엄쳐 가기 (0:10)|Lake Dock]]>><<pass 10>><</link>>"
+  ],
+  "new_en": [
+   "\t<<elseif $debug>>",
+   "\t\t<<lakeicon \"dock\">><<link [[Swim to dock (0:10)|Lake Dock]]>><<pass 10>><</link>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $debug is 1>>",
+   "\t\t<<lakeicon \"dock\">><<link [[Swim to dock (0:02)|Lake Dock]]>><<pass 2>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<elseif $debug is 1>>",
+   "\t\t<<lakeicon \"dock\">><<link [[부두로 헤엄쳐 가기 (0:02)|Lake Dock]]>><<pass 2>><</link>>"
+  ],
+  "new_en": [
+   "\t<<elseif $debug>>",
+   "\t\t<<lakeicon \"dock\">><<link [[Swim to dock (0:02)|Lake Dock]]>><<pass 2>><</link>>"
+  ],
+  "context": "\t<<if $exposed gte 1 and $laketeenspresent is 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<<exposure>>"
+ }
+]

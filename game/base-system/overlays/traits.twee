@@ -1,6 +1,6 @@
 :: Traits [widget]
 <<widget "traits">>
-	<<if $sexStats and $sexStats.pills>>
+	<<if $sexStats?.pills>>
 		<<set _pills to $sexStats.pills.pills>>
 	<</if>>
 	<<set _traitLists to [
@@ -82,13 +82,7 @@
 					text: "시간이 지날수록 흥분이 오르며 이를 관리해야 합니다.",
 				},
 				{
-					name: "녹색의 손",
-					colour: "green",
-					has: $backgroundTraits.includes("greenthumb"),
-					text: "비료를 사용하면 작물이 더 풍성해지고 부패하지 않습니다.",
-				},
-				{
-					name: () => V.submissive <= 850 ? "나무성애자" : "식물 애호가",
+					name: () => V.submissive <= 850 ? "Dendrophile" : "Plant Lover",
 					colour: "lewd",
 					has: $backgroundTraits.includes("plantlover"),
 					text: "당신에게 식물은 전부입니다. 더 이상 환각 수치가 없어도 인간형 식물과 식물형 촉수를 마주칠 수 있습니다. 트라우마가 증가할수록 관리 스킬에 보너스를 받습니다.",
@@ -126,15 +120,15 @@
 								break;
 						}
 						let parasites = [];
-						if ($parasite.breasts and $parasite.breasts.name is "parasite") {
+						if ($parasite.breasts?.name is "parasite") {
 							if ($player.breastsize gte 1) {
 								parasites.push("가슴");
 							} else {
 								parasites.push("흉부");
 							}
 						}
-						if (($parasite.clit and $parasite.clit.name is "parasite") or ($parasite.penis and $parasite.penis.name is "parasite")) parasites.push("성기");
-						if (parasites.length) result += ` 그 기생충들이 옷처럼 당신의 ${parasites.length === 1 ? parasites[0] : parasites.slice(0, -1).join(", ") + "와 " + parasites[parasites.length - 1]}【을를】 덮고 있습니다.`;
+						if ($parasite.clit?.name is "parasite" or $parasite.penis?.name is "parasite") parasites.push("genitals");
+						if (parasites.length) result += ` Its parasites cover your ${formatList(parasites, "and", true)} like clothing.`;
 						return result;
 					}
 				},
@@ -241,7 +235,7 @@
 					text: "당신은 젖이 짜이기를 갈망합니다. 모유와 정액의 생산량이 증가합니다. 특정 신체 부위가 커질 수도 있습니다. 당신의 뿔, 귀, 꼬리가 당신을 더 눈에 띄게 만듭니다.",
 				},
 				{
-					name: () => V.hallucinations gte 2 || !V.settings.bestialityEnabled ? "하피" : V.player.gender is "n" ? "새" : "새 <<pcGender>>",
+					name: () => resolveIfNamedBeastIsMonster("greathawk") ? "Harpy" : V.player.gender is "n" ? "Bird" : "Bird <<pcGender>>",
 					colour: "grey",
 					has: $harpy gte 6,
 					text: "하늘이 부릅니다.",
@@ -458,31 +452,7 @@
 					text: "당신의 반항적인 행동이 훨씬 위험해집니다. 상대에게 고통을 가하면 흥분이 증가합니다.",
 				},
 				{
-					name: "농부",
-					colour: "green",
-					has: $farm_stage gte 6,
-					text: "농장 축사 주변의 지리에 빠삭합니다. 체력을 관리하기 더 수월해집니다.",
-				},
-				{
-					name: "지식: 섬 주민 언어",
-					colour: "",
-					has: $islander_language gte 100,
-					text: "섬 주민들의 언어를 이해하고 구사할 수 있습니다.",
-				},
-				{
-					name: "지식: 유사",
-					colour: "",
-					has: $quicksand gte 5,
-					text: "이것에 빠졌을 때 어떻게 대처해야 하는지 알고 있습니다.",
-				},
-				{
-					name: "고대의 예술",
-					colour: "wraith",
-					has: $hc?.wraith,
-					text: "과거에 실전된 기술을 배웠습니다. 채찍이 몸의 일부처럼, 팔과 채찍이 하나가 되어 움직입니다.",
-				},
-				{
-					name: "거울의 광기",
+					name: "Mirror Madness",
 					colour: () => V.awareness < 200 ? "blue" : "blue",
 					has: $asylum_mirror gte 5,
 					text: "거울을 보면 하루에 한 번 경계심과 트라우마가 감소합니다. 경계심이 낮을 때만 활성화됩니다.",
@@ -850,7 +820,54 @@
 			],
 		},
 		{
-			title: "트라우마 특성",
+			title: "Knowledge Traits",
+			traits: [
+				{
+					name: "Ancient Arts",
+					colour: "wraith",
+					has: $hc?.wraith,
+					text: "You've learned techniques lost to the past. An extension of your body, your arm and whip move as one.",
+				},
+				{
+					name: "Islander language",
+					colour: "",
+					has: $islander_language gte 100,
+					text: "You can understand and speak the tongue of the islanders.",
+				},
+				{
+					name: "Temple Calligraphy",
+					colour: "green",
+					has: $temple_calligraphy gte 11,
+					text: "Cheating on exams is twice as effective.",
+				},
+				{
+					name: "Farming",
+					colour: "green",
+					has: $farm_stage gte 6,
+					text: "You know your way around a barn. Your physique is easier to maintain.",
+				},
+				{
+					name: "Green Thumb",
+					colour: "green",
+					has: $backgroundTraits.includes("greenthumb"),
+					text: "More bountiful crops and no decay when using fertiliser.",
+				},
+				{
+					name: "Quicksand",
+					colour: "",
+					has: $quicksand gte 5,
+					text: "You know how to react when stuck in the stuff.",
+				},
+				{
+					name: "Pumpkin Carving",
+					colour: "tangerine",
+					has: ($pumpkin_carving + ($pumpkin_carving_knowledge?.length * 5)) gte 15,
+					text: "You carve pumpkins like a pro.",
+				},
+			],
+		},
+		{
+			title: "Trauma Traits",
 			traits: [
 				{
 					name: () => V.hypnosis_traits.slumber ? "억제된 불면증" : V.controlled === 0 ? "불면증" : "통제된 불면증",
@@ -955,17 +972,17 @@
 					textColour: "red",
 				},
 				{
-					name: () => V.settings.bestialityEnabled ? "스톡홀름 신드롬: 늑대" : "스톡홀름 신드롬: 늑대인간",
+					name: () => animalSexEnabledForType("wolf") ? "Stockholm Syndrome: Wolves" : "Stockholm Syndrome: Wolf People",
 					colour: "white",
 					has: $syndromewolves gte 1,
-					text: () => V.settings.bestialityEnabled ? "그저 귀여운 동물일 뿐입니다." : "그저 귀여운 괴물일 뿐입니다.",
+					text: () => animalSexEnabledForType("wolf") ? "They're just cute animals." : "They're just cute monsters.",
 					textColour: "red",
 				},
 				{
 					name: "스톡홀름 신드롬: 거대 매",
 					colour: "white",
 					has: $syndromebird gte 1,
-					text: () => V.greathawkmonster === 2 || !V.settings.bestialityEnabled ? "<<nnpc_He 'Great Hawk'>>【은는】 짝을 원할 뿐입니다." : "그저 짝을 원할 뿐입니다.",
+					text: () => resolveIfNamedBeastIsMonster("greathawk") ? "<<nnpc_He 'Great Hawk'>> only wants a mate." : "It only wants a mate.",
 					textColour: "red",
 				},
 				{

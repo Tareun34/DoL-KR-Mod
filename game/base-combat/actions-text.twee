@@ -835,22 +835,24 @@
 	<<if $enemytype is "beast">>
 		"넌 아무것도 모르잖아. <<beasttype>>【이】니까." 당신이 말한다. "널 용서할게."
 	<<else>>
-		<<if _loveInterest isnot undefined>> 
-			/* Removing RNG since it's straightforward. Might add `and random(0, 100) lte 15` back if the situation calls for it */
-			<<set $speechnamedrop to $npc.includes(_loveInterest) ? 0 : 1>>
+		<<if _loveInterest isnot undefined>>
 			<<rng>>
+			<<speechPool "pc">>
 			<<switch _loveInterest>>
 				<<case "Avery">>
 					<<if $npc.includes("Avery")>>
-						<<if $avery_fate is undefined>>
-							"그저 화가 났을 뿐이잖아요." 당신이 말한다. "누구나 가끔 화를 내요. 용서할게요."
-						<<else>>
-							"이제 왜 그렇게 화를 내는지 알겠어요, 에이버리." 당신이 말한다. "그리고 당신을 용서할게요."
-						<</if>>
+						<<pc-line-avery-forgive>>
 					<</if>>
-				<<default>>
-					"이런 끔찍한 짓을 저지르고 있지만, 걱정하지 마." 당신이 말한다. "널 용서할게."
+				<<case "Whitney">>
+					<<if $npc.includes("Whitney")>>
+						<<pc-line-whitney-forgive>>
+					<</if>>
 			<</switch>>
+			<<if hasSpeechLines()>>
+				<<speechSay>>
+			<<else>>
+				"Even though you're doing such a horrible thing, don't worry," you say. "I forgive you."
+			<</if>>
 		<<else>>
 			"이런 끔찍한 짓을 저지르고 있지만, 걱정하지 마." 당신이 말한다. "널 용서할게."
 		<</if>>
@@ -1058,17 +1060,18 @@
 		<</if>>
 	<<else>>
 		<<if _loveInterest isnot undefined and random(0, 100) lte 15>>
-			<<set $speechnamedrop to $npc.includes(_loveInterest) ? 0 : 1>>
-			<<if $speechnamedrop is 0>>
-				당신은 말한다.
+			<<set $speechLINameDrop to $npc.includes(_loveInterest) ? 0 : 1>>
+			<<if $speechLINameDrop is 0>>
+				You speak.
 			<<else>>
 				당신은 <<voice "plead">>.
 			<</if>>
 			<<rng>>
+			<<speechPool "pc">>
 			<<switch _loveInterest>>
 				<<case "Robin">>
 					<<if $npc.includes("Robin")>>
-						"로빈, 제발 그만해!"
+						<<pc-line-robin-plead>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
@@ -1116,7 +1119,7 @@
 					<</if>>
 				<<case "Kylar">>
 					<<if $npc.includes("Kylar")>>
-						"카일라... 날 사랑하는 줄 알았는데..."
+						<<pc-line-kylar-plead>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
@@ -1168,12 +1171,12 @@
 							"ㅋ...카일라... 도와줘..."
 						<</if>>
 					<</if>>
-					<<if $location is "school" and $speechnamedrop is 1 and Time.schoolDay>>
+					<<if $location is "school" and $speechLINameDrop is 1 and Time.schoolDay>>
 						<<status -1>><<lcool>>
 					<</if>>
 				<<case "Whitney">>
 					<<if $npc.includes("Whitney")>>
-						"제발 부드럽게 해줘, 휘트니..."
+						<<pc-line-whitney-plead>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
@@ -1224,7 +1227,7 @@
 					<</if>>
 				<<case "Eden">>
 					<<if $npc.includes("Eden")>>
-						"너... 너무 거칠어, 에덴..."
+						<<pc-line-eden-plead>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
@@ -1272,7 +1275,7 @@
 					<</if>>
 				<<case "Black Wolf">>
 					<<if $npc.includes("Black Wolf")>>
-						"부드럽게, 제발..."
+						<<pc-line-blackwolf-plead>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
@@ -1321,22 +1324,7 @@
 					<<famebestiality $enemyno>>
 				<<case "Avery">>
 					<<if $npc.includes("Avery")>>
-						<<set _possibleSentences to []>>
-						<<if !$avery_mansion>>
-							<<set _possibleSentences.push({ sentence: `"이러려고 데이트한 거예요...?"`, dialogueID: "avery_plead_premansion" })>>
-						<<else>>
-							<<if isAveryHuntingPlayer()>>
-								<<set _possibleSentences.push({ sentence: `"죄송해요! 일부러 그런 게 아니에요!"`, dialogueID: "avery_plead_hunting_1" })>>
-								<<set _possibleSentences.push({ sentence: `"제발요, 앞으로 잘할게요! 약속해요...!"`, dialogueID: "avery_plead_hunting_2" })>>
-							<<elseif $averyromance is 1>>
-								<<set _possibleSentences.push({ sentence: `"사랑해요, 에이버리. 제발 나한테 이러지 마요!"`, dialogueID: "avery_plead_romance" })>>
-							<<else>>
-								<<set _possibleSentences.push({ sentence: `"죄송해요, 에이버리, 제발 용서해 줘요...!"`, dialogueID: "avery_plead_mansion" })>>
-							<</if>>
-						<</if>>
-						<<set _chosenSentence to _possibleSentences.random()>>
-						<<set $speechspecialdialogue to _chosenSentence.dialogueID>>
-						<<print _chosenSentence.sentence>>
+						<<pc-line-avery-plead>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
@@ -1385,7 +1373,7 @@
 
 				<<case "Great Hawk">>
 					<<if $npc.includes("Great Hawk")>>
-						"나, 날 보살펴줄 거지, 그렇지?"
+						<<pc-line-greathawk-plead>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
@@ -1435,7 +1423,7 @@
 
 				<<case "Alex">>
 					<<if $npc.includes("Alex")>>
-						"알렉스, 이성 좀 차려!"
+						<<pc-line-alex-plead>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
@@ -1483,13 +1471,8 @@
 					<</if>>
 
 				<<case "Sydney">>
-					<<run statusCheck("Sydney")>>
 					<<if $npc.includes("Sydney")>>
-						<<if _sydneyStatus.includes("corrupt")>>
-							"당신이... 색욕은 죄악이라고 했잖아요..."
-						<<else>>
-							"잘못했어요, 순결하게 지낼게요! 제발 멈춰주세요!"
-						<</if>>
+						<<pc-line-sydney-plead>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $templePromised is "Sydney">>
 							<<if (($player.virginity.vaginal is true or $player.virginity.temple is true) and $vaginastate is "imminent") or (($player.virginity.penile is true and $player.virginity.temple is true) and ($penisstate is "imminent" or $penisstate is "otheranusimminent"))>>
@@ -1592,13 +1575,7 @@
 
 				<<case "Gwylan">>
 					<<if $npc.includes("Gwylan")>>
-						<<if $abomination is 1>>
-							"그윌란, 돌아와! 나 무서워!"
-						<<elseif $hypnosis_traits.devotion gte 1 or $combat_hypnosis>>
-							"그윌란, 제발, 머리가 어떻게 된 것 같아!"
-						<<else>>
-							"그윌란, 제발, 기분이 이상해!"
-						<</if>>
+						<<pc-line-gwylan-plead>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
@@ -1647,6 +1624,7 @@
 
 				<<default>>
 			<</switch>>
+			<<speechSay>>
 		<<else>>
 			당신은 <<voice "plead">>.
 			<<if $npc.includes("Robin")>>
@@ -1762,8 +1740,8 @@
 
 <!-- Ideally, the parameters here should be replaced when the way the Great Hawk is generated changes. -->
 <<widget "hawkText">><<silently>>
-	<<if ($settings.monsterChance gte $rng and $hallucinations gte 1) or ($settings.monsterChance gte $rng and !$settings.monsterHallucinationsOnly) or ($greathawkmonster is 2) or (!$settings.bestialityEnabled)>>
-		<<set _text_output to "하피">>
+	<<if resolveIfNamedBeastIsMonster("greathawk")>>
+		<<set _text_output to "harpy">>
 	<<else>>
 		<<set _text_output to "매">>
 	<</if>>
@@ -1814,67 +1792,30 @@
 	<<checkforloveinterests>>
 	당신은 <<voice "moan">>.
 	<<if $npc.includes(_loveInterest) and random(0,100) lte 45>>
+		<<speechPool "pc">>
 		<<switch _loveInterest>>
 			<<case "Robin">>
-				<<if C.npc.Robin.dom gte 70>>
-					<<set $speechspecialdialogue to "robin_moan_dom">>
-					"넌 날 어떻게 흥분시키는지 아는구나."
-				<<else>>
-					<<set $speechspecialdialogue to "robin_moan_default">>
-					"녹아버릴 것 같아, 네가 날 너무 행복하게 만들어."
-				<</if>>
+				<<pc-line-robin-moan>>
 			<<case "Sydney">>
-				<<run statusCheck("Sydney")>>
-				<<if !_sydneyChastity>>
-					<<if _sydneyStatus.includes("corrupt")>>
-						"넌 모든 죄악 중에서 가장 달콤해."
-					<<else>>
-						"영원히, 하나로서."
-					<</if>>
-				<<else>>
-					"넌 날 너무 음탕하게 만들어."
-				<</if>>
+				<<pc-line-sydney-moan>>
 			<<case "Whitney">>
-				"날 사용해줘, 휘트니. 난 네 거야."
+				<<pc-line-whitney-moan>>
 			<<case "Black Wolf">>
-				<<if $wolfpackleader is 1>>
-					"착하다, <<nnpc_gendery "Black Wolf">>. 계속해."
-				<<else>>
-					"<<print ($settings.pregnancySpeechEnabled ? "임신시켜" : "박아")>>줘, 알파!"
-				<</if>>
+				<<pc-line-blackwolf-moan>>
 			<<case "Great Hawk">>
-				"넌 공포가 아니야. 넌 내게 필요한 전부야."
+				<<pc-line-greathawk-moan>>
 			<<case "Eden">>
-				"난 네 것이고, 오직 너만의 것이야."
+				<<pc-line-eden-moan>>
 			<<case "Avery">>
-				<<set _possibleSentences to []>>
-				/* Daddy variable is set if PC is submissive and the odds are 1-to-4 */
-				<<set _daddy to $submissive gte 1150 and random(1, 4) is 1>>
-				<<if $avery_fate is "ascended">>
-					<<set _possibleSentences.push({ sentence: `"전부 당신 거예요, 하운드."`, dialogueID: "avery_moan_ascended"})>>
-				<<elseif $averyromance>>
-					<<set _possibleSentences.push({ sentence: `"사랑해요, 에이버리."`, dialogueID: "avery_moan_romance"})>>
-				<<elseif _daddy>>
-					<<set _possibleSentences.push({ sentence: `"제 분수를 가르쳐주세요, <<nnpc_mummy "Avery">>."`, dialogueID: "avery_moan_daddy"})>>
-				<<elseif isLoveInterest("Avery")>> 
-					<<if !$avery_mansion>>
-						<<set _possibleSentences.push({ sentence: `"그곳에서 절 꺼내주세요, 당신 곁으로 데려가 줘요."`, dialogueID: "avery_moan_premansion"})>>
-					<<else>>
-						<<set _possibleSentences.push({ sentence: `"제가 얼마나 감사하고 있는지 보여드릴게요, 절 원하는 만큼 마음껏 다뤄주세요."`, dialogueID: "avery_moan_mansion"})>>
-					<</if>>
-				<<else>>
-					<<set _possibleSentences.push({ sentence: `"당신은 그 어떤 보수보다도 가치 있어요."`, dialogueID: "avery_moan_default"})>>
-				<</if>>
-				<<set _chosenSentence to _possibleSentences.random()>>
-				<<set $speechspecialdialogue to _chosenSentence.dialogueID>>
-				<<print _chosenSentence.sentence>>
+				<<pc-line-avery-moan>>
 			<<case "Alex">>
-				"더 좋은 파트너는 바랄 수도 없어."
+				<<pc-line-alex-moan>>
 			<<case "Kylar">>
-				"내게 필요한 건 오직 너뿐이야, 카일라."
+				<<pc-line-kylar-moan>>
 			<<case "Gwylan">>
-				"나 홀린 것 같아."
+				<<pc-line-gwylan-moan>>
 		<</switch>>
+		<<speechSay>>
 	<<elseif $enemytype is "beast">>
 		<<if $vaginastate is "imminent">>
 			<<if $player.virginity.vaginal is true>>
@@ -2263,13 +2204,13 @@
 		<<set _npcPronoun to $NPCList[0].pronoun>>
 		<<set _daddy_text  to (_npcPronoun is "m" ? "아빠" : "엄마")>>
 		<<switch $speechcycle>>
-			<<case 0>> "내 목을 졸라 줘<<if _daddy>>, _daddy_text<</if>>."
-			<<case 1>> "내 목에 손을 올려 줘, 제발."
-			<<case 2>> "더 세게<<if _daddy>>, _daddy_text<</if>>! 더 세게 졸라 줘!"
-			<<case 3>> "<<if _daddy>>아빠, <</if>>내 목을 졸라 줬으면 좋겠어."
-			<<case 4>> "제발, 내 목을 조여 줘!"
-			<<case 5>> "내 목을 잡아 줘<<if _daddy>>, _daddy_text<</if>>."
-			<<default>> "목을 세게 졸라 줘."
+			<<case 0>> "Choke me<<if _daddy>>, _daddy_text<</if>>."
+			<<case 1>> "Put your hand on my neck, please."
+			<<case 2>> "Harder<<if _daddy>>, _daddy_text<</if>>! Choke me harder!"
+			<<case 3>> "<<if _daddy>>_daddy_text, I<<else>>I<</if>> want you to choke me."
+			<<case 4>> "Please, squeeze my throat!"
+			<<case 5>> "Grab my neck<<if _daddy>>, _daddy_text<</if>>."
+			<<default>> "Choke me hard."
 		<</switch>>
 	<<else>>
 		<<switch $speechcycle>>
@@ -2530,17 +2471,18 @@
 			<</if>>
 
 		<<elseif _loveInterest isnot undefined and random(0,100) lte 15>>
-			<<set $speechnamedrop to $npc.includes(_loveInterest) ? 0 : 1>>
-			<<if $speechnamedrop is 0>>
-				당신은 말한다.
+			<<set $speechLINameDrop to $npc.includes(_loveInterest) ? 0 : 1>>
+			<<if $speechLINameDrop is 0>>
+				You speak.
 			<<else>>
 				당신은 <<voice "demand">>.
 			<</if>>
 			<<rng>>
+			<<speechPool "pc">>
 			<<switch _loveInterest>>
 				<<case "Robin">>
 					<<if $npc.includes("Robin")>>
-						"로빈, 그만해! 난 이거 원하지 않아!"
+						<<pc-line-robin-demand>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
@@ -2589,7 +2531,7 @@
 
 				<<case "Kylar">>
 					<<if $npc.includes("Kylar")>>
-						"지금 네 헛소리 들어줄 기분 아니야, 카일라."
+						<<pc-line-kylar-demand>>
 					<<elseif $vaginastate is "imminent">>
 						<<if $player.virginity.vaginal is true>>
 							<<if $awarelevel gte 1>>
@@ -2645,13 +2587,13 @@
 							"카일라가... 이 일로 널 다치게 할 거야...!"
 						<</if>>
 					<</if>>
-					<<if $location is "school" and $speechnamedrop is 1 and Time.schoolDay>>
+					<<if $location is "school" and $speechLINameDrop is 1 and Time.schoolDay>>
 						<<status -1>><<lcool>>
 					<</if>>
 
 				<<case "Whitney">>
 					<<if $npc.includes("Whitney")>>
-						"네가 원할 때마다 날 박을 순 없어, 휘트니!"
+						<<pc-line-whitney-demand>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
@@ -2703,7 +2645,7 @@
 
 				<<case "Eden">>
 					<<if $npc.includes("Eden")>>
-						"오늘은 네 사냥감이 아니야, 날 내버려 둬."
+						<<pc-line-eden-demand>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
@@ -2752,7 +2694,7 @@
 
 				<<case "Black Wolf">>
 					<<if $npc.includes("Black Wolf")>>
-						"엎드려. 엎드려!"
+						<<pc-line-blackwolf-demand>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
@@ -2802,21 +2744,7 @@
 
 				<<case "Avery">>
 					<<if $npc.includes("Avery")>>
-						<<set _possibleSentences to []>>
-						<<if !$avery_mansion>>
-							<<set _possibleSentences.push({ sentence: `"날 이렇게 대할 만큼 돈을 많이 주는 것도 아니잖아요!"`, dialogueID: "avery_demand_default"})>>
-						<<else>>
-							<<if isAveryHuntingPlayer()>>
-								<<set _possibleSentences.push({ sentence: `"내게서 당장 떨어져요! 이건 너무 지나치잖아요, 에이버리!"`, dialogueID: "avery_demand_hunting"})>>
-							<<elseif $averyromance is 1>>
-								<<set _possibleSentences.push({ sentence: `"사랑한다고는 했지만, 당장 이걸 멈추지 않으면 미련 없이 떠날 거예요!"`, dialogueID: "avery_demand_romance"})>>
-							<<else>>
-								<<set _possibleSentences.push({ sentence: `"그만해요, 에이버리! 난<<if $averySeen.includes("walkParkSOYes") or $averyromance>> 당신의 <<girlfriend>>【이】지,<</if>> 당신 샌드백이 아니라고요!"`, dialogueID: "avery_demand_mansion"})>>
-							<</if>>
-						<</if>>
-						<<set _chosenSentence to _possibleSentences.random()>>
-						<<set $speechspecialdialogue to _chosenSentence.dialogueID>>
-						<<print _chosenSentence.sentence>>
+						<<pc-line-avery-demand>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
@@ -2865,7 +2793,7 @@
 
 				<<case "Great Hawk">>
 					<<if $npc.includes("Great Hawk")>>
-						"그만 쪼아!"
+						<<pc-line-greathawk-demand>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
@@ -2915,7 +2843,7 @@
 
 				<<case "Alex">>
 					<<if $npc.includes("Alex")>>
-						"알렉스, 이 바보야! 정신 차려."
+						<<pc-line-alex-demand>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
@@ -2963,13 +2891,8 @@
 					<</if>>
 
 				<<case "Sydney">>
-					<<run statusCheck("Sydney")>>
 					<<if $npc.includes("Sydney")>>
-						<<if _sydneyStatus.includes("corrupt")>>
-							"네가 순수했을 때가 그리워. 적어도 이런 짓은 안 했잖아."
-						<<else>>
-							"이게 무슨 벌이야? 나한테서 떨어져!"
-						<</if>>
+						<<pc-line-sydney-demand>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $templePromised is "Sydney">>
 							<<if (($player.virginity.vaginal is true or $player.virginity.temple is true) and $vaginastate is "imminent") or (($player.virginity.penile is true and $player.virginity.temple is true) and ($penisstate is "imminent" or $penisstate is "otheranusimminent"))>>
@@ -3072,15 +2995,7 @@
 
 				<<case "Gwylan">>
 					<<if $npc.includes("Gwylan")>>
-						<<if $abomination is 1>>
-							"그윌란, 거기 있는 거 알아! 정신 차려!"
-						<<elseif $hypnosis_traits.devotion gte 4 or $combat_hypnosis>>
-							"그윌란, 그만해! 내 머릿속에서 나가!"
-						<<elseif $gwylanSeen.includes("romance")>>
-							"그윌란, 그만해! 약속했잖아!"
-						<<else>>
-							"그윌란, 그만해!"
-						<</if>>
+						<<pc-line-gwylan-demand>>
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
@@ -3128,6 +3043,7 @@
 					<</if>>
 				<<default>>
 			<</switch>>
+			<<speechSay>>
 		<<else>>
 			당신은 <<voice "demand">>.
 			<<if $npc.includes("Robin")>>
@@ -3253,338 +3169,349 @@
 
 <<widget "actionsmock">>
 	<<set $mockcycle to $mockcycle gt -1 ? ($mockcycle + 1) % 5 : 0>>
-	<<if $mockaction is "penis">>
-		<<if $vaginause is "penis">>
-			<<if $vaginastate is "penetrated">>
-				<<switch $mockcycle>>
-					<<case 0>> "거의 안 느껴지는데,"
-					<<case 1>> "저번 자지가 훨씬 컸어,"
-					<<case 2>> "들어오긴 한 거야?"
-					<<case 3>> "좀 더 큰 거 없어?"
-					<<case 4>> "실망스럽네,"
-				<</switch>>
-			<<else>>
-				<<switch $mockcycle>>
-					<<case 0>> "내 보지에 들어갈 생각만 해도 미치겠지,"
-					<<case 1>> "네가 충분히 큰지 모르겠어,"
-					<<case 2>> "뭘 기다리는 거야?"
-					<<case 3>> "넣기도 전에 쌀 것 같은데,"
-					<<case 4>> "그거 어떻게 쓰는지나 알아?"
-				<</switch>>
-			<</if>>
-		<<elseif $anususe is "penis">>
-			<<if $anusstate is "penetrated">>
-				<<switch $mockcycle>>
-					<<case 0>> "거의 안 느껴지는데,"
-					<<case 1>> "저번 자지가 훨씬 컸어,"
-					<<case 2>> "들어오긴 한 거야?"
-					<<case 3>> "좀 더 큰 거 없어?"
-					<<case 4>> "실망스럽네,"
-				<</switch>>
-			<<else>>
-				<<switch $mockcycle>>
-					<<case 0>> "내 엉덩이에 들어갈 생각만 해도 미치겠지,"
-					<<case 1>> "네가 충분히 큰지 모르겠어,"
-					<<case 2>> "뭘 기다리는 거야?"
-					<<case 3>> "넣기도 전에 쌀 것 같은데,"
-					<<case 4>> "그거 어떻게 쓰는지나 알아?"
-				<</switch>>
-			<</if>>
-		<<else>>
-			<<switch $mockcycle>>
-				<<case 0>> "실망스럽네,"
-				<<case 1>> "애처롭네,"
-				<<case 2>> "그게 다야?"
-				<<case 3>> "네 조그만 물건은 하나도 안 무서워,"
-				<<case 4>> "네 자지 정말 작다,"
-			<</switch>>
-		<</if>>
-	<<elseif $mockaction is "vagina">>
-		<<if $penisuse is "othervagina">>
-			<<if $penisstate is "penetrated">>
-				<<switch $mockcycle>>
-					<<case 0>> "박히고 있는 주제에 자신만만하네,"
-					<<case 1>> "네 자궁을 가득 채워주지,"
-					<<case 2>> "네 보지 느낌이 이상해,"
-					<<case 3>> "너한테 들어간 자지가 너무 많은 것 같은데,"
-					<<case 4>> "이렇게 박히는 기분이 어때?"
-				<</switch>>
-			<<else>>
-				<<switch $mockcycle>>
-					<<case 0>> "넌 너무 <<slut>> 같아,"
-					<<case 1>> "넌 아직 내 자지를 받을 준비가 안 된 것 같아,"
-					<<case 2>> "감당할 수 있을 것 같아?"
-					<<case 3>> "눈에 띄는 자지는 다 타보려고 할 것 같은데,"
-					<<case 4>> "나를 안에 들이려고 아주 안달이 났네,"
-				<</switch>>
-			<</if>>
-		<<else>>
-			<<switch $mockcycle>>
-				<<case 0>> "벌써 이렇게 젖었잖아,"
-				<<case 1>> "박히고 싶어서 안달이 났네,"
-				<<case 2>> "네 보지는 아주 많이 쓰였나봐,"
-				<<case 3>> "넌 나한테 너무 헐렁할지도 몰라,"
-				<<case 4>> "네 보지 이상하게 생겼어,"
-			<</switch>>
-		<</if>>
-	<<elseif $mockaction is "skill">>
-		<<if $vaginause is "penis">>
-			<<if $vaginastate is "penetrated">>
-				<<switch $mockcycle>>
-					<<case 0>> "그래도 노력은 하네,"
-					<<case 1>> "지루해,"
-					<<case 2>> "네 자지 정말 서투르다,"
-					<<case 3>> "그거 어떻게 쓰는지나 알아?"
-					<<case 4>> "이거 처음이야?"
-				<</switch>>
-			<<else>>
-				<<switch $mockcycle>>
-					<<case 0>> "어디다 들이대는지 조심해,"
-					<<case 1>> "얼마 못 갈 것 같은데,"
-					<<case 2>> "이런 건 처음이지,"
-					<<case 3>> "넌 내 보지에 들어가기엔 한참 모자라,"
-					<<case 4>> "별로 기대도 안 해,"
-				<</switch>>
-			<</if>>
-		<<elseif $anususe is "penis">>
-			<<if $anusstate is "penetrated">>
-				<<switch $mockcycle>>
-					<<case 0>> "그래도 노력은 하네,"
-					<<case 1>> "지루해,"
-					<<case 2>> "네 자지 정말 서투르다,"
-					<<case 3>> "그거 어떻게 쓰는지나 알아?"
-					<<case 4>> "이거 처음이야?"
-				<</switch>>
-			<<else>>
-				<<switch $mockcycle>>
-					<<case 0>> "어디다 들이대는지 조심해,"
-					<<case 1>> "얼마 못 갈 것 같은데,"
-					<<case 2>> "이런 건 처음이지,"
-					<<case 3>> "넌 내 엉덩이에 들어가기엔 한참 모자라,"
-					<<case 4>> "별로 기대도 안 해,"
-				<</switch>>
-			<</if>>
-		<<elseif $penisuse is "othervagina" or $penisuse is "otheranus">>
-			<<if $penisstate is "penetrated" or $penisstate is "otheranus">>
-				<<switch $mockcycle>>
-					<<case 0>> "그래도 노력은 하네,"
-					<<case 1>> "나 하나도 안 가는데,"
-					<<case 2>> "허리 좀 더 움직여봐. 내가 다 해줘야 돼?"
-					<<case 3>> "지금 네가 뭘 하고 있는지 알기는 해?"
-					<<case 4>> "이거 처음이야?"
-				<</switch>>
-			<<else>>
-				<<switch $mockcycle>>
-					<<case 0>> "어디다 들이대는지 조심해,"
-					<<case 1>> "얼마 못 갈 것 같은데,"
-					<<case 2>> "네가 어떻게 다뤄야 할지 알기나 할까,"
-					<<case 3>> "넌 내 자지를 받기엔 한참 모자라,"
-					<<case 4>> "별로 기대도 안 해,"
-				<</switch>>
-			<</if>>
-		<<else>>
-			<<switch $mockcycle>>
-				<<case 0>> "그래도 노력은 하네,"
-				<<case 1>> "끝나면 깨워줘,"
-				<<case 2>> "내 손을 쓰는 게 낫겠어,"
-				<<case 3>> "지금 뭘 하는지도 모르지?"
-				<<case 4>> "정말 못하네,"
-			<</switch>>
-		<</if>>
-	<<elseif $mockaction is "weak">>
-		<<if $vaginause is "penis">>
-			<<if $vaginastate is "penetrated">>
-				<<switch $mockcycle>>
-					<<case 0>> "벌써 지쳤어?"
-					<<case 1>> "원래 이런 약골은 내 안에 안 들이는데,"
-					<<case 2>> "심장마비 안 오게 조심해,"
-					<<case 3>> "넌 너무 약해서 이걸 계속 못 할 거야,"
-					<<case 4>> "금방 닳아버리네,"
-				<</switch>>
-			<<else>>
-				<<switch $mockcycle>>
-					<<case 0>> "넌 밀어넣을 힘도 없을 것 같은데,"
-					<<case 1>> "내가 넣으라고 할 때 넣는 거야,"
-					<<case 2>> "이러다 기절하는 거 아니야?"
-					<<case 3>> "평생 못 들어오게 막을 수도 있어,"
-					<<case 4>> "내 보지를 원한다면 그보다 더 노력해야 할 걸,"
-				<</switch>>
-			<</if>>
-		<<elseif $anususe is "penis">>
-			<<if $anusstate is "penetrated">>
-				<<switch $mockcycle>>
-					<<case 0>> "벌써 지쳤어?"
-					<<case 1>> "원래 이런 약골은 내 안에 안 들이는데,"
-					<<case 2>> "심장마비 안 오게 조심해,"
-					<<case 3>> "넌 너무 약해서 이걸 계속 못 할 거야,"
-					<<case 4>> "금방 닳아버리네,"
-				<</switch>>
-			<<else>>
-				<<switch $mockcycle>>
-					<<case 0>> "넌 밀어넣을 힘도 없을 것 같은데,"
-					<<case 1>> "내가 넣으라고 할 때 넣는 거야,"
-					<<case 2>> "이러다 기절하는 거 아니야?"
-					<<case 3>> "평생 못 들어오게 막을 수도 있어,"
-					<<case 4>> "내 엉덩이를 원한다면 그보다 더 노력해야 할 걸,"
-				<</switch>>
-			<</if>>
-		<<elseif $penisuse is "othervagina" or $penisuse is "otheranus">>
-			<<if $penisstate is "penetrated" or $penisstate is "otheranus">>
-				<<switch $mockcycle>>
-					<<case 0>> "벌써 지쳤어?"
-					<<case 1>> "원래 이런 약골하곤 안 떡치는데,"
-					<<case 2>> "심장마비 안 오게 조심해,"
-					<<case 3>> "넌 너무 약해서 이걸 계속 못 할 거야,"
-					<<case 4>> "금방 닳아버리네,"
-				<</switch>>
-			<<else>>
-				<<switch $mockcycle>>
-					<<case 0>> "넌 밀어넣을 힘도 없을 것 같은데,"
-					<<case 1>> "내가 넣으라고 할 때 넣는 거야,"
-					<<case 2>> "이러다 기절하는 거 아니야?"
-					<<case 3>> "평생 못 들어오게 막을 수도 있어,"
-					<<case 4>> "내 자지를 원한다면 그보다 더 노력해야 할 걸,"
-				<</switch>>
-			<</if>>
-		<<else>>
-			<<switch $mockcycle>>
-				<<case 0>> "넌 너무 약해,"
-				<<case 1>> "이건 순전히 내가 허락해서 일어나는 일이야,"
-				<<case 2>> "불쌍해서 해주는 거야,"
-				<<case 3>> "넌 강제로라도 남한테 떡치게 못 만들 거야,"
-				<<case 4>> "그게 다야?"
-			<</switch>>
-		<</if>>
-	<<elseif $mockaction is "looks">>
-		<<if $vaginause is "penis">>
-			<<if $vaginastate is "penetrated">>
-				<<switch $mockcycle>>
-					<<case 0>> "적어도 네 얼굴은 안 보게 해줘,"
-					<<case 1>> "넌 억지로가 아니면 누구랑 떡칠 일도 없겠지,"
-					<<case 2>> "빨리 끝내. 네 꼴 더 이상 보기 싫으니까,"
-					<<case 3>> "너같이 못생긴 놈이랑은 다시는 떡치고 싶지 않아,"
-					<<case 4>> "네가 즐기고 있길 바라. 네 분수에 넘치는 호사니까,"
-				<</switch>>
-			<<else>>
-				<<switch $mockcycle>>
-					<<case 0>> "이렇게 역겨운 놈이 나랑 떡친다고 생각하니까 구역질 나네,"
-					<<case 1>> "내가 널 동정해서 떡쳐주길 바라?"
-					<<case 2>> "네 끔찍한 몸뚱이가 내 안에 조금이라도 들어오는 건 사양이야,"
-					<<case 3>> "너처럼 못생긴 놈이랑은 떡쳐본 적도 없어,"
-					<<case 4>> "내가 널 상대하기엔 너무 아깝지,"
-				<</switch>>
-			<</if>>
-		<<elseif $anususe is "penis">>
-			<<if $anusstate is "penetrated">>
-				<<switch $mockcycle>>
-					<<case 0>> "적어도 네 얼굴은 안 보게 해줘,"
-					<<case 1>> "넌 억지로가 아니면 누구랑 떡칠 일도 없겠지,"
-					<<case 2>> "빨리 끝내. 네 꼴 더 이상 보기 싫으니까,"
-					<<case 3>> "너같이 못생긴 놈이랑은 다시는 떡치고 싶지 않아,"
-					<<case 4>> "네가 즐기고 있길 바라. 네 분수에 넘치는 호사니까,"
-				<</switch>>
-			<<else>>
-				<<switch $mockcycle>>
-					<<case 0>> "이렇게 역겨운 놈이 나랑 떡친다고 생각하니까 구역질 나네,"
-					<<case 1>> "내가 널 동정해서 떡쳐주길 바라?"
-					<<case 2>> "네 끔찍한 몸뚱이가 내 안에 조금이라도 들어오는 건 사양이야,"
-					<<case 3>> "너처럼 못생긴 놈이랑은 떡쳐본 적도 없어,"
-					<<case 4>> "내가 널 상대하기엔 너무 아깝지,"
-				<</switch>>
-			<</if>>
-		<<elseif $penisuse is "othervagina" or $penisuse is "otheranus">>
-			<<if $penisstate is "penetrated" or $penisstate is "otheranus">>
-				<<switch $mockcycle>>
-					<<case 0>> "적어도 네 얼굴은 안 보게 해줘,"
-					<<case 1>> "넌 억지로가 아니면 누구랑 떡칠 일도 없겠지,"
-					<<case 2>> "빨리 끝내. 네 꼴 더 이상 보기 싫으니까,"
-					<<case 3>> "너같이 못생긴 놈이랑은 다시는 떡치고 싶지 않아,"
-					<<case 4>> "네가 즐기고 있길 바라. 네 분수에 넘치는 호사니까,"
-				<</switch>>
-			<<else>>
-				<<switch $mockcycle>>
-					<<case 0>> "이렇게 역겨운 놈이 나랑 떡친다고 생각하니까 구역질 나네,"
-					<<case 1>> "내가 널 동정해서 떡쳐주길 바라?"
-					<<case 2>> "내 몸의 어떤 부분도 네 끔찍한 몸뚱이 안에 넣기 싫어,"
-					<<case 3>> "너처럼 못생긴 놈이랑은 떡쳐본 적도 없어,"
-					<<case 4>> "내가 널 상대하기엔 너무 아깝지,"
-				<</switch>>
-			<</if>>
-		<<else>>
-			<<switch $mockcycle>>
-				<<case 0>> "난 네가 넘볼 수준이 아니야,"
-				<<case 1>> "다시는 네 얼굴 보고 싶지 않아,"
-				<<case 2>> "잘 쳐줘야 평범하네,"
-				<<case 3>> "으, 징그러,"
-				<<case 4>> "네 몸뚱이 이상하게 생겼어,"
-			<</switch>>
-		<</if>>
-	<<else>>
-		<<if $vaginause is "penis">>
-			<<if $vaginastate is "penetrated">>
-				<<switch $mockcycle>>
-					<<case 0>> "이렇게 날 더럽히니까 기분 좋지?"
-					<<case 1>> "이런 순수한 <<girl>>【을를】 유린하다니. 부끄러운 줄 알아,"
-					<<case 2>> "이러면 벌 받을 거야,"
-					<<case 3>> "내 보지에 이런 짓을 하다니 넌 나쁜 사람이야,"
-					<<case 4>> "정말 잔인해,"
-				<</switch>>
-			<<else>>
-				<<switch $mockcycle>>
-					<<case 0>> "내 순결한 보지를 정말로 더럽힐 셈이야?"
-					<<case 1>> "나 같은 <<girls>>한테 거칠게 구는 게 좋아?"
-					<<case 2>> "그거 때문에 다칠지도 몰라,"
-					<<case 3>> "그러고도 네가 좋은 사람이라고 생각해?"
-					<<case 4>> "내 보지는 그걸 다 받아들이지 못할 텐데,"
-				<</switch>>
-			<</if>>
-		<<elseif $anususe is "penis">>
-			<<if $anusstate is "penetrated">>
-				<<switch $mockcycle>>
-					<<case 0>> "이렇게 날 더럽히니까 기분 좋지?"
-					<<case 1>> "이런 순수한 <<girl>>【을를】 유린하다니. 부끄러운 줄 알아,"
-					<<case 2>> "이러면 벌 받을 거야,"
-					<<case 3>> "내 엉덩이에 이런 짓을 하다니 넌 나쁜 사람이야,"
-					<<case 4>> "정말 잔인해,"
-				<</switch>>
-			<<else>>
-				<<switch $mockcycle>>
-					<<case 0>> "내 순결한 엉덩이를 정말로 더럽힐 셈이야?"
-					<<case 1>> "나 같은 <<girls>>한테 거칠게 구는 게 좋아?"
-					<<case 2>> "그거 때문에 다칠지도 몰라,"
-					<<case 3>> "그러고도 네가 좋은 사람이라고 생각해?"
-					<<case 4>> "내 엉덩이는 그걸 다 받아들이지 못할 텐데,"
-				<</switch>>
-			<</if>>
-		<<elseif $penisuse is "othervagina" or $penisuse is "otheranus">>
-			<<if $penisstate is "penetrated" or $penisstate is "otheranus">>
-				<<switch $mockcycle>>
-					<<case 0>> "이렇게 날 더럽히니까 기분 좋지?"
-					<<case 1>> "이런 순수한 <<girl>>【을를】 유린하다니. 부끄러운 줄 알아,"
-					<<case 2>> "이러면 벌 받을 거야,"
-					<<case 3>> "내 자지에 이런 짓을 하다니 넌 나쁜 사람이야,"
-					<<case 4>> "정말 잔인해,"
-				<</switch>>
-			<<else>>
-				<<switch $mockcycle>>
-					<<case 0>> "내 순결한 자지를 정말로 더럽힐 셈이야?"
-					<<case 1>> "나 같은 <<girls>>한테 거칠게 구는 게 좋아?"
-					<<case 2>> "그거 때문에 다칠지도 몰라,"
-					<<case 3>> "그러고도 네가 좋은 사람이라고 생각해?"
-					<<case 4>> "내 자지는 그걸 다 받아들이지 못할 텐데,"
-				<</switch>>
-			<</if>>
-		<<else>>
-			<<switch $mockcycle>>
-				<<case 0>> "정말 너무해,"
-				<<case 1>> "순수한 <<girls>>【을를】 이런 식으로 대하는 사람이었어?"
-				<<case 2>> "네가 하는 짓은 잘못됐어,"
-				<<case 3>> "그러고도 마음이 편해?"
-				<<case 4>> "넌 나쁜 사람이야,"
-			<</switch>>
-		<</if>>
+	<<speechPool "pc">>
+	<<rng>>
+	<<if $rng lte 15>>
+		<<switch $NPCList[$mouthtarget].fullDescription>>
+			<<case "Whitney">><<pc-line-whitney-mock $mockaction>>
+		<</switch>>
 	<</if>>
-	당신은 <<if $consensual is 1>>장난스러운<<else>>조롱하는<</if>> 말투로 말한다.
+	<<if hasSpeechLines()>>
+		<<speechSay>>
+	<<else>>
+		<<if $mockaction is "penis">>
+			<<if $vaginause is "penis">>
+				<<if $vaginastate is "penetrated">>
+					<<switch $mockcycle>>
+						<<case 0>> "I can barely feel it,"
+						<<case 1>> "The last cock was much larger,"
+						<<case 2>> "Is it even in yet?"
+						<<case 3>> "Don't you have something bigger?"
+						<<case 4>> "How disappointing,"
+					<</switch>>
+				<<else>>
+					<<switch $mockcycle>>
+						<<case 0>> "I bet the thought of entering my pussy is driving you mad,"
+						<<case 1>> "I'm not sure you're big enough,"
+						<<case 2>> "What are you waiting for?"
+						<<case 3>> "I bet you cum before you get it in,"
+						<<case 4>> "Do you even know how to use that thing?"
+					<</switch>>
+				<</if>>
+			<<elseif $anususe is "penis">>
+				<<if $anusstate is "penetrated">>
+					<<switch $mockcycle>>
+						<<case 0>> "I can barely feel it,"
+						<<case 1>> "The last cock was much larger,"
+						<<case 2>> "Is it even in yet?"
+						<<case 3>> "Don't you have something bigger?"
+						<<case 4>> "How disappointing,"
+					<</switch>>
+				<<else>>
+					<<switch $mockcycle>>
+						<<case 0>> "I bet the thought of entering my ass is driving you mad,"
+						<<case 1>> "I'm not sure you're big enough,"
+						<<case 2>> "What are you waiting for?"
+						<<case 3>> "I bet you cum before you get it in,"
+						<<case 4>> "Do you even know how to use that thing?"
+					<</switch>>
+				<</if>>
+			<<else>>
+				<<switch $mockcycle>>
+					<<case 0>> "How disappointing,"
+					<<case 1>> "You're pathetic,"
+					<<case 2>> "Is that all you've got?"
+					<<case 3>> "Your little thing doesn't frighten me,"
+					<<case 4>> "Your cock is so small,"
+				<</switch>>
+			<</if>>
+		<<elseif $mockaction is "vagina">>
+			<<if $penisuse is "othervagina">>
+				<<if $penisstate is "penetrated">>
+					<<switch $mockcycle>>
+						<<case 0>> "You're confident for someone getting pounded,"
+						<<case 1>> "I'm gonna fill your womb,"
+						<<case 2>> "Your pussy feels weird,"
+						<<case 3>> "I think you've had one too many cocks in you,"
+						<<case 4>> "What's it like getting fucked like this?"
+					<</switch>>
+				<<else>>
+					<<switch $mockcycle>>
+						<<case 0>> "You're such a <<slut>>,"
+						<<case 1>> "I don't think you're ready for my cock,"
+						<<case 2>> "You think you can handle it?"
+						<<case 3>> "I bet you try to ride every cock you see,"
+						<<case 4>> "You're very eager to take me inside you,"
+					<</switch>>
+				<</if>>
+			<<else>>
+				<<switch $mockcycle>>
+					<<case 0>> "You're so wet already,"
+					<<case 1>> "You're eager to get fucked,"
+					<<case 2>> "I bet your pussy has had lots of use,"
+					<<case 3>> "You might be too wide for me,"
+					<<case 4>> "Your pussy looks weird,"
+				<</switch>>
+			<</if>>
+		<<elseif $mockaction is "skill">>
+			<<if $vaginause is "penis">>
+				<<if $vaginastate is "penetrated">>
+					<<switch $mockcycle>>
+						<<case 0>> "At least you're trying,"
+						<<case 1>> "You're boring me,"
+						<<case 2>> "Your cock is so clumsy,"
+						<<case 3>> "Do you even know how to use that thing?"
+						<<case 4>> "Is this your first time?"
+					<</switch>>
+				<<else>>
+					<<switch $mockcycle>>
+						<<case 0>> "Careful where you point that,"
+						<<case 1>> "You won't last long,"
+						<<case 2>> "I bet this is new to you,"
+						<<case 3>> "You're not good enough for my pussy,"
+						<<case 4>> "I don't expect much,"
+					<</switch>>
+				<</if>>
+			<<elseif $anususe is "penis">>
+				<<if $anusstate is "penetrated">>
+					<<switch $mockcycle>>
+						<<case 0>> "At least you're trying,"
+						<<case 1>> "You're boring me,"
+						<<case 2>> "Your cock is so clumsy,"
+						<<case 3>> "Do you even know how to use that thing?"
+						<<case 4>> "Is this your first time?"
+					<</switch>>
+				<<else>>
+					<<switch $mockcycle>>
+						<<case 0>> "Careful where you point that,"
+						<<case 1>> "You won't last long,"
+						<<case 2>> "I bet this is new to you,"
+						<<case 3>> "You're not good enough for my ass,"
+						<<case 4>> "I don't expect much,"
+					<</switch>>
+				<</if>>
+			<<elseif $penisuse is "othervagina" or $penisuse is "otheranus">>
+				<<if $penisstate is "penetrated" or $penisstate is "otheranus">>
+					<<switch $mockcycle>>
+						<<case 0>> "At least you're trying,"
+						<<case 1>> "You're not making me cum,"
+						<<case 2>> "Move your hips more. Do I have to do everything?"
+						<<case 3>> "Do you even know what you're doing?"
+						<<case 4>> "Is this your first time?"
+					<</switch>>
+				<<else>>
+					<<switch $mockcycle>>
+						<<case 0>> "Careful where you point that,"
+						<<case 1>> "You won't last long,"
+						<<case 2>> "I doubt you know how handle it,"
+						<<case 3>> "You're not good enough for my penis,"
+						<<case 4>> "I don't expect much,"
+					<</switch>>
+				<</if>>
+			<<else>>
+				<<switch $mockcycle>>
+					<<case 0>> "At least you're trying,"
+					<<case 1>> "Wake me when it's over,"
+					<<case 2>> "I'd be better off using my hand,"
+					<<case 3>> "You don't know what you're doing, do you?"
+					<<case 4>> "You're bad at this,"
+				<</switch>>
+			<</if>>
+		<<elseif $mockaction is "weak">>
+			<<if $vaginause is "penis">>
+				<<if $vaginastate is "penetrated">>
+					<<switch $mockcycle>>
+						<<case 0>> "Tired already?"
+						<<case 1>> "I don't normally let such weaklings inside me,"
+						<<case 2>> "Careful you don't have a heart attack,"
+						<<case 3>> "You're too weak to keep this up,"
+						<<case 4>> "You're wearing out fast,"
+					<</switch>>
+				<<else>>
+					<<switch $mockcycle>>
+						<<case 0>> "I don't think you're strong enough to push it in,"
+						<<case 1>> "It goes in when I say so,"
+						<<case 2>> "You gonna faint on me?"
+						<<case 3>> "I could keep you away forever,"
+						<<case 4>> "If you want my pussy, you'll need to work harder than that,"
+					<</switch>>
+				<</if>>
+			<<elseif $anususe is "penis">>
+				<<if $anusstate is "penetrated">>
+					<<switch $mockcycle>>
+						<<case 0>> "Tired already?"
+						<<case 1>> "I don't normally let such weaklings inside me,"
+						<<case 2>> "Careful you don't have a heart attack,"
+						<<case 3>> "You're too weak to keep this up,"
+						<<case 4>> "You're wearing out fast,"
+					<</switch>>
+				<<else>>
+					<<switch $mockcycle>>
+						<<case 0>> "I don't think you're strong enough to push it in,"
+						<<case 1>> "It goes in when I say so,"
+						<<case 2>> "You gonna faint on me?"
+						<<case 3>> "I could keep you away forever,"
+						<<case 4>> "If you want my ass, you'll need to work harder than that,"
+					<</switch>>
+				<</if>>
+			<<elseif $penisuse is "othervagina" or $penisuse is "otheranus">>
+				<<if $penisstate is "penetrated" or $penisstate is "otheranus">>
+					<<switch $mockcycle>>
+						<<case 0>> "Tired already?"
+						<<case 1>> "I don't normally fuck such weaklings,"
+						<<case 2>> "Careful you don't have a heart attack,"
+						<<case 3>> "You're too weak to keep this up,"
+						<<case 4>> "You're wearing out fast,"
+					<</switch>>
+				<<else>>
+					<<switch $mockcycle>>
+						<<case 0>> "I don't think you're strong enough to push it in,"
+						<<case 1>> "It goes in when I say so,"
+						<<case 2>> "You gonna faint on me?"
+						<<case 3>> "I could keep you away forever,"
+						<<case 4>> "If you want my penis, you'll need to work harder than that,"
+					<</switch>>
+				<</if>>
+			<<else>>
+				<<switch $mockcycle>>
+					<<case 0>> "You're so weak,"
+					<<case 1>> "This is only happening because I let it,"
+					<<case 2>> "I'm doing this out of pity,"
+					<<case 3>> "You couldn't even force someone to fuck you,"
+					<<case 4>> "Is that all you've got?"
+				<</switch>>
+			<</if>>
+		<<elseif $mockaction is "looks">>
+			<<if $vaginause is "penis">>
+				<<if $vaginastate is "penetrated">>
+					<<switch $mockcycle>>
+						<<case 0>> "At least don't make me look at your face,"
+						<<case 1>> "You could only ever get someone to fuck you through force,"
+						<<case 2>> "Hurry up. I don't want to look at you any more,"
+						<<case 3>> "I hope I don't have to fuck anyone as ugly as you again,"
+						<<case 4>> "I hope you're enjoying this. It's more than you deserve,"
+					<</switch>>
+				<<else>>
+					<<switch $mockcycle>>
+						<<case 0>> "The thought of someone so revolting fucking me is making me queasy,"
+						<<case 1>> "You want me to pity fuck you?"
+						<<case 2>> "I don't want any part of your disgusting body inside me,"
+						<<case 3>> "I've never fucked anyone as ugly as you,"
+						<<case 4>> "I look too good for you,"
+					<</switch>>
+				<</if>>
+			<<elseif $anususe is "penis">>
+				<<if $anusstate is "penetrated">>
+					<<switch $mockcycle>>
+						<<case 0>> "At least don't make me look at your face,"
+						<<case 1>> "You could only ever get someone to fuck you through force,"
+						<<case 2>> "Hurry up. I don't want to look at you any more,"
+						<<case 3>> "I hope I don't have to fuck anyone as ugly as you again,"
+						<<case 4>> "I hope you're enjoying this. It's more than you deserve,"
+					<</switch>>
+				<<else>>
+					<<switch $mockcycle>>
+						<<case 0>> "The thought of someone so revolting fucking me is making me queasy,"
+						<<case 1>> "You want me to pity fuck you?"
+						<<case 2>> "I don't want any part of your disgusting body inside me,"
+						<<case 3>> "I've never fucked anyone as ugly as you,"
+						<<case 4>> "I look too good for you,"
+					<</switch>>
+				<</if>>
+			<<elseif $penisuse is "othervagina" or $penisuse is "otheranus">>
+				<<if $penisstate is "penetrated" or $penisstate is "otheranus">>
+					<<switch $mockcycle>>
+						<<case 0>> "At least don't make me look at your face,"
+						<<case 1>> "You could only ever get someone to fuck you through force,"
+						<<case 2>> "Hurry up. I don't want to look at you any more,"
+						<<case 3>> "I hope I don't have to fuck anyone as ugly as you again,"
+						<<case 4>> "I hope you're enjoying this. It's more than you deserve,"
+					<</switch>>
+				<<else>>
+					<<switch $mockcycle>>
+						<<case 0>> "The thought of someone so revolting fucking me is making me queasy,"
+						<<case 1>> "You want me to pity fuck you?"
+						<<case 2>> "I don't want any part of me inside your disgusting body,"
+						<<case 3>> "I've never fucked anyone as ugly as you,"
+						<<case 4>> "I look too good for you,"
+					<</switch>>
+				<</if>>
+			<<else>>
+				<<switch $mockcycle>>
+					<<case 0>> "I'm out of your league,"
+					<<case 1>> "I don't want to see your face again,"
+					<<case 2>> "You're plain, at best,"
+					<<case 3>> "Ew, gross,"
+					<<case 4>> "Your body looks weird,"
+				<</switch>>
+			<</if>>
+		<<else>>
+			<<if $vaginause is "penis">>
+				<<if $vaginastate is "penetrated">>
+					<<switch $mockcycle>>
+						<<case 0>> "I hope you're happy defiling me like this,"
+						<<case 1>> "You're ravaging an innocent <<girl>>. Shame on you,"
+						<<case 2>> "You'll be punished for this,"
+						<<case 3>> "You're a bad person to be doing such things to my pussy,"
+						<<case 4>> "You're so cruel,"
+					<</switch>>
+				<<else>>
+					<<switch $mockcycle>>
+						<<case 0>> "Are you really going to defile my innocent pussy?"
+						<<case 1>> "Do you like being rough with <<girls>> like me?"
+						<<case 2>> "You might hurt me with that,"
+						<<case 3>> "Do you still think you're a good person?"
+						<<case 4>> "My pussy might not be able to take it,"
+					<</switch>>
+				<</if>>
+			<<elseif $anususe is "penis">>
+				<<if $anusstate is "penetrated">>
+					<<switch $mockcycle>>
+						<<case 0>> "I hope you're happy defiling me like this,"
+						<<case 1>> "You're ravaging an innocent <<girl>>. Shame on you,"
+						<<case 2>> "You'll be punished for this,"
+						<<case 3>> "You're a bad person to be doing such things to my ass,"
+						<<case 4>> "You're so cruel,"
+					<</switch>>
+				<<else>>
+					<<switch $mockcycle>>
+						<<case 0>> "Are you really going to defile my innocent ass?"
+						<<case 1>> "Do you like being rough with <<girls>> like me?"
+						<<case 2>> "You might hurt me with that,"
+						<<case 3>> "Do you still think you're a good person?"
+						<<case 4>> "My ass might not be able to take it,"
+					<</switch>>
+				<</if>>
+			<<elseif $penisuse is "othervagina" or $penisuse is "otheranus">>
+				<<if $penisstate is "penetrated" or $penisstate is "otheranus">>
+					<<switch $mockcycle>>
+						<<case 0>> "I hope you're happy defiling me like this,"
+						<<case 1>> "You're ravaging an innocent <<girl>>. Shame on you,"
+						<<case 2>> "You'll be punished for this,"
+						<<case 3>> "You're a bad person to be doing such things to my penis,"
+						<<case 4>> "You're so cruel,"
+					<</switch>>
+				<<else>>
+					<<switch $mockcycle>>
+						<<case 0>> "Are you really going to defile my innocent penis?"
+						<<case 1>> "Do you like being rough with <<girls>> like me?"
+						<<case 2>> "You might hurt me with that,"
+						<<case 3>> "Do you still think you're a good person?"
+						<<case 4>> "My penis might not be able to take it,"
+					<</switch>>
+				<</if>>
+			<<else>>
+				<<switch $mockcycle>>
+					<<case 0>> "You're so mean,"
+					<<case 1>> "Are you really the sort of person who treats innocent <<girls>> this way?"
+					<<case 2>> "What you're doing is wrong,"
+					<<case 3>> "How will you live with yourself?"
+					<<case 4>> "You're a bad person,"
+				<</switch>>
+			<</if>>
+		<</if>>
+		you say in a <<if $consensual is 1>>teasing<<else>>mocking<</if>> tone.
+	<</if>>
 	<<personselect $mouthtarget>>
 	<<if $role is "islander" and (!$islander_language or $islander_language lt 100)>>
 		<span class="red"><<if $enemyno gte 2>>그들은<<else>><<He>>【은는】 <</if>> 당신의 말을 이해하지 못하고,</span> 당신을 <<if $enemyno gte 2>>무시한다<<else>>무시한다<</if>>.
@@ -3753,7 +3680,7 @@
 	<<if $mouthstate is "kissentrance">>
 		당신은 <<hers>> 입술에 부드럽게 입술을 스친다.
 		<<if $player.virginity.kiss is true>>
-			<<set $speechkissvirgin to 1>>
+			<<set $speechKissVirgin to 1>>
 		<</if>>
 		<<if $NPCList[$mouthtarget].mouth is "kissentrance">>
 			<<if $npcrow.includes($mouthtarget)>>
@@ -3787,21 +3714,22 @@
 <</widget>>
 
 <<widget "actionshandbite">>
+	<<personselect $mouthtarget>>
 	<<if $transformationParts.traits.fangs isnot "disabled">>
 		<<print either(
-			"당신의 송곳니가 상대의 손을 찢고 파고든다.",
-			"당신의 송곳니가 상대의 손 깊숙이 박힌다.",
-			"당신은 송곳니로 그 손을 물어뜯는다.",
-			"당신은 송곳니를 그 손에 박아 넣는다.",
-			"당신은 송곳니로 그 손에 구멍을 낸다.",
+			"Your fangs tear into <<his>> hand.",
+			"Your fangs dig deep into <<his>> hand.",
+			"You tear at <<his>> hand with your fangs.",
+			"You sink your fangs into <<his>> hand.",
+			"You puncture <<his>> hand with your fangs.",
 		)>>
 	<<else>>
 		<<print either(
-			"당신은 입을 틀어막은 손을 문다.",
-			"당신은 입을 틀어막은 손을 갉아문다.",
-			"당신은 상대의 손에 이를 박아 넣는다.",
-			"당신은 상대의 손을 꽉 깨문다.",
-			"당신은 이로 상대의 손을 으스러질 듯 깨문다.",
+			"You bite the hand gagging you.",
+			"You gnaw at the hand gagging you.",
+			"You sink your teeth into <<his>> hand.",
+			"You chomp at <<his>> hand.",
+			"You crunch <<his>> hand with your teeth.",
 		)>>
 	<</if>>
 <</widget>>
@@ -5430,7 +5358,7 @@
 <</widget>>
 
 <<widget "actionsconfrontNNPC">>
-	<<if $wraith and $wraith.mimic>>
+	<<if $wraith?.mimic>>
 		<<set $_npc to $wraith.mimic>>
 	<<else>>
 		<<set $_npc to $NPCList[0].fullDescription>>
@@ -5530,7 +5458,7 @@
 					<</if>>
 				<</if>>
 			<<case "Ivory Wraith">>
-				<<if $wraith.state is "haunt" and $wraithPrison and $wraithPrison.vision>>
+				<<if $wraith.state is "haunt" and $wraithPrison?.vision>>
 					<<if $speech_attitude is "meek">>
 						<<switch random(1, 3)>>
 							<<case 3>> 당신은 운다. "미안해! 그냥 날 내버려 둬!"
@@ -5607,7 +5535,7 @@
 	<</if>>
 <</widget>>
 <<widget "actionstauntNNPC">>
-	<<if $wraith and $wraith.mimic>>
+	<<if $wraith?.mimic>>
 		<<set $_npc to $wraith.mimic>>
 	<<else>>
 		<<set $_npc to $NPCList[0].fullDescription>>
@@ -5641,8 +5569,8 @@
 				<<actionstaunt>>
 			<</if>>
 		<<case "Ivory Wraith">>
-			<<if $wraith.state is "haunt" and $wraithPrison and $wraithPrison.vision>>
-				"네 멍청한 목걸이 여기 있어," 당신이 말한다. "와서 가져가 봐."
+			<<if $wraith.state is "haunt" and $wraithPrison?.vision>>
+				"I've got your stupid necklace right here," you say. "Come get it."
 			<<else>>
 				<<if $speech_attitude is "meek">>
 					<<switch random(1, 3)>>

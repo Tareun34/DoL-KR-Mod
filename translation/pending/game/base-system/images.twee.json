@@ -1,0 +1,78 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<case \"search\">><<icon \"forest-search.png\">>"
+  ],
+  "context": "\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<case \"scriptorium\">><<icon \"scriptorium.png\">>",
+   "\t\t<<case \"calligraphy\">><<icon \"calligraphy.png\">>",
+   "\t\t<<case \"candle\">><<icon \"candle.png\">>"
+  ],
+  "context": "\t\t<<case \"virginity\">><<icon \"virginity-test.png\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<case \"search\">>",
+   "\t\t\t<<if Time.season is \"winter\">>",
+   "\t\t\t\t<<icon \"moor-search-winter.png\">>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<icon \"moor-search.png\">>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t<<case \"remy cottage\">><<icon \"remy-cottage.png\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<case \"tower\">><<icon \"bird-tower/tower.png\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<case \"tower\">>",
+   "\t\t\t<<if Time.season is \"winter\">>",
+   "\t\t\t\t<<icon \"bird-tower/tower-winter.png\">>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<icon \"bird-tower/tower.png\">>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t<<case \"sing\">><<icon \"sing.png\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $monster is 1 or ($settings.monsterChance gte $rng and $hallucinations gte 1) or ($settings.monsterChance gte $rng and !$settings.monsterHallucinationsOnly) or ($greathawkmonster is 2) or (!$settings.bestialityEnabled)>>",
+   "\t\t\t\t\t<<set _skin to C.npc[\"Great Hawk\"].skincolour is \"black\" ? \"dark\" : \"light\">>",
+   "\t\t\t\t\t<<set _pregnancyIconFilter = \"filter: \" + setup.colours.getSkinCSSFilter(_skin)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if resolveIfNamedBeastIsMonster(\"greathawk\")>>",
+   "\t\t\t\t\t<<set _pregnancyIconFilter = \"filter: \" + setup.colours.getSkinToneCSSFilter(C.npc[\"Great Hawk\"])>>"
+  ],
+  "context": "\t\t\t<<if _args[0] is \"Great Hawk\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set _skin to C.npc[_args[0]].skincolour is \"black\" ? \"dark\" : \"light\">>",
+   "\t\t\t\t<<set _pregnancyIconFilter = \"filter: \" + setup.colours.getSkinCSSFilter(_skin)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set _pregnancyIconFilter = \"filter: \" + setup.colours.getSkinToneCSSFilter(C.npc[_args[0]])>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ }
+]

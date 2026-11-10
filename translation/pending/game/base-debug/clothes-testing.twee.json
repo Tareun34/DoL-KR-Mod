@@ -1,0 +1,58 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<span class=\"gold\">Penis Size</span>"
+  ],
+  "old_kr": [
+   "\t<span class=\"gold\">자지 크기</span>"
+  ],
+  "new_en": [
+   "\t<span class=\"gold\">Body Freckles</span><br>",
+   "\t<label>None <<radiobutton \"$characterViewer.bodyState.bodyFreckles\" \"none\" autocheck>></label> |",
+   "\t<label>Upper body <<radiobutton \"$characterViewer.bodyState.bodyFreckles\" \"upper\" autocheck>></label> |",
+   "\t<label>Full body <<radiobutton \"$characterViewer.bodyState.bodyFreckles\" \"full\" autocheck>></label> |",
+   "\t<br><br>",
+   "",
+   "\t<span class=\"gold\">Penis Size</span>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tbodyFreckles: \"none\","
+  ],
+  "context": "\t\t\tfreckles: false,"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $characterViewer.bodyState.bodyFreckles to \"none\">>"
+  ],
+  "context": "\t\t<<set $characterViewer.bodyState.freckles to false>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $characterViewer.bodyState.bodyFreckles to [\"none\", \"upper\", \"full\"].random()>>"
+  ],
+  "context": "\t\t<<set $characterViewer.bodyState.freckles to !random(1)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set _modeloptions.freckles to $characterViewer.bodyState.freckles>>",
+   "\t<<set _modeloptions.bodyFreckles to $characterViewer.bodyState.bodyFreckles>>"
+  ],
+  "context": "\t<<set _modeloptions.skin_tone to $characterViewer.skinColour.range>>"
+ }
+]

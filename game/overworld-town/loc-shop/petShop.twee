@@ -54,7 +54,7 @@
 		<br>
 	<</if>>
 	<<if Time.dayState isnot "night">>
-		<<if $daily.seenPets isnot true and $fame.bestiality gte 200 and $settings.bestialityEnabled and ($settings.monsterChance lt 100 or $settings.monsterHallucinationsOnly)>>
+		<<if !$daily.seenPets and $fame.bestiality gte 200 and ["dog", "cat", "lizard"].some(type => animalSexEnabledForType(type))>>
 			<<set $daily.seenPets to true>><<generate1>><<person1>>
 			<<if $fame.bestiality gte 600>>
 				가게로 들어서자 <<person>>【이가】 당신을 막아선다. <<Hes>> 가게 유니폼을 입고 이름표를 달고 있다. <<His>> 말투는 정중하지만 단호하다.

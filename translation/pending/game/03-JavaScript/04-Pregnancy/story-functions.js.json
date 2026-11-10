@@ -1,0 +1,291 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "// pregnancyOnly: count only the belly from pregnancies, excluding parasites and bloat —",
+   "// for checks that ask whether the pregnancy itself shows."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "// pregnancyOnly: count only the belly from pregnancies, excluding parasites and bloat.",
+   "// For checks that ask whether the pregnancy itself shows."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t// toward a term size set by the litter count. Both",
+   "\t\t// orifices can carry at once, so their bellies add up."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t// toward a term size set by the litter count."
+  ],
+  "context": "\t\t// Pregnancies live in records. The belly grows with progress"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\tif (pregnancy) bellySize += pregnancyBellySize(pregnancy);"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tif (pregnancy && !pregnancy.litterBorn) bellySize += pregnancyBellySize(pregnancy);"
+  ],
+  "context": "\t\t\tconst pregnancy = getActivePregnancy(\"pc\", orifice);"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * The cycle keeps one pace: cycleDaysPerTick a tick, cycleTicksPerDay ticks a day. Pills change how",
+   " * fertile the body is, never how fast the cycle runs, so a cycle day and a real day are the same",
+   " * unit and this is addition rather than a simulation. The next cycle is walked with this one's",
+   " * shape, since its own length and stages are not rolled until it begins."
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * Days past the end of this cycle",
+   " * wrap around using this cycle's length, because the next cycle's length isn't rolled until it starts."
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tconst c = PregnancyConstants.menstrualCycle;",
+   "\tconst m = V.sexStats.vagina.menstruation;",
+   "\tlet day = m.currentDay + days * c.cycleDaysPerTick * c.cycleTicksPerDay;",
+   "\twhile (day >= m.currentDaysMax) day -= m.currentDaysMax;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tconst cycle = PregnancyConstants.menstrualCycle;",
+   "\tconst menstruation = V.sexStats.vagina.menstruation;",
+   "\tlet day = menstruation.currentDay + days * cycle.cycleDaysPerTick * cycle.cycleTicksPerDay;",
+   "\twhile (day >= menstruation.currentDaysMax) day -= menstruation.currentDaysMax;"
+  ],
+  "context": "function menstrualDayIn(days) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * The fertility a load left in the PC on a given day can expect to meet across its whole life,",
+   " * weighted by how likely it is to still be alive to meet it, and after birth control."
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * How fertile the PC is over the days a load landing on a given day could live, after birth control",
+   " * and fertility boosters. Each day counts by the chance the load is still alive on it."
+  ],
+  "context": "/**"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * The INTEGRAL, deliberately, not the peak. A peak is bimodal -- it reads 1 the moment ovulation",
+   " * comes within sperm range and stays there, so 25 of 30 days land in \"very safe\" or \"dangerous\" and",
+   " * the days between say nothing. The integral spreads the cycle across all five bands, and because",
+   " * every day of the load's life is weighted by loadSurvival it is very nearly proportional to the",
+   " * real odds the conception roll produces, which a peak is not.",
+   " *",
+   " * This, not a probability, is still what the meter reports. A probability would have to carry",
+   " * settings.basePlayerPregnancyChance, a 0-100 slider the player set once and already knows about --",
+   " * at the top of its range every day of the month reads dangerous, at the bottom ovulation itself",
+   " * reads safe, and either way the reading stops saying anything about the cycle.",
+   " *",
+   " * menstrualFertileDates bands its printed ranges on this same function, so the label and the dates",
+   " * beside it cannot disagree: one quantity, one set of thresholds, coherence by construction rather",
+   " * than by two constants that happen to match."
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * This is the fertility meter's reading. It averages over the load's life instead of taking the most",
+   " * fertile day, because the most fertile day jumps straight from safe to dangerous and skips the",
+   " * bands in between. It leaves out the base pregnancy chance setting, which would push every day to",
+   " * one end of the meter. menstrualFertileDates uses it too, so the dates match the label."
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @returns {number} 0 for no chance at all; 1 is every day of the load's life at unmedicated ovulation,",
+   " * and fertility boosters can carry it past 1"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @returns {number} 0 is no chance, 1 is a load spending its whole life at ovulation with no pills.",
+   " *   Fertility boosters can push it past 1."
+  ],
+  "context": " * @param {number} [daysFromNow=0] read the load as landing this many days from today"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t// A parasited orifice never rolls. Only a body with no clear orifice left is safe by it."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t// An orifice with parasites in it can't conceive, so the meter only reads 0 when every orifice has them."
+  ],
+  "context": "\tif (V.settings.basePlayerPregnancyChance <= 0) return 0; // the slider's floor turns pregnancy off"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * The PC's risky and dangerous days as calendar dates, in the player's date format, for the stats",
+   " * screen."
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * The PC's risky and dangerous days this cycle as calendar dates, in the player's date format, for",
+   " * the stats screen."
+  ],
+  "context": "/**"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * A cycle day is a real day, so a date is the days between and nothing has to be simulated. Only",
+   " * this cycle is projected: restartMenstruationCycle re-rolls the next one's length, stages and",
+   " * fertileLeadDays, so a date past this window would be a number the game has not generated yet.",
+   " * Once the window has passed, risky and dangerous come back null. The next cycle's start IS known --",
+   " * it is whatever is left of this one -- and its length and lead days are rolled from known ranges, so",
+   " * nextWindow carries how many days away the next fertile window can be, as a span rather than a date",
+   " * the game has not settled on."
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * Only this cycle is shown, because restartMenstruationCycle rolls the next cycle's length and",
+   " * stages when it starts. Once this cycle's window has passed, risky and dangerous are null, and",
+   " * nextWindow gives how many days away the next window could be, as a range."
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * A span already under way is reported from today rather than from the day it opened, and dangerous",
+   " * comes back null once ovulation itself is behind the PC while the luteal tail still runs."
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * A window that has already started is reported from today. dangerous is null once ovulation has",
+   " * passed, even while the days after it are still risky."
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tconst m = V.sexStats.vagina.menstruation;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tconst menstruation = V.sexStats.vagina.menstruation;"
+  ],
+  "context": "function menstrualFertileDates() {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t// Walk the rest of this cycle with the very function the label bands, so the two cannot disagree.",
+   "\t// Only this cycle: restartMenstruationCycle re-rolls the next one's length, stages and lead days,",
+   "\t// so a date past it would be a number the game has not generated.",
+   "\tconst daysLeft = Math.ceil(m.currentDaysMax - m.currentDay);"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t// The same function as the meter label, so the dates match it.",
+   "\tconst daysLeft = Math.ceil(menstruation.currentDaysMax - menstruation.currentDay);"
+  ],
+  "context": "\t};"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * How many real days away the NEXT cycle's fertile window can be, as a span."
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * How many days away the next cycle's fertile window could be, as a range."
+  ],
+  "context": "/**"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tconst c = PregnancyConstants.menstrualCycle;",
+   "\tconst m = V.sexStats.vagina.menstruation;",
+   "\tconst lengths = [m.baseDays, m.baseDays + m.baseDaysRng];",
+   "\tconst riskyStartFor = (length, leadDays) => Math.round(length * c.ovulationStartCycleFraction) - leadDays * (1 - c.riskyFertility);",
+   "\tconst daysAway = cycleDay => m.currentDaysMax - m.currentDay + (cycleDay - c.cycleRestartDay);",
+   "\tconst soonest = daysAway(riskyStartFor(Math.min(...lengths), c.fertileLeadDaysMax));",
+   "\tconst latest = daysAway(riskyStartFor(Math.max(...lengths), c.fertileLeadDaysMin));"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tconst cycle = PregnancyConstants.menstrualCycle;",
+   "\tconst menstruation = V.sexStats.vagina.menstruation;",
+   "\tconst lengths = [menstruation.baseDays, menstruation.baseDays + menstruation.baseDaysRng];",
+   "\tconst riskyStartFor = (length, leadDays) => Math.round(length * cycle.ovulationStartCycleFraction) - leadDays * (1 - cycle.riskyFertility);",
+   "\tconst daysAway = cycleDay => menstruation.currentDaysMax - menstruation.currentDay + (cycleDay - cycle.cycleRestartDay);",
+   "\tconst soonest = daysAway(riskyStartFor(Math.min(...lengths), cycle.fertileLeadDaysMax));",
+   "\tconst latest = daysAway(riskyStartFor(Math.max(...lengths), cycle.fertileLeadDaysMin));"
+  ],
+  "context": "function menstrualNextWindowIn() {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tconst c = PregnancyConstants.menstrualCycle;",
+   "\tconst menstrualEnd = random(c.periodDaysMin, c.periodDaysMax);",
+   "\tconst ovulationStart = Math.round(currentDaysMax * c.ovulationStartCycleFraction);"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tconst cycle = PregnancyConstants.menstrualCycle;",
+   "\tconst menstrualEnd = random(cycle.periodDaysMin, cycle.periodDaysMax);",
+   "\tconst ovulationStart = Math.round(currentDaysMax * cycle.ovulationStartCycleFraction);"
+  ],
+  "context": "function rollMenstrualStages(currentDaysMax) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t// Heat used to run off playerPregnancyRisk, which returns 0 when player pregnancy is switched",
+   "\t// off entirely. Reading fertility directly dropped that gate, so a player with both pregnancy",
+   "\t// settings off still went into heat."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t// No heat when player pregnancy is switched off entirely."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t// The cycle's own curve, NOT fertilityOnCycleDay: a fertility booster lifts that to 0.8 on every",
+   "\t// day of the month, which would leave a beast-TF player permanently in heat."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t// Uses the cycle's own curve and not fertilityOnCycleDay, because a fertility booster raises that",
+   "\t// on every day of the month and would leave a beast-TF player permanently in heat."
+  ],
+  "context": "\tconst heat = PregnancyConstants.menstrualCycle.heatFertility;"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * The records a (carrier, existingId) pair selects: just that one prengancy record when existingId is given,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * The records a (carrier, existingId) pair selects: just that one pregnancy record when existingId is given,"
+  ],
+  "context": "/**"
+ }
+]

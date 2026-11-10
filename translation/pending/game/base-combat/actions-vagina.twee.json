@@ -1,0 +1,46 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<if $NPCList[$vaginatarget].condom and $NPCList[$vaginatarget].condom.willUse is true and $NPCList[$vaginatarget].condom.worn is false and !$NPCList[$vaginatarget].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if $NPCList[$vaginatarget].condom?.willUse is true and $NPCList[$vaginatarget].condom.worn is false and !$NPCList[$vaginatarget].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<sex 100 \"genitals\" $vaginatarget>><<bruise vagina>><<vaginalstat>><<raped>><<vaginaraped>><<takeVirginity $NPCList[$vaginatarget].fullDescription \"vaginal\">><<takeNPCVirginity $vaginatarget \"penile\">><<set $vaginastate to \"penetrated\">><<set $speechvaginavirgin to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<sex 100 \"genitals\" $vaginatarget>><<bruise vagina>><<vaginalstat>><<raped>><<vaginaraped>><<takeVirginity $NPCList[$vaginatarget].fullDescription \"vaginal\">><<takeNPCVirginity $vaginatarget \"penile\">><<set $vaginastate to \"penetrated\">><<set $speechVaginaVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $NPCList[$vaginadoubletarget].condom and $NPCList[$vaginadoubletarget].condom.willUse is true and $NPCList[$vaginadoubletarget].condom.worn is false and !$NPCList[$vaginadoubletarget].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $NPCList[$vaginadoubletarget].condom?.willUse is true and $NPCList[$vaginadoubletarget].condom.worn is false and !$NPCList[$vaginadoubletarget].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<sex 50 \"genitals\" $vaginatarget>><<sex 50 \"genitals\" $vaginadoubletarget>><<bruise vagina>><<vaginalstat>><<vaginaldoublestat>><<raped>><<vaginaraped>><<takeVirginity `[_npcA, _npcB]` \"vaginal\">><<takeNPCVirginity _npcA \"penile\">><<takeNPCVirginity _npcB \"penile\">><<set $vaginastate to \"doublepenetrated\">><<set $speechvaginavirgin to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<sex 50 \"genitals\" $vaginatarget>><<sex 50 \"genitals\" $vaginadoubletarget>><<bruise vagina>><<vaginalstat>><<vaginaldoublestat>><<raped>><<vaginaraped>><<takeVirginity `[_npcA, _npcB]` \"vaginal\">><<takeNPCVirginity _npcA \"penile\">><<takeNPCVirginity _npcB \"penile\">><<set $vaginastate to \"doublepenetrated\">><<set $speechVaginaVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t<<set _mydesc to ($NPCList[_npcA].fullDescription + \" and \" + $NPCList[_npcB].fullDescription)>>"
+ }
+]

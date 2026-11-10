@@ -48,8 +48,8 @@
 <</if>>
 <br><br>
 
-<<if $pound and $pound.progress gte 6>>
-	<<link [[사냥 무리와 함께 간다|Wolf Halloween Dog]]>><</link>>
+<<if $pound?.progress gte 6>>
+	<<link [[Go with the hunting party|Wolf Halloween Dog]]>><</link>>
 <<else>>
 	<<link [[사냥 무리와 함께 간다|Wolf Halloween 3]]>><<set $phase to 0>><</link>>
 <</if>>

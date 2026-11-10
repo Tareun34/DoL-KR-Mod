@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou awaken upside down, suspended from the ceiling by a thick string of silk. You squirm and struggle.",
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [
+   "\t깨어나 보니, 두꺼운 거미줄에 묶여 천장에 거꾸로 매달려 있다. 몸부림치며 발버둥친다.",
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "new_en": [
+   "\tYou awaken upside down, suspended from the ceiling by a thick string of silk. You squirm and struggle.",
+   "\t<<if beastSexEnabledForType(\"spider\", $monster is 1)>>"
+  ],
+  "context": "<<if $settings.spidersEnabled>>"
+ }
+]

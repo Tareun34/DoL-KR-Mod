@@ -1,0 +1,13 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if beastSexEnabledForType(\"dog\", $monster is 1)>>"
+  ],
+  "context": ""
+ }
+]

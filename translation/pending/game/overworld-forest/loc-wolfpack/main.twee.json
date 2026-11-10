@@ -1,0 +1,88 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $pound and $pound.progress is 5>>",
+   "\t<span class=\"blue\">A dark shape lurks in the trees.</span>"
+  ],
+  "old_kr": [
+   "<<if $pound and $pound.progress is 5>>",
+   "\t<span class=\"blue\">어두운 형체가 나무들 사이에 숨어 있다.</span>"
+  ],
+  "new_en": [
+   "<<if $pound?.progress is 5>>",
+   "\t<span class=\"blue\">A dark shape lurks in the trees.</span>"
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $pound and $pound.progress is 5>>",
+   "\t\t<<wolfcaveicon \"black dog\">><<link [[Approach the dark shape|Wolf Cave Dog Intro]]>><<set $pound.progress to 6>><<stress 6>><<trauma -6>><<control 25>><</link>><<gstress>><<ggcontrol>><<ltrauma>>"
+  ],
+  "old_kr": [
+   "\t<<if $pound and $pound.progress is 5>>",
+   "\t\t<<wolfcaveicon \"black dog\">><<link [[어두운 형체에 접근한다|Wolf Cave Dog Intro]]>><<set $pound.progress to 6>><<stress 6>><<trauma -6>><<control 25>><</link>><<gstress>><<ggcontrol>><<ltrauma>>"
+  ],
+  "new_en": [
+   "\t<<if $pound?.progress is 5>>",
+   "\t\t<<wolfcaveicon \"black dog\">><<link [[Approach the dark shape|Wolf Cave Dog Intro]]>><<set $pound.progress to 6>><<stress 6>><<trauma -6>><<control 25>><</link>><<gstress>><<ggcontrol>><<ltrauma>>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $pound and $pound.progress is 6 and Time.dayState is \"day\" and $daily.wolfCaveDog is undefined>>",
+   "\t\t<<wolfcaveicon \"black dog\">><<link [[Approach the black dog|Wolf Cave Dog]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<elseif $pound and $pound.progress is 6 and Time.dayState is \"day\" and $daily.wolfCaveDog is undefined>>",
+   "\t\t<<wolfcaveicon \"black dog\">><<link [[검은 개에게 접근한다|Wolf Cave Dog]]>><</link>>"
+  ],
+  "new_en": [
+   "\t<<elseif $pound?.progress is 6 and Time.dayState is \"day\" and $daily.wolfCaveDog is undefined>>",
+   "\t\t<<wolfcaveicon \"black dog\">><<link [[Approach the black dog|Wolf Cave Dog]]>><</link>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<br><br>",
+   "\t\tYou slept soundly, but now feel a little rough."
+  ],
+  "old_kr": [
+   "\t\t<br><br>",
+   "\t\t푹 잤지만, 지금은 속이 좀 좋지 않다."
+  ],
+  "new_en": [
+   "\t\t<br>",
+   "\t\tYou slept soundly, but now feel a little rough."
+  ],
+  "context": "\t<<if [\"dryheaving\",\"nausea\"].includes(_wakingEffect)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br>"
+  ],
+  "context": "\t\t<<undobindingsicon>><<link [[결박을 끊는다|Wolf Cave Unbind]]>><</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if !_eggEvent>><br><br><</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if !_eggEvent>><br><</if>>"
+  ],
+  "context": "\t\t<<else>>"
+ }
+]

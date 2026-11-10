@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\tAn enormous <<beasttype>> stalks out of the darkness in front of you! <<if $monster is 1>><<bHe>> licks <<bhis>> lips and lets out a low hiss. \"Looks tasty.\"<<else>>Its mouth is wide open.<</if>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t거대한 <<beasttype>>【이가】 어둠 속에서 성큼성큼 걸어 나온다! <<if $monster is 1>><<bHe>>【이가】 입술을 핥으며 낮게 쉭 소리를 낸다. \"맛있어 보이는군.\"<<else>>입을 크게 벌리고 있다.<</if>>"
+  ],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"lizard\", $monster is 1)>>",
+   "\t\t\tAn enormous <<beasttype>> stalks out of the darkness in front of you! <<if $monster is 1>><<bHe>> licks <<bhis>> lips and lets out a low hiss. \"Looks tasty.\"<<else>>Its mouth is wide open.<</if>>"
+  ],
+  "context": "\t\t<<beastNEWinit 1 lizard>>"
+ }
+]

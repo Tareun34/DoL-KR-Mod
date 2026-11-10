@@ -20,7 +20,7 @@
 
 알렉스는 샌드위치를 우물거리며 농장 일과 자기 근황, 그리고 마을에 대한 이야기를 꺼낸다.
 <<if $rng gte 67>>
-	"여기 케이크가 맛있을지는 모르겠네," <<he>>【이가】 목소리를 낮추며 말한다. "우리 부모님이 만드신 거에 비하면 별로일걸." 
+	"I doubt the cakes are any good here," <<he>> says, keeping <<his>> voice low. "Not compared to what my parents make."
 <<elseif $rng gte 33>>
 	"나쁘지 않은 곳이네," <<he>>【이가】 말한다. "이 마을치고는. 적어도 음료는 시원하잖아."
 <<else>>
@@ -81,7 +81,7 @@
 <</if>>
 <br><br>
 
-알렉스는 고개를 끄덕인다. "신경 쓰지 마. 나도 일하러 가봐야겠다. 농장에서 보자." <<He>>【은는】 걸어간다.
+Alex nods. "Don't worry. I should really be working too. See you at the farm." <<He>> walks away.
 <br><br>
 
 <<destinationeventend>>
@@ -94,15 +94,15 @@
 <<if $farm_stage gte 7 and C.npc.Alex.dom gte random(1, 100)>>
 	"어이," <<he>>【이가】 뒤에서 당신의 팔을 붙잡으며 말한다. "내가 뭐 잘못한 거라도 있어? 밥이라도 같이 먹을까 했는데."
 	<br><br>
-	
-	<<link [[밥을 먹으러 간다|Street Alex Cafe]]>><<set $phase to 0>><</link>>
+
+	<<link [[Grab a bite to eat|Street Alex Cafe]]>><<set $phase to 0>><</link>>
 	<br>
 	<<link [[<<him>>【을를】 떨쳐낸다|Street Alex Shake]]>><<npcincr Alex love -1>><</link>><<llove>>
 	<br>
 <<else>>
 	<<He>>【은는】 당신을 놓아준다.
 	<br><br>
-	
+
 	<<destinationeventend>>
 <</if>>
 
@@ -117,20 +117,20 @@
 :: Street Alex Cafe React Intro
 <<effects>>
 
-당신은 아무 반응도 보이지 않는다. 
+You don't react.
 <<if random(1, 2) is 2>>
 	휘트니와 <<person2>><<his>> 패거리는 <span class="green">당신을 눈치채지 못한 채</span> 창문을 휙 지나쳐 간다.
 	<br><br>
-	
-	알렉스는 영문도 모른 채 샌드위치를 맛있게 베어 물고, 마지막 빵가루까지 싹 비운다. 알렉스는 만족스러운 듯 당신과 함께 카페를 나선다. "돌아가는 게 낫겠어," <<he>>【이가】 말한다. "할 일이 많거든. 만나서 반가웠어." <<He>>【은는】 걸어간다.
+
+	Alex tucks into <<person1>><<his>> sandwich, none the wiser, until <<he>> finishes the last crumb. Satisfied, Alex leaves the cafe with you. "Better head back," <<he>> says. "Lots of work to do. Nice seeing you." <<He>> walks away.
 	<br><br>
 	<<destinationeventend>>
 <<else>>
 	휘트니와 <<person2>><<his>> 패거리가 창문 앞을 지나간다. 휘트니가 걸음을 멈추고 능글맞게 웃더니, <span class="red">이내 고개를 당신 쪽으로 돌린다.</span>
 
 	<br><br>
-	
-	<<link [[다음|Street Alex Cafe Whitney Intro]]>><</link>>
+
+	<<link [[Next|Street Alex Cafe Whitney Intro]]>><</link>>
 	<br>
 <</if>>
 
@@ -249,8 +249,8 @@
 	<br><br>
 	알렉스는 휘트니에게 다가가 <<his>> 비열한 웃음을 잠시 쳐다보더니, <span class="red"><<him>>의 턱에 주먹을 날린다.</span>
 	<br><br>
-	
-	<<link [[다음|Street Alex Cafe Whitney Intro Bully 2]]>><</link>>
+
+	<<link [[Next|Street Alex Cafe Whitney Intro Bully 2]]>><</link>>
 	<br>
 <<else>>
 	<<person1>>
@@ -260,11 +260,11 @@
 	<br><br>
 	"내 친구한테서 떨어져," 알렉스가 대답한다. 휘트니의 패거리가 다가와 <<person2>><<him>>【을를】 에워싸도 개의치 않는 눈치다. "얘한테 무슨 짓을 했든 당장 그만둬, 알아들었어?"
 	<br><br>
-	
-	휘트니 패거리는 마치 신호를 기다리듯 <<him>>【을를】 쳐다본다. 휘트니가 씩 웃는다.
+
+	Whitney's gang look to <<him>>, as if waiting for a signal. Whitney grins.
 	<br><br>
-	
-	<<link [[다음|Street Alex Cafe Whitney Intro Bully 2]]>><</link>>
+
+	<<link [[Next|Street Alex Cafe Whitney Intro Bully 2]]>><</link>>
 	<br>
 <</if>>
 
@@ -287,8 +287,8 @@
 	<br><br>
 	휘트니 패거리는 이 상황을 즐기며 여유롭게 번갈아 주먹을 날린다. 알렉스는 간신히 버텨내고 있지만, 압박에 못 이겨 구석으로 몰린다. 그때, 눈 깜짝할 새에 알렉스가 양손으로 옆에 있던 의자 두 개를 들어 방 가로질러 내던진다. 휘트니 패거리가 몸을 피하려 팔을 들어 올린 틈이 생겼다. 휘트니는 그 틈에 반응할 겨를도, 비열하게 웃던 표정을 거둘 틈도 없었다. <span class="red">알렉스가 <<him>>의 얼굴에 주먹을 내리꽂는다.</span>
 	<br><br>
-	
-	<<link [[다음|Street Alex Cafe Whitney Intro Bully 3]]>><</link>>
+
+	<<link [[Next|Street Alex Cafe Whitney Intro Bully 3]]>><</link>>
 	<br>
 <</if>>
 
@@ -409,14 +409,14 @@
 <</if>>
 <br><br>
 
-"성적 라이벌 같은 거?" 알렉스가 묻는다. <<person1>><<He>>【은는】 휘트니가 다른 테이블에서 음료를 낚아채 단숨에 들이켠 뒤, 등 뒤 문밖으로 던져버리는 모습을 지켜본다. "그건 아닌 것 같네."
+"Like an academic rival?" Alex asks. <<person1>><<He>> watches Whitney snatch someone else's drink from a table, chug it down, then throw it out the door behind <<person2>><<him>>. "I'm guessing not."
 <br><br>
 
 알렉스는 자리에 앉은 채 휘트니가 다가오는 것을 지켜본다.
 <br>
-"신경 쓰지 말아 줄래?" <<he>>【이가】 말한다. "우린 둘만의 시간을 보내는 중이거든."
+"Do you mind?" <<person1>><<he>> asks. "We're sharing a private moment."
 <br>
-<<person2>>휘트니는 알렉스의 옷차림을 훑어본다. "촌구석 놈?" <<he>>【이가】 묻는다. 
+<<person2>>Whitney examines Alex's clothes. "Country fucker?" <<he>> asks.
 <br><br>
 <<He>>【은는】 당신의 머리 위에 손을 얹는다. "내 <<girl>>【을를】 찾아줘서 고맙다. 이제 넌 가봐." <<He>>【은는】 문을 향해 엄지손가락을 치켜세우더니, 알렉스의 남은 샌드위치 반쪽을 낚아챈다.
 <br><br>
@@ -430,7 +430,7 @@
 :: Street Alex Cafe Whitney Intro Rival 2
 <<effects>>
 
-휘트니가 비틀거리며 뒤로 물러서자, <<person2>><<his>> 패거리 두 명이 <<his>> 양팔을 붙잡는다. 충격에서 벗어난 다른 놈들이 알렉스에게 바짝 다가선다. 휘트니는 얻어맞은 충격이 아직 가시지 않았지만 패거리를 향해 손짓하며 막으려 한다. 하지만 놈들은 알렉스에게 정신이 팔려 알아채지 못한다. <<ldom "Whitney">><<npcincr Whitney dom -1>> 
+Whitney staggers backwards, where two of <<person2>><<his>> friends catch <<his>> arms. Others recover from their shock, and step closer to Alex. Still recovering from the blow, Whitney gestures at <<person2>><<his>> gang, trying to hold them back, but they're too focused on Alex to notice. <<ldom "Whitney">><<npcincr Whitney dom -1>>
 <br><br>
 <<person1>>알렉스는 양팔을 올려 스스로를 방어하며 첫 번째, 두 번째 일격을 쳐내지만 하마터면 중심을 잃을 뻔한다. 타격이 이어질 때마다 <<he>>【은는】 한 걸음씩 뒤로 밀려난다. 놈들은 휘트니가 간신히 입을 열 때까지 알렉스를 구석으로 몰아넣는다.
 <br><br>
@@ -507,8 +507,8 @@
 		<br><br>
 		알렉스는 확신이 서지 않는 듯 당신을 바라본다. 그 사이 휘트니는 알렉스의 남은 샌드위치 반쪽을 낚아채 베어 문다. "내 챙년을 찾아줘서 고마워." <<He>>【은는】 출구를 향해 엄지손가락을 치켜세운다. "넌 이만 가봐도 좋아."
 		<br><br>
-		
-		자리에서 일어난 알렉스는 휘트니의 눈을 잠시 쳐다보더니, <span class="red"><<person2>><<him>>의 얼굴에 주먹을 내리꽂는다.</span>
+
+		Alex rises to <<person1>><<his>> feet, looks Whitney in the eyes a moment, <span class="red">then punches <<person2>><<him>> in the face.</span>
 	<<else>>
 		<<person2>>휘트니가 박장대소한다. "너랑 마을 절반 사람들이 그렇겠지," <<he>>【이가】 말한다. 알렉스는 휘트니의 말을 이해하지 못한 채 당신을 바라본다. 그러자 휘트니는 <<person1>>알렉스 접시에 남은 샌드위치 반쪽을 낚아챈다.
 		<br><br>
@@ -548,7 +548,7 @@
 
 <<person1>>알렉스는 그들이 시야에서 사라질 때까지 기다렸다가 경계를 푼다. "미안해," <<he>>【이가】 말한다. "일을 키우면 안 됐는데.
 <<if $farm_stage gte 7>>
-	그냥 걔가 너에 대해 지껄이는 꼴이 너무 거슬렸어.
+	I just didn't like the way <<person2>><<he>><<person1>> was talking about you.
 <<else>>
 	하지만 저런 부류는 뜨거운 맛을 보여주기 전까진 멈추지 않거든.
 <</if>>
@@ -583,7 +583,7 @@
 <br>
 
 :: Street Alex Cafe Whitney Intro Affection 2
-<<effects>> 
+<<effects>>
 
 휘트니가 제 얼굴을 감싸 쥐고 뒤로 물러서자, <<person2>><<his>> 패거리 두 명이 <<his>> 양팔을 붙잡는다. 다른 두 명이 앞으로 나선다. 휘트니는 그들을 말리려 손짓하지만, 놈들은 알아채지 못한다.<<ldom "Whitney">><<npcincr Whitney dom -1>>
 <br><br>
@@ -738,7 +738,7 @@
 "이해가 안 가네," 알렉스가 곰곰이 생각하며 말한다. 그러더니 <<person1>><<he>>【은는】 어깨를 으쓱하고 남은 샌드위치를 베어 문다.
 <br><br>
 
-만족스러운 듯 알렉스가 자리에서 일어난다. "재밌었어. 고마워. 난 이만 농장으로 돌아가 봐야겠다. 할 일이 있어서."
+Satisfied, Alex rises to <<his>> feet. "I had a nice time. Thanks. I better get back to the farm. Work to do."
 <br><br>
 
 당신은 카페를 나온 뒤, 각자의 길로 향한다.
@@ -753,7 +753,7 @@
 당신은 아무 말도 하지 않는다. 알렉스는 고개를 가로젓는다. "가끔은 네가 참 궁금해져. 다음부터 그런 장난 칠 땐 미리 귀띔이라도 해줘." <<He>>【은는】 남은 샌드위치를 베어 문다.
 <br><br>
 
-만족스러운 듯 알렉스가 자리에서 일어난다. "재밌었어. 고마워. 난 이만 농장으로 돌아가 봐야겠다. 할 일이 있어서."
+Satisfied, Alex rises to <<his>> feet. "I had a nice time. Thanks. I better get back to the farm. Work to do."
 <br><br>
 
 당신은 카페를 나온 뒤, 각자의 길로 향한다.

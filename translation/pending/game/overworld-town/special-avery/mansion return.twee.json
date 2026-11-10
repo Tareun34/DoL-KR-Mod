@@ -1,0 +1,58 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You strip to your underwear. Avery watches as if appriasing you. <<covered>>"
+  ],
+  "old_kr": [
+   "당신은 속옷만 남기고 벗는다. 에이버리는 당신을 감정하듯 지켜본다. <<covered>>"
+  ],
+  "new_en": [
+   "You strip to your underwear. Avery watches as if appraising you. <<covered>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\tAvery and the <<person>> make small talk. Meanwhile, the <<beasttype>> examines you. <<bHe 0>> walks around you three times, then sticks <<bhis 0>> nose in your <<bottom>>.<<gstress>><<stress 6>>"
+  ],
+  "old_kr": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t에이버리와 그 <<person>>【은는】 잠시 잡담을 나눈다. 그 사이 <<beasttype>>【은는】 당신을 살핀다. <<bHe 0>>【은는】 당신 주위를 세 바퀴 돌더니, <<bhis 0>> 코를 당신의 <<bottom>>에 들이민다.<<gstress>><<stress 6>>"
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\tAvery and the <<person>> make small talk. Meanwhile, the <<beasttype>> examines you. <<bHe 0>> walks around you three times, then sticks <<bhis 0>> nose in your <<bottom>>.<<gstress>><<stress 6>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\tYou're crawling along a riverbank when a pair of yellow eyes emerge from a nearby bush. A <<beasttype>> steps out, fur dripping. <<bHe>> prowls toward you, as if you were prey."
+  ],
+  "old_kr": [
+   "<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t당신이 강둑을 따라 기어가고 있을 때, 근처 덤불에서 노란 눈 한 쌍이 떠오른다. <<beasttype>>【이가】 털에서 물을 뚝뚝 흘리며 걸어 나온다. <<bHe>>【은는】 당신을 사냥감처럼 향해 다가온다."
+  ],
+  "new_en": [
+   "<<if beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\tYou're crawling along a riverbank when a pair of yellow eyes emerge from a nearby bush. A <<beasttype>> steps out, fur dripping. <<bHe>> prowls toward you, as if you were prey."
+  ],
+  "context": "<<beastNEWinit 1 \"wolf\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<effects>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<effects>><<seenPassage>>"
+  ],
+  "context": "<<set $averySeen.pushUnique(\"puppyPlayReturn\")>>"
+ }
+]

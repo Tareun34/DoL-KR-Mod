@@ -256,7 +256,7 @@
 			<<set $_item.accessory_colour to clone($_item.accessory_colour_options.random())>>
 		<</if>>
 	<</if>>
-	<<if $_item.pattern_options and $_item.pattern_options.length gt 0>>
+	<<if $_item.pattern_options?.length gt 0>>
 		<<if _args[5]>>
 			<<set $_item.pattern to _args[5]>>
 		<<else>>
@@ -836,7 +836,7 @@
 		<<set $_clothesbr to true>>
 		당신은 $worn.handheld.name【을를】 <<= $worn.handheld.name.includes("balloon") ? "되찾는다" : "집어든다">>.
 	<</if>>
-	<<if !pcAreArmsBound("both") and !_rubbedNecklace and !$passage.includes("Wardrobe") and random(1, 3) is 1>>
+	<<if !pcAreArmsBound("both") and !_rubbedNecklace and !$passage.includes("Wardrobe") and !$passage.includes("Changing Room") and random(1, 3) is 1>>
 		<<if $worn.neck.name is "ivory necklace">>
 			<<set $_clothesbr to true>><<set _rubbedNecklace to true>>
 			당신은 목걸이를 움켜쥔다.
@@ -1251,7 +1251,7 @@
 		<<if $_item.outfitPrimary isnot undefined>>
 			<<for _labelStore, _unused range $_item.outfitPrimary>>
 				<<set $_itemPair to $store[_labelStore].find(item => item.location is _args[0])>>
-				<<if $_itemPair and $_itemPair.outfitSecondary isnot undefined and $_itemPair.outfitSecondary[1] is $_item.name and !$_itemPair.temp>>
+				<<if $_itemPair?.outfitSecondary isnot undefined and $_itemPair.outfitSecondary[1] is $_item.name and !$_itemPair.temp>>
 					<<if !setup.wardrobeSkip.includes($_itemPair.name)>>
 						<<set $wardrobe[_labelStore].push(clone($_itemPair))>>
 					<</if>>
@@ -1983,7 +1983,7 @@
 	<</if>>
 	<<if (!$worn.legs.type.includes("swim") or !$worn.legs.type.includes("naked") or $worn.legs.cursed isnot 1)>>
 		<<set _swim_strip_check.pushUnique("legs")>>
-	<</if>>	
+	<</if>>
 	<<if (!$worn.feet.type.includes("swim") or !$worn.feet.type.includes("naked") or $worn.feet.cursed isnot 1)>>
 		<<set _swim_strip_check.pushUnique("feet")>>
 	<</if>>
@@ -2022,7 +2022,7 @@
 	<<else>>
 		당신은 옷을 벗어 안전하게 챙겨둔다.
 	<</if>>
-	
+
 	<<if _swim_strip_check.includes("upper")>>
 		<<upperstrip>>
 	<</if>>

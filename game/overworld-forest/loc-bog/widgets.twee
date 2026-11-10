@@ -31,8 +31,8 @@
 		<<addinlineevent "bog_water_lizard">>
 			물이 부글부글 끓는다. 바로 앞에서 커다란 무언가가 튀어나오며 물보라가 튄다!
 			<<beastNEWinit 1 lizard>>
-			<<if $monster is 1 or $settings.bestialityEnabled>>
-				<<beasttype>>의 비늘 덮인 얼굴이 굶주린 듯 당신을 쳐다본다. <<bHe>>【이가】 당신에게 뛰어들어, 수면 아래로 끌어당긴다.
+			<<if beastSexEnabledForType("lizard", $monster is 1)>>
+				The scaled face of a <<beasttype>> eyes you hungrily. <<bHe>> leaps at you, dragging you under the surface.
 				<br><br>
 
 				<<link [[다음|Bog Lizard Rape]]>><<set $molestationstart to 1>><</link>>
@@ -106,8 +106,8 @@
 		<<addinlineevent "bog_lizard">>
 			물이 부글부글 끓는다. 커다란 무언가가 통로 위로 뛰어오르며 요란한 물보라를 일으키는 소리가 들린다.
 			<<beastNEWinit 1 lizard>>
-			<<if $monster is 1 or $settings.bestialityEnabled>>
-				<<beasttype>>【이가】 굶주린 듯 당신을 쳐다본다.
+			<<if beastSexEnabledForType("lizard", $monster is 1)>>
+				The scaled face of a <<beasttype>> eyes you hungrily.
 				<br><br>
 
 				<<link [[몸집을 크게 보이게 한다|Bog Lizard Stand]]>><</link>><<physiquedifficulty 6000 15000>>

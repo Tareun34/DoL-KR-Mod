@@ -1,0 +1,11 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<run sortTentaclesByDescription()>>"
+  ],
+  "context": "\t\t<</for>>"
+ }
+]

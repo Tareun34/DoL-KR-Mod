@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $player.penisExist and $player.vaginaExist>>",
+   "\t\tIf <<hes>> surprised by your unique genitalia, <<he>> gives no sign."
+  ],
+  "old_kr": [
+   "\t<<if $player.penisExist and $player.vaginaExist>>",
+   "\t\t<<hes>> 당신의 독특한 성기를 보고 놀랐다 해도, <<he>>【은는】 내색하지 않는다."
+  ],
+  "new_en": [
+   "\t<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>",
+   "\t\tIf <<hes>> surprised by your unique genitalia, <<he>> gives no sign."
+  ],
+  "context": "\t<<lowerstrip>>"
+ }
+]

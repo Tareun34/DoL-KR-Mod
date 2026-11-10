@@ -1,0 +1,41 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<elseif $bus is \"garden\" and $_waterInThisContainer and $_waterInThisContainer.dirty lte 1>>",
+   "\t\t\t\t\t| <<link [[Dump out (0:01)|$passage]]>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<elseif $bus is \"garden\" and $_waterInThisContainer and $_waterInThisContainer.dirty lte 1>>",
+   "\t\t\t\t\t| <<link [[쏟아버린다 (0:01)|$passage]]>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<elseif $bus is \"garden\" and $_waterInThisContainer?.dirty lte 1>>",
+   "\t\t\t\t\t| <<link [[Dump out (0:01)|$passage]]>>"
+  ],
+  "context": "\t\t\t\t\t<</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $player.freckles to false>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $player.skin.faceFreckles to false>>",
+   "\t<<set $player.skin.bodyFreckles to \"none\">>"
+  ],
+  "context": "\t<<set $facevariant to \"aloof\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $itemActionObject and $itemActionObject.dirty gte 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $itemActionObject?.dirty gte 2>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ }
+]

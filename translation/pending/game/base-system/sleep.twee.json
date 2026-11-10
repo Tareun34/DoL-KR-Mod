@@ -1,0 +1,59 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $hc and $hcChallenge and $hcChallenge.timeSleep>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $hc and $hcChallenge?.timeSleep>>"
+  ],
+  "context": "\t<!-- hopeless cycle \"poor beds\" challenge modifier -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\t\t\t\t<<elseif $kylarSeen.includes(\"locket\") and $wardrobe.neck.some(item => item.name is \"love locket\") and Time.dayState is \"night\" and $kylarbed is undefined and $robinbed is undefined and !($christmas is 1 and Time.monthDay is 25) and $weekly.kylarLocketBreakIn isnot 1 and $rng gte 91 and C.npc.Kylar.state is \"active\">>",
+   "\t\t\t\t\t<<set $weekly.kylarLocketBreakIn to 1>>",
+   "\t\t\t\t\t<<set _sleepinterrupt to 1>>",
+   "\t\t\t\t\t<<set _kylarWake to 3>>"
+  ],
+  "context": "\t\t\t\t\t<<set _kylarWake to 2>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if wraithSleepEventCheck() and $bird and $bird.upgrades and $bird.upgrades.mirror is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if wraithSleepEventCheck() and $bird?.upgrades?.mirror is 1>>"
+  ],
+  "context": "\t\t\t<<case \"tower\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if maleChance() gt 0 or beastMaleChance() gt 0 or $settings.femaleNPCPenisChance gt 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if maleChance() gt 0 or C.beastSettingTypes.some(type => beastMaleChanceForType(type) > 0) or $settings.femaleNPCPenisChance gt 0>>"
+  ],
+  "context": "\t\t<<if [\"pregnancy\", \"mixed\"].includes($earSlime.focus) and ($player.vaginaExist or $settings.analEnabled) and !playerIsPregnant()>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if maleChance() lt 100 or beastMaleChance() lt 100 or $settings.maleNPCVaginaChance gt 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if maleChance() lt 100 or C.beastSettingTypes.some(type => beastMaleChanceForType(type) < 100) or $settings.maleNPCVaginaChance gt 0>>"
+  ],
+  "context": "\t\t<<if $player.penisExist and [\"impregnation\", \"mixed\"].includes($earSlime.focus)>>"
+ }
+]

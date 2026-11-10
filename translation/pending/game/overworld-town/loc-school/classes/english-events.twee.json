@@ -1,0 +1,49 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t<<link [[Next|English Outbuilding Molestation]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t<<link [[다음|English Outbuilding Molestation]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\t\t<<link [[Next|English Outbuilding Molestation]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tDoren makes you sit alone on the other side of the room. You got away at least.",
+   "\t\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t\t도렌은 당신을 교실 반대편에 혼자 앉게 한다. 어쨌든 벗어나긴 했다.",
+   "\t\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t\tDoren makes you sit alone on the other side of the room. You got away at least."
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<npc Doren>><<person1>>",
+   "\tDoren puts <<his>> hands on <<his>> hips and gives them a level stare. \"You're not gonna fool me that easily. Office, now.\""
+  ],
+  "old_kr": [
+   "\t<<npc Doren>><<person1>>",
+   "\t도렌은 허리에 손을 얹고 그들을 매섭게 노려본다. \"그딴 얄팍한 수로 날 속일 순 없다. 교장실로 가라, 당장.\""
+  ],
+  "new_en": [
+   "\t<<person1>>",
+   "\tDoren puts <<his>> hands on <<his>> hips and gives them a level stare. \"You're not gonna fool me that easily. Office, now.\""
+  ],
+  "context": ""
+ }
+]

@@ -217,7 +217,7 @@
 				<</switch>>
 				<<takeVirginity `$abomination is 1 ? $NPCList[0].fullDescription + "'s " + _tentacle.fullDesc : _tentacle.fullDesc` "oral">><<violence 5>>
 				<<if $abomination is 1 and $NPCList[0].type is "plant">>
-					<<set $speechmouthvirgin to 2>>
+					<<set $speechOralVirgin to 2>>
 				<</if>>
 			<<else>>
 				<<switch _tentacle.size>>
@@ -297,7 +297,7 @@
 				<</switch>>
 				<<violence 100>>
 				<<if $abomination is 1 and $NPCList[0].type is "plant">>
-					<<set $speechvaginavirgin to 2>>
+					<<set $speechVaginaVirgin to 2>>
 				<</if>>
 			<</if>>
 		<<else>>
@@ -360,7 +360,7 @@
 			<span class="pink">당신의 <<penis>>에 들이박으며, 뿌리까지 집어삼켜</span> <span class="red">귀두와 포피 사이의 점막을 찢고 순결을 영원히 앗아간다.</span>
 			<<violence 100>>
 			<<if $abomination is 1 and $NPCList[0].type is "plant">>
-				<<set $speechpenisvirgin to 2>>
+				<<set $speechPenisVirgin to 2>>
 			<</if>>
 		<<else>>
 			<span class="pink">당신의 <<penis>>에 들이박으며, 뿌리까지 통째로 집어삼킨다.</span>
@@ -446,7 +446,7 @@
 			<</switch>>
 			<<takeVirginity `$abomination is 1 ? $NPCList[0].fullDescription + "'s " + _tentacle.fullDesc : _tentacle.fullDesc` "anal">><<violence 100>>
 			<<if $abomination is 1 and $NPCList[0].type is "plant">>
-				<<set $speechanusvirgin to 2>>
+				<<set $speechAnusVirgin to 2>>
 			<</if>>
 		<<else>>
 			<<switch _tentacle.size>>
@@ -791,8 +791,8 @@
 		<<elseif $rng gte 4 and ($hypnosis_traits.cover is undefined or $hypnosis_traits.cover lt 5)>>
 			혼란스러운 형상들이 마음속을 떠다니며, 당신의 생각들을 뒤섞고 뒤집어 놓는다.
 			<<set _tentacle.head to "hypnosis_cover">>
-		<<elseif $rng gte 3 and $settings.bestialityEnabled and ($hypnosis_traits.deviancy is undefined or $hypnosis_traits.deviancy lt 5)>>
-			형언할 수 없는 형상들이 마음을 채우며, 당신을 낯선 곳으로 유혹한다.
+		<<elseif $rng gte 3 and isBestialityOnForAnyCreature() and ($hypnosis_traits.deviancy is undefined or $hypnosis_traits.deviancy lt 5)>>
+			Unspeakable images fill your mind, luring you someplace alien.
 			<<set _tentacle.head to "hypnosis_deviancy">>
 		<<elseif $rng gte 2>>
 			사디스틱한 형상들이 마음속에 소용돌이치며, 불경한 환희가 뒤따른다.
@@ -1560,7 +1560,7 @@
 			<<set $rightaction to 0>><<set $rightactiondefault to "righthittentacle">>
 		<</if>>
 		<<defiance `2 * _multi`>>
-		<<set $speechhit to 1 * _multi>><<set $attackstat += 1 * _multi>>
+		<<set $speechPlayerHits to 1 * _multi>><<set $attackstat += 1 * _multi>>
 		<<if $rng lte (currentSkillValue('physique') / 200)>>
 			<span class="green">그것은 당신의 힘 앞에서 덜덜 떤다.</span>
 			<<set _tentacle.tentaclehealth -= 1 * _multi>><<tentacle_record "damage" 1 * _multi>>
@@ -1597,7 +1597,7 @@
 			<<set _multi ++>>
 		<</if>>
 		<<defiance `Math.floor($purity / 150) * _multi`>>
-		<<set $speechbanish to 1 * _multi>><<set $attackstat += 1 * _multi>>
+		<<set $speechBanish to 1 * _multi>><<set $attackstat += 1 * _multi>>
 		<<if $rng lte ($purity / 20)>><<set _tentacle.tentaclehealth -= 10 * _multi>><<tentacle_record "banish" 10 * _multi>><</if>>
 		<<set _tentacle.tentaclehealth -= 10 * _multi>><<tentacle_record "banish" 10 * _multi>>
 		<<tentacleadvdisable _tentacle>>
@@ -1678,7 +1678,7 @@
 		<</if>>
 		<<if $leftaction is "leftstruggle" and _tentacle.shaft is "leftarm">>
 			<<set $leftaction to 0>><<set $leftactiondefault to "leftstruggle">>
-			<<set $speechstruggle to 1>><<defiance 1>>
+			<<set $speechStruggle to 1>><<defiance 1>>
 			<<if currentSkillValue('physique') gte random(1, 64000)>>
 				<span class="teal">당신은 어떻게든 몸을 비틀어 왼팔을 빼낸다.</span>
 				<<defiance 5>><<tentacleadvdisable _tentacle>>
@@ -1689,7 +1689,7 @@
 		<</if>>
 		<<if $rightaction is "rightstruggle" and _tentacle.shaft is "rightarm">>
 			<<set $rightaction to 0>><<set $rightactiondefault to "rightstruggle">>
-			<<defiance 1>><<set $speechstruggle to 1>>
+			<<defiance 1>><<set $speechStruggle to 1>>
 			<<if currentSkillValue('physique') gte random(1, 64000)>>
 				<span class="teal">당신은 어떻게든 몸을 비틀어 오른팔을 빼낸다.</span>
 				<<defiance 5>><<tentacleadvdisable _tentacle>>
@@ -1947,8 +1947,8 @@
 
 	<<if $feetaction is "feethit" and $feetactionTarget is _tentacle.id>>
 		<<set $feetaction to 0>><<set $feetactiondefault to "feethit">>
-		당신이 _the _tentacle.fullDesc【을를】 발로 걷어차자 그것은 비틀거리며 멀어진다.
-		<<defiance 2>><<set $speechhit to 1>><<tentacleadvdisable _tentacle>><<set $attackstat += 1>>
+		You kick _the _tentacle.fullDesc and it reels away from you.
+		<<defiance 2>><<set $speechPlayerHits to 1>><<tentacleadvdisable _tentacle>><<set $attackstat += 1>>
 		<<set _tentacle.tentaclehealth -= 1>><<tentacle_record "damage" 1>>
 		<<if $rng lte (currentSkillValue('physique') / 200)>>
 			<span class="green">그것은 당신의 힘 앞에서 덜덜 떤다.</span>
@@ -2366,9 +2366,9 @@
 <</widget>>
 
 <<widget "tentacle_skin">>
-	<<if $skin[_args[0]] and $skin[_args[0]].special is "holy" or $skin[_args[1]] and $skin[_args[1]].special is "holy" and !$banishDisable>>
-		피부 위의 성스러운 문양이 하얀 빛으로 타오르며, <span class="pink">당신을 지지고,</span> <span class="teal">_the _tentacle.fullDesc까지 태운다.</span><<pain 8>><<set _tentacle.tentaclehealth -= 12>><<tentacle_record "banish" 12>><<tentacleadvdisable _tentacle>>
-		<<set $speechbanish to 1>>
+	<<if ($skin[_args[0]]?.special is "holy" or $skin[_args[1]]?.special is "holy") and !$banishDisable>>
+		The holy symbol on your skin burns with a white light, <span class="pink">searing you,</span> <span class="teal">and _the _tentacle.fullDesc.</span><<pain 8>><<set _tentacle.tentaclehealth -= 12>><<tentacle_record "banish" 12>><<tentacleadvdisable _tentacle>>
+		<<set $speechBanish to 1>>
 	<<elseif _tentacle.traits.includes("pain") and _args[0] isnot "pubic">>
 		<<if _args[0].includes("_")>>
 			<<set _bodypart to _args[0].split("_").pop()>>

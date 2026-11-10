@@ -1,0 +1,13 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $cool lt 80 or $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $cool lt 80 or $debug>>"
+  ],
+  "context": ""
+ }
+]

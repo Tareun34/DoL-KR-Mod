@@ -1271,11 +1271,11 @@
 	even though it still works without them due to type coercion.
 	it's better for us to explicitly choose which types we're using.
 	-->
-   <<set _dogEnabled to ($monster is 1 or $settings.bestialityEnabled) ? 1 : 0>>
-   <<set _plantsEnabled to ($settings.tentaclesEnabled and ($hallucinations gte 2 or $backgroundTraits.includes("plantlover"))) ? 1 : 0>>
-   <<set _available_events to _plantsEnabled+_dogEnabled>>
-   <<set $phase to random(1,3-_available_events) === 1 ? 1 : -2>>
-   /*
+	<<set _dogEnabled to beastSexEnabledForType("dog", $monster is 1) ? 1 : 0>>
+	<<set _plantsEnabled to ($settings.tentaclesEnabled and ($hallucinations gte 2 or $backgroundTraits.includes("plantlover"))) ? 1 : 0>>
+	<<set _available_events to _plantsEnabled+_dogEnabled>>
+	<<set $phase to random(1,3-_available_events) === 1 ? 1 : -2>>
+	/*
 	$phase is passed to Danube Garden Sex Finish to determine payout for that event.
 	Disabling toggles leads to statistically lower payouts, since it makes things less dangerous.
 	Other dangerous events have constant payouts.
@@ -2441,8 +2441,8 @@
 <<endevent>>
 <<loadNPC 0 "danube_cat_0">><<loadNPC 1 "danube_cat_1">><<person1>>
 
-<<if ($monster is 1 or $settings.bestialityEnabled) and dangerEvent(0.5,6000)>>
-	<<link [[다음|Danube Catperson Accept 2]]>><<set $danubecathappiness to 0>><</link>>
+<<if beastSexEnabledForType("cat", $monster is 1) and dangerEvent(0.5,6000)>>
+	<<link [[Next|Danube Catperson Accept 2]]>><<set $danubecathappiness to 0>><</link>>
 	<br>
 <<else>>
 	<<link [[다음|Danube Catperson Safe]]>><</link>>
@@ -2493,7 +2493,7 @@
 먹이를 주지 말라고 들었지만, 배가 고파 보인다.
 <br><br>
 
-<<if $settings.bestialityEnabled or $monster is 1>>
+<<if beastSexEnabledForType("cat", $monster is 1)>>
 	<<if hasSexStat("deviancy", 3)>>
 		<<link [[다른 식욕을 만족시켜준다|Danube Catperson Feed]]>><<set $phase to 3>><</link>><<deviant3>>
 		<br>
@@ -2601,7 +2601,7 @@
 
 당신은 <<bhim>>에게 신경 쓰지 않았지만, <<bhe>>【은는】 더 가까이 다가온다. 하악질과 함께, <<bhe>>【은는】 <<bhis>> 발톱을 드러낸다.<<stress 5>><<gstress>>
 <br><br>
-<<if $settings.bestialityEnabled or $monster is 1>>
+<<if beastSexEnabledForType("cat", $monster is 1)>>
 	<<if hasSexStat("deviancy", 2)>>
 		<<link [[유혹한다|Danube Catperson Claws Sex]]>><<set $sexstart to 1>><</link>><<deviant2>>
 		<br>

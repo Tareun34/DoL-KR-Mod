@@ -1,0 +1,69 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<span @class=\"($lastOptions.left isnot _leftOptions or _leftGold is true ?'gold':'')\"><<selectNpcWithPartInPosition \"penis\" \"leftarm\">><<set $lefttarget to $index>>Your left hand is <<if $NPCList[$index] and $NPCList[$index].chastity.penis.includes(\"chastity\")>>teasing<<else>>holding<</if>> <<personselect $index>><<combatpersons>> $NPCList[$index].penisdesc<<if $NPCList[$index].chastity.penis.includes(\"chastity\")>> through <<his>> $NPCList[$index].chastity.penis<</if>>.</span>"
+  ],
+  "old_kr": [
+   "\t\t\t<span @class=\"($lastOptions.left isnot _leftOptions or _leftGold is true ?'gold':'')\"><<selectNpcWithPartInPosition \"penis\" \"leftarm\">><<set $lefttarget to $index>>당신의 왼손은 <<if $NPCList[$index] and $NPCList[$index].chastity.penis.includes(\"chastity\")>>애태우듯<<else>>쥔 채<</if>> <<personselect $index>><<combatpersons>>의 <<= window.KR.getPenisDescKr($NPCList[$index].penisdesc)>><<if $NPCList[$index].chastity.penis.includes(\"chastity\")>>【을를】 <<his>> $NPCList[$index].chastity.penis 너머로<</if>> 만지고 있다.</span>"
+  ],
+  "new_en": [
+   "\t\t\t<span @class=\"($lastOptions.left isnot _leftOptions or _leftGold is true ?'gold':'')\"><<selectNpcWithPartInPosition \"penis\" \"leftarm\">><<set $lefttarget to $index>>Your left hand is <<if $NPCList[$index]?.chastity.penis.includes(\"chastity\")>>teasing<<else>>holding<</if>> <<personselect $index>><<combatpersons>> $NPCList[$index].penisdesc<<if $NPCList[$index].chastity.penis.includes(\"chastity\")>> through <<his>> $NPCList[$index].chastity.penis<</if>>.</span>"
+  ],
+  "context": "\t\t\t<<set _leftOptions to \"penis\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<listbox \"$mockaction\">>",
+   "\t\t\t\t<<option \"ethics\" \"ethics\" `$mockaction is \"ethics\" ? \"selected\" : \"\"`>>",
+   "\t\t\t\t<<option \"looks\" \"looks\" `$mockaction is \"looks\" ? \"selected\" : \"\"`>>",
+   "\t\t\t\t<<option \"strength\" \"weak\" `$mockaction is \"weak\" ? \"selected\" : \"\"`>>",
+   "\t\t\t\t<<option \"skill\" \"skill\" `$mockaction is \"skill\" ? \"selected\" : \"\"`>>",
+   "\t\t\t\t<<option \"penis\" \"penis\" `$mockaction is \"penis\" ? \"selected\" : \"\"`>>",
+   "\t\t\t\t<<option \"pussy\" \"vagina\" `$mockaction is \"vagina\" ? \"selected\" : \"\"`>>",
+   "\t\t\t<</listbox>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<listbox \"$mockaction\">>",
+   "                <<option \"도덕\" \"ethics\" `$mockaction is \"ethics\" ? \"selected\" : \"\"`>>",
+   "                <<option \"외모\" \"looks\" `$mockaction is \"looks\" ? \"selected\" : \"\"`>>",
+   "                <<option \"힘\" \"weak\" `$mockaction is \"weak\" ? \"selected\" : \"\"`>>",
+   "                <<option \"기술\" \"skill\" `$mockaction is \"skill\" ? \"selected\" : \"\"`>>",
+   "                <<option \"자지\" \"penis\" `$mockaction is \"penis\" ? \"selected\" : \"\"`>>",
+   "                <<option \"보지\" \"vagina\" `$mockaction is \"vagina\" ? \"selected\" : \"\"`>>",
+   "            <</listbox>>"
+  ],
+  "new_en": [
+   "\t\t\t<<set _mockItems to {",
+   "\t\t\t\tethics: \"ethics\",",
+   "\t\t\t\tlooks: \"looks\",",
+   "\t\t\t\tstrength: \"weak\",",
+   "\t\t\t\tskill: \"skill\",",
+   "\t\t\t}>>",
+   "",
+   "\t\t\t<<if $NPCList[$mouthtarget].penis isnot \"none\">>",
+   "\t\t\t\t<<set _mockItems.penis to \"penis\">>",
+   "\t\t\t<</if>>",
+   "\t\t\t<<if $NPCList[$mouthtarget].vagina isnot \"none\">>",
+   "\t\t\t\t<<set _mockItems.pussy to \"vagina\">>",
+   "\t\t\t<</if>>",
+   "",
+   "\t\t\t<<listbox \"$mockaction\" autoselect>>",
+   "\t\t\t\t<<optionsfrom _mockItems>>",
+   "\t\t\t<</listbox>>"
+  ],
+  "context": "\t\t<<case \"mock\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $swarm and $swarm.name>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $swarm?.name>>"
+  ],
+  "context": "\t\t<</if>>"
+ }
+]

@@ -1,0 +1,75 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<set $jordansong to true>>",
+   "You're in a thin, long bedroom. A little natural light enters the room from a high window, beneath which lies the bed itself. Near the door is a weapon rack, carrying metal rods, maces, and whips. A shield rests on the floor beside it."
+  ],
+  "old_kr": [
+   "<<set $jordansong to true>>",
+   "당신은 좁고 긴 침실에 있다. 높은 창문으로 약간의 자연광이 들어오고, 그 아래에는 침대가 놓여 있다. 문 근처에는 금속 막대, 철퇴, 채찍이 걸린 무기 거치대가 있다. 그 옆 바닥에는 방패가 기대어 있다."
+  ],
+  "new_en": [
+   "<<set $jordansong to true>><<npc Jordan>><<person1>>",
+   "You're in a thin, long bedroom. A little natural light enters the room from a high window, beneath which lies the bed itself. Near the door is a weapon rack, carrying metal rods, maces, and whips. A shield rests on the floor beside it."
+  ],
+  "context": "<<set $outside to 0>><<set $location to \"temple\">><<temple_effects>><<effects>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Sneak out|Temple Jordan Sneak]]>><</link>><<skulduggerydifficulty>>"
+  ],
+  "old_kr": [
+   "<<link [[몰래 빠져나간다|Temple Jordan Sneak]]>><</link>><<skulduggerydifficulty>>"
+  ],
+  "new_en": [
+   "<<link [[Sneak out|Temple Jordan Sneak]]>><<endevent>><</link>><<skulduggerydifficulty>>",
+   "<br>",
+   "<<link [[Stay|Temple Jordan Stay]]>><</link>>"
+  ],
+  "context": "<<set $skulduggerydifficulty to 300>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<npc Jordan>><<person1>>You see Jordan. <<Hes>> having a shower. Water runs over <<his>> closed eyes and down <<his>> naked body."
+  ],
+  "old_kr": [
+   "<<npc Jordan>><<person1>>조던이 보인다. <<Hes>> 샤워 중이다. 물이 <<his>> 감긴 눈 위로, 그리고 <<his>> 벌거벗은 몸을 따라 흘러내린다."
+  ],
+  "new_en": [
+   "You see Jordan. <<Hes>> having a shower. Water runs over <<his>> closed eyes and down <<his>> naked body."
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   ":: Temple Jordan Stay",
+   "",
+   "<<set $outside to 0>><<set $location to \"temple\">><<temple_effects>><<effects>><<pass 10>>",
+   "Curiosity gets the better of you, and you decide to stay.",
+   "<br><br>",
+   "You admire Jordan's weapons, trying to tune <<his>> singing out in order to give <<him>> some privacy.",
+   "<br><br>",
+   "The shower stops. You lost track of time, and can't leave without being seen anymore.",
+   "<br><br>",
+   "The curtain opens, revealing Jordan. <<He>> screams.",
+   "<<llgrace>><<grace -5>>",
+   "<br><br>",
+   "<<link [[Run|Temple Jordan Run]]>><</link>><<athleticsdifficulty 1 1400>>",
+   "<br>",
+   "<<link [[Apologise|Temple Jordan Apologise]]>><<grace 1>><</link>><<ggrace>>",
+   "<br>",
+   "<<if hasSexStat(\"promiscuity\", 2)>>",
+   "\t<<link [[Flirt|Temple Jordan Flirt]]>><</link>><<promiscuous2>>",
+   "\t<br>",
+   "<</if>>"
+  ],
+  "context": "<br>"
+ }
+]

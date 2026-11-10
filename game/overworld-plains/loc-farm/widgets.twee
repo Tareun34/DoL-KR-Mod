@@ -17,14 +17,14 @@
 
 <<widget "fox_gen">>
 	<!-- Modified for monster people -->
-	<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>
+	<<if monsterCanAppearForType("fox")>>
 		<<if maleChance() lt random(1, 100)>>
 			<<set $foxGen to "female">>
 		<<else>>
 			<<set $foxGen to "male">>
 		<</if>>
 	<<else>>
-		<<if beastMaleChance() lt random(1, 100)>>
+		<<if beastMaleChanceForType("fox") lt random(1, 100)>>
 			<<set $foxGen to "vixen">>
 		<<else>>
 			<<set $foxGen to "reynard">>
@@ -47,7 +47,7 @@
 
 <<widget "farm_work_time">>
 	<!-- Math.trunc means any time from 6:00 AM to 6:19 AM will be set to "1".
-		It seems this is coded so that farm work only officially begins when 1 <= _farm_work_time <= 45  -->
+		It seems this is coded so that farm work only officially begins when 1 <= _farm_work_time <= 45 -->
 	<<set _farm_work_time to Math.trunc(((Time.hour * 60) / 20) - 17)>>
 	<<if _farm_work_time gte 46 or _args[0] is "midnight">>
 		<<set _farm_work_time to 46>>
@@ -127,12 +127,10 @@
 		<<set $farm_work.pig.monster_roll to false>>
 		<<set $farm_work.dog.monster_roll to false>>
 		<<set $farm_work.cattle.monster_roll to false>>
-		<<if $hallucinations gte 1 or !$settings.monsterHallucinationsOnly>>
-			<<set $farm_work.horse.monster_roll to $settings.monsterChance gte random(1, 100)>>
-			<<set $farm_work.pig.monster_roll to $settings.monsterChance gte random(1, 100)>>
-			<<set $farm_work.dog.monster_roll to $settings.monsterChance gte random(1, 100)>>
-			<<set $farm_work.cattle.monster_roll to $settings.monsterChance gte random(1, 100)>>
-		<</if>>
+		<<set $farm_work.horse.monster_roll to (($hallucinations gte 1 or !monsterHallucinationsOnlyForType("horse")) and monsterChanceForType("horse") gte random(1, 100))>>
+		<<set $farm_work.pig.monster_roll to (($hallucinations gte 1 or !monsterHallucinationsOnlyForType("pig")) and monsterChanceForType("pig") gte random(1, 100))>>
+		<<set $farm_work.dog.monster_roll to (($hallucinations gte 1 or !monsterHallucinationsOnlyForType("dog")) and monsterChanceForType("dog") gte random(1, 100))>>
+		<<set $farm_work.cattle.monster_roll to (($hallucinations gte 1 or !monsterHallucinationsOnlyForType("cow")) and monsterChanceForType("cow") gte random(1, 100))>>
 		<<unset $farm_kennel>>
 		<<farm_gen_all>>
 	<</if>>
@@ -514,11 +512,11 @@
 				<br>
 			<</if>>
 		<<elseif hasSexStat("deviancy", 3) and $farm_work.horses_satisfied lt 6 and $farm_work.horses_out lt 2>>
-			<<if $farm_work.horse.monster is true and $settings.horsesEnabled>>
-				켄타우로스들이 초조해 보인다. 그들에게는 "특별한" 관리가 필요하다.
+			<<if $farm_work.horse.monster and monsterSexEnabledForType("horse")>>
+				The centaurs seem agitated. They need "special" attention.
 				<br>
-			<<elseif $settings.bestialityEnabled and $settings.horsesEnabled>>
-				말들이 초조해 보인다. 녀석들에게는 "특별한" 관리가 필요하다.
+			<<elseif animalSexEnabledForType("horse")>>
+				The horses seem agitated. They need "special" attention.
 				<br>
 			<</if>>
 		<</if>>
@@ -668,11 +666,11 @@
 				<</if>>
 				<br>
 
-			<<elseif hasSexStat("deviancy", 3) and $farm_work.horses_satisfied lt 6 and $farm_work.horses_out lt 2 and $settings.horsesEnabled>>
+			<<elseif hasSexStat("deviancy", 3) and $farm_work.horses_satisfied lt 6 and $farm_work.horses_out lt 2 and beastSexEnabledForType("horse", $farm_work.horse.monster)>>
 				<<if $farm_work.horse.monster is true>>
-					<<animalicon "horse">><<link [[켄타우로스에게 다가간다|Farm Horses Lewd]]>><</link>><<run _actions++>>
-				<<elseif $settings.bestialityEnabled>>
-					<<animalicon "horse">><<link [[말에게 다가간다|Farm Horses Lewd]]>><</link>><<run _actions++>>
+					<<animalicon "horse">><<link [[Approach a centaur|Farm Horses Lewd]]>><</link>><<run _actions++>>
+				<<elseif animalSexEnabledForType("horse")>>
+					<<animalicon "horse">><<link [[Approach a horse|Farm Horses Lewd]]>><</link>><<run _actions++>>
 				<</if>>
 				<br>
 			<</if>>
@@ -890,16 +888,17 @@
 <</widget>>
 
 <<widget "farm_gen">>
-	<<if $farm_work[_args[0]].monster_roll is true and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)>>
+	<<set _beastType to _args[0] is "cattle" ? "cow" : _args[0]>>
+	<<if $farm_work[_args[0]].monster_roll and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType(_beastType))>>
 		<<set $farm_work[_args[0]].monster to true>>
-		<<if beastMaleChance() gte 100>>
+		<<if beastMaleChanceForType(_beastType) gte 100>>
 			<<set $farm_work[_args[0]].gender_plural to "m">>
-		<<elseif beastMaleChance() gte 1>>
+		<<elseif beastMaleChanceForType(_beastType) gte 1>>
 			<<set $farm_work[_args[0]].gender_plural to "b">>
 		<<else>>
 			<<set $farm_work[_args[0]].gender_plural to "f">>
 		<</if>>
-		<<if beastMaleChance() gte random(1, 100)>>
+		<<if beastMaleChanceForType(_beastType) gte random(1, 100)>>
 			<<set $farm_work[_args[0]].gender to "m">>
 			<<if $settings.maleNPCVaginaChance gte random(1, 100)>>
 				<<set $farm_work[_args[0]].genitals to "vagina">>
@@ -916,14 +915,14 @@
 		<</if>>
 	<<else>>
 		<<set $farm_work[_args[0]].monster to false>>
-		<<if beastMaleChance() gte 100>>
+		<<if beastMaleChanceForType(_beastType) gte 100>>
 			<<set $farm_work[_args[0]].gender_plural to "m">>
-		<<elseif beastMaleChance() gte 1>>
+		<<elseif beastMaleChanceForType(_beastType) gte 1>>
 			<<set $farm_work[_args[0]].gender_plural to "b">>
 		<<else>>
 			<<set $farm_work[_args[0]].gender_plural to "f">>
 		<</if>>
-		<<if beastMaleChance() gte random(1, 100)>>
+		<<if beastMaleChanceForType(_beastType) gte random(1, 100)>>
 			<<set $farm_work[_args[0]].gender to "m">>
 			<<set $farm_work[_args[0]].genitals to "penis">>
 		<<else>>
@@ -956,8 +955,8 @@
 
 	<<if dangerEvent()>>
 	<!-- Modified for monster people -->
-		<<if $settings.horsesEnabled and ($settings.bestialityEnabled or $farm_work.horse.monster is true)>>
-			당신은 마무리를 한 뒤, 빗에 엉킨 털을 치우며 문 쪽으로 걸어간다. 등 뒤로 발굽 소리가 들려온다. <<farm_text horse>>【이가】 당신을 쫓아온 것이다.
+		<<if beastSexEnabledForType("horse", $farm_work.horse.monster)>>
+			You finish up, and walk toward the gate while cleaning the brush of hair. You hear hooves approach behind you. The <<farm_text horse>> gives chase.
 			<br><br>
 
 			<<if $farm_work.horse.monster is true>>
@@ -1042,8 +1041,8 @@
 		<</if>>
 		<<farmicon "bucket">><<link [["손으로 젖을 짠다 (0:" + String(_cattleMilkHand).padStart(2, '0') + ")"|Farm Cattle Milk Hand]]>><<farm_yield 1>><<set $cattle_milked += 1>><<set $farm_work.cattle_milked += 1>><<tending 1>><<farm_cattle 1>><<set $phase to _cattleMilkHand>><<pass _cattleMilkHand>><</link>><<deviant1>><<gfarm>><<gtending>><<grespect>>
 		<br>
-		<<if hasSexStat("deviancy", 4) and ($settings.bestialityEnabled or $monster is 1)>>
-			<<brothelicon>><<link [[입으로 젖을 짠다 (0:03)|Farm Cattle Milk Mouth]]>><<set $cattle_milked += 1>><<set $farm_work.cattle_milked += 1>><<tending 1>><<farm_count 3>><</link>><<deviant4>><<gtending>>
+		<<if hasSexStat("deviancy", 4) and beastSexEnabledForType("cow", $monster is 1)>>
+			<<brothelicon>><<link [[Milk with your mouth (0:03)|Farm Cattle Milk Mouth]]>><<set $cattle_milked += 1>><<set $farm_work.cattle_milked += 1>><<tending 1>><<farm_count 3>><</link>><<deviant4>><<gtending>>
 			<<if $NPCList[0].penis isnot "none" and $player.virginity.oral is true>>
 				<<oralvirginitywarning>>
 			<</if>>
@@ -1119,7 +1118,8 @@
 			<<else>>
 				<<loadNPC 1 "alexs_parent1">>
 			<</if>>
-			알렉스는 당신과 수다를 떨다가 <<person1>><<his>> 가족에 대해 이야기한다. "형제가 12명이나 돼." <<he>>【이가】 어느 순간 말한다. "<<person2>><<Mum>>도 우리들을 어떻게 다뤄야 할지 몰라 해."<<person1>>
+			Alex chats with you, and talks about <<person1>><<his>> family. "I've twelve siblings," <<he>> says at one point. <<person2>>"<<Mum>> doesn't know what to do with us all."<<person1>>
+			<<clearsinglenpc 1>>
 		<<case 2>>
 			알렉스가 당신과 수다를 떨며 농장의 돼지들에 대해 이야기한다. "돼지 밥을 나르는 게 좀 힘들긴 해," <<person1>><<he>>【이가】 문득 말한다. "그래도 송로버섯을 찾아주는 걸 생각하면 그럴만한 가치가 있지."
 		<<case 3>>
@@ -1816,8 +1816,8 @@
 <<widget "farm_tending_events">>
 	<<rng 3>>
 	<<if $rng is 3>>
-		<<if $settings.bestialityEnabled and $settings.lurkersEnabled and random(1, 2) is 2>>
-			흙을 파고 있는데 시야 구석에서 바닥 가까이 어두운 무언가가 움직이는 것이 보인다. 당신이 쳐다보았을 때는 이미 사라지고 없다.
+		<<if $settings.lurkersEnabled and random(1, 2) is 2>>
+			You're digging in the earth when you see something dark move in your peripheral, low to the ground. It's gone by the time you look over.
 			<br><br>
 
 			<<link [[계속 일한다|Farm Tending Lurker Work]]>><</link>>
@@ -2481,13 +2481,12 @@
 <<widget "cottage_bailey_options">>
 	<<babyRent>>
 	<<rent_avery>>
-	<<if $money gte $rentmoney + ($babyRent or 0)>>
-		<<link [[돈을 낸다|Farm Cottage Bailey Pay]]>><</link>>
+	<<if $money gte $rentMoney + ($babyRent or 0)>>
+		<<link [[Pay up|Farm Cottage Bailey Pay]]>><</link>>
 		<br>
 		<<link [[거절한다|Farm Cottage Bailey Refuse]]>><<def 1>><</link>>
 		<br>
 	<<else>>
-		<<set $baileypaychain to 0>>
 		<<if $speech_attitude is "meek">>
 			"도-돈이 없어요," 베일리에게 말한다. "제발 알렉스를 해치지 말아주세요."
 		<<elseif $speech_attitude is "bratty">>
@@ -2709,8 +2708,8 @@
 			<<destination_farm_ride>>
 		<</if>>
 	<<elseif $rng is 3>>
-		<<if $farm.beasts.horses lt -20 and $settings.horsesEnabled and ($monster is 1 or $settings.bestialityEnabled)>>
-			<<beasttype>>【이가】 갑자기 방향을 틀더니 전속력으로 달리기 시작해, 넓은 들판을 가로지른다. <<bHe>>【은는】 건초더미 옆에 멈춰 서서 상체를 휙 숙여, 당신을 안장 아래로 떨어뜨린다.
+		<<if $farm.beasts.horses lt -20 and beastSexEnabledForType("horse", $monster is 1)>>
+			The <<beasttype>> jerks in another direction, and breaks into a sprint, running across an open field. <<bHe>> stops beside a haybale, and leans forward, dropping you from the saddle.
 			<br><br>
 			당신은 건초더미 위로 떨어지지만, 도망치기도 전에 <<beasttype>>【이가】 <<bhis>> 무게로 당신을 억누른다.
 			<<if $monster gte 1>>
@@ -2723,8 +2722,8 @@
 
 			<<link [[다음|Farm Ride Rape]]>><<set $molestationstart to 1>><</link>>
 			<br>
-		<<elseif $farm.beasts.horses lt 0 and $settings.horsesEnabled and ($monster is 1 or $settings.bestialityEnabled)>>
-			<<beasttype>>【이가】 멈춰 서서는 더 이상 발걸음을 떼려 하지 않는다.
+		<<elseif $farm.beasts.horses lt 0 and beastSexEnabledForType("horse", $monster is 1)>>
+			The <<beasttype>> pulls to a stop, and refuses to take a step further.
 			<<if $monster is 1>>
 				"나 욕구불만이야." <<bhe>>【이가】 말한다. "이걸 풀어주는 게 네 일이잖아."
 			<<else>>
@@ -3279,7 +3278,7 @@
 				<<if C.npc.Alex.pregnancy.ultraSound and C.npc.Alex.pregnancy.ultraSound.includes("collected")>>
 					<span class="blue">어쩌면 알렉스에게 임신에 관해 다시 이야기할 좋은 기회일지도 모른다.</span>
 					<br>
-					<<link [[임신했다는 사실과 <<he>>【이가】 아빠일 수도 있다는 사실을 증명한다|Farm PC Pregnancy Reveal Unknown]]>><<set $phase to 1>><</link>>
+					<<link [[Prove your pregnancy to Alex and that <<he>> may be the father|Farm PC Pregnancy Reveal Unknown]]>><<set $phase to 1>><</link>>
 				<<else>>
 					<span class="blue">어쩌면 알렉스가 아이 아빠라고 생각해도 괜찮지 않을까?</span>
 					<br>
@@ -3520,30 +3519,30 @@
 <</widget>>
 
 <<widget "pigsOpinion">>
-   <<outfitChecks>>
-   <<set _silent to _args[0] ? _args[0] : false>>
-   <<set _newlineCount to _args[1] ? _args[1] : 2>>
+	<<outfitChecks>>
+	<<set _silent to _args[0] ? _args[0] : false>>
+	<<set _newlineCount to _args[1] ? _args[1] : 2>>
 
-   <<if not _silent and ($settings.bestialityEnabled or $farm_work.pig.monster is true)>>
-       <<if _fullyNaked or $allure gte 6000 * $settings.allureModifier>>
-           <span class="red"><<farm_text_many pig>>【이가】 노골적인 정욕을 품고 당신을 지켜본다.</span>
-       <<elseif $allure gte 4000 * $settings.allureModifier>>
-           <span class="pink"><<farm_text_many pig>>【이가】 보내는 음흉한 시선이 느껴진다.</span>
-       <<elseif $allure gte 3000 * $settings.allureModifier>>
-           <span class="purple"><<farm_text_many pig>>【이가】 당신의 모습에 넋을 잃고 감탄한다.</span>
-       <<elseif $allure gte 2000 * $settings.allureModifier>>
-           <span class="blue">몇몇 <<farm_text_many pig>>【이가】 당신을 빤히 쳐다본다.</span>
-       <<elseif $allure gte 1500 * $settings.allureModifier>>
-           <span class="lblue">몇 마리의 <<farm_text_many pig>>【이가】 눈길로 당신을 쫓는다.</span>
-       <<elseif $allure gte 1000 * $settings.allureModifier>>
-           <span class="teal"><<farm_text_many pig>>【이가】 가끔씩 당신을 힐끗거린다.</span>
-       <<else>>
-           <span class="green"><<farm_text_many pig>>【은는】 당신에게 별다른 흥미를 느끼지 못한다.</span>
-       <</if>>
-       <<for $_i = 0; $_i < _newlineCount; $_i++>>
-           <br>
-       <</for>>
-   <</if>>
+	<<if not _silent and beastSexEnabledForType("pig", $farm_work.pig.monster)>>
+		<<if _fullyNaked or $allure gte 6000 * $settings.allureModifier>>
+			<span class="red">The <<farm_text_many pig>> watch you with open desire.</span>
+		<<elseif $allure gte 4000 * $settings.allureModifier>>
+			<span class="pink">You feel lustful gazes from the <<farm_text_many pig>>.</span>
+		<<elseif $allure gte 3000 * $settings.allureModifier>>
+			<span class="purple">The <<farm_text_many pig>> admire how you look.</span>
+		<<elseif $allure gte 2000 * $settings.allureModifier>>
+			<span class="blue">Some <<farm_text_many pig>> are staring at you.</span>
+		<<elseif $allure gte 1500 * $settings.allureModifier>>
+			<span class="lblue">A few <<farm_text_many pig>> follow you with their eyes.</span>
+		<<elseif $allure gte 1000 * $settings.allureModifier>>
+			<span class="teal">The <<farm_text_many pig>> glance at you from time to time.</span>
+		<<else>>
+			<span class="green">The <<farm_text_many pig>> think you look boring.</span>
+		<</if>>
+		<<for $_i = 0; $_i < _newlineCount; $_i++>>
+			<br>
+		<</for>>
+	<</if>>
 <</widget>>
 
 <<widget "endWoodlandForage">>

@@ -1,0 +1,66 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\tA heavy weight presses against your back and forces you to the ground. You try to struggle to your knees, but the <<beasttype>> mounts you and holds you down."
+  ],
+  "old_kr": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t무거운 것이 등을 짓누르며 당신을 바닥으로 쓰러뜨린다. 무릎을 꿇고 벗어나려 발버둥쳐 보지만, <<beasttype>>【이가】 당신의 위로 올라타 꼼짝 못하게 억누른다."
+  ],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\t\tA heavy weight presses against your back and forces you to the ground. You try to struggle to your knees, but the <<beasttype>> mounts you and holds you down."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\tYou hear several <<beastsplural>> barking. They're approaching fast, and soon surround you."
+  ],
+  "old_kr": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\t여러 마리의 <<beastsplural>>【이가】 짖는 소리가 들린다. 빠르게 다가오더니 이내 당신을 포위한다."
+  ],
+  "new_en": [
+   "\t\t\t<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\t\t\tYou hear several <<beastsplural>> barking. They're approaching fast, and soon surround you."
+  ],
+  "context": "\t\t\t<<beastNEWinit 3 dog>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\t<<link [[Next|Bondage Two Wolf Rape]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\t<<link [[다음|Bondage Two Wolf Rape]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\t\t\t\t<<link [[Next|Bondage Two Wolf Rape]]>><<set $molestationstart to 1>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\tThen mounts you."
+  ],
+  "old_kr": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\t그러고는 당신의 위로 올라탄다."
+  ],
+  "new_en": [
+   "\t\t\t<<if beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\t\t\t\tThen mounts you."
+  ],
+  "context": ""
+ }
+]

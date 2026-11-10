@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $debug is 1>>",
+   "\t\t__Debug__"
+  ],
+  "old_kr": [
+   "\t<<if $debug is 1>>",
+   "\t\t__디버그__"
+  ],
+  "new_en": [
+   "\t<<if $debug>>",
+   "\t\t__Debug__"
+  ],
+  "context": ""
+ }
+]

@@ -1,0 +1,45 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Next|Starfish Street]]>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[다음|Starfish Street]]>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Next|Starfish Street]]>><<endevent>><</link>>",
+   "",
+   ":: Starfish Musician",
+   "<<effects>>",
+   "",
+   "<<if $phase is 0>>",
+   "\tYou smile politely and move on, the music fading behind you as the crowd swallows you up.",
+   "<<elseif $phase is 1>>",
+   "\tYou stop for a moment and let the music wash over you.",
+   "\t<br><br>",
+   "",
+   "\tThe noise of the promenade seems to fall away. You stay until the song ends, then carry on your way. <<stress -6>><<lstress>>",
+   "<<elseif $phase is 2>>",
+   "\tThe tune is familiar enough that you find yourself singing along under your breath.",
+   "\t<br><br>",
+   "",
+   "\t<<if $english gte 500>>",
+   "\t\tThe <<person>> raises an eyebrow. As the song carries on, you find your footing, <span class=\"green\">matching the melody without much effort.</span> A few tourists slow down to have a listen.",
+   "\t\t<br><br>",
+   "",
+   "\t\tWhen the song ends, <<he>> gives you a pleased smile.",
+   "\t\t<br><br>",
+   "",
+   "\t\t\"Hey, you can actually sing.\" <<He>> laughs, shaking <<his>> head. \"Seriously though, that was lovely. Come back any time.\" <<stress -8>><<lstress>>",
+   "\t<<else>>",
+   "\t\t<span class=\"red\">You stumble over a few words and lose your place.</span> The <<person>> chuckles but doesn't comment on it.<<stress 2>><<gstress>>",
+   "\t<</if>>",
+   "<</if>>",
+   "<br><br>",
+   "",
+   "<<link [[Next|Starfish Street]]>><<endevent>><</link>>"
+  ],
+  "context": ""
+ }
+]

@@ -91,8 +91,8 @@
 <<mericon>><<link [[떠난다|Mer Street]]>><</link>>
 <br>
 
-<<if $debug is 1>>
-	<<icon "small-up-arrow.png" "infront">><<mericon>><<link [[(debug) 부두 평판 최대|Docks]]>><<set $docks.status to 100>><</link>>
+<<if $debug>>
+	<<icon "small-up-arrow.png" "infront">><<mericon>><<link [[(debug) Max dock status|Docks]]>><<set $docks.status to 100>><</link>>
 	<br>
 	<<icon "small-down-arrow.png" "infront">><<mericon>><<link [[(debug) 부두 평판 최소|Docks]]>><<set $docks.status to 0>><</link>>
 	<br>

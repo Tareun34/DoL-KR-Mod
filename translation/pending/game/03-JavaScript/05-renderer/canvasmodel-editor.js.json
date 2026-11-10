@@ -1,0 +1,11 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\tselectOption(\"bodyFreckles\", [\"none\", \"upper\", \"full\"]),"
+  ],
+  "context": "\t\t\t\t\t\tbooleanOption(\"freckles\"),"
+ }
+]

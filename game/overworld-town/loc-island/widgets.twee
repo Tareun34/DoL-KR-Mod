@@ -197,6 +197,9 @@
 	<<set $island.walk to undefined>>
 	<<set $island.kneel to undefined>>
 	<<set $hunger to 0>>
+	<<if $island.defeat gt 6>>
+		<<set $island.defeat to 6>>
+	<</if>>
 <</widget>>
 
 <<widget "island_explore_end">>
@@ -924,7 +927,7 @@
 	등 뒤에서 적대적인 기척이 느껴진다. 홱 돌아보자, 가까이 어슬렁거리며 다가오는 <<beasttype>>【이가】 보인다.
 	<br><br>
 
-	<<if $monster is 1 or $settings.bestialityEnabled>>
+	<<if beastSexEnabledForType("cat", $monster is 1)>>
 		<<if $monster is 1>>
 			"나는 지금 배가 더 고픈 걸까, 아니면 발정난 걸까?" <<bhe>>【이가】 말한다. "어디 한 번 확인해 보자고."
 			<br><br>
@@ -948,7 +951,7 @@
 	머리 위 보이지 않는 나뭇가지에서 <<beasttype 0>>【이가】 당신의 눈앞에 떨어진다. <<bHe 0>>【은는】 입술을 핥으며 가까이 어슬렁거린다.
 	<br><br>
 
-	<<if $monster is 1 or $settings.bestialityEnabled>>
+	<<if beastSexEnabledForType("cat", $monster is 1)>>
 		<<if $monster is 1>>
 			"음," <<bhe 0>>【이가】 말한다. "널 잡아먹어 주마!"
 			<br><br>
@@ -1347,13 +1350,7 @@
 				<span class="black">나무가 더 필요하다.</span> <<wood_required _islandUpgrades[_args[0]].woodUsed>>
 				<<set $_disableBuild to true>>
 			<</if>>
-			<<if _islandUpgrades[_args[0]].timeTaken>>
-				<<set _hours to Math.floor(_islandUpgrades[_args[0]].timeTaken / 60)>>
-				<<set _minutes to _islandUpgrades[_args[0]].timeTaken % 60>>
-				<<set _timeString to " (" +_hours+":"+(_minutes lt 10 ? "0": "")+_minutes+")">>
-			<<else>>
-				<<set _timeString to "">>
-			<</if>>
+			<<set _timeString to _islandUpgrades[_args[0]].timeTaken ? printTime(_islandUpgrades[_args[0]].timeTaken, true) : "">>
 			<<if $_disableBuild>>
 			<<elseif !$island[$island.home][_args[0]]>>
 				<br>

@@ -267,20 +267,20 @@
 		<</if>>
 		<br>
 	<</if>>
-	<<if !$adultshopclerk and $debug is 1>>
-		<<ind>><<link [[디버그: 점원 직업 해금|$passage]]>><<set $adultshopclerk to true>><</link>>
+	<<if !$adultshopclerk and $debug>>
+		<<ind>><<link [[Debug unlock clerk job|$passage]]>><<set $adultshopclerk to true>><</link>>
 		<br>
 	<</if>>
 	<<if $adultshopstate isnot "closed">>
 		<<socialiseicon>><<link [[시리스에게 다가간다 (0:01)|Adult Shop Approach Sirris]]>><<pass 1>><<endevent>><</link>>
 		<br>
 	<</if>>
-	<<if $adultshopstate is "sydney" and $debug is 1>>
-		<<socialiseicon>><<link [[시드니에게 다가간다 (0:01)|Adult Shop Approach Sydney]]>><<pass 1>><<endevent>><</link>>
+	<<if $adultshopstate is "sydney" and $debug>>
+		<<socialiseicon>><<link [[Approach Sydney (0:01)|Adult Shop Approach Sydney]]>><<pass 1>><<endevent>><</link>>
 		<br>
 	<</if>>
-	<<icon "adult-clothing.png">><<link [[의류 둘러보기 (0:01)|Adult Shop Store]]>><<pass 1>><</link>>
-	<<if $adultshopstate isnot "closed" or $debug is 1>>
+	<<icon "adult-clothing.png">><<link [[Browse clothing (0:01)|Adult Shop Store]]>><<pass 1>><</link>>
+	<<if $adultshopstate isnot "closed" or $debug>>
 		<br>
 		<<sextoysicon "strap-on">><<link [[장난감 둘러보기 (0:01)|Adult Shop Menu]]>><<pass 1>><</link>>
 	<</if>>
@@ -310,7 +310,7 @@
 	<<socialiseicon "ask">><<link [[일거리에 대해 묻는다|Adult Shop Approach Sirris Ask]]>><</link>>
 	<br>
 <</if>>
-<<if $brothelVending and $brothelVending.status is "set">>
+<<if $brothelVending?.status is "set">>
 	<<if $brothelVending.products gte 2 and !$weekly.brothelVMLube and $brothelVending.lubeToRefill gte 10>>
 		<<sextoysicon "lube">><<link [[창관에 납품할 윤활제 구매하기 (0:10)|Adult Shop Buy Lube in Bulk]]>><<pass 10>><</link>>
 		<br>
@@ -396,7 +396,7 @@
 당신은 카운터 뒤에서 섹스 토이를 팔고 선반을 채우는 일을 한다.
 <br><br>
 <<adultshopclerkevents>>
-<<if $debug is 1>>
+<<if $debug>>
 <br><br><br>
 	<<link [[디버그 귀환|Adult Shop]]>><</link>>
 <</if>>

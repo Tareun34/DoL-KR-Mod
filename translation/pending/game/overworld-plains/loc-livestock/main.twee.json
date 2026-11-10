@@ -1,0 +1,408 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t\t<<livestock_cows \"cap\">> line up at the edge of their cells as farmhands affix milking machines to their bodies."
+  ],
+  "old_kr": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t\t<<livestock_cows \"cap\">>【이가】 감옥 가장자리에 줄을 서고, 농장 일꾼들이 그들의 몸에 착유기를 부착한다."
+  ],
+  "new_en": [
+   "\t<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>",
+   "\t\t<<livestock_cows \"cap\">> line up at the edge of their cells as farmhands affix milking machines to their bodies."
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if !hasSexStat(\"exhibitionism\", 6) or $uncomfortable.nude is true>>",
+   "\t\"Keep your arms at your side,\" <<he>> commands. You move your arms, exposing your naked body.",
+   "\t<<if $uncomfortable.nude is true>>You look away and close your eyes, unable to take the shame.<</if>>"
+  ],
+  "old_kr": [
+   "<<if !hasSexStat(\"exhibitionism\", 6) or $uncomfortable.nude is true>>",
+   "\t\"팔은 옆에 붙여.\" <<he>>【이가】 명령한다. 당신은 팔을 움직여 알몸을 드러낸다.",
+   "\t<<if $uncomfortable.nude is true>>당신은 수치심을 견디지 못하고 고개를 돌려 눈을 감는다.<</if>>"
+  ],
+  "new_en": [
+   "<<if !pcAreArmsBound(\"any\")>>",
+   "\t<<if !hasSexStat(\"exhibitionism\", 6) or $uncomfortable.nude is true>>",
+   "\t\t\"Keep your arms at your side,\" <<he>> commands. You move your arms, exposing your naked body.",
+   "\t\t<<if $uncomfortable.nude is true>>You look away and close your eyes, unable to take the shame.<</if>>",
+   "\t<<else>>",
+   "\t\t\"Keep your arms at your side,\" <<he>> commands. You feel a thrill as <<his>> eyes flicker over your body.",
+   "\t<</if>>",
+   "<<elseif !pcAreArmsBound(\"both\") and pcAreArmsBound(\"any\")>>",
+   "\t<<if !hasSexStat(\"exhibitionism\", 6) or $uncomfortable.nude is true>>",
+   "\t\t\"Keep your arm at your side,\" <<he>> commands. You move your arm, exposing your naked body.",
+   "\t\t<<if $uncomfortable.nude is true>>You look away and close your eyes, unable to take the shame.<</if>>",
+   "\t<<else>>",
+   "\t\t\"Keep your arm at your side,\" <<he>> commands. You feel a thrill as <<his>> eyes flicker over your body.",
+   "\t<</if>>"
+  ],
+  "context": "<<milkvolume 20>><<lactation_pressure 10>><<set $breastgrowthtimer -= 150>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"Keep your arms at your side,\" <<he>> commands. You feel a thrill as <<his>> eyes flicker over your body."
+  ],
+  "old_kr": [
+   "\t\"팔은 옆에 붙여.\" <<he>>【이가】 명령한다. <<his>> 시선이 당신의 몸을 훑자 전율이 느껴진다."
+  ],
+  "new_en": [
+   "\t<<if $uncomfortable.nude is true>>You look away and close your eyes, unable to take the shame of your exposure.<</if>>"
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\tYou see the <<livestock_cows>> kneeling up and down the barn, mooing in pleasure, their faces contorted in rapture."
+  ],
+  "old_kr": [
+   "<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t당신은 <<livestock_cows>>이 축사 위아래로 무릎을 꿇고 쾌감에 겨워 음메 소리를 내며, 황홀경에 얼굴이 일그러진 것을 본다."
+  ],
+  "new_en": [
+   "<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>",
+   "\tYou see the <<livestock_cows>> kneeling up and down the barn, mooing in pleasure, their faces contorted in rapture."
+  ],
+  "context": "<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\tYou see the <<livestock_cows>> kneeling up and down the barn, mooing in pleasure, their faces contorted in rapture."
+  ],
+  "old_kr": [
+   "<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t당신은 <<livestock_cows>>이 축사 위아래로 무릎을 꿇고 쾌감에 겨워 음메 소리를 내며, 황홀경에 얼굴이 일그러진 것을 본다."
+  ],
+  "new_en": [
+   "<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>",
+   "\tYou see the <<livestock_cows>> kneeling up and down the barn, mooing in pleasure, their faces contorted in rapture."
+  ],
+  "context": "<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\tYou see the <<livestock_cows>> kneeling up and down the barn, mooing in pleasure, their faces contorted in rapture."
+  ],
+  "old_kr": [
+   "<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t당신은 <<livestock_cows>>이 축사 위아래로 무릎을 꿇고 쾌감에 겨워 음메 소리를 내며, 황홀경에 얼굴이 일그러진 것을 본다."
+  ],
+  "new_en": [
+   "<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>",
+   "\tYou see the <<livestock_cows>> kneeling up and down the barn, mooing in pleasure, their faces contorted in rapture."
+  ],
+  "context": "<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\tYou see the <<livestock_cows>> kneeling up and down the barn, mooing in pleasure, their faces contorted in rapture."
+  ],
+  "old_kr": [
+   "<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t당신은 <<livestock_cows>>이 축사 위아래로 무릎을 꿇고 쾌감에 겨워 음메 소리를 내며, 황홀경에 얼굴이 일그러진 것을 본다."
+  ],
+  "new_en": [
+   "<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>",
+   "\tYou see the <<livestock_cows>> kneeling up and down the barn, mooing in pleasure, their faces contorted in rapture."
+  ],
+  "context": "<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t\tThe farmhands finish attaching the milking machine to the \"cows.\" They kneel at the edge of their cells, tubes attached to their breasts and genitals, looking satisfied and content."
+  ],
+  "old_kr": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t\t농장 인부들이 \"소들\"에게 착유기를 부착하는 것을 마친다. 그들은 감옥 가장자리에 무릎을 꿇고, 가슴과 성기에 튜브를 연결한 채 만족스럽고 흡족한 표정을 짓고 있다."
+  ],
+  "new_en": [
+   "\t<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>",
+   "\t\tThe farmhands finish attaching the milking machine to the \"cows.\" They kneel at the edge of their cells, tubes attached to their breasts and genitals, looking satisfied and content."
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t\tThe farmhands finish attaching the milking machine to the \"cows.\" They kneel at the edge of their cells, tubes attached to their breasts and genitals, looking satisfied and content."
+  ],
+  "old_kr": [
+   "\t<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>",
+   "\t\t농장 인부들이 \"소들\"에게 착유기를 부착하는 것을 마친다. 그들은 감옥 가장자리에 무릎을 꿇고, 가슴과 성기에 튜브를 연결한 채 만족스럽고 흡족한 표정을 짓고 있다."
+  ],
+  "new_en": [
+   "\t<<if victimsAlwaysMonsterForType(\"cow\") or monsterCanAppearForType(\"cow\")>>",
+   "\t\tThe farmhands finish attaching the milking machine to the \"cows.\" They kneel at the edge of their cells, tubes attached to their breasts and genitals, looking satisfied and content."
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<He>> opens your cell door and steps inside, kneeling down next to you. \"You've been such a good <<girl>> for me lately. The pride of the farm.\" <<if $cow gte 6>> The thought makes you feel good.<<stress -4>><<lstress>><</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<He>>【은는】 감옥 문을 열고 안으로 들어와 당신 옆에 무릎을 꿇는다. \"요즘 나한테 정말 착한 <<girl>>【이었였】어. 농장의 자랑이야.\" <<if $cow gte 6>> 그 생각에 기분이 좋아진다.<<stress -4>><<lstress>><</if>>"
+  ],
+  "new_en": [
+   "\t\t\t<<He>> opens your cell door and steps inside, kneeling down next to you. \"You've been such a good <<girl>> for me lately. The pride of the farm.\" <<if $cow gte 6>> The thought makes you feel good.<<stress -4>><<lstress>><</if>>",
+   "\t\t\t<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<He>> kneels down next to you, and reaches out a hand towards your head. <<He>> begins to pet you. <<if $cow gte 6>> The feeling of <<his>> hand against your scalp sends warm shivers down your back.<<arousal 800>><<garousal>><</if>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<He>>【은는】 당신 옆에 무릎을 꿇고, 당신의 머리를 향해 손을 뻗는다. <<He>>【은는】 당신을 쓰다듬기 시작한다. <<if $cow gte 6>> <<his>> 손이 두피에 닿는 느낌에 따뜻한 전율이 등을 타고 내려온다.<<arousal 800>><<garousal>><</if>>"
+  ],
+  "new_en": [
+   "\t\t\t<<He>> kneels down next to you, and reaches out a hand towards your head. <<He>> begins to pet you. <<if $cow gte 6>> The feeling of <<his>> hand against your scalp sends warm shivers down your back.<<arousal 800>><<garousal>><</if>>",
+   "\t\t\t<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if _remyPunishBeast is \"horse\" and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\"I know what you deserve,\" <<nnpc_he \"Remy\">> says, stroking <<nnpc_his \"Remy\">> <<if $monster is 1>>centaur steed<<else>>horse<</if>> behind the ear. The <<beasttype>> leans into <<bhis>> master's hand. \"This <<bboy>> has been good. Your punishment is <<his>> reward.\""
+  ],
+  "old_kr": [
+   "<<if _remyPunishBeast is \"horse\" and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\"네가 무슨 꼴을 당해야 마땅한지 알겠지,\" <<nnpc_he \"Remy\">>【이가】 <<nnpc_his \"Remy\">> <<if $monster is 1>>켄타우로스 승용마<<else>>말<</if>>의 귀 뒤를 쓰다듬으며 말한다. <<beasttype>>【이가】 주인의 손길에 몸을 기댄다. \"얘는 말을 아주 잘 들었거든. 네 벌이 얘한테는 상인 셈이지.\""
+  ],
+  "new_en": [
+   "<<if _remyPunishBeast is \"horse\" and beastSexEnabledForType(\"horse\", $monster is 1)>>",
+   "\t\"I know what you deserve,\" <<nnpc_he \"Remy\">> says, stroking <<nnpc_his \"Remy\">> <<if $monster is 1>>centaur steed<<else>>horse<</if>> behind the ear. The <<beasttype>> leans into <<bhis>> master's hand. \"This <<bboy>> has been good. Your punishment is <<his>> reward.\""
+  ],
+  "context": "<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<elseif _remyPunishBeast is \"dog\" and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\"I know what you deserve,\" <<nnpc_he \"Remy\">> says, looking at the barking <<beastsplural>> crouched beside the farmhands. <<nnpc_He \"Remy\">> settles on one in particular. \"That one. <<if $pronoun is \"m\">>He's<<else>>She's<</if>> a very good <<if $pronoun is \"m\">>boy<<else>>girl<</if>>. Give <<if $pronoun is \"m\">>him<<else>>her<</if>> a treat.\" <<bHis>> tail wags. The <<generate2>><<person2>><<person>> beside the <<person1>><<if $pronoun is \"m\">>hound<<else>>bitch<</if>> releases <<bhis>> collar, and <<bhe>> bounds towards you."
+  ],
+  "old_kr": [
+   "<<elseif _remyPunishBeast is \"dog\" and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\"네가 무슨 꼴을 당해야 마땅한지 알겠지,\" <<nnpc_he \"Remy\">>【이가】 농장 인부들 옆에 웅크려 짖어대는 <<beastsplural>>【을를】 보며 말한다. <<nnpc_He \"Remy\">>【은는】 그중 한 마리를 고른다. \"저 녀석으로 하지. <<if $pronoun is \"m\">>그놈은<<else>>그년은<</if>> 아주 훌륭한 <<if $pronoun is \"m\">>수캐<<else>>암캐<</if>>거든. <<if $pronoun is \"m\">>그놈에게<<else>>그년에게<</if>> 상을 줘.\" <<bHis>> 꼬리가 세차게 흔들린다. <<person1>><<if $pronoun is \"m\">>사냥개<<else>>암캐<</if>> 옆에 있던 <<generate2>><<person2>><<person>>【이가】 <<bhis>> 목줄을 풀자, <<bhe>>【은는】 당신을 향해 달려든다."
+  ],
+  "new_en": [
+   "<<elseif _remyPunishBeast is \"dog\" and beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\"I know what you deserve,\" <<nnpc_he \"Remy\">> says, looking at the barking <<beastsplural>> crouched beside the farmhands. <<nnpc_He \"Remy\">> settles on one in particular. \"That one. <<if $pronoun is \"m\">>He's<<else>>She's<</if>> a very good <<if $pronoun is \"m\">>boy<<else>>girl<</if>>. Give <<if $pronoun is \"m\">>him<<else>>her<</if>> a treat.\" <<bHis>> tail wags. The <<generate2>><<person2>><<person>> beside the <<person1>><<if $pronoun is \"m\">>hound<<else>>bitch<</if>> releases <<bhis>> collar, and <<bhe>> bounds towards you."
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<getouticon>><<link [[Step back|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<getouticon>><<link [[뒤로 물러선다|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<getouticon>><<link [[Step back|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><<generate1>><</link>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<getouticon>><<link [[Step back|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<getouticon>><<link [[뒤로 물러선다|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t<<getouticon>><<link [[Step back|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><<generate1>><</link>>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<getouticon>><<link [[Step back|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<getouticon>><<link [[뒤로 물러선다|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<getouticon>><<link [[Step back|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><<generate1>><</link>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<getouticon>><<link [[Step back|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><</link>>",
+   ""
+  ],
+  "old_kr": [
+   "\t<<getouticon>><<link [[뒤로 물러선다|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><</link>>"
+  ],
+  "new_en": [
+   "\t<<getouticon>><<link [[Step back|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><<generate1>><</link>>",
+   ""
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Next|Livestock Cell]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[다음|Livestock Cell]]>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Next|Livestock Cell]]>><<endevent>><</link>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<generate1>><<person1>>",
+   "\t\tYou step back from the gate and lie in your pile of straw, feigning sleep.",
+   "\t\tThe <<person>> approaches your cell and looks at you, only to walk past your stall and narcotise the remaining cattle. Soon the barn falls silent."
+  ],
+  "old_kr": [
+   "\t\t<<generate1>><<person1>>",
+   "\t\t문에서 물러나 짚단 위에 누워 자는 척을 한다.",
+   "\t\t<<person>>【이가】 우리로 다가와 당신을 쳐다보더니, 그대로 지나쳐 나머지 가축들에게 마취제를 투여한다. 곧 외양간에 고요가 찾아온다."
+  ],
+  "new_en": [
+   "\t\t<<person1>>",
+   "\t\tYou step back from the gate and lie in your pile of straw, feigning sleep.",
+   "\t\tThe <<person>> approaches your cell and looks at you, only to walk past your stall and narcotise the remaining cattle. Soon the barn falls silent."
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<br>"
+  ],
+  "context": "<<link [[다음|Livestock Cell]]>><<endevent>><</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t당신의 배를 보고 문지르며, <<he>>【은는】 말을 잇는다. \"너처럼 다른 가축들도 임신시키도록 더 노력해야겠어.\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t당신의 배를 보고 문지르며, <<he>>【은는】 말을 잇는다. \"이 속도라면, 네가 농장의 자랑이 될 때까지 그리 오래 걸리지 않겠어.\""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if random(1) and $settings.horsesEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set _remyPunishBeast to \"dog\">>",
+   "<<if random(1)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if random(1, 100) lte beastMaleChance()>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if random(1, 100) lte beastMaleChanceForType(\"horse\")>>"
+  ],
+  "context": "\t<<if $remyEscapeSteed is \"centaur\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set _remyPunishBeast to \"horse\">>",
+   "<<else>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"horse\", $monster is 1)>>",
+   "\t\t<<set _remyPunishBeast to \"horse\">>",
+   "\t<<else>>",
+   "\t\t<<clearnpc>>",
+   "\t<</if>>",
+   "<</if>>",
+   "<<if _remyPunishBeast is \"dog\">>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly) or $settings.bestialityEnabled) and $settings.horsesEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"horse\", monsterChanceForType(\"horse\") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType(\"horse\")))>>"
+  ],
+  "context": "\t<!-- Modified for Monster People -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $settings.bestialityEnabled>>",
+   "\t\t<<if beastMaleChance() gte 1 and $settings.horsesEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif animalSexEnabledForType(\"horse\")>>",
+   "\t\t<<if beastMaleChanceForType(\"horse\") gte 1>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<elseif random(1, 2) is 2 and $settings.horsesEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<elseif random(1, 2) is 2>>"
+  ],
+  "context": "\t\t\t<br>"
+ }
+]

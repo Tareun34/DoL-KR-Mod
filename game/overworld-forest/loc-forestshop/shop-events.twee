@@ -30,7 +30,7 @@
 <<elseif _justEntered and _shopEvent and _gwylanLovePercent gte 10 and !$gwylanSeen.includes("intruder")>>
 	<<set $daily.gwylan.eventShop to true>>
 	<<include "Forest Shop Intruder">>
-<<elseif _justEntered and _shopEvent and _gwylanLovePercent gte 85 and C.npc.Gwylan.dom gte 120 and $hypnosis_traits.devotion gte 3 and $gwylanSeen.includesAll("partners", "hypnosis_deepest", "petplay") and !$gwylanSeen.includes("familiar_collar")>>
+<<elseif _justEntered and _shopEvent and _gwylanLovePercent gte 75 and C.npc.Gwylan.dom gte 120 and $hypnosis_traits.devotion gte 3 and $gwylanSeen.includesAll("partners", "hypnosis_deepest", "petplay") and !$gwylanSeen.includes("familiar_collar")>>
 	<<set $daily.gwylan.eventShop to true>>
 	<<include "Forest Shop Familiar Collar">>
 <<elseif _justEntered and $whitney_familiar_seen is 1 and !["dungeon", "pillory"].includes(C.npc.Whitney.state) and C.npc.Whitney.init is 1 and $worn.neck.name is "familiar collar" and $worn.neck.cursed is 1>>
@@ -54,8 +54,8 @@
 		<<pregnancyPassout "forestShop">>
 	<<else>>
 
-		<<if _gwylanLovePercent gte 35 and !$gwylan.punishment and !$gwylan.taken and !$gwylan.timer.wrap and (pcAreArmsBound("any") or $feetuse is "bound")>>
-			당신의 결박이 <<print either("헐거운 선반", "옷걸이", "낮게 드리워진 나뭇가지", "불쾌하게 끈적이는 덩굴")>>에 걸린다. 몸을 빼내려 하자, <span class="green">결박이 너덜너덜해져 발치에 떨어진다.</span>
+		<<if _gwylanLovePercent gte 40 and !$gwylan.punishment and !$gwylan.taken and !$gwylan.timer.wrap and (pcAreArmsBound("any") or $feetuse is "bound")>>
+			Your bindings catch on <<print either("a loose shelf", "a clothes hanger", "a low-hanging branch", "some unpleasantly sticky vines")>>. You try to pull away, and <span class="green">your bindings fall to tatters at your feet.</span>
 			<<unbind>>
 			<br><br>
 		<</if>>
@@ -93,17 +93,17 @@
 				<<if !$halloween_robin_costume or $halloween_robin_costume is "ghost">>
 					<<socialiseicon>><<link [[로빈에게 말 걸기|Robin Forest Costume Intro]]>><</link>>
 				<</if>>
-			<<elseif _snoopEvent and _gwylanLovePercent gte 20 and $gwylanSeen.includes("intruder", "clothes_intro") and !$gwylanSeen.includes("hat_found")>>
+			<<elseif _snoopEvent and _gwylanLovePercent gte 20 and $gwylanSeen.includesAll("intruder", "clothes_intro") and !$gwylanSeen.includes("hat_found")>>
 				<<set $gwylan.timer.eventShopEnd to new DateTime(Time.date).addHours(3).timeStamp>>
 				가게 안은 고요하고, 그윌란의 모습은 어디에도 보이지 않는다. <span class="purple">평소보다 조금 더 어둡기도 하다.</span>
 				<br>
-				<<investigateicon>><<link [[그윌란을 찾아본다|Forest Shop Hat]]>><</link>>
-			<<elseif _snoopEvent and _gwylanLovePercent gte 35 and $gwylanSeen.includes("hat_found") and !$gwylanSeen.includes("lights") and $gwylan.progress gte 3 and $gwylan.requestCount gte 2>>
+				<<investigateicon>><<link [[Try to find Gwylan|Forest Shop Hat]]>><</link>>
+			<<elseif _snoopEvent and _gwylanLovePercent gte 30 and $gwylanSeen.includes("hat_found") and !$gwylanSeen.includes("lights") and $gwylan.progress gte 3 and $gwylan.requestCount gte 2>>
 				<<set $gwylan.timer.eventShopEnd to new DateTime(Time.date).addHours(2).timeStamp>>
 				가게 안은 고요하고, 그윌란의 모습은 보이지 않는다. <span class="purple">평소보다 어둡다.</span>
 				<br>
-				<<investigateicon>><<link [[다시 그윌란을 찾아본다|Forest Shop Lights]]>><</link>>
-			<<elseif _snoopEvent and _gwylanLovePercent gte 50 and $gwylanSeen.includes("lights") and !$gwylanSeen.includesAny("caught", "caught_no_lewd") and $gwylanTalked.length gte 10 and $gwylan.progress gte 6 and !(["clothing"].includes($gwylan.request.event) && gwylanRequestMet())>>
+				<<investigateicon>><<link [[Try to find Gwylan again|Forest Shop Lights]]>><</link>>
+			<<elseif _snoopEvent and _gwylanLovePercent gte 40 and $gwylanSeen.includes("lights") and !$gwylanSeen.includesAny("caught", "caught_no_lewd") and $gwylanTalked.length gte 10 and $gwylan.progress gte 6 and !(["clothing"].includes($gwylan.request.event) && gwylanRequestMet())>>
 				<<set $gwylan.timer.eventShopEnd to new DateTime(Time.date).addHours(2).timeStamp>>
 				가게 안은 고요하고, 그윌란의 모습은 보이지 않는다. <span class="purple">평소보다 어둡다.</span><br>
 				<br>
@@ -221,8 +221,8 @@
 	<<link [[떠난다|Forest]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<br>
 <<elseif Time.isBloodMoon() and C.npc.Gwylan.love gte 10 and !$gwylanSteal>>
-	문을 두드린다.
-	<<if $wraith and $wraith.hunt>>
+	You knock on the door.
+	<<if $wraith?.hunt>>
 		<<set $gwylan.timer.bloodKnock to new DateTime(Time.date).addDays(1).timeStamp>>
 		건물 안에서 무언가 덜컹거리고, 여러 개의 자물쇠가 추가로 잠기는 소리가 들린다. <span class="red">당신을 쫓는 무언가가 더 가까이 다가오는 것을 느낀다.</span> <<set $wraith.hunt++>><<set $foresthunt++>>
 		그윌란이 들었기를 바란다. <span class="blue">만약 잡히더라도 <<nnpc_he "Gwylan">> 정도는 당신을 찾으러 와줄지도 모른다</span>.
@@ -843,8 +843,8 @@
 	5분쯤 지나자, 당신은 일어선다. <<stress -6>><<lstress>>
 	<br><br>
 
-	<<if $hypnosis_traits.devotion and (!$hypnosis_traits.slumber or $hypnosisTimers.slumber and $hypnosisTimers.slumber.time lt Math.floor($hypnosisTimers.slumber.max / 2))>>
-		<span class="witchbloom">당신은 즉시 <<his>> 무릎으로 돌아가 더없이 행복한 잠에 다시 빠져들고 싶다는 갈망을 느낀다.</span>
+	<<if $hypnosis_traits.devotion and (!$hypnosis_traits.slumber or $hypnosisTimers.slumber?.time lt Math.floor($hypnosisTimers.slumber.max / 2))>>
+		<span class="witchbloom">You immediately yearn to return to <<his>> lap and sink back into the blissful slumber.</span>
 		<br>
 		<<gwylanHypnosis "slumber" 10>>
 	<</if>>
@@ -1121,8 +1121,8 @@
 당신은 천천히 문틀로 다가가 모퉁이 너머를 엿본다.
 <br><br>
 
-<<if $world_corruption_soft gte 25 and (($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or $settings.bestialityEnabled)>>
-	<<link [[다음|Forest Shop Caught 2]]>><<handheldon>><</link>>
+<<if $world_corruption_soft gte 25 and beastSexEnabledForType("wolf")>>
+	<<link [[Next|Forest Shop Caught 2]]>><<handheldon>><</link>>
 <<else>>
 	<<link [[다음|Forest Shop Caught No Lewd]]>><<handheldon>><</link>>
 <</if>>
@@ -1985,7 +1985,7 @@
 <br>
 <<link [[그윌란을 놀린다|Forest Shop Caught 9]]>><<npcincr Gwylan lust 2>><<set $phase2 to 2>><</link>><<glust>>
 <br>
-<<link [[침묵을 지킨다|Forest Shop Caught 9]]>><<set $phase2 to 4>><</link>>
+<<link [[Remain silent|Forest Shop Caught 9]]>><<set $phase2 to 4>><</link>>
 <br>
 <<if hasSexStat("deviancy", 2)>>
 	<<link [[그윌란에게 당신도 늑대와 하는 것을 좋아한다고 말한다|Forest Shop Caught 9]]>><<npcincr Gwylan lust 4>><<set $phase2 to 3>><</link>><<deviant2>><<gglust>>
@@ -3825,8 +3825,8 @@ You may run around and play pretend with whomever you so wish, but in the end, y
 			<<wakingEffects $sleepHoursTotal>>
 		<</if>>
 		<<if ["dryheaving","nausea"].includes(_wakingEffect)>>
-			<br><br>
-			푹 잤지만, 지금은 몸이 좀 찌뿌둥하다.
+			<br>
+			You slept soundly, but now feel a little rough.
 			<<if $gwylanbed>>
 				그윌란이 당신을 위로하듯 등을 문질러준다.
 			<</if>>
@@ -3847,7 +3847,7 @@ You may run around and play pretend with whomever you so wish, but in the end, y
 			<</if>>
 			<br><br>
 		<<else>>
-			<br><br>
+			<br>
 		<</if>>
 	<</if>>
 	<<getouticon>><<link [[침대에서 나온다|Forest Shop Entrance]]>><<endevent>><</link>>

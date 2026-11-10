@@ -1,0 +1,13 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $settings.bestialityEnabled and $settings.breastFeedingEnabled and $lactating is 1 and hasSexStat(\"deviancy\", 3) and ($settings.monsterChance lt 100 or ($settings.monsterHallucinationsOnly and $hallucinations is 0))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if animalSexEnabledForType(\"wolf\") and !$wolfcave_monster_roll and $settings.breastFeedingEnabled and $lactating is 1 and hasSexStat(\"deviancy\", 3)>>"
+  ],
+  "context": ""
+ }
+]

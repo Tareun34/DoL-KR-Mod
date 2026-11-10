@@ -6,7 +6,7 @@
 	<<set $fishingCatCount to 1>>
 <</if>>
 <<beastNEWinit $fishingCatCount cat>>
-<<if $settings.bestialityEnabled>>
+<<if animalSexEnabledForType("cat")>>
 	<<set $fishingCatMouthTarget to random(1, 4)>>
 	<<if $fishingCatCount is 1>>
 		당신이 <<fishingBob>>【을를】 지켜보고 있을 때, 커다란 <<print either("헤이즐넛색", "노란색", "초록색", "파란색")>> 눈의 <<beasttype>>【이가】 헤더 덤불 속에서 튀어나온다. <<bHe>>【은는】 으르렁거리며 당신을 향해 똑바로 돌진하고,

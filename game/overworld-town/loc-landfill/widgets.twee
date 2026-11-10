@@ -26,7 +26,7 @@
 	<<beastNEWinit 1 dog>>
 	등 뒤에서 으르렁거리는 소리가 들린다. 쓰레기 더미 뒤에서 <<beasttype>>【이가】 이빨을 드러낸 채 나타난다.
 	<br><br>
-	<<if $monster is 1 or $settings.bestialityEnabled>>
+	<<if beastSexEnabledForType("dog", $monster is 1)>>
 
 		<<link [[다음|Trash Beast]]>><<set $molestationstart to 1>><</link>>
 		<br>

@@ -1,0 +1,53 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.voreEnabled>>",
+   "\t\t<<link [[Go deeper into the forest to retrieve the basket|Robin Forest Basket]]>><<npcincr Robin love 1>><</link>><<glove>>"
+  ],
+  "old_kr": [
+   "\t<<if $settings.voreEnabled>>",
+   "\t\t<<link [[바구니를 되찾으러 숲 깊이 들어간다|Robin Forest Basket]]>><<npcincr Robin love 1>><</link>><<glove>>"
+  ],
+  "new_en": [
+   "\t<<if $settings.voreEnabled and animalSexEnabledForType(\"snake\")>>",
+   "\t\t<<link [[Go deeper into the forest to retrieve the basket|Robin Forest Basket]]>><<npcincr Robin love 1>><</link>><<glove>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<He>> does it eat, though, sparing not a crumb. It's a nice sandwich, fat with lettuce, tomato, and battered cod."
+  ],
+  "old_kr": [
+   "그래도 <<He>>【은는】 먹는다. 한 조각도 남기지 않는다. 양상추와 토마토, 튀긴 대구가 두툼하게 든 좋은 샌드위치다."
+  ],
+  "new_en": [
+   "<<He>> does eat it, though, not sparing a crumb. It's a nice sandwich, fat with lettuce, tomato, and battered cod."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $enemytrust += 500>><<npcexpose>><<set $speechdisable to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $enemytrust += 500>><<npcexpose>><<set $speechDisable to 1>>"
+  ],
+  "context": "\t<<maninit>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $enemytrust += 500>><<set $speechdisable to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $enemytrust += 500>><<set $speechDisable to 1>>"
+  ],
+  "context": "\t<</if>>"
+ }
+]

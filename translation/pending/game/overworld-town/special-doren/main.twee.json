@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $debug is 1 and Time.hour isnot 16>>",
+   "\t\t<<loitericon>><<link [[Wait for Doren (DEBUG)|$passage]]>><<passTimeUntil 16>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if $debug is 1 and Time.hour isnot 16>>",
+   "\t\t<<loitericon>><<link [[도렌을 기다린다 (DEBUG)|$passage]]>><<passTimeUntil 16>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if $debug and Time.hour isnot 16>>",
+   "\t\t<<loitericon>><<link [[Wait for Doren (DEBUG)|$passage]]>><<passTimeUntil 16>><</link>>"
+  ],
+  "context": "\t<<endevent>>"
+ }
+]

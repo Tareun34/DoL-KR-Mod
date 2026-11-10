@@ -553,8 +553,8 @@
 <<if $eventskip isnot 1>>
 	<<maze_basilisk>>
 <<else>>
-	<<if $settings.bestialityEnabled>>
-		벽이 안쪽으로 기울어져 복도가 너무 좁아져서, 몸을 옆으로 돌려 비집고 들어가야 한다. 절반쯤 갔을 때 양쪽에서 뱀들이 나타난다. 뱀들이 당신의 가슴을 감싸고 <<breasts>> 부분을 조인다.<<garousal>><<arousal 600>><<gstress>><<stress 6>>
+	<<if animalSexEnabledForType("snake")>>
+		The walls angle inwards, shrinking the corridor so much that you must turn sideways to squeeze through. You're halfway along when snakes emerge from either side of you. They wrap around your chest, squeezing your <<breasts>>.<<garousal>><<arousal 600>><<gstress>><<stress 6>>
 		<br><br>
 
 		<<link [[빠르게 움직인다|Maze 1 0 Speed]]>><</link>>
@@ -576,8 +576,8 @@
 :: Maze 1 0 Speed
 <<effects>>
 
-<<if $settings.bestialityEnabled>>
-	뱀들이 계속해서 당신을 더듬는 동안 최대한 빨리 움직인다.
+<<if animalSexEnabledForType("snake")>>
+	You move as fast as you can as the snakes continue to grope at you.
 	<<if $exposed lte 1>>
 		그것들이 당신의 옷을 잡고 팔다리를 구속하려 하지만, 당신은 뿌리칠 수 있다.
 	<<else>>
@@ -608,8 +608,8 @@
 :: Maze 1 0 Whack
 <<effects>>
 
-<<if $settings.bestialityEnabled>>
-	이렇게 좁은 공간에서 움직이기는 어렵지만, 당신은 해치에서 나오는 뱀들을 후려쳐 쫓아낸다. 수가 너무 많아 몇 마리가 빠져나와 당신 주위를 휘감지만, 당신은 그것들을 쳐내고 반대편으로 빠져나온다.<<garousal>><<arousal 600>><<gpain>><<pain 4>>
+<<if animalSexEnabledForType("snake")>>
+	It's hard to move with such limited space, but you whack the snakes away as they emerge from the hatches. There are enough that a few slip through, twirling around you before you manage to smack them away, but you make it to the other side.<<garousal>><<arousal 600>><<gpain>><<pain 4>>
 	<br><br>
 <<else>>
 	이렇게 좁은 공간에서 움직이기는 어렵지만, 당신은 해치에서 나오는 손들을 후려쳐 쫓아낸다. 수가 너무 많아 몇 개가 빠져나와 당신을 더듬고 꼬집지만, 당신은 그것들을 쳐내고 반대편으로 빠져나온다.<<garousal>><<arousal 600>><<gpain>><<pain 4>>
@@ -644,8 +644,8 @@
 
 <<water>><<waterbr 2>><<effects>>
 
-<<if $settings.bestialityEnabled>>
-	석조 구조물의 구멍에서 뱀들이 나타나지만, 당신은 그것들을 따돌릴 수 있다.
+<<if animalSexEnabledForType("snake")>>
+	Snakes emerge from holes in the stonework, but you're able to outmanoeuvre them.
 	<br><br>
 <<else>>
 	물 아래에서 해치가 열리고 손들이 뻗어 나와 당신을 더듬지만, 당신은 그것들의 손아귀에서 벗어날 수 있다.
@@ -669,10 +669,10 @@
 옷을 벗어 머리 위로 들고 차가운 물속으로 걸어 들어간다. 발과 한쪽 팔로 헤엄치고, 다른 팔로는 옷이 젖지 않게 한다.
 <br><br>
 
-<<waterbr 2>><<effects>>
+<<waterwash>><<waterbr 2>><<effects>>
 
-<<if $settings.bestialityEnabled>>
-	석조 구조물 안의 구멍에서 뱀들이 나타난다.
+<<if animalSexEnabledForType("snake")>>
+	Snakes emerge from holes within the stonework.
 	<<if $swimmingSuccess>>
 		한쪽 팔을 쓰고 있음에도, <span class="green">당신은 그것들의 손이 닿지 않는 곳으로 움직일 수 있다.</span>
 		<br><br>

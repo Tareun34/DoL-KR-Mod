@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tconst message = $(\"<div>\");",
+   "\t\tnew Wikifier(message, messageAttr);",
+   "\t\tsettings.message = message.html();"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tsettings.message = $(\"<div>\").append(Wikifier.wikifyEval(messageAttr)).html();"
+  ],
+  "context": "\tif (messageAttr) {"
+ }
+]

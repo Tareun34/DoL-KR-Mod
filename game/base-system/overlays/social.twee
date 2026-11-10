@@ -1,7 +1,7 @@
 :: Social [widget]
 
 <<widget "social">>
-	<div id="relation-display">
+	<div class="relation-display">
 		<<silently>>
 			<<script>>
 				if (V.wolfpackharmony) C.npc["Black Wolf"].harmony = V.wolfpackharmony;
@@ -97,18 +97,16 @@
 				/* this list is sorted */
 				T.importantNPCs = T.importantNpcOrder.map(name => V.NPCName[V.NPCNameList.indexOf(name)]);
 
-				/* this list is unsorted */
-				T.otherNPCs = V.NPCName.filter(npc => !T.importantNpcOrder.includes(npc.nam) && !T.specialNPCs.includes(npc.nam));
-
-				/* sorting takes the lower value and puts it first, so if a < b, a goes first. */
-				/* yes, this works on words, somehow. it's math shit, but it works. read a book if necessary. */
-				T.otherNPCs.sort((a,b) => a.nam - b.nam);
+				/* this list is unsorted, let's sort it */
+				T.otherNPCs = V.NPCName
+					.filter(npc => !T.importantNpcOrder.includes(npc.nam) && !T.specialNPCs.includes(npc.nam))
+					.sort((a,b) => a.nam.localeCompare(b.nam));
 			<</script>>
 		<</silently>>
 
 		<br>
-		<span class="gold">주요 관계</span>
-		<div id="npc-relations" class="relation-box-list">
+		<span class="gold">Primary Relationships</span>
+		<div class="npc-relations relation-box-list">
 			<<set _initNPC to 0>>
 			<<for _k = 0; _k lt _importantNPCs.length; _k++>>
 				<<relation-box _importantNPCs[_k] _npcConfig[_importantNPCs[_k].nam]>>
@@ -121,8 +119,8 @@
 		<</if>>
 
 		<br>
-		<span class="gold">관심 인물</span>
-		<div id="secondary-npcs" class="relation-box-list">
+		<span class="gold">People of Interest</span>
+		<div class="secondary-npcs relation-box-list">
 			<<set _initNPC to 0>>
 			<<for _k= 0; _k lt _otherNPCs.length; _k++>>
 				<<relation-box _otherNPCs[_k] _npcConfig[_otherNPCs[_k].nam]>>
@@ -140,213 +138,214 @@
 		<</if>>
 
 		<br>
-		<span class="gold">평판</span>
-		<div id="faction-reputations" class="relation-box-list">
-			<<silently>>
-				/* Police config */
-				<<set _policeCrimeConfig = { currentValue : crimeSumHistory(), states : [
-					{ requiredValue: 0, color: 'green', description: '경찰은 당신에게 관심이 없으며,'},
-					{ requiredValue: 1000, color: 'teal', description: '경찰은 당신을 기록하고 있으며,'},
-					{ requiredValue: 2000, color: 'lblue', description: '경찰은 당신을 관심 인물로 간주하고 있으며,'},
-					{ requiredValue: 3000, color: 'blue', description: '경찰은 당신을 문제아로 간주하고 있으며,'},
-					{ requiredValue: 5000, color: 'purple', description: '경찰은 당신을 범죄자로 간주하고 있으며,'},
-					{ requiredValue: 10000, color: 'pink', description: '경찰은 당신에 대한 전담 문서를 가지고 있으며,'},
-					{ requiredValue: 30000, color: 'red', description: '경찰은 당신 전담 서류함까지 따로 두고 있으며,'}
-					]}>>
-				<<set _policeEvidenceConfig = { currentValue : crimeSumHistory(), secondaryValue : crimeSumCurrent(), preText: '당신을 범죄와 연결할 ', states : [
-					{ requiredValue: 0, secondaryStates : [
-					{ requiredValue: 0, color: 'green', description: '어떤 증거도 가지고 있지 않다.'},
-					{ requiredValue: 1, color: 'teal', description: '약간의 증거를 가지고 있지만 체포하기에는 부족하다.'}, ]},
-					{ requiredValue: 1000, secondaryStates : [
-					{ requiredValue: 0, color: 'green', description: '증거가 거의 없다.'},
-					{ requiredValue: 1000, color: 'pink', description: '충분한 증거를 가지고 있으며, 체포할 수 있다.'},
-					{ requiredValue: 5000, color: 'red', description: '차고 넘치는 증거를 가지고 있으며, 당신을 체포할 수 있다.'},
-				 ]}
-				]}>>
-				<<set _policeBoxConfig = { name : "경찰", icon : "img/misc/icon/police.png", description: "<<relation-text _policeCrimeConfig>> <<relation-text _policeEvidenceConfig>>"}>>
+		<<silently>>
+			/* Police config */
+			<<set _policeCrimeConfig = { currentValue : crimeSumHistory(), preText: 'The police ', states : [
+				{ requiredValue: 0,		color: 'green',		description: 'aren\'t concerned with you,'},
+				{ requiredValue: 1000,	color: 'teal',		description: 'have you on their records,'},
+				{ requiredValue: 2000,	color: 'lblue',		description: 'consider you a person of interest,'},
+				{ requiredValue: 3000,	color: 'blue',		description: 'consider you a troublemaker,'},
+				{ requiredValue: 5000,	color: 'purple',	description: 'consider you a criminal,'},
+				{ requiredValue: 10000,	color: 'pink',		description: 'have a binder devoted to you,'},
+				{ requiredValue: 30000,	color: 'red',		description: 'have a filing cabinet devoted to you,'}
+			]}>>
+			<<set _policeEvidenceConfig = { currentValue : crimeSumHistory(), secondaryValue : crimeSumCurrent(), states : [
+				{ requiredValue: 0, secondaryStates : [
+					{ requiredValue: 0,	color: 'green',	description: 'and have no evidence linking you to any crime.'},
+					{ requiredValue: 1,	color: 'teal',	description: 'despite having a little evidence linking you to crime.'},
+				]},
+				{ requiredValue: 1000, secondaryStates : [
+					{ requiredValue: 0,		color: 'green',	description: 'but lack enough evidence for an arrest.'},
+					{ requiredValue: 1000,	color: 'pink',	description: 'and have enough evidence for an arrest.'},
+					{ requiredValue: 5000,	color: 'red',	description: 'and have more than enough evidence for an arrest.'},
+				]}
+			]}>>
+			<<set _policeBoxConfig = { name : "Police", icon : "img/misc/icon/police.png", description: "<<relation-text _policeCrimeConfig>> <<relation-text _policeEvidenceConfig>>"}>>
 
-				/* Orphanage */
-				<<set _orphanageMoodConfig = { currentValue: $orphan_hope, secondaryValue: $orphan_reb, preText: '고아원의 분위기는 ', states : [
-					{ requiredValue: -100, secondaryStates : [
-					{ requiredValue: -100, color: 'pink', description: '절망적이다.'},
-					{ requiredValue: -40, color: 'pink', description: '풀이 죽어 있다.'},
-					{ requiredValue: -10, color: 'pink', description: '불행하다.'},
-					{ requiredValue: 10, color: 'pink', description: '앙심을 품고 있다.'},
-					{ requiredValue: 40, color: 'def', description: '복수심에 불탄다.'},
+			/* Orphanage */
+			<<set _orphanageMoodConfig = { currentValue: $orphan_hope, secondaryValue: $orphan_reb, preText: 'The atmosphere in the orphanage is ', states : [
+				{ requiredValue: -100, secondaryStates : [
+					{ requiredValue: -100,	color: 'pink',	description: 'hopeless.'},
+					{ requiredValue: -40,	color: 'pink',	description: 'crestfallen.'},
+					{ requiredValue: -10,	color: 'pink',	description: 'unhappy.'},
+					{ requiredValue: 10,	color: 'pink',	description: 'spiteful.'},
+					{ requiredValue: 40,	color: 'def',	description: 'vengeful.'},
+				]},
+				{ requiredValue: -40, secondaryStates : [
+					{ requiredValue: -100,	color: 'purple',	description: 'morose.'},
+					{ requiredValue: -40,	color: 'purple',	description: 'dispirited.'},
+					{ requiredValue: -10,	color: 'purple',	description: 'resigned.'},
+					{ requiredValue: 10,	color: 'purple',	description: 'disobedient.'},
+					{ requiredValue: 40,	color: 'def',		description: 'unruly.'},
+				]},
+				{ requiredValue: -10, secondaryStates : [
+					{ requiredValue: -100,	color: 'blue',	description: 'obedient.'},
+					{ requiredValue: -40,	color: 'blue',	description: 'compliant.'},
+					{ requiredValue: -10,	color: 'blue',	description: 'calm.'},
+					{ requiredValue: 10,	color: 'blue',	description: 'subversive.'},
+					{ requiredValue: 40,	color: 'def',	description: 'defiant.'},
+				]},
+				{ requiredValue: 10, secondaryStates : [
+					{ requiredValue: -100,	color: 'teal',	description: 'enduring.'},
+					{ requiredValue: -40,	color: 'teal',	description: 'unresistant.'},
+					{ requiredValue: -10,	color: 'teal',	description: 'optimistic.'},
+					{ requiredValue: 10,	color: 'teal',	description: 'rebellious.'},
+					{ requiredValue: 40,	color: 'def',	description: 'mutinous.'},
+				]},
+				{ requiredValue: 40, secondaryStates : [
+					{ requiredValue: -100,	color: 'green',	description: 'kind.'},
+					{ requiredValue: -40,	color: 'green',	description: 'friendly.'},
+					{ requiredValue: -10,	color: 'green',	description: 'hopeful.'},
+					{ requiredValue: 10,	color: 'green',	description: 'idealistic.'},
+					{ requiredValue: 40,	color: 'def',	description: 'revolutionary.'},
+				]},
+			]}>>
+			<<set _orphanageBoxConfig = { name : "Orphanage", icon : "img/misc/icon/orphanage.png", description: "<<relation-text _orphanageMoodConfig>>"}>>
+
+			/* School config */
+			<<set _teacherRepConfig = { currentValue: $delinquency, preText: 'You are considered ', postText: ' by the teachers.', states : [
+				{ requiredValue: 0,		color: 'green',		description: 'an ideal student'},
+				{ requiredValue: 10,	color: 'teal',		description: 'a normal student'},
+				{ requiredValue: 200,	color: 'lblue',		description: 'a bad student'},
+				{ requiredValue: 400,	color: 'blue',		description: 'a delinquent'},
+				{ requiredValue: 600,	color: 'purple',	description: 'a delinquent'},
+				{ requiredValue: 800,	color: 'pink',		description: 'a delinquent'},
+				{ requiredValue: 1000,	color: 'red',		description: 'a terror'}
+			]}>>
+			<<set _studentRepConfig = { currentValue: $cool, preText: 'Your fellow students think you\'re ', states : [
+				{ requiredValue: 0,		color: 'red',		preText: 'Your fellow students ', description: 'avoid you.'},
+				{ requiredValue: 40,	color: 'pink',		description: 'odd.'},
+				{ requiredValue: 80,	color: 'purple',	description: 'dorky.'},
+				{ requiredValue: 120,	color: 'blue',		description: 'ok.'},
+				{ requiredValue: 160,	color: 'lblue',		description: 'cool.'},
+				{ requiredValue: 240,	color: 'teal',		description: 'very cool.'},
+				{ requiredValue: 400,	color: 'green',		preText: 'Your fellow students ', description: 'aspire to be seen with you.'}
+			]}>>
+			<<set _teacherBoxConfig = { name : "Teachers", icon : "img/misc/icon/school.png", description: "<<relation-text _teacherRepConfig>> <<statbar 0 $delinquency 1000>>"}>>
+			<<set _studentBoxConfig = { name : "Students", icon : "img/misc/icon/school-building.png", description: "<<relation-text _studentRepConfig>> <<statbarinverted $cool $coolmax>>"}>>
+
+			/*Crossdressing*/
+			<<if $schoolrep.crossdress neq 0>>
+				<<set _crossdressing to $player.gender isnot $player.sex ? "presumed crossdressing" : "crossdressing exploits">>
+				<<set _knows to $player.gender isnot $player.sex ? "believes" : "knows">>
+				<<set _crossdressRepConfig = { currentValue: $schoolrep.crossdress, states : [
+					{ requiredValue: 1,	color: 'lblue',		description: `A few cliques at school whisper amongst themselves about your ${_crossdressing}. Few believe it.`},
+					{ requiredValue: 2,	color: 'blue',		description: `A rumour has taken root at school. Some say you're a crossdresser.`},
+					{ requiredValue: 3,	color: 'purple',	description: `Students gossip about your supposed crossdressing, though most think it only a joke.`},
+					{ requiredValue: 4,	color: 'pink',		description: `Everyone at school has heard the rumours of your ${_crossdressing}.`},
+					{ requiredValue: 5,	color: 'red',		description: `Everyone at school ${_knows} that you crossdress, including the teachers.`}
+				]}>>
+				<<set _crossdressBoxConfig = { name : "Crossdressing", description : '<<relation-text _crossdressRepConfig>>'}>>
+			<</if>>
+
+			/*Herm*/
+			<<if $schoolrep.herm neq 0>>
+				<<set _hermRepConfig = { currentValue: $schoolrep.herm, states : [
+					{ requiredValue: 1,	color: 'lblue',		description: 'A few cliques at school gossip about a student with both boy and girl parts. Few believe it.'},
+					{ requiredValue: 2,	color: 'blue',		description: 'Rumours of a student with both boy and girl parts have spread through the school.'},
+					{ requiredValue: 3,	color: 'purple',	description: 'The school is rife with gossip about a student with both boy and girl parts.'},
+					{ requiredValue: 4,	color: 'pink',		description: 'Everyone at school has heard the rumours about your unique genitalia.'},
+					{ requiredValue: 5,	color: 'red',		description: 'Everyone at school has heard of your unique genitalia, including the teachers.'}
+				]}>>
+				<<set _hermBoxConfig = { name : "Genitalia", description : '<<relation-text _hermRepConfig>>'}>>
+			<</if>>
+
+			/* Prison */
+			<<if $prison>>
+				<<set _prisonMoodConfig = { currentValue: $prison.hope, secondaryValue: $prison.reb, preText: 'The atmosphere in the prison is ', states : [
+					{ requiredValue: 0, secondaryStates : [
+						{ requiredValue: 0,	color: 'pink',	description: 'hopeless.'},
+						{ requiredValue: 20,	color: 'pink',	description: 'crestfallen.'},
+						{ requiredValue: 40,	color: 'pink',	description: 'unhappy.'},
+						{ requiredValue: 60,	color: 'pink',	description: 'spiteful.'},
+						{ requiredValue: 80,	color: 'def',	description: 'vengeful.'},
 					]},
-					{ requiredValue: -40, secondaryStates : [
-					{ requiredValue: -100, color: 'purple', description: '우울하다.'},
-					{ requiredValue: -40, color: 'purple', description: '의기소침하다.'},
-					{ requiredValue: -10, color: 'purple', description: '체념한 상태다.'},
-					{ requiredValue: 10, color: 'purple', description: '말을 안 듣는다.'},
-					{ requiredValue: 40, color: 'def', description: '통제가 안 된다.'},
-					]},
-					{ requiredValue: -10, secondaryStates : [
-					{ requiredValue: -100, color: 'blue', description: '순종적이다.'},
-					{ requiredValue: -40, color: 'blue', description: '고분고분하다.'},
-					{ requiredValue: -10, color: 'blue', description: '차분하다.'},
-					{ requiredValue: 10, color: 'blue', description: '반항적이다.'},
-					{ requiredValue: 40, color: 'def', description: '도전적이다.'},
-					]},
-					{ requiredValue: 10, secondaryStates : [
-					{ requiredValue: -100, color: 'teal', description: '견뎌내고 있다.'},
-					{ requiredValue: -40, color: 'teal', description: '저항하지 않는다.'},
-					{ requiredValue: -10, color: 'teal', description: '낙관적이다.'},
-					{ requiredValue: 10, color: 'teal', description: '반항적이다.'},
-					{ requiredValue: 40, color: 'def', description: '반란을 꾀하고 있다.'},
+					{ requiredValue: 20, secondaryStates : [
+						{ requiredValue: 0,	color: 'purple',	description: 'morose.'},
+						{ requiredValue: 20,	color: 'purple',	description: 'dispirited.'},
+						{ requiredValue: 40,	color: 'purple',	description: 'resigned.'},
+						{ requiredValue: 60,	color: 'purple',	description: 'disobedient.'},
+						{ requiredValue: 80,	color: 'def',		description: 'unruly.'},
 					]},
 					{ requiredValue: 40, secondaryStates : [
-					{ requiredValue: -100, color: 'green', description: '친절하다.'},
-					{ requiredValue: -40, color: 'green', description: '우호적이다.'},
-					{ requiredValue: -10, color: 'green', description: '희망에 차 있다.'},
-					{ requiredValue: 10, color: 'green', description: '이상적이다.'},
-					{ requiredValue: 40, color: 'def', description: '혁명적이다.'},
+						{ requiredValue: 0,	color: 'blue',	description: 'obedient.'},
+						{ requiredValue: 20,	color: 'blue',	description: 'compliant.'},
+						{ requiredValue: 40,	color: 'blue',	description: 'calm.'},
+						{ requiredValue: 60,	color: 'blue',	description: 'subversive.'},
+						{ requiredValue: 80,	color: 'def',	description: 'defiant.'},
+					]},
+					{ requiredValue: 60, secondaryStates : [
+						{ requiredValue: 0,	color: 'teal',	description: 'enduring.'},
+						{ requiredValue: 20,	color: 'teal',	description: 'unresistant.'},
+						{ requiredValue: 40,	color: 'teal',	description: 'optimistic.'},
+						{ requiredValue: 60,	color: 'teal',	description: 'rebellious.'},
+						{ requiredValue: 80,	color: 'def',	description: 'mutinous.'},
+					]},
+					{ requiredValue: 80, secondaryStates : [
+						{ requiredValue: 0,	color: 'green',	description: 'tolerant.'},
+						{ requiredValue: 20,	color: 'green',	description: 'patient.'},
+						{ requiredValue: 40,	color: 'green',	description: 'hopeful.'},
+						{ requiredValue: 60,	color: 'green',	description: 'idealistic.'},
+						{ requiredValue: 80,	color: 'def',	description: 'revolutionary.'},
 					]},
 				]}>>
-				<<set _orphanageBoxConfig = { name : "고아원", icon : "img/misc/icon/orphanage.png", description: "<<relation-text _orphanageMoodConfig>>"}>>
-
-				/* School config */
-				<<set _teacherRepConfig = { currentValue: $delinquency, preText: '교사들은 당신을 ', postText: '【으로로】 간주한다.', states : [
-					{ requiredValue: 0, color: 'green', description: '모범생'},
-					{ requiredValue: 10, color: 'teal', description: '평범한 학생'},
-					{ requiredValue: 200, color: 'lblue', description: '불량 학생'},
-					{ requiredValue: 400, color: 'blue', description: '비행 청소년'},
-					{ requiredValue: 600, color: 'purple', description: '비행 청소년'},
-					{ requiredValue: 800, color: 'pink', description: '비행 청소년'},
-					{ requiredValue: 1000, color: 'red', description: '골칫거리'}
+				<<set _guardRepConfig = { currentValue: $prison.guards, preText: 'The guards ', states : [
+					{ requiredValue: 0,		color: 'red',		description: 'have you under constant surveillance.'},
+					{ requiredValue: 15,	color: 'pink',		description: 'consider you a problem.'},
+					{ requiredValue: 30,	color: 'purple',		description: 'watch you.'},
+					{ requiredValue: 45,	color: 'blue',		description: 'are keeping an eye on you.'},
+					{ requiredValue: 60,	color: 'lblue',		description: 'expect no trouble from you.'},
+					{ requiredValue: 80,	color: 'teal',		description: 'overlook you.'},
+					{ requiredValue: 100,	color: 'green',		description: 'forget you are here.'}
 				]}>>
-				<<set _studentRepConfig = { currentValue: $cool, preText: '동급생들은 당신을 ', states : [
-					{ requiredValue: 0, color: 'red', preText: '동급생들은 당신을 ', description: '피한다.'},
-					{ requiredValue: 40, color: 'pink', description: '특이하다고 생각한다.'},
-					{ requiredValue: 80, color: 'purple', description: '괴짜라고 생각한다.'},
-					{ requiredValue: 120, color: 'blue', description: '괜찮다고 생각한다.'},
-					{ requiredValue: 160, color: 'lblue', description: '멋지다고 생각한다.'},
-					{ requiredValue: 240, color: 'teal', description: '아주 멋지다고 생각한다.'},
-					{ requiredValue: 400, color: 'green', preText: '동급생들은 당신과 ', description: '어울리고 싶어 한다.'}
+				<<set _inmateRepConfig = { currentValue: $prison.inmates, preText: 'Most fellow inmates ', states : [
+					{ requiredValue: 0,		color: 'red',		description: 'see you as meat.'},
+					{ requiredValue: 15,	color: 'pink',		description: 'think you\'re a fucktoy.'},
+					{ requiredValue: 30,	color: 'purple',	description: 'consider you a bitch.'},
+					{ requiredValue: 45,	color: 'blue',		description: 'see you as one of them.'},
+					{ requiredValue: 60,	color: 'lblue',		description: 'have a good opinion of you.'},
+					{ requiredValue: 80,	color: 'teal',		description: 'respect you.'},
+					{ requiredValue: 100,	color: 'green',		description: 'think you\'re the boss.'}
 				]}>>
-				<<set _teacherBoxConfig = { name : "교사", icon : "img/misc/icon/school.png", description: "<<relation-text _teacherRepConfig>> <<statbar 0 $delinquency 1000>>"}>>
-				<<set _studentBoxConfig = { name : "학생", icon : "img/misc/icon/school-building.png", description: "<<relation-text _studentRepConfig>> <<statbarinverted $cool $coolmax>>"}>>
-
-				/*Crossdressing*/
-				<<if $schoolrep.crossdress neq 0>>
-					<<set _crossdressing to $player.gender isnot $player.sex ? "크로스드레싱 의혹" : "크로스드레싱">>
-					<<set _knows to $player.gender isnot $player.sex ? "믿고 있다" : "알고 있다">>
-					<<set _crossdressRepConfig = { currentValue: $schoolrep.crossdress, states : [
-						{ requiredValue: 1,	color: 'lblue',		description: `학교의 몇몇 무리가 당신의 ${_crossdressing}에 대해 수군거린다. 믿는 사람은 거의 없다.`},
-						{ requiredValue: 2,	color: 'blue',		description: `학교에 소문이 뿌리내렸다. 몇몇은 당신이 크로스드레싱을 한다고 말한다.`},
-						{ requiredValue: 3,	color: 'purple',	description: `학생들이 당신의 ${_crossdressing}에 대해 떠들어댄다. 다만 대부분은 그저 농담이라고 생각한다.`},
-						{ requiredValue: 4,	color: 'pink',		description: `학교의 모두가 당신의 ${_crossdressing}에 대한 소문을 들었다.`},
-						{ requiredValue: 5,	color: 'red',		description: `교사들을 포함해 학교의 모두가 당신이 크로스드레싱을 한다고 ${_knows}.`}
-					]}>>
-					<<set _crossdressBoxConfig = { name : "크로스드레싱", description : '<<relation-text _crossdressRepConfig>>'}>>
-				<</if>>
-
-				/*Herm*/
-				<<if $schoolrep.herm neq 0>>
-					<<set _hermRepConfig = { currentValue: $schoolrep.herm, states : [
-						{ requiredValue: 1, color: 'lblue', description: '학교의 몇몇 무리에서 남자와 여자의 성기를 모두 가진 학생에 대한 소문이 돌고 있다. 믿는 사람은 거의 없다.'},
-						{ requiredValue: 2, color: 'blue', description: '남자와 여자의 성기를 모두 가진 학생에 대한 소문이 학교 전체에 퍼졌다.'},
-						{ requiredValue: 3, color: 'purple', description: '학교는 남자와 여자의 성기를 모두 가진 학생에 대한 소문으로 가득하다.'},
-						{ requiredValue: 4, color: 'pink', description: '학교의 모든 사람들이 당신의 독특한 성기에 대한 소문을 들었다.'},
-						{ requiredValue: 5, color: 'red', description: '교사들을 포함해 학교의 모든 사람이 당신의 독특한 성기에 대해 알고 있다.'}
-					]}>>
-					<<set _hermBoxConfig = { name : "성기", description : '<<relation-text _hermRepConfig>>'}>>
-				<</if>>
-
-				/* Prison */
-				<<if $prison>>
-					<<set _prisonMoodConfig = { currentValue: $prison.hope, secondaryValue: $prison.reb, preText: '교도소의 분위기는 ', states : [
-						{ requiredValue: 0, secondaryStates : [
-							{ requiredValue: 0, color: 'pink', description: '절망적이다.'},
-							{ requiredValue: 20, color: 'pink', description: '풀이 죽어 있다.'},
-							{ requiredValue: 40, color: 'pink', description: '불행하다.'},
-							{ requiredValue: 60, color: 'pink', description: '앙심을 품고 있다.'},
-							{ requiredValue: 80, color: 'def', description: '복수심에 불탄다.'},
-													]},
-						{ requiredValue: 20, secondaryStates : [
-							{ requiredValue: 0, color: 'purple', description: '우울하다.'},
-							{ requiredValue: 20, color: 'purple', description: '의기소침하다.'},
-							{ requiredValue: 40, color: 'purple', description: '체념한 상태다.'},
-							{ requiredValue: 60, color: 'purple', description: '말을 안 듣는다.'},
-							{ requiredValue: 80, color: 'def', description: '통제가 안 된다.'},
-													]},
-						{ requiredValue: 40, secondaryStates : [
-							{ requiredValue: 0, color: 'blue', description: '순종적이다.'},
-							{ requiredValue: 20, color: 'blue', description: '고분고분하다.'},
-							{ requiredValue: 40, color: 'blue', description: '차분하다.'},
-							{ requiredValue: 60, color: 'blue', description: '반항적이다.'},
-							{ requiredValue: 80, color: 'def', description: '도전적이다.'},
-													]},
-						{ requiredValue: 60, secondaryStates : [
-							{ requiredValue: 0, color: 'teal', description: '견뎌내고 있다.'},
-							{ requiredValue: 20, color: 'teal', description: '저항하지 않는다.'},
-							{ requiredValue: 40, color: 'teal', description: '낙관적이다.'},
-							{ requiredValue: 60, color: 'teal', description: '반항적이다.'},
-							{ requiredValue: 80, color: 'def', description: '반란을 꾀하고 있다.'},
-						]},
-						{ requiredValue: 80, secondaryStates : [
-							{ requiredValue: 0, color: 'green', description: '관용적이다.'},
-							{ requiredValue: 20, color: 'green', description: '참을성이 있다.'},
-							{ requiredValue: 40, color: 'green', description: '희망에 차 있다.'},
-							{ requiredValue: 60, color: 'green', description: '이상적이다.'},
-							{ requiredValue: 80, color: 'def', description: '혁명적이다.'},
-						]},
-					]}>>
-					<<set _guardRepConfig = { currentValue: $prison.guards, preText: '경비원들은 당신을 ', states : [
-						{ requiredValue: 0, color: 'red', description: '항상 감시하고 있다.'},
-						{ requiredValue: 15, color: 'pink', description: '문제아로 간주한다.'},
-						{ requiredValue: 30, color: 'purple', description: '지켜보고 있다.'},
-						{ requiredValue: 45, color: 'blue', description: '주시하고 있다.'},
-						{ requiredValue: 60, color: 'lblue', description: '문제를 일으키지 않을 거라 예상한다.'},
-						{ requiredValue: 80, color: 'teal', description: '못 본 척 넘겨준다.'},
-						{ requiredValue: 100, color: 'green', description: '여기에 있다는 사실조차 잊고 있다.'}
-					]}>>
-					<<set _inmateRepConfig = { currentValue: $prison.inmates, preText: '대부분의 동료 죄수들은 당신을 ', states : [
-						{ requiredValue: 0, color: 'red', description: '고깃덩어리로 본다.'},
-						{ requiredValue: 15, color: 'pink', description: '육변기라고 생각한다.'},
-						{ requiredValue: 30, color: 'purple', description: '암캐로 간주한다.'},
-						{ requiredValue: 45, color: 'blue', description: '그들 중 하나로 본다.'},
-						{ requiredValue: 60, color: 'lblue', description: '좋게 평가한다.'},
-						{ requiredValue: 80, color: 'teal', description: '존중한다.'},
-						{ requiredValue: 100, color: 'green', description: '보스라고 생각한다.'}
-					]}>>
-					<<set _prisonBoxConfig = { name : "교도소 분위기", icon : "img/misc/icon/prison-cell.png", description: "<<relation-text _prisonMoodConfig>>"}>>
-					<<set _guardBoxConfig = { name : "교도소 경비원", icon : "img/misc/icon/prison-cell.png", description: "<<relation-text _guardRepConfig>>"}>>
-					<<set _inmateBoxConfig = { name : "교도소 죄수", icon : "img/misc/icon/prison-cell.png", description: "<<relation-text _inmateRepConfig>>"}>>
-				<</if>>
-				/*Docks */
-				<<if $docks.hired>>
-					<<set _dockRepConfig = { currentValue: $docks.status, preText: '다른 노동자들은 당신을 ', states : [
-						{ requiredValue: 0, color: 'red', description: '경멸스럽게 바라본다.'},
-						{ requiredValue: 20, color: 'purple', description: '의심스럽게 바라본다.'},
-						{ requiredValue: 40, color: 'blue', description: '용인한다.'},
-						{ requiredValue: 60, color: 'lblue', description: '받아들인다.'},
-						{ requiredValue: 80, color: 'teal', description: '존중한다.'},
-						{ requiredValue: 100, color: 'green', description: '존경한다.'}
-					]}>>
-					<<set _dockBoxConfig = { name : "부두", icon : "img/misc/icon/docks.png", description : '<<relation-text _dockRepConfig>>'}>>
-				<</if>>
-				/*Pirates */
-				<<set _pirateStatusConfig = { currentValue: $pirate_rank, secondaryValue: $pirate_status, preText: '해적들은 당신을 ', states : [
-						{ requiredValue: 0, secondaryStates : [
-							{ requiredValue: 0, color: 'red', description: '역겨운 쓰레기로 본다.'},
-							{ requiredValue: 10, color: 'pink', description: '쓸모없는 쓰레기로 본다.'},
-							{ requiredValue: 30, color: 'pink', description: '한심한 쓰레기로 본다.'},
-							{ requiredValue: 50, color: 'pink', description: '엉성한 쓰레기로 본다.'},
-							{ requiredValue: 70, color: 'pink', description: '귀여운 쓰레기로 본다.'},
-							{ requiredValue: 90, color: 'purple', description: '더 이상 쓰레기가 아니라고 본다.'},
-						]},
-						{ requiredValue: 1, secondaryStates : [
-							{ requiredValue: 0, color: 'blue', description: '쓰레기 같은 동료로 본다.'},
-							{ requiredValue: 10, color: 'blue', description: '쓸모없는 동료로 본다.'},
-							{ requiredValue: 30, color: 'blue', description: '검증되지 않은 동료로 본다.'},
-							{ requiredValue: 50, color: 'blue', description: '2급 동료로 본다.'},
-							{ requiredValue: 70, color: 'blue', description: '훌륭한 동료로 본다.'},
-							{ requiredValue: 90, color: 'lblue', description: '1급 동료로 본다.'},
-						]},
-					]}>>
-					<<set _pirateBoxConfig = { name : "해적 계급", icon : "img/misc/icon/mer.png", description: "<<relation-text _pirateStatusConfig>>"}>>
-			<</silently>>
+				<<set _prisonBoxConfig = { name : "Prison Atmosphere", icon : "img/misc/icon/prison-cell.png", description: "<<relation-text _prisonMoodConfig>>"}>>
+				<<set _guardBoxConfig = { name : "Prison Guards", icon : "img/misc/icon/prison-cell.png", description: "<<relation-text _guardRepConfig>>"}>>
+				<<set _inmateBoxConfig = { name : "Prison Inmates", icon : "img/misc/icon/prison-cell.png", description: "<<relation-text _inmateRepConfig>>"}>>
+			<</if>>
+			/*Docks */
+			<<if $docks.hired>>
+				<<set _dockRepConfig = { currentValue: $docks.status, preText: 'The other workers ', states : [
+					{ requiredValue: 0,		color: 'red',		description: 'view you with contempt.'},
+					{ requiredValue: 20,	color: 'purple',	description: 'view you with suspicion.'},
+					{ requiredValue: 40,	color: 'blue',		description: 'tolerate you.'},
+					{ requiredValue: 60,	color: 'lblue',		description: 'accept you.'},
+					{ requiredValue: 80,	color: 'teal',		description: 'respect you.'},
+					{ requiredValue: 100,	color: 'green',		description: 'admire you.'}
+				]}>>
+				<<set _dockBoxConfig = { name : "Docks", icon : "img/misc/icon/docks.png", description : '<<relation-text _dockRepConfig>>'}>>
+			<</if>>
+			/*Pirates */
+			<<set _pirateStatusConfig = { currentValue: $pirate_rank, secondaryValue: $pirate_status, preText: 'The pirates view you as ', states : [
+					{ requiredValue: 0, secondaryStates : [
+						{ requiredValue: 0,	color: 'red',	description: 'wretched scum.'},
+						{ requiredValue: 10,	color: 'pink',	description: 'worthless scum.'},
+						{ requiredValue: 30,	color: 'pink',	description: 'pathetic scum.'},
+						{ requiredValue: 50,	color: 'pink',	description: 'sloppy scum.'},
+						{ requiredValue: 70,	color: 'pink',	description: 'endearing scum.'},
+						{ requiredValue: 90,	color: 'purple',	description: 'scum no longer.'},
+					]},
+					{ requiredValue: 1, secondaryStates : [
+						{ requiredValue: 0,	color: 'blue',	description: 'a scummy mate.'},
+						{ requiredValue: 10,	color: 'blue',	description: 'a useless mate.'},
+						{ requiredValue: 30,	color: 'blue',	description: 'an untested mate.'},
+						{ requiredValue: 50,	color: 'blue',	description: 'a second-class mate.'},
+						{ requiredValue: 70,	color: 'blue',	description: 'a mate in good standing.'},
+						{ requiredValue: 90,	color: 'lblue',		description: 'a first-class mate.'},
+					]},
+				]}>>
+				<<set _pirateBoxConfig = { name : "Pirate Rank", icon : "img/misc/icon/mer.png", description: "<<relation-text _pirateStatusConfig>>"}>>
+		<</silently>>
+		<span class="gold">Reputation</span>
+		<div class="faction-reputations relation-box-list">
 			<<relation-box-simple _policeBoxConfig>>
 			<<relation-box-simple _orphanageBoxConfig>>
 			<<relation-box-simple _teacherBoxConfig>>
@@ -369,60 +368,75 @@
 				<<relation-box-simple _pirateBoxConfig>>
 			<</if>>
 				<<relation-box-wolves>>
-
 		</div>
+		
 		<<if $farm_stage gte 2>>
 			<<silently>>
 				/* Farm Animals */
-				/*Horses*/
-				<<switch $settings.beastMaleChance>>
-					<<case 100>>
-						<<set _people to "boys">>
-						<<set _cowpeople to "bullboys">>
-					<<case 0>>
-						<<set _people to "girls">>
-						<<set _cowpeople to "cowgirls">>
-					<<default>>
-						<<set _people to "people">>
-						<<set _cowpeople to "cowgirls and bullboys">>
-				<</switch>>
-								<!-- These values apply if the current value is "Greater than or equal to" the specified value. So:
+				/* Farm animal gender words reflect each species' own beast male chance. */
+				<<set _pigMaleChance to beastMaleChanceForType("pig")>>
+				<<set _dogMaleChance to beastMaleChanceForType("dog")>>
+				<<set _cowMaleChance to beastMaleChanceForType("cow")>>
+				<<if _pigMaleChance is 100>>
+					<<set _pigPeople to "boys">>
+				<<elseif _pigMaleChance is 0>>
+					<<set _pigPeople to "girls">>
+				<<else>>
+					<<set _pigPeople to "people">>
+				<</if>>
+
+				<<if _dogMaleChance is 100>>
+					<<set _dogPeople to "boys">>
+				<<elseif _dogMaleChance is 0>>
+					<<set _dogPeople to "girls">>
+				<<else>>
+					<<set _dogPeople to "people">>
+				<</if>>
+
+				<<if _cowMaleChance is 100>>
+					<<set _cowpeople to "bullboys">>
+				<<elseif _cowMaleChance is 0>>
+					<<set _cowpeople to "cowgirls">>
+				<<else>>
+					<<set _cowpeople to "cowgirls and bullboys">>
+				<</if>>
+				<!-- These values apply if the current value is "Greater than or equal to" the specified value. So:
 					-30 to -21 	: Fucktoy
 					-20 to -6 	: Little respect
 					-5 to 4 	: Wary
 					5 to 19		: Trust
 					20 to 30	: Respect
 					 -->
-				<<set _farmHorseRepConfig = { currentValue: $farm.beasts.horses, preText: `${$settings.monsterChance is 100 ? '켄타우로스들' : '말들'}【은는】 당신을 `, postText: '', states: [
-					{ requiredValue: -100, color: 'pink', description: '육변기로 본다.'},
-					{ requiredValue: -20, color: 'purple', description: '존중하지 않는다.'},
-					{ requiredValue: -5, color: '', description: '경계한다.'},
-					{ requiredValue: 5, color: 'lblue', description: '신뢰한다.'},
-					{ requiredValue: 20, color: 'green', description: '존중한다.'}
+				<<set _farmHorseRepConfig = { currentValue: $farm.beasts.horses, preText: `The ${monsterChanceForType("horse") === 100 && (V.hallucinations >= 1 || !monsterHallucinationsOnlyForType("horse")) ? 'centaurs ' : 'steeds '}`, postText: ' you.', states: [
+					{ requiredValue: -100,	color: 'pink',		description: 'see you as a fucktoy.', postText: ' '},
+					{ requiredValue: -20,	color: 'purple',	description: 'have little respect', postText: ' for you.'},
+					{ requiredValue: -5,	color: '',			description: 'are wary of'},
+					{ requiredValue: 5,		color: 'lblue',		description: 'trust'},
+					{ requiredValue: 20,	color: 'green',		description: 'respect'}
 				]}>>
 				/*Pigs*/
-				<<set _farmPigRepConfig = { currentValue: $farm.beasts.pigs, preText: `${$settings.monsterChance is 100 ? '돼지 수인들' : '돼지들'}【은는】 당신을 `, postText: '', states: [
-					{ requiredValue: -100, color: 'pink', description: '육변기로 본다.'},
-					{ requiredValue: -20, color: 'purple', description: '존중하지 않는다.'},
-					{ requiredValue: -5, color: '', description: '경계한다.'},
-					{ requiredValue: 5, color: 'lblue', description: '신뢰한다.'},
-					{ requiredValue: 20, color: 'green', description: '존중한다.'}
+				<<set _farmPigRepConfig = { currentValue: $farm.beasts.pigs, preText: `The ${monsterChanceForType("pig") === 100 && (V.hallucinations >= 1 || !monsterHallucinationsOnlyForType("pig")) ? 'pig' + _pigPeople : 'pigs '}`, postText: ' you.', states: [
+					{ requiredValue: -100,	color: 'pink',		description: 'see you as a fucktoy.', postText: ' '},
+					{ requiredValue: -20,	color: 'purple',	description: 'have little respect', postText: ' for you.'},
+					{ requiredValue: -5,	color: '',			description: 'are wary of'},
+					{ requiredValue: 5,		color: 'lblue',		description: 'trust'},
+					{ requiredValue: 20,	color: 'green',		description: 'respect'}
 				]}>>
 				/*Cattle*/
-				<<set _farmCattleRepConfig = { currentValue: $farm.beasts.cattle, preText: `${$settings.monsterChance is 100 ? '소 수인들' : '소들'}【은는】 당신을 `, postText: '', states: [
-					{ requiredValue: -100, color: 'pink', description: '귀찮은 존재로 본다.'},
-					{ requiredValue: -20, color: 'purple', description: '존중하지 않는다.'},
-					{ requiredValue: -5, color: '', description: '경계한다.'},
-					{ requiredValue: 5, color: 'lblue', description: '신뢰한다.'},
-					{ requiredValue: 20, color: 'green', description: '존중한다.'}
+				<<set _farmCattleRepConfig = { currentValue: $farm.beasts.cattle, preText: `The ${monsterChanceForType("cow") === 100 && (V.hallucinations >= 1 || !monsterHallucinationsOnlyForType("cow")) ? _cowpeople : 'cattle '}`, postText: ' you.', states: [
+					{ requiredValue: -100,	color: 'pink',		description: 'see you as an annoyance.', postText: ' '},
+					{ requiredValue: -20,	color: 'purple',	description: 'have little respect', postText: ' for you.'},
+					{ requiredValue: -5,	color: '',			description: 'are wary of'},
+					{ requiredValue: 5,		color: 'lblue',		description: 'trust'},
+					{ requiredValue: 20,	color: 'green',		description: 'respect'}
 				]}>>
 				/*Dogs*/
-				<<set _farmDogRepConfig = { currentValue: $farm.beasts.dogs, preText: `${$settings.monsterChance is 100 ? '개 수인들' : '개들'}【은는】 당신을 `, postText: '', states: [
-					{ requiredValue: -100, color: 'pink', description: '육변기로 본다.'},
-					{ requiredValue: -20, color: 'purple', description: '존중하지 않는다.'},
-					{ requiredValue: -5, color: '', description: '경계한다.'},
-					{ requiredValue: 5, color: 'lblue', description: '신뢰한다.'},
-					{ requiredValue: 20, color: 'green', description: '존중한다.'}
+				<<set _farmDogRepConfig = { currentValue: $farm.beasts.dogs, preText: `The ${monsterChanceForType("dog") === 100 && (V.hallucinations >= 1 || !monsterHallucinationsOnlyForType("dog")) ? 'dog' + _dogPeople : 'dogs '}`, postText: ' you.', states: [
+					{ requiredValue: -100,	color: 'pink',		description: 'see you as a fucktoy.', postText: ' '},
+					{ requiredValue: -20,	color: 'purple',	description: 'have little respect', postText: ' for you.'},
+					{ requiredValue: -5,	color: '',			description: 'are wary of'},
+					{ requiredValue: 5,		color: 'lblue',		description: 'trust'},
+					{ requiredValue: 20,	color: 'green',		description: 'respect'}
 				]}>>
 				<<set _farmHorseBoxConfig =		{ name: "말",	icon : "img/misc/icon/horse.png", description : '<<relation-text _farmHorseRepConfig>>'}>>
 				<<set _farmPigBoxConfig =		{ name: "돼지",		icon : "img/misc/icon/pig.png", description : '<<relation-text _farmPigRepConfig>>'}>>
@@ -445,8 +459,8 @@
 			<</silently>>
 
 			<br>
-			<span class="gold">농장 상태</span>
-			<div id="farm-status" class="relation-box-list">
+			<span class="gold">Farm Status</span>
+			<div class="farm-status relation-box-list">
 				<<relation-box-simple _farmHorseBoxConfig>>
 				<<relation-box-simple _farmPigBoxConfig>>
 				<<relation-box-simple _farmCattleBoxConfig>>
@@ -458,8 +472,8 @@
 		<</if>>
 
 		<br>
-		<span class="gold">명성</span>
-		<div id="global-recognition" class="relation-box-list">
+		<span class="gold">Fame</span>
+		<div class="global-recognition relation-box-list">
 			<<silently>>
 				<<set _fameStates = [
 					{ requiredValue: 0,		color: 'green',		description: ' 알려지지 않음'},
@@ -480,12 +494,12 @@
 					{ requiredValue: 1000,	color: 'green',		description: ' 명망 높은 _config.flavorText'}
 				]>>
 
-				<<set _sexFameConfig =				{ currentValue: $fame.sex,				preText: '섹스:',			flavorText: '걸레',				states: _fameStates }>>
-				<<set _prostitutionFameConfig =		{ currentValue: $fame.prostitution,		preText: '매춘:',	flavorText: '창녀',			states: _fameStates }>>
-				<<set _rapeFameConfig =				{ currentValue: $fame.rape,				preText: '강간:',			flavorText: '육변기',			states: _fameStates }>>
-				<<if $settings.bestialityEnabled>>
-					<<set $_pre to "수간:">>
-					<<set $_flavor to "암캐">>
+				<<set _sexFameConfig =				{ currentValue: $fame.sex,				preText: 'Sex:',			flavorText: 'slut',				states: _fameStates }>>
+				<<set _prostitutionFameConfig =		{ currentValue: $fame.prostitution,		preText: 'Prostitution:',	flavorText: 'whore',			states: _fameStates }>>
+				<<set _rapeFameConfig =				{ currentValue: $fame.rape,				preText: 'Rape:',			flavorText: 'fucktoy',			states: _fameStates }>>
+				<<if isBestialityOnForAnyCreature()>>
+					<<set $_pre to "Bestiality:">>
+					<<set $_flavor to "bitch">>
 				<<else>>
 					<<set $_pre to "몬스터:">>
 					<<set $_flavor to "몬스터 박이">>

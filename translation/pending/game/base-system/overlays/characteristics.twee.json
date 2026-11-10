@@ -1,0 +1,98 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $hallucinations gte 2 or !$settings.bestialityEnabled>>",
+   "\t\t\t\tharpy"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $hallucinations gte 2 or !$settings.bestialityEnabled>>",
+   "\t\t\t\t하피"
+  ],
+  "new_en": [
+   "\t\t\t<<if resolveIfNamedBeastIsMonster(\"greathawk\")>>",
+   "\t\t\t\tharpy"
+  ],
+  "context": "\t\t<<elseif $harpy gte 6>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $player.penisExist and $player.penissize gte 1>>",
+   "\t\t<<set _semenCapacityTextConfig = { currentValue : $semen_volume, preText: 'You produce ', states : [",
+   "\t\t\t\t{ requiredValue: 0,\t\tcolor: '',\t\t\tdescription: '',\t\t\t\tpostText: ' no cum.' },",
+   "\t\t\t\t{ requiredValue: 1,\t\tcolor: 'red',\t\tdescription: 'a tiny',\t\t\tpostText: ' amount of cum, ' },",
+   "\t\t\t\t{ requiredValue: 100,\tcolor: 'pink',\t\tdescription: 'a small',\t\t\tpostText: ' amount of cum, ' },",
+   "\t\t\t\t{ requiredValue: 300,\tcolor: 'purple',\tdescription: 'a limited',\t\tpostText: ' amount of cum, ' },",
+   "\t\t\t\t{ requiredValue: 500,\tcolor: 'blue',\t\tdescription: 'a decent',\t\tpostText: ' amount of cum, ' },",
+   "\t\t\t\t{ requiredValue: 1000,\tcolor: 'lblue',\t\tdescription: 'a large',\t\t\tpostText: ' amount of cum, ' },",
+   "\t\t\t\t{ requiredValue: 1500,\tcolor: 'teal',\t\tdescription: 'a huge',\t\t\tpostText: ' amount of cum, ' },",
+   "\t\t\t\t{ requiredValue: 2000,\tcolor: 'green',\t\tdescription: 'a prodigious',\tpostText: ' amount of cum, ' }",
+   "\t\t\t]"
+  ],
+  "old_kr": [
+   "\t<<if $player.penisExist and $player.penissize gte 1>>",
+   "\t\t<<set _semenCapacityTextConfig = { currentValue : $semen_volume, preText: '당신은 ', states : [",
+   "{ requiredValue: 0, color: '', description: '정액을', postText: ' 생산하지 않는다.' },{ requiredValue: 1, color: 'red', description: '아주 적은', postText: ' 양의 정액을 생산하며, ' },{ requiredValue: 100, color: 'pink', description: '적은', postText: ' 양의 정액을 생산하며, ' },{ requiredValue: 300, color: 'purple', description: '적당한', postText: ' 양의 정액을 생산하며, ' },{ requiredValue: 500, color: 'blue', description: '꽤 많은', postText: ' 양의 정액을 생산하며, ' },{ requiredValue: 1000, color: 'lblue', description: '많은', postText: ' 양의 정액을 생산하며, ' },{ requiredValue: 1500, color: 'teal', description: '엄청난', postText: ' 양의 정액을 생산하며, ' },{ requiredValue: 2000, color: 'green', description: '경이로운', postText: ' 양의 정액을 생산하며, ' }\t\t\t]"
+  ],
+  "new_en": [
+   "\t<<if $player.penisExist and $player.penissize gte 0>>",
+   "\t\t<<set _semenCapacityTextConfig = { currentValue : $semen_volume, preText: 'You produce ', states : [",
+   "\t\t\t\t{ requiredValue: 0,\t\tcolor: '',\t\t\tdescription: '',\t\t\t\tpostText: ' no cum.' },",
+   "\t\t\t\t{ requiredValue: 1,\t\tcolor: 'red',\t\tdescription: 'a tiny',\t\t\tpostText: ' amount of cum, ' },",
+   "\t\t\t\t{ requiredValue: 100,\tcolor: 'pink',\t\tdescription: 'a small',\t\t\tpostText: ' amount of cum, ' },",
+   "\t\t\t\t{ requiredValue: 300,\tcolor: 'purple',\tdescription: 'a limited',\t\tpostText: ' amount of cum, ' },",
+   "\t\t\t\t{ requiredValue: 500,\tcolor: 'blue',\t\tdescription: 'a decent',\t\tpostText: ' amount of cum, ' },",
+   "\t\t\t\t{ requiredValue: 1000,\tcolor: 'lblue',\t\tdescription: 'a large',\t\t\tpostText: ' amount of cum, ' },",
+   "\t\t\t\t{ requiredValue: 1500,\tcolor: 'teal',\t\tdescription: 'a huge',\t\t\tpostText: ' amount of cum, ' },",
+   "\t\t\t\t{ requiredValue: 2000,\tcolor: 'green',\t\tdescription: 'a prodigious',\tpostText: ' amount of cum, ' }",
+   "\t\t\t]"
+  ],
+  "context": "\t<!--Semen Details-->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<set _sprayConfig =\t\t{ name : \"Sprays\",\t\tdisplayType : \"grade\",\tcurrentValue : $prof.spray,\t\tmodifier: 100, modTypes: { good: [], bad: [] },\t\tstates : _basicSkillGrades}>>",
+   "\t\t\t\t<<set _netConfig =\t\t\t{ name : \"Nets\",\t\tdisplayType : \"grade\",\tcurrentValue : $prof.net,\t\tmodifier: 100, modTypes: { good: [], bad: [] },\t\tstates : _basicSkillGrades}>>",
+   "\t\t\t\t<<set _batonConfig =\t\t{ name : \"Batons\",\t\tdisplayType : \"grade\",\tcurrentValue : $prof.baton,\t\tmodifier: 100, modTypes: { good: [], bad: [] },\t\tstates : _basicSkillGrades}>>",
+   "\t\t\t\t<<set _whipConfig =\t\t\t{ name : \"Whips\",\t\tdisplayType : \"grade\",\tcurrentValue : $prof.whip,\t\tmodifier: 100, modTypes: { good: [], bad: [] },\t\tstates : _basicSkillGrades}>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<set _sprayConfig =\t\t{ name : \"후추 스프레이\",\t\tdisplayType : \"grade\",\tcurrentValue : $prof.spray,\t\tmodifier: 100, modTypes: { good: [], bad: [] },\t\tstates : _basicSkillGrades}>>",
+   "\t\t\t\t<<set _netConfig =\t\t\t{ name : \"그물\",\t\tdisplayType : \"grade\",\tcurrentValue : $prof.net,\t\tmodifier: 100, modTypes: { good: [], bad: [] },\t\tstates : _basicSkillGrades}>>",
+   "\t\t\t\t<<set _batonConfig =\t\t{ name : \"봉\",\t\tdisplayType : \"grade\",\tcurrentValue : $prof.baton,\t\tmodifier: 100, modTypes: { good: [], bad: [] },\t\tstates : _basicSkillGrades}>>",
+   "\t\t\t\t<<set _whipConfig =\t\t\t{ name : \"채찍\",\t\tdisplayType : \"grade\",\tcurrentValue : $prof.whip,\t\tmodifier: 100, modTypes: { good: [], bad: [] },\t\tstates : _basicSkillGrades}>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<set _sprayConfig =\t\t{ name : \"Sprays\",\t\tdisplayType : \"grade\",\tcurrentValue : $prof.spray,\t\tmodifier: 100, modTypes: { good: [], bad: [] },\t\tstates : _basicSkillGrades}>>",
+   "\t\t\t\t<<set _netConfig =\t\t\t{ name : \"Nets\",\t\tdisplayType : \"grade\",\tcurrentValue : $prof.net,\t\tmodifier: 100, modTypes: { good: [], bad: [] },\t\tstates : _basicSkillGrades}>>",
+   "\t\t\t\t<<set _batonConfig =\t\t{ name : \"Batons\",\t\tdisplayType : \"grade\",\tcurrentValue : $prof.baton,\t\tmodifier: 100, modTypes: { good: [], bad: [] },\t\tstates : _basicSkillGrades}>>",
+   "\t\t\t\t<<set _whipConfig =\t\t\t{ name : \"Whips\",\t\tdisplayType : \"grade\",\tcurrentValue : $prof.whip,\t\tmodifier: 100, modTypes: { good: [], bad: [] },\t\tstates : _basicSkillGrades}>>",
+   "\t\t\t\t<<set _pickaxeConfig =\t\t{ name : \"Pickaxes\",\tdisplayType : \"grade\",\tcurrentValue : $prof.pickaxe,\tmodifier: 100, modTypes: { good: [], bad: [] },\t\tstates : _basicSkillGrades}>>"
+  ],
+  "context": "\t\t\t<<silently>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<div id=\"characteristics-display\">"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<div class=\"characteristics-display\">"
+  ],
+  "context": "\t<<bodywriting>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<</if>>*/"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<<characteristic-box _corruptionConfig>>"
+ }
+]

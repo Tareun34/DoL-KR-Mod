@@ -1,0 +1,450 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<He>> smiles. \"Good. I can't take your leash off just yet, not until you're trained.\" <<He>> ties <<his>> end of the leash around a wooden beam. \"There should be enough slack for you to roam the entire cabin though.\""
+  ],
+  "old_kr": [
+   "<<He>>【은는】 미소짓는다. \"좋아. 아직 목줄을 풀어줄 순 없어, 네가 훈련될 때까지는.\" <<He>>【은는】 <<his>> 목줄 끝을 나무 기둥에 묶는다. \"그래도 오두막 전체를 돌아다닐 만큼은 헐렁할 거야.\""
+  ],
+  "new_en": [
+   "\"Good,\" <<he>> says with a curt nod. Eden ties <<his>> end of the leash around a wooden beam."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\"You don't mean that,\" <<he>> says. \"This benefits you far more than me.\" <<He>> grabs you and bends you over <<his>> lap. \"But I can't let you get away with being so insolent.\""
+  ],
+  "old_kr": [
+   "\"진심이 아닐 텐데.\" <<he>>【이가】 말한다. \"이건 나보다 너한테 훨씬 더 이득이야.\" <<He>>【은는】 당신을 붙잡아 <<his>> 무릎 위에 엎드리게 한다. \"하지만 네가 이렇게 무례하게 구는 걸 그냥 넘어갈 순 없지.\""
+  ],
+  "new_en": [
+   "\"You don't mean that,\" <<he>> says. \"It's safer for you here. You'll learn.\" <<He>> grabs you and bends you over <<his>> lap. \"But I can't let you get away with being so insolent.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"You ungrateful slut,\" <<he>> says. \"Maybe I should throw you out and leave you to the wolves!\" <<He>> winces and holds <<his>> side. \"I need to get something for this.\""
+  ],
+  "old_kr": [
+   "\t\"이 은혜도 모르는 암캐 같으니,\" <<he>>【이가】 말한다. \"널 밖으로 내쫓아서 늑대들한테나 던져줘야겠어!\" <<He>>【은는】 얼굴을 찡그리며 <<his>> 옆구리를 붙잡는다. \"이건 치료해야겠군.\""
+  ],
+  "new_en": [
+   "\t\"You ungrateful brat,\" <<he>> says. \"Should've left you for the wolves.\" <<He>> winces and holds <<his>> side. \"I need to get something for this.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<span class=\"green\">Eden unties the leash from the wooden beam.</span> \"You've been a good <<girl>>, so I'm going to give you a bit more freedom. Don't you dare run out on me though. Stick to the cabin and the clearing just outside.\""
+  ],
+  "old_kr": [
+   "\t\t<span class=\"green\">에덴이 나무 기둥에서 목줄을 푼다.</span> \"착한 <<girl>>【이었였】으니, 자유를 좀 주겠다. 하지만 내게서 도망칠 생각은 마라. 오두막과 바로 바깥 공터에만 있도록 해.\""
+  ],
+  "new_en": [
+   "\t\t<span class=\"green\">Eden unties the leash from the wooden beam.</span> \"You've been a good <<girl>>. Stick to the cabin and the clearing just outside.\""
+  ],
+  "context": "\t<<if C.npc.Eden.trust gte 200>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<span class=\"red\">Eden ties your leash to a wooden beam.</span> \"You've been a bad <<girl>>, so I'm going to make sure you don't go anywhere.\""
+  ],
+  "old_kr": [
+   "\t\t<span class=\"red\">에덴이 당신의 목줄을 나무 기둥에 묶는다.</span> \"나쁜 <<girl>>【이었였】으니, 어디도 못 가게 해야겠군.\""
+  ],
+  "new_en": [
+   "\t\t<span class=\"red\">Eden ties your leash to a wooden beam.</span> \"You've been a bad <<girl>>. You'll have to learn to be good.\""
+  ],
+  "context": "\t<<if C.npc.Eden.trust lt 100>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<span class=\"red\"><i>Eden isn't so bad, <<hes>> just lonely. It must be hard living here in the woods on your own.</i>"
+  ],
+  "old_kr": [
+   "\t\t<span class=\"red\"><i>에덴은 그렇게 나쁘지 않아, <<he>>【은는】 그냥 외로운 거야. 혼자 숲에서 사는 건 힘들겠지.</i>"
+  ],
+  "new_en": [
+   "\t\t<span class=\"red\"><i>It's lonely in the woods. Eden just wants company.</i>"
+  ],
+  "context": "\t\t<<set $syndromeeden to 1>><<set C.npc.Eden.lust to 0>><<set $edenshrooms to 0>><<set $edengarden to 0>><<set $edenspring to 0>><<set $wardrobes.edensCabin.unlocked to true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tEden carries you to the bed."
+  ],
+  "old_kr": [
+   "\t\t에덴이 당신을 침대로 옮긴다."
+  ],
+  "new_en": [
+   "\t\tEden leads you to the bed."
+  ],
+  "context": "\t<<if Time.hour lte 6>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<He>> leers at you, a ravenous look in <<his>> eyes. \"You're so hot. I'm gonna enjoy this.\""
+  ],
+  "old_kr": [
+   "\t\t<<He>>【은는】 <<his>> 눈에 굶주린 빛을 띠고 당신을 음흉하게 쳐다본다. \"몸이 아주 뜨겁군. 재미 좀 보겠어.\""
+  ],
+  "new_en": [
+   "\t\t<<He>> leers at you, a ravenous look in <<his>> eyes. \"<<print either(\"Don't struggle.\",",
+   "\t\t\"You'll learn to enjoy it too.\",",
+   "\t\t\"Be good.\",",
+   "\t\t\"Hold still.\",",
+   "\t\t\"Let me have this.\",",
+   "\t\t\"Serve your purpose.\",",
+   "\t\t\"I'll make you enjoy it.\")>>\""
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tEden gives you instructions on how to prepare <<his>> breakfast."
+  ],
+  "old_kr": [
+   "\t\t에덴이 <<his>> 아침 식사를 준비하는 법을 지시한다."
+  ],
+  "new_en": [
+   "\t\tEden wraps the leash around a chair as <<he>> prepares breakfast. Shortly after, <<he>> places a plate of berries with some honeycomb on the table to share."
+  ],
+  "context": "\t<<elseif Time.hour lte 8>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Prepare the food as instructed (2:00)|Forest Cabin Food]]>><<npcincr Eden trust 10>><<sub 1>><<pass 2 hours>><</link>><<gtrust>><<gstockholm>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[지시대로 음식을 준비한다 (2:00)|Forest Cabin Food]]>><<npcincr Eden trust 10>><<sub 1>><<pass 2 hours>><</link>><<gtrust>><<gstockholm>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Eat with Eden (2:00)|Forest Cabin Food]]>><<npcincr Eden trust 10>><<sub 1>><<pass 2 hours>><</link>><<gtrust>><<gstockholm>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Spit in the eggs (2:00)|Forest Cabin Spit]]>><<npcincr Eden trust -10>><<def 1>><<pass 2 hours>><</link>><<ltrust>><<lstockholm>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[계란에 침을 뱉는다 (2:00)|Forest Cabin Spit]]>><<npcincr Eden trust -10>><<def 1>><<pass 2 hours>><</link>><<ltrust>><<lstockholm>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Shove the food away (2:00)|Forest Cabin Spit]]>><<npcincr Eden trust -10>><<def 1>><<pass 2 hours>><</link>><<ltrust>><<lstockholm>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tEden runs a bath. <<He>> eases <<his>> body into the water, and looks at you. \"What are you waiting for? Strip, get in, and wash me.\""
+  ],
+  "old_kr": [
+   "\t\t에덴이 목욕물을 받는다. <<He>>【은는】 물속으로 <<his>> 몸을 담그고는 당신을 쳐다본다. \"뭘 기다리고 있어? 벗고 들어와서 내 몸이나 씻겨.\""
+  ],
+  "new_en": [
+   "\t\tEden runs a bath. <<He>> eases <<his>> body into the water, and looks at you expectantly. \"Get in and wash me.\""
+  ],
+  "context": "\t<<elseif Time.hour lte 18>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Cuddle (4:00)|Cabin Cuddle]]>><<sub 1>><<npcincr Eden trust 20>><<npcincr Eden love 1>><<pass 4 hours>><</link>><<glove>><<gtrust>><<ggstockholm>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[껴안는다 (4:00)|Cabin Cuddle]]>><<sub 1>><<npcincr Eden trust 20>><<npcincr Eden love 1>><<pass 4 hours>><</link>><<glove>><<gtrust>><<ggstockholm>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Cuddle (2:00)|Cabin Cuddle]]>><<sub 1>><<npcincr Eden trust 20>><<npcincr Eden love 1>><<pass 2 hours>><</link>><<glove>><<gtrust>><<ggstockholm>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Catch some sleep (4:00)|Forest Cabin]]>><<def 1>><<tiredness -12>><<tiredness -12>><<pass 4 hours>><<endevent>><</link>><<ltiredness>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[잠을 청한다 (4:00)|Forest Cabin]]>><<def 1>><<tiredness -12>><<tiredness -12>><<pass 4 hours>><<endevent>><</link>><<ltiredness>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Catch some sleep (2:00)|Forest Cabin]]>><<def 1>><<tiredness -12>><<tiredness -12>><<pass 2 hours>><<endevent>><</link>><<ltiredness>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tEden carries you to the bed."
+  ],
+  "old_kr": [
+   "\t\t에덴이 당신을 침대로 옮긴다."
+  ],
+  "new_en": [
+   "\t\tEden leads you to the bed."
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<He>> leers at you, a ravenous look in <<his>> eyes. \"You're so hot. I'm gonna enjoy this.\""
+  ],
+  "old_kr": [
+   "\t\t<<He>>【은는】 <<his>> 눈에 굶주린 빛을 띠고 당신을 음흉하게 쳐다본다. \"몸이 아주 뜨겁군. 재미 좀 보겠어.\""
+  ],
+  "new_en": [
+   "\t\t<<He>> leers at you, a ravenous look in <<his>> eyes. \"<<print either(\"Don't struggle.\",",
+   "\t\t\"You'll learn to enjoy it too.\",",
+   "\t\t\"Be good.\",",
+   "\t\t\"Hold still.\",",
+   "\t\t\"Let me have this.\",",
+   "\t\t\"Serve your purpose.\",",
+   "\t\t\"I'll make you enjoy it.\")>>\""
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You are awoken a while later by Eden kissing you on the cheek. \"Good morning.\" <<He>> yawns and stretches. \"Time for breakfast.\""
+  ],
+  "old_kr": [
+   "얼마 후, 에덴이 뺨에 키스하는 바람에 잠에서 깬다. \"좋은 아침.\" <<He>>【은는】 하품하며 기지개를 켠다. \"아침 먹을 시간이야.\""
+  ],
+  "new_en": [
+   "You are awoken a while later by Eden's weight shifting the bed. <<He>> yawns and stretches, then looks at you. \"Come on. We need to start the day.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "A while later you hear Eden stir. <<He>> rolls over and kisses you on the cheek. \"Good morning.\" <<He>> yawns and stretches. \"Time for breakfast.\" <<He>> notices your broken leash. \"Oh dear, I thought these things were sturdier. You're such a good <<girl>> for not running off.\" <<He>> leans over and kisses you on the forehead, then looks thoughtfully at the broken remains of the leash."
+  ],
+  "old_kr": [
+   "얼마 후 에덴이 뒤척이는 소리가 들린다. <<He>>【은는】 몸을 돌려 당신의 뺨에 키스한다. \"좋은 아침.\" <<He>>【은는】 하품하며 기지개를 켠다. \"아침 먹을 시간이야.\" <<He>>【은는】 당신의 끊어진 목줄을 발견한다. \"이런, 이것들이 더 튼튼한 줄 알았는데. 도망가지 않고 있다니, 정말 착한 <<girl>>【이】구나.\" <<He>>【은는】 몸을 숙여 당신의 이마에 키스하고는, 끊어진 목줄의 잔해를 생각에 잠겨 바라본다."
+  ],
+  "new_en": [
+   "A while later you hear Eden stir. <<He>> yawns and stretches, then looks at you. \"Come on. We need to start the day.\" <<He>> notices your broken leash. <<He>> grabs the remains, and looks at them for a moment. \"Well. Seems like you're learning to be a good <<girl>>.\""
+  ],
+  "context": "<<npc Eden>><<person1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"I don't think keeping you tied is necessary any more. Just don't run off on me. Stick to the cabin and the clearing just outside, where it's safe.\""
+  ],
+  "old_kr": [
+   "\t\"이제 더는 널 묶어둘 필요가 없을 것 같군. 도망만 가지 마. 안전한 오두막과 바로 바깥 공터에만 있도록 해.\""
+  ],
+  "new_en": [
+   "\t\"I don't think keeping you tied is necessary any more. Stick to the cabin and the clearing just outside.\""
+  ],
+  "context": "<<if C.npc.Eden.trust gte 100>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<span class=\"red\"><i>Eden isn't so bad, <<hes>> just lonely. It must be hard living here in the woods on your own.</i>"
+  ],
+  "old_kr": [
+   "\t\t<span class=\"red\"><i>에덴은 그렇게 나쁘지 않아, <<he>>【은는】 그냥 외로울 뿐이야. 이 숲속에서 혼자 사는 건 힘든 일일 거야.</i>"
+  ],
+  "new_en": [
+   "\t\t<span class=\"red\"><i>It's lonely in the woods. Eden just wants company.</i>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You prepare the food and place it on the table in front of <<him>>. <<He>> takes a bite, then smiles and pats your head. <<He>> shares some with you and you eat together. Eden talks a lot about the minutiae of life here, pausing to allow you a response. You nod each time, which seems enough to satisfy <<him>>."
+  ],
+  "old_kr": [
+   "음식을 준비해 <<him>> 앞 테이블에 놓는다. <<He>>【은는】 한 입 먹더니, 미소 지으며 당신의 머리를 쓰다듬는다. <<He>>【은는】 음식을 조금 나눠주고, 당신도 함께 먹는다. 에덴은 이곳에서의 사소한 일상에 대해 한참 이야기하다가, 당신이 대답할 틈을 주듯 잠시 말을 멈춘다. 당신이 매번 고개를 끄덕이는 것만으로도 <<him>>【을를】 만족시키기엔 충분한 듯하다."
+  ],
+  "new_en": [
+   "You eat the food alongside Eden. <<He>> doesn't start any conversations, and anything you start dies quickly. Eden allows you to have your fill before eating the rest, leaving the plate empty."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<His>> plate empty, <<he>> stands and looks out the window."
+  ],
+  "old_kr": [
+   "접시가 비자, <<he>>【은는】 일어나 창밖을 본다."
+  ],
+  "new_en": [
+   "<<He>> stands when <<he>> finishes, and looks out the window."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"It's a lovely day! We'll be able to get lots of work done.\""
+  ],
+  "old_kr": [
+   "\t\"날씨 좋군! 일 많이 할 수 있겠어.\""
+  ],
+  "new_en": [
+   "\t\"We have work to do.\""
+  ],
+  "context": "<<if Weather.precipitation is \"none\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"We've got lots of work to do today. A little rain won't stop us.\""
+  ],
+  "old_kr": [
+   "\t\"오늘 할 일이 많아. 비 좀 온다고 멈출 순 없지.\""
+  ],
+  "new_en": [
+   "\t\"Best start before the weather gets worse.\""
+  ],
+  "context": "<<elseif Weather.precipitation is \"rain\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"The clouds are grumbling. Hope they don't burst before we're done for the day.\""
+  ],
+  "old_kr": [
+   "\t\"구름이 심상치 않군. 오늘 일이 끝나기 전에 터지지 않았으면 좋겠는데.\""
+  ],
+  "new_en": [
+   "\t\"The weather looks bad. Best start now.\""
+  ],
+  "context": "<<elseif Weather.is(\"heavyClouds\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"It's cold today. Best keep active.\""
+  ],
+  "old_kr": [
+   "\t\"오늘 춥군. 계속 움직이는 게 좋겠어.\""
+  ],
+  "new_en": [
+   "\t\"It's cold today. Keep warm.\""
+  ],
+  "context": "<<elseif Weather.isFreezing>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You prepare the food and place it on the table in front of <<him>>. <<He>> takes a bite. \"You did something to this, didn't you?\" You try to suppress a defiant smile, but the twitching at the corner of your lips gives it away. <<He>> grabs you and bends you over <<his>> lap."
+  ],
+  "old_kr": [
+   "당신은 음식을 준비해 <<him>> 앞 테이블에 놓는다. <<He>>【은는】 한 입 먹는다. \"이거에 무슨 짓 했지, 안 그래?\" 반항적인 미소를 억누르려 하지만, 입꼬리가 씰룩여 들키고 만다. <<He>>【은는】 당신을 붙잡아 <<his>> 무릎 위에 엎드리게 한다."
+  ],
+  "new_en": [
+   "You shove the plate away from you. The food spills over Eden and across the floor. <<He>> stands up, already annoyed. \"I worked for that.\" <<He>> grabs you and bends you over <<his>> lap. \"You'll learn what it's worth.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You snuggle up to Eden. <<He>> is taken aback, but <<his>> face soon softens and <<he>> wraps an arm around you."
+  ],
+  "old_kr": [
+   "에덴에게 바싹 파고든다. <<He>>【은는】 깜짝 놀라지만, 이내 <<his>> 얼굴이 부드러워지며 당신을 팔로 감싼다."
+  ],
+  "new_en": [
+   "You snuggle up to Eden. <<He>> tenses for a moment, then places an arm around you. <<He>> pulls you uncomfortably tight to <<his>> body."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You remove your clothing and get in the bath. Using a sponge, you wash <<his>> back. <<He>> turns to you. \"You're such a gentle thing. Now clean my chest.\" You continue washing, though it's more embarrassing when you can see <<his>> face."
+  ],
+  "old_kr": [
+   "당신은 옷을 벗고 욕조에 들어간다. 스펀지를 사용해 <<his>> 등을 씻겨준다. <<He>>【은는】 당신을 돌아본다. \"정말 얌전하군. 이제 내 가슴을 닦아.\" 계속 씻겨주지만, <<his>> 얼굴이 보이자 더 당혹스럽다."
+  ],
+  "new_en": [
+   "You remove your clothing and get in the bath. Using a sponge, you wash <<his>> back. <<He>> turns to you. \"Clean my chest.\" You continue washing, though it's more embarrassing when you can see <<his>> face."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Some time later, Eden pants and stretches while looking at the setting sun. \"I need a bath. Come on, let's go home.\""
+  ],
+  "old_kr": [
+   "얼마 후, 에덴은 지는 해를 바라보며 숨을 몰아쉬고 기지개를 켠다. \"목욕해야겠어. 자, 집으로 가자.\""
+  ],
+  "new_en": [
+   "Some time later, Eden pants and stretches while looking at the setting sun. <<He>> unties your leash from the tree, and leads you inside. \"I need a bath. Let's go home.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Some time later, Eden pants and stretches while looking at the setting sun. \"I need a bath. Come on, let's go home.\""
+  ],
+  "old_kr": [
+   "얼마 후, 에덴은 지는 해를 바라보며 숨을 몰아쉬고 기지개를 켠다. \"목욕해야겠어. 자, 집으로 가자.\""
+  ],
+  "new_en": [
+   "Some time later, Eden pants and stretches while looking at the setting sun. <<He>> unties your leash from the tree, and leads you inside. \"I need a bath. Let's go home.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<link [[Spit in the eggs (2:00)|Forest Cabin Spit]]>><<npcincr Eden trust -10>><<def 1>><<pass 2 hours>><</link>><<ltrust>><<lstockholm>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<link [[Shove the food away (2:00)|Forest Cabin Spit]]>><<npcincr Eden trust -10>><<def 1>><<pass 2 hours>><</link>><<ltrust>><<lstockholm>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<set $outside to 0>><<set $location to \"cabin\">><<effects>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set $outside to 0>><<set $location to \"cabin\">><<effects>><<wearProp `either(\"blackberry\", \"strawberry\", \"wild honeycomb\")`>><<canvas-model-override \"mouth\" \"chew\">>"
+  ],
+  "context": ":: Forest Cabin Food"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "You prepare the food and place it on the table in front of <<him>>. <<He>> takes a bite, then smiles and pats your head. <<He>> shares some with you and you eat together. Eden talks a lot about the minutiae of life here, pausing to allow you a response. You nod each time, which seems enough to satisfy <<him>>."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "You eat the food alongside Eden. <<He>> doesn't start any conversations, and anything you start dies quickly. Eden allows you to have your fill before eating the rest, leaving the plate empty."
+  ],
+  "context": ""
+ }
+]

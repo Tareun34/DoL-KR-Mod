@@ -1,0 +1,24 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if Number.isFinite($pain) and ($options.sidebarStats is \"all\" or $pain gt 50)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if Number.isFinite($pain) and ($options.sidebarStats is \"all\" or $pain gt 50) and $gamemode isnot \"soft\">>"
+  ],
+  "context": "<<widget \"mobileStats\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if Number.isFinite($control) and ($options.sidebarStats is \"all\" or $control gt $controlmax / 2)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if Number.isFinite($control) and ($options.sidebarStats is \"all\" or $control gt $controlmax / 2) and $gamemode isnot \"soft\">>"
+  ],
+  "context": "\t<</if>>"
+ }
+]

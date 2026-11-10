@@ -1,0 +1,66 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tif (V.debug === 0) {"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tif (!V.debug) {"
+  ],
+  "context": "\t */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tif (sydney.virginity.vaginal && sydney.virginity.penile) T.sydneyVirgin = 1;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tif (sydney.virginity.vaginal === true && sydney.virginity.penile === true) T.sydneyVirgin = 1;"
+  ],
+  "context": "\tif (sydney.chastity.penis.includes(\"chastity\") || sydney.chastity.vagina.includes(\"chastity\")) T.sydneyChastity = 1;"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tcase 0:"
+  ],
+  "context": "\t\tswitch (Time.hour) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tT.gwylanLovePercent >= 65 &&"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tT.gwylanLovePercent >= 55 &&"
+  ],
+  "context": "\tif ("
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tT.gwylanLovePercent >= 75 &&"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tT.gwylanLovePercent >= 65 &&"
+  ],
+  "context": "\tif ("
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\tT.gwylanLovePercent >= 90 &&"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tT.gwylanLovePercent >= 80 &&"
+  ],
+  "context": "\t\tif ("
+ }
+]

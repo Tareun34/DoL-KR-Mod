@@ -1,0 +1,26 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t// eslint-disable-next-line no-new",
+   "\tnew Wikifier(mainSpan, `<<icon \"${item.icon}\">>`);"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tmainSpan.append(Wikifier.wikifyEval(`<<icon \"${item.icon}\">>`));"
+  ],
+  "context": "\tconst mainSpan = $(\"<span>\", { class: `ssm_icon icon ${colour.replace(/\\s/g, \"-\")}`, id })[0];"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t// eslint-disable-next-line no-new",
+   "\t\tnew Wikifier(frontSpan, `<<icon \"${item.iconFront}\">>`);"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tfrontSpan.append(Wikifier.wikifyEval(`<<icon \"${item.iconFront}\">>`));"
+  ],
+  "context": "\t\t})[0];"
+ }
+]

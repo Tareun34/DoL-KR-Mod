@@ -1,0 +1,95 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYour climax is torturous and painful as you writhe against <<him>>. <<His>> assault only grows more intense. You feel weak.",
+   "\t\t<<trauma 30>><<gggtrauma>><<purity -25>><<llpurity>><<physique_loss 8>><<lphysique>><<awareness -20>><<lllawareness>><<gobsession>>"
+  ],
+  "old_kr": [
+   "\t\t당신이 <<him>>에게 맞서 몸부림치자 절정은 고문 같고 고통스럽다. <<his>> 공격은 그저 더 격렬해질 뿐이다. 당신은 몸에 힘이 빠지는 것을 느낀다.",
+   "\t\t<<trauma 30>><<gggtrauma>><<purity -25>><<llpurity>><<physique_loss 8>><<lphysique>><<awareness -20>><<lllawareness>><<gobsession>>"
+  ],
+  "new_en": [
+   "\t\tYour climax is torturous and painful as you writhe against <<him>>. <<His>> assault only grows more intense. You feel weak.",
+   "\t\t<<trauma 30>><<gggtrauma>><<purity -25>><<llpurity>><<physique -8>><<lphysique>><<awareness -20>><<lllawareness>><<gobsession>>"
+  ],
+  "context": "\t\t<<orgasm>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $debug>>"
+  ],
+  "context": "\t\t\t<<case \"slimetentacles\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechdisable to 1>><<set $enemynomax to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechDisable to 1>><<set $enemynomax to 1>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $wraithPrison and $wraithPrison.vision is true>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $wraithPrison?.vision is true>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $town_projects and $town_projects.road gte 3>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $town_projects?.road gte 3>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<trauma 30>><<gggtrauma>><<purity -50>><<lllpurity>><<physique_loss 16>><<llphysique>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<trauma 30>><<gggtrauma>><<purity -50>><<lllpurity>><<physique -16>><<llphysique>>"
+  ],
+  "context": "\t<<arousal 2000 \"mouth\">><<gggarousal>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<relationshipclamp>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<relationshipClamp>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<relationshipclamp>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<relationshipClamp>>"
+  ],
+  "context": "\t<</if>>"
+ }
+]

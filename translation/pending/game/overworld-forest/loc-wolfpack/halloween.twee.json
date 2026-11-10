@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $pound and $pound.progress gte 6>>",
+   "\t<<link [[Go with the hunting party|Wolf Halloween Dog]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<if $pound and $pound.progress gte 6>>",
+   "\t<<link [[사냥 무리와 함께 간다|Wolf Halloween Dog]]>><</link>>"
+  ],
+  "new_en": [
+   "<<if $pound?.progress gte 6>>",
+   "\t<<link [[Go with the hunting party|Wolf Halloween Dog]]>><</link>>"
+  ],
+  "context": ""
+ }
+]

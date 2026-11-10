@@ -1,0 +1,65 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You run down the corridor. As you reach the door you hear a sharp buzz and the sound of grinding metal.",
+   "<<beastNEWinit 6 wolf>>"
+  ],
+  "old_kr": [
+   "복도를 달려간다. 문에 다다르자 날카로운 윙 소리와 금속이 갈리는 소리가 들린다.",
+   "<<beastNEWinit 6 wolf>>"
+  ],
+  "new_en": [
+   "You run down the corridor. As you reach the door you hear a sharp buzz and the sound of grinding metal.",
+   "<<generateBeastVictim 6 wolf>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $rng gte 81 or ($monster isnot 1 and !$settings.bestialityEnabled)>>",
+   "\tYou pull on the handle, and the door aches open. You dash through and shut it behind you, seeing a number of <<beastsplural>> bounding down the corridor as you do."
+  ],
+  "old_kr": [
+   "<<if $rng gte 81 or ($monster isnot 1 and !$settings.bestialityEnabled)>>",
+   "\t손잡이를 당기자 문이 삐걱거리며 열린다. 당신은 재빨리 문을 통과하고 닫는다. 그 순간 복도를 달려 내려오는 수많은 <<beastsplural>>【을를】 본다."
+  ],
+  "new_en": [
+   "<<if $rng gte 81 or !beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\tYou pull on the handle, and the door aches open. You dash through and shut it behind you, seeing a number of <<beastsplural>> bounding down the corridor as you do."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "",
+   "<<beastNEWinit 6 wolf>>"
+  ],
+  "old_kr": [
+   "<<beastNEWinit 6 wolf>>"
+  ],
+  "new_en": [
+   "",
+   "<<generateBeastVictim 6 wolf>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<elseif $monster isnot 1 and !$settings.bestialityEnabled>>",
+   "\tDropping to your hands and knees, you squeeze through the gap. It's a tight fit, but you're able to fit."
+  ],
+  "old_kr": [
+   "<<elseif $monster isnot 1 and !$settings.bestialityEnabled>>",
+   "\t손과 무릎으로 기어 틈새를 비집고 들어간다. 꽉 끼지만, 당신은 들어갈 수 있다."
+  ],
+  "new_en": [
+   "<<elseif !beastSexEnabledForType(\"wolf\", $monster is 1)>>",
+   "\tDropping to your hands and knees, you squeeze through the gap. It's a tight fit, but you're able to fit."
+  ],
+  "context": "\t<<commercialquick>>"
+ }
+]

@@ -1,0 +1,24 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "function toggleRelationCollapse(element) {",
+   "\tconst box = element.closest(\".relation-box\");",
+   "\tconst npcName = box.dataset.npc;",
+   "\tconst idx = V.collapsedRelationBoxes.indexOf(npcName);",
+   "\tif (idx >= 0) {",
+   "\t\tV.collapsedRelationBoxes.splice(idx, 1);",
+   "\t\tbox.classList.remove(\"is-collapsed\");",
+   "\t} else {",
+   "\t\tV.collapsedRelationBoxes.push(npcName);",
+   "\t\tbox.classList.add(\"is-collapsed\");",
+   "\t}",
+   "}",
+   "window.toggleRelationCollapse = toggleRelationCollapse;"
+  ],
+  "context": "window.basicHypnoCss = basicHypnoCss;"
+ }
+]

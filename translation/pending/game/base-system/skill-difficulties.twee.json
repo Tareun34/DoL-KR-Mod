@@ -1,0 +1,49 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\"Physique\": \"physiqueSuccess\",",
+   "\t\t\t\"Willpower\": \"willpowerSuccess\",",
+   "\t\t\t\"Dance\": \"danceSuccess\",",
+   "\t\t\t\"Swimming\": \"swimmingSuccess\",",
+   "\t\t\t\"Athletics\": \"athleticsSuccess\",",
+   "\t\t\t\"Tending\": \"tendingSuccess\",",
+   "\t\t\t\"Housekeeping\": \"housekeepingSuccess\",",
+   "\t\t\t\"English\": \"englishSuccess\""
+  ],
+  "old_kr": [
+   "\t\t\t\"체격\": \"physiqueSuccess\",",
+   "\t\t\t\"의지력\": \"willpowerSuccess\",",
+   "\t\t\t\"춤\": \"danceSuccess\",",
+   "\t\t\t\"수영\": \"swimmingSuccess\",",
+   "\t\t\t\"운동\": \"athleticsSuccess\",",
+   "\t\t\t\"관리\": \"tendingSuccess\",",
+   "\t\t\t\"가사\": \"housekeepingSuccess\",",
+   "\t\t\t\"영어\": \"englishSuccess\""
+  ],
+  "new_en": [
+   "\t\t\t\"Physique\": \"physiqueSuccess\",",
+   "\t\t\t\"Willpower\": \"willpowerSuccess\",",
+   "\t\t\t\"Dance\": \"danceSuccess\",",
+   "\t\t\t\"Swimming\": \"swimmingSuccess\",",
+   "\t\t\t\"Athletics\": \"athleticsSuccess\",",
+   "\t\t\t\"Tending\": \"tendingSuccess\",",
+   "\t\t\t\"Housekeeping\": \"housekeepingSuccess\",",
+   "\t\t\t\"English\": \"englishSuccess\",",
+   "\t\t\t\"Pickaxe\": \"pickaxeSuccess\""
+  ],
+  "context": "\t\t<<set _successVars to {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"pickaxedifficulty\">>",
+   "\t<<skill_difficulty $prof.pickaxe \"Pickaxe\" _args[0] _args[1] _args[2]>>",
+   "<</widget>>",
+   ""
+  ],
+  "context": ""
+ }
+]

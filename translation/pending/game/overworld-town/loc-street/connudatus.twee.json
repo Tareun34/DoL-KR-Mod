@@ -1,0 +1,67 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You decide to help the poor <<person1>><<personsimple>> and accept to take the bag of <<recipe_name $streetFruit plural>> off <<his>> hands. "
+  ],
+  "old_kr": [
+   "당신은 불쌍한 <<person1>><<personsimple>>【을를】 돕기로 하고 <<recipe_name $streetFruit plural>> 자루를 받아든다. "
+  ],
+  "new_en": [
+   "You decide to help the poor <<person1>><<personsimple>> and accept to take the bag of <<recipe_name $streetFruit plural>> off <<his>> hands."
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"Don't- don't uh… if you ever see my <<spouse>>, don't tell that I did that, though.\" <<tending_pick $streetFruit>>"
+  ],
+  "old_kr": [
+   "\t\"그, 그래도 어... 혹시라도 우리 <<spouse>>【을를】 보거든 내가 이랬다는 말은 절대 하지 마라.\" <<tending_pick $streetFruit>>"
+  ],
+  "new_en": [
+   "\t\"Don't- don't uh... if you ever see my <<spouse>>, don't tell that I did that, though.\" <<tending_pick $streetFruit>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"God damn it, why are they always like this…\" <<he>> mutters under his breath, clutching himself in pain."
+  ],
+  "old_kr": [
+   "\t\"씨발, 왜 맨날 다 이따위야...\" <<he>>【이가】 고통에 몸을 웅크리며 잇새로 중얼거린다."
+  ],
+  "new_en": [
+   "\t\"God damn it, why are they always like this...\" <<he>> mutters under his breath, clutching himself in pain."
+  ],
+  "context": "<<if $enemyhealth lte 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"Don't- don't uh… if you ever see <<spouse>>, don't tell that I did that, though.\" <<tearful>> you struggle to your feet."
+  ],
+  "old_kr": [
+   "\t\"그, 그래도 어... 혹시라도 <<spouse>>【을를】 보거든 내가 이랬다는 말은 절대 하지 마라.\" <<tearful>> 당신은 비틀거리며 몸을 일으킨다."
+  ],
+  "new_en": [
+   "\t\"Don't- don't uh... if you ever see <<spouse>>, don't tell that I did that, though.\" <<tearful>> you struggle to your feet."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"God damn it, why are they always like this…\" <<he>> mutters under his breath, clutching himself in pain."
+  ],
+  "old_kr": [
+   "\t\"씨발, 왜 맨날 다 이따위야...\" <<he>>【이가】 고통에 몸을 웅크리며 잇새로 중얼거린다."
+  ],
+  "new_en": [
+   "\t\"God damn it, why are they always like this...\" <<he>> mutters under his breath, clutching himself in pain."
+  ],
+  "context": "<<if $enemyhealth lte 0>>"
+ }
+]

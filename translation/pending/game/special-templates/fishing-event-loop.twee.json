@@ -1,0 +1,35 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<addinlineevent \"bite\" fishingCatchEventWeight(\"fishingLocationName\", 10)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<addinlineevent \"bite\" `fishingCatchEventWeight(\"fishingLocationName\", 10)`>>"
+  ],
+  "context": "/* Generic bite event. Big fish trigger a fight, small fish are caught without a fight. */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<addinlineevent \"dangerStart\" fishingDangerEventWeight(3)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addinlineevent \"dangerStart\" `fishingDangerEventWeight(3)`>>"
+  ],
+  "context": "<<if $fishing.locationName.event is \"none\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Widgets Fishing LocationName Wait Flavor [widget]"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ":: Widgets Fishing LocationName Wait Flavour [widget]"
+  ],
+  "context": ""
+ }
+]

@@ -1,0 +1,57 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $_item.pattern_options and $_item.pattern_options.length gt 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $_item.pattern_options?.length gt 0>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if !pcAreArmsBound(\"both\") and !_rubbedNecklace and !$passage.includes(\"Wardrobe\") and random(1, 3) is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !pcAreArmsBound(\"both\") and !_rubbedNecklace and !$passage.includes(\"Wardrobe\") and !$passage.includes(\"Changing Room\") and random(1, 3) is 1>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $_itemPair and $_itemPair.outfitSecondary isnot undefined and $_itemPair.outfitSecondary[1] is $_item.name and !$_itemPair.temp>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $_itemPair?.outfitSecondary isnot undefined and $_itemPair.outfitSecondary[1] is $_item.name and !$_itemPair.temp>>"
+  ],
+  "context": "\t\t\t\t<<set $_itemPair to $store[_labelStore].find(item => item.location is _args[0])>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<</if>>\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<</if>>"
+  ],
+  "context": "\t\t<<set $store[$_slot].delete($_item)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<</widget>>"
+ }
+]

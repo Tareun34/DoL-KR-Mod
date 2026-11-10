@@ -1,0 +1,148 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * The child gene pool's name for a parent's skin colour."
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * What a parent contributes to the child's skin gene."
+  ],
+  "context": "/**"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * @param {string} skincolour a parent's skincolour",
+   " * @returns {string}"
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * @param {object} npc a named or stored NPC",
+   " * @returns {string|undefined} undefined for beasts, which have no skin tone to pass on"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "function parentSkinColour(skincolour) {",
+   "\tif (skincolour === \"black\") return \"dark\";",
+   "\tif (skincolour === \"white\") return \"light\";",
+   "\treturn skincolour;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "function parentSkinGene(npc) {",
+   "\tif (npc.skinType === \"ghost\") return \"ghost\";",
+   "\treturn Number.isFinite(npc.skincolour) ? parentSkinColour(npc.skincolour) : undefined;"
+  ],
+  "context": " */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "window.parentSkinGene = parentSkinGene;",
+   "",
+   "/**",
+   " * The child gene pool's name for a skin tone.",
+   " *",
+   " * @param {number} tone 0-100",
+   " * @returns {string} \"light\", \"medium\" or \"dark\"",
+   " */",
+   "function parentSkinColour(tone) {",
+   "\tif (tone < 30) return \"light\";",
+   "\tif (tone < 70) return \"medium\";",
+   "\treturn \"dark\";",
+   "}",
+   "window.parentSkinColour = parentSkinColour;"
+  ],
+  "context": "}"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\treturn { gender, hairColour: npc.hairColour, eyeColour: npc.eyeColour, skinColour: parentSkinColour(npc.skincolour) };"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\treturn { gender, hairColour: npc.hairColour, eyeColour: npc.eyeColour, skinColour: parentSkinGene(npc) };"
+  ],
+  "context": "\t\telse throw new Error(`parent \"${name}\" has no genitals`);"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\treturn { gender: stored.npc.gender, hairColour: null, eyeColour: null, skinColour: parentSkinColour(stored.npc.skincolour) };"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\treturn { gender: stored.npc.gender, hairColour: null, eyeColour: null, skinColour: parentSkinGene(stored.npc) };"
+  ],
+  "context": "\tif (stored) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   " * A child's skin colour: inherit from a parent, or fall back to the darkSkinChance roll."
+  ],
+  "old_kr": [],
+  "new_en": [
+   " * A child's skin colour: inherit from a parent, or fall back to a freshly rolled skin tone."
+  ],
+  "context": "/**"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\treturn inheritTrait(carrierParent.skinColour, donorParent.skinColour, () => (random(1, 100) <= V.settings.darkSkinChance ? \"dark\" : \"light\"));"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\treturn inheritTrait(carrierParent.skinColour, donorParent.skinColour, () => parentSkinColour(randomSkinTone()));"
+  ],
+  "context": "function rollChildSkinColour(carrierParent, donorParent) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   " * @param {number} [fixedLitterSize] how many children the pregnancy has, rolled randomly when left out"
+  ],
+  "context": " * @param {number} pregnancyId"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "function generateChildren(pregnancyId) {"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "function generateChildren(pregnancyId, fixedLitterSize) {"
+  ],
+  "context": " */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\tif (fixedLitterSize) litterSize = fixedLitterSize;"
+  ],
+  "context": "\t}"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t// The player's beast/divine transformations only pass down when the player is actually a parent."
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t// The player's beast/divine transformations only pass down when the player is a parent."
+  ],
+  "context": "\tconst sameParent = pregnancy.carrier === pregnancy.donor;"
+ }
+]

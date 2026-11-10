@@ -351,8 +351,8 @@
 	<br>
 <<else>>
 	<<set $phase to 9>>
-		당신은 빛을 잡으려 하지만, <span class="red">해류가 당신을 밀어낸다.</span>
-		<br> 중심을 잡자, 웅덩이에서 이어지는 동굴이 보인다. 희미한 푸른빛이 동굴을 비추고 있다. 바닥에 있는 다른 불빛은 당신 아래쪽 가까이에 있다.
+	You try to grasp the light, <span class="red">but the currents push you away.</span>
+	<br> As you regain control, you notice a cave leading away from the pool, lit by a dim blue light. The other light at the bottom is still close, below you.
 	<br><br>
 
 	<<swimicon "up">><<link [[위로 헤엄친다|Rocks Up]]>><<set $phase to 0>><</link>>
@@ -599,7 +599,7 @@
 	<<else>>
 		활기로 북적인다.
 	<</if>>
-	<<physique>>
+	<<physique 1>>
 	<br><br>
 	<<if $stress gte $stressmax>>
 		<<passoutsea>>
@@ -631,7 +631,7 @@
 	<<else>>
 		가까운 마을이 보인다.
 	<</if>>
-	<<physique>>
+	<<physique 1>>
 	<br><br>
 	<<if $stress gte $stressmax>>
 		<<passoutsea>>
@@ -672,7 +672,7 @@
 	<<else>>
 		멀리 마을이 보인다.
 	<</if>>
-	<<physique>>
+	<<physique 1>>
 	<br><br>
 	<<if $stress gte $stressmax>>
 		<<passoutsea>>
@@ -713,7 +713,7 @@
 	<<else>>
 		수평선 너머로 마을이 보인다.
 	<</if>>
-	<<physique>>
+	<<physique 1>>
 	<br><br>
 	<<if $stress gte $stressmax>>
 		<<passoutsea>>
@@ -756,7 +756,7 @@
 	<<else>>
 		근처에 섬이 하나 있다. 요새가 섬을 장악하고 있으며, 들쭉날쭉한 바위들로 둘러싸여 있다.
 	<</if>>
-	<<physique>>
+	<<physique 1>>
 	<br><br>
 	<<earnFeat "The Endless Deep">>
 	<<if $stress gte $stressmax>>

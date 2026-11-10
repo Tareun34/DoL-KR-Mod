@@ -7,7 +7,7 @@
 	<<set $fishingWolfCount to 1>>
 <</if>>
 <<beastNEWinit $fishingWolfCount wolf>>
-<<if $settings.bestialityEnabled>>
+<<if animalSexEnabledForType("wolf")>>
 	<<set $fishingWolfMouthTarget to random(1, 4)>>
 	낚싯줄이 물 위를 떠다니는 것을 지켜보고 있을 때, 숲속에서 으르렁거리는 소리가 터져 나온다.
 	<<if $fishingWolfCount is 1>>

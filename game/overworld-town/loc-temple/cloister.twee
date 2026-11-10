@@ -47,7 +47,8 @@
 	<<else>>
 		<<templeicon $temple_weapon>><<link [[훈련실 (0:01)|Temple Cloister Training]]>><<pass 1>><</link>>
 		<br>
-
+		<<templeicon "scriptorium">><<link [[Scriptorium (0:01)|Temple Scriptorium]]>><<pass 1>><</link>>
+		<br>
 		<<if $temple_confessor_intro>>
 			<<templeicon "statue">><<link [[비르고 조각상을 살펴본다|Temple Cloister Statue]]>><</link>>
 			<br>

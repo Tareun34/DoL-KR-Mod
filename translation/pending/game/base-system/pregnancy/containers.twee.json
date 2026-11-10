@@ -1,0 +1,119 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<link [[Attempt to deliver your anus parasite children (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to \"anus\">><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<link [[항문 속 기생충 아이 출산 시도 (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to \"anus\">><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<ind>><<link [[Attempt to deliver your anus parasite children (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to \"anus\">><</link>>"
+  ],
+  "context": "\t\t\t<<if $pregnancyStats.namesParasitesChild is true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<link [[Attempt to deliver the anus parasite (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to \"anus\">><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<link [[항문 속 기생충 출산 시도 (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to \"anus\">><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<ind>><<link [[Attempt to deliver the anus parasite (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to \"anus\">><</link>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou don't think <<print ($pregnancyStats.namesParasitesChild is true ? \"your parasite children\" : \"the parasites\")>> in your anus are ready for delivery.",
+   "\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t항문 속의 <<print ($pregnancyStats.namesParasitesChild is true ? \"기생충 아이들이\" : \"기생충들이\")>> 아직 태어날 준비가 되지 않은 것 같다.",
+   "\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\tYou don't think <<print ($pregnancyStats.namesParasitesChild is true ? \"your parasite children\" : \"the parasites\")>> in your anus are ready for delivery.",
+   "\t\t<br>"
+  ],
+  "context": "\t<<elseif _aPregnancy.fetus.length - (_aPregnancy.motherStatus is 2 ? 1 : 0) gt 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<link [[Attempt to deliver your vagina parasite children (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to \"vagina\">><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<link [[질 속 기생충 아이 출산 시도 (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to \"vagina\">><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<ind>><<link [[Attempt to deliver your vagina parasite children (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to \"vagina\">><</link>>"
+  ],
+  "context": "\t\t\t<<if $pregnancyStats.namesParasitesChild is true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<link [[Attempt to deliver the vagina parasite (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to \"vagina\">><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<link [[질 속 기생충 출산 시도 (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to \"vagina\">><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<ind>><<link [[Attempt to deliver the vagina parasite (1:00)|GiveBirth]]>><<pass 60>><<set $giveBirthLocation to \"vagina\">><</link>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou don't think <<print ($pregnancyStats.namesParasitesChild is true ? \"your parasite children\" : \"the parasites\")>> in your vagina are ready for delivery.",
+   "\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t질 속의 <<print ($pregnancyStats.namesParasitesChild is true ? \"기생충 아이들이\" : \"기생충들이\")>> 아직 태어날 준비가 되지 않은 것 같다.",
+   "\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\tYou don't think <<print ($pregnancyStats.namesParasitesChild is true ? \"your parasite children\" : \"the parasites\")>> in your vagina are ready for delivery.",
+   "\t\t<br>"
+  ],
+  "context": "\t<<elseif _vPregnancy.fetus.length - (_aPregnancy.motherStatus is 2 ? 1 : 0) gt 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br>"
+  ],
+  "context": "\t\t<</link>>"
+ }
+]

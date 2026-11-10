@@ -397,7 +397,7 @@
 		당신은 공원에 오는 것 외에 스트레스를 풀기 위해 무엇을 하는지 묻는다.
 		<br><br>
 
-		"아, 나 스파 가는 거 엄청 좋아한단다." <<He>>【이가】 말한다. "내가 가장 즐기는 휴식 방법 중 하나야. 일 끝나고 나면 몸이 항상 뻣뻣하게 굳어버리거든."
+		"Ah. You know, I love going to the spa," <<he>> says. "It's one of my favourite ways to unwind, I always get so stiff after work."
 		<br><br>
 
 		<<if $samSeen?.includes("spa")>>

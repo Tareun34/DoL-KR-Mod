@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\"That's another seven years of rotten luck for you.\"",
+   "\t\t\t\t\t\t\t\t<<elseif $_edenTargetHit and $_edenTargetHit.health lte 0>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\"또 7년 동안 끔찍한 불운을 겪겠네.\"",
+   "\t\t\t\t\t\t\t\t<<elseif $_edenTargetHit and $_edenTargetHit.health lte 0>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\"That's another seven years of rotten luck for you.\"",
+   "\t\t\t\t\t\t\t\t<<elseif $_edenTargetHit?.health lte 0>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t\t<</if>>"
+ }
+]

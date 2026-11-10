@@ -1,0 +1,87 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or (!$settings.bestialityEnabled)>>",
+   "\t<<if beastMaleChance() gte 100>>",
+   "\t\tSeveral pigboys sit in pens.",
+   "\t<<elseif beastMaleChance() gte 1>>",
+   "\t\tSeveral pigboys and girls sit in pens."
+  ],
+  "old_kr": [
+   "<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or (!$settings.bestialityEnabled)>>",
+   "\t<<if beastMaleChance() gte 100>>",
+   "\t\t여러 돼지 소년들이 우리 안에 앉아 있다.",
+   "\t<<elseif beastMaleChance() gte 1>>",
+   "\t\t여러 돼지 소년 소녀들이 우리 안에 앉아 있다."
+  ],
+  "new_en": [
+   "<<if monsterChanceForType(\"pig\") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType(\"pig\"))>>",
+   "\t<<if beastMaleChanceForType(\"pig\") gte 100>>",
+   "\t\tSeveral pigboys sit in pens.",
+   "\t<<elseif beastMaleChanceForType(\"pig\") gte 1>>",
+   "\t\tSeveral pigboys and girls sit in pens."
+  ],
+  "context": "<!-- Modified for monster people -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or (!$settings.bestialityEnabled)>>",
+   "\t<<if beastMaleChance() gte 100>>",
+   "\t\tInside, a number of bullboys stand on all fours, each with a tube attached to his penis. They moo in pleasure.",
+   "\t<<elseif beastMaleChance() lte 0>>",
+   "\t\tInside, a number of cowgirls stand on all fours, each with two tubes attached to her breasts. They moo in pleasure."
+  ],
+  "old_kr": [
+   "<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or (!$settings.bestialityEnabled)>>",
+   "\t<<if beastMaleChance() gte 100>>",
+   "\t\t안에는 여러 황소 소년들이 네 발로 서 있고, 각각의 자지에 튜브가 연결되어 있다. 그들은 쾌감에 음메 소리를 낸다.",
+   "\t<<elseif beastMaleChance() lte 0>>",
+   "\t\t안에는 여러 암소 소녀들이 네 발로 서 있고, 각각의 가슴에 두 개의 튜브가 연결되어 있다. 그들은 쾌감에 음메 소리를 낸다."
+  ],
+  "new_en": [
+   "<<if monsterChanceForType(\"cow\") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType(\"cow\"))>>",
+   "\t<<if beastMaleChanceForType(\"cow\") gte 100>>",
+   "\t\tInside, a number of bullboys stand on all fours, each with a tube attached to his penis. They moo in pleasure.",
+   "\t<<elseif beastMaleChanceForType(\"cow\") lte 0>>",
+   "\t\tInside, a number of cowgirls stand on all fours, each with two tubes attached to her breasts. They moo in pleasure."
+  ],
+  "context": "<!-- Modified for monster people -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if beastMaleChance() gte 100>>",
+   "\t\tA number of bulls stand inside, each attached to a milking machine.",
+   "\t<<elseif beastMaleChance() lte 0>>",
+   "\t\tA number of cows stand inside, each attached to a milking machine."
+  ],
+  "old_kr": [
+   "\t<<if beastMaleChance() gte 100>>",
+   "\t\t안에는 여러 황소들이 서 있고, 각각 착유기에 연결되어 있다.",
+   "\t<<elseif beastMaleChance() lte 0>>",
+   "\t\t안에는 여러 암소들이 서 있고, 각각 착유기에 연결되어 있다."
+  ],
+  "new_en": [
+   "\t<<if beastMaleChanceForType(\"cow\") gte 100>>",
+   "\t\tA number of bulls stand inside, each attached to a milking machine.",
+   "\t<<elseif beastMaleChanceForType(\"cow\") lte 0>>",
+   "\t\tA number of cows stand inside, each attached to a milking machine."
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if ($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or (!$settings.bestialityEnabled)>>",
+   "\t<<if beastMaleChance() lte $rng>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if monsterChanceForType(\"horse\") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType(\"horse\"))>>",
+   "\t<<if beastMaleChanceForType(\"horse\") lte $rng>>"
+  ],
+  "context": "<!-- Modified for monster people -->"
+ }
+]

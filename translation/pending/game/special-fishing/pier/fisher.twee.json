@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "The <<person>> glances over, caught off guard. <<He>> looks between Whitney and <<nnpc_his \"Whitney\">> friends, then at <<his>> rod. After a moment <<he>> starts packing up without a word, shaking <<his>> head as <<he>> leaves the pier. "
+  ],
+  "old_kr": [
+   "<<person>>【은는】 갑작스러운 상황에 당황한 듯 그들을 힐끗 쳐다본다. <<He>>【은는】 휘트니와 <<nnpc_his \"Whitney\">> 친구들을 번갈아 보다가 자기 낚싯대를 쳐다본다. 잠시 후 <<he>>【은는】 아무 말 없이 짐을 싸기 시작하더니, 고개를 내저으며 부두를 떠난다. "
+  ],
+  "new_en": [
+   "The <<person>> glances over, caught off guard. <<He>> looks between Whitney and <<nnpc_his \"Whitney\">> friends, then at <<his>> rod. After a moment <<he>> starts packing up without a word, shaking <<his>> head as <<he>> leaves the pier."
+  ],
+  "context": ""
+ }
+]

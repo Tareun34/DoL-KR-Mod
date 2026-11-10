@@ -318,7 +318,7 @@
 :: Kylar Strap-on Sex Refuse
 <<He>>【이가】 실망한 표정을 짓는다. "괜찮아. 이해해."
 <br>
-<<kylaroptions>>
+<<kylarOptions>>
 
 :: Robin Gift Strap-on
 <<set $location to "home">><<set $outside to 0>><<effects>>

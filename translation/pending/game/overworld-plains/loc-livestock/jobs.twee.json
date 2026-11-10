@@ -1,0 +1,223 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<endevent>><<beastNEWinit 1 pig>>",
+   "\t\tRemy leads you down the small lane towards the barn. You arrive in front of it, but then are turned toward the second, smaller barn opposite."
+  ],
+  "old_kr": [
+   "\t\t<<endevent>><<beastNEWinit 1 pig>>",
+   "\t\t레미가 당신을 축사 쪽 작은 길로 이끈다. 당신은 축사 앞에 도착하지만, 이내 맞은편의 더 작은 두 번째 축사로 향한다."
+  ],
+  "new_en": [
+   "\t\t<<endevent>><<generateBeastVictim 1 pig>>",
+   "\t\tRemy leads you down the small lane towards the barn. You arrive in front of it, but then are turned toward the second, smaller barn opposite."
+  ],
+  "context": "\t\t<<set $livestock.jobs.pig to 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<endevent>><<beastNEWinit 3 pig>>",
+   "\t\tRemy leads you down the small lane towards the barn. You arrive in front of it, but then are turned toward the second, smaller barn opposite."
+  ],
+  "old_kr": [
+   "\t\t<<endevent>><<beastNEWinit 3 pig>>",
+   "\t\t레미가 당신을 축사 쪽 작은 길로 이끈다. 당신은 축사 앞에 도착하지만, 이내 맞은편의 더 작은 두 번째 축사로 향한다."
+  ],
+  "new_en": [
+   "\t\t<<endevent>><<generateBeastVictim 3 pig>>",
+   "\t\tRemy leads you down the small lane towards the barn. You arrive in front of it, but then are turned toward the second, smaller barn opposite."
+  ],
+  "context": "\t\t<<set $livestock.jobs.pig to 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $player.penisExist and $player.vaginaExist>>",
+   "\t\tThe audience murmurs about your hermaphroditism. \"You might be wondering,\" Harper continues. \"If all the livestock here are blessed with both male and female genitalia. They are not. This specimen is unique.\""
+  ],
+  "old_kr": [
+   "\t<<if $player.penisExist and $player.vaginaExist>>",
+   "\t\t관객들이 당신의 자웅동체에 대해 수군거린다. \"궁금해하실지도 모르겠습니다.\" 하퍼가 말을 잇는다. \"여기 있는 모든 가축이 남성과 여성의 생식기를 모두 가지고 있는지 말입니다. 그렇지 않습니다. 이 표본은 독특합니다.\""
+  ],
+  "new_en": [
+   "\t<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>",
+   "\t\tThe audience murmurs about your genitals. \"You might be wondering,\" Harper continues. \"If all the livestock here are blessed with both male and female genitalia. They are not. This specimen is unique.\""
+  ],
+  "context": "<<elseif playerChastity()>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $player.penisExist and $player.vaginaExist>>",
+   "\t\tThe audience murmurs about your hermaphroditism. \"You might be wondering,\" Harper continues. \"If all the livestock here are blessed with both male and female genitalia. They are not. This specimen is unique.\""
+  ],
+  "old_kr": [
+   "\t<<if $player.penisExist and $player.vaginaExist>>",
+   "\t\t관객들이 당신의 자웅동체에 대해 수군거린다. \"궁금해하실지도 모르겠습니다.\" 하퍼가 말을 잇는다. \"여기 있는 모든 가축이 남성과 여성의 생식기를 모두 가지고 있는지 말입니다. 그렇지 않습니다. 이 표본은 독특합니다.\""
+  ],
+  "new_en": [
+   "\t<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>",
+   "\t\tThe audience murmurs about your genitals. \"You might be wondering,\" Harper continues. \"If all the livestock here are blessed with both male and female genitalia. They are not. This specimen is unique.\""
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<beastNEWinit 1 pig>>",
+   "The barn doors open, and a farmhand enters, holding a leash. The leash tightens. Whatever it's attached to refuses to enter."
+  ],
+  "old_kr": [
+   "<<beastNEWinit 1 pig>>",
+   "헛간 문이 열리고, 농장 인부가 목줄을 들고 들어온다. 목줄이 팽팽해진다. 그것에 매달린 무언가가 들어오기를 거부한다."
+  ],
+  "new_en": [
+   "<<generateBeastVictim 1 pig>>",
+   "The barn doors open, and a farmhand enters, holding a leash. The leash tightens. Whatever it's attached to refuses to enter."
+  ],
+  "context": "<<endevent>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<beastNEWinit 1 cow>><<generate2>><<generate3>><<person1>>",
+   "\t\tThe doors to the barn open. You hear two voices arguing. As they get closer, you can see that two farmhands are herding a <<beasttype>> in between them. <<bHe>> digs <<bhis>> <<if $monster is 1>>heels<<else>>hooves<</if>> into the ground as the farmhands drag <<bhim>> to the stall next to you."
+  ],
+  "old_kr": [
+   "\t\t<<beastNEWinit 1 cow>><<generate2>><<generate3>><<person1>>",
+   "\t\t축사 문이 열린다. 두 사람이 다투는 소리가 들린다. 가까워지면서 보니, 두 명의 일꾼이 그들 사이로 <<beasttype>>【을를】 몰고 있다. 일꾼들이 <<bhim>>【을를】 당신 옆 칸으로 끌고 가려 하자, <<bHe>>【은는】 땅에 <<bhis>> <<if $monster is 1>>발뒤꿈치를<<else>>발굽을<</if>> 푹 박고 버틴다."
+  ],
+  "new_en": [
+   "\t\t<<generateBeastVictim 1 cow>><<generate2>><<generate3>><<person1>>",
+   "\t\tThe doors to the barn open. You hear two voices arguing. As they get closer, you can see that two farmhands are herding a <<beasttype>> in between them. <<bHe>> digs <<bhis>> <<if $monster is 1>>heels<<else>>hooves<</if>> into the ground as the farmhands drag <<bhim>> to the stall next to you."
+  ],
+  "context": "\t<<addinlineevent \"tie_stall_punishment_other_cow\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<beastNEWinit 1 cow>><<generate2>><<generate3>><<person1>>",
+   "\t\tA loud screech rips through the air. <<if $syndromebird>>You recognise the call of your spouse.<<stress -6>><<lstress>><<else>>You feel the hairs on the back of your neck stand on end.<<stress 6>><<gstress>><</if>>"
+  ],
+  "old_kr": [
+   "\t\t<<beastNEWinit 1 cow>><<generate2>><<generate3>><<person1>>",
+   "\t\t시끄러운 비명 소리가 허공을 가른다. <<if $syndromebird>>당신은 당신 반려의 울음소리라는 걸 알아챈다.<<stress -6>><<lstress>><<else>>목덜미의 털이 곤두서는 것이 느껴진다.<<stress 6>><<gstress>><</if>>"
+  ],
+  "new_en": [
+   "\t\t<<generateBeastVictim 1 cow>><<generate2>><<generate3>><<person1>>",
+   "\t\tA loud screech rips through the air. <<if $syndromebird>>You recognise the call of your spouse.<<stress -6>><<lstress>><<else>>You feel the hairs on the back of your neck stand on end.<<stress 6>><<gstress>><</if>>"
+  ],
+  "context": "\t<<addinlineevent \"tie_stall_punishment_screech\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\tThere is a gleam in <<bhis>> eyes. <<bHe>> saunters around to your ass. You feel <<bhis>> hot breath on your <<genitals>>."
+  ],
+  "old_kr": [
+   "\t\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t\t<<bhis>> 눈에 번뜩이는 빛이 돈다. <<bHe>>【은는】 당신의 엉덩이 쪽으로 어슬렁어슬렁 다가간다. 당신의 <<genitals>>에 <<bhis>> 뜨거운 입김이 느껴진다."
+  ],
+  "new_en": [
+   "\t\t\t<<if beastSexEnabledForType(\"cat\", $monster is 1)>>",
+   "\t\t\t\tThere is a gleam in <<bhis>> eyes. <<bHe>> saunters around to your ass. You feel <<bhis>> hot breath on your <<genitals>>."
+  ],
+  "context": "\t\t<<if $rng lte 15>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $rng gte 51 or !$settings.bestialityEnabled>>",
+   "\t\t\t\"This experiment is very sensitive,\" a voice says. <<if $harperSeen>>It's Harper<<else>>You don't recognise it<</if>>. \"If I don't administer the serum within the right time frame, it could throw off the results.\""
+  ],
+  "old_kr": [
+   "\t\t<<if $rng gte 51 or !$settings.bestialityEnabled>>",
+   "\t\t\t\"이 실험은 매우 민감합니다.\" 한 목소리가 말한다. <<if $harperSeen>>하퍼다<<else>>당신은 그 목소리를 모른다<</if>>. \"만약 제가 적절한 시간 내에 혈청을 투여하지 않으면, 결과가 틀어질 수 있습니다.\""
+  ],
+  "new_en": [
+   "\t\t<<if $rng gte 51 or !animalSexEnabledForType(\"pig\")>>",
+   "\t\t\t\"This experiment is very sensitive,\" a voice says. <<if $harperSeen>>It's Harper<<else>>You don't recognise it<</if>>. \"If I don't administer the serum within the right time frame, it could throw off the results.\""
+  ],
+  "context": "\t<<if $skulduggerysuccess>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if ($phase is 0 and $rng gte 75) or !$settings.bestialityEnabled or !$settings.lurkersEnabled>>",
+   "\tThe chittering stops. You hear something skitter to the back of the barn. Whatever it is, it seems it doesn't want to risk attacking you.<<stress -4>><<lstress>>"
+  ],
+  "old_kr": [
+   "<<if ($phase is 0 and $rng gte 75) or !$settings.bestialityEnabled or !$settings.lurkersEnabled>>",
+   "\t채터링 소리가 멈춘다. 무언가 헛간 뒤쪽으로 재빨리 움직이는 소리가 들린다. 그게 무엇이든, 당신을 공격할 위험을 감수하고 싶지는 않은 것 같다.<<stress -4>><<lstress>>"
+  ],
+  "new_en": [
+   "<<if ($phase is 0 and $rng gte 75) or !$settings.lurkersEnabled>>",
+   "\tThe chittering stops. You hear something skitter to the back of the barn. Whatever it is, it seems it doesn't want to risk attacking you.<<stress -4>><<lstress>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tThe lurker jumps away from you with a chitter. It scurries back into the shadows. <<tearful>>, you try to gather your scattered wits and think of what to do next."
+  ],
+  "old_kr": [
+   "\t럴커가 채터링 소리를 내며 당신에게서 뛰어내린다. 그것은 그림자 속으로 재빨리 사라진다. <<tearful>>, 당신은 흩어진 정신을 수습하고 다음에 무엇을 해야 할지 생각하려 애쓴다."
+  ],
+  "new_en": [
+   "\tThe lurker jumps away from you with a chitter. It scurries back into the shadows. <<tearful>> you try to gather your scattered wits and think of what to do next."
+  ],
+  "context": "<<if $struggle.done gte $struggle.number>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $rng gte 51 or !$settings.bestialityEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $rng gte 51 or !animalSexEnabledForType(\"pig\")>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<person1>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $rng gte 51 and (($settings.monsterChance gte random(1, 100) and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly) or $settings.bestialityEnabled))>>",
+   "\t\t\t<<if $rng gte 51 and $settings.horsesEnabled>>",
+   "\t\t\t\t<<beastNEWinit 1 horse>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $rng gte 51 and (beastSexEnabledForType(\"horse\") or beastSexEnabledForType(\"dog\"))>>",
+   "\t\t\t<<set _beastType to beastSexEnabledForType(\"horse\") ? \"horse\" : \"dog\">>",
+   "\t\t\t\t<<beastNEWinit 1 _beastType>>",
+   "\t\t\t<<if beastSexEnabledForType(_beastType, $monster is 1)>>",
+   "\t\t\t\t<<set _attacker to $NPCList[0].type>>"
+  ],
+  "context": "\t<<addinlineevent \"tie_stall_punishment_rape_reward\" 1000>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<beastNEWinit 1 dog>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<clearnpc>><<generate1>><<set _attacker to \"farmhand\">>"
+  ],
+  "context": "\t\t\t<<else>>"
+ }
+]

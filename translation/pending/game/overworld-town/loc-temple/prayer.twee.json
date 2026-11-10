@@ -1,0 +1,50 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYour thoughts turn to Bailey.",
+   "\t\t\t<<if $renttime lte 0>>"
+  ],
+  "old_kr": [
+   "\t\t\t당신의 생각은 베일리에게로 향한다.",
+   "\t\t\t<<if $renttime lte 0>>"
+  ],
+  "new_en": [
+   "\t\t\tYour thoughts turn to Bailey.",
+   "\t\t\t<<if $rentTime lte 0>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $money gte $rentmoney + ($babyRent or 0)>>",
+   "\t\t\t\t\tYou have enough to pay <<nnpc_him \"Bailey\">>,"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $money gte $rentmoney + ($babyRent or 0)>>",
+   "\t\t\t\t\t당신은 <<nnpc_him \"Bailey\">>에게 낼 돈이 충분하다,"
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $money gte $rentMoney + ($babyRent or 0)>>",
+   "\t\t\t\t\tYou have enough to pay <<nnpc_him \"Bailey\">>,"
+  ],
+  "context": "\t\t\t\t<<babyRent true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $money gte $rentmoney + ($babyRent or 0)>>",
+   "\t\t\t\t\tYou have enough to pay <<nnpc_him \"Bailey\">> on <<rentday>>,"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $money gte $rentmoney + ($babyRent or 0)>>",
+   "\t\t\t\t\t당신은 <<rentday>>에 <<nnpc_him \"Bailey\">>에게 낼 돈이 충분하다,"
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $money gte $rentMoney + ($babyRent or 0)>>",
+   "\t\t\t\t\tYou have enough to pay <<nnpc_him \"Bailey\">> on <<rentday>>,"
+  ],
+  "context": "\t\t\t\t<<babyRent true>>"
+ }
+]

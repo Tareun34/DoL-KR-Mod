@@ -1,0 +1,80 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<beastNEWinit 1 pig>>",
+   "\t\"Instead of our scheduled show, we have a special treat for you.\" A metal shutter opens behind you, revealing a gigantic <<beasttype>>."
+  ],
+  "old_kr": [
+   "\t<<beastNEWinit 1 pig>>",
+   "\t\"예정된 쇼 대신, 특별한 볼거리를 준비했습니다.\" 당신 뒤의 금속 셔터가 열리며 거대한 <<beasttype>>【이가】 모습을 드러낸다."
+  ],
+  "new_en": [
+   "\t<<generateBeastVictim 1 pig>>",
+   "\t\"Instead of our scheduled show, we have a special treat for you.\" A metal shutter opens behind you, revealing a gigantic <<beasttype>>."
+  ],
+  "context": "\t<<endevent>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<beastNEWinit 1 pig>>",
+   "You are led once more to the stage, where the crowd awaits. <<covered>>"
+  ],
+  "old_kr": [
+   "<<beastNEWinit 1 pig>>",
+   "당신은 다시 무대로 이끌려 나간다. 그곳에는 군중이 기다리고 있다. <<covered>>"
+  ],
+  "new_en": [
+   "<<generateBeastVictim 1 pig>>",
+   "You are led once more to the stage, where the crowd awaits. <<covered>>"
+  ],
+  "context": "<<set $outside to 0>><<set $location to \"underground\">><<effects>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\tOnce there, a metal shutter rattles open behind you, and a gigantic <<beasttype>> steps out. The audience cheers <<bhim>> on."
+  ],
+  "old_kr": [
+   "<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t그곳에 도착하자 당신 뒤에서 금속 셔터가 덜컹거리며 열리고, 거대한 <<beasttype>>【이가】 걸어 나온다. 관객들이 <<bhim>>【을를】 응원한다."
+  ],
+  "new_en": [
+   "<<if $rng gte 51 and beastSexEnabledForType(\"pig\", $monster is 1)>>",
+   "\tOnce there, a metal shutter rattles open behind you, and a gigantic <<beasttype>> steps out. The audience cheers <<bhim>> on."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>><!-- Modified for BeastPeople -->",
+   "\t\tYou hear something running through the grass behind you, and <span class=\"red\">feel <<print ($monster is 1 ? \"hands\" : \"paws\")>> on your back as you are forced to your knees</span>.",
+   "\t\tThe <<beasttype 0>> starts humping<<if $NPCList[0].penis isnot \"none\">>, you feel <<bhis 0>> penis prodding your <<bottom>><</if>>."
+  ],
+  "old_kr": [
+   "\t<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>><!-- Modified for BeastPeople -->",
+   "\t\t뒤쪽 풀숲에서 무언가 달려오는 소리가 들리고, <span class=\"red\">당신은 등에 닿는 <<print ($monster is 1 ? \"손\" : \"발\")>>【을를】 느끼며 무릎을 꿇린다</span>.",
+   "\t\t<<beasttype 0>>【이가】 올라타 허리를 흔들기 시작한다<<if $NPCList[0].penis isnot \"none\">>. <<bhis 0>> 자지가 당신의 <<bottom>>【을를】 찌르는 게 느껴진다<</if>>."
+  ],
+  "new_en": [
+   "\t<<if $rng gte 51 and beastSexEnabledForType(\"dog\", $monster is 1)>><!-- Modified for BeastPeople -->",
+   "\t\tYou hear something running through the grass behind you, and <span class=\"red\">feel <<print ($monster is 1 ? \"hands\" : \"paws\")>> on your back as you are forced to your knees</span>.",
+   "\t\tThe <<beasttype 0>> starts humping<<if $NPCList[0].penis isnot \"none\">>, you feel <<bhis 0>> penis prodding your <<bottom>><</if>>."
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<if $rng gte 51 and beastSexEnabledForType(\"pig\", $monster is 1)>>"
+  ],
+  "context": ""
+ }
+]

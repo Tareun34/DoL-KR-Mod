@@ -426,8 +426,8 @@
 	<<run $farm.build_finished.delete("stable 1")>>
 	<span class="gold">당신은 확장된 마구간으로 다가간다.</span> 안에서는 부드러운 클래식 음악이 흐른다.
 	<br><br>
-	<<if $farm_work.horse.monster_roll is true and (($hallucinations gte 1 or !$settings.monsterHallucinationsOnly) or !$settings.bestialityEnabled)>>
-		"이게 더 적합하군." 당신이 지나가자 <<farm_text horse>>【이가】 말한다. "고맙다."
+	<<if $farm_work.horse.monster>>
+		"This is more suitable," a <<farm_text horse>> says as you pass. "Thank you."
 		<br><br>
 	<<else>>
 		당신이 지나가자 <<farm_text horse>> 한 마리가 고맙다는 듯 당신의 목에 코를 비빈다.
@@ -1075,8 +1075,8 @@
 <br><br>
 
 <<if dangerEvent()>>
-	<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>
-		막 일을 끝내려던 참에, <<if Weather.isSnow>>눈<<else>>낙엽<</if>> 더미에서 무언가 튀어나온다!<<gstress>><<stress 6>>
+	<<if $settings.lurkersEnabled>>
+		You're just finishing up, when something leaps from the pile of <<if Weather.isSnow>>snow<<else>>leaves<</if>>!<<gstress>><<stress 6>>
 		<br><br>
 		<<if hasSexStat("deviancy", 4)>>
 			<<link [[가만히 서 있는다|Farm Yard Stand Still]]>><</link>><<deviant4>>
@@ -1113,7 +1113,7 @@
 
 <<if dangerEvent()>>
 	<<farm_gen dog>>
-	<<if $monster is 1 or $settings.bestialityEnabled>>
+	<<if beastSexEnabledForType("dog", $farm_work.dog.monster)>>
 		<<if $farm_work.dog.monster is true>>
 			<<beastNEWinit 1 dog $farm_work.dog.gender $farm_work.dog.genitals monster>>
 		<<else>>
@@ -1245,7 +1245,7 @@
 -->
 <<if _fullyNaked or dangerEvent(1.25)>>
 <!-- Modified for monster people -->
-   <<if ($settings.bestialityEnabled or $farm_work.pig.monster is true)>>
+	<<if beastSexEnabledForType("pig", $farm_work.pig.monster)>>
 		<<if $farm_work.pig.monster is true>>
 			마지막 녀석이 당신의 <<hairDetails>>【을를】 잡고, 땅으로 넘어뜨리려 한다.
 		<<else>>
@@ -1335,8 +1335,8 @@
 			currentSkillValue("skulduggery") gte random(100, 300)
 		]>>
 		<<set _attemptOne to random(0, 2)>>
-		<<if ($settings.bestialityEnabled or $farm_work.pig.monster is true) and _checkResults[_attemptOne]>>
-			구유에서 돌아서는데 무언가 당신의
+		<<if beastSexEnabledForType("pig", $farm_work.pig.monster) and _checkResults[_attemptOne]>>
+			Something catches your
 			<<if _attemptOne is 0>> <<hairDetails>>
 			<<elseif _attemptOne is 1>> _top.name
 			<<else>> _bottom.name
@@ -1486,7 +1486,7 @@
 <<pigsOpinion>>
 
 <!--
-	PC's  with at least 14,000 Physique will be able to feed the pigs twice as fast, halving their number of required interactions. This reduces the number of times the PC can interact with them to raise their respect, so they also gain +1 Pig's Respect as compensation.
+	PC's with at least 14,000 Physique will be able to feed the pigs twice as fast, halving their number of required interactions. This reduces the number of times the PC can interact with them to raise their respect, so they also gain +1 Pig's Respect as compensation.
 -->
 <<if currentSkillValue('physique') gte 14000>>
 	양동이 몇 개에 사료를 쏟아붓고 들판을 가로지른다. 양동이는 무겁지만, <span class="green">당신의 근력으로는 아무 문제 없다.</span>
@@ -1521,8 +1521,8 @@
 	<<set _attemptTwo to random(0, 2)>>
 	<<set _grabbed to ((_checkResults[_attemptOne]) or (not _checkResults[3] and _checkResults[_attemptTwo]))>>
 
-	<<if ($settings.bestialityEnabled or $farm_work.pig.monster is true) and !$weekly.farmNauseaEvent and $rng gte 86 and playerIsPregnant() and playerAwareTheyArePregnant() and between(pregnancyProgress(getPlayerPregnancy()), 0.1, 0.3)>>
-		양동이를 들어 올리자 그 안의 음식물 쓰레기에서 지독한 냄새가 훅 끼친다. 즉시 속이 뒤틀리고, 냄새에서 벗어나려 서두르다 양동이를 거의 떨어뜨릴 뻔한다. 진정하려고 애쓰며 두어 걸음 뒷걸음질 친다.
+	<<if beastSexEnabledForType("pig", $farm_work.pig.monster) and !$weekly.farmNauseaEvent and $rng gte 86 and playerIsPregnant() and playerAwareTheyArePregnant() and between(pregnancyProgress(getPlayerPregnancy()), 0.1, 0.3)>>
+		As you lift the bucket, you catch a strong whiff of the slop within. Immediately, your stomach churns, and you all but drop the bucket in your haste to get away from the smell. You stumble back a few steps, trying to will your stomach to settle.
 		<br><br>
 
 		<<if random(0, 2) is 0>>
@@ -1594,7 +1594,7 @@
 				<<link [[다음|Farm Work]]>><</link>>
 			<</if>>
 		<</if>>
-	<<elseif ($settings.bestialityEnabled or $farm_work.pig.monster is true) and _grabbed>>
+	<<elseif beastSexEnabledForType("pig", $farm_work.pig.monster) and _grabbed>>
 		<<if _checkResults[_attemptOne]>>
 			<<set _firstSuccess to _attemptOne>>
 		<<else>>
@@ -1735,26 +1735,26 @@
 당신은 <<farm_text_many pig>>을 돼지우리로 다시 몰아넣었다. 몇몇은 움직이기를 꺼리는 듯해서, 구슬려야 했다.
 
 <<if _fullyNaked or dangerEvent(1.25)>>
-   <<if $settings.bestialityEnabled or $farm_work.pig.monster is true>>
-       당신은 간신히 마지막 녀석을 일으켜 세운다. 당신이 <<farm_him pig>>【을를】 안으로 이끌려 할 때, <<farm_he pig>>【이가】
-       <<= $farm_work.pig.monster is true ? "당신의 팔을 움켜쥐고는" : "뒷다리로 일어서더니">> 억지로 당신을 바닥에 눕히려 한다.
-       <br><br>
+	<<if beastSexEnabledForType("pig", $farm_work.pig.monster)>>
+		You manage to get the last to stand. You're leading <<farm_him pig>> inside when <<farm_he pig>>
+		<<= $farm_work.pig.monster is true ? "grasps your arms" : "rears on its hind legs">> and tries to force you to the ground.
+		<br><br>
 
-       <<link [[꾸짖기|Farm Pigs Scold]]>><</link>><<tendingdifficulty 1 600>>
-       <br>
-       <<link [[<<farm_him pig>>【을를】 밀쳐내기|Farm Pigs Shove]]>><</link>><<physiquedifficulty 1 12000>>
-       <br>
-       <<link [[견뎌내기|Farm Pigs Endure]]>><<trauma 6>><<stress 6>><<farm_pigs -1>><</link>><<gtrauma>><<gstress>><<lrespect>>
-       <br>
-       <<if hasSexStat("deviancy", 3)>>
-           <<link [[<<farm_him pig>>【을를】 손으로 도와주기|Farm Pigs Hand]]>><<set $sexstart to 1>><</link>><<deviant3>>
-           <br>
-       <</if>>
-   <<else>>
-       <<farm_text_many pig>>【은는】 흥분한 것 같다. 조금 무섭다.<<gstress>><<stress 6>>
-       <br><br>
+		<<link [[Scold|Farm Pigs Scold]]>><</link>><<tendingdifficulty 1 600>>
+		<br>
+		<<link [[Shove <<farm_him pig>> away|Farm Pigs Shove]]>><</link>><<physiquedifficulty 1 12000>>
+		<br>
+		<<link [[Endure|Farm Pigs Endure]]>><<trauma 6>><<stress 6>><<farm_pigs -1>><</link>><<gtrauma>><<gstress>><<lrespect>>
+		<br>
+		<<if hasSexStat("deviancy", 3)>>
+			<<link [[Give <<farm_him pig>> a hand|Farm Pigs Hand]]>><<set $sexstart to 1>><</link>><<deviant3>>
+			<br>
+		<</if>>
+	<<else>>
+		The <<farm_text_many pig>> seem agitated. It's a little scary.<<gstress>><<stress 6>>
+		<br><br>
 
-       <<link [[다음|Farm Work]]>><</link>>
+		<<link [[Next|Farm Work]]>><</link>>
 		<br>
 	<</if>>
 <<else>>
@@ -1772,10 +1772,11 @@
 당신은 각 마구간을 열어 안에 있는 <<farm_text_many horse>>을 풀어주었다. 그들은 어디로 가야 할지 알고 있었지만, 당신은 그들을 길 아래로 이끌고 들판으로 가는 문을 열어주었다.
 <br><br>
 
-<<if dangerEvent() and $settings.horsesEnabled>>
+
+<<if dangerEvent() and beastSexEnabledForType("horse")>>
 <!-- Modified for Monster People -->
-	<<if $settings.bestialityEnabled or $farm_work.pig.monster is true>>
-		대부분은 다리를 뻗고 싶어 안달이 나 달려갔지만, 두어 마리는 뒤에 남았다.
+	<<if beastSexEnabledForType("horse", $farm_work.horse.monster)>>
+		Most run by, eager to stretch their legs, but a couple hang back.
 		<<if $farm_work.horse.monster is true>>
 			그중 하나가 당신 앞에 서서 문에서 밀어냈다. "우릴 가둬두는 건 달갑지 않아." 뒤에서 한 쌍의 강력한 손이 당신의 어깨를 붙잡자 <<farm_he horse>>【이가】 말했다. "사과의 의미로 뭐 좀 해주는 게 어때?"
 			<br><br>
@@ -1842,8 +1843,8 @@
 	<<link [[쫓아간다|Farm Horses Chase]]>><<tiredness 2>><</link>><<athleticsdifficulty 1 1000>><<gtiredness>>
 	<br>
 	<!-- Modified for Monster People -->
-	<<if hasSexStat("deviancy", 2) and $settings.horsesEnabled and ($settings.bestialityEnabled or $farm_work.horse.monster is true)>>
-		<<link [[유혹한다|Farm Horses Seduce]]>><</link>><<deviant2>>
+	<<if hasSexStat("deviancy", 2) and beastSexEnabledForType("horse", $farm_work.horse.monster)>>
+		<<link [[Seduce|Farm Horses Seduce]]>><</link>><<deviant2>>
 		<br>
 	<</if>>
 	<<link [[기다린다 (0:20)|Farm Horses Wait]]>><<pass 20>><<farm_count 20>><<farm_horses -1>><</link>><<lrespect>>
@@ -2103,8 +2104,8 @@
 	<<link [[알렉스를 부른다|Farm Horses In Alex]]>><<npcincr Alex dom 1>><<farm_horses -1>><</link>><<lrespect>><<gdom "Alex">>
 	<br>
 	<!-- Modified for Monster People -->
-	<<if hasSexStat("deviancy", 2) and $settings.horsesEnabled and ($settings.bestialityEnabled or $farm_work.horse.monster is true)>>
-		<<link [[유혹한다|Farm Horses In Seduce]]>><</link>><<deviant2>>
+	<<if hasSexStat("deviancy", 2) and beastSexEnabledForType("horse", $farm_work.horse.monster)>>
+		<<link [[Seduce|Farm Horses In Seduce]]>><</link>><<deviant2>>
 	<</if>>
 	<br>
 
@@ -2164,9 +2165,9 @@
 
 당신은 <<farm_text_many cattle>>【을를】 축사로 이끌고, 기계에 묶는다.
 
-<<if $settings.bestialityEnabled or $farm_work.cattle.monster is true>>
+<<if beastSexEnabledForType("cow", $farm_work.cattle.monster)>>
 	<<if $cattle_milked lte 6>>
-		<<if $farm_work.cattle.monster_roll is true and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)>>
+		<<if $farm_work.cattle.monster>>
 			<<if $farm_work.cattle.gender_plural is "m">>
 				<<if $settings.maleNPCVaginaChance gte 100>>
 					알렉스가 간단한 지시를 내렸지만, 그들의 젖꼭지에 흡입 튜브를 부착할 때가 되자 당신은 망설인다.
@@ -2194,7 +2195,7 @@
 			<</if>>
 		<</if>>
 	<<elseif $cattle_milked lte 1200>>
-		<<if $farm_work.cattle.monster_roll is true and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)>>
+		<<if $farm_work.cattle.monster>>
 			<<if $farm_work.cattle.gender_plural is "m">>
 				<<if $settings.maleNPCVaginaChance gte 100>>
 					요령을 터득하고 있는 것 같지만, 그들의 젖꼭지에 흡입 튜브를 부착할 때가 되면 여전히 시선을 피한다.
@@ -2222,7 +2223,7 @@
 			<</if>>
 		<</if>>
 	<<else>>
-		<<if $farm_work.cattle.monster_roll is true and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)>>
+		<<if $farm_work.cattle.monster>>
 			<<if $farm_work.cattle.gender_plural is "m">>
 				<<if $settings.maleNPCVaginaChance gte 100>>
 					당신은 몽상을 하며 그들의 젖꼭지에 흡입 튜브를 부착한다. 숙련된 손이 자동적으로 움직인다.
@@ -2843,8 +2844,9 @@
 	<<link [[거절한다|Farm Rest Refuse]]>><</link>>
 	<br>
 
-<<elseif C.npc.Alex.love gte 60 and $phase isnot 5 and Weather.precipitation isnot "rain" and $rng gte 81 and $exposed lte 0>>
-	"오늘 어디 좀 나가볼래? 다리도 좀 풀 겸 괜찮을 것 같은데."
+<<elseif C.npc.Alex.love gte 60 and $phase isnot 5 and Weather.precipitation isnot "rain" and $rng gte 81 and $exposed lte 0 and !$daily.alexMeadowDate>>
+	<<set $daily.alexMeadowDate to true>>
+	"Want to go out somewhere today? Might be good to stretch our legs."
 	<br><br>
 
 	알렉스가 나무 아래에서 기지개를 켠다. "아니면 그냥 여기 앉아서 평소처럼 좀 쉬어도 되고. 어느 쪽이든 상관없어."
@@ -2991,8 +2993,8 @@
 <br><br>
 
 <!-- Modified for Monster People -->
-<<if dangerEvent() and $farm.beasts.dogs lte -20 and ($settings.bestialityEnabled or $farm_work.dog.monster is true)>>
-	당신은 <<farm_text_many dog>>【이가】 먹도록 두고 들판에서 걸어 나오지만, 발소리가 다가오는 것을 듣는다.
+<<if dangerEvent() and $farm.beasts.dogs lte -20 and beastSexEnabledForType("dog", $farm_work.dog.monster)>>
+	You leave the <<farm_text_many dog>> to feed, but hear footsteps approach as you walk from the field.
 	<<if $farm_work.dog.monster is true>>
 		돌아서기도 전에, 한 쌍의 손이 당신의 어깨에 놓인다. 무게에 짓눌려 당신은 땅으로 넘어진다.
 	<<else>>
@@ -3003,8 +3005,8 @@
 	<<link [[다음|Farm Dogs Rape]]>><<set $molestationstart to 1>><</link>>
 	<br>
 <!-- Modified for Monster People -->
-<<elseif (dangerEvent() or $farm.beasts.dogs lte -5) and ($settings.bestialityEnabled or $farm_work.dog.monster is true)>>
-	당신은 <<farm_text_many dog>>【이가】 먹도록 두고 들판에서 걸어 나오지만, 발소리가 다가오는 것을 듣는다.
+<<elseif (dangerEvent() or $farm.beasts.dogs lte -5) and beastSexEnabledForType("dog", $farm_work.dog.monster)>>
+	You leave the <<farm_text_many dog>> to feed, but hear footsteps approach as you walk from the field.
 	<<if $farm_work.dog.monster is true>>
 		<<farm_text dog>> 한 마리가 <<farm_his dog>> 팔로 당신의 목을 감싸고, <<farm_his dog>> 골반을 당신에게 비벼댄다.
 	<<else>>
@@ -3015,7 +3017,7 @@
 	<br>
 	<<link [[참는다|Farm Dogs Endure]]>><<sub 1>><<farm_dogs -1>><<trauma 6>><<stress 6>><</link>><<lrespect>><<gtrauma>><<gstress>>
 	<br>
-	<<if $settings.bestialityEnabled or $farm_work.dog.monster is true>>
+	<<if beastSexEnabledForType("dog", $farm_work.dog.monster)>>
 		<<if hasSexStat("deviancy", 2)>>
 			<<link [[무릎 꿇는다|Farm Dogs Drop]]>><</link>><<deviant2>>
 			<br>

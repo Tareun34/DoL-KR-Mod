@@ -1029,7 +1029,7 @@
 :: Mansion Return Massage Sophisticated Undies
 <<effects>>
 
-당신은 속옷만 남기고 벗는다. 에이버리는 당신을 감정하듯 지켜본다. <<covered>>
+You strip to your underwear. Avery watches as if appraising you. <<covered>>
 <<exhibitionism2>>
 
 "속옷은 입고 있겠다고? 좋아. 저 병 좀 건네줘." <<He>>【은는】 넉넉한 양을 짜서 당신의 몸에 거품을 낸다. <<He>>【은는】 이번에는 당신의 몸에 직접 더 짜낸다. <<He>>【은는】 병을 비울 때까지 짜고, 버린 다음, <<his>> 손으로 당신의 온몸을 문지른다.
@@ -2199,7 +2199,7 @@
 
 :: Mansion Return Walk Dog
 <<set $averySeen.pushUnique("puppyPlayReturn")>>
-<<effects>>
+<<effects>><<seenPassage>>
 
 <<if $worn.neck.name is "familiar collar" and $worn.neck.cursed is 1>>
 	에이버리가 당신의 사역마 목걸이를 잡아당겨 벗기고 다른 것으로 바꾸려 하지만, 아무리 세게 <<he>>【이가】 잡아당겨도 꼼짝도 하지 않는다.
@@ -2363,8 +2363,8 @@
 		"이렇게 좋은 날에 만나니 반갑군." <<He>>【은는】 <<his>> 손을 내민다."
 	<</if>>
 	<br><br>
-	<<if $monster is 1 or $settings.bestialityEnabled>>
-		에이버리와 그 <<person>>【은는】 잠시 잡담을 나눈다. 그 사이 <<beasttype>>【은는】 당신을 살핀다. <<bHe 0>>【은는】 당신 주위를 세 바퀴 돌더니, <<bhis 0>> 코를 당신의 <<bottom>>에 들이민다.<<gstress>><<stress 6>>
+	<<if beastSexEnabledForType("dog", $monster is 1)>>
+		Avery and the <<person>> make small talk. Meanwhile, the <<beasttype>> examines you. <<bHe 0>> walks around you three times, then sticks <<bhis 0>> nose in your <<bottom>>.<<gstress>><<stress 6>>
 		<br><br>
 		<<link [[견딘다|Mansion Return Walk Dog Endure]]>><<sub 1>><<stress 12>><<npcincr Avery dom 1>><</link>><<gdom>><<ggstress>>
 		<br>
@@ -2470,8 +2470,8 @@
 <br><br>
 <<endevent>>
 <<beastNEWinit 1 "wolf">>
-<<if $monster is 1 or $settings.bestialityEnabled>>
-	당신이 강둑을 따라 기어가고 있을 때, 근처 덤불에서 노란 눈 한 쌍이 떠오른다. <<beasttype>>【이가】 털에서 물을 뚝뚝 흘리며 걸어 나온다. <<bHe>>【은는】 당신을 사냥감처럼 향해 다가온다.
+<<if beastSexEnabledForType("wolf", $monster is 1)>>
+	You're crawling along a riverbank when a pair of yellow eyes emerge from a nearby bush. A <<beasttype>> steps out, fur dripping. <<bHe>> prowls toward you, as if you were prey.
 	<br><br>
 	<<if $syndromewolves is 1>>
 		당신은 <<bhim>>【을를】 알아보지 못한다. <span class="red"><<bHes>> 당신 무리의 일원이 아니다.</span>

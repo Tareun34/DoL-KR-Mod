@@ -923,7 +923,7 @@
 	<<elseif $skin[_args[0]].degree lte 0>>
 		<<if (($enemyarousal + ($enemytrust * 5) - $enemyanger + ($attractiveness / 10) * (currentSkillValue("seductionskill") / 200)) gte 1000)>>
 			<<set $enemyanger += 10>><<set $enemytrust -= 100>><<fameprostitution 1>>
-			<<if !$speechadmired>><<set $speechadmired to 1>>
+			<<if !$speechAdmired>><<set $speechAdmired to 1>>
 				<<switch random(1, 5)>>
 					<<case 1>><<He>>【이가】 말한다. "비싸네. 좋아."
 					<<case 2>><<He>>【이가】 말한다. "돈은 내겠지만, 그만한 가치가 있어야 할 거야."
@@ -936,7 +936,7 @@
 			<<earnFeat "Billboard">><<set $NPCList[_n].paid to 1>>
 		<<elseif (($enemyarousal + ($enemytrust * 5) - $enemyanger + ($attractiveness / 10) * (currentSkillValue("seductionskill") / 200)) gte 500)>>
 			<<set $enemyanger += 10>><<set $enemytrust -= 100>><<fameprostitution 1>>
-			<<if !$speechadmired>><<set $speechadmired to 1>>
+			<<if !$speechAdmired>><<set $speechAdmired to 1>>
 				<<switch random(1, 5)>>
 					<<case 1>><<He>>【이가】 말한다. "내가 뭐라도 쥐여주는 걸 다행으로 여겨."
 					<<case 2>><<He>>【이가】 말한다. "돈으로 자존심을 살 수 있다면 참 좋았을 텐데."
@@ -949,7 +949,7 @@
 			<<earnFeat "Billboard">><<set $NPCList[_n].paid to 1>>
 		<<else>><<set $enemytrust -= 20>>
 			<<fameprostitution 1>>
-			<<if !$speechadmired>><<set $speechadmired to 1>>
+			<<if !$speechAdmired>><<set $speechAdmired to 1>>
 				<<switch random(1, 5)>>
 					<<case 1>><<He>>【이가】 말한다. "돈을 줘? 웃기지도 않네."
 					<<case 2>><<He>>【이가】 말한다. "나랑 떡칠 수 있다는 것만으로도 충분한 지불이야."
@@ -961,7 +961,7 @@
 		<</if>>
 	<<elseif $skin[_args[0]].degree lte ($enemyarousal + ($enemytrust * 5) - $enemyanger + ($attractiveness / 10) * (currentSkillValue("seductionskill") / 200))>>
 		<<set $enemyanger += 10>><<set $enemytrust -= $skin[_args[0]].degree>><<fameprostitution 1>>
-		<<if !$speechadmired>><<set $speechadmired to 1>>
+		<<if !$speechAdmired>><<set $speechAdmired to 1>>
 			<<switch random(1, 5)>>
 				<<case 1>><<He>>【이가】 말한다. "돈은 내겠지만, 그만한 가치가 있어야 할 거야."
 				<<case 2>><<He>>【이가】 말한다. "너희 창녀들은 자만심이 아주 하늘을 찌른단 말이지."
@@ -974,7 +974,7 @@
 		<<earnFeat "Billboard">><<set $NPCList[_n].paid to 1>>
 	<<else>>
 		<<set $enemytrust -= 20>><<fameprostitution 1>>
-		<<if !$speechadmired>><<set $speechadmired to 1>>
+		<<if !$speechAdmired>><<set $speechAdmired to 1>>
 			<<switch random(1, 5)>>
 				<<case 1>><<He>>【이가】 말한다. "씨발 장난하냐."
 				<<case 2>><<He>>【이가】 말한다. "단 한 푼도 못 받아, 이 걸레년아."
@@ -1000,10 +1000,10 @@
 			<<if $NPCList[_n].vagina is 0>>
 				<<set $NPCList[_n].vagina to "mouthotheranus">>
 			<</if>>
-			<<set $NPCList[_n].location.genitals = "head">><<set $speechmouthotheranus to 1>><<set $mouthtarget to _n>>
+			<<set $NPCList[_n].location.genitals = "head">><<set $speechMouthNPCAnus to 1>><<set $mouthtarget to _n>>
 		<<elseif $NPCList[_n].penis is 0>>
-			<<He>>【은는】 화살표의 지시를 따라, <span class="blue"><<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 입 앞에 가져다 댄다.</span>
-			<<neutral 5>><<set $mouthuse to "penis">><<set $NPCList[_n].penis to "mouthentrance">><<set $mouthstate to "entrance">><<set $speechmouthentrance to 1>><<set $mouthtarget to _n>>
+			<<He>> follows the arrow's instruction, <span class="blue">and positions <<his>> $NPCList[_n].penisdesc in front of your mouth.</span>
+			<<neutral 5>><<set $mouthuse to "penis">><<set $NPCList[_n].penis to "mouthentrance">><<set $mouthstate to "entrance">><<set $speechMouthEntrance to 1>><<set $mouthtarget to _n>>
 			<<set $NPCList[_n].location.genitals to "head">>
 		<<elseif $NPCList[_n].vagina is 0>>
 			<<He>>【은는】 화살표의 지시를 따른다.
@@ -1029,10 +1029,10 @@
 				<</if>>
 				</span>
 				<<submission 5>><<set $NPCList[_n].vagina to "facesit">><<set $mouthuse to "facesit">><<set $mouthstate to "vagina">><<set $mouthtarget to _n>>
-				<<set $speechfacesit to 1>><<set $NPCList[_n].location.genitals = "head">>
+				<<set $speechFaceSit to 1>><<set $NPCList[_n].location.genitals = "head">>
 			<<else>>
-				<span class="purple"><<He>>【은는】 다리로 당신의 머리를 감싸고 자기 보지를 당신의 입에 밀착시킨다.</span>
-				<<submission 5>><<set $mouthuse to "othervagina">><<set $NPCList[_n].vagina to "mouth">><<set $mouthstate to "othervagina">><<violence 3>><<bruise face>><<set $speechvaginamouth to 1>><<set $mouthtarget to _n>>
+				<span class="purple"><<He>> wraps <<his>> legs around your head and presses <<his>> pussy against your mouth.</span>
+				<<submission 5>><<set $mouthuse to "othervagina">><<set $NPCList[_n].vagina to "mouth">><<set $mouthstate to "othervagina">><<violence 3>><<bruise face>><<set $speechMouthNPCVagina to 1>><<set $mouthtarget to _n>>
 				<<set $NPCList[_n].location.genitals to "head">>
 			<</if>>
 		<</if>>
@@ -1047,7 +1047,7 @@
 				<<if $NPCList[_n].type is "plant" and $NPCList[_n].penissize gte 4 and canImpregnateParasite("anus")>>
 					<span class="red">뭔가 당신을 두렵게 한다.</span>
 				<</if>>
-				<<neutral 5>><<set $anususe to "penis">><<set $NPCList[_n].penis to "anusentrance">><<set $anusstate to "entrance">><<set $speechanusentrance to 1>>
+				<<neutral 5>><<set $anususe to "penis">><<set $NPCList[_n].penis to "anusentrance">><<set $anusstate to "entrance">><<set $speechAnusEntrance to 1>>
 				<<set $NPCList[_n].location.genitals to "genitals">><<set $anustarget to _n>>
 			<</if>>
 		<</if>>
@@ -1061,11 +1061,11 @@
 				<<elseif $NPCList[_n].penis is 0>>
 					<<He>>【은는】 화살표의 지시에 따라, <span class="blue"><<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 것을 향해 조준한다.</span>
 					<<neutral 5>><<set $NPCList[_n].penis to "penisentrance">><<set $penisuse to "otherpenis">><<set $penisstate to "otherpenisentrance">>
-					<<set $NPCList[_n].location.genitals to "genitals">><<set $penistarget to _n>><<set $speechfencingentrance to 1>>
+					<<set $NPCList[_n].location.genitals to "genitals">><<set $penistarget to _n>><<set $speechFencingEntrance to 1>>
 				<<elseif $NPCList[_n].vagina is 0>>
 					<<He>>【은는】 화살표의 지시에 따라, <span class="blue">당신에게 올라타, 자기 보지를 당신의 <<penis>> 가까이 맴돌게 한다.</span>
 					<<neutral 5>><<set $NPCList[_n].vagina to "penisentrance">><<set $penisuse to "othervagina">><<set $penisstate to "entrance">>
-					<<set $NPCList[_n].location.genitals to "genitals">><<set $penistarget to _n>><<set $speechpenisentrance to 1>>
+					<<set $NPCList[_n].location.genitals to "genitals">><<set $penistarget to _n>><<set $speechNPCVaginaEntrance to 1>>
 				<</if>>
 			<<elseif $vaginause is 0>>
 				<<if random(1, 5) is 1 and $NPCList[_n].mouth is 0>>
@@ -1078,21 +1078,21 @@
 						<span class="red">뭔가 당신을 두렵게 한다.</span>
 					<</if>>
 					<<neutral 5>><<set $NPCList[_n].penis to "vaginaentrance">><<set $vaginause to "penis">><<set $vaginastate to "entrance">>
-					<<set $NPCList[_n].location.genitals to "genitals">><<set $vaginatarget to _n>><<set $speechvaginaentrance to 1>>
+					<<set $NPCList[_n].location.genitals to "genitals">><<set $vaginatarget to _n>><<set $speechVaginaEntrance to 1>>
 				<<elseif $NPCList[_n].vagina is 0>>
 					<<He>>【은는】 화살표의 지시에 따라, <span class="blue">보지를 당신의 것 가까이 댄다.</span>
 					<<neutral 5>><<set $NPCList[_n].vagina to "vaginaentrance">><<set $vaginause to "othervagina">><<set $vaginastate to "othervaginaentrance">>
-					<<set $NPCList[_n].location.genitals to "genitals">><<set $vaginatarget to _n>><<set $speechtribentrance to 1>>
+					<<set $NPCList[_n].location.genitals to "genitals">><<set $vaginatarget to _n>><<set $speechTribEntrance to 1>>
 				<</if>>
 			<</if>>
 		<</if>>
 	<</if>>
-	<<set $speechadmired to 1>>
+	<<set $speechAdmired to 1>>
 <</widget>>
 
 <<widget "bodypart_admire_rape">>
 	<<set $enemytrust -= 20>><<famerape 1>>
-	<<if !$speechadmired>><<set $speechadmired to 1>>
+	<<if !$speechAdmired>><<set $speechAdmired to 1>>
 		<<if $consensual is 1>>
 			<<switch random(1, 9)>>
 				<<case 1>><<He>>【이가】 말한다. "쓰레기 취급당하면서 느끼는 거야?"
@@ -1123,7 +1123,7 @@
 
 <<widget "bodypart_admire_exhibitionism">>
 	<<fameexhibitionism 1>>
-	<<if !$speechadmired>><<set $speechadmired to 1>>
+	<<if !$speechAdmired>><<set $speechAdmired to 1>>
 		<<switch random(1, 10)>>
 			<<case 1>><<He>>【이가】 말한다. "걱정 마. 아주 잘 보고 있으니까."
 			<<case 2>><<He>>【이가】 말한다. "사진이라도 몇 장 찍어둬야겠어."
@@ -1141,7 +1141,7 @@
 
 <<widget "bodypart_admire_bestiality">>
 	<<famebestiality 1>>
-	<<if !$speechadmired>><<set $speechadmired to 1>>
+	<<if !$speechAdmired>><<set $speechAdmired to 1>>
 		<<switch random(1, 10)>>
 			<<case 1>><<He>>【이가】 말한다. "역겨운 녀석."
 			<<case 2>><<He>>【이가】 말한다. "짐승이랑 떡치는 걸 좋아하는군? 놀랍지도 않네."
@@ -1169,7 +1169,7 @@
 
 <<widget "bodypart_admire_promiscuity">>
 	<<famesex 1>>
-	<<if !$speechadmired>><<set $speechadmired to 1>>
+	<<if !$speechAdmired>><<set $speechAdmired to 1>>
 		<<switch random(1, 10)>>
 			<<case 1>><<He>>【이가】 말한다. "넌 참 대단한 걸레야."
 			<<case 2>><<He>>【이가】 말한다. "아무한테나 대주겠지."
@@ -1188,7 +1188,7 @@
 <<widget "bodypart_admire_pregnancy">>
 	<<if playerBellyVisible()>>
 		<<famepregnancy 1>>
-		<<if !$speechadmired>><<set $speechadmired to 1>>
+		<<if !$speechAdmired>><<set $speechAdmired to 1>>
 			<<if $settings.pregnancySpeechEnabled>>
 				<<switch random(1, 10)>>
 					<<case 1>><<He>>【이가】 말한다. "지금 당장 내가 어떻게 해줄 수 있는 건 아닌 것 같네."
@@ -1205,7 +1205,7 @@
 			<</if>>
 		<</if>>
 	<<else>>
-		<<if !$speechadmired>><<set $speechadmired to 1>>
+		<<if !$speechAdmired>><<set $speechAdmired to 1>>
 			<<if $settings.pregnancySpeechEnabled>>
 				<<switch random(1, 10)>>
 					<<case 1>><<He>>【이가】 말한다. "그렇게 애를 배고 싶었어, 이 걸레야?"
@@ -1226,7 +1226,7 @@
 
 <<widget "bodypart_admire_impreg">>
 	<<fameimpreg 1>>
-	<<if !$speechadmired>><<set $speechadmired to 1>>
+	<<if !$speechAdmired>><<set $speechAdmired to 1>>
 		<<if $settings.pregnancySpeechEnabled>>
 			<<switch random(1, 10)>>
 				<<case 1>><<He>>【이가】 말한다. "그렇게 애가 갖고 싶어, 걸레야?"
@@ -1245,7 +1245,7 @@
 <</widget>>
 
 <<widget "bodypart_admire_girly">>
-	<<if !$speechadmired>><<set $speechadmired to 1>>
+	<<if !$speechAdmired>><<set $speechAdmired to 1>>
 		<<if $player.gender_appearance is "m">>
 			<<switch random(1, 10)>>
 				<<case 1>><<He>>【이가】 말한다. "여자애 취급을 받고 싶다고? 난 상관없어."
@@ -1277,7 +1277,7 @@
 <</widget>>
 
 <<widget "bodypart_admire_boyish">>
-	<<if !$speechadmired>><<set $speechadmired to 1>>
+	<<if !$speechAdmired>><<set $speechAdmired to 1>>
 		<<if $player.gender_appearance is "m">>
 				<<switch random(1, 10)>>
 				<<case 1>><<He>>【이가】 말한다. "이렇게 잘생긴 남자애를 데리고 놀 수 있어서 너무 기뻐."
@@ -1310,7 +1310,7 @@
 
 <<widget "bodypart_admire_combat">>
 	<<famescrap 1>><<set $enemytrust -= 5>>
-	<<if !$speechadmired>><<set $speechadmired to 1>>
+	<<if !$speechAdmired>><<set $speechAdmired to 1>>
 		<<switch random(1, 10)>>
 			<<case 1>><<He>>【이가】 말한다. "너 주변에서는 조심해야겠네."
 			<<case 2>><<He>>【이가】 말한다. "넌 험하게 다뤄지는 걸 좋아할 거야, 정말로."
@@ -1328,7 +1328,7 @@
 
 <<widget "bodypart_admire_violence">>
 	<<set $enemyanger += 20>>
-	<<if !$speechadmired>><<set $speechadmired to 1>>
+	<<if !$speechAdmired>><<set $speechAdmired to 1>>
 		<<switch random(1, 10)>>
 			<<case 1>><<He>>【이가】 말한다. "거친 걸 좋아하는구나."
 			<<case 2>><<He>>【이가】 말한다. "난 그저 네가 원하는 걸 주는 것뿐이야."
@@ -1345,7 +1345,7 @@
 <</widget>>
 
 <<widget "bodypart_admire_lewd">>
-	<<if !$speechadmired>><<set $speechadmired to 1>>
+	<<if !$speechAdmired>><<set $speechAdmired to 1>>
 		<<if $skin[_args[0]].type is "text">>
 			<<switch random(1, 10)>>
 				<<case 1>>
@@ -1427,7 +1427,7 @@
 
 <<widget "bodypart_admire_criminal">>
 	<<set $enemytrust -= 35>>
-	<<if !$speechadmired>><<set $speechadmired to 1>>
+	<<if !$speechAdmired>><<set $speechAdmired to 1>>
 		<<if $consensual is 1>>
 			<<switch random(1, 9)>>
 				<<case 1>><<He>>【이가】 말한다. "내 돈을 조심해야겠네."
@@ -1461,8 +1461,8 @@
 		<<He>>【은는】 입맛을 다신다.
 	<<else>>
 		<<famesex 2>>
-		<<if !$speechadmired>><<set $speechadmired to 1>>
-			<<He>>【이가】 말한다.
+		<<if !$speechAdmired>><<set $speechAdmired to 1>>
+			<<He>> speaks.
 
 			<<if _args[0] is "anus" and $player.sex is "m" and $player.penissize lte 3 and random(1, 5) is 1>>
 				<<if random(1, 2) is 1>>
@@ -1507,8 +1507,8 @@
 		<<He>>【은는】 입맛을 다신다.
 	<<else>>
 		<<famesex 1>>
-		<<if !$speechadmired>><<set $speechadmired to 1>>
-			<<He>>【이가】 말한다.
+		<<if !$speechAdmired>><<set $speechAdmired to 1>>
+			<<He>> speaks.
 			<<if _args[0] is "vagina">>
 				<<switch random(1, 9)>>
 					<<case 1>>
@@ -1611,7 +1611,7 @@
 
 <<widget "bodypart_admire_parasite_comment">>
 	<<if $NPCList[_n].type is "plant">>
-		<<if !$speechadmired>><<set $speechadmired to 1>>
+		<<if !$speechAdmired>><<set $speechAdmired to 1>>
 			<<if _args[0] is "penis">>
 				<<He>>【이가】 입술을 삐죽인다. "저것 때문에 네가 싸는 게<<if $orgasmcurrent gte 1>> 또<</if>> 막히진 않았으면 좋겠는데."
 			<<else>>
@@ -1620,8 +1620,8 @@
 		<</if>>
 	<<else>>
 		<<famebestiality 1>>
-		<<if !$speechadmired>><<set $speechadmired to 1>>
-			<<He>>【이가】 말한다.
+		<<if !$speechAdmired>><<set $speechAdmired to 1>>
+			<<He>> speaks.
 			<<switch random(1, 8)>>
 				<<case 1>>"분명 기분 좋겠지."
 				<<case 2>>"그게 계속 널 발정 나게 만들고 있는 게 분명해. 그래서 아직 떼어내지 않은 거겠지."
@@ -2077,8 +2077,8 @@
 							<<He>>【은는】 비웃는다.
 							<<set _text_output to "좋은 생각이군. 패키지 상품이라면 두 배로 돈을 낼 테니까.">>
 						<<default>>
-							<<if $speechadmired>>
-								<<He>>【은는】 노려본다.
+							<<if $speechAdmired>>
+								<<He>> glares.
 							<<else>>
 								<<He>>【은는】 미소 짓는다.
 							<</if>>
@@ -2156,8 +2156,8 @@
 			<<switch $skin[_args[0]].special>>
 				<<case "Alex">>
 					<<if random(1)>>
-						<<if $speechadmired>>
-							<<He>>【이가】 의기양양한 미소를 짓는다.
+						<<if $speechAdmired>>
+							<<He>> flashes a smug grin.
 						<<else>>
 							<<He>>【은는】 미소 짓는다.
 						<</if>>
@@ -2243,13 +2243,13 @@
 			<<bodypart_admire_generic _args[0]>>
 	<</switch>>
 
-	<<if !$speechadmired and !_admireNothing>><<set $speechadmired to 1>>
+	<<if !$speechAdmired and !_admireNothing>><<set $speechAdmired to 1>>
 		"<<print _text_output>>"
 	<</if>>
 <</widget>>
 
 <<widget "bodypart_admire_plant">>
-	<<if !$speechadmired>><<set $speechadmired to 1>>
+	<<if !$speechAdmired>><<set $speechAdmired to 1>>
 		<<if $skin[_args[0]].type is "object">>
 			<<switch $skin[_args[0]].writing>>
 				<<case "unicorn">>
@@ -2473,11 +2473,13 @@
 		<<else>>
 			<<switch $npc[_n]>>
 				<<case "Avery">>
+					/* Disabled until the source of body fluids is tracked - Avery may be the one who came on the PC.
 					<<if C.npc.Avery.rage gte 20>>
 						<<He>>【은는】 얼굴을 찌푸린다. "내 몰래 딴 놈이랑 붙어먹은 거야?" <<he>>【이가】 다그친다. <<garage>><<npcincr Avery rage 1>>
 					<<else>>
 						<<He>>【은는】 인상을 쓴다. "내 몰래 딴짓하고 다닌 거야, <<girl>>?" <<he>>【이가】 다그친다. <<garage>><<npcincr Avery rage 1>>
 					<</if>>
+					*/
 			<</switch>>
         <</if>>
     <<elseif setup.bodyliquid.combined(_args[0]) gte 2>>
@@ -2509,7 +2511,7 @@
 <</widget>>
 
 <<widget "bodypart_admire_chance">>
-	<<if $enemytype isnot "beast" and ($NPCList[_n].mouth is 0 or $NPCList[_n].mouth is "speech_only" or ($NPCList[_n].type is "plant" and $speechkissvirgin is 1)) and $speechdisable isnot 1>>
+	<<if $enemytype isnot "beast" and ($NPCList[_n].mouth is 0 or $NPCList[_n].mouth is "speech_only" or ($NPCList[_n].type is "plant" and $speechKissVirgin is 1)) and $speechDisable isnot 1>>
 		<<switch random(1, 5)>>
 			<<case 5>>
 				<<bodypart_admire _args[0] bodywriting>>

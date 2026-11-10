@@ -1,0 +1,29 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $brothelVending and $brothelVending.status is \"set\" and $brothelVending.products % 2 and $brothelVending.condomsToRefill gte 10 and $settings.condomLevel gte 1>>",
+   "\t\t<<condomicon>><<link [[Buy condoms for the brothel (0:10)|Pharmacy Buy Condoms in Bulk]]>><<unset $phase2>><<pass 10>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if $brothelVending and $brothelVending.status is \"set\" and $brothelVending.products % 2 and $brothelVending.condomsToRefill gte 10 and $settings.condomLevel gte 1>>",
+   "\t\t<<condomicon>><<link [[창관용 콘돔 구매 (0:10)|Pharmacy Buy Condoms in Bulk]]>><<unset $phase2>><<pass 10>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if $brothelVending?.status is \"set\" and $brothelVending.products % 2 and $brothelVending.condomsToRefill gte 10 and $settings.condomLevel gte 1>>",
+   "\t\t<<condomicon>><<link [[Buy condoms for the brothel (0:10)|Pharmacy Buy Condoms in Bulk]]>><<unset $phase2>><<pass 10>><</link>>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $brothelVending and $brothelVending.status is \"set\" and $settings.condomLevel gte 1 and !($brothelVending.products % 2)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $brothelVending?.status is \"set\" and $settings.condomLevel gte 1 and !($brothelVending.products % 2)>>"
+  ],
+  "context": "\t<br>"
+ }
+]

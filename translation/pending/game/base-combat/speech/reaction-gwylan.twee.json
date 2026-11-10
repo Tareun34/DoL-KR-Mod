@@ -1,0 +1,59 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<</widget>>"
+  ],
+  "old_kr": [
+   "<</widget>>"
+  ],
+  "new_en": [
+   "<</widget>>",
+   "",
+   "/* PC lines (plead / demand / moan). */",
+   "",
+   "<<widget \"pc-line-gwylan-plead\">>",
+   "\t<<if $abomination is 1>>",
+   "\t\t<<addSpeechLine \"plead\">>",
+   "\t\t\t\"Gwylan, come back! I'm scared!\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<<elseif $hypnosis_traits.devotion gte 1 or $combat_hypnosis>>",
+   "\t\t<<addSpeechLine \"plead\">>",
+   "\t\t\t\"Gwylan, please, I can't think straight!\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<<else>>",
+   "\t\t<<addSpeechLine \"plead\">>",
+   "\t\t\t\"Gwylan, please, this doesn't feel right!\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "<</widget>>",
+   "",
+   "<<widget \"pc-line-gwylan-demand\">>",
+   "\t<<if $abomination is 1>>",
+   "\t\t<<addSpeechLine \"demand\">>",
+   "\t\t\t\"Gwylan, I know you're in there! Take control!\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<<elseif $hypnosis_traits.devotion gte 4 or $combat_hypnosis>>",
+   "\t\t<<addSpeechLine \"demand\">>",
+   "\t\t\t\"Gwylan, stop! Get out of my head!\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<<elseif $gwylanSeen.includes(\"romance\")>>",
+   "\t\t<<addSpeechLine \"demand\">>",
+   "\t\t\t\"Gwylan, stop this! You promised!\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<<else>>",
+   "\t\t<<addSpeechLine \"demand\">>",
+   "\t\t\t\"Gwylan, stop this!\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "<</widget>>",
+   "",
+   "<<widget \"pc-line-gwylan-moan\">>",
+   "\t<<addSpeechLine \"moan\">>",
+   "\t\t\"I think I'm bewitched.\"",
+   "\t<</addSpeechLine>>",
+   "<</widget>>"
+  ],
+  "context": "\t<</if>>"
+ }
+]

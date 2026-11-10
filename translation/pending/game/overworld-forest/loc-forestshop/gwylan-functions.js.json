@@ -1,0 +1,74 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tconst availableShops = [\"clothing\"];"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tconst availableShops = [\"clothing\", \"baitShop\"];"
+  ],
+  "context": "\t// Normal"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tif (V.tending < 800 || !(V.settings.bestialityEnabled && V.settings.beesEnabled)) {"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tif (V.tending < 800 || !V.settings.beesEnabled) {"
+  ],
+  "context": "\t// Remove honeycomb unless bees are enabled."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tif (!V.settings.bestialityEnabled && V.settings.monsterHallucinationsOnly) complexity += 3;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tconst enabledBeastCount = [\"wolf\", \"fox\", \"cat\", \"lizard\", \"dog\", \"dolphin\", \"boar\", \"bear\"].filter(type => beastSexEnabledForType(type)).length;",
+   "\tif (enabledBeastCount === 0) complexity += 3;"
+  ],
+  "context": "\tif (V.gwylan.requestCount >= 30) complexity += 1;"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\tif (V.settings.bestialityEnabled && complexity > 3) {",
+   "\t\t\tavailableSpecies.push([\"wolf\", 2], [\"fox\", 2], [\"cat\", 1], [\"lizard\", 1], [\"dog\", 1]);",
+   "\t\t\tif (complexity > 4) availableSpecies.push([\"dolphin\", 1]);",
+   "\t\t\tif (complexity > 5) availableSpecies.push([\"boar\", 1]);",
+   "\t\t\tif (complexity > 6) availableSpecies.push([\"bear\", 1]);"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\tif (complexity > 3) {",
+   "\t\t\tif (beastSexEnabledForType(\"wolf\")) availableSpecies.push([\"wolf\", 2]);",
+   "\t\t\tif (beastSexEnabledForType(\"fox\")) availableSpecies.push([\"fox\", 2]);",
+   "\t\t\tif (beastSexEnabledForType(\"cat\")) availableSpecies.push([\"cat\", 1]);",
+   "\t\t\tif (beastSexEnabledForType(\"lizard\")) availableSpecies.push([\"lizard\", 1]);",
+   "\t\t\tif (beastSexEnabledForType(\"dog\")) availableSpecies.push([\"dog\", 1]);",
+   "\t\t\tif (complexity > 4 && beastSexEnabledForType(\"dolphin\")) availableSpecies.push([\"dolphin\", 1]);",
+   "\t\t\tif (complexity > 5 && beastSexEnabledForType(\"boar\")) availableSpecies.push([\"boar\", 1]);",
+   "\t\t\tif (complexity > 6 && beastSexEnabledForType(\"bear\")) availableSpecies.push([\"bear\", 1]);"
+  ],
+  "context": "\t\tconst availableSpecies = [[\"human\", 2]];"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\tif (ritual === \"beast\") return !Time.isBloodMoon() && Time.hour > 8 && (V.settings.bestialityEnabled || V.settings.monsterChance >= 100);"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\tif (ritual === \"beast\") {",
+   "\t\tconst wolfOrFoxAvailable = [\"wolf\", \"fox\"].some(type => beastSexEnabledForType(type));",
+   "\t\tconst dryadsAvailable = V.settings.plantsEnabled && V.settings.tentaclesEnabled;",
+   "\t\treturn !Time.isBloodMoon() && Time.hour > 8 && (wolfOrFoxAvailable || dryadsAvailable);",
+   "\t}"
+  ],
+  "context": "function gwylanCanForceRitual(ritual = \"any\") {"
+ }
+]

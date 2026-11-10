@@ -1,0 +1,114 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<br><br>",
+   "\tYou slept soundly, but now feel a little rough."
+  ],
+  "old_kr": [
+   "\t<br><br>",
+   "\t푹 잤지만, 지금은 몸이 좀 찌뿌둥하다."
+  ],
+  "new_en": [
+   "\t<br>",
+   "\tYou slept soundly, but now feel a little rough."
+  ],
+  "context": "<<if [\"dryheaving\",\"nausea\"].includes(_wakingEffect)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Next (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Asylum 3]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[다음 (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Asylum 3]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Next (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Asylum 3]]>><<endevent>><<run setPlayerLitterBorn()>><<pass _timeCalc>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Next (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Asylum Wolf]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[다음 (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Asylum 3]]>><<endevent>><<run beginPlayerBirth()>><<pass _timeCalc>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Next (<<print getTimeString(_timeCalc)>>)| Pregnancy Birth Asylum Wolf]]>><<endevent>><<run setPlayerLitterBorn()>><<pass _timeCalc>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Next|Pregnancy Birth Asylum 5]]>><<storeon \"asylum_birth\">><<pass 24 hour>><<stress -40>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[다음|Pregnancy Birth Asylum 5]]>><<storeon \"asylum_birth\">><<pass 24 hour>><<stress -40>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Next|Pregnancy Birth Asylum 5]]>><<storeon \"asylum_birth\">><<pass 24 hour>><<stress -40>><<set $tiredness to 0>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Next|Pregnancy Birth Asylum Wolf 3]]>><<storeon \"asylum_birth\">><<pass 24 hour>><<stress -40>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[다음|Pregnancy Birth Asylum Wolf 3]]>><<storeon \"asylum_birth\">><<pass 24 hour>><<stress -40>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Next|Pregnancy Birth Asylum Wolf 3]]>><<storeon \"asylum_birth\">><<pass 24 hour>><<stress -40>><<set $tiredness to 0>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<br>"
+  ],
+  "context": "\t<<link [[다음|Asylum Cell]]>><</link>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<br>"
+  ],
+  "context": "\t\t옷이 들어있는 푹신한 벽장이 벽에서 튀어나와 있지만, 팔이 묶여 있어 닿을 수 없다."
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ""
+  ],
+  "context": "<br>"
+ }
+]

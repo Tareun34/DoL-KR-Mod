@@ -1,0 +1,154 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou start by stripping your <<if _overLower>>and <<print _overLower>><</if>>, and begin your walk."
+  ],
+  "old_kr": [
+   "\t당신은 겉옷<<if _overLower>>【와과】 <<print _overLower>><</if>>【을를】 벗으며 걷기 시작한다."
+  ],
+  "new_en": [
+   "\tYou start by stripping your $worn.over_upper.name<<if _overLower>> and <<print _overLower>><</if>>, and begin your walk."
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $worn.upper.name isnot \"naked\" and $worn.upper.outfitPrimary and $worn.upper.outfitPrimary.lower isnot $worn.lower.name>>",
+   "\t<<link [[Next|Shopping Centre Slime Exhibitionism Obey Outfit]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<if $worn.upper.name isnot \"naked\" and $worn.upper.outfitPrimary and $worn.upper.outfitPrimary.lower isnot $worn.lower.name>>",
+   "\t<<link [[다음|Shopping Centre Slime Exhibitionism Obey Outfit]]>><</link>>"
+  ],
+  "new_en": [
+   "<<if $worn.upper.name isnot \"naked\" and _middleOutfit>>",
+   "\t<<link [[Next|Shopping Centre Slime Exhibitionism Obey Outfit]]>><</link>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You notice a small alley coming up, as you walk down the corridor. Hastily, you pull your $worn.upper.name above your head, tossing it into the alley.",
+   "<<if $worn.under_upper.name isnot \"naked\" and $worn.under_upper.outfitPrimary and $worn.under_upper.outfitPrimary.under_lower isnot $worn.under_lower.name>>",
+   "\tNot wasting any time, you remove your $worn.under_upper.name in a quick motion, tossing it into a nearby garbage bin."
+  ],
+  "old_kr": [
+   "복도를 걸어가던 중 작은 골목이 나타나는 것을 발견한다. 서둘러 $worn.upper.name【을를】 머리 위로 당겨 벗고는 골목 안으로 던져버린다.",
+   "<<if $worn.under_upper.name isnot \"naked\" and $worn.under_upper.outfitPrimary and $worn.under_upper.outfitPrimary.under_lower isnot $worn.under_lower.name>>",
+   "\t시간을 지체하지 않고 빠른 동작으로 $worn.under_upper.name【을를】 벗어 근처 쓰레기통에 던져버린다."
+  ],
+  "new_en": [
+   "You notice a small alley coming up, as you walk down the corridor. Hastily, you pull your $worn.upper.name above your head, tossing it into the alley.",
+   "<<outfitChecks>>",
+   "<<if $worn.under_upper.name isnot \"naked\" and !_underOutfit>>",
+   "\tNot wasting any time, you remove your $worn.under_upper.name in a quick motion, tossing it into a nearby garbage bin."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Next|Shopping Centre Slime Exhibitionism Obey Lower]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[다음|Shopping Centre Slime Exhibitionism Obey Lower]]>><</link>>"
+  ],
+  "new_en": [
+   "<<if $worn.lower.name isnot \"naked\">>",
+   "\t<<link [[Next|Shopping Centre Slime Exhibitionism Obey Lower]]>><</link>>",
+   "<<elseif $worn.under_upper.name isnot \"naked\">>",
+   "\t<<link [[Next|Shopping Centre Slime Exhibitionism Obey Under Outfit]]>><</link>>",
+   "<<else>>",
+   "\t<<link [[Next|Shopping Centre Slime Exhibitionism Obey Ending]]>><</link>>",
+   "<</if>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $worn.under_upper.outfitPrimary and $worn.under_upper.outfitPrimary.under_lower isnot $worn.under_lower.name>>",
+   "\t\tYour <<underoutfit>> now exposed, you begin to draw attention."
+  ],
+  "old_kr": [
+   "\t<<if $worn.under_upper.outfitPrimary and $worn.under_upper.outfitPrimary.under_lower isnot $worn.under_lower.name>>",
+   "\t\t당신의 <<underoutfit>>【이가】 드러나자 사람들의 이목을 끌기 시작한다."
+  ],
+  "new_en": [
+   "\t<<if _underOutfit>>",
+   "\t\tYour <<underoutfit>> now exposed, you begin to draw attention."
+  ],
+  "context": "<<if $worn.under_lower.name isnot \"naked\" and $worn.under_upper.name isnot \"naked\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $worn.under_upper.name isnot \"naked\" and $worn.under_upper.outfitPrimary and $worn.under_upper.outfitPrimary.under_lower isnot $worn.under_lower.name>>",
+   "\t<<link [[Next|Shopping Centre Slime Exhibitionism Obey Under Outfit]]>><</link>>"
+  ],
+  "old_kr": [
+   "<<if $worn.under_upper.name isnot \"naked\" and $worn.under_upper.outfitPrimary and $worn.under_upper.outfitPrimary.under_lower isnot $worn.under_lower.name>>",
+   "\t<<link [[다음|Shopping Centre Slime Exhibitionism Obey Under Outfit]]>><</link>>"
+  ],
+  "new_en": [
+   "<<if $worn.under_upper.name isnot \"naked\" and _underOutfit>>",
+   "\t<<link [[Next|Shopping Centre Slime Exhibitionism Obey Under Outfit]]>><</link>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<outfitChecks>>"
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $worn.over_lower.name isnot \"naked\" and $worn.over_upper.outfitPrimary and $worn.over_upper.outfitPrimary.over_lower isnot $worn.over_lower.name>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $worn.over_lower.name isnot \"naked\" and !_overOutfit>>"
+  ],
+  "context": "<<if $worn.over_upper.name isnot \"naked\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<if $worn.under_upper.name isnot \"naked\" and $worn.under_upper.outfitPrimary and $worn.under_upper.outfitPrimary.under_lower isnot $worn.under_lower.name>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<outfitChecks>>",
+   "<<if $worn.under_upper.name isnot \"naked\" and $worn.under_lower.name isnot \"naked\" and !_underOutfit>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<underruined>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<underlowerruined>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<outfitChecks>>"
+  ],
+  "context": ""
+ }
+]

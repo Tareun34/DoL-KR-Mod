@@ -1,0 +1,18 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $pubfame and $pubfame.task is \"remy\">>",
+   "\t\t<<set _text_output to \"in the \">>"
+  ],
+  "old_kr": [
+   "\t<<if $pubfame and $pubfame.task is \"remy\">>",
+   "\t\t<<set _text_output to \"\">>"
+  ],
+  "new_en": [
+   "\t<<if $pubfame?.task is \"remy\">>",
+   "\t\t<<set _text_output to \"in the \">>"
+  ],
+  "context": ""
+ }
+]

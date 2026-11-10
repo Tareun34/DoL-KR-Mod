@@ -1,0 +1,4318 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<He>> gives your clitoris a tweak.",
+   "\t\t<<set $speechclit to 1>><<neutral 10 \"genitals\" _n>>"
+  ],
+  "old_kr": [
+   "\t\t<<He>>【이가】 당신의 클리토리스를 꼬집는다.",
+   "\t\t<<set $speechclit to 1>><<neutral 10 \"genitals\" _n>>"
+  ],
+  "new_en": [
+   "\t\t<<He>> gives your clitoris a tweak.",
+   "\t\t<<set $speechClit to 1>><<neutral 10 \"genitals\" _n>>"
+  ],
+  "context": "\t<<elseif ($rng gte 21 or $novaginal is 1) and (!$player.penisExist or random(1,100) gte 51)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<He>> rubs the base of your <<penisSimple>> while toying with your pussy.",
+   "\t\t<<neutral 10 \"genitals\" _n>><<set $speechfutapenis to 1>>"
+  ],
+  "old_kr": [
+   "\t\t<<He>>【이가】 당신의 보지를 희롱하며 당신의 <<penisSimple>> 밑동을 문지른다.",
+   "\t\t<<neutral 10 \"genitals\" _n>><<set $speechfutapenis to 1>>"
+  ],
+  "new_en": [
+   "\t\t<<He>> rubs the base of your <<penisSimple>> while toying with your pussy.",
+   "\t\t<<neutral 10 \"genitals\" _n>><<set $speechFutaPenis to 1>>"
+  ],
+  "context": "\t<<elseif $rng gte 21 or $novaginal is 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<He>> rubs your glans.",
+   "\t\t<<neutral 10 \"genitals\" _n>><<set $speechglans to 1>>"
+  ],
+  "old_kr": [
+   "\t\t<<He>>【이가】 당신의 귀두를 문지른다.",
+   "\t\t<<neutral 10 \"genitals\" _n>><<set $speechglans to 1>>"
+  ],
+  "new_en": [
+   "\t\t<<He>> rubs your glans.",
+   "\t\t<<neutral 10 \"genitals\" _n>><<set $speechGlans to 1>>"
+  ],
+  "context": "\t<<elseif $rng gte 21>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<He>> <<strokes>> the inside of your <<pussy>>,",
+   "\t\t<<neutral 20 \"genitals\" _n>><<set $speechvagina to 1>>"
+  ],
+  "old_kr": [
+   "\t\t<<He>>【이가】 당신의 <<pussy>> 안쪽을 <<strokes>>",
+   "\t\t<<neutral 20 \"genitals\" _n>><<set $speechvagina to 1>>"
+  ],
+  "new_en": [
+   "\t\t<<He>> <<strokes>> the inside of your <<pussy>>,",
+   "\t\t<<neutral 20 \"genitals\" _n>><<set $speechVagina to 1>>"
+  ],
+  "context": "\t<<elseif $rng lte 100>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<He>> massages the length of your <<penis>>,",
+   "\t\t<<neutral 20 \"genitals\" _n>><<set $speechpenis to 1>>"
+  ],
+  "old_kr": [
+   "\t\t<<He>>【이가】 당신의 <<penis>> 전체를 마사지하듯 주무르며,",
+   "\t\t<<neutral 20 \"genitals\" _n>><<set $speechpenis to 1>>"
+  ],
+  "new_en": [
+   "\t\t<<He>> massages the length of your <<penis>>,",
+   "\t\t<<neutral 20 \"genitals\" _n>><<set $speechPenis to 1>>"
+  ],
+  "context": "\t<<elseif $rng lte 100>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<He>> rhythmically slides <<his>> finger in and out of your ass,",
+   "\t\t<<neutral 20 _n>><<set $speechanus to 1>>"
+  ],
+  "old_kr": [
+   "\t\t<<He>>【이가】 리드미컬하게 손가락을 당신의 항문에 넣었다 뺐다 하며,",
+   "\t\t<<neutral 20 _n>><<set $speechanus to 1>>"
+  ],
+  "new_en": [
+   "\t\t<<He>> rhythmically slides <<his>> finger in and out of your ass,",
+   "\t\t<<neutral 20 _n>><<set $speechAnus to 1>>"
+  ],
+  "context": "\t<<elseif $rng lte 100>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<He>> <<print either(\"rubs\",\"slaps\")>> your clit with the $_toy in <<his>> _args[0] hand<<if $_clothing isnot undefined>>, through your <<print $_clothing>><</if>>.",
+   "\t\t<<set $speechclit to 1>><<neutral 10 \"genitals\" _n>>"
+  ],
+  "old_kr": [
+   "\t\t<<He>>【이가】 <<print _args[0] is \"left\" ? \"왼손\" : \"오른손\">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 클리토리스를 <<print either(\"문지른다\",\"가볍게 때린다\")>><<if $_clothing isnot undefined>>, 당신의 <<print $_clothing>>【을를】 너머로<</if>>.",
+   "\t\t<<set $speechclit to 1>><<neutral 10 \"genitals\" _n>>"
+  ],
+  "new_en": [
+   "\t\t<<He>> <<print either(\"rubs\",\"slaps\")>> your clit with the $_toy in <<his>> _args[0] hand<<if $_clothing isnot undefined>>, through your <<print $_clothing>><</if>>.",
+   "\t\t<<set $speechClit to 1>><<neutral 10 \"genitals\" _n>>"
+  ],
+  "context": "\t<<elseif ($_rng gte 21 or $novaginal is 0) and (!$player.penisExist or random(1,100) gte 51)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<He>> rubs the base of your <<penisSimple>> with <<his>> $_toy while toying with your pussy<<if $_clothing isnot undefined>>, through your <<print $_clothing>><</if>>.",
+   "\t\t<<neutral 10 \"genitals\" _n>><<set $speechfutapenis to 1>>"
+  ],
+  "old_kr": [
+   "\t\t<<He>>【이가】 당신의 보지를 희롱하는 동시에 <<his>> <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 <<penisSimple>> 밑동을 문지른다<<if $_clothing isnot undefined>>, 당신의 <<print $_clothing>>【을를】 통해<</if>>.",
+   "\t\t<<neutral 10 \"genitals\" _n>><<set $speechfutapenis to 1>>"
+  ],
+  "new_en": [
+   "\t\t<<He>> rubs the base of your <<penisSimple>> with <<his>> $_toy while toying with your pussy<<if $_clothing isnot undefined>>, through your <<print $_clothing>><</if>>.",
+   "\t\t<<neutral 10 \"genitals\" _n>><<set $speechFutaPenis to 1>>"
+  ],
+  "context": "\t<<elseif $_rng gte 21 or $novaginal is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<span class=\"pink\"><<He>> plunges <<his>> _args[0]-hand $_toy into your warm <<pussy>>.</span>",
+   "\t\t<<neutral 15 \"genitals\" _n>><<set $speechvagina to 1>><<combat-set-hand-target _args[0] \"vaginadildo\">>"
+  ],
+  "old_kr": [
+   "\t\t<span class=\"pink\"><<He>>【이가】 <<print _args[0] is \"left\" ? \"왼손\" : \"오른손\">>에 든 <<print window.KR.getToolKr($_toy)>>【을를】 당신의 따뜻한 <<pussy>>에 깊숙이 쑤셔 넣는다.</span>",
+   "\t\t<<neutral 15 \"genitals\" _n>><<set $speechvagina to 1>><<combat-set-hand-target _args[0] \"vaginadildo\">>"
+  ],
+  "new_en": [
+   "\t\t<span class=\"pink\"><<He>> plunges <<his>> _args[0]-hand $_toy into your warm <<pussy>>.</span>",
+   "\t\t<<neutral 15 \"genitals\" _n>><<set $speechVagina to 1>><<combat-set-hand-target _args[0] \"vaginadildo\">>"
+  ],
+  "context": "\t\t/* Doesn't check if the PC is already penetrated (aside from mouth) in order to allow for multiple penetrations. */"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<He>> <<print either(\"slaps\",\"smacks\",\"teases\",\"rubs\")>> your glans with the $_toy in <<his>> _args[0] hand<<if $_clothing isnot undefined>>, through your <<print $_clothing>><</if>>.",
+   "\t\t<<neutral 10 \"genitals\" _n>><<set $speechglans to 1>>"
+  ],
+  "old_kr": [
+   "\t\t<<He>>【이가】 <<print _args[0] is \"left\" ? \"왼손\" : \"오른손\">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 귀두를 <<print either(\"가볍게 친다\",\"찰싹 때린다\",\"희롱한다\",\"문지른다\")>><<if $_clothing isnot undefined>>, 당신의 <<print $_clothing>>【을를】 너머로<</if>>.",
+   "\t\t<<neutral 10 \"genitals\" _n>><<set $speechglans to 1>>"
+  ],
+  "new_en": [
+   "\t\t<<He>> <<print either(\"slaps\",\"smacks\",\"teases\",\"rubs\")>> your glans with the $_toy in <<his>> _args[0] hand<<if $_clothing isnot undefined>>, through your <<print $_clothing>><</if>>.",
+   "\t\t<<neutral 10 \"genitals\" _n>><<set $speechGlans to 1>>"
+  ],
+  "context": "\t<<elseif $rng gte 21>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<He>> <<print either(\"massages\",\"rubs\",\"fences\",\"frots\")>> the length of your <<penis>> with the $_toy in <<his>> _args[0] hand,",
+   "\t\t\t<<neutral 20 \"genitals\" _n>><<set $speechpenis to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<He>>【이가】 <<his>> <<print _args[0] is \"left\" ? \"왼손\" : \"오른손\">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 <<penis>> 전체를 <<print either(\"마사지한다\",\"문지른다\",\"펜싱하듯 부딪친다\",\"비빈다\")>>,",
+   "\t\t\t<<neutral 20 \"genitals\" _n>><<set $speechpenis to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t<<He>> <<print either(\"massages\",\"rubs\",\"fences\",\"frots\")>> the length of your <<penis>> with the $_toy in <<his>> _args[0] hand,",
+   "\t\t\t<<neutral 20 \"genitals\" _n>><<set $speechPenis to 1>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<He>> teases your glans with the $_toy in <<his>> _args[0] hand<<if $_clothing isnot \"none\">>, through your $_clothing<</if>>.",
+   "\t\t<<neutral 10 \"genitals\" _n>><<set $speechglans to 1>>"
+  ],
+  "old_kr": [
+   "\t\t<<he>>【이가】 <<his>> <<print _args[0] is \"left\" ? \"왼손\" : \"오른손\">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 <<if $_clothing isnot \"none\">>당신의 $_clothing【을를】 너머로, <</if>>당신의 귀두를 애태운다.",
+   "\t\t<<neutral 10 \"genitals\" _n>><<set $speechglans to 1>>"
+  ],
+  "new_en": [
+   "\t\t<<He>> teases your glans with the $_toy in <<his>> _args[0] hand<<if $_clothing isnot \"none\">>, through your $_clothing<</if>>.",
+   "\t\t<<neutral 10 \"genitals\" _n>><<set $speechGlans to 1>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tWith your hair in <<his>> grip, <<he>> yanks back your head.",
+   "\t\t<<violence 4 1 1 1 _n>><<set $speechhair to 1>>"
+  ],
+  "old_kr": [
+   "\t\t당신의 머리카락을 꽉 쥔 채, <<he>>【이가】 당신의 머리를 확 잡아당긴다.",
+   "\t\t<<violence 4 1 1 1 _n>><<set $speechhair to 1>>"
+  ],
+  "new_en": [
+   "\t\tWith your hair in <<his>> grip, <<he>> yanks back your head.",
+   "\t\t<<violence 4 1 1 1 _n>><<set $speechHair to 1>>"
+  ],
+  "context": "\t<<elseif $enemyanger gte 61>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<He>> strokes your hair while holding it bunched in <<his>> grip.",
+   "\t\t<<set $speechhair to 1>><<neutral 1 _n>>"
+  ],
+  "old_kr": [
+   "\t\t<<He>>【이가】 당신의 머리카락을 한 움큼 쥔 채로 쓰다듬는다.",
+   "\t\t<<set $speechhair to 1>><<neutral 1 _n>>"
+  ],
+  "new_en": [
+   "\t\t<<He>> strokes your hair while holding it bunched in <<his>> grip.",
+   "\t\t<<set $speechHair to 1>><<neutral 1 _n>>"
+  ],
+  "context": "\t<<elseif $enemyanger gte 21>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"lewd\">revealing your <<breasts>>.</span>",
+   "\t\t\t\t<<neutral 3 _n>><<set $speechbreasts to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"lewd\">당신의 <<breasts>>【을를】 드러낸다.</span>",
+   "\t\t\t\t<<neutral 3 _n>><<set $speechbreasts to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"lewd\">revealing your <<breasts>>.</span>",
+   "\t\t\t\t<<neutral 3 _n>><<set $speechExposeBreasts to 1>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\trevealing your <span class=\"lewd\"><<genitals>>.</span>",
+   "\t\t\t\t<<neutral 5 _n>><<set $speechgenitals to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"lewd\">당신의 <<genitals>>【을를】 드러낸다.</span>",
+   "\t\t\t\t<<neutral 5 _n>><<set $speechgenitals to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\trevealing your <span class=\"lewd\"><<genitals>>.</span>",
+   "\t\t\t\t<<neutral 5 _n>><<set $speechExposeGenitals to 1>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<span class=\"lewd\">exposing your <<breasts>>.</span>",
+   "\t\t\t\t\t\t<<neutral 3 _n>><<set $speechbreasts to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<span class=\"lewd\">당신의 <<breasts>>【을를】 노출시킨다.</span>",
+   "\t\t\t\t\t\t<<neutral 3 _n>><<set $speechbreasts to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<span class=\"lewd\">exposing your <<breasts>>.</span>",
+   "\t\t\t\t\t\t<<neutral 3 _n>><<set $speechExposeBreasts to 1>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"lewd\">revealing your <<breasts>>.</span>",
+   "\t\t\t\t<<neutral 3 _n>><<set $speechbreasts to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"lewd\">당신의 <<breasts>>【을를】 드러낸다.</span>",
+   "\t\t\t\t<<neutral 3 _n>><<set $speechbreasts to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"lewd\">revealing your <<breasts>>.</span>",
+   "\t\t\t\t<<neutral 3 _n>><<set $speechExposeBreasts to 1>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\trevealing your <span class=\"lewd\"><<genitals>>.</span>",
+   "\t\t\t\t<<neutral 5 _n>><<set $speechgenitals to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"lewd\">당신의 <<genitals>>【을를】 드러낸다.</span>",
+   "\t\t\t\t<<neutral 5 _n>><<set $speechgenitals to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\trevealing your <span class=\"lewd\"><<genitals>>.</span>",
+   "\t\t\t\t<<neutral 5 _n>><<set $speechExposeGenitals to 1>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> lifts up your $_clothing.name with <<his>> $_hand hand, <span class=\"lewd\">exposing your <<breasts>>.</span>",
+   "\t\t\t\t\t<<neutral 2 _n>><<set $speechbreasts to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 <<print ($_hand is \"left\" ? \"왼손\" : \"오른손\")>>으로 당신의 $_clothing.name【을를】 걷어 올려, <span class=\"lewd\">당신의 <<breasts>>【을를】 노출시킨다.</span>",
+   "\t\t\t\t\t<<neutral 2 _n>><<set $speechbreasts to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> lifts up your $_clothing.name with <<his>> $_hand hand, <span class=\"lewd\">exposing your <<breasts>>.</span>",
+   "\t\t\t\t\t<<neutral 2 _n>><<set $speechExposeBreasts to 1>>"
+  ],
+  "context": "\t\t\t\t<<if _toplessExposed>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou manage to keep <<him>> from stripping you of your $worn[$_slot].name.",
+   "\t\t<<set $speechstripstruggle to 1>>"
+  ],
+  "old_kr": [
+   "\t\t당신은 어떻게든 <<him>>【이가】 당신의 $worn[$_slot].name【을를】 벗기지 못하게 막아낸다.",
+   "\t\t<<set $speechstripstruggle to 1>>"
+  ],
+  "new_en": [
+   "\t\tYou manage to keep <<him>> from stripping you of your $worn[$_slot].name.",
+   "\t\t<<set $speechStripStruggle to 1>>"
+  ],
+  "context": "\t\t<<set V[$_strugglevar] to 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<He>> pushes your mouth against <<hisselect _n>> $NPCList[_n].breastdesc, but it's blocked by your $worn.face.name.",
+   "\t\t<<set $speechheadbreasts to 1>>"
+  ],
+  "old_kr": [
+   "\t\t<<He>>【이가】 당신의 입을 <<hisselect _n>> <<= window.KR.getBreastSizeKr($NPCList[_n].breastdesc)>>에 밀어붙이지만, 당신의 $worn.face.name【으로로】 인해 막힌다.",
+   "\t\t<<set $speechheadbreasts to 1>>"
+  ],
+  "new_en": [
+   "\t\t<<He>> pushes your mouth against <<hisselect _n>> $NPCList[_n].breastdesc, but it's blocked by your $worn.face.name.",
+   "\t\t<<set $speechHeadBreasts to 1>>"
+  ],
+  "context": "\t<<if $rng gte 69 and ($worn.face.type.includes(\"face_covering\") or $worn.face.type.includes(\"gag\"))>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<span class=\"pink\">Milk leaks from <<hisselect _n>> bud.</span>",
+   "\t\t\t<<set $speechheadsuckleclosed to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t<span class=\"pink\"><<hisselect _n>> 멍울에서 모유가 새어 나온다.</span>",
+   "\t\t\t<<set $speechheadsuckleclosed to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t<span class=\"pink\">Milk leaks from <<hisselect _n>> bud.</span>",
+   "\t\t\t<<set $speechHeadSuckleClosed to 1>>"
+  ],
+  "context": "\t\t<<elseif $NPCList[_n].lactation is 1 and $settings.breastFeedingEnabled>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<span class=\"pink\">Milk leaks from <<hisselect _n>> bud.</span>",
+   "\t\t\t<<set $speechheadsuckleclosed to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t<span class=\"pink\"><<hisselect _n>> 멍울에서 모유가 새어 나온다.</span>",
+   "\t\t\t<<set $speechheadsuckleclosed to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t<span class=\"pink\">Milk leaks from <<hisselect _n>> bud.</span>",
+   "\t\t\t<<set $speechHeadSuckleClosed to 1>>"
+  ],
+  "context": "\t\t<<elseif $NPCList[_n].lactation is 1 and $settings.breastFeedingEnabled>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> stops after a few more moments of squeezing, looking bewildered.",
+   "\t\t\t\t<<combat-reset-hand _args[0]>><<set $speechchastity to 1>><<bodypart_admire_chance pubic>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t당황한 기색이 역력한 <<He>>【이가】 잠시 더 꽉 쥐더니 멈춘다.",
+   "\t\t\t\t<<combat-reset-hand _args[0]>><<set $speechchastity to 1>><<bodypart_admire_chance pubic>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> stops after a few more moments of squeezing, looking bewildered.",
+   "\t\t\t\t<<combat-reset-hand _args[0]>><<set $speechChastity to 1>><<bodypart_admire_chance pubic>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<span class=\"lblue\"><<He>> gently holds onto your $worn.genitals.name before letting it go.</span>",
+   "\t\t\t<<combat-reset-hand _args[0]>><<set $speechchastity to 1>><<bodypart_admire_chance pubic>>"
+  ],
+  "old_kr": [
+   "\t\t\t<span class=\"lblue\"><<He>>【이가】 놓아주기 전 당신의 $worn.genitals.name【을를】 부드럽게 붙잡는다.</span>",
+   "\t\t\t<<combat-reset-hand _args[0]>><<set $speechchastity to 1>><<bodypart_admire_chance pubic>>"
+  ],
+  "new_en": [
+   "\t\t\t<span class=\"lblue\"><<He>> gently holds onto your $worn.genitals.name before letting it go.</span>",
+   "\t\t\t<<combat-reset-hand _args[0]>><<set $speechChastity to 1>><<bodypart_admire_chance pubic>>"
+  ],
+  "context": "\t\t<<elseif $worn.genitals.origin is $NPCList[_n].fullDescription>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<span class=\"blue\"><<He>> tries to loosen your $worn.genitals.name.</span>",
+   "\t\t\t<<His>> rough handling leaves you feeling more frustrated and aroused. <<He>> gives up after a few moments of impotent tugging, looking disappointed.",
+   "\t\t\t<<set $enemyanger += 5>><<combat-reset-hand _args[0]>><<set $speechchastity to 1>><<bodypart_admire_chance pubic>><<set $worn.genitals.integrity -= 10>>"
+  ],
+  "old_kr": [
+   "\t\t\t<span class=\"blue\"><<He>>【이가】 당신의 $worn.genitals.name【을를】 벗겨내려 시도한다.</span>",
+   "\t\t\t<<His>> 거친 손길은 당신을 더욱 애타고 달아오르게 만든다. 실망한 표정의 <<He>>【이가】 잠시 무력하게 잡아당기더니 포기한다.",
+   "\t\t\t<<set $enemyanger += 5>><<combat-reset-hand _args[0]>><<set $speechchastity to 1>><<bodypart_admire_chance pubic>><<set $worn.genitals.integrity -= 10>>"
+  ],
+  "new_en": [
+   "\t\t\t<span class=\"blue\"><<He>> tries to loosen your $worn.genitals.name.</span>",
+   "\t\t\t<<His>> rough handling leaves you feeling more frustrated and aroused. <<He>> gives up after a few moments of impotent tugging, looking disappointed.",
+   "\t\t\t<<set $enemyanger += 5>><<combat-reset-hand _args[0]>><<set $speechChastity to 1>><<bodypart_admire_chance pubic>><<set $worn.genitals.integrity -= 10>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> <<strokes>> your inner thigh and brushes <<his>> fingers against your $worn.genitals.name<<if $worn.genitals.name is \"chastity parasite\">>, <span class=\"lewd\">leaving you feeling more aroused.</span><<arousal 100 \"genitals\">><<else>>.<</if>>",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechchastity to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 당신의 허벅지 안쪽을 <<strokes>> <<his>> 손가락으로 당신의 $worn.genitals.name【을를】 스친다<<if $worn.genitals.name is \"chastity parasite\">>, <span class=\"lewd\">그 감각에 당신은 더욱 흥분한다.</span><<arousal 100 \"genitals\">><<else>>.<</if>>",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechchastity to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> <<strokes>> your inner thigh and brushes <<his>> fingers against your $worn.genitals.name<<if $worn.genitals.name is \"chastity parasite\">>, <span class=\"lewd\">leaving you feeling more aroused.</span><<arousal 100 \"genitals\">><<else>>.<</if>>",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechChastity to 1>>"
+  ],
+  "context": "\t\t\t<<elseif !(($player.penisExist and !playerChastity(\"penis\")) or ($player.vaginaExist and !playerChastity(\"vagina\")))>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> <<strokes>> your <<testicles>> and teases your glans.",
+   "\t\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechglans to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 당신의 <<testicles>>【을를】 <<strokes>> 귀두를 애태운다.",
+   "\t\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechglans to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> <<strokes>> your <<testicles>> and teases your glans.",
+   "\t\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechGlans to 1>>"
+  ],
+  "context": "\t\t\t\t<<if $player.ballsExist and random(0,1) is 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> strokes the base of your <<penis>> where it meets your <<pussy>>.",
+   "\t\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechfutapenis to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 당신의 <<penis>>【와과】 <<pussy>>【이가】 만나는 밑동을 쓰다듬는다.",
+   "\t\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechfutapenis to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> strokes the base of your <<penis>> where it meets your <<pussy>>.",
+   "\t\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechFutaPenis to 1>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> <<strokes>> your <<testicles>> and teases your glans.",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechglans to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 당신의 <<testicles>>【을를】 <<strokes>> 귀두를 애태운다.",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechglans to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> <<strokes>> your <<testicles>> and teases your glans.",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechGlans to 1>>"
+  ],
+  "context": "\t\t\t<<elseif $player.penisExist and $player.ballsExist and !playerChastity(\"penis\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> <<strokes>> your pubic mound and teases your clit.",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechclit to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 당신의 불두덩을 <<strokes>> 클리토리스를 애태운다.",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechclit to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> <<strokes>> your pubic mound and teases your clit.",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechClit to 1>>"
+  ],
+  "context": "\t\t\t<<elseif $player.vaginaExist and !playerChastity(\"vagina\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> <<strokes>> your inner thigh and brushes <<his>> fingers against your $worn.genitals.name<<if $worn.genitals.name is \"chastity parasite\">>, <span class=\"lewd\">leaving you feeling more aroused.</span><<arousal 100 \"genitals\">><<else>>.<</if>>",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechchastity to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 당신의 허벅지 안쪽을 <<strokes>> <<his>> 손가락으로 당신의 $worn.genitals.name【을를】 스친다<<if $worn.genitals.name is \"chastity parasite\">>, <span class=\"lewd\">그 감각에 당신은 더욱 흥분한다.</span><<arousal 100 \"genitals\">><<else>>.<</if>>",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechchastity to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> <<strokes>> your inner thigh and brushes <<his>> fingers against your $worn.genitals.name<<if $worn.genitals.name is \"chastity parasite\">>, <span class=\"lewd\">leaving you feeling more aroused.</span><<arousal 100 \"genitals\">><<else>>.<</if>>",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechChastity to 1>>"
+  ],
+  "context": "\t\t\t<<elseif !(($player.penisExist and !playerChastity(\"penis\")) or ($player.vaginaExist and !playerChastity(\"vagina\")))>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> runs <<his>> hand up your thigh and over the area where your <<penis>> and <<pussy>> meet.",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechfutapenis to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 허벅지를 따라 <<his>> 손을 미끄러뜨리며 당신의 <<penis>>【와과】 <<pussy>>【이가】 만나는 부위를 어루만진다.",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechfutapenis to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> runs <<his>> hand up your thigh and over the area where your <<penis>> and <<pussy>> meet.",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechFutaPenis to 1>>"
+  ],
+  "context": "\t\t\t<<elseif ($player.penisExist and !playerChastity(\"penis\")) and ($player.vaginaExist and !playerChastity(\"vagina\"))>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> <<strokes>> your inner thigh and brushes <<his>> fingers against your <<glans>>.",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechglans to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 당신의 허벅지 안쪽을 <<strokes>> <<his>> 손가락으로 당신의 <<glans>>【을를】 스친다.",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechglans to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> <<strokes>> your inner thigh and brushes <<his>> fingers against your <<glans>>.",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechGlans to 1>>"
+  ],
+  "context": "\t\t\t<<elseif $player.penisExist and !playerChastity(\"penis\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> <<strokes>> your inner thigh and brushes <<his>> fingers against your clit.",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechclit to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 당신의 허벅지 안쪽을 <<strokes>> <<his>> 손가락으로 클리토리스를 스친다.",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechclit to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> <<strokes>> your inner thigh and brushes <<his>> fingers against your clit.",
+   "\t\t\t\t<<neutral 10 \"genitals\" _n>><<set $speechClit to 1>>"
+  ],
+  "context": "\t\t\t<<elseif $player.vaginaExist and !playerChastity(\"vagina\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> pinches your glans.",
+   "\t\t\t\t<<neutral 15 \"genitals\" _n>><<bruise penis>><<set $speechglans to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 귀두를 꼬집는다.",
+   "\t\t\t\t<<neutral 15 \"genitals\" _n>><<bruise penis>><<set $speechglans to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> pinches your glans.",
+   "\t\t\t\t<<neutral 15 \"genitals\" _n>><<bruise penis>><<set $speechGlans to 1>>"
+  ],
+  "context": "\t\t\t<<if $penisuse is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<He>> pinches your clitoris.",
+   "\t\t\t<<neutral 15 \"genitals\" _n>><<bruise vagina>><<set $speechclit to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<He>>【이가】 클리토리스를 꼬집는다.",
+   "\t\t\t<<neutral 15 \"genitals\" _n>><<bruise vagina>><<set $speechclit to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t<<He>> pinches your clitoris.",
+   "\t\t\t<<neutral 15 \"genitals\" _n>><<bruise vagina>><<set $speechClit to 1>>"
+  ],
+  "context": "\t\t<<elseif $player.vaginaExist and !playerChastity(\"vagina\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<span class=\"purple\"><<He>> seizes your hair with <<his>> _args[0] hand.</span>",
+   "\t\t\t<<combat-set-hand-target _args[0] \"hair\">><<violence 2>><<set $speechhair to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t<span class=\"purple\"><<He>>【이가】 <<his>> <<print _args[0] is \"left\" ? \"왼손\" : \"오른손\">>【으로로】 머리채를 휘어잡는다.</span>",
+   "\t\t\t<<combat-set-hand-target _args[0] \"hair\">><<violence 2>><<set $speechhair to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t<span class=\"purple\"><<He>> seizes your hair with <<his>> _args[0] hand.</span>",
+   "\t\t\t<<combat-set-hand-target _args[0] \"hair\">><<violence 2>><<set $speechHair to 1>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<span class=\"purple\"><<He>> pins down your arms.</span>",
+   "\t\t\t<<combat-set-hand-target _args[0] \"arms\">><<disablearms>><<set $leftarm to \"grappled\">><<set $rightarm to \"grappled\">><<set $lefttarget to _n>><<set $righttarget to _n>><<violence 2>><<bruise leftarm>><<bruise rightarm>><<set $speecharms to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t<span class=\"purple\"><<He>>【이가】 당신의 팔을 짓누른다.</span>",
+   "\t\t\t<<combat-set-hand-target _args[0] \"arms\">><<disablearms>><<set $leftarm to \"grappled\">><<set $rightarm to \"grappled\">><<set $lefttarget to _n>><<set $righttarget to _n>><<violence 2>><<bruise leftarm>><<bruise rightarm>><<set $speecharms to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t<span class=\"purple\"><<He>> pins down your arms.</span>",
+   "\t\t\t<<combat-set-hand-target _args[0] \"arms\">><<disablearms>><<set $leftarm to \"grappled\">><<set $rightarm to \"grappled\">><<set $lefttarget to _n>><<set $righttarget to _n>><<violence 2>><<bruise leftarm>><<bruise rightarm>><<set $speechArms to 1>>"
+  ],
+  "context": "\t\t<<elseif $leftarm isnot \"bound\" and $rightarm isnot \"bound\" and $leftarm isnot \"grappled\" and $rightarm isnot \"grappled\" and $NPCList[_n].lefthand isnot \"arms\" and $NPCList[_n].righthand isnot \"arms\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> slaps your face.",
+   "\t\t\t\t<<violence 10>><<bruise face>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 당신의 뺨을 갈긴다.",
+   "\t\t\t\t<<violence 10>><<bruise face>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> slaps your face.",
+   "\t\t\t\t<<violence 10>><<bruise face>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t<<if $walltype is \"front\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> slaps your <<bottom>>.",
+   "\t\t\t\t<<violence 10>><<bruise bottom>><<hitstat>><<set $speechspank to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 당신의 <<bottom>>【을를】 찰싹 때린다.",
+   "\t\t\t\t<<violence 10>><<bruise bottom>><<hitstat>><<set $speechspank to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> slaps your <<bottom>>.",
+   "\t\t\t\t<<violence 10>><<bruise bottom>><<hitstat>><<set $speechSpank to 1>>"
+  ],
+  "context": "\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<He>> digs <<his>> nails into your <<breasts>> while groping, giving no heed to your comfort.",
+   "\t\t\t<<violence 10>><<bruise chest>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<He>>【은는】 당신이 아프든 말든 신경도 쓰지 않고 손톱을 세워 <<breasts>>【을를】 꽉 움켜쥔다.",
+   "\t\t\t<<violence 10>><<bruise chest>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t<<He>> digs <<his>> nails into your <<breasts>> while groping, giving no heed to your comfort.",
+   "\t\t\t<<violence 10>><<bruise chest>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t<<if $walltype is \"front\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<He>> digs <<his>> nails into your <<bottom>> while groping, giving no heed to your comfort.",
+   "\t\t\t<<violence 10>><<bruise bottom>><<hitstat>><<set $speechspank to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<He>>【은는】 당신이 아프든 말든 신경도 쓰지 않고 손톱을 세워 <<bottom>>【을를】 꽉 움켜쥔다.",
+   "\t\t\t<<violence 10>><<bruise bottom>><<hitstat>><<set $speechspank to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t<<He>> digs <<his>> nails into your <<bottom>> while groping, giving no heed to your comfort.",
+   "\t\t\t<<violence 10>><<bruise bottom>><<hitstat>><<set $speechSpank to 1>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<He>> smacks your <<breasts>>.",
+   "\t\t\t<<violence 10>><<bruise chest>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<He>>【이가】 당신의 <<breasts>>【을를】 세게 친다.",
+   "\t\t\t<<violence 10>><<bruise chest>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t<<He>> smacks your <<breasts>>.",
+   "\t\t\t<<violence 10>><<bruise chest>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t<<if $walltype is \"front\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<He>> smacks your thighs.",
+   "\t\t\t<<violence 10>><<bruise thigh>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<He>>【이가】 당신의 허벅지를 세게 친다.",
+   "\t\t\t<<violence 10>><<bruise thigh>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t<<He>> smacks your thighs.",
+   "\t\t\t<<violence 10>><<bruise thigh>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<He>> beats your thigh.",
+   "\t\t\t<<bruise thigh>><<hitstat>><<violence 10>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<He>>【이가】 당신의 허벅지를 때린다.",
+   "\t\t\t<<bruise thigh>><<hitstat>><<violence 10>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t<<He>> beats your thigh.",
+   "\t\t\t<<bruise thigh>><<hitstat>><<violence 10>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t<<if $position is \"wall\" and $walltype isnot \"front\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<He>> punches your tummy.",
+   "\t\t\t<<violence 20>><<bruise tummy>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<He>>【이가】 당신의 배를 주먹으로 친다.",
+   "\t\t\t<<violence 20>><<bruise tummy>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t<<He>> punches your tummy.",
+   "\t\t\t<<violence 20>><<bruise tummy>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<He>> <<print either(\"spanks\",\"whacks\",\"slaps\",\"smacks\",\"thwacks\")>> your <<bottom>>.",
+   "\t\t\t<<violence 20>><<bruise bottom>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<He>>【은는】 당신의 <<bottom>>【을를】 <<print either(\"찰싹 때린다\",\"후려친다\",\"때린다\",\"철썩 때린다\",\"세게 내리친다\")>>.",
+   "\t\t\t<<violence 20>><<bruise bottom>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t<<He>> <<print either(\"spanks\",\"whacks\",\"slaps\",\"smacks\",\"thwacks\")>> your <<bottom>>.",
+   "\t\t\t<<violence 20>><<bruise bottom>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t<<if $position is \"wall\" and $walltype isnot \"front\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<He>> slaps your <<breasts>>.",
+   "\t\t\t<<violence 20>><<bruise chest>><<hitstat>><<set $speechbeat to 1>><<playWithBreasts>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<He>>【이가】 당신의 <<breasts>>【을를】 찰싹 때린다.",
+   "\t\t\t<<violence 20>><<bruise chest>><<hitstat>><<set $speechbeat to 1>><<playWithBreasts>>"
+  ],
+  "new_en": [
+   "\t\t\t<<He>> slaps your <<breasts>>.",
+   "\t\t\t<<violence 20>><<bruise chest>><<hitstat>><<set $speechPlayerBeaten to 1>><<playWithBreasts>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> scratches your helpless <<bottom>>.",
+   "\t\t\t\t\t<<violence 20>><<bruise bottom>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 속수무책인 당신의 <<bottom>>【을를】 할퀸다.",
+   "\t\t\t\t\t<<violence 20>><<bruise bottom>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> scratches your helpless <<bottom>>.",
+   "\t\t\t\t\t<<violence 20>><<bruise bottom>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t\t<<if $player.penisExist>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> scratches your helpless <<bottom>>.",
+   "\t\t\t\t\t<<violence 20>><<bruise bottom>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 속수무책인 당신의 <<bottom>>【을를】 할퀸다.",
+   "\t\t\t\t\t<<violence 20>><<bruise bottom>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> scratches your helpless <<bottom>>.",
+   "\t\t\t\t\t<<violence 20>><<bruise bottom>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $player.vaginaExist>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> punches your nose.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 주먹으로 당신의 코를 때린다.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> punches your nose.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t\t<<if $rng gte 81>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> punches the back of your neck.",
+   "\t\t\t\t\t<<violence 20>><<bruise neck>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 주먹으로 당신의 뒷목을 친다.",
+   "\t\t\t\t\t<<violence 20>><<bruise neck>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> punches the back of your neck.",
+   "\t\t\t\t\t<<violence 20>><<bruise neck>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $rng gte 61>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> punches your cheek.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 주먹으로 당신의 뺨을 때린다.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> punches your cheek.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $rng gte 41>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> punches your jaw.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 주먹으로 당신의 턱을 친다.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> punches your jaw.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $rng gte 21>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> jabs the front of your neck.",
+   "\t\t\t\t\t<<violence 20>><<bruise neck>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 당신의 앞목을 찌른다.",
+   "\t\t\t\t\t<<violence 20>><<bruise neck>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> jabs the front of your neck.",
+   "\t\t\t\t\t<<violence 20>><<bruise neck>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> jabs your gooch.",
+   "\t\t\t\t\t<<violence 20>><<bruise penis>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 당신의 회음부를 찌른다.",
+   "\t\t\t\t\t<<violence 20>><<bruise penis>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> jabs your gooch.",
+   "\t\t\t\t\t<<violence 20>><<bruise penis>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t\t<<if $player.penisExist and (!$player.vaginaExist or random(0,100) gte 50)>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> jabs your gooch.",
+   "\t\t\t\t\t<<violence 20>><<bruise vagina>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 당신의 회음부를 찌른다.",
+   "\t\t\t\t\t<<violence 20>><<bruise vagina>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> jabs your gooch.",
+   "\t\t\t\t\t<<violence 20>><<bruise vagina>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $player.vaginaExist>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> scratches the side of your face.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 당신의 뺨 한쪽을 할퀸다.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> scratches the side of your face.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t\t<<if $rng gte 81>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> scratches the back of your neck.",
+   "\t\t\t\t\t<<violence 20>><<bruise neck>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 당신의 뒷목을 할퀸다.",
+   "\t\t\t\t\t<<violence 20>><<bruise neck>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> scratches the back of your neck.",
+   "\t\t\t\t\t<<violence 20>><<bruise neck>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $rng gte 61>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> scratches your cheek.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 당신의 뺨을 할퀸다.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> scratches your cheek.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $rng gte 41>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> scratches your jaw.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 당신의 턱을 할퀸다.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> scratches your jaw.",
+   "\t\t\t\t\t<<violence 20>><<bruise face>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $rng gte 21>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> scratches the front of your neck.",
+   "\t\t\t\t\t<<violence 20>><<bruise neck>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【이가】 당신의 앞목을 할퀸다.",
+   "\t\t\t\t\t<<violence 20>><<bruise neck>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> scratches the front of your neck.",
+   "\t\t\t\t\t<<violence 20>><<bruise neck>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tRespecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> but does not penetrate.",
+   "\t\t\t\t\t<<sex 15 \"genital\" _n>><<set $speechvaginawithhold to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t당신의 뜻을 존중하여, <<he>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지르지만 삽입하지는 않는다.",
+   "\t\t\t\t\t<<sex 15 \"genital\" _n>><<set $speechvaginawithhold to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\tRespecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> but does not penetrate.",
+   "\t\t\t\t\t<<sex 15 \"genital\" _n>><<set $speechVaginaWithhold to 1>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.over_lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechvaginaentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechvaginaentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.over_lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechVaginaEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t<<if $worn.over_lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.lower.integrity -= 10>><<set $speechvaginaentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.lower.integrity -= 10>><<set $speechvaginaentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.lower.integrity -= 10>><<set $speechVaginaEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $worn.lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.under_lower.name.",
+   "\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechvaginaentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.under_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.",
+   "\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechvaginaentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.under_lower.name.",
+   "\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechVaginaEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t<<if $worn.under_lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.genitals.name.",
+   "\t\t\t\t\t\t\t\t<<sex 25 \"genital\" _n>><<set $worn.genitals.integrity -= 10>><<set $speechchastity to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.genitals.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.",
+   "\t\t\t\t\t\t\t\t<<sex 25 \"genital\" _n>><<set $worn.genitals.integrity -= 10>><<set $speechchastity to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.genitals.name.",
+   "\t\t\t\t\t\t\t\t<<sex 25 \"genital\" _n>><<set $worn.genitals.integrity -= 10>><<set $speechChastity to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<elseif playerChastity(\"vagina\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t<<He>> pushes <<his>> $NPCList[_n].penisdesc against your <<pussy>>. <<vagina_lube_text>><span class=\"pink\">the tip presses into you, a thrust away from penetrating.</span>",
+   "\t\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].penis to \"vaginaimminent\">><<set $vaginastate to \"imminent\">><<set $speechvaginaimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 갖다 댄다. <<vagina_lube_text>><span class=\"pink\">그 끝이 당신을 짓누르며, 당장이라도 삽입할 듯하다.</span>",
+   "\t\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].penis to \"vaginaimminent\">><<set $vaginastate to \"imminent\">><<set $speechvaginaimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t<<He>> pushes <<his>> $NPCList[_n].penisdesc against your <<pussy>>. <<vagina_lube_text>><span class=\"pink\">the tip presses into you, a thrust away from penetrating.</span>",
+   "\t\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].penis to \"vaginaimminent\">><<set $vaginastate to \"imminent\">><<set $speechVaginaImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<if $vaginaWetness gte ($NPCList[_n].penissize * 15) + random(1, 40) or random(1, 2) is 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>>, <span class=\"blue\">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it against your <<clit>>.",
+   "\t\t\t\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $speechvaginaimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 밀어붙이지만, <span class=\"blue\">삽입에는 실패하고,</span> 대신 각도를 틀어 당신의 <<clit>>에 그것을 문지른다.",
+   "\t\t\t\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $speechvaginaimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>>, <span class=\"blue\">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it against your <<clit>>.",
+   "\t\t\t\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $speechVaginaImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\tRespecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> but does not penetrate.",
+   "\t\t\t\t\t\t<<sex 15 \"genitals\" _n>><<set $speechvaginawithhold to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t당신의 뜻을 존중하여, <<he>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지르지만 삽입하지는 않는다.",
+   "\t\t\t\t\t\t<<sex 15 \"genitals\" _n>><<set $speechvaginawithhold to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\tRespecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> but does not penetrate.",
+   "\t\t\t\t\t\t<<sex 15 \"genitals\" _n>><<set $speechVaginaWithhold to 1>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\tRespecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> but does not penetrate.",
+   "\t\t\t\t\t\t<<sex 15 \"genitals\" _n>><<set $speechvaginawithhold to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t당신의 뜻을 존중하여, <<he>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지르지만 삽입하지는 않는다.",
+   "\t\t\t\t\t\t<<sex 15 \"genitals\" _n>><<set $speechvaginawithhold to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\tRespecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> but does not penetrate.",
+   "\t\t\t\t\t\t<<sex 15 \"genitals\" _n>><<set $speechVaginaWithhold to 1>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.over_lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genitals\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechvaginaentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.",
+   "\t\t\t\t\t<<sex 5 \"genitals\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechvaginaentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.over_lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genitals\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechVaginaEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t<<if $worn.over_lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genitals\" _n>><<set $worn.lower.integrity -= 10>><<set $speechvaginaentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.",
+   "\t\t\t\t\t<<sex 5 \"genitals\" _n>><<set $worn.lower.integrity -= 10>><<set $speechvaginaentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genitals\" _n>><<set $worn.lower.integrity -= 10>><<set $speechVaginaEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $worn.lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.under_lower.name.",
+   "\t\t\t\t\t\t<<sex 5 \"genitals\" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechvaginaentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.under_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.",
+   "\t\t\t\t\t\t<<sex 5 \"genitals\" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechvaginaentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.under_lower.name.",
+   "\t\t\t\t\t\t<<sex 5 \"genitals\" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechVaginaEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t<<if $worn.under_lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.genitals.name.",
+   "\t\t\t\t\t\t\t\t<<sex 25 \"genitals\" _n>><<set $worn.genitals.integrity -= 10>><<set $speechchastity to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.genitals.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.",
+   "\t\t\t\t\t\t\t\t<<sex 25 \"genitals\" _n>><<set $worn.genitals.integrity -= 10>><<set $speechchastity to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.genitals.name.",
+   "\t\t\t\t\t\t\t\t<<sex 25 \"genitals\" _n>><<set $worn.genitals.integrity -= 10>><<set $speechChastity to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<elseif playerChastity(\"vagina\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t<<He>> pushes <<his>> $NPCList[_n].penisdesc against your <<pussy>>. <<vagina_lube_text>><span class=\"pink\">the tip presses into you, a thrust away from penetrating.</span>",
+   "\t\t\t\t\t\t\t\t\t<<sex 20 \"genitals\" _n>><<set $NPCList[_n].penis to \"vaginaimminentdouble\">><<set $speechvaginaimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 갖다 댄다. <<vagina_lube_text>><span class=\"pink\">그 끝이 당신을 짓누르며, 당장이라도 삽입할 듯하다.</span>",
+   "\t\t\t\t\t\t\t\t\t<<sex 20 \"genitals\" _n>><<set $NPCList[_n].penis to \"vaginaimminentdouble\">><<set $speechvaginaimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t<<He>> pushes <<his>> $NPCList[_n].penisdesc against your <<pussy>>. <<vagina_lube_text>><span class=\"pink\">the tip presses into you, a thrust away from penetrating.</span>",
+   "\t\t\t\t\t\t\t\t\t<<sex 20 \"genitals\" _n>><<set $NPCList[_n].penis to \"vaginaimminentdouble\">><<set $speechVaginaImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<if $vaginaWetness gte ($NPCList[_n].penissize * 15) + random(1, 40) or random(1, 3) is 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>>; <span class=\"blue\">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it against your <<clit>> and the other cock.",
+   "\t\t\t\t\t\t\t\t\t<<sex 5 \"genitals\" _n>><<set $speechvaginaimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 밀어붙이지만, <span class=\"blue\">삽입에는 실패하고,</span> 대신 각도를 틀어 당신의 <<clit>>【와과】 다른 자지에 그것을 문지른다.",
+   "\t\t\t\t\t\t\t\t\t<<sex 5 \"genitals\" _n>><<set $speechvaginaimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>>; <span class=\"blue\">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it against your <<clit>> and the other cock.",
+   "\t\t\t\t\t\t\t\t\t<<sex 5 \"genitals\" _n>><<set $speechVaginaImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tRespecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your anus and $_buttplug but does not penetrate.",
+   "\t\t\t\t\t<<sex 15 \"anal\" _n>><<set $speechanuswithhold to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t당신의 뜻을 존중하여, <<he>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문과 $_buttplug에 문지르지만 삽입하지는 않는다.",
+   "\t\t\t\t\t<<sex 15 \"anal\" _n>><<set $speechanuswithhold to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\tRespecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your anus and $_buttplug but does not penetrate.",
+   "\t\t\t\t\t<<sex 15 \"anal\" _n>><<set $speechAnusWithhold to 1>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tRespecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your anus but does not penetrate.",
+   "\t\t\t\t\t<<sex 15 \"anal\" _n>><<set $speechanuswithhold to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t당신의 뜻을 존중하여, <<he>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문에 문지르지만 삽입하지는 않는다.",
+   "\t\t\t\t\t<<sex 15 \"anal\" _n>><<set $speechanuswithhold to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\tRespecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your anus but does not penetrate.",
+   "\t\t\t\t\t<<sex 15 \"anal\" _n>><<set $speechAnusWithhold to 1>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.over_lower.name.",
+   "\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechanusentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 문지른다.",
+   "\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechanusentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.over_lower.name.",
+   "\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t<<if $worn.over_lower.anus_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.lower.name.",
+   "\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $worn.lower.integrity -= 10>><<set $speechanusentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 문지른다.",
+   "\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $worn.lower.integrity -= 10>><<set $speechanusentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.lower.name.",
+   "\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $worn.lower.integrity -= 10>><<set $speechAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $worn.lower.anus_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.under_lower.name.",
+   "\t\t\t\t\t\t<<set $speechanusentrance to 1>><<sex 5 \"anal\" _n>><<set $worn.under_lower.integrity -= 10>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.under_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 문지른다.",
+   "\t\t\t\t\t\t<<set $speechanusentrance to 1>><<sex 5 \"anal\" _n>><<set $worn.under_lower.integrity -= 10>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.under_lower.name.",
+   "\t\t\t\t\t\t<<set $speechAnusEntrance to 1>><<sex 5 \"anal\" _n>><<set $worn.under_lower.integrity -= 10>>"
+  ],
+  "context": "\t\t\t\t\t<<if $worn.under_lower.anus_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your anus through your $worn.genitals.name.",
+   "\t\t\t\t\t\t\t\t<<sex 25 \"anal\" _n>><<set $worn.genitals.integrity -= 10>><<set $speechchastity to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.genitals.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문에 문지른다.",
+   "\t\t\t\t\t\t\t\t<<sex 25 \"anal\" _n>><<set $worn.genitals.integrity -= 10>><<set $speechchastity to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your anus through your $worn.genitals.name.",
+   "\t\t\t\t\t\t\t\t<<sex 25 \"anal\" _n>><<set $worn.genitals.integrity -= 10>><<set $speechChastity to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<elseif playerChastity(\"anus\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your anus and your $worn.butt_plug.name.",
+   "\t\t\t\t\t\t\t\t\t\t<<sex 10 \"anal\" _n>><<set $speechanusentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문과 당신의 $worn.butt_plug.name에 문지른다.",
+   "\t\t\t\t\t\t\t\t\t\t<<sex 10 \"anal\" _n>><<set $speechanusentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your anus and your $worn.butt_plug.name.",
+   "\t\t\t\t\t\t\t\t\t\t<<sex 10 \"anal\" _n>><<set $speechAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t\t<<case 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\t\t<<anus_lube_text>><<if $npcSub>>you press<<else>><<he>> presses<</if>> <<his>> $NPCList[_n].penisdesc against your anus and your $worn.butt_plug.name, <span class=\"pink\">a thrust away from penetrating.</span>",
+   "\t\t\t\t\t\t\t\t\t\t\t<<sex 10 \"anal\" _n>><<set $NPCList[_n].penis to \"anusimminent\">><<set $anusstate to \"imminent\">><<set $speechanusimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\t\t<<anus_lube_text>><<if $npcSub>>당신은<<else>><<he>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문과 $worn.butt_plug.name에 밀어붙이고, <span class=\"pink\">당장이라도 쑤셔넣을 듯 짓누른다.</span>",
+   "\t\t\t\t\t\t\t\t\t\t\t<<sex 10 \"anal\" _n>><<set $NPCList[_n].penis to \"anusimminent\">><<set $anusstate to \"imminent\">><<set $speechanusimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\t\t<<anus_lube_text>><<if $npcSub>>you press<<else>><<he>> presses<</if>> <<his>> $NPCList[_n].penisdesc against your anus and your $worn.butt_plug.name, <span class=\"pink\">a thrust away from penetrating.</span>",
+   "\t\t\t\t\t\t\t\t\t\t\t<<sex 10 \"anal\" _n>><<set $NPCList[_n].penis to \"anusimminent\">><<set $anusstate to \"imminent\">><<set $speechAnusImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t\t\t<<if $anusWetness gte ($NPCList[_n].penissize * 15) + random(1, 40) or random(0, 2) is 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\t\t<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> and your $worn.butt_plug.name, <span class=\"blue\">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it between your cheeks.",
+   "\t\t\t\t\t\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $speechanusimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>【와과】 당신의 $worn.butt_plug.name에 밀어붙이지만, <span class=\"blue\">삽입에는 실패하고,</span> 대신 각도를 틀어 당신의 엉덩이골 사이에 문지른다.",
+   "\t\t\t\t\t\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $speechanusimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\t\t<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> and your $worn.butt_plug.name, <span class=\"blue\">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it between your cheeks.",
+   "\t\t\t\t\t\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $speechAnusImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t<<He>> presses <<his>> $NPCList[_n].penisdesc against your <<bottom>>. <<anus_lube_text>><span class=\"pink\">the tip presses into you, a thrust away from penetrating.</span>",
+   "\t\t\t\t\t\t\t\t\t<<sex 20 \"anal\" _n>><<set $NPCList[_n].penis to \"anusimminent\">><<set $anusstate to \"imminent\">><<set $speechanusimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 밀어붙인다. <<anus_lube_text>><span class=\"pink\">그 끝이 당신을 짓누르며, 당장이라도 삽입할 듯하다.</span>",
+   "\t\t\t\t\t\t\t\t\t<<sex 20 \"anal\" _n>><<set $NPCList[_n].penis to \"anusimminent\">><<set $anusstate to \"imminent\">><<set $speechanusimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t<<He>> presses <<his>> $NPCList[_n].penisdesc against your <<bottom>>. <<anus_lube_text>><span class=\"pink\">the tip presses into you, a thrust away from penetrating.</span>",
+   "\t\t\t\t\t\t\t\t\t<<sex 20 \"anal\" _n>><<set $NPCList[_n].penis to \"anusimminent\">><<set $anusstate to \"imminent\">><<set $speechAnusImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<if $anusWetness gte ($NPCList[_n].penissize * 15) + random(1, 40) or random(1, 2) is 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>>, <span class=\"blue\">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it between your cheeks.",
+   "\t\t\t\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $speechanusimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 밀어붙이지만, <span class=\"blue\">삽입에는 실패하고,</span> 대신 각도를 틀어 당신의 엉덩이골 사이에 문지른다.",
+   "\t\t\t\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $speechanusimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>>, <span class=\"blue\">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it between your cheeks.",
+   "\t\t\t\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $speechAnusImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\tRespecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your anus, and the other cock, but does not penetrate.",
+   "\t\t\t\t\t\t<<sex 15 \"anal\" _n>><<set $speechanuswithhold to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t당신의 뜻을 존중하여, <<he>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문과 다른 자지에 문지르지만 삽입하지는 않는다.",
+   "\t\t\t\t\t\t<<sex 15 \"anal\" _n>><<set $speechanuswithhold to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\tRespecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your anus, and the other cock, but does not penetrate.",
+   "\t\t\t\t\t\t<<sex 15 \"anal\" _n>><<set $speechAnusWithhold to 1>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\tRespecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your anus, but does not penetrate.",
+   "\t\t\t\t\t\t<<sex 15 \"anal\" _n>><<set $speechanuswithhold to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t당신의 뜻을 존중하여, <<he>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문에 문지르지만, 삽입하지는 않는다.",
+   "\t\t\t\t\t\t<<sex 15 \"anal\" _n>><<set $speechanuswithhold to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\tRespecting your wishes, <<he>> presses <<his>> $NPCList[_n].penisdesc against your anus, but does not penetrate.",
+   "\t\t\t\t\t\t<<sex 15 \"anal\" _n>><<set $speechAnusWithhold to 1>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.over_lower.name.",
+   "\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechanusentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 문지른다.",
+   "\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechanusentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.over_lower.name.",
+   "\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t<<if $worn.over_lower.anus_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.lower.name.",
+   "\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $worn.lower.integrity -= 10>><<set $speechanusentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 문지른다.",
+   "\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $worn.lower.integrity -= 10>><<set $speechanusentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.lower.name.",
+   "\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $worn.lower.integrity -= 10>><<set $speechAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $worn.lower.anus_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.under_lower.name.",
+   "\t\t\t\t\t\t<<set $speechanusentrance to 1>><<sex 5 \"anal\" _n>><<set $worn.under_lower.integrity -= 10>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.under_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 문지른다.",
+   "\t\t\t\t\t\t<<set $speechanusentrance to 1>><<sex 5 \"anal\" _n>><<set $worn.under_lower.integrity -= 10>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> through your $worn.under_lower.name.",
+   "\t\t\t\t\t\t<<set $speechAnusEntrance to 1>><<sex 5 \"anal\" _n>><<set $worn.under_lower.integrity -= 10>>"
+  ],
+  "context": "\t\t\t\t\t<<if $worn.under_lower.anus_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your anus through your $worn.genitals.name.",
+   "\t\t\t\t\t\t\t\t<<sex 25 \"anal\" _n>><<set $worn.genitals.integrity -= 10>><<set $speechchastity to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.genitals.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문에 문지른다.",
+   "\t\t\t\t\t\t\t\t<<sex 25 \"anal\" _n>><<set $worn.genitals.integrity -= 10>><<set $speechchastity to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your anus through your $worn.genitals.name.",
+   "\t\t\t\t\t\t\t\t<<sex 25 \"anal\" _n>><<set $worn.genitals.integrity -= 10>><<set $speechChastity to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<elseif playerChastity(\"anus\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your anus and your $worn.butt_plug.name.",
+   "\t\t\t\t\t\t\t\t\t\t<<sex 10 \"anal\" _n>><<set $speechanusentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문과 당신의 $worn.butt_plug.name에 문지른다.",
+   "\t\t\t\t\t\t\t\t\t\t<<sex 10 \"anal\" _n>><<set $speechanusentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your anus and your $worn.butt_plug.name.",
+   "\t\t\t\t\t\t\t\t\t\t<<sex 10 \"anal\" _n>><<set $speechAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t\t<<case 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\t\t<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> and your $worn.butt_plug.name, <span class=\"blue\">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it between your cheeks.",
+   "\t\t\t\t\t\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $speechanusimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>【와과】 당신의 $worn.butt_plug.name에 밀어붙이지만, <span class=\"blue\">삽입에는 실패하고,</span> 대신 각도를 틀어 당신의 엉덩이골 사이에 문지른다.",
+   "\t\t\t\t\t\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $speechanusimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\t\t<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> and your $worn.butt_plug.name, <span class=\"blue\">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it between your cheeks.",
+   "\t\t\t\t\t\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $speechAnusImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>>, <span class=\"blue\">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it between your cheeks.",
+   "\t\t\t\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $speechanusimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 밀어붙이지만, <span class=\"blue\">삽입에는 실패하고,</span> 대신 각도를 틀어 당신의 엉덩이골 사이에 문지른다.",
+   "\t\t\t\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $speechanusimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>>, <span class=\"blue\">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it between your cheeks.",
+   "\t\t\t\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $speechAnusImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<breasts>>.",
+   "\t\t\t\t\t<<set $speechchestrub to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<breasts>>에 문지른다.",
+   "\t\t\t\t\t<<set $speechchestrub to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc against your <<breasts>>.",
+   "\t\t\t\t\t<<set $speechChestRub to 1>>"
+  ],
+  "context": "\t\t\t\t<<if $breastcup is \"none\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc between your <<breasts>>.",
+   "\t\t\t\t\t<<set $speechbreastrub to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<breasts>> 사이에 문지른다.",
+   "\t\t\t\t\t<<set $speechbreastrub to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> $NPCList[_n].penisdesc between your <<breasts>>.",
+   "\t\t\t\t\t<<set $speechBreastRub to 1>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> presses your <<penis>> against your stomach with <<his>> foot and rubs your <<glans>> between <<his>> toes.",
+   "\t\t\t\t\t<<set $speechpenisfoot to 1>><<neutral 5 \"genitals\" _n>><<violence 1 1 1 1 _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 발로 당신의 <<penis>>【을를】 배 쪽에 밀어붙이며 발가락 사이에 당신의 <<glans>>【을를】 끼우고 문지른다.",
+   "\t\t\t\t\t<<set $speechpenisfoot to 1>><<neutral 5 \"genitals\" _n>><<violence 1 1 1 1 _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> presses your <<penis>> against your stomach with <<his>> foot and rubs your <<glans>> between <<his>> toes.",
+   "\t\t\t\t\t<<set $speechPenisFoot to 1>><<neutral 5 \"genitals\" _n>><<violence 1 1 1 1 _n>>"
+  ],
+  "context": "\t\t\t\t<<if $penisuse is \"feet\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> presses and teases your <<pussy>> with <<his>> foot.",
+   "\t\t\t\t\t<<set $speechvaginafoot to 1>><<neutral 5 \"genitals\" _n>><<violence 1 1 1 1 _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 <<his>> 발로 당신의 <<pussy>>【을를】 짓누르며 애태운다.",
+   "\t\t\t\t\t<<set $speechvaginafoot to 1>><<neutral 5 \"genitals\" _n>><<violence 1 1 1 1 _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> presses and teases your <<pussy>> with <<his>> foot.",
+   "\t\t\t\t\t<<set $speechVaginaFoot to 1>><<neutral 5 \"genitals\" _n>><<violence 1 1 1 1 _n>>"
+  ],
+  "context": "\t\t\t\t<<elseif $vaginause is \"feet\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> shifts <<his>> ass and presses <<his>> anus against your <<penis>>.</span>",
+   "\t\t\t\t<<set $penisuse to \"otheranus\">><<set $NPCList[_n].penis to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechotheranusentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"blue\"><<He>>【이가】 엉덩이를 비틀어 <<his>> 항문을 당신의 <<penis>>에 밀어붙인다.</span>",
+   "\t\t\t\t<<set $penisuse to \"otheranus\">><<set $NPCList[_n].penis to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechotheranusentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> shifts <<his>> ass and presses <<his>> anus against your <<penis>>.</span>",
+   "\t\t\t\t<<set $penisuse to \"otheranus\">><<set $NPCList[_n].penis to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechNPCAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t<<if $rng gte 101>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"purple\"><<He>> moves <<his>> pelvis away, releasing your <<penis>> from <<his>> anus.</span>",
+   "\t\t\t\t<<sex 30 \"genital\" _n>><<set $NPCList[_n].penis to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechotheranusimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"purple\"><<He>>【이가】 골반을 뒤로 빼며, <<his>> 항문에서 당신의 <<penis>>【을를】 놓아준다.</span>",
+   "\t\t\t\t<<sex 30 \"genital\" _n>><<set $NPCList[_n].penis to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechotheranusimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"purple\"><<He>> moves <<his>> pelvis away, releasing your <<penis>> from <<his>> anus.</span>",
+   "\t\t\t\t<<sex 30 \"genital\" _n>><<set $NPCList[_n].penis to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechNPCAnusImminent to 1>>"
+  ],
+  "context": "\t\t\t<<if $rng gte 101>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> stops pressing <<his>> ass against your <<penis>>.</span>",
+   "\t\t\t\t<<set $NPCList[_n].penis to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechotheranusentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"blue\"><<He>>【은는】 당신의 <<penis>>에 엉덩이를 밀어붙이는 것을 멈춘다.</span>",
+   "\t\t\t\t<<set $NPCList[_n].penis to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechotheranusentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> stops pressing <<his>> ass against your <<penis>>.</span>",
+   "\t\t\t\t<<set $NPCList[_n].penis to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechNPCAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t<<if $rng gte 101>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> presses <<his>> ass against the tip of your <<penis>>, trying to take you in. <span class=\"blue\">But you don't have an erection.</span>",
+   "\t\t\t\t\t\t<<set $speechpenissmall to 1>><<set $enemyanger += 5>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 당신을 받아들이려 <<his>> 엉덩이를 당신의 <<penis>> 끝에 밀어붙인다. <span class=\"blue\">하지만 당신은 발기하지 않은 상태다.</span>",
+   "\t\t\t\t\t\t<<set $speechpenissmall to 1>><<set $enemyanger += 5>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<He>> presses <<his>> ass against the tip of your <<penis>>, trying to take you in. <span class=\"blue\">But you don't have an erection.</span>",
+   "\t\t\t\t\t\t<<set $speechPenisSmall to 1>><<set $enemyanger += 5>>"
+  ],
+  "context": "\t\t\t\t\t<<if ((playerPenisSize() is -1 and $arousal lt ($arousalmax / 5) * 4) or (playerPenisSize() is -2 and $arousal lt ($arousalmax / 10) * 9))>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"><<He>> eases your <<penis>> into <<his>> ass, swallowing you to the base.</span>",
+   "\t\t\t\t\t\t\t<<sex 30 \"genital\" _n>><<set $speechotheranuspenetrated to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"><<He>>【이가】 당신의 <<penis>>【을를】 <<his>> 엉덩이 속으로 부드럽게 밀어 넣으며, 뿌리까지 집어삼킨다.</span>",
+   "\t\t\t\t\t\t\t<<sex 30 \"genital\" _n>><<set $speechotheranuspenetrated to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"><<He>> eases your <<penis>> into <<his>> ass, swallowing you to the base.</span>",
+   "\t\t\t\t\t\t\t<<sex 30 \"genital\" _n>><<set $speechNPCAnusPenetrated to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<<if playerHasStrapon() or $player.virginity.penile isnot true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"><<He>> eases your virgin penis into <<his>> ass,</span><span class=\"red\"> separating your foreskin from your glans and</span> <<virginitylosttext $NPCList[_n].fullDescription>>",
+   "\t\t\t\t\t\t\t<<sex 100 \"genital\" _n>><<takeVirginity $NPCList[_n].fullDescription \"penile\">><<bruise penis>><<violence 100>><<raped>><<penisraped>><<set $speechpenisvirgin to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"><<He>>【은는】 당신의 처녀 자지를 <<his>> 엉덩이 안으로 밀어넣어,</span><span class=\"red\"> 당신의 귀두에서 포피를 벗겨내며</span> <<virginitylosttext $NPCList[_n].fullDescription>>",
+   "\t\t\t\t\t\t\t<<sex 100 \"genital\" _n>><<takeVirginity $NPCList[_n].fullDescription \"penile\">><<bruise penis>><<violence 100>><<raped>><<penisraped>><<set $speechpenisvirgin to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"><<He>> eases your virgin penis into <<his>> ass,</span><span class=\"red\"> separating your foreskin from your glans and</span> <<virginitylosttext $NPCList[_n].fullDescription>>",
+   "\t\t\t\t\t\t\t<<sex 100 \"genital\" _n>><<takeVirginity $NPCList[_n].fullDescription \"penile\">><<bruise penis>><<violence 100>><<raped>><<penisraped>><<set $speechPenisVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<<elseif $player.virginity.penile is true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> presses <<his>> ass against the tip of your <<penis>>, trying to take you in. <span class=\"blue\">Your girth proves too much.</span>",
+   "\t\t\t\t\t\t<<set $speechpenisbig to 1>><<set $enemyanger += 5>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 당신을 받아들이려 <<his>> 엉덩이를 당신의 <<penis>> 끝에 밀어붙인다. <span class=\"blue\">당신의 둘레가 너무 굵어 무리다.</span>",
+   "\t\t\t\t\t\t<<set $speechpenisbig to 1>><<set $enemyanger += 5>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<He>> presses <<his>> ass against the tip of your <<penis>>, trying to take you in. <span class=\"blue\">Your girth proves too much.</span>",
+   "\t\t\t\t\t\t<<set $speechPenisBig to 1>><<set $enemyanger += 5>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tRespecting your wishes, <<he>> does not envelop your <<penis>> with <<his>> ass, instead teasing the tip of your <<glans>>.",
+   "\t\t\t\t\t<<sex 15 \"genital\" _n>><<set $speechotheranuswithhold to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t당신의 뜻을 존중하여, <<he>>【은는】 <<his>> 엉덩이로 당신의 <<penis>>【을를】 집어삼키지 않고 대신 당신의 <<glans>> 끝을 애태운다.",
+   "\t\t\t\t\t<<sex 15 \"genital\" _n>><<set $speechotheranuswithhold to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\tRespecting your wishes, <<he>> does not envelop your <<penis>> with <<his>> ass, instead teasing the tip of your <<glans>>.",
+   "\t\t\t\t\t<<sex 15 \"genital\" _n>><<set $speechNPCAnusWithhold to 1>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.over_lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechotheranusentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> 당신의 $worn.over_lower.name 너머로 <<his>> 엉덩이를 당신의 <<penis>>에 문지른다.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechotheranusentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.over_lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechNPCAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t<<if $worn.over_lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.lower.integrity -= 10>><<set $speechotheranusentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> 당신의 $worn.lower.name 너머로 <<his>> 엉덩이를 당신의 <<penis>>에 문지른다.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.lower.integrity -= 10>><<set $speechotheranusentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.lower.integrity -= 10>><<set $speechNPCAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $worn.lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.under_lower.name.",
+   "\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechotheranusentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> 당신의 $worn.under_lower.name 너머로 <<his>> 엉덩이를 당신의 <<penis>>에 문지른다.",
+   "\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechotheranusentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.under_lower.name.",
+   "\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechNPCAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t<<if $worn.under_lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<span class=\"purple\"><<He>> presses <<his>> ass against your <<penis>>.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].penis to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechotheranusimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t<span class=\"purple\"><<He>>【이가】 당신의 <<penis>>에 엉덩이를 밀어붙인다.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].penis to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechotheranusimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<span class=\"purple\"><<He>> presses <<his>> ass against your <<penis>>.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].penis to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechNPCAnusImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<elseif $nopenile is 1 and !$npcSub>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<He>> presses <<his>> ass against your <<penis>>. <<penis_lube_text>> <span class=\"pink\">your tip is pushed into <<him>>, a thrust away from being enveloped.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].penis to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechotheranusimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t<<He>>【이가】 당신의 <<penis>>에 엉덩이를 밀어붙인다. <<penis_lube_text>> <span class=\"pink\">당신의 끝부분이 <<him>> 안으로 파고들어, 한 번만 허리를 쳐올리면 집어삼켜질 듯하다.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].penis to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechotheranusimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<He>> presses <<his>> ass against your <<penis>>. <<penis_lube_text>> <span class=\"pink\">your tip is pushed into <<him>>, a thrust away from being enveloped.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].penis to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechNPCAnusImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<elseif $penisWetness gte (playerPenisSize() * 15) + random(1, 40) or random(1, 2) is 2 and !$npcSub>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<He>> presses <<his>> ass against your <<penis>>, <span class=\"blue\">but fails to envelop you.</span> Your <<penisSimple>> angles away and rubs between <<his>> cheeks.",
+   "\t\t\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $speechotheranusimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t<<He>>【이가】 당신의 <<penis>>에 엉덩이를 밀어붙이지만, <span class=\"blue\">당신을 집어삼키는 데는 실패한다.</span> 당신의 <<penisSimple>>【이가】 빗겨 나가며 <<his>> 엉덩이골 사이를 문지른다.",
+   "\t\t\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $speechotheranusimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<He>> presses <<his>> ass against your <<penis>>, <span class=\"blue\">but fails to envelop you.</span> Your <<penisSimple>> angles away and rubs between <<his>> cheeks.",
+   "\t\t\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $speechNPCAnusImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<elseif !$npcSub>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<his>> <<npcPenisSimple _n>> against your $worn.genitals.name.",
+   "\t\t\t\t\t<<set $worn.genitals.integrity -= 10>><<set $speechchastity to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $enemyarousal gte (($enemyarousalmax / 10) * 7)>>",
+   "\t\t\t\t\t\t격렬하게 부딪치며",
+   "\t\t\t\t\t<<elseif $enemyarousal gte (($enemyarousalmax / 10) * 4)>>",
+   "\t\t\t\t\t\t세게 내리찍으며",
+   "\t\t\t\t\t<<else>>",
+   "\t\t\t\t\t\t맞대고 누르며",
+   "\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t당신의 $worn.genitals.name에 <<his>> <<npcPenisSimple _n>>【을를】 비빈다.",
+   "\t\t\t\t\t<<set $worn.genitals.integrity -= 10>><<set $speechchastity to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<his>> <<npcPenisSimple _n>> against your $worn.genitals.name.",
+   "\t\t\t\t\t<<set $worn.genitals.integrity -= 10>><<set $speechChastity to 1>>"
+  ],
+  "context": "\t\t\t\t<<if playerChastity(\"penis\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> moves <<his>> clit away and presses <<his>> hungry pussy against your <<penis>>.</span>",
+   "\t\t\t\t<<set $penisuse to \"othervagina\">><<set $NPCList[_n].vagina to \"penisentrance\">><<set $penisstate to \"entrance\">><<set $speechpenisentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"blue\"><<He>>【은는】 <<his>> 클리토리스를 떼어내고, 굶주린 보지를 당신의 <<penis>>에 꽉 누른다.</span>",
+   "\t\t\t\t<<set $penisuse to \"othervagina\">><<set $NPCList[_n].vagina to \"penisentrance\">><<set $penisstate to \"entrance\">><<set $speechpenisentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> moves <<his>> clit away and presses <<his>> hungry pussy against your <<penis>>.</span>",
+   "\t\t\t\t<<set $penisuse to \"othervagina\">><<set $NPCList[_n].vagina to \"penisentrance\">><<set $penisstate to \"entrance\">><<set $speechNPCVaginaEntrance to 1>>"
+  ],
+  "context": "\t\t\t<<if $rng gte 101>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"purple\"><<He>> moves <<his>> pelvis away, releasing your <<penis>> from <<his>> vagina.</span>",
+   "\t\t\t\t<<sex 30 \"genital\" _n>><<set $NPCList[_n].vagina to \"penisimminent\">><<set $penisstate to \"imminent\">><<set $speechpenisimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"purple\"><<He>>【은는】 골반을 치우고, <<his>> 보지에서 당신의 <<penis>>【을를】 빼낸다.</span>",
+   "\t\t\t\t<<sex 30 \"genital\" _n>><<set $NPCList[_n].vagina to \"penisimminent\">><<set $penisstate to \"imminent\">><<set $speechpenisimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"purple\"><<He>> moves <<his>> pelvis away, releasing your <<penis>> from <<his>> vagina.</span>",
+   "\t\t\t\t<<sex 30 \"genital\" _n>><<set $NPCList[_n].vagina to \"penisimminent\">><<set $penisstate to \"imminent\">><<set $speechNPCVaginaImminent to 1>>"
+  ],
+  "context": "\t\t\t<<if $rng gte 101>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> stops pressing <<his>> pussy against your <<penis>>.</span>",
+   "\t\t\t\t<<set $NPCList[_n].vagina to \"penisentrance\">><<set $penisstate to \"entrance\">><<set $speechpenisentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"blue\"><<He>>【은는】 당신의 <<penis>>에 <<his>> 보지를 누르던 것을 멈춘다.</span>",
+   "\t\t\t\t<<set $NPCList[_n].vagina to \"penisentrance\">><<set $penisstate to \"entrance\">><<set $speechpenisentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> stops pressing <<his>> pussy against your <<penis>>.</span>",
+   "\t\t\t\t<<set $NPCList[_n].vagina to \"penisentrance\">><<set $penisstate to \"entrance\">><<set $speechNPCVaginaEntrance to 1>>"
+  ],
+  "context": "\t\t\t<<if $rng gte 101>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> presses <<his>> pussy against the tip of your <<penis>>, trying to take you in. <span class=\"blue\">But you don't have an erection.</span>",
+   "\t\t\t\t\t\t<<set $speechpenissmall to 1>><<set $enemyanger += 5>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 당신의 <<penis>> 끝에 <<his>> 보지를 누르며 안으로 머금으려 한다. <span class=\"blue\">하지만 당신은 발기하지 않았다.</span>",
+   "\t\t\t\t\t\t<<set $speechpenissmall to 1>><<set $enemyanger += 5>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<He>> presses <<his>> pussy against the tip of your <<penis>>, trying to take you in. <span class=\"blue\">But you don't have an erection.</span>",
+   "\t\t\t\t\t\t<<set $speechPenisSmall to 1>><<set $enemyanger += 5>>"
+  ],
+  "context": "\t\t\t\t\t<<if ((playerPenisSize() is -1 and $arousal lt ($arousalmax / 5) * 4) or (playerPenisSize() is -2 and $arousal lt ($arousalmax / 10) * 9))>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"><<He>> eases your <<penis>> into <<his>> pussy, swallowing you to the base.</span>",
+   "\t\t\t\t\t\t\t<<sex 30 \"genital\" _n>><<set $speechpenispenetrated to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"><<He>>【은는】 당신의 <<penis>>【을를】 <<his>> 보지 안으로 천천히 밀어넣어, 뿌리 끝까지 삼킨다.</span>",
+   "\t\t\t\t\t\t\t<<sex 30 \"genital\" _n>><<set $speechpenispenetrated to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"><<He>> eases your <<penis>> into <<his>> pussy, swallowing you to the base.</span>",
+   "\t\t\t\t\t\t\t<<sex 30 \"genital\" _n>><<set $speechNPCVaginaPenetrated to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<<if playerHasStrapon() or $player.virginity.penile isnot true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"><<He>> eases your virgin penis into <<his>> pussy,</span><span class=\"red\"> separating your foreskin from your glans and <<virginitylosttext $NPCList[_n].fullDescription>></span>",
+   "\t\t\t\t\t\t\t<<sex 100 \"genital\" _n>><<takeVirginity $NPCList[_n].fullDescription \"penile\">><<bruise penis>><<violence 100>><<raped>><<penisraped>><<set $speechpenisvirgin to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"><<He>>【은는】 당신의 동정 자지를 <<his>> 보지 안으로 천천히 밀어넣어,</span><span class=\"red\"> 귀두에서 포피가 벗겨지게 만들고 <<virginitylosttext $NPCList[_n].fullDescription>></span>",
+   "\t\t\t\t\t\t\t<<sex 100 \"genital\" _n>><<takeVirginity $NPCList[_n].fullDescription \"penile\">><<bruise penis>><<violence 100>><<raped>><<penisraped>><<set $speechpenisvirgin to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"><<He>> eases your virgin penis into <<his>> pussy,</span><span class=\"red\"> separating your foreskin from your glans and <<virginitylosttext $NPCList[_n].fullDescription>></span>",
+   "\t\t\t\t\t\t\t<<sex 100 \"genital\" _n>><<takeVirginity $NPCList[_n].fullDescription \"penile\">><<bruise penis>><<violence 100>><<raped>><<penisraped>><<set $speechPenisVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<<elseif $player.virginity.penile is true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> presses <<his>> pussy against the tip of your <<penis>>, trying to take you in. <span class=\"blue\">Your girth proves too much.</span> <<He>> frots against your length.",
+   "\t\t\t\t\t\t<<set $speechpenisbig to 1>><<set $enemyanger += 5>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 당신의 <<penis>> 끝에 <<his>> 보지를 누르며 안으로 머금으려 한다. <span class=\"blue\">하지만 당신의 굵기가 너무 버겁다.</span> <<He>>【은는】 당신의 기둥에 보지를 비빈다.",
+   "\t\t\t\t\t\t<<set $speechpenisbig to 1>><<set $enemyanger += 5>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<He>> presses <<his>> pussy against the tip of your <<penis>>, trying to take you in. <span class=\"blue\">Your girth proves too much.</span> <<He>> frots against your length.",
+   "\t\t\t\t\t\t<<set $speechPenisBig to 1>><<set $enemyanger += 5>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tRespecting your wishes, <<he>> does not envelop your <<penis>> with <<his>> vagina, instead teasing the tip of your glans.",
+   "\t\t\t\t\t<<sex 15 \"genital\" _n>><<set $speechpeniswithhold to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t당신의 의사를 존중하여, <<he>>【은는】 <<his>> 보지로 당신의 <<penis>>【을를】 삼키는 대신 귀두 끝을 애태운다.",
+   "\t\t\t\t\t<<sex 15 \"genital\" _n>><<set $speechpeniswithhold to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\tRespecting your wishes, <<he>> does not envelop your <<penis>> with <<his>> vagina, instead teasing the tip of your glans.",
+   "\t\t\t\t\t<<sex 15 \"genital\" _n>><<set $speechNPCVaginaWithhold to 1>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> pussy against your <<penis>> through your $worn.over_lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechpenisentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.over_lower.name 너머로 <<his>> 보지를 당신의 <<penis>>에 비빈다.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechpenisentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> pussy against your <<penis>> through your $worn.over_lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechNPCVaginaEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t<<if $worn.over_lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> pussy against your <<penis>> through your $worn.lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.lower.integrity -= 10>><<set $speechpenisentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.lower.name 너머로 <<his>> 보지를 당신의 <<penis>>에 비빈다.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.lower.integrity -= 10>><<set $speechpenisentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> pussy against your <<penis>> through your $worn.lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.lower.integrity -= 10>><<set $speechNPCVaginaEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $worn.lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> pussy against your <<penis>> through your $worn.under_lower.name.",
+   "\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechpenisentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.under_lower.name 너머로 <<his>> 보지를 당신의 <<penis>>에 비빈다.",
+   "\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechpenisentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> pussy against your <<penis>> through your $worn.under_lower.name.",
+   "\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechNPCVaginaEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t<<if $worn.under_lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<span class=\"purple\"><<He>> presses <<his>> pussy against your <<penis>>.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].vagina to \"penisimminent\">><<set $penisstate to \"imminent\">><<set $speechpenisimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t<span class=\"purple\"><<He>>【은는】 당신의 <<penis>>에 <<his>> 보지를 누른다.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].vagina to \"penisimminent\">><<set $penisstate to \"imminent\">><<set $speechpenisimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<span class=\"purple\"><<He>> presses <<his>> pussy against your <<penis>>.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].vagina to \"penisimminent\">><<set $penisstate to \"imminent\">><<set $speechNPCVaginaImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<elseif $nopenile is 1 and !$npcSub>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<He>> presses <<his>> pussy against your <<penis>>. <<penis_lube_text>> <span class=\"pink\">your tip is pushed into <<him>>, a thrust away from being enveloped.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].vagina to \"penisimminent\">><<set $penisstate to \"imminent\">><<set $speechpenisimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t<<He>>【은는】 당신의 <<penis>>에 <<his>> 보지를 누른다. <<penis_lube_text>> <span class=\"pink\">당신의 끝부분이 <<him>> 안으로 밀려 들어가, 단 한 번의 찌르기면 완전히 집어삼켜질 듯하다.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].vagina to \"penisimminent\">><<set $penisstate to \"imminent\">><<set $speechpenisimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<He>> presses <<his>> pussy against your <<penis>>. <<penis_lube_text>> <span class=\"pink\">your tip is pushed into <<him>>, a thrust away from being enveloped.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].vagina to \"penisimminent\">><<set $penisstate to \"imminent\">><<set $speechNPCVaginaImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<elseif $penisWetness gte (playerPenisSize() * 15) + random(1, 40) or random(1, 2) is 2 and !$npcSub>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<He>> presses <<his>> pussy against your <<penis>>, <span class=\"blue\">but fails to envelop you.</span> Your <<penisSimple>> angles away and rubs against <<his>> clit.",
+   "\t\t\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $speechpenisimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t<<He>>【은는】 당신의 <<penis>>에 <<his>> 보지를 누르지만, <span class=\"blue\">당신을 삼키는 데는 실패한다.</span> 당신의 <<penisSimple>>【이가】 비껴가며 <<his>> 클리토리스에 문질러진다.",
+   "\t\t\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $speechpenisimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<He>> presses <<his>> pussy against your <<penis>>, <span class=\"blue\">but fails to envelop you.</span> Your <<penisSimple>> angles away and rubs against <<his>> clit.",
+   "\t\t\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $speechNPCVaginaImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<elseif !$npcSub>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<his>> pussy against yours.</span>",
+   "\t\t\t<<set $vaginastate to \"othervagina\">><<set $NPCList[_n].vagina to \"vagina\">><<sex 20 \"genital\" _n>><<set $speechvaginavagina to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<his>> 보지를 당신의 것에 들이박는다.</span>",
+   "\t\t\t<<set $vaginastate to \"othervagina\">><<set $NPCList[_n].vagina to \"vagina\">><<sex 20 \"genital\" _n>><<set $speechvaginavagina to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t<<his>> pussy against yours.</span>",
+   "\t\t\t<<set $vaginastate to \"othervagina\">><<set $NPCList[_n].vagina to \"vagina\">><<sex 20 \"genital\" _n>><<set $speechTrib to 1>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> presses your <<penis>> against your stomach with <<his>> foot and rubs your <<glans>> between <<his>> toes.",
+   "\t\t\t\t\t<<set $speechpenisfoot to 1>><<neutral 5 \"genitals\" _n>><<violence 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 발로 당신의 <<penis>>【을를】 배 쪽에 밀어붙이며 발가락 사이에 당신의 <<glans>>【을를】 끼우고 문지른다.",
+   "\t\t\t\t\t<<set $speechpenisfoot to 1>><<neutral 5 \"genitals\" _n>><<violence 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> presses your <<penis>> against your stomach with <<his>> foot and rubs your <<glans>> between <<his>> toes.",
+   "\t\t\t\t\t<<set $speechPenisFoot to 1>><<neutral 5 \"genitals\" _n>><<violence 1>>"
+  ],
+  "context": "\t\t\t\t<<if $penisuse is \"feet\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> rubs <<his>> foot against your <<pussy>>.",
+   "\t\t\t\t\t<<set $speechvaginafoot to 1>><<neutral 5 \"genitals\" _n>><<violence 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 당신의 <<pussy>>에 <<his>> 발을 문지른다.",
+   "\t\t\t\t\t<<set $speechvaginafoot to 1>><<neutral 5 \"genitals\" _n>><<violence 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> rubs <<his>> foot against your <<pussy>>.",
+   "\t\t\t\t\t<<set $speechVaginaFoot to 1>><<neutral 5 \"genitals\" _n>><<violence 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $vaginause is \"feet\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> shifts <<his>> ass and presses <<his>> anus against your <<penis>>.</span>",
+   "\t\t\t\t<<set $penisuse to \"otheranus\">><<set $NPCList[_n].vagina to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechotheranusentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"blue\"><<He>>【이가】 엉덩이를 비틀어 <<his>> 항문을 당신의 <<penis>>에 밀어붙인다.</span>",
+   "\t\t\t\t<<set $penisuse to \"otheranus\">><<set $NPCList[_n].vagina to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechotheranusentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> shifts <<his>> ass and presses <<his>> anus against your <<penis>>.</span>",
+   "\t\t\t\t<<set $penisuse to \"otheranus\">><<set $NPCList[_n].vagina to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechNPCAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"purple\"><<He>> moves <<his>> pelvis away, releasing your <<penis>> from <<his>> anus.</span>",
+   "\t\t\t\t<<sex 30 \"genital\" _n>><<set $NPCList[_n].vagina to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechotheranusimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"purple\"><<He>>【이가】 골반을 뒤로 빼며, <<his>> 항문에서 당신의 <<penis>>【을를】 빼낸다.</span>",
+   "\t\t\t\t<<sex 30 \"genital\" _n>><<set $NPCList[_n].vagina to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechotheranusimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"purple\"><<He>> moves <<his>> pelvis away, releasing your <<penis>> from <<his>> anus.</span>",
+   "\t\t\t\t<<sex 30 \"genital\" _n>><<set $NPCList[_n].vagina to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechNPCAnusImminent to 1>>"
+  ],
+  "context": "\t\t\t<<if $rng gte 101>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> stops pressing <<his>> ass against your <<penis>>.</span>",
+   "\t\t\t\t<<set $NPCList[_n].vagina to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechotheranusentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"blue\"><<He>>【은는】 당신의 <<penis>>에 엉덩이를 밀어붙이는 것을 멈춘다.</span>",
+   "\t\t\t\t<<set $NPCList[_n].vagina to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechotheranusentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> stops pressing <<his>> ass against your <<penis>>.</span>",
+   "\t\t\t\t<<set $NPCList[_n].vagina to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechNPCAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t<<if $rng gte 101>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> presses <<his>> ass against the tip of your <<penis>>, trying to take you in. <span class=\"blue\">But you don't have an erection.</span>",
+   "\t\t\t\t\t\t<<set $speechpenissmall to 1>><<set $enemyanger += 5>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 당신을 받아들이려 <<his>> 엉덩이를 당신의 <<penis>> 끝에 밀어붙인다. <span class=\"blue\">하지만 당신은 발기하지 않은 상태다.</span>",
+   "\t\t\t\t\t\t<<set $speechpenissmall to 1>><<set $enemyanger += 5>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<He>> presses <<his>> ass against the tip of your <<penis>>, trying to take you in. <span class=\"blue\">But you don't have an erection.</span>",
+   "\t\t\t\t\t\t<<set $speechPenisSmall to 1>><<set $enemyanger += 5>>"
+  ],
+  "context": "\t\t\t\t\t<<if ((playerPenisSize() is -1 and $arousal lt ($arousalmax / 5) * 4) or (playerPenisSize() is -2 and $arousal lt ($arousalmax / 10) * 9))>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"><<He>> eases your <<penis>> into <<his>> ass, swallowing you to the base.</span>",
+   "\t\t\t\t\t\t\t<<sex 30 \"genital\" _n>><<set $speechotheranuspenetrated to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"><<He>>【이가】 당신의 <<penis>>【을를】 <<his>> 엉덩이 속으로 부드럽게 밀어 넣으며, 뿌리까지 집어삼킨다.</span>",
+   "\t\t\t\t\t\t\t<<sex 30 \"genital\" _n>><<set $speechotheranuspenetrated to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"><<He>> eases your <<penis>> into <<his>> ass, swallowing you to the base.</span>",
+   "\t\t\t\t\t\t\t<<sex 30 \"genital\" _n>><<set $speechNPCAnusPenetrated to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<<if playerHasStrapon() or $player.virginity.penile isnot true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"> <<He>> eases your virgin penis into <<his>> ass,</span><span class=\"red\"> separating your foreskin from your glans and <<virginitylosttext $NPCList[_n].fullDescription>></span>",
+   "\t\t\t\t\t\t\t<<sex 100 \"genital\" _n>><<takeVirginity $NPCList[_n].fullDescription \"penile\">><<bruise penis>><<violence 100>><<raped>><<penisraped>><<set $speechpenisvirgin to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"> <<He>>【은는】 당신의 동정 자지를 <<his>> 항문 안으로 천천히 밀어넣어,</span><span class=\"red\"> 귀두에서 포피가 벗겨지게 만들고 <<virginitylosttext $NPCList[_n].fullDescription>></span>",
+   "\t\t\t\t\t\t\t<<sex 100 \"genital\" _n>><<takeVirginity $NPCList[_n].fullDescription \"penile\">><<bruise penis>><<violence 100>><<raped>><<penisraped>><<set $speechpenisvirgin to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t<span class=\"pink\"> <<He>> eases your virgin penis into <<his>> ass,</span><span class=\"red\"> separating your foreskin from your glans and <<virginitylosttext $NPCList[_n].fullDescription>></span>",
+   "\t\t\t\t\t\t\t<<sex 100 \"genital\" _n>><<takeVirginity $NPCList[_n].fullDescription \"penile\">><<bruise penis>><<violence 100>><<raped>><<penisraped>><<set $speechPenisVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<<elseif $player.virginity.penile is true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> presses <<his>> ass against the tip of your <<penis>>, trying to take you in. <span class=\"blue\">Your girth proves too much.</span>",
+   "\t\t\t\t\t\t<<set $speechpenisbig to 1>><<set $enemyanger += 5>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 당신을 받아들이려 <<his>> 엉덩이를 당신의 <<penis>> 끝에 밀어붙인다. <span class=\"blue\">당신의 둘레가 너무 굵어 무리다.</span>",
+   "\t\t\t\t\t\t<<set $speechpenisbig to 1>><<set $enemyanger += 5>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<He>> presses <<his>> ass against the tip of your <<penis>>, trying to take you in. <span class=\"blue\">Your girth proves too much.</span>",
+   "\t\t\t\t\t\t<<set $speechPenisBig to 1>><<set $enemyanger += 5>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\tRespecting your wishes, <<he>> does not envelop your <<penis>> with <<his>> ass, instead teasing the tip of your <<glans>>.",
+   "\t\t\t\t\t<<sex 15 \"genital\" _n>><<set $speechotheranuswithhold to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t당신의 뜻을 존중하여, <<he>>【은는】 <<his>> 엉덩이로 당신의 <<penis>>【을를】 집어삼키지 않고 대신 당신의 <<glans>> 끝을 애태운다.",
+   "\t\t\t\t\t<<sex 15 \"genital\" _n>><<set $speechotheranuswithhold to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\tRespecting your wishes, <<he>> does not envelop your <<penis>> with <<his>> ass, instead teasing the tip of your <<glans>>.",
+   "\t\t\t\t\t<<sex 15 \"genital\" _n>><<set $speechNPCAnusWithhold to 1>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.over_lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechotheranusentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> 당신의 $worn.over_lower.name 너머로 <<his>> 엉덩이를 당신의 <<penis>>에 문지른다.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechotheranusentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.over_lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.over_lower.integrity -= 10>><<set $speechNPCAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t<<if $worn.over_lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.lower.integrity -= 10>><<set $speechotheranusentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> 당신의 $worn.lower.name 너머로 <<his>> 엉덩이를 당신의 <<penis>>에 문지른다.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.lower.integrity -= 10>><<set $speechotheranusentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.lower.name.",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.lower.integrity -= 10>><<set $speechNPCAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $worn.lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.under_lower.name.",
+   "\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechotheranusentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> 당신의 $worn.under_lower.name 너머로 <<his>> 엉덩이를 당신의 <<penis>>에 문지른다.",
+   "\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechotheranusentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<if $npcSub>>You rub<<else>><<He>> rubs<</if>> <<his>> ass against your <<penis>> through your $worn.under_lower.name.",
+   "\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $worn.under_lower.integrity -= 10>><<set $speechNPCAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t<<if $worn.under_lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<span class=\"purple\"><<He>> presses <<his>> ass against your <<penis>>.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].vagina to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechotheranusimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t<span class=\"purple\"><<He>>【이가】 당신의 <<penis>>에 엉덩이를 밀어붙인다.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].vagina to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechotheranusimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<span class=\"purple\"><<He>> presses <<his>> ass against your <<penis>>.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].vagina to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechNPCAnusImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<elseif $nopenile is 1 and !$npcSub>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<He>> presses <<his>> ass against your <<penis>>. <<penis_lube_text>> <span class=\"pink\">your tip is pushed into <<him>>, a thrust away from being enveloped.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].vagina to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechotheranusimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t<<He>>【이가】 당신의 <<penis>>에 엉덩이를 밀어붙인다. <<penis_lube_text>> <span class=\"pink\">당신의 끝부분이 <<him>> 안으로 파고들어, 한 번만 허리를 쳐올리면 집어삼켜질 듯하다.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].vagina to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechotheranusimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<He>> presses <<his>> ass against your <<penis>>. <<penis_lube_text>> <span class=\"pink\">your tip is pushed into <<him>>, a thrust away from being enveloped.</span>",
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $NPCList[_n].vagina to \"otheranusimminent\">><<set $penisstate to \"otheranusimminent\">><<set $speechNPCAnusImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<elseif $penisWetness gte (playerPenisSize() * 15) + random(1, 40) or random(1, 2) is 2 and !$npcSub>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<He>> presses <<his>> ass against your <<penis>>, <span class=\"blue\">but fails to envelop you.</span> Your <<penisSimple>> angles away and rubs between <<his>> cheeks.",
+   "\t\t\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $speechotheranusimminent to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t\t<<He>>【이가】 당신의 <<penis>>에 엉덩이를 밀어붙이지만, <span class=\"blue\">당신을 집어삼키는 데는 실패한다.</span> 당신의 <<penisSimple>>【이가】 빗겨 나가며 <<his>> 엉덩이골 사이를 문지른다.",
+   "\t\t\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $speechotheranusimminent to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<He>> presses <<his>> ass against your <<penis>>, <span class=\"blue\">but fails to envelop you.</span> Your <<penisSimple>> angles away and rubs between <<his>> cheeks.",
+   "\t\t\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $speechNPCAnusImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<elseif !$npcSub>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<span class=\"blue\"><<He>> straddles you, rubbing <<his>> ass against your <<penis>>.</span>",
+   "\t\t\t\t\t<<neutral 5 _n>><<set $penisuse to \"otheranus\">><<set $NPCList[_n].penis to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechotheranusentrance to 1>><<set $penistarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<span class=\"blue\"><<He>>【이가】 당신의 위로 올라타, 당신의 <<penis>>에 <<his>> 엉덩이를 문지른다.</span>",
+   "\t\t\t\t\t<<neutral 5 _n>><<set $penisuse to \"otheranus\">><<set $NPCList[_n].penis to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechotheranusentrance to 1>><<set $penistarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<span class=\"blue\"><<He>> straddles you, rubbing <<his>> ass against your <<penis>>.</span>",
+   "\t\t\t\t\t<<neutral 5 _n>><<set $penisuse to \"otheranus\">><<set $NPCList[_n].penis to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechNPCAnusEntrance to 1>><<set $penistarget to _n>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<span class=\"blue\"><<He>> moves between your legs, positioning <<his>> $NPCList[_n].penisdesc in front of your <<pussy>>.</span>",
+   "\t\t\t<<neutral 5 _n>><<set $vaginause to \"penis\">><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginastate to \"entrance\">><<set $speechvaginaentrance to 1>><<set $vaginatarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t<span class=\"blue\"><<He>>【이가】 당신의 다리 사이로 움직여, <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>> 앞에 자리 잡게 한다.</span>",
+   "\t\t\t<<neutral 5 _n>><<set $vaginause to \"penis\">><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginastate to \"entrance\">><<set $speechvaginaentrance to 1>><<set $vaginatarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t<span class=\"blue\"><<He>> moves between your legs, positioning <<his>> $NPCList[_n].penisdesc in front of your <<pussy>>.</span>",
+   "\t\t\t<<neutral 5 _n>><<set $vaginause to \"penis\">><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginastate to \"entrance\">><<set $speechVaginaEntrance to 1>><<set $vaginatarget to _n>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<span class=\"purple\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus.</span>",
+   "\t\t\t\t\t<<neutral 5 \"anus\">><<set $anususe to \"penis\">><<set $NPCList[_n].penis to \"anusentrance\">><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>><<set $anustarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<span class=\"purple\"><<He>>【이가】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문에 밀어붙인다.</span>",
+   "\t\t\t\t\t<<neutral 5 \"anus\">><<set $anususe to \"penis\">><<set $NPCList[_n].penis to \"anusentrance\">><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>><<set $anustarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<span class=\"purple\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus.</span>",
+   "\t\t\t\t\t<<neutral 5 \"anus\">><<set $anususe to \"penis\">><<set $NPCList[_n].penis to \"anusentrance\">><<set $anusstate to \"entrance\">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>"
+  ],
+  "context": "\t\t\t\t<<if $worn.under_lower.anus_exposed is 1 and $worn.genitals.anus_exposed is 1 and $NPCList[_n].chastity.penis.includes(\"chastity\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> presses <<his>> $NPCList[_n].penisdesc against your anus, <span class=\"pink\">preparing to penetrate.</span>",
+   "\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $anususe to \"penis\">><<set $NPCList[_n].penis to \"anusimminent\">><<set $anusstate to \"imminent\">><<set $speechanusimminent to 1>><<set $anustarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문에 밀착시키며, <span class=\"pink\">삽입할 준비를 한다.</span>",
+   "\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $anususe to \"penis\">><<set $NPCList[_n].penis to \"anusimminent\">><<set $anusstate to \"imminent\">><<set $speechanusimminent to 1>><<set $anustarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> presses <<his>> $NPCList[_n].penisdesc against your anus, <span class=\"pink\">preparing to penetrate.</span>",
+   "\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $anususe to \"penis\">><<set $NPCList[_n].penis to \"anusimminent\">><<set $anusstate to \"imminent\">><<set $speechAnusImminent to 1>><<set $anustarget to _n>>"
+  ],
+  "context": "\t\t\t\t<<elseif $worn.under_lower.anus_exposed is 1 and $worn.genitals.anus_exposed is 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.under_lower.name.</span>",
+   "\t\t\t\t\t<<sex 3 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.under_lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>><<set $anustarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<span class=\"blue\"><<He>>【이가】 당신의 $worn.under_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 항문에 밀어붙인다.</span>",
+   "\t\t\t\t\t<<sex 3 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.under_lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>><<set $anustarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.under_lower.name.</span>",
+   "\t\t\t\t\t<<sex 3 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.under_lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>"
+  ],
+  "context": "\t\t\t\t<<elseif $worn.under_lower.anus_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.over_lower.name.</span>",
+   "\t\t\t\t<<sex 2 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.over_lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>><<set $anustarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"blue\"><<He>>【이가】 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 항문에 밀어붙인다.</span>",
+   "\t\t\t\t<<sex 2 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.over_lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>><<set $anustarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.over_lower.name.</span>",
+   "\t\t\t\t<<sex 2 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.over_lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>"
+  ],
+  "context": "\t\t\t<<elseif $worn.over_lower.anus_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.lower.name.</span>",
+   "\t\t\t\t<<sex 2 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>><<set $anustarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"blue\"><<He>>【이가】 당신의 $worn.lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 항문에 밀어붙인다.</span>",
+   "\t\t\t\t<<sex 2 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>><<set $anustarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.lower.name.</span>",
+   "\t\t\t\t<<sex 2 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>"
+  ],
+  "context": "\t\t\t<<elseif $worn.lower.anus_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<span class=\"purple\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>>.</span>",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $vaginause to \"penis\">><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginastate to \"entrance\">><<set $speechvaginaentrance to 1>><<set $vaginatarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<span class=\"purple\"><<He>>【이가】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 밀어붙인다.</span>",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $vaginause to \"penis\">><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginastate to \"entrance\">><<set $speechvaginaentrance to 1>><<set $vaginatarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<span class=\"purple\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>>.</span>",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $vaginause to \"penis\">><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginastate to \"entrance\">><<set $speechVaginaEntrance to 1>><<set $vaginatarget to _n>>"
+  ],
+  "context": "\t\t\t\t<<if $worn.under_lower.vagina_exposed is 1 and !playerChastity(\"vagina\") and $NPCList[_n].chastity.penis.includes(\"chastity\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>>, <span class=\"pink\">preparing to penetrate.</span>",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $vaginause to \"penis\">><<set $NPCList[_n].penis to \"vaginaimminent\">><<set $vaginastate to \"imminent\">><<set $speechvaginaimminent to 1>><<set $vaginatarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 밀착시키며, <span class=\"pink\">삽입할 준비를 한다.</span>",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $vaginause to \"penis\">><<set $NPCList[_n].penis to \"vaginaimminent\">><<set $vaginastate to \"imminent\">><<set $speechvaginaimminent to 1>><<set $vaginatarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>>, <span class=\"pink\">preparing to penetrate.</span>",
+   "\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $vaginause to \"penis\">><<set $NPCList[_n].penis to \"vaginaimminent\">><<set $vaginastate to \"imminent\">><<set $speechVaginaImminent to 1>><<set $vaginatarget to _n>>"
+  ],
+  "context": "\t\t\t\t<<elseif $worn.under_lower.vagina_exposed is 1 and !playerChastity(\"vagina\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.under_lower.name.</span>",
+   "\t\t\t\t\t<<set $worn.under_lower.integrity -= 10>><<sex 3 \"genital\" _n>><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginause to \"penis\">><<set $vaginastate to \"entrance\">><<set $speechvaginaentrance to 1>><<set $vaginatarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<span class=\"blue\"><<He>>【이가】 당신의 $worn.under_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 밀어붙인다.</span>",
+   "\t\t\t\t\t<<set $worn.under_lower.integrity -= 10>><<sex 3 \"genital\" _n>><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginause to \"penis\">><<set $vaginastate to \"entrance\">><<set $speechvaginaentrance to 1>><<set $vaginatarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.under_lower.name.</span>",
+   "\t\t\t\t\t<<set $worn.under_lower.integrity -= 10>><<sex 3 \"genital\" _n>><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginause to \"penis\">><<set $vaginastate to \"entrance\">><<set $speechVaginaEntrance to 1>><<set $vaginatarget to _n>>"
+  ],
+  "context": "\t\t\t\t<<elseif $worn.under_lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.over_lower.name.</span>",
+   "\t\t\t\t<<sex 2 \"genital\" _n>><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginause to \"penis\">><<set $worn.over_lower.integrity -= 10>><<set $vaginastate to \"entrance\">><<set $speechvaginaentrance to 1>><<set $vaginatarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"blue\"><<He>>【이가】 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 밀어붙인다.</span>",
+   "\t\t\t\t<<sex 2 \"genital\" _n>><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginause to \"penis\">><<set $worn.over_lower.integrity -= 10>><<set $vaginastate to \"entrance\">><<set $speechvaginaentrance to 1>><<set $vaginatarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.over_lower.name.</span>",
+   "\t\t\t\t<<sex 2 \"genital\" _n>><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginause to \"penis\">><<set $worn.over_lower.integrity -= 10>><<set $vaginastate to \"entrance\">><<set $speechVaginaEntrance to 1>><<set $vaginatarget to _n>>"
+  ],
+  "context": "\t\t\t<<elseif $worn.over_lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.lower.name.</span>",
+   "\t\t\t\t<<sex 2 \"genital\" _n>><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginause to \"penis\">><<set $worn.lower.integrity -= 10>><<set $vaginastate to \"entrance\">><<set $speechvaginaentrance to 1>><<set $vaginatarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<span class=\"blue\"><<He>>【이가】 당신의 $worn.lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 밀어붙인다.</span>",
+   "\t\t\t\t<<sex 2 \"genital\" _n>><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginause to \"penis\">><<set $worn.lower.integrity -= 10>><<set $vaginastate to \"entrance\">><<set $speechvaginaentrance to 1>><<set $vaginatarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your <<pussy>> through your $worn.lower.name.</span>",
+   "\t\t\t\t<<sex 2 \"genital\" _n>><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginause to \"penis\">><<set $worn.lower.integrity -= 10>><<set $vaginastate to \"entrance\">><<set $speechVaginaEntrance to 1>><<set $vaginatarget to _n>>"
+  ],
+  "context": "\t\t\t<<elseif $worn.lower.vagina_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<span class=\"purple\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus.</span>",
+   "\t\t\t\t\t\t<<neutral 5 \"anus\">><<set $anususe to \"penis\">><<set $NPCList[_n].penis to \"anusentrance\">><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>><<set $anustarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<span class=\"purple\"><<He>>【이가】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문에 밀어붙인다.</span>",
+   "\t\t\t\t\t\t<<neutral 5 \"anus\">><<set $anususe to \"penis\">><<set $NPCList[_n].penis to \"anusentrance\">><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>><<set $anustarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<span class=\"purple\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus.</span>",
+   "\t\t\t\t\t\t<<neutral 5 \"anus\">><<set $anususe to \"penis\">><<set $NPCList[_n].penis to \"anusentrance\">><<set $anusstate to \"entrance\">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>"
+  ],
+  "context": "\t\t\t\t\t<<if $worn.under_lower.anus_exposed is 1 and $worn.genitals.anus_exposed is 1 and $NPCList[_n].chastity.penis.includes(\"chastity\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> presses <<his>> $NPCList[_n].penisdesc against your anus, <span class=\"pink\">preparing to penetrate.</span>",
+   "\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $anususe to \"penis\">><<set $NPCList[_n].penis to \"anusimminent\">><<set $anusstate to \"imminent\">><<set $speechanusimminent to 1>><<set $anustarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문에 밀착시키며, <span class=\"pink\">삽입할 준비를 한다.</span>",
+   "\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $anususe to \"penis\">><<set $NPCList[_n].penis to \"anusimminent\">><<set $anusstate to \"imminent\">><<set $speechanusimminent to 1>><<set $anustarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<He>> presses <<his>> $NPCList[_n].penisdesc against your anus, <span class=\"pink\">preparing to penetrate.</span>",
+   "\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $anususe to \"penis\">><<set $NPCList[_n].penis to \"anusimminent\">><<set $anusstate to \"imminent\">><<set $speechAnusImminent to 1>><<set $anustarget to _n>>"
+  ],
+  "context": "\t\t\t\t\t<<elseif $worn.under_lower.anus_exposed is 1 and $worn.genitals.anus_exposed is 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.under_lower.name.</span>",
+   "\t\t\t\t\t\t<<sex 3 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.under_lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>><<set $anustarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<span class=\"blue\"><<He>>【이가】 당신의 $worn.under_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 항문에 밀어붙인다.</span>",
+   "\t\t\t\t\t\t<<sex 3 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.under_lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>><<set $anustarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.under_lower.name.</span>",
+   "\t\t\t\t\t\t<<sex 3 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.under_lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>"
+  ],
+  "context": "\t\t\t\t\t<<elseif $worn.under_lower.anus_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.over_lower.name.</span>",
+   "\t\t\t\t\t<<sex 2 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.over_lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>><<set $anustarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<span class=\"blue\"><<He>>【이가】 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 항문에 밀어붙인다.</span>",
+   "\t\t\t\t\t<<sex 2 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.over_lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>><<set $anustarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.over_lower.name.</span>",
+   "\t\t\t\t\t<<sex 2 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.over_lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>"
+  ],
+  "context": "\t\t\t\t<<elseif $worn.over_lower.anus_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.lower.name.</span>",
+   "\t\t\t\t\t<<sex 2 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>><<set $anustarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<span class=\"blue\"><<He>>【이가】 당신의 $worn.lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 항문에 밀어붙인다.</span>",
+   "\t\t\t\t\t<<sex 2 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>><<set $anustarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<span class=\"blue\"><<He>> presses <<his>> $NPCList[_n].penisdesc against your anus through your $worn.lower.name.</span>",
+   "\t\t\t\t\t<<sex 2 \"anal\" _n>><<set $NPCList[_n].penis to \"anusentrance\">><<set $anususe to \"penis\">><<set $worn.lower.integrity -= 10>><<set $anusstate to \"entrance\">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>"
+  ],
+  "context": "\t\t\t\t<<elseif $worn.lower.anus_exposed is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<His>> legs quiver, <<his>> pussy waiting for you to do something.",
+   "\t\t<<neutral 1 _n>><<set $speechvaginaflaunt to 1>>"
+  ],
+  "old_kr": [
+   "\t\t<<His>> 다리가 떨리고, <<his>> 보지가 당신이 무언가 해주기를 기다린다.",
+   "\t\t<<neutral 1 _n>><<set $speechvaginaflaunt to 1>>"
+  ],
+  "new_en": [
+   "\t\t<<His>> legs quiver, <<his>> pussy waiting for you to do something.",
+   "\t\t<<neutral 1 _n>><<set $speechVaginaFlaunt to 1>>"
+  ],
+  "context": "\t<<elseif $npcSub>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<He>> sways <<his>> hips suggestively.",
+   "\t\t<<neutral 1 _n>><<set $speechvaginaflaunt to 1>>"
+  ],
+  "old_kr": [
+   "\t\t<<He>>【은는】 노골적으로 <<his>> 엉덩이를 흔든다.",
+   "\t\t<<neutral 1 _n>><<set $speechvaginaflaunt to 1>>"
+  ],
+  "new_en": [
+   "\t\t<<He>> sways <<his>> hips suggestively.",
+   "\t\t<<neutral 1 _n>><<set $speechVaginaFlaunt to 1>>"
+  ],
+  "context": "\t<<elseif $enemyanger + $rng lte 20 and $NPCList[_n].location.genitals is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<He>> rubs <<his>> pussy.",
+   "\t\t<<neutral 3 _n>><<set $speechvaginaflaunt to 1>>"
+  ],
+  "old_kr": [
+   "\t\t<<He>>【은는】 <<his>> 보지를 문지른다.",
+   "\t\t<<neutral 3 _n>><<set $speechvaginaflaunt to 1>>"
+  ],
+  "new_en": [
+   "\t\t<<He>> rubs <<his>> pussy.",
+   "\t\t<<neutral 3 _n>><<set $speechVaginaFlaunt to 1>>"
+  ],
+  "context": "\t<<elseif $enemyanger + $rng lte 40>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<span class=\"blue\"><<He>> straddles you, rubbing <<his>> ass against your <<penis>>.</span>",
+   "\t\t<<neutral 5 \"genitals\">><<set $penisuse to \"otheranus\">><<set $NPCList[_n].vagina to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechotheranusentrance to 1>><<set $penistarget to _n>>"
+  ],
+  "old_kr": [
+   "\t\t<span class=\"blue\"><<He>>【이가】 당신의 위에 올라타, <<his>> 엉덩이를 당신의 <<penis>>에 비빈다.</span>",
+   "\t\t<<neutral 5 \"genitals\">><<set $penisuse to \"otheranus\">><<set $NPCList[_n].vagina to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechotheranusentrance to 1>><<set $penistarget to _n>>"
+  ],
+  "new_en": [
+   "\t\t<span class=\"blue\"><<He>> straddles you, rubbing <<his>> ass against your <<penis>>.</span>",
+   "\t\t<<neutral 5 \"genitals\">><<set $penisuse to \"otheranus\">><<set $NPCList[_n].vagina to \"otheranusentrance\">><<set $penisstate to \"otheranusentrance\">><<set $speechNPCAnusEntrance to 1>><<set $penistarget to _n>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<span class=\"blue\"><<He>> moves <<his>> pussy close to yours.</span>",
+   "\t\t<<set $NPCList[_n].location.genitals = \"genitals\">><<set $speechtribentrance to 1>>"
+  ],
+  "old_kr": [
+   "\t\t<span class=\"blue\"><<He>>【이가】 <<his>> 보지를 당신의 것에 가까이 댄다.</span>",
+   "\t\t<<set $NPCList[_n].location.genitals = \"genitals\">><<set $speechtribentrance to 1>>"
+  ],
+  "new_en": [
+   "\t\t<span class=\"blue\"><<He>> moves <<his>> pussy close to yours.</span>",
+   "\t\t<<set $NPCList[_n].location.genitals = \"genitals\">><<set $speechTribEntrance to 1>>"
+  ],
+  "context": "\t\t<<set $vaginause to \"othervagina\">><<set $vaginastate to \"othervaginaentrance\">><<set $NPCList[_n].vagina to \"vaginaentrance\">><<sex 5 \"genital\" _n>><<set $vaginatarget to _n>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> kicks your <<penis>>.",
+   "\t\t\t\t\t<<violence 20>><<hitstat>><<bruise penis>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 당신의 <<penis>>【을를】 걷어찬다.",
+   "\t\t\t\t\t<<violence 20>><<hitstat>><<bruise penis>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> kicks your <<penis>>.",
+   "\t\t\t\t\t<<violence 20>><<hitstat>><<bruise penis>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t\t<<if $player.penisExist>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> kicks your <<pussy>>.",
+   "\t\t\t\t\t<<violence 20>><<hitstat>><<bruise vagina>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 당신의 <<pussy>>【을를】 걷어찬다.",
+   "\t\t\t\t\t<<violence 20>><<hitstat>><<bruise vagina>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> kicks your <<pussy>>.",
+   "\t\t\t\t\t<<violence 20>><<hitstat>><<bruise vagina>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $player.vaginaExist>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<span class=\"purple\"><<He>> wraps <<his>> legs around your head and presses <<his>> pussy against your mouth.</span>",
+   "\t\t\t\t\t<<submission 5 _n>><<set $mouthuse to \"othervagina\">><<set $NPCList[_n].vagina to \"mouth\">><<set $mouthstate to \"othervagina\">><<violence 3>><<bruise face>><<set $speechvaginamouth to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<span class=\"purple\"><<He>>【이가】 당신의 머리에 다리를 휘감고, <<his>> 보지를 당신의 입에 밀착시킨다.</span>",
+   "\t\t\t\t\t<<submission 5 _n>><<set $mouthuse to \"othervagina\">><<set $NPCList[_n].vagina to \"mouth\">><<set $mouthstate to \"othervagina\">><<violence 3>><<bruise face>><<set $speechvaginamouth to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<span class=\"purple\"><<He>> wraps <<his>> legs around your head and presses <<his>> pussy against your mouth.</span>",
+   "\t\t\t\t\t<<submission 5 _n>><<set $mouthuse to \"othervagina\">><<set $NPCList[_n].vagina to \"mouth\">><<set $mouthstate to \"othervagina\">><<violence 3>><<bruise face>><<set $speechMouthNPCVagina to 1>>"
+  ],
+  "context": "\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> kicks your <<penis>>.",
+   "\t\t\t\t<<violence 20>><<hitstat>><<bruise penis>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【은는】 당신의 <<penis>>【을를】 걷어찬다.",
+   "\t\t\t\t<<violence 20>><<hitstat>><<bruise penis>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> kicks your <<penis>>.",
+   "\t\t\t\t<<violence 20>><<hitstat>><<bruise penis>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t<<if $player.penisExist>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> kicks your <<pussy>>.",
+   "\t\t\t\t<<violence 20>><<hitstat>><<bruise vagina>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【은는】 당신의 <<pussy>>【을를】 걷어찬다.",
+   "\t\t\t\t<<violence 20>><<hitstat>><<bruise vagina>><<set $speechbeat to 1>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<He>> kicks your <<pussy>>.",
+   "\t\t\t\t<<violence 20>><<hitstat>><<bruise vagina>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t\t<<elseif $player.vaginaExist>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<He>> kicks you in the face.",
+   "\t\t\t<<violence 10>><<bruise face>><<set $speechbeat to 1>><<hitstat>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<He>>【은는】 당신의 얼굴을 걷어찬다.",
+   "\t\t\t<<violence 10>><<bruise face>><<set $speechbeat to 1>><<hitstat>>"
+  ],
+  "new_en": [
+   "\t\t\t<<He>> kicks you in the face.",
+   "\t\t\t<<violence 10>><<bruise face>><<set $speechPlayerBeaten to 1>><<hitstat>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<bruise bottom>><<hitstat>><<set $speechspank to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<bruise bottom>><<hitstat>><<set $speechSpank to 1>>"
+  ],
+  "context": "<<widget \"combat-spank\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<bruise bottom>><<hitstat>><<set $speechspank to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<bruise bottom>><<hitstat>><<set $speechSpank to 1>>"
+  ],
+  "context": "\t<<set $_toy to ($_hand is \"left\" ? $NPCList[_n].lefttool : $NPCList[_n].righttool)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $speechvagina to 1>><<set $vaginastate to \"otherhand\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $speechVagina to 1>><<set $vaginastate to \"otherhand\">>"
+  ],
+  "context": "\t\t<<neutral 15 \"genitals\" _n>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $speechpenis to 1>><<set $penisstate to \"otherhand\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $speechPenis to 1>><<set $penisstate to \"otherhand\">>"
+  ],
+  "context": "\t\t<<neutral 15 \"genitals\" _n>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<violence 10>><<hitstat>><<set $speechbeat to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<violence 10>><<hitstat>><<set $speechPlayerBeaten to 1>>"
+  ],
+  "context": "\t\t)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<neutral 20 \"genitals\" _n>><<set $speechvagina to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<neutral 20 \"genitals\" _n>><<set $speechVagina to 1>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $speechanus to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $speechAnus to 1>>"
+  ],
+  "context": "\t\t<<neutral 15 _n>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<neutral 20 _n>><<set $speechanus to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<neutral 20 _n>><<set $speechAnus to 1>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if playerBellyVisible()>><<set $speechpregnant to 1>><</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if playerBellyVisible()>><<set $speechPregnant to 1>><</if>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<if playerBellyVisible()>><<set $speechpregnant to 1>><</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if playerBellyVisible()>><<set $speechPregnant to 1>><</if>>"
+  ],
+  "context": "\t\t\t\t\t<<neutral 2 _n>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if playerBellyVisible()>><<set $speechpregnant to 1>><</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if playerBellyVisible()>><<set $speechPregnant to 1>><</if>>"
+  ],
+  "context": "\t\t\t<<neutral 1 _n>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if playerBellyVisible()>><<set $speechpregnant to 1>><</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if playerBellyVisible()>><<set $speechPregnant to 1>><</if>>"
+  ],
+  "context": "\t\t\t\t<<neutral 1 _n>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $_clothing.vagina_exposed to 1>><<set $_clothing.anus_exposed to 1>><<set $_clothing.exposed to 1>><<set $speechgenitals to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $_clothing.vagina_exposed to 1>><<set $_clothing.anus_exposed to 1>><<set $_clothing.exposed to 1>><<set $speechExposeGenitals to 1>>"
+  ],
+  "context": "\t\t<<combat-reset-hand $_hand>><<neutral 5 _n>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<neutral 5 _n>><<set $speechgenitals to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<neutral 5 _n>><<set $speechExposeGenitals to 1>>"
+  ],
+  "context": "\t\t<span class=\"lewd\"><<genitals>>.</span>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $speechanusentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $speechAnusEntrance to 1>>"
+  ],
+  "context": "\t<<combat-reset-hand $_hand>><<neutral 5 _n>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechheadnippleclosed to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechHeadNippleClosed to 1>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechheadnippleclosed to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechHeadNippleClosed to 1>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechheadbreasts to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechHeadBreasts to 1>>"
+  ],
+  "context": "\t\t<<if $NPCList[_n].breastsize gte 6>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechheadchest to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechHeadChest to 1>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<arousal 100 \"genitals\">><<combat-reset-hand _args[0]>><<set $speechchastity to 1>><<bodypart_admire_chance pubic>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<arousal 100 \"genitals\">><<combat-reset-hand _args[0]>><<set $speechChastity to 1>><<bodypart_admire_chance pubic>>"
+  ],
+  "context": "\t\t\t\t<<set $worn.genitals.integrity -= 5>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if playerBellyVisible()>><<set $speechpregnant to 1>><</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if playerBellyVisible()>><<set $speechPregnant to 1>><</if>>"
+  ],
+  "context": "\t\t\t<<neutral 1 _n>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $NPCList[_n].chest to \"mouthentrance\">><<set $speechheadbreasts to 1>><<neutral 3 _n>><<set $mouthactiondefault to \"breastclosed\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $NPCList[_n].chest to \"mouthentrance\">><<set $speechHeadBreasts to 1>><<neutral 3 _n>><<set $mouthactiondefault to \"breastclosed\">>"
+  ],
+  "context": "\t\t<<combat-set-hand-target _args[0] \"head_breasts\">><<set $mouthuse to \"breasts\">><<set $mouthstate to \"breasts\">><<set $head to \"breasts\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechbottom to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechBottom to 1>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $NPCList[_n].clothes and $NPCList[_n].clothes.set>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $NPCList[_n].clothes?.set>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechthigh to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechThigh to 1>>"
+  ],
+  "context": "\t\t<<if $NPCList[_n].penis is \"thighs\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "context": "\t\t\t\t<<if $rng gte 101>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $thighuse to 0>><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginause to \"penis\">><<set $vaginastate to \"entrance\">><<set $vaginatarget to _n>><<set $speechvaginaentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $thighuse to 0>><<set $NPCList[_n].penis to \"vaginaentrance\">><<set $vaginause to \"penis\">><<set $vaginastate to \"entrance\">><<set $vaginatarget to _n>><<set $speechVaginaEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechcheeks to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechCheeks to 1>>"
+  ],
+  "context": "\t\t<<if $NPCList[_n].penis is \"cheeks\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "context": "\t\t\t<<if $rng gte 101>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $NPCList[_n].penis to \"anusentrance\">><<set $anusstate to \"entrance\">><<set $anustarget to _n>><<set $bottomuse to 0>><<set $cheekactiondefault to \"cheeks\">><<set $speechanusentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $NPCList[_n].penis to \"anusentrance\">><<set $anusstate to \"entrance\">><<set $anustarget to _n>><<set $bottomuse to 0>><<set $cheekactiondefault to \"cheeks\">><<set $speechAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechhandjobpenis to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechHandjobPenis to 1>>"
+  ],
+  "context": "\t\t<<if $NPCList[_n].penis is \"leftarm\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechhandjobpenis to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechHandjobPenis to 1>>"
+  ],
+  "context": "\t\t<<if $NPCList[_n].penis is \"rightarm\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechhandjobpenis to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechHandjobPenis to 1>>"
+  ],
+  "context": "\t\t<<if $NPCList[_n].penis is \"botharm\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechfeet to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechFeet to 1>>"
+  ],
+  "context": "\t\t<<if $NPCList[_n].penis is \"feet\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<sex 30 \"genital\" _n>><<bruise vagina>><<violence 1>><<set $speechvaginapenetrated to 1>><<pain _pain>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<sex 30 \"genital\" _n>><<bruise vagina>><<violence 1>><<set $speechVaginaPenetrated to 1>><<pain _pain>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<sex 30 \"genital\" _n>><<takeTempleVirginity $NPCList[_n].fullDescription \"vaginal\">><<violence 1>><<set $speechvaginapenetrated to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<sex 30 \"genital\" _n>><<takeTempleVirginity $NPCList[_n].fullDescription \"vaginal\">><<violence 1>><<set $speechVaginaPenetrated to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<sex 100 \"genital\" _n>><<takeVirginity $NPCList[_n].fullDescription \"vaginal\">><<set $speechvaginavirgin to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<sex 100 \"genital\" _n>><<takeVirginity $NPCList[_n].fullDescription \"vaginal\">><<set $speechVaginaVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<sex 10 \"genital\" _n>><<set $speechvaginaentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<sex 10 \"genital\" _n>><<set $speechVaginaEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $speechchastity to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<sex 5 \"genital\" _n>><<set $speechChastity to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<sex 30 \"genitals\" _n>><<bruise vagina>><<violence 1>><<set $speechvaginapenetrated to 1>><<pain _pain>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<sex 30 \"genitals\" _n>><<bruise vagina>><<violence 1>><<set $speechVaginaPenetrated to 1>><<pain _pain>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<sex 30 \"genitals\" _n>><<bruise vagina>><<violence 1>><<set $speechvaginapenetrated to 1>><<pain _pain>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<sex 30 \"genitals\" _n>><<bruise vagina>><<violence 1>><<set $speechVaginaPenetrated to 1>><<pain _pain>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<sex 30 \"genitals\" _n>><<takeTempleVirginity $NPCList[_n].fullDescription \"vaginal\">><<violence 1>><<set $speechvaginapenetrated to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<sex 30 \"genitals\" _n>><<takeTempleVirginity $NPCList[_n].fullDescription \"vaginal\">><<violence 1>><<set $speechVaginaPenetrated to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<sex 100 \"genitals\" _n>><<takeVirginity $NPCList[_n].fullDescription \"vaginal\">><<set $speechvaginavirgin to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<sex 100 \"genitals\" _n>><<takeVirginity $NPCList[_n].fullDescription \"vaginal\">><<set $speechVaginaVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<sex 30 \"genitals\" _n>><<takeTempleVirginity $NPCList[_n].fullDescription \"vaginal\">><<violence 1>><<set $speechvaginapenetrated to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<sex 30 \"genitals\" _n>><<takeTempleVirginity $NPCList[_n].fullDescription \"vaginal\">><<violence 1>><<set $speechVaginaPenetrated to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<sex 100 \"genitals\" _n>><<takeVirginity $NPCList[_n].fullDescription \"vaginal\">><<set $speechvaginavirgin to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<sex 100 \"genitals\" _n>><<takeVirginity $NPCList[_n].fullDescription \"vaginal\">><<set $speechVaginaVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<sex 10 \"genitals\" _n>><<set $speechvaginaentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<sex 10 \"genitals\" _n>><<set $speechVaginaEntrance to 1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<sex 5 \"genitals\" _n>><<set $speechchastity to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<sex 5 \"genitals\" _n>><<set $speechChastity to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<sex 30 \"anal\" _n>><<bruise anus>><<violence 1>><<set $speechanuspenetrated to 1>><<pain _pain>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<sex 30 \"anal\" _n>><<bruise anus>><<violence 1>><<set $speechAnusPenetrated to 1>><<pain _pain>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<sex 30 \"anal\" _n>><<bruise anus>><<violence 1>><<set $speechanuspenetrated to 1>><<pain _pain>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<sex 30 \"anal\" _n>><<bruise anus>><<violence 1>><<set $speechAnusPenetrated to 1>><<pain _pain>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<sex 30 \"anal\" _n>><<violence 1>><<set $speechanuspenetrated to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<sex 30 \"anal\" _n>><<violence 1>><<set $speechAnusPenetrated to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<sex 100 \"anal\" _n>><<violence 50>><<set $speechanusvirgin to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<sex 100 \"anal\" _n>><<violence 50>><<set $speechAnusVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<sex 30 \"anal\" _n>><<violence 1>><<set $speechanuspenetrated to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<sex 30 \"anal\" _n>><<violence 1>><<set $speechAnusPenetrated to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<sex 100 \"anal\" _n>><<takeVirginity $NPCList[_n].fullDescription \"anal\">><<violence 50>><<set $speechanusvirgin to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<sex 100 \"anal\" _n>><<takeVirginity $NPCList[_n].fullDescription \"anal\">><<violence 50>><<set $speechAnusVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\t<<sex 10 \"anal\" _n>><<set $speechanusentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\t<<sex 10 \"anal\" _n>><<set $speechAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t\t\t<<sex 10 \"anal\" _n>><<set $speechanusentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t\t\t<<sex 10 \"anal\" _n>><<set $speechAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $speechanusentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<sex 5 \"anal\" _n>><<set $speechAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<submission 10 _n>><<bruise face>><<bruise neck>><<violence 1>><<set $speechmouthpenetrated to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<submission 10 _n>><<bruise face>><<bruise neck>><<violence 1>><<set $speechMouthPenetrated to 1>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<submission 10 _n>><<bruise face>><<violence 1>><<set $speechmouthpenetrated to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<submission 10 _n>><<bruise face>><<violence 1>><<set $speechMouthPenetrated to 1>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<submission 10 _n>><<set $speechmouthpenetrated to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<submission 10 _n>><<set $speechMouthPenetrated to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<submission 30 _n>><<takeVirginity $NPCList[_n].fullDescription \"oral\">><<violence 1>><<set $speechmouthvirgin to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<submission 30 _n>><<takeVirginity $NPCList[_n].fullDescription \"oral\">><<violence 1>><<set $speechOralVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<submission 5 _n>><<set $speechmouthimminent to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<submission 5 _n>><<set $speechMouthImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $NPCList[_n].penis to \"mouthimminent\">><<submission 5 _n>><<set $mouthstate to \"imminent\">><<set $speechmouthimminent to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $NPCList[_n].penis to \"mouthimminent\">><<submission 5 _n>><<set $mouthstate to \"imminent\">><<set $speechMouthImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<sex 30 \"genital\" _n>><<set $speechotheranuspenetrated to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<sex 30 \"genital\" _n>><<set $speechNPCAnusPenetrated to 1>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $speechchastity to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $speechChastity to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<sex 3 \"mouth\" _n>><<set $speechmouthotheranus to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<sex 3 \"mouth\" _n>><<set $speechMouthNPCAnus to 1>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechanallick to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechAnalLick to 1>>"
+  ],
+  "context": "\t\t\t\t<<if $mouthactiondefault is \"anallick\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechanalkiss to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechAnalKiss to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $mouthactiondefault is \"analkiss\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechfencingentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechFencingEntrance to 1>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $penisstate to \"otherpenis\">><<set $NPCList[_n].penis to \"penis\">><<sex 20 \"genital\" _n>><<set $speechpenispenis to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $penisstate to \"otherpenis\">><<set $NPCList[_n].penis to \"penis\">><<sex 20 \"genital\" _n>><<set $speechFencing to 1>>"
+  ],
+  "context": "\t\t\t</span>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechchastity to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechChastity to 1>>"
+  ],
+  "context": "\t\t\t\t\t<<if $worn.genitals.name is \"chastity parasite\">><<arousal 100 \"genitals\">><</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<sex 20 \"genital\" _n>><<set $speechpenispenis to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<sex 20 \"genital\" _n>><<set $speechFencing to 1>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<sex 30 \"genital\" _n>><<set $speechpenispenetrated to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<sex 30 \"genital\" _n>><<set $speechNPCVaginaPenetrated to 1>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $speechchastity to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<sex 20 \"genital\" _n>><<set $speechChastity to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<violence 3>><<bruise face>><<set $speechvaginamouth to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<violence 3>><<bruise face>><<set $speechMouthNPCVagina to 1>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<sex 3 \"mouth\" _n>><<set $speechvaginamouth to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<sex 3 \"mouth\" _n>><<set $speechMouthNPCVagina to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<sex 3 \"mouth\" _n>><<set $speechvaginamouth to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<sex 3 \"mouth\" _n>><<set $speechMouthNPCVagina to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechtribentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechTribEntrance to 1>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<sex 20 \"genital\" _n>><<set $speechvaginavagina to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<sex 20 \"genital\" _n>><<set $speechTrib to 1>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechfeet to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechFeet to 1>>"
+  ],
+  "context": "\t\t<<if $NPCList[_n].vagina is \"feet\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and !$player.condom and $parasite.penis.name is undefined>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $NPCList[_n].condom?.willUse is true and !$player.condom and $parasite.penis.name is undefined>>"
+  ],
+  "context": "\t\t\t<<if $rng gte 101>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<sex 30 \"genital\" _n>><<set $speechotheranuspenetrated to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<sex 30 \"genital\" _n>><<set $speechNPCAnusPenetrated to 1>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and !$player.condom and $parasite.penis.name is undefined and"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $NPCList[_n].condom?.willUse is true and !$player.condom and $parasite.penis.name is undefined and"
+  ],
+  "context": "\t\t\t<<elseif $rng gte 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t\t\t<<sex 25 \"genital\" _n>><<set $speechchastity to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<sex 25 \"genital\" _n>><<set $speechChastity to 1>>"
+  ],
+  "context": "\t\t\t\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $speechmouthotheranus to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $speechMouthNPCAnus to 1>>"
+  ],
+  "context": "\t\t\t\t<<set $mouthstate to \"anal\">><<set $NPCList[_n].vagina to \"facesitanal\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<sex 3 \"mouth\" _n>><<set $speechfacesit to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<sex 3 \"mouth\" _n>><<set $speechFaceSit to 1>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<sex 3 \"mouth\" _n>><<set $speechmouthotheranus to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<sex 3 \"mouth\" _n>><<set $speechMouthNPCAnus to 1>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechanallick to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechAnalLick to 1>>"
+  ],
+  "context": "\t\t\t\t<<if $mouthactiondefault is \"anallick\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechanalkiss to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechAnalKiss to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $mouthactiondefault is \"analkiss\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $speechfacesit to 1>><<set $mouthtarget to _n>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $speechFaceSit to 1>><<set $mouthtarget to _n>>"
+  ],
+  "context": "\t\t\t\t<<set $mouthstate to \"vagina\">><<set $NPCList[_n].vagina to \"facesit\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<sex 3 \"mouth\" _n>><<set $speechmouthotheranus to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<sex 3 \"mouth\" _n>><<set $speechMouthNPCAnus to 1>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechanallick to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechAnalLick to 1>>"
+  ],
+  "context": "\t\t\t\t<<if $mouthactiondefault is \"anallick\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechanalkiss to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechAnalKiss to 1>>"
+  ],
+  "context": "\t\t\t\t<<elseif $mouthactiondefault is \"analkiss\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $speechvaginavirgin isnot 1 and $speechpenisvirgin isnot 1 and $speechanusvirgin isnot 1 and $speechmouthvirgin isnot 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $speechVaginaVirgin isnot 1 and $speechPenisVirgin isnot 1 and $speechAnusVirgin isnot 1 and $speechOralVirgin isnot 1>>"
+  ],
+  "context": "\t\t<<if $NPCList[_n].mouth is \"kiss\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $speechvaginavirgin isnot 1 and $speechpenisvirgin isnot 1 and $speechanusvirgin isnot 1 and $speechmouthvirgin isnot 1 and !$_preventKiss>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $speechVaginaVirgin isnot 1 and $speechPenisVirgin isnot 1 and $speechAnusVirgin isnot 1 and $speechOralVirgin isnot 1 and !$_preventKiss>>"
+  ],
+  "context": "\t\t<<if $NPCList[_n].mouth is \"kissimminent\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $speechvaginavirgin isnot 1 and $speechpenisvirgin isnot 1 and $speechanusvirgin isnot 1 and $speechmouthvirgin isnot 1 and !$_preventKiss>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $speechVaginaVirgin isnot 1 and $speechPenisVirgin isnot 1 and $speechAnusVirgin isnot 1 and $speechOralVirgin isnot 1 and !$_preventKiss>>"
+  ],
+  "context": "\t\t<<if $NPCList[_n].mouth is \"kissentrance\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<set $speechkissvirgin to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<set $speechKissVirgin to 1>>"
+  ],
+  "context": "\t\t\t\t\t<<if $player.virginity.kiss is true>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $speechvaginavirgin isnot 1 and $speechpenisvirgin isnot 1 and $speechanusvirgin isnot 1 and $speechmouthvirgin isnot 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $speechVaginaVirgin isnot 1 and $speechPenisVirgin isnot 1 and $speechAnusVirgin isnot 1 and $speechOralVirgin isnot 1>>"
+  ],
+  "context": "\t\t<<if $NPCList[_n].mouth is \"chest\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $speechvaginavirgin isnot 1 and $speechpenisvirgin isnot 1 and $speechanusvirgin isnot 1 and $speechmouthvirgin isnot 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $speechVaginaVirgin isnot 1 and $speechPenisVirgin isnot 1 and $speechAnusVirgin isnot 1 and $speechOralVirgin isnot 1>>"
+  ],
+  "context": "\t\t<<if $NPCList[_n].mouth is \"chestimminent\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $speechvaginavirgin isnot 1 and $speechpenisvirgin isnot 1 and $speechanusvirgin isnot 1 and $speechmouthvirgin isnot 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $speechVaginaVirgin isnot 1 and $speechPenisVirgin isnot 1 and $speechAnusVirgin isnot 1 and $speechOralVirgin isnot 1>>"
+  ],
+  "context": "\t\t<<if $NPCList[_n].mouth is \"chestentrance\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if ($NPCList[_n].mouth is 0 or $NPCList[_n].mouth is \"speech_only\" or ($NPCList[_n].type is \"plant\" and $speechkissvirgin is 1)) and $speechdisable isnot 1 and _noNameComment>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if ($NPCList[_n].mouth is 0 or $NPCList[_n].mouth is \"speech_only\" or ($NPCList[_n].type is \"plant\" and $speechKissVirgin is 1)) and $speechDisable isnot 1 and _noNameComment>>"
+  ],
+  "context": "\t\t<<namedNpcComments $NPCList[_n].fullDescription>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<elseif $speechvaginavirgin is 1 and $NPCList[_n].penis is \"vagina\" and !_npc_speech>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<elseif $speechVaginaVirgin is 1 and $NPCList[_n].penis is \"vagina\" and !_npc_speech>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<elseif $speechpenisvirgin is 1 and ($NPCList[_n].vagina is \"penis\" or $NPCList[_n].vagina is \"otheranus\" or $NPCList[_n].penis is \"otheranus\") and !_npc_speech>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<elseif $speechPenisVirgin is 1 and ($NPCList[_n].vagina is \"penis\" or $NPCList[_n].vagina is \"otheranus\" or $NPCList[_n].penis is \"otheranus\") and !_npc_speech>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<elseif $speechanusvirgin is 1 and $NPCList[_n].penis is \"anus\" and !_npc_speech>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<elseif $speechAnusVirgin is 1 and $NPCList[_n].penis is \"anus\" and !_npc_speech>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<elseif $speechmouthvirgin is 1 and $NPCList[_n].penis is \"mouth\" and !_npc_speech>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<elseif $speechOralVirgin is 1 and $NPCList[_n].penis is \"mouth\" and !_npc_speech>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<elseif $speechspray is 1 and !_npc_speech>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<elseif $speechPepperSpray is 1 and !_npc_speech>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<elseif $speechcum is 1 and $rng gte 61 and $speechorgasmrepeat lte 1 and $speechorgasmcount lte 6 and !_npc_speech>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<elseif $speechPlayerOrgasm is 1 and $rng gte 61 and $speechorgasmrepeat lte 1 and $speechorgasmcount lte 6 and !_npc_speech>>"
+  ],
+  "context": "\t\t\t\t<<sprayspeech>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<if playerBellyVisible()>><<set $speechpregnant to 1>><</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<if playerBellyVisible()>><<set $speechPregnant to 1>><</if>>"
+  ],
+  "context": "\t\t\t\t\t\t<<bodypart_admire back>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if playerBellyVisible()>><<set $speechpregnant to 1>><</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if playerBellyVisible()>><<set $speechPregnant to 1>><</if>>"
+  ],
+  "context": "\t\t\t<<submission 2 _n>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and !$player.condom and $parasite.penis.name is undefined and"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if $NPCList[_n].condom?.willUse is true and !$player.condom and $parasite.penis.name is undefined and"
+  ],
+  "context": "\t\t\t\t<<if $settings.analEnabled and $consensual is 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<neutral 5 _n>><<set $mouthuse to \"penis\">><<set $NPCList[_n].penis to \"mouthentrance\">><<set $mouthstate to \"entrance\">><<set $speechmouthentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<neutral 5 _n>><<set $mouthuse to \"penis\">><<set $NPCList[_n].penis to \"mouthentrance\">><<set $mouthstate to \"entrance\">><<set $speechMouthEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "context": "\t\t<<if $player.vaginaExist and $vaginause is 0 and ($anususe isnot 0 or random(0,100) gte 50)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "context": "\t\t\t\t/* Do intended function. Switch player into DP state and set NPC state */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $speechvaginaentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $speechVaginaEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t/* NPC */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "context": "\t\t<<elseif $settings.analEnabled and $anususe is 0 and $bottomuse is 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<neutral 5>><<set $anususe to \"penis\">><<set $NPCList[_n].penis to \"anusentrance\">><<set $anusstate to \"entrance\">><<set $speechanusentrance to 1>><<set $anustarget to _n>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<neutral 5>><<set $anususe to \"penis\">><<set $NPCList[_n].penis to \"anusentrance\">><<set $anusstate to \"entrance\">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "context": "\t\t\t/* Otherwise do the intended function */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $NPCList[_n].penis to \"anusentrancedouble\">><<set $NPCList[_n].location.genitals = \"genitals\">><<set $speechanusentrance to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $NPCList[_n].penis to \"anusentrancedouble\">><<set $NPCList[_n].location.genitals = \"genitals\">><<set $speechAnusEntrance to 1>>"
+  ],
+  "context": "\t\t\t\t/* NPC */"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $NPCList[_n].location.genitals = \"head\">><<set $speechmouthotheranus to 1>><<set $mouthtarget to _n>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $NPCList[_n].location.genitals = \"head\">><<set $speechMouthNPCAnus to 1>><<set $mouthtarget to _n>>"
+  ],
+  "context": "\t\t\t<<submission 5 _n>><<set $mouthuse to \"otheranus\">><<set $mouthstate to \"otheranus\">><<set $NPCList[_n].penis to \"mouthotheranus\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<submission 5 _n>><<set $mouthuse to \"penis\">><<set $mouthstate to \"imminent\">><<set $NPCList[_n].penis to \"mouthimminent\">><<set $speechmouthimminent to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<submission 5 _n>><<set $mouthuse to \"penis\">><<set $mouthstate to \"imminent\">><<set $NPCList[_n].penis to \"mouthimminent\">><<set $speechMouthImminent to 1>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $penisuse to \"feet\">><<set $speechpenisfoot to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $penisuse to \"feet\">><<set $speechPenisFoot to 1>>"
+  ],
+  "context": "\t\t<<if $player.penisExist and $penisuse is 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $speechvaginafoot to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $speechVaginaFoot to 1>>"
+  ],
+  "context": "\t\t\t<<if !$player.penisExist>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "context": "\t\t<<if $anususe is 0 and $settings.analEnabled>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "context": "\t\t<<if $player.vaginaExist and $vaginause is 0 and (!$player.penisExist or $anususe isnot 0 or random(0,100) gte 50)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $NPCList[_n].condom?.willUse is true and $NPCList[_n].condom.worn is false and !$NPCList[_n].penisdesc.includes(\"strap-on\")>>"
+  ],
+  "context": "\t\t\t<<if $anususe is 0 and $settings.analEnabled>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and !$player.condom and $parasite.penis.name is undefined and"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $NPCList[_n].condom?.willUse is true and !$player.condom and $parasite.penis.name is undefined and"
+  ],
+  "context": "\t\t\tand ($player.penisExist or playerHasStrapon()) and $penisuse is 0 and $settings.analEnabled and $walltype isnot \"front\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechfacesit to 1>><<set $NPCList[_n].location.genitals = \"head\">><<set $mouthtarget to _n>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechFaceSit to 1>><<set $NPCList[_n].location.genitals = \"head\">><<set $mouthtarget to _n>>"
+  ],
+  "context": "\t\t\t<<submission 5 _n>><<set $NPCList[_n].vagina to \"facesit\">><<set $mouthuse to \"facesit\">><<set $mouthstate to \"vagina\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechvaginamouth to 1>><<set $NPCList[_n].location.genitals = \"head\">><<set $mouthtarget to _n>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechMouthNPCVagina to 1>><<set $NPCList[_n].location.genitals = \"head\">><<set $mouthtarget to _n>>"
+  ],
+  "context": "\t\t\t<<submission 5 _n>><<set $mouthuse to \"othervagina\">><<set $NPCList[_n].vagina to \"mouth\">><<set $mouthstate to \"othervagina\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and !$player.condom and $parasite.penis.name is undefined>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $NPCList[_n].condom?.willUse is true and !$player.condom and $parasite.penis.name is undefined>>"
+  ],
+  "context": "\t\t<<set $penisuse to \"othervagina\">><<set $NPCList[_n].vagina to \"penisentrance\">><<set $penisstate to \"entrance\">><<set $penistarget to _n>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $NPCList[_n].condom and $NPCList[_n].condom.willUse is true and !$player.condom and $parasite.penis.name is undefined>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $NPCList[_n].condom?.willUse is true and !$player.condom and $parasite.penis.name is undefined>>"
+  ],
+  "context": "\t\t<<set $penisuse to \"othervagina\">><<set $NPCList[_n].vagina to \"penisimminent\">><<set $penisstate to \"imminent\">><<set $penistarget to _n>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $penisuse to \"feet\">><<set $speechpenisfoot to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $penisuse to \"feet\">><<set $speechPenisFoot to 1>>"
+  ],
+  "context": "\t\t<<if ($player.penisExist or playerHasStrapon()) and $penisuse is 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $speechvaginafoot to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $speechVaginaFoot to 1>>"
+  ],
+  "context": "\t\t\t<<if !$player.penisExist>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<violence 3>><<bruise face>><<set $speechfacesit to 1>><<set $mouthtarget to _n>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<violence 3>><<bruise face>><<set $speechFaceSit to 1>><<set $mouthtarget to _n>>"
+  ],
+  "context": "\t\t\t\t\t<<submission 5 _n>><<set $NPCList[_n].vagina to \"facesit\">><<set $mouthuse to \"facesit\">><<set $mouthstate to \"vagina\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechthroat to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechChoke to 1>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechthroat to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechChoke to 1>>"
+  ],
+  "context": "\t\t\t<<set $askedtochoke to 0>>"
+ }
+]

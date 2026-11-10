@@ -1,0 +1,186 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $sewingKit isnot 1 and $debug is 1>>",
+   "\tLooks like the shop has a new machine for sale in the display."
+  ],
+  "old_kr": [
+   "<<if $sewingKit isnot 1 and $debug is 1>>",
+   "\t가게 진열장에 새로운 재봉틀이 판매용으로 나온 것 같다."
+  ],
+  "new_en": [
+   "<<if $sewingKit isnot 1 and $debug>>",
+   "\tLooks like the shop has a new machine for sale in the display."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<shopicon \"register\">><<link [[Examine the cash register|Tailor Register]]>><</link>>",
+   "\t\t\t<br>"
+  ],
+  "old_kr": [
+   "\t\t\t<<shopicon \"register\">><<link [[금전 등록기를 살펴본다|Tailor Register]]>><</link>>",
+   "\t\t\t<br>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<shopicon \"register\">><<link [[Examine the cash register|Tailor Register]]>><</link>>",
+   "\t\t\t\t<br>"
+  ],
+  "context": "\t\t\t<<if Time.hour isnot $closinghour and !$weekly.theft.tailor>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $sewingKit isnot 1 and $debug is 1>>",
+   "\t\t\t\t<<ind>><<link [[Approach the display cabinet|Tailor Shop Sewing Machine]]>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if $sewingKit isnot 1 and $debug is 1>>",
+   "\t\t\t\t<<ind>><<link [[진열장으로 다가간다|Tailor Shop Sewing Machine]]>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if $sewingKit isnot 1 and $debug>>",
+   "\t\t\t\t<<ind>><<link [[Approach the display cabinet|Tailor Shop Sewing Machine]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou approach the display, inside it lies a sewing machine. An advertisement poster hangs beside the display, it reads:"
+  ],
+  "old_kr": [
+   "\t진열장으로 다가가자 재봉틀이 놓여 있다. 진열장 옆에 광고 포스터가 걸려 있고, 이렇게 적혀 있다."
+  ],
+  "new_en": [
+   "You approach the display, inside it lies a sewing machine. An advertisement poster hangs beside the display, it reads:"
+  ],
+  "context": "<<effects>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<br><br>",
+   "\tTHE SEWINATOR-9000 <sup>tm</sup>",
+   "\t<br><br>",
+   "\t- Dog Chewed Your Undies? <span class=\"pink\">~Tentacles~</span> Tore Your Clothes? No Problem!",
+   "\t<br><br>",
+   "\t- Can Fix Any Piece of Clothing in One minute!",
+   "\t<br><br>",
+   "\t- Requires <span class=\"green\">No Skill</span>! Even Bailey Could Use It!",
+   "\t<br><br>",
+   "\t- Comes With a Lifetime Supply of Cloth For Repairs!",
+   "\t<br><br>",
+   "\t- Only <span class =\"gold\">£1000.00!</span>",
+   "\t<br><br>"
+  ],
+  "old_kr": [
+   "\t<br><br>",
+   "\t재봉의 신-9000 <sup>tm</sup>",
+   "\t<br><br>",
+   "\t- 개가 속옷을 물어뜯었나요? <span class=\"pink\">~촉수~</span>가 옷을 찢었나요? 문제없습니다!",
+   "\t<br><br>",
+   "\t- 1분 만에 어떤 옷이든 고칠 수 있습니다!",
+   "\t<br><br>",
+   "\t- <span class=\"green\">기술</span>이 필요 없습니다! 베일리조차도 사용할 수 있습니다!",
+   "\t<br><br>",
+   "\t- 평생 쓸 수 있는 수선용 천을 제공합니다!",
+   "\t<br><br>",
+   "\t- 단돈 <span class =\"gold\">£1000.00!</span>",
+   "\t<br><br>"
+  ],
+  "new_en": [
+   "<br><br>",
+   "THE SEWINATOR-9000 <sup>tm</sup>",
+   "<br><br>",
+   "- Dog Chewed Your Undies? <span class=\"pink\">~Tentacles~</span> Tore Your Clothes? No Problem!",
+   "<br><br>",
+   "- Can Fix Any Piece of Clothing in One minute!",
+   "<br><br>",
+   "- Requires <span class=\"green\">No Skill</span>! Even Bailey Could Use It!",
+   "<br><br>",
+   "- Comes With a Lifetime Supply of Cloth For Repairs!",
+   "<br><br>",
+   "- Only <span class =\"gold\">£1000.00!</span>",
+   "<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $money gte 100000>>",
+   "\t\t<<link [[Purchase sewing machine - Repair your clothes in your room! £1000|Tailor Shop]]>><<money -100000 \"tailor\">><<set $sewingKit to 1>><<set $sewingBought to 1>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<link [[Go back|Tailor Shop]]>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if $money gte 100000>>",
+   "\t\t<<link [[재봉틀 구매 - 방에서 옷 수선하기! £1000|Tailor Shop]]>><<money -100000 \"tailor\">><<set $sewingKit to 1>><<set $sewingBought to 1>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t<</if>>",
+   "\t<<link [[돌아가기|Tailor Shop]]>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "<<if $money gte 100000>>",
+   "\t<<link [[Purchase sewing machine - Repair your clothes in your room! £1000|Tailor Shop]]>><<money -100000 \"tailor\">><<set $sewingKit to 1>><<set $sewingBought to 1>><<endevent>><</link>>",
+   "\t<br>",
+   "<</if>>",
+   "<<link [[Go back|Tailor Shop]]>><<endevent>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $exposed gte 1>>",
+   "\t\tYou continue to hide while the tailor makes the needed repairs. After what feels like an eternity, <<he>> passes you back your <<print $outfitRepair.name>> and you slip it on.",
+   "\t\t<br><br>",
+   "\t<<else>>",
+   "\t\tYou loiter around the shop until the tailor calls you over for a few minor adjustments.",
+   "\t\tJust like that, your <<print $outfitRepair.name>> is as good as new.",
+   "\t\t<br><br>",
+   "\t<</if>>"
+  ],
+  "old_kr": [
+   "\t<<if $exposed gte 1>>",
+   "\t\t재단사가 필요한 수선을 하는 동안 당신은 계속 숨어 있는다. 영원할 것 같은 시간이 지난 후, <<he>>【이가】 당신의 <<print $outfitRepair.name>>【을를】 돌려주고 당신은 옷을 입는다.",
+   "\t\t<br><br>",
+   "\t<<else>>",
+   "\t\t가게를 서성거리자 재단사가 몇 가지 사소한 조정을 위해 당신을 부른다.",
+   "\t\t그러자 당신의 <<print $outfitRepair.name>>【은는】 새것처럼 깨끗해진다.",
+   "\t\t<br><br>",
+   "\t<</if>>"
+  ],
+  "new_en": [
+   "<<if $exposed gte 1>>",
+   "\tYou continue to hide while the tailor makes the needed repairs. After what feels like an eternity, <<he>> passes you back your <<print $outfitRepair.name>> and you slip it on.",
+   "\t<br><br>",
+   "<<else>>",
+   "\tYou loiter around the shop until the tailor calls you over for a few minor adjustments.",
+   "\tJust like that, your <<print $outfitRepair.name>> is as good as new.",
+   "\t<br><br>",
+   "<</if>>"
+  ],
+  "context": ":: Fix Outfit"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $worn[$outfitRepair.wornHalf].integrity = clothingData($outfitRepair.wornHalf,$worn[$outfitRepair.wornHalf],'integrity_max')>>",
+   "\t<<set makeMissingOutfit($outfitRepair)>>",
+   "\t<<unset $outfitRepair>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set $worn[$outfitRepair.wornHalf].integrity = clothingData($outfitRepair.wornHalf,$worn[$outfitRepair.wornHalf],'integrity_max')>>",
+   "<<set makeMissingOutfit($outfitRepair)>>",
+   "<<unset $outfitRepair>>"
+  ],
+  "context": ""
+ }
+]

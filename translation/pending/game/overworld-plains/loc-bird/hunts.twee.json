@@ -1,0 +1,179 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Next (?:??)|Bird Hunt Passout]]>><<bird_pass _returnTime>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[다음 (?:??)|Bird Hunt Passout]]>><<bird_pass _returnTime>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<passout>>",
+   "\t\t<<link [[Next (?:??)|Bird Hunt Passout]]>><<bird_pass _returnTime>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\tYou try to jump aside, <span class=\"red\">but you fail to move in time, and the lurker lands on your face.</span>"
+  ],
+  "old_kr": [
+   "\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\t옆으로 피하려 하지만, <span class=\"red\">제때 움직이지 못해 럴커가 당신의 얼굴에 내려앉는다.</span>"
+  ],
+  "new_en": [
+   "\t<<if $settings.lurkersEnabled>>",
+   "\t\tYou try to jump aside, <span class=\"red\">but you fail to move in time, and the lurker lands on your face.</span>"
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tA <<beasttype>> pounces!",
+   "\t\t<<if $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [
+   "\t\t<<beasttype>>【이가】 덮친다!",
+   "\t\t<<if $settings.bestialityEnabled>>"
+  ],
+  "new_en": [
+   "\t\tA <<beasttype>> pounces!",
+   "\t\t<<if animalSexEnabledForType(\"fox\")>>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\tThe first lurker squirms in your grasp as the second pounces at you!"
+  ],
+  "old_kr": [
+   "\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\t첫 번째 럴커가 당신의 손아귀에서 꿈틀거리는 동안 두 번째 럴커가 당신에게 덤벼든다!"
+  ],
+  "new_en": [
+   "\t<<if $settings.lurkersEnabled>>",
+   "\t\tThe first lurker squirms in your grasp as the second pounces at you!"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if ($settings.bestialityEnabled or $monster is 1) and hasSexStat(\"deviancy\", 3)>>",
+   "\t\t\t\t<<link [[Push over|Bird Hunt Fox Sex]]>><<set $sexstart to 1>><</link>><<deviant3>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<if ($settings.bestialityEnabled or $monster is 1) and hasSexStat(\"deviancy\", 3)>>",
+   "\t\t\t\t<<link [[밀어 넘어뜨린다|Bird Hunt Fox Sex]]>><<set $sexstart to 1>><</link>><<deviant3>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if beastSexEnabledForType(\"fox\", $monster is 1) and hasSexStat(\"deviancy\", 3)>>",
+   "\t\t\t\t<<link [[Push over|Bird Hunt Fox Sex]]>><<set $sexstart to 1>><</link>><<deviant3>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $settings.bestialityEnabled>>",
+   "\t\t\t\tYou don't have time to flee before <<bhe>> springs forward."
+  ],
+  "old_kr": [
+   "\t\t\t<<if $settings.bestialityEnabled>>",
+   "\t\t\t\t<<bhe>>【이가】 앞으로 튀어나오기 전에 도망칠 시간이 없다."
+  ],
+  "new_en": [
+   "\t\t\t<<if animalSexEnabledForType(\"fox\")>>",
+   "\t\t\t\tYou don't have time to flee before <<bhe>> springs forward."
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if ($settings.bestialityEnabled or $monster is 1) and hasSexStat(\"deviancy\", 3)>>",
+   "\t<<link [[Reward|Bird Hunt Fox Sex]]>><<set $sexstart to 1>><</link>><<deviant3>>"
+  ],
+  "old_kr": [
+   "<<if ($settings.bestialityEnabled or $monster is 1) and hasSexStat(\"deviancy\", 3)>>",
+   "\t<<link [[보상한다|Bird Hunt Fox Sex]]>><<set $sexstart to 1>><</link>><<deviant3>>"
+  ],
+  "new_en": [
+   "<<if beastSexEnabledForType(\"fox\", $monster is 1) and hasSexStat(\"deviancy\", 3)>>",
+   "\t<<link [[Reward|Bird Hunt Fox Sex]]>><<set $sexstart to 1>><</link>><<deviant3>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\t\t\tAs you stand up, you notice movement in the grass near you. You turn to face it, but something leaps on your back and lands on your <<bottom>>."
+  ],
+  "old_kr": [
+   "\t\t\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>",
+   "\t\t\t\t일어서자, 당신은 근처 풀밭에서 움직임을 감지한다. 그쪽으로 몸을 돌리지만, 무언가 등 뒤로 뛰어올라 당신의 <<bottom>> 위에 올라탄다."
+  ],
+  "new_en": [
+   "\t\t\t<<if $settings.lurkersEnabled>>",
+   "\t\t\t\tAs you stand up, you notice movement in the grass near you. You turn to face it, but something leaps on your back and lands on your <<bottom>>."
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<span class=\"green\"><<Hes>> unable to pull away.</span> You sidestep the hole, and bring <<him>> right to it. \"Don't make this hard for—\" <<His>> words are interrupted as <<he>> steps on the trap, causing <<him>> to stumble and fall. You take the opportunity to quickly run away. The <<person1>> doesn't chase you, instead opting to laugh at <<his>> misfortunate friend."
+  ],
+  "old_kr": [
+   "\t<span class=\"green\"><<He>>【은는】 뿌리치지 못한다.</span> 당신은 구덩이를 옆으로 피하며 <<him>>【을를】 바로 그곳으로 데려간다. \"이걸 어렵게 만들지 마—\" <<He>>【이가】 함정을 밟자 <<his>> 말은 끊기고, 비틀거리다 넘어진다. 당신은 이 기회를 틈타 재빨리 도망친다. <<person1>>【은는】 당신을 쫓지 않고, 대신 불운한 친구를 보고 웃는다."
+  ],
+  "new_en": [
+   "\t<span class=\"green\"><<Hes>> unable to pull away.</span> You sidestep the hole, and bring <<him>> right to it. \"Don't make this hard for—\" <<His>> words are interrupted as <<he>> steps on the trap, causing <<him>> to stumble and fall. You take the opportunity to quickly run away. The <<person1>> doesn't chase you, instead opting to laugh at <<his>> unfortunate friend."
+  ],
+  "context": "<<if $physiqueSuccess>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Next (?:??)|Bird Hunt Passout]]>><<bird_pass _returnTime>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[다음 (?:??)|Bird Hunt Passout]]>><<bird_pass _returnTime>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<passout>>",
+   "\t\t<<link [[Next (?:??)|Bird Hunt Passout]]>><<bird_pass _returnTime>><</link>>"
+  ],
+  "context": "\t\t<<flight_time_check _returnTime \"silent\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\tskinColour: random(1, 100) lte $settings.darkSkinChance ? \"dark\" : \"light\",",
+   "\t\t\t\t\tmonster: ((V.settings.monsterChance >= random(1, 100) && (V.hallucinations >= 1 || !V.settings.monsterHallucinationsOnly)) || V.greathawkmonster === 2) ? \"monster\" : 0"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\tskinColour: parentSkinColour(randomSkinTone()),",
+   "\t\t\t\t\tmonster: resolveIfNamedBeastIsMonster(\"greathawk\") ? \"monster\" : 0"
+  ],
+  "context": "\t\t\t\t\thairColour: [\"white\", \"brown\"][random(0,1)],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $settings.bestialityEnabled and $settings.lurkersEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $settings.lurkersEnabled>>"
+  ],
+  "context": "\t\t<br>"
+ }
+]

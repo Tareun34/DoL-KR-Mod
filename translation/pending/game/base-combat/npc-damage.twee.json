@@ -1,0 +1,28 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $debug is 1>><br><span class=\"yellow\">Total damage: _thedamage</span> | <span class=\"blue\">Excess damage: $_excessdamage</span> |<</if>>"
+  ],
+  "old_kr": [
+   "\t<<if $debug is 1>><br><span class=\"yellow\">총 피해: _thedamage</span> | <span class=\"blue\">초과 피해: $_excessdamage</span> |<</if>>"
+  ],
+  "new_en": [
+   "\t<<if $debug>><br><span class=\"yellow\">Total damage: _thedamage</span> | <span class=\"blue\">Excess damage: $_excessdamage</span> |<</if>>"
+  ],
+  "context": "\t<!-- Debug message -->"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $debug is 1>><span class=\"pink\">enemyhealth damage: _thedamage</span><br><</if>>"
+  ],
+  "old_kr": [
+   "\t<<if $debug is 1>><span class=\"pink\">적 체력 피해: _thedamage</span><br><</if>>"
+  ],
+  "new_en": [
+   "\t<<if $debug>><span class=\"pink\">enemyhealth damage: _thedamage</span><br><</if>>"
+  ],
+  "context": "\t<!-- Debug message -->"
+ }
+]

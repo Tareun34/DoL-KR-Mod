@@ -9,12 +9,10 @@
 	"안녕." 당신이 다가가자 <<he>>【이가】 말한다. "좀 괜찮아? 걱정했잖아."
 	<<set $daily.robin.passoutTalk to 1>>
 <<elseif $robin.timer.hurt gte 1>>
-	<br><br>
-	"안녕." 당신이 다가가자 <<he>>【이가】 말한다. <<He>>【은는】 어딘가 쌀쌀맞은 목소리로, 더는 인사하지 않는다. 손님이 없어 침묵은 더욱 어색해진다.
+	"Hey," <<he>> says as you draw close. <<He>> sounds distant, and doesn't greet you further. The silence is made more awkward by the lack of customers.
 <<elseif $robinlemonadeintro isnot 1>><<set $robinlemonadeintro to 1>><<set $daily.robin.freeDrink to 1>>
 	<<wearProp "lemonade">>
-	<br><br>
-	"안녕," 당신이 가까이 다가가자 <<he>>【이가】 말한다. <<He>>【은는】 <<= $robin.stayup is 2 ? "하품을 참으며 지친 미소를 짓는다" : "환하게 웃는다">>. "만나서 반가워. 내 레모네이드를 마셔 봤으면 해." <<He>>【은는】 물과 레몬즙, 설탕을 섞어 유리잔을 건네준다. "서비스야." 아주 달다.
+	"Hey," <<he>> says as you draw close. <<He>> <<= $robin.stayup is 2 ? "gives you a tired smile, stifling a yawn" : "beams">>. "It's nice to see you. I want you to try my lemonade." <<He>> mixes together water, lemon juice, and sugar and hands you the glass. "On the house." It's very sweet.
 <<elseif $robin.stayup is 2>>
 	"너구나." <<he>>【이가】 크게 하품하며 말한다. "손님을 더 끌어야 하는데, 너무 피곤해."
 <<elseif _robin.crossdressing is 2>>

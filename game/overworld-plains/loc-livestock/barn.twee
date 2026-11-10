@@ -18,8 +18,8 @@
 	농장 인부 두 명이 문을 밀어 열자 문이 덜컹거린다. 레미가 안으로 성큼성큼 들어와 <<livestock_horses>> 중 하나에 올라탄다. <<He>>【은는】 가축 주위를 돌며 녀석들을 한데 모아 출구 쪽으로 몰아간다.
 	<br><br>
 	<<if $hunger gte 2000>>
-		정신이 아득해진다. <span class="red">굶주리고 있다.</span> 건초조차 맛있어 보일 지경이다.
-		<<gggstress>><<stress 36>>/*<<physique_loss 36>><<willpower 12>>*/
+		You feel faint. <span class="red">You're starving.</span> Even the thought of hay is appetising.
+		<<gggstress>><<stress 36>>/*<<physique -36>><<willpower 12>>*/
 	<<elseif $hunger gte 1600>>
 		배에서 요란하게 꼬르륵 소리가 난다. <span class="pink">너무 배가 고프다.</span> 건초조차 맛있어 보일 지경이다.
 		<<ggstress>><<stress 18>>
@@ -135,27 +135,27 @@
 		<</if>>
 	<</if>>
 <<elseif $arousal gte $arousalmax>> <!-- modified field version for the barn -->
-   <<orgasm>> 다리에 힘이 풀리며 바닥에 쓰러진다.
-   <!-- Modified for Monster People -->
-   <<if ($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly))>>
-       <<if maleChance() lt random(1, 100)>>
-           헛간 주변의 소 소녀들이 혼란스러운 듯 쳐다본다.
+	<<orgasm>> Your knees buckle, and you fall to the ground.
+	<!-- Modified for Monster People -->
+	<<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
+		<<if maleChance() lt random(1, 100)>>
+			Cowgirls around the barn look over in confusion.
 
-       <<else>>
-           헛간 주변의 황소 소년들이 혼란스러운 듯 쳐다본다.
+		<<else>>
+			Bullboys around the barn look over in confusion.
 
-       <</if>>
-   <<else>>
-   <</if>>
-   <br><br>
-   <<generate1>><<generate2>><<generate3>><<generate4>><<person1>>
-   헛간에 누워 있자 곧 다가오는 발소리가 들린다. "이게 뭐지?" 당신 곁에서 <<personssimple>> 목소리가 말한다. "아픈 건가?"
-   <br><br>
-   "돌봐줘야 할 것 같은데," <<person2>><<person>>【이가】 당신 옆에 쭈그리고 앉아 어깨를 바닥에 짓누르며 말한다. 더 많은 농장 일꾼들이 다가오는 소리가 들린다.
-   <br><br>
+		<</if>>
+	<<else>>
+	<</if>>
+	<br><br>
+	<<generate1>><<generate2>><<generate3>><<generate4>><<person1>>
+	You lie in the barn, and soon hear footsteps approach. "What have we here?" says a <<personssimple>> voice beside you. "Is it unwell?"
+	<br><br>
+	"I think it needs a seeing to," says a <<person2>><<person>> as <<he>> crouches beside you, pinning your shoulders to the ground. You hear more farmhands approach.
+	<br><br>
 
-   <<link [[다음|Livestock Field Gang]]>><<set $molestationstart to 1>><</link>>
-   <br>
+	<<link [[Next|Livestock Field Gang]]>><<set $molestationstart to 1>><</link>>
+	<br>
 <<else>>
 	<<if !$livestock.seen.includes("corner")>>
 		<span class="blue">건초 더미 중 하나가 다른 것들보다 더 높이 쌓여 있어 구석 한쪽을 막고 있다.</span> 농장 인부들이 앉은 자리에서는 보이지 않을 것 같다.
@@ -248,8 +248,8 @@
 <br><br>
 
 <<if $rng gte 81>>
-	<<beastNEWinit 1 cow>>
-	<<person1>><<beasttype>> 한 마리가 당신에게 음메 하고 운다. 당신은 더 가까이 파고든다.
+	<<generateBeastVictim 1 cow>>
+	A <<person1>><<beasttype>> moos at you. You snuggle closer.
 	<br><br>
 <<elseif $rng gte 51>>
 	<<livestock_overhear>>
@@ -406,8 +406,8 @@ $livestock.obey lte 10
 
 레미의 말들에게 다가간다.
 
-<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>
-	그들은 머리와 몸통이
+<<if monsterCanAppearForType("horse")>>
+	They have the heads and torsos of
 	<<if _horse_gender is "f">>
 		여성이다.
 	<<elseif _horse_gender is "m">>
@@ -431,14 +431,14 @@ $livestock.obey lte 10
 <br><br>
 
 <<if $livestock.horse.reputation gte 2>>
-	<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>
-		<span class="green">당신이 다가가자 몇몇이 고개를 끄덕이며 인사한다.</span>
+	<<if monsterCanAppearForType("horse")>>
+		<span class="green">A few nod in greeting as you approach.</span>
 	<<else>>
 		<span class="green">당신이 다가가자 그들이 더 가까이 다가온다.</span>
 	<</if>>
 <<elseif $livestock.horse.reputation gte 1>>
-	<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>
-		당신이 다가가는 것을 지켜본다. 몇몇은 재미있어하는 것 같다.
+	<<if monsterCanAppearForType("horse")>>
+		They watch as you approach. Some look amused.
 	<<else>>
 		당신이 다가가는 것을 지켜본다. 그들은 차분해 보인다.
 	<</if>>
@@ -470,8 +470,8 @@ $livestock.obey lte 10
 	<<clearnpc>><<beastNEWinit 1 horse>>
 
 	<!-- Modified for Monster People -->
-	<<if random(1,2) is 1 and $daily.livestock.horses_satisfied lt 6 and $settings.horsesEnabled and ($settings.bestialityEnabled or $monster is 1)>>
-		한 <<beasttype>>【이가】 무리에서 떨어져 서성이는 것이 눈에 띈다. <<bHe>>【은는】 앞뒤로 서성거린다. <<livestock_cows>>은 서둘러 <<bhis>> 길에서 비켜난다.
+	<<if random(1,2) is 1 and $daily.livestock.horses_satisfied lt 6 and beastSexEnabledForType("horse", $monster is 1)>>
+		You notice that one <<beasttype>> is standing apart from the rest. <<bHe>> paces back and forth. The <<livestock_cows>> hasten to get out of <<bhis>> way.
 		<<set _agitated to 1>>
 		<br><br>
 	<</if>>
@@ -550,7 +550,7 @@ $livestock.obey lte 10
 	<<set _horse_gender to "b">>
 <</if>>
 
-<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>
+<<if monsterCanAppearForType("horse")>>
 	<<if $livestock.horse.reputation gte 2>>
 		당신은 손가락으로 켄타우로스들의 머리카락을 빗어준다. 켄타우로스들은 자기 차례를 받으려고 서로 밀친다. 등에는 털이 거의 없는데도 등을 긁어달라고 조르기도 한다.
 	<<else>>
@@ -635,8 +635,8 @@ $livestock.obey lte 10
 		<</if>>
 	<<else>>
 		<!-- Modified for Monster People -->
-		<<if random(1,2) is 1 and $daily.livestock.horses_satisfied lt 6 and $settings.horsesEnabled and ($settings.bestialityEnabled or $monster is 1)>>
-			한 <<beasttype>>【이가】 무리에서 떨어져 서 있는 것이 눈에 띈다. <<bHe>>【은는】 앞뒤로 서성인다. <<livestock_cows>>【은는】 <<bhis>> 길을 서둘러 비켜준다.
+		<<if random(1,2) is 1 and $daily.livestock.horses_satisfied lt 6 and beastSexEnabledForType("horse", $monster is 1)>>
+			You notice that one <<beasttype>> is standing apart from the rest. <<bHe>> paces back and forth. The <<livestock_cows>> hasten to get out of <<bhis>> way.
 			<br><br>
 
 			<<animalicon "horse">><<link [[안절부절못하는 <<beasttype>> 조사하기|Livestock Cribbing Horse Investigate]]>><<pass 1>><</link>>
@@ -1041,7 +1041,7 @@ $livestock.obey lte 10
 	<<if $monster is 1>>
 		숨을 몰아쉬며 건초 위에 눕는다. <<bhe>>【이가】 헐떡이며 말한다. "고마워. 이게 필요했거든." 땀으로 <<bhis>> 털이 번들거린다.
 	<<else>>
-		황홀한 듯 울음을 터뜨린다. <<bHe>>【은는】 건초 위에 눕고, 땀으로 털이 번들거린다. 당신은 <<bhis>> 목을 쓰다듬는다.
+		neighs in ecstasy. <<bHe>> lays down on the hay, coat shining with sweat. You stroke <<bhis>> neck.
 	<</if>>
 	<br><br>
 
@@ -1072,7 +1072,7 @@ $livestock.obey lte 10
 당신은 너무 가까이 다가가지 않기로 한다. <<livestock_horse>>【은는】 결국 농장 인부에게 끌려간다. 당신은 헛간을 둘러보며 무엇을 할지 고민한다.
 <br><br>
 
-<<link [[다음|Livestock Barn]]>><</link>>
+<<link [[Next|Livestock Barn]]>><<endevent>><</link>>
 <br>
 
 :: Livestock Barn Horse Apple Seduction
@@ -1080,8 +1080,8 @@ $livestock.obey lte 10
 <<beastNEWinit 3 horse>>
 당신은 <<beastsplural>>에게 다가간다. 그중 하나가 당신 손에 들린 사과 바구니를 보고 다른 이들에게 <<if $monster is 1>>속삭인다<<else>>히힝거린다<</if>>. 몇몇은 <<if $monster is 1>>거의 무아지경에 빠진 듯 입술을 핥고<<else>>당신이 나눠주길 바라며 우는 소리를 낸다<</if>>.
 <br><br>
-<<if $settings.horsesEnabled and ($settings.bestialityEnabled or $monster is 1) and hasSexStat("deviancy", 5)>>
-	<span class="lewd">음란한 생각이 떠오른다.</span> 놈들이 먹을 수 있는 다른 것이 있다.
+<<if beastSexEnabledForType("horse", $monster is 1) and hasSexStat("deviancy", 5)>>
+	<span class="lewd">A lewd idea strikes you.</span> There's something else they could eat.
 	<br><br>
 	<<link [[놈들을 애태운다|Livestock Barn Horse Apple Seduction Tease]]>><</link>><<deviant5>>
 	<br>
@@ -1254,9 +1254,9 @@ $livestock.obey lte 10
 :: Livestock Power Wash Cows Fight Finish
 <<effects>>
 <<if $enemyhealth lte 0>>
-	그 <<person>>【은는】 비틀거리더니 엉덩방아를 찧는다. <<livestock_cows>>
-	<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>
-		【이가】 재미있다는 듯 킬킬거린다.
+	The <<person>> stumbles and falls onto <<his>> ass. The <<livestock_cows>>
+	<<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
+		snicker
 	<<else>>
 		【이가】 재미있다는 듯 음메 하고 울어댄다.
 	<</if>>

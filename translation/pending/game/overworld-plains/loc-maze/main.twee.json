@@ -1,0 +1,93 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled>>",
+   "\t\tThe walls angle inwards, shrinking the corridor so much that you must turn sideways to squeeze through. You're halfway along when snakes emerge from either side of you. They wrap around your chest, squeezing your <<breasts>>.<<garousal>><<arousal 600>><<gstress>><<stress 6>>"
+  ],
+  "old_kr": [
+   "\t<<if $settings.bestialityEnabled>>",
+   "\t\t벽이 안쪽으로 기울어져 복도가 너무 좁아져서, 몸을 옆으로 돌려 비집고 들어가야 한다. 절반쯤 갔을 때 양쪽에서 뱀들이 나타난다. 뱀들이 당신의 가슴을 감싸고 <<breasts>> 부분을 조인다.<<garousal>><<arousal 600>><<gstress>><<stress 6>>"
+  ],
+  "new_en": [
+   "\t<<if animalSexEnabledForType(\"snake\")>>",
+   "\t\tThe walls angle inwards, shrinking the corridor so much that you must turn sideways to squeeze through. You're halfway along when snakes emerge from either side of you. They wrap around your chest, squeezing your <<breasts>>.<<garousal>><<arousal 600>><<gstress>><<stress 6>>"
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $settings.bestialityEnabled>>",
+   "\tYou move as fast as you can as the snakes continue to grope at you."
+  ],
+  "old_kr": [
+   "<<if $settings.bestialityEnabled>>",
+   "\t뱀들이 계속해서 당신을 더듬는 동안 최대한 빨리 움직인다."
+  ],
+  "new_en": [
+   "<<if animalSexEnabledForType(\"snake\")>>",
+   "\tYou move as fast as you can as the snakes continue to grope at you."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $settings.bestialityEnabled>>",
+   "\tIt's hard to move with such limited space, but you whack the snakes away as they emerge from the hatches. There are enough that a few slip through, twirling around you before you manage to smack them away, but you make it to the other side.<<garousal>><<arousal 600>><<gpain>><<pain 4>>"
+  ],
+  "old_kr": [
+   "<<if $settings.bestialityEnabled>>",
+   "\t이렇게 좁은 공간에서 움직이기는 어렵지만, 당신은 해치에서 나오는 뱀들을 후려쳐 쫓아낸다. 수가 너무 많아 몇 마리가 빠져나와 당신 주위를 휘감지만, 당신은 그것들을 쳐내고 반대편으로 빠져나온다.<<garousal>><<arousal 600>><<gpain>><<pain 4>>"
+  ],
+  "new_en": [
+   "<<if animalSexEnabledForType(\"snake\")>>",
+   "\tIt's hard to move with such limited space, but you whack the snakes away as they emerge from the hatches. There are enough that a few slip through, twirling around you before you manage to smack them away, but you make it to the other side.<<garousal>><<arousal 600>><<gpain>><<pain 4>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $settings.bestialityEnabled>>",
+   "\tSnakes emerge from holes in the stonework, but you're able to outmanoeuvre them."
+  ],
+  "old_kr": [
+   "<<if $settings.bestialityEnabled>>",
+   "\t석조 구조물의 구멍에서 뱀들이 나타나지만, 당신은 그것들을 따돌릴 수 있다."
+  ],
+  "new_en": [
+   "<<if animalSexEnabledForType(\"snake\")>>",
+   "\tSnakes emerge from holes in the stonework, but you're able to outmanoeuvre them."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $settings.bestialityEnabled>>",
+   "\tSnakes emerge from holes within the stonework."
+  ],
+  "old_kr": [
+   "<<if $settings.bestialityEnabled>>",
+   "\t석조 구조물 안의 구멍에서 뱀들이 나타난다."
+  ],
+  "new_en": [
+   "<<if animalSexEnabledForType(\"snake\")>>",
+   "\tSnakes emerge from holes within the stonework."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<waterbr 2>><<effects>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<waterwash>><<waterbr 2>><<effects>>"
+  ],
+  "context": ""
+ }
+]

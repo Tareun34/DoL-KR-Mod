@@ -1198,7 +1198,7 @@
 	<<He>>【은는】 히죽 웃는다. <span class="red">당신은 <<he>>【이가】 믿지 않는다고 생각한다.</span>
 	"브라이어에게 전해두지." <<he>>【이가】 말하고는 골목으로 숨어든다.<<llove "Briar">>
 	<br><br>
-	<<npcincr Briar love 1>>
+	<<npcincr Briar love -1>>
 	<<set $brothel_rivalry += 2>>
 	<<skulduggeryuse>>
 

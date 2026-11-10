@@ -1,0 +1,171 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if _gwylanLovePercent gte 35 and !$gwylan.punishment and !$gwylan.taken and !$gwylan.timer.wrap and (pcAreArmsBound(\"any\") or $feetuse is \"bound\")>>",
+   "\t\t\tYour bindings catch on <<print either(\"a loose shelf\", \"a clothes hanger\", \"a low-hanging branch\", \"some unpleasantly sticky vines\")>>. You try to pull away, and <span class=\"green\">your bindings fall to tatters at your feet.</span>"
+  ],
+  "old_kr": [
+   "\t\t<<if _gwylanLovePercent gte 35 and !$gwylan.punishment and !$gwylan.taken and !$gwylan.timer.wrap and (pcAreArmsBound(\"any\") or $feetuse is \"bound\")>>",
+   "\t\t\t당신의 결박이 <<print either(\"헐거운 선반\", \"옷걸이\", \"낮게 드리워진 나뭇가지\", \"불쾌하게 끈적이는 덩굴\")>>에 걸린다. 몸을 빼내려 하자, <span class=\"green\">결박이 너덜너덜해져 발치에 떨어진다.</span>"
+  ],
+  "new_en": [
+   "\t\t<<if _gwylanLovePercent gte 40 and !$gwylan.punishment and !$gwylan.taken and !$gwylan.timer.wrap and (pcAreArmsBound(\"any\") or $feetuse is \"bound\")>>",
+   "\t\t\tYour bindings catch on <<print either(\"a loose shelf\", \"a clothes hanger\", \"a low-hanging branch\", \"some unpleasantly sticky vines\")>>. You try to pull away, and <span class=\"green\">your bindings fall to tatters at your feet.</span>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<investigateicon>><<link [[Try to find Gwylan|Forest Shop Hat]]>><</link>>",
+   "\t\t\t<<elseif _snoopEvent and _gwylanLovePercent gte 35 and $gwylanSeen.includes(\"hat_found\") and !$gwylanSeen.includes(\"lights\") and $gwylan.progress gte 3 and $gwylan.requestCount gte 2>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<investigateicon>><<link [[그윌란을 찾아본다|Forest Shop Hat]]>><</link>>",
+   "\t\t\t<<elseif _snoopEvent and _gwylanLovePercent gte 35 and $gwylanSeen.includes(\"hat_found\") and !$gwylanSeen.includes(\"lights\") and $gwylan.progress gte 3 and $gwylan.requestCount gte 2>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<investigateicon>><<link [[Try to find Gwylan|Forest Shop Hat]]>><</link>>",
+   "\t\t\t<<elseif _snoopEvent and _gwylanLovePercent gte 30 and $gwylanSeen.includes(\"hat_found\") and !$gwylanSeen.includes(\"lights\") and $gwylan.progress gte 3 and $gwylan.requestCount gte 2>>"
+  ],
+  "context": "\t\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<investigateicon>><<link [[Try to find Gwylan again|Forest Shop Lights]]>><</link>>",
+   "\t\t\t<<elseif _snoopEvent and _gwylanLovePercent gte 50 and $gwylanSeen.includes(\"lights\") and !$gwylanSeen.includesAny(\"caught\", \"caught_no_lewd\") and $gwylanTalked.length gte 10 and $gwylan.progress gte 6 and !([\"clothing\"].includes($gwylan.request.event) && gwylanRequestMet())>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<investigateicon>><<link [[다시 그윌란을 찾아본다|Forest Shop Lights]]>><</link>>",
+   "\t\t\t<<elseif _snoopEvent and _gwylanLovePercent gte 50 and $gwylanSeen.includes(\"lights\") and !$gwylanSeen.includesAny(\"caught\", \"caught_no_lewd\") and $gwylanTalked.length gte 10 and $gwylan.progress gte 6 and !([\"clothing\"].includes($gwylan.request.event) && gwylanRequestMet())>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<investigateicon>><<link [[Try to find Gwylan again|Forest Shop Lights]]>><</link>>",
+   "\t\t\t<<elseif _snoopEvent and _gwylanLovePercent gte 40 and $gwylanSeen.includes(\"lights\") and !$gwylanSeen.includesAny(\"caught\", \"caught_no_lewd\") and $gwylanTalked.length gte 10 and $gwylan.progress gte 6 and !([\"clothing\"].includes($gwylan.request.event) && gwylanRequestMet())>>"
+  ],
+  "context": "\t\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tYou knock on the door.",
+   "\t<<if $wraith and $wraith.hunt>>"
+  ],
+  "old_kr": [
+   "\t문을 두드린다.",
+   "\t<<if $wraith and $wraith.hunt>>"
+  ],
+  "new_en": [
+   "\tYou knock on the door.",
+   "\t<<if $wraith?.hunt>>"
+  ],
+  "context": "<<elseif Time.isBloodMoon() and C.npc.Gwylan.love gte 10 and !$gwylanSteal>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $hypnosis_traits.devotion and (!$hypnosis_traits.slumber or $hypnosisTimers.slumber and $hypnosisTimers.slumber.time lt Math.floor($hypnosisTimers.slumber.max / 2))>>",
+   "\t\t<span class=\"witchbloom\">You immediately yearn to return to <<his>> lap and sink back into the blissful slumber.</span>"
+  ],
+  "old_kr": [
+   "\t<<if $hypnosis_traits.devotion and (!$hypnosis_traits.slumber or $hypnosisTimers.slumber and $hypnosisTimers.slumber.time lt Math.floor($hypnosisTimers.slumber.max / 2))>>",
+   "\t\t<span class=\"witchbloom\">당신은 즉시 <<his>> 무릎으로 돌아가 더없이 행복한 잠에 다시 빠져들고 싶다는 갈망을 느낀다.</span>"
+  ],
+  "new_en": [
+   "\t<<if $hypnosis_traits.devotion and (!$hypnosis_traits.slumber or $hypnosisTimers.slumber?.time lt Math.floor($hypnosisTimers.slumber.max / 2))>>",
+   "\t\t<span class=\"witchbloom\">You immediately yearn to return to <<his>> lap and sink back into the blissful slumber.</span>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $world_corruption_soft gte 25 and (($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or $settings.bestialityEnabled)>>",
+   "\t<<link [[Next|Forest Shop Caught 2]]>><<handheldon>><</link>>"
+  ],
+  "old_kr": [
+   "<<if $world_corruption_soft gte 25 and (($settings.monsterChance gte 1 and ($hallucinations gte 1 or !$settings.monsterHallucinationsOnly)) or $settings.bestialityEnabled)>>",
+   "\t<<link [[다음|Forest Shop Caught 2]]>><<handheldon>><</link>>"
+  ],
+  "new_en": [
+   "<<if $world_corruption_soft gte 25 and beastSexEnabledForType(\"wolf\")>>",
+   "\t<<link [[Next|Forest Shop Caught 2]]>><<handheldon>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Remain Silent|Forest Shop Caught 9]]>><<set $phase2 to 4>><</link>>"
+  ],
+  "old_kr": [
+   "<<link [[침묵을 지킨다|Forest Shop Caught 9]]>><<set $phase2 to 4>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[Remain silent|Forest Shop Caught 9]]>><<set $phase2 to 4>><</link>>"
+  ],
+  "context": "<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<br><br>",
+   "\t\t\tYou slept soundly, but now feel a little rough."
+  ],
+  "old_kr": [
+   "\t\t\t<br><br>",
+   "\t\t\t푹 잤지만, 지금은 몸이 좀 찌뿌둥하다."
+  ],
+  "new_en": [
+   "\t\t\t<br>",
+   "\t\t\tYou slept soundly, but now feel a little rough."
+  ],
+  "context": "\t\t<<if [\"dryheaving\",\"nausea\"].includes(_wakingEffect)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif _justEntered and _shopEvent and _gwylanLovePercent gte 85 and C.npc.Gwylan.dom gte 120 and $hypnosis_traits.devotion gte 3 and $gwylanSeen.includesAll(\"partners\", \"hypnosis_deepest\", \"petplay\") and !$gwylanSeen.includes(\"familiar_collar\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<elseif _justEntered and _shopEvent and _gwylanLovePercent gte 75 and C.npc.Gwylan.dom gte 120 and $hypnosis_traits.devotion gte 3 and $gwylanSeen.includesAll(\"partners\", \"hypnosis_deepest\", \"petplay\") and !$gwylanSeen.includes(\"familiar_collar\")>>"
+  ],
+  "context": "\t<<include \"Forest Shop Intruder\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<elseif _snoopEvent and _gwylanLovePercent gte 20 and $gwylanSeen.includes(\"intruder\", \"clothes_intro\") and !$gwylanSeen.includes(\"hat_found\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<elseif _snoopEvent and _gwylanLovePercent gte 20 and $gwylanSeen.includesAll(\"intruder\", \"clothes_intro\") and !$gwylanSeen.includes(\"hat_found\")>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<br>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<br>"
+  ],
+  "context": "\t\t\t<<if isLoveInterest(\"Robin\")>><<gifticon \"love\">><<else>><<gifticon \"christmas\">><</if>><<link [[로빈에게 줄 선물 찾기 (0:10)|Forest Christmas Robin]]>><<pass 10>><</link>>"
+ }
+]

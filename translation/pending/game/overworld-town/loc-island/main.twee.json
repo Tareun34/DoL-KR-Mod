@@ -1,0 +1,48 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $debug is 1>>",
+   "\t\t<<ind>><<link [[Get wood|$passage]]>><<set $island.wood += 100>><</link>> (debug)"
+  ],
+  "old_kr": [
+   "\t<<if $debug is 1>>",
+   "\t\t<<ind>><<link [[목재 얻기|$passage]]>><<set $island.wood += 100>><</link>> (debug)"
+  ],
+  "new_en": [
+   "\t<<if $debug>>",
+   "\t\t<<ind>><<link [[Get wood|$passage]]>><<set $island.wood += 100>><</link>> (debug)"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<set _time to 60>>",
+   "<<set _hours to Math.floor(_time / 60)>>",
+   "<<set _minutes to _time % 60>>",
+   "<<link [[\"Next (\"+_hours+\":\"+(_minutes lt 10 ? \"0\": \"\")+_minutes+\")\"| Pregnancy Birth Hospital]]>><<island_end>><<pass _time>><<set $phase to 1>><</link>>"
+  ],
+  "old_kr": [
+   "<<set _time to 60>>",
+   "<<set _hours to Math.floor(_time / 60)>>",
+   "<<set _minutes to _time % 60>>",
+   "<<link [[\"다음 (\"+_hours+\":\"+(_minutes lt 10 ? \"0\": \"\")+_minutes+\")\"| Pregnancy Birth Hospital]]>><<island_end>><<pass _time>><<set $phase to 1>><</link>>"
+  ],
+  "new_en": [
+   "<<link [[\"Next \" + printTime(_time, true)| Pregnancy Birth Hospital]]>><<island_end>><<pass _time>><<set $phase to 1>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled and $settings.slugsEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $settings.slugsEnabled>>"
+  ],
+  "context": "\t<<addevent \"island_events_rope\" 0.5>>"
+ }
+]

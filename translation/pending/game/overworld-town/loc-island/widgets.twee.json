@@ -1,0 +1,52 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $island.defeat gt 6>>",
+   "\t\t<<set $island.defeat to 6>>",
+   "\t<</if>>"
+  ],
+  "context": "\t<<set $hunger to 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"cat\", $monster is 1)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $monster is 1 or $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"cat\", $monster is 1)>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if _islandUpgrades[_args[0]].timeTaken>>",
+   "\t\t\t\t<<set _hours to Math.floor(_islandUpgrades[_args[0]].timeTaken / 60)>>",
+   "\t\t\t\t<<set _minutes to _islandUpgrades[_args[0]].timeTaken % 60>>",
+   "\t\t\t\t<<set _timeString to \" (\" +_hours+\":\"+(_minutes lt 10 ? \"0\": \"\")+_minutes+\")\">>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<set _timeString to \"\">>",
+   "\t\t\t<</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set _timeString to _islandUpgrades[_args[0]].timeTaken ? printTime(_islandUpgrades[_args[0]].timeTaken, true) : \"\">>"
+  ],
+  "context": "\t\t\t<</if>>"
+ }
+]

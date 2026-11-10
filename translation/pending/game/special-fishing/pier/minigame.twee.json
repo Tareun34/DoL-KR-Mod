@@ -1,0 +1,13 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if V.debug === 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if V.debug>>"
+  ],
+  "context": ""
+ }
+]

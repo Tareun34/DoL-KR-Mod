@@ -445,7 +445,7 @@
 		<<link [[돌아간다|Adult Shop]]>><</link>>
 	<</addinlineevent>>
 
-	<<if $cool lt 80 or $debug is 1>>
+	<<if $cool lt 80 or $debug>>
 		/* school status event */
 		<<addinlineevent "studentbully" 1>>
 			<<endevent>>

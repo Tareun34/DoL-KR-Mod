@@ -1,0 +1,1793 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"Time to pay up,\" <<he>> says.",
+   "\t<<if $baileydefeatedchain gte 3 or ($robinpaid is 1 and $bus is \"home\" and $robinfirstrentfight isnot 1 and $renttime lte -14)>>"
+  ],
+  "old_kr": [
+   "\t\"돈 낼 시간이야,\" <<he>>【이가】 말한다.",
+   "\t<<if $baileydefeatedchain gte 3 or ($robinpaid is 1 and $bus is \"home\" and $robinfirstrentfight isnot 1 and $renttime lte -14)>>"
+  ],
+  "new_en": [
+   "\t\"Time to pay up,\" <<he>> says.",
+   "\t<<if $baileydefeatedchain gte 3 or ($robinpaid is 1 and $bus is \"home\" and $robinfirstrentfight isnot 1 and ($rentTime lte -14 or $rentThug?.anger gte 4))>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $money gte $rentmoney + ($babyRent or 0)>>",
+   "\t\t<<link [[Pay|Rent Pay]]>><<set $phase to $_robinWasInRoom>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if $money gte $rentmoney + ($babyRent or 0)>>",
+   "\t\t<<link [[돈을 낸다|Rent Pay]]>><<set $phase to $_robinWasInRoom>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if $money gte $rentMoney + ($babyRent or 0)>>",
+   "\t\t<<link [[Pay|Rent Pay]]>><<set $phase to $_robinWasInRoom>><</link>>"
+  ],
+  "context": "\t<<babyRent>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Submit|Rent Intro]]>><<endevent>><<set $phase to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[순응한다|Rent Intro]]>><<endevent>><<set $phase to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<if isPregnancyEnding()>>",
+   "\t\t\t<<set $phase to 1>><<set $rentPregInterruption to \"broke\">><<include \"Rent Pregnant\">>",
+   "\t\t<<else>>",
+   "\t\t\t<<link [[Submit|Rent Intro]]>><<endevent>><<set $phase to 1>><</link>>",
+   "\t\t\t<br>",
+   "\t\t\t<<if $bus is \"hospital\">>",
+   "\t\t\t\t<<link [[Fight|Rent Hospital Fight Robin]]>><<set $fightstart to 1>><</link>>",
+   "\t\t\t\t<br>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<link [[Fight|Rent Robin Fight]]>><<set $fightstart to 1>><</link>>",
+   "\t\t\t\t<br>",
+   "\t\t\t<</if>>",
+   "\t\t<</if>>",
+   "\t<</if>>",
+   "\t<<if !isPregnancyEnding()>><<set $rentTime to 7>><</if>>",
+   "<</widget>>",
+   "",
+   "<<widget \"thugrentduerobin\">>",
+   "\t<<set $_robinInRoom to _args[0]>><<set $baileyRefusedToPay to 0>>",
+   "\t/*<<set $baileyRefusedToPayTotal += $rentMoney + ($babyRent || 0)>>",
+   "\t<<set $baileyRefusedToPayTotalStat += $rentMoney + ($babyRent || 0)>>*/",
+   "",
+   "\t<<set $phase2 to \"thug\">>",
+   "\t<<npc Bailey>><<loadNPC 1 \"rent_thug\">><<person1>>",
+   "\t\"I see you've finally found your way back. Though it seems you needed some assistance,\" <<he>> sneers. ",
+   "\t<<if $baileydefeatedchain gte 3 or $rentThug.anger gte 4>>",
+   "\t\t<<generateRole 2 0 \"thug\">><<generateRole 3 0 \"thug\">><<generateRole 4 0 \"thug\">>",
+   "\t\tA rough-looking <<person3>><<person>> and <<person4>><<person>> stand next to <<person1>><<him>>.",
+   "\t\t<<if $_robinInRoom>>",
+   "\t\t\tBehind them, a third <<person5>><<person>> walks in with a length of rope and rushes Robin. Robin tries to resist, but it's no use.",
+   "\t\t<<else>>",
+   "\t\t\tBehind them, a third <<person5>><<person>> stands, bringing Robin in with <<him>>. Robin has restraints on <<nnpc_his \"Robin\">> hands.",
+   "\t\t<</if>>",
+   "\t\tThe <<person3>><<person>> cracks <<his>> knuckles, and the <<person4>><<person>> grins darkly.",
+   "\t<<elseif $baileydefeatedchain gte 1 or $rentThug.anger gte 2>>",
+   "\t\t<<generateRole 2 0 \"thug\">><<generateRole 3 0 \"thug\">>",
+   "\t\tA rough-looking <<person3>><<person>> and <<person4>><<person>> stand next to <<person1>><<him>>.",
+   "\t\t<<if $_robinInRoom>>",
+   "\t\t\tThe <<person4>><<person>> walks in with a length of rope and rushes Robin. Robin tries to resist, but it's no use.",
+   "\t\t\tThe <<person3>><<person>> cracks <<his>> knuckles.",
+   "\t\t<<else>>",
+   "\t\t\tThe <<person3>><<person>> cracks <<his>> knuckles, and the <<person4>><<person>> grins darkly, bringing Robin in with <<him>>.",
+   "\t\t\tRobin has restraints on <<nnpc_his \"Robin\">> hands.",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\t<<generateRole 2 0 \"thug\">>",
+   "\t\tA rough-looking <<person3>><<person>> stands next to <<person1>><<him>>.",
+   "\t\t<<if $_robinInRoom>>",
+   "\t\t\tThe <<person3>><<person>> walks in with a length of rope and rushes Robin. Robin tries to resist, but it's no use.",
+   "\t\t<<else>>",
+   "\t\t\tThe <<person3>><<person>> brings Robin in with <<him>>. Robin has restraints on <<nnpc_his \"Robin\">> hands.",
+   "\t\t<</if>>",
+   "\t<</if>>",
+   "\t<br><br>",
+   "\t<<person1>>",
+   "\t<<if $worn.face.type.includes(\"gag\")>>",
+   "\t\t\"Looks like you had some difficulties returning,\" Bailey says while looking at your gag. \"A good tool to keep a brat in check,\" <<he>> snidely remarks, \"but it's not needed anymore.\"",
+   "\t\t<<He>> snaps <<his>> fingers, and the <<person2>><<person>> removes it from your mouth.",
+   "\t\t<<set $worn.face.type.push(\"broken\")>><<faceruined>><<person1>>",
+   "\t<<else>>",
+   "\t\t<<He>> looks at you coldly. \"You better not keep me waiting next time, unless you want another rough escort back.",
+   "\t<</if>>",
+   "\t<br><br>",
+   "",
+   "\t\"Now then, you've had more than enough time to scrounge up what you owe,\" Bailey says. \"So pay up.\"",
+   "\t<br><br>",
+   "",
+   "\t<<if $baileyOfficeSeduced is 1>>",
+   "\t\t<<unset $baileyOfficeSeduced>>",
+   "\t<</if>>",
+   "\t<<if $babyIntros and $babyIntros.Bailey and $babyIntros.Bailey.length gt 0>>",
+   "\t\t<<set _homeBabyRent to true>>",
+   "\t\t<<homeBabyIntro>>",
+   "\t<</if>>",
+   "\t<<babyRent>>",
+   "\t<<if $money gte $rentMoney + ($babyRent or 0)>>",
+   "\t\t<<link [[Pay|Rent Pay Robin]]>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $bus is \"hospital\">>",
+   "\t\t\t<<link [[Fight|Rent Hospital Fight Robin]]>><<set $fightstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $bus is \"hospital\">>",
+   "\t\t\t<<link [[싸운다|Rent Hospital Fight Robin]]>><<set $fightstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Refuse|Rent Refuse Robin]]>><<def 1>><</link>>",
+   "\t\t<br>",
+   "\t\t<<if isPregnancyEnding()>>",
+   "\t\t\t<<link [[Tell <<him>> your waters have broken|Rent Pregnant]]>><<set $rentPregInterruption to \"told\">><</link>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<link [[Fight|Rent Robin Fight]]>><<set $fightstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<link [[싸운다|Rent Robin Fight]]>><<set $fightstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t<<link [[Submit|Rent Intro]]>><<endevent>><<set $phase to 1>><</link>>",
+   "\t\t\t<br>",
+   "\t\t\t<<link [[Fight|Rent Robin Fight]]>><<set $fightstart to 1>><<set $phase to 0>><</link>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tOn an unseen signal, the thugs advance on you.",
+   "\t\tThe <<person3>><<person>> reaches for you. You duck under <<his>> arm, but the <<person2>><<person>> grabs yours.",
+   "\t\tThe <<person3>><<person>> grabs your other arm, and they hold you there."
+  ],
+  "old_kr": [
+   "\t\t보이지 않는 신호에, 깡패들이 당신에게 다가온다.",
+   "\t\t<<person3>><<person>>【이가】 당신에게 손을 뻗는다. 당신은 <<his>> 팔 아래로 몸을 숙여 피하지만, <<person2>><<person>>【이가】 당신의 팔을 붙잡는다.",
+   "\t\t<<person3>><<person>>【이가】 다른 팔까지 붙잡고, 그들은 당신을 그 자리에 붙들어 둔다."
+  ],
+  "new_en": [
+   "\t\t<<if $phase2 is \"thug\">>",
+   "\t\t\tOn an unseen signal, the thugs advance on you.",
+   "\t\t\tYou prepare to avoid them, but the <<person2>><<person>> behind you quickly grabs hold of you. You try to shake <<him>> off, but by then the <<person3>><<person>> and <<person4>><<person>> have already reached you.",
+   "\t\t\tThey easily take hold of your arms and pin you in place.",
+   "\t\t<<else>>",
+   "\t\t\tOn an unseen signal, the thugs advance on you.",
+   "\t\t\tThe <<person3>><<person>> reaches for you. You duck under <<his>> arm, but the <<person2>><<person>> grabs yours.",
+   "\t\t\tThe <<person3>><<person>> grabs your other arm, and they hold you there.",
+   "\t\t<</if>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\"That's okay,\" <<he>> says, smiling. \"I've already made arrangements. I don't know what they intend for you, and frankly I don't care.\"",
+   "\t\t<<He>> produces a hood and length of rope. \"Hold still.\""
+  ],
+  "old_kr": [
+   "\t\t\"괜찮아.\" <<he>>【은는】 미소 지으며 말한다. \"이미 조치를 취해뒀거든. 저들이 너한테 뭘 할지는 모르겠지만, 솔직히 신경 안 써.\"",
+   "\t\t<<He>>【은는】 후드와 밧줄 한 뭉치를 꺼낸다. \"가만히 있어.\""
+  ],
+  "new_en": [
+   "\t\t<<if $phase2 is \"thug\">>",
+   "\t\t\t\"Oh well,\" <<he>> says, now smiling.",
+   "\t\t<<else>>",
+   "\t\t\t\"That's okay,\" <<he>> says, smiling.",
+   "\t\t<</if>>",
+   "\t\t\"I've already made arrangements. I don't know what they intend for you, and frankly I don't care.\"",
+   "\t\t<<He>> produces a hood and length of rope. \"Hold still.\""
+  ],
+  "context": "\t\t<<person1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Submit|Rent Intro]]>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t\t<<if $bus is \"hospital\">>",
+   "\t\t\t<<link [[Fight|Rent Hospital Fight]]>><<set $fightstart to 1>><</link>>",
+   "\t\t\t<br>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[순응한다|Rent Intro]]>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t\t<<if $bus is \"hospital\">>",
+   "\t\t\t<<link [[싸운다|Rent Hospital Fight]]>><<set $fightstart to 1>><</link>>",
+   "\t\t\t<br>"
+  ],
+  "new_en": [
+   "\t\t<<if isPregnancyEnding()>>",
+   "\t\t\t<<set $phase to 1>><<include \"Rent Pregnant\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<link [[Fight|Rent Fight]]>><<set $fightstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<link [[싸운다|Rent Fight]]>><<set $fightstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t<<link [[Submit|Rent Intro]]>><<endevent>><</link>>"
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<</if>>",
+   "\t\t<<if $baileyseduced isnot 1 and $_seduceAllowed>>",
+   "\t\t\t<<if hasSexStat(\"promiscuity\", 2)>>",
+   "\t\t\t\t<<link [[Seduce|Rent Seduce]]>><<trauma 3>><</link>><<promiscuous2>><<gtrauma>>"
+  ],
+  "old_kr": [
+   "\t\t<</if>>",
+   "\t\t<<if $baileyseduced isnot 1 and $_seduceAllowed>>",
+   "\t\t\t<<if hasSexStat(\"promiscuity\", 2)>>",
+   "\t\t\t\t<<link [[유혹한다|Rent Seduce]]>><<trauma 3>><</link>><<promiscuous2>><<gtrauma>>"
+  ],
+  "new_en": [
+   "\t\t\t<<if $bus is \"hospital\">>",
+   "\t\t\t\t<<link [[Fight|Rent Hospital Fight]]>><<set $fightstart to 1>><</link>>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<elseif $uncomfortable.prostituting is false>>",
+   "\t\t\t\t<<set _desperateaction to 1>>",
+   "\t\t\t\t<<link [[Seduce|Rent Seduce]]>><<trauma 12>><<set $desperateaction to _desperateaction>><</link>><<promiscuous2>><<ggtrauma>>"
+  ],
+  "old_kr": [
+   "\t\t\t<<elseif $uncomfortable.prostituting is false>>",
+   "\t\t\t\t<<set _desperateaction to 1>>",
+   "\t\t\t\t<<link [[유혹한다|Rent Seduce]]>><<trauma 12>><<set $desperateaction to _desperateaction>><</link>><<promiscuous2>><<ggtrauma>>"
+  ],
+  "new_en": [
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<link [[Fight|Rent Fight]]>><<set $fightstart to 1>><</link>>"
+  ],
+  "context": "\t\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tBailey snatches the money from your hand and starts counting. \"Good,\" <<nnpc_he \"Bailey\">> says, satisfied. \"You came through.",
+   "\t<<if $rentstage is 1>>",
+   "\t\tNext week I want <<printmoney $rentmoney \"pink\">><<babyRentDisplay \" plus \" \" if you don't look after your children\" \"pink\">>. You didn't think it would get any easier, did you?\"",
+   "\t<<else>>",
+   "\t\tNext week I want <<printmoney $rentmoney \"pink\">><<babyRentDisplay \" plus \" \" if you don't look after your children\" \"pink\">>.\""
+  ],
+  "old_kr": [
+   "\t베일리는 당신의 손에서 돈을 낚아채 세기 시작한다. \"좋아.\" 베일리가 만족한 듯 말한다. \"약속대로 해왔군.",
+   "\t<<if $rentstage is 1>>",
+   "\t\t다음 주에는 <<printmoney $rentmoney \"pink\">><<babyRentDisplay \" 추가로, \" \" 아이들을 돌보지 않는다면\" \"pink\">>【을를】 가져와. 점점 쉬워질 거라고 생각한 건 아니겠지?\"",
+   "\t<<else>>",
+   "\t\t다음 주에는 <<printmoney $rentmoney \"pink\">><<babyRentDisplay \" 추가로, \" \" 아이들을 돌보지 않는다면\" \"pink\">>【을를】 가져와.\""
+  ],
+  "new_en": [
+   "\tBailey snatches the money from your hand and starts counting. \"Good,\" <<nnpc_he \"Bailey\">> says, satisfied.",
+   "\t\"You came through. Next week I want <<printmoney $rentMoney \"pink\">><<babyRentDisplay \" plus \" \" if you don't look after your children\" \"pink\">>.<<if $rentStage is 1>> You didn't think it would get any easier, did you?\"<<else>>\"<</if>>",
+   "\t<<if _args[0] is \"thug\">>",
+   "\t\t<br><br>",
+   "\t\tBy the time <<hes>> done counting the money, the <<print $event.buffer.length gte 3 ? \"thugs that were with <<him>> have\" : \"thug that was with <<him>> has\">> already vanished.<<thuganger -5>><<lllthuganger>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $bus is \"hospital\">>",
+   "\t<<if crimeSumCurrent() gte 1000>>",
+   "\t\t<<link [[Next|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t<<else>>",
+   "\t\t<<link [[Next|Hospital front]]>><<pass 10>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t<</if>>"
+  ],
+  "old_kr": [
+   "<<if $bus is \"hospital\">>",
+   "\t<<if crimeSumCurrent() gte 1000>>",
+   "\t\t<<link [[다음|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t<<else>>",
+   "\t\t<<link [[다음|Hospital front]]>><<pass 10>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t<</if>>"
+  ],
+  "new_en": [
+   "<<if $phase2 is \"thug\">>",
+   "\tYou're left alone in the main hall.",
+   "\t<br><br>",
+   "",
+   "\t<<link [[Next|Orphanage]]>><<endevent>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $phase is 1>>",
+   "\t\t<<endevent>>",
+   "\t\t<<npc Robin>><<person1>>",
+   "\t\tYou see Robin run up to you from around a corner as you exit <<his>> room. \"You're okay!\" <<He>> tackles you into a hug.",
+   "\t\t\"Bailey took me away last night and I thought something awful was going to happen,\" <<he>> says before calming down.",
+   "\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t<<if $phase is 1>>",
+   "\t\t<<endevent>>",
+   "\t\t<<npc Robin>><<person1>>",
+   "\t\t당신이 <<his>> 방에서 나오자 로빈이 모퉁이에서 달려오는 것이 보인다. \"괜찮구나!\" <<He>>【이가】 당신을 껴안는다.",
+   "\t\t\"어젯밤에 베일리가 날 데려가서 끔찍한 일이 생길 줄 알았어.\" <<he>>【이가】 진정하며 말한다.",
+   "\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t<<if $bus is \"hospital\">>",
+   "\t\t<<if crimeSumCurrent() gte 1000>>",
+   "\t\t\t<<link [[Next|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>",
+   "\t\t<<else>>",
+   "\t\t\t<<link [[Next|Hospital front]]>><<pass 10>><<endevent>><</link>>",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\t<<if $phase is 1>>",
+   "\t\t\t<<endevent>>",
+   "\t\t\t<<npc Robin>><<person1>>",
+   "\t\t\tYou see Robin run up to you from around a corner as you exit <<his>> room. \"You're okay!\" <<He>> tackles you into a hug.",
+   "\t\t\t\"Bailey took me away last night and I thought something awful was going to happen,\" <<he>> says before calming down.",
+   "\t\t\t<br><br>"
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou return the embrace before returning to your room.",
+   "\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t당신은 포옹에 답한 후 방으로 돌아간다.",
+   "\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t\tYou return the embrace before returning to your room.",
+   "\t\t\t<br><br>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<link [[Next|Bedroom]]>><<endevent>><</link>>",
+   "\t<br>"
+  ],
+  "old_kr": [
+   "\t<<link [[다음|Bedroom]]>><<endevent>><</link>>",
+   "\t<br>"
+  ],
+  "new_en": [],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Robin hugs you softly after Bailey leaves. \"I'm so sorry,\" <<he>> says."
+  ],
+  "old_kr": [
+   "베일리가 떠난 후 로빈이 당신을 부드럽게 안아준다. \"정말 미안해.\" <<he>>【이가】 말한다."
+  ],
+  "new_en": [
+   "<<if $phase2 is \"thug\">>",
+   "\tYou're left in the hall with Robin. <<He>> hugs you softly after Bailey leaves. \"I'm so sorry,\" <<he>> says.",
+   "\t<br><br>"
+  ],
+  "context": "<<npc \"Robin\">><<person1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<set $companion to \"Robinrent\">>",
+   "\t<<if crimeSumCurrent() gte 1000>>",
+   "\t\t<<link [[Next|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t<<else>>",
+   "\t\t<<link [[Next|Hospital front]]>><<pass 10>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t<</if>>"
+  ],
+  "old_kr": [
+   "\t<<set $companion to \"Robinrent\">>",
+   "\t<<if crimeSumCurrent() gte 1000>>",
+   "\t\t<<link [[다음|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t<<else>>",
+   "\t\t<<link [[다음|Hospital front]]>><<pass 10>><<endevent>><</link>>",
+   "\t\t<br>",
+   "\t<</if>>"
+  ],
+  "new_en": [
+   "\t<<link [[Next|Orphanage]]>><<endevent>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $inRobinsRoom>>",
+   "\t\t<<He>> sits down on <<his>> bed. \"That was scary.\"",
+   "\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t<<if $inRobinsRoom>>",
+   "\t\t<<He>>【이가】 <<his>> 침대에 앉는다. \"무서웠어.\"",
+   "\t\t<br><br>"
+  ],
+  "new_en": [
+   "\tRobin hugs you softly after Bailey leaves. \"I'm so sorry,\" <<he>> says."
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tAfter a moment to make sure Robin is okay, you leave the room and go back to the main hall."
+  ],
+  "old_kr": [
+   "\t\t잠시 로빈이 괜찮은지 확인한 후, 당신은 방을 나와 중앙 홀로 돌아간다."
+  ],
+  "new_en": [
+   "\t<<if $bus is \"hospital\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Next|Orphanage]]>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[다음|Orphanage]]>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<set $companion to \"Robinrent\">>",
+   "\t\t<<if crimeSumCurrent() gte 1000>>",
+   "\t\t\t<<link [[Next|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>",
+   "\t\t<<else>>",
+   "\t\t\t<<link [[Next|Hospital front]]>><<pass 10>><<endevent>><</link>>",
+   "\t\t<</if>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<He>> eventually leaves your bedroom. \"If you need anything, just let me know.\"",
+   "\t\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\t<<He>>【이가】 마침내 당신의 침실을 나선다. \"필요한 거 있으면, 그냥 말해줘.\"",
+   "\t\t<br><br>"
+  ],
+  "new_en": [
+   "\t\t<<if $inRobinsRoom>>",
+   "\t\t\t<<He>> sits down on <<his>> bed. \"That was scary.\"",
+   "\t\t\t<br><br>"
+  ],
+  "context": "\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Next|Bedroom]]>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[다음|Bedroom]]>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\tAfter a moment to make sure Robin is okay, you leave the room and go back to the main hall.",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<link [[Next|Orphanage]]>><<endevent>><</link>>",
+   "\t\t<<else>>",
+   "\t\t\t<<He>> eventually leaves your bedroom. \"If you need anything, just let me know.\"",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<link [[Next|Bedroom]]>><<endevent>><</link>>",
+   "\t\t<</if>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<person1>>",
+   "<<if $speech_attitude is \"bratty\">>",
+   "\tYou stare at <<him>> in defiance. \"I'm not paying you. I don't care what you do to me.\"",
+   "<<elseif $speech_attitude is \"meek\">>",
+   "\t\"N-no,\" you stutter, surprised by your bravery. \"I-I won't.\""
+  ],
+  "old_kr": [
+   "<<person1>>",
+   "<<if $speech_attitude is \"bratty\">>",
+   "\t당신은 반항적으로 <<him>>【을를】 쳐다본다. \"돈 안 낼 거예요. 나한테 무슨 짓을 하든 상관없어요.\"",
+   "<<elseif $speech_attitude is \"meek\">>",
+   "\t\"시, 싫어요.\" 당신은 자신의 용기에 놀라 말을 더듬는다. \"아, 안 낼 거예요.\""
+  ],
+  "new_en": [
+   "<<if isPregnancyEnding()>><<set $rentPregInterruption to \"refused\">><</if>><<person1>>",
+   "<<if $phase2 is \"thug\">>",
+   "\t<<if $speech_attitude is \"bratty\">>",
+   "\t\t\"I'm not giving you a penny,\" you declare defiantly. \"You don't deserve my hard earned money!\"",
+   "\t<<elseif $speech_attitude is \"meek\">>",
+   "\t\t\"I-I...\" you stutter. \"I won't!\" you manage to yell, surprising yourself.",
+   "\t<<else>>",
+   "\t\tYou shake your head. \"It's my money, and I plan to keep it,\" you say.",
+   "\t<</if>>",
+   "\t<br><br>",
+   "",
+   "\t\"You came all this way just to act like a brat?\" Bailey scoffs."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"The money isn't yours,\" you say, \"I'm keeping it.\""
+  ],
+  "old_kr": [
+   "\t\"그 돈은 당신 것이 아니에요.\" 당신이 말한다. \"제가 가질 거예요.\""
+  ],
+  "new_en": [
+   "\t<<if $speech_attitude is \"bratty\">>",
+   "\t\tYou stare at <<him>> in defiance. \"I'm not paying you. I don't care what you do to me.\"",
+   "\t<<elseif $speech_attitude is \"meek\">>",
+   "\t\t\"N-no,\" you stutter, surprised by your bravery. \"I-I won't.\"",
+   "\t<<else>>",
+   "\t\t\"The money isn't yours,\" you say, \"I'm keeping it.\"",
+   "\t<</if>>",
+   "\t<br><br>"
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $speech_attitude is \"bratty\">>",
+   "\tYou stare at <<him>> in defiance. \"I'm not paying you. I don't care what you do to me, but leave Robin out of this.\"",
+   "<<elseif $speech_attitude is \"meek\">>",
+   "\t\"N-no,\" you stutter, surprised by your bravery. \"I-I won't let you hurt either of us...\""
+  ],
+  "old_kr": [
+   "<<if $speech_attitude is \"bratty\">>",
+   "\t당신은 반항적으로 <<him>>【을를】 쳐다본다. \"돈 안 낼 거예요. 나한테 무슨 짓을 하든 상관없지만, 로빈은 건드리지 마세요.\"",
+   "<<elseif $speech_attitude is \"meek\">>",
+   "\t\"시, 싫어요.\" 당신은 자신의 용기에 놀라 말을 더듬는다. \"우, 우리 둘 다 다치게 두지 않을 거예요...\""
+  ],
+  "new_en": [
+   "<<if $phase2 is \"thug\">>",
+   "\t<<if $speech_attitude is \"bratty\">>",
+   "\t\t\"I'm not giving you a penny,\" you declare defiantly. \"You can do what you want with me, just leave Robin out of this!\"",
+   "\t<<elseif $speech_attitude is \"meek\">>",
+   "\t\t\"N-no, I- I won't,\" you stutter out. \"I'm sorry,\" you almost whisper while looking at Robin.",
+   "\t<<else>>",
+   "\t\tYou shake your head. \"It's my money, and I plan to keep it,\" you say. \"Punish me however you want but leave <<nnpc_him \"Robin\">> out of this.\"",
+   "\t<</if>>",
+   "\t<br><br>",
+   "",
+   "\t\"You came all this way just to act like a selfish brat?\" Bailey scoffs. <<He>> stares at you with cold indifference before speaking again.",
+   "\t<br><br>",
+   "",
+   "\t\"Oh well,\" <<he>> says, now smiling."
+  ],
+  "context": "<<person1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"The money isn't yours,\" you say. \"Punish me however you want but leave <<nnpc_him \"Robin\">> out of this.\"",
+   "<</if>>",
+   "<br><br>"
+  ],
+  "old_kr": [
+   "\t\"그 돈은 당신 것이 아니에요.\" 당신이 말한다. \"원하는 대로 벌을 주되, <<nnpc_him \"Robin\">>【은는】 건드리지 마세요.\"",
+   "<</if>>",
+   "<br><br>"
+  ],
+  "new_en": [
+   "\t<<if $speech_attitude is \"bratty\">>",
+   "\t\tYou stare at <<him>> in defiance. \"I'm not paying you. I don't care what you do to me, but leave Robin out of this.\"",
+   "\t<<elseif $speech_attitude is \"meek\">>",
+   "\t\t\"N-no,\" you stutter, surprised by your bravery. \"I-I won't let you hurt either of us...\"",
+   "\t<<else>>",
+   "\t\t\"The money isn't yours,\" you say. \"Punish me however you want but leave <<nnpc_him \"Robin\">> out of this.\"",
+   "\t<</if>>",
+   "\t<br><br>"
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\"That's okay,\" <<he>> says, smiling. \"I've already made arrangements. I don't know what they intend for you two, and frankly I don't care.\"",
+   "<<He>> produces a hood and length of rope. \"Hold still.\""
+  ],
+  "old_kr": [
+   "\"괜찮아.\" <<he>>【이가】 미소 지으며 말한다. \"이미 조치를 취해 뒀거든. 그들이 너희 둘에게 뭘 하려는지 모르겠고, 솔직히 관심도 없어.\"",
+   "<<He>>【이가】 두건과 밧줄을 꺼낸다. \"가만히 있어.\""
+  ],
+  "new_en": [
+   "\t\"That's okay,\" <<he>> says, smiling.",
+   "<</if>>",
+   "\"I've already made arrangements. I don't know what they intend for you two, and frankly I don't care.\"",
+   "<<He>> produces a hood and length of rope. \"Hold still.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<link [[Submit|Rent Intro]]>><<set $phase to 1>><<endevent \"phaseless\">><</link>>",
+   "<br>",
+   "<<if $bus is \"hospital\">>",
+   "\t<<link [[Fight|Rent Hospital Fight Robin]]>><<set $fightstart to 1>><</link>>",
+   "\t<br>"
+  ],
+  "old_kr": [
+   "<<link [[굴복한다|Rent Intro]]>><<set $phase to 1>><<endevent \"phaseless\">><</link>>",
+   "<br>",
+   "<<if $bus is \"hospital\">>",
+   "\t<<link [[싸운다|Rent Hospital Fight Robin]]>><<set $fightstart to 1>><</link>>",
+   "\t<br>"
+  ],
+  "new_en": [
+   "<<if isPregnancyEnding()>>",
+   "\t<<set $phase to 1>><<set $rentPregInterruption to \"refused\">><<include \"Rent Pregnant\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<link [[Fight|Rent Robin Fight]]>><<set $fightstart to 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<link [[싸운다|Rent Robin Fight]]>><<set $fightstart to 1>><</link>>"
+  ],
+  "new_en": [
+   "\t<<link [[Submit|Rent Intro]]>><<set $phase to 1>><<endevent \"phaseless\">><</link>>"
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<He>> releases you and presses <<his>> hand on your chest, shoving you. You stumble backwards as Bailey takes a menacing step towards you",
+   "\t<<if $money gte $rentmoney + ($babyRent or 0)>>",
+   "\t\twith <<his>> palm open expectantly. \"Your payment. Now.\""
+  ],
+  "old_kr": [
+   "\t<<He>>【이가】 당신을 놓아주고 가슴에 손을 대고 밀친다. 당신이 뒤로 비틀거리자 베일리가 위협적으로 한 걸음 다가온다",
+   "\t<<if $money gte $rentmoney + ($babyRent or 0)>>",
+   "\t\t기대하는 듯 <<his>> 손바닥을 내밀며. \"네 빚. 지금 당장.\""
+  ],
+  "new_en": [
+   "\t<<He>> releases you and presses <<his>> hand on your chest, shoving you. You stumble backwards as Bailey takes a menacing step towards you",
+   "\t<<if $money gte $rentMoney + ($babyRent or 0)>>",
+   "\t\twith <<his>> palm open expectantly. \"Your payment. Now.\""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"You can pay me,\" <<person1>><<he>> sneers. \"With money. <span class=\"pink\">£<<print ($rentmoney + ($babyRent or 0)) / 100>>.</span> <span class=\"red\">That's what your body's worth.</span>\""
+  ],
+  "old_kr": [
+   "\t\"갚을 수 있어.\" <<person1>><<he>>【이가】 비웃는다. \"돈으로. <span class=\"pink\">£<<print ($rentmoney + ($babyRent or 0)) / 100>>.</span> <span class=\"red\">그게 네 몸값이야.</span>\""
+  ],
+  "new_en": [
+   "\t\"You can pay me,\" <<person1>><<he>> sneers. \"With money. <span class=\"pink\">£<<print ($rentMoney + ($babyRent or 0)) / 100>>.</span> <span class=\"red\">That's what your body's worth.</span>\""
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $baileydefeatedchain gte 1>>",
+   "\t\t<<person2>>\"I'll take that as payment,\" the <<person>> beside <<nnpc_him Bailey>> says."
+  ],
+  "old_kr": [
+   "\t<<if $baileydefeatedchain gte 1>>",
+   "\t\t<<person2>>\"그걸로 빚을 갚는 걸로 하지.\" <<nnpc_him Bailey>> 옆에 있던 <<person>>【이가】 말한다."
+  ],
+  "new_en": [
+   "\t<<if $baileydefeatedchain gte 1 and $phase2 isnot \"thug\">>",
+   "\t\t<<person2>>\"I'll take that as payment,\" the <<person>> beside <<nnpc_him Bailey>> says."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $money gte $rentmoney + ($babyRent or 0)>>",
+   "\t\t<<He>> holds out <<his>> hand."
+  ],
+  "old_kr": [
+   "\t<<if $money gte $rentmoney + ($babyRent or 0)>>",
+   "\t\t<<He>>【이가】 <<his>> 손을 내민다."
+  ],
+  "new_en": [
+   "\t<<if $money gte $rentMoney + ($babyRent or 0)>>",
+   "\t\t<<He>> holds out <<his>> hand."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<elseif $rentsale is 3>>",
+   "\t<<set $rentsale to 0>><<generate2>><<person2>>",
+   "\tAfter journeying for some time you hear another set of footsteps."
+  ],
+  "old_kr": [
+   "<<elseif $rentsale is 3>>",
+   "\t<<set $rentsale to 0>><<generate2>><<person2>>",
+   "\t얼마간 이동하자 다른 발소리가 들려온다."
+  ],
+  "new_en": [
+   "<<elseif $rentSale is 3>>",
+   "\t<<set $rentSale to 0>><<generate2>><<person2>>",
+   "\tAfter journeying for some time you hear another set of footsteps."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\"Wait! Let <<phim>> go! Please don't hurt my <<if $robinromance is 1>><<girlfriend>><<else>>friend<</if>>—\""
+  ],
+  "old_kr": [
+   "\t\t\t\"잠깐만요! <<phim>>【을를】 놔줘요! 제 <<if $robinromance is 1>><<girlfriend>><<else>>친구<</if>>【을를】 다치게 하지 말아주세요—\""
+  ],
+  "new_en": [
+   "\t\t\t\"Wait! Let <<phim>> go! Please don't hurt my <<friend>>—\""
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"You think I won't beat it out of you?\" Bailey says.",
+   "\t<br><br>"
+  ],
+  "old_kr": [
+   "\t\"내가 두들겨 패서라도 알아낼 줄 알아?\" 베일리가 말한다.",
+   "\t<br><br>"
+  ],
+  "new_en": [
+   "\t<<if $phase2 is \"thug\">>",
+   "\t\t\"Not a smart move,\" you hear the <<person2>><<person>> say behind you. <<He>> lunges at",
+   "\t\t<<if (currentSkillValue('danceskill') + random(0,750)) gte 1100>>",
+   "\t\t\tyou, but <span class=\"green\">you manage to dodge, causing <<him>> to stumble headfirst into the ground</span>. Bailey looks at <<him>> scornfully for a moment, then pulls <<him>> up.",
+   "\t\t\t<<set $enemyhealth -= $enemyhealth / 5>>",
+   "\t\t<<else>>",
+   "\t\t\tyou and <span class=\"red\">grabs your arms, restraining them</span>. \"Let's see how long you keep resisting,\" Bailey says.",
+   "\t\t\t<<set $leftarm to \"grappled\">><<set $rightarm to \"grappled\">><<set $NPCList[1].lefthand to \"arms\">><<set $NPCList[1].righthand to \"arms\">>",
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\t\"You think I won't beat it out of you?\" Bailey says.",
+   "\t<</if>>"
+  ],
+  "context": "\t<<npcidlegenitals>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\"Keep the other one under control, one of you,\" Bailey says. The <<personselect $enemynomax>><<person>> nods and grabs at Robin,",
+   "\twhile Bailey returns <<person1>><<his>> gaze to you."
+  ],
+  "old_kr": [
+   "\t\"너희 중 하나는 저놈 좀 붙잡고 있어.\" 베일리가 말한다. <<personselect $enemynomax>><<person>>【이가】 고개를 끄덕이고 로빈을 붙잡는 동안,",
+   "\t베일리는 <<person1>><<his>> 시선을 당신에게 돌린다."
+  ],
+  "new_en": [
+   "\t<<if $phase2 is \"thug\">>",
+   "\t\t\"Not a smart move,\" you hear the <<person2>><<person>> say behind you. <<He>> lunges at",
+   "\t\t<<if (currentSkillValue('danceskill') + random(0,750)) gte 1100>>",
+   "\t\t\tyou, but <span class=\"green\">you manage to dodge, causing <<him>> to stumble headfirst into the ground</span>. Bailey looks at <<him>> scornfully for a moment, then pulls <<him>> up.",
+   "\t\t\t<<set $enemyhealth -= $enemyhealth / 5>>",
+   "\t\t<<else>>",
+   "\t\t\tyou and <span class=\"red\">grabs your arms, restraining them</span>. \"Let's see how long you keep resisting,\" Bailey says.",
+   "\t\t\t<<set $leftarm to \"grappled\">><<set $rightarm to \"grappled\">><<set $NPCList[1].lefthand to \"arms\">><<set $NPCList[1].righthand to \"arms\">>",
+   "\t\t<</if>>",
+   "\t\t<br><br>",
+   "\t<</if>>",
+   "\t\"Keep the other one under control, one of you,\" Bailey says. The <<personselect $enemynomax>><<person>> nods and grabs at Robin,",
+   "\twhile Bailey returns <<person1>><<his>> gaze to you."
+  ],
+  "context": "\t<<npcidlegenitals>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $baileydefeatedchain gte 2>>",
+   "\t\tThe <<person2>><<person>> slinks out after <<person1>><<him>>."
+  ],
+  "old_kr": [
+   "\t<<if $baileydefeatedchain gte 2>>",
+   "\t\t<<person2>><<person>>【은는】 <<person1>><<him>> 뒤를 따라 슬그머니 빠져나간다."
+  ],
+  "new_en": [
+   "\t<<if $phase2 is \"thug\">>",
+   "\t\tThe thugs slink away after <<him>>.",
+   "\t\t<br><br>",
+   "\t<<elseif $baileydefeatedchain gte 2>>",
+   "\t\tThe <<person2>><<person>> slinks out after <<person1>><<him>>."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tThe orphans cheer your defeat of the tyrant. <<He>> will be back, but for now you're in the clear.",
+   "\t<<greb>><<ghope>><<reb 1>><<hope 1>><<ltrauma>><<lstress>><<trauma -6>><<stress -12>>"
+  ],
+  "old_kr": [
+   "\t고아들은 폭군을 물리친 당신에게 환호한다. <<He>>【은는】 다시 돌아오겠지만, 지금은 일단 무사하다.",
+   "\t<<greb>><<ghope>><<reb 1>><<hope 1>><<ltrauma>><<lstress>><<trauma -6>><<stress -12>>"
+  ],
+  "new_en": [
+   "\tThe orphans cheer your defeat of the tyrant. <<He>> will be back, but for now you're in the clear.",
+   "\t<<greb>><<ghope>><<reb 1>><<hope 1>><<ltrauma>><<lstress>><<trauma -6>><<stress -12>><<llthuganger>><<thuganger -2>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $baileydefeatedchain gte 2>>",
+   "\t\tThe <<person2>><<person>> slinks out after <<person1>><<him>>."
+  ],
+  "old_kr": [
+   "\t<<if $baileydefeatedchain gte 2>>",
+   "\t\t<<person2>><<person>>【은는】 <<person1>><<him>> 뒤를 따라 슬그머니 빠져나간다."
+  ],
+  "new_en": [
+   "\t<<if $phase2 is \"thug\">>",
+   "\t\tThe thugs slink away after <<him>>.",
+   "\t\t<br><br>",
+   "\t<<elseif $baileydefeatedchain gte 2>>",
+   "\t\tThe <<person2>><<person>> slinks out after <<person1>><<him>>."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tBailey's departure lifts a weight from the watching orphans, who cheer your defeat of the tyrant. <<He>> will be back, but for now you're in the clear.",
+   "\t<<greb>><<ghope>><<reb 1>><<hope 1>><<ltrauma>><<lstress>><<trauma -6>><<stress -12>>"
+  ],
+  "old_kr": [
+   "\t베일리가 떠나자 지켜보던 고아들은 짓누르던 무게에서 벗어나, 폭군을 물리친 당신에게 환호한다. <<He>>【은는】 다시 돌아오겠지만, 지금은 일단 무사하다.",
+   "\t<<greb>><<ghope>><<reb 1>><<hope 1>><<ltrauma>><<lstress>><<trauma -6>><<stress -12>>"
+  ],
+  "new_en": [
+   "\tBailey's departure lifts a weight from the watching orphans, who cheer your defeat of the tyrant. <<He>> will be back, but for now you're in the clear.",
+   "\t<<greb>><<ghope>><<reb 1>><<hope 1>><<ltrauma>><<lstress>><<trauma -6>><<stress -12>><<llthuganger>><<thuganger -2>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $baileydefeatedchain gte 2>>",
+   "\t\tThe <<person2>><<person>> slinks out after <<person1>><<him>>."
+  ],
+  "old_kr": [
+   "\t<<if $baileydefeatedchain gte 2>>",
+   "\t\t<<person2>><<person>>【은는】 <<person1>><<him>> 뒤를 따라 슬그머니 빠져나간다."
+  ],
+  "new_en": [
+   "\t<<if $phase2 is \"thug\">>",
+   "\t\tThe thugs slink away after <<him>>.",
+   "\t\t<br><br>",
+   "\t<<elseif $baileydefeatedchain gte 2>>",
+   "\t\tThe <<person2>><<person>> slinks out after <<person1>><<him>>."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tThe orphans cheer your defeat of the tyrant. <<He>> will be back, but for now you're in the clear.",
+   "\t<<greb>><<ghope>><<reb 1>><<hope 1>><<ltrauma>><<lstress>><<trauma -6>><<stress -12>>"
+  ],
+  "old_kr": [
+   "\t고아들은 폭군을 물리친 당신에게 환호한다. <<He>>【은는】 다시 돌아오겠지만, 지금은 일단 무사하다.",
+   "\t<<greb>><<ghope>><<reb 1>><<hope 1>><<ltrauma>><<lstress>><<trauma -6>><<stress -12>>"
+  ],
+  "new_en": [
+   "\tThe orphans cheer your defeat of the tyrant. <<He>> will be back, but for now you're in the clear.",
+   "\t<<greb>><<ghope>><<reb 1>><<hope 1>><<ltrauma>><<lstress>><<trauma -6>><<stress -12>><<llthuganger>><<thuganger -2>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $baileydefeatedchain gte 2>>",
+   "\t\tThe <<person2>><<person>> slinks out after <<person1>><<him>>."
+  ],
+  "old_kr": [
+   "\t<<if $baileydefeatedchain gte 2>>",
+   "\t\t<<person2>><<person>>【은는】 <<person1>><<him>> 뒤를 따라 슬그머니 빠져나간다."
+  ],
+  "new_en": [
+   "\t<<if $phase2 is \"thug\">>",
+   "\t\tThe thugs slink away after <<him>>.",
+   "\t\t<br><br>",
+   "\t<<elseif $baileydefeatedchain gte 2>>",
+   "\t\tThe <<person2>><<person>> slinks out after <<person1>><<him>>."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<His>> departure lifts a weight from the watching orphans, who cheer your defeat of the tyrant. <<He>> will be back, but for now you're in the clear.",
+   "\t<<greb>><<ghope>><<reb 1>><<hope 1>><<ltrauma>><<lstress>><<trauma -6>><<stress -12>>"
+  ],
+  "old_kr": [
+   "\t<<He>>【이가】 떠나자 지켜보던 고아들은 짓누르던 무게에서 벗어나, 폭군을 물리친 당신에게 환호한다. <<He>>【은는】 다시 돌아오겠지만, 지금은 일단 무사하다.",
+   "\t<<greb>><<ghope>><<reb 1>><<hope 1>><<ltrauma>><<lstress>><<trauma -6>><<stress -12>>"
+  ],
+  "new_en": [
+   "\t<<His>> departure lifts a weight from the watching orphans, who cheer your defeat of the tyrant. <<He>> will be back, but for now you're in the clear.",
+   "\t<<greb>><<ghope>><<reb 1>><<hope 1>><<ltrauma>><<lstress>><<trauma -6>><<stress -12>><<llthuganger>><<thuganger -2>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $speechplead is 1 or $speechapologiseno is 1 or $speechscream is 1 or $speechdemand is 1 or $speechapologiseunforgiving is 1>>",
+   "\t\t\t\t\t\"Save your breath,\" Bailey says. \"If you really want to save <<nnpc_him \"Robin\">>, it's not too late to pay.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $speechplead is 1 or $speechapologiseno is 1 or $speechscream is 1 or $speechdemand is 1 or $speechapologiseunforgiving is 1>>",
+   "\t\t\t\t\t\"숨 돌릴 생각 마.\" 베일리가 말한다. \"정말로 <<nnpc_him \"Robin\">>【을를】 구하고 싶다면, 아직 돈을 낼 기회는 있어.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $speechPlead is 1 or $speechApologiseRejected is 1 or $speechScreamForHelp is 1 or $speechDemand is 1 or $speechApologiseUnforgiving is 1>>",
+   "\t\t\t\t\t\"Save your breath,\" Bailey says. \"If you really want to save <<nnpc_him \"Robin\">>, it's not too late to pay.\""
+  ],
+  "context": "\t\t\t<<case 2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $speechplead is 1 or $speechapologiseno is 1 or $speechapologiseunforgiving is 1>>",
+   "\t\t\t\t\tBailey rolls <<his>> eyes. \"If you'd paid me on time, maybe you wouldn't be crying your eyes out now.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $speechplead is 1 or $speechapologiseno is 1 or $speechapologiseunforgiving is 1>>",
+   "\t\t\t\t\t베일리가 <<his>> 눈을 굴린다. \"제때 돈을 냈더라면, 지금처럼 울고불고하지 않아도 됐을 텐데.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $speechPlead is 1 or $speechApologiseRejected is 1 or $speechApologiseUnforgiving is 1>>",
+   "\t\t\t\t\tBailey rolls <<his>> eyes. \"If you'd paid me on time, maybe you wouldn't be crying your eyes out now.\""
+  ],
+  "context": "\t\t\t<<case 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<elseif $speechscream is 1 or $speechdemand is 1>>",
+   "\t\t\t\t\t\"You think you're going to convince me with shouting?\" Bailey sneers."
+  ],
+  "old_kr": [
+   "\t\t\t\t<<elseif $speechscream is 1 or $speechdemand is 1>>",
+   "\t\t\t\t\t\"소리 지르면 내가 설득될 것 같아?\" 베일리가 비웃는다."
+  ],
+  "new_en": [
+   "\t\t\t\t<<elseif $speechScreamForHelp is 1 or $speechDemand is 1>>",
+   "\t\t\t\t\t\"You think you're going to convince me with shouting?\" Bailey sneers."
+  ],
+  "context": "\t\t\t\t\t<<set $baileySpoke++>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $speechplead is 1 or $speechapologiseno is 1 or $speechapologiseunforgiving is 1>>",
+   "\t\t\t\t\tBailey scoffs at you. \"Oh, now you're sorry? Now that there's consequences?\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $speechplead is 1 or $speechapologiseno is 1 or $speechapologiseunforgiving is 1>>",
+   "\t\t\t\t\t베일리가 당신을 비웃는다. \"오, 이제 와서 미안하다고? 이제 와서 대가를 치를 때가 되니까?\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $speechPlead is 1 or $speechApologiseRejected is 1 or $speechApologiseUnforgiving is 1>>",
+   "\t\t\t\t\tBailey scoffs at you. \"Oh, now you're sorry? Now that there's consequences?\""
+  ],
+  "context": "\t\t\t<<default>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<elseif $speechscream is 1 or $speechdemand is 1>>",
+   "\t\t\t\t\t\"Shut up,\" Bailey snaps at you. \"You didn't pay the price, so <<nnpc_he \"Robin\">> will.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<elseif $speechscream is 1 or $speechdemand is 1>>",
+   "\t\t\t\t\t\"닥쳐.\" 베일리가 당신에게 쏘아붙인다. \"네가 대가를 치르지 않았으니, <<nnpc_he \"Robin\">>【이가】 치르게 될 거다.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<elseif $speechScreamForHelp is 1 or $speechDemand is 1>>",
+   "\t\t\t\t\t\"Shut up,\" Bailey snaps at you. \"You didn't pay the price, so <<nnpc_he \"Robin\">> will.\""
+  ],
+  "context": "\t\t\t\t\t<<set $baileySpoke++>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $speechpay is 1>>",
+   "\t\t\"There,\" Bailey sneers. \"Was that so hard?\" <<He>> gestures to <<his>> thugs, and they let go of your arms."
+  ],
+  "old_kr": [
+   "\t<<if $speechpay is 1>>",
+   "\t\t\"그래, 그거야.\" 베일리가 비웃는다. \"그게 그렇게 어려웠어?\" <<He>>【이가】 <<his>> 부하들에게 손짓하자, 그들이 당신의 팔을 놓아준다."
+  ],
+  "new_en": [
+   "\t<<if $speechPay is 1>>",
+   "\t\t\"There,\" Bailey sneers. \"Was that so hard?\" <<He>> gestures to <<his>> thugs, and they let go of your arms."
+  ],
+  "context": "<<elseif $combatPhase is \"pay\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechpay is -1>>",
+   "\t\t\"Well, isn't that a shame,\" Bailey sneers. \"But I'm feeling generous. You can still save <<nnpc_him \"Robin\">>. Just stay still.\""
+  ],
+  "old_kr": [
+   "\t<<elseif $speechpay is -1>>",
+   "\t\t\"이런, 안됐군.\" 베일리가 비웃는다. \"하지만 내가 관대하게 굴어주지. 아직 <<nnpc_him \"Robin\">>【을를】 구할 수 있어. 그냥 가만히 있어.\""
+  ],
+  "new_en": [
+   "\t<<elseif $speechPay is -1>>",
+   "\t\t\"Well, isn't that a shame,\" Bailey sneers. \"But I'm feeling generous. You can still save <<nnpc_him \"Robin\">>. Just stay still.\""
+  ],
+  "context": "\t\t<<set _fin to 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if $combatPhase is \"pay\" and $speechpay is 1>>",
+   "\t<span id=\"next\"><<link [[Next|Rent First Robin Fight Finish]]>><<endevent>><<set $phase to \"pay\">><</link>></span><<nexttext>>"
+  ],
+  "old_kr": [
+   "<<if $combatPhase is \"pay\" and $speechpay is 1>>",
+   "\t<span id=\"next\"><<link [[다음|Rent First Robin Fight Finish]]>><<endevent>><<set $phase to \"pay\">><</link>></span><<nexttext>>"
+  ],
+  "new_en": [
+   "<<if $combatPhase is \"pay\" and $speechPay is 1>>",
+   "\t<span id=\"next\"><<link [[Next|Rent First Robin Fight Finish]]>><<endevent>><<set $phase to \"pay\">><</link>></span><<nexttext>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tA hand rests on your shoulder from behind. <span class=\"red\">It's Bailey.</span>",
+   "\t\t<<if $robinfirstrentfight and ($baileypaychain lt 2 or $renttime lte -1) and _robinAtOrphanage>>"
+  ],
+  "old_kr": [
+   "\t\t뒤에서 누군가의 손이 당신의 어깨에 얹힌다. <span class=\"red\">베일리다.</span>",
+   "\t\t<<if $robinfirstrentfight and ($baileypaychain lt 2 or $renttime lte -1) and _robinAtOrphanage>>"
+  ],
+  "new_en": [
+   "\t\tA hand rests on your shoulder from behind. <span class=\"red\">It's Bailey.</span>",
+   "\t\t<<if $robinfirstrentfight and ($baileypaychain lt 2 or $rentTime lte -1) and _robinAtOrphanage>>"
+  ],
+  "context": "\t<<if _bundle.items.length is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<set $renttime to 7>><<set $rentday to Time.weekDay>>",
+   "\t\t<<link [[Next|Orphanage]]>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t<<set $renttime to 7>><<set $rentday to Time.weekDay>>",
+   "\t\t<<link [[다음|Orphanage]]>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "\t\t<<set $rentTime to 7>><<set $baileyRefusedToPay to 0>>",
+   "\t\t<<link [[Don't fight|Orphanage]]>><<endevent>><</link>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $_robinWasInRoom to _args[0]>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $_robinWasInRoom to _args[0]>><<set $baileyRefusedToPay to 0>>"
+  ],
+  "context": "\t<<npc Bailey>><<person1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<person1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $babyIntros and $babyIntros.Bailey and $babyIntros.Bailey.length gt 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $babyIntros?.Bailey?.length gt 0>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $money gte $rentmoney + ($babyRent or 0)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $money gte $rentMoney + ($babyRent or 0)>>"
+  ],
+  "context": "\t<<babyRent>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $baileyseduced isnot 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $baileyseduced isnot 1 and !isPregnancyEnding()>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if isPregnancyEnding()>>",
+   "\t\t\t<<link [[Tell <<him>> your waters have broken|Rent Pregnant]]>><<set $rentPregInterruption to \"told\">><</link>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $_robinInRoom to _args[0]>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $_robinInRoom to _args[0]>><<set $baileyRefusedToPay to 0>>"
+  ],
+  "context": "<<widget \"rentduerobin\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $baileyRefusedToPayTotal += $rentmoney + ($babyRent || 0)>>",
+   "\t<<set $baileyRefusedToPayTotalStat += $rentmoney + ($babyRent || 0)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t/*<<set $baileyRefusedToPayTotal += $rentMoney + ($babyRent || 0)>>",
+   "\t<<set $baileyRefusedToPayTotalStat += $rentMoney + ($babyRent || 0)>>*/"
+  ],
+  "context": "\t<<npc Bailey>><<person1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<br><br>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<br><br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<person1>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $babyIntros and $babyIntros.Bailey and $babyIntros.Bailey.length gt 0>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $babyIntros?.Bailey?.length gt 0>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $money gte $rentmoney + ($babyRent or 0)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $money gte $rentMoney + ($babyRent or 0)>>"
+  ],
+  "context": "\t<<babyRent>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if isPregnancyEnding()>>",
+   "\t\t\t<<link [[Tell <<him>> your waters have broken|Rent Pregnant]]>><<set $rentPregInterruption to \"told\">><</link>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>"
+  ],
+  "context": "\t\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<</if>>",
+   "\t<<else>>",
+   "\t\t<<set $baileypaychain to 0>>",
+   "\t\t<<if $speech_attitude is \"bratty\">>",
+   "\t\t\tYou stare <<him>> down defiantly. \"Well, guess what? I still don't have enough money for you. Do what you want with me, but leave Robin out of this.\"",
+   "\t\t<<elseif $speech_attitude is \"meek\">>",
+   "\t\t\tYou know you don't have enough money, but admitting that in this situation is too much for you. You look at Robin and shake your head apologetically."
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $renttime to 7>><<set $rentday to Time.weekDay>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !isPregnancyEnding()>><<set $rentTime to 7>><</if>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $baileypaychain to 0>>",
+   "\t<<set $_seduceAllowed to _args[0]>>",
+   "\t<<set $baileyRefusedToPayTotal += $rentmoney + ($babyRent || 0)>>",
+   "\t<<set $baileyRefusedToPayTotalStat += $rentmoney + ($babyRent || 0)>>",
+   "\t<<if $robinpaid is 1 and $bus is \"home\" and $robinfirstrentfight isnot 1 and ($baileydefeatedchain gte 3 or $renttime lte -14)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if !isPregnancyEnding()>>",
+   "\t\t<<set $baileypaychain to 0>>",
+   "\t\t<<set $_seduceAllowed to _args[0]>>",
+   "\t\t<<set $baileyRefusedToPayTotal += $rentMoney + ($babyRent || 0)>>",
+   "\t\t<<set $baileyRefusedToPayTotalStat += $rentMoney + ($babyRent || 0)>>",
+   "\t<</if>>",
+   "\t<<if $robinpaid is 1 and $bus is \"home\" and $robinfirstrentfight isnot 1 and !isPregnancyEnding() and ($baileydefeatedchain gte 3 or $rentTime lte -14 or $rentThug?.anger gte 4)>>"
+  ],
+  "context": "<<widget \"rentnopay\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<</if>>",
+   "\t\t\t<<if $baileyseduced isnot 1 and $_seduceAllowed>>",
+   "\t\t\t\t<<if hasSexStat(\"promiscuity\", 2)>>",
+   "\t\t\t\t\t<<link [[Seduce|Rent Seduce]]>><<trauma 3>><</link>><<promiscuous2>><<gtrauma>>",
+   "\t\t\t\t\t<br>",
+   "\t\t\t\t<<elseif $uncomfortable.prostituting is false>>",
+   "\t\t\t\t\t<<set _desperateaction to 1>>",
+   "\t\t\t\t\t<<link [[Seduce|Rent Seduce]]>><<trauma 12>><<set $desperateaction to _desperateaction>><</link>><<promiscuous2>><<ggtrauma>>",
+   "\t\t\t\t\t<br>",
+   "\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $rentmoney to Math.floor($rentmoney * $settings.rentCostModifier)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $rentMoney to Math.floor($rentMoney * $settings.rentCostModifier)>>"
+  ],
+  "context": "<<widget \"rentmod\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $rentmoney *= 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $rentMoney *= 2>>"
+  ],
+  "context": "\t<<if $robinpaid is 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<money `-($rentmoney + ($babyRent or 0))` \"baileyRent\">>",
+   "\t<<set $rentmoney to [10000,30000,50000,70000,100000,150000,200000][Math.clamp($rentstage,1,6)]>> <!-- note: clamping to 1 is intentional -->"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<money `-($rentMoney + ($babyRent or 0))` \"baileyRent\">>",
+   "\t<<set $rentMoney to [10000,30000,50000,70000,100000,150000,200000][Math.clamp($rentStage,1,6)]>> <!-- note: clamping to 1 is intentional -->"
+  ],
+  "context": "<<widget \"rentpay\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $rentstage += 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $rentStage += 1>>"
+  ],
+  "context": "\t<<unset $bailey_encroach>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\tchild.development.interactions = 7 - Math.clamp(V.renttime, 0, 7);"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tchild.development.interactions = 7 - Math.clamp(V.rentTime, 0, 7);"
+  ],
+  "context": "\t\t\tchild.development.interactionsTotal = 0;"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<rentpay>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<rentpay $phase2>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<br>"
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<rentpay>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<rentpay $phase2>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<endevent>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<endevent \"phaseless\">>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $inRobinsRoom>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<unset $inRobinsRoom>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<br>"
+  ],
+  "context": "<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<effects>><<set $baileypaychain to 0>>",
+   "<<set $baileyRefusedToPayTotal += $rentmoney + ($babyRent || 0)>>",
+   "<<set $baileyRefusedToPayTotalStat += $rentmoney + ($babyRent || 0)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<effects>>",
+   "<<if !isPregnancyEnding()>>",
+   "\t<<set $baileypaychain to 0>>",
+   "\t<<set $baileyRefusedToPayTotal += $rentMoney + ($babyRent || 0)>>",
+   "\t<<set $baileyRefusedToPayTotalStat += $rentMoney + ($babyRent || 0)>>",
+   "<</if>>"
+  ],
+  "context": ":: Rent Refuse Robin"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<else>>",
+   "\t<<link [[Fight|Rent Robin Fight]]>><<set $fightstart to 1>><</link>>",
+   "\t<br>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $bus is \"hospital\">>",
+   "\t\t<<link [[Fight|Rent Hospital Fight Robin]]>><<set $fightstart to 1>><</link>>",
+   "\t\t<br>",
+   "\t<<else>>",
+   "\t\t<<link [[Fight|Rent Robin Fight]]>><<set $fightstart to 1>><</link>>",
+   "\t\t<br>",
+   "\t<</if>>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   ":: Rent Pregnant",
+   "<<if $phase is 1>><<silently>><<effects>><</silently>><<else>><<effects>><</if>>",
+   "<<endevent \"phaseless\">><<npc Bailey>><<generateyv2>><<person1>>",
+   "<<set $rentPregCount to ($rentPregCount or 0) + 1>>",
+   "<<earnFeat \"Pregnant Pause\">>",
+   "<<switch $speech_attitude>>",
+   "\t<<case \"meek\">>\"Wai...\" You clutch your <<bellyDescription>>, sweating and heaving between words. \"Wait! Please... <<if playerAwareTheyArePregnant()>>My baby!<<else>>It hurts!<</if>> Please...\"",
+   "\t<<case \"bratty\">>\"Are you bloody daft?\" you yell through gritted teeth, feeling lightheaded. \"Can't you see <<if playerAwareTheyArePregnant()>>I'm in labour<<else>>something's wrong with me<</if>>?!\"",
+   "\t<<default>>\"Stop! Wait...\" You wince as a jolt of pain shoots through you. \"<<if playerAwareTheyArePregnant()>>My baby<<else>>It hurts<</if>>... I need to get to the hospital!\"",
+   "<</switch>>",
+   "<br><br>",
+   "",
+   "Bailey steps forward with a cold expression.",
+   "<<if $rentPregCount gte 3>>",
+   "\t\"Is this a joke?\" <<he>> sneers. \"You've gotten way too comfortable doing this.\"",
+   "\t<br><br>",
+   "\t<<He>> looks you over just to be sure. Just like before, the realisation that you're telling the truth finally hits <<him>>.",
+   "<<else>>",
+   "\t\"<<if playerAwareTheyArePregnant()>>Right, figures you'd pull something like that<<else>>I don't have time for your excuses<</if>>,\" <<he>> sneers.",
+   "\t<<if $phase is 1>>",
+   "\t\t\"You're not getting out of this that easily. Now I won't ask again. Hold. Still.\"",
+   "\t<<else>>",
+   "\t\t\"Am I to assume then that you're not paying? That's fine too.\" <<He>> produces a hood and length of rope. \"Hold still.\"",
+   "\t<</if>>",
+   "\t<br><br>",
+   "\t<<He>> continues to approach you with the rope,",
+   "\t<<if $rentPregCount gte 2>>",
+   "\t\tthen <<he>> looks you over and shakes <<his>> head.",
+   "\t<<else>>",
+   "\t\tbut hesitates for a moment as <<his>> gaze meets yours. <<His>> eyes squint as <<he>> looks you over one more time, before they suddenly go wide.",
+   "\t<</if>>",
+   "<</if>>",
+   "<br><br>",
+   "<<switch $rentPregCount>>",
+   "\t<<case 1>>\"Shit.\"",
+   "\t<<case 2>>\"Fuck, again?\"",
+   "\t<<case 3 4>>\"For fuck's sake.\"",
+   "\t<<case 5 6>>\"For <i>fuck's</i> sake.\"",
+   "\t<<case 7 8 9>>\"You just don't know when to quit...\"",
+   "\t<<default>>But <<he>> says nothing, having already resigned <<himself>> to this depraved routine of yours.",
+   "<</switch>>",
+   "<br><br>",
+   "The next thing you know, you're being grabbed by your shoulders and rushed through the main hall. You spot orphans left and right, all turning to look at the commotion. \"Move,\" you hear as a <<person2>><<personsimple>> who stood a bit too close gets shoved to the floor.",
+   "<br><br>",
+   "You're led outside to Bailey's car. <<person1>><<He>> yanks open the door and pushes you into the front seat before throwing the seatbelt over you. With heavy eyes, you stare out the window as <<he>> circles around to the driver's side.",
+   "<br><br>",
+   "Then, there are only the fading sounds of an engine to lull you into darkness.",
+   "<br><br>",
+   "<<link [[Everything fades to black...|Pregnancy Birth Hospital]]>><<endevent>><<pass 15>><<set $phase to 1>><</link>>",
+   "<br>",
+   "",
+   ":: Rent Pregnant Return",
+   "<<effects>>",
+   "<<npc Bailey>><<person1>>",
+   "",
+   "Bailey finally drags <<his>> gaze from the nursery back to you.",
+   "<<if !$rentPregInterruption>>",
+   "\t\"Now, time to pay up.\"",
+   "<<else>>",
+   "\t\"Now that this little 'incident' of yours has been taken care of,",
+   "\t<<if $rentPregInterruption is \"told\">>",
+   "\t\tit's time to pay up.\"",
+   "\t<<elseif $rentPregInterruption is \"refused\">>",
+   "\t\tI'm going to give you one last chance to pay up.\"",
+   "\t<<elseif $rentPregInterruption is \"broke\">>",
+   "\t\tit's about time we resume where we'd left off.\"",
+   "\t<</if>>",
+   "<</if>>",
+   "<<if $baileydefeatedchain gte 3 or ($robinpaid is 1 and $bus is \"home\" and $robinfirstrentfight isnot 1 and ($rentTime lte -14 or $rentThug?.anger gte 4))>>",
+   "\t<<generateRole 1 0 \"thug\">><<generateRole 2 0 \"thug\">>",
+   "\tTwo thugs flank <<him>> on either side.",
+   "<<elseif $baileydefeatedchain gte 1>>",
+   "\t<<generateRole 1 0 \"thug\">>",
+   "\tA thug silently approaches you both.",
+   "<</if>>",
+   "<br><br>",
+   "<<if $rentPregInterruption is \"broke\">>",
+   "\t<<if $robinfirstrentfight is 1>>",
+   "\t\t<<He>> smiles as <<he>> produces a hood and length of rope. \"Hold still.\"",
+   "\t\t<br><br>",
+   "",
+   "\t\t<<link [[Submit|Rent Intro]]>><<set $phase to 1>><<endevent \"phaseless\">><</link>>",
+   "\t\t<br>",
+   "\t\t<<link [[Fight|Rent Robin Fight]]>><<set $fightstart to 1>><</link>>",
+   "\t\t<br>",
+   "\t<<else>>",
+   "\t\t<<if $robinpaid is 1 and $bus is \"home\" and $robinfirstrentfight isnot 1 and ($baileydefeatedchain gte 3 or $rentTime lte -14 or $rentThug?.anger gte 4)>>",
+   "\t\t\t<<set $robinfirstrentfight to 1>>",
+   "\t\t\t\"I've learned my lesson. Trying to get value out of you directly is fruitless.\"",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\tOn an unseen signal, the thugs advance on you.",
+   "\t\t\tThe <<person3>><<person>> reaches for you. You duck under <<his>> arm, but the <<person2>><<person>> grabs yours.",
+   "\t\t\tThe <<person3>><<person>> grabs your other arm, and they hold you there.",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<link [[Next|Rent First Robin Fight]]>><<set $fightstart to 1>><<set $combatPhase to \"talk\">><<set $robinRentEvent to 1>><<set $timer to 5>><</link>>",
+   "\t\t<<else>>",
+   "\t\t\t<<He>> smiles as <<he>> produces a hood and length of rope. \"Hold still.\"",
+   "\t\t\t<br><br>",
+   "",
+   "\t\t\t<<link [[Submit|Rent Intro]]>><<endevent>><</link>>",
+   "\t\t\t<br>",
+   "\t\t\t<<link [[Fight|Rent Fight]]>><<set $fightstart to 1>><</link>>",
+   "\t\t\t<br>",
+   "\t\t<</if>>",
+   "\t<</if>>",
+   "<<else>>",
+   "\tYou look back at Bailey, confused and still somewhat dazed from the whole experience.",
+   "\t<br><br>",
+   "\t\"What? You didn't think popping out some <<pluralise $litter_size \"brat\">> was going to get you out of your obligations, did you? You still owe me, and I intend to collect.\"",
+   "\t<br><br>",
+   "\tYou had almost forgotten all about that. A silent moment passes between you before <<he>> rolls <<his>> eyes and drops <<his>> voice.",
+   "\t<<endevent>><<rentdue>>",
+   "<</if>>",
+   "<<unset $litter_size>><<unset $rentPregInterruption>>",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<set $baileyRefusedToPay to 0>>",
+   "<<set $baileyRefusedToPayTotal to $baileyRefusedToPayTotal lt $rentmoney + ($babyRent || 0) ? 0 : $baileyRefusedToPayTotal - ($rentmoney + ($babyRent || 0))>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set $baileyRefusedToPayTotal to $baileyRefusedToPayTotal lt $rentMoney + ($babyRent || 0) ? 0 : $baileyRefusedToPayTotal - ($rentMoney + ($babyRent || 0))>>"
+  ],
+  "context": "<<set $baileydefeatedchain to 0>><<set $soldCount += 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $rentsale is 2>>",
+   "\t<<set $rentsale += 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<elseif $rentSale is 2>>",
+   "\t<<set $rentSale += 1>>"
+  ],
+  "context": "\t<br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<elseif $rentsale is 1>>",
+   "\t<<set $rentsale += 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<elseif $rentSale is 1>>",
+   "\t<<set $rentSale += 1>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $rentsale to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $rentSale to 1>>"
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $baileydefeatedchain gte 3>>",
+   "\t\t<<set $enemyno to 3>>",
+   "\t\t<<set $enemynomax to 3>>",
+   "\t<<elseif $baileydefeatedchain gte 1>>",
+   "\t\t<<set $enemyno to 2>>",
+   "\t\t<<set $enemynomax to 2>>",
+   "\t<<else>>",
+   "\t\t<<set $enemyno to 1>>",
+   "\t\t<<set $enemynomax to 1>>",
+   "\t<</if>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $enemyno -= 1>>",
+   "\t<<set $enemynomax -= 1>>"
+  ],
+  "context": "<<if $fightstart is 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set $leftarm to \"grappled\">><<set $rightarm to \"grappled\">><<set $NPCList[0].lefthand to \"arms\">><<set $NPCList[0].righthand to \"arms\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $leftarm to \"grappled\">><<set $rightarm to \"grappled\">><<set $NPCList[1].lefthand to \"arms\">><<set $NPCList[2].righthand to \"arms\">>"
+  ],
+  "context": "\t<<set $head to \"grappled\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   ":: Thug Rent",
+   "<<set $location to \"home\">><<effects>>",
+   "",
+   "<<if $phase is \"unwilling\">>",
+   "\tAfter some time, the car comes to a stop in front of the orphanage. \"We're here. Don't even think about running, it's way too late for that,\" the <<person1>><<person>> says. ",
+   "\t<<if $exposed gte 1>>",
+   "\t\t<<He>> eyes over your exposed body. \"Cover yourself, we don't want any onlookers getting the wrong idea,\" <<he>> says, tossing you a towel. You wrap it around yourself.",
+   "\t\t<<towelup>>",
+   "\t<</if>>",
+   "\t<<switch $event.buffer.length>>",
+   "\t\t<<case 1>><<He>> roughly pulls you out of the car and leads you into the orphanage.",
+   "\t\t<<case 2>><<He>> roughly pulls you out of the car while the <<person2>><<person>> keeps a close eye on you. <<He>> watches the <<person1>><<person>> lead you all the way to the front door before getting back into the car.",
+   "\t\t<<case 3>><<He>> roughly pulls you out of the car while the <<person2>><<person>> and <<person3>><<person>> keep a close eye on you. They watch the <<person1>><<person>> lead you all the way to the front door before getting back into the car.",
+   "\t<</switch>>",
+   "\t<br><br>",
+   "\tYou see Bailey waiting for you in the main hall<<if $robinfirstrentfight is 1>> along with a tied-up Robin<</if>>.",
+   "<<elseif $phase is \"willing\">>",
+   "\tAfter some time, the car comes to a stop in front of the orphanage. \"We're here. Get going, you've kept <<nnpc_him \"Bailey\">> waiting long enough,\" the <<person1>><<person>> says.",
+   "\t<<if $exposed gte 1>>",
+   "\t\t<<He>> eyes over your exposed body. \"Can't have you looking like that in front of the boss,\" <<he>> says, tossing you a towel. You wrap it around yourself.",
+   "\t\t<<towelup>>",
+   "\t<</if>>",
+   "\t<<switch $event.buffer.length>>",
+   "\t\t<<case 1>>You step out of the car and are led into the orphanage.",
+   "\t\t<<case 2>>You step out of the car and are led into the orphanage under the watchful eye of the <<person2>><<person>>. Once you make it to the front door, <<he>> gets back into the car.",
+   "\t\t<<case 3>>You step out of the car and are led into the orphanage under the watchful eye of the <<person2>><<person>> and <<person3>><<person>>. Once you make it to the front door, they get back into the car.",
+   "\t<</switch>>",
+   "\t<br><br>",
+   "\tYou see Bailey is already waiting for you in the main hall<<if $robinfirstrentfight is 1>> with a tied-up Robin<</if>>.",
+   "<<elseif $phase is \"unwilling van\">>",
+   "\tAfter some time, the van comes to a stop. \"Looks like we've arrived,\" the <<person1>><<person>> says, putting away <<his>> phone. \"Get up. And don't even think about running, it's way too late for that.\"",
+   "\t<<if $exposed gte 1>>",
+   "\t\t<<He>> eyes over your exposed body. \"Cover yourself, we don't want any onlookers getting the wrong idea,\" <<he>> says, tossing you a towel. You wrap it around yourself.",
+   "\t\t<<towelup>>",
+   "\t<</if>>",
+   "\t<br><br>",
+   "\tAll of them walk you to the orphanage door, but only you and the <<person>> enter. You see Bailey is already waiting for you in the main hall<<if $robinfirstrentfight is 1>> with a tied-up Robin<</if>>.",
+   "<</if>>",
+   "<<saveNPC 0 \"rent_thug\">><<endevent>>",
+   "",
+   "<<if $robinfirstrentfight is 1>>",
+   "\t<<thugrentduerobin>>",
+   "<<else>>",
+   "\t<<thugrentdue>> ",
+   "<</if>>",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set _weekRent to $rentmoney + ($babyRent || 0)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set _weekRent to $rentMoney + ($babyRent || 0)>>"
+  ],
+  "context": "\t<<babyRent true>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set _owed to $rentmoney + ($babyRent or 0)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set _owed to $rentMoney + ($babyRent or 0)>>"
+  ],
+  "context": "\t\t<<babyRent true>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<set $renttime to 7>><<set $rentday to Time.weekDay>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<set $rentTime to 7>>"
+  ],
+  "context": "<<npc Bailey>><<person1>>"
+ }
+]

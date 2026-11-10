@@ -1,0 +1,89 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t<<link [[Soothe|Cream Ex Naked Walk Soothe]]>><</link>><<tendingdifficulty 1 1000>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $monster is 1 or $settings.bestialityEnabled>>",
+   "\t\t\t<<link [[달랜다|Cream Ex Naked Walk Soothe]]>><</link>><<tendingdifficulty 1 1000>>"
+  ],
+  "new_en": [
+   "\t\t<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\t\t<<link [[Soothe|Cream Ex Naked Walk Soothe]]>><</link>><<tendingdifficulty 1 1000>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if random(1, 2) is 2 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\t\tA <<beasttype>> emerges from the crowd, running right at you. <<bHe>> pounces, knocking you to the ground and licking you for what little cream remains. More <<beasttype>>s appear, drawn by the smell."
+  ],
+  "old_kr": [
+   "\t\t<<if random(1, 2) is 2 and ($monster is 1 or $settings.bestialityEnabled)>>",
+   "\t\t\t군중 속에서 <<beasttype>>【이가】 나타나, 당신을 향해 곧장 달려온다. <<bHe>>【이가】 덮쳐 당신을 바닥에 쓰러뜨리고, 조금 남아있는 크림을 핥아먹는다. 냄새에 이끌린 더 많은 <<beasttype>>들이 나타난다."
+  ],
+  "new_en": [
+   "\t\t<<if random(1, 2) is 2 and beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\t\tA <<beasttype>> emerges from the crowd, running right at you. <<bHe>> pounces, knocking you to the ground and licking you for what little cream remains. More <<beasttype>>s appear, drawn by the smell."
+  ],
+  "context": "\t<<if $exposed gte 2>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<domusquick>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<domusQuick>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<wolfquick>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<wolfQuick>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<starfishquick>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<starfishQuick>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<harvestquick>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<harvestQuick>>"
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<danubequick>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<danubeQuick>>"
+  ],
+  "context": "<<endcombat>>"
+ }
+]

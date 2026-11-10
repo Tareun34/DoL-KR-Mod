@@ -1261,7 +1261,7 @@
 :: Gwylan Ritual Inspect
 <<effects>><<run statusCheck("Gwylan")>><<set _tf to checkTFparts()>><<hallucinogen 100>>
 
-<<if $player.penisExist and $player.vaginaExist and !$gwylanSeen.includes("herm")>>
+<<if $player.penisExist and $player.vaginaExist and !$gwylanSeen.includes("herm") and $settings.nudeGenderPerception !== 0>>
 	<<set $gwylanSeen.pushUnique("herm")>>
 	<<He>>【은는】 당신의 허벅지를 살짝 벌린다.
 	<<if C.npc.Gwylan.gender is "h">>
@@ -1269,8 +1269,8 @@
 	<<else>>
 		"와. 레비스를 직접 보는 건 처음이야. 넌 정말 놀라움의 연속이구나!"
 	<</if>>
-<<elseif $sexRitual.crossdressing>>
-	<<He>>【은는】 당신의 허벅지를 살짝 벌린다. "예상치 못한 생식기지만, 싫지는 않아. 난 뭐든 잘 다루거든."
+<<elseif $sexRitual.crossdressing and $settings.nudeGenderPerception !== 0>>
+	<<He>> holds your thighs slightly apart. "Unexpected genitalia, but not unwelcome. I'm nothing if not versatile."
 <</if>>
 <<set $genderknown.pushUnique("Gwylan")>>
 <<if $player.penisExist>>
@@ -1920,10 +1920,10 @@
 		호수 밑에 무언가가 있다. 당신을 채운 구역질 나는 공허가 여기에 있다. 모든 것이 여기에 있다, 그 비참한 무의 전부가. 호수 밑에는 아무것도 없다. <span class="red">아무것도 아닌 것이 손을 뻗어 당신을 건드린다.</span> <<gggawareness>><<lllpurity>><<gwylanPurgeEffect 2>><<awareness 50>><<purity -50>>
 		<br><br>
 
-		"<i>너는 호수다. 밀어내라.</i>"<br>
-		그윌란의 목소리가 자비롭게도 당신을 끌어낸다. 오래 참고 있던 숨을 내쉬자, 달콤한 공기가 폐를 채운다. "강하구나. 잘했어. 걱정 마, 전부 다시 빼내줄게." <<Hes>> 당신의 머리를 <<his>> 옅은 주근깨가 있는 <<if C.npc.Gwylan.breastsize gte 3>><<print window.KR.getBreastSizeKr(C.npc.Gwylan.breastsdesc)>><<else>>가슴<</if>>에 기대 품고 있다.
-		<<if _gwylanLovePercent gte 85>>
-			<<He>>【은는】 당신의 정수리에 입을 맞춘다.
+		"<i>You are the lake. Expel.</i>"<br>
+		Gwylan's voice mercifully pulls you out. You let out your long-held breath, lungs filling with sweet air. "You're strong. Well done. Don't worry, we'll get it all back out of you." <<Hes>> cradling your head against <<his>> lightly-freckled <<if C.npc.Gwylan.breastsize gte 3>><<print C.npc.Gwylan.breastsdesc>><<else>>chest<</if>>.
+		<<if _gwylanLovePercent gte 75>>
+			<<He>> kisses the top of your head.
 		<<else>>
 			<<He>>【은는】 당신의 정수리를 쓰다듬는다.
 		<</if>>
@@ -2260,6 +2260,11 @@
 :: Gwylan Ritual Sex Select
 <<effects>><<run statusCheck("Gwylan")>><<set _tf to checkTFparts()>><<hallucinogen 2>><<drugs 2>>
 <<canvas-model-temporary-effect "petals">>
+
+<<if $earSlime.event is "have sex with someone" or $earSlime.event is "have sex with someone or something">>
+	<<set $earSlime.event to "">>
+<</if>>
+
 <<if $player.penisExist>>
 	/* Player has a penis */
 	<<if $sexRitual.roseKiss>>
@@ -3965,7 +3970,7 @@
 		<<if _gwylanTF.tail is "revealed">>
 			당신은 <<his>> 꼬리가 <<him>> 뒤로 축 처지는 것을 본다.
 		<<else>>
-			<<His>> 얼굴은 부끄러운 듯 새빨개져 있다.
+			<<His>> face is beet-rooted red, as if ashamed of <<himself>>.
 		<</if>>
 		<br><br>
 
@@ -4516,9 +4521,9 @@
 			<</if>>
 			그윌란은 <<= $sexRitual.bondage ? "허밍한다" : "미소 짓는다">>.
 			<<if _gwylanStatus.includesAny("dom", "lust")>>
-				"너한테 계속 화를 낼 순 없지."
-			<<elseif _gwylanLovePercent gte 75>>
-				"<<pcPetname "Gwylan" "good">>." 그 단어들이 당신의 귓가에 울린다. <<stress -6>><<lstress>><<arousal 50>><<garousal>>
+				"I can't stay mad at you."
+			<<elseif _gwylanLovePercent gte 65>>
+				"<<pcPetname "Gwylan" "good">>." The words ring in your ears. <<stress -6>><<lstress>><<arousal 50>><<garousal>>
 				<br><br>
 			<<else>>
 				"얼추 맞았어."
@@ -5247,10 +5252,10 @@
 						당신은 그윌란의 손을 향해 손을 뻗는다.
 					<</if>>
 					<<if _gwylanStatus.includes("heat")>>
-						<<He>>【은는】 당신을 타는 동안 균형을 잡기 위해 재빠르게 그것들을 붙잡는다.
-					<<elseif _gwylanLovePercent gte 75>>
-						<<He>>【은는】 그것들을 들어 올려서 당신을 타는 동안 양쪽을 모두 잡을 수 있도록 해준다.
-						<<His>> 얼굴은 마치 예상하지 못했던 일인 양 조금 더 빨개진다.
+						<<He>> quickly grabs them, using them for added balance as <<he>> continues to ride you.
+					<<elseif _gwylanLovePercent gte 65>>
+						<<He>> lifts them, allowing you to hold both as <<he>> continues to ride you.
+						<<His>> face turns a little more red, as if this was somehow unexpected.
 					<<else>>
 						<<He>>【이가】 가만히 있자 당신이 그것들을 가져와 들어 올린다. <<He>>【은는】 이에 맞추어 균형을 바로잡는다.
 						<<His>> 얼굴은 이 상황이 어쩐지 뜻밖이라는 듯 조금 더 붉어진다.
@@ -6910,22 +6915,22 @@
 			<</if>>
 		<</if>>
 	<</if>>
-	<<if $debug is 1>>
-		<br><u>디버그:</u><br>
-		플레이어 흥분도: $arousal <br>
-		플레이어 절정 횟수: $sexRitual.playerOrgasms <br>
-		플레이어 절정 억누름: $sexRitual.playerOrgasmsResisted <br>
-		플레이어 절정 참기 실패: $sexRitual.playerOrgasmsFailed <br>
-		플레이어 절정 목표치: $sexRitual.orgasmTarget <br>
-		그윌란 흥분도: $sexRitual.arousal (최대 200) <br>
-		그윌란 절정 횟수: $sexRitual.gwylanOrgasms <br>
-		그윌란 절정 억누름: $sexRitual.gwylanOrgasmsBlocked <br>
-		제어권: <<if $sexRitual.playerControlsSpeed>>플레이어<<else>>그윌란<</if>> <br>
-		속도: $sexRitual.speed <br>
-		의지 대결(willContest): $sexRitual.willContest <br>
-		체위(position): $sexRitual.position <br>
-		그윌란 상태: <<print formatList(_gwylanStatus)>><br>
-		정화 효과: $sexRitual.purge <br>
+	<<if $debug>>
+		<br><u>DEBUG:</u><br>
+		Player arousal: $arousal <br>
+		Player orgasms: $sexRitual.playerOrgasms <br>
+		Player orgasms resisted: $sexRitual.playerOrgasmsResisted <br>
+		Player orgasms failed: $sexRitual.playerOrgasmsFailed <br>
+		Player orgasm target: $sexRitual.orgasmTarget <br>
+		Gwylan arousal: $sexRitual.arousal (max 200) <br>
+		Gwylan orgasms: $sexRitual.gwylanOrgasms <br>
+		Gwylan orgasms resisted: $sexRitual.gwylanOrgasmsBlocked <br>
+		control: <<if $sexRitual.playerControlsSpeed>>Player<<else>>Gwylan<</if>> <br>
+		speed: $sexRitual.speed <br>
+		willContest: $sexRitual.willContest <br>
+		position: $sexRitual.position <br>
+		Gwylan states: <<print formatList(_gwylanStatus)>><br>
+		Purge effectiveness: $sexRitual.purge <br>
 		<br>
 	<</if>>
 <</widget>>

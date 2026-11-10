@@ -97,8 +97,8 @@
 <<widget "passout_flats">>
 <<passout>>
 
-<<if dangerEvent()>>
-	<<link [[다음|Flats Auction]]>><</link>>
+<<if dangerEvent() and $mine?.freed isnot 1>>
+	<<link [[Next|Flats Auction]]>><</link>>
 	<br>
 <<else>>
 	<<ambulance>>

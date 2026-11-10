@@ -1,0 +1,223 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   " * BODY FRECKLE OPTIONS:",
+   " * --------------------",
+   " * \"bodyFreckles\": \"none\"|\"upper\"|\"full\"",
+   " *"
+  ],
+  "context": " *"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\"bodyFreckles\": \"none\",",
+   "\t\t\t\"freckles\": false,"
+  ],
+  "context": "\t\t\t\"skin_scars\":false,"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\tz: ZIndices.freckles,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tz: ZIndices.faceFreckles,"
+  ],
+  "context": "\t\t\tfilters: [\"tan\"],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\treturn options.show_face && !!options.freckles;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\treturn options.show_face && !!options.freckles && options.blush <= 0 && !options.blusher_colour;",
+   "\t\t\t},",
+   "\t\t},",
+   "\t\t// Combination of freckles and blush",
+   "\t\t\"freckles_blush\": {",
+   "\t\t\tz: ZIndices.faceFrecklesBlushCombo,",
+   "\t\t\tfilters: [\"tan\"],",
+   "",
+   "\t\t\tsrcfn(options) {",
+   "\t\t\t\treturn `img/face/${options.facestyle}/blush-freckles/freckles-blush-${options.blush}.png`;",
+   "\t\t\t},",
+   "\t\t\tshowfn(options) {",
+   "\t\t\t\treturn options.show_face && !!options.freckles && options.blush > 0;",
+   "\t\t\t},",
+   "\t\t},",
+   "\t\t// Combination of freckles and blusher",
+   "\t\t\"freckles_blusher\": {",
+   "\t\t\tz: ZIndices.faceFrecklesBlushCombo + 1,",
+   "\t\t\tfilters: [\"tan\"],",
+   "",
+   "\t\t\tsrcfn(options) {",
+   "\t\t\t\treturn `img/face/${options.facestyle}/blush-freckles/freckles-blusher.png`;",
+   "\t\t\t},",
+   "\t\t\tshowfn(options) {",
+   "\t\t\t\treturn options.show_face && !!options.freckles && !!options.blusher_colour;"
+  ],
+  "context": "\t\t\tshowfn(options) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\treturn `img/face/${options.facestyle}/blusher.png`;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\treturn `img/face/${options.facestyle}/blush/blusher.png`;"
+  ],
+  "context": "\t\t\tsrcfn(options) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\treturn options.show_face && !!options.blusher_colour;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\treturn options.show_face && !!options.blusher_colour && !options.freckles;"
+  ],
+  "context": "\t\t\tshowfn(options) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\tz: ZIndices.blush,"
+  ],
+  "context": "\t\t\"blush\": {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\treturn `img/face/${options.facestyle}/blush-${options.blush}.png`;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\treturn `img/face/${options.facestyle}/blush/blush-${options.blush}.png`;"
+  ],
+  "context": "\t\t\tsrcfn(options) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\treturn options.show_face && options.blush > 0;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\treturn options.show_face && options.blush > 0 && !options.freckles;"
+  ],
+  "context": "\t\t\tshowfn(options) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\tif ([\"cover\", \"hold\"].includes(options.arm_left)) return ZIndices.left_cover_arm + 0.5;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\tif ([\"cover\", \"hold\"].includes(options.arm_left)) return ZIndices.left_cover_arm;"
+  ],
+  "context": "\t\t\tzfn(options) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\tif ([\"cover\", \"hold\"].includes(options.arm_right)) return ZIndices.right_cover_arm + 0.5;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\tif ([\"cover\", \"hold\"].includes(options.arm_right)) return ZIndices.right_cover_arm;"
+  ],
+  "context": "\t\t\tzfn(options) {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t},",
+   "\t\t},",
+   "",
+   "\t\t/*",
+   "\t\t\t\t███████ ██████  ███████  ██████ ██   ██ ██      ███████ ███████ ",
+   "\t\t\t\t██      ██   ██ ██      ██      ██  ██  ██      ██      ██      ",
+   "\t\t\t\t█████   ██████  █████   ██      █████   ██      █████   ███████ ",
+   "\t\t\t\t██      ██   ██ ██      ██      ██  ██  ██      ██           ██ ",
+   "\t\t\t\t██      ██   ██ ███████  ██████ ██   ██ ███████ ███████ ███████",
+   "\t\t*/",
+   "\t\t\"freckles_base\": {",
+   "\t\t\tfilters: [\"tan\"],",
+   "\t\t\tz: ZIndices.bodyFreckles,",
+   "\t\t\tanimation: \"idle\",",
+   "",
+   "\t\t\tsrcfn(options) {",
+   "\t\t\t\treturn `img/body/freckles/base-${options.body_type}-freckles-${options.bodyFreckles}.png`;",
+   "\t\t\t},",
+   "\t\t\tshowfn(options) {",
+   "\t\t\t\treturn options.bodyFreckles !== \"none\" && !options.mannequin;",
+   "\t\t\t},",
+   "\t\t},",
+   "\t\t\"freckles_pregnant_belly\": {",
+   "\t\t\tfilters: [\"tan\"],",
+   "\t\t\tz: ZIndices.bellyBase + 0.1,",
+   "\t\t\tanimation: \"idle\",",
+   "",
+   "\t\t\tsrcfn(options) {",
+   "\t\t\t\treturn between(options.belly, 1, 24) ? `img/body/freckles/pregnant-belly/${options.belly}-freckles.png` : \"\";",
+   "\t\t\t},",
+   "\t\t\tshowfn(options) {",
+   "\t\t\t\treturn options.bodyFreckles === \"full\" && !options.mannequin && !!options.belly;",
+   "\t\t\t},",
+   "\t\t},",
+   "\t\t\"freckles_left_arm\": {",
+   "\t\t\tfilters: [\"tan\"],",
+   "\t\t\tanimation: \"idle\",",
+   "",
+   "\t\t\tsrcfn(options) {",
+   "\t\t\t\tif (options.arm_left === \"cover\") {",
+   "\t\t\t\t\treturn \"img/body/freckles/left-arm-cover-freckles.png\";",
+   "\t\t\t\t} else if (options.arm_left === \"idle\") {",
+   "\t\t\t\t\treturn `img/body/freckles/left-arm-idle-${options.body_type}-freckles.png`;",
+   "\t\t\t\t}",
+   "\t\t\t},",
+   "\t\t\tshowfn(options) {",
+   "\t\t\t\treturn options.bodyFreckles !== \"none\" && !options.mannequin && options.arm_left !== \"none\";",
+   "\t\t\t},",
+   "\t\t\tzfn(options) {",
+   "\t\t\t\treturn options.arm_left === \"cover\" ? ZIndices.left_cover_arm : ZIndices.armsidle + 0.1;",
+   "\t\t\t},",
+   "\t\t},",
+   "\t\t\"freckles_right_arm\": {",
+   "\t\t\tfilters: [\"tan\"],",
+   "\t\t\tanimation: \"idle\",",
+   "",
+   "\t\t\tsrcfn(options) {",
+   "\t\t\t\tif (options.arm_right === \"cover\") {",
+   "\t\t\t\t\treturn \"img/body/freckles/right-arm-cover-freckles.png\";",
+   "\t\t\t\t} else if (options.arm_right === \"hold\") {",
+   "\t\t\t\t\treturn \"img/body/freckles/right-arm-hold-freckles.png\";",
+   "\t\t\t\t} else if (options.arm_right === \"idle\") {",
+   "\t\t\t\t\treturn `img/body/freckles/right-arm-idle-${options.body_type}-freckles.png`;",
+   "\t\t\t\t}",
+   "\t\t\t},",
+   "\t\t\tshowfn(options) {",
+   "\t\t\t\treturn options.bodyFreckles !== \"none\" && !options.mannequin && options.arm_right !== \"none\";",
+   "\t\t\t},",
+   "\t\t\tzfn(options) {",
+   "\t\t\t\treturn [\"cover\", \"hold\"].includes(options.arm_right) ? ZIndices.right_cover_arm : ZIndices.armsidle + 0.1;"
+  ],
+  "context": "\t\t\t\treturn !!options.writing_right_thigh;"
+ }
+]

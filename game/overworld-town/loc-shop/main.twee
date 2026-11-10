@@ -962,11 +962,12 @@
 	이렇게 공개적인 장소에 노출된다는 생각에 당신의 심장이 두근거린다. 두려움과 흥분이 동일한 비율로 당신을 채운다.<<arousal 1000>><<garousal>>
 <</if>>
 <br><br>
+<<outfitChecks>>
 <<if $worn.over_upper.name isnot "naked">>
-	<<if $worn.over_lower.name isnot "naked" and $worn.over_upper.outfitPrimary and $worn.over_upper.outfitPrimary.over_lower isnot $worn.over_lower.name>>
+	<<if $worn.over_lower.name isnot "naked" and !_overOutfit>>
 		<<set _overLower to $worn.over_lower.name>>
 	<</if>>
-	당신은 겉옷<<if _overLower>>【와과】 <<print _overLower>><</if>>【을를】 벗으며 걷기 시작한다.
+	You start by stripping your $worn.over_upper.name<<if _overLower>> and <<print _overLower>><</if>>, and begin your walk.
 <<elseif $worn.over_lower.name isnot "naked">>
 	당신은 $worn.over_lower.name【을를】 벗으며 걷기 시작한다.
 <<else>>
@@ -975,8 +976,8 @@
 <<overruined>>
 <<exposure>>
 <br><br>
-<<if $worn.upper.name isnot "naked" and $worn.upper.outfitPrimary and $worn.upper.outfitPrimary.lower isnot $worn.lower.name>>
-	<<link [[다음|Shopping Centre Slime Exhibitionism Obey Outfit]]>><</link>>
+<<if $worn.upper.name isnot "naked" and _middleOutfit>>
+	<<link [[Next|Shopping Centre Slime Exhibitionism Obey Outfit]]>><</link>>
 <<elseif $worn.upper.name isnot "naked">>
 	<<link [[다음|Shopping Centre Slime Exhibitionism Obey Upper]]>><</link>>
 <<elseif $worn.lower.name isnot "naked">>
@@ -988,9 +989,10 @@
 :: Shopping Centre Slime Exhibitionism Obey Upper
 <<effects>>
 
-복도를 걸어가던 중 작은 골목이 나타나는 것을 발견한다. 서둘러 $worn.upper.name【을를】 머리 위로 당겨 벗고는 골목 안으로 던져버린다.
-<<if $worn.under_upper.name isnot "naked" and $worn.under_upper.outfitPrimary and $worn.under_upper.outfitPrimary.under_lower isnot $worn.under_lower.name>>
-	시간을 지체하지 않고 빠른 동작으로 $worn.under_upper.name【을를】 벗어 근처 쓰레기통에 던져버린다.
+You notice a small alley coming up, as you walk down the corridor. Hastily, you pull your $worn.upper.name above your head, tossing it into the alley.
+<<outfitChecks>>
+<<if $worn.under_upper.name isnot "naked" and !_underOutfit>>
+	Not wasting any time, you remove your $worn.under_upper.name in a quick motion, tossing it into a nearby garbage bin.
 	<<underupperruined>>
 <</if>>
 <<upperruined>>
@@ -1006,7 +1008,13 @@
 <</if>>
 
 <br><br>
-<<link [[다음|Shopping Centre Slime Exhibitionism Obey Lower]]>><</link>>
+<<if $worn.lower.name isnot "naked">>
+	<<link [[Next|Shopping Centre Slime Exhibitionism Obey Lower]]>><</link>>
+<<elseif $worn.under_upper.name isnot "naked">>
+	<<link [[Next|Shopping Centre Slime Exhibitionism Obey Under Outfit]]>><</link>>
+<<else>>
+	<<link [[Next|Shopping Centre Slime Exhibitionism Obey Ending]]>><</link>>
+<</if>>
 
 :: Shopping Centre Slime Exhibitionism Obey Lower
 <<effects>>
@@ -1016,11 +1024,12 @@
 <<lowerruined>>
 <<exposure>>
 
-<<if $worn.under_upper.name isnot "naked" and $worn.under_upper.outfitPrimary and $worn.under_upper.outfitPrimary.under_lower isnot $worn.under_lower.name>>
+<<outfitChecks>>
+<<if $worn.under_upper.name isnot "naked" and $worn.under_lower.name isnot "naked" and !_underOutfit>>
 	<br><br>
 	이제 당신의 성기를 보호하는 것은 단 한 조각의 천뿐이다. 그렇지만, 이미 너무 멀리 와버렸다. 멈춰서서 생각할 겨를도 없이 당신은 $worn.under_lower.name【을를】 내리고 땅에 떨어지자마자 걸어 나온다.
 	<br><br>
-	<<underruined>>
+	<<underlowerruined>>
 	<<exposure>>
 	<<if $player.gender_appearance is "m">>
 		많은 이들이 발걸음을 멈추고 당신이 옷을 벗는 모습을 대놓고 지켜보며 당신의 노출에 당황해한다.
@@ -1050,9 +1059,10 @@
 <<middleruined>>
 <<exposure>>
 
+<<outfitChecks>>
 <<if $worn.under_lower.name isnot "naked" and $worn.under_upper.name isnot "naked">>
-	<<if $worn.under_upper.outfitPrimary and $worn.under_upper.outfitPrimary.under_lower isnot $worn.under_lower.name>>
-		당신의 <<underoutfit>>【이가】 드러나자 사람들의 이목을 끌기 시작한다.
+	<<if _underOutfit>>
+		Your <<underoutfit>> now exposed, you begin to draw attention.
 	<<else>>
 		당신의 속옷이 드러나자 사람들의 이목을 끌기 시작한다.
 	<</if>>
@@ -1064,8 +1074,8 @@
 <</if>>
 
 <br><br>
-<<if $worn.under_upper.name isnot "naked" and $worn.under_upper.outfitPrimary and $worn.under_upper.outfitPrimary.under_lower isnot $worn.under_lower.name>>
-	<<link [[다음|Shopping Centre Slime Exhibitionism Obey Under Outfit]]>><</link>>
+<<if $worn.under_upper.name isnot "naked" and _underOutfit>>
+	<<link [[Next|Shopping Centre Slime Exhibitionism Obey Under Outfit]]>><</link>>
 <<else>>
 	<<link [[다음|Shopping Centre Slime Exhibitionism Obey Ending]]>><</link>>
 <</if>>

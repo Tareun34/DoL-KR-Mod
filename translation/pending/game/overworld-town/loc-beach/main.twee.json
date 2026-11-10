@@ -1,0 +1,74 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tIt appears deserted, save for a group of students who are drinking around a fire."
+  ],
+  "old_kr": [
+   "\t\t모닥불 주위에 모여 술을 마시는 한 무리의 학생들을 제외하면 텅 빈 것 같다."
+  ],
+  "new_en": [
+   "\t\t<<if Weather.bloodMoon>>",
+   "\t\t\tThe blood moon shines through the tree leaves.",
+   "\t\t<<else>>",
+   "\t\t\tIt appears deserted, save for a group of students who are drinking around a fire.",
+   "\t\t<</if>>"
+  ],
+  "context": "\t<<if !Weather.isOvercast>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "A voice cuts through the noise somewhere at the edge of the crowd. The surge falters and a few people exchange glances before sitting back down. Most look embarrased, some grumpy.<<gstress>><<stress 3>>"
+  ],
+  "old_kr": [
+   "군중의 가장자리 어디선가 소음을 뚫고 한 목소리가 울려 퍼진다. 밀려들던 인파가 주춤하고, 몇몇은 서로 눈치를 살피더니 다시 자리에 주저앉는다. 대부분은 무안해하는 표정이고, 일부는 불퉁한 기색이다.<<gstress>><<stress 3>>"
+  ],
+  "new_en": [
+   "A voice cuts through the noise somewhere at the edge of the crowd. The surge falters and a few people exchange glances before sitting back down. Most look embarrassed, some grumpy.<<gstress>><<stress 3>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<flaunting>> you stroll down the beach, drawing eyes wherever you go.",
+   "<<if $player.penisExist and $player.vaginaExist and !$worn.genitals.type.includesAll(\"chastity\", \"hidden\") and $rng % 2 == 0>>Many eyes fix on your genitals, awed by your uniqueness.",
+   "<<elseif $player.breastsize gte 6 and $rng % 2 == 0>>Many eyes are drawn to your <<breasts>>.",
+   "<<elseif $player.penisExist and $player.penissize gte 5 and !$worn.genitals.type.includesAll(\"chastity\", \"hidden\")>>Many eyes fix on your <<penis>>.",
+   "<<elseif $beauty gte (($beautymax / 7) * 5) and $rng % 3>>Some just stare, open-mouthed, blown away by your naked beauty.",
+   "<<elseif $physique gte (($physiquesize / 7) * 5)>>Some marvel at seeing such a stunning physique so fully displayed.",
+   "<<elseif $worn.genitals.type.includesAll(\"chastity\", \"hidden\")>>Some stare with a curious look at your $worn.genitals.name."
+  ],
+  "old_kr": [
+   "<<flaunting>> 당신은 해변을 따라 거닐며, 가는 곳마다 시선을 끈다.",
+   "<<if $player.penisExist and $player.vaginaExist and !$worn.genitals.type.includesAll(\"chastity\", \"hidden\") and $rng % 2 == 0>>많은 시선이 당신의 독특함에 경외하며 당신의 성기에 고정된다.",
+   "<<elseif $player.breastsize gte 6 and $rng % 2 == 0>>많은 시선이 당신의 <<breasts>>에 쏠린다.",
+   "<<elseif $player.penisExist and $player.penissize gte 5 and !$worn.genitals.type.includesAll(\"chastity\", \"hidden\")>>많은 시선이 당신의 <<penis>>에 고정된다.",
+   "<<elseif $beauty gte (($beautymax / 7) * 5) and $rng % 3>>몇몇은 그저 입을 벌린 채, 당신의 벌거벗은 아름다움에 넋을 잃고 쳐다본다.",
+   "<<elseif $physique gte (($physiquesize / 7) * 5)>>몇몇은 그렇게 멋진 몸매가 완전히 드러난 것을 보고 감탄한다.",
+   "<<elseif $worn.genitals.type.includesAll(\"chastity\", \"hidden\")>>몇몇은 당신의 $worn.genitals.name【을를】 호기심 어린 표정으로 쳐다본다."
+  ],
+  "new_en": [
+   "<<flaunting>> you stroll down the beach, drawing eyes wherever you go.",
+   "<<if $player.penisExist and $player.vaginaExist and !$worn.genitals.type.includesAll(\"chastity\", \"hidden\") and $rng % 2 == 0 and $settings.nudeGenderPerception !== 0>>Many eyes fix on your genitals, awed by your uniqueness.",
+   "<<elseif $player.breastsize gte 6 and $rng % 2 == 0>>Many eyes are drawn to your <<breasts>>.",
+   "<<elseif $player.penisExist and $player.penissize gte 5 and !$worn.genitals.type.includesAll(\"chastity\", \"hidden\")>>Many eyes fix on your <<penis>>.",
+   "<<elseif $beauty gte (($beautymax / 7) * 5) and $rng % 3>>Some just stare, open-mouthed, blown away by your naked beauty.",
+   "<<elseif $physique gte (($physiquesize / 7) * 5)>>Some marvel at seeing such a stunning physique so fully displayed.",
+   "<<elseif $worn.genitals.type.includesAll(\"chastity\", \"hidden\")>>Some stare with a curious look at your $worn.genitals.name."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if Weather.bloodMoon and !Weather.isOvercast>>",
+   "\t\t\t<<bloodmoonTouristBeach>>",
+   "\t\t<</if>>"
+  ],
+  "context": "\t<<else>>"
+ }
+]

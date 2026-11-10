@@ -1,0 +1,178 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tlink: [`Enemy Trust +++`, stayOnPassageFn],"
+  ],
+  "old_kr": [
+   "\t\t\tlink: [`적 신뢰도 +++`, stayOnPassageFn],"
+  ],
+  "new_en": [
+   "\t\t\tlink: [`Make Rent Due`, stayOnPassageFn],",
+   "\t\t\twidgets: [`<<set $rentTime to -1>>`],",
+   "\t\t},",
+   "\t\t{",
+   "\t\t\tlink: [`Max Thug Anger`, stayOnPassageFn],",
+   "\t\t\twidgets: [`<<set $rentThug to { anger: 5, angerCountdown: 0, traps: [] }>>`],",
+   "\t\t},",
+   "\t\t{",
+   "\t\t\tlink: [`Enemy Trust +++`, stayOnPassageFn],"
+  ],
+  "context": "\t\t{"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tlink: [`Make all beasts male`, stayOnPassageFn],",
+   "\t\t\twidgets: [`<<set $settings.monsterChance to 0>>`, `<<set $settings.beastMaleChanceMale to 100>>`, `<<set $settings.beastMaleChanceFemale to 100>>`],",
+   "\t\t},",
+   "\t\t{",
+   "\t\t\tlink: [`Make all beasts female`, stayOnPassageFn],",
+   "\t\t\twidgets: [`<<set $settings.monsterChance to 0>>`, `<<set $settings.beastMaleChanceMale to 0>>`, `<<set $settings.beastMaleChanceFemale to 0>>`],",
+   "\t\t},",
+   "\t\t{",
+   "\t\t\tlink: [`Make all beasts cuntboys`, stayOnPassageFn],"
+  ],
+  "old_kr": [
+   "\t\t\tlink: [`모든 짐승을 수컷으로`, stayOnPassageFn],",
+   "\t\t\twidgets: [`<<set $settings.monsterChance to 0>>`, `<<set $settings.beastMaleChanceMale to 100>>`, `<<set $settings.beastMaleChanceFemale to 100>>`],",
+   "\t\t},",
+   "\t\t{",
+   "\t\t\tlink: [`모든 짐승을 암컷으로`, stayOnPassageFn],",
+   "\t\t\twidgets: [`<<set $settings.monsterChance to 0>>`, `<<set $settings.beastMaleChanceMale to 0>>`, `<<set $settings.beastMaleChanceFemale to 0>>`],",
+   "\t\t},",
+   "\t\t{",
+   "\t\t\tlink: [`모든 짐승을 보지 달린 남자로`, stayOnPassageFn],"
+  ],
+  "new_en": [
+   "\t\t\tlink: [`Make all beasts male`, stayOnPassageFn],"
+  ],
+  "context": "\t\t{"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tlink: [`Make all beasts dickgirls`, stayOnPassageFn],"
+  ],
+  "old_kr": [
+   "\t\t\tlink: [`모든 짐승을 자지 달린 여자로`, stayOnPassageFn],"
+  ],
+  "new_en": [
+   "\t\t\tlink: [`Make all beasts female`, stayOnPassageFn],"
+  ],
+  "context": "\t\t{"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tlink: [`Make all beasts monster people`, stayOnPassageFn],",
+   "\t\t\twidgets: [`<<set $settings.monsterChance to 100>>`, `<<set $settings.monsterHallucinationsOnly to false>>`],"
+  ],
+  "old_kr": [
+   "\t\t\tlink: [`모든 짐승을 수인으로`, stayOnPassageFn],",
+   "\t\t\twidgets: [`<<set $settings.monsterChance to 100>>`, `<<set $settings.monsterHallucinationsOnly to false>>`],"
+  ],
+  "new_en": [
+   "\t\t\tlink: [`Make all beasts monster people`, stayOnPassageFn],",
+   "\t\t\twidgets: [",
+   "\t\t\t\t() => {",
+   "\t\t\t\t\tC.beastSettingTypes.forEach(type => {",
+   "\t\t\t\t\t\tV.settings.beastSettings[type].monsterChance = 100;",
+   "\t\t\t\t\t\tV.settings.beastSettings[type].hallucinationsOnly = false;",
+   "\t\t\t\t\t});",
+   "\t\t\t\t},",
+   "\t\t\t],"
+  ],
+  "context": "\t\t{"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tlink: [`Toggle Weather Band Bounds`, stayOnPassageFn],",
+   "\t\t\twidgets: [`<<set $debugWeatherBandBounds to !$debugWeatherBandBounds>>`],",
+   "\t\t},",
+   "\t\t{"
+  ],
+  "old_kr": [
+   "\t\t\tlink: [`날씨 구간 경계 토글`, stayOnPassageFn],",
+   "\t\t\twidgets: [`<<set $debugWeatherBandBounds to !$debugWeatherBandBounds>>`],",
+   "\t\t},",
+   "\t\t{"
+  ],
+  "new_en": [],
+  "context": "\t\t{"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\twidgets: [`<<set $settings.monsterChance to 0>>`, `<<set $settings.beastMaleChanceMale to 100>>`, `<<set $settings.beastMaleChanceFemale to 100>>`],"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\twidgets: [",
+   "\t\t\t\t() => {",
+   "\t\t\t\t\tC.beastSettingTypes.forEach(type => {",
+   "\t\t\t\t\t\tV.settings.beastSettings[type].maleChance = 100;",
+   "\t\t\t\t\t\tV.settings.beastSettings[type].maleChanceMale = 100;",
+   "\t\t\t\t\t\tV.settings.beastSettings[type].maleChanceFemale = 100;",
+   "\t\t\t\t\t});",
+   "\t\t\t\t},",
+   "\t\t\t],"
+  ],
+  "context": "\t\t\tlink: [`Make all beasts male`, stayOnPassageFn],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t`<<set $settings.beastMaleChanceMale to 100>>`,",
+   "\t\t\t\t`<<set $settings.beastMaleChanceFemale to 100>>`,",
+   "\t\t\t\t`<<set $settings.maleNPCVaginaChance to 100>>`,",
+   "\t\t\t],",
+   "\t\t},",
+   "\t\t{",
+   "\t\t\tlink: [`Make all beasts dickgirls`, stayOnPassageFn],",
+   "\t\t\twidgets: [",
+   "\t\t\t\t`<<set $settings.beastMaleChanceMale to 0>>`,",
+   "\t\t\t\t`<<set $settings.beastMaleChanceFemale to 0>>`,",
+   "\t\t\t\t`<<set $settings.femaleNPCPenisChance to 100>>`,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t() => {",
+   "\t\t\t\t\tC.beastSettingTypes.forEach(type => {",
+   "\t\t\t\t\t\tV.settings.beastSettings[type].maleChance = 0;",
+   "\t\t\t\t\t\tV.settings.beastSettings[type].maleChanceMale = 0;",
+   "\t\t\t\t\t\tV.settings.beastSettings[type].maleChanceFemale = 0;",
+   "\t\t\t\t\t});",
+   "\t\t\t\t},"
+  ],
+  "context": "\t\t\twidgets: ["
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t},",
+   "\t\t{",
+   "\t\t\tlink: [`Toggle Weather Band Bounds`, stayOnPassageFn],",
+   "\t\t\twidgets: [`<<set $debugWeatherBandBounds to !$debugWeatherBandBounds>>`],",
+   "\t\t},",
+   "\t\t{",
+   "\t\t\tlink: [`Sky Testing`, `Sky Testing`],",
+   "\t\t\twidgets: [`<<if $passage isnot \"Sky Testing\">><<set $lastPassage to $passage>><<freezePlayerStats>><</if>>`],"
+  ],
+  "context": "\t\t\twidgets: [`<<run Time.timeTravel(new DateTime(Time.year, 12))>>`],"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t`<<set $renttime to 0>>`,"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t`<<set $rentTime to 0>>`,"
+  ],
+  "context": "\t\t\twidgets: ["
+ }
+]

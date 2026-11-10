@@ -847,32 +847,21 @@ currentSkillValue('tending')
 <</if>>
 
 :: Encounter Movements
-<span class="blue"><<He>>【은는】 <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 입 앞에 가져다 댄다.</span>
-<<neutral 5 "mouth">><<set $mouthuse to "penis">><<set $NPCList[_n].penis to "mouthentrance">><<set $mouthstate to "entrance">><<set $speechmouthentrance to 1>><<set $mouthtarget to _n>>
 
-<span class="purple"><<He>>【은는】 다리로 당신의 머리를 감싸고 보지를 당신의 입에 누른다.</span>
-<<submission 5>><<set $mouthuse to "othervagina">><<set $NPCList[_n].vagina to "mouth">><<set $mouthstate to "othervagina">><<violence 3>><<bruise face>><<set $speechvaginamouth to 1>><<set $mouthtarget to _n>>
+<span class="blue"><<He>> positions <<his>> $NPCList[_n].penisdesc in front of your mouth.</span>
+<<neutral 5 "mouth">><<set $mouthuse to "penis">><<set $NPCList[_n].penis to "mouthentrance">><<set $mouthstate to "entrance">><<set $speechMouthEntrance to 1>><<set $mouthtarget to _n>>
 
-<span class="blue"><<He>>【은는】 당신의 다리 사이로 들어와 <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>> 앞에 가져다 댄다.</span>
-<<neutral 5 "genitals">><<set $vaginause to "penis">><<set $NPCList[_n].penis to "vaginaentrance">><<set $vaginastate to "entrance">><<set $speechvaginaentrance to 1>><<set $vaginatarget to _n>>
+<span class="purple"><<He>> wraps <<his>> legs around your head and presses <<his>> pussy against your mouth.</span>
+<<submission 5>><<set $mouthuse to "othervagina">><<set $NPCList[_n].vagina to "mouth">><<set $mouthstate to "othervagina">><<violence 3>><<bruise face>><<set $speechMouthNPCVagina to 1>><<set $mouthtarget to _n>>
+
+<span class="blue"><<He>> moves between your legs, positioning <<his>> $NPCList[_n].penisdesc in front of your <<pussy>>.</span>
+<<neutral 5 "genitals">><<set $vaginause to "penis">><<set $NPCList[_n].penis to "vaginaentrance">><<set $vaginastate to "entrance">><<set $speechVaginaEntrance to 1>><<set $vaginatarget to _n>>
 
 <<set $penisuse to "othervagina">><<set $NPCList[_n].vagina to "penisentrance">><<set $penisstate to "entrance">><<set $penistarget to _n>>
 <span class="blue"><<He>>【은는】 당신 위에 올라타고, 보지가 당신의 <<penis>> 가까이 맴돈다.</span>
 
-<span class="blue"><<He>>【은는】 당신의 다리 사이로 들어와 <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>> 앞에 가져다 댄다.</span>
-<<neutral 5 "bottom">><<set $anususe to "penis">><<set $NPCList[_n].penis to "anusentrance">><<set $anusstate to "entrance">><<set $speechanusentrance to 1>><<set $anustarget to _n>>
-
-:: Monster Selection
-<!-- Modified for Monster People -->
-<<if ($settings.monsterChance gte 1 and $hallucinations gte 1) or ($settings.monsterChance gte 1 and !$settings.monsterHallucinationsOnly)>>
-	<<if maleChance() lt random(1, 100)>>
-		몬스터 소녀
-	<<else>>
-		몬스터 소년
-	<</if>>
-<<else>>
-	짐승
-<</if>>
+<span class="blue"><<He>> moves between your legs, positioning <<his>> $NPCList[_n].penisdesc in front of your <<bottom>>.</span>
+<<neutral 5 "bottom">><<set $anususe to "penis">><<set $NPCList[_n].penis to "anusentrance">><<set $anusstate to "entrance">><<set $speechAnusEntrance to 1>><<set $anustarget to _n>>
 
 :: Reminder of how to impact plants outside tending
 <<set _garden_location to "garden">>

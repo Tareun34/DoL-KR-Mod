@@ -1,0 +1,285 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tRent time: $renttime<br>"
+  ],
+  "old_kr": [
+   "\t렌트 시간: $renttime<br>"
+  ],
+  "new_en": [
+   "\tRent time: $rentTime<br>"
+  ],
+  "context": "<<widget \"avery_mansion_variables_debug\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $debug is 1>>",
+   "\t\t\t<i>No kneeling</i><br>"
+  ],
+  "old_kr": [
+   "\t\t<<if $debug is 1>>",
+   "\t\t\t<i>무릎 꿇지 않음</i><br>"
+  ],
+  "new_en": [
+   "\t\t<<if $debug>>",
+   "\t\t\t<i>No kneeling</i><br>"
+  ],
+  "context": "\t\t<<set $avery_mansion.rage.assess += 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $debug is 1>>",
+   "\t\t\t<i>No bow</i><br>"
+  ],
+  "old_kr": [
+   "\t\t<<if $debug is 1>>",
+   "\t\t\t<i>인사하지 않음</i><br>"
+  ],
+  "new_en": [
+   "\t\t<<if $debug>>",
+   "\t\t\t<i>No bow</i><br>"
+  ],
+  "context": "\t\t<<set $avery_mansion.rage.assess += 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $debug is 1>>",
+   "\t\t\t<i>Wrong demeanour</i><br>"
+  ],
+  "old_kr": [
+   "\t\t<<if $debug is 1>>",
+   "\t\t\t<i>태도 불량</i><br>"
+  ],
+  "new_en": [
+   "\t\t<<if $debug>>",
+   "\t\t\t<i>Wrong demeanour</i><br>"
+  ],
+  "context": "\t\t<<set $avery_mansion.rage.assess += 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $debug is 1>>",
+   "\t\t\t<i>No maid clothes</i><br>"
+  ],
+  "old_kr": [
+   "\t\t<<if $debug is 1>>",
+   "\t\t\t<i>메이드복 안 입음</i><br>"
+  ],
+  "new_en": [
+   "\t\t<<if $debug>>",
+   "\t\t\t<i>No maid clothes</i><br>"
+  ],
+  "context": "\t\t<<set _avery_mansion_maid_failed to true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $debug is 1>>",
+   "\t\t\t<i>No formal clothes</i><br>"
+  ],
+  "old_kr": [
+   "\t\t<<if $debug is 1>>",
+   "\t\t\t<i>정장 안 입음</i><br>"
+  ],
+  "new_en": [
+   "\t\t<<if $debug>>",
+   "\t\t\t<i>No formal clothes</i><br>"
+  ],
+  "context": "\t\t<<set _avery_mansion_formal_failed to true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $debug is 1>>",
+   "\t\t\t<i>Hair wrong style</i><br>"
+  ],
+  "old_kr": [
+   "\t\t<<if $debug is 1>>",
+   "\t\t\t<i>머리 스타일 틀림</i><br>"
+  ],
+  "new_en": [
+   "\t\t<<if $debug>>",
+   "\t\t\t<i>Hair wrong style</i><br>"
+  ],
+  "context": "\t\t<<set $avery_mansion_hairstyle_failed to true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $debug is 1>>",
+   "\t\t\t<i>Hair too long</i><br>"
+  ],
+  "old_kr": [
+   "\t\t<<if $debug is 1>>",
+   "\t\t\t<i>머리가 너무 김</i><br>"
+  ],
+  "new_en": [
+   "\t\t<<if $debug>>",
+   "\t\t\t<i>Hair too long</i><br>"
+  ],
+  "context": "\t\t<<set $avery_mansion_hairlength_failed to true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $debug is 1>>",
+   "\t\t<i>Total rage assess:</i> <<print $avery_mansion.rage.assess>>"
+  ],
+  "old_kr": [
+   "\t<<if $debug is 1>>",
+   "\t\t<i>총 분노 평가치:</i> <<print $avery_mansion.rage.assess>>"
+  ],
+  "new_en": [
+   "\t<<if $debug>>",
+   "\t\t<i>Total rage assess:</i> <<print $avery_mansion.rage.assess>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<else>>",
+   "\t\t\t\"Long day,\" <<he>> says, managing a weak smile."
+  ],
+  "old_kr": [
+   "\t\t<<else>>",
+   "\t\t\t\"긴 하루였어,\" <<he>>【이가】 억지로 희미한 미소를 지으며 말한다."
+  ],
+  "new_en": [
+   "\t\t<<elseif Time.weekDay isnot 1 and Time.weekDay isnot 7 and Time.hour gt 9>>",
+   "\t\t\t\"Long day,\" <<he>> says, managing a weak smile."
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYou hear the front gates rattle open, followed by a car driving through. It enters the garage, and a car door slams.",
+   "\t\t\t<<if Time.weekDay isnot 1>>",
+   "\t\t\t\tAvery is home from work."
+  ],
+  "old_kr": [
+   "\t\t\t정문이 덜컥거리며 열리는 소리가 들리더니, 차 한 대가 들어온다. 차는 차고 안으로 들어가고, 쾅 하고 차 문 닫히는 소리가 난다.",
+   "\t\t\t<<if Time.weekDay isnot 1>>",
+   "\t\t\t\t에이버리가 퇴근하고 돌아왔다."
+  ],
+  "new_en": [
+   "\t\t\tYou hear the front gates rattle open, followed by a car driving through. It enters the garage, and a car door slams.",
+   "\t\t\t<<if Time.weekDay isnot 1 and Time.weekDay isnot 7>>",
+   "\t\t\t\tAvery is home from work."
+  ],
+  "context": "\t\t<<elseif _avery_interrupt is \"work\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $avery_valentines and $avery_valentines.ready and !$avery_valentines.done and Time.monthDay is 14>>",
+   "\t\t\t\t\t<<icon \"avery-car.png\">><<link [[Valentine's Date|Avery Valentines]]>><<endevent>><</link>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $avery_valentines and $avery_valentines.ready and !$avery_valentines.done and Time.monthDay is 14>>",
+   "\t\t\t\t\t<<icon \"avery-car.png\">><<link [[발렌타인 데이트|Avery Valentines]]>><<endevent>><</link>>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $avery_valentines?.ready and !$avery_valentines.done and Time.monthDay is 14>>",
+   "\t\t\t\t\t<<icon \"avery-car.png\">><<link [[Valentine's Date|Avery Valentines]]>><<endevent>><</link>>"
+  ],
+  "context": "\t\t\t<<if $bus is \"avery_garage\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $debug>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<if $debug>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\t<<if $transformationParts.traits.chase isnot \"disabled\">>",
+   "\t\tYour heart races. <span class=\"green\">The thrill of the chase invigorates you.</span> <<lstress>><<garousal>><<stress -8>><<arousal 200>><<transform fox 1>>",
+   "\t<</if>>",
+   "\t<br><br>",
+   "\t"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t\t<<if !$daily.avery.bathroom_peek and ![\"Mansion Bathroom\", \"Mansion Bathe\", \"Mansion Brush\", \"Mansion Talk Chat 2\", \"Mansion Talk Leave\"].includes($passagePrev) and random(1, 4) is 4>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t\t<<if !$daily.avery.bathroom_peek and ![\"Mansion Bathroom\", \"Mansion Bathe\", \"Mansion Brush\", \"Mansion Talk Chat 2\", \"Mansion Talk Leave\", \"Mansion Talk Flirt\"].includes($passagePrev) and random(1, 4) is 4>>"
+  ],
+  "context": "\t\t\t\t\t<<if !$daily.avery.morning_bath>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $debug>>"
+  ],
+  "context": "\t\t\t\t<br><br>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $_avery_present is true and $avery_valentines and $avery_valentines.invite and !$avery_valentines.ready and Time.monthName is \"February\" and Time.monthDay is 14 and Time.hour gte 21>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $_avery_present is true and $avery_valentines?.invite and !$avery_valentines.ready and Time.monthName is \"February\" and Time.monthDay is 14 and Time.hour gte 21>>"
+  ],
+  "context": "\t\t<<set _avery_interrupt to false>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $_avery_present is true and $avery_mansion.schedule is \"return\" and !($avery_valentines and $avery_valentines.invite and Time.monthName is \"February\" and Time.monthDay is 14 and Time.hour gte 21)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $_avery_present is true and $avery_mansion.schedule is \"return\" and !($avery_valentines?.invite and Time.monthName is \"February\" and Time.monthDay is 14 and Time.hour gte 21)>>"
+  ],
+  "context": "\t\t<<set _avery_interrupt to \"injury\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<unset $speechfallentransform>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<unset $speechFallenTransform>>"
+  ],
+  "context": "\t<<unset $avery_valentines_vow>>"
+ }
+]

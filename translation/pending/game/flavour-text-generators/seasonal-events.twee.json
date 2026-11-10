@@ -1,0 +1,153 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<addinlineevent \"winter_anywhere_1\">>",
+   "\t\t\t\t\tA brutally cold wind surges. You hug yourself for warmth until it dies down. <<stress 3>><<gstress>>",
+   "\t\t\t\t<</addinlineevent>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<addinlineevent \"winter_anywhere_1\">>",
+   "\t\t\t\t\t매섭게 차가운 바람이 불어온다. 바람이 잦아들 때까지 팔로 몸을 감싸며 버틴다. <<stress 3>><<gstress>>",
+   "\t\t\t\t<</addinlineevent>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<addinlineevent \"winter_anywhere_1\">>",
+   "\t\t\t\t\t\tA brutally cold wind surges. You hug yourself for warmth until it dies down. <<stress 3>><<gstress>>",
+   "\t\t\t\t\t<</addinlineevent>>"
+  ],
+  "context": "\t\t\t\t<<if Weather.isFreezing>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<dancedifficulty 1 500 true>>",
+   "\t\t\t\t\t\tThe rain-slicked pavement causes you to slip,"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<dancedifficulty 1 500 true>>",
+   "\t\t\t\t\t\t비에 젖어 미끄러운 길에서 넘어질 뻔하지만,"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<dancedifficulty 1 500 true>>",
+   "\t\t\t\t\t\tThe rain-slicked pavement causes you to slip,"
+  ],
+  "context": "\t\t\t\t\t<<addinlineevent \"rain_anystreet_2\" 0.33>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\tYou slip and fall onto a patch of wet grass.",
+   "\t\t\t\t\t\t\t<<if playerIsPregnant() and playerAwareTheyArePregnant()>>",
+   "\t\t\t\t\t\t\t\tYour hands instinctively curl around your <<bellyDescription \"pc\">> to protect it from harm as you fall flat on your ass. You use a nearby bench to safely haul yourself to your feet, careful not to slip again.",
+   "\t\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t\t\tYour bottom is left sore and damp. <<if !$worn.lower.type.includes(\"swim\") and !$worn.lower.type.includes(\"naked\")>><<lowerwet 75>><<elseif $worn.lower.type.includes(\"naked\") and !$worn.under_lower.type.includes(\"swim\") and !$worn.under_lower.type.includes(\"naked\") and !playerChastity()>><<underlowerwet 75>><</if>><<stress 6>><<pain 4>><<gstress>><<gpain>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t당신은 미끄러져 젖은 잔디 위로 넘어지고 만다.",
+   "\t\t\t\t\t\t\t<<if playerIsPregnant() and playerAwareTheyArePregnant()>>",
+   "\t\t\t\t\t\t\t\t엉덩방아를 찧으면서 당신의 두 손은 피해를 막고자 본능적으로 <<bellyDescription \"pc\">>【을를】 감싼다. 다시 미끄러지지 않도록 조심하며 근처의 벤치를 짚고 일어선다.",
+   "\t\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t\t\t엉덩이가 아프고 축축해진다. <<if !$worn.lower.type.includes(\"swim\") and !$worn.lower.type.includes(\"naked\")>><<lowerwet 75>><<elseif $worn.lower.type.includes(\"naked\") and !$worn.under_lower.type.includes(\"swim\") and !$worn.under_lower.type.includes(\"naked\") and !playerChastity()>><<underlowerwet 75>><</if>><<stress 6>><<pain 4>><<gstress>><<gpain>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\tYou slip and fall onto a patch of wet grass.",
+   "\t\t\t\t\t\t<<if playerIsPregnant() and playerAwareTheyArePregnant()>>",
+   "\t\t\t\t\t\t\tYour hands instinctively curl around your <<bellyDescription \"pc\">> to protect it from harm as you fall flat on your ass. You use a nearby bench to safely haul yourself to your feet, careful not to slip again.",
+   "\t\t\t\t\t\t<</if>>",
+   "\t\t\t\t\t\tYour bottom is left sore and damp. <<if !$worn.lower.type.includes(\"swim\") and !$worn.lower.type.includes(\"naked\")>><<lowerwet 75>><<elseif $worn.lower.type.includes(\"naked\") and !$worn.under_lower.type.includes(\"swim\") and !$worn.under_lower.type.includes(\"naked\") and !playerChastity()>><<underlowerwet 75>><</if>><<stress 6>><<pain 4>><<gstress>><<gpain>>"
+  ],
+  "context": "\t\t\t\t\t<<addinlineevent \"rain_park_3\" 0.5>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\t<<beastNEWinit 2 dog>>",
+   "\t\t\t\t\t\t\tYou see a pair of <<if $monster is 1>>dogpeople<<else>>dogs<</if>> eating a pile of spaghetti together next to a trash can. Romantic Italian music plays from a nearby building. You shake your head and leave. <<stress -24>><<lllstress>>",
+   "\t\t\t\t\t\t\t<<endevent>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t<<beastNEWinit 2 dog>>",
+   "\t\t\t\t\t\t\t쓰레기통 옆에서 한 쌍의 <<if $monster is 1>>개 수인<<else>>개<</if>>들이 파스타 한 무더기를 같이 먹고 있는 것을 본다. 근처 건물에서는 로맨틱한 이탈리아 음악이 흘러나온다. 당신은 고개를 가로저으며 그곳을 뜬다. <<stress -24>><<lllstress>>",
+   "\t\t\t\t\t\t\t<<endevent>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t\t<<beastNEWinit 2 dog>>",
+   "\t\t\t\t\t\t\t\tYou see a pair of <<if $monster is 1>>dogpeople<<else>>dogs<</if>> eating a pile of spaghetti together next to a trash can. Romantic Italian music plays from a nearby building. You shake your head and leave. <<stress -24>><<lllstress>>",
+   "\t\t\t\t\t\t\t\t<<endevent>>"
+  ],
+  "context": "\t\t\t\t\t\t\t<<addinlineevent \"spring_anyalley_3\" 0.1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<default>>",
+   "\t\t\t<span class=\"red\">ERROR: You have somehow managed to pass beyond the concepts of time and weather. Please inform Vrelnir unless you just used a cheat.</span>"
+  ],
+  "old_kr": [
+   "\t\t<<default>>",
+   "\t\t\t<span class=\"red\">ERROR: 당신은 어떤 식으로든 시간과 날씨의 개념을 뛰어넘었습니다. 치트를 쓴 게 아니라면 Vrelnir에게 제보해 주세요.</span>"
+  ],
+  "new_en": [
+   "\t\t\t<<default>>",
+   "\t\t\t<span class=\"red\">ERROR: You have somehow managed to pass beyond the concepts of time and weather. Please inform Vrelnir unless you just used a cheat.</span>"
+  ],
+  "context": "\t\t\t<</switch>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if Weather.bloodMoon and !Weather.isOvercast>>",
+   "\t\t\t\t\t\t<<bloodmoonTouristParkWidget>>",
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<<case \"park\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if Weather.bloodMoon and !Weather.isOvercast>>",
+   "\t\t\t\t\t\t<<bloodmoonTouristParkWidget>>",
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<<case \"park\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if Weather.bloodMoon and !Weather.isOvercast>>",
+   "\t\t\t\t\t\t<<bloodmoonTouristParkWidget>>",
+   "\t\t\t\t\t<</if>>"
+  ],
+  "context": "\t\t\t\t<<case \"park\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "",
+   "<<widget \"bloodmoonTouristParkWidget\">>",
+   "\t<<addinlineevent \"bloodmoonTouristPark\" 15>>",
+   "\t\t<<if random(0,3) is 0>>",
+   "\t\t\t<<bloodmoonTourist1>>",
+   "\t\t<<elseif random(0,3) is 1>>",
+   "\t\t\t<<bloodmoonTourist2>>",
+   "\t\t<<elseif random(0,3) is 2>>",
+   "\t\t\t<<bloodmoonTourist3>>",
+   "\t\t<<else>>",
+   "\t\t\t<<bloodmoonTourist4>>",
+   "\t\t<</if>>",
+   "\t<</addinlineevent>>",
+   "<</widget>>"
+  ],
+  "context": "<</widget>>"
+ }
+]

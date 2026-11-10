@@ -1,0 +1,31 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<link [[Throw the fish at the fox|Fishing Moor Fox Angry Feed]]>><<endevent>><</link>>",
+   "\t\t<<if $settings.bestialityEnabled>>"
+  ],
+  "old_kr": [
+   "\t\t<<link [[여우에게 물고기를 던진다|Fishing Moor Fox Angry Feed]]>><<endevent>><</link>>",
+   "\t\t<<if $settings.bestialityEnabled>>"
+  ],
+  "new_en": [
+   "\t\t<<link [[Throw the fish at the fox|Fishing Moor Fox Angry Feed]]>><<endevent>><</link>>",
+   "\t\t<<if animalSexEnabledForType(\"fox\")>>"
+  ],
+  "context": "\t<<if _foxLunges>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tThe <<person2>><<personsimple>> clicks <<his>> tongue sympathetically. \"Nearly had it.\" "
+  ],
+  "old_kr": [
+   "\t\t\t<<person2>><<personsimple>>【은는】 안타까운 듯 혀를 찬다. \"거의 다 잡았었는데.\" "
+  ],
+  "new_en": [
+   "\t\t\tThe <<person2>><<personsimple>> clicks <<his>> tongue sympathetically. \"Nearly had it.\""
+  ],
+  "context": "\t\t<<case 2>>"
+ }
+]

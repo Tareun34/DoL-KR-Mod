@@ -1,0 +1,144 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tYou carry the sodden <<= $clothingItem.item.name>> over to a bin at the edge of the sand and throw <<= $clothingItem.item.word is \"n\" ? \"them\" : \"it\">> away."
+  ],
+  "old_kr": [
+   "\t\t당신은 흠뻑 젖은 <<= $clothingItem.item.name>>【을를】 들고 모래사장 가장자리에 있는 쓰레기통으로 가 버린다."
+  ],
+  "new_en": [
+   "\t\tYou carry the sodden <<= $clothingItem.item.name>> over to a bin and throw <<= $clothingItem.item.word is \"n\" ? \"them\" : \"it\">> away."
+  ],
+  "context": "\t<<elseif $fishingAmbientOverride is \"tossClothing\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<addinlineevent \"bite\" fishingCatchEventWeight(\"fishingBeach\", 10)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<addinlineevent \"bite\" `fishingCatchEventWeight(\"fishingBeach\", 10)`>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<addinlineevent \"fisherExposedAttack\" fishingDangerEventWeight($daily.fishing.fishingBeach.fisherOgle)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addinlineevent \"fisherExposedAttack\" `fishingDangerEventWeight($daily.fishing.fishingBeach.fisherOgle)`>>"
+  ],
+  "context": "<<if $daily.fishing.fishingBeach.fisher.phase is \"fishing\" and fishingHasMinutesPassedSinceNpcArrival(60) and $exposed gte 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<addinlineevent \"exposedNoticed\" fishingDangerEventWeight(1)>>",
+   "\t\t<<beachex1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addinlineevent \"exposedNoticed\" `fishingDangerEventWeight(1)`>>",
+   "\t\t<<beachExposedNoticed>>"
+  ],
+  "context": "<<if $exposed gte 1 and Weather.dayState is \"day\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<addinlineevent \"exposedMolestation\" fishingDangerEventWeight(1)>>",
+   "\t\t<<beachex2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addinlineevent \"exposedMolestation\" `fishingDangerEventWeight(1)`>>",
+   "\t\t<<beachExposedMolestation>>"
+  ],
+  "context": "\t<</addinlineevent>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<beachday4>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<beachDayWind>>"
+  ],
+  "context": "<<addinlineevent \"beachWind\" .2>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<addinlineevent \"beachDog\" fishingDangerEventWeight(0.75)>>",
+   "\t\t<<beachday2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addinlineevent \"beachDog\" `fishingDangerEventWeight(0.75)`>>",
+   "\t\t<<beachDayDogTug>>"
+  ],
+  "context": "<<if [undefined, \"finished\"].includes($daily.fishing.fishingBeach.fisher.phase) and !$worn.lower.type.includes(\"naked\")>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<addinlineevent \"beachMolestation\" fishingDangerEventWeight(0.75)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<addinlineevent \"beachMolestation\" `fishingDangerEventWeight(0.75)`>>"
+  ],
+  "context": "\t<<if [undefined, \"finished\"].includes($daily.fishing.fishingBeach.fisher.phase)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<beachday3>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<beachDayParent>>"
+  ],
+  "context": "\t<<addinlineevent \"beachParent\" 1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<addinlineevent \"nightDog\" fishingDangerEventWeight(0.75)>>",
+   "\t\t<<beachnight1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addinlineevent \"nightDog\" `fishingDangerEventWeight(0.75)`>>",
+   "\t\t<<beachNightDog>>"
+  ],
+  "context": "<<if Weather.dayState is \"night\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<addinlineevent \"beachNightTentacles\" fishingDangerEventWeight(0.75)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<addinlineevent \"beachNightTentacles\" `fishingDangerEventWeight(0.75)`>>"
+  ],
+  "context": "\t<</addinlineevent>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   ":: Widgets Fishing Beach Wait Flavor [widget]"
+  ],
+  "old_kr": [],
+  "new_en": [
+   ":: Widgets Fishing Beach Wait Flavour [widget]"
+  ],
+  "context": ""
+ }
+]

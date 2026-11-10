@@ -1,0 +1,3795 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 0,",
+   "\t\t\tname: \"red rose\",",
+   "\t\t\tsingular: \"red rose\",",
+   "\t\t\tplural: \"red roses\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 0,",
+   "\t\t\tname: \"붉은 장미\",",
+   "\t\t\tsingular: \"붉은 장미\",",
+   "\t\t\tcounter: \"송이\",",
+   "\t\t\tplural: \"붉은 장미\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"red rose\",",
+   "\t\t\tsingular: \"red rose\",",
+   "\t\t\tplural: \"red roses\","
+  ],
+  "context": "\t\tred_rose: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 1,",
+   "\t\t\tname: \"white rose\",",
+   "\t\t\tsingular: \"white rose\",",
+   "\t\t\tplural: \"white roses\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 1,",
+   "\t\t\tname: \"하얀 장미\",",
+   "\t\t\tsingular: \"하얀 장미\",",
+   "\t\t\tcounter: \"송이\",",
+   "\t\t\tplural: \"하얀 장미\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"white rose\",",
+   "\t\t\tsingular: \"white rose\",",
+   "\t\t\tplural: \"white roses\","
+  ],
+  "context": "\t\twhite_rose: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 2,",
+   "\t\t\tname: \"orchid\",",
+   "\t\t\tsingular: \"orchid\",",
+   "\t\t\tplural: \"orchids\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 2,",
+   "\t\t\tname: \"난초\",",
+   "\t\t\tsingular: \"난초\",",
+   "\t\t\tcounter: \"송이\",",
+   "\t\t\tplural: \"난초\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"orchid\",",
+   "\t\t\tsingular: \"orchid\",",
+   "\t\t\tplural: \"orchids\","
+  ],
+  "context": "\t\torchid: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 3,",
+   "\t\t\tname: \"daisy\",",
+   "\t\t\tsingular: \"daisy\",",
+   "\t\t\tplural: \"daisies\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 3,",
+   "\t\t\tname: \"데이지\",",
+   "\t\t\tsingular: \"데이지\",",
+   "\t\t\tcounter: \"송이\",",
+   "\t\t\tplural: \"데이지\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"daisy\",",
+   "\t\t\tsingular: \"daisy\",",
+   "\t\t\tplural: \"daisies\","
+  ],
+  "context": "\t\tdaisy: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 4,",
+   "\t\t\tname: \"tulip\",",
+   "\t\t\tsingular: \"tulip\",",
+   "\t\t\tplural: \"tulips\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 4,",
+   "\t\t\tname: \"튤립\",",
+   "\t\t\tsingular: \"튤립\",",
+   "\t\t\tcounter: \"송이\",",
+   "\t\t\tplural: \"튤립\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"tulip\",",
+   "\t\t\tsingular: \"tulip\",",
+   "\t\t\tplural: \"tulips\","
+  ],
+  "context": "\t\ttulip: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 5,",
+   "\t\t\tname: \"lotus\",",
+   "\t\t\tsingular: \"lotus\",",
+   "\t\t\tplural: \"lotuses\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 5,",
+   "\t\t\tname: \"연꽃\",",
+   "\t\t\tsingular: \"연꽃\",",
+   "\t\t\tcounter: \"송이\",",
+   "\t\t\tplural: \"연꽃\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"lotus\",",
+   "\t\t\tsingular: \"lotus\",",
+   "\t\t\tplural: \"lotuses\","
+  ],
+  "context": "\t\tlotus: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 6,",
+   "\t\t\tname: \"lily\",",
+   "\t\t\tsingular: \"lily\",",
+   "\t\t\tplural: \"lilies\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 6,",
+   "\t\t\tname: \"백합\",",
+   "\t\t\tsingular: \"백합\",",
+   "\t\t\tcounter: \"송이\",",
+   "\t\t\tplural: \"백합\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"lily\",",
+   "\t\t\tsingular: \"lily\",",
+   "\t\t\tplural: \"lilies\","
+  ],
+  "context": "\t\tlily: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 7,",
+   "\t\t\tname: \"poppy\",",
+   "\t\t\tsingular: \"poppy\",",
+   "\t\t\tplural: \"poppies\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 7,",
+   "\t\t\tname: \"양귀비\",",
+   "\t\t\tsingular: \"양귀비\",",
+   "\t\t\tcounter: \"송이\",",
+   "\t\t\tplural: \"양귀비\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"poppy\",",
+   "\t\t\tsingular: \"poppy\",",
+   "\t\t\tplural: \"poppies\","
+  ],
+  "context": "\t\tpoppy: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 8,",
+   "\t\t\tname: \"apple\",",
+   "\t\t\tsingular: \"apple\",",
+   "\t\t\tplural: \"apples\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 8,",
+   "\t\t\tname: \"사과\",",
+   "\t\t\tsingular: \"사과\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"사과\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"apple\",",
+   "\t\t\tsingular: \"apple\",",
+   "\t\t\tplural: \"apples\","
+  ],
+  "context": "\t\tapple: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 9,",
+   "\t\t\tname: \"orange\",",
+   "\t\t\tsingular: \"orange\",",
+   "\t\t\tplural: \"oranges\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 9,",
+   "\t\t\tname: \"오렌지\",",
+   "\t\t\tsingular: \"오렌지\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"오렌지\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"orange\",",
+   "\t\t\tsingular: \"orange\",",
+   "\t\t\tplural: \"oranges\","
+  ],
+  "context": "\t\torange: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 10,",
+   "\t\t\tname: \"banana\",",
+   "\t\t\tsingular: \"banana\",",
+   "\t\t\tplural: \"bananas\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 10,",
+   "\t\t\tname: \"바나나\",",
+   "\t\t\tsingular: \"바나나\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"바나나\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"banana\",",
+   "\t\t\tsingular: \"banana\",",
+   "\t\t\tplural: \"bananas\","
+  ],
+  "context": "\t\tbanana: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 11,",
+   "\t\t\tname: \"lemon\",",
+   "\t\t\tsingular: \"lemon\",",
+   "\t\t\tplural: \"lemons\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 11,",
+   "\t\t\tname: \"레몬\",",
+   "\t\t\tsingular: \"레몬\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"레몬\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"lemon\",",
+   "\t\t\tsingular: \"lemon\",",
+   "\t\t\tplural: \"lemons\","
+  ],
+  "context": "\t\tlemon: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 12,",
+   "\t\t\tname: \"blood lemon\",",
+   "\t\t\tsingular: \"blood lemon\",",
+   "\t\t\tplural: \"blood lemons\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 12,",
+   "\t\t\tname: \"핏빛 레몬\",",
+   "\t\t\tsingular: \"핏빛 레몬\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"핏빛 레몬\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"blood lemon\",",
+   "\t\t\tsingular: \"blood lemon\",",
+   "\t\t\tplural: \"blood lemons\","
+  ],
+  "context": "\t\tblood_lemon: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 13,",
+   "\t\t\tname: \"pear\",",
+   "\t\t\tsingular: \"pear\",",
+   "\t\t\tplural: \"pears\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 13,",
+   "\t\t\tname: \"배\",",
+   "\t\t\tsingular: \"배\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"배\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"pear\",",
+   "\t\t\tsingular: \"pear\",",
+   "\t\t\tplural: \"pears\","
+  ],
+  "context": "\t\tpear: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 14,",
+   "\t\t\tname: \"strawberry\",",
+   "\t\t\tsingular: \"strawberry\",",
+   "\t\t\tplural: \"strawberries\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 14,",
+   "\t\t\tname: \"딸기\",",
+   "\t\t\tsingular: \"딸기\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"딸기\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"strawberry\",",
+   "\t\t\tsingular: \"strawberry\",",
+   "\t\t\tplural: \"strawberries\","
+  ],
+  "context": "\t\tstrawberry: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 15,",
+   "\t\t\tname: \"peach\",",
+   "\t\t\tsingular: \"peach\",",
+   "\t\t\tplural: \"peaches\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 15,",
+   "\t\t\tname: \"복숭아\",",
+   "\t\t\tsingular: \"복숭아\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"복숭아\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"peach\",",
+   "\t\t\tsingular: \"peach\",",
+   "\t\t\tplural: \"peaches\","
+  ],
+  "context": "\t\tpeach: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 16,",
+   "\t\t\tname: \"plum\",",
+   "\t\t\tsingular: \"plum\",",
+   "\t\t\tplural: \"plums\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 16,",
+   "\t\t\tname: \"자두\",",
+   "\t\t\tsingular: \"자두\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"자두\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"plum\",",
+   "\t\t\tsingular: \"plum\",",
+   "\t\t\tplural: \"plums\","
+  ],
+  "context": "\t\tplum: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 17,",
+   "\t\t\tname: \"mushroom\",",
+   "\t\t\tsingular: \"mushroom\",",
+   "\t\t\tplural: \"mushrooms\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 17,",
+   "\t\t\tname: \"버섯\",",
+   "\t\t\tsingular: \"버섯\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"버섯\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"mushroom\",",
+   "\t\t\tsingular: \"mushroom\",",
+   "\t\t\tplural: \"mushrooms\","
+  ],
+  "context": "\t\tmushroom: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 18,",
+   "\t\t\tname: \"wolfshroom\",",
+   "\t\t\tsingular: \"wolfshroom\",",
+   "\t\t\tplural: \"wolfshrooms\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 18,",
+   "\t\t\tname: \"늑대버섯\",",
+   "\t\t\tsingular: \"늑대버섯\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"늑대버섯\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"wolfshroom\",",
+   "\t\t\tsingular: \"wolfshroom\",",
+   "\t\t\tplural: \"wolfshrooms\","
+  ],
+  "context": "\t\twolfshroom: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 19,",
+   "\t\t\tname: \"wild honeycomb\",",
+   "\t\t\tsingular: \"wild honeycomb\",",
+   "\t\t\tplural: \"wild honeycombs\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 19,",
+   "\t\t\tname: \"야생 벌집\",",
+   "\t\t\tsingular: \"야생 벌집\",",
+   "\t\t\tcounter: \"통\",",
+   "\t\t\tplural: \"야생 벌집\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"wild honeycomb\",",
+   "\t\t\tsingular: \"wild honeycomb\",",
+   "\t\t\tplural: \"wild honeycombs\","
+  ],
+  "context": "\t\twild_honeycomb: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 20,",
+   "\t\t\tname: \"wild carrot\",",
+   "\t\t\tsingular: \"wild carrot\",",
+   "\t\t\tplural: \"carrots\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 20,",
+   "\t\t\tname: \"야생 당근\",",
+   "\t\t\tsingular: \"야생 당근\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"야생 당근\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"wild carrot\",",
+   "\t\t\tsingular: \"wild carrot\",",
+   "\t\t\tplural: \"carrots\","
+  ],
+  "context": "\t\twild_carrot: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 21,",
+   "\t\t\tname: \"onion\",",
+   "\t\t\tsingular: \"onion\",",
+   "\t\t\tplural: \"onions\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 21,",
+   "\t\t\tname: \"양파\",",
+   "\t\t\tsingular: \"양파\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"양파\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"onion\",",
+   "\t\t\tsingular: \"onion\",",
+   "\t\t\tplural: \"onions\","
+  ],
+  "context": "\t\tonion: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 22,",
+   "\t\t\tname: \"garlic bulb\",",
+   "\t\t\tsingular: \"garlic bulb\",",
+   "\t\t\tplural: \"garlic bulbs\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 22,",
+   "\t\t\tname: \"마늘\",",
+   "\t\t\tsingular: \"마늘\",",
+   "\t\t\tcounter: \"통\",",
+   "\t\t\tplural: \"마늘\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"garlic bulb\",",
+   "\t\t\tsingular: \"garlic bulb\",",
+   "\t\t\tplural: \"garlic bulbs\","
+  ],
+  "context": "\t\tgarlic_bulb: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 23,",
+   "\t\t\tname: \"potato\",",
+   "\t\t\tsingular: \"potato\",",
+   "\t\t\tplural: \"potatoes\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 23,",
+   "\t\t\tname: \"감자\",",
+   "\t\t\tsingular: \"감자\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"감자\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"potato\",",
+   "\t\t\tsingular: \"potato\",",
+   "\t\t\tplural: \"potatoes\","
+  ],
+  "context": "\t\tpotato: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 24,",
+   "\t\t\tname: \"strange flower\",",
+   "\t\t\tsingular: \"strange flower\",",
+   "\t\t\tplural: \"strange flowers\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 24,",
+   "\t\t\tname: \"이상한 꽃\",",
+   "\t\t\tsingular: \"이상한 꽃\",",
+   "\t\t\tcounter: \"송이\",",
+   "\t\t\tplural: \"이상한 꽃\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"strange flower\",",
+   "\t\t\tsingular: \"strange flower\",",
+   "\t\t\tplural: \"strange flowers\","
+  ],
+  "context": "\t\tstrange_flower: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 25,",
+   "\t\t\tname: \"truffle\",",
+   "\t\t\tsingular: \"truffle\",",
+   "\t\t\tplural: \"truffles\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 25,",
+   "\t\t\tname: \"송로버섯\",",
+   "\t\t\tsingular: \"송로버섯\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"송로버섯\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"truffle\",",
+   "\t\t\tsingular: \"truffle\",",
+   "\t\t\tplural: \"truffles\","
+  ],
+  "context": "\t\ttruffle: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 26,",
+   "\t\t\tname: \"bottle of milk\",",
+   "\t\t\tsingular: \"bottle of milk\",",
+   "\t\t\tplural: \"bottles of milk\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 26,",
+   "\t\t\tname: \"우유\",",
+   "\t\t\tsingular: \"우유\",",
+   "\t\t\tcounter: \"병\",",
+   "\t\t\tplural: \"우유\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"bottle of milk\",",
+   "\t\t\tsingular: \"bottle of milk\",",
+   "\t\t\tplural: \"bottles of milk\","
+  ],
+  "context": "\t\tbottle_of_milk: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 27,",
+   "\t\t\tname: \"chicken egg\",",
+   "\t\t\tsingular: \"chicken egg\",",
+   "\t\t\tplural: \"chicken eggs\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 27,",
+   "\t\t\tname: \"달걀\",",
+   "\t\t\tsingular: \"달걀\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"달걀\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"chicken egg\",",
+   "\t\t\tsingular: \"chicken egg\",",
+   "\t\t\tplural: \"chicken eggs\","
+  ],
+  "context": "\t\tchicken_egg: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 28,",
+   "\t\t\tname: \"bottle of breast milk\",",
+   "\t\t\tsingular: \"bottle of breast milk\",",
+   "\t\t\tplural: \"bottles of breast milk\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 28,",
+   "\t\t\tname: \"모유\",",
+   "\t\t\tsingular: \"모유\",",
+   "\t\t\tcounter: \"병\",",
+   "\t\t\tplural: \"모유\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"bottle of breast milk\",",
+   "\t\t\tsingular: \"bottle of breast milk\",",
+   "\t\t\tplural: \"bottles of breast milk\","
+  ],
+  "context": "\t\tbottle_of_breast_milk: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 29,",
+   "\t\t\tname: \"bottle of semen\",",
+   "\t\t\tsingular: \"bottle of semen\",",
+   "\t\t\tplural: \"bottles of semen\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 29,",
+   "\t\t\tname: \"정액\",",
+   "\t\t\tsingular: \"정액\",",
+   "\t\t\tcounter: \"병\",",
+   "\t\t\tplural: \"정액\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"bottle of semen\",",
+   "\t\t\tsingular: \"bottle of semen\",",
+   "\t\t\tplural: \"bottles of semen\","
+  ],
+  "context": "\t\tbottle_of_semen: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 30,",
+   "\t\t\tname: \"cabbage\",",
+   "\t\t\tsingular: \"cabbage\",",
+   "\t\t\tplural: \"cabbages\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 30,",
+   "\t\t\tname: \"양배추\",",
+   "\t\t\tsingular: \"양배추\",",
+   "\t\t\tcounter: \"통\",",
+   "\t\t\tplural: \"양배추\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"cabbage\",",
+   "\t\t\tsingular: \"cabbage\",",
+   "\t\t\tplural: \"cabbages\","
+  ],
+  "context": "\t\tcabbage: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 31,",
+   "\t\t\tname: \"turnip\",",
+   "\t\t\tsingular: \"turnip\",",
+   "\t\t\tplural: \"turnips\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 31,",
+   "\t\t\tname: \"순무\",",
+   "\t\t\tsingular: \"순무\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"순무\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"turnip\",",
+   "\t\t\tsingular: \"turnip\",",
+   "\t\t\tplural: \"turnips\","
+  ],
+  "context": "\t\tturnip: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 32,",
+   "\t\t\tname: \"broccoli\",",
+   "\t\t\tsingular: \"broccoli\",",
+   "\t\t\tplural: \"broccoli\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 32,",
+   "\t\t\tname: \"브로콜리\",",
+   "\t\t\tsingular: \"브로콜리\",",
+   "\t\t\tcounter: \"송이\",",
+   "\t\t\tplural: \"브로콜리\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"broccoli\",",
+   "\t\t\tsingular: \"broccoli\",",
+   "\t\t\tplural: \"broccoli\","
+  ],
+  "context": "\t\tbroccoli: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 33,",
+   "\t\t\tname: \"ghostshroom\",",
+   "\t\t\tsingular: \"ghostshroom\",",
+   "\t\t\tplural: \"ghostshrooms\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 33,",
+   "\t\t\tname: \"유령버섯\",",
+   "\t\t\tsingular: \"유령버섯\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"유령버섯\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"ghostshroom\",",
+   "\t\t\tsingular: \"ghostshroom\",",
+   "\t\t\tplural: \"ghostshrooms\","
+  ],
+  "context": "\t\tghostshroom: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 34,",
+   "\t\t\tname: \"blackberry\",",
+   "\t\t\tsingular: \"blackberry\",",
+   "\t\t\tplural: \"blackberries\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 34,",
+   "\t\t\tname: \"블랙베리\",",
+   "\t\t\tsingular: \"블랙베리\",",
+   "\t\t\tcounter: \"알\",",
+   "\t\t\tplural: \"블랙베리\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"blackberry\",",
+   "\t\t\tsingular: \"blackberry\",",
+   "\t\t\tplural: \"blackberries\","
+  ],
+  "context": "\t\tblackberry: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 35,",
+   "\t\t\tname: \"carnation\",",
+   "\t\t\tsingular: \"carnation\",",
+   "\t\t\tplural: \"carnations\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 35,",
+   "\t\t\tname: \"카네이션\",",
+   "\t\t\tsingular: \"카네이션\",",
+   "\t\t\tcounter: \"송이\",",
+   "\t\t\tplural: \"카네이션\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"carnation\",",
+   "\t\t\tsingular: \"carnation\",",
+   "\t\t\tplural: \"carnations\","
+  ],
+  "context": "\t\tcarnation: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 36,",
+   "\t\t\tname: \"bird egg\",",
+   "\t\t\tsingular: \"bird egg\",",
+   "\t\t\tplural: \"bird eggs\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 36,",
+   "\t\t\tname: \"새 알\",",
+   "\t\t\tsingular: \"새 알\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"새 알\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"bird egg\",",
+   "\t\t\tsingular: \"bird egg\",",
+   "\t\t\tplural: \"bird eggs\","
+  ],
+  "context": "\t\tbird_egg: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 37,",
+   "\t\t\tname: \"baby bottle of breast milk\",",
+   "\t\t\tsingular: \"baby bottle of breast milk\",",
+   "\t\t\tplural: \"baby bottles of breast milk\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 37,",
+   "\t\t\tname: \"젖병\",",
+   "\t\t\tsingular: \"젖병\",",
+   "\t\t\tcounter: \"병\",",
+   "\t\t\tplural: \"젖병\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"baby bottle of breast milk\",",
+   "\t\t\tsingular: \"baby bottle of breast milk\",",
+   "\t\t\tplural: \"baby bottles of breast milk\","
+  ],
+  "context": "\t\tbaby_bottle_of_breast_milk: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 38,",
+   "\t\t\tname: \"plumeria\",",
+   "\t\t\tsingular: \"plumeria\",",
+   "\t\t\tplural: \"plumerias\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 38,",
+   "\t\t\tname: \"플루메리아\",",
+   "\t\t\tsingular: \"플루메리아\",",
+   "\t\t\tcounter: \"송이\",",
+   "\t\t\tplural: \"플루메리아\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"plumeria\",",
+   "\t\t\tsingular: \"plumeria\",",
+   "\t\t\tplural: \"plumerias\","
+  ],
+  "context": "\t\tplumeria: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 39,",
+   "\t\t\tname: \"oyster pearl\",",
+   "\t\t\tsingular: \"oyster pearl\",",
+   "\t\t\tplural: \"oyster pearls\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 39,",
+   "\t\t\tname: \"굴 진주\",",
+   "\t\t\tsingular: \"굴 진주\",",
+   "\t\t\tcounter: \"알\",",
+   "\t\t\tplural: \"굴 진주\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"oyster pearl\",",
+   "\t\t\tsingular: \"oyster pearl\",",
+   "\t\t\tplural: \"oyster pearls\","
+  ],
+  "context": "\t\toyster_pearl: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 40,",
+   "\t\t\tname: \"bread\",",
+   "\t\t\tsingular: \"piece of bread\",",
+   "\t\t\tplural: \"pieces of bread\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 40,",
+   "\t\t\tname: \"빵\",",
+   "\t\t\tsingular: \"빵\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"빵\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"bread\",",
+   "\t\t\tsingular: \"piece of bread\",",
+   "\t\t\tplural: \"pieces of bread\","
+  ],
+  "context": "\t\tbread: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 41,",
+   "\t\t\tname: \"flour\",",
+   "\t\t\tsingular: \"spoonful of flour\",",
+   "\t\t\tplural: \"spoonfuls of flour\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 41,",
+   "\t\t\tname: \"밀가루\",",
+   "\t\t\tsingular: \"밀가루\",",
+   "\t\t\tcounter: \"봉지\",",
+   "\t\t\tplural: \"밀가루\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"flour\",",
+   "\t\t\tsingular: \"spoonful of flour\",",
+   "\t\t\tplural: \"spoonfuls of flour\","
+  ],
+  "context": "\t\tflour: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 42,",
+   "\t\t\tname: \"salt\",",
+   "\t\t\tsingular: \"pinch of salt\",",
+   "\t\t\tplural: \"pinches of salt\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 42,",
+   "\t\t\tname: \"소금\",",
+   "\t\t\tsingular: \"소금\",",
+   "\t\t\tcounter: \"봉지\",",
+   "\t\t\tplural: \"소금\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"salt\",",
+   "\t\t\tsingular: \"pinch of salt\",",
+   "\t\t\tplural: \"pinches of salt\","
+  ],
+  "context": "\t\tsalt: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 43,",
+   "\t\t\tname: \"vegetable oil\",",
+   "\t\t\tsingular: \"spoonful of vegetable oil\",",
+   "\t\t\tplural: \"spoonfuls of vegetable oil\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 43,",
+   "\t\t\tname: \"식용유\",",
+   "\t\t\tsingular: \"식용유\",",
+   "\t\t\tcounter: \"병\",",
+   "\t\t\tplural: \"식용유\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"vegetable oil\",",
+   "\t\t\tsingular: \"spoonful of vegetable oil\",",
+   "\t\t\tplural: \"spoonfuls of vegetable oil\","
+  ],
+  "context": "\t\tvegetable_oil: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 44,",
+   "\t\t\tname: \"pizza\",",
+   "\t\t\tsingular: \"pizza\",",
+   "\t\t\tplural: \"pizzas\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 44,",
+   "\t\t\tname: \"피자\",",
+   "\t\t\tsingular: \"피자\",",
+   "\t\t\tcounter: \"판\",",
+   "\t\t\tplural: \"피자\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"pizza\",",
+   "\t\t\tsingular: \"pizza\",",
+   "\t\t\tplural: \"pizzas\","
+  ],
+  "context": "\t\tpizza: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 45,",
+   "\t\t\tname: \"tomato\",",
+   "\t\t\tsingular: \"tomato\",",
+   "\t\t\tplural: \"tomatoes\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 45,",
+   "\t\t\tname: \"토마토\",",
+   "\t\t\tsingular: \"토마토\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"토마토\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"tomato\",",
+   "\t\t\tsingular: \"tomato\",",
+   "\t\t\tplural: \"tomatoes\","
+  ],
+  "context": "\t\ttomato: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 46,",
+   "\t\t\tname: \"cheese\",",
+   "\t\t\tsingular: \"piece of cheese\",",
+   "\t\t\tplural: \"pieces of cheese\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 46,",
+   "\t\t\tname: \"치즈\",",
+   "\t\t\tsingular: \"치즈\",",
+   "\t\t\tcounter: \"덩이\",",
+   "\t\t\tplural: \"치즈\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"cheese\",",
+   "\t\t\tsingular: \"piece of cheese\",",
+   "\t\t\tplural: \"pieces of cheese\","
+  ],
+  "context": "\t\tcheese: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 47,",
+   "\t\t\tname: \"macaroni cheese\",",
+   "\t\t\tsingular: \"serving of macaroni and cheese\",",
+   "\t\t\tplural: \"servings of macaroni and cheese\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 47,",
+   "\t\t\tname: \"마카로니 치즈\",",
+   "\t\t\tsingular: \"마카로니 치즈\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"마카로니 치즈\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"macaroni cheese\",",
+   "\t\t\tsingular: \"serving of macaroni and cheese\",",
+   "\t\t\tplural: \"servings of macaroni and cheese\","
+  ],
+  "context": "\t\tmacaroni_cheese: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 48,",
+   "\t\t\tname: \"pasta\",",
+   "\t\t\tsingular: \"serving of pasta\",",
+   "\t\t\tplural: \"servings of pasta\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 48,",
+   "\t\t\tname: \"파스타\",",
+   "\t\t\tsingular: \"파스타\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"파스타\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"pasta\",",
+   "\t\t\tsingular: \"serving of pasta\",",
+   "\t\t\tplural: \"servings of pasta\","
+  ],
+  "context": "\t\tpasta: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 49,",
+   "\t\t\tname: \"cauliflower cheese\",",
+   "\t\t\tsingular: \"serving of cauliflower cheese\",",
+   "\t\t\tplural: \"servings of cauliflower cheese\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 49,",
+   "\t\t\tname: \"콜리플라워 치즈\",",
+   "\t\t\tsingular: \"콜리플라워 치즈\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"콜리플라워 치즈\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"cauliflower cheese\",",
+   "\t\t\tsingular: \"serving of cauliflower cheese\",",
+   "\t\t\tplural: \"servings of cauliflower cheese\","
+  ],
+  "context": "\t\tcauliflower_cheese: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 50,",
+   "\t\t\tname: \"wheat\",",
+   "\t\t\tsingular: \"cup of wheat\",",
+   "\t\t\tplural: \"cups of wheat\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 50,",
+   "\t\t\tname: \"밀\",",
+   "\t\t\tsingular: \"밀\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"밀\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"wheat\",",
+   "\t\t\tsingular: \"cup of wheat\",",
+   "\t\t\tplural: \"cups of wheat\","
+  ],
+  "context": "\t\twheat: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 51,",
+   "\t\t\tname: \"prawn bisque\",",
+   "\t\t\tsingular: \"serving of prawn bisque\",",
+   "\t\t\tplural: \"servings of prawn bisque\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 51,",
+   "\t\t\tname: \"새우 비스크\",",
+   "\t\t\tsingular: \"새우 비스크\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"새우 비스크\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"prawn bisque\",",
+   "\t\t\tsingular: \"serving of prawn bisque\",",
+   "\t\t\tplural: \"servings of prawn bisque\","
+  ],
+  "context": "\t\tprawn_bisque: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 52,",
+   "\t\t\tname: \"cream\",",
+   "\t\t\tsingular: \"spoonful of cream\",",
+   "\t\t\tplural: \"spoonfuls of cream\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 52,",
+   "\t\t\tname: \"크림\",",
+   "\t\t\tsingular: \"크림\",",
+   "\t\t\tcounter: \"통\",",
+   "\t\t\tplural: \"크림\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"cream\",",
+   "\t\t\tsingular: \"spoonful of cream\",",
+   "\t\t\tplural: \"spoonfuls of cream\","
+  ],
+  "context": "\t\tcream: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 53,",
+   "\t\t\tname: \"chelsea bun\",",
+   "\t\t\tsingular: \"Chelsea bun\",",
+   "\t\t\tplural: \"Chelsea buns\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 53,",
+   "\t\t\tname: \"첼시 번\",",
+   "\t\t\tsingular: \"첼시 번\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"첼시 번\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"chelsea bun\",",
+   "\t\t\tsingular: \"Chelsea bun\",",
+   "\t\t\tplural: \"Chelsea buns\","
+  ],
+  "context": "\t\tchelsea_bun: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 54,",
+   "\t\t\tname: \"honey\",",
+   "\t\t\tsingular: \"spoonful of honey\",",
+   "\t\t\tplural: \"spoonfuls of honey\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 54,",
+   "\t\t\tname: \"꿀\",",
+   "\t\t\tsingular: \"꿀\",",
+   "\t\t\tcounter: \"병\",",
+   "\t\t\tplural: \"꿀\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"honey\",",
+   "\t\t\tsingular: \"spoonful of honey\",",
+   "\t\t\tplural: \"spoonfuls of honey\","
+  ],
+  "context": "\t\thoney: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 55,",
+   "\t\t\tname: \"butter\",",
+   "\t\t\tsingular: \"spoonful of butter\",",
+   "\t\t\tplural: \"spoonfuls of butter\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 55,",
+   "\t\t\tname: \"버터\",",
+   "\t\t\tsingular: \"버터\",",
+   "\t\t\tcounter: \"덩이\",",
+   "\t\t\tplural: \"버터\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"butter\",",
+   "\t\t\tsingular: \"spoonful of butter\",",
+   "\t\t\tplural: \"spoonfuls of butter\","
+  ],
+  "context": "\t\tbutter: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 56,",
+   "\t\t\tname: \"naan bread\",",
+   "\t\t\tsingular: \"piece of naan bread\",",
+   "\t\t\tplural: \"pieces of naan bread\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 56,",
+   "\t\t\tname: \"난\",",
+   "\t\t\tsingular: \"난\",",
+   "\t\t\tcounter: \"장\",",
+   "\t\t\tplural: \"난\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"naan bread\",",
+   "\t\t\tsingular: \"piece of naan bread\",",
+   "\t\t\tplural: \"pieces of naan bread\","
+  ],
+  "context": "\t\tnaan_bread: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 57,",
+   "\t\t\tname: \"pastry\",",
+   "\t\t\tsingular: \"piece of pastry\",",
+   "\t\t\tplural: \"pieces of pastry\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 57,",
+   "\t\t\tname: \"페이스트리\",",
+   "\t\t\tsingular: \"페이스트리\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"페이스트리\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"pastry\",",
+   "\t\t\tsingular: \"piece of pastry\",",
+   "\t\t\tplural: \"pieces of pastry\","
+  ],
+  "context": "\t\tpastry: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 58,",
+   "\t\t\tname: \"quiche\",",
+   "\t\t\tsingular: \"serving of quiche\",",
+   "\t\t\tplural: \"servings of quiche\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 58,",
+   "\t\t\tname: \"키시\",",
+   "\t\t\tsingular: \"키시\",",
+   "\t\t\tcounter: \"판\",",
+   "\t\t\tplural: \"키시\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"quiche\",",
+   "\t\t\tsingular: \"serving of quiche\",",
+   "\t\t\tplural: \"servings of quiche\","
+  ],
+  "context": "\t\tquiche: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 59,",
+   "\t\t\tname: \"bacon\",",
+   "\t\t\tsingular: \"rasher of bacon\",",
+   "\t\t\tplural: \"rashers of bacon\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 59,",
+   "\t\t\tname: \"베이컨\",",
+   "\t\t\tsingular: \"베이컨\",",
+   "\t\t\tcounter: \"장\",",
+   "\t\t\tplural: \"베이컨\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"bacon\",",
+   "\t\t\tsingular: \"rasher of bacon\",",
+   "\t\t\tplural: \"rashers of bacon\","
+  ],
+  "context": "\t\tbacon: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 60,",
+   "\t\t\tname: \"mince pie\",",
+   "\t\t\tsingular: \"mince pie\",",
+   "\t\t\tplural: \"mince pies\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 60,",
+   "\t\t\tname: \"민스 파이\",",
+   "\t\t\tsingular: \"민스 파이\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"민스 파이\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"mince pie\",",
+   "\t\t\tsingular: \"mince pie\",",
+   "\t\t\tplural: \"mince pies\","
+  ],
+  "context": "\t\tmince_pie: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 61,",
+   "\t\t\tname: \"sugar\",",
+   "\t\t\tsingular: \"spoonful of sugar\",",
+   "\t\t\tplural: \"spoonfuls of sugar\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 61,",
+   "\t\t\tname: \"설탕\",",
+   "\t\t\tsingular: \"설탕\",",
+   "\t\t\tcounter: \"봉지\",",
+   "\t\t\tplural: \"설탕\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"sugar\",",
+   "\t\t\tsingular: \"spoonful of sugar\",",
+   "\t\t\tplural: \"spoonfuls of sugar\","
+  ],
+  "context": "\t\tsugar: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 62,",
+   "\t\t\tname: \"sausage roll\",",
+   "\t\t\tsingular: \"sausage roll\",",
+   "\t\t\tplural: \"sausage rolls\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 62,",
+   "\t\t\tname: \"소시지 롤\",",
+   "\t\t\tsingular: \"소시지 롤\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"소시지 롤\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"sausage roll\",",
+   "\t\t\tsingular: \"sausage roll\",",
+   "\t\t\tplural: \"sausage rolls\","
+  ],
+  "context": "\t\tsausage_roll: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 63,",
+   "\t\t\tname: \"sausage\",",
+   "\t\t\tsingular: \"sausage\",",
+   "\t\t\tplural: \"sausages\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 63,",
+   "\t\t\tname: \"소시지\",",
+   "\t\t\tsingular: \"소시지\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"소시지\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"sausage\",",
+   "\t\t\tsingular: \"sausage\",",
+   "\t\t\tplural: \"sausages\","
+  ],
+  "context": "\t\tsausage: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 64,",
+   "\t\t\tname: \"potato pancake\",",
+   "\t\t\tsingular: \"potato pancake\",",
+   "\t\t\tplural: \"potato pancakes\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 64,",
+   "\t\t\tname: \"감자 팬케이크\",",
+   "\t\t\tsingular: \"감자 팬케이크\",",
+   "\t\t\tcounter: \"장\",",
+   "\t\t\tplural: \"감자 팬케이크\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"potato pancake\",",
+   "\t\t\tsingular: \"potato pancake\",",
+   "\t\t\tplural: \"potato pancakes\","
+  ],
+  "context": "\t\tpotato_pancake: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 65,",
+   "\t\t\tname: \"onion bhaji\",",
+   "\t\t\tsingular: \"onion bhaji\",",
+   "\t\t\tplural: \"onion bhajis\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 65,",
+   "\t\t\tname: \"양파 바지\",",
+   "\t\t\tsingular: \"양파 바지\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"양파 바지\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"onion bhaji\",",
+   "\t\t\tsingular: \"onion bhaji\",",
+   "\t\t\tplural: \"onion bhajis\","
+  ],
+  "context": "\t\tonion_bhaji: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 66,",
+   "\t\t\tname: \"chilli pepper\",",
+   "\t\t\tsingular: \"chilli pepper\",",
+   "\t\t\tplural: \"chilli peppers\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 66,",
+   "\t\t\tname: \"고추\",",
+   "\t\t\tsingular: \"고추\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"고추\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"chilli pepper\",",
+   "\t\t\tsingular: \"chilli pepper\",",
+   "\t\t\tplural: \"chilli peppers\","
+  ],
+  "context": "\t\tchilli_pepper: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 67,",
+   "\t\t\tname: \"samosa\",",
+   "\t\t\tsingular: \"samosa\",",
+   "\t\t\tplural: \"samosas\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 67,",
+   "\t\t\tname: \"사모사\",",
+   "\t\t\tsingular: \"사모사\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"사모사\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"samosa\",",
+   "\t\t\tsingular: \"samosa\",",
+   "\t\t\tplural: \"samosas\","
+  ],
+  "context": "\t\tsamosa: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 68,",
+   "\t\t\tname: \"sweet and sour chicken\",",
+   "\t\t\tsingular: \"serving of sweet and sour chicken\",",
+   "\t\t\tplural: \"servings of sweet and sour chicken\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 68,",
+   "\t\t\tname: \"스위트 앤 사워 치킨\",",
+   "\t\t\tsingular: \"스위트 앤 사워 치킨\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"스위트 앤 사워 치킨\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"sweet and sour chicken\",",
+   "\t\t\tsingular: \"serving of sweet and sour chicken\",",
+   "\t\t\tplural: \"servings of sweet and sour chicken\","
+  ],
+  "context": "\t\tsweet_and_sour_chicken: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 69,",
+   "\t\t\tname: \"chicken\",",
+   "\t\t\tsingular: \"serving of chicken\",",
+   "\t\t\tplural: \"servings of chicken\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 69,",
+   "\t\t\tname: \"닭고기\",",
+   "\t\t\tsingular: \"닭고기\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"닭고기\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"chicken\",",
+   "\t\t\tsingular: \"serving of chicken\",",
+   "\t\t\tplural: \"servings of chicken\","
+  ],
+  "context": "\t\tchicken: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 70,",
+   "\t\t\tname: \"pepper\",",
+   "\t\t\tsingular: \"pepper\",",
+   "\t\t\tplural: \"peppers\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 70,",
+   "\t\t\tname: \"피망\",",
+   "\t\t\tsingular: \"피망\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"피망\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"pepper\",",
+   "\t\t\tsingular: \"pepper\",",
+   "\t\t\tplural: \"peppers\","
+  ],
+  "context": "\t\tpepper: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 71,",
+   "\t\t\tname: \"kedgeree\",",
+   "\t\t\tsingular: \"serving of kedgeree\",",
+   "\t\t\tplural: \"servings of kedgeree\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 71,",
+   "\t\t\tname: \"케저리\",",
+   "\t\t\tsingular: \"케저리\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"케저리\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"kedgeree\",",
+   "\t\t\tsingular: \"serving of kedgeree\",",
+   "\t\t\tplural: \"servings of kedgeree\","
+  ],
+  "context": "\t\tkedgeree: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 72,",
+   "\t\t\tname: \"rice\",",
+   "\t\t\tsingular: \"cup of rice\",",
+   "\t\t\tplural: \"cups of rice\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 72,",
+   "\t\t\tname: \"쌀\",",
+   "\t\t\tsingular: \"쌀\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"쌀\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"rice\",",
+   "\t\t\tsingular: \"cup of rice\",",
+   "\t\t\tplural: \"cups of rice\","
+  ],
+  "context": "\t\trice: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 73,",
+   "\t\t\tname: \"haddock\",",
+   "\t\t\tsingular: \"haddock\",",
+   "\t\t\tplural: \"haddock\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 73,",
+   "\t\t\tname: \"해덕대구\",",
+   "\t\t\tsingular: \"해덕대구\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"해덕대구\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"haddock\",",
+   "\t\t\tsingular: \"haddock\",",
+   "\t\t\tplural: \"haddock\","
+  ],
+  "context": "\t\thaddock: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 74,",
+   "\t\t\tname: \"honeyed pork\",",
+   "\t\t\tsingular: \"serving of honeyed pork\",",
+   "\t\t\tplural: \"servings of honeyed pork\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 74,",
+   "\t\t\tname: \"꿀 바른 돼지고기\",",
+   "\t\t\tsingular: \"꿀 바른 돼지고기\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"꿀 바른 돼지고기\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"honeyed pork\",",
+   "\t\t\tsingular: \"serving of honeyed pork\",",
+   "\t\t\tplural: \"servings of honeyed pork\","
+  ],
+  "context": "\t\thoneyed_pork: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 75,",
+   "\t\t\tname: \"beef wellington\",",
+   "\t\t\tsingular: \"serving of beef wellington\",",
+   "\t\t\tplural: \"servings of beef wellington\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 75,",
+   "\t\t\tname: \"비프 웰링턴\",",
+   "\t\t\tsingular: \"비프 웰링턴\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"비프 웰링턴\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"beef wellington\",",
+   "\t\t\tsingular: \"serving of beef wellington\",",
+   "\t\t\tplural: \"servings of beef wellington\","
+  ],
+  "context": "\t\tbeef_wellington: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 76,",
+   "\t\t\tname: \"salmon wellington\",",
+   "\t\t\tsingular: \"serving of salmon wellington\",",
+   "\t\t\tplural: \"servings of salmon wellington\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 76,",
+   "\t\t\tname: \"연어 웰링턴\",",
+   "\t\t\tsingular: \"연어 웰링턴\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"연어 웰링턴\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"salmon wellington\",",
+   "\t\t\tsingular: \"serving of salmon wellington\",",
+   "\t\t\tplural: \"servings of salmon wellington\","
+  ],
+  "context": "\t\tsalmon_wellington: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 77,",
+   "\t\t\tname: \"hamburger\",",
+   "\t\t\tsingular: \"hamburger\",",
+   "\t\t\tplural: \"hamburgers\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 77,",
+   "\t\t\tname: \"햄버거\",",
+   "\t\t\tsingular: \"햄버거\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"햄버거\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"hamburger\",",
+   "\t\t\tsingular: \"hamburger\",",
+   "\t\t\tplural: \"hamburgers\","
+  ],
+  "context": "\t\thamburger: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 78,",
+   "\t\t\tname: \"cheeseburger\",",
+   "\t\t\tsingular: \"cheeseburger\",",
+   "\t\t\tplural: \"cheeseburgers\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 78,",
+   "\t\t\tname: \"치즈버거\",",
+   "\t\t\tsingular: \"치즈버거\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"치즈버거\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"cheeseburger\",",
+   "\t\t\tsingular: \"cheeseburger\",",
+   "\t\t\tplural: \"cheeseburgers\","
+  ],
+  "context": "\t\tcheeseburger: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 79,",
+   "\t\t\tname: \"chips\",",
+   "\t\t\tsingular: \"packet of chips\",",
+   "\t\t\tplural: \"packets of chips\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 79,",
+   "\t\t\tname: \"감자튀김\",",
+   "\t\t\tsingular: \"감자튀김\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"감자튀김\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"chips\",",
+   "\t\t\tsingular: \"packet of chips\",",
+   "\t\t\tplural: \"packets of chips\","
+  ],
+  "context": "\t\tchips: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 80,",
+   "\t\t\tname: \"cheese topped trout\",",
+   "\t\t\tsingular: \"serving of cheese topped trout\",",
+   "\t\t\tplural: \"servings of cheese topped trout\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 80,",
+   "\t\t\tname: \"치즈 얹은 송어\",",
+   "\t\t\tsingular: \"치즈 얹은 송어\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"치즈 얹은 송어\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"cheese topped trout\",",
+   "\t\t\tsingular: \"serving of cheese topped trout\",",
+   "\t\t\tplural: \"servings of cheese topped trout\","
+  ],
+  "context": "\t\tcheese_topped_trout: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 81,",
+   "\t\t\tname: \"salmon\",",
+   "\t\t\tsingular: \"salmon\",",
+   "\t\t\tplural: \"salmon\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 81,",
+   "\t\t\tname: \"연어\",",
+   "\t\t\tsingular: \"연어\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"연어\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"salmon\",",
+   "\t\t\tsingular: \"salmon\",",
+   "\t\t\tplural: \"salmon\","
+  ],
+  "context": "\t\tsalmon: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 82,",
+   "\t\t\tname: \"trout\",",
+   "\t\t\tsingular: \"trout\",",
+   "\t\t\tplural: \"trout\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 82,",
+   "\t\t\tname: \"송어\",",
+   "\t\t\tsingular: \"송어\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"송어\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"trout\",",
+   "\t\t\tsingular: \"trout\",",
+   "\t\t\tplural: \"trout\","
+  ],
+  "context": "\t\ttrout: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 83,",
+   "\t\t\tname: \"spaghetti bolognese\",",
+   "\t\t\tsingular: \"serving of spaghetti bolognese\",",
+   "\t\t\tplural: \"servings of spaghetti bolognese\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 83,",
+   "\t\t\tname: \"스파게티 볼로네제\",",
+   "\t\t\tsingular: \"스파게티 볼로네제\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"스파게티 볼로네제\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"spaghetti bolognese\",",
+   "\t\t\tsingular: \"serving of spaghetti bolognese\",",
+   "\t\t\tplural: \"servings of spaghetti bolognese\","
+  ],
+  "context": "\t\tspaghetti_bolognese: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 84,",
+   "\t\t\tname: \"lasagne\",",
+   "\t\t\tsingular: \"serving of lasagne\",",
+   "\t\t\tplural: \"servings of lasagne\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 84,",
+   "\t\t\tname: \"라자냐\",",
+   "\t\t\tsingular: \"라자냐\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"라자냐\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"lasagne\",",
+   "\t\t\tsingular: \"serving of lasagne\",",
+   "\t\t\tplural: \"servings of lasagne\","
+  ],
+  "context": "\t\tlasagne: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 85,",
+   "\t\t\tname: \"carbonara\",",
+   "\t\t\tsingular: \"serving of carbonara\",",
+   "\t\t\tplural: \"servings of carbonara\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 85,",
+   "\t\t\tname: \"까르보나라\",",
+   "\t\t\tsingular: \"까르보나라\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"까르보나라\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"carbonara\",",
+   "\t\t\tsingular: \"serving of carbonara\",",
+   "\t\t\tplural: \"servings of carbonara\","
+  ],
+  "context": "\t\tcarbonara: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 86,",
+   "\t\t\tname: \"chicken tikka masala\",",
+   "\t\t\tsingular: \"serving of chicken tikka masala\",",
+   "\t\t\tplural: \"servings of chicken tikka masala\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 86,",
+   "\t\t\tname: \"치킨 티카 마살라\",",
+   "\t\t\tsingular: \"치킨 티카 마살라\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"치킨 티카 마살라\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"chicken tikka masala\",",
+   "\t\t\tsingular: \"serving of chicken tikka masala\",",
+   "\t\t\tplural: \"servings of chicken tikka masala\","
+  ],
+  "context": "\t\tchicken_tikka_masala: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 87,",
+   "\t\t\tname: \"chilli con carne\",",
+   "\t\t\tsingular: \"serving of chilli con carne\",",
+   "\t\t\tplural: \"servings of chilli con carne\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 87,",
+   "\t\t\tname: \"칠리 콘 카르네\",",
+   "\t\t\tsingular: \"칠리 콘 카르네\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"칠리 콘 카르네\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"chilli con carne\",",
+   "\t\t\tsingular: \"serving of chilli con carne\",",
+   "\t\t\tplural: \"servings of chilli con carne\","
+  ],
+  "context": "\t\tchilli_con_carne: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 88,",
+   "\t\t\tname: \"rich biscuit\",",
+   "\t\t\tsingular: \"rich biscuit\",",
+   "\t\t\tplural: \"rich biscuits\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 88,",
+   "\t\t\tname: \"리치 비스킷\",",
+   "\t\t\tsingular: \"리치 비스킷\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"리치 비스킷\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"rich biscuit\",",
+   "\t\t\tsingular: \"rich biscuit\",",
+   "\t\t\tplural: \"rich biscuits\","
+  ],
+  "context": "\t\trich_biscuit: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 89,",
+   "\t\t\tname: \"shortbread\",",
+   "\t\t\tsingular: \"piece of shortbread\",",
+   "\t\t\tplural: \"pieces of shortbread\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 89,",
+   "\t\t\tname: \"쇼트브레드\",",
+   "\t\t\tsingular: \"쇼트브레드\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"쇼트브레드\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"shortbread\",",
+   "\t\t\tsingular: \"piece of shortbread\",",
+   "\t\t\tplural: \"pieces of shortbread\","
+  ],
+  "context": "\t\tshortbread: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 90,",
+   "\t\t\tname: \"melting moment\",",
+   "\t\t\tsingular: \"melting moment\",",
+   "\t\t\tplural: \"melting moments\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 90,",
+   "\t\t\tname: \"멜팅 모먼트\",",
+   "\t\t\tsingular: \"멜팅 모먼트\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"멜팅 모먼트\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"melting moment\",",
+   "\t\t\tsingular: \"melting moment\",",
+   "\t\t\tplural: \"melting moments\","
+  ],
+  "context": "\t\tmelting_moment: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 91,",
+   "\t\t\tname: \"choc chip cookie\",",
+   "\t\t\tsingular: \"chocolate chip cookie\",",
+   "\t\t\tplural: \"chocolate chip cookies\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 91,",
+   "\t\t\tname: \"초코칩 쿠키\",",
+   "\t\t\tsingular: \"초코칩 쿠키\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"초코칩 쿠키\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"choc chip cookie\",",
+   "\t\t\tsingular: \"chocolate chip cookie\",",
+   "\t\t\tplural: \"chocolate chip cookies\","
+  ],
+  "context": "\t\tchoc_chip_cookie: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 92,",
+   "\t\t\tname: \"cocoa powder\",",
+   "\t\t\tsingular: \"cup of cocoa powder\",",
+   "\t\t\tplural: \"cups of cocoa powder\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 92,",
+   "\t\t\tname: \"코코아 가루\",",
+   "\t\t\tsingular: \"코코아 가루\",",
+   "\t\t\tcounter: \"통\",",
+   "\t\t\tplural: \"코코아 가루\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"cocoa powder\",",
+   "\t\t\tsingular: \"cup of cocoa powder\",",
+   "\t\t\tplural: \"cups of cocoa powder\","
+  ],
+  "context": "\t\tcocoa_powder: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 93,",
+   "\t\t\tname: \"chocolate\",",
+   "\t\t\tsingular: \"slab of chocolate\",",
+   "\t\t\tplural: \"slabs of chocolate\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 93,",
+   "\t\t\tname: \"초콜릿\",",
+   "\t\t\tsingular: \"초콜릿\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"초콜릿\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"chocolate\",",
+   "\t\t\tsingular: \"slab of chocolate\",",
+   "\t\t\tplural: \"slabs of chocolate\","
+  ],
+  "context": "\t\tchocolate: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 94,",
+   "\t\t\tname: \"apple strudel\",",
+   "\t\t\tsingular: \"apple strudel\",",
+   "\t\t\tplural: \"apple strudels\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 94,",
+   "\t\t\tname: \"애플 스트루델\",",
+   "\t\t\tsingular: \"애플 스트루델\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"애플 스트루델\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"apple strudel\",",
+   "\t\t\tsingular: \"apple strudel\",",
+   "\t\t\tplural: \"apple strudels\","
+  ],
+  "context": "\t\tapple_strudel: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 95,",
+   "\t\t\tname: \"soufflé\",",
+   "\t\t\tsingular: \"soufflé\",",
+   "\t\t\tplural: \"soufflés\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 95,",
+   "\t\t\tname: \"수플레\",",
+   "\t\t\tsingular: \"수플레\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"수플레\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"soufflé\",",
+   "\t\t\tsingular: \"soufflé\",",
+   "\t\t\tplural: \"soufflés\","
+  ],
+  "context": "\t\tsouffle: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 96,",
+   "\t\t\tname: \"tart\",",
+   "\t\t\tsingular: \"tart\",",
+   "\t\t\tplural: \"tarts\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 96,",
+   "\t\t\tname: \"타르트\",",
+   "\t\t\tsingular: \"타르트\",",
+   "\t\t\tcounter: \"판\",",
+   "\t\t\tplural: \"타르트\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"tart\",",
+   "\t\t\tsingular: \"tart\",",
+   "\t\t\tplural: \"tarts\","
+  ],
+  "context": "\t\ttart: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 97,",
+   "\t\t\tname: \"lemon meringue pie\",",
+   "\t\t\tsingular: \"lemon meringue pie\",",
+   "\t\t\tplural: \"lemon meringue pies\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 97,",
+   "\t\t\tname: \"레몬 머랭 파이\",",
+   "\t\t\tsingular: \"레몬 머랭 파이\",",
+   "\t\t\tcounter: \"판\",",
+   "\t\t\tplural: \"레몬 머랭 파이\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"lemon meringue pie\",",
+   "\t\t\tsingular: \"lemon meringue pie\",",
+   "\t\t\tplural: \"lemon meringue pies\","
+  ],
+  "context": "\t\tlemon_meringue_pie: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 98,",
+   "\t\t\tname: \"sponge cake\",",
+   "\t\t\tsingular: \"sponge cake\",",
+   "\t\t\tplural: \"sponge cakes\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 98,",
+   "\t\t\tname: \"스펀지 케이크\",",
+   "\t\t\tsingular: \"스펀지 케이크\",",
+   "\t\t\tcounter: \"판\",",
+   "\t\t\tplural: \"스펀지 케이크\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"sponge cake\",",
+   "\t\t\tsingular: \"sponge cake\",",
+   "\t\t\tplural: \"sponge cakes\","
+  ],
+  "context": "\t\tsponge_cake: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 99,",
+   "\t\t\tname: \"swiss roll\",",
+   "\t\t\tsingular: \"Swiss roll\",",
+   "\t\t\tplural: \"Swiss rolls\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 99,",
+   "\t\t\tname: \"스위스 롤\",",
+   "\t\t\tsingular: \"스위스 롤\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"스위스 롤\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"swiss roll\",",
+   "\t\t\tsingular: \"Swiss roll\",",
+   "\t\t\tplural: \"Swiss rolls\","
+  ],
+  "context": "\t\tswiss_roll: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 100,",
+   "\t\t\tname: \"scone\",",
+   "\t\t\tsingular: \"scone\",",
+   "\t\t\tplural: \"scones\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 100,",
+   "\t\t\tname: \"스콘\",",
+   "\t\t\tsingular: \"스콘\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"스콘\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"scone\",",
+   "\t\t\tsingular: \"scone\",",
+   "\t\t\tplural: \"scones\","
+  ],
+  "context": "\t\tscone: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 101,",
+   "\t\t\tname: \"brownie\",",
+   "\t\t\tsingular: \"brownie\",",
+   "\t\t\tplural: \"brownies\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 101,",
+   "\t\t\tname: \"브라우니\",",
+   "\t\t\tsingular: \"브라우니\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"브라우니\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"brownie\",",
+   "\t\t\tsingular: \"brownie\",",
+   "\t\t\tplural: \"brownies\","
+  ],
+  "context": "\t\tbrownie: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 102,",
+   "\t\t\tname: \"carrot cake\",",
+   "\t\t\tsingular: \"carrot cake\",",
+   "\t\t\tplural: \"carrot cakes\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 102,",
+   "\t\t\tname: \"당근 케이크\",",
+   "\t\t\tsingular: \"당근 케이크\",",
+   "\t\t\tcounter: \"판\",",
+   "\t\t\tplural: \"당근 케이크\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"carrot cake\",",
+   "\t\t\tsingular: \"carrot cake\",",
+   "\t\t\tplural: \"carrot cakes\","
+  ],
+  "context": "\t\tcarrot_cake: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 103,",
+   "\t\t\tname: \"crème brûlée\",",
+   "\t\t\tsingular: \"pot of crème brûlée\",",
+   "\t\t\tplural: \"pots of crème brûlée\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 103,",
+   "\t\t\tname: \"크렘 브륄레\",",
+   "\t\t\tsingular: \"크렘 브륄레\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"크렘 브륄레\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"crème brûlée\",",
+   "\t\t\tsingular: \"pot of crème brûlée\",",
+   "\t\t\tplural: \"pots of crème brûlée\","
+  ],
+  "context": "\t\tcreme_brulee: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 104,",
+   "\t\t\tname: \"date\",",
+   "\t\t\tsingular: \"date\",",
+   "\t\t\tplural: \"dates\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 104,",
+   "\t\t\tname: \"대추야자\",",
+   "\t\t\tsingular: \"대추야자\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"대추야자\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"date\",",
+   "\t\t\tsingular: \"date\",",
+   "\t\t\tplural: \"dates\","
+  ],
+  "context": "\t\tdate: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 105,",
+   "\t\t\tname: \"sticky toffee pudding\",",
+   "\t\t\tsingular: \"sticky toffee pudding\",",
+   "\t\t\tplural: \"sticky toffee puddings\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 105,",
+   "\t\t\tname: \"스티키 토피 푸딩\",",
+   "\t\t\tsingular: \"스티키 토피 푸딩\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"스티키 토피 푸딩\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"sticky toffee pudding\",",
+   "\t\t\tsingular: \"sticky toffee pudding\",",
+   "\t\t\tplural: \"sticky toffee puddings\","
+  ],
+  "context": "\t\tsticky_toffee_pudding: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 106,",
+   "\t\t\tname: \"chicken vindaloo\",",
+   "\t\t\tsingular: \"serving of chicken vindaloo\",",
+   "\t\t\tplural: \"servings of chicken vindaloo\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 106,",
+   "\t\t\tname: \"치킨 빈달루\",",
+   "\t\t\tsingular: \"치킨 빈달루\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"치킨 빈달루\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"chicken vindaloo\",",
+   "\t\t\tsingular: \"serving of chicken vindaloo\",",
+   "\t\t\tplural: \"servings of chicken vindaloo\","
+  ],
+  "context": "\t\tchicken_vindaloo: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 107,",
+   "\t\t\tname: \"flapjack\",",
+   "\t\t\tsingular: \"flapjack square\",",
+   "\t\t\tplural: \"flapjack squares\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 107,",
+   "\t\t\tname: \"플랩잭\",",
+   "\t\t\tsingular: \"플랩잭\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"플랩잭\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"flapjack\",",
+   "\t\t\tsingular: \"flapjack square\",",
+   "\t\t\tplural: \"flapjack squares\","
+  ],
+  "context": "\t\tflapjack: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 108,",
+   "\t\t\tname: \"cherry\",",
+   "\t\t\tsingular: \"cherry\",",
+   "\t\t\tplural: \"cherries\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 108,",
+   "\t\t\tname: \"체리\",",
+   "\t\t\tsingular: \"체리\",",
+   "\t\t\tcounter: \"알\",",
+   "\t\t\tplural: \"체리\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"cherry\",",
+   "\t\t\tsingular: \"cherry\",",
+   "\t\t\tplural: \"cherries\","
+  ],
+  "context": "\t\tcherry: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 109,",
+   "\t\t\tname: \"belgian bun\",",
+   "\t\t\tsingular: \"Belgian bun\",",
+   "\t\t\tplural: \"Belgian buns\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 109,",
+   "\t\t\tname: \"벨지안 번\",",
+   "\t\t\tsingular: \"벨지안 번\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"벨지안 번\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"belgian bun\",",
+   "\t\t\tsingular: \"Belgian bun\",",
+   "\t\t\tplural: \"Belgian buns\","
+  ],
+  "context": "\t\tbelgian_bun: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 110,",
+   "\t\t\tname: \"lime\",",
+   "\t\t\tsingular: \"lime\",",
+   "\t\t\tplural: \"limes\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 110,",
+   "\t\t\tname: \"라임\",",
+   "\t\t\tsingular: \"라임\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"라임\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"lime\",",
+   "\t\t\tsingular: \"lime\",",
+   "\t\t\tplural: \"limes\","
+  ],
+  "context": "\t\tlime: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 111,",
+   "\t\t\tname: \"linguine\",",
+   "\t\t\tsingular: \"serving of linguine\",",
+   "\t\t\tplural: \"servings of linguine\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 111,",
+   "\t\t\tname: \"링귀네\",",
+   "\t\t\tsingular: \"링귀네\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"링귀네\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"linguine\",",
+   "\t\t\tsingular: \"serving of linguine\",",
+   "\t\t\tplural: \"servings of linguine\","
+  ],
+  "context": "\t\tlinguine: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 112,",
+   "\t\t\tname: \"steak\",",
+   "\t\t\tsingular: \"serving of steak\",",
+   "\t\t\tplural: \"servings of steak\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 112,",
+   "\t\t\tname: \"스테이크\",",
+   "\t\t\tsingular: \"스테이크\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"스테이크\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"steak\",",
+   "\t\t\tsingular: \"serving of steak\",",
+   "\t\t\tplural: \"servings of steak\","
+  ],
+  "context": "\t\tsteak: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 113,",
+   "\t\t\tname: \"full english breakfast\",",
+   "\t\t\tsingular: \"full English breakfast\",",
+   "\t\t\tplural: \"full English breakfasts\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 113,",
+   "\t\t\tname: \"잉글리시 브렉퍼스트\",",
+   "\t\t\tsingular: \"잉글리시 브렉퍼스트\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"잉글리시 브렉퍼스트\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"full english breakfast\",",
+   "\t\t\tsingular: \"full English breakfast\",",
+   "\t\t\tplural: \"full English breakfasts\","
+  ],
+  "context": "\t\tfull_english_breakfast: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 114,",
+   "\t\t\tname: \"apple crumble\",",
+   "\t\t\tsingular: \"serving of apple crumble\",",
+   "\t\t\tplural: \"servings of apple crumble\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 114,",
+   "\t\t\tname: \"애플 크럼블\",",
+   "\t\t\tsingular: \"애플 크럼블\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"애플 크럼블\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"apple crumble\",",
+   "\t\t\tsingular: \"serving of apple crumble\",",
+   "\t\t\tplural: \"servings of apple crumble\","
+  ],
+  "context": "\t\tapple_crumble: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 115,",
+   "\t\t\tname: \"Bakewell tart\",",
+   "\t\t\tsingular: \"Bakewell tart\",",
+   "\t\t\tplural: \"Bakewell tarts\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 115,",
+   "\t\t\tname: \"베이크웰 타르트\",",
+   "\t\t\tsingular: \"베이크웰 타르트\",",
+   "\t\t\tcounter: \"판\",",
+   "\t\t\tplural: \"베이크웰 타르트\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"Bakewell tart\",",
+   "\t\t\tsingular: \"Bakewell tart\",",
+   "\t\t\tplural: \"Bakewell tarts\","
+  ],
+  "context": "\t\tbakewell_tart: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 116,",
+   "\t\t\tname: \"cod\",",
+   "\t\t\tsingular: \"cod\",",
+   "\t\t\tplural: \"cod\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 116,",
+   "\t\t\tname: \"대구\",",
+   "\t\t\tsingular: \"대구\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"대구\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"cod\",",
+   "\t\t\tsingular: \"cod\",",
+   "\t\t\tplural: \"cod\","
+  ],
+  "context": "\t\tcod: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 117,",
+   "\t\t\tname: \"fish and chips\",",
+   "\t\t\tsingular: \"serving of fish and chips\",",
+   "\t\t\tplural: \"servings of fish and chips\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 117,",
+   "\t\t\tname: \"피시 앤 칩스\",",
+   "\t\t\tsingular: \"피시 앤 칩스\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"피시 앤 칩스\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"fish and chips\",",
+   "\t\t\tsingular: \"serving of fish and chips\",",
+   "\t\t\tplural: \"servings of fish and chips\","
+  ],
+  "context": "\t\tfish_and_chips: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 118,",
+   "\t\t\tname: \"clam\",",
+   "\t\t\tsingular: \"clam\",",
+   "\t\t\tplural: \"clams\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 118,",
+   "\t\t\tname: \"조개\",",
+   "\t\t\tsingular: \"조개\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"조개\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"clam\",",
+   "\t\t\tsingular: \"clam\",",
+   "\t\t\tplural: \"clams\","
+  ],
+  "context": "\t\tclam: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 119,",
+   "\t\t\tname: \"clam chowder\",",
+   "\t\t\tsingular: \"serving of clam chowder\",",
+   "\t\t\tplural: \"servings of clam chowder\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 119,",
+   "\t\t\tname: \"클램 차우더\",",
+   "\t\t\tsingular: \"클램 차우더\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"클램 차우더\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"clam chowder\",",
+   "\t\t\tsingular: \"serving of clam chowder\",",
+   "\t\t\tplural: \"servings of clam chowder\","
+  ],
+  "context": "\t\tclam_chowder: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 120,",
+   "\t\t\tname: \"cheese and crackers\",",
+   "\t\t\tsingular: \"serving of cheese and crackers\",",
+   "\t\t\tplural: \"servings of cheese and crackers\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 120,",
+   "\t\t\tname: \"치즈와 크래커\",",
+   "\t\t\tsingular: \"치즈와 크래커\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"치즈와 크래커\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"cheese and crackers\",",
+   "\t\t\tsingular: \"serving of cheese and crackers\",",
+   "\t\t\tplural: \"servings of cheese and crackers\","
+  ],
+  "context": "\t\tcheese_and_crackers: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 121,",
+   "\t\t\tname: \"bangers and mash\",",
+   "\t\t\tsingular: \"serving of bangers and mash\",",
+   "\t\t\tplural: \"servings of bangers and mash\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 121,",
+   "\t\t\tname: \"뱅어스 앤 매시\",",
+   "\t\t\tsingular: \"뱅어스 앤 매시\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"뱅어스 앤 매시\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"bangers and mash\",",
+   "\t\t\tsingular: \"serving of bangers and mash\",",
+   "\t\t\tplural: \"servings of bangers and mash\","
+  ],
+  "context": "\t\tbangers_and_mash: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 122,",
+   "\t\t\tname: \"yorkshire pudding\",",
+   "\t\t\tsingular: \"yorkshire pudding\",",
+   "\t\t\tplural: \"yorkshire puddings\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 122,",
+   "\t\t\tname: \"요크셔 푸딩\",",
+   "\t\t\tsingular: \"요크셔 푸딩\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"요크셔 푸딩\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"yorkshire pudding\",",
+   "\t\t\tsingular: \"yorkshire pudding\",",
+   "\t\t\tplural: \"yorkshire puddings\","
+  ],
+  "context": "\t\tyorkshire_pudding: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 123,",
+   "\t\t\tname: \"stuffing\",",
+   "\t\t\tsingular: \"stuffing ball\",",
+   "\t\t\tplural: \"stuffing balls\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 123,",
+   "\t\t\tname: \"스터핑\",",
+   "\t\t\tsingular: \"스터핑\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"스터핑\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"stuffing\",",
+   "\t\t\tsingular: \"stuffing ball\",",
+   "\t\t\tplural: \"stuffing balls\","
+  ],
+  "context": "\t\tstuffing: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 124,",
+   "\t\t\tname: \"roast dinner\",",
+   "\t\t\tsingular: \"serving of roast dinner\",",
+   "\t\t\tplural: \"servings of roast dinner\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 124,",
+   "\t\t\tname: \"로스트 디너\",",
+   "\t\t\tsingular: \"로스트 디너\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"로스트 디너\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"roast dinner\",",
+   "\t\t\tsingular: \"serving of roast dinner\",",
+   "\t\t\tplural: \"servings of roast dinner\","
+  ],
+  "context": "\t\troast_dinner: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 125,",
+   "\t\t\tname: \"crumpet\",",
+   "\t\t\tsingular: \"crumpet\",",
+   "\t\t\tplural: \"crumpets\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 125,",
+   "\t\t\tname: \"크럼펫\",",
+   "\t\t\tsingular: \"크럼펫\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"크럼펫\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"crumpet\",",
+   "\t\t\tsingular: \"crumpet\",",
+   "\t\t\tplural: \"crumpets\","
+  ],
+  "context": "\t\tcrumpet: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 126,",
+   "\t\t\tname: \"orange juice\",",
+   "\t\t\tsingular: \"glass of orange juice\",",
+   "\t\t\tplural: \"glasses of orange juice\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 126,",
+   "\t\t\tname: \"오렌지 주스\",",
+   "\t\t\tsingular: \"오렌지 주스\",",
+   "\t\t\tcounter: \"잔\",",
+   "\t\t\tplural: \"오렌지 주스\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"orange juice\",",
+   "\t\t\tsingular: \"glass of orange juice\",",
+   "\t\t\tplural: \"glasses of orange juice\","
+  ],
+  "context": "\t\torange_juice: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 127,",
+   "\t\t\tname: \"lemonade\",",
+   "\t\t\tsingular: \"glass of lemonade\",",
+   "\t\t\tplural: \"glasses of lemonade\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 127,",
+   "\t\t\tname: \"레모네이드\",",
+   "\t\t\tsingular: \"레모네이드\",",
+   "\t\t\tcounter: \"잔\",",
+   "\t\t\tplural: \"레모네이드\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"lemonade\",",
+   "\t\t\tsingular: \"glass of lemonade\",",
+   "\t\t\tplural: \"glasses of lemonade\","
+  ],
+  "context": "\t\tlemonade: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 128,",
+   "\t\t\tname: \"banana bread\",",
+   "\t\t\tsingular: \"loaf of banana bread\",",
+   "\t\t\tplural: \"loaves of banana bread\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 128,",
+   "\t\t\tname: \"바나나 빵\",",
+   "\t\t\tsingular: \"바나나 빵\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"바나나 빵\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"banana bread\",",
+   "\t\t\tsingular: \"loaf of banana bread\",",
+   "\t\t\tplural: \"loaves of banana bread\","
+  ],
+  "context": "\t\tbanana_bread: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 129,",
+   "\t\t\tname: \"red wine\",",
+   "\t\t\tsingular: \"bottle of red wine\",",
+   "\t\t\tplural: \"bottles of red wine\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 129,",
+   "\t\t\tname: \"레드 와인\",",
+   "\t\t\tsingular: \"레드 와인\",",
+   "\t\t\tcounter: \"병\",",
+   "\t\t\tplural: \"레드 와인\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"red wine\",",
+   "\t\t\tsingular: \"bottle of red wine\",",
+   "\t\t\tplural: \"bottles of red wine\","
+  ],
+  "context": "\t\tred_wine: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 130,",
+   "\t\t\tname: \"white wine\",",
+   "\t\t\tsingular: \"bottle of white wine\",",
+   "\t\t\tplural: \"bottles of white wine\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 130,",
+   "\t\t\tname: \"화이트 와인\",",
+   "\t\t\tsingular: \"화이트 와인\",",
+   "\t\t\tcounter: \"병\",",
+   "\t\t\tplural: \"화이트 와인\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"white wine\",",
+   "\t\t\tsingular: \"bottle of white wine\",",
+   "\t\t\tplural: \"bottles of white wine\","
+  ],
+  "context": "\t\twhite_wine: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 131,",
+   "\t\t\tname: \"poached pear\",",
+   "\t\t\tsingular: \"poached pear\",",
+   "\t\t\tplural: \"poached pears\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 131,",
+   "\t\t\tname: \"와인에 졸인 배\",",
+   "\t\t\tsingular: \"와인에 졸인 배\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"와인에 졸인 배\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"poached pear\",",
+   "\t\t\tsingular: \"poached pear\",",
+   "\t\t\tplural: \"poached pears\","
+  ],
+  "context": "\t\tpoached_pear: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 132,",
+   "\t\t\tname: \"peach panzanella\",",
+   "\t\t\tsingular: \"serving of peach panzanella\",",
+   "\t\t\tplural: \"servings of peach panzanella\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 132,",
+   "\t\t\tname: \"복숭아 판자넬라\",",
+   "\t\t\tsingular: \"복숭아 판자넬라\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"복숭아 판자넬라\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"peach panzanella\",",
+   "\t\t\tsingular: \"serving of peach panzanella\",",
+   "\t\t\tplural: \"servings of peach panzanella\","
+  ],
+  "context": "\t\tpeach_panzanella: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 133,",
+   "\t\t\tname: \"plum pudding\",",
+   "\t\t\tsingular: \"serving of plum pudding\",",
+   "\t\t\tplural: \"servings of plum pudding\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 133,",
+   "\t\t\tname: \"자두 푸딩\",",
+   "\t\t\tsingular: \"자두 푸딩\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"자두 푸딩\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"plum pudding\",",
+   "\t\t\tsingular: \"serving of plum pudding\",",
+   "\t\t\tplural: \"servings of plum pudding\","
+  ],
+  "context": "\t\tplum_pudding: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 134,",
+   "\t\t\tname: \"spinach\",",
+   "\t\t\tsingular: \"spinach leaf\",",
+   "\t\t\tplural: \"spinach leaves\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 134,",
+   "\t\t\tname: \"시금치\",",
+   "\t\t\tsingular: \"시금치\",",
+   "\t\t\tcounter: \"포기\",",
+   "\t\t\tplural: \"시금치\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"spinach\",",
+   "\t\t\tsingular: \"spinach leaf\",",
+   "\t\t\tplural: \"spinach leaves\","
+  ],
+  "context": "\t\tspinach: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 135,",
+   "\t\t\tname: \"salad\",",
+   "\t\t\tsingular: \"serving of salad\",",
+   "\t\t\tplural: \"servings of salad\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 135,",
+   "\t\t\tname: \"샐러드\",",
+   "\t\t\tsingular: \"샐러드\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"샐러드\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"salad\",",
+   "\t\t\tsingular: \"serving of salad\",",
+   "\t\t\tplural: \"servings of salad\","
+  ],
+  "context": "\t\tsalad: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 136,",
+   "\t\t\tname: \"arancini\",",
+   "\t\t\tsingular: \"arancini ball\",",
+   "\t\t\tplural: \"arancini balls\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 136,",
+   "\t\t\tname: \"아란치니\",",
+   "\t\t\tsingular: \"아란치니\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"아란치니\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"arancini\",",
+   "\t\t\tsingular: \"arancini ball\",",
+   "\t\t\tplural: \"arancini balls\","
+  ],
+  "context": "\t\tarancini: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 137,",
+   "\t\t\tname: \"wolfbrew\",",
+   "\t\t\tsingular: \"bottle of wolfbrew\",",
+   "\t\t\tplural: \"bottles of wolfbrew\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 137,",
+   "\t\t\tname: \"늑대맥주\",",
+   "\t\t\tsingular: \"늑대맥주\",",
+   "\t\t\tcounter: \"병\",",
+   "\t\t\tplural: \"늑대맥주\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"wolfbrew\",",
+   "\t\t\tsingular: \"bottle of wolfbrew\",",
+   "\t\t\tplural: \"bottles of wolfbrew\","
+  ],
+  "context": "\t\twolfbrew: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 138,",
+   "\t\t\tname: \"ghostbrew\",",
+   "\t\t\tsingular: \"bottle of ghostbrew\",",
+   "\t\t\tplural: \"bottles of ghostbrew\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 138,",
+   "\t\t\tname: \"유령맥주\",",
+   "\t\t\tsingular: \"유령맥주\",",
+   "\t\t\tcounter: \"병\",",
+   "\t\t\tplural: \"유령맥주\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"ghostbrew\",",
+   "\t\t\tsingular: \"bottle of ghostbrew\",",
+   "\t\t\tplural: \"bottles of ghostbrew\","
+  ],
+  "context": "\t\tghostbrew: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 139,",
+   "\t\t\tname: \"beef\",",
+   "\t\t\tsingular: \"serving of beef\",",
+   "\t\t\tplural: \"servings of beef\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 139,",
+   "\t\t\tname: \"소고기\",",
+   "\t\t\tsingular: \"소고기\",",
+   "\t\t\tcounter: \"덩이\",",
+   "\t\t\tplural: \"소고기\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"beef\",",
+   "\t\t\tsingular: \"serving of beef\",",
+   "\t\t\tplural: \"servings of beef\","
+  ],
+  "context": "\t\tbeef: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 140,",
+   "\t\t\tname: \"pork\",",
+   "\t\t\tsingular: \"serving of pork\",",
+   "\t\t\tplural: \"servings of pork\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 140,",
+   "\t\t\tname: \"돼지고기\",",
+   "\t\t\tsingular: \"돼지고기\",",
+   "\t\t\tcounter: \"덩이\",",
+   "\t\t\tplural: \"돼지고기\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"pork\",",
+   "\t\t\tsingular: \"serving of pork\",",
+   "\t\t\tplural: \"servings of pork\","
+  ],
+  "context": "\t\tpork: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 141,",
+   "\t\t\tname: \"cauliflower\",",
+   "\t\t\tsingular: \"cauliflower\",",
+   "\t\t\tplural: \"cauliflowers\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 141,",
+   "\t\t\tname: \"콜리플라워\",",
+   "\t\t\tsingular: \"콜리플라워\",",
+   "\t\t\tcounter: \"통\",",
+   "\t\t\tplural: \"콜리플라워\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"cauliflower\",",
+   "\t\t\tsingular: \"cauliflower\",",
+   "\t\t\tplural: \"cauliflowers\","
+  ],
+  "context": "\t\tcauliflower: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 142,",
+   "\t\t\tname: \"oats\",",
+   "\t\t\tsingular: \"cup of oat\",",
+   "\t\t\tplural: \"cups of oats\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 142,",
+   "\t\t\tname: \"귀리\",",
+   "\t\t\tsingular: \"귀리\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"귀리\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"oats\",",
+   "\t\t\tsingular: \"cup of oat\",",
+   "\t\t\tplural: \"cups of oats\","
+  ],
+  "context": "\t\toats: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 143,",
+   "\t\t\tname: \"prawn\",",
+   "\t\t\tsingular: \"prawn\",",
+   "\t\t\tplural: \"prawns\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 143,",
+   "\t\t\tname: \"새우\",",
+   "\t\t\tsingular: \"새우\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"새우\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"prawn\",",
+   "\t\t\tsingular: \"prawn\",",
+   "\t\t\tplural: \"prawns\","
+  ],
+  "context": "\t\tprawn: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 144,",
+   "\t\t\tname: \"omelette\",",
+   "\t\t\tsingular: \"omelette\",",
+   "\t\t\tplural: \"omelettes\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 144,",
+   "\t\t\tname: \"오믈렛\",",
+   "\t\t\tsingular: \"오믈렛\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"오믈렛\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"omelette\",",
+   "\t\t\tsingular: \"omelette\",",
+   "\t\t\tplural: \"omelettes\","
+  ],
+  "context": "\t\tomelette: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 145,",
+   "\t\t\tname: \"porridge\",",
+   "\t\t\tsingular: \"serving of porridge\",",
+   "\t\t\tplural: \"servings of porridge\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 145,",
+   "\t\t\tname: \"포리지\",",
+   "\t\t\tsingular: \"포리지\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"포리지\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"porridge\",",
+   "\t\t\tsingular: \"serving of porridge\",",
+   "\t\t\tplural: \"servings of porridge\","
+  ],
+  "context": "\t\tporridge: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 146,",
+   "\t\t\tname: \"turnip soup\",",
+   "\t\t\tsingular: \"serving of turnip soup\",",
+   "\t\t\tplural: \"servings of turnip soup\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 146,",
+   "\t\t\tname: \"순무 수프\",",
+   "\t\t\tsingular: \"순무 수프\",",
+   "\t\t\tcounter: \"접시\",",
+   "\t\t\tplural: \"순무 수프\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"turnip soup\",",
+   "\t\t\tsingular: \"serving of turnip soup\",",
+   "\t\t\tplural: \"servings of turnip soup\","
+  ],
+  "context": "\t\tturnip_soup: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 147,",
+   "\t\t\tname: \"pink rose\",",
+   "\t\t\tsingular: \"pink rose\",",
+   "\t\t\tplural: \"pink roses\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 147,",
+   "\t\t\tname: \"분홍 장미\",",
+   "\t\t\tsingular: \"분홍 장미\",",
+   "\t\t\tcounter: \"송이\",",
+   "\t\t\tplural: \"분홍 장미\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"pink rose\",",
+   "\t\t\tsingular: \"pink rose\",",
+   "\t\t\tplural: \"pink roses\","
+  ],
+  "context": "\t\tpink_rose: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 148,",
+   "\t\t\tname: \"valentines chocolate\",",
+   "\t\t\tsingular: \"slab of valentines chocolate\",",
+   "\t\t\tplural: \"slabs of valentines chocolate\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 148,",
+   "\t\t\tname: \"발렌타인 초콜릿\",",
+   "\t\t\tsingular: \"발렌타인 초콜릿\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"발렌타인 초콜릿\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"valentines chocolate\",",
+   "\t\t\tsingular: \"slab of valentines chocolate\",",
+   "\t\t\tplural: \"slabs of valentines chocolate\","
+  ],
+  "context": "\t\tvalentines_chocolate: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 149,",
+   "\t\t\tname: \"sunflower\",",
+   "\t\t\tsingular: \"sunflower\",",
+   "\t\t\tplural: \"sunflowers\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 149,",
+   "\t\t\tname: \"해바라기\",",
+   "\t\t\tsingular: \"해바라기\",",
+   "\t\t\tcounter: \"송이\",",
+   "\t\t\tplural: \"해바라기\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"sunflower\",",
+   "\t\t\tsingular: \"sunflower\",",
+   "\t\t\tplural: \"sunflowers\","
+  ],
+  "context": "\t\tsunflower: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tjammie_dodger: {",
+   "\t\t\tindex: 94,",
+   "\t\t\tname: \"jammie dodger\",",
+   "\t\t\tsingular: \"jammie dodger\",",
+   "\t\t\tplural: \"jammie dodgers\","
+  ],
+  "old_kr": [
+   "\t\t\t\tjammie_dodger: {",
+   "\t\t\tindex: 94,",
+   "\t\t\tname: \"잼 도저\",",
+   "\t\t\tsingular: \"잼 도저\",",
+   "\t\t\tcounter: \"개\",",
+   "\t\t\tplural: \"잼 도저\","
+  ],
+  "new_en": [
+   "\t\tjammie_dodger: {",
+   "\t\t\tname: \"jammie dodger\",",
+   "\t\t\tsingular: \"jammie dodger\",",
+   "\t\t\tplural: \"jammie dodgers\","
+  ],
+  "context": "\t\t},"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 95,",
+   "\t\t\tname: \"jam\",",
+   "\t\t\tsingular: \"cup of jam\",",
+   "\t\t\tplural: \"cups of jam\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 95,",
+   "\t\t\tname: \"잼\",",
+   "\t\t\tsingular: \"잼\",",
+   "\t\t\tcounter: \"병\",",
+   "\t\t\tplural: \"잼\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"jam\",",
+   "\t\t\tsingular: \"cup of jam\",",
+   "\t\t\tplural: \"cups of jam\","
+  ],
+  "context": "\t\tjam: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 152,",
+   "\t\t\tname: \"herring\",",
+   "\t\t\tsingular: \"herring\",",
+   "\t\t\tplural: \"herring\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 152,",
+   "\t\t\tname: \"청어\",",
+   "\t\t\tsingular: \"청어\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"청어\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"herring\",",
+   "\t\t\tsingular: \"herring\",",
+   "\t\t\tplural: \"herring\","
+  ],
+  "context": "\t\therring: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 153,",
+   "\t\t\tname: \"whiting\",",
+   "\t\t\tsingular: \"whiting\",",
+   "\t\t\tplural: \"whiting\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 153,",
+   "\t\t\tname: \"민대구\",",
+   "\t\t\tsingular: \"민대구\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"민대구\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"whiting\",",
+   "\t\t\tsingular: \"whiting\",",
+   "\t\t\tplural: \"whiting\","
+  ],
+  "context": "\t\twhiting: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 154,",
+   "\t\t\tname: \"mackerel\",",
+   "\t\t\tsingular: \"mackerel\",",
+   "\t\t\tplural: \"mackerel\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 154,",
+   "\t\t\tname: \"고등어\",",
+   "\t\t\tsingular: \"고등어\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"고등어\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"mackerel\",",
+   "\t\t\tsingular: \"mackerel\",",
+   "\t\t\tplural: \"mackerel\","
+  ],
+  "context": "\t\tmackerel: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 155,",
+   "\t\t\tname: \"flounder\",",
+   "\t\t\tsingular: \"flounder\",",
+   "\t\t\tplural: \"flounder\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 155,",
+   "\t\t\tname: \"가자미\",",
+   "\t\t\tsingular: \"가자미\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"가자미\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"flounder\",",
+   "\t\t\tsingular: \"flounder\",",
+   "\t\t\tplural: \"flounder\","
+  ],
+  "context": "\t\tflounder: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 156,",
+   "\t\t\tname: \"bass\",",
+   "\t\t\tsingular: \"bass\",",
+   "\t\t\tplural: \"bass\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 156,",
+   "\t\t\tname: \"베스\",",
+   "\t\t\tsingular: \"베스\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"베스\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"bass\",",
+   "\t\t\tsingular: \"bass\",",
+   "\t\t\tplural: \"bass\","
+  ],
+  "context": "\t\tbass: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 157,",
+   "\t\t\tname: \"roach\",",
+   "\t\t\tsingular: \"roach\",",
+   "\t\t\tplural: \"roach\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 157,",
+   "\t\t\tname: \"로치\",",
+   "\t\t\tsingular: \"로치\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"로치\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"roach\",",
+   "\t\t\tsingular: \"roach\",",
+   "\t\t\tplural: \"roach\","
+  ],
+  "context": "\t\troach: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 158,",
+   "\t\t\tname: \"perch\",",
+   "\t\t\tsingular: \"perch\",",
+   "\t\t\tplural: \"perch\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 158,",
+   "\t\t\tname: \"퍼치\",",
+   "\t\t\tsingular: \"퍼치\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"퍼치\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"perch\",",
+   "\t\t\tsingular: \"perch\",",
+   "\t\t\tplural: \"perch\","
+  ],
+  "context": "\t\tperch: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 159,",
+   "\t\t\tname: \"chub\",",
+   "\t\t\tsingular: \"chub\",",
+   "\t\t\tplural: \"chub\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 159,",
+   "\t\t\tname: \"처브\",",
+   "\t\t\tsingular: \"처브\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"처브\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"chub\",",
+   "\t\t\tsingular: \"chub\",",
+   "\t\t\tplural: \"chub\","
+  ],
+  "context": "\t\tchub: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 160,",
+   "\t\t\tname: \"pike\",",
+   "\t\t\tsingular: \"pike\",",
+   "\t\t\tplural: \"pike\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 160,",
+   "\t\t\tname: \"꼬치고기\",",
+   "\t\t\tsingular: \"꼬치고기\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"꼬치고기\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"pike\",",
+   "\t\t\tsingular: \"pike\",",
+   "\t\t\tplural: \"pike\","
+  ],
+  "context": "\t\tpike: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 162,",
+   "\t\t\tname: \"eel\",",
+   "\t\t\tsingular: \"eel\",",
+   "\t\t\tplural: \"eels\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 162,",
+   "\t\t\tname: \"뱀장어\",",
+   "\t\t\tsingular: \"뱀장어\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"뱀장어\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"eel\",",
+   "\t\t\tsingular: \"eel\",",
+   "\t\t\tplural: \"eels\","
+  ],
+  "context": "\t\teel: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 163,",
+   "\t\t\tname: \"grayling\",",
+   "\t\t\tsingular: \"grayling\",",
+   "\t\t\tplural: \"grayling\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 163,",
+   "\t\t\tname: \"사루기\",",
+   "\t\t\tsingular: \"사루기\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"사루기\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"grayling\",",
+   "\t\t\tsingular: \"grayling\",",
+   "\t\t\tplural: \"grayling\","
+  ],
+  "context": "\t\tgrayling: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 164,",
+   "\t\t\tname: \"baitfish\",",
+   "\t\t\tsingular: \"baitfish\",",
+   "\t\t\tplural: \"baitfish\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 164,",
+   "\t\t\tname: \"미끼고기\",",
+   "\t\t\tsingular: \"미끼고기\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"미끼고기\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"baitfish\",",
+   "\t\t\tsingular: \"baitfish\",",
+   "\t\t\tplural: \"baitfish\","
+  ],
+  "context": "\t\tbaitfish: {"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tindex: 165,",
+   "\t\t\tname: \"bait worm\",",
+   "\t\t\tsingular: \"bait worm\",",
+   "\t\t\tplural: \"bait worms\","
+  ],
+  "old_kr": [
+   "\t\t\tindex: 165,",
+   "\t\t\tname: \"미끼용 지렁이\",",
+   "\t\t\tsingular: \"미끼용 지렁이\",",
+   "\t\t\tcounter: \"마리\",",
+   "\t\t\tplural: \"미끼용 지렁이\","
+  ],
+  "new_en": [
+   "\t\t\tname: \"bait worm\",",
+   "\t\t\tsingular: \"bait worm\",",
+   "\t\t\tplural: \"bait worms\","
+  ],
+  "context": "\t\tbait_worm: {"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\tpumpkin: {",
+   "\t\t\tname: \"pumpkin\",",
+   "\t\t\tsingular: \"pumpkin\",",
+   "\t\t\tplural: \"pumpkins\",",
+   "\t\t\ticon: \"pumpkin.png\",",
+   "\t\t\tcategory: \"vegetable\",",
+   "\t\t\tkitchen_item_type_icon: \"recipe-vegetable.png\",",
+   "\t\t\tprop_folder: \"tending\",",
+   "\t\t\ttending: {",
+   "\t\t\t\taffected_by_tending_skill: true,",
+   "\t\t\t\tplanting_bed: \"earth\",",
+   "\t\t\t\tgrowth_days: 20,",
+   "\t\t\t\tyield_multiplier: 1,",
+   "\t\t\t\thas_seeds: true,",
+   "\t\t\t\tseasons: [\"spring\", \"summer\", \"autumn\"],",
+   "\t\t\t\ttags: [],",
+   "\t\t\t\tfeatCost: 5,",
+   "\t\t\t},",
+   "\t\t\tshop: {",
+   "\t\t\t\tsell_price: 280,",
+   "\t\t\t},",
+   "\t\t},",
+   "\t\tpumpkin_spice: {",
+   "\t\t\tname: \"pumpkin spice\",",
+   "\t\t\tsingular: \"pinch of pumpkin spice\",",
+   "\t\t\tplural: \"pinches of pumpkin spice\",",
+   "\t\t\ticon: \"pumpkin-spice.png\",",
+   "\t\t\tcategory: \"ingredient\",",
+   "\t\t\tkitchen_item_type_icon: \"recipe-ingredient.png\",",
+   "\t\t\tprop_folder: \"ingredient\",",
+   "\t\t\tshop: {",
+   "\t\t\t\tsell_price: 10,",
+   "\t\t\t\tavailable_in: [\"supermarket\"],",
+   "\t\t\t\tbought_in_bulk: 10,",
+   "\t\t\t},",
+   "\t\t},",
+   "\t\tstuffed_pumpkin: {",
+   "\t\t\tname: \"stuffed pumpkin\",",
+   "\t\t\tsingular: \"stuffed pumpkin\",",
+   "\t\t\tplural: \"stuffed pumpkins\",",
+   "\t\t\ticon: \"stuffed-pumpkin.png\",",
+   "\t\t\tcategory: \"dish\",",
+   "\t\t\tkitchen_item_type_icon: \"recipe-food.png\",",
+   "\t\t\tprop_folder: \"food\",",
+   "\t\t\tshop: {",
+   "\t\t\t\tsell_price: 1800,",
+   "\t\t\t},",
+   "\t\t\trecipe: {",
+   "\t\t\t\trecipe_name: \"stuffed pumpkin\",",
+   "\t\t\t\tdifficulty: 3,",
+   "\t\t\t\tcook_minutes: 30,",
+   "\t\t\t\tservings: 1,",
+   "\t\t\t\tingredients: [\"pumpkin\", \"chicken\", \"vegetable_oil\", \"garlic_bulb\", \"onion\", \"cream\", \"white_wine\", \"cheese\"],",
+   "\t\t\t\ttags: [],",
+   "\t\t\t},",
+   "\t\t\tfood: {",
+   "\t\t\t\ttags: [\"halloween\"],",
+   "\t\t\t},",
+   "\t\t},",
+   "\t\tpumpkin_pie: {",
+   "\t\t\tname: \"pumpkin pie\",",
+   "\t\t\tsingular: \"pumpkin pie\",",
+   "\t\t\tplural: \"pumpkin pies\",",
+   "\t\t\ticon: \"pumpkin-pie.png\",",
+   "\t\t\tcategory: \"dish\",",
+   "\t\t\tkitchen_item_type_icon: \"recipe-food.png\",",
+   "\t\t\tprop_folder: \"food\",",
+   "\t\t\tshop: {",
+   "\t\t\t\tsell_price: 1600,",
+   "\t\t\t},",
+   "\t\t\trecipe: {",
+   "\t\t\t\trecipe_name: \"pumpkin pie\",",
+   "\t\t\t\tdifficulty: 2,",
+   "\t\t\t\tcook_minutes: 30,",
+   "\t\t\t\tservings: 1,",
+   "\t\t\t\tingredients: [\"pumpkin\", \"pastry\", \"chicken_egg\", \"bottle_of_milk\", \"sugar\", \"pumpkin_spice\", \"cream\"],",
+   "\t\t\t\ttags: [],",
+   "\t\t\t},",
+   "\t\t\tfood: {",
+   "\t\t\t\ttags: [\"vegetarian\", \"halloween\", \"sweet\"],",
+   "\t\t\t\thandheld_gift: true,",
+   "\t\t\t},",
+   "\t\t},",
+   "\t\tpumpkin_drink: {",
+   "\t\t\tname: \"pumpkin drink\",",
+   "\t\t\tsingular: \"glass of pumpkin drink\",",
+   "\t\t\tplural: \"glasses of pumpkin drink\",",
+   "\t\t\ticon: \"pumpkin-drink.png\",",
+   "\t\t\tcategory: \"dish\",",
+   "\t\t\tkitchen_item_type_icon: \"recipe-food.png\",",
+   "\t\t\tprop_folder: \"drink\",",
+   "\t\t\tshop: {",
+   "\t\t\t\tsell_price: 1000,",
+   "\t\t\t},",
+   "\t\t\trecipe: {",
+   "\t\t\t\trecipe_name: \"pumpkin drink\",",
+   "\t\t\t\tdifficulty: 1,",
+   "\t\t\t\tcook_minutes: 10,",
+   "\t\t\t\tservings: 1,",
+   "\t\t\t\tingredients: [\"pumpkin\", \"bottle_of_milk\", \"sugar\", \"pumpkin_spice\", \"cream\"],",
+   "\t\t\t\ttags: [],",
+   "\t\t\t},",
+   "\t\t\tfood: {",
+   "\t\t\t\ttags: [\"vegetarian\", \"halloween\", \"drink\"],",
+   "\t\t\t},",
+   "\t\t},"
+  ],
+  "context": "\t\t},"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "\tsetup.moddedFoodstuff = {};",
+   "",
+   "\tmergeModdedFoodstuff();"
+  ],
+  "context": "\t};"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "",
+   "/** @param {FoodstuffItem} item */",
+   "function verifyModdedFoodstuffItem(item) {",
+   "\tconst label = `'${item.name ?? \"unnamed\"}'${item.modder ? ` from modder '${item.modder}'` : \" (no 'modder' field set)\"}`;",
+   "\tif (!item.modder) console.error(`Modded foodstuff ${label} is missing required field: 'modder'.`);",
+   "\tif (item.name === undefined) console.error(`Modded foodstuff ${label} is missing required field: 'name'.`);",
+   "\tif (item.singular === undefined) console.error(`Modded foodstuff ${label} is missing required field: 'singular'.`);",
+   "\tif (item.plural === undefined) console.error(`Modded foodstuff ${label} is missing required field: 'plural'.`);",
+   "\tif (item.icon === undefined) console.error(`Modded foodstuff ${label} is missing required field: 'icon'.`);",
+   "\tif (item.category === undefined) console.error(`Modded foodstuff ${label} is missing required field: 'category'.`);",
+   "\tif (item.kitchen_item_type_icon === undefined) console.error(`Modded foodstuff ${label} is missing required field: 'kitchen_item_type_icon'.`);",
+   "\tif (item.prop_folder === undefined) console.error(`Modded foodstuff ${label} is missing required field: 'prop_folder'.`);",
+   "\tif (item.shop === undefined) console.error(`Modded foodstuff ${label} is missing required field: 'shop'.`);",
+   "}",
+   "window.verifyModdedFoodstuffItem = verifyModdedFoodstuffItem;",
+   "",
+   "function mergeModdedFoodstuff() {",
+   "\tObject.entries(setup.moddedFoodstuff).forEach(([key, item], i) => {",
+   "\t\tverifyModdedFoodstuffItem(item);",
+   "\t\tif (setup.foodstuff[key]) {",
+   "\t\t\tconsole.error(`duplicate foodstuff key detected: ${key}`);",
+   "\t\t}",
+   "\t\tsetup.foodstuff[key] = item;",
+   "\t});",
+   "}",
+   "window.mergeModdedFoodstuff = mergeModdedFoodstuff;"
+  ],
+  "context": "window.initFoodstuff = initFoodstuff;"
+ }
+]

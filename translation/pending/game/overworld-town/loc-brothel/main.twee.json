@@ -1,0 +1,98 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<npc Briar>><<generate2>><<generate3>><<person1>>Briar storms towards you as two of <<his>> thugs block the entrance. \"Where were you?\" <<he>> asks. \"The crowd were expecting a show. It cost me, but you'll pay for it.\" <<He>> holds out <<his>> hand. \"£1000. Now.\""
+  ],
+  "old_kr": [
+   "\t<<npc Briar>><<generate2>><<generate3>><<person1>>브라이어가 당신을 향해 돌진하고, <<his>> 부하 두 명이 입구를 막는다. \"어디 있었어?\" <<he>>【이가】 묻는다. \"관객들은 쇼를 기대하고 있었다고. 나한테 손해가 막심했지만, 네가 그 대가를 치르게 될 거야.\" <<He>>【은는】 <<his>> 손을 내민다. \"£1000. 당장 내놔.\""
+  ],
+  "new_en": [
+   "\t<<npc Briar>><<generate2>><<generate3>><<person1>>Briar storms towards you as two of <<his>> thugs block the entrance. \"Where were you?\" <<he>> asks. \"The crowd were expecting a show. It cost me, but you'll pay for it.\" <<He>> holds out <<his>> hand. \"_printmoney. Now.\""
+  ],
+  "context": "\t<<set $brothelshowdata.missed to false>><<npcincr Briar love -1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $money gte 100000>>",
+   "\t\t<<link [[Pay (£1000)|Brothel Pay]]>><<npcincr Briar dom 1>><<money -100000 \"brothelShow\">><<sub 1>><</link>>"
+  ],
+  "old_kr": [
+   "\t<<if $money gte 100000>>",
+   "\t\t<<link [[지불한다 (£1000)|Brothel Pay]]>><<npcincr Briar dom 1>><<money -100000 \"brothelShow\">><<sub 1>><</link>>"
+  ],
+  "new_en": [
+   "\t<<if $money gte _fee>>",
+   "\t\t<<link [[Pay (_printmoney)|Brothel Pay]]>><<npcincr Briar dom 1>><<money _fee \"brothelShow\">><<sub 1>><</link>>"
+  ],
+  "context": "\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tYour vending machine is installed.",
+   "\t\t\t<<if $brothelVending and $brothelVending.status is \"set\" and $settings.condomLevel gte 1 and !($brothelVending.products % 2)>>",
+   "\t\t\t\tYou should talk to the <span class=\"gold\">pharmacy</span> about buying condoms in bulk."
+  ],
+  "old_kr": [
+   "\t\t\t자판기가 설치되어 있다.",
+   "\t\t\t<<if $brothelVending and $brothelVending.status is \"set\" and $settings.condomLevel gte 1 and !($brothelVending.products % 2)>>",
+   "\t\t\t\t콘돔 대량 구매에 대해 <span class=\"gold\">약국</span>에 이야기해야 한다."
+  ],
+  "new_en": [
+   "\t\t\tYour vending machine is installed.",
+   "\t\t\t<<if $brothelVending?.status is \"set\" and $settings.condomLevel gte 1 and !($brothelVending.products % 2)>>",
+   "\t\t\t\tYou should talk to the <span class=\"gold\">pharmacy</span> about buying condoms in bulk."
+  ],
+  "context": "\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<if $settings.bestialityEnabled or $per_npc.saddled_steed.monster is \"monster\">>",
+   "\t\t\t\tYour $farm.steed steed awaits you."
+  ],
+  "old_kr": [
+   "\t\t\t<<if $settings.bestialityEnabled or $per_npc.saddled_steed.monster is \"monster\">>",
+   "\t\t\t\t당신의 <<horseHairKr $farm.steed>> 말이 당신을 기다리고 있다."
+  ],
+  "new_en": [
+   "\t\t\t<<if beastSexEnabledForType(\"horse\", $per_npc.saddled_steed.monster is \"monster\")>>",
+   "\t\t\t\tYour $farm.steed steed awaits you."
+  ],
+  "context": "\t\t<<if $farm.steed>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set _fee to 100000>>",
+   "\t<<formatmoney _fee>>"
+  ],
+  "context": "<<elseif $brothelshowdata.missed>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<harvestquick>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<harvestQuick>>"
+  ],
+  "context": "\t<<endcombat>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<harvestquick>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<harvestQuick>>"
+  ],
+  "context": "\t<<endcombat>>"
+ }
+]

@@ -1,0 +1,77 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<elseif $earSlime.forcedDressing and $earSlime.forcedDressing.days and _item.gender isnot $earSlime.forcedDressing.type and _item.gender isnot \"n\" and !_item.type.includesAny(\"event\") and V.hypnosis_traits?.silence isnot 1>>",
+   "\t\t\t<span class=\"red\">The slime in your ear refuses to allow you to try on or buy the _temp_choice.name as it is only permitting more <<print $earSlime.forcedDressing.type is \"f\" ? \"feminine\" : \"masculine\">> clothing.</span>"
+  ],
+  "old_kr": [
+   "\t\t<<elseif $earSlime.forcedDressing and $earSlime.forcedDressing.days and _item.gender isnot $earSlime.forcedDressing.type and _item.gender isnot \"n\" and !_item.type.includesAny(\"event\") and V.hypnosis_traits?.silence isnot 1>>",
+   "\t\t\t<span class=\"red\">귀 슬라임이 좀 더 <<print $earSlime.forcedDressing.type is \"f\" ? \"여성스러운\" : \"남성스러운\">> 옷만 허용하고 있기 때문에, _temp_choice.name【을를】 입어보거나 구매하는 것을 거부합니다.</span>"
+  ],
+  "new_en": [
+   "\t\t<<elseif $earSlime.forcedDressing?.days and _item.gender isnot $earSlime.forcedDressing.type and _item.gender isnot \"n\" and !_item.type.includesAny(\"event\") and V.hypnosis_traits?.silence isnot 1>>",
+   "\t\t\t<span class=\"red\">The slime in your ear refuses to allow you to try on or buy the _temp_choice.name as it is only permitting more <<print $earSlime.forcedDressing.type is \"f\" ? \"feminine\" : \"masculine\">> clothing.</span>"
+  ],
+  "context": "\t\t\t<br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\tPatterns:"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t패턴:"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<if _temp_choice.pattern_name>><<= _temp_choice.pattern_name.toUpperFirst()>><<else>>Patterns<</if>>:"
+  ],
+  "context": "\t\t\t\t\t\t<<if _temp_choice.pattern_options.length gte 15>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t\tPatterns:"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t\t패턴:"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t\t<<if _temp_choice.pattern_name>><<= _temp_choice.pattern_name.toUpperFirst()>><<else>>Patterns<</if>>:"
+  ],
+  "context": "\t\t\t\t\t\t\t<<run _temp_choice.pattern_options.pushUnique(\"random\")>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<set _unavailableItems to !!earSlimeCorruptionClothes() or ($earSlime.forcedCommando and $earSlime.forcedCommando gte 0) or ($earSlime.forcedDressing and $earSlime.forcedDressing.days) or playerBellySize() gte 12 or $location is \"forest_shop\">>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set _unavailableItems to !!earSlimeCorruptionClothes() or ($earSlime.forcedCommando and $earSlime.forcedCommando gte 0) or ($earSlime.forcedDressing?.days) or playerBellySize() gte 12 or $location is \"forest_shop\">>"
+  ],
+  "context": "\t</span>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set _realSlot to ($clothingShopSlot is \"all\" ? _item.slot : $clothingShopSlot)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set _realSlot to ($clothingShopSlot is \"all\" ? _temp_choice.slot : $clothingShopSlot)>>"
+  ],
+  "context": "\t\t<<set _temp_choice to clone(setup.clothes[$clothingShopSlot][$clothes_choice])>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<set $_special to $specialClothes.find(item => item.name === _item.name)>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<set $_special to $specialClothes.find(item => item.name === _temp_choice.name)>>"
+  ],
+  "context": "\t\t<<set _realIndex to _temp_choice.index>>"
+ }
+]

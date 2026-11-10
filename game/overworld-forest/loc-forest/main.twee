@@ -139,6 +139,9 @@
 			<br><br>
 		<</if>>
 
+		<<forestShortcuts "in">>
+		<<travelSpeedOptions>>
+		<br><br>
 		<<forestdeeper>>
 		<br><br>
 
@@ -155,21 +158,6 @@
 		<br>
 		<<if $temple_rank isnot undefined and $temple_rank isnot "prospective">>
 			<<templeicon "garden">><<link [[신전 정원 (0:10)|Temple Garden]]>><<pass 10>><<set $foresthunt to 0>><</link>>
-			<br>
-		<</if>>
-		<br><br>
-
-		<<if $historytrait gte 2 and $thicket_tunnel_intro is 1>>
-			<<foresticon "bush">><<link [[비밀 통로를 통해 거주 지구 골목으로 가기 (0:05)|Residential Thicket]]>><<pass 5>><<set $foresthunt to 0>><</link>>
-			<br>
-		<</if>>
-		<<if $historytrait gte 3>>
-			<<forestroadicon "secret">>
-			<<link [[비밀 통로를 따라 숲 더 깊은 곳으로 가기 (0:10)|Forest]]>>
-				<<set $forestmod to 1.5>><<set $forest += 50>><<set $forestmove to "secretin">><<pass 10>>
-				<<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>>
-				<<if $forestHunter is "Gwylan" and $foresthunt gte 1>><<set $foresthunt += 5>><</if>>
-			<</link>>
 			<br>
 		<</if>>
 	<</if>>
@@ -204,6 +192,9 @@
 			<br><br>
 		<</if>>
 
+		<<forestShortcuts>>
+		<<travelSpeedOptions>>
+		<br><br>
 		<<forestdeeper>>
 		<br><br>
 
@@ -232,19 +223,22 @@
 			<<if $nextPassageCheck is "Lake Shore">>
 				<span class="nextLink"><<lakeicon>><<link [[호수.|Lake Shore]]>><<pass 10>><</link>></span>
 			<<else>>
-				<<lakeicon>><<link [[호수 (0:10)|Lake Shore]]>><<pass 10>><</link>>
+				<<lakeicon>><<link [[Lake: Shore (0:10)|Lake Shore]]>><<pass 10>><</link>>
 			<</if>>
 		<<elseif $forest lte 40>>
-			<<lakeicon>><<link [[호수 (0:10)|Lake Waterfall]]>><<pass 10>><</link>>
+			<<lakeicon>><<link [[Lake: Waterfall (0:10)|Lake Waterfall]]>><<pass 10>><</link>>
 		<<else>>
 			<<if $nextPassageCheck is "Lake Fishing Rock">>
 				<span class="nextLink"><<lakeicon>><<link [[호수.|Lake Fishing Rock]]>><<pass 10>><</link>></span>
 			<<else>>
-				<<lakeicon>><<link [[호수 (0:10)|Lake Fishing Rock]]>><<pass 10>><</link>>
+				<<lakeicon>><<link [[Lake: Fishing Rock (0:10)|Lake Fishing Rock]]>><<pass 10>><</link>>
 			<</if>>
 		<</if>>
 		<br><br>
 
+		<<forestShortcuts "out">>
+		<<travelSpeedOptions>>
+		<br><br>
 		<<forestdeeper>>
 		<br><br>
 
@@ -252,17 +246,6 @@
 		<br><br>
 
 		<<forestlessdeep>>
-		<br><br>
-
-		<<if $historytrait gte 3>>
-			<<forestroadicon "secret">>
-			<<link [[비밀 통로를 이용해 숲 밖으로 나가기 (0:10)|Forest]]>>
-				<<set $forestmod to 1.5>><<set $forest -= 50>><<set $forestmove to "secretout">><<pass 10>>
-				<<if $foresthunt gte 1>><<set $foresthunt += 1>><</if>>
-				<<if $forestHunter is "Gwylan" and $foresthunt gte 1>><<set $foresthunt += 5>><</if>>
-			<</link>>
-			<br>
-		<</if>>
 	<</if>>
 
 <<elseif $forest lte 99>>
@@ -322,6 +305,8 @@
 		<</if>>
 		<br>
 
+		<<travelSpeedOptions>>
+		<br><br>
 		<<forestdeeper>>
 		<br><br>
 
@@ -345,6 +330,8 @@
 		숲 깊은 곳이다. 나무들 사이로 정신병원이 보인다.
 		<br><br>
 
+		<<travelSpeedOptions>>
+		<br><br>
 		<<forestsearch>>
 		<br><br>
 
@@ -371,8 +358,8 @@
 <</if>>
 <br><br>
 
-<<if $monster is 1 or $settings.bestialityEnabled>>
-	<<getinicon>><<link [[들어간다|Forest Bear Box Molestation]]>><<set $molestationstart to 1>><</link>>
+<<if beastSexEnabledForType("bear", $monster is 1)>>
+	<<getinicon>><<link [[Enter|Forest Bear Box Molestation]]>><<set $molestationstart to 1>><</link>>
 	<br>
 <<else>>
 	<<getinicon>><<link [[들어간다|Forest Bear Box Molestation Finish]]>><<set $phase to 1>><</link>>

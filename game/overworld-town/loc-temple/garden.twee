@@ -112,8 +112,8 @@
 	화단의 잡초를 뽑으라는 지시를 받는다. 당신은 무릎을 꿇고 일을 시작한다.
 	<br><br>
 	<<beastNEWinit 1 wolf>>
-	<<if dangerEvent() and ($monster is 1 or $settings.bestialityEnabled)>>
-		<<tending_text>> 손이 더러워지고 땀방울이 뺨을 타고 흐르지만, 일이 끝나자 꽃들이 자랄 공간이 훨씬 넓어졌다. <<physique 6>>
+	<<if dangerEvent() and beastSexEnabledForType("wolf", $monster is 1)>>
+		<<tending_text>> Your hands get dirty, and beads of sweat slip down your cheek, but the flowers have lots more space when you're done. <<physique 6>>
 		<br><br>
 			<<if $syndromewolves is 1>>
 				등 뒤에서 발소리가 들린다. 돌아보니 <<beasttype>> 한 마리가 당신 위로 뛰어오른다. <<bHe>>【이가】 당신의 얼굴을 핥는다. 웃지 않을 수 없다.
@@ -872,8 +872,8 @@
 <br><br>
 <<rng>>
 <<beastNEWinit 1 wolf>>
-<<if $rng gte 51 and ($monster is 1 or $settings.bestialityEnabled)>>
-	등 뒤에서 무언가 소리가 들린다.
+<<if $rng gte 51 and beastSexEnabledForType("wolf", $monster is 1)>>
+	You hear something behind you.
 	<<if $syndromewolves is 1>>
 		<<beasttype>> 한 마리가 울타리 아래에서 모습을 드러낸다. <<bhis>> <<if $monster is 1>>팔 안에 천 꾸러미를 안고 있다. "가려. 몸, 나쁜 사람들 보라고 있는 거 아냐."<<else>>입에 천 꾸러미를 물고 있다.<</if>>
 		<<bHe>> 당신 옆에 수건 몇 장을 떨어뜨리고 숲으로 달려 돌아간다.

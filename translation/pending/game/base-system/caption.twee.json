@@ -1,0 +1,57 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $options.tipdisable is \"f\" and (!$statFreeze or $hc)>>",
+   "\t\t\t<span class=\"gold\">Tip:</span> <<tips>>"
+  ],
+  "old_kr": [
+   "\t\t<<if $options.tipdisable is \"f\" and (!$statFreeze or $hc)>>",
+   "\t\t\t<span class=\"gold\">팁:</span> <<tips>>"
+  ],
+  "new_en": [
+   "\t\t<<if !$options.tipdisable and (!$statFreeze or $hc)>>",
+   "\t\t\t<span class=\"gold\">Tip:</span> <<tips>>"
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<if $dancing is 0 and $combat is 0 and $passage isnot \"Start2\" and $cheatsEnabled is true or $debug is 1>>",
+   "\t\t\t\t\t<<button CHEATS>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<if $dancing is 0 and $combat is 0 and $passage isnot \"Start2\" and $cheatsEnabled is true or $debug is 1>>",
+   "\t\t\t\t\t<<button \"치트\">>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<if $dancing is 0 and $combat is 0 and $passage isnot \"Start2\" and $cheatsEnabled is true or $debug>>",
+   "\t\t\t\t\t<<button CHEATS>>"
+  ],
+  "context": "\t\t\t<div class=\"sidebarButtonSplit\">"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<if $debug>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t_modeloptions.freckles = $player.freckles is true;"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t_modeloptions.freckles = $player.skin.faceFreckles is true;",
+   "\t\t\t_modeloptions.bodyFreckles = $player.skin.bodyFreckles is \"random\" ? \"none\" : $player.skin.bodyFreckles;"
+  ],
+  "context": "\t\t\t_modeloptions.mouth = \"smile\";"
+ }
+]

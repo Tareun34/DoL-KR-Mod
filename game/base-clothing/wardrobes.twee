@@ -597,13 +597,30 @@
 				<<option "설정하지 않음" undefined>>
 				<<optionsfrom _savedHairStylesKeys>>
 			<</listbox>>
-			<mouse class="tooltip linkBlue">(?)<span>'설정하지 않음'은 현재 헤어스타일을 변경하지 않습니다.</span></mouse>
+			<mouse class="tooltip linkBlue">(?)<span>'Not set' will not change your hairstyle when you select the outfit.</span></mouse>
 		</div>
 	<<else>>
 		<div>
 			헤어 스타일: 저장된 세트 없음 (거울 확인)
 		</div>
 	<</if>>
+	<div>
+		Demeanour:
+		<<listbox "_demeanour" autoselect>>
+			<<option "Not set" undefined>>
+			<<optionsfrom setup.faceVariantOptions[$facestyle]>>
+		<</listbox>>
+		<mouse class="tooltip linkBlue">(?)<span>'Not set' will not change your demeanour when you select the outfit.</span></mouse>
+	</div>
+	<div>
+		Default expression:
+		<<listbox "_defaultSidebarMouth" autoselect>>
+			<<option "Not set" undefined>>
+			<<option "Smile" "smile">>
+			<<option "Neutral" "neutral">>
+		<</listbox>>
+		<mouse class="tooltip linkBlue">(?)<span>'Not set' will not change your expression when you select the outfit.</span></mouse>
+	</div>
 	<br>
 	<div class="wardrobe-action">
 		<<link "현재 입은 옷을 새 세트로 추가">>
@@ -668,6 +685,12 @@
 			<</if>>
 			<<if _hairStyle>>
 				<<set _newOutfit.hairStyle to _hairStyle>>
+			<</if>>
+			<<if _demeanour>>
+				<<set _newOutfit.facevariant to _demeanour>>
+			<</if>>
+			<<if _defaultSidebarMouth>>
+				<<set _newOutfit.defaultSidebarMouth to _defaultSidebarMouth>>
 			<</if>>
 			<<set $outfit.push(_newOutfit)>>
 			<<updatewardrobe "outfits">>
@@ -824,22 +847,23 @@
 	<<switch _args[0]>>
 		<<case "upper">>
 			<<switch $worn.upper.variable>>
-				<<case "schoolcardigan">><<set _altLink to ["가디건을 허리에 묶기", "가디건을 정상적으로 입기"]>>
-				<<case "brownleather" "blackleather" "leathercropjacket" "winterjacket">><<set _altLink to ["재킷 지퍼 올리기", "재킷 지퍼 내리기"]>>
-				<<case "waistcoat" "waistcoatlapel" "blazershirt">><<set _altLink to ["넣어 입기", "빼서 입기"]>>
-				<<case "dress" "buttondown" "oversizedbuttondown" "shortsleevebuttonup" "flannel shirt">><<set _altLink to ["셔츠 단추 풀기", "셔츠 단추 채우기"]>>
-				<<case "catsuit">><<set _altLink to ["지퍼 내리기", "지퍼 올리기"]>>
-				<<case "kimono" "kimonomini">><<set _altLink to ["느슨하게 풀기", "단단히 조이기"]>>
-				<<case "flowy sleeve top" "milkmaid dress">><<set _altLink to ["소매 내리기", "소매 올리기"]>>
-				<<case "striped sweater">><<set _altLink to ["소매를 걷어올린다", "소매를 내린다"]>>
-                <<default>><<exit>>
-            <</switch>>
-        <<case "under_upper">>
-            <<switch $worn.under_upper.variable>>
-                <<case "ruffled swimsuit">><<set _altLink to ["가디건 벗기", "가디건 입기"]>>
-                <<default>><<exit>>
-            <</switch>>
-        <<case "head">>
+				<<case "schoolcardigan">><<set _altLink to ["Tie cardigan around waist", "Wear cardigan normally"]>>
+				<<case "brownleather" "blackleather" "leathercropjacket" "winterjacket">><<set _altLink to ["Zip jacket", "Unzip jacket"]>>
+				<<case "waistcoat" "waistcoatlapel" "blazershirt">><<set _altLink to ["Tuck in", "Untuck"]>>
+				<<case "dress" "buttondown" "oversizedbuttondown" "shortsleevebuttonup" "flannel shirt">><<set _altLink to ["Unbutton shirt", "Button up shirt"]>>
+				<<case "catsuit">><<set _altLink to ["Unzip", "Zip"]>>
+				<<case "kimono" "kimonomini">><<set _altLink to ["Loosen", "Tighten"]>>
+				<<case "flowy sleeve top" "milkmaid dress">><<set _altLink to ["Pull sleeves down", "Pull sleeves up"]>>
+				<<case "striped sweater">><<set _altLink to ["Pull up sleeves", "Pull down sleeves"]>>
+				<<case "boilersuit">><<set _altLink to ["Unzip", "Zip"]>>
+				<<default>><<exit>>
+			<</switch>>
+		<<case "under_upper">>
+			<<switch $worn.under_upper.variable>>
+				<<case "ruffled swimsuit">><<set _altLink to ["Take off cardigan", "Put on cardigan"]>>
+				<<default>><<exit>>
+			<</switch>>
+		<<case "head">>
 			<<switch $worn.head.variable>>
 				<<case "bandana hat">><<set _altLink to ["뒤로 묶기", "앞으로 묶기"]>>
 				<<default>><<exit>>
@@ -1224,7 +1248,7 @@
 	<<oldWardrobeMinorOptions>>
 	<br>
 
-	<<if $debug is 1>>
+	<<if $debug>>
 		<<oldWardrobeList "over_upper">>
 		<<oldWardrobeList "over_lower">>
 	<</if>>
@@ -1242,7 +1266,7 @@
 	<div id="clothingBox-under_lower">
 		<<oldWardrobeList "under_lower">>
 	</div>
-	<<if $debug is 1>>
+	<<if $debug>>
 		<<oldWardrobeList "over_head">>
 	<</if>>
 	<div id="clothingBox-head"><<oldWardrobeList "head">></div>

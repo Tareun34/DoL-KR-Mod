@@ -1,0 +1,558 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<elseif $debug is 1 and $NPCList[_mancombatcontrol].active isnot \"active\">>",
+   "\t\t\t\t\t<br>Debug Message:<br>NPC _mancombatcontrol, $NPCList[_mancombatcontrol].fullDescription is not active.<br>",
+   "\t\t\t\t<<elseif $debug is 1 and $NPCList[_mancombatcontrol].stance is \"defeated\">>",
+   "\t\t\t\t\t<br>Debug Message:<br>NPC _mancombatcontrol, $NPCList[_mancombatcontrol].fullDescription is defeated.<br>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<elseif $debug is 1 and $NPCList[_mancombatcontrol].active isnot \"active\">>",
+   "\t\t\t\t\t<br>디버그 메시지:<br>NPC _mancombatcontrol, <<print window.KR.getDescriptionKr($NPCList[_mancombatcontrol].fullDescription)>>【이가】 활성화되어 있지 않습니다.<br>",
+   "\t\t\t\t<<elseif $debug is 1 and $NPCList[_mancombatcontrol].stance is \"defeated\">>",
+   "\t\t\t\t\t<br>디버그 메시지:<br>NPC _mancombatcontrol, <<print window.KR.getDescriptionKr($NPCList[_mancombatcontrol].fullDescription)>>【이가】 패배했습니다.<br>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<elseif $debug and $NPCList[_mancombatcontrol].active isnot \"active\">>",
+   "\t\t\t\t\t<br>Debug Message:<br>NPC _mancombatcontrol, $NPCList[_mancombatcontrol].fullDescription is not active.<br>",
+   "\t\t\t\t<<elseif $debug and $NPCList[_mancombatcontrol].stance is \"defeated\">>",
+   "\t\t\t\t\t<br>Debug Message:<br>NPC _mancombatcontrol, $NPCList[_mancombatcontrol].fullDescription is defeated.<br>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<span class=\"purple\"><<His>> eyes go wide at the sight of your <<genitals>>. <<His>> breath catches and <<his>> entire body seems to shake.</span>",
+   "\t\t\t\t\t<<set $enemyarousal += 50>><<set $speechhermaroused to 2>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<span class=\"purple\">당신의 <<genitals>>【을를】 보자 <<his>> 눈이 휘둥그레진다. <<He>>【은는】 숨을 들이켜더니 온몸을 부들부들 떨기 시작한다.</span>",
+   "\t\t\t\t\t<<set $enemyarousal += 50>><<set $speechhermaroused to 2>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<span class=\"purple\"><<His>> eyes go wide at the sight of your <<genitals>>. <<His>> breath catches and <<his>> entire body seems to shake.</span>",
+   "\t\t\t\t\t<<set $enemyarousal += 50>><<set $speechHermAroused to 2>>"
+  ],
+  "context": "\t\t\t\t\t<<set $kylarSeen.pushUnique(\"herm\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<His>> eyebrows raise upon seeing your <<genitals>>.",
+   "\t\t\t\t\t<<set $speechhermaroused to 2>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t당신의 <<genitals>>【을를】 보자 <<his>> 눈썹이 치켜 올라간다.",
+   "\t\t\t\t\t<<set $speechhermaroused to 2>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<His>> eyebrows raise upon seeing your <<genitals>>.",
+   "\t\t\t\t\t<<set $speechHermAroused to 2>>"
+  ],
+  "context": "\t\t\t\t\t<<set $gwylanSeen.pushUnique(\"herm\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<if _kylar.gender isnot $player.sex or _kylar.gender is \"h\">>",
+   "\t\t\t\t\t\tYour <<genitals 1>> was clearly not what <<he>> was expecting. <<if _kylar.gender isnot \"h\">><span class=\"purple\"><<His>> hands shake as <<he>> looks at you with wide eyes. <<He>> seems thrilled.</span><</if>>",
+   "\t\t\t\t\t\t<<set $enemyarousal += 50>><<set $speechcrossdressaroused to 2>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<if _kylar.gender isnot $player.sex or _kylar.gender is \"h\">>",
+   "\t\t\t\t\t\t당신의 <<genitals 1>>【은는】 분명 <<he>>【이가】 예상했던 것이 아니었다. <<if _kylar.gender isnot \"h\">><span class=\"purple\"><<He>>【이가】 눈을 크게 뜬 채 당신을 바라보며 손을 부들부들 떤다. 몹시 흥분한 모양이다.</span><</if>>",
+   "\t\t\t\t\t\t<<set $enemyarousal += 50>><<set $speechcrossdressaroused to 2>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<if playerCanBreedWith(\"Kylar\") or ($player.penisExist and $settings.npcAnalPregnancyEnabled)>>",
+   "\t\t\t\t\t\tYour <<genitals 1>> was clearly not what <<he>> was expecting. <<if _kylar.gender isnot \"h\">><span class=\"purple\"><<His>> hands shake as <<he>> looks at you with wide eyes. <<He>> seems thrilled.</span><</if>>",
+   "\t\t\t\t\t\t<<set $enemyarousal += 50>><<set $speechCrossdressAroused to 2>>"
+  ],
+  "context": "\t\t\t\t\t<<set _kylar to statusCheck(\"Kylar\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t\t<<He>> sees your <<genitals>> and looks aghast. It wasn't what <<he>> was expecting.",
+   "\t\t\t\t\t\t<<set $enemyarousal -= 100>><<set $enemytrust -= 50>><<set $speechcrossdressdisappointed to 2>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t\t<<He>>【은는】 당신의 <<genitals>>【을를】 보고 경악한 표정을 짓는다. <<he>>【이가】 예상했던 것이 아니었다.",
+   "\t\t\t\t\t\t<<set $enemyarousal -= 100>><<set $enemytrust -= 50>><<set $speechcrossdressdisappointed to 2>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t\t<<He>> sees your <<genitals>> and looks aghast. It wasn't what <<he>> was expecting.",
+   "\t\t\t\t\t\t<<set $enemyarousal -= 100>><<set $enemytrust -= 50>><<set $speechCrossdressDisappointed to 2>>"
+  ],
+  "context": "\t\t\t\t\t<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<He>> scratches <<his>> head upon seeing your <<genitals>>. It wasn't what <<he>> was expecting, but <<he>> doesn't seem to mind.",
+   "\t\t\t\t\t<<set $speechcrossdressaroused to 2>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t<<He>>【은는】 당신의 <<genitals>>【을를】 보고 머리를 긁적인다. <<he>>【이가】 원하던 것은 아니었지만, 개의치 않는 듯하다.",
+   "\t\t\t\t\t<<set $speechcrossdressaroused to 2>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<He>> scratches <<his>> head upon seeing your <<genitals>>. It wasn't what <<he>> was expecting, but <<he>> doesn't seem to mind.",
+   "\t\t\t\t\t<<set $speechCrossdressAroused to 2>>"
+  ],
+  "context": "\t\t\t\t\t<<set $gwylanSeen.pushUnique(\"crossdress\")>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t\t<<His>> eyes widen in surprise as <<he>> looks down at your <<genitals>>.",
+   "\t\t\t\t\t<<set $speechcrossdressshock to 2>>"
+  ],
+  "old_kr": [
+   "\t\t\t\t\t당신의 <<genitals>>【을를】 내려다보는 <<his>> 눈이 놀라움으로 크게 뜨인다.",
+   "\t\t\t\t\t<<set $speechcrossdressshock to 2>>"
+  ],
+  "new_en": [
+   "\t\t\t\t\t<<His>> eyes widen in surprise as <<he>> looks down at your <<genitals>>.",
+   "\t\t\t\t\t<<set $speechCrossdressShock to 2>>"
+  ],
+  "context": "\t\t\t\t\t<<set $averySeen.pushUnique(\"crossdress\")>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<!-- Args are number of beasts(1-6), Type, Gender, Genitals and Monster status-->",
+   "\t<!-- Last three args are optional and override generation based on settings. Use with care -->"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<!-- Args are number of beasts(1-6), Type, Gender, Genitals, Monster status and Victim status-->",
+   "\t<!-- Gender, Genitals and Monster status are optional and override generation based on settings. Use with care -->",
+   "\t<!-- Victim status is optional. When true, the beasts use the \"victims always generate as monster people\" setting. Use <<generateBeastVictim>> rather than passing it directly -->"
+  ],
+  "context": "\t<!-- NEW beast intitiation widget v2.6. Replaces beast(1-6)init widgets -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<!-- Example: <<beastNEWinit 1 horse f penis monster>> would generate 1 dickgirl centaur -->"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<!-- Example: <<beastNEWinit 1 horse f penis monster>> would generate 1 female centaur with a penis -->"
+  ],
+  "context": "\t<!-- Example: <<beastNEWinit 2 wolf f>> would generate 2 female wolves -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set _beast_victim to _args[5]>>"
+  ],
+  "context": "\t<<set _beast_monster to _args[4]>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<generateBEAST _xx _tpe _gnn _beast_genitals _beast_monster>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<generateBEAST _xx _tpe _gnn _beast_genitals _beast_monster _beast_victim>>"
+  ],
+  "context": "\t<<for _xx = 1; _xx < _nn+1; _xx++>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"generateBeastVictim\">>",
+   "\t<<beastNEWinit _args[0] _args[1] _args[2] _args[3] _args[4] true>>",
+   "<</widget>>",
+   ""
+  ],
+  "context": ""
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<!-- Args are number of beasts(1-6), Type, Gender, Genitals and Monster status-->",
+   "\t<!-- Last three args are optional and override generation based on settings. Use with care -->",
+   "\t<!-- Example: <<beastNEWinit 1 dog m>> would generate 1 male dog -->",
+   "\t<!-- Example: <<beastNEWinit 2 wolf f>> would generate 2 female wolves -->",
+   "\t<!-- Example: <<beastNEWinit 1 horse f penis monster>> would generate 1 dickgirl centaur -->"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<!-- Args are NPC slot of beast, Type, NPC slot of partner and Victim status-->",
+   "\t<!-- Victim status is optional. When true, the beast uses the \"victims always generate as monster people\" setting. Use <<generateBeastPartnerVictim>> rather than passing it directly -->",
+   "\t<!-- Example: <<beastNEWinit 1 horse>><<beastPARTNERinit 1 horse 0>> would generate a horse in slot 2 as a partner for the horse in slot 1 -->"
+  ],
+  "context": "\t<!-- This will probably brick any combat it's called into. -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set _beast_victim to _args[3]>> <!-- If the NPC is a victim -->"
+  ],
+  "context": "\t<<set _partner to _args[2]>> <!-- NPC slot of partner -->"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<generateBEAST _xx _tpe>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<generateBEAST _xx _tpe undefined undefined undefined _beast_victim>>"
+  ],
+  "context": "\t<<set _xx to _nn +1>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "<</widget>>",
+   "",
+   "<<widget \"generateBeastPartnerVictim\">>",
+   "\t<!-- Generates a beast partner that is a victim. Same args as beastPARTNERinit, minus Victim status -->",
+   "\t<<beastPARTNERinit _args[0] _args[1] _args[2] true>>"
+  ],
+  "context": "\t<<set $monster to ($NPCList[_partner].monster is \"monster\" ? 1 : 0)>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t<<if $settings.nudeGenderPerception is 0>>",
+   "\t\t<<set $crossdressing to 0>>",
+   "\t<</if>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<!-- <<set $turnCount to 0>> -->"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<set $turnCount to 0>>"
+  ],
+  "context": "\t<<set $combatgoal to 0>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<if $position isnot \"stalk\" and !$breakIgnore>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<if $position is \"stalk\">>",
+   "\t\t\t\t\t\t<<break>>",
+   "\t\t\t\t\t<<elseif !$breakIgnore>>"
+  ],
+  "context": "\t\t\t\t\t<<man-combat _mancombatcontrol>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t<<elseif $crossdressing gte 1 and $worn.over_lower.vagina_exposed gte 1 and $worn.under_lower.vagina_exposed gte 1 and $worn.lower.vagina_exposed gte 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t<<elseif $crossdressing gte 1 and $worn.over_lower.vagina_exposed gte 1 and $worn.under_lower.vagina_exposed gte 1 and $worn.lower.vagina_exposed gte 1 and $settings.nudeGenderPerception !== 0>>"
+  ],
+  "context": "\t<<if $worn.genitals.type.includesAll(\"chastity\", \"hidden\") or $NPCList[0].state is \"stalk\" or $NPCList[0].state is \"pursuit\" or $NPCList[0].state is \"chased\" or $gloryhole>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<npcincr Sydney purity -2>><<lspurity>><<set $speechhermaroused to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<npcincr Sydney purity -2>><<lspurity>><<set $speechHermAroused to 2>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechhermaroused to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechHermAroused to 2>>"
+  ],
+  "context": "\t\t\t\t\t<<set $enemyarousal += 50>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $enemyarousal -= 100>><<set $enemytrust -= 50>><<set $speechhermdisappointed to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $enemyarousal -= 100>><<set $enemytrust -= 50>><<set $speechHermDisappointed to 2>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $enemyanger -= 50>><<set $enemytrust -= 50>><<set $speechhermshock to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $enemyanger -= 50>><<set $enemytrust -= 50>><<set $speechHermShock to 2>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $enemyarousal += (50 * $enemyno)>><<set $speechhermaroused to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $enemyarousal += (50 * $enemyno)>><<set $speechHermAroused to 2>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $enemyanger += 200>><<set $enemytrust -= 100>><<set $speechhermangry to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $enemyanger += 200>><<set $enemytrust -= 100>><<set $speechHermAngry to 2>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<npcincr Sydney purity -2>><<lspurity>><<set $speechcrossdressaroused to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<npcincr Sydney purity -2>><<lspurity>><<set $speechCrossdressAroused to 2>>"
+  ],
+  "context": "\t\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $enemyarousal -= 100>><<set $enemytrust -= 50>><<set $speechcrossdressdisappointed to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $enemyarousal -= 100>><<set $enemytrust -= 50>><<set $speechCrossdressDisappointed to 2>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $enemyanger -= 50>><<set $enemytrust -= 50>><<set $speechcrossdressshock to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $enemyanger -= 50>><<set $enemytrust -= 50>><<set $speechCrossdressShock to 2>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $enemyarousal += (50 * $enemyno)>><<set $speechcrossdressaroused to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $enemyarousal += (50 * $enemyno)>><<set $speechCrossdressAroused to 2>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t<<set $enemyanger += 200>><<set $enemytrust -= 100>><<set $speechcrossdressangry to 2>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t<<set $enemyanger += 200>><<set $enemytrust -= 100>><<set $speechCrossdressAngry to 2>>"
+  ],
+  "context": "\t\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<br><br>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<set $speechSextoyState to $speechSextoyState || either(\"aroused\", \"neutral\", \"disappointed\", \"shocked\", \"angry\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<set $speechSexToyState to $speechSexToyState || either(\"aroused\", \"neutral\", \"disappointed\", \"shocked\", \"angry\")>>"
+  ],
+  "context": "\t\t<<if $enemyno gte 2>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<switch $speechSextoyState>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<switch $speechSexToyState>>"
+  ],
+  "context": "\t\t\t<<cleareventpool>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechsextoy to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechNoticeSexToy to 1>>"
+  ],
+  "context": "\t\t\t\t<<case \"Robin\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechsextoy to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechNoticeSexToy to 1>>"
+  ],
+  "context": "\t\t\t\t<<case \"Kylar\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechsextoy to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechNoticeSexToy to 1>>"
+  ],
+  "context": "\t\t\t\t<<case \"Whitney\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechsextoy to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechNoticeSexToy to 1>>"
+  ],
+  "context": "\t\t\t\t<<case \"Sydney\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechsextoy to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechNoticeSexToy to 1>>"
+  ],
+  "context": "\t\t\t\t<<case \"Alex\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechsextoy to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechNoticeSexToy to 1>>"
+  ],
+  "context": "\t\t\t\t<<case \"Eden\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechsextoy to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechNoticeSexToy to 1>>"
+  ],
+  "context": "\t\t\t\t<<case \"Avery\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechsextoy to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechNoticeSexToy to 1>>"
+  ],
+  "context": "\t\t\t\t<<case \"Gwylan\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechsextoy to 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechNoticeSexToy to 1>>"
+  ],
+  "context": "\t\t\t\t<<case \"Leighton\">>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<set $speechSextoyState to $speechSextoyState || either(\"aroused\", \"neutral\", \"disappointed\", \"shocked\", \"angry\")>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<set $speechSexToyState to $speechSexToyState || either(\"aroused\", \"neutral\", \"disappointed\", \"shocked\", \"angry\")>>"
+  ],
+  "context": "\t\t\t\t<<default>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t\t\t<<switch $speechSextoyState>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t\t\t<<switch $speechSexToyState>>"
+  ],
+  "context": "\t\t\t\t\t<<cleareventpool>>"
+ }
+]

@@ -46,7 +46,11 @@
 	<</if>>
 <<elseif Weather.dayState is "night">>
 	<<if !Weather.isOvercast>>
-		모닥불 주위에 모여 술을 마시는 한 무리의 학생들을 제외하면 텅 빈 것 같다.
+		<<if Weather.bloodMoon>>
+			The blood moon shines through the tree leaves.
+		<<else>>
+			It appears deserted, save for a group of students who are drinking around a fire.
+		<</if>>
 	<<else>>
 		텅 빈 것 같다.
 	<</if>>
@@ -176,6 +180,9 @@
 	<<elseif _robin_location is "beach" and $balloonStand.open is true and $balloonStand.robin.status is "unaffected">>
 		<<balloonRobinIntro>>
 	<<else>>
+		<<if Weather.bloodMoon and !Weather.isOvercast>>
+			<<bloodmoonTouristBeach>>
+		<</if>>
 		<<if Time.weekDay is 1 and Time.hour is 9 and !Weather.isOvercast>> /* 9-10 */
 			자원봉사자 무리가 해변을 청소하고 있다.
 			<<if C.npc.Doren.state is "active">>
@@ -799,7 +806,7 @@
 :: Beach Party Dance Rape Stop
 <<effects>>
 
-군중의 가장자리 어디선가 소음을 뚫고 한 목소리가 울려 퍼진다. 밀려들던 인파가 주춤하고, 몇몇은 서로 눈치를 살피더니 다시 자리에 주저앉는다. 대부분은 무안해하는 표정이고, 일부는 불퉁한 기색이다.<<gstress>><<stress 3>>
+A voice cuts through the noise somewhere at the edge of the crowd. The surge falters and a few people exchange glances before sitting back down. Most look embarrassed, some grumpy.<<gstress>><<stress 3>>
 <br><br>
 
 심장이 여전히 거세게 요동치는 가운데, 당신은 임시 무대에서 내려온다.
@@ -908,13 +915,13 @@
 한 <<person1>><<person>>【이가】 당신을 보고 숨을 헐떡인다. 한 <<person2>><<person>>【은는】 시선을 돌리고 무슨 수를 써서라도 당신을 보지 않으려 한다. 한 <<person3>><<person>>【은는】 뚫어지게 쳐다보며 침을 흘릴 것 같다. 당신은 이것이 가장 흔한 반응이라 기쁘다. 당신은 당신의 <<genitals>>【을를】 부끄러워하지 않는다. 자랑스러워할 모든 것을 가졌다.
 <<exhibitionism5>>
 
-<<flaunting>> 당신은 해변을 따라 거닐며, 가는 곳마다 시선을 끈다.
-<<if $player.penisExist and $player.vaginaExist and !$worn.genitals.type.includesAll("chastity", "hidden") and $rng % 2 == 0>>많은 시선이 당신의 독특함에 경외하며 당신의 성기에 고정된다.
-<<elseif $player.breastsize gte 6 and $rng % 2 == 0>>많은 시선이 당신의 <<breasts>>에 쏠린다.
-<<elseif $player.penisExist and $player.penissize gte 5 and !$worn.genitals.type.includesAll("chastity", "hidden")>>많은 시선이 당신의 <<penis>>에 고정된다.
-<<elseif $beauty gte (($beautymax / 7) * 5) and $rng % 3>>몇몇은 그저 입을 벌린 채, 당신의 벌거벗은 아름다움에 넋을 잃고 쳐다본다.
-<<elseif $physique gte (($physiquesize / 7) * 5)>>몇몇은 그렇게 멋진 몸매가 완전히 드러난 것을 보고 감탄한다.
-<<elseif $worn.genitals.type.includesAll("chastity", "hidden")>>몇몇은 당신의 $worn.genitals.name【을를】 호기심 어린 표정으로 쳐다본다.
+<<flaunting>> you stroll down the beach, drawing eyes wherever you go.
+<<if $player.penisExist and $player.vaginaExist and !$worn.genitals.type.includesAll("chastity", "hidden") and $rng % 2 == 0 and $settings.nudeGenderPerception !== 0>>Many eyes fix on your genitals, awed by your uniqueness.
+<<elseif $player.breastsize gte 6 and $rng % 2 == 0>>Many eyes are drawn to your <<breasts>>.
+<<elseif $player.penisExist and $player.penissize gte 5 and !$worn.genitals.type.includesAll("chastity", "hidden")>>Many eyes fix on your <<penis>>.
+<<elseif $beauty gte (($beautymax / 7) * 5) and $rng % 3>>Some just stare, open-mouthed, blown away by your naked beauty.
+<<elseif $physique gte (($physiquesize / 7) * 5)>>Some marvel at seeing such a stunning physique so fully displayed.
+<<elseif $worn.genitals.type.includesAll("chastity", "hidden")>>Some stare with a curious look at your $worn.genitals.name.
 <</if>>
 벌거벗은 살결을 어루만지는 산들바람 하나하나가 당신의 노출을 상기시킨다. 당신은 너무나 자유롭고, 강력하고, 섹시하게 느껴진다.
 

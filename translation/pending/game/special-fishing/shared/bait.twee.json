@@ -1,0 +1,15 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\tEach fish prefers a specific kind of bait, and fishing without any bait will not attract many fish. Bait worms are easily acquired in the bait shop, but aren't very good at attracting anything other than baitfish. Various kinds of food can be used as bait, and are all effective at catching your average fish, while baitfish attract larger, more difficult to catch fish. Each fish has a favorite kind of bait, experiment to find out which fish like which bait so you can better catch what you want!"
+  ],
+  "old_kr": [
+   "\t각 물고기는 선호하는 미끼가 있으며, 미끼 없이 낚시하면 물고기를 유인하기 어렵습니다. 미끼용 지렁이는 미끼 상점에서 쉽게 구할 수 있지만 미끼용 물고기 외에는 잘 꼬이지 않습니다. 각종 음식을 미끼로 쓸 수 있으며 일반적인 물고기를 잡는 데 효과적이고, 미끼용 물고기는 더 크고 잡기 어려운 물고기를 끌어들입니다. 물고기마다 좋아하는 미끼가 다르므로 여러 가지로 실험해 보며 원하는 물고기를 쉽게 잡을 방법을 찾을 수 있습니다."
+  ],
+  "new_en": [
+   "\tEach fish prefers a specific kind of bait, and fishing without any bait will not attract many fish. Bait worms are easily acquired in the bait shop, but aren't very good at attracting anything other than baitfish. Various kinds of food can be used as bait, and are all effective at catching your average fish, while baitfish attract larger, more difficult to catch fish. Each fish has a favourite kind of bait, experiment to find out which fish like which bait so you can better catch what you want!"
+  ],
+  "context": "\t<br><br>"
+ }
+]

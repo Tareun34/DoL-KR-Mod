@@ -1,0 +1,69 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<<if random(1, 2) is 2 and $settings.bestialityEnabled and $settings.slugsEnabled>>",
+   "\tYou hear a squelch, and the tentacle unravels. It points at the water, as if watching something. A shape lunges from the water. The tentacle unravels the rest of the way, dropping you and recoiling in fright."
+  ],
+  "old_kr": [
+   "<<if random(1, 2) is 2 and $settings.bestialityEnabled and $settings.slugsEnabled>>",
+   "\t질척이는 소리가 들리고 촉수가 풀린다. 그것은 무언가를 보는 것처럼 물을 가리킨다. 형체 하나가 물속에서 튀어 오른다. 촉수는 완전히 풀리며 당신을 떨어뜨리고, 겁먹은 듯 움츠러든다."
+  ],
+  "new_en": [
+   "<<if random(1, 2) is 2 and $settings.slugsEnabled>>",
+   "\tYou hear a squelch, and the tentacle unravels. It points at the water, as if watching something. A shape lunges from the water. The tentacle unravels the rest of the way, dropping you and recoiling in fright."
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "The presence draws closer.",
+   "<<if random(1, 2) is 2 and $settings.bestialityEnabled and $settings.slugsEnabled>>",
+   "\tYou hear a squelch, and a shape lunges from the water, landing on your thigh. A slug, as large as a cat. Another joins it, wrapping around the rope. It gnaws through with disturbing speed, and you splash into the water."
+  ],
+  "old_kr": [
+   "무언가의 존재가 가까워진다.",
+   "<<if random(1, 2) is 2 and $settings.bestialityEnabled and $settings.slugsEnabled>>",
+   "\t질척이는 소리가 들리고, 형체 하나가 물속에서 튀어 올라 허벅지에 달라붙는다. 고양이만 한 민달팽이다. 또 하나가 합류해 밧줄을 감싼다. 그것은 불쾌할 만큼 빠르게 밧줄을 갉아 끊고, 당신은 물속으로 떨어진다."
+  ],
+  "new_en": [
+   "The presence draws closer.",
+   "<<if random(1, 2) is 2 and $settings.slugsEnabled>>",
+   "\tYou hear a squelch, and a shape lunges from the water, landing on your thigh. A slug, as large as a cat. Another joins it, wrapping around the rope. It gnaws through with disturbing speed, and you splash into the water."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled and $settings.slugsEnabled and random(1, 2) is 2>>",
+   "\t\t<span class=\"red\">A slug leaps out as you pass,</span> narrowly missing you.<<set $pursuit += 1>>"
+  ],
+  "old_kr": [
+   "\t<<if $settings.bestialityEnabled and $settings.slugsEnabled and random(1, 2) is 2>>",
+   "\t\t<span class=\"red\">지나가는 순간 민달팽이가 튀어나와,</span> 아슬아슬하게 빗나간다.<<set $pursuit += 1>>"
+  ],
+  "new_en": [
+   "\t<<if $settings.slugsEnabled and random(1, 2) is 2>>",
+   "\t\t<span class=\"red\">A slug leaps out as you pass,</span> narrowly missing you.<<set $pursuit += 1>>"
+  ],
+  "context": "<<if $pursuit gt 0 and $rng gte (100 - ($pursuit * 15))>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t<<if $settings.bestialityEnabled and $settings.slugsEnabled and random(1, 2) is 2>>",
+   "\t\t\t<span class=\"red\">A shape lunges from the water.</span> It misses, landing on the cave wall behind you. A large slug. Another swims towards you."
+  ],
+  "old_kr": [
+   "\t\t<<if $settings.bestialityEnabled and $settings.slugsEnabled and random(1, 2) is 2>>",
+   "\t\t\t<span class=\"red\">형체 하나가 물속에서 튀어 오른다.</span> 그것은 빗나가 뒤쪽 동굴 벽에 달라붙는다. 커다란 민달팽이다. 또 하나가 당신을 향해 헤엄쳐 온다."
+  ],
+  "new_en": [
+   "\t\t<<if $settings.slugsEnabled and random(1, 2) is 2>>",
+   "\t\t\t<span class=\"red\">A shape lunges from the water.</span> It misses, landing on the cave wall behind you. A large slug. Another swims towards you."
+  ],
+  "context": "\t<<if $pursuit gte 6>>"
+ }
+]

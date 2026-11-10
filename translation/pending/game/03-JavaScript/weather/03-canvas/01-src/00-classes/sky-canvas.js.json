@@ -1,0 +1,13 @@
+[
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\treturn V.location === \"tentworld\"; // todo move to Weather"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\treturn V.location === \"tentworld\" || V.location === \"mines\"; // todo move to Weather"
+  ],
+  "context": "\tget sidebarSkyDisabled() {"
+ }
+]

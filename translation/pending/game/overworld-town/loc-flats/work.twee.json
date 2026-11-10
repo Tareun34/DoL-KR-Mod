@@ -1,0 +1,200 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\tWhatever the argument is about, it doesn’t sound particularly heated, though you do catch something",
+   "\t\tabout tomatoes."
+  ],
+  "old_kr": [
+   "\t\t무엇 때문에 다투는지 모르겠지만, 그렇게 격앙되어 보이진 않는다. 하지만 토마토에 관한 뭔가가 들린다.",
+   "\t\t<br><br>\t",
+   "\t\t당신은 문을 두드리고 기다린다."
+  ],
+  "new_en": [
+   "\t\tWhatever the argument is about, it doesn't sound particularly heated, though you do catch something",
+   "\t\tabout tomatoes."
+  ],
+  "context": "\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $settings.bestialityEnabled or $monster is 1>>",
+   "\t\tYou fill a bin bag with shredded fabric, then drop to the floor to clear beneath the sofa. It's raised above the ground just enough to fit."
+  ],
+  "old_kr": [
+   "\t<<if $settings.bestialityEnabled or $monster is 1>>",
+   "\t\t당신은 쓰레기봉투를 찢어진 천 조각으로 채운 뒤, 소파 밑을 치우기 위해 바닥에 엎드린다. 소파는 몸이 겨우 들어갈 만큼만 바닥에서 떨어져 있다."
+  ],
+  "new_en": [
+   "\t<<if beastSexEnabledForType(\"dog\", $monster is 1)>>",
+   "\t\tYou fill a bin bag with shredded fabric, then drop to the floor to clear beneath the sofa. It's raised above the ground just enough to fit."
+  ],
+  "context": "<<if (dangerEvent() or $eventforced) and $eventskip is 0>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t<<tearful>> you leave the flat"
+  ],
+  "old_kr": [
+   "\t\t\t<<tearful>> 당신은 아파트를 떠난다."
+  ],
+  "new_en": [
+   "\t\t\t<<tearful>> you leave the flat."
+  ],
+  "context": ""
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $submissive lte 500>>",
+   "\t\t<<link [[Threaten to take the television|Flats Kitchen Threaten]]>><<stress -6>><<wolfDefiant 500>><</link>><<defianttext 500>><<lstress>>"
+  ],
+  "old_kr": [
+   "\t<<if $submissive lte 500>>",
+   "\t\t<<link [[텔레비전을 가져가겠다고 위협한다|Flats Kitchen Threaten]]>><<stress -6>><<wolfDefiant 500>><</link>><<defianttext 500>><<lstress>>"
+  ],
+  "new_en": [
+   "\t<<if displayDefiantOption(500)>>",
+   "\t\t<<link [[Threaten to take the television|Flats Kitchen Threaten]]>><<stress -6>><<wolfDefiant 500>><</link>><<defianttext 500>><<lstress>>"
+  ],
+  "context": "\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "You’re uncertain if your knocking was heard as the voices inside continue unabated."
+  ],
+  "old_kr": [
+   "안에서 들리는 목소리가 끊이지 않는 것으로 보아 당신의 노크 소리를 듣지 못한 것 같다."
+  ],
+  "new_en": [
+   "You're uncertain if your knocking was heard as the voices inside continue unabated."
+  ],
+  "context": "<<generate1>><<generatep2>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Just as you’re about to knock again, one of the voices grows louder, and you hear a lock turn."
+  ],
+  "old_kr": [
+   "다시 노크하려던 찰나, 목소리 중 하나가 커지더니 자물쇠가 돌아가는 소리가 났다."
+  ],
+  "new_en": [
+   "Just as you're about to knock again, one of the voices grows louder, and you hear a lock turn."
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\"For the last time, we’re not fighting, you bloody–\" A <<person1>><<person>> yanks the door open,",
+   "the rest of <<his>> sentence dying on <<his>> lips when <<he>> spots you. \"Oh, sorry, you’re not",
+   "who I was expecting.\""
+  ],
+  "old_kr": [
+   "\"마지막으로 말하는데, 우리 안 싸웠다고, 이 망할–\" <<person1>><<person>>【이가】 문을 벌컥 열었지만,<<he>>【이가】 당신을 발견하고는 <<his>> 입술에서 남은 말이 쏙 들어갔다. \"오, 미안. 내가 생각한 사람이 아니네.\""
+  ],
+  "new_en": [
+   "\"For the last time, we're not fighting, you bloody–\" A <<person1>><<person>> yanks the door open,",
+   "the rest of <<his>> sentence dying on <<his>> lips when <<he>> spots you. \"Oh, sorry, you're not",
+   "who I was expecting.\""
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "Before <<he>> can say anything else, a <<person2>><<person>> leans around a corner further",
+   "inside the flat and, in a cheerful voice, calls out, \"We’re not fighting!\""
+  ],
+  "old_kr": [
+   "<<he>>【이가】 다른 말을 꺼내기도 전에, 집 안쪽 모퉁이에서 <<person2>><<person>>【이가】 몸을 내밀며 밝은 목소리로 외쳤다. \"우리 안 싸워요!\""
+  ],
+  "new_en": [
+   "Before <<he>> can say anything else, a <<person2>><<person>> leans around a corner further",
+   "inside the flat and, in a cheerful voice, calls out, \"We're not fighting!\""
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "The <<person1>><<person>> rolls <<his>> eyes. \"It’s not the old hag from next door.\""
+  ],
+  "old_kr": [
+   "<<person1>><<person>>【은는】 눈을 굴렸다. \"옆집 늙은 마녀가 아니야.\""
+  ],
+  "new_en": [
+   "The <<person1>><<person>> rolls <<his>> eyes. \"It's not the old hag from next door.\""
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "The <<person1>><<person>> doesn’t answer <<his>> partner. \"What can I do for you?\""
+  ],
+  "old_kr": [
+   "<<person1>><<person>>【은는】 <<his>> 파트너에게 대답하지 않았다. \"무슨 일로 왔지?\""
+  ],
+  "new_en": [
+   "The <<person1>><<person>> doesn't answer <<his>> partner. \"What can I do for you?\""
+  ],
+  "context": "<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "    a tomato."
+  ],
+  "old_kr": [
+   "    토마토 1개를 얻었습니다."
+  ],
+  "new_en": [
+   "\ta tomato."
+  ],
+  "context": "<<if _tomatoes is 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "    <<number _tomatoes>> tomatoes."
+  ],
+  "old_kr": [
+   "    토마토 <<number _tomatoes>>개를 얻었습니다."
+  ],
+  "new_en": [
+   "\t<<number _tomatoes>> tomatoes."
+  ],
+  "context": "<<else>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "    a tomato."
+  ],
+  "old_kr": [
+   "    토마토 1개를 얻었습니다."
+  ],
+  "new_en": [
+   "\ta tomato."
+  ],
+  "context": "<<if _tomatoes is 1>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "    <<number _tomatoes>> tomatoes."
+  ],
+  "old_kr": [
+   "    토마토 <<number _tomatoes>>개를 얻었습니다."
+  ],
+  "new_en": [
+   "\t<<number _tomatoes>> tomatoes."
+  ],
+  "context": "<<else>>"
+ }
+]

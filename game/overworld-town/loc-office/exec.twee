@@ -459,8 +459,8 @@
 	<<set $skulduggerysuccess to 0>>
 	<<skulduggerycheck>>
 	<<if $skulduggerysuccess is 1>>
-		<<crimeUp 5 "thievery">>
-		서류철을 슬쩍 빼돌리는 동안 <<person1>><<person>>【은는】 당신 쪽을 쳐다보지도 않는다. <<lstress>>
+		<<set $blackmoney += 50>><<crimeUp 5 "thievery">>
+		The <<person1>><<person>> doesn't even glance at you as you slip the file away. <<lstress>>
 		<br><br>
 		<<link [[다음|Office Executive Work Finish]]>><</link>>
 	<<else>>

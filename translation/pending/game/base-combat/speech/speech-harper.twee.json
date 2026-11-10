@@ -1,0 +1,145 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<if $speechpenisvirgin is 1 and $player.virginity.penile is \"Harper\">>",
+   "\t\t<<He>> smiles. \"Hold still. I need to check your blood pressure.\"",
+   "\t<<elseif ($speechvaginavirgin is 1 and $player.virginity.vaginal is \"Harper\")>>",
+   "\t\t<<He>> smiles. \"This will only hurt a bit.\"",
+   "\t<<elseif $speechanusvirgin is 1 and $player.virginity.anal is \"Harper\">>",
+   "\t\t<<if $player.sex is \"f\">>",
+   "\t\t\t<<He>> smiles. \"I'm going to administer a suppository. Please, try to relax.\"",
+   "\t\t<<else>>",
+   "\t\t\t<<He>> smiles. \"You're overdue for a prostate examination. Please, try to relax.\""
+  ],
+  "old_kr": [
+   "\t<<if $speechpenisvirgin is 1 and $player.virginity.penile is \"Harper\">>",
+   "\t\t<<He>>【이가】 미소 짓는다. \"가만히 계십시오. 혈압을 확인해야 합니다.\"",
+   "\t<<elseif ($speechvaginavirgin is 1 and $player.virginity.vaginal is \"Harper\")>>",
+   "\t\t<<He>>【이가】 미소 짓는다. \"조금 따끔할 겁니다.\"",
+   "\t<<elseif $speechanusvirgin is 1 and $player.virginity.anal is \"Harper\">>",
+   "\t\t<<if $player.sex is \"f\">>",
+   "\t\t\t<<He>>【이가】 미소 짓는다. \"좌약을 투여하겠습니다. 긴장 푸세요.\"",
+   "\t\t<<else>>",
+   "\t\t\t<<He>>【이가】 미소 짓는다. \"전립선 검사를 받을 때가 한참 지났군요. 긴장 푸세요.\""
+  ],
+  "new_en": [
+   "\t<<speechPool \"Harper\">>",
+   "\t<<if $player.virginity.penile is \"Harper\" and $speechPenisVirgin>>",
+   "\t\t<<addSpeechLine \"virginity\">>",
+   "\t\t\t<<He>> smiles. \"Hold still. I need to check your blood pressure.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $player.virginity.vaginal is \"Harper\" and $speechVaginaVirgin>>",
+   "\t\t<<addSpeechLine \"virginity\">>",
+   "\t\t\t<<He>> smiles. \"This will only hurt a bit.\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $player.virginity.anal is \"Harper\">>",
+   "\t\t<<if $speechAnusVirgin>>",
+   "\t\t\t<<if $player.sex is \"f\">>",
+   "\t\t\t\t<<addSpeechLine \"virginity\">>",
+   "\t\t\t\t\t<<He>> smiles. \"I'm going to administer a suppository. Please, try to relax.\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<<else>>",
+   "\t\t\t\t<<addSpeechLine \"virginity\">>",
+   "\t\t\t\t\t<<He>> smiles. \"You're overdue for a prostate examination. Please, try to relax.\"",
+   "\t\t\t\t<</addSpeechLine>>",
+   "\t\t\t<</if>>"
+  ],
+  "context": "\t<<set _npc_speech to true>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t<<elseif $speechmouthvirgin is 1 and $player.virginity.oral is \"Harper\">>",
+   "\t\t<<He>> smiles. \"Say 'Ahh'...\"",
+   "\t<<elseif $speechkissvirgin is 1 and $player.virginity.kiss is \"Harper\">>",
+   "\t\t<<He>> smiles. \"How's my bedside manner?\"",
+   "\t<<elseif $speechnamedrop is 1>>",
+   "\t\t<<set $speechnamedrop to 0>>"
+  ],
+  "old_kr": [
+   "\t<<elseif $speechmouthvirgin is 1 and $player.virginity.oral is \"Harper\">>",
+   "\t\t<<He>>【이가】 미소 짓는다. \"'아' 하세요...\"",
+   "\t<<elseif $speechkissvirgin is 1 and $player.virginity.kiss is \"Harper\">>",
+   "\t\t<<He>>【이가】 미소 짓는다. \"제 진료 태도는 어떠셨습니까?\"",
+   "\t<<elseif $speechnamedrop is 1>>",
+   "\t\t<<set $speechnamedrop to 0>>"
+  ],
+  "new_en": [
+   "\t<</if>>",
+   "\t<<if $player.virginity.oral is \"Harper\" and $speechOralVirgin>>",
+   "\t\t<<addSpeechLine \"virginity\">>",
+   "\t\t\t<<He>> smiles. \"Say 'Ahh'...\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $player.virginity.kiss is \"Harper\" and $speechKissVirgin>>",
+   "\t\t<<addSpeechLine \"virginity\">>",
+   "\t\t\t<<He>> smiles. \"How's my bedside manner?\"",
+   "\t\t<</addSpeechLine>>",
+   "\t<</if>>",
+   "\t<<if $speechLINameDrop>>"
+  ],
+  "context": "\t\t<</if>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> speaks. \"Interesting. You've a very healthy imagination, to give your hallucination such a name.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 말한다. \"흥미롭군요. 환각에 그런 이름까지 붙여주다니 상상력이 아주 풍부하십니다.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<He>> speaks. \"Interesting. You've a very healthy imagination, to give your hallucination such a name.\"",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"Gwylan\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> shakes <<his>> head. \"As I've said, such animals do not exist.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 고개를 가로젓는다. \"말씀드렸다시피, 그런 동물은 존재하지 않습니다.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<He>> shakes <<his>> head. \"As I've said, such animals do not exist.\"",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<case \"Black Wolf\" \"Great Hawk\">>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<He>> nods. \"Prior attachments. Noted.\""
+  ],
+  "old_kr": [
+   "\t\t\t\t<<He>>【이가】 끄덕인다. \"선행 애착 관계. 기록해 두겠습니다.\""
+  ],
+  "new_en": [
+   "\t\t\t\t<<addSpeechLine \"namedrop\">>",
+   "\t\t\t\t\t<<He>> nods. \"Prior attachments. Noted.\"",
+   "\t\t\t\t<</addSpeechLine>>"
+  ],
+  "context": "\t\t\t<<default>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "<</widget>>"
+  ],
+  "old_kr": [
+   "<</widget>>"
+  ],
+  "new_en": [
+   "\t<<speechSay>>",
+   "<</widget>>"
+  ],
+  "context": "\t<</if>>"
+ }
+]

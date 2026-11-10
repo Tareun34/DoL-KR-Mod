@@ -1,0 +1,96 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\tSome of the $changingRoomGender look at you uncomfortably, mostly to your <<print playerAwareTheyArePregnant() ? \"pregnant belly\" : \"pregnant looking belly\">>. It's clearly making them think you're a girl. <<gstress>>",
+   "\t\t<<elseif $player.penisExist and $player.vaginaExist>>"
+  ],
+  "old_kr": [
+   "\t\t\t몇몇 <<if $changingRoomGender is \"boys\">>남학생<<else>>여학생<</if>>【이가】 당신을 불편하게 쳐다본다. 대부분 당신의 <<print playerAwareTheyArePregnant() ? \"임신한 배\" : \"임신한 것처럼 보이는 배\">>【을를】 본다. 그들은 당신을 여자라고 생각하는 것이 분명하다. <<gstress>>",
+   "\t\t<<elseif $player.penisExist and $player.vaginaExist>>"
+  ],
+  "new_en": [
+   "\t\t\tSome of the $changingRoomGender look at you uncomfortably, mostly to your <<print playerAwareTheyArePregnant() ? \"pregnant belly\" : \"pregnant looking belly\">>. It's clearly making them think you're a girl. <<gstress>>",
+   "\t\t<<elseif $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>"
+  ],
+  "context": "\t\t\t<br><br>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 0>> No one gives you a second glance, unaware of your hermaphroditism.",
+   "\t\t\t\t<<case 1>> A <<person>> glances at your crotch. <<He>> whispers something to <<his>> friend, who shakes <<his>> head<<print either (\", unconvinced\", \" sceptically\", \" doubtfully\", \" and rolls <<his>> eyes\", \" and laughs\")>>. <span class=\"purple\">Rumours about your genitalia are beginning to spread.</span>",
+   "\t\t\t\t<<case 2>> A <<person>> glances at your crotch. <<He>> whispers something to <<his>> friend, who <<print either (\"shakes <<his>> head, unconvinced\", \"appears convinced\", \"nods thoughtfully\", \"eyes you warily\", \"snickers\")>>. <span class=\"purple\">Rumours about your genitalia are beginning to spread.</span>",
+   "\t\t\t\t<<case 3>> Some glance at your crotch. A few <<print either(\"point at you and whisper to their friends\", \"make rude gestures\", \"stare for an uncomfortably long period of time\", \"look as though they're going to say something, but remain quiet\", \"ask intrusive questions about what's in your pants\")>>. <span class=\"pink\">They've heard the rumours.</span>",
+   "\t\t\t\t<<case 4>> Some glance at your crotch. A <<person>> points at you and <<print either(\"laughs\", \"cracks a rude joke\", \"elbows <<his>> friend\", \"mocks you\")>> as you head to your locker. <span class=\"pink\">They've heard the rumours.</span>",
+   "\t\t\t\t<<case 5>> Many glance at your crotch, openly whispering and pointing at you. A few <<print either(\"make snide comments\", \"laugh\", \"jeer\", \"mock you\", \"catcall you\")>> as you pass them on the way to your locker. <span class=\"red\">They've heard the rumours, and you suspect everyone else has too.</span>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 0>> 당신이 후타나리라는 사실을 모르는지, 아무도 당신을 두 번 쳐다보지 않는다.",
+   "\t\t\t\t<<case 1>> 한 <<person>>【이가】 당신의 가랑이를 힐끗 본다. <<He>>【이가】 <<his>> 친구에게 무언가 속삭이자, 친구는 <<print either(\"믿기지 않는다는 듯 고개를 젓는다\", \"회의적으로 고개를 젓는다\", \"의심스럽게 고개를 젓는다\", \"고개를 저으며 <<his>> 눈을 굴린다\", \"고개를 저으며 웃는다\")>>. <span class=\"purple\">당신의 성기에 대한 소문이 퍼지기 시작했다.</span>",
+   "\t\t\t\t<<case 2>> 한 <<person>>【이가】 당신의 가랑이를 힐끗 본다. <<He>>【이가】 <<his>> 친구에게 무언가 속삭이자, 친구는 <<print either(\"믿기지 않는다는 듯 고개를 젓는다\", \"설득된 듯 보인다\", \"생각에 잠겨 고개를 끄덕인다\", \"당신을 경계하며 쳐다본다\", \"킥킥거린다\")>>. <span class=\"purple\">당신의 성기에 대한 소문이 퍼지기 시작했다.</span>",
+   "\t\t\t\t<<case 3>> 몇몇이 당신의 가랑이를 힐끗 본다. 몇몇은 <<print either(\"당신을 가리키며 친구들에게 속삭인다\", \"무례한 손짓을 한다\", \"불편할 정도로 오랫동안 쳐다본다\", \"무언가 말하려는 듯 보이지만 조용히 있는다\", \"바지 속에 뭐가 들었는지 무례한 질문을 한다\")>>. <span class=\"pink\">그들은 소문을 들었다.</span>",
+   "\t\t\t\t<<case 4>> 몇몇이 당신의 가랑이를 힐끗 본다. 한 <<person>>【이가】 당신을 가리키며 <<print either(\"웃는다\", \"무례한 농담을 던진다\", \"<<his>> 친구를 팔꿈치로 친다\", \"당신을 조롱한다\")>>. 당신은 사물함으로 향한다. <span class=\"pink\">그들은 소문을 들었다.</span>",
+   "\t\t\t\t<<case 5>> 많은 이들이 당신의 가랑이를 힐끗 보며, 노골적으로 속삭이고 당신을 가리킨다. 당신이 사물함으로 가는 길에 그들을 지나치자 몇몇은 <<print either(\"비꼬는 말을 한다\", \"웃는다\", \"야유한다\", \"당신을 조롱한다\", \"희롱한다\")>>. <span class=\"red\">그들은 소문을 들었고, 당신은 다른 모두도 들었을 것이라 의심한다.</span>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<case 0>> No one gives you a second glance, unaware of your unique genitals.",
+   "\t\t\t\t<<case 1>> A <<person>> glances at your crotch. <<He>> whispers something to <<his>> friend, who shakes <<his>> head<<print either (\", unconvinced\", \" sceptically\", \" doubtfully\", \" and rolls <<his>> eyes\", \" and laughs\")>>. <span class=\"purple\">Rumours about your genitalia are beginning to spread.</span>",
+   "\t\t\t\t<<case 2>> A <<person>> glances at your crotch. <<He>> whispers something to <<his>> friend, who <<print either (\"shakes <<his>> head, unconvinced\", \"appears convinced\", \"nods thoughtfully\", \"eyes you warily\", \"snickers\")>>. <span class=\"purple\">Rumours about your genitalia are beginning to spread.</span>",
+   "\t\t\t\t<<case 3>> Some glance at your crotch. A few <<print either(\"point at you and whisper to their friends\", \"make rude gestures\", \"stare for an uncomfortably long period of time\", \"look as though they're going to say something, but remain quiet\", \"ask intrusive questions about what's in your pants\")>>. <span class=\"pink\">They've heard the rumours.</span>",
+   "\t\t\t\t<<case 4>> Some glance at your crotch. A <<person>> points at you and <<print either(\"laughs\", \"cracks a rude joke\", \"elbows <<his>> friend\", \"mocks you\")>> as you head to your locker. <span class=\"pink\">They've heard the rumours.</span>",
+   "\t\t\t\t<<case 5>> Many glance at your crotch, openly whispering and pointing at you. A few <<print either(\"make snide comments\", \"laugh\", \"jeer\", \"mock you\", \"catcall you\")>> as you pass them on the way to your locker. <span class=\"red\">They've heard the rumours, and you suspect everyone else has too.</span>"
+  ],
+  "context": "\t\t\t<<switch $schoolrep.herm>>"
+ },
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case 0>> No one gives you a second glance, unaware of your hermaphroditism.",
+   "\t\t\t\t<<case 1>> A <<person>> glances at your crotch. <<He>> whispers something to <<his>> friend, who shakes <<his>> head<<print either (\", unconvinced\", \" sceptically\", \" doubtfully\", \" and rolls <<his>> eyes\", \" and laughs\")>>. <span class=\"purple\">Rumours about your genitalia are beginning to spread.</span>",
+   "\t\t\t\t<<case 2>> A <<person>> glances at your crotch. <<He>> whispers something to <<his>> friend, who <<print either (\"shakes <<his>> head, unconvinced\", \"appears convinced\", \"nods thoughtfully\", \"eyes you warily\", \"snickers\")>>. <span class=\"purple\">Rumours about your genitalia are beginning to spread.</span>",
+   "\t\t\t\t<<case 3>> Some glance at your crotch. A few <<print either(\"point at you and whisper to their friends\", \"make rude gestures\", \"stare for an uncomfortably long period of time\", \"look as though they're going to say something, but remain quiet\", \"ask intrusive questions about what's in your pants\")>>. <span class=\"pink\">They've heard the rumours.</span>",
+   "\t\t\t\t<<case 4>> Some glance at your crotch. A <<person>> points at you and <<print either(\"laughs\", \"cracks a rude joke\", \"elbows <<his>> friend\", \"mocks you\")>> as you head to your locker. <span class=\"pink\">They've heard the rumours.</span>",
+   "\t\t\t\t<<case 5>> Many glance at your crotch, openly whispering and pointing at you. A few <<print either(\"make snide comments\", \"laugh\", \"jeer\", \"mock you\", \"catcall you\")>> as you pass them on the way to your locker. <span class=\"red\">They've heard the rumours, and you suspect everyone else has too.</span>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case 0>> 아무도 당신의 양성구유에 대해 알지 못해 쳐다보지 않는다.",
+   "\t\t\t\t<<case 1>> 한 <<person>>【이가】 당신의 가랑이를 힐끗 본다. <<He>>【이가】 친구에게 무언가 속삭이자, 친구는<<print either (\", 믿기지 않는다는 듯\", \" 회의적으로\", \" 의심스럽다는 듯\", \" 그리고 눈을 굴리며\", \" 그리고 웃으며\")>> <<his>> 고개를 젓는다. <span class=\"purple\">당신의 성기에 대한 소문이 퍼지기 시작했다.</span>",
+   "\t\t\t\t<<case 2>> 한 <<person>>【이가】 당신의 가랑이를 힐끗 본다. <<He>>【이가】 <<his>> 친구에게 무언가 속삭이자, 친구는 <<print either (\"믿기지 않는다는 듯 고개를 젓는다\", \"수긍하는 듯 보인다\", \"생각에 잠겨 고개를 끄덕인다\", \"당신을 경계하며 쳐다본다\", \"킥킥거린다\")>>. <span class=\"purple\">당신의 성기에 대한 소문이 퍼지기 시작했다.</span>",
+   "\t\t\t\t<<case 3>> 몇몇이 당신의 가랑이를 힐끗 본다. 몇몇은 <<print either(\"당신을 가리키며 친구들에게 속삭인다\", \"무례한 손짓을 한다\", \"불편할 정도로 오랫동안 쳐다본다\", \"무언가 말하려는 듯 보이지만 입을 다문다\", \"바지 속에 뭐가 들었는지 무례한 질문을 던진다\")>>. <span class=\"pink\">그들은 소문을 들었다.</span>",
+   "\t\t\t\t<<case 4>> 몇몇이 당신의 가랑이를 힐끗 본다. 한 <<person>>【이가】 당신을 가리키며 <<print either(\"웃는다\", \"무례한 농담을 던진다\", \"<<his>> 친구를 팔꿈치로 쿡 찌른다\", \"당신을 조롱한다\")>>. 당신은 사물함으로 향한다. <span class=\"pink\">그들은 소문을 들었다.</span>",
+   "\t\t\t\t<<case 5>> 많은 이들이 당신의 가랑이를 힐끗 보며, 노골적으로 속삭이고 당신을 가리킨다. 사물함으로 가는 길에 그들을 지나치자 몇몇은 <<print either(\"비꼬는 말을 던진다\", \"웃는다\", \"야유한다\", \"당신을 조롱한다\", \"희롱한다\")>>. <span class=\"red\">그들은 소문을 들었고, 다른 모든 이들도 들었을 거라는 생각이 든다.</span>"
+  ],
+  "new_en": [
+   "\t\t\t\t<<case 0>> No one gives you a second glance, unaware of your unique genitals.",
+   "\t\t\t\t<<case 1>> A <<person>> glances at your crotch. <<He>> whispers something to <<his>> friend, who shakes <<his>> head<<print either (\", unconvinced\", \" sceptically\", \" doubtfully\", \" and rolls <<his>> eyes\", \" and laughs\")>>. <span class=\"purple\">Rumours about your genitalia are beginning to spread.</span>",
+   "\t\t\t\t<<case 2>> A <<person>> glances at your crotch. <<He>> whispers something to <<his>> friend, who <<print either (\"shakes <<his>> head, unconvinced\", \"appears convinced\", \"nods thoughtfully\", \"eyes you warily\", \"snickers\")>>. <span class=\"purple\">Rumours about your genitalia are beginning to spread.</span>",
+   "\t\t\t\t<<case 3>> Some glance at your crotch. A few <<print either(\"point at you and whisper to their friends\", \"make rude gestures\", \"stare for an uncomfortably long period of time\", \"look as though they're going to say something, but remain quiet\", \"ask intrusive questions about what's in your pants\")>>. <span class=\"pink\">They've heard the rumours.</span>",
+   "\t\t\t\t<<case 4>> Some glance at your crotch. A <<person>> points at you and <<print either(\"laughs\", \"cracks a rude joke\", \"elbows <<his>> friend\", \"mocks you\")>> as you head to your locker. <span class=\"pink\">They've heard the rumours.</span>",
+   "\t\t\t\t<<case 5>> Many glance at your crotch, openly whispering and pointing at you. A few <<print either(\"make snide comments\", \"laugh\", \"jeer\", \"mock you\", \"catcall you\")>> as you pass them on the way to your locker. <span class=\"red\">They've heard the rumours, and you suspect everyone else has too.</span>"
+  ],
+  "context": "\t\t\t<<switch $schoolrep.herm>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<elseif $player.penisExist and $player.vaginaExist>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<elseif $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>"
+  ],
+  "context": "\t\t\t<</if>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t<<elseif isCrossdressing()>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t<<elseif isCrossdressing() and $settings.nudeGenderPerception !== 0>>"
+  ],
+  "context": "\t\t\t<<endevent>>"
+ }
+]

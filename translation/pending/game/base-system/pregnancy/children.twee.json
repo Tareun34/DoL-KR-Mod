@@ -1,0 +1,44 @@
+[
+ {
+  "kind": "conflict",
+  "old_en": [
+   "\t\t\t\t<<case \"m\">><<set $_text_output to \"Male \">>",
+   "\t\t\t\t<<case \"f\">><<set $_text_output to \"Female \">>",
+   "\t\t\t\t<<case \"h\">><<set $_text_output to \"Hermaphrodite \">>"
+  ],
+  "old_kr": [
+   "\t\t\t\t<<case \"m\">><<set $_text_output to \"♂ \">>",
+   "\t\t\t\t<<case \"f\">><<set $_text_output to \"♀ \">>",
+   "\t\t\t\t<<case \"h\">><<set $_text_output to \"⚥ \">>"
+  ],
+  "new_en": [
+   "\t\t\t\t<!-- TODO: as discussed, replace with sprites for ♂, ♀, and ☿ or ⚥, use characters in text-only version -->",
+   "\t\t\t\t<<case \"m\">><<set $_text_output to \"Male \">>",
+   "\t\t\t\t<<case \"f\">><<set $_text_output to \"Female \">>",
+   "\t\t\t\t<<case \"h\">><<set $_text_output to \"Hermaphrodite \">>"
+  ],
+  "context": "\t\t\t<<switch _args[0].gender>>"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "<<widget \"childInteratedWith\">><<silently>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "<<widget \"childInteractedWith\">><<silently>>"
+  ],
+  "context": "/*args[0] - childId in an array*/"
+ },
+ {
+  "kind": "merged-new-text",
+  "old_en": [
+   "\t\t\t<<if $debug is 1>>"
+  ],
+  "old_kr": [],
+  "new_en": [
+   "\t\t\t<<if $debug>>"
+  ],
+  "context": "\t\t\t</span>"
+ }
+]
