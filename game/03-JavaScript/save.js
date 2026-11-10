@@ -736,6 +736,11 @@ function applyGameplaySettings(settings) {
 	V.settings.maleVictimChance = settings.maleVictimChance ?? V.settings.maleVictimChance;
 	V.settings.maleChance = settings.maleChance ?? V.settings.maleChance;
 	V.settings.femaleNPCPenisChance = settings.femaleNPCPenisChance ?? V.settings.femaleNPCPenisChance;
+	if (setup.features?.herm) {
+		// Herm 빌드에서만 가져온다. 그 외 빌드는 가져오기로도 양성 비율이 0에서 벗어나지 않게 한다.
+		V.settings.femaleNPCHermChance = settings.femaleNPCHermChance ?? V.settings.femaleNPCHermChance;
+		V.settings.maleNPCHermChance = settings.maleNPCHermChance ?? V.settings.maleNPCHermChance;
+	}
 	V.settings.straponChance = settings.straponChance ?? V.settings.straponChance;
 	V.settings.plantsEnabled = settings.plantsEnabled ?? V.settings.plantsEnabled;
 	V.settings.playerPregnancyEggLayingEnabled = settings.playerPregnancyEggLayingEnabled ?? V.settings.playerPregnancyEggLayingEnabled;
@@ -957,6 +962,12 @@ function settingsToExportObject() {
 				maleVictimChance: V.settings.maleVictimChance,
 				maleChance: V.settings.maleChance,
 				femaleNPCPenisChance: V.settings.femaleNPCPenisChance,
+				...(setup.features?.herm
+					? {
+							femaleNPCHermChance: V.settings.femaleNPCHermChance,
+							maleNPCHermChance: V.settings.maleNPCHermChance,
+					  }
+					: {}),
 				straponChance: V.settings.straponChance,
 				plantsEnabled: V.settings.plantsEnabled,
 				playerPregnancyEggLayingEnabled: V.settings.playerPregnancyEggLayingEnabled,
@@ -1327,6 +1338,10 @@ window.settingNameFromVarName = function (varName) {
 			return "Percentage of people attracted to you that are male";
 		case "femaleNPCPenisChance":
 			return "Percentage of women that have penises";
+		case "femaleNPCHermChance":
+			return setup.features?.herm ? "자지와 보지를 모두 가진 여성 비율" : varName;
+		case "maleNPCHermChance":
+			return setup.features?.herm ? "자지와 보지를 모두 가진 남성 비율" : varName;
 		case "straponChance":
 			return "Percentage of women that have strap-on penises";
 		case "plantsEnabled":
@@ -2376,6 +2391,8 @@ function settingValueNameFromValue(varName, value) {
 			return `${value} (${setup.colours.getSkinToneLabel(value)})`;
 	}
 
+	if ((varName === "femaleNPCHermChance" || varName === "maleNPCHermChance") && setup.features?.herm) return value + "%";
+
 	switch (varName) {
 		case "rentCostModifier":
 		case "clothingCostModifier":
@@ -2527,6 +2544,10 @@ function randomiseEncounterSettings() {
 	V.settings.maleChance = random(0, 100);
 	V.settings.femaleNPCPenisChance = random(0, 100);
 	V.settings.straponChance = random(0, 100);
+	if (setup.features?.herm) {
+		V.settings.femaleNPCHermChance = random(0, 100);
+		V.settings.maleNPCHermChance = random(0, 100);
+	}
 
 	V.genericBeastSettings.beastMaleChance = random(0, 100);
 	V.genericBeastSettings.beastMaleChanceMale = random(0, 100);

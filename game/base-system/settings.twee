@@ -2947,9 +2947,9 @@
 			<span class="gold">생식기:</span>
 			<br>
 			<span data-target="npcname-pregnancy" data-disabledif="getActivePregnancies(V.NPCName[T.npcId].nam).length">
-				<label><<radiovar "$NPCName[_npcId].gender" "f">><<nnpcGenderSetByHand _npcId>><</radiovar>> Vagina</label> |
-				<label><<radiovar "$NPCName[_npcId].gender" "m">><<nnpcGenderSetByHand _npcId>><</radiovar>> Penis</label>
-				<<if $debug>>| <label><<radiovar "$NPCName[_npcId].gender" "h">><<nnpcGenderSetByHand _npcId>><</radiovar>> Both</label><</if>>
+				<label><<radiovar "$NPCName[_npcId].gender" "f">><<nnpcGenderSetByHand _npcId>><</radiovar>> 보지</label> |
+				<label><<radiovar "$NPCName[_npcId].gender" "m">><<nnpcGenderSetByHand _npcId>><</radiovar>> 자지</label>
+				<<if $debug or setup.features?.herm or $NPCName[_npcId].gender is "h">>| <label><<radiovar "$NPCName[_npcId].gender" "h">><<nnpcGenderSetByHand _npcId>><</radiovar>> 양성</label><</if>>
 			</span>
 		</div>
 		<div class="settingsToggleItem">

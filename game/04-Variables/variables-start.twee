@@ -521,6 +521,8 @@
 
 	<<set $settings.femaleNPCPenisChance to 5>>
 	<<set $settings.maleNPCVaginaChance to 5>>
+	<<set $settings.femaleNPCHermChance to 0>>
+	<<set $settings.maleNPCHermChance to 0>>
 	<<set $settings.straponChance to 5>>
 	<<set $settings.breastModifier to 0>>
 	<<set $settings.penisModifier to 0>>
