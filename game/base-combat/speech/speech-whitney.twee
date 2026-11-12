@@ -9,157 +9,157 @@
 	<<if $speechFallenTransform is 1>>
 		<<if $consensual is 0 and $audiencepresent gte 1>>
 			<<addSpeechLine "virginity">>
-				<<He>> falls silent when <<he>> sees you break, only to laugh. "Don't give me that! You like this, don't you?"
+				<<He>>【은는】 당신이 무너지는 걸 보고 입을 다물더니, 이내 웃음을 터뜨린다. "그딴 표정 짓지 마! 너 이거 좋아하잖아, 안 그래?"
 			<</addSpeechLine>>
 		<<elseif $consensual is 0>>
 			<<addSpeechLine "virginity">>
-				<<He>> begins to laugh, but soon makes a face when <<he>> sees you break. "Cut that shit out. You're really creeping me out right now, slut."
+				<<He>>【은는】 웃기 시작하다가, 당신이 무너지는 걸 보고 이내 얼굴을 찌푸린다. "그딴 짓 집어치워. 지금 진짜 소름 끼친다고, 걸레야."
 			<</addSpeechLine>>
 		<<elseif $consensual is 1>>
 			<<addSpeechLine "virginity">>
-				<<He>> begins to laugh, but falls silent and gives you uneasy glances when <<he>> sees you break. "...Hey. Hey!"
+				<<He>>【은는】 웃기 시작하다가, 당신이 무너지는 걸 보고 입을 다물고 불안한 눈길을 보낸다. "...야. 야!"
 			<</addSpeechLine>>
 		<</if>>
 	<<else>>
 		<<if $player.virginity.vaginal is "Whitney" and $speechVaginaVirgin>>
 			<<addSpeechLine "virginity">>
-				<<He>> laughs. "No one can call you a virgin after this. You're my dirty slut now."
+				<<He>>【이가】 비웃는다. "이제 처녀란 소리는 못 듣겠네. 넌 이제 내 천박한 걸레야."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $player.virginity.penile is "Whitney" and $speechPenisVirgin>>
 			<<addSpeechLine "virginity">>
-				<<He>> laughs. "Just watch, slut. I'll be your first, and the best you'll ever have!"
+				<<He>>【이가】 웃는다. "잘 봐둬, 걸레야. 내가 네 첫 상대가 되어줄 거고, 네 평생 최고의 상대가 될 테니까!"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $player.virginity.anal is "Whitney">>
 		<<if $speechAnusVirgin>>
 			<<addSpeechLine "virginity">>
-				<<He>> laughs. "Was this off limits? I want to hear you squeal, <<bitch>>!"
+				<<He>>【이가】 크게 웃는다. "여긴 안 된다 이거냐? 네가 뒈질 듯이 꽥꽥거리는 소릴 듣고 싶다고, <<bitch>>【아야】!"
 			<</addSpeechLine>>
 		<</if>>
 		<<if $consensual is 1>>
 			<<if $speechAnusVirgin>>
 				<<addSpeechLine "virginity">>
-					<<He>> grins. "Breathe easy, <<slut>>. That's far from the worst thing I want to do to you."
+					<<He>>【이가】 씩 웃는다. "숨 편히 쉬어, <<slut>>【아야】. 내가 너한테 하고 싶은 짓 중에선 이건 최악 축에도 못 껴."
 				<</addSpeechLine>>
 			<</if>>
 			<<if C.npc.Whitney.love gte 20 and $speechAnusVirgin>>
 				<<addSpeechLine "virginity">>
-					<<He>> grins. "Relax, <<bitch>>. You can take it."
+					<<He>>【이가】 씩 웃는다. "힘 빼, <<bitch>>【아야】. 넌 받아낼 수 있어."
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
 	<</if>>
 	<<if $player.virginity.oral is "Whitney" and $speechOralVirgin>>
 		<<addSpeechLine "virginity">>
-			<<He>> laughs. "I bet you'll get addicted in no time!"
+			<<He>>【이가】 웃는다. "내가 장담컨대 너 조만간 푹 빠져들 거다!"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $player.virginity.kiss is "Whitney">>
 		<<if $speechKissVirgin>>
 			<<addSpeechLine "virginity">>
-				<<He>> laughs. "Why are you looking at me like that? I can't be your first, slut."
+				<<He>>【이가】 웃어제낀다. "표정이 왜 그래? 내가 처음은 아닐 거 아냐, 이 걸레야."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $consensual is 1 and !isLoveInterest("Whitney") and $speechKissVirgin>>
 			<<addSpeechLine "virginity">>
-				<<He>> briefly pulls away to look at you. "You haven't even gone this far yet? That's real sad, slut."
+				<<He>>【은는】 잠시 입을 떼고 당신을 바라본다. "아직 여기까지도 안 가봤다고? 진짜 불쌍하네, 걸레야."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechNPCAnusVirgin>>
 		<<if !playerHasStrapon() and $player.penissize is 6 and C.npc.Whitney.penissize gte 4>>
 			<<addSpeechLine "virginity">>
-				"Only first I had left to give. Better be-" <<He>> cuts <<himself>> off with a grunt of pain, feeling your <<penis>> spread <<him>> wide. "Fuck! Is this what it feels like when I... Bloody hell."
+				"나한테 남은 유일한 처음이었다고. 고마운 줄-" <<He>>【은는】 당신의 <<penis>>【이가】 자신을 활짝 벌리는 걸 느끼며, 고통에 찬 신음과 함께 말을 끊는다. "씨발! 내가 할 때 이런 느낌이란 거야... 젠장할."
 			<</addSpeechLine>>
 		<<elseif !playerHasStrapon() and $player.penissize is 6>>
 			<<addSpeechLine "virginity">>
-				"Only first I had left to give. Better be-" <<He>> cuts <<himself>> off with a grunt of pain, feeling your <<penis>> spread <<him>> wide. "You fucking prick! What are you, a bloody horse?!"
+				"나한테 남은 유일한 처음이었다고. 고마운 줄-" <<He>>【은는】 당신의 <<penis>>【이가】 자신을 활짝 벌리는 걸 느끼며, 고통에 찬 신음과 함께 말을 끊는다. "이 씨발 새끼야! 넌 뭐야, 말 새끼라도 되는 거야?!"
 				<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
 			<</addSpeechLine>>
 		<<elseif !playerHasStrapon() and $player.penissize lte 2>>
 			<<addSpeechLine "virginity">>
 				<<set $whitneySeen.pushUnique("penisSmall")>>
-				"Only first I had left to give. Better be..." <<He>> blinks when <<he>> feels your <<penissize>> penis, before collapsing into a laughing fit.
+				"나한테 남은 유일한 처음이었다고. 고마운 줄..." <<He>>【은는】 당신의 <<penissize>> 좆을 느끼고는 눈을 깜빡이더니, 이내 웃음보를 터뜨리며 무너진다.
 				<<insecurity "penis_small" 1>><<ginsecurity "penis_small">>
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "virginity">>
-				<<He>> grunts as you push into <<him>>. "Only first I had left to give. Better be fucking grateful, slut."
+				<<He>>【은는】 당신이 안으로 밀고 들어오자 신음한다. "나한테 남은 유일한 처음이었다고. 존나 고마워해야 할 거다, 걸레야."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechForgive>>
 		<<if $audiencepresent gte 1>>
 			<<addSpeechLine "forgive">>
-				<<He>> recoils, before trying to save face. "Think I hit <<phim>> too hard. Yeah."
+				<<He>>【은는】 움찔 물러섰다가, 체면을 차리려 든다. "내가 <<phim>>【을를】 너무 세게 쳤나 봐. 그래."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "forgive">>
 			<<speechLine>>
-				<<He>> scoffs. "You don't understand shit."
+				<<He>>【이가】 코웃음 친다. "넌 좆도 모르는구나."
 			<<speechLine>>
-				<<He>> laughs. "What the hell?"
+				<<He>>【이가】 웃는다. "뭐야 대체?"
 			<<speechLine>>
-				<<He>> cringes. "Whatever shit you're on, I don't want it."
+				<<He>>【이가】 얼굴을 찡그린다. "네가 뭘 빨았는지 몰라도, 난 사양할게."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechPlead>>
 		<<if $audiencepresent gte 1 and C.npc.Whitney.dom gte 15>>
 			<<addSpeechLine "plead" 4>>
-				<<He>> mimics what you say in a babylike voice, prompting the crowd to laugh and repeat it in turn.
+				<<He>>【은는】 당신이 한 말을 아기 같은 목소리로 흉내 내고, 구경꾼들은 웃으며 차례로 따라 한다.
 			<</addSpeechLine>>
 		<<elseif $audiencepresent gte 1 and C.npc.Whitney.dom lte 10>>
 			<<addSpeechLine "plead" 4>>
-				<<He>> mimics what you say in a babylike voice, only to be met with forced laughs.
+				<<He>>【은는】 당신이 한 말을 아기 같은 목소리로 흉내 내지만, 돌아오는 건 억지웃음뿐이다.
 			<</addSpeechLine>>
 		<<elseif $enemyanger gt 100>>
 			<<addSpeechLine "plead">>
-				<<He>> sneers. "You're pathetic."
+				<<He>>【이가】 비웃는다. "한심하긴."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "plead">>
 			<<speechLine>>
-				<<He>> laughs. "Keep crying. See if I give a shit."
+				<<He>>【이가】 웃는다. "계속 울어봐. 내가 신경이나 쓰나 보자."
 			<<speechLine>>
-				<<He>> snickers. "Beg all you want, slut. I know what you like."
+				<<He>>【이가】 낄낄거린다. "실컷 빌어봐, 걸레야. 네가 뭘 좋아하는지 난 다 알아."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $mouthactiondefault is "mock" and $audiencepresent gte 1 and C.npc.Whitney.dom gte 15>>
 		<<if $speechDemand>>
 			<<addSpeechLine "demand">>
-				Your words elicit gasps and murmurs from the crowd, prompting Whitney to stop and glare at you. "You've crossed a line, slut. In fact, you just fucking leaped over it! You're dead!"
+				당신의 말에 구경꾼들이 숨을 들이켜며 웅성거리고, 휘트니는 멈춰 서서 당신을 노려본다. "선을 넘었어, 걸레야. 아니, 씨발 아예 뛰어넘어 버렸네! 넌 뒈졌어!"
 			<</addSpeechLine>>
 		<</if>>
 	<<elseif $mouthactiondefault is "mock" and $audiencepresent gte 1 and C.npc.Whitney.dom lte 10>>
 		<<if $speechDemand>>
 			<<addSpeechLine "demand">>
-				Your words elicit soft giggles and laughter from the crowd, much to Whitney's bewilderment. "What the fuck are you all laughing at?!" No one answers <<him>>.
+				당신의 말에 구경꾼들이 킥킥대며 웃음을 터뜨리고, 휘트니는 당황한다. "씨발 다들 뭘 보고 웃는 거야?!" 아무도 <<him>>에게 대답하지 않는다.
 			<</addSpeechLine>>
 		<</if>>
 	<<else>>
 		<<if $speechDemand>>
 			<<addSpeechLine "demand">>
 			<<speechLine>>
-				<<He>> snarls. "You'll fucking regret saying that!"
+				<<He>>【이가】 으르렁거린다. "그 말 씨발 후회하게 될 거다!"
 			<<speechLine>>
-				<<He>> sneers. "Bloody <<bitch>>. You better shut the fuck up, or I'll shut you up myself."
+				<<He>>【이가】 비웃는다. "빌어먹을 <<bitch>>. 주둥이 닥치는 게 좋을 거야, 아니면 내가 직접 닥치게 해줄 테니까."
 			<<speechLine>>
-				<<He>> scoffs. "Do you ever just shut up?"
+				<<He>>【이가】 코웃음 친다. "넌 입 좀 다물 줄 모르냐?"
 			<</addSpeechLine>>
 		<</if>>
 		<<if C.npc.Whitney.dom lte 10>>
 			<<if $speechDemand>>
 				<<addSpeechLine "demand">>
-					<<He>> stops. "I let you get away with too much. I best fix that right fucking now."
+					<<He>>【이가】 멈춘다. "내가 너한테 너무 많이 봐줬어. 씨발 지금 당장 바로잡아야겠네."
 				<</addSpeechLine>>
 			<</if>>
 			<<if C.npc.Whitney.love lte 10 and $speechDemand>>
 				<<addSpeechLine "demand">>
-					<<He>> stops. "I am <i>this</i> close to shutting you up for good. Don't fucking test me!"
+					<<He>>【이가】 멈춘다. "네 주둥이를 영원히 닥치게 하기까지 <i>요만큼</i> 남았어. 씨발 날 시험하지 마!"
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -167,17 +167,17 @@
 	<<if playerChastity()>>
 		<<if $speechExposeGenitals>>
 			<<addSpeechLine "expose">>
-				<<He>> leers at your newly-exposed <<printChastity>>. "How big of a slut do you have to be to have ended up with that kind of gear?"
+				<<He>>【은는】 방금 드러난 당신의 <<printChastity>>【을를】 음흉하게 바라본다. "대체 얼마나 걸레여야 그딴 장비를 차게 되는 거냐?"
 			<</addSpeechLine>>
 		<</if>>
 		<<if $speechExposeGenitals>>
 			<<if $enemyanger lte 100>>
 				<<addSpeechLine "expose">>
-					<<He>> scoffs at your newly-exposed <<printChastity>>. "They had to chain down the slut to end all sluts somehow."
+					<<He>>【은는】 방금 드러난 당신의 <<printChastity>>【을를】 보고 코웃음 친다. "걸레 중의 걸레를 어떻게든 묶어두긴 해야 했겠지."
 				<</addSpeechLine>>
 			<<else>>
 				<<addSpeechLine "expose">>
-					<<He>> sneers at your newly-exposed <<printChastity>>. "Think you're so fucking smart, keeping that lock on you like it'll stop anyone serious. I should rip it off you!"
+					<<He>>【은는】 방금 드러난 당신의 <<printChastity>>【을를】 보고 비웃는다. "그딴 자물쇠 채워놓으면 작정한 놈을 막을 수 있을 거라고 생각하다니, 존나 똑똑한 줄 아나 보지. 확 뜯어버려야겠어!"
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -185,51 +185,51 @@
 		<<if $player.penissize gte 5>>
 			<<if $speechExposeGenitals>>
 				<<addSpeechLine "expose">>
-					<<He>> laughs upon seeing your newly-exposed <<penis>>. "Looks like the monster's out of the cage!"<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
+					<<He>>【은는】 방금 드러난 당신의 <<penis>>【을를】 보고 웃는다. "괴물이 우리에서 탈출했나 보네!"<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
 				<</addSpeechLine>>
 			<</if>>
 			<<if $speechExposeGenitals>>
 				<<if $enemyanger lte 100>>
 					<<addSpeechLine "expose">>
-						<<He>> sneers upon seeing your newly-exposed <<penis>>. "Don't worry, slut. I'll make sure everyone's seen this monster by the time I'm done with you!"<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
+						<<He>>【은는】 방금 드러난 당신의 <<penis>>【을를】 보고 비웃는다. "걱정 마, 걸레야. 내가 너랑 끝낼 때쯤이면 모두가 이 괴물을 보게 해줄 테니까!"<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
 					<</addSpeechLine>>
 				<<else>>
 					<<addSpeechLine "expose">>
-						<<He>> clicks <<his>> tongue upon seeing your newly-exposed <<penis>>. "Now everyone knows you're a freak of nature!"<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
+						<<He>>【은는】 방금 드러난 당신의 <<penis>>【을를】 보고 혀를 찬다. "이제 네가 괴물 같은 놈이란 걸 다들 알겠네!"<<insecurity "penis_big" 1>><<ginsecurity "penis_big">>
 					<</addSpeechLine>>
 				<</if>>
 			<</if>>
 		<<elseif $player.penissize lte 2>>
 			<<if $whitneySeen.includes("penisSmall") and $speechExposeGenitals>>
 				<<addSpeechLine "expose">>
-					<<He>> laughs hard enough for tears to come upon seeing your newly-exposed <<penis>>. "Seeing this never gets old!"<<insecurity "penis_small" 1>><<ginsecurity "penis_small">>
+					<<He>>【은는】 방금 드러난 당신의 <<penis>>【을를】 보고 눈물이 날 만큼 웃어댄다. "이건 봐도 봐도 질리질 않네!"<<insecurity "penis_small" 1>><<ginsecurity "penis_small">>
 				<</addSpeechLine>>
 			<</if>>
 			<<if $speechExposeGenitals>>
 				<<if $enemyanger lte 100>>
 					<<addSpeechLine "expose">>
-						<<He>> laughs hard enough to force <<him>> to catch <<his>> breath upon seeing your newly-exposed <<penis>>. "Cute clit you've got there, slut!"<<set $whitneySeen.pushUnique("penisSmall")>><<insecurity "penis_small" 1>><<ginsecurity "penis_small">>
+						<<He>>【은는】 방금 드러난 당신의 <<penis>>【을를】 보고 숨이 넘어갈 정도로 웃어댄다. "귀여운 클리토리스네, 걸레야!"<<set $whitneySeen.pushUnique("penisSmall")>><<insecurity "penis_small" 1>><<ginsecurity "penis_small">>
 					<</addSpeechLine>>
 				<<else>>
 					<<addSpeechLine "expose">>
-						<<He>> grins hard enough to hurt <<his>> face upon seeing your newly-exposed <<penis>>. "Embarrassed to be seen having such a pathetic cock? You should be!"<<set $whitneySeen.pushUnique("penisSmall")>><<insecurity "penis_small" 1>><<ginsecurity "penis_small">>
+						<<He>>【은는】 방금 드러난 당신의 <<penis>>【을를】 보고 얼굴이 아플 정도로 씩 웃는다. "그딴 한심한 좆을 들킨 게 쪽팔리냐? 당연히 그래야지!"<<set $whitneySeen.pushUnique("penisSmall")>><<insecurity "penis_small" 1>><<ginsecurity "penis_small">>
 					<</addSpeechLine>>
 				<</if>>
 			<</if>>
 		<<else>>
 			<<if $speechExposeGenitals>>
 				<<addSpeechLine "expose">>
-					<<He>> grins upon seeing your newly-exposed <<penis>>. "Would you look at that?"
+					<<He>>【은는】 방금 드러난 당신의 <<penis>>【을를】 보고 씩 웃는다. "이것 좀 봐라?"
 				<</addSpeechLine>>
 			<</if>>
 			<<if $speechExposeGenitals>>
 				<<if $enemyanger lte 100>>
 					<<addSpeechLine "expose">>
-						<<He>> laughs upon seeing your newly-exposed <<penis>>. "Oh, look. It's the town's favourite ride!"
+						<<He>>【은는】 방금 드러난 당신의 <<penis>>【을를】 보고 웃는다. "오, 봐라. 온 동네가 제일 좋아하는 놀이기구네!"
 					<</addSpeechLine>>
 				<<else>>
 					<<addSpeechLine "expose">>
-						<<He>> spits upon seeing your newly-exposed <<penis>>. "Sluts like you should stay naked!"
+						<<He>>【은는】 방금 드러난 당신의 <<penis>>【을를】 보고 침을 뱉는다. "너 같은 걸레는 그냥 벌거벗고 다녀야 해!"
 					<</addSpeechLine>>
 				<</if>>
 			<</if>>
@@ -237,17 +237,17 @@
 	<<elseif $player.vaginaExist>>
 		<<if $speechExposeGenitals>>
 			<<addSpeechLine "expose">>
-				<<He>> smirks as <<he>> stares at your newly-exposed <<pussy>>. "Don't be shy, slut. Nothing wrong with showing off!"
+				<<He>>【은는】 방금 드러난 당신의 <<pussy>>【을를】 빤히 보며 능글맞게 웃는다. "부끄러워하지 마, 걸레야. 자랑 좀 하면 어때서!"
 			<</addSpeechLine>>
 		<</if>>
 		<<if $speechExposeGenitals>>
 			<<if $enemyanger lte 100>>
 				<<addSpeechLine "expose">>
-					<<He>> laughs as <<he>> stares at your newly-exposed <<pussy>>. "Soon enough, this gaping hole's gonna be full of me."
+					<<He>>【은는】 방금 드러난 당신의 <<pussy>>【을를】 빤히 보며 웃는다. "곧 이 뻥 뚫린 구멍은 나로 꽉 차게 될 거야."
 				<</addSpeechLine>>
 			<<else>>
 				<<addSpeechLine "expose">>
-					<<He>> clicks <<his>> tongue as <<he>> stares at your newly-exposed <<pussy>>. "I almost want to stop giving you what you want and leave you high and dry right about now. Almost."
+					<<He>>【은는】 방금 드러난 당신의 <<pussy>>【을를】 빤히 보며 혀를 찬다. "네가 원하는 걸 그만 주고 지금 당장 바싹 말라붙은 채로 내버려 두고 싶을 지경이네. 거의 말이야."
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -257,17 +257,17 @@
 			<<if $audiencepresent gte 1 and $consensual is 0>>
 				<<addSpeechLine "reveal">>
 					<<set $whitneySeen.pushUnique("crossdress")>>
-					<<He>> grins at the sight of your <<genitals>>, then turns to the crowd. "Looks like this <<if $player.penisExist>>dickhead<<else>>cunt<</if>>'s been keeping some nasty secrets. Who's down to teach <<phim>> a lesson?!"
+					<<He>>【은는】 당신의 <<genitals>>【을를】 보고 씩 웃더니, 구경꾼들을 돌아본다. "이 <<if $player.penisExist>>좆대가리<<else>>보지년<</if>>【이가】 더러운 비밀을 숨기고 있었나 본데. <<phim>>【을를】 혼내줄 사람?!"
 				<</addSpeechLine>>
 			<<elseif $audiencepresent gte 1>>
 				<<addSpeechLine "reveal">>
 					<<set $whitneySeen.pushUnique("crossdress")>>
-					<<He>> grins at the sight of your <<genitals>>, then turns to the crowd. "Looks like my <<girl>>'s been keeping some secrets!"
+					<<He>>【은는】 당신의 <<genitals>>【을를】 보고 씩 웃더니, 구경꾼들을 돌아본다. "내 <<girl>>【이가】 비밀을 숨기고 있었나 보네!"
 				<</addSpeechLine>>
 			<<else>>
 				<<addSpeechLine "reveal">>
 					<<set $whitneySeen.pushUnique("crossdress")>>
-					<<His>> breath quickens at the sight of your <<genitals>>, eyes dark with nefarious intent. "You were lying to me, slut?! Oh, <i>ouch.</i> How will you ever make this up to me now..."
+					당신의 <<genitals>>【을를】 보자 <<his>> 숨이 가빠지고, 눈은 사악한 의도로 어두워진다. "나한테 거짓말을 했다고, 걸레야?! 오, <i>아파라.</i> 이걸 대체 어떻게 갚으려고..."
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -277,22 +277,22 @@
 			<<if _whitney.gender is "h">>
 				<<addSpeechLine "reveal">>
 					<<set $whitneySeen.pushUnique("herm")>>
-					<<He>> smirks at the sight of your <<genitals>>. "You too, huh? No fucking way."
+					<<He>>【은는】 당신의 <<genitals>>【을를】 보고 능글맞게 웃는다. "너도냐? 씨발 말도 안 돼."
 				<</addSpeechLine>>
 			<<elseif $audiencepresent gte 1 and $consensual is 0>>
 				<<addSpeechLine "reveal">>
 					<<set $whitneySeen.pushUnique("herm")>>
-					<<He>> grins at the sight of your <<genitals>>, eyes darkening with nefarious intent. "Oh, fuck... Anyone got any new ideas on how to break this freak?"
+					<<He>>【은는】 당신의 <<genitals>>【을를】 보고 씩 웃고, 눈은 사악한 의도로 어두워진다. "오, 씨발... 이 괴물을 망가뜨릴 새로운 아이디어 있는 사람?"
 				<</addSpeechLine>>
 			<<elseif $audiencepresent gte 1>>
 				<<addSpeechLine "reveal">>
 					<<set $whitneySeen.pushUnique("herm")>>
-					<<He>> grins at the sight of your <<genitals>>, eyes darkening with mischievous intent. "Oh, fuck... Now we've got even more to mess with."
+					<<He>>【은는】 당신의 <<genitals>>【을를】 보고 씩 웃고, 눈은 짓궂은 의도로 어두워진다. "오, 씨발... 이제 갖고 놀 게 더 늘었네."
 				<</addSpeechLine>>
 			<<else>>
 				<<addSpeechLine "reveal">>
 					<<set $whitneySeen.pushUnique("herm")>>
-					<<He>> smirks at the sight of your <<genitals>>. "Both? You're twice the slut I thought!"
+					<<He>>【은는】 당신의 <<genitals>>【을를】 보고 능글맞게 웃는다. "둘 다? 내 생각보다 두 배는 걸레였네!"
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -300,22 +300,22 @@
 	<<if $speechPregnant>>
 		<<if $consensual is 0 and $audiencepresent gte 1 and C.npc.Whitney.love lte 10 and !isLoveInterest("Whitney")>>
 			<<addSpeechLine "pregnant">>
-				"Well, shit! Looks like the slut finally got knocked up."
+				"이런, 씨발! 걸레가 드디어 애를 뱄나 보네."
 			<</addSpeechLine>>
 		<<elseif $consensual is 0>>
 			<<addSpeechLine "pregnant">>
-				"Fuck, you're pregnant? I knew you were a dirty slut."
+				"씨발, 임신했다고? 네가 더러운 걸레인 건 알고 있었지."
 			<</addSpeechLine>>
 		<<elseif C.npc.Whitney.love gte 20 and !($audiencepresent gte 1)>>
 			<<addSpeechLine "pregnant">>
-				<<He>> mumbles under <<his>> breath. "Don't hurt yourself or whatever."
+				<<He>>【이가】 숨죽여 중얼거린다. "다치지 말라고, 뭐 그런 거."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "pregnant">>
 			<<speechLine>>
-				<<He>> gives your belly testy glances.
+				<<He>>【은는】 당신의 배를 짜증스럽게 흘끔거린다.
 			<<speechLine>>
-				"Do you even know whose is it? Fucking whore."
+				"누구 앤지는 알기나 해? 씨발 창녀."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
@@ -323,27 +323,27 @@
 		<<if $audiencepresent gte 1>>
 			<<addSpeechLine "expose">>
 			<<speechLine>>
-				<<He>> moves your body to face the crowd. "Enjoy the show, perverts!"
+				<<He>>【은는】 당신의 몸을 구경꾼들 쪽으로 돌린다. "구경 잘해라, 변태들아!"
 			<<speechLine>>
-				<<He>> moves your body to face the crowd. "Who's up to see more?!"
+				<<He>>【은는】 당신의 몸을 구경꾼들 쪽으로 돌린다. "더 보고 싶은 사람?!"
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "expose">>
-				<<He>> leers at your <<breasts>>.
+				<<He>>【은는】 당신의 <<breasts>>【을를】 음흉하게 바라본다.
 				<<if $player.breastsize lte 0>>
 					<<if $player.gender_appearance isnot "m">>
-						"Don't cry. Flat or not, you're still a slut."
+						"울지 마. 납작하든 말든, 넌 여전히 걸레니까."
 					<</if>>
 				<<elseif $player.breastsize lte 1>>
-					"I bet you'll be big enough to give all of the gang some helpings soon enough."
+					"조만간 패거리 전부한테 한 입씩 돌릴 만큼 커질 거다, 장담하지."
 				<<elseif $player.breastsize lte 2>>
-					"Don't be shy. Mid or not, you're still a slut."
+					"부끄러워하지 마. 어중간하든 말든, 넌 여전히 걸레니까."
 				<<elseif $player.breastsize lte 4>>
-					"If I could, I'd make sure these never stay out of sight."
+					"할 수만 있다면, 이것들이 절대 안 보이는 일 없게 만들어 놓을 텐데."
 				<<else>>
 					<<print either(
-						`"Almost can't believe all of this is mine."`,
-						`"Fuck, there's clearly more than enough to go around."`
+						`"이게 전부 내 거라니 믿기지가 않을 정도네."`,
+						`"씨발, 돌려 쓰고도 남을 만큼 넉넉하네."`
 					)>>
 				<</if>>
 			<</addSpeechLine>>
@@ -352,80 +352,80 @@
 	<<if $speechPenisBig>>
 		<<addSpeechLine "penisSize">>
 		<<speechLine>>
-			<<He>> gapes at your <<penis>>. "Shit. Not bad, slut."
+			<<He>>【은는】 당신의 <<penis>>【을를】 보고 입을 벌린다. "씨발. 나쁘지 않네, 걸레야."
 		<<speechLine>>
-			"Don't break me in half now, you hear?"
+			"날 반으로 쪼개진 마라, 알았어?"
 		<</addSpeechLine>>
 		<<if C.npc.Whitney.penissize gte 4>>
 			<<addSpeechLine "penisSize">>
-				<<He>> chuckles. "I've seen better."
+				<<He>>【이가】 킬킬거린다. "더 나은 것도 봤어."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $audiencepresent gte 1>>
 			<<addSpeechLine "penisSize">>
 			<<speechLine>>
-				<<He>> laughs at your <<penis>>. "What the hell is that?!"
+				<<He>>【은는】 당신의 <<penis>>【을를】 보고 웃는다. "저게 대체 뭐야?!"
 				<<if !$whitneyUniqueComments.includes("insecurityPenisBig")>><<set $whitneyUniqueComments.pushUnique("insecurityPenisBig")>><<insecurity "penis_big" 1>><<ginsecurity "penis_big">><</if>>
 			<<speechLine>>
-				<<He>> turns to the crowd. "Who else wants a go with this monster?"
+				<<He>>【은는】 구경꾼들을 돌아본다. "이 괴물이랑 한판 해보고 싶은 사람 또 없어?"
 				<<if !$whitneyUniqueComments.includes("insecurityPenisBig")>><<set $whitneyUniqueComments.pushUnique("insecurityPenisBig")>><<insecurity "penis_big" 1>><<ginsecurity "penis_big">><</if>>
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechNoticeSexToy>>
 		<<addSpeechLine "sexToy">>
-			<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "sex toys" : "sex toy")>>
+			<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "섹스 토이들" : "섹스 토이")>>
 		<<speechLine>>
-			<<He>> looks at your $_sexToy and grins. "Good slut."
+			<<He>>【은는】 당신의 $_sexToy【을를】 보고 씩 웃는다. "착한 걸레."
 		<<speechLine>>
-			<<He>> looks at your $_sexToy and grins. "I knew you were a dirty slut."
+			<<He>>【은는】 당신의 $_sexToy【을를】 보고 씩 웃는다. "네가 더러운 걸레인 건 알고 있었지."
 		<<speechLine>>
-			<<He>> looks at your $_sexToy and grins. "Don't get any bright ideas."
+			<<He>>【은는】 당신의 $_sexToy【을를】 보고 씩 웃는다. "괜히 머리 굴리지 마."
 		<<speechLine>>
-			<<He>> looks at your $_sexToy and grins. "What's wrong, is your slutty mouth getting tired?"
+			<<He>>【은는】 당신의 $_sexToy【을를】 보고 씩 웃는다. "왜, 네 그 음탕한 주둥이라도 아프냐?"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechScreamForHelp>>
 		<<addSpeechLine "screamForHelp">>
 		<<speechLine>>
-			<<He>> sneers. "Shut up, will you?"
+			<<He>>【이가】 비웃는다. "입 좀 닥쳐 줄래?"
 		<<speechLine>>
-			<<He>> laughs. "Wah wah wah!"
+			<<He>>【이가】 웃는다. "앙앙앙!"
 		<</addSpeechLine>>
 		<<if $consensual is 0>>
 			<<addSpeechLine "screamForHelp">>
-				"Shut the fuck up, <<bitch>>. No one's coming to save you."
+				"씨발 닥쳐, <<bitch>>【아야】. 아무도 널 구하러 안 와."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $audiencepresent gte 1>>
 			<<addSpeechLine "screamForHelp" 4>>
 			<<speechLine>>
-				"Noisy little fucker, ain't <<pshe>>?"
+				"<<pshe>>【은는】 참 시끄러운 새끼네, 안 그래?"
 			<<speechLine>>
-				"The lot of you better get closer, before some party crasher comes running."
+				"너희들 다 더 가까이 붙는 게 좋을 거야, 어떤 불청객이 달려오기 전에."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechChokedWheeze>>
 		<<if $consensual is 0 and $audiencepresent gte 1 and C.npc.Whitney.dom lte 10>>
 			<<addSpeechLine "choked" 4>>
-				<<He>> mimics the sound of your choking, laughing to <<himself>> as you choke.
+				<<He>>【은는】 당신이 켁켁대는 소리를 흉내 내며, 혼자 낄낄 웃는다.
 			<</addSpeechLine>>
 		<<elseif $consensual is 0 and $audiencepresent gte 1>>
 			<<addSpeechLine "choked" 4>>
-				<<He>> mimics the sound of your choking, eliciting a laugh out of the crowd.
+				<<He>>【은는】 당신이 켁켁대는 소리를 흉내 내고, 구경꾼들의 웃음을 끌어낸다.
 			<</addSpeechLine>>
 		<<elseif $choketrait gte 1>>
 			<<addSpeechLine "choked">>
-				<<He>> leers at you. "We both know you like being choked, whore. No need to mince words."
+				<<He>>【은는】 당신을 음흉하게 바라본다. "너나 나나 네가 목 졸리는 걸 좋아하는 거 알잖아, 창녀야. 돌려 말할 필요 없어."
 			<</addSpeechLine>>
 		<<elseif $consensual is 0>>
 			<<addSpeechLine "choked">>
-				<<He>> laughs. "That's right, squeal for me."
+				<<He>>【이가】 웃는다. "그렇지, 날 위해 꽥꽥거려 봐."
 			<</addSpeechLine>>
 		<<elseif C.npc.Whitney.dom gte 15>>
 			<<addSpeechLine "choked">>
-				"What was that?" <<He>> asks mockingly, giving your neck a small squeeze. "Pathetic slut."
+				"뭐라고?" <<He>>【은는】 당신의 목을 살짝 조이며 조롱하듯 묻는다. "한심한 걸레."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
@@ -433,59 +433,59 @@
 		<<if _loveInterest is "Black Wolf">>
 			<<addSpeechLine "namedrop">>
 			<<speechLine>>
-				<<He>> laughs. "Did you just admit to fucking a dog? You're making this too easy."
+				<<He>>【이가】 비웃는다. "개새끼랑 떡쳤다고 자기 입으로 인정하는 거냐? 참 가지가지 하네."
 			<<speechLine>>
-				<<He>> laughs. "I think I need to remind you whose <<bitch>> you actually are."
+				<<He>>【이가】 비웃는다. "네가 진짜 누구의 <<bitch>>인지 내가 확실하게 일깨워줘야겠네."
 			<</addSpeechLine>>
 		<<elseif _loveInterest is "Great Hawk">>
 			<<addSpeechLine "namedrop">>
 			<<speechLine>>
-				<<He>> laughs. "Did you just admit to fucking a bird? You're making this too easy."
+				<<He>>【이가】 비웃는다. "새랑 떡쳤다고 자기 입으로 인정하는 거냐? 참 가지가지 하네."
 			<<speechLine>>
-				<<He>> laughs. "You can't fly away. Not from me."
+				<<He>>【이가】 비웃는다. "네가 어딜 날아가. 내 손아귀를 벗어날 순 없어."
 			<</addSpeechLine>>
 		<<elseif _loveInterest is "Kylar" and $whitneySeen.includes("halloweenWhitneyWon")>>
 			<<addSpeechLine "namedrop">>
-				<<He>> pauses, then laughs hard enough to bring <<himself>> to tears. "Seriously?! What the hell is <<nnpc_he "Kylar">> gonna do?!"
+				<<He>>【은는】 잠시 멈칫하더니, 눈물이 날 만큼 웃어댄다. "진심이야?! <<nnpc_he "Kylar">>【이가】 대체 뭘 어쩌겠다는 거야?!"
 			<</addSpeechLine>>
 		<<elseif _loveInterest is "Kylar" and $whitneySeen.includes("halloweenKylarWon")>>
 			<<addSpeechLine "namedrop">>
-				<<He>> glares at you. "Don't make me laugh, slut. I know all <<nnpc_his "Kylar">> tricks by now."
+				<<He>>【은는】 당신을 노려본다. "웃기지 마, 걸레야. <<nnpc_his "Kylar">> 수법은 이제 전부 꿰고 있어."
 			<</addSpeechLine>>
 		<<elseif _loveInterest is "Avery" and $averySeen.includes("whitney_crash")>>
 			<<addSpeechLine "namedrop">>
-				<<He>> laughs. "Does <<nnpc_he "Avery">> even give enough of a shit about you?"
+				<<He>>【이가】 웃는다. "<<nnpc_he "Avery">>【이가】 너한테 그만큼 신경이나 쓴대?"
 			<</addSpeechLine>>
 		<<elseif _loveInterest is "Avery" and $averySeen.includes("schoolDropOff")>>
 			<<addSpeechLine "namedrop">>
-				<<He>> laughs. "Your sugar<<nnpc_mummy "Avery">> isn't going to do shit!"
+				<<He>>【이가】 웃는다. "네 슈거<<nnpc_mummy "Avery">>【은는】 좆도 못 할걸!"
 			<</addSpeechLine>>
 		<<elseif _loveInterest is "Gwylan" and $whitney_familiar_seen gte 2>>
 			<<addSpeechLine "namedrop">>
-				<<He>> laughs. "Oh no! Some spindly weirdo's gonna get me! Whatever will I do?"
+				<<He>>【이가】 웃는다. "오, 안 돼! 어떤 비쩍 마른 괴짜가 날 잡으러 온대! 난 어쩌면 좋지?"
 			<</addSpeechLine>>
 		<<elseif _loveInterest is "Robin">>
 			<<addSpeechLine "namedrop">>
-				<<He>> laughs. "You've fallen for that weak little shit? I guess I know who to visit next."
+				<<He>>【이가】 비웃는다. "그딴 약해빠진 등신새끼한테 푹 빠졌다고? 다음번엔 누굴 밟아줘야 할지 알겠네."
 			<</addSpeechLine>>
 		<<elseif _loveInterest is "Kylar">>
 			<<addSpeechLine "namedrop">>
-				<<He>> scowls. "I should've known you'd fall for that freak."
+				<<He>>【이가】 성질을 낸다. "그딴 괴물 새끼한테 홀딱 넘어갈 줄 알았어야 했는데."
 			<</addSpeechLine>>
 		<<elseif _loveInterest is "Sydney">>
 			<<addSpeechLine "namedrop">>
-				<<He>> laughs. "Two book criminals, sitting in a tree. Adorable."
+				<<He>>【이가】 웃는다. "책 도둑놈들 두 마리가 나란히 있네. 아주 귀여워 죽겠어."
 			<</addSpeechLine>>
 		<<elseif $cow gte 6>>
 			<<addSpeechLine "namedrop">>
-				<<He>> sneers. "You only moo for me, you dumb heifer."
+				<<He>>【이가】 비웃는다. "넌 나한테만 음매거리는 거야, 이 멍청한 암소야."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "namedrop">>
 			<<speechLine>>
-				<<He>> scowls. "Let me remind you why you don't have a choice."
+				<<He>>【이가】 으르렁거린다. "너한테 왜 선택권 따윈 없는지 내가 뼈저리게 알려주지."
 			<<speechLine>>
-				<<He>> laughs. "I don't care about your little crush. You belong to me."
+				<<He>>【이가】 웃어제낀다. "네 사소한 연애놀음 따윈 알 바 아냐. 넌 내 거니까."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
@@ -493,308 +493,308 @@
 		<<if C.npc.Whitney.love gte 20>>
 			<<addSpeechLine "apologise">>
 			<<speechLine>>
-				<<His>> eyes soften, before <<he>> rolls them. "Fine, jeez."
+				<<His>> 눈빛이 부드러워지더니, 이내 눈을 굴린다. "알았어, 젠장."
 			<<speechLine>>
-				<<His>> eyes soften, before <<he>> rolls them. "How much softer can you get? Fine."
+				<<His>> 눈빛이 부드러워지더니, 이내 눈을 굴린다. "넌 얼마나 더 물러터질 셈이야? 알았어."
 			<<speechLine>>
-				<<He>> clicks <<his>> tongue. "Fine. You're lucky I'm in a good mood."
+				<<He>>【이가】 혀를 찬다. "알았어. 내 기분이 좋은 걸 다행으로 알아."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "apologise">>
 			<<speechLine>>
-				<<He>> scowls. "Ugh, fine. If it'll get you to shut up."
+				<<He>>【이가】 얼굴을 찌푸린다. "으, 알았어. 그걸로 네 입이 닥쳐진다면야."
 			<<speechLine>>
-				<<He>> clicks <<his>> tongue. "Sure, whatever."
+				<<He>>【이가】 혀를 찬다. "그래, 맘대로 해."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechApologiseRejected>>
 		<<addSpeechLine "apologise">>
 		<<speechLine>>
-			<<He>> scowls. "Don't make me repeat myself."
+			<<He>>【이가】 얼굴을 찌푸린다. "두 번 말하게 하지 마."
 		<<speechLine>>
-			<<He>> scowls. "I already wanna take it back."
+			<<He>>【이가】 얼굴을 찌푸린다. "벌써 취소하고 싶어지네."
 		<<speechLine>>
-			<<He>> scoffs. "Yeah, I get it. You can shut up now."
+			<<He>>【이가】 코웃음 친다. "그래, 알았다고. 이제 입 다물어도 돼."
 		<<speechLine>>
-			"Are you deaf? I said fine."
+			"귀먹었냐? 알았다고 했잖아."
 		<<speechLine>>
-			<<He>> scoffs. "Ugh. Can't hear you!"
+			<<He>>【이가】 코웃음 친다. "으. 안 들려!"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechApologiseUnforgiving>>
 		<<if C.npc.Whitney.dom lte 10>>
 			<<addSpeechLine "apologise">>
 			<<speechLine>>
-				<<He>> sneers. "You have a lot more to apologise for, <<bitch>>."
+				<<He>>【이가】 비웃는다. "넌 사과할 게 훨씬 더 많아, <<bitch>>【아야】."
 			<<speechLine>>
-				<<He>> spits. "Shut up! Just shut the fuck up for once! Fuck!"
+				<<He>>【이가】 침을 뱉는다. "닥쳐! 한 번만이라도 씨발 좀 닥치라고! 씨발!"
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "apologise">>
 			<<speechLine>>
-				"Too late for that now, slut."
+				"이젠 너무 늦었어, 걸레야."
 			<<speechLine>>
-				"You better shut the fuck up, or I'll shut you up myself."
+				"주둥이 닥치는 게 좋을 거야, 아니면 내가 직접 닥치게 해줄 테니까."
 			<<speechLine>>
-				<<He>> mockingly repeats your apology. "You're bloody pathetic."
+				<<He>>【은는】 당신의 사과를 조롱하듯 따라 한다. "존나 한심하네."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechGrowl>>
 		<<if $audiencepresent gte 1 and C.npc.Whitney.dom gte 15>>
 			<<addSpeechLine "growl" 4>>
-				<<He>> growls back at you, causing people in the crowd to laugh and bark mockingly.
+				<<He>>【이가】 당신에게 마주 으르렁거리자, 구경꾼들이 웃으며 조롱하듯 짖어댄다.
 			<</addSpeechLine>>
 		<<elseif $audiencepresent gte 1 and C.npc.Whitney.dom lte 10>>
 			<<addSpeechLine "growl" 4>>
-				<<He>> growls back at you before laughing loudly. No one laughs with <<him>>.
+				<<He>>【이가】 당신에게 마주 으르렁거리더니 크게 웃는다. 아무도 <<him>>【와과】 함께 웃지 않는다.
 			<</addSpeechLine>>
 		<<elseif $audiencepresent gte 1>>
 			<<addSpeechLine "growl" 4>>
-				<<He>> snorts. "The slut thinks <<pshes>> a dog now."
+				<<He>>【이가】 콧방귀를 뀐다. "이 걸레가 이제 자기가 개인 줄 아나 보네."
 			<</addSpeechLine>>
 		<<elseif C.npc.Whitney.dom gte 15>>
 			<<addSpeechLine "growl">>
-				<<He>> snorts. "What? Was that supposed to be scary? Fuck, you're so pathetic."
+				<<He>>【이가】 콧방귀를 뀐다. "뭐야? 그게 무서우라고 한 거야? 씨발, 존나 한심하네."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "growl">>
-				"Bite me and you'll fucking regret it."
+				"물면 씨발 후회하게 될 거다."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechGrowlHeat or $speechGrowlRut>>
 		<<addSpeechLine "growl">>
 		<<speechLine>>
-			"Fuck, what a horny little <<bitch>>."
+			"씨발, 발정 난 <<bitch>> 같으니."
 		<<speechLine>>
-			"You need it bad, don't you <<bitch>>?"
+			"존나 필요하지, 안 그래, <<bitch>>【아야】?"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $consensual is 0 and $audiencepresent gte 1 and ($speechGrowlHeat or $speechGrowlRut)>>
 		<<addSpeechLine "growl" 4>>
 		<<speechLine>>
-			<<He>> snorts. "Looks like we caught us a bitch in heat."
+			<<He>>【이가】 콧방귀를 뀐다. "발정 난 암캐를 한 마리 잡았나 보네."
 		<<speechLine>>
-			<<He>> laughs with the crowd. "What the hell? I think <<pshe>>'s losing it."
+			<<He>>【이가】 구경꾼들과 함께 웃는다. "뭐야 대체? <<pshe>> 맛이 간 것 같은데."
 		<</addSpeechLine>>
 	<</if>>
 	<<if C.npc.Whitney.dom gte 15 and ($speechGrowlHeat or $speechGrowlRut)>>
 		<<addSpeechLine "growl">>
-			<<He>> laughs. "Did you just fucking growl? Don't make yourself look any more desperate, slut."
+			<<He>>【이가】 웃는다. "방금 씨발 으르렁거린 거야? 더 절박해 보이게 굴지 마, 걸레야."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechMoan>>
 		<<addSpeechLine "moan">>
 		<<speechLine>>
-			"Of course you're enjoying this. What a good little slut."
+			"당연히 즐기고 있겠지. 참 착한 걸레야."
 		<<speechLine>>
-			<<He>> grins. "What? What was that?"
+			<<He>>【이가】 씩 웃는다. "뭐? 방금 뭐라고?"
 		<<speechLine>>
-			<<He>> grins. "Say that again?"
+			<<He>>【이가】 씩 웃는다. "다시 말해 봐?"
 		<<speechLine>>
-			"Really now?"
+			"어, 진짜?"
 		<</addSpeechLine>>
 	<</if>>
 	<<if ($wolfgirl gte 6 or $fox gte 6) and $speechMoan>>
 		<<addSpeechLine "moan">>
-			"That's it, bark for me, <<bitch>>."
+			"그렇지, 날 위해 짖어 봐, <<bitch>>【아야】."
 		<</addSpeechLine>>
 	<</if>>
 	<<if isLoveInterest("Whitney") and C.npc.Whitney.love gte 20>>
 		<<if $speechAskRough>>
 			<<addSpeechLine "askRough">>
 			<<speechLine>>
-				<<He>> grins. "Yeah? You want me to be rougher? How could I say no to you, slut?"
+				<<He>>【이가】 씩 웃는다. "그래? 더 거칠게 해달라고? 내가 어떻게 네 부탁을 거절하겠어, 걸레야?"
 			<<speechLine>>
-				<<He>> laughs. "Just because you asked so nicely."
+				<<He>>【이가】 웃는다. "네가 그렇게 예쁘게 부탁하니까 특별히."
 			<</addSpeechLine>>
 		<</if>>
 	<<else>>
 		<<if $speechAskRough>>
 			<<addSpeechLine "askRough">>
 			<<speechLine>>
-				<<He>> grins. "Oh, you asked for it now."
+				<<He>>【이가】 씩 웃는다. "오, 네가 자초한 거다."
 			<<speechLine>>
-				<<He>> laughs. "You're mental, you know that?"
+				<<He>>【이가】 웃는다. "너 미쳤구나, 알아?"
 			<<speechLine>>
-				"Don't cry if I break something, alright?"
+				"뭐 하나 부러뜨려도 울지 마라, 알았지?"
 			<<speechLine>>
-				"Just know I won't kiss it all better after."
+				"나중에 호 해주진 않을 거란 것만 알아둬."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $audiencepresent gte 1 and $speechAskRough>>
 			<<addSpeechLine "askRough" 4>>
-				"Aww. <<pShe>> thinks <<pshe>> can handle me."
+				"어머. <<pShe>>【은는】 자기가 날 감당할 수 있을 줄 아나 봐."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechPepperSpray>>
 		<<addSpeechLine "pepperSpray">>
-			<<He>> recoils in pain and snarls.
+			<<He>>【은는】 고통에 움찔 물러서며 으르렁거린다.
 		<<speechLine>>
-			"You demented fucking whore!"
+			"이 미친 씨발 창녀야!"
 		<<speechLine>>
-			"You could have blinded me!"
+			"눈이 멀 뻔했잖아!"
 		<<speechLine>>
-			"What the fuck?!"
+			"씨발 뭐야?!"
 		<<speechLine>>
-			"You are so fucking dead!"
+			"넌 씨발 진짜 뒈졌어!"
 		<<speechLine>>
-			"Shit, shit, shit, shit!"
+			"씨발, 씨발, 씨발, 씨발!"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechPlayerOrgasm>>
 		<<addSpeechLine "playerOrgasm">>
 		<<speechLine>>
-			<<His>> eyes darken. "Enjoy yourself, slut. That'll be far from the last."
+			<<His>> 눈이 어두워진다. "실컷 즐겨, 걸레야. 그게 마지막은 절대 아닐 테니까."
 		<<speechLine>>
-			<<He>> snickers. "Yeah, I know I'm good."
+			<<He>>【이가】 낄낄거린다. "그래, 내가 잘하는 건 나도 알아."
 		<</addSpeechLine>>
 		<<if $audiencepresent gte 1>>
 			<<addSpeechLine "playerOrgasm" 4>>
 			<<speechLine>>
-				<<He>> laughs, then turns to the crowd. "Am I just good at this, or this slut just real easy to please?"
+				<<He>>【은는】 웃더니 구경꾼들을 돌아본다. "내가 잘하는 거야, 아니면 이 걸레가 그냥 존나 쉬운 거야?"
 			<<speechLine>>
-				<<He>> turns to the crowd. "Bet you guys a tenner the slut's got more in the tank!"
+				<<He>>【은는】 구경꾼들을 돌아본다. "이 걸레한테 아직 더 남았다는 데 10파운드 건다!"
 			<</addSpeechLine>>
 		<</if>>
 		<<if $consensual is 0>>
 			<<addSpeechLine "playerOrgasm">>
 			<<speechLine>>
-				<<He>> nearly doubles over in laughter. "See? You do like this!"
+				<<He>>【은는】 허리가 꺾일 정도로 웃어댄다. "거봐? 너 이거 좋아하잖아!"
 			<<speechLine>>
-				<<He>> stares down at you. "Is this even rape at this point?"
+				<<He>>【은는】 당신을 내려다본다. "이쯤 되면 이게 강간이긴 해?"
 			<</addSpeechLine>>
 			<<if $audiencepresent gte 1>>
 				<<addSpeechLine "playerOrgasm" 4>>
 				<<speechLine>>
-					<<He>> nearly doubles over in laughter, then turns to the crowd. "The bitch really wanted this after all!"
+					<<He>>【은는】 허리가 꺾일 정도로 웃어대더니, 구경꾼들을 돌아본다. "이 암캐가 결국 이걸 진짜 원했다니까!"
 				<<speechLine>>
-					<<He>> sneers. "Good. Let everyone know what a nasty fucking freak you are."
+					<<He>>【이가】 비웃는다. "좋아. 네가 얼마나 더러운 씨발 변태인지 모두한테 알려줘."
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
 	<</if>>
 	<<if $speechLactate>>
 		<<addSpeechLine "lactate">>
-			"Ugh, fuck! You're getting it all over me!"
+			"으, 씨발! 나한테 다 튀잖아!"
 		<</addSpeechLine>>
 		<<if $audiencepresent gte 1>>
 			<<addSpeechLine "lactate" 4>>
-				<<He>> turns to the crowd. "Anyone want a taste?"
+				<<He>>【은는】 구경꾼들을 돌아본다. "맛보고 싶은 사람?"
 			<</addSpeechLine>>
 		<</if>>
 		<<if playerBellyVisible()>>
 			<<addSpeechLine "lactate">>
-				<<He>> grimaces. "Not sure why I'm surprised you're just raining milk."
+				<<He>>【이가】 얼굴을 찡그린다. "네가 젖을 줄줄 흘리는 게 왜 놀랍지? 당연한 건데."
 			<</addSpeechLine>>
 		<<elseif !playerIsPregnant()>>
 			<<addSpeechLine "lactate">>
-				<<He>> stares at your leaking breasts. "The hell?"
+				<<He>>【은는】 젖이 새어 나오는 당신의 가슴을 빤히 본다. "뭐야 이게?"
 			<</addSpeechLine>>
 		<</if>>
 		<<if $player.breastsize gte 8>>
 			<<addSpeechLine "lactate">>
-				<<He>> gapes at your leaking breasts. "Fuck, I'm not even kidding anymore. You really are a cow."
+				<<He>>【은는】 젖이 새어 나오는 당신의 가슴을 보고 입을 벌린다. "씨발, 이젠 농담이 아니라 진짜네. 넌 진짜 젖소야."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechVaginaEscape>>
 		<<addSpeechLine "escape">>
 		<<speechLine>>
-			<<He>> grunts. "Get back here, whore."
+			<<He>>【이가】 으르렁댄다. "이리 돌아와, 창녀야."
 		<<speechLine>>
-			<<He>> grunts. "You're not getting away from me, slut."
+			<<He>>【이가】 으르렁댄다. "나한테서 못 도망가, 걸레야."
 		<<speechLine>>
-			<<He>> sneers. "I don't see your hole gaping yet. Looks like we're not done."
+			<<He>>【이가】 비웃는다. "네 구멍이 아직 뻥 뚫린 것 같진 않은데. 아직 안 끝났나 보네."
 		<</addSpeechLine>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			<<addSpeechLine "escape">>
-				<<He>> laughs. "Come off it! You're only depriving yourself here, slut."
+				<<He>>【이가】 웃는다. "그만둬! 그래 봤자 손해 보는 건 너야, 걸레야."
 			<</addSpeechLine>>
 		<<elseif $arousal lt ($arousalmax / 5) * 2>>
 			<<addSpeechLine "escape">>
-				<<He>> scoffs. "You sure you're gonna cum fine without me?"
+				<<He>>【이가】 코웃음 친다. "나 없이도 제대로 쌀 수 있을 것 같아?"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechNPCVaginaEscape or $speechNPCAnusEscape>>
 		<<addSpeechLine "escape">>
 		<<speechLine>>
-			"Where do you think you're going?" <<He>> sneers. "Get your cock back inside me, slut."
+			"어딜 가려고?" <<He>>【이가】 비웃는다. "네 좆 다시 내 안에 집어넣어, 걸레야."
 		<<speechLine>>
-			<<He>> sneers. "Did I say you could do that?"
+			<<He>>【이가】 비웃는다. "내가 그래도 된다고 했냐?"
 		<<speechLine>>
-			<<He>> sneers. "Fine. Don't say I never let you do what you want."
+			<<He>>【이가】 비웃는다. "알았어. 내가 네 맘대로 하게 해준 적 없다는 소린 하지 마."
 		<<speechLine>>
-			<<He>> clicks <<his>> tongue. "Starting to get lonely here, slut."
+			<<He>>【이가】 혀를 찬다. "여기 슬슬 허전해지는데, 걸레야."
 		<</addSpeechLine>>
 		<<if $speechNPCVaginaEscape>>
 			<<addSpeechLine "escape">>
-				<<He>> laughs. "Oi! Don't leave me dry here."
+				<<He>>【이가】 웃는다. "야! 날 이렇게 말려 죽이지 마."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $speechNPCAnusEscape>>
 			<<addSpeechLine "escape">>
-				<<He>> sneers. "You wanted my ass so bad, but look at you now."
+				<<He>>【이가】 비웃는다. "내 엉덩이를 그렇게 원하더니, 지금 네 꼴 좀 봐."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechAnusEscape>>
 		<<addSpeechLine "escape">>
 		<<speechLine>>
-			<<He>> grunts. "Get back here, whore."
+			<<He>>【이가】 으르렁댄다. "이리 돌아와, 창녀야."
 		<<speechLine>>
-			<<He>> grunts. "You're not getting away from me, slut."
+			<<He>>【이가】 으르렁댄다. "나한테서 못 도망가, 걸레야."
 		<<speechLine>>
-			<<He>> sneers. "I don't see your hole gaping yet. Looks like we're not done."
+			<<He>>【이가】 비웃는다. "네 구멍이 아직 뻥 뚫린 것 같진 않은데. 아직 안 끝났나 보네."
 		<<speechLine>>
-			<<He>> laughs. "Come on, you can take more!"
+			<<He>>【이가】 웃는다. "왜 이래, 더 받아낼 수 있잖아!"
 		<<speechLine>>
-			<<He>> laughs. "Don't whine when I don't get back in, you hear?"
+			<<He>>【이가】 웃는다. "내가 다시 안 넣어준다고 징징대지 마라, 알았어?"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechSteal>>
 		<<addSpeechLine "steal">>
 		<<speechLine>>
-			"Oi. Keep your hands to yourself, slut."
+			"야. 손 치워, 걸레야."
 		<<speechLine>>
-			"God, you're bad at this."
+			"세상에, 진짜 못하네."
 		<<speechLine>>
-			"Are you fucking kidding me?"
+			"씨발 장난하냐?"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechPlayerBeaten>>
 		<<if $masochism_level gte 1>>
 			<<addSpeechLine "playerBeaten">>
 			<<speechLine>>
-				<<He>> laughs. "That's it, bitch. Knew you liked this!"
+				<<He>>【이가】 웃는다. "그렇지, 암캐야. 네가 이걸 좋아할 줄 알았어!"
 			<<speechLine>>
-				<<He>> laughs. "Oh, this is fun."
+				<<He>>【이가】 웃는다. "오, 이거 재밌네."
 			<<speechLine>>
-				"You like that?!"
+				"좋냐?!"
 			<<speechLine>>
-				"No more going easy on you. You clearly like this."
+				"더는 안 봐줘. 너 이거 좋아하는 게 뻔하니까."
 			<</addSpeechLine>>
 			<<if C.npc.Whitney.lust gte 60>>
 				<<addSpeechLine "playerBeaten">>
-					<<He>> groans. "Fuck, you're such a dirty little <<= either("slut","whore","bitch")>>."
+					<<He>>【이가】 신음한다. "씨발, 넌 진짜 더러운 <<= either("걸레","창녀","암캐")>>【이】야."
 				<</addSpeechLine>>
 			<</if>>
 		<<else>>
 			<<addSpeechLine "playerBeaten">>
 			<<speechLine>>
-				<<He>> laughs. "Squeal, bitch!"
+				<<He>>【이가】 웃는다. "꽥꽥거려 봐, 암캐야!"
 			<<speechLine>>
-				<<He>> sneers. "Fucking pussy!"
+				<<He>>【이가】 비웃는다. "씨발 겁쟁이!"
 			<<speechLine>>
-				<<He>> laughs. "Fuck, this is fun!"
+				<<He>>【이가】 웃는다. "씨발, 이거 재밌네!"
 			<<speechLine>>
-				"Get up! I'm not done with you yet!"
+				"일어나! 아직 너랑 안 끝났어!"
 			<<speechLine>>
-				"Hurts, huh?!"
+				"아프냐?!"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
@@ -802,30 +802,30 @@
 		<<if $sadism_level gte 1>>
 			<<addSpeechLine "playerHits">>
 			<<speechLine>>
-				<<He>> hisses. "You're fucking crazy!"
+				<<He>>【이가】 씩씩거린다. "너 씨발 미쳤어!"
 			<<speechLine>>
-				<<He>> hisses. "Don't—stop! Stop! Fuck!"
+				<<He>>【이가】 씩씩거린다. "하지—그만! 그만해! 씨발!"
 			<<speechLine>>
-				"You demented <<bitch>>! Stop!"
+				"이 미친 <<bitch>>【아야】! 그만해!"
 			<<speechLine>>
-				"You sick freak!"
+				"이 역겨운 변태 새끼야!"
 			<<speechLine>>
-				"What the fuck is wrong with you?!"
+				"넌 씨발 뭐가 문제야?!"
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "playerHits">>
 			<<speechLine>>
-				<<He>> hisses. "Oh, you've done it now."
+				<<He>>【이가】 씩씩거린다. "오, 이제 진짜 제대로 저질렀네."
 			<<speechLine>>
-				"It's like you want me to get even worse!"
+				"내가 더 심하게 굴길 바라는 것 같잖아!"
 			<<speechLine>>
-				"Oh yeah?!"
+				"아, 그래?!"
 			<<speechLine>>
-				"Want a fight, bitch?!"
+				"한판 붙고 싶냐, 암캐야?!"
 			<</addSpeechLine>>
 			<<if $physique lt ($physiquesize / 7) * 3>>
 				<<addSpeechLine "playerHits">>
-					<<He>> laughs. "What the fuck? Was that supposed to hurt me?"
+					<<He>>【이가】 웃는다. "씨발 뭐야? 그게 아프라고 한 거야?"
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -833,51 +833,51 @@
 	<<if $speechStripStruggle>>
 		<<addSpeechLine "struggle">>
 		<<speechLine>>
-			<<He>> sneers. "Fucking prude."
+			<<He>>【이가】 비웃는다. "씨발 내숭쟁이."
 		<<speechLine>>
-			"Stupid bitch! You're just making things worse for yourself!"
+			"멍청한 암캐! 그래 봤자 네 상황만 더 나빠질 뿐이야!"
 		<<speechLine>>
-			"Quit it before I tear everything off you!"
+			"내가 다 찢어버리기 전에 그만둬!"
 		<</addSpeechLine>>
 		<<if $fame.exhibitionism gte 600>>
 			<<addSpeechLine "struggle">>
-				"What, trying to turn your rep around? Try harder, <<= either("bitch","whore","slut")>>!"
+				"뭐야, 평판이라도 뒤집어 보려고? 더 노력해 봐, <<= either("암캐","창녀","걸레")>>【아야】!"
 			<</addSpeechLine>>
 		<</if>>
 		<<if $audiencepresent gte 1>>
 			<<addSpeechLine "struggle" 4>>
 			<<speechLine>>
-				"Don't leave us hanging, slut!"
+				"우릴 애태우지 마, 걸레야!"
 			<<speechLine>>
-				"One way or another, everyone's gonna get an eyeful!"
+				"어떻게든 다들 실컷 구경하게 될 거다!"
 			<<speechLine>>
-				<<He>> spits. "You're not leaving until everyone's gotten a show!"
+				<<He>>【이가】 침을 뱉는다. "다들 구경 다 하기 전엔 못 가!"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechStruggle>>
 		<<addSpeechLine "struggle">>
 		<<speechLine>>
-			"Stupid bitch! You're just making things worse for yourself!"
+			"멍청한 암캐! 그래 봤자 네 상황만 더 나빠질 뿐이야!"
 		<<speechLine>>
-			<<He>> laughs. "I could do this all day!"
+			<<He>>【이가】 웃는다. "이거 하루 종일도 할 수 있겠는데!"
 		<</addSpeechLine>>
 		<<if $physique lt ($physiquesize / 7) * 3>>
 			<<addSpeechLine "struggle">>
-				<<He>> grins. "Yeah, keep trying. You look real funny right about now."
+				<<He>>【이가】 씩 웃는다. "그래, 계속 해봐. 지금 네 꼴 진짜 웃기거든."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $audiencepresent gte 1>>
 			<<addSpeechLine "struggle" 4>>
-				<<He>> smirks at the crowd. "Man, this bitch is making me real sad right now."
+				<<He>>【은는】 구경꾼들을 향해 능글맞게 웃는다. "야, 이 암캐 때문에 지금 진짜 슬퍼지려고 하네."
 			<</addSpeechLine>>
 			<<if C.npc.Whitney.dom lte 10>>
 				<<addSpeechLine "struggle" 4>>
-					<<He>> turns to the crowd. "Still think this bitch is hot shit?"
+					<<He>>【은는】 구경꾼들을 돌아본다. "아직도 이 암캐가 대단한 줄 알아?"
 				<</addSpeechLine>>
 			<<elseif C.npc.Whitney.dom gte 15>>
 				<<addSpeechLine "struggle" 4>>
-					<<He>> turns to the crowd. "Right where <<pshe>> belongs. Right, guys?"
+					<<He>>【은는】 구경꾼들을 돌아본다. "<<pshe>>한테 딱 어울리는 자리지. 안 그래, 얘들아?"
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -885,27 +885,27 @@
 	<<if $speechSpank>>
 		<<if $audiencepresent gte 1 and C.npc.Whitney.dom lte 10>>
 			<<addSpeechLine "spank" 4>>
-				"Guess I better teach <<phim>> a lesson. Right, guys?" <<He>> looks around at the crowd, but no one answers <<him>>.
+				"<<phim>>【을를】 좀 가르쳐야겠네. 안 그래, 얘들아?" <<He>>【은는】 구경꾼들을 둘러보지만, 아무도 <<him>>에게 대답하지 않는다.
 			<</addSpeechLine>>
 		<<elseif $audiencepresent gte 1 and C.npc.Whitney.dom gte 15>>
 			<<addSpeechLine "spank" 4>>
-				"Guess I better teach <<phim>> a lesson. Right, guys?" The crowd cheers and hollers in response.
+				"<<phim>>【을를】 좀 가르쳐야겠네. 안 그래, 얘들아?" 구경꾼들이 환호하며 소리 지른다.
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "spank">>
 			<<speechLine>>
-				"Dumb slut. You better fucking behave!"
+				"멍청한 걸레. 씨발 얌전히 구는 게 좋을 거야!"
 			<<speechLine>>
-				"Fucking <<= either("slut","whore")>>. This is what you wanted, isn't it?!"
+				"씨발 <<= either("걸레","창녀")>>. 이게 네가 원하던 거잖아, 안 그래?!"
 			<</addSpeechLine>>
 		<</if>>
 		<<if C.npc.Whitney.dom lte 10>>
 			<<addSpeechLine "spank">>
-				"Take it! Take it like the bitch you actually are!"
+				"받아! 네 본모습인 암캐답게 받아내!"
 			<</addSpeechLine>>
 		<<elseif C.npc.Whitney.dom gte 15>>
 			<<addSpeechLine "spank">>
-				"Of course I'm going to be the one to keep my slut in line!"
+				"내 걸레를 단속하는 건 당연히 내 몫이지!"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
@@ -913,44 +913,44 @@
 		<<if $worn.genitals.name is "chastity parasite">>
 			<<addSpeechLine "chastity">>
 			<<speechLine>>
-				<<He>> laughs. "You always get a slutty look on your face when I squeeze this."
+				<<He>>【이가】 웃는다. "내가 여길 쥐어짤 때마다 넌 참 음탕한 표정을 지어."
 			<<speechLine>>
-				<<He>> raises an eyebrow. "That good?"
+				<<He>>【이가】 눈썹을 치켜올린다. "그렇게 좋아?"
 			<<speechLine>>
-				<<He>> raises an eyebrow. "Horny slut."
+				<<He>>【이가】 눈썹을 치켜올린다. "발정 난 걸레."
 			<</addSpeechLine>>
 		<<elseif $worn.genitals.origin is "Whitney">>
 			<<if $rng gte 86 and $player.gender_appearance is "f" and $player.penissize lt 0>>
 				<<addSpeechLine "chastity">>
-					<<He>> smirks. "You look so cute with your tiny <<= $player.virginity.penile is true ? "virgin" : "useless">> penis all locked up."
+					<<He>>【이가】 능글맞게 웃는다. "네 그 조그맣고 <<= $player.virginity.penile is true ? "써본 적 없는" : "쓸모없는">> 좆이 잠겨 있으니까 존나 귀엽네."
 					<<if !$whitneyUniqueComments.includes("insecurityChastityTiny")>><<set $whitneyUniqueComments.pushUnique("insecurityChastityTiny")>><<insecurity "penis_small" 4>><<ginsecurity "penis_small">><</if>>
 				<</addSpeechLine>>
 			<<elseif $rng gte 61>>
 				<<if playerBellyVisible() and random(0, 100) gte 50>>
 					<<addSpeechLine "chastity">>
-						"Good slut." <<He>> smirks. "You clearly don't need to be unlocked when you've obviously been having a lot of fun without it."
+						"착한 걸레." <<He>>【이가】 능글맞게 웃는다. "이런 거 없어도 아주 잘만 즐기고 있으니까 굳이 안 풀어줘도 되겠어."
 					<</addSpeechLine>>
 				<<elseif ((!playerBellyVisible() and knowsAboutAnyPregnancy("pc", "Whitney")) or !$settings.pregnancySpeechEnabled) and random(0, 100) gte 50>>
 					<<addSpeechLine "chastity">>
-						"Good slut." <<He>> smirks. "Don't worry, you'll still be my slut even when you get <<= $settings.pregnancySpeechEnabled ? "knocked" : "fucked">> up."
+						"착한 걸레." <<He>>【이가】 능글맞게 웃는다. "걱정 마, 네 배가 <<= $settings.pregnancySpeechEnabled ? "불러와도" : "박혀대도">> 넌 여전히 내 걸레니까."
 					<</addSpeechLine>>
 				<<elseif C.npc.Whitney.vagina isnot "none" and $whitneyromance and $settings.pregnancySpeechEnabled and !npcIsPregnant("Whitney")>>
 					<<addSpeechLine "chastity">>
-						"Good slut." <<He>> smirks. "No more bad ideas about pumping brats into anyone without my say, got it?"
+						"착한 걸레." <<He>>【이가】 능글맞게 웃는다. "내 허락 없이 아무한테나 애새끼를 박아 넣을 생각은 더는 하지 마, 알았어?"
 					<</addSpeechLine>>
 				<<else>>
 					<<addSpeechLine "chastity">>
-						"Good slut." <<He>> smirks. "Not like you need that thing to have fun."
+						"착한 걸레." <<He>>【이가】 능글맞게 웃는다. "네가 놀아나는 데 그게 필요한 것도 아니잖아."
 					<</addSpeechLine>>
 				<</if>>
 			<<else>>
 				<<addSpeechLine "chastity">>
 				<<speechLine>>
-					"Good slut." <<He>> smirks. "Can't trust a slut like you to run around without being locked up."
+					"착한 걸레." <<He>>【이가】 능글맞게 웃는다. "너 같은 걸레가 채워지지도 않고 돌아다니게 내버려둘 순 없지."
 				<<speechLine>>
-					"Good slut." <<He>> smirks. "I hope it's getting you all hot and bothered."
+					"착한 걸레." <<He>>【이가】 능글맞게 웃는다. "그것 때문에 잔뜩 열올랐으면 좋겠는데."
 				<<speechLine>>
-					"Good slut." <<He>> smirks. "If only these things were indestructible."
+					"착한 걸레." <<He>>【이가】 능글맞게 웃는다. "이딴 게 망가지지도 않으면 좋을 텐데."
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -958,49 +958,49 @@
 	<<if $speechVaginaFlaunt>>
 		<<addSpeechLine "vaginaFlaunt">>
 		<<speechLine>>
-			<<He>> smirks. "Like what you see, slut?"
+			<<He>>【이가】 능글맞게 웃는다. "보기 좋냐, 걸레야?"
 		<<speechLine>>
-			<<He>> grins. "Well?"
+			<<He>>【이가】 씩 웃는다. "어때?"
 		<<speechLine>>
-			<<He>> grins. "You look real hungry for this right about now. Good."
+			<<He>>【이가】 씩 웃는다. "지금 이게 존나 고픈 표정인데. 좋아."
 		<</addSpeechLine>>
 		<<if $player.penisExist>>
 			<<addSpeechLine "vaginaFlaunt">>
 			<<speechLine>>
-				<<He>> grins. "I've got your cock's next destination right here!"
+				<<He>>【이가】 씩 웃는다. "네 좆이 다음에 갈 곳이 바로 여기 있다!"
 			<<speechLine>>
-				<<He>> smirks. "Come on, slut. Put it in. I know you wanna."
+				<<He>>【이가】 능글맞게 웃는다. "어서, 걸레야. 넣어. 넣고 싶은 거 다 알아."
 			<<speechLine>>
-				<<He>> grins. "Look all you want. See where your cock's gonna go."
+				<<He>>【이가】 씩 웃는다. "실컷 봐둬. 네 좆이 어디로 들어갈지."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechVagina>>
 		<<addSpeechLine "fondle">>
 		<<speechLine>>
-			<<He>> whispers. "Wonder how I have to curl to make you squeal."
+			<<He>>【이가】 속삭인다. "어떻게 구부려야 네가 꽥꽥거릴까."
 		<<speechLine>>
-			<<He>> laughs. "You like that, slut?"
+			<<He>>【이가】 웃는다. "좋냐, 걸레야?"
 		<<speechLine>>
-			"Mess my fingers up. You know you wanna."
+			"내 손가락 더럽혀 봐. 그러고 싶은 거 다 알아."
 		<<speechLine>>
-			"Bet you love having my fingers in your <<= either("slutty","whore")>> hole."
+			"네 <<= either("음탕한","창녀 같은")>> 구멍에 내 손가락 들어간 거 존나 좋지?"
 		<</addSpeechLine>>
 		<<if $consensual is 0>>
 			<<addSpeechLine "fondle">>
-				"Wonder what kind of face you'll make when I get even worse with you."
+				"내가 더 심하게 굴면 넌 어떤 표정을 지을까."
 			<</addSpeechLine>>
 			<<if $audiencepresent gte 1>>
 				<<addSpeechLine "fondle" 4>>
 				<<speechLine>>
-					<<He>> snorts. "<<pHer>> <<= either("pussy","cunt","hole")>> is already dripping! Proof that <<pshe>> loves being taken advantage of."
+					<<He>>【이가】 콧방귀를 뀐다. "<<pHer>> <<= either("보지","보짓구멍","구멍")>>【이가】 벌써 줄줄 흐르잖아! <<pshe>>【이가】 당하는 걸 좋아한다는 증거지."
 				<<speechLine>>
-					<<He>> laughs. "You see this? There's no way this slut didn't want this!"
+					<<He>>【이가】 웃는다. "이거 보여? 이 걸레가 이걸 원하지 않았을 리가 없잖아!"
 				<</addSpeechLine>>
 			<</if>>
 			<<if C.npc.Whitney.dom lte 10>>
 				<<addSpeechLine "fondle">>
-					"Stupid slut," <<he>> sneers, "why can't you see that you're just a toy for me to play with?"
+					"멍청한 걸레," <<he>>【이가】 비웃는다, "넌 그냥 내가 갖고 노는 장난감일 뿐이란 걸 왜 모르냐?"
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -1008,30 +1008,30 @@
 	<<if $speechPenis>>
 		<<addSpeechLine "fondle">>
 		<<speechLine>>
-			<<He>> whispers. "Wonder how I have to grip to make you squeal."
+			<<He>>【이가】 속삭인다. "어떻게 쥐어야 네가 꽥꽥거릴까."
 		<<speechLine>>
-			<<He>> laughs. "You like that, slut?"
+			<<He>>【이가】 웃는다. "좋냐, 걸레야?"
 		<</addSpeechLine>>
 		<<if !playerHasStrapon() and $player.penissize lte 2>>
 			<<addSpeechLine "fondle">>
-				<<He>> snorts. "I don't even need to use my whole hand to jerk you off. You're so fucking tiny."
+				<<He>>【이가】 콧방귀를 뀐다. "널 흔들어 주는 데 손 전체를 쓸 필요도 없네. 존나 작아."
 				<<set $whitneySeen.pushUnique("penisSmall")>><<if !$whitneyUniqueComments.includes("insecurityHandjobSmall")>><<set $whitneyUniqueComments.pushUnique("insecurityHandjobSmall")>><<insecurity "penis_small" 1>><<ginsecurity "penis_small">><</if>>
 			<</addSpeechLine>>
 		<<elseif !playerHasStrapon() and $player.penissize gte 5 and $audiencepresent gte 1>>
 			<<addSpeechLine "fondle" 4>>
-				<<He>> snorts. "You need both hands or something? Should I get the whole gang working?"
+				<<He>>【이가】 콧방귀를 뀐다. "두 손이 다 필요하냐? 패거리 전부 동원해야 되나?"
 				<<if !$whitneyUniqueComments.includes("insecurityHandjobBig")>><<set $whitneyUniqueComments.pushUnique("insecurityHandjobBig")>><<insecurity "penis_big" 1>><<ginsecurity "penis_big">><</if>>
 			<</addSpeechLine>>
 		<</if>>
 		<<if $consensual is 0>>
 			<<if $audiencepresent gte 1>>
 				<<addSpeechLine "fondle" 4>>
-					<<He>> snorts. "<<pHer>> <<= either("dick","cock")>> is already hard! Proof that <<pshe>> loves being taken advantage of."
+					<<He>>【이가】 콧방귀를 뀐다. "<<pHer>> <<= either("자지","좆")>>【이가】 벌써 딱딱하잖아! <<pshe>>【이가】 당하는 걸 좋아한다는 증거지."
 				<</addSpeechLine>>
 			<</if>>
 			<<if C.npc.Whitney.dom lte 10 and $enemyanger gt 100>>
 				<<addSpeechLine "fondle">>
-					"Stupid slut," <<he>> sneers, "why can't you see that you're just a toy for me to play with?"
+					"멍청한 걸레," <<he>>【이가】 비웃는다, "넌 그냥 내가 갖고 노는 장난감일 뿐이란 걸 왜 모르냐?"
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -1039,28 +1039,28 @@
 	<<if $speechAnus>>
 		<<addSpeechLine "fondle">>
 		<<speechLine>>
-			"Bet you love having my fingers in your <<= either("slutty","whore")>> hole."
+			"네 <<= either("음탕한","창녀 같은")>> 구멍에 내 손가락 들어간 거 존나 좋지?"
 		<<speechLine>>
-			"Feel that? Bet you're losing your mind right about now."
+			"느껴져? 지금쯤 정신이 나갈 지경이겠지."
 		<</addSpeechLine>>
 		<<if $analskill gte 400>>
 			<<addSpeechLine "fondle">>
-				"How many perverts have you let ruin you down here already? Bet you can't even keep count anymore!"
+				"여기 아래를 벌써 몇 명의 변태한테 망가뜨리게 놔둔 거야? 이젠 세지도 못하겠지!"
 			<</addSpeechLine>>
 		<</if>>
 		<<if $analskill gte 800>>
 			<<addSpeechLine "fondle">>
-				"Knew you'd be loose down here, <<= either("slut","whore")>>."
+				"여기 아래가 헐렁할 줄 알았어, <<= either("걸레","창녀")>>【아야】."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $player.virginity.anal is true>>
 			<<addSpeechLine "fondle">>
-				"Haven't popped this yet? I'm surprised your slutty ass got this far with that."
+				"아직 여길 안 뚫었다고? 네 걸레 같은 엉덩이가 그러고도 여기까지 온 게 놀랍네."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $consensual is 0 and C.npc.Whitney.dom lte 10 and $enemyanger gt 100>>
 			<<addSpeechLine "fondle">>
-				"Stupid slut," <<he>> sneers, "why can't you see that you're just a toy for me to play with?"
+				"멍청한 걸레," <<he>>【이가】 비웃는다, "넌 그냥 내가 갖고 노는 장난감일 뿐이란 걸 왜 모르냐?"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
@@ -1068,37 +1068,37 @@
 		<<if $choketrait gte 1>>
 			<<addSpeechLine "choke">>
 			<<speechLine>>
-				<<He>> pants. "That's right, bitch. Gag!"
+				<<He>>【이가】 헐떡인다. "그렇지, 암캐야. 켁켁거려!"
 			<<speechLine>>
-				<<He>> laughs. "What's that? You want me to keep going?"
+				<<He>>【이가】 웃는다. "뭐라고? 계속해 달라고?"
 			<<speechLine>>
-				"Yeah? You like that, huh? You're such a needy little slut."
+				"그래? 좋지? 넌 진짜 애걸하는 걸레야."
 			<</addSpeechLine>>
 			<<if C.npc.Whitney.dom lte 10>>
 				<<addSpeechLine "choke">>
-					"Fuck, if only you were always this easy."
+					"씨발, 네가 항상 이렇게 쉬우면 좋을 텐데."
 				<</addSpeechLine>>
 			<<elseif C.npc.Whitney.dom gte 15>>
 				<<addSpeechLine "choke">>
-					"You're so fucking easy, I love it!"
+					"넌 씨발 존나 쉬워, 그게 좋아!"
 				<</addSpeechLine>>
 			<</if>>
 		<<else>>
 			<<addSpeechLine "choke">>
 			<<speechLine>>
-				"You better not pass out. I'm having too much fun."
+				"기절하지 않는 게 좋을 거야. 지금 너무 재밌거든."
 			<<speechLine>>
-				"What's wrong? Can't take it?"
+				"왜 그래? 못 버티겠어?"
 			<<speechLine>>
-				"Did you say something, bitch?"
+				"뭐라고 했냐, 암캐야?"
 			<</addSpeechLine>>
 			<<if C.npc.Whitney.dom lte 10>>
 				<<addSpeechLine "choke">>
-					"You're lucky I'm not doing something worse."
+					"내가 더 심한 짓 안 하는 걸 다행으로 알아."
 				<</addSpeechLine>>
 			<<elseif C.npc.Whitney.dom gte 15>>
 				<<addSpeechLine "choke">>
-					"Oh, slut. You know you can't do anything to me by now, right?!"
+					"오, 걸레야. 이제 넌 나한테 아무것도 못 한다는 거 알지?!"
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -1106,333 +1106,333 @@
 	<<if $speechVaginaFoot>>
 		<<addSpeechLine "footjob">>
 		<<speechLine>>
-			"Don't fuck up my shoes, slut."
+			"내 신발 더럽히지 마, 걸레야."
 		<<speechLine>>
-			"Cum on my shoes, and you'll lick them clean."
+			"내 신발에 싸면, 네가 핥아서 닦아야 할 거야."
 		<<speechLine>>
-			<<He>> sneers. "Gross."
+			<<He>>【이가】 비웃는다. "역겨워."
 		<<speechLine>>
-			<<He>> glares at you. "You like this, don't you?"
+			<<He>>【은는】 당신을 노려본다. "너 이거 좋지, 안 그래?"
 		<</addSpeechLine>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			<<addSpeechLine "footjob">>
-				<<He>> sneers. "Fuck, my shoe's ruined! You're not getting off easy for this, slut."
+				<<He>>【이가】 비웃는다. "씨발, 내 신발 다 망가졌잖아! 이건 쉽게 안 넘어가, 걸레야."
 			<</addSpeechLine>>
 			<<if $consensual is 0>>
 				<<addSpeechLine "footjob">>
-					<<He>> snorts. "You're all slimy. Fucking dirty <<= either("slut","whore")>>, of course you like this."
+					<<He>>【이가】 콧방귀를 뀐다. "온통 끈적끈적하네. 씨발 더러운 <<= either("걸레","창녀")>>, 당연히 좋아하겠지."
 				<</addSpeechLine>>
 			<</if>>
 		<<elseif $arousal lt ($arousalmax / 5) * 2>>
 			<<addSpeechLine "footjob">>
-				<<He>> scoffs. "Hey, come on. Cum already."
+				<<He>>【이가】 코웃음 친다. "야, 왜 이래. 빨리 싸."
 			<</addSpeechLine>>
 		<</if>>
 		<<if ($consensual is 0 and (C.npc.Whitney.dom lte 10 or C.npc.Whitney.love lte 10) and $enemyanger gt 100)>>
 			<<addSpeechLine "footjob">>
-				<<He>> snarls. "Dumb fucking <<= either("slut","whore","bitch")>>. This is where you belong, beneath my foot."
+				<<He>>【이가】 으르렁거린다. "멍청한 씨발 <<= either("걸레","창녀","암캐")>>. 여기가 네 자리야, 내 발밑."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechPenisFoot>>
 		<<addSpeechLine "footjob">>
 		<<speechLine>>
-			"Don't fuck up my shoes, slut."
+			"내 신발 더럽히지 마, 걸레야."
 		<<speechLine>>
-			"Cum on my shoes, and you'll lick them clean."
+			"내 신발에 싸면, 네가 핥아서 닦아야 할 거야."
 		<<speechLine>>
-			<<He>> sneers. "Gross."
+			<<He>>【이가】 비웃는다. "역겨워."
 		<</addSpeechLine>>
 		<<if !playerHasStrapon() and $player.penissize lte 2>>
 			<<addSpeechLine "footjob">>
-				<<He>> laughs. "Maybe I should press harder, before I lose where to step."
+				<<He>>【이가】 웃는다. "어디를 밟아야 할지 놓치기 전에 더 세게 눌러야겠네."
 				<<set $whitneySeen.pushUnique("penisSmall")>><<if !$whitneyUniqueComments.includes("insecurityFootSmall")>><<set $whitneyUniqueComments.pushUnique("insecurityFootSmall")>><<insecurity "penis_small" 1>><<ginsecurity "penis_small">><</if>>
 			<</addSpeechLine>>
 		<<elseif !playerHasStrapon() and $player.penissize gte 5>>
 			<<addSpeechLine "footjob">>
-				<<He>> laughs. "Fuck, is my foot even enough? Maybe the whole town should get in on this!"
+				<<He>>【이가】 웃는다. "씨발, 내 발로 되긴 해? 온 동네가 달라붙어야 할지도 모르겠네!"
 				<<if !$whitneyUniqueComments.includes("insecurityFootBig")>><<set $whitneyUniqueComments.pushUnique("insecurityFootBig")>><<insecurity "penis_big" 1>><<ginsecurity "penis_big">><</if>>
 			<</addSpeechLine>>
 		<</if>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			<<addSpeechLine "footjob">>
-				<<He>> sneers. "Fuck, my shoe's ruined! You're not getting off easy for this, slut."
+				<<He>>【이가】 비웃는다. "씨발, 내 신발 다 망가졌잖아! 이건 쉽게 안 넘어가, 걸레야."
 			<</addSpeechLine>>
 			<<if $consensual is 0>>
 				<<addSpeechLine "footjob">>
-					<<He>> snorts. "You're rock hard. Fucking dirty <<= either("slut","whore")>>, of course you like this."
+					<<He>>【이가】 콧방귀를 뀐다. "돌처럼 딱딱하네. 씨발 더러운 <<= either("걸레","창녀")>>, 당연히 좋아하겠지."
 				<</addSpeechLine>>
 			<</if>>
 		<<elseif $arousal lt ($arousalmax / 5) * 2>>
 			<<addSpeechLine "footjob">>
-				<<He>> scoffs. "Hey, come on. Cum already."
+				<<He>>【이가】 코웃음 친다. "야, 왜 이래. 빨리 싸."
 			<</addSpeechLine>>
 		<</if>>
 		<<if ($consensual is 0 and (C.npc.Whitney.dom lte 10 or C.npc.Whitney.love lte 10) and $enemyanger gt 100)>>
 			<<addSpeechLine "footjob">>
-				<<He>> snarls. "Dumb fucking <<= either("slut","whore","bitch")>>. This is where you belong, beneath my foot."
+				<<He>>【이가】 으르렁거린다. "멍청한 씨발 <<= either("걸레","창녀","암캐")>>. 여기가 네 자리야, 내 발밑."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechArms>>
 		<<if $consensual is 0 and $audiencepresent gte 1 and C.npc.Whitney.dom lte 10>>
 			<<addSpeechLine "arms" 4>>
-				<<He>> turns to the audience. "Ha! You guys seeing this?!"
+				<<He>>【은는】 구경꾼들을 돌아본다. "하! 너희들 이거 보고 있냐?!"
 			<</addSpeechLine>>
 		<<elseif $consensual is 0 and $audiencepresent gte 1>>
 			<<addSpeechLine "arms" 4>>
-				<<He>> laughs. "Now everyone knows you're not so tough!"
+				<<He>>【이가】 웃는다. "이제 네가 별로 세지도 않다는 걸 다들 알겠네!"
 			<</addSpeechLine>>
 		<<elseif $consensual is 0>>
 			<<addSpeechLine "arms">>
 			<<speechLine>>
-				"Come on, bitch, squeal!"
+				"어서, 암캐야, 꽥꽥거려!"
 			<<speechLine>>
-				"What's wrong? Can't break free?"
+				"왜 그래? 못 빠져나가겠어?"
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "arms">>
-				<<He>> laughs. "Stay. Stay!"
+				<<He>>【이가】 웃는다. "가만히. 가만히 있어!"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechClit>>
 		<<addSpeechLine "fondle">>
 		<<speechLine>>
-			<<He>> whispers. "Bet I don't even have to go hard to make you squeal."
+			<<He>>【이가】 속삭인다. "세게 안 해도 널 꽥꽥거리게 만들 수 있을걸."
 		<<speechLine>>
-			<<He>> whispers. "Don't be difficult. Only good sluts'll get to cum."
+			<<He>>【이가】 속삭인다. "까다롭게 굴지 마. 착한 걸레만 싸게 해줄 거니까."
 		<</addSpeechLine>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			<<addSpeechLine "fondle" 3>>
-				<<He>> laughs. "See? Knew you'd be easy to please."
+				<<He>>【이가】 웃는다. "거봐? 쉽게 넘어올 줄 알았어."
 			<</addSpeechLine>>
 		<<elseif $arousal lt ($arousalmax / 5) * 2>>
 			<<addSpeechLine "fondle" 3>>
-				<<He>> smirks. "Give me a bit. I'll have you begging for me in no time."
+				<<He>>【이가】 능글맞게 웃는다. "조금만 기다려. 금방 나한테 애원하게 만들어 줄 테니까."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechFutaPenis>>
 		<<addSpeechLine "fondle">>
 		<<speechLine>>
-			<<He>> leers at your exposure. "Now there's two ways for me to make you squeal. Be careful, slut."
+			<<He>>【은는】 드러난 당신의 몸을 음흉하게 바라본다. "이제 널 꽥꽥거리게 만들 방법이 두 가지가 됐네. 조심해, 걸레야."
 		<<speechLine>>
-			<<He>> smirks. "You might just be the best toy I've ever had."
+			<<He>>【이가】 능글맞게 웃는다. "넌 내가 가져본 것 중 최고의 장난감일지도 몰라."
 		<<speechLine>>
-			<<He>> snickers. "With parts like these, who'll ever get bored with you?"
+			<<He>>【이가】 낄낄거린다. "이런 부품들을 달고 있는데, 누가 너한테 질리겠어?"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechGlans>>
 		<<if !playerHasStrapon() and $player.penissize lte 2>>
 			<<addSpeechLine "fondle">>
-				<<He>> snorts. "Bet you love having me tease your tiny <<= either("dick","cock")>> like this."
+				<<He>>【이가】 콧방귀를 뀐다. "네 조그만 <<= either("자지","좆")>>【을를】 이렇게 놀려주니까 존나 좋지?"
 				<<set $whitneySeen.pushUnique("penisSmall")>><<if !$whitneyUniqueComments.includes("insecurityGlansSmall")>><<set $whitneyUniqueComments.pushUnique("insecurityGlansSmall")>><<insecurity "penis_small" 1>><<ginsecurity "penis_small">><</if>>
 			<</addSpeechLine>>
 		<</if>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			<<addSpeechLine "fondle">>
-				<<He>> laughs. "Aww, look, your cock's drooling for me."
+				<<He>>【이가】 웃는다. "어머, 봐라, 네 좆이 날 보고 침을 흘리네."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if ($speechVagina or $speechPenis or $speechAnus or $speechClit or $speechFutaPenis or $speechGlans) and C.npc.Whitney.love gte 20 and $consensual is 1 and $audiencepresent gte 1>>
 		<<addSpeechLine "fondle" 4>>
-			"What a good slut, letting me play with you in front of all of these people."
+			"참 착한 걸레야, 이 많은 사람들 앞에서 내가 갖고 놀게 해주다니."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechMasturbate>>
 		<<addSpeechLine "masturbate">>
-			"Aww, look at that. The slut's begging for me."
+			"어머, 저것 봐. 걸레가 나한테 애원하네."
 		<</addSpeechLine>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			<<addSpeechLine "masturbate">>
 			<<speechLine>>
-				<<He>> laughs. "Alright, I get it. You need it bad, huh?"
+				<<He>>【이가】 웃는다. "알았어, 알았다고. 존나 필요하지?"
 			<<speechLine>>
-				<<He>> sneers. "Hey. Don't be too eager, slut."
+				<<He>>【이가】 비웃는다. "야. 너무 안달 내지 마, 걸레야."
 			<</addSpeechLine>>
 		<<elseif $arousal lt ($arousalmax / 5) * 2>>
 			<<addSpeechLine "masturbate">>
 			<<speechLine>>
-				<<He>> grins. "What, am I not doing it for you?"
+				<<He>>【이가】 씩 웃는다. "뭐야, 내가 성에 안 차?"
 			<<speechLine>>
-				<<He>> grins. "Sure. Get yourself ready."
+				<<He>>【이가】 씩 웃는다. "그래. 준비해 둬."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechHandjobPenis>>
 		<<addSpeechLine "touch">>
 		<<speechLine>>
-			<<He>> grunts. "Just let me fuck that whore mouth of yours already."
+			<<He>>【이가】 신음한다. "그냥 빨리 네 그 창녀 같은 주둥이나 박게 해줘."
 		<<speechLine>>
-			"Tell me when your hand's getting tired. I'm always down to dick you down after!"
+			"손 아파지면 말해. 그다음엔 언제든 박아줄 테니까!"
 		<</addSpeechLine>>
 		<<if $consensual is 0>>
 			<<addSpeechLine "touch">>
-				<<He>> laughs. "Oh, you've really lost it. Go on, then."
+				<<He>>【이가】 웃는다. "오, 진짜 맛이 갔구나. 그럼 계속해 봐."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $handskill lt 200>>
 			<<addSpeechLine "touch">>
-				<<He>> laughs. "Can't even touch someone right? Looks like I need to give you some lessons."
+				<<He>>【이가】 웃는다. "만지는 것도 제대로 못 해? 내가 좀 가르쳐야겠네."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "touch">>
-				<<He>> whistles in appreciation. "Not bad, slut."
+				<<He>>【이가】 감탄하며 휘파람을 분다. "나쁘지 않네, 걸레야."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
 			<<addSpeechLine "touch">>
 			<<speechLine>>
-				<<He>> groans. "Fuck... Come on, come on, come on!"
+				<<He>>【이가】 신음한다. "씨발... 어서, 어서, 어서!"
 			<<speechLine>>
-				<<He>> pants. "Faster, whore. Faster!"
+				<<He>>【이가】 헐떡인다. "더 빨리, 창녀야. 더 빨리!"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechHandjobVagina>>
 		<<addSpeechLine "touch">>
 		<<speechLine>>
-			<<He>> laughs. "Come on, bitch. Try a little harder."
+			<<He>>【이가】 웃는다. "왜 이래, 암캐야. 좀 더 노력해 봐."
 		<<speechLine>>
-			"Tell me when your hand's getting tired. Gotta know if you'll even handle what I'll do next."
+			"손 아파지면 말해. 내가 다음에 할 짓을 네가 감당이나 할지 알아야 하니까."
 		<</addSpeechLine>>
 		<<if $consensual is 0>>
 			<<addSpeechLine "touch">>
-				<<He>> laughs. "Oh, you've really lost it. Go on, then."
+				<<He>>【이가】 웃는다. "오, 진짜 맛이 갔구나. 그럼 계속해 봐."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $handskill lt 200>>
 			<<addSpeechLine "touch">>
-				<<He>> laughs. "Can't even touch someone right? Looks like I need to give you some lessons."
+				<<He>>【이가】 웃는다. "만지는 것도 제대로 못 해? 내가 좀 가르쳐야겠네."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "touch">>
-				<<He>> whistles in appreciation. "Not bad, slut."
+				<<He>>【이가】 감탄하며 휘파람을 분다. "나쁘지 않네, 걸레야."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
 			<<addSpeechLine "touch">>
 			<<speechLine>>
-				<<He>> groans. "Fuck... Come on, come on, come on!"
+				<<He>>【이가】 신음한다. "씨발... 어서, 어서, 어서!"
 			<<speechLine>>
-				<<He>> pants. "Faster, whore. Faster!"
+				<<He>>【이가】 헐떡인다. "더 빨리, 창녀야. 더 빨리!"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechDildoVagina or $speechDildoAnus>>
 		<<addSpeechLine "toy">>
 		<<speechLine>>
-			<<He>> laughs. "This'll do."
+			<<He>>【이가】 웃는다. "이거면 되겠네."
 		<<speechLine>>
-			<<He>> smirks. "Yeah, go on now."
+			<<He>>【이가】 능글맞게 웃는다. "그래, 어서 해봐."
 		<</addSpeechLine>>
 		<<if $speechDildoVagina>>
 			<<addSpeechLine "toy">>
-				"That's it. Hit all the good parts."
+				"그렇지. 좋은 데 전부 찔러."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $speechDildoAnus>>
 			<<addSpeechLine "toy">>
-				"Watch where you're ramming, slut."
+				"어디 쑤시는지 잘 봐, 걸레야."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $player.penisExist>>
 			<<addSpeechLine "toy">>
-				"Good idea, I guess. Who knows how overused your cock is at this point?"
+				"좋은 생각이긴 하네. 네 좆이 이쯤 되면 얼마나 닳았을지 누가 알겠어?"
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "toy">>
-				"Don't worry, slut. You'd get me off plenty even without a cock."
+				"걱정 마, 걸레야. 좆 없이도 넌 날 충분히 가게 할 수 있어."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechStroker>>
 		<<addSpeechLine "toy">>
 		<<speechLine>>
-			<<He>> hisses. "Fuck, this toy's not beating the real thing."
+			<<He>>【이가】 씩씩거린다. "씨발, 이 장난감은 진짜엔 못 미치네."
 		<<speechLine>>
-			"Best do better, slut, before I get rid of this toy."
+			"더 잘하는 게 좋을 거야, 걸레야, 내가 이 장난감을 치워버리기 전에."
 		<</addSpeechLine>>
 		<<if $player.vaginaExist>>
 			<<addSpeechLine "toy">>
 			<<speechLine>>
-				<<He>> grunts. "Keep this up, and it's your cunt that's getting me next."
+				<<He>>【이가】 신음한다. "계속 이러면, 다음엔 네 보지가 날 받게 될 거야."
 			<<speechLine>>
-				"Sure. Keep me busy with another cunt. Why not?"
+				"그래. 다른 보지로 날 바쁘게 해줘. 안 될 거 없지?"
 			<<speechLine>>
-				"Rather it'd be you on me right now. At least you're able to scream."
+				"차라리 지금 네가 내 위에 있었으면 좋겠네. 넌 적어도 비명은 지를 수 있잖아."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechHeadSuckle>>
 		<<addSpeechLine "chest">>
 		<<speechLine>>
-			<<He>> laughs. "Bet you're not used to this, are you?"
+			<<He>>【이가】 웃는다. "이런 건 익숙하지 않지, 그렇지?"
 		<<speechLine>>
-			"Don't stop now, slut. Keep sucking."
+			"멈추지 마, 걸레야. 계속 빨아."
 		<<speechLine>>
-			<<He>> laughs. "Good <<girl>>."
+			<<He>>【이가】 웃는다. "착한 <<girl>>."
 		<</addSpeechLine>>
 		<<if $oralskill lt 200>>
 			<<addSpeechLine "chest">>
-				<<He>> snorts. "Come on, use that little tongue of yours like a good <<girl>>. It's not that hard."
+				<<He>>【이가】 콧방귀를 뀐다. "어서, 착한 <<girl>>답게 그 작은 혀를 써 봐. 그렇게 어렵지 않아."
 			<</addSpeechLine>>
 		<<elseif $oralskill gte 800>>
 			<<addSpeechLine "chest">>
-				<<He>> laughs. "Only a nasty <<= either("bitch","slut","whore")>> like you could be good at this."
+				<<He>>【이가】 웃는다. "너처럼 더러운 <<= either("암캐","걸레","창녀")>>【이】나 이런 걸 잘하겠지."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if (C.npc.Whitney.love lte 10 or C.npc.Whitney.dom lte 10) and $speechHeadSuckle>>
 		<<addSpeechLine "chest">>
 		<<speechLine>>
-			"What, miss your <<mummy>> or something?" <<He>> laughs. "Oh, wait."
+			"뭐야, <<mummy>>【이가】 보고 싶기라도 해?" <<He>>【이가】 웃는다. "아, 잠깐."
 		<<speechLine>>
-			<<He>> coos. "Aww, look at you! You're so sad."
+			<<He>>【이가】 어르듯 말한다. "어머, 네 꼴 좀 봐! 참 불쌍하네."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechHeadNipple>>
 		<<if $transformationParts.traits.fangs isnot "disabled">>
 			<<addSpeechLine "chest">>
-				"Better fucking watch those teeth of yours. Bite me and there'll be hell to pay."
+				"그 이빨 씨발 조심하는 게 좋을 거야. 물면 뼈저리게 후회하게 될 테니까."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $oralskill lt 200>>
 			<<addSpeechLine "chest">>
-				<<He>> snorts. "Come on, use that little tongue of yours like a good <<girl>>. It's not that hard."
+				<<He>>【이가】 콧방귀를 뀐다. "어서, 착한 <<girl>>답게 그 작은 혀를 써 봐. 그렇게 어렵지 않아."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechHeadNippleClosed>>
 		<<addSpeechLine "chest">>
-			<<He>> scoffs. "How the fuck are you gonna pleasure me with that shit on your face?"
+			<<He>>【이가】 코웃음 친다. "얼굴에 그딴 걸 쓰고 씨발 어떻게 날 기분 좋게 해주겠다는 거야?"
 		<</addSpeechLine>>
 		<<if $enemyanger gt 100>>
 			<<addSpeechLine "chest">>
-				<<He>> scoffs. "Well? What the fuck are you waiting for?"
+				<<He>>【이가】 코웃음 친다. "그래서? 씨발 뭘 기다리는 거야?"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechHeadBreasts>>
 		<<if $enemyanger gt 100>>
 			<<addSpeechLine "chest">>
-				"Well? What the fuck are you waiting for?"
+				"그래서? 씨발 뭘 기다리는 거야?"
 			<</addSpeechLine>>
 		<</if>>
 		<<if C.npc.Whitney.dom gte 15>>
 			<<addSpeechLine "chest">>
-				<<He>> snorts. "Look at you! Such an adorable slut with your face all smothered."
+				<<He>>【이가】 콧방귀를 뀐다. "네 꼴 좀 봐! 얼굴이 파묻힌 채로 참 사랑스러운 걸레네."
 			<</addSpeechLine>>
 		<</if>>
 		<<if C.npc.Whitney.breastsize gte 9>>
 			<<addSpeechLine "chest">>
-				"Bet you get off to having your face all up in my tits. Pathetic slut."
+				"내 젖가슴에 얼굴을 파묻는 걸로 꼴리지? 한심한 걸레."
 			<</addSpeechLine>>
 			<<if $player.breastsize lte 3 and ($player.breastsize gte 1 or $player.gender_appearance isnot "m")>>
 				<<addSpeechLine "chest">>
-					"Take a good look. These are what real tits are supposed to look like, not the pea-sized shit you have."
+					"잘 봐둬. 진짜 젖가슴은 이렇게 생겨야 하는 거야, 네 그 콩알만 한 것들 말고."
 					<<if !$whitneyUniqueComments.includes("insecurityBreastsSmall")>><<set $whitneyUniqueComments.pushUnique("insecurityBreastsSmall")>><<insecurity "breasts_small" 1>><<ginsecurity "breasts_small">><</if>>
 				<</addSpeechLine>>
 			<</if>>
@@ -1440,41 +1440,41 @@
 	<</if>>
 	<<if $speechHeadChest>>
 		<<addSpeechLine "chest">>
-			"Well? What the fuck are you waiting for?"
+			"그래서? 씨발 뭘 기다리는 거야?"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechLegLock>>
 		<<if playerHeatMinArousal() and $consensual is 1>>
 			<<addSpeechLine "legLock">>
-				<<He>> snorts. "Fuck. Looks like someone's eager to be bred."
+				<<He>>【이가】 콧방귀를 뀐다. "씨발. 누가 교배당하고 싶어서 안달이 났나 보네."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "legLock">>
 			<<speechLine>>
-				<<He>> grunts. "Would you ease up?!"
+				<<He>>【이가】 신음한다. "좀 힘 빼지?!"
 			<<speechLine>>
-				<<He>> grunts. "Relax, slut. I'm not going anywhere."
+				<<He>>【이가】 신음한다. "힘 빼, 걸레야. 나 아무 데도 안 가."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if ($speechCheeks or $speechThigh or $speechFeet) and C.npc.Whitney.penis isnot "none">>
 		<<addSpeechLine "touch">>
-			<<He>> grunts. "When I'm done, you'll be dripping with cum."
+			<<He>>【이가】 신음한다. "내가 끝내고 나면, 넌 정액을 줄줄 흘리고 있을 거야."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechBottom>>
 		<<if $consensual is 0 and $audiencepresent gte 1>>
 			<<addSpeechLine "fondle" 4>>
-				<<He>> grunts in pleasure, a wicked grin on <<his>> lips. "You best behave, slut. Wouldn't want to have to spank you for being a bad <<girl>> in front of everyone."
+				<<He>>【은는】 입술에 사악한 미소를 머금은 채 쾌감에 신음한다. "얌전히 구는 게 좋을 거야, 걸레야. 모두 앞에서 나쁜 <<girl>>【이】라고 엉덩이를 때려주고 싶진 않거든."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $player.bottomsize lte 1>>
 			<<addSpeechLine "fondle">>
-				"For a slut, you don't have much to grab down here."
+				"걸레치곤 여기 아래가 잡을 게 별로 없네."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "fondle">>
-				"Nice ass, slut."
+				"엉덩이 좋네, 걸레야."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
@@ -1482,127 +1482,127 @@
 		<<if $player.bottomsize lte 1>>
 			<<addSpeechLine "touch">>
 			<<speechLine>>
-				<<He>> snickers. "Cute <<bottomsimple>>. Not much to use, is there?"
+				<<He>>【이가】 낄낄거린다. "귀여운 <<bottomsimple>>【이】네. 쓸 데가 별로 없겠는데?"
 			<<speechLine>>
-				"You got a small <<bottomsimple>>. Don't worry, I'll find a use for it."
+				"<<bottomsimple>>【이가】 작네. 걱정 마, 내가 쓸 데를 찾아줄 테니까."
 			<</addSpeechLine>>
 		<<elseif $player.bottomsize lte 5>>
 			<<addSpeechLine "touch">>
-				"Nice <<bottomsimple>>, slut. Use it often?"
+				"<<bottomsimple>> 좋네, 걸레야. 자주 써?"
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "touch">>
-				"You got a fat <<bottomsimple>>, slut. Bet you get lots of use out of it."
+				"<<bottomsimple>>【이가】 푸짐하네, 걸레야. 자주 써먹겠어."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $thighskill gte 800 and $speechThigh>>
 		<<addSpeechLine "touch">>
-			"Fuck," <<he>> grunts. "You're good with your thighs, huh? What a slut."
+			"씨발," <<he>>【이가】 신음한다. "허벅지 잘 쓰네? 참 걸레다."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $feetskill gte 800 and $speechFeet>>
 		<<addSpeechLine "touch">>
-			"Fuck," <<he>> grunts. "How are you this good with your feet? Knew you got around, slut."
+			"씨발," <<he>>【이가】 신음한다. "발을 어떻게 이렇게 잘 써? 여기저기 굴러먹은 줄은 알았지만, 걸레야."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechMouthNPCVagina>>
 		<<addSpeechLine "oral">>
 		<<speechLine>>
-			"Hurry up, slut. It won't lick itself."
+			"서둘러, 걸레야. 저절로 핥아지진 않아."
 		<<speechLine>>
-			<<He>> hisses. "Come on already!"
+			<<He>>【이가】 씩씩거린다. "빨리 좀 해!"
 		<<speechLine>>
-			<<He>> grunts. "Do I need to tell you what to do or what?!"
+			<<He>>【이가】 으르렁댄다. "뭘 해야 하는지 일일이 말해줘야 돼?!"
 		<</addSpeechLine>>
 		<<if C.npc.Whitney.dom gte 15 and C.npc.Whitney.love gte 20>>
 			<<addSpeechLine "oral">>
-				"Now be a good <<girl>> and make me feel good."
+				"자, 착한 <<girl>>답게 날 기분 좋게 해줘."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $consensual is 0>>
 			<<addSpeechLine "oral">>
-				"Don't make this difficult, bitch."
+				"어렵게 만들지 마, 암캐야."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $audiencepresent gte 1>>
 			<<addSpeechLine "oral" 4>>
-				<<He>> turns to the crowd. "I have this bitch right where <<pshe>> wants. Watch!"
+				<<He>>【은는】 구경꾼들을 돌아본다. "이 암캐는 <<pshe>>【이가】 원하는 자리에 딱 있지. 잘 봐!"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechTribEntrance>>
 		<<addSpeechLine "trib">>
-			<<He>> grins. "This'll be good. If you can keep up, anyway."
+			<<He>>【이가】 씩 웃는다. "이거 재밌겠네. 네가 따라올 수 있다면 말이지만."
 		<</addSpeechLine>>
 		<<if $consensual is 0 and $arousal gte ($arousalmax / 5) * 4>>
 			<<addSpeechLine "trib">>
-				"Don't act like you don't want this. Bet a pathetic slut like you is just gagging to feel my <<= either("pussy","cunt")>> on yours."
+				"원하지 않는 척하지 마. 너 같은 한심한 걸레는 내 <<= either("보지","보짓구멍")>>【이가】 네 것에 닿는 걸 느끼고 싶어 환장했겠지."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechTrib>>
 		<<if $vaginalskill gte 800>>
 			<<addSpeechLine "trib">>
-				<<He>> lets out a shaky laugh. "Fuck, how are you so good at this? Knew I was keeping you around for a reason, slut."
+				<<He>>【이가】 떨리는 웃음을 흘린다. "씨발, 어떻게 이렇게 잘해? 내가 널 곁에 두는 이유가 있다니까, 걸레야."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $enemyarousal gte ($enemyarousalmax / 5) * 4 and C.npc.Whitney.love gte 20>>
 			<<addSpeechLine "trib">>
-				<<He>> grunts, hips stuttering. "Fuck, keep going. Feels real good rubbing on you like this. Good job, slut."
+				<<He>>【이가】 엉덩이를 들썩이며 신음한다. "씨발, 계속해. 이렇게 너한테 비비니까 존나 좋네. 잘했어, 걸레야."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			<<addSpeechLine "trib">>
-				<<He>> laughs. "You horny <<= either("slut","bitch")>>. I can feel just how wet your <<= either("pussy","cunt")>> is."
+				<<He>>【이가】 웃는다. "이 발정 난 <<= either("걸레","암캐")>>. 네 <<= either("보지","보짓구멍")>>【이가】 얼마나 젖었는지 다 느껴져."
 			<</addSpeechLine>>
 			<<if $audiencepresent gte 1>>
 				<<addSpeechLine "trib" 4>>
-					<<He>> laughs loudly. "Look how wet <<pshe>> is! Filthy <<= either("slut","bitch")>> is making a mess all over the place."
+					<<He>>【이가】 크게 웃는다. "<<pshe>>【이가】 얼마나 젖었는지 봐! 더러운 <<= either("걸레","암캐")>>【이가】 사방을 엉망으로 만들고 있잖아."
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
 	<</if>>
 	<<if $speechFencingEntrance>>
 		<<addSpeechLine "imminent">>
-			<<He>> grins. "This'll be good. If you can keep up, anyway."
+			<<He>>【이가】 씩 웃는다. "이거 재밌겠네. 네가 따라올 수 있다면 말이지만."
 		<</addSpeechLine>>
 		<<if !playerHasStrapon() and $player.penissize lte 2>>
 			<<addSpeechLine "imminent">>
-				"You're so tiny that I forgot you had something to rub up against." <<He>> snorts. "Oh well, might as well give it a try anyway."
+				"너무 작아서 비빌 게 달려 있다는 것도 잊고 있었네." <<He>>【이가】 콧방귀를 뀐다. "뭐, 그래도 한번 해보지 뭐."
 				<<set $whitneySeen.pushUnique("penisSmall")>><<if !$whitneyUniqueComments.includes("insecurityFencingTiny")>><<set $whitneyUniqueComments.pushUnique("insecurityFencingTiny")>><<insecurity "penis_small" 1>><<ginsecurity "penis_small">><</if>>
 			<</addSpeechLine>>
 		<</if>>
 		<<if !playerHasStrapon() and C.npc.Whitney.penissize gte 4 and $player.penissize lte 4>>
 			<<addSpeechLine "imminent">>
-				<<He>> looks down between your legs, angling <<his>> length beside yours. <<He>> snorts. "Your <<= either("cock","dick")>> is so fucking pathetic in comparison."
+				<<He>>【은는】 당신의 다리 사이를 내려다보며, 자신의 물건을 당신 것 옆에 나란히 댄다. <<He>>【이가】 콧방귀를 뀐다. "비교하니까 네 <<= either("좆","자지")>>【은는】 존나 한심하네."
 				<<if !$whitneyUniqueComments.includes("insecurityFencingCompare")>><<set $whitneyUniqueComments.pushUnique("insecurityFencingCompare")>><<insecurity "penis_small" 1>><<ginsecurity "penis_small">><</if>>
 			<</addSpeechLine>>
 		<</if>>
 		<<if $consensual is 0 and $arousal gte ($arousalmax / 5) * 4>>
 			<<addSpeechLine "imminent">>
-				"Don't act like you don't want this. Bet a pathetic slut like you is just gagging to feel my <<= either("cock","dick")>> on yours."
+				"원하지 않는 척하지 마. 너 같은 한심한 걸레는 내 <<= either("좆","자지")>>【이가】 네 것에 닿는 걸 느끼고 싶어 환장했겠지."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechFencing>>
 		<<if $penileskill gte 800>>
 			<<addSpeechLine "fencing">>
-				<<He>> lets out a shaky laugh. "Fuck, how are you so good at this? Knew I was keeping you around for a reason, slut."
+				<<He>>【이가】 떨리는 웃음을 흘린다. "씨발, 어떻게 이렇게 잘해? 내가 널 곁에 두는 이유가 있다니까, 걸레야."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $enemyarousal gte ($enemyarousalmax / 5) * 4 and C.npc.Whitney.love gte 20>>
 			<<addSpeechLine "fencing">>
-				<<He>> grunts, hips stuttering. "Fuck, keep going. Feels real good rubbing on you like this. Good job, slut."
+				<<He>>【이가】 엉덩이를 들썩이며 신음한다. "씨발, 계속해. 이렇게 너한테 비비니까 존나 좋네. 잘했어, 걸레야."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			<<addSpeechLine "fencing">>
-				<<He>> laughs. "You horny <<= either("slut","bitch")>>. I can feel just how hard your <<= either("cock","dick")>> is."
+				<<He>>【이가】 웃는다. "이 발정 난 <<= either("걸레","암캐")>>. 네 <<= either("좆","자지")>>【이가】 얼마나 딱딱한지 다 느껴져."
 			<</addSpeechLine>>
 			<<if $audiencepresent gte 1>>
 				<<addSpeechLine "fencing" 4>>
-					<<He>> laughs loudly. "Look how hard <<pshe>> is! Bet the filthy <<= either("slut","bitch")>> is gonna cum real soon."
+					<<He>>【이가】 크게 웃는다. "<<pshe>>【이가】 얼마나 딱딱해졌는지 봐! 이 더러운 <<= either("걸레","암캐")>>【은는】 금방 쌀 거야."
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -1610,196 +1610,196 @@
 	<<if $speechChestRub>>
 		<<addSpeechLine "touch">>
 		<<speechLine>>
-			"Like fucking a bloody washboard. Nothing but ribs."
+			"빨래판이랑 떡치는 것 같네. 갈비뼈밖에 없잖아."
 		<<speechLine>>
-			<<He>> rolls <<his>> eyes. "Hope this is doing something for you, at least."
+			<<He>>【이가】 눈을 굴린다. "적어도 너한텐 뭔가 되길 바란다."
 		<</addSpeechLine>>
 		<<if C.npc.Whitney.penis isnot "none" and $player.gender_appearance isnot "m">>
 			<<addSpeechLine "touch">>
-				<<He>> snorts. "Maybe if I cover your chest in enough cum your tits will grow."
+				<<He>>【이가】 콧방귀를 뀐다. "네 가슴에 정액을 충분히 발라주면 젖가슴이 자랄지도 모르겠네."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechBreastRub>>
 		<<addSpeechLine "touch">>
 			<<if $player.breastsize gte 8 and $player.breastsize lte 11>>
-				<<He>> squeezes your <<breasts>> around <<his>> <<= npcHasStrapon($chesttarget) ? "strap-on" : "penis">>. "Fuck! Tits like these were meant to be used."
+				<<He>>【은는】 당신의 <<breasts>>【을를】 자신의 <<= npcHasStrapon($chesttarget) ? "스트랩온" : "좆">> 주위로 쥐어짠다. "씨발! 이런 젖가슴은 이렇게 쓰라고 있는 거야."
 			<<else>>
-				<<He>> squeezes your <<breasts>> around <<his>> <<= npcHasStrapon($chesttarget) ? "strap-on" : "penis">>. "Look at me, putting your bitch-tits to good work."
+				<<He>>【은는】 당신의 <<breasts>>【을를】 자신의 <<= npcHasStrapon($chesttarget) ? "스트랩온" : "좆">> 주위로 쥐어짠다. "날 봐, 네 암캐 젖가슴을 제대로 써먹고 있잖아."
 			<</if>>
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechFaceSit>>
 		<<addSpeechLine "oral">>
 		<<speechLine>>
-			<<He>> grinds against your face. "This is where you belong, slut."
+			<<He>>【은는】 당신의 얼굴에 몸을 비빈다. "여기가 네 자리야, 걸레야."
 		<<speechLine>>
-			<<He>> smothers you. "There we go."
+			<<He>>【은는】 당신을 짓누른다. "그렇지."
 		<</addSpeechLine>>
 		<<if C.npc.Whitney.dom gte 15 and C.npc.Whitney.love gte 20>>
 			<<addSpeechLine "oral">>
-				"Now be a good <<girl>> and make me feel good."
+				"자, 착한 <<girl>>답게 날 기분 좋게 해줘."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechAnalLick>>
 		<<addSpeechLine "oral">>
 		<<speechLine>>
-			"What a dirty ass-licker. Make sure to get your tongue in nice and deep."
+			"더러운 똥구멍 핥개 같으니. 혀를 깊숙이 잘 밀어 넣어."
 		<<speechLine>>
-			<<He>> leers. "Filthy whore."
+			<<He>>【이가】 음흉하게 바라본다. "더러운 창녀."
 		<<speechLine>>
-			"Try not to squeal too loud!"
+			"너무 크게 꽥꽥거리진 마!"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechAnalKiss>>
 		<<addSpeechLine "oral">>
-			<<He>> whistles in appreciation. "Finally, someone who knows what I deserve."
+			<<He>>【이가】 감탄하며 휘파람을 분다. "드디어 내가 뭘 받아 마땅한지 아는 놈이 나타났네."
 		<</addSpeechLine>>
 		<<if C.npc.Whitney.dom gte 15 and $audiencepresent gte 1>>
 			<<addSpeechLine "oral" 4>>
-				<<He>> laughs loudly. "Fuck yeah, that's what I'm talking about! Clearly <<pshe>> knows where <<pshe>> belongs."
+				<<He>>【이가】 크게 웃는다. "씨발 좋아, 바로 이거지! <<pshe>>【은는】 자기 자리가 어딘지 확실히 아네."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechMouthNPCAnus>>
 		<<addSpeechLine "oral">>
-			"Come on, slut. Give it a smooch."
+			"어서, 걸레야. 쪽 해줘."
 		<</addSpeechLine>>
 		<<if C.npc.Whitney.dom gte 15 and $audiencepresent gte 1>>
 			<<addSpeechLine "oral" 4>>
-				"Who's ready to see this dirty whore eat some ass?!" The crowd cheers and hollers in response.
+				"이 더러운 창녀가 똥구멍 핥는 거 볼 준비 됐어?!" 구경꾼들이 환호하며 소리 지른다.
 			<</addSpeechLine>>
 		<</if>>
 		<<if C.npc.Whitney.dom gte 15 and C.npc.Whitney.love gte 20>>
 			<<addSpeechLine "oral">>
-				"Now be a good <<girl>> and make me feel good."
+				"자, 착한 <<girl>>답게 날 기분 좋게 해줘."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechNPCVaginaPenetrated>>
 		<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
 			<<addSpeechLine "penetrated">>
-				<<He>> groans. "Fuck, that's the spot...!"
+				<<He>>【이가】 신음한다. "씨발, 거기야...!"
 			<</addSpeechLine>>
 		<</if>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			<<addSpeechLine "penetrated">>
-				<<He>> laughs. "You're really throbbing in me! Needy slut."
+				<<He>>【이가】 웃는다. "내 안에서 존나 꿈틀대네! 애걸하는 걸레."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $penileskill gte 800>>
 			<<addSpeechLine "penetrated">>
-				<<He>> lets out a stretched out groan. "Oh, fuck. Of course you've practiced."
+				<<He>>【이가】 길게 늘어진 신음을 흘린다. "오, 씨발. 당연히 연습했겠지."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechNPCAnusPenetrated>>
 		<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
 			<<addSpeechLine "penetrated">>
-				<<He>> groans. "Come on, don't fuck this up...!"
+				<<He>>【이가】 신음한다. "어서, 망치지 마...!"
 			<</addSpeechLine>>
 		<</if>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			<<addSpeechLine "penetrated">>
-				<<He>> laughs. "You're really throbbing in me! Needy slut."
+				<<He>>【이가】 웃는다. "내 안에서 존나 꿈틀대네! 애걸하는 걸레."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $penileskill gte 800>>
 			<<addSpeechLine "penetrated">>
-				<<He>> lets out a stretched out groan. "Oh, fuck. Of course you've practiced."
+				<<He>>【이가】 길게 늘어진 신음을 흘린다. "오, 씨발. 당연히 연습했겠지."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechVaginaPenetrated>>
 		<<addSpeechLine "penetrated">>
-			<<He>> whistles. "Look at you treating that cock right."
+			<<He>>【이가】 휘파람을 분다. "그 좆을 제대로 대접하는 것 좀 봐."
 		<</addSpeechLine>>
 		<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
 			<<addSpeechLine "penetrated">>
-				<<He>> groans. "Fuck, you feel good, <<= either("slut","whore")>>."
+				<<He>>【이가】 신음한다. "씨발, 느낌 좋네, <<= either("걸레","창녀")>>【아야】."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			<<addSpeechLine "penetrated">>
-				<<He>> laughs. "Your cunt's making a mess. You close? That's my slut."
+				<<He>>【이가】 웃는다. "네 보지가 엉망진창이네. 갈 것 같아? 역시 내 걸레야."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $vaginalskill lt 200>>
 			<<addSpeechLine "penetrated">>
-				<<He>> clicks <<his>> tongue. "Looks like I should be doing this more often. Way more often."
+				<<He>>【이가】 혀를 찬다. "이걸 더 자주 해야겠네. 훨씬 더 자주."
 			<</addSpeechLine>>
 		<<elseif $vaginalskill gte 800>>
 			<<addSpeechLine "penetrated">>
-				<<He>> grunts. "Huh. My bitch's well-trained!"
+				<<He>>【이가】 신음한다. "허. 내 암캐 훈련 잘됐네!"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechAnusPenetrated>>
 		<<addSpeechLine "penetrated">>
-			<<He>> whistles. "Look at you treating that cock right."
+			<<He>>【이가】 휘파람을 분다. "그 좆을 제대로 대접하는 것 좀 봐."
 		<</addSpeechLine>>
 		<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
 			<<addSpeechLine "penetrated">>
-				<<He>> groans. "Fuck, you feel good, <<= either("slut","whore")>>."
+				<<He>>【이가】 신음한다. "씨발, 느낌 좋네, <<= either("걸레","창녀")>>【아야】."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			<<addSpeechLine "penetrated">>
-				<<He>> laughs. "I can feel you gripping me. You close? That's my slut."
+				<<He>>【이가】 웃는다. "네가 날 조이는 게 느껴져. 갈 것 같아? 역시 내 걸레야."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $analskill lt 200>>
 			<<addSpeechLine "penetrated">>
-				<<He>> sighs. "Give me some time, slut. Soon, you'll be used to taking me up every hole!"
+				<<He>>【이가】 한숨 쉰다. "시간을 좀 줘, 걸레야. 곧 모든 구멍으로 날 받아내는 데 익숙해질 테니까!"
 			<</addSpeechLine>>
 		<<elseif $analskill gte 800>>
 			<<addSpeechLine "penetrated">>
-				<<He>> grunts. "Huh. My bitch's well-trained!"
+				<<He>>【이가】 신음한다. "허. 내 암캐 훈련 잘됐네!"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechMouthPenetrated>>
 		<<addSpeechLine "penetrated">>
-			<<He>> whistles. "Look at you treating that cock right."
+			<<He>>【이가】 휘파람을 분다. "그 좆을 제대로 대접하는 것 좀 봐."
 		<</addSpeechLine>>
 		<<if $oralskill lt 200>>
 			<<addSpeechLine "penetrated">>
-				<<He>> lets out an unimpressed sigh. "You fucking suck at this."
+				<<He>>【이가】 시큰둥하게 한숨 쉰다. "너 이거 씨발 존나 못하네."
 			<</addSpeechLine>>
 		<<elseif $oralskill gte 800>>
 			<<addSpeechLine "penetrated">>
-				<<He>> groans loudly. "Fuck! I knew a <<= either("whore","slut")>> like you would be good at this!"
+				<<He>>【이가】 크게 신음한다. "씨발! 너 같은 <<= either("창녀","걸레")>>【은는】 이런 걸 잘할 줄 알았어!"
 			<</addSpeechLine>>
 		<</if>>
 		<<if C.npc.Whitney.penissize gte 4>>
 			<<addSpeechLine "penetrated">>
-				<<He>> rocks <<his>> hips, pushing <<his>> length in deeper. <<He>> grins wickedly when you sputter. "Careful, I've heard that I'm a choking hazard."
+				<<He>>【은는】 엉덩이를 흔들며 자신의 물건을 더 깊숙이 밀어 넣는다. 당신이 켁켁거리자 <<he>>【은는】 사악하게 씩 웃는다. "조심해, 내가 질식 위험물이란 소릴 들었거든."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechVaginaImminent>>
 		<<addSpeechLine "imminent">>
-			<<He>> smirks. "I hope you're ready for me."
+			<<He>>【이가】 능글맞게 웃는다. "준비됐길 바란다."
 		<</addSpeechLine>>
 		<<if $player.virginity.vaginal is true>>
 			<<addSpeechLine "imminent">>
-				"Let's find out how tight this virgin <<= either("pussy","hole","cunt")>> really is."
+				"이 뚫린 적 없는 <<= either("보지","구멍","보짓구멍")>>【이가】 진짜 얼마나 꽉 조이는지 알아보자."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			<<addSpeechLine "imminent">>
-				<<He>> leers at your <<genitals>>. "You're so wet, I bet I could slide in with ease."
+				<<He>>【은는】 당신의 <<genitals>>【을를】 음흉하게 바라본다. "너무 젖어서 그냥 쑥 미끄러져 들어가겠는데."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if (!playerHasStrapon() and ($player.penissize gte 5 or $player.penissize lte 2)) and $speechNPCVaginaImminent>>
 		<<addSpeechLine "imminent">>
 			<<if $player.penissize gte 5>>
-				<<He>> takes a quick glance at your <<penis>>, and gives you a smug expression. "Go on."
+				<<He>>【은는】 당신의 <<penis>>【을를】 흘끗 보더니, 잘난 체하는 표정을 짓는다. "해봐."
 			<<else>>
 				<<set $whitneySeen.pushUnique("penisSmall")>>
-				<<He>> takes a quick glance at your <<penis>>, and grins. "Don't disappoint, slut."
+				<<He>>【은는】 당신의 <<penis>>【을를】 흘끗 보더니, 씩 웃는다. "실망시키지 마, 걸레야."
 			<</if>>
 		<</addSpeechLine>>
 	<</if>>
@@ -1807,52 +1807,52 @@
 		<<if $player.penissize gte 5>>
 			<<if $speechNPCAnusImminent>>
 				<<addSpeechLine "imminent">>
-					<<He>> takes a quick glance at your <<penis>>, and gives you a smug expression. "Go on."
+					<<He>>【은는】 당신의 <<penis>>【을를】 흘끗 보더니, 잘난 체하는 표정을 짓는다. "해봐."
 				<</addSpeechLine>>
 			<</if>>
 			<<if C.npc.Whitney.virginity.anal is true and $speechNPCAnusImminent>>
 				<<addSpeechLine "imminent">>
-					"You better not tear something, or there'll be hell to pay."
+					"뭐 찢어놓지 않는 게 좋을 거야, 안 그러면 뼈저리게 후회할 테니까."
 				<</addSpeechLine>>
 			<</if>>
 		<<else>>
 			<<if $speechNPCAnusImminent>>
 				<<addSpeechLine "imminent">>
-					<<set $whitneySeen.pushUnique("penisSmall")>><<He>> takes a quick glance at your <<penis>>, and grins. "Don't disappoint, slut."
+					<<set $whitneySeen.pushUnique("penisSmall")>><<He>>【은는】 당신의 <<penis>>【을를】 흘끗 보더니, 씩 웃는다. "실망시키지 마, 걸레야."
 				<</addSpeechLine>>
 			<</if>>
 			<<if C.npc.Whitney.virginity.anal is true and $speechNPCAnusImminent>>
 				<<addSpeechLine "imminent">>
-					<<He>> takes a quick glance at your <<penis>>, and snickers. "Hah! Shouldn't have to be too worried."
+					<<He>>【은는】 당신의 <<penis>>【을를】 흘끗 보더니, 낄낄거린다. "하! 별로 걱정 안 해도 되겠네."
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
 	<</if>>
 	<<if $speechAnusImminent>>
 		<<addSpeechLine "imminent">>
-			<<He>> smirks. "I hope you're ready for me."
+			<<He>>【이가】 능글맞게 웃는다. "준비됐길 바란다."
 		<</addSpeechLine>>
 		<<if $player.virginity.anal is true>>
 			<<addSpeechLine "imminent">>
-				"Let's find out how tight this virgin <<= either("ass","hole")>> really is."
+				"이 뚫린 적 없는 <<= either("똥구멍","구멍")>>【이가】 진짜 얼마나 꽉 조이는지 알아보자."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechMouthImminent>>
 		<<addSpeechLine "imminent">>
 		<<speechLine>>
-			<<He>> pants. "Can't bloody wait."
+			<<He>>【이가】 헐떡인다. "존나 못 기다리겠네."
 		<<speechLine>>
-			<<He>> laughs. "This is the best part."
+			<<He>>【이가】 웃는다. "이게 제일 좋은 부분이지."
 		<<speechLine>>
-			"Open up, slut!"
+			"입 벌려, 걸레야!"
 		<</addSpeechLine>>
 		<<if $consensual is 0>>
 			<<addSpeechLine "imminent">>
 			<<speechLine>>
-				"Wider, whore. I better not feel any teeth."
+				"더 크게, 창녀야. 이빨 느껴지면 가만 안 둬."
 			<<speechLine>>
-				"I'm gonna make sure you get every fucking inch in, you understand?"
+				"씨발 한 치도 남김없이 다 넣게 해줄 거다, 알아들었어?"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
@@ -1860,25 +1860,25 @@
 		<<if $speechVaginaEntrance>>
 			<<addSpeechLine "imminent">>
 			<<speechLine>>
-				"Can't wait to use your <<= either("slutty","whore")>> <<= either("pussy","hole","cunt")>>."
+				"네 <<= either("음탕한","창녀 같은")>> <<= either("보지","구멍","보짓구멍")>>【을를】 빨리 쓰고 싶어 죽겠네."
 			<<speechLine>>
-				"Let's see. Are you gonna squeal, or scream?"
+				"어디 보자. 꽥꽥거릴래, 아니면 비명 지를래?"
 			<</addSpeechLine>>
 		<</if>>
 		<<if C.npc.Whitney.penissize gte 3 and $speechVaginaEntrance>>
 			<<addSpeechLine "imminent">>
-				"Can you even handle me? Let's find out."
+				"날 감당이나 할 수 있을까? 어디 알아보자."
 			<</addSpeechLine>>
 		<</if>>
 	<<else>>
 		<<if C.npc.Whitney.love gte 20 and $speechVaginaEntrance>>
 			<<addSpeechLine "imminent">>
-				"Don't stay too silent. Gotta make sure I don't end the fun early."
+				"너무 조용히 있지 마. 내가 재미를 일찍 끝내지 않게 해야지."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $arousal gte ($arousalmax / 5) * 4 and $speechVaginaEntrance>>
 			<<addSpeechLine "imminent">>
-				"Oh, look at that. You're already wet."
+				"오, 저것 봐. 벌써 젖었네."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
@@ -1886,23 +1886,23 @@
 		<<if $speechAnusEntrance>>
 			<<addSpeechLine "imminent">>
 			<<speechLine>>
-				"Can't wait to use your <<= either("slutty","whore")>> <<= either("ass","hole")>>."
+				"네 <<= either("음탕한","창녀 같은")>> <<= either("똥구멍","구멍")>>【을를】 빨리 쓰고 싶어 죽겠네."
 			<<speechLine>>
-				"Let's see. Are you gonna squeal, or scream?"
+				"어디 보자. 꽥꽥거릴래, 아니면 비명 지를래?"
 			<</addSpeechLine>>
 		<</if>>
 		<<if C.npc.Whitney.penissize gte 3 and $speechAnusEntrance>>
 			<<addSpeechLine "imminent">>
-				"Can you even handle me? Let's find out."
+				"날 감당이나 할 수 있을까? 어디 알아보자."
 			<</addSpeechLine>>
 		<</if>>
 	<<else>>
 		<<if $speechAnusEntrance>>
 			<<addSpeechLine "imminent">>
 			<<speechLine>>
-				"Don't stay too silent. Gotta make sure I don't end the fun early."
+				"너무 조용히 있지 마. 내가 재미를 일찍 끝내지 않게 해야지."
 			<<speechLine>>
-				"Hope you prepped for this, slut."
+				"준비해 뒀길 바란다, 걸레야."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
@@ -1910,60 +1910,60 @@
 		<<if $consensual is 0>>
 			<<addSpeechLine "imminent">>
 			<<speechLine>>
-				"Don't fucking test me, whore. Open!"
+				"씨발 날 시험하지 마, 창녀야. 벌려!"
 			<<speechLine>>
-				"I can't wait to shut you up."
+				"네 입 틀어막는 게 기대되네."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "imminent">>
 			<<speechLine>>
-				<<He>> smirks as <<he>> rubs <<his>> tip against your lips. "Open wide, slut."
+				<<He>>【은는】 당신의 입술에 끝을 문지르며 능글맞게 웃는다. "크게 벌려, 걸레야."
 			<<speechLine>>
-				"Come on, slut. Say 'ahh' for me."
+				"어서, 걸레야. '아' 해봐."
 			<<speechLine>>
-				"Oh, you're gonna love this."
+				"오, 넌 이거 존나 좋아하게 될 거야."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechNPCVaginaEntrance>>
 		<<addSpeechLine "imminent">>
 		<<speechLine>>
-			"Time to have some fun!"
+			"재미 좀 볼 시간이다!"
 		<<speechLine>>
-			"Don't worry, slut. I'll be great."
+			"걱정 마, 걸레야. 내가 끝내주게 해줄 테니까."
 		<</addSpeechLine>>
 		<<if $player.virginity.penile is true>>
 			<<addSpeechLine "imminent">>
 			<<speechLine>>
-				<<He>> grins. "Scared, slut?"
+				<<He>>【이가】 씩 웃는다. "무섭냐, 걸레야?"
 			<<speechLine>>
-				<<He>> laughs. "About time I take you for good."
+				<<He>>【이가】 웃는다. "널 완전히 내 걸로 만들 때도 됐지."
 			<</addSpeechLine>>
 			<<if $consensual is 0>>
 				<<addSpeechLine "imminent">>
 				<<speechLine>>
-					<<He>> glares. "I could fuck you up real easy right about now."
+					<<He>>【이가】 노려본다. "지금 당장 널 아주 쉽게 조져버릴 수도 있어."
 				<<speechLine>>
-					<<He>> laughs. "Scared, slut? You should be."
+					<<He>>【이가】 웃는다. "무섭냐, 걸레야? 무서워해야지."
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
 		<<if $consensual is 0>>
 			<<addSpeechLine "imminent">>
-				<<He>> laughs. "Don't struggle too hard, yeah?"
+				<<He>>【이가】 웃는다. "너무 심하게 발버둥 치진 마, 알았지?"
 			<</addSpeechLine>>
 			<<if C.npc.Whitney.dom lte 10>>
 				<<addSpeechLine "imminent">>
-					<<He>> glares. "Think you're hot shit now? I'll fucking show you."
+					<<He>>【이가】 노려본다. "이제 네가 대단한 줄 알아? 씨발 내가 보여주지."
 				<</addSpeechLine>>
 			<</if>>
 		<<else>>
 			<<addSpeechLine "imminent">>
-				<<He>> leers. "Fuck, I can't wait."
+				<<He>>【이가】 음흉하게 바라본다. "씨발, 못 기다리겠네."
 			<</addSpeechLine>>
 			<<if C.npc.Whitney.dom gte 15>>
 				<<addSpeechLine "imminent">>
-					<<He>> leers. "Gotta give my bitch what <<pshe>> deserves."
+					<<He>>【이가】 음흉하게 바라본다. "내 암캐한테 <<pshe>>【이가】 받아 마땅한 걸 줘야지."
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -1971,34 +1971,34 @@
 	<<if C.npc.Whitney.lust gte 60>>
 		<<if $speechNPCAnusEntrance>>
 			<<addSpeechLine "imminent">>
-				"You're doing things how I want, you hear?"
+				"내가 원하는 대로 하는 거야, 알았어?"
 			<</addSpeechLine>>
 		<</if>>
 		<<if $speechNPCAnusEntrance>>
 			<<if C.npc.Whitney.virginity.anal is true>>
 				<<addSpeechLine "imminent">>
-					<<He>> pants. "Come on, slut. Just take it already."
+					<<He>>【이가】 헐떡인다. "어서, 걸레야. 빨리 가져가."
 				<</addSpeechLine>>
 			<<else>>
 				<<addSpeechLine "imminent">>
-					<<He>> pants. "Yeah, that's it. Fucking give it to me!"
+					<<He>>【이가】 헐떡인다. "그래, 그거야. 씨발 나한테 박아!"
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
 	<<elseif C.npc.Whitney.lust lte 30>>
 		<<if $speechNPCAnusEntrance>>
 			<<addSpeechLine "imminent">>
-				"Fuck..."
+				"씨발..."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $speechNPCAnusEntrance>>
 			<<if C.npc.Whitney.virginity.anal is true>>
 				<<addSpeechLine "imminent">>
-					<<He>> blushes. "You tear something, I'll break you in half."
+					<<He>>【이가】 얼굴을 붉힌다. "뭐 찢어놓으면, 널 반으로 꺾어버릴 거야."
 				<</addSpeechLine>>
 			<<else>>
 				<<addSpeechLine "imminent">>
-					<<He>> blushes. "This doesn't mean anything, you hear?"
+					<<He>>【이가】 얼굴을 붉힌다. "이건 아무 의미도 없는 거야, 알았어?"
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -2006,101 +2006,101 @@
 		<<if $speechNPCAnusEntrance>>
 			<<addSpeechLine "imminent">>
 			<<speechLine>>
-				"Don't back out now."
+				"이제 와서 빼지 마."
 			<<speechLine>>
-				"What's wrong? Think I can't take it?"
+				"왜 그래? 내가 못 받아낼 것 같아?"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechVaginaWithhold or $speechAnusWithhold>>
 		<<addSpeechLine "withhold">>
-			"Don't bitch and whine now."
+			"징징대지 마."
 		<</addSpeechLine>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			<<addSpeechLine "withhold">>
 			<<speechLine>>
-				<<He>> laughs. "Fucking look at yourself!"
+				<<He>>【이가】 웃는다. "씨발 네 꼴 좀 봐!"
 			<<speechLine>>
-				<<He>> grins. "Sorry."
+				<<He>>【이가】 씩 웃는다. "미안."
 			<</addSpeechLine>>
 			<<if $consensual is 0>>
 				<<addSpeechLine "withhold">>
-					"Try telling me you don't want this again. Your face tells me otherwise."
+					"이걸 원하지 않는다고 다시 말해 봐. 네 표정은 다르게 말하고 있는데."
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
 		<<if $consensual is 0>>
 			<<addSpeechLine "withhold">>
-				<<He>> laughs. "You're not off the hook yet, bitch."
+				<<He>>【이가】 웃는다. "아직 안 끝났어, 암캐야."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechNPCVaginaWithhold or $speechNPCAnusWithhold>>
 		<<addSpeechLine "withhold">>
 		<<speechLine>>
-			<<He>> grunts. "Enough of that."
+			<<He>>【이가】 으르렁댄다. "그만해."
 		<<speechLine>>
-			<<He>> hisses. "Give me a fucking break."
+			<<He>>【이가】 씩씩거린다. "씨발 좀 봐줘."
 		<</addSpeechLine>>
 		<<if $speechNPCVaginaWithhold>>
 			<<addSpeechLine "withhold">>
-				<<He>> laughs. "Bet you miss me already."
+				<<He>>【이가】 웃는다. "벌써 내가 그립지?"
 			<</addSpeechLine>>
 		<</if>>
 		<<if $speechNPCAnusWithhold>>
 			<<addSpeechLine "withhold">>
-				<<He>> laughs. "Fun's over, slut."
+				<<He>>【이가】 웃는다. "재미는 끝났어, 걸레야."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $hairlength lt 300>>
 		<<if $speechHair>>
 			<<addSpeechLine "hair">>
-				<<He>> holds you by your hair. "Wonder how hard I'll need to pull to yank all this off."
+				<<He>>【은는】 당신의 머리카락을 움켜쥔다. "얼마나 세게 당겨야 이걸 다 뽑아버릴 수 있을까."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $speechHair>>
 			<<if $enemyanger lte 100>>
 				<<addSpeechLine "hair">>
-					"Oops. Didn't mean to make you even more bald."
+					"이런. 더 대머리로 만들 생각은 없었는데."
 				<</addSpeechLine>>
 			<<else>>
 				<<addSpeechLine "hair">>
-					"Want me to rip out what's left on your head, whore?"
+					"네 머리에 남은 것도 다 뜯어줄까, 창녀야?"
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
 	<<elseif $hairlength gte 700>>
 		<<if $speechHair>>
 			<<addSpeechLine "hair">>
-				<<He>> holds you by your hair. "Careful. I could make you a lot less pretty if I wanted to."
+				<<He>>【은는】 당신의 머리카락을 움켜쥔다. "조심해. 마음만 먹으면 널 훨씬 덜 예쁘게 만들 수 있어."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $speechHair>>
 			<<if $enemyanger lte 100>>
 				<<addSpeechLine "hair">>
-					"Best be good, slut. Wouldn't want me to pull you down the easy way, right?"
+					"얌전히 구는 게 좋을 거야, 걸레야. 내가 널 쉬운 방법으로 끌어내리는 건 싫겠지?"
 				<</addSpeechLine>>
 			<<else>>
 				<<addSpeechLine "hair">>
-					"You're being too much of a bitch for someone so yankable."
+					"이렇게 잡아당기기 좋은 머리를 달고서 너무 암캐처럼 구네."
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
 	<<else>>
 		<<if $speechHair>>
 			<<addSpeechLine "hair">>
-				<<He>> holds you by your hair. "The things I could do with your hair right about now..."
+				<<He>>【은는】 당신의 머리카락을 움켜쥔다. "지금 네 머리카락으로 할 수 있는 짓들이..."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $speechHair>>
 			<<if $enemyanger lte 100>>
 				<<addSpeechLine "hair">>
-					"What to do with this mop on your head... Decisions, decisions."
+					"네 머리 위 이 대걸레로 뭘 할까... 고민되네, 고민돼."
 				<</addSpeechLine>>
 			<<else>>
 				<<addSpeechLine "hair">>
-					"Don't fucking test me. I'm this close to being real creative with your hair, slut!"
+					"씨발 날 시험하지 마. 네 머리카락으로 아주 창의적인 짓을 하기까지 요만큼 남았어, 걸레야!"
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -2108,62 +2108,62 @@
 	<<if $speechCoverFace>>
 		<<addSpeechLine "cover">>
 		<<speechLine>>
-			<<He>> leers. "Aww, what's wrong? Can't handle the attention?"
+			<<He>>【이가】 음흉하게 바라본다. "어머, 왜 그래? 주목받는 걸 못 견디겠어?"
 		<<speechLine>>
-			<<He>> laughs. "Keep hiding. I'll tell everyone you're my bitch anyway."
+			<<He>>【이가】 웃는다. "계속 숨어봐. 어차피 네가 내 암캐라는 건 다들한테 말할 거니까."
 		<<speechLine>>
-			"Imagine having the nerve to be shy when you're as big of a slut as you are."
+			"너만큼 걸레인 주제에 부끄러워할 염치가 있다니."
 		<</addSpeechLine>>
 		<<if $audiencepresent gte 1>>
 			<<addSpeechLine "cover" 4>>
-				"Give us a big smile, slut!"
+				"활짝 웃어 봐, 걸레야!"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if ($fame.sex gte 600 or $fame.exhibitionism gte 600) and $speechCoverFace>>
 		<<addSpeechLine "cover">>
-			<<He>> laughs. "Like that'll help."
+			<<He>>【이가】 웃는다. "그게 도움이 될 것 같냐."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechCoverPenis>>
 		<<addSpeechLine "cover">>
 		<<speechLine>>
-			<<He>> leers. "Come off it!"
+			<<He>>【이가】 음흉하게 바라본다. "그만둬!"
 		<<speechLine>>
-			"Don't be such a prude."
+			"내숭 좀 그만 떨어."
 		<</addSpeechLine>>
 		<<if !playerHasStrapon() and $player.penissize lte 2>>
 			<<addSpeechLine "cover">>
-				<<He>> laughs. "What's there to cover?"
+				<<He>>【이가】 웃는다. "가릴 게 뭐가 있다고?"
 				<<set $whitneySeen.pushUnique("penisSmall")>><<if !$whitneyUniqueComments.includes("insecurityCoverSmall")>><<set $whitneyUniqueComments.pushUnique("insecurityCoverSmall")>><<insecurity "penis_small" 1>><<ginsecurity "penis_small">><</if>>
 			<</addSpeechLine>>
 		<<elseif !playerHasStrapon() and $player.penissize gte 5>>
 			<<addSpeechLine "cover">>
-				<<He>> laughs. "Think you're gonna need more hands than that."
+				<<He>>【이가】 웃는다. "손이 그것보단 더 필요할 것 같은데."
 				<<if !$whitneyUniqueComments.includes("insecurityCoverBig")>><<set $whitneyUniqueComments.pushUnique("insecurityCoverBig")>><<insecurity "penis_big" 1>><<ginsecurity "penis_big">><</if>>
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "cover">>
-				<<He>> laughs. "What's there to be shy about, slut?"
+				<<He>>【이가】 웃는다. "부끄러워할 게 뭐가 있어, 걸레야?"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechCoverVagina>>
 		<<addSpeechLine "cover">>
 		<<speechLine>>
-			<<He>> leers. "Come off it!"
+			<<He>>【이가】 음흉하게 바라본다. "그만둬!"
 		<<speechLine>>
-			<<He>> laughs. "What? Don't want anyone to see how loose you are?"
+			<<He>>【이가】 웃는다. "뭐야? 얼마나 헐렁한지 아무한테도 보여주기 싫어?"
 		<<speechLine>>
-			"Don't be such a prude."
+			"내숭 좀 그만 떨어."
 		<</addSpeechLine>>
 		<<if $arousal gte ($arousalmax / 5) * 4>>
 			<<addSpeechLine "cover">>
-				<<He>> laughs. "There's no hiding how wet you are, slut!"
+				<<He>>【이가】 웃는다. "얼마나 젖었는지는 숨길 수 없어, 걸레야!"
 			<</addSpeechLine>>
 		<<elseif $arousal lt ($arousalmax / 5) * 2>>
 			<<addSpeechLine "cover">>
-				<<He>> laughs. "Now how the hell am I gonna get you wet if you keep covering up?"
+				<<He>>【이가】 웃는다. "계속 가리고 있으면 대체 어떻게 널 젖게 만들라는 거야?"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
@@ -2171,97 +2171,97 @@
 	/* Idle lines */
 	<<if $worn.neck.collared is 1 and C.npc.Whitney.dom gte 15>>
 		<<addSpeechLine "idle">>
-			<<His>> eyes glance down at your collar. "What a good <<girl>>," <<he>> grins. "Letting everyone know who you belong to?"
+			<<His>> 눈이 당신의 목걸이를 내려다본다. "참 착한 <<girl>>【이】네," <<he>>【이가】 씩 웃는다. "네가 누구 건지 다들한테 알리는 거야?"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $audiencepresent gte 1>>
 		<<addSpeechLine "idle">>
 		<<speechLine>>
-			<<He>> grins at the crowd. "Let's see what my slut's got for us today." The crowd chatters excitedly around you.
+			<<He>>【은는】 구경꾼들을 향해 씩 웃는다. "오늘은 내 걸레가 뭘 보여줄지 보자고." 구경꾼들이 당신 주위에서 신나게 떠들어댄다.
 		<<speechLine>>
-			<<He>> turns to the crowd. "Isn't <<pshe>> a riot?" The crowd jeers around you.
+			<<He>>【은는】 구경꾼들을 돌아본다. "<<pshe>> 진짜 웃기지 않냐?" 구경꾼들이 당신 주위에서 야유한다.
 		<</addSpeechLine>>
 		<<if C.npc.Whitney.dom gte 15>>
 			<<addSpeechLine "idle">>
 			<<speechLine>>
-				<<He>> grins at the crowd. "<<= either("Paws off","Keep your hands to yourselves")>>, perverts. My slut, my rules." The crowd boos playfully.
+				<<He>>【은는】 구경꾼들을 향해 씩 웃는다. "<<= either("손 떼","손 치워")>>, 변태들아. 내 걸레니까 내 규칙대로야." 구경꾼들이 장난스럽게 야유한다.
 			<<speechLine>>
-				<<He>> smirks at the crowd. "Someone get a picture. I want to remember this." Phones go up all around you.
+				<<He>>【은는】 구경꾼들을 향해 능글맞게 웃는다. "누가 사진 좀 찍어. 이건 기억해 두고 싶네." 당신 주위로 온통 휴대폰이 올라온다.
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $arousal gte ($arousalmax / 5) * 4>>
 		<<addSpeechLine "idle">>
-			<<He>> snickers. "You're practically begging for it."
+			<<He>>【이가】 낄낄거린다. "넌 사실상 애원하고 있는 거야."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $dissociation gte 1>>
 		<<addSpeechLine "idle">>
-			<<He>> frowns at your blank expression.
+			<<He>>【은는】 당신의 멍한 표정에 얼굴을 찌푸린다.
 		<<speechLine>>
-			"Don't just lie there like a fucking corpse."
+			"씨발 시체처럼 그냥 누워 있지 마."
 		<<speechLine>>
-			"Hello? Anyone home? Say something."
+			"여보세요? 누구 없어? 뭐라고 말 좀 해."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $pain gte 100 and $willpowerpain is 0>>
 		<<addSpeechLine "idle">>
 		<<speechLine>>
-			<<He>> snarls. "Hurts, doesn't it?"
+			<<He>>【이가】 으르렁거린다. "아프지, 안 그래?"
 		<<speechLine>>
-			<<He>> snickers. "What, too rough?"
+			<<He>>【이가】 낄낄거린다. "뭐야, 너무 거칠어?"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $enemyanger lte 20>>
 		<<if C.npc.Whitney.dom lte 10>>
 			<<addSpeechLine "idle">>
-				"Why can't you be this easy all the time, slut?"
+				"왜 항상 이렇게 쉽게 굴지 못하냐, 걸레야?"
 			<</addSpeechLine>>
 		<<elseif C.npc.Whitney.dom gte 15>>
 			<<addSpeechLine "idle">>
-				"See? Way easier when you just do what I tell you, slut."
+				"거봐? 내가 시키는 대로만 하면 훨씬 쉽잖아, 걸레야."
 			<</addSpeechLine>>
 		<</if>>
 	<<elseif $enemyanger gt 100>>
 		<<if C.npc.Whitney.dom lte 10>>
 			<<addSpeechLine "idle">>
-				<<He>> spits. "What's your fucking problem?"
+				<<He>>【이가】 침을 뱉는다. "넌 씨발 뭐가 문제야?"
 			<</addSpeechLine>>
 		<<elseif C.npc.Whitney.dom gte 15>>
 			<<addSpeechLine "idle">>
-				<<He>> spits. "Why can't you just do as you're told, <<= $player.penisExist ? "cock" : "cunt">>-for-brains?"
+				<<He>>【이가】 침을 뱉는다. "그냥 시키는 대로 좀 하면 안 되냐, 이 <<= $player.penisExist ? "좆" : "보지">>대가리야?"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $location is "park" and $enemyanger gt 100>>
 		<<addSpeechLine "idle">>
-			<<He>> snarls. "Keep that up and I'll toss your ass into the fountain!"
+			<<He>>【이가】 으르렁거린다. "계속 그러면 널 분수에 처박아 버릴 거다!"
 		<</addSpeechLine>>
 	<</if>>
 	<<set $_tf to checkTFparts()>>
 	<<if $cow gte 6 and ($_tf.cowHorns or $_tf.cowTail)>>
 		<<addSpeechLine "idle">>
-			"Come on, then. Moo for me!"
+			"자, 어서. 날 위해 음매 해봐!"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $cat gte 6 and ($_tf.catEars or $_tf.catTail)>>
 		<<addSpeechLine "idle">>
-			"Come on, then. Purr for me!"
+			"자, 어서. 날 위해 가르랑거려 봐!"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $harpy gte 6 and ($_tf.birdWings or $_tf.birdTail or $_tf.birdPlumage)>>
 		<<addSpeechLine "idle">>
-			"Come on, then. Sing for me!"
+			"자, 어서. 날 위해 노래해 봐!"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $wolfgirl gte 6 and ($_tf.wolfEars or $_tf.wolfTail)>>
 		<<addSpeechLine "idle">>
-			"Come on, then. Bark for me!"
+			"자, 어서. 날 위해 짖어 봐!"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $fox gte 6 and ($_tf.foxEars or $_tf.foxTail)>>
 		<<addSpeechLine "idle">>
-			"Come on, then. Scream for me!"
+			"자, 어서. 날 위해 비명 질러 봐!"
 		<</addSpeechLine>>
 	<</if>>
 	<<speechSay>>
