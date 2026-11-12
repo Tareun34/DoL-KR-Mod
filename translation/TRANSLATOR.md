@@ -57,7 +57,7 @@
 | `[[Leave\|Street]]` → `[[나간다\|Street]]` | `<<goto "Street">>` |
 | `<span class="gold">Money:</span>` → `돈:` | `class="gold"` |
 | `<<= $x ? \`"Fuck!" <<he>> hisses\` : \`…\`>>` 안의 글자 | 그 안의 `<<he>>`, `$x` |
-| `title="Hover text"`, `<input type="button" value="Save">`의 value | `id`, `data-*`, `style`, `<option value>`, `type="file"`의 value |
+| `title="…"`·`tooltip="…"`, `<input type="button" value="Save">`의 value | `id`, `data-*`, `style`, `<option value>`, `type="file"`의 value |
 | | `@data-tip="_x + ' skin tone'"`처럼 속성 안에서 코드와 이어 붙는 영어: 붙는 산문도 영어로 둔다 |
 | `displayName: "Percentage of men"` (JS) | `name: "naked"`, `type: "m"`, 키 이름 |
 

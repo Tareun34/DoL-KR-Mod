@@ -52,9 +52,9 @@ game/special-fishing/fishing-text.twee:1532:【에게】
 | 묶음 | 단계 | 파일 | 산문 줄 | 상태 | 메모 |
 |---|---|---|---|---|---|
 | P1-01 | 1 | game/base-system/settings.twee | 436 | 완료 | 남은 영어 61줄(코드·주석). skinToneRange 핸들 라벨은 data-tip 결합 때문에 영어 유지. 표기: monster people→수인, NNPC→네임드 NPC |
-| P1-02 | 1 | game/base-system/widgets.twee | 265 | 대기 |  |
-| P1-03 | 1 | game/base-system/overlays/social.twee<br>game/base-system/text.js | 430 | 대기 |  |
-| P1-04 | 1 | game/base-system/overlays/journal.twee<br>game/base-system/tips.twee<br>game/base-system/overlays/traits.twee<br>game/base-system/tending.twee | 419 | 대기 |  |
+| P1-02 | 1 | game/base-system/widgets.twee | 265 | 완료 | 남은 영어 105줄(코드·주석). thugs→베일리의 부하들. 거리 이름이 'High 가'처럼 찍힘: getMapNameKr로 코드 측 보정 후보 |
+| P1-03 | 1 | game/base-system/overlays/social.twee<br>game/base-system/text.js | 430 | 완료 | 남은 영어 180/216줄(코드). text.js 템플릿 `${NPCName}'s` → 기존 한글 줄과 같은 KR 헬퍼 호출로 맞춤. 표기: Thug Anger→폭력배의 분노, Research→조사, Calligraphy→서예 |
+| P1-04 | 1 | game/base-system/overlays/journal.twee<br>game/base-system/tips.twee<br>game/base-system/overlays/traits.twee<br>game/base-system/tending.twee | 419 | 완료 | 남은 영어는 코드만. tending의 planting_bed 값(earth/water)이 영어로 찍힘: 코드 측 보정 후보. 표기: Farming→농사, recipe→요리법 |
 | P1-05 | 1 | game/base-system/pregnancy/events.twee<br>game/base-system/mirror.twee<br>game/base-system/overlays/statistics.twee<br>game/base-system/overlays/options.twee<br>game/base-system/overlays/cheats.twee<br>game/base-system/named-npcs.twee<br>game/base-system/kitchen.twee<br>game/base-system/overlays/characteristics.twee<br>game/base-system/bodywriting.twee<br>game/base-system/overlays/feats-ui.twee<br>game/base-system/pregnancy/children-events.twee<br>game/base-system/effect.js<br>game/base-system/orgasm.twee<br>game/base-system/pregnancy/containers.twee<br>game/base-system/weather/passout-scenes.twee<br>game/base-system/overlays/saves-export-import.twee<br>game/base-system/questmarkers.js<br>game/base-system/pregnancy/pregnancy.twee | 236 | 대기 |  |
 | P1-06 | 1 | game/base-combat/speech/speech-whitney.twee | 2247 | 대기 |  |
 | P1-07 | 1 | game/base-combat/ejaculation/ejaculation.twee | 2190 | 대기 |  |

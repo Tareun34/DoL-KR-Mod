@@ -961,13 +961,13 @@
 			<<if _type>>
 				<<if _type isnot "noMessage">>
 					<<if ($combat is 1 and _type isnot "workout") or _type is "invig">>
-						<span class="gold"> It invigorates you.</span>
+						<span class="gold"> 활기가 솟는다.</span>
 					<<else>>
-						<span class="gold"> You get a good workout.</span>
+						<span class="gold"> 좋은 운동이 되었다.</span>
 					<</if>>
 				<</if>>
 			<<elseif $combat is 1>>
-				<span class="gold"> It invigorates you.</span>
+				<span class="gold"> 활기가 솟는다.</span>
 			<<else>>
 				<span class="gold"> 좋은 운동이 되었다.</span>
 			<</if>>
@@ -3234,14 +3234,14 @@
 			<span class="relation-name">늑대 무리</span>
 		</div>
 		<div class="relation-description">
-			The <<wolf_cave_plural>>
-			<<if $wolfpackleader gte 1>> view you as <span class="green">the leader of the pack.</span>
-				<<elseif $syndromewolves gte 1>> view you as <span class="green">their <<ppackbrother>>.</span>
-				<<elseif $wolfpacktrust gte 12>> <span class="green">trust you.</span>
-				<<elseif $wolfpacktrust gte 6>> are <span class="teal">starting to accept you.</span>
-				<<elseif $wolfpackfear gte 12>> <span class="red">fear you.</span>
-				<<elseif $wolfpackfear gte 6>> are <span class="purple">starting to fear you.</span>
-				<<else>><span class="pink"> view you as prey.</span>
+			<<wolf_cave_plural>>【은는】
+			<<if $wolfpackleader gte 1>> 당신을 <span class="green">무리의 우두머리로 본다.</span>
+				<<elseif $syndromewolves gte 1>> 당신을 <span class="green">그들의 <<ppackbrother>>【으로로】 본다.</span>
+				<<elseif $wolfpacktrust gte 12>> <span class="green">당신을 신뢰한다.</span>
+				<<elseif $wolfpacktrust gte 6>> <span class="teal">당신을 받아들이기 시작했다.</span>
+				<<elseif $wolfpackfear gte 12>> <span class="red">당신을 두려워한다.</span>
+				<<elseif $wolfpackfear gte 6>> <span class="purple">당신을 두려워하기 시작했다.</span>
+				<<else>><span class="pink">당신을 먹잇감으로 본다.</span>
 			<</if>>
 		</div>
 	</div>
@@ -3385,9 +3385,9 @@
 						</span>
 						<<if _loveInterest>>
 							<<if $options.images>>
-								<img class="love-interest-icon" src="img/ui/love-interest.png" alt="Love Interest" title="Love Interest"/>
+								<img class="love-interest-icon" src="img/ui/love-interest.png" alt="연애 관심 대상" title="연애 관심 대상"/>
 							<<else>>
-								<span class="lewd" alt="Love Interest" title="Love Interest"><b>LI</b></span>
+								<span class="lewd" alt="연애 관심 대상" title="연애 관심 대상"><b>LI</b></span>
 							<</if>>
 						<</if>>
 					</div>
@@ -3421,9 +3421,9 @@
 					</span>
 					<<if _loveInterest>>
 						<<if $options.images>>
-							<img class="love-interest-icon" src="img/ui/love-interest.png" alt="Love Interest" title="Love Interest"/>
+							<img class="love-interest-icon" src="img/ui/love-interest.png" alt="연애 관심 대상" title="연애 관심 대상"/>
 						<<else>>
-							<span class="lewd" alt="Love Interest" title="Love Interest"><b>LI</b></span>
+							<span class="lewd" alt="연애 관심 대상" title="연애 관심 대상"><b>LI</b></span>
 						<</if>>
 					<</if>>
 				</div>
@@ -3932,7 +3932,7 @@
 	<!-- Print text and change the PC's condition if they have the "Dendrophile" / "Plank Lover" trait (Not the "Nectar Addict" trait). -->
 	<<if $backgroundTraits.includes("plantlover")>>
 		<<if $nectar_timer lte 14>>
-			<span class="green">You feel an overwhelming sense of relief.</span>
+			<span class="green">당신은 압도적인 안도감을 느낀다.</span>
 			<<pain -4>><<lpain>>
 			<<stress -12>><<llstress>>
 		<<else>>
@@ -5599,20 +5599,20 @@
 
 <<widget "travelSpeedOptions">>
 	<<travelSpeedInfo>>
-	How do you want to proceed?
+	어떻게 나아가겠는가?
 	<br>
 	<<if $worn.feet.type.includes("shackle")>>
-		<<runicon>><span class="red">Your shackles stop you from running.</span>
+		<<runicon>><span class="red">족쇄 때문에 달릴 수 없다.</span>
 	<<else>>
-		<<runicon>><label><<radiovar "$travelSpeed" "quickly">><<travelSpeedInfo>><<replace ".travelTime">><<print _travelTimeString>><</replace>><</radiovar>> Quickly (<<print getTimeString(_travelTimes.quickly)>>)</label><<gharass>>
+		<<runicon>><label><<radiovar "$travelSpeed" "quickly">><<travelSpeedInfo>><<replace ".travelTime">><<print _travelTimeString>><</replace>><</radiovar>> 빠르게 (<<print getTimeString(_travelTimes.quickly)>>)</label><<gharass>>
 	<</if>>
 	<br>
-	<<walkicon>><label><<radiovar "$travelSpeed" "normally">><<travelSpeedInfo>><<replace ".travelTime">><<print _travelTimeString>><</replace>><</radiovar>> Normally (<<print getTimeString(_travelTimes.normally)>>)</label>
+	<<walkicon>><label><<radiovar "$travelSpeed" "normally">><<travelSpeedInfo>><<replace ".travelTime">><<print _travelTimeString>><</replace>><</radiovar>> 보통 속도로 (<<print getTimeString(_travelTimes.normally)>>)</label>
 	<br>
-	<<sneakicon>><label><<radiovar "$travelSpeed" "carefully">><<travelSpeedInfo>><<replace ".travelTime">><<print _travelTimeString>><</replace>><</radiovar>> Carefully (<<print getTimeString(_travelTimes.carefully)>>)</label><<lharass>>
+	<<sneakicon>><label><<radiovar "$travelSpeed" "carefully">><<travelSpeedInfo>><<replace ".travelTime">><<print _travelTimeString>><</replace>><</radiovar>> 조심스럽게 (<<print getTimeString(_travelTimes.carefully)>>)</label><<lharass>>
 	<<if $worn.feet.type.includes("heels") and !$possessed>>
 		<br>
-		<span class="red">Your heels only let you hobble, except when searching.</span>
+		<span class="red">힐을 신고 있어 수색할 때 말고는 절뚝거리며 걸을 수밖에 없다.</span>
 	<</if>>
 <</widget>>
 
@@ -5663,9 +5663,9 @@
 
 		<<if !$settings.blindStatsEnabled>>
 			<<if _refreshTrap>>
-				<span class="blue"><i>Bailey's thugs are now actively looking for you on <<print _location.toUpperFirst()>> Street. You probably shouldn't return here for some time.</i></span>
+				<span class="blue"><i>베일리의 부하들이 이제 <<print _location.toUpperFirst()>> 가에서 당신을 적극적으로 찾고 있다. 당분간 이곳에 돌아오지 않는 편이 좋겠다.</i></span>
 			<<else>>
-				<span class="blue"><i>Since you were seen by Bailey's thugs on <<print _location.toUpperFirst()>> Street, they are likely to be looking for you around here for some time.</i></span>
+				<span class="blue"><i><<print _location.toUpperFirst()>> 가에서 베일리의 부하들에게 목격되었으니, 그들은 당분간 이 근처에서 당신을 찾아다닐 것이다.</i></span>
 			<</if>>
 			<br><br>
 		<</if>>

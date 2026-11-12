@@ -171,18 +171,18 @@
 				<span class="blue">이곳에 <<print $_plantedPlant.plural>> 씨앗을 심었다.</span>
 			<<else>>
 				<<if _plantbed.till gte 1>>
-					The soil is ready for planting.
+					씨앗을 심을 준비가 되었다.
 					<<if $plants_known.length is 0>>
 						<br>
-						Search wild areas for seeds to plant.
+						심을 씨앗은 야생 지역에서 찾아야 한다.
 						<br>
 					<<elseif _seedsByBed[_plantbed.bed].length is 0>>
 						<br>
-						<span class="blue">None of your seeds can be planted here right now.</span>
+						<span class="blue">지금은 가진 씨앗 중 이곳에 심을 수 있는 것이 없다.</span>
 						<br>
 					<<else>>
 						<details class="journal">
-							<summary class="journal">Plant seeds (<<= _seedsByBed[_plantbed.bed].length>> available)</summary>
+							<summary class="journal">씨앗 심기 (심을 수 있는 씨앗 <<= _seedsByBed[_plantbed.bed].length>>종)</summary>
 							<<tendingPlantSeedsOptions _location _plantbed `_seedsByBed[_plantbed.bed]`>>
 						</details>
 					<</if>>
@@ -235,14 +235,14 @@
 	<</if>>
 	<<if _readyBeds.length gte 1>>
 		<<for _plantType range _brokenSeeds>>
-			<span class="red">Plant type '<<= _plantType>>' not found.</span>
+			<span class="red">'<<= _plantType>>' 식물 종류를 찾을 수 없습니다.</span>
 			<br><br>
-			Please report this.
+			이 버그를 보고해 주십시오.
 			<br>
 		<</for>>
 		<<if _blockedSeeds.length gte 1>>
 			<details class="journal">
-				<summary class="journal">Seeds you can't plant (<<= _blockedSeeds.length>>)</summary>
+				<summary class="journal">심을 수 없는 씨앗 (<<= _blockedSeeds.length>>종)</summary>
 				<<tendingUnplantableSeeds _readyBeds `_blockedSeeds`>>
 			</details>
 			<br>
@@ -311,10 +311,10 @@
 		<<set $_name to $_plant.tending.seed_name ? $_plant.tending.seed_name : $_plant.plural>>
 		<<capture _passTime _plantbed _plantType>>
 			<<foodstufficon _plantType>>
-			<<link "Plant $_name ($_timeString)" $passage>><<pass _passTime>><<run plantSeedsInPlot(_plantbed, _plantType)>><</link>>
+			<<link "$_name 심기 ($_timeString)" $passage>><<pass _passTime>><<run plantSeedsInPlot(_plantbed, _plantType)>><</link>>
 		<</capture>>
 		<<if !$settings.blindStatsEnabled>>
-			<span class="orange">(<<print $_plant.tending.growth_days>> days)</span>
+			<span class="orange">(<<print $_plant.tending.growth_days>>일)</span>
 		<</if>>
 		<br>
 	<</for>>
@@ -332,7 +332,7 @@
 		<<else>>
 			<<set $_name to $_plant.tending.seed_name ? $_plant.tending.seed_name : $_plant.plural>>
 			<<foodstufficon _plantType>>
-			<span class="blue"><<print $_name.toLocaleUpperFirst()>> only grow<<if $_plant.tending.seed_name>>s<</if>> in <<print $_plant.tending.planting_bed>>.</span>
+			<span class="blue"><<print $_name.toLocaleUpperFirst()>>【은는】<<if $_plant.tending.seed_name>><</if>> <<print $_plant.tending.planting_bed>> 밭에서만 자랍니다.</span>
 		<</if>>
 		<br>
 	<</for>>
