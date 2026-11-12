@@ -185,7 +185,9 @@ def _tokens_twee(text, text_macros):
         if text[i] == "<":
             m = TAG_RE.match(text, i)
             if m:
-                attrs = ["%s=%s" % (a, "" if a.lower() in TRANSLATABLE_ATTRS else v) for a, v in ATTR_RE.findall(m.group(3))]
+                pairs = ATTR_RE.findall(m.group(3))
+                button = m.group(2).lower() == "input" and any(a.lower() == "type" and v.strip("\"'").lower() in ("button", "submit") for a, v in pairs)
+                attrs = ["%s=%s" % (a, "" if a.lower() in TRANSLATABLE_ATTRS or (button and a.lower() == "value") else v) for a, v in pairs]
                 tokens.append(("<" + m.group(1) + m.group(2) + ("".join(" " + a for a in attrs)) + m.group(4) + ">", line))
                 line += text.count("\n", i, m.end())
                 i = m.end()

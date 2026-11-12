@@ -44,6 +44,12 @@ class SkeletonTweeTests(unittest.TestCase):
         self.assertEqual(ct.skeleton_twee('<span class="gold">Money:</span>', TM), ct.skeleton_twee('<span class="gold">돈:</span>', TM))
         self.assertNotEqual(ct.skeleton_twee('<span class="gold">x</span>', TM), ct.skeleton_twee('<span class="red">x</span>', TM))
 
+    def test_input_button_value_is_prose_but_option_value_is_code(self):
+        self.assertEqual(ct.skeleton_twee('<input type="button" value="Save to file">', TM), ct.skeleton_twee('<input type="button" value="파일로 저장">', TM))
+        self.assertEqual(ct.skeleton_twee('<input type="submit" value="Go" class="x">', TM), ct.skeleton_twee('<input type="submit" value="가기" class="x">', TM))
+        self.assertNotEqual(ct.skeleton_twee('<option value="m">Male</option>', TM), ct.skeleton_twee('<option value="남">남성</option>', TM))
+        self.assertNotEqual(ct.skeleton_twee('<input type="text" value="m">', TM), ct.skeleton_twee('<input type="text" value="남">', TM))
+
     def test_variables_in_prose_are_kept(self):
         self.assertNotEqual(ct.skeleton_twee('You have $money coins', TM), ct.skeleton_twee('동전이 있다', TM))
         self.assertEqual(ct.skeleton_twee('You have $money coins', TM), ct.skeleton_twee('$money개의 동전이 있다', TM))
