@@ -17,7 +17,7 @@ const events = [
 		text: "<<schoolday>>",
 		// text shown if condition() is still met, but it's past the time to attend
 		failuretext:
-			"You have missed <<print Object.keys(V.daily.school.attended).length === 4 ? 'a lesson' : ('<<number ' + (5 - Object.keys(V.daily.school.attended).length) + '>> lessons')>> today.",
+			"오늘 수업을 <<print Object.keys(V.daily.school.attended).length === 4 ? '한 번' : ('<<number ' + (5 - Object.keys(V.daily.school.attended).length) + '>>번')>> 빠졌습니다.",
 	},
 	{
 		// example of a lazy event that will still work

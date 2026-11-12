@@ -218,8 +218,8 @@
 					<<if $tiredness gte C.tiredness.max>>
 						<span class="purple">요리하기엔 너무 지쳤습니다.</span>
 					<<elseif $_setupItem.recipe.ingredients.every(ingredient => $foodstuff[ingredientUsed(ingredient, $lastRecipeViewed)].amount gte 1 or _ingredientsSupplied?.includes(ingredientUsed(ingredient, $lastRecipeViewed)))>>
-						Make:
-						<<link [["1 " + printTime($_setupItem.recipe.cook_minutes, true)|$passage]]>><<make_recipe $lastRecipeViewed 1>><</link>>
+						만들기:
+						<<link [["1인분 " + printTime($_setupItem.recipe.cook_minutes, true)|$passage]]>><<make_recipe $lastRecipeViewed 1>><</link>>
 						<<if $_setupItem.recipe.ingredients.every(ingredient => $foodstuff[ingredientUsed(ingredient, $lastRecipeViewed)].amount gte 3 or _ingredientsSupplied?.includes(ingredientUsed(ingredient, $lastRecipeViewed)))>>
 							<<set _wait to $_setupItem.recipe.cook_minutes*3>>
 
@@ -233,7 +233,7 @@
 							<</if>>
 
 							<<if (!_hourRestriction or _futureTime.hour lt _hourRestriction or _futureTime.minute lte 15) and !_limitedIngredientRestriction>>
-								| <<link [["3 " + printTime(_wait, true)|$passage]]>><<make_recipe $lastRecipeViewed 3>><</link>>
+								| <<link [["3인분 " + printTime(_wait, true)|$passage]]>><<make_recipe $lastRecipeViewed 3>><</link>>
 							<</if>>
 						<</if>>
 						<br>
@@ -752,11 +752,11 @@ Should probably be removed once said feature has been implemented
 			<<case "potato_pancake">>
 				"버블 앤 스퀴크와 아주 비슷하지만, 곁들이는 채소가 없다. 그래서 감자 팬케이크는 아침식사나 간식으로 더 어울린다."
 			<<case "prawn_bisque">>
-				"Do not remove the shells until the prawns have been simmered. This helps the broth gain a lot of flavour you would otherwise lose. The shells are sieved out later."
+				"새우를 끓이기 전에는 껍질을 벗기지 마라. 그래야 육수에 그냥 잃어버렸을 맛이 많이 우러난다. 껍질은 나중에 걸러낸다."
 			<<case "pumpkin_drink">>
-				"With some cinnamon and nutmeg on top, it's quite a treat on a chilly night. Be careful with the sugar. This isn't a latte, so there's no coffee bitterness to counteract."
+				"위에 계피와 육두구를 조금 뿌리면 쌀쌀한 밤에 꽤 괜찮은 별미가 된다. 설탕은 조심해라. 라테가 아니니 단맛을 상쇄해 줄 커피의 쓴맛이 없다."
 			<<case "pumpkin_pie">>
-				"A classic autumn dessert in some parts. Make sure the flesh is suitably pulped. The pumpkin custard should be smooth. Served best with fresh whipped cream on top."
+				"어떤 지방에서는 가을의 고전적인 디저트다. 과육을 충분히 으깨도록 해라. 호박 커스터드는 부드러워야 한다. 위에 갓 만든 휘핑크림을 얹어 내면 가장 좋다."
 			<<case "quiche">>
 				"아니다, 이건 그냥 짭짤한 파이가 아니다. 정말로 둘의 공통점은 파이 크러스트를 쓴다는 것 정도뿐이다."
 			<<case "rich_biscuit">>
@@ -784,9 +784,9 @@ Should probably be removed once said feature has been implemented
 			<<case "steak">>
 				"분명 많은 학생이 이걸 기다렸을 거다. 솔직히 말하면, 나도 기다렸다."
 			<<case "sticky_toffee_pudding">>
-				"As with all cakes, be careful not to overbake it. When in doubt, use the toothpick trick."
+				"모든 케이크가 그렇듯, 너무 오래 굽지 않도록 조심해라. 확신이 없으면 이쑤시개 요령을 써라."
 			<<case "stuffed pumpkin">>
-				"You could stuff it with all sorts of ingredients, but we'll keep it simple. Make sure you rub enough oil into the skin. It'll need the encouragement."
+				"온갖 재료로 속을 채울 수도 있지만, 우리는 간단하게 간다. 껍질에 기름을 충분히 문질러 발라라. 그래야 잘 익는다."
 			<<case "stuffing">>
 				"추수감사절은 해외처럼 여기서 제대로 된 명절은 아니다. 그러니 죄책감 없이 일 년 중 아무 때나 이걸 만들 수 있다는 뜻이다."
 			<<case "sweet_and_sour_chicken">>
@@ -805,9 +805,9 @@ Should probably be removed once said feature has been implemented
 			<<case "valentines_chocolate">>
 				"작은 하트 모양으로 빚어 과일 필링을 채운 초콜릿이다. 밸런타인 초콜릿이라고 불리며, 적절한 시기에는 많은 사람들이 특별하게 여긴다."
 			<<default>>
-				"Let's get right into it."
+				"바로 시작하지."
 				<<if $debug or $options.debugdisable is "f">>
-					<span class="black">Food item "_args[0]" does not have an exam description!</span>
+					<span class="black">음식 항목 "_args[0]"에는 시험 설명이 없습니다!</span>
 				<</if>>
 		<</switch>>
 		<<if setup.foodstuff[_args[0]].recipe.ingredients.includes("chicken_egg") and !$housekeepingTips.includes("alternativeEgg")>>

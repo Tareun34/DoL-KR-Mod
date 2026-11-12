@@ -47,6 +47,13 @@ game/overworld-underground/loc-underground/robin.twee:288:【의】
 game/special-fishing/fishing-text.twee:1532:【에게】
 ```
 
+## 코드 측 보정 후보(번역 커밋으로는 못 고치는 것, 1차 뒤 별도 처리)
+
+- `base-system/widgets.twee` 거리 이름: `<<print _location.toUpperFirst()>> 가` → `getMapNameKr(...)`로 한글 거리명.
+- `base-system/tending.twee` 335: `$_plant.tending.planting_bed` 값(earth/water)이 영어로 찍힘.
+- `base-system/bodywriting.twee` 1005: `$NPCList[_n].penisdesc`를 옛 번역처럼 `window.KR.getPenisDescKr(...)`로.
+- `base-system/effect.js` 508: 최면 특성 이름 `trait.toUpperFirst()` 영어 그대로(옛 번역과 동일).
+
 ## 묶음
 
 | 묶음 | 단계 | 파일 | 산문 줄 | 상태 | 메모 |
@@ -55,9 +62,9 @@ game/special-fishing/fishing-text.twee:1532:【에게】
 | P1-02 | 1 | game/base-system/widgets.twee | 265 | 완료 | 남은 영어 105줄(코드·주석). thugs→베일리의 부하들. 거리 이름이 'High 가'처럼 찍힘: getMapNameKr로 코드 측 보정 후보 |
 | P1-03 | 1 | game/base-system/overlays/social.twee<br>game/base-system/text.js | 430 | 완료 | 남은 영어 180/216줄(코드). text.js 템플릿 `${NPCName}'s` → 기존 한글 줄과 같은 KR 헬퍼 호출로 맞춤. 표기: Thug Anger→폭력배의 분노, Research→조사, Calligraphy→서예 |
 | P1-04 | 1 | game/base-system/overlays/journal.twee<br>game/base-system/tips.twee<br>game/base-system/overlays/traits.twee<br>game/base-system/tending.twee | 419 | 완료 | 남은 영어는 코드만. tending의 planting_bed 값(earth/water)이 영어로 찍힘: 코드 측 보정 후보. 표기: Farming→농사, recipe→요리법 |
-| P1-05 | 1 | game/base-system/pregnancy/events.twee<br>game/base-system/mirror.twee<br>game/base-system/overlays/statistics.twee<br>game/base-system/overlays/options.twee<br>game/base-system/overlays/cheats.twee<br>game/base-system/named-npcs.twee<br>game/base-system/kitchen.twee<br>game/base-system/overlays/characteristics.twee<br>game/base-system/bodywriting.twee<br>game/base-system/overlays/feats-ui.twee<br>game/base-system/pregnancy/children-events.twee<br>game/base-system/effect.js<br>game/base-system/orgasm.twee<br>game/base-system/pregnancy/containers.twee<br>game/base-system/weather/passout-scenes.twee<br>game/base-system/overlays/saves-export-import.twee<br>game/base-system/questmarkers.js<br>game/base-system/pregnancy/pregnancy.twee | 236 | 대기 |  |
-| P1-06 | 1 | game/base-combat/speech/speech-whitney.twee | 2247 | 대기 |  |
-| P1-07 | 1 | game/base-combat/ejaculation/ejaculation.twee | 2190 | 대기 |  |
+| P1-05 | 1 | game/base-system/pregnancy/events.twee<br>game/base-system/mirror.twee<br>game/base-system/overlays/statistics.twee<br>game/base-system/overlays/options.twee<br>game/base-system/overlays/cheats.twee<br>game/base-system/named-npcs.twee<br>game/base-system/kitchen.twee<br>game/base-system/overlays/characteristics.twee<br>game/base-system/bodywriting.twee<br>game/base-system/overlays/feats-ui.twee<br>game/base-system/pregnancy/children-events.twee<br>game/base-system/effect.js<br>game/base-system/orgasm.twee<br>game/base-system/pregnancy/containers.twee<br>game/base-system/weather/passout-scenes.twee<br>game/base-system/overlays/saves-export-import.twee<br>game/base-system/questmarkers.js<br>game/base-system/pregnancy/pregnancy.twee | 236 | 완료 | 18파일 ok. bodywriting 1005: 옛 번역의 KR 헬퍼 호출(getPenisDescKr)은 코드 변경이라 미적용 → 코드 측 보정 후보. 표기: Genitalia Fame→생식기 소문, Pickaxes→곡괭이 |
+| P1-06 | 1 | game/base-combat/speech/speech-whitney.twee | 2247 | 진행 |  |
+| P1-07 | 1 | game/base-combat/ejaculation/ejaculation.twee | 2190 | 진행 |  |
 | P1-08 | 1 | game/base-combat/speech/speech-avery.twee | 1950 | 대기 |  |
 | P1-09 | 1 | game/base-combat/speech/speech-sydney.twee | 1230 | 대기 |  |
 | P1-10 | 1 | game/base-combat/speech/speech-gwylan.twee | 810 | 대기 |  |

@@ -160,8 +160,8 @@
 			<br>
 
 			<<if $debug>>
-				Pheromones (DEBUG): <span id="statsalluretest"><<= $alluretest ? "On" : "Off">></span> |
-				<<link "Change">>
+				페로몬 (디버그): <span id="statsalluretest"><<= $alluretest ? "켜짐" : "꺼짐">></span> |
+				<<link "변경">>
 					<<if $alluretest is 1>>
 						<<set $alluretest to 0>>
 					<<else>>
@@ -1064,12 +1064,12 @@
 		<div class="settingsToggleItem">
 			<span class="gold">주근깨</span>
 			<br>
-			Face: <label>Disabled <<radiobutton "$player.skin.faceFreckles" false autocheck>></label>
-			| <label>Enabled <<radiobutton "$player.skin.faceFreckles" true autocheck>></label>
+			얼굴: <label>없음 <<radiobutton "$player.skin.faceFreckles" false autocheck>></label>
+			| <label>있음 <<radiobutton "$player.skin.faceFreckles" true autocheck>></label>
 			<br>
-			Body: <label>Disabled <<radiobutton "$player.skin.bodyFreckles" "none" autocheck>></label>
-			| <label>Upper body <<radiobutton "$player.skin.bodyFreckles" "upper" autocheck>></label>
-			| <label>Full body <<radiobutton "$player.skin.bodyFreckles" "full" autocheck>></label>
+			몸: <label>없음 <<radiobutton "$player.skin.bodyFreckles" "none" autocheck>></label>
+			| <label>상반신 <<radiobutton "$player.skin.bodyFreckles" "upper" autocheck>></label>
+			| <label>전신 <<radiobutton "$player.skin.bodyFreckles" "full" autocheck>></label>
 		</div>
 		<div class="settingsToggleItem">
 			<span class="gold">가슴 크기</span>
@@ -1392,7 +1392,7 @@
 			<<numberStepper "비행도" $delinquency "delinquency" {max: 1000, reverse: true}>>
 			<hr>
 			<<if $player.penisExist and $player.vaginaExist>>
-				<<numberStepper "Genitalia Fame" $schoolrep.herm { callback: value => {V.schoolrep.herm = value; Wikifier.wikifyEval("<<replace '#repherm'>><<cheatsRep herm>><</replace>>")}, max: 5, step: 1, percentage: false, reverse: true, activeButtons: ["single", "minMax"] }>>
+				<<numberStepper "생식기 소문" $schoolrep.herm { callback: value => {V.schoolrep.herm = value; Wikifier.wikifyEval("<<replace '#repherm'>><<cheatsRep herm>><</replace>>")}, max: 5, step: 1, percentage: false, reverse: true, activeButtons: ["single", "minMax"] }>>
 				<span id="repherm"><<cheatsRep "herm">></span>
 			<<else>>
 				<<numberStepper "여장/남장 소문" $schoolrep.crossdress { callback: value => {V.schoolrep.crossdress = value; Wikifier.wikifyEval("<<replace '#repcrossdress'>><<cheatsRep crossdress>><</replace>>")}, max: 5, step: 1, percentage: false, reverse: true, activeButtons: ["single", "minMax"] }>>
@@ -1643,7 +1643,7 @@
 				<br>
 				<<foresticon>><<link [[숲|Forest]]>><<cheats-teleport-function>><</link>>
 				<br>
-				<<lakeicon>><<link [[Lake: Shore|Lake Shore]]>><<cheats-teleport-function>><</link>>
+				<<lakeicon>><<link [[호수: 호숫가|Lake Shore]]>><<cheats-teleport-function>><</link>>
 				<br>
 				<<roadicon>><<link [[농장 도로 1|Farm Road 1]]>><<cheats-teleport-function>><</link>>
 				<br>
@@ -1785,7 +1785,7 @@
 			<br>
 			<br>
 			<<cheatsFog>>
-			<span class="description">Changing this setting will change the weather for at least 6 hours, before returning to the original weather simulation.</span>
+			<span class="description">이 설정을 변경하면 최소 6시간 동안 날씨가 변경되며, 이후 원래 날씨 시뮬레이션으로 돌아갑니다.</span>
 		</div>
 		<div class="settingsToggleItemWide">
 			<span class="gold">온도</span>
@@ -2045,7 +2045,7 @@
 					<<if $settings.playerPregnancyHumanEnabled>>
 						|
 					<</if>>
-					<<link [[A wolf|$passage]]>>
+					<<link [[늑대|$passage]]>>
 					<<if monsterChanceForType("wolf") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType("wolf"))>>
 						<<if $settings.femaleNPCPenisChance gt 0 and $settings.maleNPCVaginaChance lt 100>>
 							<<set _impregnator to either("cheater wolfboy", "cheater wolfgirl")>>
@@ -2127,7 +2127,7 @@
 						<<if $settings.playerPregnancyHumanEnabled>>
 							|
 						<</if>>
-						<<link "A wolf">>
+						<<link "늑대">>
 							<<if monsterChanceForType("wolf") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType("wolf"))>>
 								<<if $settings.femaleNPCPenisChance gt 0 and $settings.maleNPCVaginaChance lt 100>>
 									<<set _impregnator to either("cheater wolfboy", "cheater wolfgirl")>>
@@ -2449,7 +2449,7 @@
 <</widget>>
 
 <<widget "cheatsFog">>
-	<<numberStepper "Fog" `Weather.FogGeneration.getFog()` {
+	<<numberStepper "안개" `Weather.FogGeneration.getFog()` {
 		callback: value => {
 			Weather.FogGeneration.setFog(value);
 		},
@@ -2465,8 +2465,8 @@
 	<<if $earSlime.growth gt 50>><<set _reasons.push("귀 슬라임이 너무 자랐기 때문")>><</if>>
 	<<if _inWardrobe>>
 		<<if _reasons.length gte 1>>
-			<span class="gold"><<= $player.sex is "m" ? "Penis" : $player.sex is "f" ? "Vagina" : "Both">></span>
-			| This setting cannot be changed due to <<= _reasons.join(" and ")>>.
+			<span class="gold"><<= $player.sex is "m" ? "자지" : $player.sex is "f" ? "보지" : "양성">></span>
+			| <<= _reasons.join(", ")>>에 이 설정을 변경할 수 없습니다.
 		<<else>>
 			<<if $player.sex is "m">>
 				<span class="gold">자지</span> |
@@ -2530,15 +2530,15 @@
 		<</if>>
 		<<if $player.sex is "h">>
 			<br>
-			Testicles: <span id="statsBallsExist"><<= $player.ballsExist ? "Present" : "Disabled">></span> |
-			<<link "Change">>
+			고환: <span id="statsBallsExist"><<= $player.ballsExist ? "있음" : "비활성화">></span> |
+			<<link "변경">>
 				<<set $player.ballsExist to clone(!$player.ballsExist)>>
 				<<updatesidebarimg>>
 				<<replace "#statsGender">><<cheatsSex>><</replace>>
 			<</link>>
 		<</if>>
 	<<else>>
-		<span class="gold"><<= $player.sex is "m" ? "Penis" : $player.sex is "f" ? "Vagina" : "Both">></span> | <<if _reasons.length gte 1>>You cannot change your genitals due to <<= _reasons.join(" and ")>>. Normally, this<<else>>This<</if>> setting can only be changed when accessing your wardrobe.
+		<span class="gold"><<= $player.sex is "m" ? "자지" : $player.sex is "f" ? "보지" : "양성">></span> | <<if _reasons.length gte 1>><<= _reasons.join(", ")>>에 생식기를 변경할 수 없습니다. 일반적으로 이<<else>>이<</if>> 설정은 옷장에 접근 중일 때만 변경할 수 있습니다.
 	<</if>>
 <</widget>>
 

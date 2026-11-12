@@ -129,7 +129,7 @@
 		최음제 판매 횟수: $stat_aphrodisiacs_sold
 		<br>
 		<<if $brothelVending?.total>>
-			Products sold at the brothel: $brothelVending.total
+			창관 상품 판매 횟수: $brothelVending.total
 			<br>
 		<</if>>
 		<<if $confessionsDone>>
@@ -207,7 +207,7 @@
 			커닐링구스 사정: $cunnilingusejacstat
 			<br>
 		<</if>>
-		Semen swallowed: <<print Math.floor($semenswallowedstat)>> mL
+		삼킨 정액: <<print Math.floor($semenswallowedstat)>> mL
 		<<if isBestialityOnForAnyCreature()>>
 			<br>
 			삼킨 동물 정액: <<print Math.floor($animalsemenswallowedstat)>> mL
@@ -318,7 +318,7 @@
 			마지막 강간: <<statisticsTimeCompare $rapeTimeStat>>
 			<br>
 			<<if isBestialityOnForAnyCreature()>>
-				Raped by animals: $beastrapestat
+				동물에게 강간: $beastrapestat
 				<br>
 			<<else>>
 				몬스터 인물에게 강간: $beastrapestat
@@ -589,7 +589,7 @@
 			<br>
 		<</if>>
 		<<if $bird?.lurkersEaten>>
-			Lurkers eaten: $bird.lurkersEaten
+			럴커 섭취 수: $bird.lurkersEaten
 			<br>
 		<</if>>
 		<<if $gwylan?.requestCount>>
@@ -742,11 +742,11 @@
 				0%
 			<</if>>
 			<br>
-			Nectar addiction
+			넥타르 중독
 			<<if $backgroundTraits.includes("plantlover")>>
-				timer: <<print Math.trunc($nectar_timer)>> <<pluralise $nectar_timer "day">>
+				타이머: <<print Math.trunc($nectar_timer)>> <<pluralise $nectar_timer "일">>
 			<<else>>
-				progression: <<print Math.trunc(($nectar_addiction / 150) * 100)>>%
+				진행도: <<print Math.trunc(($nectar_addiction / 150) * 100)>>%
 			<</if>>
 			<br><br>
 			민감도:
@@ -907,7 +907,7 @@
 				<br>
 			<</if>>
 			<<if $pound?.progress gte 1>>
-				Stray dog contentment: <<print Math.trunc($stray_happiness)>>
+				유기견 만족도: <<print Math.trunc($stray_happiness)>>
 				<br>
 			<</if>>
 			섹스 명성: <<print Math.trunc($fame.sex)>>
@@ -931,7 +931,7 @@
 			사업 명성: <<print Math.trunc($fame.business)>>
 			<br>
 			<<if $debug>>
-				Pimp fame: <<print Math.trunc($fame.pimp)>>
+				포주 명성: <<print Math.trunc($fame.pimp)>>
 				<br>
 			<</if>>
 			사교 명성: <<print Math.trunc($fame.social)>>
@@ -940,9 +940,9 @@
 			<br>
 			섬 주민 언어: <<if $islander_language is undefined>>0<<else>><<print Math.trunc($islander_language)>><</if>>
 			<br>
-			Gwylan progress: <<if $gwylan?.progress is undefined>>0<<else>><<print $gwylan.progress>><</if>>
+			그윌란의 발전: <<if $gwylan?.progress is undefined>>0<<else>><<print $gwylan.progress>><</if>>
 			<br>
-			Mine hope: <<if $mine?.hope is undefined>>0<<else>><<print $mine.hope>><</if>>
+			광산의 희망: <<if $mine?.hope is undefined>>0<<else>><<print $mine.hope>><</if>>
 			<br><br>
 		<</foldout>>
 
@@ -997,9 +997,9 @@
 			<br>
 			젖소 발현 단계: <<print Math.trunc($cow)>>
 			<br>
-			<<if resolveIfNamedBeastIsMonster("greathawk")>>Harpyness<<else>>Birdieness<</if>>: <<print Math.trunc($birdbuild)>> (30+ for full transformation)
+			<<if resolveIfNamedBeastIsMonster("greathawk")>>하피 변이<<else>>새 변이<</if>>: <<print Math.trunc($birdbuild)>> (30+ 완전 변신)
 			<br>
-			<<if resolveIfNamedBeastIsMonster("greathawk")>>Harpy<<else>>Bird<</if>> manifestation: <<print Math.trunc($harpy)>>
+			<<if resolveIfNamedBeastIsMonster("greathawk")>>하피<<else>>새<</if>> 발현 단계: <<print Math.trunc($harpy)>>
 			<br>
 			여우 변이: <<print Math.trunc($foxbuild)>> (30+ 완전 변신)
 			<br>
@@ -1083,7 +1083,7 @@
 		<</foldout>>
 		<<if $NPCName.find(npc => npc.pregnancy and npc.pregnancy.enabled isnot undefined)>>
 			<<foldout false "_npcPregnancyFoldout">>
-				<span class="gold">NPC Pregnancy</span>
+				<span class="gold">NPC 임신</span>
 				<<for $_npc range $NPCName.filter(npc => npc.pregnancy and npc.pregnancy.enabled isnot undefined).sort((a,b) => a.nam.localeCompare(b.nam))>>
 					<div>
 						<<print window.KR.gatPersonNameDictKR($_npc.nam)>>:
@@ -1276,7 +1276,7 @@
 				<<moneyStats>>
 			</div>
 			<<if $debug>>
-				<<link "Reset Stats (Debug)">>
+				<<link "통계 초기화 (디버그)">>
 					<<set $moneyStats to {}>>
 					<<set $timeStats to {}>>
 					<<unset $moneyStatsSnapshot>>

@@ -129,7 +129,7 @@ IMPORTANT:
 			<label><<radiovar "$options.pepperSprayDisplay" "none">><<updatesidebarimg>><</radiovar>> 숨김</label>
 		</div>
 		<div class="settingsToggleItem">
-			<label><<checkbox "$options.tipdisable" true false autocheck>> Enable sidebar hints and tips</label>
+			<label><<checkbox "$options.tipdisable" true false autocheck>> 사이드바에 힌트 및 팁 표시 활성화</label>
 		</div>
 		<div class="settingsToggleItem">
 			<label><<checkbox "$options.debugdisable" "t" "f" autocheck>> 추가 에러 메시지 활성화</label>
@@ -433,21 +433,21 @@ IMPORTANT:
 			<<checkbox "$options.textAnimsDrunk" false true autocheck { onToggle: t => {
 				$("#prevDrunk").replaceWith(Wikifier.wikifyEval('<span id="prevDrunk" @class="basicDrunkCss(3)">취기 흔들림</span>'));
 			}}>>
-			<span id="prevDrunk" @class="basicDrunkCss(3)">Drunk sway</span>
+			<span id="prevDrunk" @class="basicDrunkCss(3)">취기 흔들림</span>
 			</label>
 			<br>
 			<label>
 			<<checkbox "$options.textAnimsHeat" false true autocheck { onToggle: t => {
 				$("#prevHeat").replaceWith(Wikifier.wikifyEval('<span id="prevHeat" @class="basicJitterCss()">발정기/러트 떨림</span>'));
 			}}>>
-			<span id="prevHeat" @class="basicJitterCss()">Heat/rut jitter</span>
+			<span id="prevHeat" @class="basicJitterCss()">발정기/러트 떨림</span>
 			</label>
 			<br>
 			<label>
 			<<checkbox "$options.textAnimsHypno" false true autocheck { onToggle: t => {
 				$("#prevHypno").replaceWith(Wikifier.wikifyEval('<span id="prevHypno"><<hypnosisText "최면 나선">></span>'));
 			}}>>
-			<span id="prevHypno"><<hypnosisText "Hypnosis spiral">></span>
+			<span id="prevHypno"><<hypnosisText "최면 나선">></span>
 			</label>
 		</div>
 	</div>
@@ -730,21 +730,21 @@ IMPORTANT:
 	</div>
 	<hr>
 	<div class="settingsGrid">
-		<div class="settingsHeader options">History Depth</div>
+		<div class="settingsHeader options">히스토리 깊이</div>
 		<<if not $ironmanmode>>
 			<div class="settingsToggleItem">
-				Enables going back in history up to N-1 passages. Useful for reporting bugs or undoing decisions.
+				N-1 이전의 히스토리로 되돌아가기를 활성화합니다. 버그를 보고하거나 선택을 되돌릴 때 유용합니다.
 				<hr>
 				<label>
-					<<checkbox "$options.historyControls" false true autocheck>> Display history controls in the sidebar
+					<<checkbox "$options.historyControls" false true autocheck>> 사이드바에 히스토리 컨트롤 표시
 				</label>
 				<<if $debug is 1>>
-					<span class="tooltip-anchor linkBlue" tooltip="<span class='linkBlue'>/ and - on the numpad can be used for moving through passage history. * reloads the passage with new rng.</span>">(?)</span>
+					<span class="tooltip-anchor linkBlue" tooltip="<span class='linkBlue'>숫자 패드의 / 와 - 로 패시지 히스토리를 이동할 수 있습니다. * 는 새로운 난수로 패시지를 다시 불러옵니다.</span>">(?)</span>
 				<</if>>
 			</div>
 		<</if>>
 		<div class="settingsToggleItem">
-			<span class="gold">States saved to memory:</span>
+			<span class="gold">메모리에 저장된 상태:</span>
 			<<numberslider "$options.maxStates" `$options.maxStates gt 100 ? 100 : $options.maxStates` 1 100 1>>
 			<br><br>
 		</div>

@@ -246,7 +246,7 @@
 			</div>
 		</div>
 		<br>
-		<<link [["Next" + (_args[4] ? " " + printTime(_args[4], true) : "")|_args[3]]]>>
+		<<link [["다음" + (_args[4] ? " " + printTime(_args[4], true) : "")|_args[3]]]>>
 			<<if _args[0] is "pc">>
 				<<endPlayerPregnancy _args[1] _args[2]>>
 			<<elseif $NPCNameList.includes(_args[0])>>
@@ -273,7 +273,7 @@
 			<</for>>
 		</div>
 		<br>
-		<<link [["Next" + (_args[2] ? " " + printTime(_args[2], true) : "")|_args[1]]]>>
+		<<link [["다음" + (_args[2] ? " " + printTime(_args[2], true) : "")|_args[1]]]>>
 			<<run _readyEggs.forEach(child => {
 				if (!child.name) child.name = generateBabyName(undefined, child.gender, child.childId);
 				recordBirth(child.childId);
@@ -696,12 +696,12 @@
 				<</if>>
 			<<case "remy">>
 				<<if $outside is 1>>
-					A
+					
 					<<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
 						<<set $monster to 1>>
-						<<if $settings.maleVictimChance lt random(1, 100)>>cowgirl<<else>>bullboy<</if>>
+						<<if $settings.maleVictimChance lt random(1, 100)>>젖소 소녀가<<else>>황소 소년이<</if>>
 					<<else>>
-						cow
+						소가
 					<</if>>
 					당신의 허벅지를 찌르며 음매 하고 운다. 아래를 내려다보니 맑은 액체가 다리에 흐르고 있고 이내 하복부에 짧은 통증이 번진다. 산기가 다가오고 있다.
 					<br><br>
@@ -1944,9 +1944,9 @@
 	<<set $_genders to {m:0,f:0,h:0}>>
 	<<run $_litter.forEach(b => $_genders[b.gender]++)>>
 	<<if $_litter[0].identical isnot null>>
-		<<set $_text_output to `"I believe they are <<if $_litter.length is 3>>all identical triplets<<else>>both identical twins<</if>>. They're the same sex and their facial features are similar."`>>
+		<<set $_text_output to `"제 생각엔 <<if $_litter.length is 3>>셋 다 일란성 세쌍둥이<<else>>둘 다 일란성 쌍둥이<</if>>인 것 같습니다. 성별도 같고 이목구비도 서로 닮았네요."`>>
 	<<elseif ($_genders.m is $_litter.length or $_genders.f is $_litter.length or $_genders.h is $_litter.length) and $_litter.length gt 1>>
-		<<set $_text_output to `"Despite being the same sex, I believe they are not identical. They appear to have slightly different facial features."`>>
+		<<set $_text_output to `"같은 성별이긴 하지만, 일란성은 아닌 것 같습니다. 이목구비가 약간 다르게 생겼네요."`>>
 	<<else>>
 		<<set $_text_output to "당신의 아이는">>
 		<<if $_genders.m gt 0>>
@@ -1975,8 +1975,8 @@
 				<<case 1>><<set $_text_output += " 한">>
 				<<default>><<set $_text_output += " " + $_genders.h>>
 			<</switch>>
-			<<if $_genders.h gt 1>><<set $_text_output += " babies">><<else>><<set $_text_output += " baby">><</if>>
-			<<set $_text_output += " with genitals like your own">>
+			<<if $_genders.h gt 1>><<set $_text_output += " 명의 당신과 같은 생식기를 가진 아이들">><<else>><<set $_text_output += " 명의 당신과 같은 생식기를 가진 아이">><</if>>
+			<<set $_text_output += "">>
 		<</if>>
 		<<set $_text_output += "입니다.">>
 	<</if>>

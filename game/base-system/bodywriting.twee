@@ -1002,7 +1002,7 @@
 			<</if>>
 			<<set $NPCList[_n].location.genitals = "head">><<set $speechMouthNPCAnus to 1>><<set $mouthtarget to _n>>
 		<<elseif $NPCList[_n].penis is 0>>
-			<<He>> follows the arrow's instruction, <span class="blue">and positions <<his>> $NPCList[_n].penisdesc in front of your mouth.</span>
+			<<He>>【은는】 화살표의 지시를 따라, <span class="blue"><<his>> $NPCList[_n].penisdesc【을를】 당신의 입 앞에 가져다 댄다.</span>
 			<<neutral 5>><<set $mouthuse to "penis">><<set $NPCList[_n].penis to "mouthentrance">><<set $mouthstate to "entrance">><<set $speechMouthEntrance to 1>><<set $mouthtarget to _n>>
 			<<set $NPCList[_n].location.genitals to "head">>
 		<<elseif $NPCList[_n].vagina is 0>>
@@ -1031,7 +1031,7 @@
 				<<submission 5>><<set $NPCList[_n].vagina to "facesit">><<set $mouthuse to "facesit">><<set $mouthstate to "vagina">><<set $mouthtarget to _n>>
 				<<set $speechFaceSit to 1>><<set $NPCList[_n].location.genitals = "head">>
 			<<else>>
-				<span class="purple"><<He>> wraps <<his>> legs around your head and presses <<his>> pussy against your mouth.</span>
+				<span class="purple"><<He>>【은는】 다리로 당신의 머리를 감싸고 자기 보지를 당신의 입에 밀착시킨다.</span>
 				<<submission 5>><<set $mouthuse to "othervagina">><<set $NPCList[_n].vagina to "mouth">><<set $mouthstate to "othervagina">><<violence 3>><<bruise face>><<set $speechMouthNPCVagina to 1>><<set $mouthtarget to _n>>
 				<<set $NPCList[_n].location.genitals to "head">>
 			<</if>>
@@ -1462,7 +1462,7 @@
 	<<else>>
 		<<famesex 2>>
 		<<if !$speechAdmired>><<set $speechAdmired to 1>>
-			<<He>> speaks.
+			<<He>>【이가】 말한다.
 
 			<<if _args[0] is "anus" and $player.sex is "m" and $player.penissize lte 3 and random(1, 5) is 1>>
 				<<if random(1, 2) is 1>>
@@ -1508,7 +1508,7 @@
 	<<else>>
 		<<famesex 1>>
 		<<if !$speechAdmired>><<set $speechAdmired to 1>>
-			<<He>> speaks.
+			<<He>>【이가】 말한다.
 			<<if _args[0] is "vagina">>
 				<<switch random(1, 9)>>
 					<<case 1>>
@@ -1621,7 +1621,7 @@
 	<<else>>
 		<<famebestiality 1>>
 		<<if !$speechAdmired>><<set $speechAdmired to 1>>
-			<<He>> speaks.
+			<<He>>【이가】 말한다.
 			<<switch random(1, 8)>>
 				<<case 1>>"분명 기분 좋겠지."
 				<<case 2>>"그게 계속 널 발정 나게 만들고 있는 게 분명해. 그래서 아직 떼어내지 않은 거겠지."
@@ -2078,7 +2078,7 @@
 							<<set _text_output to "좋은 생각이군. 패키지 상품이라면 두 배로 돈을 낼 테니까.">>
 						<<default>>
 							<<if $speechAdmired>>
-								<<He>> glares.
+								<<He>>【은는】 노려본다.
 							<<else>>
 								<<He>>【은는】 미소 짓는다.
 							<</if>>
@@ -2157,7 +2157,7 @@
 				<<case "Alex">>
 					<<if random(1)>>
 						<<if $speechAdmired>>
-							<<He>> flashes a smug grin.
+							<<He>>【이가】 의기양양한 미소를 짓는다.
 						<<else>>
 							<<He>>【은는】 미소 짓는다.
 						<</if>>

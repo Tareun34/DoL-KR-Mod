@@ -1216,7 +1216,7 @@ Zohar
 								 "Alex", "Sydney", "Gwylan", "Bailey",
 								 "Leighton", "Quinn", "Ivory Wraith", "Mason"]>>
 		<<if !_lustwhitelist.includes(_nam)>>
-			<<error { message: "<<npcincr>> attempted to modify lust for non-whitelisted npc " + _nam + ". Make sure to add a lust clamp in <<relationshipClamp>> before whitelisting!" }>>
+			<<error { message: "<<npcincr>>【이가】 화이트리스트에 없는 NPC의 욕망을 수정하려고 시도했다 " + _nam + ". 화이트리스트에 추가하기 전에 <<relationshipClamp>>에서 욕망 제한을 설정했는지 확인하세요." }>>
 		<</if>>
 		<<if $valentines and Time.monthDay is 14 and setup.loveInterestNpc.includes(_nam)>>
 			<<set _val += _val>>
@@ -1722,15 +1722,15 @@ Zohar
 			<<if $syndromebird is 1>>
 				<<if $NPCName[_i].love gte 60>>
 					<<if $NPCName[_i].dom gte 50>>
-						has <span class="lewd">claimed you as <<if resolveIfNamedBeastIsMonster("greathawk")>><<nnpc_his "Great Hawk">><<else>>its<</if>> <<wife>></span>.
+						당신을 <span class="lewd"><<if resolveIfNamedBeastIsMonster("greathawk")>><<nnpc_his "Great Hawk">><<else>>자신의<</if>> <<wife>></span>로 삼았다.
 					<<elseif $NPCName[_i].dom gte 20>>
-						thinks you're <span class="lewd"><<if resolveIfNamedBeastIsMonster("greathawk")>><<nnpc_his "Great Hawk">><<else>>its<</if>> <<wife>></span>.
+						당신을 <span class="lewd"><<if resolveIfNamedBeastIsMonster("greathawk")>><<nnpc_his "Great Hawk">><<else>>자신의<</if>> <<wife>></span>라고 생각한다.
 					<<else>>
 						당신을 <span class="lewd">좋은 <<wife>></span>라고 생각한다.
 					<</if>>
 				<<elseif $NPCName[_i].love gte 20>>
 					<<if $NPCName[_i].dom gte 50>>
-						wants you to <span class="red">return <<if resolveIfNamedBeastIsMonster("greathawk")>><<nnpc_his "Great Hawk">><<else>>its<</if>> affections</span>.
+						당신이 <span class="red"><<if resolveIfNamedBeastIsMonster("greathawk")>><<nnpc_his "Great Hawk">><<else>>자신의<</if>> 애정에 답해 주길</span> 바란다.
 					<<elseif $NPCName[_i].dom gte 20>>
 						<span class="red">몹시 괴로워한다</span>.
 					<<else>>
@@ -1753,11 +1753,11 @@ Zohar
 			<<if $syndromewolves is 1>>
 				<<if $NPCName[_i].love gte $npclovehigh>>
 					<<if $wolfpackferocity gt $wolfpackharmony>>
-						<<print resolveIfNamedBeastIsMonster("blackwolf") ? "is" : "seems">> <span class="lewd">proud you're <<if resolveIfNamedBeastIsMonster("blackwolf")>><<nnpc_his "Black Wolf">><<else>>its<</if>> mate</span>.
+						<<print resolveIfNamedBeastIsMonster("blackwolf") ? "확실히" : "왠지">> 당신이 <span class="lewd"><<if resolveIfNamedBeastIsMonster("blackwolf")>><<nnpc_his "Black Wolf">><<else>>자신의<</if>> 짝</span>인 것을 자랑스러워한다.
 					<<elseif $wolfpackharmony gt $wolfpackferocity>>
-						<<print resolveIfNamedBeastIsMonster("blackwolf") ? "is" : "seems">> <span class="lewd">glad you're <<if resolveIfNamedBeastIsMonster("blackwolf")>><<nnpc_his "Black Wolf">><<else>>its<</if>> mate</span>.
+						<<print resolveIfNamedBeastIsMonster("blackwolf") ? "확실히" : "왠지">> 당신이 <span class="lewd"><<if resolveIfNamedBeastIsMonster("blackwolf")>><<nnpc_his "Black Wolf">><<else>>자신의<</if>> 짝</span>이라 기뻐한다.
 					<<else>>
-						thinks of you <span class="lewd">as <<if resolveIfNamedBeastIsMonster("blackwolf")>><<nnpc_his "Black Wolf">><<else>>its<</if>> mate</span>.
+						당신을 <span class="lewd"><<if resolveIfNamedBeastIsMonster("blackwolf")>><<nnpc_his "Black Wolf">><<else>>자신의<</if>> 짝</span>으로 생각한다.
 					<</if>>
 				<<elseif $NPCName[_i].love lte $npclovelow>>
 					<<if $wolfpackferocity gt $wolfpackharmony>>
@@ -1902,15 +1902,15 @@ Zohar
 				<<if $gwylan?.wary gt 1 && ($brownFoxRevealed or $gwylanSeen?.includes("auriga_scar"))>>
 					당신을 <span class="red">경계한다</span>.
 				<<elseif _gwylanStatus.includes("aroused")>>
-					is <span class="pink">nervous about how close you are becoming</span>.
+					당신과 점점 가까워지는 것을 <span class="pink">불안해한다</span>.
 				<<elseif _gwylanLovePercent gte 70>>
-					<span class="green">knows there's something special about you</span>.
+					당신에게 <span class="green">특별한 무언가가 있음을 안다</span>.
 				<<elseif _gwylanLovePercent lt 55 and $gwylanTalked?.length gte 6 and !$daily.gwylan.clothesTalk>>
-					is <span class="blue">eager to hear more of your stories</span>.
+					당신의 이야기를 <span class="blue">더 듣고 싶어 한다</span>.
 				<<elseif _gwylanLovePercent gte 50>>
-					<span class="teal">thinks there's something special about you</span>.
+					당신에게 <span class="teal">특별한 무언가가 있다고 생각한다</span>.
 				<<elseif _gwylanLovePercent gte 30>>
-					is <span class="lblue">fascinated by you</span>.
+					당신에게 <span class="lblue">매료되어 있다</span>.
 				<<elseif _gwylanLovePercent gte 20 or $avery_mansion>>
 					당신에게 <span class="blue">호기심을 느낀다</span>.
 				<<else>>
@@ -1921,9 +1921,9 @@ Zohar
 		<!-- Persons of interest -->
 
 		<<case Bailey>>
-			Bailey
+			베일리는
 			<<if isRentDue() or isBaileyLookingForPlayer()>>
-				is <span class="red">ready to collect</span>.
+				<span class="red">거둬 갈 준비가 되어 있다</span>.
 			<<elseif $NPCName[_i].love gte 50>>
 				당신이 <span class="blue">스스로를 건사할 수 있다</span>고 생각한다.
 			<<elseif $NPCName[_i].love gte 25>>

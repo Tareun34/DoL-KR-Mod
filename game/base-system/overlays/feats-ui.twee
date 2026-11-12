@@ -12,9 +12,9 @@ Degrees of Lewdity를 플레이하며 다양한 임무를 완수함으로써 <sp
 	<br><br>
 
 	<<if $feats.locked>>
-		<span class="red">You can't earn feats as you have enabled cheats at some point.</span>
+		<span class="red">플레이 도중 치트를 사용한 기록이 있어 업적을 달성할 수 없습니다.</span>
 	<<elseif $debug>>
-		<span class="red">Feats are disabled during debug mode.</span>
+		<span class="red">디버그 모드 중에는 업적을 달성할 수 없습니다.</span>
 	<<elseif $replayScene isnot undefined>>
 		<span class="red">리플레이 모드 중에는 업적을 달성할 수 없습니다.</span>
 	<<elseif $feats.soft or $feats.pregnancyLocked>>
@@ -55,11 +55,11 @@ Degrees of Lewdity를 플레이하며 다양한 임무를 완수함으로써 <sp
 	</select>
 	<br>
 	<<set $feats.shownew to true>>
-	<label><input type="checkbox" checked name="showNew" onchange="V.feats.shownew = this.checked; Wikifier.wikifyEval('<<replace #featsList>><<featsList>><</replace>>')" /> Show New</label> |
+	<label><input type="checkbox" checked name="showNew" onchange="V.feats.shownew = this.checked; Wikifier.wikifyEval('<<replace #featsList>><<featsList>><</replace>>')" /> 신규 표시</label> |
 	<<set $feats.showold to true>>
-	<label><input type="checkbox" checked name="showOld" onchange="V.feats.showold = this.checked; Wikifier.wikifyEval('<<replace #featsList>><<featsList>><</replace>>')" /> Show Old</label> |
+	<label><input type="checkbox" checked name="showOld" onchange="V.feats.showold = this.checked; Wikifier.wikifyEval('<<replace #featsList>><<featsList>><</replace>>')" /> 기존 표시</label> |
 	<<set $feats.showmissing to true>>
-	<label><input type="checkbox" checked name="showMissing" onchange="V.feats.showmissing = this.checked; Wikifier.wikifyEval('<<replace #featsList>><<featsList>><</replace>>')" /> Show Missing</label>
+	<label><input type="checkbox" checked name="showMissing" onchange="V.feats.showmissing = this.checked; Wikifier.wikifyEval('<<replace #featsList>><<featsList>><</replace>>')" /> 미달성 표시</label>
 	<br><br>
 	<div id="featsList">
 		<<featsList>>

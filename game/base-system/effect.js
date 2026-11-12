@@ -358,8 +358,8 @@ function effects() {
 	// eslint-disable-next-line no-undef
 	if (isPregnancyEnding()) {
 		sWikifier(
-			`<span class="red">Your waters have broken.</span> ${
-				["asylum", "prison", "hospital", "mines"].includes(V.location) ? "You need to find help, fast!" : "You need to head to the hospital, fast!"
+			`<span class="red">양수가 터졌다.</span> ${
+				["asylum", "prison", "hospital", "mines"].includes(V.location) ? "빨리 도움을 찾아야 한다!" : "빨리 병원으로 가야 한다!"
 			} <<ggstress>>`
 		);
 		br();
@@ -505,7 +505,7 @@ function effects() {
 						break;
 					}
 					default:
-						sWikifier(`<span class="purple">Your Hypnotic ${trait === "insight" && V.awareness >= 300 ? "Ignorance" : trait.toUpperFirst()} has faded.</span>`);
+						sWikifier(`<span class="purple">최면 효과 ${trait === "insight" && V.awareness >= 300 ? "무지" : trait.toUpperFirst()}【이가】 사라졌다.</span>`);
 						delete V.hypnosis_traits[trait];
 						delete V.hypnosisTimers[trait];
 						break;
@@ -973,7 +973,7 @@ function effects() {
 					break;
 				case "withdrawals":
 					sWikifier(
-						'<span class="red">Your body craves nectar and has begun to suffer from withdrawals.</span> <<stress 12>><<ggstress>><<trauma 12>><<ggtrauma>><<physique -4>><<lphysique>>'
+						'<span class="red">몸이 넥타르를 갈망하며 금단 증상에 시달리기 시작했다.</span> <<stress 12>><<ggstress>><<trauma 12>><<ggtrauma>><<physique -4>><<lphysique>>'
 					);
 					br();
 					break;

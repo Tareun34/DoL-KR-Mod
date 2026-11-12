@@ -354,7 +354,7 @@
 			<<run _increaseAttractive.push(`매력적인 신발 ${"+".repeat(Math.floor($worn.feet.reveal / 200))}`)>>
 		<</if>>
 		<<if $rentThug and isBaileyLookingForPlayer()>>
-			<<run _increaseAllure.push(`Hunted by Bailey's thugs${$rentThug.anger gte 1 ? " " + "+".repeat($rentThug.anger) : ""}`)>>
+			<<run _increaseAllure.push(`베일리의 부하들에게 쫓기는 중${$rentThug.anger gte 1 ? " " + "+".repeat($rentThug.anger) : ""}`)>>
 		<</if>>
 		<<if Weather.dayState is "night">>
 			<<run _increaseAllure.push("밤")>>
@@ -394,13 +394,13 @@
 			{ threshold: 30, class: "pink", label: "무명" }
 		]>>
 		<<set _neg = [
-			{ type: "sex", name: "slut" },
-			{ type: "prostitution", name: "whore" },
-			{ type: "rape", name: "fucktoy" },
-			{ type: "bestiality", name: isBestialityOnForAnyCreature() ? "bitch" : "monster fucker" },
-			{ type: "exhibitionism", name: "flaunter" },
-			{ type: "pregnancy", name: $fame.pregnancy gte 1000 ? "broodmother" : ($fame.pregnancy gte 400 ? "breeder" : "mother") },
-			{ type: "impreg", name: $fame.impreg gte 1000 ? "allfather" : ($fame.impreg gte 400 ? "sire" : "inseminator") },
+			{ type: "sex", name: "걸레" },
+			{ type: "prostitution", name: "창녀" },
+			{ type: "rape", name: "육변기" },
+			{ type: "bestiality", name: isBestialityOnForAnyCreature() ? "암캐" : "괴물박이" },
+			{ type: "exhibitionism", name: "노출광" },
+			{ type: "pregnancy", name: $fame.pregnancy gte 1000 ? "번식모" : ($fame.pregnancy gte 400 ? "번식용" : "어미") },
+			{ type: "impreg", name: $fame.impreg gte 1000 ? "만인의 아버지" : ($fame.impreg gte 400 ? "씨내리" : "수정자") },
 		]>>
 		<<set _pos = [
 			{ type: "scrap", name: "싸움꾼" },
@@ -671,14 +671,14 @@
 
 		</div>
 		<div id="visualsFreckles" class="settingsToggleItemWide">
-			<span class="gold bold">Freckles:</span>
+			<span class="gold bold">주근깨:</span>
 			<br>
-			Face: <label>Disabled <<radiobutton "$player.skin.faceFreckles" false autocheck>></label>
-			| <label>Enabled <<radiobutton "$player.skin.faceFreckles" true autocheck>></label>
+			얼굴: <label>없음 <<radiobutton "$player.skin.faceFreckles" false autocheck>></label>
+			| <label>있음 <<radiobutton "$player.skin.faceFreckles" true autocheck>></label>
 			<br>
-			Body: <label>Disabled <<radiobutton "$player.skin.bodyFreckles" "none" autocheck>></label>
-			| <label>Upper body <<radiobutton "$player.skin.bodyFreckles" "upper" autocheck>></label>
-			| <label>Full body <<radiobutton "$player.skin.bodyFreckles" "full" autocheck>></label>
+			몸: <label>없음 <<radiobutton "$player.skin.bodyFreckles" "none" autocheck>></label>
+			| <label>상반신 <<radiobutton "$player.skin.bodyFreckles" "upper" autocheck>></label>
+			| <label>전신 <<radiobutton "$player.skin.bodyFreckles" "full" autocheck>></label>
 		</div>
 		<<run $(() => {
 			$('#visualsFreckles input[type="radio"]').on("change", () => {
@@ -788,7 +788,7 @@
 		<</if>>
 
 		<div id="visualsFaceVariants" class="settingsToggleItem">
-			<span class="gold bold">Demeanour:</span>
+			<span class="gold bold">인상:</span>
 			<br>
 			<div id="visualsFaceVariantRadios">
 				<<faceVariantOptions>>
@@ -796,12 +796,12 @@
 		</div>
 
 		<div class="settingsToggleItem">
-			<span class="gold bold">Default expression:</span>
+			<span class="gold bold">기본 표정:</span>
 			<br>
-			Your default facial expression is:
+			당신의 기본 표정:
 			<<listbox "$defaultSidebarMouth" autoselect>>
-				<<option "Smile" "smile">>
-				<<option "Neutral" "neutral">>
+				<<option "미소" "smile">>
+				<<option "무표정" "neutral">>
 			<</listbox>>
 			<<run $(() => {
 				$("#listbox-defaultsidebarmouth").on("change", () => {
@@ -1204,7 +1204,7 @@
 			<</if>>
 		<</for>>
 		<<if $debug>>
-			Write
+			적을 내용:
 			<<listbox "_bodyWritingDebugSelected">>
 				<<optionsfrom _listBoxOptions>>
 			<</listbox>>
