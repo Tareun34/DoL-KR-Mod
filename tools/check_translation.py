@@ -52,15 +52,17 @@ def _link_target(inner):
     if "][" in inner:
         inner, setter = inner.split("][", 1)
         setter = "][" + setter
+    label = ""
     if "->" in inner:
-        target = inner.split("->", 1)[1]
+        label, target = inner.split("->", 1)
     elif "<-" in inner:
-        target = inner.split("<-", 1)[0]
+        target, label = inner.split("<-", 1)
     elif "|" in inner:
-        target = inner.rsplit("|", 1)[1]
+        label, target = inner.rsplit("|", 1)
     else:
         target = inner
-    return "[[" + target.strip() + setter + "]]"
+    macros = "".join("<<" + _normalise_macro_body(m) + ">>" for m in re.findall(r"<<(.*?)>>", label, re.S))
+    return "[[" + target.strip() + setter + "]]" + macros
 
 
 def _macro_end(text, i):
@@ -68,6 +70,7 @@ def _macro_end(text, i):
     n = len(text)
     j = i + 2
     quote = None
+    depth = 0
     while j < n:
         c = text[j]
         if quote:
@@ -85,8 +88,14 @@ def _macro_end(text, i):
             if c in "\"'`":
                 quote = c
                 j += 1
+            elif text.startswith("<<", j):
+                depth += 1
+                j += 2
             elif text.startswith(">>", j):
-                return j
+                if depth == 0:
+                    return j
+                depth -= 1
+                j += 2
             else:
                 j += 1
     return -1

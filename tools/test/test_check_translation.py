@@ -53,6 +53,12 @@ class SkeletonTweeTests(unittest.TestCase):
     def test_tooltip_attribute_is_prose(self):
         self.assertEqual(ct.skeleton_twee('<span tooltip="Unknown seed">?</span>', TM), ct.skeleton_twee('<span tooltip="알 수 없는 씨앗">?</span>', TM))
 
+    def test_nested_macro_inside_link_label(self):
+        base = '<<link [[Next (<<print getTimeString(_timeCalc)>>)|Bed]]>><<endevent>><</link>>'
+        self.assertEqual(ct.skeleton_twee(base, TM), ct.skeleton_twee('<<link [[다음 (<<print getTimeString(_timeCalc)>>)|Bed]]>><<endevent>><</link>>', TM))
+        self.assertNotEqual(ct.skeleton_twee(base, TM), ct.skeleton_twee('<<link [[다음|Bed]]>><<endevent>><</link>>', TM))
+        self.assertNotEqual(ct.skeleton_twee(base, TM), ct.skeleton_twee('<<link [[다음 (<<print getTimeString(_timeCalc)>>)|Bed2]]>><<endevent>><</link>>', TM))
+
     def test_variables_in_prose_are_kept(self):
         self.assertNotEqual(ct.skeleton_twee('You have $money coins', TM), ct.skeleton_twee('동전이 있다', TM))
         self.assertEqual(ct.skeleton_twee('You have $money coins', TM), ct.skeleton_twee('$money개의 동전이 있다', TM))
