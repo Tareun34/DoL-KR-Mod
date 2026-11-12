@@ -57,7 +57,8 @@
 | `[[Leave\|Street]]` → `[[나간다\|Street]]` | `<<goto "Street">>` |
 | `<span class="gold">Money:</span>` → `돈:` | `class="gold"` |
 | `<<= $x ? \`"Fuck!" <<he>> hisses\` : \`…\`>>` 안의 글자 | 그 안의 `<<he>>`, `$x` |
-| `title="Hover text"` | `id`, `data-*`, `style` |
+| `title="Hover text"`, `<input type="button" value="Save">`의 value | `id`, `data-*`, `style`, `<option value>`, `type="file"`의 value |
+| | `@data-tip="_x + ' skin tone'"`처럼 속성 안에서 코드와 이어 붙는 영어: 붙는 산문도 영어로 둔다 |
 | `displayName: "Percentage of men"` (JS) | `name: "naked"`, `type: "m"`, 키 이름 |
 
 JS 파일(`.js`)은 사용자에게 보이는 문자열(`displayName`, `description`, `name_lower`, 메시지)만 번역합니다. 의상 파일의 `name:`은 게임 로직의 키라서 번역하지 않습니다. 음식 항목에는 옛 번역처럼 `counter: "개"`(단위: 개·병·송이·잔 등) 줄을 **추가**할 수 있습니다. 그 밖의 속성 추가·코드 변경은 금지입니다.

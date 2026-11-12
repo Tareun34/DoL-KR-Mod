@@ -51,7 +51,7 @@ game/special-fishing/fishing-text.twee:1532:【에게】
 
 | 묶음 | 단계 | 파일 | 산문 줄 | 상태 | 메모 |
 |---|---|---|---|---|---|
-| P1-01 | 1 | game/base-system/settings.twee | 436 | 대기 |  |
+| P1-01 | 1 | game/base-system/settings.twee | 436 | 완료 | 남은 영어 61줄(코드·주석). skinToneRange 핸들 라벨은 data-tip 결합 때문에 영어 유지. 표기: monster people→수인, NNPC→네임드 NPC |
 | P1-02 | 1 | game/base-system/widgets.twee | 265 | 대기 |  |
 | P1-03 | 1 | game/base-system/overlays/social.twee<br>game/base-system/text.js | 430 | 대기 |  |
 | P1-04 | 1 | game/base-system/overlays/journal.twee<br>game/base-system/tips.twee<br>game/base-system/overlays/traits.twee<br>game/base-system/tending.twee | 419 | 대기 |  |
