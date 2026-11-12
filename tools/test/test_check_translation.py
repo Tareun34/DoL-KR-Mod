@@ -50,6 +50,9 @@ class SkeletonTweeTests(unittest.TestCase):
         self.assertNotEqual(ct.skeleton_twee('<option value="m">Male</option>', TM), ct.skeleton_twee('<option value="남">남성</option>', TM))
         self.assertNotEqual(ct.skeleton_twee('<input type="text" value="m">', TM), ct.skeleton_twee('<input type="text" value="남">', TM))
 
+    def test_tooltip_attribute_is_prose(self):
+        self.assertEqual(ct.skeleton_twee('<span tooltip="Unknown seed">?</span>', TM), ct.skeleton_twee('<span tooltip="알 수 없는 씨앗">?</span>', TM))
+
     def test_variables_in_prose_are_kept(self):
         self.assertNotEqual(ct.skeleton_twee('You have $money coins', TM), ct.skeleton_twee('동전이 있다', TM))
         self.assertEqual(ct.skeleton_twee('You have $money coins', TM), ct.skeleton_twee('$money개의 동전이 있다', TM))

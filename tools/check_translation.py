@@ -29,7 +29,7 @@ JOSA_RE = re.compile(r"【[^】]*】")
 VAR_RE = re.compile(r"(?<![A-Za-z0-9_$])[$_][A-Za-z_][A-Za-z0-9_]*")
 TAG_RE = re.compile(r"<(/?)([A-Za-z][\w-]*)((?:\s[^<>]*)?)(/?)>", re.S)
 ATTR_RE = re.compile(r"([A-Za-z_@:][\w:.-]*)\s*=\s*(\"[^\"]*\"|'[^']*'|[^\s\"'<>]+)")
-TRANSLATABLE_ATTRS = {"title", "alt", "placeholder", "aria-label", "data-tooltip"}
+TRANSLATABLE_ATTRS = {"title", "alt", "placeholder", "aria-label", "data-tooltip", "tooltip"}
 LINK_RE = re.compile(r"\[\[(.*?)\]\]", re.S)
 MACRO_NAME_RE = re.compile(r"^\s*(/?)([A-Za-z_=][\w]*)")
 WS_RE = re.compile(r"\s+")
