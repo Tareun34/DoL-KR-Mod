@@ -65,11 +65,11 @@ game/special-fishing/fishing-text.twee:1532:【에게】
 | P1-05 | 1 | game/base-system/pregnancy/events.twee<br>game/base-system/mirror.twee<br>game/base-system/overlays/statistics.twee<br>game/base-system/overlays/options.twee<br>game/base-system/overlays/cheats.twee<br>game/base-system/named-npcs.twee<br>game/base-system/kitchen.twee<br>game/base-system/overlays/characteristics.twee<br>game/base-system/bodywriting.twee<br>game/base-system/overlays/feats-ui.twee<br>game/base-system/pregnancy/children-events.twee<br>game/base-system/effect.js<br>game/base-system/orgasm.twee<br>game/base-system/pregnancy/containers.twee<br>game/base-system/weather/passout-scenes.twee<br>game/base-system/overlays/saves-export-import.twee<br>game/base-system/questmarkers.js<br>game/base-system/pregnancy/pregnancy.twee | 236 | 완료 | 18파일 ok. bodywriting 1005: 옛 번역의 KR 헬퍼 호출(getPenisDescKr)은 코드 변경이라 미적용 → 코드 측 보정 후보. 표기: Genitalia Fame→생식기 소문, Pickaxes→곡괭이 |
 | P1-06 | 1 | game/base-combat/speech/speech-whitney.twee | 2247 | 완료 | 513줄 번역, 남은 영어 0(코드 2줄). 첫 에이전트는 내용상 거절, 맥락 명시 후 재시도 성공. either(\"slut\",…) 류는 관례대로 한글 |
 | P1-07 | 1 | game/base-combat/ejaculation/ejaculation.twee | 2190 | 완료 | 808줄 번역, 남은 영어 0(코드·주석 89줄). strap-on→페니스 밴드. $NPCList[].penisdesc/breastsdesc 영어 출력 → 코드 측 보정 후보 |
-| P1-08 | 1 | game/base-combat/speech/speech-avery.twee | 1950 | 진행 |  |
+| P1-08 | 1 | game/base-combat/speech/speech-avery.twee | 1950 | 완료 | 591줄 번역, 남은 영어 0(코드 11줄). 2650행 깨진 span 태그는 원문 버그, 그대로 둠 |
 | P1-09 | 1 | game/base-combat/speech/speech-sydney.twee | 1230 | 건너뜀 | 에이전트가 내용(학교 배경 인물의 성적 장면)을 이유로 거절. 영어 309줄 그대로. 1차 끝에 재시도 |
 | P1-10 | 1 | game/base-combat/speech/speech-gwylan.twee | 810 | 완료 | 215줄 번역, 남은 영어 0(코드 6줄). rut/heat→러트/발정기 |
-| P1-11 | 1 | game/base-combat/ejaculation/ejaculation-gloryhole.twee | 691 | 진행 |  |
-| P1-12 | 1 | game/base-combat/ejaculation/ejaculation-wall.twee | 588 | 진행 |  |
+| P1-11 | 1 | game/base-combat/ejaculation/ejaculation-gloryhole.twee | 691 | 완료 | 165줄 번역, 남은 영어 0(헤더·주석 3줄) |
+| P1-12 | 1 | game/base-combat/ejaculation/ejaculation-wall.twee | 588 | 완료 | 126줄 번역, 남은 영어 0(헤더 1줄) |
 | P1-13 | 1 | game/base-combat/speech/speech-robin.twee | 513 | 대기 |  |
 | P1-14 | 1 | game/base-combat/speech/speech-bailey.twee | 363 | 대기 |  |
 | P1-15 | 1 | game/base-combat/man-combat.twee | 356 | 대기 |  |
