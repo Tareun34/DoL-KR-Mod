@@ -3,7 +3,7 @@
 	<<npc Bailey>><<person1>>
 	<<set $_robinWasInRoom to _args[0]>><<set $baileyRefusedToPay to 0>>
 
-	"Time to pay up," <<he>> says.
+	"돈 낼 시간이야," <<he>>【이가】 말한다.
 	<<if $baileydefeatedchain gte 3 or ($robinpaid is 1 and $bus is "home" and $robinfirstrentfight isnot 1 and ($rentTime lte -14 or $rentThug?.anger gte 4))>>
 		<<generateRole 1 0 "thug">><<generateRole 2 0 "thug">>
 		험상궂게 생긴 <<person2>><<person>> 하나와 <<person3>><<person>> 하나가 <<person1>><<him>> 옆에 서 있다.
@@ -37,7 +37,7 @@
 	<</if>>
 	<<babyRent>>
 	<<if $money gte $rentMoney + ($babyRent or 0)>>
-		<<link [[Pay|Rent Pay]]>><<set $phase to $_robinWasInRoom>><</link>>
+		<<link [[돈을 낸다|Rent Pay]]>><<set $phase to $_robinWasInRoom>><</link>>
 		<br>
 		<<link [[거절한다|Rent Refuse]]>><<def 1>><</link>>
 		<br>
@@ -52,7 +52,7 @@
 			<</if>>
 		<</if>>
 		<<if isPregnancyEnding()>>
-			<<link [[Tell <<him>> your waters have broken|Rent Pregnant]]>><<set $rentPregInterruption to "told">><</link>>
+			<<link [[<<him>>에게 양수가 터졌다고 말한다|Rent Pregnant]]>><<set $rentPregInterruption to "told">><</link>>
 			<br>
 		<</if>>
 	<<else>>
@@ -74,24 +74,24 @@
 <<widget "thugrentdue">>
 	<<set $phase2 to "thug">><<set $baileyRefusedToPay to 0>>
 	<<npc Bailey>><<loadNPC 1 "rent_thug">><<person1>>
-	"I see you've finally found your way back. Though it seems you needed some assistance," <<he>> sneers. 
+	"드디어 돌아올 길을 찾았나 보군. 도움이 좀 필요했던 모양이지만," <<he>>【이가】 비웃는다. 
 	<<if $baileydefeatedchain gte 3 or $rentTime lte -7 or $rentThug.anger gte 4>>
 		<<generate3>><<generate4>>
-		<<He>> is flanked on both sides by a <<person3>><<person>> and <<person4>><<person>>.
+		<<He>>【은는】 양옆에 <<person3>><<person>>【와과】 <<person4>><<person>>【을를】 거느리고 있다.
 	<<elseif $baileydefeatedchain gte 1 or $rentTime lte -3 or $rentThug.anger gte 2>>
 		<<generate3>>
-		With <<him>> is a <<person3>><<person>>.
+		<<him>> 곁에는 <<person3>><<person>> 하나가 있다.
 	<</if>>
 	<br><br>
 	<<if $worn.face.type.includes("gag")>>
-		"Looks like you had some difficulties returning," Bailey says while looking at your gag. "A good tool to keep a brat in check," <<person1>><<he>> snidely remarks, "but it's not needed anymore." <<He>> snaps <<his>> fingers, and the <<person2>><<person>> removes it from your mouth.<<person1>>
+		"돌아오는 데 꽤 애를 먹은 모양이군," 베일리가 당신의 재갈을 보며 말한다. "버릇없는 녀석을 얌전하게 만드는 데는 좋은 도구지," <<person1>><<he>>【이가】 비꼬듯 말한다. "하지만 이제는 필요 없어." <<He>>【이가】 손가락을 튕기자, <<person2>><<person>>【이가】 당신의 입에서 재갈을 빼낸다.<<person1>>
 		<<set $worn.face.type.push("broken")>><<faceruined>>
 	<<else>>
-		<<person1>><<He>> looks at you coldly. "You better not keep me waiting next time, unless you want another rough escort back.
+		<<person1>><<He>>【은는】 당신을 차갑게 바라본다. "다음엔 날 기다리게 하지 않는 게 좋을 거다. 또 거칠게 끌려오고 싶지 않다면 말이야."
 	<</if>>
 	<br><br>
 
-	"Now then, you've had more than enough time to scrounge up what you owe," Bailey says. "So pay up."
+	"자, 빚진 돈을 긁어모을 시간은 차고 넘치게 줬지," 베일리가 말한다. "그러니 내놔."
 	<br><br>
 
 	<<if $babyIntros and $babyIntros.Bailey and $babyIntros.Bailey.length gt 0>>
@@ -100,36 +100,36 @@
 	<</if>>
 	<<babyRent>>
 	<<if $money gte $rentMoney + ($babyRent or 0)>>
-		<<link [[Pay|Rent Pay]]>><</link>>
+		<<link [[돈을 낸다|Rent Pay]]>><</link>>
 		<br>
-		<<link [[Refuse|Rent Refuse]]>><<def 1>><</link>>
+		<<link [[거절한다|Rent Refuse]]>><<def 1>><</link>>
 		<br>
 		<<if $baileyseduced isnot 1 and !isPregnancyEnding()>>
 			<<if hasSexStat("promiscuity", 2)>>
-				<<link [[Seduce|Rent Seduce]]>><<set $phase to ($_rentSeduce ? 1 : 0)>><<trauma 3>><</link>><<promiscuous2>><<gtrauma>>
+				<<link [[유혹한다|Rent Seduce]]>><<set $phase to ($_rentSeduce ? 1 : 0)>><<trauma 3>><</link>><<promiscuous2>><<gtrauma>>
 				<br>
 			<<elseif $uncomfortable.prostituting is false>>
 				<<set _desperateaction to 1>>
-				<<link [[Seduce|Rent Seduce]]>><<set $phase to ($_rentSeduce ? 1 : 0)>><<trauma 12>><<set $desperateaction to _desperateaction>><</link>><<promiscuous2>><<ggtrauma>>
+				<<link [[유혹한다|Rent Seduce]]>><<set $phase to ($_rentSeduce ? 1 : 0)>><<trauma 12>><<set $desperateaction to _desperateaction>><</link>><<promiscuous2>><<ggtrauma>>
 				<br>
 			<</if>>
 		<</if>>
 		<<if isPregnancyEnding()>>
-			<<link [[Tell <<him>> your waters have broken|Rent Pregnant]]>><<set $rentPregInterruption to "told">><</link>>
+			<<link [[<<him>>에게 양수가 터졌다고 말한다|Rent Pregnant]]>><<set $rentPregInterruption to "told">><</link>>
 			<br>
 		<</if>>
 	<<else>>
 		<<if isPregnancyEnding()>><<set $rentPregInterruption to "broke">><</if>>
 		<<if $speech_attitude is "bratty">>
-			You stare <<him>> down defiantly. "Well, guess what? I still don't have enough money for you. Deal with it," you scoff.
+			당신은 반항적으로 <<him>>【을를】 노려본다. "그래서 뭐? 아직도 너한테 줄 돈은 없어. 알아서 해," 당신이 비웃는다.
 		<<elseif $speech_attitude is "meek">>
-			You know you don't have enough money, but admitting that in this situation is too much for you. You look down at your feet shamefully.
+			돈이 모자란다는 건 알지만, 이 상황에서 그걸 인정하기란 너무 벅차다. 당신은 부끄러운 듯 발끝만 내려다본다.
 		<<else>>
-			"I... couldn't make enough money," you cautiously admit, afraid of how <<he>> will react.
+			"돈을... 충분히 못 벌었어요," 당신은 <<he>>【이가】 어떻게 반응할지 두려워하며 조심스럽게 털어놓는다.
 		<</if>>
 		<br><br>
 
-		For a moment, Bailey stares at you with cold indifference before speaking again.
+		베일리는 잠시 차갑고 무심한 눈으로 당신을 바라보다가 다시 입을 연다.
 		<<if $phase is "willing">>
 			<<rentnopay true>>
 		<<else>>
@@ -195,7 +195,7 @@
 		<<link [[거절한다|Rent Refuse Robin]]>><<def 1>><</link>>
 		<br>
 		<<if isPregnancyEnding()>>
-			<<link [[Tell <<him>> your waters have broken|Rent Pregnant]]>><<set $rentPregInterruption to "told">><</link>>
+			<<link [[<<him>>에게 양수가 터졌다고 말한다|Rent Pregnant]]>><<set $rentPregInterruption to "told">><</link>>
 			<br>
 		<</if>>
 	<<else>>
@@ -222,13 +222,13 @@
 		<<if isPregnancyEnding()>>
 			<<set $phase to 1>><<set $rentPregInterruption to "broke">><<include "Rent Pregnant">>
 		<<else>>
-			<<link [[Submit|Rent Intro]]>><<endevent>><<set $phase to 1>><</link>>
+			<<link [[순응한다|Rent Intro]]>><<endevent>><<set $phase to 1>><</link>>
 			<br>
 			<<if $bus is "hospital">>
-				<<link [[Fight|Rent Hospital Fight Robin]]>><<set $fightstart to 1>><</link>>
+				<<link [[싸운다|Rent Hospital Fight Robin]]>><<set $fightstart to 1>><</link>>
 				<br>
 			<<else>>
-				<<link [[Fight|Rent Robin Fight]]>><<set $fightstart to 1>><</link>>
+				<<link [[싸운다|Rent Robin Fight]]>><<set $fightstart to 1>><</link>>
 				<br>
 			<</if>>
 		<</if>>
@@ -243,47 +243,47 @@
 
 	<<set $phase2 to "thug">>
 	<<npc Bailey>><<loadNPC 1 "rent_thug">><<person1>>
-	"I see you've finally found your way back. Though it seems you needed some assistance," <<he>> sneers. 
+	"드디어 돌아올 길을 찾았나 보군. 도움이 좀 필요했던 모양이지만," <<he>>【이가】 비웃는다. 
 	<<if $baileydefeatedchain gte 3 or $rentThug.anger gte 4>>
 		<<generateRole 2 0 "thug">><<generateRole 3 0 "thug">><<generateRole 4 0 "thug">>
-		A rough-looking <<person3>><<person>> and <<person4>><<person>> stand next to <<person1>><<him>>.
+		험상궂게 생긴 <<person3>><<person>> 하나와 <<person4>><<person>> 하나가 <<person1>><<him>> 옆에 서 있다.
 		<<if $_robinInRoom>>
-			Behind them, a third <<person5>><<person>> walks in with a length of rope and rushes Robin. Robin tries to resist, but it's no use.
+			그들 뒤로, 세 번째 <<person5>><<person>>【이가】 밧줄 한 줄을 들고 들어와 로빈에게 달려든다. 로빈은 저항하려 하지만 소용없다.
 		<<else>>
-			Behind them, a third <<person5>><<person>> stands, bringing Robin in with <<him>>. Robin has restraints on <<nnpc_his "Robin">> hands.
+			그들 뒤로 세 번째 <<person5>><<person>>【이가】 서서 로빈을 데려온다. 로빈은 <<nnpc_his "Robin">> 두 손에 구속구가 채워져 있다.
 		<</if>>
-		The <<person3>><<person>> cracks <<his>> knuckles, and the <<person4>><<person>> grins darkly.
+		<<person3>><<person>>【은는】 손가락 마디를 우두둑 꺾고, <<person4>><<person>>【은는】 음침하게 씩 웃는다.
 	<<elseif $baileydefeatedchain gte 1 or $rentThug.anger gte 2>>
 		<<generateRole 2 0 "thug">><<generateRole 3 0 "thug">>
-		A rough-looking <<person3>><<person>> and <<person4>><<person>> stand next to <<person1>><<him>>.
+		험상궂게 생긴 <<person3>><<person>> 하나와 <<person4>><<person>> 하나가 <<person1>><<him>> 옆에 서 있다.
 		<<if $_robinInRoom>>
-			The <<person4>><<person>> walks in with a length of rope and rushes Robin. Robin tries to resist, but it's no use.
-			The <<person3>><<person>> cracks <<his>> knuckles.
+			<<person4>><<person>>【이가】 밧줄 한 줄을 들고 들어와 로빈에게 달려든다. 로빈은 저항하려 하지만 소용없다.
+			<<person3>><<person>>【은는】 손가락 마디를 우두둑 꺾는다.
 		<<else>>
-			The <<person3>><<person>> cracks <<his>> knuckles, and the <<person4>><<person>> grins darkly, bringing Robin in with <<him>>.
-			Robin has restraints on <<nnpc_his "Robin">> hands.
+			<<person3>><<person>>【은는】 손가락 마디를 우두둑 꺾고, <<person4>><<person>>【은는】 로빈을 데려오며 음침하게 씩 웃는다.
+			로빈은 <<nnpc_his "Robin">> 두 손에 구속구가 채워져 있다.
 		<</if>>
 	<<else>>
 		<<generateRole 2 0 "thug">>
-		A rough-looking <<person3>><<person>> stands next to <<person1>><<him>>.
+		험상궂게 생긴 <<person3>><<person>> 하나가 <<person1>><<him>> 옆에 서 있다.
 		<<if $_robinInRoom>>
-			The <<person3>><<person>> walks in with a length of rope and rushes Robin. Robin tries to resist, but it's no use.
+			<<person3>><<person>>【이가】 밧줄 한 줄을 들고 들어와 로빈에게 달려든다. 로빈은 저항하려 하지만 소용없다.
 		<<else>>
-			The <<person3>><<person>> brings Robin in with <<him>>. Robin has restraints on <<nnpc_his "Robin">> hands.
+			<<person3>><<person>>【이가】 로빈을 데려온다. 로빈은 <<nnpc_his "Robin">> 두 손에 구속구가 채워져 있다.
 		<</if>>
 	<</if>>
 	<br><br>
 	<<person1>>
 	<<if $worn.face.type.includes("gag")>>
-		"Looks like you had some difficulties returning," Bailey says while looking at your gag. "A good tool to keep a brat in check," <<he>> snidely remarks, "but it's not needed anymore."
-		<<He>> snaps <<his>> fingers, and the <<person2>><<person>> removes it from your mouth.
+		"돌아오는 데 꽤 애를 먹은 모양이군," 베일리가 당신의 재갈을 보며 말한다. "버릇없는 녀석을 얌전하게 만드는 데는 좋은 도구지," <<he>>【이가】 비꼬듯 말한다. "하지만 이제는 필요 없어."
+		<<He>>【이가】 손가락을 튕기자, <<person2>><<person>>【이가】 당신의 입에서 재갈을 빼낸다.
 		<<set $worn.face.type.push("broken")>><<faceruined>><<person1>>
 	<<else>>
-		<<He>> looks at you coldly. "You better not keep me waiting next time, unless you want another rough escort back.
+		<<He>>【은는】 당신을 차갑게 바라본다. "다음엔 날 기다리게 하지 않는 게 좋을 거다. 또 거칠게 끌려오고 싶지 않다면 말이야."
 	<</if>>
 	<br><br>
 
-	"Now then, you've had more than enough time to scrounge up what you owe," Bailey says. "So pay up."
+	"자, 빚진 돈을 긁어모을 시간은 차고 넘치게 줬지," 베일리가 말한다. "그러니 내놔."
 	<br><br>
 
 	<<if $baileyOfficeSeduced is 1>>
@@ -295,38 +295,38 @@
 	<</if>>
 	<<babyRent>>
 	<<if $money gte $rentMoney + ($babyRent or 0)>>
-		<<link [[Pay|Rent Pay Robin]]>><</link>>
+		<<link [[돈을 낸다|Rent Pay Robin]]>><</link>>
 		<br>
-		<<link [[Refuse|Rent Refuse Robin]]>><<def 1>><</link>>
+		<<link [[거절한다|Rent Refuse Robin]]>><<def 1>><</link>>
 		<br>
 		<<if isPregnancyEnding()>>
-			<<link [[Tell <<him>> your waters have broken|Rent Pregnant]]>><<set $rentPregInterruption to "told">><</link>>
+			<<link [[<<him>>에게 양수가 터졌다고 말한다|Rent Pregnant]]>><<set $rentPregInterruption to "told">><</link>>
 			<br>
 		<</if>>
 	<<else>>
 		<<set $baileypaychain to 0>>
 		<<if $speech_attitude is "bratty">>
-			You stare <<him>> down defiantly. "Well, guess what? I still don't have enough money for you. Do what you want with me, but leave Robin out of this."
+			당신은 반항적으로 <<him>>【을를】 노려본다. "그래서 뭐? 아직도 너한테 줄 돈은 없어. 나한테는 마음대로 해도 좋지만, 로빈은 이 일에 끌어들이지 마."
 		<<elseif $speech_attitude is "meek">>
-			You know you don't have enough money, but admitting that in this situation is too much for you. You look at Robin and shake your head apologetically.
+			돈이 모자란다는 건 알지만, 이 상황에서 그걸 인정하기란 너무 벅차다. 당신은 로빈을 바라보며 미안한 듯 고개를 젓는다.
 		<<else>>
-			"I... couldn't make enough money," you shamefully admit. "Punish me however you want, just don't hurt Robin."
+			"돈을... 충분히 못 벌었어요," 당신은 부끄러워하며 털어놓는다. "벌은 원하는 대로 주되, 로빈은 다치게 하지 마세요."
 		<</if>>
 		<br><br>
 
-		For a moment, Bailey stares at you with cold indifference before speaking again.
+		베일리는 잠시 차갑고 무심한 눈으로 당신을 바라보다가 다시 입을 연다.
 		<br><br>
 
-		"Oh well," <<he>> says, now smiling. "I've already made arrangements. I don't know what they intend for you two, and frankly I don't care."
-		<<He>> produces a hood and length of rope. "Hold still."
+		"뭐, 할 수 없지," <<he>>【이가】 이제 미소를 지으며 말한다. "이미 조치를 취해 뒀거든. 그들이 너희 둘에게 뭘 하려는지 모르겠고, 솔직히 관심도 없어."
+		<<He>>【이가】 두건과 밧줄을 꺼낸다. "가만히 있어."
 		<br><br>
 
 		<<if isPregnancyEnding()>>
 			<<set $phase to 1>><<set $rentPregInterruption to "broke">><<include "Rent Pregnant">>
 		<<else>>
-			<<link [[Submit|Rent Intro]]>><<endevent>><<set $phase to 1>><</link>>
+			<<link [[순응한다|Rent Intro]]>><<endevent>><<set $phase to 1>><</link>>
 			<br>
-			<<link [[Fight|Rent Robin Fight]]>><<set $fightstart to 1>><<set $phase to 0>><</link>>
+			<<link [[싸운다|Rent Robin Fight]]>><<set $fightstart to 1>><<set $phase to 0>><</link>>
 			<br>
 		<</if>>
 	<</if>>
@@ -347,13 +347,13 @@
 		<br><br>
 
 		<<if $phase2 is "thug">>
-			On an unseen signal, the thugs advance on you.
-			You prepare to avoid them, but the <<person2>><<person>> behind you quickly grabs hold of you. You try to shake <<him>> off, but by then the <<person3>><<person>> and <<person4>><<person>> have already reached you.
-			They easily take hold of your arms and pin you in place.
+			보이지 않는 신호에, 폭력배들이 당신에게 다가온다.
+			당신은 피할 준비를 하지만, 등 뒤에 있던 <<person2>><<person>>【이가】 재빨리 당신을 붙잡는다. <<him>>【을를】 뿌리치려 하지만, 그사이 <<person3>><<person>>【와과】 <<person4>><<person>>【이가】 이미 당신 앞까지 와 있다.
+			그들은 손쉽게 당신의 양팔을 붙잡아 그 자리에 꼼짝 못 하게 만든다.
 		<<else>>
-			On an unseen signal, the thugs advance on you.
-			The <<person3>><<person>> reaches for you. You duck under <<his>> arm, but the <<person2>><<person>> grabs yours.
-			The <<person3>><<person>> grabs your other arm, and they hold you there.
+			보이지 않는 신호에, 폭력배들이 당신에게 다가온다.
+			<<person3>><<person>>【이가】 당신에게 손을 뻗는다. 당신은 <<his>> 팔 아래로 몸을 숙여 피하지만, <<person2>><<person>>【이가】 당신의 팔을 붙잡는다.
+			<<person3>><<person>>【이가】 다른 팔까지 붙잡고, 그들은 당신을 그 자리에 붙들어 둔다.
 		<</if>>
 		<br><br>
 
@@ -361,33 +361,33 @@
 	<<else>>
 		<<person1>>
 		<<if $phase2 is "thug">>
-			"Oh well," <<he>> says, now smiling.
+			"뭐, 할 수 없지," <<he>>【이가】 이제 미소를 지으며 말한다.
 		<<else>>
-			"That's okay," <<he>> says, smiling.
+			"괜찮아," <<he>>【이가】 미소 지으며 말한다.
 		<</if>>
-		"I've already made arrangements. I don't know what they intend for you, and frankly I don't care."
-		<<He>> produces a hood and length of rope. "Hold still."
+		"이미 조치를 취해 뒀거든. 저들이 너한테 뭘 할지는 모르겠지만, 솔직히 신경 안 써."
+		<<He>>【이가】 두건과 밧줄을 꺼낸다. "가만히 있어."
 		<br><br>
 
 		<<if isPregnancyEnding()>>
 			<<set $phase to 1>><<include "Rent Pregnant">>
 		<<else>>
-			<<link [[Submit|Rent Intro]]>><<endevent>><</link>>
+			<<link [[순응한다|Rent Intro]]>><<endevent>><</link>>
 			<br>
 			<<if $bus is "hospital">>
-				<<link [[Fight|Rent Hospital Fight]]>><<set $fightstart to 1>><</link>>
+				<<link [[싸운다|Rent Hospital Fight]]>><<set $fightstart to 1>><</link>>
 				<br>
 			<<else>>
-				<<link [[Fight|Rent Fight]]>><<set $fightstart to 1>><</link>>
+				<<link [[싸운다|Rent Fight]]>><<set $fightstart to 1>><</link>>
 				<br>
 			<</if>>
 			<<if $baileyseduced isnot 1 and $_seduceAllowed>>
 				<<if hasSexStat("promiscuity", 2)>>
-					<<link [[Seduce|Rent Seduce]]>><<trauma 3>><</link>><<promiscuous2>><<gtrauma>>
+					<<link [[유혹한다|Rent Seduce]]>><<trauma 3>><</link>><<promiscuous2>><<gtrauma>>
 					<br>
 				<<elseif $uncomfortable.prostituting is false>>
 					<<set _desperateaction to 1>>
-					<<link [[Seduce|Rent Seduce]]>><<trauma 12>><<set $desperateaction to _desperateaction>><</link>><<promiscuous2>><<ggtrauma>>
+					<<link [[유혹한다|Rent Seduce]]>><<trauma 12>><<set $desperateaction to _desperateaction>><</link>><<promiscuous2>><<ggtrauma>>
 					<br>
 				<</if>>
 			<</if>>
@@ -431,11 +431,11 @@
 	<<set $rentMoney to [10000,30000,50000,70000,100000,150000,200000][Math.clamp($rentStage,1,6)]>> <!-- note: clamping to 1 is intentional -->
 	<<rentmod>>
 
-	Bailey snatches the money from your hand and starts counting. "Good," <<nnpc_he "Bailey">> says, satisfied.
-	"You came through. Next week I want <<printmoney $rentMoney "pink">><<babyRentDisplay " plus " " if you don't look after your children" "pink">>.<<if $rentStage is 1>> You didn't think it would get any easier, did you?"<<else>>"<</if>>
+	베일리는 당신의 손에서 돈을 낚아채 세기 시작한다. "좋아," <<nnpc_he "Bailey">>【이가】 만족한 듯 말한다.
+	"약속대로 해왔군. 다음 주에는 <<printmoney $rentMoney "pink">><<babyRentDisplay "【와과】, 아이들을 돌보지 않을 거면 추가로 " "" "pink">>【을를】 가져와.<<if $rentStage is 1>> 점점 쉬워질 거라고 생각한 건 아니겠지?"<<else>>"<</if>>
 	<<if _args[0] is "thug">>
 		<br><br>
-		By the time <<hes>> done counting the money, the <<print $event.buffer.length gte 3 ? "thugs that were with <<him>> have" : "thug that was with <<him>> has">> already vanished.<<thuganger -5>><<lllthuganger>>
+		베일리가 돈을 다 셀 때쯤에는, <<print $event.buffer.length gte 3 ? "<<him>>【와과】 함께 있던 폭력배들은" : "<<him>>【와과】 함께 있던 폭력배는">> 이미 사라지고 없다.<<thuganger -5>><<lllthuganger>>
 	<</if>>
 	<br><br>
 
@@ -708,30 +708,30 @@
 <<rentpay $phase2>>
 
 <<if $phase2 is "thug">>
-	You're left alone in the main hall.
+	당신은 중앙 홀에 홀로 남겨진다.
 	<br><br>
 
-	<<link [[Next|Orphanage]]>><<endevent>><</link>>
+	<<link [[다음|Orphanage]]>><<endevent>><</link>>
 <<else>>
 	<<if $bus is "hospital">>
 		<<if crimeSumCurrent() gte 1000>>
-			<<link [[Next|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
+			<<link [[다음|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
 		<<else>>
-			<<link [[Next|Hospital front]]>><<pass 10>><<endevent>><</link>>
+			<<link [[다음|Hospital front]]>><<pass 10>><<endevent>><</link>>
 		<</if>>
 	<<else>>
 		<<if $phase is 1>>
 			<<endevent>>
 			<<npc Robin>><<person1>>
-			You see Robin run up to you from around a corner as you exit <<his>> room. "You're okay!" <<He>> tackles you into a hug.
-			"Bailey took me away last night and I thought something awful was going to happen," <<he>> says before calming down.
+			당신이 <<his>> 방에서 나오자 로빈이 모퉁이에서 달려오는 것이 보인다. "괜찮구나!" <<He>>【이가】 당신을 껴안는다.
+			"어젯밤에 베일리가 날 데려가서 끔찍한 일이 생길 줄 알았어." <<he>>【이가】 진정하며 말한다.
 			<br><br>
 
-			You return the embrace before returning to your room.
+			당신은 포옹에 답한 후 방으로 돌아간다.
 			<br><br>
 
 		<</if>>
-		<<link [[Next|Bedroom]]>><<endevent>><</link>>
+		<<link [[다음|Bedroom]]>><<endevent>><</link>>
 	<</if>>
 <</if>>
 <br>
@@ -744,39 +744,39 @@
 <<endevent "phaseless">>
 <<npc "Robin">><<person1>>
 <<if $phase2 is "thug">>
-	You're left in the hall with Robin. <<He>> hugs you softly after Bailey leaves. "I'm so sorry," <<he>> says.
+	당신은 로빈과 함께 홀에 남겨진다. 베일리가 떠난 후 <<He>>【은는】 당신을 부드럽게 안아준다. "정말 미안해," <<he>>【이가】 말한다.
 	<br><br>
 
-	After a brief hug, <<he>> walks back to <<his>> room. "If you need anything, just let me know."
+	짧은 포옹 뒤, <<he>>【은는】 <<his>> 방으로 돌아간다. "필요한 거 있으면, 그냥 말해줘."
 	<br><br>
 
-	<<link [[Next|Orphanage]]>><<endevent>><</link>>
+	<<link [[다음|Orphanage]]>><<endevent>><</link>>
 <<else>>
-	Robin hugs you softly after Bailey leaves. "I'm so sorry," <<he>> says.
+	베일리가 떠난 후 로빈이 당신을 부드럽게 안아준다. "정말 미안해." <<he>>【이가】 말한다.
 
 	<<if $bus is "hospital">>
 		<br><br>
 
 		<<set $companion to "Robinrent">>
 		<<if crimeSumCurrent() gte 1000>>
-			<<link [[Next|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
+			<<link [[다음|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
 		<<else>>
-			<<link [[Next|Hospital front]]>><<pass 10>><<endevent>><</link>>
+			<<link [[다음|Hospital front]]>><<pass 10>><<endevent>><</link>>
 		<</if>>
 	<<else>>
 		<<if $inRobinsRoom>>
-			<<He>> sits down on <<his>> bed. "That was scary."
+			<<He>>【이가】 <<his>> 침대에 앉는다. "무서웠어."
 			<br><br>
 
-			After a moment to make sure Robin is okay, you leave the room and go back to the main hall.
+			잠시 로빈이 괜찮은지 확인한 후, 당신은 방을 나와 중앙 홀로 돌아간다.
 			<br><br>
 
-			<<link [[Next|Orphanage]]>><<endevent>><</link>>
+			<<link [[다음|Orphanage]]>><<endevent>><</link>>
 		<<else>>
-			<<He>> eventually leaves your bedroom. "If you need anything, just let me know."
+			<<He>>【이가】 마침내 당신의 침실을 나선다. "필요한 거 있으면, 그냥 말해줘."
 			<br><br>
 
-			<<link [[Next|Bedroom]]>><<endevent>><</link>>
+			<<link [[다음|Bedroom]]>><<endevent>><</link>>
 		<</if>>
 	<</if>>
 	<<unset $inRobinsRoom>>
@@ -789,22 +789,22 @@
 <<if isPregnancyEnding()>><<set $rentPregInterruption to "refused">><</if>><<person1>>
 <<if $phase2 is "thug">>
 	<<if $speech_attitude is "bratty">>
-		"I'm not giving you a penny," you declare defiantly. "You don't deserve my hard earned money!"
+		"한 푼도 안 줄 거예요," 당신은 반항적으로 선언한다. "내가 힘들게 번 돈을 가질 자격 없어요!"
 	<<elseif $speech_attitude is "meek">>
-		"I-I..." you stutter. "I won't!" you manage to yell, surprising yourself.
+		"저, 저는..." 당신은 말을 더듬는다. "안 낼 거예요!" 당신은 가까스로 소리치고, 스스로도 놀란다.
 	<<else>>
-		You shake your head. "It's my money, and I plan to keep it," you say.
+		당신은 고개를 젓는다. "제 돈이에요. 제가 가질 거예요," 당신이 말한다.
 	<</if>>
 	<br><br>
 
-	"You came all this way just to act like a brat?" Bailey scoffs.
+	"여기까지 와서 고작 어린애처럼 굴 셈이냐?" 베일리가 코웃음 친다.
 <<else>>
 	<<if $speech_attitude is "bratty">>
-		You stare at <<him>> in defiance. "I'm not paying you. I don't care what you do to me."
+		당신은 반항적으로 <<him>>【을를】 쳐다본다. "돈 안 낼 거예요. 나한테 무슨 짓을 하든 상관없어요."
 	<<elseif $speech_attitude is "meek">>
-		"N-no," you stutter, surprised by your bravery. "I-I won't."
+		"시, 싫어요." 당신은 자신의 용기에 놀라 말을 더듬는다. "아, 안 낼 거예요."
 	<<else>>
-		"The money isn't yours," you say, "I'm keeping it."
+		"그 돈은 당신 것이 아니에요." 당신이 말한다. "제가 가질 거예요."
 	<</if>>
 	<br><br>
 <</if>>
@@ -821,44 +821,44 @@
 <<person1>>
 <<if $phase2 is "thug">>
 	<<if $speech_attitude is "bratty">>
-		"I'm not giving you a penny," you declare defiantly. "You can do what you want with me, just leave Robin out of this!"
+		"한 푼도 안 줄 거예요," 당신은 반항적으로 선언한다. "나한테는 마음대로 해도 되지만, 로빈은 이 일에 끌어들이지 마세요!"
 	<<elseif $speech_attitude is "meek">>
-		"N-no, I- I won't," you stutter out. "I'm sorry," you almost whisper while looking at Robin.
+		"시, 싫어요, 아, 안 낼 거예요," 당신은 더듬더듬 말한다. "미안해," 당신은 로빈을 바라보며 거의 속삭이듯 말한다.
 	<<else>>
-		You shake your head. "It's my money, and I plan to keep it," you say. "Punish me however you want but leave <<nnpc_him "Robin">> out of this."
+		당신은 고개를 젓는다. "제 돈이에요. 제가 가질 거예요," 당신이 말한다. "원하는 대로 벌을 주되, <<nnpc_him "Robin">>【은는】 이 일에 끌어들이지 마세요."
 	<</if>>
 	<br><br>
 
-	"You came all this way just to act like a selfish brat?" Bailey scoffs. <<He>> stares at you with cold indifference before speaking again.
+	"여기까지 와서 고작 이기적인 어린애처럼 굴 셈이냐?" 베일리가 코웃음 친다. <<He>>【은는】 차갑고 무심한 눈으로 당신을 바라보다가 다시 입을 연다.
 	<br><br>
 
-	"Oh well," <<he>> says, now smiling.
+	"뭐, 할 수 없지," <<he>>【이가】 이제 미소를 지으며 말한다.
 <<else>>
 	<<if $speech_attitude is "bratty">>
-		You stare at <<him>> in defiance. "I'm not paying you. I don't care what you do to me, but leave Robin out of this."
+		당신은 반항적으로 <<him>>【을를】 쳐다본다. "돈 안 낼 거예요. 나한테 무슨 짓을 하든 상관없지만, 로빈은 건드리지 마세요."
 	<<elseif $speech_attitude is "meek">>
-		"N-no," you stutter, surprised by your bravery. "I-I won't let you hurt either of us..."
+		"시, 싫어요." 당신은 자신의 용기에 놀라 말을 더듬는다. "우, 우리 둘 다 다치게 두지 않을 거예요..."
 	<<else>>
-		"The money isn't yours," you say. "Punish me however you want but leave <<nnpc_him "Robin">> out of this."
+		"그 돈은 당신 것이 아니에요." 당신이 말한다. "원하는 대로 벌을 주되, <<nnpc_him "Robin">>【은는】 건드리지 마세요."
 	<</if>>
 	<br><br>
 
-	"That's okay," <<he>> says, smiling.
+	"괜찮아," <<he>>【이가】 미소 지으며 말한다.
 <</if>>
-"I've already made arrangements. I don't know what they intend for you two, and frankly I don't care."
-<<He>> produces a hood and length of rope. "Hold still."
+"이미 조치를 취해 뒀거든. 그들이 너희 둘에게 뭘 하려는지 모르겠고, 솔직히 관심도 없어."
+<<He>>【이가】 두건과 밧줄을 꺼낸다. "가만히 있어."
 <br><br>
 
 <<if isPregnancyEnding()>>
 	<<set $phase to 1>><<set $rentPregInterruption to "refused">><<include "Rent Pregnant">>
 <<else>>
-	<<link [[Submit|Rent Intro]]>><<set $phase to 1>><<endevent "phaseless">><</link>>
+	<<link [[굴복한다|Rent Intro]]>><<set $phase to 1>><<endevent "phaseless">><</link>>
 	<br>
 	<<if $bus is "hospital">>
-		<<link [[Fight|Rent Hospital Fight Robin]]>><<set $fightstart to 1>><</link>>
+		<<link [[싸운다|Rent Hospital Fight Robin]]>><<set $fightstart to 1>><</link>>
 		<br>
 	<<else>>
-		<<link [[Fight|Rent Robin Fight]]>><<set $fightstart to 1>><</link>>
+		<<link [[싸운다|Rent Robin Fight]]>><<set $fightstart to 1>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -884,9 +884,9 @@
 	"좋은 시도야." <<he>>【이가】 쉭쉭거린다. "하지만 그게 네 엉덩이를 구해주진 못할 거야. 이번에는 아니지."
 	<br><br>
 
-	<<He>> releases you and presses <<his>> hand on your chest, shoving you. You stumble backwards as Bailey takes a menacing step towards you
+	<<He>>【이가】 당신을 놓아주고 가슴에 손을 대고 밀친다. 당신이 뒤로 비틀거리자 베일리가 위협적으로 한 걸음 다가온다
 	<<if $money gte $rentMoney + ($babyRent or 0)>>
-		with <<his>> palm open expectantly. "Your payment. Now."
+		기대하는 듯 <<his>> 손바닥을 내밀며. "네 빚. 지금 당장."
 		<br><br>
 
 		<<link [[지불한다|Rent Pay]]>><</link>>
@@ -908,11 +908,11 @@
 		<</if>>
 	<</if>>
 <<else>>
-	"You can pay me," <<person1>><<he>> sneers. "With money. <span class="pink">£<<print ($rentMoney + ($babyRent or 0)) / 100>>.</span> <span class="red">That's what your body's worth.</span>"
+	"갚을 수 있어." <<person1>><<he>>【이가】 비웃는다. "돈으로. <span class="pink">£<<print ($rentMoney + ($babyRent or 0)) / 100>>.</span> <span class="red">그게 네 몸값이야.</span>"
 	<br><br>
 
 	<<if $baileydefeatedchain gte 1 and $phase2 isnot "thug">>
-		<<person2>>"I'll take that as payment," the <<person>> beside <<nnpc_him Bailey>> says.
+		<<person2>>"그걸로 빚을 갚는 걸로 하지." <<nnpc_him Bailey>> 옆에 있던 <<person>>【이가】 말한다.
 		<br><br>
 
 		베일리가 <<him>>【을를】 쏘아보자, <<he>>【이가】 시선을 피한다.
@@ -922,7 +922,7 @@
 	베일리와 협상하기엔 너무 늦었다. <<He>>【은는】 <<his>> 돈을 원한다.
 
 	<<if $money gte $rentMoney + ($babyRent or 0)>>
-		<<He>> holds out <<his>> hand.
+		<<He>>【이가】 <<his>> 손을 내민다.
 		<br><br>
 
 		<<link [[지불한다|Rent Pay]]>><</link>>
@@ -952,113 +952,113 @@
 <<set $rentPregCount to ($rentPregCount or 0) + 1>>
 <<earnFeat "Pregnant Pause">>
 <<switch $speech_attitude>>
-	<<case "meek">>"Wai..." You clutch your <<bellyDescription>>, sweating and heaving between words. "Wait! Please... <<if playerAwareTheyArePregnant()>>My baby!<<else>>It hurts!<</if>> Please..."
-	<<case "bratty">>"Are you bloody daft?" you yell through gritted teeth, feeling lightheaded. "Can't you see <<if playerAwareTheyArePregnant()>>I'm in labour<<else>>something's wrong with me<</if>>?!"
-	<<default>>"Stop! Wait..." You wince as a jolt of pain shoots through you. "<<if playerAwareTheyArePregnant()>>My baby<<else>>It hurts<</if>>... I need to get to the hospital!"
+	<<case "meek">>"자, 잠..." 당신은 <<bellyDescription>>【을를】 움켜쥔 채, 땀을 흘리고 헐떡이며 겨우 말을 잇는다. "잠깐만요! 제발... <<if playerAwareTheyArePregnant()>>제 아기가!<<else>>아파요!<</if>> 제발..."
+	<<case "bratty">>"머리가 어떻게 된 거 아냐?" 당신은 어지러움을 느끼며 이를 악문 채 소리친다. "<<if playerAwareTheyArePregnant()>>진통이 왔잖아<<else>>내 몸이 이상하잖아<</if>>, 안 보여?!"
+	<<default>>"그만! 잠깐만..." 온몸을 꿰뚫는 통증에 당신은 얼굴을 찡그린다. "<<if playerAwareTheyArePregnant()>>아기가<<else>>아파요<</if>>... 병원에 가야 해요!"
 <</switch>>
 <br><br>
 
-Bailey steps forward with a cold expression.
+베일리가 차가운 표정으로 다가선다.
 <<if $rentPregCount gte 3>>
-	"Is this a joke?" <<he>> sneers. "You've gotten way too comfortable doing this."
+	"장난하냐?" <<he>>【이가】 비웃는다. "이 짓이 아주 습관이 됐군."
 	<br><br>
-	<<He>> looks you over just to be sure. Just like before, the realisation that you're telling the truth finally hits <<him>>.
+	<<He>>【은는】 혹시나 하여 당신을 훑어본다. 전과 마찬가지로, 당신이 진실을 말하고 있다는 사실이 마침내 <<him>>에게 와닿는다.
 <<else>>
-	"<<if playerAwareTheyArePregnant()>>Right, figures you'd pull something like that<<else>>I don't have time for your excuses<</if>>," <<he>> sneers.
+	"<<if playerAwareTheyArePregnant()>>그래, 네가 그런 수를 쓸 줄 알았지<<else>>네 변명 들어줄 시간 없어<</if>>," <<he>>【이가】 비웃는다.
 	<<if $phase is 1>>
-		"You're not getting out of this that easily. Now I won't ask again. Hold. Still."
+		"그렇게 쉽게 빠져나갈 순 없어. 두 번 말 안 한다. 가만히. 있어."
 	<<else>>
-		"Am I to assume then that you're not paying? That's fine too." <<He>> produces a hood and length of rope. "Hold still."
+		"그럼 돈을 안 내겠다는 걸로 알아들으면 되나? 그것도 좋지." <<He>>【이가】 두건과 밧줄을 꺼낸다. "가만히 있어."
 	<</if>>
 	<br><br>
-	<<He>> continues to approach you with the rope,
+	<<He>>【은는】 밧줄을 든 채 계속 당신에게 다가오다가,
 	<<if $rentPregCount gte 2>>
-		then <<he>> looks you over and shakes <<his>> head.
+		<<he>>【은는】 당신을 훑어보고는 <<his>> 고개를 젓는다.
 	<<else>>
-		but hesitates for a moment as <<his>> gaze meets yours. <<His>> eyes squint as <<he>> looks you over one more time, before they suddenly go wide.
+		<<his>> 시선이 당신의 눈과 마주치자 잠시 멈칫한다. <<His>> 눈이 가늘어지며 <<he>>【이가】 당신을 다시 한번 훑어보더니, 이내 그 눈이 휘둥그레진다.
 	<</if>>
 <</if>>
 <br><br>
 <<switch $rentPregCount>>
-	<<case 1>>"Shit."
-	<<case 2>>"Fuck, again?"
-	<<case 3 4>>"For fuck's sake."
-	<<case 5 6>>"For <i>fuck's</i> sake."
-	<<case 7 8 9>>"You just don't know when to quit..."
-	<<default>>But <<he>> says nothing, having already resigned <<himself>> to this depraved routine of yours.
+	<<case 1>>"젠장."
+	<<case 2>>"씨발, 또야?"
+	<<case 3 4>>"씨발, 진짜."
+	<<case 5 6>>"<i>씨발</i>, 진짜."
+	<<case 7 8 9>>"넌 정말 그만둘 줄을 모르는군..."
+	<<default>>하지만 <<he>>【은는】 아무 말도 하지 않는다. 당신의 이 타락한 일과에 이미 체념한 것이다.
 <</switch>>
 <br><br>
-The next thing you know, you're being grabbed by your shoulders and rushed through the main hall. You spot orphans left and right, all turning to look at the commotion. "Move," you hear as a <<person2>><<personsimple>> who stood a bit too close gets shoved to the floor.
+정신을 차려 보니, 당신은 어깨를 붙잡힌 채 중앙 홀을 가로질러 끌려가고 있다. 좌우로 고아들이 보이고, 모두가 소란 쪽으로 고개를 돌린다. "비켜," 하는 소리와 함께, 너무 가까이 서 있던 <<person2>><<personsimple>> 하나가 바닥으로 떠밀린다.
 <br><br>
-You're led outside to Bailey's car. <<person1>><<He>> yanks open the door and pushes you into the front seat before throwing the seatbelt over you. With heavy eyes, you stare out the window as <<he>> circles around to the driver's side.
+당신은 밖으로, 베일리의 차까지 끌려간다. <<person1>><<He>>【은는】 문을 홱 열어 당신을 앞좌석에 밀어 넣고 안전벨트를 둘러 채운다. 무거운 눈꺼풀로, 당신은 <<he>>【이가】 운전석 쪽으로 돌아가는 동안 창밖을 바라본다.
 <br><br>
-Then, there are only the fading sounds of an engine to lull you into darkness.
+그러고 나면, 당신을 어둠 속으로 재워 주는 것은 점점 희미해지는 엔진 소리뿐이다.
 <br><br>
-<<link [[Everything fades to black...|Pregnancy Birth Hospital]]>><<endevent>><<pass 15>><<set $phase to 1>><</link>>
+<<link [[모든 것이 어둠 속으로 사라진다...|Pregnancy Birth Hospital]]>><<endevent>><<pass 15>><<set $phase to 1>><</link>>
 <br>
 
 :: Rent Pregnant Return
 <<effects>>
 <<npc Bailey>><<person1>>
 
-Bailey finally drags <<his>> gaze from the nursery back to you.
+베일리가 마침내 탁아소에서 <<his>> 시선을 거두어 당신에게로 돌린다.
 <<if !$rentPregInterruption>>
-	"Now, time to pay up."
+	"자, 돈 낼 시간이다."
 <<else>>
-	"Now that this little 'incident' of yours has been taken care of,
+	"네 그 작은 '사건'도 처리됐으니,
 	<<if $rentPregInterruption is "told">>
-		it's time to pay up."
+		이제 돈 낼 시간이다."
 	<<elseif $rentPregInterruption is "refused">>
-		I'm going to give you one last chance to pay up."
+		돈을 낼 마지막 기회를 한 번 더 주지."
 	<<elseif $rentPregInterruption is "broke">>
-		it's about time we resume where we'd left off."
+		하던 일을 이어서 할 때가 됐군."
 	<</if>>
 <</if>>
 <<if $baileydefeatedchain gte 3 or ($robinpaid is 1 and $bus is "home" and $robinfirstrentfight isnot 1 and ($rentTime lte -14 or $rentThug?.anger gte 4))>>
 	<<generateRole 1 0 "thug">><<generateRole 2 0 "thug">>
-	Two thugs flank <<him>> on either side.
+	폭력배 둘이 <<him>> 양옆을 지키고 서 있다.
 <<elseif $baileydefeatedchain gte 1>>
 	<<generateRole 1 0 "thug">>
-	A thug silently approaches you both.
+	폭력배 하나가 말없이 당신들 둘에게 다가온다.
 <</if>>
 <br><br>
 <<if $rentPregInterruption is "broke">>
 	<<if $robinfirstrentfight is 1>>
-		<<He>> smiles as <<he>> produces a hood and length of rope. "Hold still."
+		<<He>>【은는】 미소를 지으며 두건과 밧줄을 꺼낸다. "가만히 있어."
 		<br><br>
 
-		<<link [[Submit|Rent Intro]]>><<set $phase to 1>><<endevent "phaseless">><</link>>
+		<<link [[굴복한다|Rent Intro]]>><<set $phase to 1>><<endevent "phaseless">><</link>>
 		<br>
-		<<link [[Fight|Rent Robin Fight]]>><<set $fightstart to 1>><</link>>
+		<<link [[싸운다|Rent Robin Fight]]>><<set $fightstart to 1>><</link>>
 		<br>
 	<<else>>
 		<<if $robinpaid is 1 and $bus is "home" and $robinfirstrentfight isnot 1 and ($baileydefeatedchain gte 3 or $rentTime lte -14 or $rentThug?.anger gte 4)>>
 			<<set $robinfirstrentfight to 1>>
-			"I've learned my lesson. Trying to get value out of you directly is fruitless."
+			"교훈을 얻었어. 너한테서 직접 가치를 뽑아내려는 건 부질없는 짓이라는 걸 말이야."
 			<br><br>
 
-			On an unseen signal, the thugs advance on you.
-			The <<person3>><<person>> reaches for you. You duck under <<his>> arm, but the <<person2>><<person>> grabs yours.
-			The <<person3>><<person>> grabs your other arm, and they hold you there.
+			보이지 않는 신호에, 폭력배들이 당신에게 다가온다.
+			<<person3>><<person>>【이가】 당신에게 손을 뻗는다. 당신은 <<his>> 팔 아래로 몸을 숙여 피하지만, <<person2>><<person>>【이가】 당신의 팔을 붙잡는다.
+			<<person3>><<person>>【이가】 다른 팔까지 붙잡고, 그들은 당신을 그 자리에 붙들어 둔다.
 			<br><br>
 
-			<<link [[Next|Rent First Robin Fight]]>><<set $fightstart to 1>><<set $combatPhase to "talk">><<set $robinRentEvent to 1>><<set $timer to 5>><</link>>
+			<<link [[다음|Rent First Robin Fight]]>><<set $fightstart to 1>><<set $combatPhase to "talk">><<set $robinRentEvent to 1>><<set $timer to 5>><</link>>
 		<<else>>
-			<<He>> smiles as <<he>> produces a hood and length of rope. "Hold still."
+			<<He>>【은는】 미소를 지으며 두건과 밧줄을 꺼낸다. "가만히 있어."
 			<br><br>
 
-			<<link [[Submit|Rent Intro]]>><<endevent>><</link>>
+			<<link [[순응한다|Rent Intro]]>><<endevent>><</link>>
 			<br>
-			<<link [[Fight|Rent Fight]]>><<set $fightstart to 1>><</link>>
+			<<link [[싸운다|Rent Fight]]>><<set $fightstart to 1>><</link>>
 			<br>
 		<</if>>
 	<</if>>
 <<else>>
-	You look back at Bailey, confused and still somewhat dazed from the whole experience.
+	당신은 베일리를 돌아본다. 혼란스럽고, 방금 겪은 일로 아직도 조금 멍하다.
 	<br><br>
-	"What? You didn't think popping out some <<pluralise $litter_size "brat">> was going to get you out of your obligations, did you? You still owe me, and I intend to collect."
+	"뭐야? 설마 <<pluralise $litter_size "꼬맹이">> 좀 낳았다고 네 의무에서 벗어날 거라고 생각한 건 아니겠지? 넌 아직 내게 빚이 있고, 난 받아낼 생각이다."
 	<br><br>
-	You had almost forgotten all about that. A silent moment passes between you before <<he>> rolls <<his>> eyes and drops <<his>> voice.
+	당신은 그 일을 거의 잊고 있었다. 둘 사이에 잠시 침묵이 흐르고, <<he>>【은는】 눈을 굴리더니 <<his>> 목소리를 낮춘다.
 	<<endevent>><<rentdue>>
 <</if>>
 <<unset $litter_size>><<unset $rentPregInterruption>>
@@ -1103,7 +1103,7 @@ Bailey finally drags <<his>> gaze from the nursery back to you.
 
 <<elseif $rentSale is 3>>
 	<<set $rentSale to 0>><<generate2>><<person2>>
-	After journeying for some time you hear another set of footsteps.
+	얼마간 이동하자 다른 발소리가 들려온다.
 	<<if _robinIsPresent>>
 		"넘겨." <<personssimple>> 목소리가 말한다.
 		<br><br>
@@ -1237,7 +1237,7 @@ Bailey finally drags <<his>> gaze from the nursery back to you.
 		<<if _robin.dom lte 50>>
 			"제발, 저희를 풀어주세요! 저희는 아무 짓도 안 했어요—"
 		<<else>>
-			"Wait! Let <<phim>> go! Please don't hurt my <<friend>>—"
+			"잠깐만요! <<phim>>【을를】 놔줘요! 제 <<friend>>【을를】 다치게 하지 말아주세요—"
 		<</if>>
 		로빈의 목소리가 갑자기 웅얼거리듯 변하더니, 놀랍게도 곧이어 <<nnpc_him "Robin">>【이가】 바닥에 쓰러지는 소리가 들린다.
 		<br><br>
@@ -1257,16 +1257,16 @@ Bailey finally drags <<his>> gaze from the nursery back to you.
 	<<set $enemyanger += 200>>
 	<<npcidlegenitals>>
 	<<if $phase2 is "thug">>
-		"Not a smart move," you hear the <<person2>><<person>> say behind you. <<He>> lunges at
+		"현명하지 못한 선택이군," 등 뒤에서 <<person2>><<person>>【이가】 말하는 소리가 들린다. <<He>>【이가】 당신에게 달려든다.
 		<<if (currentSkillValue('danceskill') + random(0,750)) gte 1100>>
-			you, but <span class="green">you manage to dodge, causing <<him>> to stumble headfirst into the ground</span>. Bailey looks at <<him>> scornfully for a moment, then pulls <<him>> up.
+			하지만 <span class="green">당신은 가까스로 몸을 피하고, <<him>>【은는】 머리부터 바닥에 고꾸라진다</span>. 베일리는 잠시 <<him>>【을를】 경멸스럽게 바라보다가 일으켜 세운다.
 			<<set $enemyhealth -= $enemyhealth / 5>>
 		<<else>>
-			you and <span class="red">grabs your arms, restraining them</span>. "Let's see how long you keep resisting," Bailey says.
+			그리고 <span class="red">당신의 양팔을 붙잡아 꼼짝 못 하게 만든다</span>. "얼마나 오래 버티는지 보자," 베일리가 말한다.
 			<<set $leftarm to "grappled">><<set $rightarm to "grappled">><<set $NPCList[1].lefthand to "arms">><<set $NPCList[1].righthand to "arms">>
 		<</if>>
 	<<else>>
-		"You think I won't beat it out of you?" Bailey says.
+		"내가 두들겨 패서라도 알아낼 줄 알아?" 베일리가 말한다.
 	<</if>>
 	<<set $phase to 1>>
 <</if>>
@@ -1304,18 +1304,18 @@ Bailey finally drags <<his>> gaze from the nursery back to you.
 	<<set $enemyanger += 200>>
 	<<npcidlegenitals>>
 	<<if $phase2 is "thug">>
-		"Not a smart move," you hear the <<person2>><<person>> say behind you. <<He>> lunges at
+		"현명하지 못한 선택이군," 등 뒤에서 <<person2>><<person>>【이가】 말하는 소리가 들린다. <<He>>【이가】 당신에게 달려든다.
 		<<if (currentSkillValue('danceskill') + random(0,750)) gte 1100>>
-			you, but <span class="green">you manage to dodge, causing <<him>> to stumble headfirst into the ground</span>. Bailey looks at <<him>> scornfully for a moment, then pulls <<him>> up.
+			하지만 <span class="green">당신은 가까스로 몸을 피하고, <<him>>【은는】 머리부터 바닥에 고꾸라진다</span>. 베일리는 잠시 <<him>>【을를】 경멸스럽게 바라보다가 일으켜 세운다.
 			<<set $enemyhealth -= $enemyhealth / 5>>
 		<<else>>
-			you and <span class="red">grabs your arms, restraining them</span>. "Let's see how long you keep resisting," Bailey says.
+			그리고 <span class="red">당신의 양팔을 붙잡아 꼼짝 못 하게 만든다</span>. "얼마나 오래 버티는지 보자," 베일리가 말한다.
 			<<set $leftarm to "grappled">><<set $rightarm to "grappled">><<set $NPCList[1].lefthand to "arms">><<set $NPCList[1].righthand to "arms">>
 		<</if>>
 		<br><br>
 	<</if>>
-	"Keep the other one under control, one of you," Bailey says. The <<personselect $enemynomax>><<person>> nods and grabs at Robin,
-	while Bailey returns <<person1>><<his>> gaze to you.
+	"너희 중 하나는 저놈 좀 붙잡고 있어." 베일리가 말한다. <<personselect $enemynomax>><<person>>【이가】 고개를 끄덕이고 로빈을 붙잡는 동안,
+	베일리는 <<person1>><<his>> 시선을 당신에게 돌린다.
 	<<set $phase to 1>>
 
 	<<if _robin.dom gte 80>>
@@ -1395,16 +1395,16 @@ Bailey finally drags <<his>> gaze from the nursery back to you.
 	<br><br>
 
 	<<if $phase2 is "thug">>
-		The thugs slink away after <<him>>.
+		폭력배들이 <<him>> 뒤를 따라 슬그머니 빠져나간다.
 		<br><br>
 	<<elseif $baileydefeatedchain gte 2>>
-		The <<person2>><<person>> slinks out after <<person1>><<him>>.
+		<<person2>><<person>>【은는】 <<person1>><<him>> 뒤를 따라 슬그머니 빠져나간다.
 		<br><br>
 	<</if>>
 	당신은 로빈에게 다가가 <<nnpc_his "Robin">> 구속을 풀어준다. <<nnpc_He "Robin">>【은는】 당신을 와락 끌어안는다. "고마워, 나의 영웅!" 당신의 <<if _robin.lust gte 60 and $robinromance is 1>>입술<<else>>빰<</if>>에 가볍게 입을 맞추고는, <<nnpc_he "Robin">>【은는】 자리를 뜬다.
 	<br><br>
 
-	The orphans cheer your defeat of the tyrant. <<He>> will be back, but for now you're in the clear.
+	고아들은 폭군을 물리친 당신에게 환호한다. <<He>>【은는】 다시 돌아오겠지만, 지금은 일단 무사하다.
 	<<greb>><<ghope>><<reb 1>><<hope 1>><<ltrauma>><<lstress>><<trauma -6>><<stress -12>><<llthuganger>><<thuganger -2>>
 	<br><br>
 
@@ -1420,10 +1420,10 @@ Bailey finally drags <<his>> gaze from the nursery back to you.
 	<br><br>
 
 	<<if $phase2 is "thug">>
-		The thugs slink away after <<him>>.
+		폭력배들이 <<him>> 뒤를 따라 슬그머니 빠져나간다.
 		<br><br>
 	<<elseif $baileydefeatedchain gte 2>>
-		The <<person2>><<person>> slinks out after <<person1>><<him>>.
+		<<person2>><<person>>【은는】 <<person1>><<him>> 뒤를 따라 슬그머니 빠져나간다.
 		<br><br>
 	<</if>>
 	당신은 로빈에게 걸어가 <<nnpc_his "Robin">> 결박을 풀어준다. <<nnpc_He "Robin">>【은는】 당신을 끌어안으며 말한다. "고마워, 나의 영웅!"
@@ -1436,7 +1436,7 @@ Bailey finally drags <<his>> gaze from the nursery back to you.
 	<</if>>
 	<br><br>
 
-	Bailey's departure lifts a weight from the watching orphans, who cheer your defeat of the tyrant. <<He>> will be back, but for now you're in the clear.
+	베일리가 떠나자 지켜보던 고아들은 짓누르던 무게에서 벗어나, 폭군을 물리친 당신에게 환호한다. <<He>>【은는】 다시 돌아오겠지만, 지금은 일단 무사하다.
 	<<greb>><<ghope>><<reb 1>><<hope 1>><<ltrauma>><<lstress>><<trauma -6>><<stress -12>><<llthuganger>><<thuganger -2>>
 	<br><br>
 
@@ -1475,14 +1475,14 @@ Bailey finally drags <<his>> gaze from the nursery back to you.
 	<br><br>
 
 	<<if $phase2 is "thug">>
-		The thugs slink away after <<him>>.
+		폭력배들이 <<him>> 뒤를 따라 슬그머니 빠져나간다.
 		<br><br>
 	<<elseif $baileydefeatedchain gte 2>>
-		The <<person2>><<person>> slinks out after <<person1>><<him>>.
+		<<person2>><<person>>【은는】 <<person1>><<him>> 뒤를 따라 슬그머니 빠져나간다.
 		<br><br>
 	<</if>>
 
-	The orphans cheer your defeat of the tyrant. <<He>> will be back, but for now you're in the clear.
+	고아들은 폭군을 물리친 당신에게 환호한다. <<He>>【은는】 다시 돌아오겠지만, 지금은 일단 무사하다.
 	<<greb>><<ghope>><<reb 1>><<hope 1>><<ltrauma>><<lstress>><<trauma -6>><<stress -12>><<llthuganger>><<thuganger -2>>
 	<br><br>
 
@@ -1498,14 +1498,14 @@ Bailey finally drags <<his>> gaze from the nursery back to you.
 	<br><br>
 
 	<<if $phase2 is "thug">>
-		The thugs slink away after <<him>>.
+		폭력배들이 <<him>> 뒤를 따라 슬그머니 빠져나간다.
 		<br><br>
 	<<elseif $baileydefeatedchain gte 2>>
-		The <<person2>><<person>> slinks out after <<person1>><<him>>.
+		<<person2>><<person>>【은는】 <<person1>><<him>> 뒤를 따라 슬그머니 빠져나간다.
 		<br><br>
 	<</if>>
 
-	<<His>> departure lifts a weight from the watching orphans, who cheer your defeat of the tyrant. <<He>> will be back, but for now you're in the clear.
+	<<He>>【이가】 떠나자 지켜보던 고아들은 짓누르던 무게에서 벗어나, 폭군을 물리친 당신에게 환호한다. <<He>>【은는】 다시 돌아오겠지만, 지금은 일단 무사하다.
 	<<greb>><<ghope>><<reb 1>><<hope 1>><<ltrauma>><<lstress>><<trauma -6>><<stress -12>><<llthuganger>><<thuganger -2>>
 	<br><br>
 
@@ -1569,26 +1569,26 @@ Bailey finally drags <<his>> gaze from the nursery back to you.
 		<<switch $baileySpoke>>
 			<<case 2>>
 				<<if $speechPlead is 1 or $speechApologiseRejected is 1 or $speechScreamForHelp is 1 or $speechDemand is 1 or $speechApologiseUnforgiving is 1>>
-					"Save your breath," Bailey says. "If you really want to save <<nnpc_him "Robin">>, it's not too late to pay."
+					"숨 돌릴 생각 마." 베일리가 말한다. "정말로 <<nnpc_him "Robin">>【을를】 구하고 싶다면, 아직 돈을 낼 기회는 있어."
 				<<else>>
 					"내가 오래전에 말했지." 베일리가 말한다. "내 돈을 가져오든가... 아니면 네놈한테서 어떻게든 가치를 뽑아낼 거라고."
 				<</if>>
 			<<case 1>>
 				<<if $speechPlead is 1 or $speechApologiseRejected is 1 or $speechApologiseUnforgiving is 1>>
-					Bailey rolls <<his>> eyes. "If you'd paid me on time, maybe you wouldn't be crying your eyes out now."
+					베일리가 <<his>> 눈을 굴린다. "제때 돈을 냈더라면, 지금처럼 울고불고하지 않아도 됐을 텐데."
 					<<set $baileySpoke++>>
 				<<elseif $speechScreamForHelp is 1 or $speechDemand is 1>>
-					"You think you're going to convince me with shouting?" Bailey sneers.
+					"소리 지르면 내가 설득될 것 같아?" 베일리가 비웃는다.
 					<<set $baileySpoke++>>
 				<<else>>
 					"갚을 생각도 없었으면서 애초에 왜 이 약골의 빚을 떠맡았는지 모르겠군." 베일리가 비웃는다.
 				<</if>>
 			<<default>>
 				<<if $speechPlead is 1 or $speechApologiseRejected is 1 or $speechApologiseUnforgiving is 1>>
-					Bailey scoffs at you. "Oh, now you're sorry? Now that there's consequences?"
+					베일리가 당신을 비웃는다. "오, 이제 와서 미안하다고? 이제 와서 대가를 치를 때가 되니까?"
 					<<set $baileySpoke++>>
 				<<elseif $speechScreamForHelp is 1 or $speechDemand is 1>>
-					"Shut up," Bailey snaps at you. "You didn't pay the price, so <<nnpc_he "Robin">> will."
+					"닥쳐." 베일리가 당신에게 쏘아붙인다. "네가 대가를 치르지 않았으니, <<nnpc_he "Robin">>【이가】 치르게 될 거다."
 					<<set $baileySpoke++>>
 				<<else>>
 					"알겠어?" 베일리가 로빈을 보며 말한다. "<<pShe>>【이가】 대가를 치르지 않았으니, 네가 치르게 될 거다."
@@ -1612,10 +1612,10 @@ Bailey finally drags <<his>> gaze from the nursery back to you.
 	<span class="red"><<person2>><<person>>【와과】 <<person3>><<person>>【이가】 당신을 단단히 붙잡는다.</span>
 <<elseif $combatPhase is "pay">>
 	<<if $speechPay is 1>>
-		"There," Bailey sneers. "Was that so hard?" <<He>> gestures to <<his>> thugs, and they let go of your arms.
+		"그래, 그거야." 베일리가 비웃는다. "그게 그렇게 어려웠어?" <<He>>【이가】 <<his>> 부하들에게 손짓하자, 그들이 당신의 팔을 놓아준다.
 		<<set _fin to 1>>
 	<<elseif $speechPay is -1>>
-		"Well, isn't that a shame," Bailey sneers. "But I'm feeling generous. You can still save <<nnpc_him "Robin">>. Just stay still."
+		"이런, 안됐군." 베일리가 비웃는다. "하지만 내가 관대하게 굴어주지. 아직 <<nnpc_him "Robin">>【을를】 구할 수 있어. 그냥 가만히 있어."
 		<br>
 		로빈이 필사적으로 <<nnpc_his "Robin">> 고개를 젓는다.
 		<<set $combatPhase to "still">><<set $timer to 2>>
@@ -1648,7 +1648,7 @@ Bailey finally drags <<his>> gaze from the nursery back to you.
 <</if>>
 
 <<if $combatPhase is "pay" and $speechPay is 1>>
-	<span id="next"><<link [[Next|Rent First Robin Fight Finish]]>><<endevent>><<set $phase to "pay">><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Rent First Robin Fight Finish]]>><<endevent>><<set $phase to "pay">><</link>></span><<nexttext>>
 <<elseif $combatPhase is "still" and _defiance is undefined>>
 	<span id="next"><<link [[다음|Rent First Robin Fight Finish]]>><<endevent>><<set $phase to "still">><</link>></span><<nexttext>>
 <<elseif $finish is 1>>
@@ -1725,39 +1725,39 @@ Bailey finally drags <<his>> gaze from the nursery back to you.
 <<set $location to "home">><<effects>>
 
 <<if $phase is "unwilling">>
-	After some time, the car comes to a stop in front of the orphanage. "We're here. Don't even think about running, it's way too late for that," the <<person1>><<person>> says. 
+	얼마 뒤, 차가 고아원 앞에 멈춰 선다. "도착했다. 도망칠 생각은 꿈도 꾸지 마, 그러기엔 한참 늦었으니까," <<person1>><<person>>【이가】 말한다. 
 	<<if $exposed gte 1>>
-		<<He>> eyes over your exposed body. "Cover yourself, we don't want any onlookers getting the wrong idea," <<he>> says, tossing you a towel. You wrap it around yourself.
+		<<He>>【은는】 당신의 드러난 몸을 훑어본다. "몸 좀 가려. 구경꾼들이 오해하면 곤란하니까," <<he>>【이가】 수건을 던져주며 말한다. 당신은 수건을 몸에 두른다.
 		<<towelup>>
 	<</if>>
 	<<switch $event.buffer.length>>
-		<<case 1>><<He>> roughly pulls you out of the car and leads you into the orphanage.
-		<<case 2>><<He>> roughly pulls you out of the car while the <<person2>><<person>> keeps a close eye on you. <<He>> watches the <<person1>><<person>> lead you all the way to the front door before getting back into the car.
-		<<case 3>><<He>> roughly pulls you out of the car while the <<person2>><<person>> and <<person3>><<person>> keep a close eye on you. They watch the <<person1>><<person>> lead you all the way to the front door before getting back into the car.
+		<<case 1>><<He>>【은는】 당신을 차에서 거칠게 끌어내 고아원 안으로 데려간다.
+		<<case 2>><<He>>【은는】 당신을 차에서 거칠게 끌어내고, <<person2>><<person>>【은는】 당신을 바짝 감시한다. <<He>>【은는】 <<person1>><<person>>【이가】 당신을 현관까지 데려가는 것을 지켜본 뒤 차에 다시 올라탄다.
+		<<case 3>><<He>>【은는】 당신을 차에서 거칠게 끌어내고, <<person2>><<person>>【와과】 <<person3>><<person>>【은는】 당신을 바짝 감시한다. 그들은 <<person1>><<person>>【이가】 당신을 현관까지 데려가는 것을 지켜본 뒤 차에 다시 올라탄다.
 	<</switch>>
 	<br><br>
-	You see Bailey waiting for you in the main hall<<if $robinfirstrentfight is 1>> along with a tied-up Robin<</if>>.
+	중앙 홀에서 베일리가<<if $robinfirstrentfight is 1>> 묶여 있는 로빈과 함께<</if>> 당신을 기다리고 있는 것이 보인다.
 <<elseif $phase is "willing">>
-	After some time, the car comes to a stop in front of the orphanage. "We're here. Get going, you've kept <<nnpc_him "Bailey">> waiting long enough," the <<person1>><<person>> says.
+	얼마 뒤, 차가 고아원 앞에 멈춰 선다. "도착했다. 어서 가, <<nnpc_him "Bailey">>【을를】 기다리게 한 지도 한참 됐으니까," <<person1>><<person>>【이가】 말한다.
 	<<if $exposed gte 1>>
-		<<He>> eyes over your exposed body. "Can't have you looking like that in front of the boss," <<he>> says, tossing you a towel. You wrap it around yourself.
+		<<He>>【은는】 당신의 드러난 몸을 훑어본다. "보스 앞에서 그런 꼴로 있게 둘 순 없지," <<he>>【이가】 수건을 던져주며 말한다. 당신은 수건을 몸에 두른다.
 		<<towelup>>
 	<</if>>
 	<<switch $event.buffer.length>>
-		<<case 1>>You step out of the car and are led into the orphanage.
-		<<case 2>>You step out of the car and are led into the orphanage under the watchful eye of the <<person2>><<person>>. Once you make it to the front door, <<he>> gets back into the car.
-		<<case 3>>You step out of the car and are led into the orphanage under the watchful eye of the <<person2>><<person>> and <<person3>><<person>>. Once you make it to the front door, they get back into the car.
+		<<case 1>>당신은 차에서 내려 고아원 안으로 안내된다.
+		<<case 2>>당신은 차에서 내려 <<person2>><<person>>의 감시 아래 고아원 안으로 안내된다. 당신이 현관에 다다르자, <<he>>【은는】 차에 다시 올라탄다.
+		<<case 3>>당신은 차에서 내려 <<person2>><<person>>【와과】 <<person3>><<person>>의 감시 아래 고아원 안으로 안내된다. 당신이 현관에 다다르자, 그들은 차에 다시 올라탄다.
 	<</switch>>
 	<br><br>
-	You see Bailey is already waiting for you in the main hall<<if $robinfirstrentfight is 1>> with a tied-up Robin<</if>>.
+	중앙 홀에서 베일리가<<if $robinfirstrentfight is 1>> 묶여 있는 로빈과 함께<</if>> 이미 당신을 기다리고 있는 것이 보인다.
 <<elseif $phase is "unwilling van">>
-	After some time, the van comes to a stop. "Looks like we've arrived," the <<person1>><<person>> says, putting away <<his>> phone. "Get up. And don't even think about running, it's way too late for that."
+	얼마 뒤, 밴이 멈춰 선다. "도착한 모양이군," <<person1>><<person>>【이가】 <<his>> 휴대폰을 집어넣으며 말한다. "일어나. 그리고 도망칠 생각은 꿈도 꾸지 마, 그러기엔 한참 늦었으니까."
 	<<if $exposed gte 1>>
-		<<He>> eyes over your exposed body. "Cover yourself, we don't want any onlookers getting the wrong idea," <<he>> says, tossing you a towel. You wrap it around yourself.
+		<<He>>【은는】 당신의 드러난 몸을 훑어본다. "몸 좀 가려. 구경꾼들이 오해하면 곤란하니까," <<he>>【이가】 수건을 던져주며 말한다. 당신은 수건을 몸에 두른다.
 		<<towelup>>
 	<</if>>
 	<br><br>
-	All of them walk you to the orphanage door, but only you and the <<person>> enter. You see Bailey is already waiting for you in the main hall<<if $robinfirstrentfight is 1>> with a tied-up Robin<</if>>.
+	그들 모두가 당신을 고아원 문 앞까지 데려가지만, 안으로 들어가는 것은 당신과 <<person>>뿐이다. 중앙 홀에서 베일리가<<if $robinfirstrentfight is 1>> 묶여 있는 로빈과 함께<</if>> 이미 당신을 기다리고 있는 것이 보인다.
 <</if>>
 <<saveNPC 0 "rent_thug">><<endevent>>
 
@@ -1783,11 +1783,11 @@ Bailey finally drags <<his>> gaze from the nursery back to you.
 /* Bailey Confiscation System */
 
 <<widget "baileyConfiscationList">>
-	<<set _list to baileyConfiscationParts()>><<if _list.length is 0>>your things<</if>><<for _p range _list>><<print _p.sep>><<if _p.kind is "furniture">><<if _p.icon>><<furnitureicon _p.icon>> <</if>><<elseif _p.kind is "clothing">><<clothingicon _p.item _p.slot>> <</if>><<print _p.name>><</for>>
+	<<set _list to baileyConfiscationParts()>><<if _list.length is 0>>당신의 물건<</if>><<for _p range _list>><<print _p.sep>><<if _p.kind is "furniture">><<if _p.icon>><<furnitureicon _p.icon>> <</if>><<elseif _p.kind is "clothing">><<clothingicon _p.item _p.slot>> <</if>><<print _p.name>><</for>>
 <</widget>>
 
 <<widget "baileyConfiscationListFull">>
-	<<set _list to baileyConfiscationGrouped()>><<if _list.length is 0>>your things<</if>><<for _p range _list>><<print _p.sep>><<if _p.count gt 1>><<print _p.count>>× <</if>><<if _p.kind is "furniture">><<if _p.icon>><<furnitureicon _p.icon>> <</if>><<elseif _p.kind is "clothing">><<clothingicon _p.item _p.slot>> <</if>><<print _p.name>><</for>>
+	<<set _list to baileyConfiscationGrouped()>><<if _list.length is 0>>당신의 물건<</if>><<for _p range _list>><<print _p.sep>><<if _p.count gt 1>><<print _p.count>>× <</if>><<if _p.kind is "furniture">><<if _p.icon>><<furnitureicon _p.icon>> <</if>><<elseif _p.kind is "clothing">><<clothingicon _p.item _p.slot>> <</if>><<print _p.name>><</for>>
 <</widget>>
 
 <<widget "baileyRentConfiscation">>
@@ -1795,7 +1795,7 @@ Bailey finally drags <<his>> gaze from the nursery back to you.
 	<<set _weekRent to $rentMoney + ($babyRent || 0)>>
 	<<set _bundle to baileyConfiscationBundle(_weekRent)>>
 	<<if _bundle.items.length is 0>>
-		A hand rests on your shoulder from behind. <span class="red">It's Bailey.</span>
+		뒤에서 누군가의 손이 당신의 어깨에 얹힌다. <span class="red">베일리다.</span>
 		<<if $robinfirstrentfight and ($baileypaychain lt 2 or $rentTime lte -1) and _robinAtOrphanage>>
 			<<rentduerobin 0>>
 		<<else>>
@@ -1821,7 +1821,7 @@ Bailey finally drags <<his>> gaze from the nursery back to you.
 		<br><br>
 
 		<<set $rentTime to 7>><<set $baileyRefusedToPay to 0>>
-		<<link [[Don't fight|Orphanage]]>><<endevent>><</link>>
+		<<link [[싸우지 않는다|Orphanage]]>><<endevent>><</link>>
 		<br>
 		<<link [[싸운다|Bailey Confiscation Fight]]>><<set $fightstart to 1>><<generateRole 1 0 "thug">><<generateRole 2 0 "thug">><<generateRole 3 0 "thug">><</link>><<dangerousText>>
 		<br>
