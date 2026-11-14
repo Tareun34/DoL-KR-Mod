@@ -1460,7 +1460,7 @@
 <<wakingEffects true>>
 <<if _wakingEffect is "dryheaving">>
 	<br>
-	You slept soundly, but now feel a little rough.
+	당신은 푹 잤지만, 지금은 몸이 조금 좋지 않다.
 	<br><br>
 	"어젯밤이 당신에겐 너무 과했던 모양이네요. 그래도 쓰레기통까진 갔으니 다행이죠." 에이버리가 말한다.
 <<else>>
@@ -1507,7 +1507,7 @@
 <<else>>
 	고아원에 돌아오자,
 <</if>>
-<<he>> opens <<his>> heavy <<wallet>> and thumbs through the cash. <<He>> holds out <<printmoney `averyPayout()`>>. "You should buy something nice. My treat."
+<<he>>【은는】 묵직한 <<wallet>>【을를】 열고 현금을 훑어본다. <<He>>【은는】 <<printmoney `averyPayout()`>>【을를】 내민다. "좋은 걸 하나 사요. 내가 사주는 거예요."
 <br><br>
 
 당신이 돈을 향해 손을 뻗자, <<he>>【은는】 그것을 들어 올려 당신에게서 멀리한다. "먼저—" <<He>>【은는】 미소 지으며 <<his>> 입술을 톡톡 두드린다.
@@ -1596,7 +1596,7 @@
 <br><br>
 고아원 문이 열리자, 에이버리는 고아 하나와 마주친다. <<person2>><<He>>【은는】 입을 열려 하지만, 에이버리가 돈뭉치를 내밀자 말을 멈춘다. "나는 여기 온 적 없어. 알겠나요?" <<He>>【은는】 황홀한 표정이 되고, <<his>> 손은 돈을 쥔 채 떨린다. "무, 물론이죠! 정말 감사합니다, <<person1>><<sir>>!" <<person2>><<He>>【은는】 조용히 종종걸음으로 물러나며 돈을 세기 시작한다.
 <br><br>
-Avery carries you all the way to your room, laying you in your bed. "Thank you for the pleasant evening, and I hope you feel better in the morning." On <<person1>><<his>> way out, <<he>> leaves <<printmoney `averyPayout()`>> behind for you.
+에이버리는 당신을 방까지 안고 가, 당신의 침대에 눕힌다. "즐거운 저녁이었어요. 고마워요. 아침에는 기분이 나아지길 바랍니다." 나가는 길에, <<person1>><<he>>【은는】 당신을 위해 <<printmoney `averyPayout()`>>【을를】 남겨둔다.
 <br><br>
 <<storeon "averyCar" "check">>
 <<if _store_check is 1>>
@@ -1617,7 +1617,7 @@ Avery carries you all the way to your room, laying you in your bed. "Thank you f
 <<averyscore>>
 <<money `averyPayout()` "avery">>
 <br><br>
-Avery carries you upstairs. <<He>> lays you gently on <<his>> bed. "I'll be up later. You should rest, though. Thank you for the pleasant evening." <<He>> leaves <<printmoney `averyPayout()`>> on the nightstand.
+에이버리는 당신을 안고 위층으로 올라간다. <<He>>【은는】 당신을 <<his>> 침대 위에 조심스럽게 눕힌다. "나중에 올라올게요. 그래도 당신은 쉬어야 합니다. 즐거운 저녁이었어요. 고마워요." <<He>>【은는】 침대 옆 탁자에 <<printmoney `averyPayout()`>>【을를】 남겨둔다.
 <br><br>
 <<storeon "averyCar" "check">>
 <<if _store_check is 1>>
@@ -1634,7 +1634,7 @@ Avery carries you upstairs. <<He>> lays you gently on <<his>> bed. "I'll be up l
 <<averyscore>>
 <<if $endear gte 60 or $phase is 2>>
 	<<money `averyPayout()` "avery">>
-	<<He>> nods, smiling. <<He>> begins thumbing through some money, handing you <<printmoney `averyPayout()`>>. "You should buy something nice for yourself. My treat."
+	<<He>>【은는】 미소 지으며 고개를 끄덕인다. <<He>>【은는】 돈을 세기 시작해, 당신에게 <<printmoney `averyPayout()`>>【을를】 건넨다. "자신에게 좋은 걸 하나 사요. 내가 사주는 거예요."
 	<br><br>
 	<<He>>【은는】 다시 당신의 손을 잡고, 스위트룸을 나와 로비까지 이끈다. 체크아웃하는 데 몇 분 걸리지만, 곧 두 사람은
 	<<if $avery_mansion>>
@@ -1663,7 +1663,7 @@ Avery carries you upstairs. <<He>> lays you gently on <<his>> bed. "I'll be up l
 	<</if>>
 <<elseif $endear gte 30>>
 	<<money `averyPayout()` "avery">>
-	<<He>> nods. <<He>> begins thumbing through some money, holding out <<printmoney `averyPayout()`>>.
+	<<He>>【은는】 고개를 끄덕인다. <<He>>【은는】 돈을 세기 시작해, <<printmoney `averyPayout()`>>【을를】 내민다.
 	<br><br>
 	<<He>>【은는】 다시 당신의 손을 잡고, 스위트룸을 나와 로비까지 이끈다. 체크아웃하는 데 몇 분 걸리지만, 곧 두 사람은
 	<<if $avery_mansion>>
@@ -3135,10 +3135,10 @@ Avery carries you upstairs. <<He>> lays you gently on <<his>> bed. "I'll be up l
 <<averyscore>>
 
 <<if $avery_mansion>>
-	Avery drives you home. Once back in the mansion <<he>> opens <<his>> heavy <<wallet>> and thumbs through the cash. <<He>> holds out <<printmoney `averyPayout()`>>. "You should buy something nice. My treat."
+	에이버리는 당신을 집까지 태워준다. 저택으로 돌아오자, <<he>>【은는】 묵직한 <<wallet>>【을를】 열고 현금을 훑어본다. <<He>>【은는】 <<printmoney `averyPayout()`>>【을를】 내민다. "좋은 걸 하나 사요. 내가 사주는 거예요."
 	<br><br>
 <<else>>
-	Avery drives you home. Once back at the orphanage, <<he>> opens <<his>> heavy <<wallet>> and thumbs through the cash. <<He>> holds out <<printmoney `averyPayout()`>>. "You should buy something nice. My treat."
+	에이버리는 당신을 집까지 태워준다. 고아원에 돌아오자, <<he>>【은는】 묵직한 <<wallet>>【을를】 열고 현금을 훑어본다. <<He>>【은는】 <<printmoney `averyPayout()`>>【을를】 내민다. "좋은 걸 하나 사요. 내가 사주는 거예요."
 	<br><br>
 <</if>>
 
@@ -3173,7 +3173,7 @@ Avery carries you upstairs. <<He>> lays you gently on <<his>> bed. "I'll be up l
 <<averyscore>>
 <<He>>【은는】 <<him>>의 옆 차 문을 연다. "타요."
 <br><br>
-<<He>> opens <<his>> heavy <<wallet>> and thumbing through the cash. <<He>> holds out <<printmoney `averyPayout()`>>. "A little something for your time."
+<<He>>【은는】 묵직한 <<wallet>>【을를】 열고 현금을 훑는다. <<He>>【은는】 <<printmoney `averyPayout()`>>【을를】 내민다. "당신 시간값으로 조금."
 <br><br>
 당신이 돈을 향해 손을 뻗자, <<he>>【은는】 그것을 당신에게서 들어 올려 멀리한다. "우선순위가 있죠, <<pcpetname "Avery">>." <<he>>【이가】 말한다. <<He>>【은는】 당신의 몸을 가까이 끌어당기며 키스하려 다가온다.
 <br><br>
@@ -3337,7 +3337,7 @@ Avery carries you upstairs. <<He>> lays you gently on <<his>> bed. "I'll be up l
 <<elseif $enemyhealth lte 0>>
 	<<if $avery_mansion>>
 		<<if C.npc.Avery.rage gte random(20, 100) and $averyragerevealed gte 1 and $avery_mansion.rage.assess gte 1 and $avery_mansion.rage.timer lte 0>>
-			<<He>> falls back against the steering wheel, giving you the chance you need.
+			<<He>>【은는】 운전대에 기대 넘어지고, 당신에게 필요한 기회가 생긴다.
 			<<ggarage>><<npcincr Avery rage 10>><<money `averyPayout()` "avery">>
 			<br><br>
 
@@ -3356,7 +3356,7 @@ Avery carries you upstairs. <<He>> lays you gently on <<his>> bed. "I'll be up l
 			<<avery_mansion_chase_run>>
 			<br>
 		<<else>>
-			<<He>> falls back against the steering wheel, giving you the chance you need.
+			<<He>>【은는】 운전대에 기대 넘어지고, 당신에게 필요한 기회가 생긴다.
 			<<ggarage>><<npcincr Avery rage 10>><<money `averyPayout()` "avery">>
 			<br><br>
 
@@ -3373,7 +3373,7 @@ Avery carries you upstairs. <<He>> lays you gently on <<his>> bed. "I'll be up l
 			<br>
 		<</if>>
 	<<else>>
-		<<He>> falls back against the steering wheel, giving you the chance you need.
+		<<He>>【은는】 운전대에 기대 넘어지고, 당신에게 필요한 기회가 생긴다.
 		<<ggarage>><<npcincr Avery rage 10>><<money `averyPayout()` "avery">>
 		<br><br>
 
@@ -4917,42 +4917,42 @@ Avery carries you upstairs. <<He>> lays you gently on <<his>> bed. "I'll be up l
 :: Avery Helicopter
 <<effects>><<seenPassage>>
 
-You climb up the ladder and sit down beside Avery. <<He>> shuts the door while you buckle yourself in. You see the pilot's head through a pane of glass across from you. When the helicopter begins to move, you feel your heart skip a beat. You've
+당신은 사다리를 타고 올라가 에이버리 옆에 앉는다. 당신이 안전벨트를 매는 동안 <<he>>【이가】 문을 닫는다. 맞은편 유리창 너머로 조종사의 머리가 보인다. 헬리콥터가 움직이기 시작하자, 심장이 덜컥 내려앉는 느낌이 든다. 당신은
 <<if $averySeen.includes("helicopter_ride")>>
-	been in a helicopter before, but you aren't quite used to it yet.
+	전에 헬리콥터를 타본 적이 있지만, 아직 완전히 익숙해지지는 않았다.
 <<else>>
-	never been in a helicopter before. It's <<= $speech_attitude is "meek" ? "almost scary" : $speech_attitude is "bratty" ? "thrilling" : "exciting">>.
+	헬리콥터를 한 번도 타본 적이 없다. <<= $speech_attitude is "meek" ? "조금 무섭기까지 하다" : $speech_attitude is "bratty" ? "짜릿하다" : "신난다">>.
 <</if>>
 <br><br>
-"I had an important meeting on <<= $avery_fate is "ascended" ? "High" : "Elk">> Street today, and I was given permission to use the company heli," Avery explains. "I was on my way back, and since the timing was convenient, I thought I'd make some time for you." <<He>> smiles at you. <<glove>><<npcincr Avery love 1>><<if $avery_mansion>><<gdom>><<npcincr Avery dom 1>><</if>>
+"오늘 <<= $avery_fate is "ascended" ? "하이" : "엘크">> 가에서 중요한 회의가 있어서, 회사 헬기 사용 허가를 받았습니다," 에이버리가 설명한다. "돌아가는 길이었는데, 마침 시간이 맞길래 당신을 위해 시간을 좀 내기로 했죠." <<He>>【이가】 당신에게 미소 짓는다. <<glove>><<npcincr Avery love 1>><<if $avery_mansion>><<gdom>><<npcincr Avery dom 1>><</if>>
 <br><br>
-"Where shall I have you dropped off?"
+"어디에 내려드릴까요?"
 <br><br>
 <<if $averySeen.includes("office")>>
 	<<if $avery_fate is "ascended">>
-		<<link [[The office on Elk Street|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to "office">><</link>>
+		<<link [[엘크 가의 사무실|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to "office">><</link>>
 		<br>
 	<<else>>
-		<<link [[The office on High Street|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to "office">><</link>>
+		<<link [[하이 가의 사무실|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to "office">><</link>>
 		<br>
 	<</if>>
 <</if>>
 <<if $chef_avery>>
-	<<link [[The cafe|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to "cafe">><</link>>
+	<<link [[카페|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to "cafe">><</link>>
 	<br>
 <</if>>
 <<if $photo_known>>
-	<<link [[The photo studio|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to "photo studio">><</link>>
+	<<link [[사진 스튜디오|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to "photo studio">><</link>>
 	<br>
 <</if>>
 <<if $avery_mansion>>
-	<<link [[The mansion|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to "mansion">><</link>>
+	<<link [[저택|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to "mansion">><</link>>
 	<br>
 <</if>>
-<<link [[The orphanage|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to "orphanage">><</link>>
+<<link [[고아원|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to "orphanage">><</link>>
 <br>
 <<if $officejobintro is 1 or $photo_known is 1 or $cafe_avery>>
-	<<link [[Let Avery decide|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to "Avery">><</link>><<if $avery_mansion>><<gdom>><</if>>
+	<<link [[에이버리에게 맡긴다|Avery Helicopter Destination]]>><<set $avery_helicopter.destination to "Avery">><</link>><<if $avery_mansion>><<gdom>><</if>>
 	<br>
 <</if>>
 
@@ -4962,427 +4962,427 @@ You climb up the ladder and sit down beside Avery. <<He>> shuts the door while y
 <<if $avery_helicopter.destination is "orphanage" and $avery_mansion>>
 	<<set $avery_helicopter.destination to "mansion">>
 	<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 60>>
-		<<His>> lip curls. "I'm not taking you to that fucking dump. If it's home you want, however,
+		<<His>> 입술이 비틀린다. "그 빌어먹을 쓰레기장엔 안 데려다줘. 하지만 집에 가고 싶은 거라면,
 	<<elseif $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>>
-		<<He>> rolls <<his>> eyes. "I think not. You have no need to return to that dump. If you want to go home, however,
+		<<He>>【은는】 눈을 굴린다. "그건 안 되겠네요. 당신이 그 쓰레기장으로 돌아갈 이유는 없습니다. 하지만 집에 가고 싶은 거라면,
 	<<else>>
-		<<He>> frowns slightly.
+		<<He>>【은는】 살짝 얼굴을 찌푸린다.
 		<<if random(1,2) is 1 and $avery_mansion.folder_gone is true>>
-			"I told you it's about time you forgot that place, <<pcpetname "Avery">>. But if you'd like to go home,
+			"그곳은 이제 잊을 때도 됐다고 말했을 텐데요, <<pcpetname "Avery">>. 하지만 집에 가고 싶은 거라면,
 		<<else>>
-			"That isn't your home any longer, <<pcpetname "Avery">>. But if it's home you want,
+			"그곳은 더 이상 당신의 집이 아닙니다, <<pcpetname "Avery">>. 하지만 집에 가고 싶은 거라면,
 		<</if>>
 	<</if>>
-	then that's where I'll take you." <<He>> opens the pane to give the destination to the pilot. The pane is then shut again, and you feel the helicopter turn in that direction.
+	그곳으로 데려다 드리죠." <<He>>【은는】 유리창을 열고 조종사에게 목적지를 알려준다. 유리창이 다시 닫히고, 헬리콥터가 그 방향으로 선회하는 것이 느껴진다.
 <<elseif $avery_helicopter.destination is "Avery">>
-	You tell Avery <<he>> can pick where to drop you off. <<He>> smiles and nods, then opens the pane to give the destination to the pilot. The pane is then shut again, and you feel the helicopter turn in the direction of
+	당신은 에이버리에게 내려줄 곳을 알아서 정하라고 말한다. <<He>>【은는】 미소 지으며 고개를 끄덕이고는, 유리창을 열어 조종사에게 목적지를 알려준다. 유리창이 다시 닫히고, 헬리콥터가 방향을 트는 것이 느껴진다. 향하는 곳은
 	<<if random(1,4) is 1 and $officejobintro is 1>>
 		<<set $avery_helicopter.destination to "office">>
 		<<if $avery_fate is "ascended">>
-			Elk
+			엘크
 		<<else>>
-			High
+			하이
 		<</if>>
 	<<elseif random(1,4) is 2 and $cafe_avery>>
 		<<set $avery_helicopter.destination to "cafe">>
-		Cliff
+		클리프
 	<<elseif random(1,4) is 3 and $photo_known is 1>>
 		<<set $avery_helicopter.destination to "photo studio">>
-		Nightingale
+		나이팅게일
 	<<else>>
 		<<if $avery_mansion>>
 			<<set $avery_helicopter.destination to "mansion">>
-			Danube
+			다뉴브
 		<<else>>
 			<<set $avery_helicopter.destination to "orphanage">>
-			Domus
+			도무스
 		<</if>>
 	<</if>>
-	Street. <<if $avery_mansion>><<gdom>><<npcincr Avery dom 1>><</if>>
+	가다. <<if $avery_mansion>><<gdom>><<npcincr Avery dom 1>><</if>>
 <<else>>
-	You tell Avery you want to go to the $avery_helicopter.destination.
+	당신은 에이버리에게 $avery_helicopter.destination【으로로】 가고 싶다고 말한다.
 	<br><br>
-	<<He>> nods and opens the pane to give the destination to the pilot. The pane is then shut again, and you feel the helicopter turn in that direction.
+	<<He>>【은는】 고개를 끄덕이고 유리창을 열어 조종사에게 목적지를 알려준다. 유리창이 다시 닫히고, 헬리콥터가 그 방향으로 선회하는 것이 느껴진다.
 <</if>>
 <br><br>
 <<if $rng gte 51 and !playerBellyVisible()>>
-	Reaching across the small cabin, Avery opens a compartment, and pulls out a bottle and two glasses. With a dexterity that speaks of habit, <<he>> pours a healthy amount of bubbly liquid into each. <<He>> holds one of them out to you as <<he>> stows the bottle away again.
+	에이버리는 좁은 객실 너머로 손을 뻗어 수납함을 열고, 병 하나와 잔 두 개를 꺼낸다. 습관이 밴 능숙한 손놀림으로, <<he>>【은는】 거품이 이는 액체를 양쪽 잔에 넉넉히 따른다. <<He>>【은는】 병을 다시 집어넣으며 잔 하나를 당신에게 내민다.
 	<br><br>
-	"Champagne?"
+	"샴페인 한 잔?"
 	<br><br>
 	<<if playerIsPregnant() and playerAwareTheyArePregnant()>>
 		<span class="blue">당신은 자신이 아이를 품고 있다는 걸 아는 상태에서 차마 술을 마실 수 없다.</span>
 		<br>
-		<<link [[Refuse|Avery Helicopter Refuse]]>><</link>>
+		<<link [[거절한다|Avery Helicopter Refuse]]>><</link>>
 		<br>
 	<<else>>
-		<<link [[Drink|Avery Helicopter Drink]]>><<npcincr Avery love 1>><</link>><<glove>><<lstress>><<ggdrunk>><<ggdrugged>>
+		<<link [[마신다|Avery Helicopter Drink]]>><<npcincr Avery love 1>><</link>><<glove>><<lstress>><<ggdrunk>><<ggdrugged>>
 		<br>
-		<<link [[Refuse|Avery Helicopter Refuse]]>><</link>><<garage>>
+		<<link [[거절한다|Avery Helicopter Refuse]]>><</link>><<garage>>
 		<br>
 	<</if>>
 <<else>>
-	<<link [[Next|Avery Helicopter 2]]>><</link>>
+	<<link [[다음|Avery Helicopter 2]]>><</link>>
 <</if>>
 
 :: Avery Helicopter Drink
 <<effects>>
 <<wearProp "champagne">>
 
-You touch glasses.
+당신은 잔을 부딪친다.
 <<if $avery_helicopter.drink is "known">>
-	The champagne is light and sweet, just like before. You feel a pleasant, familiar tingle.
+	샴페인은 전처럼 가볍고 달콤하다. 기분 좋고 익숙한 얼얼함이 느껴진다.
 <<else>>
 	<<set $avery_helicopter.drink to "known">>
-	The champagne is light and surprisingly sweet, like nothing you've ever tasted before. You try to hide your reaction, to no avail. Avery looks <<= $averyragerevealed gte 1 ? "smug" : "pleased with <<himself>>">>.
+	샴페인은 가볍고 놀랄 만큼 달콤해서, 지금까지 마셔본 어떤 것과도 다르다. 당신은 반응을 숨기려 하지만, 소용없다. 에이버리는 <<= $averyragerevealed gte 1 ? "득의양양한" : "스스로 흡족해하는">> 표정이다.
 <</if>>
 <<lstress>><<stress -6>><<ggdrunk>><<drunk 120>><<ggdrugged>><<drugs 180>>
 <br><br>
 <<if $avery_mansion>>
 	<<if $rng gte 66>>
-		"Hmm, clearly I've neglected to treat you to enough champagne in our time together." <<He>> <<laughs>>. "This is far from the best there is."
+		"흠, 우리가 함께한 시간 동안 당신에게 샴페인을 충분히 대접하지 못했던 게 분명하군요." <<He>>【이가】 <<laughs>>. "이건 최고급 축에도 못 드는데 말이죠."
 	<<elseif $rng gte 33>>
-		"Delicious, isn't it?" <<He>> <<laughs>>. "I had it picked out for my colleagues, but I brought it back with me. And now I'm sharing it with you."
+		"맛있죠?" <<He>>【이가】 <<laughs>>. "동료들을 위해 골라둔 건데, 다시 가져왔습니다. 그리고 지금은 당신과 나누고 있죠."
 	<<else>>
-		"Delicious, isn't it?" <<He>> <<laughs>>. "I'm quite fond of this label myself."
+		"맛있죠?" <<He>>【이가】 <<laughs>>. "나도 이 상표를 꽤 좋아합니다."
 	<</if>>
 <<else>>
-	"Still not used to living the good life, are we? Don't worry." <<He>> pats you on the thigh. "You'll grow accustomed to luxury sooner or later."
+	"아직 좋은 삶에 익숙해지지 못했나 보군요? 걱정 마세요." <<He>>【은는】 당신의 허벅지를 토닥인다. "조만간 사치에도 익숙해질 테니."
 <</if>>
 <<glove>><<npcincr Avery love 1>>
 <br><br>
-<<link [[Next|Avery Helicopter 2]]>><</link>>
+<<link [[다음|Avery Helicopter 2]]>><</link>>
 
 :: Avery Helicopter Refuse
 <<effects>>
 
 <<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 20 and !playerIsPregnant() and !playerAwareTheyArePregnant()>>
-	Avery
+	에이버리는
 	<<if C.npc.Avery.rage gte 60>>
-		narrows <<his>> eyes at you. "What is wrong with you? Turning down luxury for the thrill of it? Keep acting ungrateful, <<girl>>, and I'll start to think you <i>enjoy</i> living like a vulgar wretch."<<if C.npc.Avery.rage gte 95 and !$avery_card_gift and !$avery_mansion>> <<He>> scoffs. "And I have <<= C.npc.Avery.love gte 40 ? "far better taste in" : "too little time to waste on">> companions such as that."<</if>>
+		당신을 향해 눈을 가늘게 뜬다. "너 뭐가 문제야? 재미 삼아 사치를 거절해? 계속 그렇게 배은망덕하게 굴면, <<girl>>【아야】, 네가 천박한 거지처럼 사는 걸 <i>즐기는</i> 줄 알겠어."<<if C.npc.Avery.rage gte 95 and !$avery_card_gift and !$avery_mansion>> <<He>>【이가】 코웃음 친다. "그리고 난 그런 동행 따위<<= C.npc.Avery.love gte 40 ? "를 곁에 둘 만큼 취향이 저급하지 않아" : "에 낭비할 시간이 없어">>."<</if>>
 	<<else>>
-		rolls <<his>> eyes, letting out a long-suffering sigh. "Yes, yes," <<he>> says. "You enjoy making a game of playing hard to get. But there's hardly any reason to deny yourself something you'd never get elsewhere."
+		눈을 굴리며, 참고 참았다는 듯 긴 한숨을 내쉰다. "네, 네," <<he>>【이가】 말한다. "튕기는 걸 게임처럼 즐기시는군요. 하지만 다른 데선 결코 얻지 못할 것을 스스로 거부할 이유는 없을 텐데요."
 	<</if>>
-	<<He>> pushes the glass into your hands. "Now, drink." <<garage>><<npcincr Avery rage 1>>
+	<<He>>【은는】 잔을 당신 손에 쥐여준다. "자, 마셔요." <<garage>><<npcincr Avery rage 1>>
 	<br><br>
 	<<if displayDefiantOption(500)>>
-		<<link [[Slap drink aside|Avery Helicopter Refuse 2]]>><<set $phase to 1>><<def 1>><<wolfDefiant 500>><</link>><<defianttext 500>><<garage>><<if $avery_mansion>><<lldom>><</if>>
+		<<link [[잔을 쳐낸다|Avery Helicopter Refuse 2]]>><<set $phase to 1>><<def 1>><<wolfDefiant 500>><</link>><<defianttext 500>><<garage>><<if $avery_mansion>><<lldom>><</if>>
 		<br>
 	<</if>>
-	<<link [[Refuse|Avery Helicopter Refuse 2]]>><<set $phase to 2>><</link>><<garage>><<if $avery_mansion>><<ldom>><</if>>
+	<<link [[거절한다|Avery Helicopter Refuse 2]]>><<set $phase to 2>><</link>><<garage>><<if $avery_mansion>><<ldom>><</if>>
 	<br>
-	<<link [[Drink|Avery Helicopter Refuse 2]]>><<set $phase to 3>><</link>><<if $avery_mansion>><<gdom>><</if>>
+	<<link [[마신다|Avery Helicopter Refuse 2]]>><<set $phase to 3>><</link>><<if $avery_mansion>><<gdom>><</if>>
 	<br>
 <<else>>
 	<<if playerIsPregnant() and playerAwareTheyArePregnant()>>
-		You tell <<him>> you can't because you're pregnant. Avery frowns, but seems to accept this.
+		당신은 <<him>>에게 임신 중이라 마실 수 없다고 말한다. 에이버리는 얼굴을 찌푸리지만, 받아들이는 듯하다.
 		<br><br>
-		"Very well, then. It's a shame, though. You're missing out."
+		"그렇다면 어쩔 수 없죠. 아쉽긴 하네요. 당신만 손해입니다."
 	<<else>>
-		Avery frowns, but accepts your decision.
+		에이버리는 얼굴을 찌푸리지만, 당신의 결정을 받아들인다.
 		<br><br>
-		"So you're not in the mood? Suit yourself, then.<<if $averyragerevealed gte 1>> Though you don't know what you're missing out on.<</if>>" <<npcincr Avery rage 1>><<garage>>
+		"그럴 기분이 아니라고요? 그럼 마음대로 하세요.<<if $averyragerevealed gte 1>> 뭘 놓치고 있는지도 모르면서 말이죠.<</if>>" <<npcincr Avery rage 1>><<garage>>
 	<</if>>
 	<br><br>
-	<<He>> puts your glass aside and starts sipping on <<his>> own.<<if $averyragerevealed gte 1>> <<He>> seems somewhat <<= C.npc.Avery.rage gte 40 ? "irritated" : "put out">>.<</if>>
+	<<He>>【은는】 당신의 잔을 옆에 치워두고 자기 잔을 홀짝이기 시작한다.<<if $averyragerevealed gte 1>> <<He>>【은는】 다소 <<= C.npc.Avery.rage gte 40 ? "짜증이 난" : "언짢은">> 기색이다.<</if>>
 	<br><br>
-	<<link [[Next|Avery Helicopter 2]]>><</link>>
+	<<link [[다음|Avery Helicopter 2]]>><</link>>
 <</if>>
 
 :: Avery Helicopter Refuse 2
 <<effects>>
 
 <<if $phase is 1>> /* Slap */
-	You slap the glass of champagne aside. The crystal shatters against the floor, splattering the expensive alcohol on <<= $worn.feet.name isnot "none" ? "both your shoes" : "your feet and Avery's shoes">>.
+	당신은 샴페인 잔을 쳐낸다. 크리스털 잔이 바닥에 부딪혀 산산조각 나고, 값비싼 술이 <<= $worn.feet.name isnot "none" ? "두 사람의 신발" : "당신의 발과 에이버리의 신발">>에 튄다.
 	<br><br>
-	For a long moment, everything is quiet and Avery's expression is blank. Then <<he>>
+	한참 동안 모든 것이 고요하고, 에이버리의 표정은 텅 비어 있다. 그러더니 <<he>>【은는】
 	<<if C.npc.Avery.rage gte random(20,100)>>
 		<<if !$averyragerevealed>>
 			<<set $averyragerevealed to 1>>
 		<</if>>
-		scowls. "Are you a fucking animal?" <<he>> snarls. "You seem to enjoy making a sport out of acting like one. Turning me down every chance you get, acting like an uncivilised goddamned brat, as though I have endless patience for it." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<lldom>><<npcincr Avery dom -2>><</if>>
+		얼굴을 험악하게 찌푸린다. "넌 빌어먹을 짐승이야?" <<he>>【이가】 으르렁거린다. "짐승처럼 구는 걸 아주 스포츠처럼 즐기는 모양이군. 기회만 있으면 날 거절하고, 교양 없는 망할 애새끼처럼 굴면서, 내 인내심이 끝이 없기라도 한 것처럼." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<lldom>><<npcincr Avery dom -2>><</if>>
 		<br><br>
-		<<He>> reaches up and grabs a fistful of your hair. <<He>> yanks your head back, pulling a<<if $speech_attitude is "bratty">> strangled<</if>> cry from you. <<gpain>><<pain 2>>
+		<<He>>【은는】 손을 뻗어 당신의 머리카락을 한 움큼 움켜쥔다. <<He>>【은는】 당신의 머리를 뒤로 홱 잡아당겨, 당신에게서<<if $speech_attitude is "bratty">> 억눌린<</if>> 비명을 끌어낸다. <<gpain>><<pain 2>>
 		<br><br>
-		"I've had just about enough of it," <<he>> hisses. "If you insist on doing whatever the hell you want when you want, then I think it's my turn to do the same!"
+		"이제 지긋지긋해," <<he>>【이가】 쉭쉭거린다. "네가 그렇게 하고 싶을 때 하고 싶은 대로 하겠다고 고집한다면, 이번엔 내가 똑같이 할 차례인 것 같군!"
 		<br><br>
-		<<link [[Next|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
+		<<link [[다음|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
 		<br>
 	<<else>>
 		<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 60>>
-			snarls. "This shit again. You do seem intent on testing just how far you can push me." <<He>> scoffs. "I'll just have to remind you of your place. Soon.<<if $avery_mansion?.jobs.includes("dungeon")>> The next time I take you to the dungeon, in fact.<</if>> But for the time being..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<lldom>><<npcincr Avery dom -2>><</if>>
+			으르렁거린다. "또 이 지랄이야. 날 어디까지 밀어붙일 수 있는지 시험하기로 작정했나 보군." <<He>>【이가】 코웃음 친다. "네 분수를 다시 일깨워줘야겠어. 곧.<<if $avery_mansion?.jobs.includes("dungeon")>> 정확히는, 다음에 널 지하 감옥에 데려갈 때.<</if>> 하지만 당장은..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<lldom>><<npcincr Avery dom -2>><</if>>
 			<br><br>
-			<<He>> reaches up and grabs a fistful of your hair. <<He>> yanks your head back, pulling a<<if $speech_attitude is "bratty">> strangled<</if>> cry from you. <<gpain>><<pain 1>>
+			<<He>>【은는】 손을 뻗어 당신의 머리카락을 한 움큼 움켜쥔다. <<He>>【은는】 당신의 머리를 뒤로 홱 잡아당겨, 당신에게서<<if $speech_attitude is "bratty">> 억눌린<</if>> 비명을 끌어낸다. <<gpain>><<pain 1>>
 			<br><br>
-			"I think you've earned yourself a punishment, <<girl>>."
+			"넌 벌을 자초한 거야, <<girl>>【아야】."
 			<br><br>
-			<<link [[Next|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
+			<<link [[다음|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
 			<br>
 		<<elseif $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>>
-			sneers. "This nonsense again?" <<He>> narrows <<his>> eyes. "We'll need to have a conversation about this attitude of yours sooner or later.<<if $avery_mansion?.jobs.includes("dungeon")>> Perhaps the next time I take you to the dungeon.<</if>> But for the time being..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<lldom>><<npcincr Avery dom -2>><</if>>
+			비웃는다. "또 이런 헛짓거리입니까?" <<He>>【은는】 눈을 가늘게 뜬다. "조만간 당신의 그 태도에 대해 얘기 좀 나눠야겠군요.<<if $avery_mansion?.jobs.includes("dungeon")>> 아마 다음에 당신을 지하 감옥에 데려갈 때쯤.<</if>> 하지만 당장은..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<lldom>><<npcincr Avery dom -2>><</if>>
 			<br><br>
-			<<He>> leans in, staring at you coldly.<<if $avery_fate is "ascended" or C.npc.Avery.rage gte 50>> You feel a shiver go up your spine at the sight. <<gstress>><<stress 3>><</if>>
+			<<He>>【은는】 몸을 기울여 당신을 차갑게 응시한다.<<if $avery_fate is "ascended" or C.npc.Avery.rage gte 50>> 그 모습에 등골이 오싹해진다. <<gstress>><<stress 3>><</if>>
 			<br><br>
-			"I think you've earned yourself a punishment, <<girl>>."
+			"벌을 자초하신 것 같군요, <<girl>>【아야】."
 			<br><br>
-			<<link [[Next|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
+			<<link [[다음|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
 			<br>
 		<<elseif $averyragerevealed gte 1>>
-			frowns. "This again?" <<He>> huffs. "I do hope that you aren't planning to start misbehaving. I'd hate to have to correct it personally..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<lldom>><<npcincr Avery dom -2>><</if>>
+			얼굴을 찌푸린다. "또 이러는군요?" <<He>>【이가】 콧방귀를 뀐다. "말썽을 부리기 시작할 생각은 아니길 바랍니다. 내가 직접 바로잡아야 하는 건 질색이거든요..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<lldom>><<npcincr Avery dom -2>><</if>>
 			<br><br>
-			<<He>> smiles again, coldly this time, and leans in close.<<if $avery_fate is "ascended">> You feel a shiver go up your spine at the sight. <<gstress>><<stress 3>><</if>>
+			<<He>>【은는】 다시 미소 짓지만, 이번에는 차가운 미소로, 몸을 바짝 기울인다.<<if $avery_fate is "ascended">> 그 모습에 등골이 오싹해진다. <<gstress>><<stress 3>><</if>>
 			<br><br>
-			"I recommend resisting this little impulse of yours in the future, <<pcpetname "Avery">>," <<he>> murmurs. "It's for your own good, you understand."
+			"앞으로는 그 사소한 충동을 참으시길 권합니다, <<pcpetname "Avery">>," <<he>>【이가】 나직이 말한다. "당신을 위해서 하는 말이에요, 아시겠죠."
 			<br><br>
-			After a tense moment, <<he>> leans back in <<his>> seat. An uncomfortable silence takes over the helicopter's cabin, and reigns until you reach your destination.
+			긴장된 순간이 지나고, <<he>>【은는】 자리에 등을 기댄다. 불편한 침묵이 헬리콥터 객실을 뒤덮고, 목적지에 도착할 때까지 이어진다.
 			<br><br>
-			<<link [[Next|Avery Helicopter 3]]>><<set $phase to 4>><<unset $phase2>><</link>>
+			<<link [[다음|Avery Helicopter 3]]>><<set $phase to 4>><<unset $phase2>><</link>>
 			<br>
 		<<else>>
-			frowns. "Throwing a fit? How immature. And after all I've done for you." <<He>> clicks <<his>> tongue. "Mischief is cute, but only in small doses, <<pcpetname "Avery">>. I'd keep that in mind. It wouldn't do for you to test anyone's patience." <<npcincr Avery rage 1>><<if $avery_mansion>><<lldom>><<npcincr Avery dom -2>><</if>>
+			얼굴을 찌푸린다. "떼를 쓰는 겁니까? 유치하군요. 내가 당신에게 해준 게 얼마인데." <<He>>【이가】 혀를 찬다. "장난은 귀엽지만, 적당할 때만입니다, <<pcpetname "Avery">>. 명심해두는 게 좋을 거예요. 남의 인내심을 시험하는 건 좋지 않으니까." <<npcincr Avery rage 1>><<if $avery_mansion>><<lldom>><<npcincr Avery dom -2>><</if>>
 			<br><br>
-			An uncomfortable silence takes over the helicopter's cabin, and reigns until you reach your destination.
+			불편한 침묵이 헬리콥터 객실을 뒤덮고, 목적지에 도착할 때까지 이어진다.
 			<br><br>
-			<<link [[Next|Avery Helicopter 3]]>><<set $phase to 4>><<unset $phase2>><</link>>
+			<<link [[다음|Avery Helicopter 3]]>><<set $phase to 4>><<unset $phase2>><</link>>
 			<br>
 		<</if>>
 	<</if>>
 <<elseif $phase is 2>> /* Refuse */
 	<<if $speech_attitude is "meek" or $speech_attitude_avery>>
-		"I'm sorry, I..." You look away. "I don't mean to offend, but I just really don't want to drink..."
+		"죄송해요, 저는..." 당신은 시선을 돌린다. "기분 상하게 하려는 건 아닌데, 정말로 마시고 싶지 않아서요..."
 	<<elseif $speech_attitude is "bratty">>
-		"I said I wasn't in the damn mood."
+		"그럴 기분 아니라고 했잖아요."
 	<<else>>
-		"I appreciate the offer, but I'm not in the mood. You can have my glass, though."
+		"권해주셔서 고맙지만, 그럴 기분이 아니에요. 제 잔은 드셔도 돼요."
 	<</if>>
 	<br><br>
-	Avery
+	에이버리는
 	<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 60>>
-		scowls and takes your glass. "Fine. But don't think you'll get any if you change your mind. You've lost your privilege to my generosity."
+		얼굴을 험악하게 찌푸리며 당신의 잔을 가져간다. "좋아. 하지만 마음이 바뀌어도 한 방울도 못 얻을 줄 알아. 넌 내 호의를 누릴 자격을 잃었어."
 	<<else>>
-		scoffs and takes your glass. "If you so insist on missing out, then have it your way. But if you change your mind later, then don't think you'll be receiving any."
+		코웃음을 치며 당신의 잔을 가져간다. "그렇게까지 놓치겠다고 고집하신다면, 마음대로 하세요. 하지만 나중에 마음이 바뀌더라도, 받을 수 있을 거라 기대하지 마시길."
 	<</if>>
-	<<He>> seems irritated as <<he>> sips at <<his>> own glass. <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
+	<<He>>【은는】 짜증이 난 기색으로 자기 잔을 홀짝인다. <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
 	<br><br>
-	<<link [[Next|Avery Helicopter 2]]>><</link>>
+	<<link [[다음|Avery Helicopter 2]]>><</link>>
 <<else>> /* Drink */
 	<<wearProp "champagne">>
-	You take the glass from Avery and take a drink from it.
+	당신은 에이버리에게서 잔을 받아 한 모금 마신다.
 	<<if $avery_helicopter.drink is true>>
-		The champagne is light and sweet, just like before. You feel a pleasant, familiar tingle.
+		샴페인은 전처럼 가볍고 달콤하다. 기분 좋고 익숙한 얼얼함이 느껴진다.
 	<<else>>
 		<<set $avery_helicopter.drink to true>>
-		The champagne is light and surprisingly sweet, like nothing you've ever tasted before. You try to hide your reaction, to no avail.
+		샴페인은 가볍고 놀랄 만큼 달콤해서, 지금까지 마셔본 어떤 것과도 다르다. 당신은 반응을 숨기려 하지만, 소용없다.
 	<</if>>
 	<<lstress>><<stress -3>><<ggdrunk>><<drunk 120>><<ggdrugged>><<drugs 180>>
 	<br><br>
-	"There we are. Much better." <<He>> seems to calm.
+	"그래요. 훨씬 낫군요." <<He>>【은는】 진정되는 듯하다.
 	<<if $avery_mansion>>
 		<<if $rng gte 66>>
-			"Though clearly I've neglected to treat you to enough champagne in our time together." <<He>> snorts. "This is far from the best there is."
+			"그래도 우리가 함께한 시간 동안 당신에게 샴페인을 충분히 대접하지 못했던 게 분명하군요." <<He>>【이가】 콧방귀를 뀐다. "이건 최고급 축에도 못 드는데 말이죠."
 		<<elseif $rng gte 33>>
-			"It's delicious, isn't it?" <<He>> smirks. "I had it picked out for my colleagues, but I brought it back with me. And now I'm sharing it with you."
+			"맛있죠?" <<He>>【이가】 능글맞게 웃는다. "동료들을 위해 골라둔 건데, 다시 가져왔습니다. 그리고 지금은 당신과 나누고 있죠."
 		<<else>>
-			"It's delicious, isn't it?" <<He>> smirks. "I'm quite fond of this label myself."
+			"맛있죠?" <<He>>【이가】 능글맞게 웃는다. "나도 이 상표를 꽤 좋아합니다."
 		<</if>>
 	<<else>>
-		"Still not used to living the good life, are we? Don't worry." <<He>> pats you on the thigh. "You'll grow accustomed to luxury sooner or later."
+		"아직 좋은 삶에 익숙해지지 못했나 보군요? 걱정 마세요." <<He>>【은는】 당신의 허벅지를 토닥인다. "조만간 사치에도 익숙해질 테니."
 	<</if>><<if $avery_mansion>><<gdom>><<npcincr Avery dom 1>><</if>>
 	<br><br>
-	<<link [[Next|Avery Helicopter 2]]>><</link>>
+	<<link [[다음|Avery Helicopter 2]]>><</link>>
 <</if>>
 
 :: Avery Helicopter 2
 <<effects>>
 
-As the helicopter continues its route towards the $avery_helicopter.destination,
+헬리콥터가 $avery_helicopter.destination【을를】 향해 계속 날아가는 동안,
 <<if random(1,3) is 1>> /* Gossip */
 	<<if $rng gte 66 and $avery_mansion?.party_guests_seen?.length>> /* The following should be adjusted to have variations when the dinner parties post-tower finale are changed */
 		<<set $phase2 to 1>>
-		Avery begins to talk about the guest of honour at the next party,
+		에이버리는 다음 파티의 귀빈에 대해 이야기하기 시작한다. 이번 귀빈은
 		<<if $avery_mansion.jordan_intro and $avery_mansion.guest is "Jordan">>
-			Jordan. Mostly about <<nnpc_his "Jordan">> faith and dedication to it. It's not flattering.
+			조던이다. 주로 <<nnpc_his "Jordan">> 신앙과, 그에 대한 헌신에 관한 이야기다. 호의적인 내용은 아니다.
 			<<if $avery_fate is "ascended">>
-				"Perhaps one day that zealot will realise that the god <<nnpc_he "Jordan">> wastes all that time worshiping isn't listening." <<He>> scoffs. <<He>> sounds <<= $averyragerevealed gte 1 ? "quite" : "surprisingly">> spiteful.
+				"언젠가는 저 광신도도 <<nnpc_he "Jordan">>【이가】 그 많은 시간을 들여 숭배하는 신이 듣고 있지 않다는 걸 깨닫겠죠." <<He>>【이가】 코웃음 친다. <<He>>【은는】 <<= $averyragerevealed gte 1 ? "꽤나" : "의외로">> 악의적으로 들린다.
 			<<else>>
-				"I do hope <<nnpc_he "Jordan">> pulls <<nnpc_his "Jordan">> head down from the clouds someday. For the sake of <<nnpc_his "Jordan">> flock, you understand," <<he>> says<<if ["initiate", "monk", "priest"].includes($temple_rank) and $averySeen.includes("temple_initiate")>> with a wink<</if>>. <<He>> sounds <<= $averyragerevealed gte 1 ? "terribly" : "surprisingly">> sarcastic.
+				"언젠가는 <<nnpc_he "Jordan">>【이가】 구름 위에서 <<nnpc_his "Jordan">> 머리를 끌어내리길 바랍니다. <<nnpc_his "Jordan">> 신도들을 위해서 말이죠, 아시겠지만," <<he>>【이가】<<if ["initiate", "monk", "priest"].includes($temple_rank) and $averySeen.includes("temple_initiate")>> 윙크하며<</if>> 말한다. <<He>>【은는】 <<= $averyragerevealed gte 1 ? "지독하게" : "의외로">> 비꼬는 투로 들린다.
 			<</if>>
 			<<if ["initiate", "monk", "priest"].includes($temple_rank)>>
 				<br><br>
-				You feel somewhat guilty listening to all this about your High <<= C.npc.Jordan.gender is "m" ? "Priest" : "Priestess">>.
+				당신의 <<= C.npc.Jordan.gender is "m" ? "대사제" : "대사제">>에 대해 이런 말을 듣고 있자니 다소 죄책감이 든다.
 			<</if>>
 		<<elseif $avery_mansion.guest is "Remy">>
-			Remy. It's mostly
+			레미다. 대부분은
 			<<if $avery_fate is "saved">>
-				simple observations, and you can't help but notice they're all in the past tense. You also hear a somewhat
+				단순한 관찰들인데, 전부 과거형이라는 점이 눈에 띌 수밖에 없다. <<his>> 목소리에서는 어딘가
 				<<if $averySeen.includes("soft_bad_end_ufarm")>>
-					<<= either("irritable","annoyed","resentful")>>
+					<<= either("짜증스러운","성가셔하는","분한")>>
 				<<else>>
-					<<= either("neutral","distant","token")>>
+					<<= either("무덤덤한","거리를 두는","형식적인")>>
 				<</if>>
-				note in <<his>> voice. <<He>> just stares out of the window coolly as <<he>> speaks.
+				기색도 느껴진다. <<He>>【은는】 말하는 동안 그저 창밖을 냉담하게 응시할 뿐이다.
 			<<else>>
-				complementary, remarking on <<nnpc_his "Remy">> manners and
+				칭찬 일색으로, <<nnpc_his "Remy">> 예의범절과
 				<<if $averySeen.includes("soft_bad_end_ufarm")>>
-					respectability, though you hear an <<= either("irritable","annoyed")>> edge in <<his>> voice.
+					품위를 언급하지만, <<his>> 목소리에는 <<= either("짜증스러운","성가셔하는")>> 날이 서 있다.
 				<<else>>
-					respectability. "If only most of the townsfolk had even a fraction of <<nnpc_his "Remy">> decorum." <<He>> <<= $averyragerevealed gte 1 and C.npc.Avery.rage gte 40 ? "gives you a pointed look" : "sighs">>.
+					품위를 언급한다. "마을 사람들 대부분이 <<nnpc_his "Remy">> 품격의 반의반이라도 갖췄더라면 좋았을 텐데." <<He>>【은는】 <<= $averyragerevealed gte 1 and C.npc.Avery.rage gte 40 ? "당신에게 의미심장한 눈길을 보낸다" : "한숨을 쉰다">>.
 					<<if $averySeen.includes("remy_past")>>
-						You can't help but think about something Avery said once before about Remy's stubbornness. Perhaps such feelings are things Avery usually prefers to keep to <<himself>>, however.
+						당신은 에이버리가 전에 레미의 고집에 대해 했던 말을 떠올리지 않을 수 없다. 하지만 그런 감정은 에이버리가 평소 혼자 간직하길 선호하는 것인지도 모른다.
 					<</if>>
 				<</if>>
 			<</if>>
 		<<elseif $avery_mansion.guest is "Harper">>
-			Harper. It's mostly
+			하퍼다. 대부분은
 			<<if $avery_fate is "saved">>
-				simple observations, and you can't help but notice they're all in the past tense. You do hear a somewhat
+				단순한 관찰들인데, 전부 과거형이라는 점이 눈에 띌 수밖에 없다. <<his>> 목소리에서는 어딘가
 				<<if $averySeen.includes("soft_bad_end_asylum")>>
-					<<= either("irritable","annoyed","resentful")>>
+					<<= either("짜증스러운","성가셔하는","분한")>>
 				<<else>>
-					<<= either("neutral","distant","token")>>
+					<<= either("무덤덤한","거리를 두는","형식적인")>>
 				<</if>>
-				note in <<his>> voice. <<He>> just stares out of the window coolly as <<he>> speaks.
+				기색이 느껴진다. <<He>>【은는】 말하는 동안 그저 창밖을 냉담하게 응시할 뿐이다.
 			<<else>>
-				about how accomplished <<nnpc_he "Harper">> is, despite being so young.
+				<<nnpc_he "Harper">>【이가】 그렇게 젊은 나이에도 얼마나 많은 것을 이루었는지에 관한 이야기다.
 				<<if $averySeen.includes("soft_bad_end_ufarm")>>
-					Though you hear an <<= either("irritable","annoyed")>> edge in <<his>> voice as <<he>> talks.
+					다만 <<he>>【이가】 말하는 동안 <<his>> 목소리에 <<= either("짜증스러운","성가셔하는")>> 날이 서 있는 것이 들린다.
 				<<else>>
-					"It's admirable, really. The youths of today ought to learn to apply themselves in the same way <<nnpc_he "Harper">> had." A smile slowly spreads on <<his>> lips. "Don't you think, <<pcpetname "Avery">>?"
+					"정말 감탄스러운 일이죠. 요즘 젊은이들도 <<nnpc_he "Harper">>【이가】 그랬던 것처럼 스스로를 갈고닦는 법을 배워야 합니다." <<his>> 입가에 천천히 미소가 번진다. "그렇게 생각하지 않나요, <<pcpetname "Avery">>?"
 				<</if>>
 			<</if>>
 		<<elseif $avery_mansion.guest is "Briar">>
-			Briar. "<<nnpc_Hes "Briar">> come quite far in life," <<he>> drawls. "Considering <<nnpc_his "Briar">> underprivileged background and the fact that <<nnpc_his "Briar">> business...catches a lot of attention with the authorities." <<He>> <<laughs>>. "But <<nnpc_he "Briar">> has made a name for <<nnpc_himself "Briar">>. Something of one, anyway."
+			브라이어다. "<<nnpc_Hes "Briar">> 인생에서 꽤 멀리까지 왔죠," <<he>>【이가】 느릿하게 말한다. "<<nnpc_his "Briar">> 불우한 배경과, <<nnpc_his "Briar">> 사업이... 당국의 관심을 꽤나 끈다는 점을 고려하면 말입니다." <<He>>【이가】 <<laughs>>. "하지만 <<nnpc_he "Briar">>【은는】 <<nnpc_himself "Briar">> 이름을 알렸습니다. 어느 정도는 말이죠."
 			<br><br>
 
-			The words drip with faint praise.
+			말 속에 미적지근한 칭찬이 배어 있다.
 			<<if $brotheljob is 1 and $brothel_raid gte 1>>
-				You feel a little nervous listening to it, knowing firsthand just how illegal Briar's business is.
+				브라이어의 사업이 얼마나 불법적인지 몸소 아는 당신은, 듣고 있자니 조금 불안해진다.
 			<</if>>
 		<<else>> /* Quinn */
-			Quinn. You hear a number of stories about <<nnpc_his "Quinn">> escapades. "It's almost comical," Avery says at one point. "<<nnpc_He "Quinn">> likes to pretend <<nnpc_hes "Quinn">> in control all the time, and yet only succeeds in making <<nnpc_himself "Quinn">> look like a <<= $averyragerevealed gte 1 and C.npc.Avery.rage gte 60 ? "fucking joke" : "bumbling buffoon">>.<<if $averyragerevealed gte 1>> It's almost embarrassing to have <<nnpc_him "Quinn">> as our mayor...<</if>>" <<He>> sighs.<<if $avery_fate is "ascended">> "...But at least <<nnpc_hes "Quinn">> easy to manipulate."<</if>>
+			퀸이다. 당신은 <<nnpc_his "Quinn">> 기행에 관한 이야기를 여럿 듣는다. "거의 희극이죠," 에이버리가 어느 순간 말한다. "<<nnpc_He "Quinn">>【은는】 늘 <<nnpc_hes "Quinn">> 상황을 장악하고 있는 척하지만, <<nnpc_himself "Quinn">> <<= $averyragerevealed gte 1 and C.npc.Avery.rage gte 60 ? "빌어먹을 웃음거리" : "얼빠진 광대">>처럼 보이게 만드는 데만 성공할 뿐입니다.<<if $averyragerevealed gte 1>> <<nnpc_him "Quinn">>【을를】 우리 시장으로 두고 있다는 게 창피할 지경이에요...<</if>>" <<He>>【이가】 한숨을 쉰다.<<if $avery_fate is "ascended">> "...하지만 적어도 <<nnpc_hes "Quinn">> 조종하기는 쉽죠."<</if>>
 		<</if>>
 	<<elseif $rng gte 33 and $officejobintro is 1>> /* Coworkers */
 		<<generate2>><<person1>>
 		<<set $phase2 to 2>>
-		Avery begins to talk about some of <<his>> fellow executives at the company.
+		에이버리는 회사의 동료 임원들에 대해 이야기하기 시작한다.
 		<<if [2,3].includes(Time.weekDay)>>
-			"The CIO is
+			"CIO는
 			<<if $averyragerevealed gte 1>>
-				incompetent," <<he>> scoffs. <<person2>>"<<he>> doesn't know what <<hes>><<if C.npc.Avery.rage gte 60>> fucking<</if>> doing, especially with technology. It's a wonder how <<hes>> even
+				무능합니다," <<he>>【이가】 코웃음 친다. <<person2>>"<<he>>【은는】 자기가<<if C.npc.Avery.rage gte 60>> 빌어먹을<</if>> 뭘 하는지도 몰라요, 특히 기술 쪽에서는. 어떻게 지금까지
 			<<else>>
-				quite tiresome," <<person1>><<he>> sighs. "To be frank with you, I'm not certain how <<person2>><<hes>>
+				꽤나 피곤한 사람입니다," <<person1>><<he>>【이가】 한숨을 쉰다. "솔직히 말해서, <<person2>><<he>>【이가】 어떻게 지금까지
 			<</if>>
-			kept a job here as long as <<he>> has."
+			여기서 그렇게 오래 자리를 지켰는지 모를 일입니다."
 			<br><br>
-			<<person1>><<He>> tells you a story about <<= either("a catastrophic system failure in the office's servers","an instance where the CIO displayed a lack of understanding of the company's own HR system","an example of the CIO's incompetence")>>. It sounds pretty bad. You aren't sure how <<person2>><<hes>> managed to keep <<his>> job either.
+			<<person1>><<He>>【은는】 당신에게 <<= either("사무실 서버에 일어난 재앙적인 시스템 장애","CIO가 회사 자체 인사 시스템도 제대로 이해하지 못하는 모습을 보인 일","CIO의 무능함을 보여주는 한 사례")>>에 관한 이야기를 들려준다. 꽤나 심각하게 들린다. 당신도 <<person2>><<he>>【이가】 어떻게 <<his>> 자리를 지켰는지 알 수 없다.
 		<<elseif [4,5].includes(Time.weekDay)>>
-			"Our company's CAO is
+			"우리 회사 CAO는
 			<<if $averyragerevealed gte 1>>
-				a—well." <<He>> scoffs. "If <<person2>><<he>> spent half the bloody time <<he>> spends on making use of <<his>> underlings
+				뭐랄까—됐습니다." <<He>>【이가】 코웃음 친다. "<<person2>><<he>>【이가】 <<his>> 부하들을 써먹는 데 쏟는 그 빌어먹을 시간의 절반만이라도
 			<<else>>
-				aggressive to the point of obnoxiousness in...coaxing favours from <<his>> subordinates. If <<he>> spent half the time <<he>> spends on that
+				<<his>> 부하들에게서... 호의를 구슬려내는 데 있어 불쾌할 정도로 적극적이죠. <<he>>【이가】 거기에 쏟는 시간의 절반만이라도
 			<</if>>
-			as <<he>> did on analytics, perhaps I'd have proper data to work with myself. Don't end up alone with <<him>> if you can help it, <<pcpetname "Avery">>," <<person1>><<he>> adds as an aside.
+			분석 업무에 썼다면, 나도 제대로 된 데이터를 가지고 일할 수 있었을 텐데 말이죠. 가능하면 <<him>>【와과】 단둘이 있게 되는 일은 피하세요, <<pcpetname "Avery">>," <<person1>><<he>>【이가】 덧붙인다.
 			<br><br>
-			<<person1>><<He>> tells you a story about <<= either("how the CAO was once caught having a threesome instead of working","a time that Avery and <<his>> subordinates had to wait a week past the original deadline because of the CAO's cavorting","an example of the CAO's incompetence")>>. It sounds pretty bad. You aren't sure how <<person2>><<hes>> managed to keep <<his>> job either.
+			<<person1>><<He>>【은는】 당신에게 <<= either("CAO가 일하는 대신 셋이서 즐기다가 한번 들킨 일","CAO가 놀아나는 바람에 에이버리와 <<his>> 부하들이 원래 마감보다 일주일을 더 기다려야 했던 일","CAO의 무능함을 보여주는 한 사례")>>에 관한 이야기를 들려준다. 꽤나 심각하게 들린다. 당신도 <<person2>><<he>>【이가】 어떻게 <<his>> 자리를 지켰는지 알 수 없다.
 		<<else>>
-			"And then the CEO—" <<He>> cuts <<himself>> off, giving you
+			"그리고 CEO는—" <<He>>【은는】 말을 끊고, 당신에게
 			<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 60>>
-				a suspicious look. "Well. Never mind what I think of <<person2>><<him>>."
+				의심스러운 눈길을 보낸다. "뭐. <<person2>><<him>>【을를】 내가 어떻게 생각하는지는 신경 쓰지 마세요."
 			<<elseif $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>>
-				a raised brow. "Well, perhaps I should keep that to myself."
+				눈썹을 치켜올려 보인다. "뭐, 그건 나 혼자만 알고 있는 편이 낫겠군요."
 			<<elseif $averyragerevealed gte 1>>
-				a wry smile. "Well, it wouldn't do for me to speak out of turn."
+				쓴웃음을 지어 보인다. "뭐, 내가 주제넘게 말해선 안 되겠죠."
 			<<else>>
-				an apologetic look. "Well, never mind <<person2>><<him>>."
+				미안하다는 눈길을 보낸다. "뭐, <<person2>><<him>>【은는】 신경 쓰지 마세요."
 			<</if>>
-			Despite <<person1>><<his>> words, you get the sense <<he>>'d take any excuse to speak on the <<person2>><<personsimple>>.
+			<<person1>><<his>> 말과는 달리, <<he>>【은는】 핑계만 있으면 <<person2>><<personsimple>>에 대해 떠들고 싶어 하는 것 같다.
 		<</if>>
 	<<else>> /* Misc */
 		<<set $phase2 to 3>>
 		<<rng 5>>
 		<<if $rng is 1 and $avery_fate is "saved" and $avery_mansion?.injury_timer gte 1>>
-			Avery talks <<his>> experiences at the hospital. It seems that one of the nurses who was tending to <<him>> was involved in a <<= either("horribly messy love polygon","some embezzlement scheme, and was summarily fired")>>.
+			에이버리는 병원에서 겪은 일을 이야기한다. <<him>>【을를】 돌보던 간호사 중 한 명이 <<= either("끔찍하게 지저분한 다각 연애 관계에 얽혀 있었던","어떤 횡령 사건에 연루되어 즉시 해고당했던")>> 모양이다.
 		<<elseif $rng is 2 and $avery_fate>>
-			Avery complains about a colleague of <<his>> that made a rude comment about<<if $avery_fate is "saved">> what happened to<</if>> <<his>> skyscraper.
+			에이버리는 동료 하나가 <<his>> 마천루<<if $avery_fate is "saved">>에 일어난 일<</if>>에 대해 무례한 말을 했다며 불평한다.
 		<<elseif $rng is 3>>
-			Avery talks about <<his>> neighbours. Apparently a couple of <<his>> neighbours had had an argument so loud last night it startled another neighbour's dog into barking. It set off all the dogs in the neighbourhood after that.<<if $avery_mansion>> You're lucky you didn't hear it yourself.<</if>>
+			에이버리는 <<his>> 이웃들에 대해 이야기한다. 어젯밤 이웃 부부가 어찌나 시끄럽게 다퉜는지 다른 이웃집 개가 놀라 짖기 시작했다고 한다. 그 뒤로 동네 개들이 전부 따라 짖었다는 것이다.<<if $avery_mansion>> 당신이 직접 듣지 못한 것이 다행이다.<</if>>
 		<<elseif $rng is 4>>
-			Avery talks about one of <<his>> neighbours being an incorrigible gossip. <<He>> then proceeds to tell you all about said neighbour's dirty laundry.
+			에이버리는 <<his>> 이웃 중 한 명이 구제불능의 수다쟁이라고 이야기한다. <<He>>【은는】 그러고는 그 이웃의 치부를 당신에게 낱낱이 들려준다.
 		<<else>>
-			Avery talks about <<his>> acquaintances. Apparently one of them accidentally <<= either("proposed to","slept with","insulted")>> the wrong person, and it spiraled into a drama worthy of a television series.
+			에이버리는 <<his>> 지인들에 대해 이야기한다. 그중 한 명이 상대를 착각해 <<= either("엉뚱한 사람에게 청혼했","엉뚱한 사람과 잠자리를 가졌","엉뚱한 사람을 모욕했")>>는데, 그 일이 텔레비전 드라마에나 나올 법한 소동으로 번졌다고 한다.
 		<</if>>
 	<</if>>
 	<<person1>>
 	<br><br>
-	<<link [[Encourage Avery's gossiping (curious)|Avery Helicopter Gossip]]>><<set $phase to 1>><</link>><<glove>><<lstress>>
+	<<link [[에이버리의 뒷담화를 부추긴다 (호기심)|Avery Helicopter Gossip]]>><<set $phase to 1>><</link>><<glove>><<lstress>>
 	<br>
-	<<link [[Humour Avery's gossiping (uninterested)|Avery Helicopter Gossip]]>><<set $phase to 2>><</link>><<gglove>><<gtiredness>>
+	<<link [[에이버리의 뒷담화에 장단을 맞춘다 (무관심)|Avery Helicopter Gossip]]>><<set $phase to 2>><</link>><<gglove>><<gtiredness>>
 	<br>
-	<<link [[Tune it out|Avery Helicopter Gossip]]>><<set $phase to 3>><</link>><<llove>><<ltiredness>>
+	<<link [[흘려듣는다|Avery Helicopter Gossip]]>><<set $phase to 3>><</link>><<llove>><<ltiredness>>
 <<elseif random(1,3) is 2>> /* Turbulence */
-	you watch outside the window. Partway through the ride, the helicopter suddenly starts to shake, startling both you and Avery. <<gstress>><<stress 3>>
+	당신은 창밖을 바라본다. 비행 도중, 헬리콥터가 갑자기 흔들리기 시작해 당신과 에이버리 모두를 놀라게 한다. <<gstress>><<stress 3>>
 	<br><br>
 	<<if (currentSkillValue('willpower')/5) gte random(1,20)>>
 		<<set $phase2 to 1>>
-		The both of you manage to <span class="green">keep your cool</span>.You meet Avery's eyes, and <<he>> gives you a reassuring smile<<if $averyragerevealed gte 1>>, though you detect a hint of disappointment.<</if>>
+		두 사람 모두 <span class="green">침착함을 유지한다</span>. 당신은 에이버리와 눈을 마주치고, <<he>>【은는】 안심시키는 미소를 지어 보인다<<if $averyragerevealed gte 1>>. 다만 살짝 실망한 기색이 엿보인다<</if>>.
 		<br><br>
-		"It seems to be a windy day," <<he>> says, offering an arm. "You're free to hold onto me if need be, <<pcpetname "Avery">>."
+		"바람이 많이 부는 날인가 보군요," <<he>>【이가】 팔을 내밀며 말한다. "필요하다면 날 붙잡아도 됩니다, <<pcpetname "Avery">>."
 		<br><br>
-		<<link [[Hold onto Avery|Avery Helicopter Turbulence]]>><<set $phase to 1>><</link>><<glove>>
+		<<link [[에이버리를 붙잡는다|Avery Helicopter Turbulence]]>><<set $phase to 1>><</link>><<glove>>
 		<br>
-		<<link [[Keep your hands to yourself|Avery Helicopter Turbulence]]>><<set $phase to 2>><</link>><<llove>>
+		<<link [[손을 가만히 둔다|Avery Helicopter Turbulence]]>><<set $phase to 2>><</link>><<llove>>
 	<<else>>
 		<<set $phase2 to 2>>
-		Avery manages to keep <<his>> cool, but <span class="red">a <<= $speech_attitude is "meek" ? "scream" : "cry of alarm">> escapes you</span> as your hands fly up to latch onto something stable. Avery happens to be the nearest thing. You hear <<him>> <<laugh>> quietly.<<if $avery_mansion>> <<gdom>><<npcincr Avery dom 1>><</if>>
+		에이버리는 침착함을 유지하지만, <span class="red">당신은 <<= $speech_attitude is "meek" ? "비명" : "놀란 외침">>을 내지르고 만다</span>. 당신의 손은 안정적인 무언가를 붙잡으려 허공을 더듬고, 마침 가장 가까이 있는 것은 에이버리다. <<him>>【이가】 조용히 <<laugh>> 소리가 들린다.<<if $avery_mansion>> <<gdom>><<npcincr Avery dom 1>><</if>>
 		<br><br>
-		"It seems to be a windy day," <<he>> says, patting one of your hands. "You're free to hold onto me all you like, <<pcpetname "Avery">>."
+		"바람이 많이 부는 날인가 보군요," <<he>>【이가】 당신의 손을 토닥이며 말한다. "원하는 만큼 날 붙잡고 있어도 됩니다, <<pcpetname "Avery">>."
 		<br><br>
-		<<link [[Hold onto Avery|Avery Helicopter Turbulence]]>><<set $phase to 1>><</link>><<glove>>
+		<<link [[에이버리를 붙잡는다|Avery Helicopter Turbulence]]>><<set $phase to 1>><</link>><<glove>>
 		<br>
-		<<link [[Let go|Avery Helicopter Turbulence]]>><<set $phase to 2>><</link>><<llove>>
+		<<link [[손을 놓는다|Avery Helicopter Turbulence]]>><<set $phase to 2>><</link>><<llove>>
 	<</if>>
 <<else>> /* Sightseeing */
-	you look outside the window. You see the town below you, and the glittering ocean in the distance. It's a relaxing sight. <<lstress>><<stress -6>><<ltrauma>><<trauma -6>>
+	당신은 창밖을 내다본다. 발아래로 마을이, 저 멀리 반짝이는 바다가 보인다. 마음이 편안해지는 광경이다. <<lstress>><<stress -6>><<ltrauma>><<trauma -6>>
 	<br><br>
-	"Enjoying the view?"
+	"경치가 마음에 드나요?"
 	<<if (random(1,2) is 1 and C.npc.Avery.lust gte 20) or C.npc.Avery.lust gte 60>>
-		You feel a hand slide onto your thigh, and you turn to look at Avery. <<He>> smiles <<= C.npc.Avery.lust gte 60 ? "seductively" : "slyly">>. "So am I."
+		손 하나가 당신의 허벅지 위로 미끄러져 오고, 당신은 에이버리를 돌아본다. <<He>>【은는】 <<= C.npc.Avery.lust gte 60 ? "유혹적으로" : "음흉하게">> 미소 짓는다. "나도 그렇습니다."
 		<br><br>
-		Avery's eyes are locked onto you, rather than either of the windows.<<if isLoveInterest("Avery") or $averyromance>> Your heart skips a beat. <<lstress>><<stress -3>><</if>>
+		에이버리의 시선은 어느 쪽 창문도 아닌 당신에게 고정되어 있다.<<if isLoveInterest("Avery") or $averyromance>> 심장이 두근거린다. <<lstress>><<stress -3>><</if>>
 		<br><br>
-		"This is what I can give you, <<pcpetname "Avery">>," <<he>>
+		"이것이 내가 당신에게 줄 수 있는 것입니다, <<pcpetname "Avery">>," <<he>>【이가】
 		<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 60>>
-			purrs<<if C.npc.Avery.rage gte 80>> dangerously<</if>>. "What I'm capable of. You'd do best not to forget that it's just as easy for me to take it away as it is to give it to you. And if you don't wish to lose it..." <<His>> hand lifts to cup your chin instead. "Prove it. Spread your legs for me."
+			가르랑거리듯<<if C.npc.Avery.rage gte 80>> 위험하게<</if>> 말한다. "내가 할 수 있는 것이지. 주는 것만큼 빼앗는 것도 내겐 쉽다는 걸 잊지 않는 게 좋을 거야. 그리고 잃고 싶지 않다면..." <<His>> 손이 올라와 대신 당신의 턱을 감싸 쥔다. "증명해. 날 위해 다리를 벌려."
 		<<elseif $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>>
-			murmurs. "What I'm capable of. As long as you ask nicely, you can have just about anything you'd like. But that requires obedience on your part as much as willingness on mine." <<His>> hand lifts to cup your chin instead. "So let's start with you spreading your legs for me, hm?"
+			나직이 말한다. "내가 할 수 있는 것이죠. 얌전히 부탁하기만 하면, 원하는 건 거의 뭐든 가질 수 있습니다. 하지만 그러려면 내 쪽의 의향만큼이나 당신 쪽의 순종이 필요하죠." <<His>> 손이 올라와 대신 당신의 턱을 감싸 쥔다. "그러니 당신이 날 위해 다리를 벌리는 것부터 시작해 볼까요, 음?"
 		<<else>>
-			<<= either("murmurs","purrs","whispers")>>. "This is what I'm capable of. And I can give you just about anything that you'd like, so long as you keep being good. You want to be good for me, don't you?" <<His>> hand lifts to cup your chin instead.
+			<<= either("나직이 말한다","가르랑거리듯 말한다","속삭인다")>>. "이게 내가 할 수 있는 것입니다. 그리고 당신이 계속 착하게만 군다면, 원하는 건 거의 뭐든 줄 수 있죠. 날 위해 착하게 굴고 싶죠, 그렇지 않나요?" <<His>> 손이 올라와 대신 당신의 턱을 감싸 쥔다.
 			<<if $averyragerevealed gte 1>>
-				"I'd like you to prove it. Let's start with you spreading your legs for me."
+				"그걸 증명해 줬으면 합니다. 날 위해 다리를 벌리는 것부터 시작하죠."
 			<<else>>
-				"So, why don't we start with this? Spread your legs for me."
+				"그럼, 이것부터 시작해 볼까요? 날 위해 다리를 벌려요."
 			<</if>>
 		<</if>>
 		<br><br>
-		<<link [[Spread your legs|Avery Helicopter View Lewd]]>><<set $phase to 1>><</link>><<glove>><<if $avery_mansion>><<gdom>><</if>>
+		<<link [[다리를 벌린다|Avery Helicopter View Lewd]]>><<set $phase to 1>><</link>><<glove>><<if $avery_mansion>><<gdom>><</if>>
 		<br>
-		<<link [[Refuse|Avery Helicopter View Lewd]]>><<set $phase to 2>><</link>><<garage>><<if $avery_mansion>><<ldom>><</if>>
+		<<link [[거절한다|Avery Helicopter View Lewd]]>><<set $phase to 2>><</link>><<garage>><<if $avery_mansion>><<ldom>><</if>>
 	<<else>>
 		<br><br>
-		You look over at Avery. <<Hes>> smiling at you<<if $averyragereveled gte 1 and C.npc.Avery.rage gte 20>>, though the smile doesn't reach <<his>> eyes<</if>>. "Marvelous, isn't it? This is what I can give you, <<pcpetname "Avery">>," <<he>>
+		당신은 에이버리를 바라본다. <<Hes>> 당신에게 미소 짓고 있다<<if $averyragereveled gte 1 and C.npc.Avery.rage gte 20>>. 다만 그 미소는 눈까지 닿지 않는다<</if>>. "굉장하죠? 이것이 내가 당신에게 줄 수 있는 것입니다, <<pcpetname "Avery">>," <<he>>【이가】
 		<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 60>>
-			purrs<<if C.npc.Avery.rage gte 80>> dangerously<</if>>. "What I'm capable of. You'd do best not to forget that it's just as easy for me to take it away as it is to give it to you. And if you don't wish to lose it..." <<He>> takes your chin between <<his>> fingers. "Then you'll prove it to me going forward. Won't you?"
+			가르랑거리듯<<if C.npc.Avery.rage gte 80>> 위험하게<</if>> 말한다. "내가 할 수 있는 것이지. 주는 것만큼 빼앗는 것도 내겐 쉽다는 걸 잊지 않는 게 좋을 거야. 그리고 잃고 싶지 않다면..." <<He>>【은는】 당신의 턱을 손가락으로 붙잡는다. "그럼 앞으로 내게 증명해 보여. 그렇지?"
 		<<elseif $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>>
-			murmurs. "What I'm capable of. As long as you ask nicely, you can have just about anything you'd like. But that requires obedience on your part as much as willingness on mine." <<He>> takes your chin between <<his>> fingers. "I hope you won't disappoint going forward."
+			나직이 말한다. "내가 할 수 있는 것이죠. 얌전히 부탁하기만 하면, 원하는 건 거의 뭐든 가질 수 있습니다. 하지만 그러려면 내 쪽의 의향만큼이나 당신 쪽의 순종이 필요하죠." <<He>>【은는】 당신의 턱을 손가락으로 붙잡는다. "앞으로 날 실망시키지 않길 바랍니다."
 		<<else>>
-			<<= either("murmurs","purrs","whispers")>>. "This is what I'm capable of. And I can give you just about anything that you'd like, so long as you keep being good. You want to be good for me, don't you?" <<He>> takes your chin between <<his>> fingers. "Nod your head for me."
+			<<= either("나직이 말한다","가르랑거리듯 말한다","속삭인다")>>. "이게 내가 할 수 있는 것입니다. 그리고 당신이 계속 착하게만 군다면, 원하는 건 거의 뭐든 줄 수 있죠. 날 위해 착하게 굴고 싶죠, 그렇지 않나요?" <<He>>【은는】 당신의 턱을 손가락으로 붙잡는다. "고개를 끄덕여 봐요."
 		<</if>>
 		<br><br>
 
-		<<link [[Nod|Avery Helicopter View]]>><<set $phase to 1>><</link>><<larage>><<if $avery_mansion>><<gdom>><</if>>
+		<<link [[고개를 끄덕인다|Avery Helicopter View]]>><<set $phase to 1>><</link>><<larage>><<if $avery_mansion>><<gdom>><</if>>
 		<br>
-		<<link [[Shake your head|Avery Helicopter View]]>><<set $phase to 2>><</link>><<garage>><<if $avery_mansion>><<ldom>><</if>>
+		<<link [[고개를 젓는다|Avery Helicopter View]]>><<set $phase to 2>><</link>><<garage>><<if $avery_mansion>><<ldom>><</if>>
 		<br>
 	<</if>>
 <</if>>
@@ -5391,133 +5391,133 @@ As the helicopter continues its route towards the $avery_helicopter.destination,
 <<effects>>
 
 <<if $phase is 1>> /* Encourage */
-	Curious to hear more, you encourage Avery to continue talking
+	더 듣고 싶은 호기심에, 당신은 에이버리에게 계속 이야기해 달라고 부추긴다.
 	<<if $phase2 is 1>> /* Dinner party guests */
-		about
+		화제는
 		<<if $avery_mansion.jordan_intro and $avery_mansion.guest is "Jordan">>
-			Jordan. You can't help your morbid fascination.
+			조던이다. 당신은 음울한 호기심을 억누를 수 없다.
 		<<elseif $avery_mansion.guest is "Remy">>
-			Remy.
+			레미다.
 			<<if $avery_fate is "saved">>
-				<<He>> makes a few more observations<<if $averySeen.includes("soft_bad_end_ufarm")>>, and one of them is almost cutting. You're a little surprised<</if>>.
+				<<He>>【은는】 몇 가지 관찰을 더 늘어놓는다<<if $averySeen.includes("soft_bad_end_ufarm")>>. 그중 하나는 거의 신랄할 정도라, 당신은 조금 놀란다<</if>>.
 			<<else>>
-				You hear a few more complimentary sentiments<<if $averySeen.includes("soft_bad_end_ufarm")>>, and notice a few things that go suspiciously unsaid<</if>>.
+				칭찬하는 말을 몇 마디 더 듣는다<<if $averySeen.includes("soft_bad_end_ufarm")>>. 그리고 수상쩍게 입에 올리지 않는 것들이 몇 가지 있음을 알아차린다<</if>>.
 			<</if>>
 		<<elseif $avery_mansion.guest is "Harper">>
-			Harper.
+			하퍼다.
 			<<if $avery_fate is "saved">>
-				<<He>> makes a few more observations<<if $averySeen.includes("soft_bad_end_asylum")>>, and one of them is almost cutting. You're a little surprised<</if>>.
+				<<He>>【은는】 몇 가지 관찰을 더 늘어놓는다<<if $averySeen.includes("soft_bad_end_asylum")>>. 그중 하나는 거의 신랄할 정도라, 당신은 조금 놀란다<</if>>.
 			<<else>>
-				You hear a few more complimentary sentiments<<if $averySeen.includes("soft_bad_end_asylum")>>, and notice a few things that go suspiciously unsaid<</if>>.
+				칭찬하는 말을 몇 마디 더 듣는다<<if $averySeen.includes("soft_bad_end_asylum")>>. 그리고 수상쩍게 입에 올리지 않는 것들이 몇 가지 있음을 알아차린다<</if>>.
 			<</if>>
 		<<elseif $avery_mansion.guest is "Briar">>
-			Briar. You can't help your morbid fascination.
+			브라이어다. 당신은 음울한 호기심을 억누를 수 없다.
 		<<else>> /* Quinn */
-			Quinn. You can't help your morbid fascination.
+			퀸이다. 당신은 음울한 호기심을 억누를 수 없다.
 		<</if>>
 	<<elseif $phase2 is 2>> /* Other executives */
-		about the
+		화제는
 		<<if [2,3].includes(Time.weekDay)>>
-			CIO. Avery seems more than willing to continue <<= $averyragerevealed gte 1 ? "tearing into" : "tell you all about">> <<person2>><<him>>. It's quite entertaining, in a secondhand embarrassment sort of way.
+			CIO다. 에이버리는 <<person2>><<him>>【을를】 계속 <<= $averyragerevealed gte 1 ? "물어뜯을" : "낱낱이 들려줄">> 의향이 넘치는 듯하다. 남의 창피함을 대신 느끼게 되는 식으로, 꽤 재미있다.
 		<<elseif [4,5].includes(Time.weekDay)>>
-			CAO. Avery seems more than willing to continue <<= $averyragerevealed gte 1 ? "tearing into" : "tell you all about">> <<person2>><<him>>. It's quite entertaining, in a morbid sort of way.
+			CAO다. 에이버리는 <<person2>><<him>>【을를】 계속 <<= $averyragerevealed gte 1 ? "물어뜯을" : "낱낱이 들려줄">> 의향이 넘치는 듯하다. 음울한 의미에서, 꽤 재미있다.
 		<<else>>
-			CEO. <<He>> <<= $averyragerevealed gte 1 ? "waves you off" : "equivocates">> at first, but eventually <<he>> gives in.
+			CEO다. <<He>>【은는】 처음엔 <<= $averyragerevealed gte 1 ? "손을 내저으며 넘기려" : "얼버무리려">> 하지만, 결국 못 이기는 척 입을 연다.
 			<br><br>
-			<<person1>>"<<Hes>> a figurehead," <<he>> says. "Purely decorative. If anyone is in control of that company, it's me." <<person1>><<He>> gestures around you to the helicopter.
+			<<person1>>"<<Hes>> 허수아비입니다," <<he>>【이가】 말한다. "순전히 장식용이죠. 그 회사를 지배하는 사람이 있다면, 그건 바로 나예요." <<person1>><<He>>【은는】 당신 주위의 헬리콥터를 가리키듯 손짓한다.
 			<<if $avery_fate is "ascended">>
-				"As I'm sure you've seen for yourself."
+				"직접 보셨을 테니 아시겠지만."
 			<</if>>
 			<br><br>
-			Avery talks for a little longer about the CEO. You learn some truly entertaining things you hadn't known about the CEO until now.
+			에이버리는 CEO에 대해 조금 더 이야기한다. 당신은 지금까지 CEO에 대해 몰랐던, 정말 흥미로운 사실들을 알게 된다.
 		<</if>>
 	<<else>> /* Misc */
-		on the subject. It's quite entertaining.
+		아까 그 화제 그대로다. 꽤 재미있다.
 	<</if>>
 	<<lstress>><<stress -3>>
 	<br><br>
-	<<person1>><<He>> seems pleased to have a captive audience.
+	<<person1>><<He>>【은는】 열심히 들어주는 청중이 생겨 기쁜 듯하다.
 	<<if $englishtrait gte 3>>
-		You even add a few things yourself, here and there. Avery seems amused when you do. <<gglove>><<npcincr Avery love 2>>
+		당신도 여기저기 몇 마디 보탠다. 그럴 때마다 에이버리는 재미있어하는 것 같다. <<gglove>><<npcincr Avery love 2>>
 	<<else>>
 		<<glove>><<npcincr Avery love 1>>
 	<</if>>
 <<elseif $phase is 2>> /* Humour */
-	You ask Avery more
+	당신은 에이버리에게 조금 더 묻는다.
 	<<if $phase2 is 1>> /* Dinner party guests */
-		about
+		화제는
 		<<if $avery_mansion.jordan_intro and $avery_mansion.guest is "Jordan">>
-			Jordan. It's not hard to keep <<him>> talking.
+			조던이다. <<him>>【이가】 계속 말하게 하는 건 어렵지 않다.
 		<<elseif $avery_mansion.guest is "Remy">>
-			Remy.
+			레미다.
 			<<if $avery_fate is "saved">>
-				<<He>> makes a few more observations<<if $averySeen.includes("soft_bad_end_ufarm")>>, and one of them is almost cutting. You're a little surprised<</if>>.
+				<<He>>【은는】 몇 가지 관찰을 더 늘어놓는다<<if $averySeen.includes("soft_bad_end_ufarm")>>. 그중 하나는 거의 신랄할 정도라, 당신은 조금 놀란다<</if>>.
 			<<else>>
-				You hear a few more complimentary sentiments<<if $averySeen.includes("soft_bad_end_ufarm")>>, and notice a few things that go suspiciously unsaid<</if>>.
+				칭찬하는 말을 몇 마디 더 듣는다<<if $averySeen.includes("soft_bad_end_ufarm")>>. 그리고 수상쩍게 입에 올리지 않는 것들이 몇 가지 있음을 알아차린다<</if>>.
 			<</if>>
 		<<elseif $avery_mansion.guest is "Harper">>
-			Harper.
+			하퍼다.
 			<<if $avery_fate is "saved">>
-				<<He>> makes a few more observations<<if $averySeen.includes("soft_bad_end_asylum")>>, and one of them is almost cutting. You're a little surprised<</if>>.
+				<<He>>【은는】 몇 가지 관찰을 더 늘어놓는다<<if $averySeen.includes("soft_bad_end_asylum")>>. 그중 하나는 거의 신랄할 정도라, 당신은 조금 놀란다<</if>>.
 			<<else>>
-				You hear a few more complimentary sentiments<<if $averySeen.includes("soft_bad_end_asylum")>>, and notice a few things that go suspiciously unsaid<</if>>.
+				칭찬하는 말을 몇 마디 더 듣는다<<if $averySeen.includes("soft_bad_end_asylum")>>. 그리고 수상쩍게 입에 올리지 않는 것들이 몇 가지 있음을 알아차린다<</if>>.
 			<</if>>
 		<<elseif $avery_mansion.guest is "Briar">>
-			Briar. It's not hard to keep <<him>> talking.
+			브라이어다. <<him>>【이가】 계속 말하게 하는 건 어렵지 않다.
 		<<else>> /* Quinn */
-			Quinn. It's not hard to keep <<him>> talking.
+			퀸이다. <<him>>【이가】 계속 말하게 하는 건 어렵지 않다.
 		<</if>>
 	<<elseif $phase2 is 2>> /* Other executives */
-		about the
+		화제는
 		<<if [2,3].includes(Time.weekDay)>>
-			CIO. Avery seems more than willing to continue <<= $averyragerevealed gte 1 ? "tearing into" : "tell you all about">> <<person2>><<him>>.
+			CIO다. 에이버리는 <<person2>><<him>>【을를】 계속 <<= $averyragerevealed gte 1 ? "물어뜯을" : "낱낱이 들려줄">> 의향이 넘치는 듯하다.
 		<<elseif [4,5].includes(Time.WeekDay)>>
-			CAO. Avery seems more than willing to continue <<= $averyragerevealed gte 1 ? "tearing into" : "tell you all about">> <<person2>><<him>>.
+			CAO다. 에이버리는 <<person2>><<him>>【을를】 계속 <<= $averyragerevealed gte 1 ? "물어뜯을" : "낱낱이 들려줄">> 의향이 넘치는 듯하다.
 		<<else>>
-			CEO. <<person1>><<He>> <<= $averyragerevealed gte 1 ? "waves you off" : "equivocates">> at first, but eventually <<he>> gives in.
+			CEO다. <<person1>><<He>>【은는】 처음엔 <<= $averyragerevealed gte 1 ? "손을 내저으며 넘기려" : "얼버무리려">> 하지만, 결국 못 이기는 척 입을 연다.
 			<br><br>
-			<<person2>>"<<Hes>> a figurehead," <<he>> says. "Purely decorative. If anyone is in control of that company, it's me." <<person1>><<He>> gestures around you to the helicopter.
+			<<person2>>"<<Hes>> 허수아비입니다," <<he>>【이가】 말한다. "순전히 장식용이죠. 그 회사를 지배하는 사람이 있다면, 그건 바로 나예요." <<person1>><<He>>【은는】 당신 주위의 헬리콥터를 가리키듯 손짓한다.
 			<<if $avery_fate is "ascended">>
-				"As I'm sure you've seen for yourself."
+				"직접 보셨을 테니 아시겠지만."
 			<</if>>
 			<br><br>
-			Avery talks for a little longer about the CEO. You learn some more things you hadn't known about <<person1>><<him>> until now.
+			에이버리는 CEO에 대해 조금 더 이야기한다. 당신은 지금까지 <<person1>><<him>>에 대해 몰랐던 사실들을 몇 가지 더 알게 된다.
 		<</if>>
 	<<else>> /* Misc */
-		on the subject.
+		아까 그 화제 그대로다.
 	<</if>>
-	Most of it is kind of boring, though. <<gtiredness>><<tiredness 3>>
+	하지만 대부분은 좀 지루하다. <<gtiredness>><<tiredness 3>>
 	<br><br>
-	<<person1>><<He>> seems pleased to have a captive audience, at least. <<gglove>><<npcincr Avery love 2>>
+	<<person1>><<He>>【은는】 적어도 열심히 들어주는 청중이 생겨 기쁜 듯하다. <<gglove>><<npcincr Avery love 2>>
 <<else>> /* Tune out */
-	You let Avery continue talking, tuning most of it out. Most of your attention remains on the beautiful sight outside. <<ltiredness>><<tiredness -6>>
+	당신은 에이버리가 계속 말하게 두고, 대부분은 흘려듣는다. 당신의 관심은 대부분 바깥의 아름다운 광경에 머물러 있다. <<ltiredness>><<tiredness -6>>
 	<br><br>
-	Eventually you hear Avery say your name, and you look <<his>> way. <<His>>
+	이윽고 에이버리가 당신의 이름을 부르는 소리가 들리고, 당신은 <<his>> 쪽을 바라본다. <<His>>
 	<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>>
-		eyes are narrowed<<if C.npc.Avery.rage gte 60>> and <<his>> lip is curled<</if>>.
+		눈은 가늘게 좁혀져 있<<if C.npc.Avery.rage gte 60>>고, <<his>> 입술은 비틀려 있<</if>>다.
 	<<else>>
-		brows are furrowed and <<hes>> frowning<<if !$averyragerevealed>> slightly<</if>>.
+		미간은 찌푸려져 있고, <<if !$averyragerevealed>>살짝 <</if>>얼굴을 찡그리고 있다.
 	<</if>>
-	"It's important to listen to someone when they're speaking," <<he>> says. <<llove>><<npcincr Avery love -1>>
+	"남이 말할 땐 귀 기울이는 게 중요합니다," <<he>>【이가】 말한다. <<llove>><<npcincr Avery love -1>>
 	<br><br>
 	<<if $speech_attitude is "meek" or $speech_attitude_avery>>
-		"Sorry," you mumble.
+		"죄송해요," 당신은 웅얼거린다.
 	<<elseif $speech_attitude is "bratty">>
-		"Yeah, yeah, sorry or whatever," you grumble.
+		"네, 네, 죄송하다고요, 뭐," 당신은 투덜거린다.
 	<<else>>
-		"I'm sorry, Avery," you say.
-	<</if>> "I had a long day at school."
+		"죄송해요, 에이버리," 당신은 말한다.
+	<</if>> "학교에서 긴 하루를 보내서요."
 	<br><br>
-	Avery seems to take your word for it for the time being, and continues talking.
+	에이버리는 당장은 당신의 말을 믿어주는 듯, 이야기를 계속한다.
 <</if>>
 <br><br>
 <<if $phase2 is 2>>
 	<<clearsinglenpc 1>>
 <</if>>
 <<if $phase lte 2>>
-	<<link [[Next|Avery Helicopter 3]]>><<set $phase to 1>><<set $phase2 to 1>><</link>>
+	<<link [[다음|Avery Helicopter 3]]>><<set $phase to 1>><<set $phase2 to 1>><</link>>
 <<else>>
-	<<link [[Next|Avery Helicopter 3]]>><<set $phase to 1>><<set $phase2 to 2>><</link>>
+	<<link [[다음|Avery Helicopter 3]]>><<set $phase to 1>><<set $phase2 to 2>><</link>>
 <</if>>
 
 :: Avery Helicopter Turbulence
@@ -5525,34 +5525,34 @@ As the helicopter continues its route towards the $avery_helicopter.destination,
 
 <<if $phase is 1>> /* Hold onto Avery */
 	<<if $speech_attitude is "meek" or $speech_attitude_avery>>
-		"Oh, um, if it's all right with you..."
+		"아, 음, 괜찮으시다면..."
 	<<elseif $speech_attitude is "bratty">>
-		"Someone sounds eager."
+		"누구 되게 적극적이네요."
 	<<else>>
-		"As long as you don't mind."
+		"괜찮다면요."
 	<</if>>
-	You <<= $phase2 is 1 ? "reach over to hold onto" : "slide a little closer to">> Avery.
+	당신은 에이버리<<= $phase2 is 1 ? "에게 손을 뻗어 붙잡는다" : "에게 조금 더 가까이 붙는다">>.
 	<<if $averyromance>>
-		You feel a smile on your lips<<if !$speech_attitude_avery and $speech_attitude is "bratty">> despite your words<</if>>.
+		<<if !$speech_attitude_avery and $speech_attitude is "bratty">>말과는 달리 <</if>>입가에 미소가 떠오르는 것이 느껴진다.
 	<</if>>
 	<br><br>
-	<<His>> smile widens, and <<he>> pats one of your arms around <<his>>. "I'll keep you safe, <<pcpetname "Avery">>," <<he>> says with a <<laugh>><<if $averyromance>> and a wink<</if>>. <<glove>><<npcincr Avery love 1>>
+	<<His>> 미소가 더 짙어지고, <<he>>【은는】 자신을 감싼 당신의 팔 한쪽을 토닥인다. "내가 당신을 안전하게 지켜드리죠, <<pcpetname "Avery">>," <<he>>【이가】 <<laugh>><<if $averyromance>>와 윙크<</if>>를 곁들여 말한다. <<glove>><<npcincr Avery love 1>>
 	<br><br>
-	<<link [[Next|Avery Helicopter 3]]>><<set $phase to 2>><<set $phase2 to 1>><</link>>
+	<<link [[다음|Avery Helicopter 3]]>><<set $phase to 2>><<set $phase2 to 1>><</link>>
 	<br>
 <<else>> /* Keep to yourself */
 	<<if $speech_attitude is "meek" or $speech_attitude_avery>>
-		"Oh, um, that's all right," you mumble. "Thank you, though."
+		"아, 음, 괜찮아요," 당신은 웅얼거린다. "그래도 고마워요."
 	<<elseif $speech_attitude is "bratty">>
-		"No need."
+		"필요 없어요."
 	<<else>>
-		"Thanks, but I'm okay."
+		"고맙지만, 괜찮아요."
 	<</if>>
-	You<<if $phase2 is 2>> pull away from Avery and<</if>> keep your hands to yourself.
+	당신은<<if $phase2 is 2>> 에이버리에게서 떨어져<</if>> 손을 가만히 둔다.
 	<br><br>
-	<<His>> smile <<= $averyragerevealed gte 1 ? "fades" : "twitches a little">>. "Very well. I'm sure you'll be just fine without me, then."<<if $phase2 is 2>> <<He>> seems skeptical.<</if>> <<llove>><<npcincr Avery love -1>>
+	<<His>> 미소가 <<= $averyragerevealed gte 1 ? "사라진다" : "살짝 굳는다">>. "좋습니다. 나 없이도 잘 버틸 수 있을 테죠."<<if $phase2 is 2>> <<He>>【은는】 미심쩍은 기색이다.<</if>> <<llove>><<npcincr Avery love -1>>
 	<br><br>
-	<<link [[Next|Avery Helicopter 3]]>><<set $phase to 2>><<set $phase2 to 2>><</link>>
+	<<link [[다음|Avery Helicopter 3]]>><<set $phase to 2>><<set $phase2 to 2>><</link>>
 	<br>
 <</if>>
 
@@ -5560,58 +5560,58 @@ As the helicopter continues its route towards the $avery_helicopter.destination,
 <<effects>>
 
 <<if $phase is 1>> /* Nod */
-	You nod your head.
+	당신은 고개를 끄덕인다.
 	<br><br>
-	Avery's smile widens slightly. "Good. Good <<girl>>.<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>> That's what I like to see.<</if>>" <<larage>><<npcincr Avery rage -1>><<if $avery_mansion>><<gdom>><<npcincr Avery dom 1>><</if>>
+	에이버리의 미소가 살짝 짙어진다. "좋아요. 착한 <<girl>>.<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>> 내가 보고 싶은 게 바로 그겁니다.<</if>>" <<larage>><<npcincr Avery rage -1>><<if $avery_mansion>><<gdom>><<npcincr Avery dom 1>><</if>>
 	<br><br>
-	<<He>> strokes your cheek, then lets <<his>> hand drop.
+	<<He>>【은는】 당신의 뺨을 쓰다듬고는, 손을 내린다.
 	<br><br>
-	<<link [[Next|Avery Helicopter 3]]>><<set $phase to 3>><<set $phase2 to 1>><</link>>
+	<<link [[다음|Avery Helicopter 3]]>><<set $phase to 3>><<set $phase2 to 1>><</link>>
 <<else>> /* Shake head */
-	You shake your head.
+	당신은 고개를 젓는다.
 	<br><br>
-	Avery's smile drops, replaced with a
+	에이버리의 미소가 사라지고, 그 자리를 대신하는 것은
 	<<if C.npc.Avery.rage gte random(40,100)>>
 		<<if !$averyragerevealed>>
 			<<set $averyragerevealed to 1>>
 		<</if>>
-		scowl. "This again?" <<He>> scoffs. "You seem to enjoy making a sport out of denying me, <<pcpetname "Avery">>. Turning me down every chance you get, acting like a spoiled<<if C.npc.Avery.rage gte 60>> fucking<</if>> brat, as though I have endless patience for it." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
+		험악하게 찌푸린 얼굴이다. "또 이거야?" <<He>>【이가】 코웃음 친다. "날 거절하는 걸 아주 스포츠처럼 즐기는 모양이군, <<pcpetname "Avery">>. 기회만 있으면 날 거절하고, 버릇없는<<if C.npc.Avery.rage gte 60>> 빌어먹을<</if>> 애새끼처럼 굴면서, 내 인내심이 끝이 없기라도 한 것처럼." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
 		<br><br>
-		<<His>> hand moves to your hair, where <<he>> grabs a fistful. <<He>> yanks your head back, pulling a<<if $speech_attitude is "bratty">> strangled<</if>> cry from you. <<gpain>><<pain 2>>
+		<<His>> 손이 당신의 머리로 옮겨 가, 머리카락을 한 움큼 움켜쥔다. <<He>>【은는】 당신의 머리를 뒤로 홱 잡아당겨, 당신에게서<<if $speech_attitude is "bratty">> 억눌린<</if>> 비명을 끌어낸다. <<gpain>><<pain 2>>
 		<br><br>
-		"I've had just about enough of it," <<he>> snarls. "If you insist on doing whatever the hell you want when you want, then I think I'll do the same!"
+		"이제 지긋지긋해," <<he>>【이가】 으르렁거린다. "네가 그렇게 하고 싶을 때 하고 싶은 대로 하겠다고 고집한다면, 나도 똑같이 해야겠군!"
 		<br><br>
-		<<link [[Next|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
+		<<link [[다음|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
 	<<else>>
 		<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 60>>
-			scowl. "This shit again. You do seem intent on testing just how far you can push me." <<He>> scoffs. "I'll just have to remind you of your place. Soon.<<if $avery_mansion?.jobs.includes("dungeon")>> The next time I take you to the dungeon, in fact.<</if>> But for the time being..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
+			험악하게 찌푸린 얼굴이다. "또 이 지랄이야. 날 어디까지 밀어붙일 수 있는지 시험하기로 작정했나 보군." <<He>>【이가】 코웃음 친다. "네 분수를 다시 일깨워줘야겠어. 곧.<<if $avery_mansion?.jobs.includes("dungeon")>> 정확히는, 다음에 널 지하 감옥에 데려갈 때.<</if>> 하지만 당장은..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
 			<br><br>
-			<<His>> hand moves to your hair, where <<he>> grabs a fistful. <<He>> yanks your head back, pulling a<<if $speech_attitude is "bratty">> strangled<</if>> cry from you. <<gpain>><<pain 1>>
+			<<His>> 손이 당신의 머리로 옮겨 가, 머리카락을 한 움큼 움켜쥔다. <<He>>【은는】 당신의 머리를 뒤로 홱 잡아당겨, 당신에게서<<if $speech_attitude is "bratty">> 억눌린<</if>> 비명을 끌어낸다. <<gpain>><<pain 1>>
 			<br><br>
-			"Cut it out, <<pcpetname "Avery">>," <<he>> growls. "Because you won't like what I'll do to you if you don't."
+			"그만둬, <<pcpetname "Avery">>," <<he>>【이가】 으르렁거린다. "안 그러면 내가 네게 무슨 짓을 할지, 넌 마음에 들지 않을 테니까."
 			<br><br>
-			<<He>> momentarily tightens <<his>> grip before releasing you. Your scalp aches as a tense, suffocating silence takes over the helicopter's cabin.
+			<<He>>【은는】 잠시 손아귀에 힘을 주었다가 당신을 놓아준다. 두피가 욱신거리는 가운데, 긴장되고 숨 막히는 침묵이 헬리콥터 객실을 뒤덮는다.
 		<<elseif $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>>
-			frown. "This nonsense again?" <<He>> narrows <<his>> eyes, <<his>> hand dropping from your chin. "We'll need to have a conversation about this attitude of yours sooner or later.<<if $avery_mansion?.jobs.includes("dungeon")>> Perhaps the next time I take you to the dungeon.<</if>> But for the time being..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
+			찌푸린 얼굴이다. "또 이런 헛짓거리입니까?" <<He>>【은는】 눈을 가늘게 뜨며, 당신의 턱에서 손을 뗀다. "조만간 당신의 그 태도에 대해 얘기 좀 나눠야겠군요.<<if $avery_mansion?.jobs.includes("dungeon")>> 아마 다음에 당신을 지하 감옥에 데려갈 때쯤.<</if>> 하지만 당장은..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
 			<br><br>
-			<<He>> leans in, staring at you coldly.<<if $avery_fate is "ascended" or C.npc.Avery.rage gte 50>> You feel a shiver go up your spine at the sight. <<gstress>><<stress 3>><</if>>
+			<<He>>【은는】 몸을 기울여 당신을 차갑게 응시한다.<<if $avery_fate is "ascended" or C.npc.Avery.rage gte 50>> 그 모습에 등골이 오싹해진다. <<gstress>><<stress 3>><</if>>
 			<br><br>
-			"I expect you to correct your behaviour moving forward, <<pcpetname "Avery">>," <<he>> murmurs. "For your own good, if nothing else."
+			"앞으로는 행실을 바로잡으시길 기대하겠습니다, <<pcpetname "Avery">>," <<he>>【이가】 나직이 말한다. "다른 건 몰라도, 당신을 위해서 말이죠."
 			<br><br>
-			After a tense moment, <<he>> leans back in <<his>> seat. An uncomfortable, suffocating silence takes over the helicopter's cabin.
+			긴장된 순간이 지나고, <<he>>【은는】 자리에 등을 기댄다. 불편하고 숨 막히는 침묵이 헬리콥터 객실을 뒤덮는다.
 		<<elseif $averyragerevealed gte 1>>
-			frown. "This again?" <<He>> huffs. "I do hope that you aren't planning to start misbehaving. I'd hate to have to correct it personally..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
+			찌푸린 얼굴이다. "또 이러는군요?" <<He>>【이가】 콧방귀를 뀐다. "말썽을 부리기 시작할 생각은 아니길 바랍니다. 내가 직접 바로잡아야 하는 건 질색이거든요..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
 			<br><br>
-			<<He>> smiles again, coldly this time, and leans in close.<<if $avery_fate is "ascended">> You feel a shiver go up your spine at the sight. <<gstress>><<stress 3>><</if>>
+			<<He>>【은는】 다시 미소 짓지만, 이번에는 차가운 미소로, 몸을 바짝 기울인다.<<if $avery_fate is "ascended">> 그 모습에 등골이 오싹해진다. <<gstress>><<stress 3>><</if>>
 			<br><br>
-			"I recommend resisting this little impulse of yours in the future, <<pcpetname "Avery">>," <<he>> murmurs. "It's for your own good, you understand."
+			"앞으로는 그 사소한 충동을 참으시길 권합니다, <<pcpetname "Avery">>," <<he>>【이가】 나직이 말한다. "당신을 위해서 하는 말이에요, 아시겠죠."
 			<br><br>
-			After a tense moment, <<he>> drops <<his>> hand and leans back in <<his>> seat. An uncomfortable silence takes over the helicopter's cabin.
+			긴장된 순간이 지나고, <<he>>【은는】 손을 내리고 자리에 등을 기댄다. 불편한 침묵이 헬리콥터 객실을 뒤덮는다.
 		<<else>>
-			frown. "Teasing me<<if C.npc.Avery.rage gte 10>> again<</if>>? How cruel. And after all I've done for you." <<He>> clicks <<his>> tongue and drops <<his>> hand from your chin. "Mischief is cute, but only in small doses, <<pcpetname "Avery">>. I'd keep that in mind. It wouldn't do for you to test anyone's patience." <<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
+			찌푸린 얼굴이다. "<<if C.npc.Avery.rage gte 10>>또 <</if>>날 놀리는 겁니까? 잔인하군요. 내가 당신에게 해준 게 얼마인데." <<He>>【은는】 혀를 차며 당신의 턱에서 손을 뗀다. "장난은 귀엽지만, 적당할 때만입니다, <<pcpetname "Avery">>. 명심해두는 게 좋을 거예요. 남의 인내심을 시험하는 건 좋지 않으니까." <<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
 		<</if>>
 		<br><br>
-		<<link [[Next|Avery Helicopter 3]]>><<set $phase to 3>><<set $phase2 to 2>><</link>>
+		<<link [[다음|Avery Helicopter 3]]>><<set $phase to 3>><<set $phase2 to 2>><</link>>
 	<</if>>
 <</if>>
 
@@ -5619,102 +5619,102 @@ As the helicopter continues its route towards the $avery_helicopter.destination,
 <<effects>>
 
 <<if $phase is 1>> /* Spread legs */
-	You spread your legs.
+	당신은 다리를 벌린다.
 	<br><br>
-	Avery's smile widens slightly. "Good. Good <<girl>>.<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>> That's what I like to see.<</if>>" <<glove>><<npcincr Avery love 1>><<if $avery_mansion>><<gdom>><<npcincr Avery dom 1>><</if>>
+	에이버리의 미소가 살짝 짙어진다. "좋아요. 착한 <<girl>>.<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>> 내가 보고 싶은 게 바로 그겁니다.<</if>>" <<glove>><<npcincr Avery love 1>><<if $avery_mansion>><<gdom>><<npcincr Avery dom 1>><</if>>
 	<br><br>
-	<<His>> hand drops from your chin to your <<crotch>>.
+	<<His>> 손이 당신의 턱에서 <<crotch>>【으로로】 내려간다.
 	<<if $arousal gte ($arousalmax*3)/4>>
 		<<if $worn.lower.name isnot "naked">>
-			<<He>> raises an eyebrow when <<he>> feels
+			<<He>>【은는】 눈썹을 치켜올린다.
 			<<if $player.penisExist>>
-				your erection through
+				발기한 것이
 			<<else>>
-				how much you've soaked
+				얼마나 흠뻑 젖었는지가
 			<</if>>
-			your $worn.lower.name. <<garousal>><<arousal 300 "genitals">>
+			당신의 $worn.lower.name 너머로 느껴진 것이다. <<garousal>><<arousal 300 "genitals">>
 			<br><br>
-			"Eager for me already?" <<he>> says. "How adorable." <<He>> <<laughs>>. <<embarrassment>>
+			"벌써부터 날 원하는 겁니까?" <<he>>【이가】 말한다. "귀엽기도 하지." <<He>>【이가】 <<laughs>>. <<embarrassment>>
 		<<else>>
-			<<He>> <<laughs>> as <<he>> brushes against your <<clit>>. "Eager for me already?" <<he>> says, leaning in close. "How adorable." <<embarrassment>> <<garousal>><<arousal 300 "genitals">>
+			<<He>>【은는】 당신의 <<clit>>【을를】 스치며 <<laughs>>. "벌써부터 날 원하는 겁니까?" <<he>>【이가】 몸을 바짝 기울이며 말한다. "귀엽기도 하지." <<embarrassment>> <<garousal>><<arousal 300 "genitals">>
 		<</if>>
 		<br><br>
 		<<if $arousal gte $arousalmax>>
-			Even that bit of stimulation is enough to send you over the edge. <<orgasm>>
+			그 정도의 자극만으로도 당신은 절정에 다다르고 만다. <<orgasm>>
 			<br><br>
-			Avery watches with <<= either("fascination","surprise","amusement")>>. "I didn't realise you were <i>that</i> eager."
+			에이버리는 <<= either("매료된","놀란","재미있어하는")>> 눈으로 지켜본다. "<i>그렇게까지</i> 원하고 있을 줄은 몰랐네요."
 			<<if $worn.lower.name is "naked">>
-				<<He>> pulls a handkerchief from <<his>> <<= C.npc.Avery.gender is "m" ? "breast pocket" : "purse">> and wipes <<his>> hand clean of fluids.
+				<<He>>【은는】 <<his>> <<= C.npc.Avery.gender is "m" ? "가슴 주머니" : "핸드백">>에서 손수건을 꺼내 손에 묻은 액체를 닦아낸다.
 			<</if>>
-			Then <<he>> <<laughs>>. "But you had your turn. I think I get some attention myself, don't you?"
+			그러고는 <<he>>【이가】 <<laughs>>. "하지만 당신 차례는 끝났으니, 이제 나도 좀 관심을 받아야겠죠. 그렇지 않나요?"
 		<<else>>
-			Avery toys with you a little longer before humming to <<himself>>. "You want more than this, don't you? So do I, as a matter of fact."
+			에이버리는 당신을 조금 더 가지고 놀다가 혼잣말처럼 콧노래를 흥얼거린다. "이것보다 더 원하죠? 사실 나도 그렇습니다."
 		<</if>>
 	<<else>>
-		<<He>> starts massaging your <<groin>>, eyes locked onto your face as <<he>> does. When you <<= $speech_attitude is "meek" ? "let out a whimper" : $speech_attitude is "bratty" ? "let out a choked sound" : "make a soft, pleased sound">>, <<he>> <<laughs>>. <<garousal>><<arousal 300 "genitals">>
+		<<He>>【은는】 당신의 <<groin>>【을를】 주무르기 시작하며, 시선은 당신의 얼굴에 고정한다. 당신이 <<= $speech_attitude is "meek" ? "흐느끼는 소리를 내자" : $speech_attitude is "bratty" ? "목 막힌 소리를 내자" : "작고 기분 좋은 소리를 내자">>, <<he>>【이가】 <<laughs>>. <<garousal>><<arousal 300 "genitals">>
 		<br><br>
-		"Adorable." <<He>> leans in close.
+		"귀엽군요." <<He>>【은는】 몸을 바짝 기울인다.
 		<<if $averyragerevealed gte 1>>
-			"But I had something more involved in mind..."
+			"하지만 난 좀 더 본격적인 걸 생각하고 있었는데..."
 		<<else>>
-			"How about a little more than that?"
+			"이것보다 조금 더 해보는 건 어때요?"
 		<</if>>
 	<</if>>
 	<br><br>
 	<<if hasSexStat("promiscuity", 2) or isLoveInterest("Avery") or $averyromance>>
-		<<link [[Accept|Avery Helicopter Sex]]>><<set $sexstart to 1>><</link>><<glove>>
+		<<link [[받아들인다|Avery Helicopter Sex]]>><<set $sexstart to 1>><</link>><<glove>>
 	<<else>>
 		<<insufficientStat "promiscuity" "to accept such an offer">>
 	<</if>>
 	<br>
-	<<link [[Refuse|Avery Helicopter View Lewd Refuse]]>><</link>><<garage>>
+	<<link [[거절한다|Avery Helicopter View Lewd Refuse]]>><</link>><<garage>>
 <<else>> /* Refuse */
-	You keep your legs together.<<if !$speech_attitude_avery and $speech_attitude is "bratty">> You even shut them a little tighter together.<</if>>
+	당신은 다리를 모은 채로 있는다.<<if !$speech_attitude_avery and $speech_attitude is "bratty">> 오히려 조금 더 꽉 오므린다.<</if>>
 	<br><br>
-	Avery's smile drops, replaced with a
+	에이버리의 미소가 사라지고, 그 자리를 대신하는 것은
 	<<if C.npc.Avery.rage gte random(20,100)>>
 		<<if !$averyragerevealed>>
 			<<set $averyragerevealed to 1>>
 		<</if>>
-		scowl. "This again?" <<He>> scoffs. "You seem to enjoy making a sport out of denying me what I want, <<pcpetname "Avery">>. Turning me down every chance you get, acting like a spoiled<<if C.npc.Avery.rage gte 60>> fucking<</if>> brat, as though I have endless patience for it." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
+		험악하게 찌푸린 얼굴이다. "또 이거야?" <<He>>【이가】 코웃음 친다. "내가 원하는 걸 거절하는 걸 아주 스포츠처럼 즐기는 모양이군, <<pcpetname "Avery">>. 기회만 있으면 날 거절하고, 버릇없는<<if C.npc.Avery.rage gte 60>> 빌어먹을<</if>> 애새끼처럼 굴면서, 내 인내심이 끝이 없기라도 한 것처럼." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
 		<br><br>
-		<<His>> hand moves to your hair, where <<he>> grabs a fistful. <<He>> yanks your head back, pulling a<<if $speech_attitude is "bratty">> strangled<</if>> cry from you. <<gpain>><<pain 2>>
+		<<His>> 손이 당신의 머리로 옮겨 가, 머리카락을 한 움큼 움켜쥔다. <<He>>【은는】 당신의 머리를 뒤로 홱 잡아당겨, 당신에게서<<if $speech_attitude is "bratty">> 억눌린<</if>> 비명을 끌어낸다. <<gpain>><<pain 2>>
 		<br><br>
-		"I've had just about enough of it," <<he>> snarls. "If you insist on doing whatever the hell you want when you want, then I think it's my turn to do the same!"
+		"이제 지긋지긋해," <<he>>【이가】 으르렁거린다. "네가 그렇게 하고 싶을 때 하고 싶은 대로 하겠다고 고집한다면, 이번엔 내가 똑같이 할 차례인 것 같군!"
 		<br><br>
-		<<link [[Next|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
+		<<link [[다음|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
 		<br>
 	<<else>>
 		<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 60>>
-			scowl. "This shit again. You do seem intent on testing just how far you can push me." <<He>> scoffs. "I'll just have to remind you of your place. Soon.<<if $avery_mansion?.jobs.includes("dungeon")>> The next time I take you to the dungeon, in fact.<</if>> But for the time being..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
+			험악하게 찌푸린 얼굴이다. "또 이 지랄이야. 날 어디까지 밀어붙일 수 있는지 시험하기로 작정했나 보군." <<He>>【이가】 코웃음 친다. "네 분수를 다시 일깨워줘야겠어. 곧.<<if $avery_mansion?.jobs.includes("dungeon")>> 정확히는, 다음에 널 지하 감옥에 데려갈 때.<</if>> 하지만 당장은..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
 			<br><br>
-			<<His>> hand moves to your hair, where <<he>> grabs a fistful. <<He>> yanks your head back, pulling a<<if $speech_attitude is "bratty">> strangled<</if>> cry from you. <<gpain>><<pain 1>>
+			<<His>> 손이 당신의 머리로 옮겨 가, 머리카락을 한 움큼 움켜쥔다. <<He>>【은는】 당신의 머리를 뒤로 홱 잡아당겨, 당신에게서<<if $speech_attitude is "bratty">> 억눌린<</if>> 비명을 끌어낸다. <<gpain>><<pain 1>>
 			<br><br>
-			"I'll be having what I want, whether you intend to cooperate or not. And you threw away your chance to have it gentle."
+			"네가 협조할 생각이 있든 없든, 난 원하는 걸 가질 거야. 그리고 부드럽게 받을 기회는 네가 스스로 내던졌어."
 			<br><br>
-			<<link [[Next|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
+			<<link [[다음|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
 		<<elseif $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>>
-			frown. "This nonsense again?" <<He>> narrows <<his>> eyes, <<his>> hand dropping from your chin. "We'll need to have a conversation about this attitude of yours sooner or later.<<if $avery_mansion?.jobs.includes("dungeon")>> Perhaps the next time I take you to the dungeon.<</if>> But for the time being..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
+			찌푸린 얼굴이다. "또 이런 헛짓거리입니까?" <<He>>【은는】 눈을 가늘게 뜨며, 당신의 턱에서 손을 뗀다. "조만간 당신의 그 태도에 대해 얘기 좀 나눠야겠군요.<<if $avery_mansion?.jobs.includes("dungeon")>> 아마 다음에 당신을 지하 감옥에 데려갈 때쯤.<</if>> 하지만 당장은..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
 			<br><br>
-			<<He>> leans in, staring at you coldly.<<if $avery_fate is "ascended" or C.npc.Avery.rage gte 50>> You feel a shiver go up your spine at the sight. <<gstress>><<stress 3>><</if>>
+			<<He>>【은는】 몸을 기울여 당신을 차갑게 응시한다.<<if $avery_fate is "ascended" or C.npc.Avery.rage gte 50>> 그 모습에 등골이 오싹해진다. <<gstress>><<stress 3>><</if>>
 			<br><br>
-			"I think I'll be taking what I want, whether you intend to cooperate or not. You had your chance to have it your way."
+			"당신이 협조할 생각이 있든 없든, 내가 원하는 건 가져가야겠군요. 당신 방식대로 할 기회는 이미 있었습니다."
 			<br><br>
-			<<link [[Next|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
+			<<link [[다음|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
 		<<elseif $averyragerevealed gte 1>>
-			frown. "This again?" <<He>> huffs. "I do hope that you aren't planning to start misbehaving. I'd hate to have to correct it personally..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
+			찌푸린 얼굴이다. "또 이러는군요?" <<He>>【이가】 콧방귀를 뀐다. "말썽을 부리기 시작할 생각은 아니길 바랍니다. 내가 직접 바로잡아야 하는 건 질색이거든요..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
 			<br><br>
-			<<He>> smiles again, coldly this time, and leans in close.<<if $avery_fate is "ascended">> You feel a shiver go up your spine at the sight. <<gstress>><<stress 3>><</if>>
+			<<He>>【은는】 다시 미소 짓지만, 이번에는 차가운 미소로, 몸을 바짝 기울인다.<<if $avery_fate is "ascended">> 그 모습에 등골이 오싹해진다. <<gstress>><<stress 3>><</if>>
 			<br><br>
-			"I recommend resisting this little impulse of yours in the future, <<pcpetname "Avery">>," <<he>> murmurs. "It's for your own good, you understand."
+			"앞으로는 그 사소한 충동을 참으시길 권합니다, <<pcpetname "Avery">>," <<he>>【이가】 나직이 말한다. "당신을 위해서 하는 말이에요, 아시겠죠."
 			<br><br>
-			After a tense moment, <<he>> drops <<his>> hand and leans back in <<his>> seat. An uncomfortable silence takes over the helicopter's cabin.
+			긴장된 순간이 지나고, <<he>>【은는】 손을 내리고 자리에 등을 기댄다. 불편한 침묵이 헬리콥터 객실을 뒤덮는다.
 			<br><br>
-			<<link [[Next|Avery Helicopter 3]]>><<set $phase to 4>><<unset $phase2>><</link>>
+			<<link [[다음|Avery Helicopter 3]]>><<set $phase to 4>><<unset $phase2>><</link>>
 		<<else>>
-			frown. "Teasing me<<if C.npc.Avery.rage gte 10>> again<</if>>? How cruel. And after all I've done for you." <<He>> clicks <<his>> tongue and drops <<his>> hand from your chin. "Mischief is cute, but only in small doses, <<pcpetname "Avery">>. I'd keep that in mind. It wouldn't do for you to test anyone's patience." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
+			찌푸린 얼굴이다. "<<if C.npc.Avery.rage gte 10>>또 <</if>>날 놀리는 겁니까? 잔인하군요. 내가 당신에게 해준 게 얼마인데." <<He>>【은는】 혀를 차며 당신의 턱에서 손을 뗀다. "장난은 귀엽지만, 적당할 때만입니다, <<pcpetname "Avery">>. 명심해두는 게 좋을 거예요. 남의 인내심을 시험하는 건 좋지 않으니까." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
 			<br><br>
-			<<link [[Next|Avery Helicopter 3]]>><<set $phase to 4>><<unset $phase2>><</link>>
+			<<link [[다음|Avery Helicopter 3]]>><<set $phase to 4>><<unset $phase2>><</link>>
 		<</if>>
 	<</if>>
 <</if>>
@@ -5723,30 +5723,30 @@ As the helicopter continues its route towards the $avery_helicopter.destination,
 <<effects>>
 
 <<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 60>>
-	Avery growls. "Oh, I'll be having what I want, whether you intend to cooperate or not. You threw away your chance to have it gentle." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
+	에이버리가 으르렁거린다. "아, 네가 협조할 생각이 있든 없든, 난 원하는 걸 가질 거야. 부드럽게 받을 기회는 네가 스스로 내던졌어." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
 	<br><br>
-	<<link [[Next|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
+	<<link [[다음|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
 	<br>
 <<elseif $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>>
-	Avery growls under <<his>> breath. "It's cute that you think you had a choice in the matter. I think I'll be taking what I want, whether you intend to cooperate or not. You had your chance to have it your way." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
+	에이버리가 나직이 으르렁거린다. "당신에게 선택권이 있었다고 생각하다니 귀엽군요. 당신이 협조할 생각이 있든 없든, 내가 원하는 건 가져가야겠습니다. 당신 방식대로 할 기회는 이미 있었어요." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
 	<br><br>
-	<<link [[Next|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
+	<<link [[다음|Avery Helicopter Rape]]>><<set $molestationstart to 1>><</link>>
 	<br>
 <<elseif $averyragerevealed gte 1>>
-	Avery frowns. "This again?" <<He>> huffs. "I do hope that you aren't planning to start misbehaving. I'd hate to have to correct it personally..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
+	에이버리가 얼굴을 찌푸린다. "또 이러는군요?" <<He>>【이가】 콧방귀를 뀐다. "말썽을 부리기 시작할 생각은 아니길 바랍니다. 내가 직접 바로잡아야 하는 건 질색이거든요..." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
 	<br><br>
-	<<He>> smiles again, coldly this time, and leans in close.<<if $avery_fate is "ascended">> You feel a shiver go up your spine at the sight. <<gstress>><<stress 3>><</if>>
+	<<He>>【은는】 다시 미소 짓지만, 이번에는 차가운 미소로, 몸을 바짝 기울인다.<<if $avery_fate is "ascended">> 그 모습에 등골이 오싹해진다. <<gstress>><<stress 3>><</if>>
 	<br><br>
-	"I recommend resisting this little impulse of yours in the future, <<pcpetname "Avery">>," <<he>> murmurs. "It's for your own good, you understand."
+	"앞으로는 그 사소한 충동을 참으시길 권합니다, <<pcpetname "Avery">>," <<he>>【이가】 나직이 말한다. "당신을 위해서 하는 말이에요, 아시겠죠."
 	<br><br>
-	After a tense moment, <<he>> pulls away and leans back in <<his>> seat. An uncomfortable silence takes over the helicopter's cabin.
+	긴장된 순간이 지나고, <<he>>【은는】 몸을 떼고 자리에 등을 기댄다. 불편한 침묵이 헬리콥터 객실을 뒤덮는다.
 	<br><br>
-	<<link [[Next|Avery Helicopter 3]]>><<set $phase to 4>><<unset $phase2>><</link>>
+	<<link [[다음|Avery Helicopter 3]]>><<set $phase to 4>><<unset $phase2>><</link>>
 	<br>
 <<else>>
-	Avery frowns. "Teasing me<<if C.npc.Avery.rage gte 10>> again<</if>>? How cruel. And after all I've done for you." <<He>> clicks <<his>> tongue and pulls away. "Mischief is cute, but only in small doses, <<pcpetname "Avery">>. I'd keep that in mind. It wouldn't do for you to test anyone's patience." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
+	에이버리가 얼굴을 찌푸린다. "<<if C.npc.Avery.rage gte 10>>또 <</if>>날 놀리는 겁니까? 잔인하군요. 내가 당신에게 해준 게 얼마인데." <<He>>【은는】 혀를 차며 몸을 뗀다. "장난은 귀엽지만, 적당할 때만입니다, <<pcpetname "Avery">>. 명심해두는 게 좋을 거예요. 남의 인내심을 시험하는 건 좋지 않으니까." <<garage>><<npcincr Avery rage 1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
 	<br><br>
-	<<link [[Next|Avery Helicopter 3]]>><<set $phase to 4>><<unset $phase2>><</link>>
+	<<link [[다음|Avery Helicopter 3]]>><<set $phase to 4>><<unset $phase2>><</link>>
 <</if>>
 
 :: Avery Helicopter 3
@@ -5762,49 +5762,49 @@ As the helicopter continues its route towards the $avery_helicopter.destination,
 	<<set _end to "bad">>
 <</if>>
 
-The helicopter slows and eventually stops over the $avery_helicopter.destination. Avery hums<<if _end is "good">> with disappointment<</if>>. <<He>>
+헬리콥터가 속도를 늦추더니 이윽고 $avery_helicopter.destination 상공에 멈춘다. 에이버리는<<if _end is "good">> 아쉬운 듯<</if>> 콧소리를 낸다. <<He>>【은는】
 <<if $phase is 2 and $phase2 is 1>>
-	extricates <<himself>> from your grasp and
+	당신의 손아귀에서 몸을 빼내고
 <</if>>
-gives you a pat on the thigh.
+당신의 허벅지를 토닥인다.
 <br><br>
 <<if _end is "good">>
-	"I suppose it couldn't last forever,"
+	"영원히 계속될 순 없는 법이죠,"
 <<else>>
-	"I think it's about time that you left,"
+	"이제 내릴 시간인 것 같군요,"
 <</if>>
-<<he>> says. <<He>> unlocks and opens the helicopter door, then kicks the ladder down.
+<<he>>【이가】 말한다. <<He>>【은는】 헬리콥터 문의 잠금을 풀고 열더니, 사다리를 발로 차 내린다.
 <<if $averySeen.includes("helicopter_ride")>>
-	"But there's always next time.
+	"하지만 다음 기회는 언제나 있으니까요.
 <<else>>
-	"Perhaps we should do this another time.
+	"언제 또 이렇게 하도록 하죠.
 <</if>>
 <<if _end is "bad">>
-	And perhaps
+	그리고 그때는
 	<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 40>>
-		I can expect more cooperation from you then.
+		당신이 좀 더 협조적이길 기대하겠습니다.
 	<<else>>
-		you'll be in a better mood then.
+		기분이 좀 더 나아져 있길 바랍니다.
 	<</if>>
 <</if>>"
 <br><br>
 <<set $averySeen.pushUnique("helicopter_ride")>>
-You<<if _end is "good">> say goodbye to Avery, and<</if>> start climbing down the ladder. When you make it down and step away from the ladder, it starts automatically coiling back up, and the helicopter flies away.
+당신은<<if _end is "good">> 에이버리에게 작별 인사를 하고<</if>> 사다리를 타고 내려가기 시작한다. 바닥에 내려서서 사다리에서 물러나자, 사다리가 자동으로 말려 올라가고 헬리콥터는 날아가 버린다.
 <br><br>
 <<if $avery_helicopter.destination is "office">>
 	<<if $avery_fate is "ascended">>
-		<<link [[Next|Elk Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+		<<link [[다음|Elk Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<<else>>
-		<<link [[Next|High Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+		<<link [[다음|High Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<</if>>
 <<elseif $avery_helicopter.destination is "cafe">>
-	<<link [[Next|Cliff Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+	<<link [[다음|Cliff Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 <<elseif $avery_helicopter.destination is "photo studio">>
-	<<link [[Next|Nightingale Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+	<<link [[다음|Nightingale Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 <<elseif $avery_helicopter.destination is "mansion">>
-	<<link [[Next|Mansion Garden]]>><<endevent>><<set $eventskip to 1>><</link>>
+	<<link [[다음|Mansion Garden]]>><<endevent>><<set $eventskip to 1>><</link>>
 <<else>>
-	<<link [[Next|Domus Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+	<<link [[다음|Domus Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 <</if>>
 
 :: Avery Helicopter Sex
@@ -5841,124 +5841,124 @@ You<<if _end is "good">> say goodbye to Avery, and<</if>> start climbing down th
 	<<ejaculation>>
 	<br><br>
 	<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 60>>
-		"<<= either("Very good,","Good job, <<pcpetname Avery>>,","So you <i>can</i> behave...")>>"
+		"<<= either("아주 좋아,","잘했어, <<pcpetname Avery>>,","얌전히 굴 <i>줄은</i> 아는군...")>>"
 	<<else>>
-		"<<= either("Good <<girl>>","Good job, <<pcpetname Avery>>")>>,"
+		"<<= either("착한 <<girl>>","잘했어요, <<pcpetname Avery>>")>>,"
 	<</if>>
-	<<he>> says once <<hes>> caught <<his>> breath. <<glove>><<npcincr Avery love 1>><<larage>><<npcincr Avery rage -1>><<llust>><<npcincr Avery lust -20>>
+	<<he>>【이가】 숨을 고른 뒤 말한다. <<glove>><<npcincr Avery love 1>><<larage>><<npcincr Avery rage -1>><<llust>><<npcincr Avery lust -20>>
 	<br><br>
 	<<if $arousal gte ($arousalmax*3)/4 and C.npc.Avery.love gte 40 and !playerChastity()>>
-		<<He>> seems to notice your state, and <<= either("a smirk","a sly smile","an impish smile")>> curls on <<his>> lips. "Poor <<pcpetname "Avery" "my">>. Shall I lend you a hand?"
+		<<He>>【은는】 당신의 상태를 알아차린 듯, <<his>> 입가에 <<= either("능글맞은 웃음","교활한 미소","장난스러운 미소")>>【이가】 번진다. "가엾은 내 <<pcpetname "Avery" "my">>. 내가 손을 좀 빌려드릴까요?"
 		<br><br>
-		Reaching for your <<genitals>>, Avery<<if $worn.lower.name isnot "naked">> slides <<his>> <<= $player.sex is "h" ? "hands" : "hand">> under your clothes and<</if>> starts to
+		에이버리는 당신의 <<genitals>>【으로로】 손을 뻗어<<if $worn.lower.name isnot "naked">> <<his>> <<= $player.sex is "h" ? "두 손" : "손">>을 당신의 옷 속으로 밀어 넣고<</if>>
 		<<if $player.penisExist and $player.vaginaExist>>
-			stroke your leaking <<= either("cock","penis","length")>> with one hand and play with your slit with the other. It feels almost too good. <<gggarousal>><<set $arousal to $arousalmax>>
+			한 손으로는 당신의 액체가 새어 나오는 <<= either("자지","음경","물건")>>【을를】 쓰다듬고, 다른 손으로는 갈라진 틈을 가지고 놀기 시작한다. 지나치게 좋을 지경이다. <<gggarousal>><<set $arousal to $arousalmax>>
 			<br><br>
-			<<orgasm>> Your semen and juices get all over Avery's hands.
+			<<orgasm>> 당신의 정액과 애액이 에이버리의 두 손을 온통 뒤덮는다.
 		<<elseif $player.penisExist>>
-			stroke your leaking <<= either("cock","penis","length")>>. It feels almost too good. <<gggarousal>><<set $arousal to $arousalmax>>
+			당신의 액체가 새어 나오는 <<= either("자지","음경","물건")>>【을를】 쓰다듬기 시작한다. 지나치게 좋을 지경이다. <<gggarousal>><<set $arousal to $arousalmax>>
 			<br><br>
-			<<orgasm>> Your semen gets all over Avery's hand.
+			<<orgasm>> 당신의 정액이 에이버리의 손을 온통 뒤덮는다.
 		<<else>>
-			play with your clit. It feels almost too good. <<gggarousal>><<set $arousal to $arousalmax>>
+			당신의 클리토리스를 가지고 놀기 시작한다. 지나치게 좋을 지경이다. <<gggarousal>><<set $arousal to $arousalmax>>
 			<br><br>
-			<<orgasm>> Your juices get all over Avery's hand.
+			<<orgasm>> 당신의 애액이 에이버리의 손을 온통 뒤덮는다.
 		<</if>>
 		<br><br>
-		"There we are." <<He>> <<laughs>><<if $worn.lower.name isnot "naked">>, sliding <<his>> <<= $player.sex is "h" ? "hands" : "hand">> free from your $worn.lower.name<</if>>.
+		"자, 됐습니다." <<He>>【이가】 <<laughs>><<if $worn.lower.name isnot "naked">>. 그러고는 <<his>> <<= $player.sex is "h" ? "두 손" : "손">>을 당신의 $worn.lower.name에서 빼낸다<</if>>.
 	<</if>>
-	"You look so <<cute>> when you're at my mercy."
+	"내 손안에 있을 때의 당신은 정말 <<cute>>하군요."
 	<br><br>
-	<<He>> pulls away from you altogether then, fixing <<his>> clothing and buckling <<himself>> back in. <<tearful>> you do the same.
+	그러고 나서 <<He>>【은는】 당신에게서 완전히 몸을 떼고, 옷매무새를 가다듬은 뒤 다시 안전벨트를 맨다. <<tearful>> 당신도 똑같이 한다.
 <<elseif $enemyhealth lte 0>>
 	<<set _end to "bad">>
-	"Fuck!" Avery swears, banging <<his>> head on the opposite wall of the helicopter cabin. <<He>> gives you a furious look as <<he>> rubs the spot. There's a few moments of tense silence as you both try to catch your breaths. <<tearful>> you fix your clothes.
+	"씨발!" 에이버리가 욕설을 내뱉으며 헬리콥터 객실 맞은편 벽에 머리를 부딪친다. <<He>>【은는】 부딪친 곳을 문지르며 당신을 사납게 노려본다. 두 사람 모두 숨을 고르려 애쓰는 동안 잠시 긴장된 침묵이 흐른다. <<tearful>> 당신은 옷매무새를 바로잡는다.
 	<br><br>
 	<<if $avery_fate is "ascended" and $averyragerevealed gte 1 and C.npc.Avery.rage gte 60>>
 		<<set _end to "threat">>
-		<<He>> suddenly yanks you to your feet. You're shoved against one of the helicopter doors, and one hand comes up to grip your shoulder tightly.
+		<<He>>【은는】 갑자기 당신을 홱 잡아 일으킨다. 당신은 헬리콥터 문 중 하나에 떠밀리고, 손 하나가 올라와 당신의 어깨를 단단히 움켜쥔다.
 		<br><br>
-		"You enjoy making trouble for me, don't you?" <<He>> gives you an imperious glare. "Acting like a feral animal? If you think you'll just get away with it this time, you're stupider than I realised." <<garage>><<npcincr Avery rage -1>>
+		"날 골치 아프게 하는 게 즐거운가 보군, 응?" <<He>>【은는】 오만한 눈으로 당신을 노려본다. "들짐승처럼 굴어? 이번에도 그냥 넘어갈 수 있을 거라 생각한다면, 넌 내 생각보다 더 멍청한 거야." <<garage>><<npcincr Avery rage -1>>
 		<br><br>
-		Avery's free hand moves to rest on the door handle. <<He>> barely grips it, but the message is clear. Your already racing heart thuds painfully. <<ggstress>><<stress 9>>
+		에이버리의 다른 손이 문손잡이 위로 옮겨 가 얹힌다. <<He>>【은는】 손잡이를 쥐는 둥 마는 둥 하지만, 뜻은 분명하다. 이미 빠르게 뛰던 심장이 고통스럽게 쿵쾅거린다. <<ggstress>><<stress 9>>
 		<br><br>
 		<<if $averySeen.includes("helicopter_ascended_threat")>>
 			<<if (currentSkillValue('willpower')/10) gte random(1,80) and $trauma lt ($traumamax*3)/4>>
-				<<link [[Check the door lock|Avery Helicopter Threat End]]>><<set $phase to 1>><</link>>
+				<<link [[문의 잠금을 확인한다|Avery Helicopter Threat End]]>><<set $phase to 1>><</link>>
 			<</if>>
 		<<else>>
 			<<if (currentSkillValue('willpower')/10) gte random(1,40) and $trauma lt ($traumamax/2)>>
-				<<link [[Check the door lock|Avery Helicopter Threat End]]>><<set $phase to 1>><</link>>
+				<<link [[문의 잠금을 확인한다|Avery Helicopter Threat End]]>><<set $phase to 1>><</link>>
 			<</if>>
 		<</if>>
 		<br>
-		<<link [[Push|Avery Helicopter Threat End]]>><<set $phase to 4>><</link>>
+		<<link [[밀친다|Avery Helicopter Threat End]]>><<set $phase to 4>><</link>>
 		<br>
-		<<link [[Plead|Avery Helicopter Threat End]]>><<set $phase to 3>><</link>>
+		<<link [[애원한다|Avery Helicopter Threat End]]>><<set $phase to 3>><</link>>
 		<br>
-		<<link [[Trust Avery|Avery Helicopter Threat End]]>><<set $phase to 2>><</link>>
+		<<link [[에이버리를 믿는다|Avery Helicopter Threat End]]>><<set $phase to 2>><</link>>
 		<br>
 	<<else>>
-		Eventually Avery drops <<his>> hand. "You're lucky that I don't have the time to discipline you for that, <<girl>>," <<he>> <<= either("hisses","snarls")>>. "But don't think I'll be forgiving you for it." <<garage>><<npcincr Avery rage -1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
+		이윽고 에이버리가 손을 내린다. "내가 그 일로 널 훈육할 시간이 없다는 걸 다행으로 알아, <<girl>>【아야】," <<he>>【이가】 <<= either("쉭쉭거린다","으르렁거린다")>>. "하지만 그걸 용서해 줄 거라곤 생각하지 마." <<garage>><<npcincr Avery rage -1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
 	<</if>>
 <<else>> /* Asked to stop */
 	<<set _end to "mid">>
-	Avery pauses, sighs, and finally pulls away.
+	에이버리는 멈칫하더니, 한숨을 쉬고, 마침내 몸을 뗀다.
 	<<if $avery_fate is "saved">>
-		"If you insist, <<pcpetname "Avery">>,"
+		"정 그러시다면, <<pcpetname "Avery">>,"
 	<<elseif $averyragerevealed gte 1 and C.npc.Avery.rage gte 60>>
-		"Fine. Fucking tease..."
+		"좋아. 빌어먹을 애태우기는..."
 	<<elseif $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>>
-		"You know how to kill the mood,"
+		"분위기 깨는 법을 잘 아시는군요,"
 	<<else>>
-		"If you didn't want it, you could have said so at the start,"
+		"원치 않았다면 처음부터 그렇게 말했으면 됐을 텐데요,"
 	<</if>>
-	<<he>> says. <<glust>><<npcincr Avery lust 5>>
+	<<he>>【이가】 말한다. <<glust>><<npcincr Avery lust 5>>
 <</if>>
 <br><br>
 
 <<if _end isnot "threat">>
-	The helicopter slows and eventually stops over the $avery_helicopter.destination. Avery hums<<if _end is "good">> with disappointment,<</if>> and gives you a pat on the thigh.
+	헬리콥터가 속도를 늦추더니 이윽고 $avery_helicopter.destination 상공에 멈춘다. 에이버리는<<if _end is "good">> 아쉬운 듯<</if>> 콧소리를 내며 당신의 허벅지를 토닥인다.
 	<br><br>
 	<<if _end is "good">>
-		"I suppose it couldn't last forever,"
+		"영원히 계속될 순 없는 법이죠,"
 	<<else>>
-		"I think it's about time that you left,"
+		"이제 내릴 시간인 것 같군요,"
 	<</if>>
-	<<he>> says. <<He>> unlocks and opens the helicopter door, then kicks the ladder down.
+	<<he>>【이가】 말한다. <<He>>【은는】 헬리콥터 문의 잠금을 풀고 열더니, 사다리를 발로 차 내린다.
 	<<if $averySeen.includes("helicopter_ride")>>
-		"But there's always next time.
+		"하지만 다음 기회는 언제나 있으니까요.
 	<<else>>
-		"Perhaps we should do this another time.
+		"언제 또 이렇게 하도록 하죠.
 	<</if>>
 	<<if _end is "bad">>
-		And perhaps
+		그리고 그때는
 		<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 40>>
-			I can expect more cooperation from you then.
+			당신이 좀 더 협조적이길 기대하겠습니다.
 		<<else>>
-			you'll be in a better mood then.
+			기분이 좀 더 나아져 있길 바랍니다.
 		<</if>>
 	<</if>>"
 	<br><br>
 	<<set $averySeen.pushUnique("helicopter_ride")>>
-	You<<if _end isnot "bad">> say goodbye to Avery, and<</if>> start climbing down. When you make it down and step away from the ladder, it starts automatically coiling back up, and the helicopter flies away.
+	당신은<<if _end isnot "bad">> 에이버리에게 작별 인사를 하고<</if>> 사다리를 타고 내려가기 시작한다. 바닥에 내려서서 사다리에서 물러나자, 사다리가 자동으로 말려 올라가고 헬리콥터는 날아가 버린다.
 	<br><br>
 	<<silently>><<clotheson>><</silently>>
 	<<endcombat>>
 	<<if $avery_helicopter.destination is "office">>
 		<<if $avery_fate is "ascended">>
-			<<link [[Next|Elk Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+			<<link [[다음|Elk Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 		<<else>>
-			<<link [[Next|High Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+			<<link [[다음|High Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 		<</if>>
 	<<elseif $avery_helicopter.destination is "cafe">>
-		<<link [[Next|Cliff Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+		<<link [[다음|Cliff Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<<elseif $avery_helicopter.destination is "photo studio">>
-		<<link [[Next|Nightingale Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+		<<link [[다음|Nightingale Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<<elseif $avery_helicopter.destination is "mansion">>
-		<<link [[Next|Mansion Garden]]>><<endevent>><<set $eventskip to 1>><</link>>
+		<<link [[다음|Mansion Garden]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<<else>>
-		<<link [[Next|Domus Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+		<<link [[다음|Domus Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<</if>>
 	<br>
 <</if>>
@@ -5984,9 +5984,9 @@ You<<if _end is "good">> say goodbye to Avery, and<</if>> start climbing down th
 <<actionsman>>
 
 <<if _combatend>>
-	<span id="next"><<link [[Next|Avery Helicopter Rape End]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Avery Helicopter Rape End]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Avery Helicopter Rape]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Avery Helicopter Rape]]>><</link>></span><<nexttext>>
 <</if>>
 
 :: Avery Helicopter Rape End
@@ -5995,87 +5995,87 @@ You<<if _end is "good">> say goodbye to Avery, and<</if>> start climbing down th
 <<if $enemyarousal gte $enemyarousalmax>>
 	<<ejaculation>>
 	<br><br>
-	"<<= either("Very good,","Good job, <<pcpetname Avery>>,","So you <i>can</i> behave...")>>" <<he>> says once <<hes>> caught <<his>> breath. <<glove>><<npcincr Avery love 1>><<larage>><<npcincr Avery rage -1>><<llust>><<npcincr Avery lust -20>>
+	"<<= either("아주 좋아,","잘했어, <<pcpetname Avery>>,","얌전히 굴 <i>줄은</i> 아는군...")>>" <<he>>【이가】 숨을 고른 뒤 말한다. <<glove>><<npcincr Avery love 1>><<larage>><<npcincr Avery rage -1>><<llust>><<npcincr Avery lust -20>>
 	<br><br>
-	<<He>> pulls away from you altogether, fixing <<his>> clothing and buckling <<himself>> back in. <<tearful>> you do the same.
+	<<He>>【은는】 당신에게서 완전히 몸을 떼고, 옷매무새를 가다듬은 뒤 다시 안전벨트를 맨다. <<tearful>> 당신도 똑같이 한다.
 <<elseif $enemyhealth lte 0>>
-	"Fuck!" Avery swears, banging <<his>> head on the opposite wall of the helicopter cabin. <<He>> gives you a furious look as <<he>> rubs the spot. There's a few moments of tense silence as you both try to catch your breaths. <<tearful>> you fix your clothes.
+	"씨발!" 에이버리가 욕설을 내뱉으며 헬리콥터 객실 맞은편 벽에 머리를 부딪친다. <<He>>【은는】 부딪친 곳을 문지르며 당신을 사납게 노려본다. 두 사람 모두 숨을 고르려 애쓰는 동안 잠시 긴장된 침묵이 흐른다. <<tearful>> 당신은 옷매무새를 바로잡는다.
 	<br><br>
 	<<if $avery_fate is "ascended" and $averyragerevealed gte 1 and C.npc.Avery.rage gte 60>>
 		<<set _end to "threat">>
-		<<He>> suddenly yanks you to your feet. You're shoved against one of the helicopter doors, and one hand comes up to grip your shoulder tightly.
+		<<He>>【은는】 갑자기 당신을 홱 잡아 일으킨다. 당신은 헬리콥터 문 중 하나에 떠밀리고, 손 하나가 올라와 당신의 어깨를 단단히 움켜쥔다.
 		<br><br>
-		"You enjoy making trouble for me, don't you?" <<He>> gives you an imperious glare. "Acting like a feral animal? If you think you'll just get away with it this time, you're stupider than I realised." <<garage>><<npcincr Avery rage -1>>
+		"날 골치 아프게 하는 게 즐거운가 보군, 응?" <<He>>【은는】 오만한 눈으로 당신을 노려본다. "들짐승처럼 굴어? 이번에도 그냥 넘어갈 수 있을 거라 생각한다면, 넌 내 생각보다 더 멍청한 거야." <<garage>><<npcincr Avery rage -1>>
 		<br><br>
-		Avery's free hand moves to rest on the door handle. <<He>> barely grips it, but the message is clear. Your already racing heart thuds painfully. <<ggstress>><<stress 9>>
+		에이버리의 다른 손이 문손잡이 위로 옮겨 가 얹힌다. <<He>>【은는】 손잡이를 쥐는 둥 마는 둥 하지만, 뜻은 분명하다. 이미 빠르게 뛰던 심장이 고통스럽게 쿵쾅거린다. <<ggstress>><<stress 9>>
 		<br><br>
 		<<if $averySeen.includes("helicopter_ascended_threat")>>
 			<<if (currentSkillValue('willpower')/10) gte random(1,80) and $trauma lt ($traumamax*3)/4>>
-				<<link [[Check the door lock|Avery Helicopter Threat End]]>><<set $phase to 1>><</link>>
+				<<link [[문의 잠금을 확인한다|Avery Helicopter Threat End]]>><<set $phase to 1>><</link>>
 			<</if>>
 		<<else>>
 			<<if (currentSkillValue('willpower')/10) gte random(1,40) and $trauma lt ($traumamax/2)>>
-				<<link [[Check the door lock|Avery Helicopter Threat End]]>><<set $phase to 1>><</link>>
+				<<link [[문의 잠금을 확인한다|Avery Helicopter Threat End]]>><<set $phase to 1>><</link>>
 				<br>
 			<</if>>
 		<</if>>
-		<<link [[Push|Avery Helicopter Threat End]]>><<set $phase to 4>><</link>>
+		<<link [[밀친다|Avery Helicopter Threat End]]>><<set $phase to 4>><</link>>
 		<br>
-		<<link [[Plead|Avery Helicopter Threat End]]>><<set $phase to 3>><</link>>
+		<<link [[애원한다|Avery Helicopter Threat End]]>><<set $phase to 3>><</link>>
 		<br>
-		<<link [[Trust Avery|Avery Helicopter Threat End]]>><<set $phase to 2>><</link>>
+		<<link [[에이버리를 믿는다|Avery Helicopter Threat End]]>><<set $phase to 2>><</link>>
 	<<else>>
-		Eventually Avery drops <<his>> hand. "You're lucky that I don't have the time to discipline you for that, <<girl>>," <<he>> <<= either("hisses","snarls")>>. "But don't think I'll be forgiving you for it." <<garage>><<npcincr Avery rage -1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
+		이윽고 에이버리가 손을 내린다. "내가 그 일로 널 훈육할 시간이 없다는 걸 다행으로 알아, <<girl>>【아야】," <<he>>【이가】 <<= either("쉭쉭거린다","으르렁거린다")>>. "하지만 그걸 용서해 줄 거라곤 생각하지 마." <<garage>><<npcincr Avery rage -1>><<if $avery_mansion>><<ldom>><<npcincr Avery dom -1>><</if>>
 	<</if>>
 <<else>> /* Asked to stop */
-	Avery pauses, sighs, and finally pulls away.
+	에이버리는 멈칫하더니, 한숨을 쉬고, 마침내 몸을 뗀다.
 	<<if $avery_fate is "saved">>
-		"If you insist, <<pcpetname "Avery">>,"
+		"정 그러시다면, <<pcpetname "Avery">>,"
 	<<elseif $averyragerevealed gte 1 and C.npc.Avery.rage gte 60>>
-		"Fine. Fucking tease..."
+		"좋아. 빌어먹을 애태우기는..."
 	<<elseif $averyragerevealed gte 1 and C.npc.Avery.rage gte 20>>
-		"You know how to kill the mood,"
+		"분위기 깨는 법을 잘 아시는군요,"
 	<<else>>
-		"If you didn't want it, you could have said so at the start,"
+		"원치 않았다면 처음부터 그렇게 말했으면 됐을 텐데요,"
 	<</if>>
-	<<he>> says. <<glust>><<npcincr Avery lust 5>>
+	<<he>>【이가】 말한다. <<glust>><<npcincr Avery lust 5>>
 <</if>>
 <br><br>
 <<if _end isnot "threat">>
-	The helicopter slows and eventually stops over the $avery_helicopter.destination. Avery hums and gives you a pat on the thigh.
+	헬리콥터가 속도를 늦추더니 이윽고 $avery_helicopter.destination 상공에 멈춘다. 에이버리는 콧소리를 내며 당신의 허벅지를 토닥인다.
 	<br><br>
-	"I think it's about time that you left," <<he>> says. <<He>> unlocks and opens the helicopter door, then kicks the ladder down.
+	"이제 내릴 시간인 것 같군요," <<he>>【이가】 말한다. <<He>>【은는】 헬리콥터 문의 잠금을 풀고 열더니, 사다리를 발로 차 내린다.
 	<<if $averySeen.includes("helicopter_ride")>>
-		"But there's always next time.
+		"하지만 다음 기회는 언제나 있으니까요.
 	<<else>>
-		"Perhaps we should do this another time.
+		"언제 또 이렇게 하도록 하죠.
 	<</if>>
-	And perhaps
+	그리고 그때는
 	<<if $averyragerevealed gte 1 and C.npc.Avery.rage gte 40>>
-		I can expect more cooperation from you then."
+		당신이 좀 더 협조적이길 기대하겠습니다."
 	<<else>>
-		you'll be in a better mood then."
+		기분이 좀 더 나아져 있길 바랍니다."
 	<</if>>
 	<br><br>
 	<<set $averySeen.pushUnique("helicopter_ride")>>
-	You start climbing down. When you make it down and step away from the ladder, it starts automatically coiling back up, and the helicopter flies away.
+	당신은 사다리를 타고 내려가기 시작한다. 바닥에 내려서서 사다리에서 물러나자, 사다리가 자동으로 말려 올라가고 헬리콥터는 날아가 버린다.
 	<br><br>
 	<<silently>><<clotheson>><</silently>>
 	<<endcombat>>
 	<<if $avery_helicopter.destination is "office">>
 		<<if $avery_fate is "ascended">>
-			<<link [[Next|Elk Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+			<<link [[다음|Elk Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 		<<else>>
-			<<link [[Next|High Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+			<<link [[다음|High Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 		<</if>>
 	<<elseif $avery_helicopter.destination is "cafe">>
-		<<link [[Next|Cliff Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+		<<link [[다음|Cliff Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<<elseif $avery_helicopter.destination is "photo studio">>
-		<<link [[Next|Nightingale Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+		<<link [[다음|Nightingale Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<<elseif $avery_helicopter.destination is "mansion">>
-		<<link [[Next|Mansion Garden]]>><<endevent>><<set $eventskip to 1>><</link>>
+		<<link [[다음|Mansion Garden]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<<else>>
-		<<link [[Next|Domus Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+		<<link [[다음|Domus Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<</if>>
 <</if>>
 
@@ -6085,100 +6085,100 @@ You<<if _end is "good">> say goodbye to Avery, and<</if>> start climbing down th
 <<if $phase lte 2>>
 	<<if $phase is 1>> /* Check lock */
 		<<set _end to "bad">>
-		You look down. The light above the door handle is red. The door is still locked. <<lstress>><<stress -6>>
+		당신은 아래를 내려다본다. 문손잡이 위의 표시등이 빨간색이다. 문은 아직 잠겨 있다. <<lstress>><<stress -6>>
 		<br><br>
-		Avery notices the moment you realise that, and <<= either("sighs","scoffs","rolls <<his>> eyes","clicks <<his>> tongue")>> as <<he>> pulls you away from the door and shoves you back into your seat. <<gpain>><<pain 1>>
+		에이버리는 당신이 그것을 깨달은 순간을 알아차리고, <<= either("한숨을 쉬며","코웃음을 치며","눈을 굴리며","혀를 차며")>> 당신을 문에서 떼어내 자리로 떠민다. <<gpain>><<pain 1>>
 		<br><br>
-		You buckle yourself back in as soon as you steady yourself. Avery does the same, though much more leisurely. Then <<he>>
+		당신은 몸을 가누자마자 다시 안전벨트를 맨다. 에이버리도 똑같이 하지만, 훨씬 느긋하다. 그러더니 <<he>>【은는】
 	<<else>> /* Trust Avery */
 		<<set _end to "mid">>
-		You take a breath and try to calm yourself. After all, Avery still <<= $averyromance ? "wants you around" : "has a use for you">>, doesn't <<he>>?
+		당신은 숨을 들이쉬며 마음을 가라앉히려 애쓴다. 어쨌든 에이버리는 아직 <<= $averyromance ? "당신을 곁에 두고 싶어 하지" : "당신에게 쓸모가 있다고 여기지">> 않는가?
 		<br><br>
-		After a pause, the cold fury on Avery's face fades. <<His>> lips purse and <<he>> raises an eyebrow. "...You seem rather placid, considering the circumstances," <<he>> says, voice low.
+		잠시 후, 에이버리의 얼굴에서 차가운 분노가 사라진다. <<His>> 입술이 오므라들고, <<he>>【은는】 눈썹을 치켜올린다. "...상황을 생각하면 꽤나 태연하군요," <<he>>【이가】 낮은 목소리로 말한다.
 		<br><br>
 		<<if $speech_attitude is "meek" or $speech_attitude_avery>>
-			"Well, I... I trust you."
+			"그게, 저는... 당신을 믿으니까요."
 		<<elseif $speech_attitude is "bratty">>
-			"I know you better than that by now."
+			"당신이 그럴 사람이 아니란 건 이제 알아요."
 		<<else>>
-			"I trust you."
+			"당신을 믿어요."
 		<</if>>
 		<br><br>
-		<<His>> face goes blank. Then <<he>> scoffs. "Do you? Then I can only assume that you've been trying to anger me on purpose." <<He>> <<= either("sighs","shakes <<his>> head","rolls <<his>> eyes","clicks <<his>> tongue")>>. "No matter." <<He>> pulls you away from the door, shoves you back into your seat, and sits back down <<himself>>. <<gpain>><<pain 1>>
+		<<His>> 얼굴에서 표정이 사라진다. 그러더니 <<he>>【은는】 코웃음 친다. "그래? 그렇다면 일부러 날 화나게 하려 했다고밖에 볼 수 없겠군." <<He>>【은는】 <<= either("한숨을 쉰다","고개를 젓는다","눈을 굴린다","혀를 찬다")>>. "상관없어." <<He>>【은는】 당신을 문에서 떼어내 자리로 떠밀고, 자신도 다시 자리에 앉는다. <<gpain>><<pain 1>>
 		<br><br>
-		Both of you buckle yourselves back in. You're relieved your trust was well-founded. <<lstress>><<stress -3>>
+		두 사람 모두 다시 안전벨트를 맨다. 당신의 믿음이 틀리지 않았다는 사실에 안도한다. <<lstress>><<stress -3>>
 		<br><br>
-		Avery then
+		그러고는 에이버리는
 	<</if>>
-	leans in close, eyes narrowed. "Just because you've spoiled my fun now doesn't mean you won't be punished for all of this later," <<he>> <<= either("growls","hisses")>>. "So don't be too pleased with yourself. I won't have you acting out of line again." <<ldom>><<npcincr Avery dom -1>>
+	눈을 가늘게 뜨고 몸을 바짝 기울인다. "지금 내 재미를 망쳤다고 해서, 이 모든 일에 대해 나중에 벌을 받지 않을 거란 뜻은 아니야," <<he>>【이가】 <<= either("으르렁거린다","쉭쉭거린다")>>. "그러니 너무 우쭐해하지 마. 다시는 선을 넘게 두지 않을 테니까." <<ldom>><<npcincr Avery dom -1>>
 <<else>>
 	<<set _end to "mid">>
 	<<if $phase is 4>> /* Push */
-		You shove Avery away as hard as you can.
+		당신은 있는 힘껏 에이버리를 밀쳐낸다.
 		<br><br>
-		To your surprise, <<he>> doesn't resist, just <<laughs>> and allows <<himself>> to be pushed. It's not a pleasant sound. You sit down and buckle yourself back in before <<he>> can retaliate.
+		놀랍게도 <<he>>【은는】 저항하지 않고, 그저 <<laughs>>. 그리고 순순히 밀려난다. 유쾌한 소리는 아니다. 당신은 <<he>>【이가】 보복하기 전에 자리에 앉아 다시 안전벨트를 맨다.
 	<<else>> /* Plead */
 		<<if $speech_attitude is "meek" or $speech_attitude_avery>>
-			"A-Avery, please, I'm sorry—!"
+			"에, 에이버리, 제발요, 죄송해요—!"
 		<<elseif $speech_attitude is "bratty">>
-			"H-hey, come on, be reasonable for once, huh? Please?"
+			"자, 잠깐, 한 번쯤은 이성적으로 굴어 봐요, 네? 제발요?"
 		<<else>>
-			"Avery, please don't! I'm sorry—"
+			"에이버리, 제발 그러지 마요! 죄송해요—"
 		<</if>>
 		<br><br>
-		To your surprise, <<he>> <<laughs>>. It's not a pleasant one. But <<he>> lets go of you and the handle. You sit down and buckle yourself back in before <<he>> changes <<his>> mind.
+		놀랍게도 <<he>>【은는】 <<laughs>>. 유쾌한 웃음은 아니다. 하지만 <<he>>【은는】 당신과 손잡이를 놓아준다. 당신은 <<he>>【이가】 마음을 바꾸기 전에 자리에 앉아 다시 안전벨트를 맨다.
 	<</if>>
-	Avery smirks at you as <<he>> does the same, though much more leisurely. <<gdom>><<npcincr Avery dom 1>>
+	에이버리는 당신을 향해 능글맞게 웃으며 똑같이 하지만, 훨씬 느긋하다. <<gdom>><<npcincr Avery dom 1>>
 	<br><br>
-	"You look frightened, <<pcpetname "Avery">>," <<he>> coos, <<his>> smirk widening. "What for?" <<He>> affects a look of surprise. "Don't tell me you were actually afraid I was going to open the door?" <<He>> scoffs a laugh. "It wouldn't have opened even if I tried."
+	"겁에 질린 얼굴이군요, <<pcpetname "Avery">>," <<he>>【이가】 능글맞은 웃음을 더 짙게 띠며 달콤하게 속삭인다. "왜요?" <<He>>【은는】 놀란 표정을 지어 보인다. "설마 내가 정말로 문을 열 거라고 생각했던 건 아니겠죠?" <<He>>【은는】 코웃음 섞인 웃음을 흘린다. "내가 열려고 했어도 열리지 않았을 겁니다."
 	<br><br>
-	<<He>> gestures to a light just above the door handle. It's glowing red, indicating that it's locked. You feel <<= $speech_attitude is "bratty" ? "stupid" : "embarrassed">> for having been scared.
+	<<He>>【은는】 문손잡이 바로 위의 표시등을 가리킨다. 잠겨 있음을 뜻하는 빨간빛이 켜져 있다. 겁을 먹었다는 사실이 <<= $speech_attitude is "bratty" ? "한심하게" : "부끄럽게">> 느껴진다.
 <</if>>
 <br><br>
 <<set $averySeen.pushUnique("helicopter_ascended_threat")>>
-The helicopter slows and eventually stops over the $avery_helicopter.destination. Avery hums<<if _end is "good">> with disappointment,<</if>> and gives you a pat on the thigh.
+헬리콥터가 속도를 늦추더니 이윽고 $avery_helicopter.destination 상공에 멈춘다. 에이버리는<<if _end is "good">> 아쉬운 듯<</if>> 콧소리를 내며 당신의 허벅지를 토닥인다.
 <br><br>
-"I think it's about time that you left," <<he>> says. <<He>> unlocks and opens the helicopter door, then kicks the ladder down.
+"이제 내릴 시간인 것 같군요," <<he>>【이가】 말한다. <<He>>【은는】 헬리콥터 문의 잠금을 풀고 열더니, 사다리를 발로 차 내린다.
 <<if $averySeen.includes("helicopter_ride")>>
-	"But there's always next time.
+	"하지만 다음 기회는 언제나 있으니까요.
 <<else>>
-	"Perhaps we should do this another time.
+	"언제 또 이렇게 하도록 하죠.
 <</if>>
 <<if _end is "bad">>
-	And perhaps
+	그리고 그때는
 <</if>>
 <<if $averyragerevealed gte 1>>
-	I can expect more cooperation from you then.
+	당신이 좀 더 협조적이길 기대하겠습니다.
 <<else>>
-	you'll be in a better mood then.
+	기분이 좀 더 나아져 있길 바랍니다.
 <</if>>"
 <br><br>
 <<set $averySeen.pushUnique("helicopter_ride")>>
-You<<if _end is "mid">> say goodbye to Avery, and<</if>> start climbing down. When you make it down and step away from the ladder, it starts automatically coiling back up, and the helicopter flies away.
+당신은<<if _end is "mid">> 에이버리에게 작별 인사를 하고<</if>> 사다리를 타고 내려가기 시작한다. 바닥에 내려서서 사다리에서 물러나자, 사다리가 자동으로 말려 올라가고 헬리콥터는 날아가 버린다.
 <br><br>
 <<if $avery_helicopter.destination is "office">>
 	<<if $avery_fate is "ascended">>
-		<<link [[Next|Elk Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+		<<link [[다음|Elk Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<<else>>
-		<<link [[Next|High Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+		<<link [[다음|High Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<</if>>
 <<elseif $avery_helicopter.destination is "cafe">>
-	<<link [[Next|Cliff Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+	<<link [[다음|Cliff Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 <<elseif $avery_helicopter.destination is "photo studio">>
-	<<link [[Next|Nightingale Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+	<<link [[다음|Nightingale Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 <<elseif $avery_helicopter.destination is "mansion">>
-	<<link [[Next|Mansion Garden]]>><<endevent>><<set $eventskip to 1>><</link>>
+	<<link [[다음|Mansion Garden]]>><<endevent>><<set $eventskip to 1>><</link>>
 <<else>>
-	<<link [[Next|Domus Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+	<<link [[다음|Domus Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 <</if>>
 
 
 :: Avery Helicopter Walk
 <<effects>>
 
-You ignore Avery and walk past the ladder. You don't see <<his>> reaction, but not long after, you see the helicopter fly off in the direction of High Street. <<llove>><<npcincr Avery love -1>><<garage>><<npcincr Avery rage 1>>
+당신은 에이버리를 무시하고 사다리를 지나쳐 걸어간다. <<his>> 반응은 보지 못했지만, 머지않아 헬리콥터가 하이 가 방향으로 날아가는 것이 보인다. <<llove>><<npcincr Avery love -1>><<garage>><<npcincr Avery rage 1>>
 <br><br>
-<<link [[Next|Oxford Street]]>><<endevent>><<set $eventskip to 1>><</link>>
+<<link [[다음|Oxford Street]]>><<endevent>><<set $eventskip to 1>><</link>>
 
 :: Avery Pub Winter
 <<set $outside to 0>><<set $location to "town">><<effects>><<set $bus to "harvest">><<seenPassage>>
@@ -6623,7 +6623,7 @@ You ignore Avery and walk past the ladder. You don't see <<his>> reaction, but n
 	<<averySchedule>>
 	당신은 차에서 내린다.
 	<<if $avery_mansion.schedule is "work">>
-		"I have <<= either("to get back to work", "to speak with a client now", "a meeting to get to")>>. I'll see you tonight, <<pcpetname "Avery" "my">>."
+		"저는 <<= either("일하러 돌아가야 합니다", "지금 고객과 이야기해야 합니다", "가야 할 회의가 있습니다")>>. 오늘 밤 봐요, <<pcpetname "Avery" "my">>."
 	<<else>>
 		<<He>>【은는】 잠시 바라보다가 뒤따라 내린다.
 	<</if>>

@@ -55,6 +55,7 @@ game/special-fishing/fishing-text.twee:1532:【에게】
 - `base-combat/man-combat.twee` 등 전투 파일: `_args[0]`/`$_hand`(left/right)와 `$_toy` 도구명을 산문에 직접 찍음. 옛 번역은 `<<print … ? "왼손" : "오른손">>`·`window.KR.getToolKr()` 래퍼. 후보: kr_dict 화면번역 사전에 도구명·left/right 추가.
 - `base-combat/actionsGeneration.twee` 1272~1283: `_mockItems` 객체 키(ethics/looks/strength/skill/penis/pussy)가 `<<optionsfrom>>` 라벨로 화면에 보임. 옛 번역은 `<<option "도덕" "ethics">>`. 키 구조를 바꿔야 하므로 코드 작업.
 - `base-combat/effects.twee`·`beast.twee`: `$NPCList[0].fullDescription`, `$combatTrain.beastTypes[...]`, `<<beasttype>>` 결과가 영어(Black Wolf 등)로 찍힘. 옛 번역은 `getDescriptionKr`/`getBeastTypeKr` 래퍼.
+- `overworld-town/special-avery/main.twee`: `$avery_helicopter.destination` 값(orphanage, photo studio 등)이 산문에 영어로 찍힘(6곳).
 - `base-system/effect.js` 508: 최면 특성 이름 `trait.toUpperFirst()` 영어 그대로(옛 번역과 동일).
 
 ## 묶음
@@ -82,10 +83,10 @@ game/special-fishing/fishing-text.twee:1532:【에게】
 | P1-19 | 1 | game/base-combat/speech/speech-kylar.twee<br>game/base-combat/effects.twee<br>game/base-combat/beast.twee<br>game/base-combat/speech/speech.twee<br>game/base-combat/speech/speech-alex.twee | 423 | 완료 | 207줄 복원, 남은 영어 0. effects/beast의 짐승 이름·fullDescription 영어 출력 → 코드 측 보정 후보 |
 | P1-20 | 1 | game/base-combat/speech/speech-morgan.twee<br>game/base-combat/speech/speech-leighton.twee<br>game/base-combat/speech/reaction-sydney.twee<br>game/base-combat/speech/reaction-gwylan.twee<br>game/base-combat/speech/speech-harper.twee<br>game/base-combat/speech/speech-eden.twee<br>game/base-combat/init.twee<br>game/base-combat/actionsGeneration.twee<br>game/base-combat/actions-penis.twee<br>game/base-combat/tentacles/tentacle-adv.twee<br>game/base-combat/machine/machine.twee<br>game/base-combat/actions-anus.twee<br>game/base-combat/actions-hands.twee<br>game/base-combat/effects-disabled.twee<br>game/base-combat/npc-damage.twee<br>game/base-combat/audienceswarm.twee<br>game/base-combat/ejaculation/ejaculation-eden.twee<br>game/base-combat/ejaculation/ejaculation-kylar.twee<br>game/base-combat/ejaculation/ejaculation-leighton.twee<br>game/base-combat/ejaculation/ejaculation-sydney.twee<br>game/base-combat/stalk/stalk.twee | 353 | 완료 | 21파일 ok, 남은 영어 0. actionsGeneration _mockItems 키가 화면 라벨(ethics 등) → 코드 측 보정 후보 |
 | P1-21 | 1 | game/overworld-town/loc-street/events.twee | 2536 | 진행 |  |
-| P1-22 | 1 | game/overworld-town/special-avery/main.twee | 1050 | 진행 |  |
-| P1-23 | 1 | game/overworld-town/loc-alley/park.twee | 1008 | 진행 |  |
-| P1-24 | 1 | game/overworld-town/loc-temple/library.twee | 965 | 대기 |  |
-| P1-25 | 1 | game/overworld-town/loc-home/main.twee | 555 | 대기 |  |
+| P1-22 | 1 | game/overworld-town/special-avery/main.twee | 1050 | 완료 | 헬리콥터 이벤트 새 번역 등 462줄, 남은 영어 0(헤더 232). $avery_helicopter.destination 값이 영어로 찍힘 → 코드 측 보정 후보 |
+| P1-23 | 1 | game/overworld-town/loc-alley/park.twee | 1008 | 완료 | 호박 조각 대회 등 새 번역, 남은 영어 0(헤더 46). scriptorium→필사실 (신규 표기) |
+| P1-24 | 1 | game/overworld-town/loc-temple/library.twee | 965 | 진행 |  |
+| P1-25 | 1 | game/overworld-town/loc-home/main.twee | 555 | 진행 |  |
 | P1-26 | 1 | game/overworld-town/loc-home/rent.twee | 532 | 대기 |  |
 | P1-27 | 1 | game/overworld-town/loc-museum/museumAntiques.twee | 500 | 대기 |  |
 | P1-28 | 1 | game/overworld-town/loc-street/widgets.twee | 417 | 대기 |  |
