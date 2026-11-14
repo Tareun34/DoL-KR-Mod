@@ -52,6 +52,7 @@ game/special-fishing/fishing-text.twee:1532:【에게】
 - `base-system/widgets.twee` 거리 이름: `<<print _location.toUpperFirst()>> 가` → `getMapNameKr(...)`로 한글 거리명.
 - `base-system/tending.twee` 335: `$_plant.tending.planting_bed` 값(earth/water)이 영어로 찍힘.
 - `$NPCList[_n].penisdesc` / `breastsdesc` 를 산문에서 직접 찍는 자리(bodywriting 1005, ejaculation 다수, 이후 전투 파일들): 옛 번역은 `window.KR.getPenisDescKr(...)`로 감쌌으나 번역 커밋에서는 변수 그대로 둠. 해결책 후보: 이 값들을 `kr_dict.js` 화면번역 사전에 넣어 후처리로 치환.
+- `base-combat/man-combat.twee` 등 전투 파일: `_args[0]`/`$_hand`(left/right)와 `$_toy` 도구명을 산문에 직접 찍음. 옛 번역은 `<<print … ? "왼손" : "오른손">>`·`window.KR.getToolKr()` 래퍼. 후보: kr_dict 화면번역 사전에 도구명·left/right 추가.
 - `base-system/effect.js` 508: 최면 특성 이름 `trait.toUpperFirst()` 영어 그대로(옛 번역과 동일).
 
 ## 묶음
@@ -70,12 +71,12 @@ game/special-fishing/fishing-text.twee:1532:【에게】
 | P1-10 | 1 | game/base-combat/speech/speech-gwylan.twee | 810 | 완료 | 215줄 번역, 남은 영어 0(코드 6줄). rut/heat→러트/발정기 |
 | P1-11 | 1 | game/base-combat/ejaculation/ejaculation-gloryhole.twee | 691 | 완료 | 165줄 번역, 남은 영어 0(헤더·주석 3줄) |
 | P1-12 | 1 | game/base-combat/ejaculation/ejaculation-wall.twee | 588 | 완료 | 126줄 번역, 남은 영어 0(헤더 1줄) |
-| P1-13 | 1 | game/base-combat/speech/speech-robin.twee | 513 | 대기 |  |
-| P1-14 | 1 | game/base-combat/speech/speech-bailey.twee | 363 | 대기 |  |
-| P1-15 | 1 | game/base-combat/man-combat.twee | 356 | 대기 |  |
-| P1-16 | 1 | game/base-combat/actions-text.twee | 346 | 대기 |  |
-| P1-17 | 1 | game/base-combat/ejaculation/ejaculation-pillory.twee | 263 | 대기 |  |
-| P1-18 | 1 | game/base-combat/speech/reaction-avery.twee<br>game/base-combat/audience.twee | 435 | 대기 |  |
+| P1-13 | 1 | game/base-combat/speech/speech-robin.twee | 513 | 완료 | 141줄 번역, 남은 영어 0(코드 7줄) |
+| P1-14 | 1 | game/base-combat/speech/speech-bailey.twee | 363 | 완료 | 118줄 번역, 남은 영어 0(헤더 1줄) |
+| P1-15 | 1 | game/base-combat/man-combat.twee | 356 | 완료 | 177줄 번역, 남은 영어 0(코드·주석 83줄). _args[0] 손(left/right)·$_toy 도구명이 영어로 찍힘 → 코드 측 보정 후보 |
+| P1-16 | 1 | game/base-combat/actions-text.twee | 346 | 진행 |  |
+| P1-17 | 1 | game/base-combat/ejaculation/ejaculation-pillory.twee | 263 | 진행 |  |
+| P1-18 | 1 | game/base-combat/speech/reaction-avery.twee<br>game/base-combat/audience.twee | 435 | 진행 |  |
 | P1-19 | 1 | game/base-combat/speech/speech-kylar.twee<br>game/base-combat/effects.twee<br>game/base-combat/beast.twee<br>game/base-combat/speech/speech.twee<br>game/base-combat/speech/speech-alex.twee | 423 | 대기 |  |
 | P1-20 | 1 | game/base-combat/speech/speech-morgan.twee<br>game/base-combat/speech/speech-leighton.twee<br>game/base-combat/speech/reaction-sydney.twee<br>game/base-combat/speech/reaction-gwylan.twee<br>game/base-combat/speech/speech-harper.twee<br>game/base-combat/speech/speech-eden.twee<br>game/base-combat/init.twee<br>game/base-combat/actionsGeneration.twee<br>game/base-combat/actions-penis.twee<br>game/base-combat/tentacles/tentacle-adv.twee<br>game/base-combat/machine/machine.twee<br>game/base-combat/actions-anus.twee<br>game/base-combat/actions-hands.twee<br>game/base-combat/effects-disabled.twee<br>game/base-combat/npc-damage.twee<br>game/base-combat/audienceswarm.twee<br>game/base-combat/ejaculation/ejaculation-eden.twee<br>game/base-combat/ejaculation/ejaculation-kylar.twee<br>game/base-combat/ejaculation/ejaculation-leighton.twee<br>game/base-combat/ejaculation/ejaculation-sydney.twee<br>game/base-combat/stalk/stalk.twee | 353 | 대기 |  |
 | P1-21 | 1 | game/overworld-town/loc-street/events.twee | 2536 | 대기 |  |

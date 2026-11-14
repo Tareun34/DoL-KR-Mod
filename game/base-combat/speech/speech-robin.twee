@@ -10,39 +10,39 @@
 		<<if $speechPlayerHits>>
 			<<addSpeechLine "playerHits">>
 			<<speechLine>>
-				<<He>> flinches as you strike. "Ugh!"
+				당신이 가격하자 <<he>>【이가】 움찔한다. "윽!"
 			<<speechLine>>
-				<<He>> recoils as you hit <<him>>.
+				당신이 <<him>>【을를】 때리자 뒤로 물러선다.
 			<</addSpeechLine>>
 		<</if>>
 		<<if $speechScreamForHelp>>
 			<<addSpeechLine "screamForHelp">>
 			<<speechLine>>
-				It goes over <<his>> head.
+				<<his>> 귀에는 닿지 않는다.
 			<<speechLine>>
-				<<He>> doesn't react.
+				<<He>>【은는】 아무 반응도 보이지 않는다.
 			<<speechLine>>
-				Robin tries to react to your screams, but fails.
+				로빈은 당신의 비명에 반응하려 하지만, 뜻대로 되지 않는다.
 			<</addSpeechLine>>
 		<</if>>
 		<<if $speechPepperSpray>>
 			<<addSpeechLine "pepperSpray">>
-				"Ouch!" <<He>> recoils with <<his>> hands over eyes. <<stress 6>><<gstress>>
+				"아야!" <<He>>【은는】 두 손으로 눈을 가리며 뒤로 물러선다. <<stress 6>><<gstress>>
 			<</addSpeechLine>>
 		<</if>>
 		<<addSpeechLine "idle">>
 			<br><br>
 			<<print either(
-				`Robin is crying.`,
-				`Robin frantically tries to look away from you, but <<he>> doesn't stop.`,
-				`"I d-don't...<<if $robinromance isnot 1>> I don't want to...<</if>>" Robin whispers under <<his>> breath.`,
-				`<<if $robinromance is 1>>"I love you!" Robin says, though <<hes>> not smiling.<<else>>"I'm so sorry!" Robin says, looking horrified.<</if>>`,
-				`"P-please, I just need—" Robin gasps. <<He>> doesn't try to finish <<his>> sentence.`,
-				`Robin closes <<his>> eyes, unable to meet your gaze.`,
-				`Robin cries out. Tears are running down <<his>> face.`,
-				`Robin shakes <<his>> head and closes <<his>> eyes.`,
-				`"S-stop it!" Robin yells, but not at you.`,
-				`"<<if $robinromance is 1>>I need you...<<else>>I'm sorry... I'm sorry... I need to...<</if>>" Robin says with teary eyes.`
+				`로빈이 울고 있다.`,
+				`로빈은 필사적으로 당신에게서 시선을 돌리려 하지만, <<he>>【은는】 멈추지 않는다.`,
+				`"나, 난...<<if $robinromance isnot 1>> 이러고 싶지 않은데...<</if>>" 로빈이 <<his>> 입속으로 나지막이 속삭인다.`,
+				`<<if $robinromance is 1>>"사랑해!" 로빈이 말하지만, <<hes>> 웃고 있지는 않다.<<else>>"정말 미안해!" 로빈이 겁에 질린 표정으로 말한다.<</if>>`,
+				`"제, 제발, 난 그저—" 로빈이 숨을 헐떡인다. <<He>>【은는】 <<his>> 말을 끝맺으려 하지 않는다.`,
+				`로빈은 차마 당신의 시선을 마주치지 못하고 <<his>> 눈을 감아버린다.`,
+				`로빈이 비명을 지른다. 눈물이 <<his>> 얼굴을 타고 흘러내린다.`,
+				`로빈이 <<his>> 고개를 흔들며 <<his>> 눈을 질끈 감는다.`,
+				`"그, 그만해!" 로빈이 소리치지만, 당신을 향한 것이 아니다.`,
+				`"<<if $robinromance is 1>>네가 필요해...<<else>>미안해... 미안해... 어쩔 수가...<</if>>" 로빈이 눈물어린 눈으로 말한다.`
 			)>>
 			<<grtrauma>>
 		<</addSpeechLine>>
@@ -51,16 +51,16 @@
 		<<speechPool "Robin" "noMouthAction">>
 		<<addSpeechLine "idle">>
 			<<print either(
-				`Robin can't maintain eye contact.`,
-				`<<if $robinromance is 1>>"Hurry," Robin whispers. "So they'll leave you alone."<<else>>"Please don't hate me," Robin whispers. "You have to... I'm sorry."<</if>>`,
-				`Robin struggles against <<his>> bindings.`,
-				`Robin struggles against the metal tentacles holding <<him>>. They don't budge.`,
-				`"Please," Robin whimpers.`,
-				`Robin stifles a sob.`,
-				`"I'm sorry," Robin hiccups.`,
-				`"They did something to me," Robin says shamefully. "I feel... numb."`,
-				`"<<if $robinromance is 1>>I'm sorry it's taking so long," Robin mutters.<<else>>"I'm so sorry," Robin mutters. "I'm trying to, I... I can't..."<</if>>`,
-				`"<<if $robinromance is 1>>They're using me against you," Robin sobs.<<else>>"You're my friend," Robin sobs. "I don't want to do this..."<</if>>`
+				`로빈은 당신의 시선을 마주하지 못한다.`,
+				`<<if $robinromance is 1>>"빨리," 로빈이 속삭인다. "그래야 쟤들이 널 내버려 둘 거야."<<else>>"제발 날 미워하지 마," 로빈이 속삭인다. "너도 어쩔 수 없어... 미안해."<</if>>`,
+				`로빈이 <<his>> 구속구에서 빠져나가려 발버둥친다.`,
+				`로빈이 <<him>>【을를】 붙들고 있는 금속 촉수에서 벗어나려 몸부림친다. 하지만 꿈쩍도 하지 않는다.`,
+				`"제발," 로빈이 훌쩍인다.`,
+				`로빈이 울음을 삼킨다.`,
+				`"미안해," 로빈이 딸꾹질을 한다.`,
+				`"저들이 내게 무슨 짓을 했어," 로빈이 수치스럽다는 듯 말한다. "감각이... 없어."`,
+				`"<<if $robinromance is 1>>너무 오래 걸려서 미안해," 로빈이 중얼거린다.<<else>>"정말 미안해," 로빈이 중얼거린다. "해 보려고 하는데, 나... 못하겠어..."<</if>>`,
+				`"<<if $robinromance is 1>>저들이 날 이용해서 널 괴롭히고 있어," 로빈이 흐느낀다.<<else>>"넌 내 친구잖아," 로빈이 흐느낀다. "이러고 싶지 않아..."<</if>>`
 			)>>
 		<</addSpeechLine>>
 		<<speechSay>>
@@ -71,9 +71,9 @@
 				<<addSpeechLine "memory">>
 					<<set $weekly.robinMemory to true>>
 					<<if C.npc.Robin.dom gte 70>>
-						"I'd choose your touch over those... those rich creeps any day." <<He>> catches <<himself>> before saying anything harsher.
+						"그... 역겨운 부자 놈들 손길 따위보단 언제든 네 손길을 택할 거야." <<He>>【은는】 더 험한 말을 뱉기 전에 입을 다문다.
 					<<else>>
-						"Even after what happened at that party... I still like your touch the most," <<he>> whispers.
+						"그 파티에서 그런 일을 겪고 나서도... 난 여전히 네 손길이 제일 좋아," <<he>>【이가】 속삭인다.
 					<</if>>
 					<<robinMemoryHeal "healedMansion">>
 				<</addSpeechLine>>
@@ -82,9 +82,9 @@
 				<<addSpeechLine "memory">>
 					<<set $weekly.robinMemory to true>>
 					<<if C.npc.Robin.trauma gte 60>>
-						"I need you so badly," <<he>> <<= either("whispers","sobs","heaves")>>. "Those feelings were never just the mist."
+						"네가 너무나도 필요해," <<he>>【이가】 <<= either("속삭인다","흐느낀다","헐떡인다")>>. "그 감정들은 결코 안개 때문만이 아니었어."
 					<<else>>
-						"I know I was under the pink mist's influence back then, but... I do love you. So, so much." <<He>> smiles, <<his>> eyes glassy.
+						"그땐 분홍 안개에 취해 있었던 거 알지만, 그래도... 널 정말 사랑해. 너무너무 많이." 흐리멍덩한 눈을 한 채 <<he>>【이가】 미소 짓는다.
 					<</if>>
 					<<robinMemoryHeal "healedMist">>
 				<</addSpeechLine>>
@@ -93,9 +93,9 @@
 				<<addSpeechLine "memory">>
 					<<set $weekly.robinMemory to true>>
 					<<if $robinSeen.includes("pilloryNaked")>>
-						"As long as you come for me, I know I'm safe in your hands," <<he>> whispers.
+						"네가 날 찾아와 주는 한, 네 품에선 안전하다는 걸 알아," <<he>>【이가】 속삭인다.
 					<<else>>
-						"My hero..." Robin's voice trembles. "You saved me from the wretched people of this town. I'm yours."
+						"나의 영웅..." 로빈의 목소리가 떨린다. "이 마을의 끔찍한 사람들에게서 날 구해줬잖아. 난 네 거야."
 					<</if>>
 					<<robinMemoryHeal "healedPilloryRescue">>
 				<</addSpeechLine>>
@@ -104,8 +104,8 @@
 				<<addSpeechLine "memory">>
 					<<set $weekly.robinMemory to true>>
 					<<print either(
-						`"Take your time..." <<he>> <<= either("smiles warmly","whispers","murmurs")>>. "We don't have to put on a show anymore."`,
-						`"You don't have to rush..." <<he>> <<= either("smiles warmly","whispers","murmurs")>>. "No one is forcing you to perform."`
+						`"천천히 해도 돼..." <<he>>【이가】 <<= either("따뜻하게 미소 짓는다","속삭인다","중얼거린다")>>. "이제 남들에게 보여주려고 애쓸 필요 없잖아."`,
+						`"서두르지 않아도 돼..." <<he>>【이가】 <<= either("따뜻하게 미소 짓는다","속삭인다","중얼거린다")>>. "이제 아무도 너한테 억지로 하라고 강요하지 않아."`
 					)>>
 					<<robinMemoryHeal "healedUbMetal">>
 				<</addSpeechLine>>
@@ -114,9 +114,9 @@
 				<<addSpeechLine "memory">>
 					<<set $weekly.robinMemory to true>>
 					<<if C.npc.Robin.virginity.anal is "player" or C.npc.Robin.virginity.vaginal is "player" or C.npc.Robin.virginity.penile is "player">>
-						"I'm so glad I gave my virginity to you before those creeps could take it." <<He>> smiles.
+						"그 역겨운 인간들에게 빼앗기기 전에 너한테 내 처음을 줄 수 있어서 정말 다행이야." <<He>>【은는】 미소 짓는다.
 					<<elseif C.npc.Robin.dom gte 70>>
-						"Those people are nothing compared to you... to what we have, and what we're sharing right now." <<He>> smiles.
+						"그런 작자들은 너에 비하면 아무것도 아니야... 우리가 나눈 것들, 그리고 지금 함께 나누고 있는 것들에 비하면 말이야." <<He>>【은는】 미소 짓는다.
 					<</if>>
 					<<robinMemoryHeal "healedUbDouble">>
 				<</addSpeechLine>>
@@ -125,9 +125,9 @@
 				<<addSpeechLine "memory">>
 					<<set $weekly.robinMemory to true>>
 					<<if $robinSeen.includes("ubMachineRobinBegged")>>
-						"I'm sorry for what I said back then," <<he>> whispers. "I hope you've forgiven me..."
+						"그때 그런 말을 해서 미안해," <<he>>【이가】 속삭인다. "날 용서해 줬으면 좋겠는데..."
 					<<else>>
-						"You held back for me back then," <<he>> heaves. "I'll make it up to you tenfold."
+						"그때 날 위해 참아줬잖아," <<he>>【이가】 숨을 헐떡인다. "몇 배로 갚아줄게."
 					<</if>>
 					<<robinMemoryHeal "healedUbMachine">>
 				<</addSpeechLine>>
@@ -135,7 +135,7 @@
 			<<if $robinSeen.includes("ubEscapeAlone")>>
 				<<addSpeechLine "memory">>
 					<<set $weekly.robinMemory to true>>
-					"My hero..." <<he>> <<= either("whispers","sobs","heaves")>>. "They can't keep us apart anymore."
+					"나의 영웅..." <<he>>【이가】 <<= either("속삭인다","흐느낀다","헐떡인다")>>. "이제 아무도 우릴 갈라놓지 못해."
 					<<robinMemoryHeal "healedUbEscape">>
 				<</addSpeechLine>>
 			<</if>>
@@ -143,11 +143,11 @@
 				<<addSpeechLine "memory">>
 					<<set $weekly.robinMemory to true>>
 					<<if $robinSeen.includes("ubHuntEscape")>>
-						"My hero..." Robin's voice trembles. "You came back and saved me. Let me make you feel just as cherished."
+						"나의 영웅..." 로빈의 목소리가 떨린다. "다시 돌아와서 날 구해줬잖아. 나도 네가 그만큼 소중하게 보살핌받는다고 느끼게 해줄게."
 					<<elseif $robinSeen.includes("ubMetalEscape")>>
-						"They can't keep us there anymore," <<he>> whispers. "I'll come with you wherever you go."
+						"이제 아무도 우릴 거기에 가둬두지 못해," <<he>>【이가】 속삭인다. "네가 어디를 가든 함께 갈게."
 					<<else>>
-						"I'm so glad we made it out of that horrible place," <<he>> whispers. <<if C.npc.Robin.dom gte 70>>"I won't let Bailey take us again."<<else>>"I never want to go back."<</if>>
+						"그 끔찍한 곳에서 무사히 빠져나와서 정말 다행이야," <<he>>【이가】 속삭인다. <<if C.npc.Robin.dom gte 70>>"베일리가 우릴 다시 잡아가지 못하게 할 거야."<<else>>"거기론 절대 다시 돌아가고 싶지 않아."<</if>>
 					<</if>>
 					<<robinMemoryHeal "healedUbEscape">>
 				<</addSpeechLine>>
@@ -156,46 +156,46 @@
 		<<if $speechNPCPenisVirgin or $speechNPCVaginaVirgin>>
 			<<addSpeechLine "virginity">>
 				<<if $speechVaginaVirgin is 1 or $speechAnusVirgin is 1>>
-					<<He>> gasps. "Sorry! It's my first time too! I hope I'm doing well."
+					<<He>>【이가】 숨을 헉 들이켠다. "미안해! 나도 처음이라 그래! 내가 잘하고 있으면 좋겠는데."
 				<<else>>
-					<<He>> marvels. "Sorry! I didn't expect it to feel like this... let's keep going!"
+					<<He>>【이가】 감탄한다. "미안해! 이런 느낌일 줄은 몰랐어... 계속하자!"
 				<</if>>
 			<</addSpeechLine>>
 		<</if>>
 		<<if $speechNPCAnusVirgin>>
 			<<addSpeechLine "virginity">>
 				<<if $speechPenisVirgin is 1>>
-					<<He>> grimaces. "This feels a bit weird." Then <<he>> smiles. "I hope I'm not doing a bad job for our first time!"
+					<<He>>【이가】 얼굴을 찌푸린다. "기분이 좀 묘하네." 그러더니 <<he>>【이가】 미소 짓는다. "우리 둘 다 처음인데, 내가 너무 못하고 있는 건 아니었으면 좋겠어!"
 				<<else>>
-					<<He>> grimaces. "This feels a bit weird." Then <<he>> brightens up. "I hope I'm doing alright."
+					<<He>>【이가】 얼굴을 찌푸린다. "기분이 좀 묘하네." 그러더니 <<his>> 표정이 밝아진다. "내가 잘하고 있는 거면 좋겠다."
 				<</if>>
 			<</addSpeechLine>>
 		<</if>>
 		<<if ($speechPenisVirgin and $player.virginity.penile is "Robin") or ($speechVaginaVirgin and $player.virginity.vaginal is "Robin")>>
 			<<addSpeechLine "virginity">>
-				<<He>> gasps. "You saved yourself for me. I don't deserve something so special. Thank you." Tears roll down <<his>> cheeks.
+				<<He>>【이가】 숨을 헐떡인다. "나를 위해 처음을 간직해준 거야? 나한텐 이렇게 특별한 선물을 받을 자격이 없는데. 고마워." <<his>> 뺨을 타고 눈물이 흘러내린다.
 			<</addSpeechLine>>
 		<</if>>
 		<<if $player.virginity.anal is "Robin" and $speechAnusVirgin>>
 			<<addSpeechLine "virginity">>
-				<<He>> gasps. "This is so naughty!"
+				<<He>>【이가】 숨을 헐떡인다. "너무 야해!"
 			<</addSpeechLine>>
 		<</if>>
 		<<if $player.virginity.oral is "Robin" and $speechOralVirgin>>
 			<<addSpeechLine "virginity">>
-				<<He>> gasps. "You're making me feel funny down there."
+				<<He>>【이가】 숨을 헐떡인다. "너 때문에 아래가 이상해져."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $speechExposeBreasts>>
 			<<addSpeechLine "expose">>
 				<<if $player.breastsize gte 5 and !$robinSeen.includes("breastsBig")>>
 					<<set $robinSeen.pushUnique("breastsBig")>>
-					<<His>> eyes widen in surprise. "I didn't expect them to be so big!"
+					<<His>> 두 눈이 놀라움으로 커진다. "이렇게 클 줄은 몰랐어!"
 				<<elseif $player.breastsize lte 2>>
-					"Cute," <<he>> says.
+					"귀여워," <<he>>【이가】 말한다.
 					<<if insecurityExists("breasts_small") and !$robinUniqueComments.includes("breastsAcceptance")>><<set $robinUniqueComments.pushUnique("breastsAcceptance")>><<acceptance "breasts_small" 10>><<gacceptance>><</if>>
 				<<else>>
-					"Your breasts always surprise me," <<he>> says. "But I still love them!"
+					"네 가슴은 볼 때마다 늘 놀라워," <<he>>【이가】 말한다. "그래도 난 정말 좋아!"
 				<</if>>
 			<</addSpeechLine>>
 		<</if>>
@@ -204,51 +204,51 @@
 				<<if C.npc.Robin.penissize gte 3>>
 					<<addSpeechLine "penisSize">>
 					<<speechLine>>
-						<<He>> looks at your <<genitals>> in surprise. "We match! I'm so happy!"
+						<<He>>【은는】 놀란 표정으로 당신의 <<genitals>>【을를】 바라본다. "우리 똑같네! 너무 기뻐!"
 					<<speechLine>>
-						<<He>> looks at your <<genitals>>. "I will try my best!"
+						<<He>>【은는】 당신의 <<genitals>>【을를】 바라본다. "최선을 다해 볼게!"
 					<</addSpeechLine>>
 				<<else>>
 					<<addSpeechLine "penisSize">>
 					<<speechLine>>
-						<<His>> eyes widen. "You're bigger than I thought!"
+						<<His>> 두 눈이 커진다. "생각했던 것보다 훨씬 크네!"
 					<<speechLine>>
-						<<He>> looks at your <<genitals>>. "I will try my best!"
+						<<He>>【은는】 당신의 <<genitals>>【을를】 바라본다. "최선을 다해 볼게!"
 					<</addSpeechLine>>
 				<</if>>
 			<<else>>
 				<<addSpeechLine "penisSize">>
 				<<speechLine>>
-					<<He>> gasps. "Were you always this big?"
+					<<He>>【이가】 숨을 헉 들이켠다. "원래부터 이렇게 컸었어?"
 				<<speechLine>>
-					<<He>> stares at your <<genitals>>. "I hope I will be able to take it!"
+					<<He>>【은는】 당신의 <<genitals>>【을를】 빤히 응시한다. "다 받아낼 수 있으면 좋겠는데!"
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
 		<<if $speechNoticeSexToy>>
 			<<if C.npc.Robin.dom gte 70>>
 				<<addSpeechLine "sexToy">>
-					<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "sex toys" : "sex toy")>>
+					<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "섹스 토이들" : "섹스 토이")>>
 				<<speechLine>>
-					<<He>> looks at your $_sexToy and giggles. "I've wanted to do this with you for a while."
+					<<He>>【이가】 당신의 $_sexToy【을를】 보고 킥킥거린다. "너랑 이거 예전부터 해보고 싶었어."
 				<<speechLine>>
-					<<He>> looks at your $_sexToy and giggles. "This is so dirty... keep going."
+					<<He>>【이가】 당신의 $_sexToy【을를】 보고 킥킥거린다. "너무 야해... 계속해줘."
 				<</addSpeechLine>>
 			<<elseif C.npc.Robin.dom lte 30>>
 				<<addSpeechLine "sexToy">>
-					<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "sex toys" : "sex toy")>>
+					<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "섹스 토이들" : "섹스 토이")>>
 				<<speechLine>>
-					<<He>> looks at your $_sexToy and blushes. "Woah! Don't you feel embarrassed?"
+					<<He>>【이가】 당신의 $_sexToy【을를】 보며 얼굴을 붉힌다. "우와! 부끄럽지도 않아?"
 				<<speechLine>>
-					<<He>> looks at your $_sexToy and blushes. "Just take it slow, okay?"
+					<<He>>【이가】 당신의 $_sexToy【을를】 보며 얼굴을 붉힌다. "천천히 해, 알았지?"
 				<</addSpeechLine>>
 			<<else>>
 				<<addSpeechLine "sexToy">>
-					<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "sex toys" : "sex toy")>>
+					<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "섹스 토이들" : "섹스 토이")>>
 				<<speechLine>>
-					<<He>> looks at your $_sexToy and giggles. "I can't believe you're touching that."
+					<<He>>【이가】 당신의 $_sexToy【을를】 보고 킥킥거린다. "네가 거길 만지고 있다니 믿기지가 않아."
 				<<speechLine>>
-					<<He>> looks at your $_sexToy and giggles. "This is so dirty... keep going."
+					<<He>>【이가】 당신의 $_sexToy【을를】 보고 킥킥거린다. "너무 야해... 계속해줘."
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -256,23 +256,23 @@
 			<<if C.npc.Robin.dom gte 70>>
 				<<addSpeechLine "choked">>
 				<<speechLine>>
-					<<He>> smiles. "Is this too much? But you sound so lovely!"
+					<<He>>【이가】 미소 짓는다. "너무 버거워? 하지만 들리는 소리가 너무 좋은걸!"
 				<<speechLine>>
-					"Oh? You've got something to say?" <<he>> asks with a teasing smile.
+					"어라? 무슨 말이라도 하려고?" 짓궂은 미소를 지으며 <<he>>【이가】 묻는다.
 				<</addSpeechLine>>
 			<<elseif C.npc.Robin.dom lte 30>>
 				<<addSpeechLine "choked">>
 				<<speechLine>>
-					<<He>> <<= either("stammers","stutters","is taken aback")>>. "S-sorry! Am I too rough?"
+					<<He>>【은는】 <<= either("말을 더듬는다","더듬거린다","당황한다")>>. "미, 미안해! 내가 너무 거칠어?"
 				<<speechLine>>
-					<<He>> looks uncertain. "<<= either("Please tell me if you want me to stop","Should I keep going? I don't want to hurt you")>>."
+					<<He>>【은는】 불안한 표정을 짓는다. "<<= either("멈춰줬으면 좋겠으면 말해줘","계속해도 될까? 아프게 하고 싶지 않아")>>."
 				<</addSpeechLine>>
 			<<else>>
 				<<addSpeechLine "choked">>
 				<<speechLine>>
-					"What was that?" Robin tilts <<his>> ear closer to you.
+					"방금 뭐라고 했어?" 로빈이 당신 쪽으로 <<his>> 귀를 기울인다.
 				<<speechLine>>
-					"Are you sure you want to be talking right now?" <<he>> says with a teasing smile.
+					"지금 진짜로 말할 여유가 있는 거야?" 놀리는 듯한 미소를 띠며 <<he>>【이가】 말한다.
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -280,27 +280,27 @@
 			<<addSpeechLine "apologise">>
 				<<if C.npc.Robin.dom gte 70>>
 					<<if $panicviolenceRecent and C.npc.Robin.trauma gte 20>>
-						"It's okay. We'll get through this together," <<he>> smiles at you.
+						"괜찮아. 우리 같이 이겨낼 수 있어," <<he>>【이가】 당신을 향해 미소 짓는다.
 					<<elseif $panicviolenceRecent>>
-						"Don't worry about it. I know you've been through a lot," <<he>> says with a gentle smile.
+						"신경 쓰지 마. 그동안 정말 많이 힘들었잖아," 다정한 미소를 띠며 <<he>>【이가】 말한다.
 					<<else>>
-						<<He>> hesitates a moment before smiling. "I forgive you, but please don't do that again, okay?"
+						<<He>>【은는】 잠시 머뭇거리더니 미소를 짓는다. "용서해 줄게. 그래도 다음부턴 그러지 마, 알겠지?"
 					<</if>>
 				<<elseif C.npc.Robin.dom lte 30>>
 					<<if $panicviolenceRecent and C.npc.Robin.trauma gte 20>>
-						<<He>> heaves. "I... understand. It's okay. I'll stay with you."
+						<<He>>【이가】 가쁘게 숨을 내쉰다. "나... 이해해. 괜찮아. 곁에 있어 줄게."
 					<<elseif $panicviolenceRecent>>
-						"A-are you okay? Should we stop?" <<He>> seems uncertain.
+						"괘, 괜찮아? 우리 그만둘까?" <<He>>【은는】 불안해 보인다.
 					<<else>>
-						<<He>> stares at you before breaking into a chuckle. "Ah, so you were just joking? It's okay then, I'm not mad."
+						<<He>>【은는】 당신을 빤히 바라보더니 가볍게 웃음을 터뜨린다. "아, 그냥 장난친 거였어? 그럼 됐어, 화 안 났어."
 					<</if>>
 				<<else>>
 					<<if $panicviolenceRecent and C.npc.Robin.trauma gte 20>>
-						"It's okay. I understand what you're going through. You don't need to apologise." <<He>> smiles gently at you.
+						"괜찮아. 네가 어떤 상태인지 다 이해해. 사과하지 않아도 돼." <<He>>【이가】 당신을 향해 부드럽게 미소 짓는다.
 					<<elseif $panicviolenceRecent>>
-						<<He>> looks concerned. "You're worrying me. Are you really okay?"
+						<<He>>【은는】 걱정스러운 표정을 짓는다. "자꾸 걱정되잖아. 정말 괜찮은 거 맞아?"
 					<<else>>
-						"It's okay! I'm not that mad." <<He>> smiles.
+						"괜찮아! 그렇게 화나지도 않았어." <<He>>【이가】 미소 짓는다.
 					<</if>>
 				<</if>>
 			<</addSpeechLine>>
@@ -309,21 +309,21 @@
 			<<addSpeechLine "apologise">>
 				<<if C.npc.Robin.dom gte 70>>
 					<<if $panicviolenceRecent>>
-						"Don't worry, I can handle this," <<he>> reassures you.
+						"걱정 마, 이 정돈 감당할 수 있어," <<he>>【이가】 당신을 안심시킨다.
 					<<else>>
-						"Ugh, stop that!" Robin pouts, though there's no real bite to <<his>> words.
+						"으, 그만해!" 로빈이 입술을 삐죽이지만, <<his>> 말에 진심으로 가시가 돋친 건 아니다.
 					<</if>>
 				<<elseif C.npc.Robin.dom lte 30>>
 					<<if $panicviolenceRecent>>
-						Despite the pain, <<he>> manages a gentle smile.
+						아픔에도 불구하고, <<he>>【은는】 애써 부드러운 미소를 지어 보인다.
 					<<else>>
-						<<He>> smiles awkwardly, unsure of how to respond.
+						어떻게 반응해야 할지 몰라, <<he>>【은는】 어색하게 미소 짓는다.
 					<</if>>
 				<<else>>
 					<<if $panicviolenceRecent>>
-						"It's okay, just let it all out," <<he>> says. "I'll take care of you."
+						"괜찮으니까 그냥 다 털어내," <<he>>【이가】 말한다. "내가 다 보살펴 줄게."
 					<<else>>
-						<<He>> raises an eyebrow and chuckles.
+						<<He>>【은는】 한쪽 눈썹을 치켜올리며 쿡쿡 웃는다.
 					<</if>>
 				<</if>>
 			<</addSpeechLine>>
@@ -332,23 +332,23 @@
 			<<if C.npc.Robin.dom gte 70>>
 				<<addSpeechLine "askRough">>
 				<<speechLine>>
-					"Since you really want this, I guess I'll have to show you what I've got!"
+					"네가 그렇게까지 원한다면, 내 실력을 제대로 보여줘야겠네!"
 				<<speechLine>>
-					"Alright. Just let me know if it's too much, okay?" <<He>> smiles at you.
+					"알았어. 너무 버거우면 꼭 말해줘야 해, 알겠지?" <<He>>【이가】 당신을 보며 미소 짓는다.
 				<</addSpeechLine>>
 			<<elseif C.npc.Robin.dom lte 30>>
 				<<addSpeechLine "askRough">>
 				<<speechLine>>
-					<<His>> eyes widen. "W-why would you want that?"
+					<<His>> 두 눈이 커진다. "왜, 왜 그렇게 하고 싶은 거야?"
 				<<speechLine>>
-					<<He>> looks uncertain. "I don't want to hurt you..."
+					<<He>>【은는】 불안한 표정을 짓는다. "널 아프게 하고 싶지 않은데..."
 				<</addSpeechLine>>
 			<<else>>
 				<<addSpeechLine "askRough">>
 				<<speechLine>>
-					<<He>> speaks. "You want me to be rougher? I'm sorry, I'm already being as rough as I can."
+					<<He>>【이가】 말한다. "더 거칠게 해달라고? 미안해, 지금도 나로선 최대한 거칠게 하고 있는 건데."
 				<<speechLine>>
-					"You really sure? I mean I can certainly try, but..." <<He>> gives you a hesitant look.
+					"정말 괜찮겠어? 해볼 수는 있겠지만, 그래도..." <<He>>【은는】 망설이는 눈빛으로 당신을 쳐다본다.
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -356,41 +356,41 @@
 			<<addSpeechLine "moan">>
 				<<if C.npc.Robin.dom gte 70>>
 					<<print either(
-						`<<He>> smiles. "Let me hear more," <<he>> moans back to you.`,
-						`<<He>> giggles. "Keep going. I love hearing that."`,
-						`<<He>> moans back to you, eyes glinting with excitement.`
+						`<<He>>【이가】 미소 짓는다. "더 들려줘," <<he>>【이가】 당신에게 맞추어 신음한다.`,
+						`<<He>>【이가】 키득거린다. "계속해 봐. 그 소리 듣는 거 너무 좋아."`,
+						`<<He>>【은는】 흥분으로 눈을 반짝이며 당신에게 맞추어 신음한다.`
 					)>>
 				<<elseif C.npc.Robin.dom lte 30>>
 					<<if C.npc.Robin.trauma gte 80>>
-						"Please," <<his>> voice breaks. "I'm nothing without you."
+						"제발," <<his>> 목소리가 갈라진다. "너 없인 난 아무것도 아니야."
 						<<set _moanHeal to true>>
 					<<elseif C.npc.Robin.trauma gte 40>>
-						<<He>> heaves, a smile barely cracking <<his>> blank face.
+						<<He>>【이가】 거칠게 숨을 내쉬며 멍한 표정 사이로 간신히 옅은 미소를 짓는다.
 						<<set _moanHeal to true>>
 					<<elseif C.npc.Robin.trauma gte 20>>
-						"That's..." <<He>> fumbles for words as <<his>> eyes dart away.
+						"그건..." 시선을 피하며 <<he>>【은는】 제대로 말을 잇지 못한다.
 						<<set _moanHeal to true>>
 					<<else>>
 						<<print either(
-							`<<His>> cheeks and ears redden. "I can't believe you're saying that!"`,
-							`<<He>> giggles. "That sounds so dirty."`,
-							`<<He>> chuckles awkwardly. "Y-You're not embarrassed saying things like that?"`
+							`<<His>> 뺨과 귀가 빨개진다. "그런 말을 하다니 믿기지 않아!"`,
+							`<<He>>【이가】 키득거린다. "너무 야하게 들려."`,
+							`<<He>>【이가】 어색하게 웃는다. "그, 그런 말을 하면서 안 부끄러워?"`
 						)>>
 					<</if>>
 				<<else>>
 					<<if C.npc.Robin.trauma gte 80>>
-						"Please," <<he>> heaves. "I'm nothing without you."
+						"제발," <<he>>【이가】 숨을 헐떡인다. "너 없인 난 아무것도 아니야."
 						<<set _moanHeal to true>>
 					<<elseif C.npc.Robin.trauma gte 40>>
-						<<He>> laughs softly. "You're really something," <<he>> says.
+						<<He>>【이가】 부드럽게 웃는다. "너도 참 대단해," <<he>>【이가】 말한다.
 						<<set _moanHeal to true>>
 					<<elseif C.npc.Robin.trauma gte 20>>
-						<<He>> giggles softly. "You're really wonderful, you know that?"
+						<<He>>【이가】 부드럽게 키득거린다. "너 진짜 멋진 거 알아?"
 						<<set _moanHeal to true>>
 					<<else>>
 						<<print either(
-							`<<He>> breaks into a smile while <<his>> cheeks and ears reddens.`,
-							`<<He>> chuckles. "You really know how to use your words," <<he>> says.`
+							`<<He>>【은는】 <<his>> 뺨과 귀를 붉히며 활짝 미소 짓는다.`,
+							`<<He>>【이가】 쿡쿡 웃는다. "말솜씨 하나는 정말 좋다니까," <<he>>【이가】 말한다.`
 						)>>
 					<</if>>
 				<</if>>
@@ -404,35 +404,35 @@
 			<<if $speechVaginaFlaunt>>
 				<<addSpeechLine "vaginaFlaunt">>
 				<<speechLine>>
-					"You can do more than just stare, you know!" <<he>> says.
+					"그냥 쳐다보고만 있지 않아도 되는데!" <<he>>【이가】 말한다.
 				<<speechLine>>
-					<<He>> sways <<his>> hips and gives you a playful wink.
+					<<He>>【은는】 <<his>> 골반을 살랑거리며 장난스레 윙크를 보낸다.
 				<</addSpeechLine>>
 			<</if>>
 			<<if $fame.sex gte 600 and $speechVaginaFlaunt>>
 				<<addSpeechLine "vaginaFlaunt">>
-					"Would you say mine's your favourite?" <<He>> smiles.
+					"내 게 제일 마음에 든다고 해줄래?" <<He>>【이가】 미소 짓는다.
 				<</addSpeechLine>>
 			<</if>>
 			<<if $player.penisExist and $speechVaginaFlaunt>>
 				<<addSpeechLine "vaginaFlaunt">>
-					"Don't make me wait any longer," <<he>> says.
+					"더 이상 기다리게 하지 마," <<he>>【이가】 말한다.
 				<</addSpeechLine>>
 			<</if>>
 		<<elseif C.npc.Robin.dom lte 30>>
 			<<if $speechVaginaFlaunt>>
 				<<if !$robinSeen.includes("vaginaFlaunt")>>
 					<<addSpeechLine "vaginaFlaunt">>
-						<<set $robinSeen.pushUnique("vaginaFlaunt")>>"I can't believe I'm baring myself to you like this..." <<He>> laughs.
+						<<set $robinSeen.pushUnique("vaginaFlaunt")>>"내가 너한테 이런 식으로 몸을 보여주고 있다니 믿기지가 않아..." <<He>>【이가】 웃는다.
 					<</addSpeechLine>>
 				<<else>>
 					<<addSpeechLine "vaginaFlaunt">>
 					<<speechLine>>
-						"D-do you like it?" <<he>> asks as <<his>> cheeks redden.
+						"마, 마음에 들어?" <<his>> 양 볼을 붉히며 <<he>>【이가】 묻는다.
 					<<speechLine>>
-						"I'd never show this to anyone but you. You're special to me." <<He>> smiles, the blush in <<his>> cheeks deepening.
+						"너 말고 다른 사람한테는 절대 이런 거 안 보여줘. 넌 나한테 특별하니까." <<his>> 뺨을 더 붉히며 <<he>>【이가】 미소 짓는다.
 					<<speechLine>>
-						"I still can't believe I'm baring myself to you like this..." <<He>> smiles.
+						"너한테 이런 모습을 보여주고 있다는 게 아직도 믿기지 않아..." <<He>>【이가】 미소 짓는다.
 					<</addSpeechLine>>
 				<</if>>
 			<</if>>
@@ -440,16 +440,16 @@
 			<<if $speechVaginaFlaunt>>
 				<<addSpeechLine "vaginaFlaunt">>
 				<<speechLine>>
-					"This is so naughty... but it's what you wanted to see, right?" <<he>> says.
+					"이러는 거 정말 부끄러운데... 그래도 네가 보고 싶어 했던 거 맞지?" <<he>>【이가】 말한다.
 				<<speechLine>>
-					"Do you like what you see?" <<He>> smiles.
+					"보니까 마음에 들어?" <<He>>【이가】 미소 짓는다.
 				<<speechLine>>
-					"You're making me feel all funny down there, you know?" <<He>> smiles.
+					"너 때문에 아래쪽이 자꾸 이상한 느낌이 들어, 알고 있어?" <<He>>【이가】 미소 짓는다.
 				<</addSpeechLine>>
 			<</if>>
 			<<if $player.penisExist and $speechVaginaFlaunt>>
 				<<addSpeechLine "vaginaFlaunt">>
-					"I'd like to have you inside me," <<he>> smiles, the blush in <<his>> cheeks deepening.
+					"네가 내 안에 들어와 줬으면 좋겠어," <<his>> 뺨을 더 붉히며 <<he>>【이가】 미소 짓는다.
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -457,11 +457,11 @@
 			<<if $speechVagina>>
 				<<if C.npc.Robin.dom gte 70>>
 					<<addSpeechLine "fondle">>
-						"Oh! I didn't know you were still a virgin!" <<His>> fingers hit against your hymen. "I will try to be careful!"
+						"어라! 아직 처녀였을 줄은 몰랐어!" <<His>> 손가락이 당신의 처녀막에 닿는다. "조심해서 해볼게!"
 					<</addSpeechLine>>
 				<<else>>
 					<<addSpeechLine "fondle">>
-						"Am I doing alright?" <<He>> looks at you concerned, fingers poking against your hymen. "I don't want to hurt you there."
+						"내가 잘하고 있어?" 처녀막을 손가락으로 콕콕 찌르며 <<he>>【이가】 걱정스러운 표정으로 당신을 바라본다. "거길 아프게 하고 싶지 않아."
 					<</addSpeechLine>>
 				<</if>>
 			<</if>>
@@ -471,37 +471,37 @@
 			<<if C.npc.Robin.trauma gte 20 and $rng gte 67>>
 				<<addSpeechLine "chest">>
 				<<speechLine>>
-					"I'd never let anyone else do this," <<he>> sighs contentedly. "Only you."
+					"다른 사람한텐 절대 이런 짓 못 하게 할 거야," <<he>>【이가】 만족스럽게 한숨을 내쉰다. "오직 너한테만."
 				<<speechLine>>
-					"I hope my milk is still good, despite everything that's happened..." <<He>> manages a thin smile.
+					"그동안 온갖 일이 다 있었는데도... 내 모유가 아직 괜찮았으면 좋겠어..." <<He>>【이가】 간신히 옅은 미소를 지어 보인다.
 				<</addSpeechLine>>
 			<<elseif $robinSeen.includes("forestMilking") and $rng gte 34>>
 				<<addSpeechLine "chest">>
 				<<speechLine>>
-					"Is this because of what happened during the picnic?" <<He>> <<= either("asks","chuckles")>>.
+					"소풍 때 있었던 일 때문에 이러는 거야?" <<He>>【이가】 <<= either("묻는다","쿡쿡 웃는다")>>.
 				<<speechLine>>
-					"So this is why you wanted me to drink your breastmilk during the picnic..." <<He>> ponders. "It actually feels nice..."
+					"소풍 때 내 모유를 마시고 싶어 했던 게 이런 이유였구나..." <<He>>【은는】 곰곰이 생각한다. "생각보다 느낌이 꽤 좋아..."
 				<</addSpeechLine>>
 			<<elseif C.npc.Robin.dom gte 70>>
 				<<addSpeechLine "chest">>
 				<<speechLine>>
-					"Shouldn't we be saving that for the baby?" <<He>> chuckles. "I don't want to be competing with our child."
+					"이건 아기를 위해 남겨둬야 하는 거 아니야?" <<He>>【이가】 쿡쿡 웃는다. "우리 아기랑 경쟁하고 싶진 않은데."
 				<<speechLine>>
-					"You're enjoying this so much, I'm starting to think my hot chocolate stand should use my milk instead," <<he>> <<= either("chuckles","snickers")>>. <<if !$robinUniqueComments.includes("suckleDom")>><<set $robinUniqueComments.pushUnique("suckleDom")>><<npcincr Robin dom 1>><<gdom>><</if>>
+					"네가 너무 맛있게 먹으니까, 내 핫초코 가판대에서도 내 모유를 써야 하나 고민되기 시작하네," <<he>>【이가】 <<= either("쿡쿡 웃는다","히죽 웃는다")>>. <<if !$robinUniqueComments.includes("suckleDom")>><<set $robinUniqueComments.pushUnique("suckleDom")>><<npcincr Robin dom 1>><<gdom>><</if>>
 				<</addSpeechLine>>
 			<<elseif C.npc.Robin.dom lte 30>>
 				<<addSpeechLine "chest">>
 				<<speechLine>>
-					"I don't mind..." <<he>> murmurs.
+					"난 상관없는데..." <<he>>【이가】 중얼거린다.
 				<<speechLine>>
-					"Isn't that for the baby?" <<he>> asks hesitantly.
+					"그건 아기 먹을 거 아니야?" 머뭇거리며 <<he>>【이가】 묻는다.
 				<</addSpeechLine>>
 			<<else>>
 				<<addSpeechLine "chest">>
 				<<speechLine>>
-					"Are you sure we shouldn't save it for the baby?" <<He>> <<= either("asks","chuckles","giggles")>>.
+					"진짜로 아기 먹을 건 안 남겨둬도 괜찮은 거야?" <<He>>【이가】 <<= either("묻는다","쿡쿡 웃는다","키득거린다")>>.
 				<<speechLine>>
-					"Do I really taste that good?" <<He>> <<= either("giggles","chuckles","smiles")>>. "<<= either("Save some for the baby, alright?","Just don't forget our little one needs it too.")>>"
+					"내가 정말 그렇게 맛있어?" <<He>>【이가】 <<= either("키득거린다","쿡쿡 웃는다","미소 짓는다")>>. "<<= either("아기 먹을 것도 좀 남겨둬, 알겠지?","우리 아기한테도 필요하다는 거 잊으면 안 돼.")>>"
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -510,63 +510,63 @@
 				<<if currentSkillValue("oralskill") gte 400>>
 					<<addSpeechLine "chest">>
 					<<speechLine>>
-						"I really like how warm your mouth feels!" <<he>> <<= either("moans","chuckles","giggles")>>.
+						"네 입안이 따뜻해서 정말 기분 좋아!" <<he>>【이가】 <<= either("신음한다","쿡쿡 웃는다","키득거린다")>>.
 					<<speechLine>>
-						"Please don't stop," <<he>> moans. "I really love the way you do that."
+						"제발 멈추지 마," <<he>>【이가】 신음한다. "네가 그렇게 해주는 거 너무 좋아."
 					<</addSpeechLine>>
 				<<else>>
 					<<addSpeechLine "chest">>
 					<<speechLine>>
-						"So my hero can be a little clumsy too, just like me," <<he>> <<= either("chuckles","giggles","teases you")>>. <<if !$robinUniqueComments.includes("nippleDom")>><<set $robinUniqueComments.pushUnique("nippleDom")>><<npcincr Robin dom 1>><<gdom>><</if>>
+						"나의 영웅도 나처럼 가끔은 서툴 때가 있구나," <<he>>【이가】 <<= either("쿡쿡 웃는다","키득거린다","당신을 놀린다")>>. <<if !$robinUniqueComments.includes("nippleDom")>><<set $robinUniqueComments.pushUnique("nippleDom")>><<npcincr Robin dom 1>><<gdom>><</if>>
 					<<speechLine>>
-						"You can keep trying, but nothing's going to come out, you know!" <<He>> pouts, then <<= either("giggles","chuckles")>>.
+						"계속 물고 있어도 아무것도 안 나올 텐데!" <<He>>【은는】 입술을 삐죽거리더니, 이내 <<= either("키득거린다","쿡쿡 웃는다")>>.
 					<</addSpeechLine>>
 				<</if>>
 			<<elseif C.npc.Robin.dom lte 30>>
 				<<if currentSkillValue("oralskill") gte 400>>
 					<<addSpeechLine "chest">>
 					<<speechLine>>
-						"T-that feels nice," <<he>> murmurs.
+						"기, 기분 좋아," <<he>>【이가】 중얼거린다.
 					<<speechLine>>
-						"This feels... This feels a little dirty," <<he>> admits as <<his>> cheeks redden.
+						"이거 왠지... 왠지 조금 부끄러운 느낌이야," <<his>> 양 볼을 붉히며 <<he>>【이가】 털어놓는다.
 					<</addSpeechLine>>
 				<<else>>
 					<<addSpeechLine "chest">>
 					<<speechLine>>
-						<<His>> cheeks remain flushed despite the conflicted look on <<his>> face.
+						<<his>> 복잡한 표정 속에서도 <<his>> 뺨은 여전히 붉게 물들어 있다.
 					<<speechLine>>
-						"You're making me blush," <<he>> <<= either("murmurs","whispers","smiles bashfully")>>.
+						"너 때문에 부끄러워지잖아," <<he>>【이가】 <<= either("중얼거린다","속삭인다","수줍게 미소 짓는다")>>.
 					<</addSpeechLine>>
 				<</if>>
 			<<else>>
 				<<if currentSkillValue("oralskill") gte 400>>
 					<<addSpeechLine "chest">>
 					<<speechLine>>
-						<<He>> smiles as <<he>> sighs in pleasure.
+						쾌감에 젖어 한숨을 내쉬며 <<he>>【이가】 미소 짓는다.
 					<<speechLine>>
-						"You're awfully affectionate today." <<He>> <<= either("giggles","chuckles","smiles")>>.
+						"오늘따라 유난히 살갑네." <<He>>【이가】 <<= either("키득거린다","쿡쿡 웃는다","미소 짓는다")>>.
 					<</addSpeechLine>>
 				<<else>>
 					<<addSpeechLine "chest">>
 					<<speechLine>>
-						<<He>> <<= either("gasps","chuckles","giggles")>>. "That tickles!"
+						<<He>>【이가】 <<= either("숨을 헉 들이켠다","쿡쿡 웃는다","키득거린다")>>. "간지러워!"
 					<<speechLine>>
-						"Is that all you're going to do?" <<he>> <<= either("chuckles","giggles","teases you")>>.
+						"겨우 그거밖에 안 할 거야?" <<he>>【이가】 <<= either("쿡쿡 웃는다","키득거린다","당신을 놀린다")>>.
 					<</addSpeechLine>>
 				<</if>>
 			<</if>>
 		<</if>>
 		<<if C.npc.Robin.dom gte 70 and $fame.sex gte 600 and $speechTrib>>
 			<<addSpeechLine "trib">>
-				"So... where would you rank mine?" <<He>> smiles.
+				"그래서... 내 건 몇 번째쯤 되는 것 같아?" <<He>>【이가】 미소 짓는다.
 			<</addSpeechLine>>
 		<</if>>
 		<<if C.npc.Robin.dom lte 30 and $speechAnalLick>>
 			<<addSpeechLine "oral">>
 			<<speechLine>>
-				"It feels a bit ticklish!" <<He>> <<= either("giggles", "smiles", "chuckles")>>.
+				"조금 간지러운 느낌이야!" <<He>>【이가】 <<= either("키득거린다", "미소 짓는다", "쿡쿡 웃는다")>>.
 			<<speechLine>>
-				"This feels a bit naughty," <<he>> <<= either("gasps", "says in surprise")>>.
+				"이거 왠지 좀 부끄러운 느낌인데," <<he>>【이가】 <<= either("숨을 헐떡인다", "놀란 듯 말한다")>>.
 			<</addSpeechLine>>
 		<</if>>
 		<<speechSay>>

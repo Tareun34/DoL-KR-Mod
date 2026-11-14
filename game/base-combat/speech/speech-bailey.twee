@@ -1,26 +1,26 @@
 :: Widgets speech-Bailey [widget]
 <<widget "speech-bailey">>
 	<<set _npc_speech to true>>
-	<<set $_stringsPre to ($enemyanger lte 60 ? "<<He>> snickers. ":"<<He>> snarls. ")>>
+	<<set $_stringsPre to ($enemyanger lte 60 ? "<<He>>【이가】 낄낄거린다. ":"<<He>>【이가】 으르렁거린다. ")>>
 	<<speechPool "Bailey" "noMouthAction">>
 	<<if ($speechPenisVirgin and $player.virginity.penile is "Bailey") or ($speechVaginaVirgin and $player.virginity.vaginal is "Bailey")>>
 		<<addSpeechLine "virginity">>
-			<<print $_stringsPre>>"Fuck. Your value just depreciated a little."
+			<<print $_stringsPre>>"젠장. 네 몸값이 방금 좀 떨어졌군."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $player.virginity.anal is "Bailey" and $speechAnusVirgin>>
 		<<addSpeechLine "virginity">>
-			<<print $_stringsPre>>"You should be putting out more if you're this tight. What do you think you're good for?"
+			<<print $_stringsPre>>"이렇게 조이면 좀 더 자주 대줘야 할 거 아냐. 네가 뭐에 쓸모가 있다고 생각하는 거냐?"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $player.virginity.oral is "Bailey" and $speechOralVirgin>>
 		<<addSpeechLine "virginity">>
-			<<print $_stringsPre>>"Don't get any funny ideas. Just take it."
+			<<print $_stringsPre>>"이상한 생각 마라. 얌전히 받아들여."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $player.virginity.kiss is "Bailey" and $speechKissVirgin>>
 		<<addSpeechLine "virginity">>
-			<<print $_stringsPre>>"Surprised are you? You'll learn to kiss better soon."
+			<<print $_stringsPre>>"놀랐냐? 조만간 키스 더 잘하는 법을 배우게 될 거다."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechLINameDrop>>
@@ -28,129 +28,129 @@
 			<<case "Robin">>
 				<<if $robinpaid is 1>>
 					<<addSpeechLine "namedrop">>
-						<<print $_stringsPre>>"You pay <<nnpc_his 'Robin'>> debt and <<nnpc_he 'Robin'>> can't even watch."
+						<<print $_stringsPre>>"네가 <<nnpc_his 'Robin'>> 빚을 대신 갚아줬는데도 <<nnpc_he 'Robin'>>【은는】 구경조차 못 하는 꼴이라니."
 					<</addSpeechLine>>
 				<<elseif C.npc.Robin.dom gte 50>>
 					<<addSpeechLine "namedrop">>
-						<<print $_stringsPre>>"That waif's grown a spine thanks to you. Shame <<nnpc_he 'Robin'>> won't save you."
+						<<print $_stringsPre>>"너 덕분에 그 고아 녀석도 제법 배짱이 생겼더군. 애석하게도 <<nnpc_he 'Robin'>>【이가】 널 구해주진 않겠지만 말이야."
 					<</addSpeechLine>>
 				<<else>>
 					<<addSpeechLine "namedrop">>
 					<<speechLine>>
-						<<print $_stringsPre>>"That worthless brat can't save you."
+						<<print $_stringsPre>>"그 쓸모없는 꼬맹이는 널 구해주지 못해."
 					<<speechLine>>
-						<<print $_stringsPre>>"What do you expect that waif to do? Cry until I stop?"
+						<<print $_stringsPre>>"그 고아 녀석이 뭘 할 수 있을 것 같냐? 내가 그만둘 때까지 징징대기라도 할까?"
 					<</addSpeechLine>>
 				<</if>>
 			<<case "Black Wolf" "Great Hawk">>
 				<<addSpeechLine "namedrop">>
 				<<speechLine>>
-					<<print $_stringsPre>>"People would pay extra to see you <<if $player.penisExist>>fuck<<else>>get fucked by<</if>> some beast."
+					<<print $_stringsPre>>"사람들은 네가 짐승 새끼랑 <<if $player.penisExist>>떡치는<<else>>박히는<</if>> 꼴을 보려고 기꺼이 웃돈을 낼 거다."
 				<<speechLine>>
-					<<print $_stringsPre>>"Animals get put down. You get put to work."
+					<<print $_stringsPre>>"짐승 새끼들은 살처분 당하지만, 넌 몸을 굴려야 할 거다."
 				<</addSpeechLine>>
 			<<case "Eden">>
 				<<addSpeechLine "namedrop">>
-					<<print $_stringsPre>>"You'll be going right back to <<nnpc_him 'Eden'>> if you keep this up."
+					<<print $_stringsPre>>"계속 이런 식이면 <<nnpc_him 'Eden'>>에게 다시 보내버릴 거다."
 				<</addSpeechLine>>
 			<<case "Gwylan">>
 				<<addSpeechLine "namedrop">>
-					<<He>> pauses, then speaks. "Careful where you bring that name."
+					<<He>>【은는】 잠시 멈칫하더니 입을 연다. "그 이름은 함부로 들먹이지 않는 게 좋을 거다."
 				<</addSpeechLine>>
 			<<case "Whitney">>
 				<<if $whitney_bailey_met gte 1>>
 					<<addSpeechLine "namedrop">>
-						<<print $_stringsPre>>"That idiot's useful. Don't confuse that with important."
+						<<print $_stringsPre>>"그 멍청이는 쓸모가 있지. 하지만 중요한 놈이라고 착각하진 마라."
 					<</addSpeechLine>>
 				<<else>>
 					<<addSpeechLine "namedrop">>
-						<<print $_stringsPre>>"If <<nnpc_he _loveInterest>> cared about you, <<nnpc_he _loveInterest>> would pay for you."
+						<<print $_stringsPre>>"만약 <<nnpc_he _loveInterest>>【이가】 널 신경 썼다면, <<nnpc_he _loveInterest>>【이가】 진작에 네 몸값을 지불했겠지."
 					<</addSpeechLine>>
 				<</if>>
 			<<case "Kylar">>
 				<<if $kylar_abduction_bailey is 1>>
 					<<addSpeechLine "namedrop">>
 					<<speechLine>>
-						<<print $_stringsPre>>"Call for <<nnpc_him 'Kylar'>> louder. Maybe <<nnpc_hes 'Kylar'>> outside the window."
+						<<print $_stringsPre>>"어디 <<nnpc_him 'Kylar'>>【을를】 더 크게 불러보시지. 어쩌면 <<nnpc_hes 'Kylar'>> 창문 밖에 있을지도 모르잖아."
 					<<speechLine>>
-						<<print $_stringsPre>>"That little freak is probably watching. Let <<nnpc_him 'Kylar'>>."
+						<<print $_stringsPre>>"그 변태 새끼는 아마 지켜보고 있을 거다. <<nnpc_him 'Kylar'>>【이가】 보든 말든 상관없어."
 					<</addSpeechLine>>
 				<<else>>
 					<<addSpeechLine "namedrop">>
-						<<print $_stringsPre>>"If <<nnpc_he _loveInterest>> cared about you, <<nnpc_he _loveInterest>> would pay for you."
+						<<print $_stringsPre>>"만약 <<nnpc_he _loveInterest>>【이가】 널 신경 썼다면, <<nnpc_he _loveInterest>>【이가】 진작에 네 몸값을 지불했겠지."
 					<</addSpeechLine>>
 				<</if>>
 			<<case "Sydney">>
 				<<if $temple_bailey>>
 					<<addSpeechLine "namedrop">>
 					<<speechLine>>
-						<<print $_stringsPre>>"Save it for confession."
+						<<print $_stringsPre>>"고해성사할 때나 지껄여."
 					<<speechLine>>
-						<<print $_stringsPre>>"That brat would pray for you. I'd rather <<nnpc_he 'Sydney'>> paid for you."
+						<<print $_stringsPre>>"그 애송이는 널 위해 기도나 하겠지. 난 차라리 <<nnpc_he 'Sydney'>>【이가】 네 몸값을 냈으면 좋겠군."
 					<</addSpeechLine>>
 				<<else>>
 					<<addSpeechLine "namedrop">>
-						<<print $_stringsPre>>"If <<nnpc_he _loveInterest>> cared about you, <<nnpc_he _loveInterest>> would pay for you."
+						<<print $_stringsPre>>"만약 <<nnpc_he _loveInterest>>【이가】 널 신경 썼다면, <<nnpc_he _loveInterest>>【이가】 진작에 네 몸값을 지불했겠지."
 					<</addSpeechLine>>
 				<</if>>
 			<<case "Avery">>
 				<<if $avery_fate is "saved">>
 					<<addSpeechLine "namedrop">>
-						<<print $_stringsPre>>"<<nnpc_He 'Avery'>>'d have let you fall."
+						<<print $_stringsPre>>"<<nnpc_He 'Avery'>>【은는】 네가 나락으로 떨어지게 내버려뒀을 거다."
 					<</addSpeechLine>>
 				<<elseif isAveryPayingBailey() is 1 and $rentTime lte 0>>
 					<<addSpeechLine "namedrop">>
-						<<print $_stringsPre>>"I had a deal with <<nnpc_him 'Avery'>>, but <<nnpc_he 'Avery'>> dried up. Take it up with <<nnpc_him 'Avery'>>."
+						<<print $_stringsPre>>"난 <<nnpc_him 'Avery'>>【와과】 거래를 했지만, <<nnpc_he 'Avery'>>【은는】 돈줄이 말랐더군. 따지려거든 <<nnpc_him 'Avery'>>한테 가서 따져."
 					<</addSpeechLine>>
 				<<elseif $bailey_avery_met>>
 					<<addSpeechLine "namedrop">>
-						<<print $_stringsPre>>"Keep calling for that idiot. See if <<nnpc_his 'Avery'>> money reaches this far."
+						<<print $_stringsPre>>"그 멍청이를 계속 불러봐. <<nnpc_his 'Avery'>> 돈이 여기까지 닿을 수 있나 보자고."
 					<</addSpeechLine>>
 				<<else>>
 					<<addSpeechLine "namedrop">>
-						<<print $_stringsPre>>"If <<nnpc_he _loveInterest>> cared about you, <<nnpc_he _loveInterest>> would pay for you."
+						<<print $_stringsPre>>"만약 <<nnpc_he _loveInterest>>【이가】 널 신경 썼다면, <<nnpc_he _loveInterest>>【이가】 진작에 네 몸값을 지불했겠지."
 					<</addSpeechLine>>
 				<</if>>
 			<<case "Alex">>
 				<<addSpeechLine "namedrop">>
 				<<speechLine>>
-					<<print $_stringsPre>>"What do you think that idiot <<if C.npc.Alex.pronoun is "f">>cowgirl<<else>>cowboy<</if>> is going to do?"
+					<<print $_stringsPre>>"그 멍청한 <<if C.npc.Alex.pronoun is "f">>카우걸<<else>>카우보이<</if>>【이가】 뭘 할 수 있을 것 같냐?"
 				<<speechLine>>
-					<<print $_stringsPre>>"Your farmer's probably face-down in a bottle somewhere."
+					<<print $_stringsPre>>"네 농부 녀석은 아마 어딘가에 처박혀서 술이나 퍼마시고 있겠지."
 				<<speechLine>>
-					<<print $_stringsPre>>"That drunk couldn't find you if you were standing in <<nnpc_his 'Alex'>> field."
+					<<print $_stringsPre>>"그 술고래는 네가 <<nnpc_his 'Alex'>> 밭 한가운데 서 있어도 널 못 찾을 거다."
 				<</addSpeechLine>>
 			<<default>>
 				<<addSpeechLine "namedrop">>
-					<<print $_stringsPre>>"If <<nnpc_he _loveInterest>> cared about you, <<nnpc_he _loveInterest>> would pay for you."
+					<<print $_stringsPre>>"만약 <<nnpc_he _loveInterest>>【이가】 널 신경 썼다면, <<nnpc_he _loveInterest>>【이가】 진작에 네 몸값을 지불했겠지."
 				<</addSpeechLine>>
 		<</switch>>
 	<</if>>
 	<<if $speechExposeGenitals>>
 		<<addSpeechLine "expose">>
 		<<speechLine>>
-			<<He>> looks at your <<genitals>>. "That'll sell."
+			<<He>>【은는】 당신의 <<genitals>>【을를】 쳐다본다. "이건 돈이 되겠군."
 		<<speechLine>>
-			<<He>> looks at your <<genitals>>. "You'll earn your keep."
+			<<He>>【은는】 당신의 <<genitals>>【을를】 쳐다본다. "밥값은 충분히 하겠어."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechExposeBreasts>>
 		<<addSpeechLine "expose">>
 		<<speechLine>>
-			<<He>> looks at your <<breasts>>. "That'll sell."
+			<<He>>【은는】 당신의 <<breasts>>【을를】 쳐다본다. "이건 돈이 되겠군."
 		<<speechLine>>
-			<<He>> looks at your <<breasts>>. "You'll earn your keep."
+			<<He>>【은는】 당신의 <<breasts>>【을를】 쳐다본다. "밥값은 충분히 하겠어."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $settings.pregnancySpeechEnabled>>
 		<<if $speechPregnant>>
 			<<if getChildrenAt("home").length>>
 				<<addSpeechLine "pregnant">>
-					<<He>> sighs at your pregnant belly. "Knocked up. Typical."
+					<<He>>【은는】 당신의 불룩한 배를 보며 한숨을 쉰다. "임신이라니. 뻔하군."
 				<</addSpeechLine>>
 			<<else>>
 				<<addSpeechLine "pregnant">>
-					<<He>> looks at your pregnant belly. "Couldn't keep your legs together, could you?"
+					<<He>>【은는】 당신의 불룩한 배를 쳐다본다. "다리 좀 오므리고 다닐 수는 없었나?"
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
@@ -159,22 +159,22 @@
 		<<if $enemyanger lte 60>>
 			<<addSpeechLine "plead">>
 			<<speechLine>>
-				<<print $_stringsPre>>"Save your breath."
+				<<print $_stringsPre>>"입 아프게 떠들지 마라."
 			<<speechLine>>
-				<<print $_stringsPre>>"Quit whining. You'll live."
+				<<print $_stringsPre>>"징징대지 마. 죽이지는 않을 테니까."
 			<<speechLine>>
-				<<print $_stringsPre>>"Begging won't change what you owe me."
+				<<print $_stringsPre>>"애원한다고 네 빚이 줄어들진 않아."
 			<<speechLine>>
-				<<print $_stringsPre>>"Beg harder, maybe I'm feeling generous."
+				<<print $_stringsPre>>"더 애절하게 빌어봐. 혹시 내가 자비를 베풀지 누가 아냐."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "plead">>
 			<<speechLine>>
-				<<print $_stringsPre>>"Every word out of your mouth adds to what you owe."
+				<<print $_stringsPre>>"네 입에서 나오는 말 한마디마다 빚이 늘어날 거다."
 			<<speechLine>>
-				<<print $_stringsPre>>"You'll shut up and take it if you know what's good for you."
+				<<print $_stringsPre>>"네 목숨이 아깝다면 닥치고 받아들여라."
 			<<speechLine>>
-				<<print $_stringsPre>>"Begging won't save you, you little shit."
+				<<print $_stringsPre>>"빌어봤자 소용없다, 이 새끼야."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
@@ -182,20 +182,20 @@
 		<<if $enemyanger lte 60>>
 			<<addSpeechLine "moan">>
 			<<speechLine>>
-				<<print $_stringsPre>>"Keep it down."
+				<<print $_stringsPre>>"조용히 해."
 			<<speechLine>>
-				<<print $_stringsPre>>"Save the moaning for clients."
+				<<print $_stringsPre>>"신음은 손님들 앞에서나 내라고."
 			<<speechLine>>
-				<<print $_stringsPre>>"Save the racket for someone who pays."
+				<<print $_stringsPre>>"그 요란한 소리는 돈 내는 놈들한테나 들려줘."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "moan">>
 			<<speechLine>>
-				<<print $_stringsPre>>"Shut your mouth, brat."
+				<<print $_stringsPre>>"입 닥쳐라, 꼬맹아."
 			<<speechLine>>
-				<<print $_stringsPre>>"Not another sound, you little shit."
+				<<print $_stringsPre>>"소리 한 번만 더 내봐, 이 새끼야."
 			<<speechLine>>
-				<<print $_stringsPre>>"One more sound and I'll give you something to moan about."
+				<<print $_stringsPre>>"한 번만 더 소리 내면 진짜로 신음할 거리를 만들어 주마."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
@@ -203,20 +203,20 @@
 		<<if $enemyanger lte 60>>
 			<<addSpeechLine "demand">>
 			<<speechLine>>
-				<<print $_stringsPre>>"You don't give orders here."
+				<<print $_stringsPre>>"여기선 네가 명령하는 게 아니다."
 			<<speechLine>>
-				<<print $_stringsPre>>"You're in no position to negotiate."
+				<<print $_stringsPre>>"넌 협상할 처지가 아니야."
 			<<speechLine>>
-				<<print $_stringsPre>>"That mouth is going to cost you, brat."
+				<<print $_stringsPre>>"그 주둥아리 때문에 빚만 더 늘어날 거다, 꼬맹아."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "demand">>
 			<<speechLine>>
-				<<print $_stringsPre>>"Mouthy little shit."
+				<<print $_stringsPre>>"입만 산 새끼."
 			<<speechLine>>
-				<<print $_stringsPre>>"Shut your goddamn mouth."
+				<<print $_stringsPre>>"그 빌어먹을 주둥아리 좀 닥쳐."
 			<<speechLine>>
-				<<print $_stringsPre>>"You don't get to make demands. You never did."
+				<<print $_stringsPre>>"네깟 게 요구할 권리 따윈 없어. 옛날부터 그랬지."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
@@ -225,86 +225,86 @@
 			<<addSpeechLine "screamForHelp">>
 				<<set $speechScreamForHelp to 0>>
 			<<speechLine>>
-				<<print $_stringsPre>>"Shut up."
+				<<print $_stringsPre>>"닥쳐."
 			<<speechLine>>
-				<<print $_stringsPre>>"Be quiet."
+				<<print $_stringsPre>>"조용히 해."
 			<<speechLine>>
-				<<print $_stringsPre>>"No one's coming."
+				<<print $_stringsPre>>"아무도 안 온다."
 			<<speechLine>>
-				<<print $_stringsPre>>"Who exactly do you think is going to help you?"
+				<<print $_stringsPre>>"대체 누가 널 도와줄 거라고 생각하나?"
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "screamForHelp">>
 				<<set $speechScreamForHelp to 0>>
 			<<speechLine>>
-				<<print $_stringsPre>>"Shut up."
+				<<print $_stringsPre>>"닥쳐."
 			<<speechLine>>
-				<<print $_stringsPre>>"Be. Quiet."
+				<<print $_stringsPre>>"조용히. 해라."
 			<<speechLine>>
-				<<print $_stringsPre>>"Noisy little shit."
+				<<print $_stringsPre>>"시끄러운 새끼."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechForgive>>
 		<<addSpeechLine "forgive">>
 		<<speechLine>>
-			<<He>> sneers. "I don't need your forgiveness."
+			<<He>>【은는】 비웃는다. "네 용서 따위 필요 없다."
 		<<speechLine>>
-			<<He>> sneers. "Forgive me? For what?"
+			<<He>>【은는】 비웃는다. "날 용서해? 도대체 뭘?"
 		<<speechLine>>
-			<<He>> sneers. "Close your damn mouth, or I'll close it for you."
+			<<He>>【은는】 비웃는다. "빌어먹을 주둥아리 다물어, 아님 내가 직접 다물게 해주지."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechApologiseUnforgiving>>
 		<<addSpeechLine "apologise">>
 		<<speechLine>>
-			<<print $_stringsPre>>"Shut up. I've heard it all before."
+			<<print $_stringsPre>>"닥쳐. 귀에 딱지가 앉도록 들은 소리니까."
 		<<speechLine>>
-			<<print $_stringsPre>>"Did you really think I would fall for that?"
+			<<print $_stringsPre>>"내가 그딴 헛소리에 속아 넘어갈 줄 알았나?"
 		<<speechLine>>
-			<<print $_stringsPre>>"Do you think I give a damn, you little shit?"
+			<<print $_stringsPre>>"내가 눈이나 깜짝할 것 같냐, 이 새끼야?"
 		<<speechLine>>
-			<<print $_stringsPre>>"Save it. If you were sorry, you'd stop struggling."
+			<<print $_stringsPre>>"집어치워. 진짜 미안하다면 반항부터 그만뒀겠지."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechGrowl or $speechGrowlHeat or $speechGrowlRut>>
 		<<addSpeechLine "growl">>
 		<<speechLine>>
-			<<print $_stringsPre>>"You little mutt."
+			<<print $_stringsPre>>"이 똥개 새끼가."
 		<<speechLine>>
-			<<print $_stringsPre>>"I'll muzzle you if I have to."
+			<<print $_stringsPre>>"필요하면 입마개라도 씌워주마."
 		<<speechLine>>
-			<<print $_stringsPre>>"Bite if you want. See what it costs you."
+			<<print $_stringsPre>>"물어뜯고 싶으면 물어봐. 그 대가가 뭔지 똑똑히 보여줄 테니."
 		<<speechLine>>
-			<<print $_stringsPre>>"This is what I get for taking in strays."
+			<<print $_stringsPre>>"길거리 똥개를 거둬준 대가가 이거군."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechStruggle>>
 		<<if $enemyanger lte 60>>
 			<<addSpeechLine "struggle">>
 			<<speechLine>>
-				<<print $_stringsPre>>"Stop struggling."
+				<<print $_stringsPre>>"반항하지 마라."
 			<<speechLine>>
-				<<print $_stringsPre>>"You're wasting both our time."
+				<<print $_stringsPre>>"둘 다 시간 낭비일 뿐이다."
 			<<speechLine>>
-				<<print $_stringsPre>>"You're not going anywhere."
+				<<print $_stringsPre>>"넌 아무 데도 못 간다."
 			<<speechLine>>
-				<<print $_stringsPre>>"Don't make this difficult."
+				<<print $_stringsPre>>"일 귀찮게 만들지 마라."
 			<<speechLine>>
-				<<print $_stringsPre>>"Stop fighting me."
+				<<print $_stringsPre>>"저항하지 마."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "struggle">>
 			<<speechLine>>
-				<<print $_stringsPre>>"Quit moving, you little shit."
+				<<print $_stringsPre>>"그만 움직여라, 이 새끼야."
 			<<speechLine>>
-				<<print $_stringsPre>>"Stop squirming, damn brat."
+				<<print $_stringsPre>>"그만 좀 꿈틀거려, 빌어먹을 꼬맹아."
 			<<speechLine>>
-				<<print $_stringsPre>>"That's enough."
+				<<print $_stringsPre>>"적당히 해라."
 			<<speechLine>>
-				<<print $_stringsPre>>"Don't test my patience."
+				<<print $_stringsPre>>"내 인내심을 시험하지 마라."
 			<<speechLine>>
-				<<print $_stringsPre>>"You're only making it worse for yourself."
+				<<print $_stringsPre>>"네 무덤만 더 파고 있을 뿐이다."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
@@ -312,113 +312,113 @@
 		<<if $enemyanger lte 60>>
 			<<addSpeechLine "spank">>
 			<<speechLine>>
-				<<print $_stringsPre>>"What have we learned?"
+				<<print $_stringsPre>>"이제 뭘 배웠는지 알겠나?"
 			<<speechLine>>
-				<<print $_stringsPre>>"Count it against what you owe."
+				<<print $_stringsPre>>"네가 진 빚에서 까주마."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "spank">>
 			<<speechLine>>
-				<<print $_stringsPre>>"Harder? Fine."
+				<<print $_stringsPre>>"더 세게 쳐달라고? 좋아."
 			<<speechLine>>
-				<<print $_stringsPre>>"You asked for this."
+				<<print $_stringsPre>>"네가 자초한 일이다."
 			<<speechLine>>
-				<<print $_stringsPre>>"This is for wasting my time."
+				<<print $_stringsPre>>"이건 내 시간을 낭비하게 만든 대가다."
 			<<speechLine>>
-				<<print $_stringsPre>>"I'll stop when you've learned your lesson."
+				<<print $_stringsPre>>"네가 주제 파악을 할 때까지 멈추지 않겠다."
 			<<speechLine>>
-				<<print $_stringsPre>>"You've been difficult. This is what happens."
+				<<print $_stringsPre>>"거슬리게 굴면 이렇게 되는 거다."
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if $speechPlayerOrgasm>>
 		<<addSpeechLine "playerOrgasm">>
 		<<speechLine>>
-			<<print $_stringsPre>>"I hope you appreciate that."
+			<<print $_stringsPre>>"감사하게 여기길 바란다."
 		<<speechLine>>
-			<<print $_stringsPre>>"Just something to remember me by."
+			<<print $_stringsPre>>"나를 기억하게 만들 기념품이다."
 		<<speechLine>>
-			<<print $_stringsPre>>"We'll call that your going away gift."
+			<<print $_stringsPre>>"작별 선물이라고 쳐두지."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $arousal gte 9500>>
 		<<addSpeechLine "idle">>
 		<<speechLine>>
-			<<print $_stringsPre>>"Nice look. Some people would pay big to see you hot and bothered like this."
+			<<print $_stringsPre>>"표정 좋군. 네가 그렇게 달아올라 헐떡이는 꼴을 보려고 큰돈을 낼 놈들이 많을 거다."
 		<<speechLine>>
-			<<print $_stringsPre>>"Should've brought a camera. Your profile would look great with this expression."
+			<<print $_stringsPre>>"카메라를 가져왔어야 했는데. 그 표정이면 네 프로필 사진으로 딱 좋겠군."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $enemyanger lte 60>>
 		<<addSpeechLine "idle">>
-			<<print $_stringsPre>>"Don't make this harder than it needs to be."
+			<<print $_stringsPre>>"쓸데없이 일 어렵게 만들지 마라."
 		<</addSpeechLine>>
 		<<if $hairlength gte 600>>
 			<<addSpeechLine "idle">>
-				<<print $_stringsPre>>"Kept your hair long? I know someone who will like that."
+				<<print $_stringsPre>>"머리는 계속 길렀나? 이런 걸 좋아할 놈을 알지."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $player.breastsize gte 6 or $player.penissize gte 4>>
 			<<addSpeechLine "idle">>
-				<<print $_stringsPre>>"Cows fetch a high price these days, you know."
+				<<print $_stringsPre>>"요즘은 젖소가 비싼 값에 팔린다는 거 알 거다."
 			<</addSpeechLine>>
 		<</if>>
 		<<if $athletics gte 750 or $physique gte $physiquesize * 0.75>>
 			<<addSpeechLine "idle">>
-				<<print $_stringsPre>>"You're strong. Good. Some people pay for the fight."
+				<<print $_stringsPre>>"힘이 좋군. 마음에 들어. 거칠게 반항하는 걸 돈 주고 보려는 놈들도 있거든."
 			<</addSpeechLine>>
 		<</if>>
 		<<addSpeechLine "idle">>
 		<<speechLine>>
-			<<print $_stringsPre>>"Just relax. I'll handle everything like always."
+			<<print $_stringsPre>>"긴장 풀어. 평소처럼 내가 알아서 처리할 테니."
 		<<speechLine>>
-			<<print $_stringsPre>>"You were always the best looking little <<print ["bastard","shit","<<bitch>>"][random(0,2)]>>."
+			<<print $_stringsPre>>"넌 항상 최고로 예쁘장한 꼬마 <<print ["자식","새끼","<<bitch>>"][random(0,2)]>>【이었였】지."
 		<<speechLine>>
-			<<print $_stringsPre>>"It's easier this way. Trust me."
+			<<print $_stringsPre>>"이러는 게 훨씬 편할 거다. 날 믿어."
 		<<speechLine>>
-			<<print $_stringsPre>>"Stay still."
+			<<print $_stringsPre>>"가만히 있어."
 		<<speechLine>>
-			<<print $_stringsPre>>"You're learning. Good."
+			<<print $_stringsPre>>"배우는 속도가 빠르군. 좋아."
 		<<speechLine>>
-			<<print $_stringsPre>>"Keep still. I'm almost done with you."
+			<<print $_stringsPre>>"가만히 있어라. 거의 다 끝나가니까."
 		<<speechLine>>
-			<<print $_stringsPre>>"Hold still. You're wasting both our time."
+			<<print $_stringsPre>>"가만히 있어. 둘 다 시간 낭비일 뿐이다."
 		<<speechLine>>
-			<<print $_stringsPre>>"You've always been the most difficult one. I hope you know that."
+			<<print $_stringsPre>>"넌 항상 제일 다루기 힘든 녀석이었지. 너도 알고 있길 바란다."
 		<</addSpeechLine>>
 	<<else>>
 		<<if $enemyanger lte 70>>
 			<<addSpeechLine "idle">>
-				<<print $_stringsPre>>"Maybe I should inspect you before we go."
+				<<print $_stringsPre>>"가기 전에 물건 상태 좀 확인해 봐야겠군."
 			<</addSpeechLine>>
 		<</if>>
 		<<addSpeechLine "idle">>
 		<<speechLine>>
-			<<print $_stringsPre>>"Why do you shits have to make it harder on yourselves?"
+			<<print $_stringsPre>>"너희 같은 새끼들은 왜 꼭 스스로 일을 꼬이게 만드는 거냐?"
 		<<speechLine>>
-			<<print $_stringsPre>>"I told you to hold still."
+			<<print $_stringsPre>>"가만히 있으라고 했을 텐데."
 		<<speechLine>>
-			<<print $_stringsPre>>"You're making it harder on both of us."
+			<<print $_stringsPre>>"너 때문에 우리 둘 다 힘들어지잖아."
 		<<speechLine>>
-			<<print $_stringsPre>>"You chose this."
+			<<print $_stringsPre>>"네가 선택한 길이다."
 		<<speechLine>>
-			<<print $_stringsPre>>"Are you going to listen to me now?"
+			<<print $_stringsPre>>"이제 내 말 들을 마음이 생겼나?"
 		<<speechLine>>
-			<<print $_stringsPre>>"I have someone willing to pay big for you."
+			<<print $_stringsPre>>"널 비싼 값에 사겠다는 놈이 있거든."
 		<<speechLine>>
-			<<print $_stringsPre>>"You're coming with me, and that's that."
+			<<print $_stringsPre>>"넌 나랑 같이 가는 거다, 잔말 마."
 		<<speechLine>>
-			<<print $_stringsPre>>"You owe me for the inconvenience."
+			<<print $_stringsPre>>"이 성가신 상황을 만든 값도 청구하마."
 		<<speechLine>>
-			<<print $_stringsPre>>"Keep fighting. See where it gets you."
+			<<print $_stringsPre>>"계속 발악해봐. 그 끝이 어딘지 똑똑히 보여줄 테니."
 		<<speechLine>>
-			<<print $_stringsPre>>"You're costing me money every time you move."
+			<<print $_stringsPre>>"네가 움직일 때마다 내 돈이 깎인단 말이다."
 		<<speechLine>>
-			<<print $_stringsPre>>"This would be over already if you'd just behave."
+			<<print $_stringsPre>>"얌전히 굴었으면 진작에 끝났을 일이다."
 		<<speechLine>>
-			<<print $_stringsPre>>"Stop squirming, you're not going anywhere."
+			<<print $_stringsPre>>"그만 꿈틀대. 넌 아무 데도 못 가니까."
 		<<speechLine>>
-			<<print $_stringsPre>>"Every second you fight me is a second you owe me."
+			<<print $_stringsPre>>"네가 반항하는 매 초마다 네 빚이 늘어날 거다."
 		<</addSpeechLine>>
 	<</if>>
 	<<speechSay>>
