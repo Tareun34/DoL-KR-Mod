@@ -76,11 +76,11 @@
 		<<museumAntiqueStatus "antiquegoldchastitybelt" "talk">>
 	<</if>>
 	<<for _labelM, _valueM range $museumAntiques.antiques>>
-		<<capture _labelM, _museumAntiqueText[_labelM].name>>
+		<<capture _labelM, _museumAntiqueText[_labelM].key>>
 			<<set _antique to _museumAntiqueText[_labelM].name.toLowerCase()>>
 			<<if $museumAntiques.antiques[_labelM] is "talk">>
 				<<icon _museumAntiqueText[_labelM].icon>>
-				<<link [[`Ask about the _antique`|`Museum `+ _museumAntiqueText[_labelM].name]]>><<set $museumAntiques.antiques[_labelM] to "museum">><<set $museumAntiques.museumCount++>><<npcincr Winter love 1>><</link>><<glove "Winter" "simple">>
+				<<link [[`Ask about the _antique`|`Museum `+ _museumAntiqueText[_labelM].key]]>><<set $museumAntiques.antiques[_labelM] to "museum">><<set $museumAntiques.museumCount++>><<npcincr Winter love 1>><</link>><<glove "Winter" "simple">>
 				<br>
 			<</if>>
 		<</capture>>
