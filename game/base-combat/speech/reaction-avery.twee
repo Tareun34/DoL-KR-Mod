@@ -55,13 +55,13 @@
 	<<if _daddy>>
 		<<rng>>
 		<<if $rng lte 20>>
-			<<He>> <<laughs>>. "Let's see if you can still beg for <<nnpc_mummy "Avery">> with <<his>> hand around your throat."
+			<<He>>【이가】 <<laughs>>. "목이 졸린 채로도 여전히 <<nnpc_mummy "Avery">>【을를】 애원할 수 있는지 볼까?"
 		<<elseif C.npc.Avery.rage gte 60>>
-			"I'll give you what you want," <<he>> murmurs darkly, "but not because you begged me to." <<His>> hand squeezes around your throat a little harder.
+			"원하는 걸 주지," <<he>>【이가】 낮게 읊조린다. "하지만 자기가 애원해서 주는 건 아니야." 목을 쥔 <<his>> 손에 조금 더 힘이 들어간다.
 		<<elseif C.npc.Avery.rage gte 20>>
-			"That's right, <<pcpetname "Avery">>." <<He>> <<laughs>> as <<his>> hand squeezes down a little harder. "Finally, you know how to speak to me."
+			"그래야지, <<pcpetname "Avery">>." <<his>> 손이 목을 조금 더 강하게 죄어오며 <<he>>【이가】 <<laughs>>. "이제야 나한테 어떻게 말해야 하는지 아는군."
 		<<else>>
-			"As you wish, <<pcpetname "Avery">>," <<he>> purrs. "Leave it to <<nnpc_mummy "Avery">>."
+			"원하시는 대로요, <<pcpetname "Avery">>," <<he>>【이가】 기분 좋게 갸르릉거린다. "<<nnpc_mummy "Avery">>에게 맡겨요."
 		<</if>>
 	<</if>>
 <</widget>>
@@ -71,52 +71,52 @@
 <<widget "pc-line-avery-plead">>
 	<<if !$avery_mansion>>
 		<<addPairedSpeechLine "Avery" "plead">>
-			<<pcLine>>"Was this all the date was for...?"
+			<<pcLine>>"이 데이트는 전부 이걸 위한 거였어요...?"
 		<<npcLine>>
 			<<if C.npc.Avery.rage gte 20 or $enemyanger gte 20>>
-				<<He>> scoffs. "You think you deserve better? You deserve exactly what I give you."
+				<<He>>【이가】 코웃음을 친다. "네가 더 나은 대접을 받을 자격이 있다고 생각해? 넌 딱 내가 주는 만큼만 받을 자격이 있어."
 			<<else>>
-				<<He>> laughs. "What did you expect, <<pcpetname "Avery">>? <<= either("A fairy tale","My patience to be endless")>>?"
+				<<He>>【이가】 웃는다. "뭘 기대한 거죠, <<pcpetname "Avery">>? <<= either("동화 같은 이야기","내 인내심이 끝없기를")>>?"
 			<</if>>
 		<</addPairedSpeechLine>>
 	<<else>>
 		<<if isAveryHuntingPlayer()>>
 			<<addPairedSpeechLine "Avery" "plead">>
-				<<pcLine>>"I'm sorry! I didn't mean to!"
+				<<pcLine>>"죄송해요! 그럴 생각은 아니었어요!"
 			<<npcLine>>
 				<<if C.npc.Avery.rage gte 20 or $enemyanger gte 20>>
-					"Don't insult my intelligence," <<he>> snarls. "You knew exactly what you were doing!"
+					"내 지능을 모욕하지 마," <<he>>【이가】 으르렁거린다. "자기가 무슨 짓을 하는지 정확히 알고 있었잖아!"
 				<<else>>
-					"Quiet now. Take your discipline like a good <<girl>>."
+					"이제 조용히 해요. 착한 <<girl>>답게 벌을 받아들이도록 해요."
 				<</if>>
 			<</addPairedSpeechLine>>
 			<<addPairedSpeechLine "Avery" "plead">>
-				<<pcLine>>"Please, I promise I'll do better! I promise...!"
+				<<pcLine>>"제발요, 더 잘할게요! 약속해요...!"
 			<<npcLine>>
 				<<if C.npc.Avery.rage gte 20 or $enemyanger gte 20>>
-					"You'll 'do better' when I've pulled you into line!"
+					"'더 잘하는' 건 내가 널 제대로 길들인 다음의 일이야!"
 				<<else>>
-					"You will do better. I'll personally ensure it." <<He>> smiles coldly.
+					"더 잘하게 될 거예요. 내가 직접 확실히 해 둘 테니까." <<He>>【이가】 차갑게 미소 짓는다.
 				<</if>>
 			<</addPairedSpeechLine>>
 		<<elseif $averyromance>>
 			<<addPairedSpeechLine "Avery" "plead">>
-				<<pcLine>>"I love you, Avery. Please don't do this to me!"
+				<<pcLine>>"사랑해요, 에이버리. 제발 나한테 이러지 말아요!"
 			<<npcLine>>
 				<<if C.npc.Avery.rage gte 20 or $enemyanger gte 20>>
-					"Don't you dare use that word to manipulate me," <<he>> spits.
+					"감히 그 단어로 날 조종하려 들지 마," <<he>>【이가】 내뱉는다.
 				<<else>>
-					<<He>> sneers. "If you truly loved me, you wouldn't have defied me."
+					<<He>>【이가】 비웃는다. "정말로 날 사랑했다면, 내게 거역하지 않았겠죠."
 				<</if>>
 			<</addPairedSpeechLine>>
 		<<else>>
 			<<addPairedSpeechLine "Avery" "plead">>
-				<<pcLine>>"I'm sorry, Avery, please forgive me...!"
+				<<pcLine>>"죄송해요, 에이버리, 제발 용서해 주세요...!"
 			<<npcLine>>
 				<<if C.npc.Avery.rage gte 20 or $enemyanger gte 20>>
-					"I don't want your fucking apologies, I want obedience!"
+					"네 빌어먹을 사과 따윈 필요 없어, 내가 원하는 건 복종이야!"
 				<<else>>
-					"Look at you, shrinking under me like a good pet. Too bad I'm feeling ruthless," <<he>> purrs.
+					"이것 봐요, 착한 애완동물처럼 내 밑에서 움츠러들고 있네요. 안타깝게도 오늘은 좀 무자비해지고 싶은 기분이라서," <<he>>【이가】 갸르릉거린다.
 				<</if>>
 			<</addPairedSpeechLine>>
 		<</if>>
@@ -126,39 +126,39 @@
 <<widget "pc-line-avery-demand">>
 	<<if !$avery_mansion>>
 		<<addPairedSpeechLine "Avery" "demand">>
-			<<pcLine>>"You don't pay me enough to treat me like this!"
+			<<pcLine>>"이런 취급을 받을 만큼 돈을 주는 것도 아니잖아요!"
 		<<npcLine>>
 			<<if C.npc.Avery.rage gte 20 or $enemyanger gt 20>>
-				"Don't you dare speak to me about money, you greedy little whore!"
+				"감히 나한테 돈 얘기를 꺼내, 이 탐욕스러운 창녀 주제에!"
 			<<else>>
-				<<His>> eyes narrow. "You have a lot of nerve demanding more when you act like this."
+				<<His>> 눈이 가늘어진다. "이렇게 굴면서 더 달라고 요구하다니, 배짱이 대단하군요."
 			<</if>>
 		<</addPairedSpeechLine>>
 	<<else>>
 		<<if isAveryHuntingPlayer()>>
 			<<addPairedSpeechLine "Avery" "demand">>
-				<<pcLine>>"Get the hell away from me! You're taking this too far, Avery!"
+				<<pcLine>>"저리 떨어져요! 너무 지나쳐요, 에이버리!"
 			<<npcLine>>
-				"It's never too far with you!" <<he>> <<= either("spits","hisses angrily","snarls")>>. "You never appreciate anything I do!<<if C.npc.Avery.rage gte 20 or $enemyanger gt 20>> Nothing's ever enough!<</if>>"
+				"너한테는 지나친 게 없지!" <<he>>【이가】 <<= either("내뱉는다","성난 목소리로 쉭쉭거린다","으르렁거린다")>>. "넌 내가 해 주는 걸 하나도 고마워할 줄 모르니까!<<if C.npc.Avery.rage gte 20 or $enemyanger gt 20>> 뭘 해 줘도 성에 안 차지!<</if>>"
 			<</addPairedSpeechLine>>
 		<<elseif $averyromance>>
 			<<addPairedSpeechLine "Avery" "demand">>
-				<<pcLine>>"I told you I loved you, but I won't hesitate to leave if you don't stop this right now!"
+				<<pcLine>>"사랑한다고 말했지만, 당장 그만두지 않으면 망설임 없이 떠날 거예요!"
 			<<npcLine>>
 				<<if C.npc.Avery.rage gte 20 or $enemyanger gt 20>>
-					<<His>> expression twists with anger. "After everything I've done for you, you'd still dare think that <<= either("cesspit","hellhole")>> is preferable to staying with me?"
+					<<His>> 표정이 분노로 일그러진다. "내가 널 위해 해 준 게 얼만데, 아직도 그 <<= either("시궁창","지옥 같은 곳")>>이 나와 함께 있는 것보다 낫다고 생각한단 말이야?"
 				<<else>>
-					<<His>> expression hardens. "I gave you a chance to escape that miserable life, and you'd throw it back in my face?"
+					<<His>> 표정이 굳어진다. "그 비참한 삶에서 벗어날 기회를 줬는데, 그걸 내 얼굴에 도로 집어던지겠다고요?"
 				<</if>>
 			<</addPairedSpeechLine>>
 		<<else>>
 			<<addPairedSpeechLine "Avery" "demand">>
-				<<pcLine>>"Stop it, Avery! I'm<<if $averySeen.includes("walkParkSOYes") or $averyromance>> your <<girlfriend>>,<</if>> not your punching bag!"
+				<<pcLine>>"그만해요, 에이버리! 난<<if $averySeen.includes("walkParkSOYes") or $averyromance>> 당신의 <<girlfriend>>지,<</if>> 당신 샌드백이 아니에요!"
 			<<npcLine>>
 				<<if C.npc.Avery.rage gte 20 or $enemyanger gt 20>>
-					<<He>> laughs derisively. "You want to play the partner? Then learn to submit!"
+					<<He>>【이가】 비웃듯 웃는다. "연인 행세를 하고 싶어? 그럼 복종부터 배워!"
 				<<else>>
-					"A title doesn't save you from discipline when you misbehave."
+					"잘못을 저질렀을 때 호칭 따위가 벌을 면해 주진 않아요."
 				<</if>>
 			<</addPairedSpeechLine>>
 		<</if>>
@@ -168,11 +168,11 @@
 <<widget "pc-line-avery-forgive">>
 	<<if $avery_fate is undefined>>
 		<<addSpeechLine "forgive">>
-			"You're just angry," you say. "Everyone gets angry sometimes. I forgive you."
+			"그냥 화가 난 것뿐이에요," 당신이 말한다. "누구나 가끔은 화를 내잖아요. 용서할게요."
 		<</addSpeechLine>>
 	<<else>>
 		<<addSpeechLine "forgive">>
-			"Now I understand why you get so angry, Avery," you say. "And I forgive you."
+			"이제 왜 그렇게 화를 내는지 알겠어요, 에이버리," 당신이 말한다. "그리고 용서할게요."
 		<</addSpeechLine>>
 	<</if>>
 <</widget>>
@@ -181,34 +181,34 @@
 	<<set _daddy to $submissive gte 1150 and random(1, 4) is 1>>
 	<<if $avery_fate is "ascended">>
 		<<addPairedSpeechLine "Avery" "moan">>
-			<<pcLine>>"I'm all yours, Hound."
+			<<pcLine>>"전 전부 당신 거예요, 하운드."
 		<<npcLine>>
 			<<if $consensual>>
 				<<if C.npc.Avery.rage gte 60 >>
-					<<His>> eyes widen for a moment, then grow dark with desire. "Yes, you are." <<He>> <<= either("scoffs","huffs")>> pridefully. "It's good that you know your place, my little fox."
+					<<His>> 눈이 잠시 커지더니, 이내 욕망으로 어두워진다. "그래, 그렇지." <<He>>【이가】 거만하게 <<= either("코웃음을 친다","콧김을 내뿜는다")>>. "자기 분수를 아는 건 좋은 일이야, 내 작은 여우."
 				<<elseif C.npc.Avery.rage gte 20>>
-					<<His>> eyes widen for a moment, then grow dark with desire. "You are, aren't you?" <<He>> smirks with satisfaction. "It's good that you know your place, my little fox..."
+					<<His>> 눈이 잠시 커지더니, 이내 욕망으로 어두워진다. "그래, 그렇지?" <<He>>【이가】 만족스럽게 씩 웃는다. "자기 분수를 아는 건 좋은 일이지, 내 작은 여우..."
 				<<else>>
-					<<His>> eyes widen for a moment, then grow dark with desire. "Yes... So you are." <<He>> <<laughs>> with satisfaction. "I'm glad you know your place, my little fox."
+					<<His>> 눈이 잠시 커지더니, 이내 욕망으로 어두워진다. "그래요... 그렇죠." <<He>>【이가】 만족스럽게 <<laughs>>. "자기 분수를 알고 있다니 기쁘네요, 내 작은 여우."
 				<</if>>
 			<<elseif C.npc.Avery.rage gte 60 >>
-				<<His>> eyes widen for a moment, then grow dark with desire. "Yes, you are." <<He>> <<= either("scoffs","huffs")>> pridefully. "So act like it!"
+				<<His>> 눈이 잠시 커지더니, 이내 욕망으로 어두워진다. "그래, 그렇지." <<He>>【이가】 거만하게 <<= either("코웃음을 친다","콧김을 내뿜는다")>>. "그럼 그렇게 행동해!"
 			<<elseif C.npc.Avery.rage gte 20>>
-				<<His>> eyes widen for a moment, then grow dark with desire. "You are, aren't you?" <<He>> smirks with satisfaction. "So you had best act like it, <<girl>>."
+				<<His>> 눈이 잠시 커지더니, 이내 욕망으로 어두워진다. "그래, 그렇지?" <<He>>【이가】 만족스럽게 씩 웃는다. "그럼 그에 맞게 행동하는 게 좋을 거야, <<girl>>."
 			<<else>>
-				<<His>> eyes widen for a moment, then grow dark with desire. "Yes... So you are." <<He>> <<laughs>> with satisfaction. "So you had best act like it, <<pcpetname "Avery">>."
+				<<His>> 눈이 잠시 커지더니, 이내 욕망으로 어두워진다. "그래요... 그렇죠." <<He>>【이가】 만족스럽게 <<laughs>>. "그럼 그에 맞게 행동하는 게 좋을 거예요, <<pcpetname "Avery">>."
 			<</if>>
 		<</addPairedSpeechLine>>
 	<<elseif $averyromance>>
 		<<addPairedSpeechLine "Avery" "moan">>
-			<<pcLine>>"I love you, Avery."
+			<<pcLine>>"사랑해요, 에이버리."
 		<<npcLine>>
 			<<if C.npc.Avery.rage gte 60 >>
-				<<He>> scoffs. "Do you? You've been so bad lately, you had me fooled."
+				<<He>>【이가】 코웃음을 친다. "그래? 요즘 하도 못되게 굴어서, 깜빡 속을 뻔했네."
 			<<elseif C.npc.Avery.rage gte 20>>
-				<<He>> smirks. "I know. But feel free to say it again."
+				<<He>>【이가】 씩 웃는다. "알아. 그래도 얼마든지 다시 말해 봐."
 			<<else>>
-				<<He>> <<= either("smiles","<<laughs>>")>>. "I know. It's adorable."
+				<<He>>【이가】 <<= either("미소 짓는다","<<laughs>>")>>. "알아요. 사랑스럽네요."
 			<</if>>
 			<<if !$averyUniqueComments.includes("moan_romance")>>
 				<<set $averyUniqueComments.pushUnique("moan_romance")>>
@@ -217,62 +217,62 @@
 		<</addPairedSpeechLine>>
 	<<elseif _daddy>>
 		<<addPairedSpeechLine "Avery" "moan">>
-			<<pcLine>>"Put me in my place, <<nnpc_mummy "Avery">>."
+			<<pcLine>>"제 분수를 알게 해 주세요, <<nnpc_mummy "Avery">>."
 		<<npcLine>>
 			<<set $averyUniqueComments.pushUnique("called_daddy")>>
-			<<His>> eyes widen for a moment, but then <<he>> smirks. You think <<he>> liked the sound of you calling <<him>> "<<nnpc_mummy "Avery">>".
+			<<His>> 눈이 잠시 커지지만, 이내 <<he>>【은는】 씩 웃는다. 당신이 <<him>>【을를】 "<<nnpc_mummy "Avery">>"라고 부르는 소리가 마음에 든 모양이다.
 			<<if $consensual>>
 				<<if C.npc.Avery.rage gte 60 >>
-					"Oh, I'll put you in your place alright. <<nnpc_Mummy "Avery">>'s been waiting to punish you properly."
+					"오, 분수를 알게 해 주고말고. <<nnpc_Mummy "Avery">>【은는】 널 제대로 벌줄 날만 기다려 왔으니까."
 				<<elseif C.npc.Avery.rage gte 20>>
-					<<He>> smiles knowingly. "You want <<nnpc_mummy "Avery">> to put you in your place? Maybe you've been acting up for attention."
+					<<He>>【이가】 다 안다는 듯 미소 짓는다. "<<nnpc_mummy "Avery">>【이가】 네 분수를 알게 해 주길 바라는 거야? 관심을 끌려고 말썽을 부려 온 건지도 모르겠네."
 				<<else>>
-					<<He>> chuckles. "Mm. I love when you call me that. Don't worry, <<nnpc_mummy "Avery">> will take care of you."
+					<<He>>【이가】 낄낄 웃는다. "음. 날 그렇게 부르는 거 정말 좋아요. 걱정 말아요, <<nnpc_mummy "Avery">>【이가】 잘 돌봐 줄 테니까."
 				<</if>>
 			<<elseif C.npc.Avery.rage gte 60 >>
-				<<He>> sneers. "Oh, I intend to. <<nnpc_mummy "Avery">> is going to remind you exactly where you belong."
+				<<He>>【이가】 비웃는다. "오, 그럴 생각이야. <<nnpc_mummy "Avery">>【이가】 네가 있을 곳이 정확히 어딘지 일깨워 줄 테니까."
 			<<elseif C.npc.Avery.rage gte 20>>
-				"Acting up just to get <<nnpc_mummy "Avery">>'s hands on you? I'll gladly show you where you belong."
+				"<<nnpc_mummy "Avery">>의 손길이 그렇게 탐나서 말썽을 부린 거야? 기꺼이 네가 있을 곳이 어딘지 보여 주지."
 			<<else>>
-				"You want <<nnpc_mummy "Avery">> to put you in your place? You could have just asked politely instead of forcing my hand."
+				"<<nnpc_mummy "Avery">>【이가】 분수를 알게 해 주길 바라는 건가요? 내 손을 쓰게 만드는 대신 그냥 공손하게 부탁하면 됐을 텐데."
 			<</if>>
 		<</addPairedSpeechLine>>
 	<<elseif isLoveInterest("Avery")>>
 		<<if !$avery_mansion>>
 			<<addPairedSpeechLine "Avery" "moan">>
-				<<pcLine>>"Take me away from that place, take me with you."
+				<<pcLine>>"그곳에서 절 데리고 나가 주세요, 당신과 함께 데려가 주세요."
 			<<npcLine>>
 				<<if C.npc.Avery.rage gte 60 >>
-					"How unfortunate. I seem to recall you wanting nothing to do with me."
+					"유감이군. 나랑은 아무 상관도 하고 싶지 않다고 했던 걸로 기억하는데."
 				<<elseif C.npc.Avery.rage gte 20>>
-					"I should make you ask again. You sound much sweeter when you're desperate."
+					"다시 한번 부탁하게 만들어야겠어. 절박할 때 훨씬 달콤하게 들리거든."
 				<<else>>
-					<<He>> smiles impishly. "Mm. You'd look rather lovely waiting for me at home."
+					<<He>>【이가】 장난스럽게 미소 짓는다. "음. 집에서 날 기다리고 있으면 꽤 사랑스러울 것 같네요."
 				<</if>>
 			<</addPairedSpeechLine>>
 		<<else>>
 			<<addPairedSpeechLine "Avery" "moan">>
-				<<pcLine>>"Let me show you how grateful I am, use me as much as you want."
+				<<pcLine>>"제가 얼마나 감사한지 보여 드릴게요, 원하시는 만큼 절 써 주세요."
 			<<npcLine>>
 				<<if C.npc.Avery.rage gte 60 >>
-					"Let's hope this sudden bout of gratitude lasts. Your recent behaviour has been entirely unacceptable."
+					"이 갑작스러운 감사의 마음이 오래가길 바라지. 요즘 네 행실은 도저히 봐줄 수 없는 수준이었으니까."
 				<<elseif C.npc.Avery.rage gte 20>>
-					"Keep this up and I'll have very little to complain about. You'd like that, wouldn't you?"
+					"계속 이렇게만 하면 불평할 게 거의 없어지겠군. 그게 네가 바라는 거지, 안 그래?"
 				<<else>>
-					<<He>> smirks. "Perfectly spoken. Now, let's put that pretty little offer to use."
+					<<He>>【이가】 씩 웃는다. "완벽한 대답이에요. 자, 그 예쁘장한 제안을 써먹어 볼까요."
 				<</if>>
 			<</addPairedSpeechLine>>
 		<</if>>
 	<<else>>
 		<<addPairedSpeechLine "Avery" "moan">>
-			<<pcLine>>"You're worth more than any payout."
+			<<pcLine>>"당신은 어떤 보수보다도 소중해요."
 		<<npcLine>>
 			<<if C.npc.Avery.rage gte 60 >>
-				<<He>> scoffs. "Is that so? Going by your behaviour of late, I find it difficult to believe."
+				<<He>>【이가】 코웃음을 친다. "그래? 요즘 네 행실을 보면, 도무지 믿기 어렵군."
 			<<elseif C.npc.Avery.rage gte 20>>
-				<<He>> smirks. "I know. But even so, as long as you behave, the money will keep coming, <<pcpetname "Avery">>."
+				<<He>>【이가】 씩 웃는다. "알아. 그래도 네가 얌전히 구는 한, 돈은 계속 들어올 거야, <<pcpetname "Avery">>."
 			<<else>>
-				<<He>> <<= either("smiles","<<laughs>>")>>. "Is that how you feel? How adorable."
+				<<He>>【이가】 <<= either("미소 짓는다","<<laughs>>")>>. "그렇게 느끼나요? 사랑스럽기도 하지."
 			<</if>>
 		<</addPairedSpeechLine>>
 	<</if>>

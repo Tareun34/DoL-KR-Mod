@@ -807,7 +807,7 @@
 			<<personselect $mouthtarget>>
 			<<if $orgasmdown gte 1>>
 				<<if $face is "covered">>
-					"Is <<pshe>> cumming from being kissed? Is that pure or lewd?"
+					"<<pshe>>【은는】 키스 받는 것만으로 가버리는 건가? 그건 순수한 거야 아니면 야한 거야?"
 				<<else>>
 					"<<pShes>> 키스받으면서 싸버렸어! 저건 맑은 걸까 아니면 발정난 걸까?"
 				<</if>>
@@ -825,7 +825,7 @@
 			<<personselect $anustarget>>
 			<<if $orgasmdown gte 1>>
 				<<if $face is "covered">>
-					"Is <<pshe>> cumming from being kissed? Is that pure or lewd?"
+					"<<pshe>>【은는】 키스 받는 것만으로 가버리는 건가? 그건 순수한 거야 아니면 야한 거야?"
 				<<else>>
 					"<<pShes>> 키스받으면서 싸버렸어! 저건 순수한 걸까 아니면 음란한 걸까?"
 				<</if>>
@@ -843,7 +843,7 @@
 			<<personselect $anustarget>>
 			<<if $orgasmdown gte 1>>
 				<<if $face is "covered">>
-					"Is <<pshe>> cumming from thinking about being kissed? Is that pure or lewd?"
+					"<<pshe>>【은는】 키스 받을 생각만으로 가버리는 건가? 그건 순수한 거야 아니면 야한 거야?"
 				<<else>>
 					"<<pShes>> 키스 받는다는 상상만으로 싸버렸어! 저건 맑은 걸까 아니면 음란한 걸까?"
 				<</if>>
@@ -1826,17 +1826,17 @@
 					<</if>>
 				<<elseif $leglocktarget isnot undefined>>
 					<<if $face is "covered">>
-						"You can hide your <<bitch>> face, but your <<bitch>> legs can't lie!"
+						"그 <<bitch>> 같은 얼굴은 숨겨도, 네 그 <<bitch>> 같은 다리는 거짓말 못 하지!"
 					<<elseif $speechCameraPose is 1>>
-						"That's it, smile for the camera while getting <<bred>>!"
+						"그래, <<bred>> 동안 카메라를 향해 웃어보라고!"
 					<<else>>
 						"착한 <<beasttype>>, 이 <<bitch>>에게 <<pher>> 분수를 가르쳐 줘. <<pShes>> 널 허락하고 있잖아."
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"Stop hiding your face and smile for the camera."
+						"얼굴 가리지 말고 카메라를 향해 웃어."
 					<<elseif $speechCameraPose is 1>>
-						"That's it, pose like the <<beasttype>> <<bitch>> you are!"
+						"그래, <<beasttype>>의 <<bitch>>답게 포즈를 취해!"
 					<<else>>
 						"착한 <<beasttype>>, 이 <<bitch>>에게 <<pher>> 분수를 가르쳐 줘."
 					<</if>>
@@ -1850,17 +1850,17 @@
 					<</if>>
 				<<elseif $leglocktarget isnot undefined>>
 					<<if $face is "covered">>
-						"Stop covering your face. <<= $position is "doggy" ? "We know you're loving this!" : "Wrap your arms around <<personselect $vaginatarget>><<him>> too!">>"
+						"얼굴 그만 가려. <<= $position is "doggy" ? "네가 이걸 좋아하는 거 다 알아!" : "<<personselect $vaginatarget>><<him>>에게 팔도 감아보라고!" >>"
 					<<elseif $speechCameraPose is 1>>
-						"That's it, smile for the camera while <<= $position is "doggy" ? "pushing into <<personselect $vaginatarget>><<him>>" : "locking your legs">> like a whore!"
+						"그래, <<= $position is "doggy" ? "<<personselect $vaginatarget>><<him>>에게 몸을 밀어붙이면서" : "다리를 감아 조이면서" >> 걸레처럼 카메라 보고 웃어!"
 					<<else>>
 						"이 걸레가 널 향해 활짝 열려 있어."
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"Stop hiding your face and smile for the camera."
+						"얼굴 가리지 말고 카메라를 향해 웃어."
 					<<elseif $speechCameraPose is 1>>
-						"That's it, pose like the slut you are!"
+						"그래, 걸레답게 포즈를 취해!"
 					<<else>>
 						"이 걸레에게 <<pshes>> 어디에 쓰이는지 똑똑히 가르쳐 줘."
 					<</if>>
@@ -1880,9 +1880,9 @@
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"Stop covering your face, I want to capture your expression when it goes in."
+						"얼굴 가리지 마, 저게 들어갈 때의 표정을 찍고 싶단 말이야."
 					<<elseif $speechCameraPose is 1>>
-						"This slut is about to be taken by a <<beasttype>> and is still concerned about looking good."
+						"이 걸레는 <<beasttype>>에게 범해지려는 와중에도 예뻐 보이려고 애쓰네."
 					<<else>>
 						"네 보지는 이제 저 <<beasttype>>의 거야."
 					<</if>>
@@ -1896,9 +1896,9 @@
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"Stop covering your face, I want to capture your expression when it goes in."
+						"얼굴 가리지 마, 저게 들어갈 때의 표정을 찍고 싶단 말이야."
 					<<elseif $speechCameraPose is 1>>
-						"I wanna see you hold that pose as the <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>> enters you."
+						"<<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>>【이가】 너에게 들어갈 때 그 포즈를 그대로 유지했으면 좋겠네."
 					<<else>>
 						"뭘 기다려? 당장 <<phim>>【을를】 박아버려."
 					<</if>>
@@ -1920,9 +1920,9 @@
 							<</if>>
 						<<else>>
 							<<if $face is "covered">>
-								"Stop covering your face, I want to capture your expression when it goes in."
+								"얼굴 가리지 마, 저게 들어갈 때의 표정을 찍고 싶단 말이야."
 							<<elseif $speechCameraPose is 1>>
-								"In good spirits for someone about to get fucked by a <<beasttype>>."
+								"<<beasttype>>에게 박히기 직전인 것치고는 기분이 좋아 보이네."
 							<<else>>
 								"네 보지는 이제 저 <<beasttype>>의 거야."
 							<</if>>
@@ -1936,9 +1936,9 @@
 							<</if>>
 						<<else>>
 							<<if $face is "covered">>
-								"Cover your face as much as you want, your $worn.genitals.name won't save you from that <<beasttype>>."
+								"얼굴은 원하는 만큼 가려도 좋아. 네 $worn.genitals.name【은는】 널 저 <<beasttype>>【으로로】부터 구해주지 못할 테니까."
 							<<elseif $speechCameraPose is 1>>
-								"Why are you teasing this poor <<beasttype>> with your $worn.genitals.name?"
+								"왜 이 불쌍한 <<beasttype>>【을를】 네 $worn.genitals.name【으로로】 애태우는 거야?"
 							<<else>>
 								"저 <<beasttype>>【은는】 이 $worn.genitals.name 아래에서 박고 싶은 냄새를 맡은 게 분명해."
 							<</if>>
@@ -1953,9 +1953,9 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"<<pShe>> can hide <<pher>> face, I'm more interested in seeing that <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>> fuck whatever <<pshe>> has under <<pher>> <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>>."
+							"<<pShe>>【은는】 <<pher>> 얼굴을 가릴 수 있겠지. 난 그보다 저 <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>>【이가】 <<pshe>>【이가】 <<pher>> <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>> 아래에 숨긴 걸 박는 걸 보고 싶어."
 						<<elseif $speechCameraPose is 1>>
-							"Now, present whatever you have under <<if _bottom.plural>>these<<else>>this<</if>> <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>>."
+							"자, <<if _bottom.plural>>이<<else>>이<</if>> <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>> 아래에 있는 게 뭐든 간에 어서 내보여 봐."
 						<<else>>
 							"<<pher>> 옷을 비비는 저 <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>>【이가】 어디로 향할지 너무 기대돼."
 						<</if>>
@@ -1972,9 +1972,9 @@
 							<</if>>
 						<<else>>
 							<<if $face is "covered">>
-								"Stop covering your face, I want to capture your expression when it goes in."
+								"얼굴 가리지 마, 저게 들어갈 때의 표정을 찍고 싶단 말이야."
 							<<elseif $speechCameraPose is 1>>
-								"I hope <<pshe>> holds that pose as it goes in."
+								"저게 들어갈 때 <<pshe>>【이가】 이 포즈를 유지했으면 좋겠어."
 							<<else>>
 								"뭘 기다려? 당장 <<phim>>【을를】 박아버려."
 							<</if>>
@@ -1988,9 +1988,9 @@
 							<</if>>
 						<<else>>
 							<<if $face is "covered">>
-								"<<pShe>> isn't looking! Take advantage and get into this $worn.genitals.name."
+								"<<pShe>>【은는】 보지 못하고 있어! 이 틈을 타서 저 $worn.genitals.name 안으로 들어가."
 							<<elseif $speechCameraPose is 1>>
-								"Are you some kind of <<if $player.virginity.penile is true and $player.virginity.vaginal is true>>virgin<<else>>pure<</if>> harlot? Not for long, your $worn.genitals.name is ready to break."
+								"너 무슨 <<if $player.virginity.penile is true and $player.virginity.vaginal is true>>처녀<<else>>순결한<</if>> 창녀 같은 거니? 머지않아 네 $worn.genitals.name【이가】 부서질 테니 그 순결도 오래가지 못하겠지만."
 							<<else>>
 								"이 $worn.genitals.name 아래에 박을 만한 게 있을까? 확인할 방법은 하나뿐이지."
 							<</if>>
@@ -2005,9 +2005,9 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"<<pShe>> can hide <<pher>> face, I'm more interested in seeing that <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>> fuck whatever <<pshe>> has under <<pher>> <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>>."
+							"<<pShe>>【은는】 <<pher>> 얼굴을 가릴 수 있겠지. 난 그보다 저 <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>>【이가】 <<pshe>>【이가】 <<pher>> <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>> 아래에 숨긴 걸 박는 걸 보고 싶어."
 						<<elseif $speechCameraPose is 1>>
-							"Now, present whatever you have under <<if _bottom.plural>>these<<else>>this<</if>> <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>>."
+							"자, <<if _bottom.plural>>이<<else>>이<</if>> <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>> 아래에 있는 게 뭐든 간에 어서 내보여 봐."
 						<<else>>
 							"<<pher>> 옷을 비비는 저 <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>>【이가】 어디로 향할지 너무 기대돼."
 						<</if>>
@@ -2030,9 +2030,9 @@
 							<</if>>
 						<<else>>
 							<<if $face is "covered">>
-								"Stop covering your face, I want to capture your expression when both <<penises>> go in."
+								"얼굴 가리지 마, 저 두 개의 <<penises>>【이가】 들어갈 때의 표정을 찍고 싶단 말이야."
 							<<elseif $speechCameraPose is 1>>
-								"I'd like to see <<phim>> keep this pose when both <<penises>> go in."
+								"<<phim>>【이가】 저 두 개의 <<penises>>【이가】 들어갈 때도 이 포즈를 유지했으면 좋겠어."
 							<<else>>
 								"뭘 기다려? 당장 <<phim>>【을를】 박아버려."
 							<</if>>
@@ -2045,9 +2045,9 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"Poor thing, <<pshe>> can't bear the sight of two <<penises>> savagely destroying <<pher>> $worn.genitals.name."
+							"가엾게도, 두 개의 <<penises>>【이가】 <<pher>> $worn.genitals.name【을를】 잔인하게 파괴하는 걸 견디지 못하겠나 봐."
 						<<elseif $speechCameraPose is 1>>
-							"Do you think you're smart? These two <<penises>> will make short work of your $worn.genitals.name."
+							"네가 똑똑하다고 생각하는 거야? 이 두 개의 <<penises>>【은는】 네 $worn.genitals.name【을를】 금방 박살 낼 거야."
 						<<else>>
 							"이 <<penises>> 아래에서 <<pher>> $worn.genitals.name【이가】 마침내 부서질 때의 표정을 찍고 싶어."
 						<</if>>
@@ -2061,9 +2061,9 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"You're no fun, have a look at these two <<penises>> stroking your <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>>."
+							"재미없게 왜 이래, 저 두 개의 <<penises>>【이가】 쓰다듬고 있는 네 <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>> 좀 보라고."
 						<<elseif $speechCameraPose is 1>>
-							"I'm immortalising your willingness to welcome two <<penises>>."
+							"두 개의 <<penises>>【을를】 받아들이려는 네 간절한 모습을 영원히 기록하고 있어."
 						<<else>>
 							"저 두 개의 <<penises>>【이가】 <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>> 아래에 있는 걸 만나고 싶어 안달난 거 보여?"
 						<</if>>
@@ -2080,9 +2080,9 @@
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"Stop covering your face, I want to capture your expression when both <<penises>> go in."
+						"얼굴 가리지 마, 저 두 개의 <<penises>>【이가】 들어갈 때의 표정을 찍고 싶단 말이야."
 					<<elseif $speechCameraPose is 1>>
-						"Just the thought of a double dicking is making this slut lose <<pher>> mind."
+						"이 걸레는 더블 페네트레이션을 생각하는 것만으로 이성을 잃고 있어."
 					<<else>>
 						"뭘 기다려? 당장 <<phim>>【을를】 더블 퍽으로 박아버려."
 					<</if>>
@@ -2101,9 +2101,9 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"Stop hiding your face and smile for the camera."
+					"얼굴 가리지 말고 카메라를 향해 웃어."
 				<<elseif $speechCameraPose is 1>>
-					"That's it, pose like a <<slut>> while that <<npcVagina>> ravages you."
+					"그래, 저 <<npcVagina>>【이가】 널 범할 때 <<slut>>답게 포즈를 취해봐."
 				<<else>>
 					"이 육변기에게 <<pshes>> 어디에 쓰이는지 똑똑히 가르쳐 줘."
 				<</if>>
@@ -2121,9 +2121,9 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"Stop covering your face, I want to capture your expression when it goes in."
+					"얼굴 가리지 마, 저게 들어갈 때의 표정을 찍고 싶단 말이야."
 				<<elseif $speechCameraPose is 1>>
-					"Fuck <<phim>> now, while <<pshes>> posing like a <<slut>>."
+					"<<pshes>> <<slut>>처럼 포즈를 취하고 있을 때 당장 <<phim>>【을를】 박아버려."
 				<<else>>
 					"뭘 기다려? 당장 <<phim>>【을를】 박아버려."
 				<</if>>
@@ -2137,16 +2137,16 @@
 				<<if (!playerChastity("hidden","penis") or playerHasStrapon())>>
 					<<if $orgasmdown gte 1>>
 						<<if $face is "covered">>
-							"<<pHer>> <<if random(1, 4) is 1>><<penis>><<else>><<penisSimple>><</if>> isn't being fucked, yet <<pshes>> still cumming."
+							"<<pHer>> <<if random(1, 4) is 1>><<penis>><<else>><<penisSimple>><</if>>【은는】 아직 박히지도 않았는데, <<pshes>> 벌써 절정을 느끼고 있어."
 						<<elseif $speechCameraPose is 1>>
 						<<else>>
 							"이제 도망칠 곳은 없어, 이 걸레야."
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"Stop covering your face, I want to capture your expression when it goes in."
+							"얼굴 가리지 마, 저게 들어갈 때의 표정을 찍고 싶단 말이야."
 						<<elseif $speechCameraPose is 1>>
-							"That's it, make sure you give a good fucking."
+							"그래, 제대로 박아줘."
 						<<else>>
 							"뭘 기다려? 당장 <<phim>>【을를】 박아버려."
 						<</if>>
@@ -2160,9 +2160,9 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"Why are you hiding? You can't bear the sight of your $worn.genitals.name getting broken?"
+							"왜 숨는 거야? 네 $worn.genitals.name【이가】 망가지는 모습을 도저히 못 보겠어?"
 						<<elseif $speechCameraPose is 1>>
-							"Such a naughty <<girl>>, teasing <<him>> with a $worn.genitals.name."
+							"이런 앙큼한 <<girl>> 같으니, $worn.genitals.name【으로로】 <<him>>【을를】 애태우다니."
 						<<else>>
 							"저게 움직이는 걸 봤어! 이 $worn.genitals.name 아래에 감춰진 보물이 드러나기까지 이제 1인치 남았군."
 						<</if>>
@@ -2177,9 +2177,9 @@
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"You should give a better look at that ?vulva, since you will soon get acquainted."
+						"저 ?vulva【을를】 더 잘 봐두는 게 좋을걸, 곧 친해질 테니까."
 					<<elseif $speechCameraPose is 1>>
-						"Now I have all the evidence that <<pshe>> is ready and willing."
+						"이제 <<pshe>>【이가】 만반의 준비가 되어 있다는 증거는 다 모았어."
 					<<else>>
 						"저 <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>>에 키스하는 네 ?vulva 모습이 참 예쁘네."
 					<</if>>
@@ -2198,9 +2198,9 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"<<pShes>> so shy and cute."
+					"<<pShes>> 너무 부끄러워하고 귀엽다."
 				<<elseif $speechCameraPose is 1>>
-					"This fucktoy knows what <<pshes>> good for."
+					"이 육변기는 <<pshes>> 어디에 쓰이는지 아주 잘 알고 있네."
 				<<else>>
 					"이 육변기에게 <<pshes>> 어디에 쓰이는지 똑똑히 가르쳐 줘."
 				<</if>>
@@ -2218,9 +2218,9 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"Stop covering your face, I want to capture your expression when it goes in."
+					"얼굴 가리지 마, 저게 들어갈 때의 표정을 찍고 싶단 말이야."
 				<<elseif $speechCameraPose is 1>>
-					"I wonder if <<pshe>>'ll be able to hold this pose as it goes in."
+					"저게 들어갈 때 <<pshe>>【이가】 이 포즈를 유지할 수 있을지 궁금하네."
 				<<else>>
 					"뭘 기다려? 당장 <<phim>>【을를】 박아버려."
 				<</if>>
@@ -2240,9 +2240,9 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"Stop covering your face, I want to capture your expression when it goes in."
+							"얼굴 가리지 마, 저게 들어갈 때의 표정을 찍고 싶단 말이야."
 						<<elseif $speechCameraPose is 1>>
-							"That's the look of an eager slut, if I've ever seen one."
+							"내가 여태껏 본 것 중에 가장 안달난 걸레의 표정이네."
 						<<else>>
 							"뭘 기다려? 당장 <<phim>>【을를】 박아버려."
 						<</if>>
@@ -2256,9 +2256,9 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"You don't want to be photographed? Maybe you're ashamed of your $worn.genitals.name?"
+							"사진 찍히기 싫어? 어쩌면 네 $worn.genitals.name【이가】 부끄러워서 그런 거 아냐?"
 						<<elseif $speechCameraPose is 1>>
-							"Just wait a moment, then you'll be free from this $worn.genitals.name and will play with that <<print either("ass", "ass", "butt")>>."
+							"조금만 참아, 곧 이 $worn.genitals.name【으로로】부터 풀려나서 그 <<print either("엉덩이", "엉덩이", "엉덩이")>>【와과】 놀게 될 테니까."
 						<<else>>
 							"<<pher>> $worn.genitals.name 위에서 뛰는 게 기분 좋은가 봐."
 						<</if>>
@@ -2273,9 +2273,9 @@
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"Can anyone hold <<pher>> face in clear view? I want a picture while <<pshe>> still has some clothes on."
+						"누가 <<pher>> 얼굴 좀 선명하게 보이게 잡아줄래? <<pshe>> 아직 옷을 좀 입고 있을 때 사진을 찍고 싶거든."
 					<<elseif $speechCameraPose is 1>>
-						"<<pShe>> is clearly enjoying this dance."
+						"<<pShe>>【은는】 이 춤을 확실히 즐기고 있네."
 					<<else>>
 						"뭘 기다려? <<pher>> <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>>【을를】 벗겨버려."
 					<</if>>
@@ -2296,7 +2296,7 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"Don't you like the feeling of your <<pussies>> joined together?"
+							"너희들의 <<pussies>>【이가】 맞닿은 느낌이 마음에 안 들어?"
 						<<elseif $speechCameraPose is 1>>
 							<<if ["kissentrance","kissimminent","kiss"].includes($mouthstate) and $moutharget is $vaginatarget>>
 								"정말 낭만적이네, 자기들의 <<pussies>>【이가】 키스하는 동안 둘이 입을 맞추고 있어."
@@ -2316,9 +2316,9 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"Why are you hiding? You can't bear the sight of your $worn.genitals.name getting broken?"
+							"왜 숨는 거야? 네 $worn.genitals.name【이가】 망가지는 모습을 도저히 못 보겠어?"
 						<<elseif $speechCameraPose is 1>>
-							"Such a naughty <<girl>>, teasing <<him>> with a $worn.genitals.name."
+							"이런 앙큼한 <<girl>> 같으니, $worn.genitals.name【으로로】 <<him>>【을를】 애태우다니."
 						<<else>>
 							"나 방금 움직이는 거 봤어! 이 $worn.genitals.name 아래의 보물이 드러나기 일보 직전이야."
 						<</if>>
@@ -2333,9 +2333,9 @@
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"You should give a better look at that ?vulva, since you will soon get acquainted."
+						"저 ?vulva【을를】 더 잘 봐두는 게 좋을걸, 곧 친해질 테니까."
 					<<elseif $speechCameraPose is 1>>
-						"Now I have all the evidence that <<pshe>> is ready and willing."
+						"이제 <<pshe>>【이가】 만반의 준비가 되어 있다는 증거는 다 모았어."
 					<<else>>
 						"저 <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>>에 입 맞추고 있는 네 ?vulva, 아주 보기 좋네."
 					<</if>>
@@ -2356,7 +2356,7 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"Don't you like the feeling of your <<if npcHasStrapon($penistarget)>>strap-ons<<else>><<penises>><</if>> grinding together?"
+							"너희들의 <<if npcHasStrapon($penistarget)>>페니스 밴드<<else>><<penises>><</if>>【이가】 서로 비벼지는 느낌이 맘에 들지 않아?"
 						<<elseif $speechCameraPose is 1>>
 							<<if ["kissentrance","kissimminent","kiss"].includes($mouthstate) and $moutharget is $vaginatarget>>
 								"정말 낭만적이야, 쟤들 <<if npcHasStrapon($penistarget)>>페니스 밴드<<else>><<penises>><</if>>【이가】 키스하는 와중에도 서로 쪽쪽거리고 있어."
@@ -2376,7 +2376,7 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"Don't you like the feeling of your <<penises>> joined together?"
+							"너희들의 <<penises>>【이가】 하나로 결합된 느낌, 맘에 들지 않아?"
 						<<elseif $speechCameraPose is 1>>
 							<<if ["kissentrance","kissimminent","kiss"].includes($mouthstate) and $moutharget is $vaginatarget>>
 								"정말 낭만적이야, 쟤들 <<penises>>【이가】 키스하는 와중에도 서로 쪽쪽거리고 있어."
@@ -2396,9 +2396,9 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"<<pShe>> isn't looking! Take advantage and get into this $worn.genitals.name."
+							"<<pShe>>【은는】 보지 못하고 있어! 이 틈을 타서 저 $worn.genitals.name 안으로 들어가."
 						<<elseif $speechCameraPose is 1>>
-							"Are you some kind of <<if $player.virginity.penile is true and $player.virginity.vaginal is true>>virgin<<else>>pure<</if>> harlot? Not for long, your $worn.genitals.name is ready to break."
+							"너 무슨 <<if $player.virginity.penile is true and $player.virginity.vaginal is true>>처녀<<else>>순결한<</if>> 창녀 같은 거니? 머지않아 네 $worn.genitals.name【이가】 부서질 테니 그 순결도 오래가지 못하겠지만."
 						<<else>>
 							"이 $worn.genitals.name 아래에 박을 만한 게 있을까? 알아볼 방법은 하나뿐이지."
 						<</if>>
@@ -2413,9 +2413,9 @@
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"<<pShe>> can hide <<pher>> face, I'm more interested in seeing that <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>> fuck whatever <<pshe>> has under <<pher>> <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>>."
+						"<<pShe>>【은는】 <<pher>> 얼굴을 가릴 수 있겠지. 난 그보다 저 <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>>【이가】 <<pshe>>【이가】 <<pher>> <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>> 아래에 숨긴 걸 박는 걸 보고 싶어."
 					<<elseif $speechCameraPose is 1>>
-						"Now, present whatever you have under <<if _bottom.plural>>these<<else>>this<</if>> <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>>."
+						"자, <<if _bottom.plural>>이<<else>>이<</if>> <<if _bottom.name_simple isnot undefined>>_bottom.name_simple<<else>>_bottom.name<</if>> 아래에 있는 게 뭐든 간에 어서 내보여 봐."
 					<<else>>
 						"<<pher>> 옷을 쓰다듬던 저 <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>>【이가】 어디로 갈지 벌써부터 기대되네."
 					<</if>>
@@ -2435,17 +2435,17 @@
 					<</if>>
 				<<elseif $leglocktarget isnot undefined>>
 					<<if $face is "covered">>
-						"Good <<beasttype>>. Don't stop until <<pshe>> can't stand."
+						"착한 <<beasttype>>. <<pshe>>【이가】 제대로 일어서지 못할 때까지 멈추지 마."
 					<<elseif $speechCameraPose is 1>>
-						"This <<bitch>> knows where <<pshe>> belongs: with <<beasttype>> <<npcPenisSimple>> in <<pher>> <<print either("ass", "ass", "butt")>>."
+						"이 <<bitch>>【은는】 자신이 어디 있어야 할지 알아. <<beasttype>> <<npcPenisSimple>>【이가】 <<pher>> <<print either("엉덩이", "엉덩이", "궁둥이")>>에 박힌 채로 말이야."
 					<<else>>
 						"착한 <<beasttype>>, 이 <<bitch>>에게 자기 분수를 가르쳐 줘. <<pShes>>【은는】 너한테 내어주고 있잖아."
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"Good <<beasttype>>, fuck this <<bitch>> hard."
+						"착한 <<beasttype>>, 이 <<bitch>>【을를】 거칠게 박아."
 					<<elseif $speechCameraPose is 1>>
-						"That's the look of an eager <<bitch>>, if I've ever seen one."
+						"저게 바로 발정 난 <<bitch>>의 표정이야. 정말 노골적이네."
 					<<else>>
 						"착한 <<beasttype>>, 이 <<girl>>에게 자기 위치를 가르쳐 줘."
 					<</if>>
@@ -2459,17 +2459,17 @@
 					<</if>>
 				<<elseif $leglocktarget isnot undefined>>
 					<<if $face is "covered">>
-						"Fuck <<pher>> <<print either("ass", "ass", "butt")>> until <<pshe>> goes limp!"
+						"<<pshe>>【이가】 늘어질 때까지 <<pher>> <<print either("엉덩이", "엉덩이", "궁둥이")>>【을를】 박아버려!"
 					<<elseif $speechCameraPose is 1>>
-						"That's it, smile for the camera while <<= $position is "doggy" ? "pushing against <<personselect $anustarget>><<him>>" : "locking your legs">>!"
+						"그래, <<= $position is "doggy" ? "<<personselect $anustarget>><<him>>에게 몸을 밀어붙이면서" : "다리를 감아 조이면서" >> 카메라를 보고 웃어!"
 					<<else>>
 						"<<phim>>【을를】 더 세게 유린해. <<pshe>>【이가】 싫어할 거 같진 않으니까."
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"Fuck <<phim>> harder!"
+						"<<phim>>【을를】 더 세게 박아!"
 					<<elseif $speechCameraPose is 1>>
-						"That's the look of an eager <<slut>>, if I've ever seen one."
+						"저게 바로 발정 난 <<slut>>의 표정이야. 정말 노골적이네."
 					<<else>>
 						"이 <<girl>>의 <<print either("엉덩이", "엉덩이", "궁둥이")>>【을를】 계속 엉망으로 만들어, 사진을 더 찍고 싶어."
 					<</if>>
@@ -2489,9 +2489,9 @@
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"Move your hands, I want to see your expression when your <<print either("ass", "ass", "butt")>> is violated."
+						"손 치워, 네 <<print either("엉덩이", "엉덩이", "궁둥이")>>【이가】 유린당할 때의 그 표정을 보고 싶으니까."
 					<<elseif $speechCameraPose is 1>>
-						"Look at how eager this <<bitch>> is."
+						"이 <<bitch>>【이가】 얼마나 발정 났는지 봐봐."
 					<<else>>
 						"착한 <<beasttype>>, <<phim>>【을를】 네 <<bitch>>【으로로】 만들어버려."
 					<</if>>
@@ -2505,9 +2505,9 @@
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"Move your hands, I want to see your expression when your <<print either("ass", "ass", "butt")>> is violated."
+						"손 치워, 네 <<print either("엉덩이", "엉덩이", "궁둥이")>>【이가】 유린당할 때의 그 표정을 보고 싶으니까."
 					<<elseif $speechCameraPose is 1>>
-						"Will you still be so confident with that thing inside you, I wonder?"
+						"네 안에 그 물건을 박아 넣고도 계속 그렇게 당당할 수 있을까? 궁금하네."
 					<<else>>
 						"<<phim>>【을를】 박아서, 몸부림치게 만들어."
 					<</if>>
@@ -2527,9 +2527,9 @@
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"A good fucking will teach this <<bitch>> <<pher>> place."
+						"제대로 한번 박아주면 이 <<bitch>>도 자기 분수를 알게 되겠지."
 					<<elseif $speechCameraPose is 1>>
-						"I love how confident this <<bitch>> is."
+						"이 <<bitch>>의 그 자신만만한 태도, 맘에 쏙 드네."
 					<<else>>
 						"저게 <<phim>>【을를】 박아버릴 거 같아. 빨리 사진으로 남기고 싶어 미치겠어."
 					<</if>>
@@ -2543,9 +2543,9 @@
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"This <<girl>> needs to learn <<pher>> place."
+						"이 <<girl>>【은는】 자기 분수를 알 필요가 있어."
 					<<elseif $speechCameraPose is 1>>
-						"I love how confident this slut is."
+						"이 창녀의 그 자신만만한 태도, 맘에 쏙 드네."
 					<<else>>
 						"<<phim>>【을를】 박아서, 몸부림치게 만들어."
 					<</if>>
@@ -2564,7 +2564,7 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"Fuck <<phim>> harder! This <<bitch>> can take both of you!"
+					"<<phim>>【을를】 더 세게 박아! 이 <<bitch>>【은는】 너희 둘 다 감당할 수 있으니까!"
 				<<elseif $speechCameraPose is 1>>
 					"What a champ."
 				<<else>>
@@ -2585,9 +2585,9 @@
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"I doubt the <<beasttype>> cares which hole it fucks."
+						"저 <<beasttype>>【은는】 어느 구멍에 박든 상관 안 할 거 같네."
 					<<elseif $speechCameraPose is 1>>
-						"This <<bitch>> is addicted to <<beasttype>> cum, look at <<phim>>."
+						"이 <<bitch>>【은는】 <<beasttype>> 정액에 단단히 중독됐어. <<phim>>【을를】 보라고."
 					<<else>>
 						"<<beasttype>> <<npcPenisSimple>> 맛이 마음에 쏙 들지? 그렇지?"
 					<</if>>
@@ -2601,9 +2601,9 @@
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"No hole is off-limits."
+						"뚫지 못할 구멍은 없지."
 					<<elseif $speechCameraPose is 1>>
-						"Bet you can't wait for that tasty cum."
+						"빨리 그 달콤한 정액을 맛보고 싶어 미치겠지."
 					<<else>>
 						"그 <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>>【이가】 그렇게 맛있어? 입에 잔뜩 물고 있으니 대답할 필욘 없어."
 					<</if>>
@@ -2623,9 +2623,9 @@
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"Don't stop there, show this <<bitch>> how much <<pshes>> worth."
+						"거기서 멈추지 마, 이 <<bitch>>에게 자기 가치가 어느 정돈지 확실히 가르쳐주라고."
 					<<elseif $speechCameraPose is 1>>
-						"Go on, suck it!"
+						"계속해, 빨아버려!"
 					<<else>>
 						"이 <<bitch>>【이가】 입안 가득 채워지는 모습을 보고 싶어."
 					<</if>>
@@ -2639,9 +2639,9 @@
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"Don't stop there, show this <<bitch>> how much <<pshes>> worth."
+						"거기서 멈추지 마, 이 <<bitch>>에게 자기 가치가 어느 정돈지 확실히 가르쳐주라고."
 					<<elseif $speechCameraPose is 1>>
-						"Don't blow your load before getting it in, this <<bitch>> is thirsty."
+						"넣기도 전에 싸지 마, 이 <<bitch>>【은는】 지금 몹시 목마르거든."
 					<<else>>
 						"이 <<bitch>>【이가】 입안 가득 채워지는 모습을 보고 싶어."
 					<</if>>
@@ -2661,9 +2661,9 @@
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"Don't stop there, show this <<bitch>> how much <<pshes>> worth."
+						"거기서 멈추지 마, 이 <<bitch>>에게 자기 가치가 어느 정돈지 확실히 가르쳐주라고."
 					<<elseif $speechCameraPose is 1>>
-						"What an absolute piece of fuckmeat."
+						"정말 끝내주는 고기구멍이네."
 					<<else>>
 						"이 <<bitch>>【이가】 입안 가득 채워지는 모습을 보고 싶어."
 					<</if>>
@@ -2677,9 +2677,9 @@
 					<</if>>
 				<<else>>
 					<<if $face is "covered">>
-						"Don't stop there, show this <<bitch>> how much <<pshes>> worth."
+						"거기서 멈추지 마, 이 <<bitch>>에게 자기 가치가 어느 정돈지 확실히 가르쳐주라고."
 					<<elseif $speechCameraPose is 1>>
-						"You can't wait for that tasty <<npcPenisSimple>>, can you?"
+						"그 맛있는 <<npcPenisSimple>>【을를】 빨리 빨고 싶어서 못 참겠지?"
 					<<else>>
 						"이 <<bitch>>【이가】 입안 가득 채워지는 모습을 보고 싶어."
 					<</if>>
@@ -2735,9 +2735,9 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"That's it, put <<pher>> mouth to work."
+					"그렇지, <<pher>> 입을 굴리게 해."
 				<<elseif $speechCameraPose is 1>>
-					"Look at <<phim>> putting on a good face."
+					"<<phim>>【이가】 태연한 척하는 표정 좀 봐."
 				<<else>>
 					"그 ?vulva【이가】 맛있어? 입에 물고 있으니 굳이 대답할 필요는 없어."
 				<</if>>
@@ -2755,9 +2755,9 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"Don't stop there, show this <<bitch>> how much <<pshes>> worth."
+					"거기서 멈추지 마, 이 <<bitch>>에게 자기 가치가 어느 정돈지 확실히 가르쳐주라고."
 				<<elseif $speechCameraPose is 1>>
-					"This <<bitch>> looks like a right tart."
+					"이 <<bitch>>【은는】 진짜 싸구려 창녀 같아 보이네."
 				<<else>>
 					"<<pher>> 그 발정난 입을 굴리게 만들어."
 				<</if>>
@@ -2775,9 +2775,9 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"Don't stop there, show this <<bitch>> how much <<pshes>> worth."
+					"거기서 멈추지 마, 이 <<bitch>>에게 자기 가치가 어느 정돈지 확실히 가르쳐주라고."
 				<<elseif $speechCameraPose is 1>>
-					"Bet you'll like the taste."
+					"그 맛, 틀림없이 좋아하게 될걸."
 				<<else>>
 					"<<pher>> 그 발정난 입을 굴리게 만들어."
 				<</if>>
@@ -2795,9 +2795,9 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"<<pShes>> shy about having <<pher>> dick sucked, how cute."
+					"<<pShes>>【은는】 자기 자지를 빨리는 걸 부끄러워하고 있네. 정말 귀여워."
 				<<elseif $speechCameraPose is 1>>
-					"Look at <<phim>> love it."
+					"<<phim>>【이가】 얼마나 좋아하는지 봐."
 				<<else>>
 					"카메라를 향해 웃어봐, <<girl>>. 네 <<if random(1, 4) is 1>><<penis>><<else>><<penisSimple>><</if>>【을를】 빨리는 걸 기뻐해야지."
 				<</if>>
@@ -2815,9 +2815,9 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"Lick <<phim>> good and proper."
+					"<<phim>>【을를】 제대로 핥아줘."
 				<<elseif $speechCameraPose is 1>>
-					"I bet <<pshe>>'ll look even cuter when cumming."
+					"<<pshe>>【은는】 절정할 때 훨씬 귀여워질 거라고 장담해."
 				<<else>>
 					"<<phim>>【이가】 네 얼굴에 사정하는 멋진 사진을 건질 수 있으면 좋겠네."
 				<</if>>
@@ -2835,9 +2835,9 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"Lick <<phim>> good and proper."
+					"<<phim>>【을를】 제대로 핥아줘."
 				<<elseif $speechCameraPose is 1>>
-					"Lick <<phim>> dry."
+					"<<phim>>【을를】 바싹 마르도록 핥아버려."
 				<<else>>
 					"<<phim>>【이가】 네 얼굴에 사정하는 멋진 사진을 건질 수 있으면 좋겠네."
 				<</if>>
@@ -2855,9 +2855,9 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"Yes, smash those <<penises>> together!"
+					"좋아, 그 <<penises>>【을를】 맞대고 짓이겨버려!"
 				<<elseif $speechCameraPose is 1>>
-					"It's nice to see you pose."
+					"네가 포즈를 취해주니 보기 좋네."
 				<<else>>
 					"<<phim>>【이가】 저 <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>> 위에 정액을 싸지르는 장면을 잘 찍을 수 있으면 좋겠어!"
 				<</if>>
@@ -2875,9 +2875,9 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"I can't get a clear shot of <<pher>> face with <<pher>> hands in the way."
+					"<<pher>> 손이 가리고 있어서 얼굴을 제대로 찍을 수가 없잖아."
 				<<elseif $speechCameraPose is 1>>
-					"Not even embarrassed!"
+					"전혀 부끄러운 기색도 없네!"
 				<<else>>
 					"이 창녀의 근사한 사진이 하나 더 생겼네."
 				<</if>>
@@ -2895,9 +2895,9 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"I don't know what you think covering your face achieves."
+					"얼굴을 가린다고 무슨 소용이 있겠냐만."
 				<<elseif $speechCameraPose is 1>>
-					"Great pose."
+					"포즈 아주 좋아."
 				<<else>>
 					"<<phim>>【을를】 핥아버릴 셈이야? 그 사진은 꼭 필요해."
 				<</if>>
@@ -2915,9 +2915,9 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"I don't know what you think covering your face achieves."
+					"얼굴을 가린다고 무슨 소용이 있겠냐만."
 				<<elseif $speechCameraPose is 1>>
-					"Keep that pose while you're licked out."
+					"네가 핥아지는 동안, 그 자세 그대로 유지해."
 				<<else>>
 					"<<phim>>【을를】 핥아버릴 셈이야? 그 사진은 꼭 필요해."
 				<</if>>
@@ -2935,9 +2935,9 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"How cute and romantic."
+					"정말 귀엽고 낭만적이야."
 				<<elseif $speechCameraPose is 1>>
-					"This <<girl>> loves that kiss."
+					"이 <<girl>>【은는】 그 키스를 정말 좋아하는 모양이네."
 				<<else>>
 					"키스라니... 어쩜 이리 낭만적일까."
 				<</if>>
@@ -2955,9 +2955,9 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"How cute and romantic."
+					"정말 귀엽고 낭만적이야."
 				<<elseif $speechCameraPose is 1>>
-					"This kiss will look so cute."
+					"이 키스는 정말 귀여워 보일 거야."
 				<<else>>
 					"키스라니... 어쩜 이리 낭만적일까."
 				<</if>>
@@ -2975,7 +2975,7 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"How cute and romantic."
+					"정말 귀엽고 낭만적이야."
 				<<elseif $speechCameraPose is 1>>
 					"What a pro."
 				<<else>>
@@ -2994,9 +2994,9 @@
 				<</if>>
 			<<else>>
 				<<if $face is "covered">>
-					"The pregnant slut is shy!"
+					"임신한 창녀가 부끄러움도 타네!"
 				<<elseif $speechCameraPose is 1>>
-					"I feel so bad for <<pher>> baby daddy."
+					"<<pher>> 애 아빠가 정말 불쌍할 정도야."
 				<<else>>
 					"저 부른 배 사진 잘 나왔네."
 				<</if>>
@@ -3013,7 +3013,7 @@
 				<<if $mouthstate is "kissentrance" and $player.virginity.kiss is true>>
 					<<addinlineevent "" 12>>
 					<<if $speechCameraPose is 1>>
-						"How kind, gifting your first kiss for Christmas."
+						"크리스마스에 네 첫 키스를 선물하다니, 참 상냥하기도 해라."
 					<<else>>
 						"겨우살이 밑이잖아? 핑계 댈 생각 말고 <<him>>에게 네 첫 키스를 내놔."
 					<</if>>
@@ -3022,7 +3022,7 @@
 				<<if ["kiss","kissimminent"].includes($mouthstate)>>
 					<<addinlineevent "" 3>>
 					<<if $speechCameraPose is 1>>
-						"Hold still! A kiss under the mistletoe deserves a photo."
+						"가만히 있어! 겨우살이 아래에서의 키스는 사진으로 남길 가치가 충분하니까."
 					<<else>>
 						"네가 원하든 원하지 않든, 이 키스는 <<his>> 크리스마스 선물이야."
 					<</if>>
@@ -3062,9 +3062,9 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"Too ashamed to look at your own valentine."
+							"자기 발렌타인 데이트 상대를 보기도 너무 부끄러운 거야?"
 						<<elseif $speechCameraPose is 1>>
-							"Hold still. A kiss with your soon-to-be valentine deserves a photo."
+							"가만히 있어. 곧 발렌타인이 될 사람과의 키스는 사진으로 남겨야지."
 						<<else>>
 							"카메라를 향해, 그리고 네 발렌타인 데이트 상대를 위해 웃어야지."
 						<</if>>
@@ -3081,9 +3081,9 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"You waited for Valentine's for your first kiss, and still can't face it?"
+							"첫 키스를 발렌타인데이까지 기다려놓고선 여전히 감당이 안 돼?"
 						<<elseif $speechCameraPose is 1>>
-							"Hold that pose, I'm taking a photo of your first Valentine's kiss."
+							"포즈 유지해, 네 첫 발렌타인 키스를 사진으로 찍고 있으니까."
 						<<else>>
 							"네 첫 발렌타인데이 키스는 아주 좋은 구경거리가 되겠네."
 						<</if>>
@@ -3100,9 +3100,9 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"At least pretend you like your valentine."
+							"최소한 네 발렌타인 데이트 상대를 좋아하는 척이라도 해."
 						<<elseif $speechCameraPose is 1>>
-							"What a <<slut>>, <<pshes>> proudly showing off <<pher>> Valentine's kiss."
+							"정말 <<slut>>【이가】 따로 없네. 자랑스럽게 자기 발렌타인 데이트 상대를 과시하고 있잖아."
 						<<else>>
 							"발렌타인데이 키스라니, 정말 로맨틱해!"
 						<</if>>
@@ -3120,9 +3120,9 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"Shy about your future Valentine? Why, look at that handsome <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>>."
+							"미래의 발렌타인 데이트 상대가 부끄러워? 왜 이래, 저렇게 잘생긴 <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>>【을를】 보라고."
 						<<elseif $speechCameraPose is 1>>
-							"Pose nicely before sucking on that <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>>: that's as romantic as Valentine's will get for you."
+							"저 <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>>【을를】 빨기 전에 예쁘게 포즈나 취해. 너한테 허락된 가장 낭만적인 발렌타인데이는 이게 전부니까."
 						<<else>>
 							"발렌타인데이에 <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>>에게 키스하다니 정말 수치스럽지. 이거 완전 물건이네."
 						<</if>>
@@ -3140,9 +3140,9 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"Your first Valentine's kiss is to <<if random(1, 10) is 1>>a <<npcPenis>><<else>>that <<npcPenisSimple>><</if>>, and you can't even face the camera. I wonder why."
+							"네 첫 발렌타인데이 키스 상대는 저 <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>>인데, 넌 카메라도 쳐다보지 못하는구나. 이유가 뭘까."
 						<<elseif $speechCameraPose is 1>>
-							"<<pShes>> trying so hard to look worthy of <<pher>> first kiss on valentine's, even if it's with <<if random(1, 10) is 1>>a <<npcPenis>><<else>>that <<npcPenisSimple>><</if>>."
+							"<<pShes>>【은는】 발렌타인데이에 첫 키스를 할 자격이 있는 것처럼 보이려 애쓰고 있어. 비록 그 상대가 저 <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>>라 할지라도 말이야."
 						<<else>>
 							"기억에 남을 첫 발렌타인데이 키스라지만, 안타깝게도 상대는 <<if random(1, 10) is 1>><<npcPenis>><<else>><<npcPenisSimple>><</if>>【이가】 될 거야."
 						<</if>>
@@ -3160,9 +3160,9 @@
 						<</if>>
 					<<else>>
 						<<if $face is "covered">>
-							"We deserve to see your face during such an original Valentine's kiss."
+							"이렇게나 특별한 발렌타인데이 키스를 나누는 순간의 네 얼굴, 우리가 볼 자격은 충분하잖아."
 						<<elseif $speechCameraPose is 1>>
-							"Believing <<pshes>> kissing <<pher>> valentine is the last thing keeping <<pher>> sanity."
+							"<<pshes>>【이가】 스스로 발렌타인 데이트 상대와 키스하고 있다고 믿는 것이, 그나마 <<pher>> 이성을 유지해 주는 마지막 끈이야."
 						<<else>>
 							"발렌타인데이에 얼굴을 범해지는 건 로맨틱하지, 가장 굴욕적인 방식으로 말이야."
 						<</if>>
@@ -3188,8 +3188,8 @@
 							"\"이렇게 특별한 발렌타인데이 키스 순간에 네 얼굴을 구경할 권리 정도는 우리에게 있잖아.\""
 						)>>
 						<<elseif $speechCameraPose is 1>><<print either(
-							"\"Pose nicely before licking that <<npcVagina>>: that's as romantic as Valentine's will get for you.\"",
-							"\"Believing <<pshes>> kissing <<pher>> valentine is the last thing keeping <<pher>> sanity intact.\""
+							"\"저 <<npcVagina>>【을를】 핥기 전에 포즈나 예쁘게 취해. 이게 네가 누릴 수 있는 가장 로맨틱한 발렌타인데이일 테니까.\"",
+							"\"자신이 발렌타인 데이트 상대와 키스하고 있다고 굳게 믿는 것이야말로, <<pher>> 이성을 간신히 유지해 주는 마지막 수단이지.\""
 						)>>
 						<<else>><<print either(
 							"\"발렌타인데이에 <<npcVagina>>에 키스하다니, 이 얼마나 굴욕적인지. 이거 완전 물건이야.\"",
@@ -3218,8 +3218,8 @@
 							"\"이렇게 특별한 발렌타인데이 키스 순간에 네 얼굴을 구경할 권리 정도는 우리에게 있잖아.\""
 						)>>
 						<<elseif $speechCameraPose is 1>><<print either(
-							"\"Pose nicely before licking that <<npcAnus>>: that's as romantic as Valentine's will get for you.\"",
-							"\"Believing <<pshes>> kissing <<pher>> valentine is the last thing keeping <<pher>> sanity intact.\""
+							"\"저 <<npcAnus>>【을를】 핥기 전에 포즈나 예쁘게 취해. 이게 네가 누릴 수 있는 가장 로맨틱한 발렌타인데이일 테니까.\"",
+							"\"자신이 발렌타인 데이트 상대와 키스하고 있다고 굳게 믿는 것이야말로, <<pher>> 이성을 간신히 유지해 주는 마지막 수단이지.\""
 						)>>
 						<<else>><<print either(
 							"\"발렌타인데이에 <<npcAnus>>에 키스하다니, 이 얼마나 굴욕적인지. 이거 완전 물건이야.\"",
@@ -4247,7 +4247,7 @@
 				<</if>>
 			<<elseif $speechCameraPose is 1>>
 				<<if $pain gte 80>>
-					"Posing through the pain. What a trouper."
+					"아픈데도 포즈를 취해주다니. 완전 프로잖아."
 				<<elseif $pain gte 40>>
 					"괜찮은 척하는 거야?"
 				<<else>>
