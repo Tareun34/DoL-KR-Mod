@@ -57,6 +57,7 @@ game/special-fishing/fishing-text.twee:1532:【에게】
 - `base-combat/effects.twee`·`beast.twee`: `$NPCList[0].fullDescription`, `$combatTrain.beastTypes[...]`, `<<beasttype>>` 결과가 영어(Black Wolf 등)로 찍힘. 옛 번역은 `getDescriptionKr`/`getBeastTypeKr` 래퍼.
 - `overworld-town/special-avery/main.twee`: `$avery_helicopter.destination` 값(orphanage, photo studio 등)이 산문에 영어로 찍힘(6곳).
 - `<<run Furniture.set('owlplushie', {name:'owl plushie', nameCap:'Owl plushie'})>>`(loc-home/main, special-robin, special-kylar): 가구 이름이 매크로 안 코드 문자열. 화면에 찍히면 kr_dict 또는 코드 변경.
+- `$loveInterest.primary` 등 NPC 이름 변수를 산문에 직접 찍는 자리(loc-flats/main 238 등): 옛 번역은 `window.KR.gatPersonNameDictKR()` 래퍼.
 - `base-system/effect.js` 508: 최면 특성 이름 `trait.toUpperFirst()` 영어 그대로(옛 번역과 동일).
 
 ## 묶음
@@ -89,10 +90,10 @@ game/special-fishing/fishing-text.twee:1532:【에게】
 | P1-24 | 1 | game/overworld-town/loc-temple/library.twee | 965 | 완료 | 필사실·서예 등 전부 새 번역, 남은 영어 0(헤더 35). Dark One→어둠의 존재 |
 | P1-25 | 1 | game/overworld-town/loc-home/main.twee | 555 | 완료 | 185줄(카일라 로켓 이벤트 신규), 남은 영어 0(헤더 110·코드). Furniture.set 가구 이름 영어(owl plushie) → 코드 측 보정 후보 |
 | P1-26 | 1 | game/overworld-town/loc-home/rent.twee | 532 | 완료 | 207줄, 남은 영어 0(헤더·코드 29). the boss→보스(livestock의 '두목'과 불일치, 추후 통일) |
-| P1-27 | 1 | game/overworld-town/loc-museum/museumAntiques.twee | 500 | 진행 |  |
+| P1-27 | 1 | game/overworld-town/loc-museum/museumAntiques.twee | 500 | 완료 | 골동품 67종(신규 4종), 남은 영어 0(코드 7). key 속성 복원 + main.twee 링크를 .key로(별도 fix 커밋). Lantern→랜턴 |
 | P1-28 | 1 | game/overworld-town/loc-street/widgets.twee | 417 | 진행 |  |
-| P1-29 | 1 | game/overworld-town/loc-flats/main.twee | 285 | 진행 |  |
-| P1-30 | 1 | game/overworld-town/special-sydney/main.twee | 237 | 대기 |  |
+| P1-29 | 1 | game/overworld-town/loc-flats/main.twee | 285 | 완료 | 옛 번역 285줄 1:1 복원. $loveInterest.primary 이름이 영어로 찍힘 → 코드 측 보정 후보 |
+| P1-30 | 1 | game/overworld-town/special-sydney/main.twee | 237 | 진행 |  |
 | P1-31 | 1 | game/overworld-town/loc-school/library.twee<br>game/overworld-town/special-kylar/main.twee | 381 | 대기 |  |
 | P1-32 | 1 | game/overworld-town/loc-school/main.twee<br>game/overworld-town/loc-photography/jobs.twee<br>game/overworld-town/loc-temple/widgets.twee | 402 | 대기 |  |
 | P1-33 | 1 | game/overworld-town/loc-school/widgets-events.twee<br>game/overworld-town/loc-museum/main.twee<br>game/overworld-town/special-avery/mansion housework.twee<br>game/overworld-town/special-whitney/main.twee<br>game/overworld-town/loc-beach/widgets.twee | 400 | 대기 |  |

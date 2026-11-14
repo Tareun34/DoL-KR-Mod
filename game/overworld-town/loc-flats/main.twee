@@ -37,85 +37,85 @@
 
 		<<if $exposed gte 1>>
 			<<addinlineevent "flats_exposed_1" 1>>
-				You hear voices up ahead. <<covered>> You turn, but hear voices from that direction as well. <span class="pink">You're trapped.</span>
+				앞쪽에서 목소리가 들린다. <<covered>> 당신은 몸을 돌렸지만, 그 방향에서도 목소리가 들려온다. <span class="pink">당신은 갇혔다.</span>
 				<br><br>
 
-				There's an unlocked window to one side, and two doors to your right. You're not sure if they're locked.
+				한쪽에는 잠기지 않은 창문이 있고, 오른쪽에는 문이 두 개 있다. 문이 잠겨 있는지는 확실하지 않다.
 				<br><br>
-				<<link [[Try a door|Flats Exposed Door]]>><</link>><<difficulty 50>>
+				<<link [[문을 열어본다|Flats Exposed Door]]>><</link>><<difficulty 50>>
 				<br>
-				<<link [[Climb out the window|Flats Exposed Window]]>><</link>>
+				<<link [[창문으로 나간다|Flats Exposed Window]]>><</link>>
 				<br>
 
 			<</addinlineevent>>
 
 			<<addinlineevent "flats_exposed_2" 1>>
-				You come to an open door. You hear music, voices, and movement within. You peek around the corner. It looks like a party. It'll be hard to get by without anyone noticing, but perhaps if you're quick people will doubt they saw a thing.
+				열려 있는 문 앞을 지나게 되었다. 안에서 음악 소리, 사람들의 목소리와 움직이는 기척이 들린다. 모퉁이 너머로 살짝 엿본다. 파티가 열린 것 같다. 아무에게도 들키지 않고 지나가기는 어렵겠지만, 재빨리 지나간다면 사람들이 뭔가 잘못 본 것이라 여길지도 모른다.
 				<br><br>
 
-				<<link [[Dash by|Flats Exposed Dash]]>><</link>><<difficulty 50>>
+				<<link [[달려 지나간다|Flats Exposed Dash]]>><</link>><<difficulty 50>>
 				<br>
-				<<link [[Find a way around (0:05)|Flats]]>><<stress 6>><<pass 5>><<set $eventskip to 1>><</link>><<gstress>>
+				<<link [[우회로를 찾는다 (0:05)|Flats]]>><<stress 6>><<pass 5>><<set $eventskip to 1>><</link>><<gstress>>
 				<br>
 			<</addinlineevent>>
 
 			<<addinlineevent "flats_exposed_3" 1>>
-				A pair of feet march down the stairs up ahead, catching you in the open. You crouch behind a large potted plant for cover.
+				앞쪽 계단에서 누군가 내려오는 발소리가 들려, 당신은 꼼짝없이 노출될 위기에 처했다. 당신은 몸을 숨기기 위해 커다란 화분 뒤에 웅크렸다.
 				<br><br>
 
 				<<generate1>><<person1>>
-				A <<person>> steps into view, walking this way. You'll look odd crouched behind a plant.
+				<<person>>【이가】 이쪽으로 걸어오는 모습이 보인다. 화분 뒤에 웅크리고 있으면 이상해 보일 것이다.
 				<br><br>
 
-				<<link [[Stay crouched|Flats Exposed Crouch]]>><</link>>
+				<<link [[계속 웅크리고 있는다|Flats Exposed Crouch]]>><</link>>
 				<br>
-				<<link [[Pick up the plant and walk with it|Flats Exposed Pick]]>><</link>><<difficulty 40>>
+				<<link [[화분을 들고 걷는다|Flats Exposed Pick]]>><</link>><<difficulty 40>>
 				<br>
 			<</addinlineevent>>
 		<<else>>
 			<<addinlineevent "flats_1" 1>>
 				<<generatey1>><<generatey2>><<generatey3>><<person1>>
-				A <<person>>, <<person2>><<person>>, and <<person3>><<person>> round a corner. You recognise them from school. They're delinquents.
+				<<person>>, <<person2>><<person>>, 그리고 <<person3>><<person>>【이가】 모퉁이를 돈다. 학교에서 본 적이 있는 얼굴들이다. 불량학생들이다.
 				<br><br>
 				<<if random(1, 2) is 2>>
 					<<if $whitneyromance is 1>>
-						The <<person1>><<person>> steps in front of you. "What's Whitney's <<girl>> doing around here?" <<he>> asks.
+						<<person1>><<person>>【이가】 당신 앞을 가로막는다. "휘트니네 <<girl>>【이가】 이 근처에서 뭘 하는 거지?" <<he>>【이가】 묻는다.
 						<<if random(1, 2) is 2>>
-							<<He>> pauses, considering, <span class="pink">then shoves you against the wall.</span> "It doesn't matter. You're in our territory. Get on your knees."<<gtrauma>><<gstress>><<gpain>><<trauma 6>><<stress 6>><<pain 4>>
+							<<he>>【은는】 잠시 멈춰 서서 생각하더니, <span class="pink">이내 당신을 벽으로 밀친다.</span> "뭐 상관없지. 넌 우리 구역에 들어왔잖아. 무릎 꿇어."<<gtrauma>><<gstress>><<gpain>><<trauma 6>><<stress 6>><<pain 4>>
 							<br><br>
 
-							<<link [[Get on your knees|Flats Events Knees]]>><<sub 1>><</link>>
+							<<link [[무릎 꿇는다|Flats Events Knees]]>><<sub 1>><</link>>
 							<br>
-							<<link [[Scream|Flats Events Scream]]>><<pain 4>><</link>><<gpain>>
+							<<link [[비명을 지른다|Flats Events Scream]]>><<pain 4>><</link>><<gpain>>
 							<br>
-							<<link [[Fight|Flats Events Fight]]>><<def 1>><<set $fightstart to 1>><</link>>
+							<<link [[싸운다|Flats Events Fight]]>><<def 1>><<set $fightstart to 1>><</link>>
 							<br>
 						<<else>>
-							<<He>> pauses, considering, <span class="teal">then steps aside.</span>
+							<<he>>【은는】 잠시 멈춰 서서 생각하더니, <span class="teal">이내 옆으로 비켜선다.</span>
 							<br><br>
 
-							They watch you walk away.
+							그들은 당신이 걸어가는 것을 지켜본다.
 							<br><br>
 
-							<<link [[Next|Flats]]>><<set $eventskip to 1>><<endevent>><</link>>
+							<<link [[다음|Flats]]>><<set $eventskip to 1>><<endevent>><</link>>
 							<br>
 						<</if>>
 					<<else>>
-						The <<person1>><<person>> steps in front of you. "What's someone like you doing around here?" <<he>> asks, shoving you against the wall. <<His>> friends close in. "Get on your knees."<<gtrauma>><<gstress>><<gpain>><<trauma 6>><<stress 6>><<pain 4>>
+						<<person1>><<person>>【이가】 당신 앞을 가로막는다. "너 같은 놈이 이 근처에서 뭘 하는 거지?" <<he>>【이가】 묻더니, 당신을 벽으로 밀친다. <<his>> 무리들이 다가온다. "무릎 꿇어."<<gtrauma>><<gstress>><<gpain>><<trauma 6>><<stress 6>><<pain 4>>
 						<br><br>
 
-						<<link [[Get on your knees|Flats Events Knees]]>><<sub 1>><</link>>
+						<<link [[무릎 꿇는다|Flats Events Knees]]>><<sub 1>><</link>>
 						<br>
-						<<link [[Scream|Flats Events Scream]]>><<pain 4>><</link>><<gpain>>
+						<<link [[비명을 지른다|Flats Events Scream]]>><<pain 4>><</link>><<gpain>>
 						<br>
-						<<link [[Fight|Flats Events Fight]]>><<def 1>><<set $fightstart to 1>><</link>>
+						<<link [[싸운다|Flats Events Fight]]>><<def 1>><<set $fightstart to 1>><</link>>
 						<br>
 					<</if>>
 				<<else>>
-					The <<person1>><<person>> pulls a funny face, but they otherwise don't bother you.
+					<<person1>><<person>>【은는】 우스꽝스러운 표정을 지을 뿐, 달리 당신을 괴롭히지는 않는다.
 					<br><br>
 
-					<<link [[Next|Flats]]>><<set $eventskip to 1>><<endevent>><</link>>
+					<<link [[다음|Flats]]>><<set $eventskip to 1>><<endevent>><</link>>
 					<br>
 				<</if>>
 			<</addinlineevent>>
@@ -123,108 +123,108 @@
 			<<addinlineevent "flats_2" 1>>
 				<<beastNEWinit 1 dog>>
 				<<generate2>><<person2>>
-				A <<beasttype 0>> walks by, followed by a <<person2>><<person>> holding a lead. <<bHe 0>> stops to sniff you, but the <<person>> jerks <<bhim 0>> away.
+				<<beasttype 0>> 한 마리가 목줄을 쥔 <<person2>><<person>>의 뒤를 따라 걸어간다. <<bHe 0>>【이가】 당신의 냄새를 맡으려 멈춰 서지만, <<person>>【이가】 <<bhim 0>>【을를】 홱 잡아당긴다.
 				<br><br>
 
-				<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+				<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 				<br>
 			<</addinlineevent>>
 
 			<<addinlineevent "flats_3" 1>>
 				<<generate1>><<person1>>
-				A <<person>> accosts you halfway in a stairwell, placing one arm around your waist, gripping your wrist with the other, and pulling you against <<him>>. "What a cute <<girl>>," <<he>> says, shifting your weight to keep you unsteady. <<He>> leans in to kiss.<<gtrauma>><<gstress>><<trauma 6>><<stress 6>>
+				계단 중간에서 <<person>>【이가】 당신의 허리에 한쪽 팔을 감고, 다른 손으로는 손목을 꽉 쥔 채 당신을 자기 쪽으로 끌어당기며 추행한다. "정말 귀여운 <<girl>>【이】네." 체중을 무너뜨려 당신을 비틀거리게 만들며 <<he>>【이가】 말한다. <<he>>【은는】 키스하려 몸을 기울인다.<<gtrauma>><<gstress>><<trauma 6>><<stress 6>>
 				<br><br>
 
-				<<link [[Slap|Flats Events Slap]]>><<def 1>><</link>><<physiquedifficulty 1 15000>>
+				<<link [[뺨을 때린다|Flats Events Slap]]>><<def 1>><</link>><<physiquedifficulty 1 15000>>
 				<br>
-				<<link [[Stomp on foot|Flats Events Stomp]]>><<def 1>><</link>><<physiquedifficulty 5000 13000>>
+				<<link [[발을 짓밟는다|Flats Events Stomp]]>><<def 1>><</link>><<physiquedifficulty 5000 13000>>
 				<br>
-				<<link [[Endure|Flats Events Endure]]>><<trauma 6>><<stress 6>><<sub 1>><</link>><<difficulty 50>><<kissvirginitywarning>><<gtrauma>><<gstress>>
+				<<link [[견딘다|Flats Events Endure]]>><<trauma 6>><<stress 6>><<sub 1>><</link>><<difficulty 50>><<kissvirginitywarning>><<gtrauma>><<gstress>>
 				<br>
 			<</addinlineevent>>
 
 			<<addinlineevent "flats_4" 1>>
 				<<generate1>><<person1>>
-				You pass a <<person>> working as a janitor. <<Hes>> wearing headphones, and doesn't seem to notice you.
+				청소부로 일하는 <<person>>의 곁을 지나친다. <<hes>> 헤드폰을 끼고 있어서, 당신을 알아채지 못한 것 같다.
 				<br><br>
-				<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+				<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 				<br>
 			<</addinlineevent>>
 
 			<<if $hookah_state is undefined>>
 				<<addinlineevent "flats_5" 1>>
-					The front door of one of the flats is ajar, and a purple light glows within. You smell a strange incense.<<garousal>><<arousal 600>><<set $hallucinogen += 10>>
+					아파트 중 한 곳의 현관문이 반쯤 열려 있고, 안에서 보랏빛 불빛이 새어 나온다. 기묘한 향 냄새가 난다.<<garousal>><<arousal 600>><<set $hallucinogen += 10>>
 					<br><br>
-					<<link [[Investigate|Flats Hookah]]>><<set $hallucinogen += 10>><</link>>
+					<<link [[조사해본다|Flats Hookah]]>><<set $hallucinogen += 10>><</link>>
 					<br>
-					<<link [[Ignore|Flats]]>><</link>>
+					<<link [[무시한다|Flats]]>><</link>>
 					<br>
 				<</addinlineevent>>
 			<</if>>
 
 			<<addinlineevent "flats_6" 1>>
 				<<generate1>><<person1>>
-				A <<person>> leers openly as <<he>> walks by, turning <<his>> head to look behind <<him>>.
+				한 <<person>>【이가】 지나가며 당신을 노골적으로 음흉하게 쳐다보고는, 고개까지 돌려 뒷모습을 살핀다.
 				<br><br>
 
 				<<if hasSexStat("promiscuity", 3)>>
-					<i>Charging less will make <<him>> easier to convince.</i>
+					<i>비용을 덜 부르면 상대를 설득하기 쉬워질 것이다.</i>
 					<br><br>
-					<<link [[Solicit for £50|Flats Events Solicit]]>><<set $phase to 1>><</link>><<promiscuous3>>
+					<<link [[£50에 호객한다|Flats Events Solicit]]>><<set $phase to 1>><</link>><<promiscuous3>>
 					<br>
-					<<link [[Solicit for £100|Flats Events Solicit]]>><<set $phase to 2>><</link>><<promiscuous3>>
+					<<link [[£100에 호객한다|Flats Events Solicit]]>><<set $phase to 2>><</link>><<promiscuous3>>
 					<br>
-					<<link [[Solicit for £150|Flats Events Solicit]]>><<set $phase to 3>><</link>><<promiscuous3>>
+					<<link [[£150에 호객한다|Flats Events Solicit]]>><<set $phase to 3>><</link>><<promiscuous3>>
 					<br>
 				<<else>>
-					<<insufficientStat "promiscuity" "to take advantage">>
+					<<insufficientStat "promiscuity" "상황을 이용하기에는">>
 					<br><br>
 				<</if>>
-				<<link [[Ignore|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+				<<link [[무시한다|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 				<br>
 			<</addinlineevent>>
 
 			<<addinlineevent "flats_7" 1>>
 				<<generatey1>><<generatey2>><<person1>>
-				A <<person>> and <<person2>><<person>> chat under a stairwell. They lower their voices as you walk by.
+				<<person>>【와과】 <<person2>><<person>>【이가】 계단 아래에서 이야기를 나누고 있다. 당신이 지나가자 그들은 목소리를 낮춘다.
 				<br><br>
 
-				<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+				<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 				<br>
 			<</addinlineevent>>
 
 			<<addinlineevent "flats_8" 1>>
-				You hear shouting from one of the flats, but it doesn't sound like anyone's in danger.
+				어느 아파트 안에서 소리치는 소리가 들리지만, 누군가 위험에 처한 것 같지는 않다.
 				<br><br>
 
-				<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+				<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 				<br>
 			<</addinlineevent>>
 
 			<<addinlineevent "flats_9" 1>>
 				<<dancedifficulty 1 200 true>>
 				<<if $danceSuccess>>
-					You skid on a wet floor, spin, <span class="green">but manage to keep your footing.</span>
+					젖은 바닥에 미끄러져 몸이 빙글 돌았지만, <span class="green">가까스로 중심을 잡았다.</span>
 					<br><br>
 
-					<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+					<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 					<br>
 				<<else>>
-					You skid on a wet floor, <span class="red">and lose your footing.</span> You land on your <<bottom>>.<<gpain>><<pain 4>><<gstress>><<stress 6>>
+					젖은 바닥에 미끄러져, <span class="red">중심을 잃고 말았다.</span> <<bottom>>【으로로】 엉덩방아를 찧었다.<<gpain>><<pain 4>><<gstress>><<stress 6>>
 					<br><br>
 
-					<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+					<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 					<br>
 				<</if>>
 			<</addinlineevent>>
 
 			<<addinlineevent "flats_10" 1>>
-				A <<generate1>><<person1>><<person>> seems to be following you.
+				어떤 <<generate1>><<person1>><<person>>【이가】 당신을 뒤따라오는 것 같다.
 				<br><br>
 
-				<<link [[Ignore|Flats Events Ignore]]>><</link>><<difficulty 90>>
+				<<link [[무시한다|Flats Events Ignore]]>><</link>><<difficulty 90>>
 				<br>
-				<<link [[Run|Flats Events Run]]>><<stress 6>><</link>><<gstress>>
+				<<link [[도망친다|Flats Events Run]]>><<stress 6>><</link>><<gstress>>
 				<br>
 			<</addinlineevent>>
 
@@ -233,32 +233,32 @@
 					<<npc Bailey 1>><<generatep2>>
 					<<if $bailey_partner is undefined>><<set $bailey_partner to 0>><</if>>
 					<<set $weekly.flatsCouple to 1>>
-					You hear giggles and clumsy footsteps from a nearby hallway. You suspect a couple returning from a <<print either("wild", "romantic")>> night.
+					근처 복도에서 킥킥거리는 소리와 비틀거리는 발소리가 들린다. <<print either("거친", "로맨틱한")>> 밤을 보내고 돌아오는 커플인 듯하다.
 					<<if $loveInterest.primary isnot "None">>
-						The thought makes you smile, and your mind drifts to <<if $loveInterest.primary is "Black Wolf" or $loveInterest.primary is "Great Hawk">>the <</if>>$loveInterest.primary. You wish to share special nights like that with <<nnpc_him $loveInterest.primary>>, too.
+						그 생각에 미소가 지어지며, 마음속으로 <<if $loveInterest.primary is "Black Wolf" or $loveInterest.primary is "Great Hawk">>그 <</if>>$loveInterest.primary【을를】 떠올려본다. 당신도 <<nnpc_him $loveInterest.primary>>【와과】 함께 그런 특별한 밤을 보내고 싶다.
 					<</if>>
 					<br><br>
 
-					When you reach the end of the hallway, you come across the mysterious lovers. <span class="purple">It's Bailey</span>, <span class="lewd">kissing a <<person2>><<personsimple>> you don't recognise.</span>
+					복도 끝에 다다르자 수수께끼의 연인들을 마주치게 된다. <span class="purple">베일리다.</span> <span class="lewd">모르는 <<person2>><<personsimple>>【와과】 키스를 나누고 있다.</span>
 					<br><br>
 
 					<<if $rentTime lte 0>>
-						You sneak away before Bailey notices you. You desperately try to erase the image from your mind. <<gtrauma>><<trauma 3>>
+						베일리가 알아채기 전에 몰래 자리를 뜬다. 머릿속에서 방금 본 장면을 필사적으로 지워버리려 애쓴다. <<gtrauma>><<trauma 3>>
 						<br><br>
 
-						<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+						<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 						<br>
 					<<else>>
-						You hide behind a wall before being noticed. <<gstress>><<stress 3>>
+						들키기 전에 벽 뒤로 몸을 숨긴다. <<gstress>><<stress 3>>
 						<br><br>
 
 						<<if hasSexStat("promiscuity", 3)>>
-							<<link [[Take a look|Flats Events Peek]]>><</link>><<promiscuous3>><<gtrauma>>
+							<<link [[엿본다|Flats Events Peek]]>><</link>><<promiscuous3>><<gtrauma>>
 							<br>
 						<</if>>
-						<<link [[Wait|Flats Events Hide]]>><</link>>
+						<<link [[기다린다|Flats Events Hide]]>><</link>>
 						<br>
-						<<link [[Leave|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+						<<link [[떠난다|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 						<br>
 					<</if>>
 				<</addinlineevent>>
@@ -268,53 +268,53 @@
 		<<runeventpool>>
 	<<else>>
 		<<if Time.dayState is "night">>
-			<<dooricon>><<link [[Approach one of the flats (0:01)|Flats Lock]]>><<pass 1>><</link>>
+			<<dooricon>><<link [[아파트 중 한 곳으로 다가간다 (0:01)|Flats Lock]]>><<pass 1>><</link>>
 			<br>
 		<<elseif $exposed lt 1>>
 			<<if $flats_progress is undefined>>
-				<<dooricon>><<link [[Knock on one of the flats (0:01)|Flats Knock Intro]]>><<pass 1>><</link>>
+				<<dooricon>><<link [[아파트 중 한 곳에 노크한다 (0:01)|Flats Knock Intro]]>><<pass 1>><</link>>
 				<br>
 			<<else>>
-				<<dooricon>><<link [[Knock on a door (0:01)|Flats Knock]]>><<pass 1>><</link>>
+				<<dooricon>><<link [[문에 노크한다 (0:01)|Flats Knock]]>><<pass 1>><</link>>
 				<br>
 			<</if>>
 		<</if>>
 		<<if $flats_window_init gte 2 and $exposed lt 1>>
 			<<if Time.dayState is "night">>
-				<span class="blue">You need more daylight to work as a window cleaner.</span>
+				<span class="blue">창문 청소부로 일하려면 아직 날이 밝지 않습니다.</span>
 				<br>
 			<<else>>
 				<<if pcAreArmsBound("both")>>
-					<span class="red">Both of your arms are bound</span>, so you are unable to work as a window cleaner.
+					<span class="red">양팔이 묶여 있어</span> 창문 청소부로 일할 수 없습니다.
 				<<else>>
-					<<link [[Work as a window cleaner (1:00)|Flats Window]]>><<housekeeping 1 300>><</link>><<ghousekeeping 300>>
+					<<link [[창문 청소부로 일한다 (1:00)|Flats Window]]>><<housekeeping 1 300>><</link>><<ghousekeeping 300>>
 				<</if>>
 			<</if>>
 		<</if>>
 		<<if $hookah_state gte 2>>
-			<<dooricon "open">><<link [[Hookah Parlour (0:01)|Flats Hookah]]>><<pass 1>><</link>>
+			<<dooricon "open">><<link [[물담배 시음장 (0:01)|Flats Hookah]]>><<pass 1>><</link>>
 			<br>
 		<<elseif $exposed lt 1 and $hookah_state gte 1>>
-			<<dooricon "open">><<link [[Hookah Parlour (0:20)|Flats Hookah]]>><<pass 20>><</link>>
+			<<dooricon "open">><<link [[물담배 시음장 (0:20)|Flats Hookah]]>><<pass 20>><</link>>
 			<br>
 		<</if>>
 		<<if $flats_superintendent is 1 or $flats_superintendent is 2>>
 			<<if Time.dayState is "day">>
 				<<if $exposed lt 1>>
-					<<officeicon>><<link [[Superintendent's office (0:01)|Flats Superintendent]]>><<pass 1>><</link>>
+					<<officeicon>><<link [[관리실 (0:01)|Flats Superintendent]]>><<pass 1>><</link>>
 					<br>
 				<</if>>
 			<<else>>
 				<<if Time.dayState is "dawn">>
-					<<officeicon>><span class="blue">The superintendent's office isn't open yet.</span>
+					<<officeicon>><span class="blue">관리실은 아직 열지 않았습니다.</span>
 					<br>
 				<<else>>
-					<<officeicon>><span class="blue">The superintendent's office is closed for the night.</span>
+					<<officeicon>><span class="blue">관리실은 밤이라 문을 닫았습니다.</span>
 					<br>
 				<</if>>
 			<</if>>
 		<</if>>
-		<<barbicon>><<link [[Leave|Barb Street]]>><</link>>
+		<<barbicon>><<link [[떠난다|Barb Street]]>><</link>>
 		<br>
 	<</if>>
 <</if>>
