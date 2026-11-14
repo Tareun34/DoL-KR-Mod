@@ -67,6 +67,14 @@ def _link_target(inner):
     return "[[" + target.strip() + setter + "]]" + macros
 
 
+def _link_end(text, j):
+    """Index of the ']]' closing a link starting at j, or -1 if there is none on the same line."""
+    k = text.find("]]", j + 2)
+    if k < 0 or "\n" in text[j:k]:
+        return -1
+    return k
+
+
 def _macro_end(text, i):
     """Index of the closing '>>' of the macro starting at i, honouring quotes and backtick templates."""
     n = len(text)
@@ -87,9 +95,8 @@ def _macro_end(text, i):
                 quote = None
             j += 1
         else:
-            if text.startswith("[[", j):
-                k = text.find("]]", j + 2)
-                j = k + 2 if k >= 0 else n
+            if text.startswith("[[", j) and _link_end(text, j) >= 0:
+                j = _link_end(text, j) + 2
             elif c in "\"'`":
                 quote = c
                 j += 1
@@ -140,9 +147,8 @@ def _normalise_macro_body(body):
                 else:
                     j += 1
         else:
-            if body.startswith("[[", j):
-                k = body.find("]]", j + 2)
-                k = n if k < 0 else k + 2
+            if body.startswith("[[", j) and _link_end(body, j) >= 0:
+                k = _link_end(body, j) + 2
                 out.append(body[j:k])
                 j = k
                 continue
@@ -181,10 +187,8 @@ def _tokens_twee(text, text_macros):
             line += text.count("\n", i, end)
             i = end + 2
             continue
-        if text.startswith("[[", i):
-            end = text.find("]]", i + 2)
-            if end < 0:
-                break
+        if text.startswith("[[", i) and _link_end(text, i) >= 0:
+            end = _link_end(text, i)
             tokens.append((_link_target(text[i + 2:end]), line))
             line += text.count("\n", i, end)
             i = end + 2
