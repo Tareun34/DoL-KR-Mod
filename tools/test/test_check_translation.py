@@ -65,6 +65,11 @@ class SkeletonTweeTests(unittest.TestCase):
         self.assertEqual(toks, ['<<link [[Toilets]]>>', '<<endevent>>', '<</link>>', '<<if $a>>', '<</if>>'])
         self.assertEqual(ct.skeleton_twee(text.replace("I'm afraid you'll see.", "무서워할 거예요."), TM), toks)
 
+    def test_twee_object_may_gain_key_property(self):
+        base = '<<set _x to {\n\tname: "Shovel Handle",\n\ticon: "shovel.png",\n}>>'
+        self.assertEqual(ct.skeleton_twee(base, TM), ct.skeleton_twee('<<set _x to {\n\tname: "삽자루",\n\tkey: "Shovel Handle",\n\ticon: "shovel.png",\n}>>', TM))
+        self.assertNotEqual(ct.skeleton_twee(base, TM), ct.skeleton_twee('<<set _x to {\n\tname: "삽자루",\n\tfoo: "Shovel Handle",\n\ticon: "shovel.png",\n}>>', TM))
+
     def test_variables_in_prose_are_kept(self):
         self.assertNotEqual(ct.skeleton_twee('You have $money coins', TM), ct.skeleton_twee('동전이 있다', TM))
         self.assertEqual(ct.skeleton_twee('You have $money coins', TM), ct.skeleton_twee('$money개의 동전이 있다', TM))

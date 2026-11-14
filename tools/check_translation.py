@@ -29,6 +29,8 @@ JOSA_RE = re.compile(r"【[^】]*】")
 VAR_RE = re.compile(r"(?<![A-Za-z0-9_$])[$_][A-Za-z_][A-Za-z0-9_]*")
 TAG_RE = re.compile(r"<(/?)([A-Za-z][\w-]*)((?:\s[^<>]*)?)(/?)>", re.S)
 ATTR_RE = re.compile(r"([A-Za-z_@:][\w:.-]*)\s*=\s*(\"[^\"]*\"|'[^']*'|[^\s\"'<>]+)")
+TWEE_ALLOWED_PROPS = ("key",)  # Korean-only object properties the old translation adds inside <<set>> objects
+TWEE_ALLOWED_PROP_RE = re.compile(r"\b(?:%s)\s*:\s*(?:\"\"|'')\s*,?" % "|".join(TWEE_ALLOWED_PROPS))
 TRANSLATABLE_ATTRS = {"title", "alt", "placeholder", "aria-label", "data-tooltip", "tooltip"}
 LINK_RE = re.compile(r"\[\[(.*?)\]\]", re.S)
 MACRO_NAME_RE = re.compile(r"^\s*(/?)([A-Za-z_=][\w]*)")
@@ -150,6 +152,7 @@ def _normalise_macro_body(body):
             j += 1
     s = "".join(out)
     s = LINK_RE.sub(lambda m: _link_target(m.group(1)), s)
+    s = TWEE_ALLOWED_PROP_RE.sub("", s)
     return WS_RE.sub(" ", s).strip()
 
 
