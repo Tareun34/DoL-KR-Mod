@@ -867,7 +867,7 @@
 
 :: Sydney Chat Glasses Accept
 <<set $outside to 0>><<set $location to "school">><<schooleffects>><<effects>>
-You nod, and Sydney takes your glasses off and hands you <<hers>>. <<He>> places the $worn.face.name on <<his>> own face. "Huh, all blurry. I guess I should've expected that." <<He>> passes your glasses back and puts <<his>> own back on. You take a moment to adjust <<= $worn.face.plural ? "them" : "it">> to your liking.
+당신이 고개를 끄덕이자, 시드니는 당신의 안경을 벗기고 <<hers>> 것을 건네준다. <<He>>【은는】 $worn.face.name【을를】 <<his>> 얼굴에 쓴다. "허, 전부 흐릿하네요. 그럴 줄 알았어야 했는데." <<He>>【은는】 당신의 안경을 돌려주고 <<his>> 것을 다시 쓴다. 당신은 잠시 <<= $worn.face.plural ? "그것들을" : "그것을">> 마음에 들게 고쳐 쓴다.
 <br><br>
 <<sydneyOptions>>
 
@@ -4681,181 +4681,181 @@ You nod, and Sydney takes your glasses off and hands you <<hers>>. <<He>> places
 <<effects>><<person1>><<run statusCheck("Sydney")>>
 
 <<if $phase is 1>> /* Thank */
-	"You're welcome." Sydney smiles.
+	"천만에요." 시드니가 미소 짓는다.
 	<br><br>
 	<<neckon>>
 	<<sydneyOptions>>
 
 <<elseif $phase is 2>> /* Show */
-	You open it.
+	당신은 그것을 연다.
 	<<if !$carried.neck.photo>>
-		There's nothing inside. You tell <<him>> you just wear it as a necklace.
+		안에는 아무것도 없다. 당신은 <<him>>에게 그냥 목걸이로 차고 다니는 거라고 말한다.
 		<br><br>
-		<<link [[Proposition about inserting <<his>> photo|Sydney Locket Empty]]>><<set $phase to "proposition">><</link>><<promiscuous1>>
+		<<link [[<<his>> 사진을 넣자고 제안한다|Sydney Locket Empty]]>><<set $phase to "proposition">><</link>><<promiscuous1>>
 		<br>
-		<<link [[Change the subject|Sydney Locket Empty]]>><<set $phase to "subject">><</link>>
+		<<link [[화제를 바꾼다|Sydney Locket Empty]]>><<set $phase to "subject">><</link>>
 		<br>
 	<<else>>
 		<<if $carried.neck.photo isnot "Gwylan">>
-			Inside is a picture of
+			안에 들어 있는 것은
 			<<if $carried.neck.photo is "Sydney">>
-				<<him>>.
+				<<his>> 사진이다.
 			<<elseif $carried.neck.photo is "Black Wolf" or $carried.neck.photo is "Great Hawk">>
-				the <<print $carried.neck.photo>>.
+				<<print $carried.neck.photo>>의 사진이다.
 			<<else>>
-				<<print $carried.neck.photo>>.
+				<<print $carried.neck.photo>>의 사진이다.
 			<</if>>
 		<</if>>
 		<br><br>
 		<<switch $carried.neck.photo>>
 			<<case "Sydney">>
 				<<if _sydneyStatus.includes("pure")>>
-					"Oh," <<he>> whispers. "Oh my. Is that really..."
+					"어," <<he>>【은는】 속삭인다. "세상에. 이거 정말..."
 					<br><br>
-					Bashful, <<he>> covers <<his>> blushing face and closes your locket. <<npcincr Sydney love 1>><<glove>>
+					수줍어하며, <<he>>【은는】 붉어진 <<his>> 얼굴을 가리고 당신의 로켓을 닫는다. <<npcincr Sydney love 1>><<glove>>
 				<<elseif _sydneyStatus.includes("corrupt")>>
-					"Wow," <<he>> laughs. "You just can't get enough of me, can you?"
+					"와," <<he>>【은는】 웃는다. "당신은 정말 저한테서 헤어나질 못하는군요, 그렇죠?"
 					<br><br>
-					Despite <<his>> teasing tone, <<he>> gives you a blushing grin. <<npcincr Sydney love 1>><<glove>>
+					놀리는 말투에도, <<he>>【은는】 얼굴을 붉히며 당신에게 씩 웃어 보인다. <<npcincr Sydney love 1>><<glove>>
 				<<else>>
-					"Oh my," <<he>> giggles. "Is that me? How cute is that?"
+					"어머," <<he>>【은는】 킥킥 웃는다. "이거 저예요? 정말 귀엽네요."
 					<br><br>
-					With reddened cheeks, <<he>> gives you a smile. <<npcincr Sydney love 1>><<glove>>
+					뺨을 붉힌 채, <<he>>【은는】 당신에게 미소를 지어 보인다. <<npcincr Sydney love 1>><<glove>>
 				<</if>>
 			<<case "Robin">>
-				"Oh!" <<he>> blurts out, staring at Robin's photo.
+				"앗!" <<he>>【은는】 로빈의 사진을 보며 불쑥 소리를 낸다.
 				<br><br>
 				<<if _sydneyStatus.includes("corrupt")>>
-					"Is this Robin? I always knew you two were close," <<he>> teases. "So, are you two in a 'best mates to bedmates' kind of relationship?" <<He>> pauses. "Actually, don't answer that."
+					"이거 로빈이에요? 두 사람이 가깝다는 건 늘 알고 있었죠," <<he>>【은는】 놀린다. "그래서, 두 사람은 '절친에서 잠자리 친구로' 같은 사이인가요?" <<He>>【은는】 잠시 멈춘다. "아니, 대답하지 마세요."
 				<<else>>
-					"You and Robin, together? Well, I'm definitely not surprised," <<he>> smiles. "I hope all is well between you two."
+					"당신과 로빈이, 함께라고요? 음, 전혀 놀랍지 않네요," <<he>>【은는】 미소 짓는다. "두 분 사이가 잘되길 바라요."
 				<</if>>
 			<<case "Whitney">>
-				Sydney makes a noise of shock when <<he>> sees Whitney's photo.
+				시드니는 휘트니의 사진을 보고 놀란 소리를 낸다.
 				<br><br>
-				Realising how that came across, Sydney backpedals. "Sorry, sorry! I just didn't expect that you two were..."
+				그게 어떻게 들렸을지 깨닫고, 시드니는 황급히 말을 주워 담는다. "죄송해요, 죄송해요! 그냥 두 사람이 그런 사이일 줄은 몰라서..."
 				<br><br>
 				<<if _sydneyStatus.includes("corrupt")>>
-					<<He>> makes a few crude gestures to illustrate <<his>> point, before sighing.
+					<<He>>【은는】 <<his>> 말뜻을 설명하려고 상스러운 손짓을 몇 번 해 보이고는, 한숨을 쉰다.
 				<<else>>
-					<<He>> looks around, unsure of how to illustrate <<his>> point, before giving up.
+					<<He>>【은는】 <<his>> 말뜻을 어떻게 설명해야 할지 몰라 주위를 둘러보다가, 포기한다.
 				<</if>>
 				<br><br>
-				"... Just be careful, alright?"
+				"... 그냥 조심하세요, 알았죠?"
 			<<case "Eden">>
 				<<if $sydneySeen.includes("locketEden")>>
-					Sydney stares intently at the photo for a moment before handing it back to you.
+					시드니는 잠시 사진을 유심히 바라보다가 당신에게 돌려준다.
 					<br><br>
-					"Eden, right?" <<he>> asks.<<if isLoveInterest("Sydney")>> <<He>> seems a bit disappointed.<</if>> "I remember <<nnpc_him "Eden">> from the last time you showed me your locket. How sweet of you to keep <<nnpc_him "Eden">> with you."
+					"에덴, 맞죠?" <<he>>【이가】 묻는다.<<if isLoveInterest("Sydney")>> <<He>>【은는】 조금 실망한 듯하다.<</if>> "지난번에 당신이 로켓을 보여줬을 때 <<nnpc_him "Eden">>【을를】 본 기억이 나요. <<nnpc_him "Eden">>【을를】 이렇게 곁에 간직하다니 정말 다정하네요."
 				<<else>>
 					<<set $sydneySeen.pushUnique("locketEden")>>
-					"Who is this?" <<he>> says, staring intently at Eden's photo.
+					"이 사람은 누구예요?" <<he>>【이가】 에덴의 사진을 유심히 바라보며 말한다.
 					<br><br>
-					"That's Eden," you say. "<<nnpc_He "Eden">> lives in the forest."
+					"에덴이에요," 당신은 말한다. "<<nnpc_He "Eden">>【은는】 숲에 살아요."
 					<br><br>
-					<<He>> gives you a look of surprise. "In the forest, you say? <<nnpc_He "Eden">> sounds familiar."
+					<<He>>【은는】 놀란 표정으로 당신을 바라본다. "숲에요? <<nnpc_He "Eden">>【은는】 어쩐지 낯익은 것 같은데요."
 					<br><br>
-					"How so?" you interject. You doubt Eden would like the sound of that.
+					"어째서요?" 당신은 끼어든다. 에덴이 그런 말을 들으면 좋아하지 않을 것 같다.
 					<br><br>
-					"I've heard rumours of a hunts<<nnpc_gender "Eden">> lurking in the forest," <<he>> says. "<<nnpc_He "Eden">> just seems to fit the bill, with <<nnpc_his "Eden">>..."
+					"숲에 숨어 사는 <<nnpc_gender "Eden">> 사냥꾼에 대한 소문을 들은 적이 있어요," <<he>>【이가】 말한다. "<<nnpc_He "Eden">>【은는】 딱 그 이야기에 들어맞는 것 같아서요, <<nnpc_his "Eden">> 그..."
 					<br><br>
-					Sydney shakes <<his>> head. "I'm sorry. That was ignorant of me to say."
+					시드니는 <<his>> 고개를 젓는다. "죄송해요. 무지한 소리였네요."
 				<</if>>
 			<<case "Avery">>
 				<<if $sydneySeen.includes("locketAvery")>>
-					Sydney stares intently at the photo for a moment before handing it back to you.
+					시드니는 잠시 사진을 유심히 바라보다가 당신에게 돌려준다.
 					<br><br>
-					"Avery, right?" <<he>> asks.<<if isLoveInterest("Sydney")>> <<He>> seems a bit disappointed.<</if>> "I remember <<nnpc_him "Avery">> from the last time you showed me your locket. How sweet of you to keep <<nnpc_him "Avery">> with you."
+					"에이버리, 맞죠?" <<he>>【이가】 묻는다.<<if isLoveInterest("Sydney")>> <<He>>【은는】 조금 실망한 듯하다.<</if>> "지난번에 당신이 로켓을 보여줬을 때 <<nnpc_him "Avery">>【을를】 본 기억이 나요. <<nnpc_him "Avery">>【을를】 이렇게 곁에 간직하다니 정말 다정하네요."
 				<<else>>
 					<<set $sydneySeen.pushUnique("locketAvery")>>
-					"Who is this?" <<he>> says, staring intently at Avery's photo. "Oh! <<nnpc_He "Avery">> seems familiar."
+					"이 사람은 누구예요?" <<he>>【이가】 에이버리의 사진을 유심히 바라보며 말한다. "아! <<nnpc_He "Avery">>【은는】 낯익은데요."
 					<br><br>
-					You can't help but make a surprised noise yourself. "Really?"
+					당신도 저도 모르게 놀란 소리를 낸다. "정말요?"
 					<br><br>
 					<<if $avery_mansion?.jordan_intro>>
-						"Yes! <<nnpc_Brother "Jordan">> Jordan—"
-						<<He>> catches <<himself>> before leaning in. "I overheard <<nnpc_Brother "Jordan">> Jordan talking about <<nnpc_him "Avery">> once. I didn't hear the details myself, but <<nnpc_he "Jordan">> seemed really agitated. I was really curious, so I looked into <<nnpc_him "Avery">> a little. That's all I know, unfortunately."
+						"네! <<nnpc_Brother "Jordan">> 조던께서—"
+						<<He>>【은는】 말을 멈추고는 몸을 기울인다. "<<nnpc_Brother "Jordan">> 조던께서 <<nnpc_him "Avery">>에 대해 말씀하시는 걸 한 번 들었어요. 자세한 내용은 직접 듣지 못했지만, <<nnpc_he "Jordan">>께서 정말 동요하신 것 같았어요. 너무 궁금해서, <<nnpc_him "Avery">>에 대해 조금 알아봤죠. 아쉽지만 제가 아는 건 그게 전부예요."
 					<<elseif $avery_mansion?.attend.english_play>>
-						"Yes! I saw you with <<nnpc_him "Avery">> before," <<he>> says. "After our play? <<if $averyragerevealed is 1>><<nnpc_He "Avery">> seemed rather irate with you. I truly hope I'm wrong, though."<<else>><<nnpc_He "Avery">> was beaming when you came around. It was hard to miss."<</if>>
+						"네! 전에 당신이 <<nnpc_him "Avery">>【와과】 함께 있는 걸 봤어요," <<he>>【이가】 말한다. "우리 연극이 끝나고요? <<if $averyragerevealed is 1>><<nnpc_He "Avery">>【은는】 당신에게 꽤 화가 난 것 같았어요. 제가 틀렸으면 정말 좋겠지만요."<<else>><<nnpc_He "Avery">>【은는】 당신이 왔을 때 환하게 웃고 있었어요. 못 보고 지나칠 수가 없었죠."<</if>>
 					<<else>>
 						"Yes! <<nnpc_He "Avery">>..."
 						<br><br>
-						Sydney looks ready to speak, before falling silent.
+						시드니는 뭔가 말하려는 듯하다가, 입을 다문다.
 						<br><br>
-						"I'm sorry, I think my mind's blanking," <<he>> sighs. "I'll be sure to tell you when I remember, though."
+						"죄송해요, 머릿속이 하얘진 것 같아요," <<he>>【은는】 한숨을 쉰다. "기억나면 꼭 말씀드릴게요."
 					<</if>>
 				<</if>>
 			<<case "Alex">>
 				<<if $sydneySeen.includes("locketAlex")>>
-					Sydney stares intently at the photo for a moment before handing it back to you.
+					시드니는 잠시 사진을 유심히 바라보다가 당신에게 돌려준다.
 					<br><br>
-					"Alex, right?" <<he>> asks.<<if isLoveInterest("Sydney")>> <<He>> seems a bit disappointed.<</if>> "I remember <<nnpc_him "Alex">> from the last time you showed me your locket. How sweet of you to keep <<nnpc_him "Alex">> with you."
+					"알렉스, 맞죠?" <<he>>【이가】 묻는다.<<if isLoveInterest("Sydney")>> <<He>>【은는】 조금 실망한 듯하다.<</if>> "지난번에 당신이 로켓을 보여줬을 때 <<nnpc_him "Alex">>【을를】 본 기억이 나요. <<nnpc_him "Alex">>【을를】 이렇게 곁에 간직하다니 정말 다정하네요."
 				<<else>>
 					<<set $sydneySeen.pushUnique("locketAlex")>>
-					"Who is this?" <<he>> says, staring intently at Alex's photo.
+					"이 사람은 누구예요?" <<he>>【이가】 알렉스의 사진을 유심히 바라보며 말한다.
 					<br><br>
-					"That's Alex," you say. "<<nnpc_Hes "Alex">> my <<nnpc_girlfriend "Alex">>. We work on a farm together all the way outside of town."
+					"알렉스예요," 당신은 말한다. "<<nnpc_Hes "Alex">> 제 <<nnpc_girlfriend "Alex">>예요. 마을 밖 멀리 떨어진 농장에서 함께 일하고 있어요."
 					<br><br>
 					<<He>> pauses. "Your <<nnpc_girlfriend "Alex">>, huh?"
 					<br><br>
-					Sydney then turns to you in surprise. "Wait, wait. Sorry, I think I just heard you say that you do farm work. What is that like?"
+					그러다 시드니는 놀라서 당신을 돌아본다. "잠깐, 잠깐만요. 죄송한데, 방금 농장 일을 한다고 하신 것 같은데요. 그건 어떤가요?"
 					<br><br>
-					You talk about your work out on the farm while going in-depth about <<= either("your commute to the farmlands", "Alex's tending advice", "the landscape around the farm", "feeding the pigs", "herding the dogs", "brushing the horses", "watching over the chickens")>>. <<trauma -3>><<ltrauma>>
+					당신은 농장에서 하는 일에 대해 이야기하며 <<= either("농지까지 오가는 길", "알렉스의 돌보기 조언", "농장 주변의 풍경", "돼지 먹이 주기", "개 몰기", "말 빗질하기", "닭 돌보기")>>에 대해 자세히 설명한다. <<trauma -3>><<ltrauma>>
 				<</if>>
 			<<case "Kylar">>
-				Sydney freezes upon seeing the photo.
+				시드니는 사진을 보고 얼어붙는다.
 				<br><br>
-				<<He>> stays silent for a moment, but quickly puts <<himself>> back together.
+				<<He>>【은는】 잠시 말이 없지만, 금세 마음을 추스른다.
 				<br><br>
-				"So! You and Kylar? It's great that you're both getting along. No wonder I've been seeing <<nnpc_him "Kylar">> around more."
+				"그래서! 당신과 카일라요? 두 사람이 잘 지낸다니 다행이네요. 어쩐지 요즘 <<nnpc_him "Kylar">>【을를】 더 자주 보더라니."
 				<<if _sydneyStatus.includes("corrupt")>>
-					Despite <<his>> efforts to seem more unaffected, <<he>> still gives you a wistful look. "I really don't understand why... Nevermind. Thank you for looking after <<nnpc_him "Kylar">>. Really."
+					아무렇지 않은 척하려 애쓰지만, <<he>>【은는】 여전히 당신에게 아쉬운 듯한 눈길을 보낸다. "정말 왜인지 모르겠... 아니에요. <<nnpc_him "Kylar">>【을를】 돌봐줘서 고마워요. 정말로요."
 				<<else>>
-					<<He>> smiles at you. "Thank you for looking after <<nnpc_him "Kylar">>. I hope we can be friends again, like the old days." <<trauma -3>><<ltrauma>>
+					<<He>>【은는】 당신에게 미소 짓는다. "<<nnpc_him "Kylar">>【을를】 돌봐줘서 고마워요. 옛날처럼 우리가 다시 친구가 될 수 있으면 좋겠어요." <<trauma -3>><<ltrauma>>
 				<</if>>
 			<<case "Black Wolf">>
-				"What a beautiful wolf!" <<he>> exclaims as <<he>> stares intently at the Black Wolf's photo. "I didn't know you like wolves."
+				"정말 아름다운 늑대네요!" <<he>>【이가】 검은 늑대의 사진을 유심히 바라보며 감탄한다. "늑대를 좋아하는 줄은 몰랐어요."
 				<br><br>
-				<<He>> doesn't think to question you further. You two instead talk about <<= either("rumours of wolves in the forest", "wolves occasionally appearing in the garden", "rumours of Doren being a werewolf", "what you learned about wolves in class", "different wolf species", "the difference between wolves and other canines", "fun facts about wolves")>> for a little while. <<trauma -3>><<ltrauma>>
+				<<He>>【은는】 더 캐물을 생각은 하지 않는다. 대신 두 사람은 잠시 <<= either("숲속의 늑대 소문", "가끔 정원에 나타나는 늑대", "도렌이 늑대인간이라는 소문", "수업 시간에 배운 늑대에 관한 내용", "다양한 늑대 종", "늑대와 다른 갯과 동물의 차이점", "늑대에 관한 재미있는 사실들")>>에 대해 이야기를 나눈다. <<trauma -3>><<ltrauma>>
 			<<case "Great Hawk">>
 				<<rng 10>>
 				<<if $rng is 1>>
-					Stunned, <<his>> eyes widen as <<he>> mutters, "I've seen <<nnpc_him "Great Hawk">> before... The Giant Hawk." <<He>> seems to remember something awful, but <<his>> composure quickly returns.
+					놀라서, <<his>> 눈이 커지며 <<he>>【은는】 중얼거린다. "<<nnpc_him "Great Hawk">>【을를】 본 적이 있어요... 그 거대한 매." <<He>>【은는】 뭔가 끔찍한 것을 떠올린 듯하지만, 금세 <<his>> 평정을 되찾는다.
 				<<else>>
-					"What a beautiful bird!" <<he>> exclaims as <<he>> stares intently at the Great Hawk's photo. "I didn't know you like birds."
+					"정말 아름다운 새네요!" <<he>>【이가】 거대 매의 사진을 유심히 바라보며 감탄한다. "새를 좋아하는 줄은 몰랐어요."
 					<br><br>
-					<<He>> doesn't think to question you further. You two instead talk about <<= either("your favourite birds", "birding", "birdwatching", "the cool birds you saw the other day", "the beautiful singing of birds", "different bird species", "the difference between hawks and other birds", "fun facts about birds", "fun facts about hawks")>> for a little while. <<trauma -3>><<ltrauma>>
+					<<He>>【은는】 더 캐물을 생각은 하지 않는다. 대신 두 사람은 잠시 <<= either("당신이 가장 좋아하는 새", "탐조", "새 관찰", "며칠 전에 본 멋진 새", "새들의 아름다운 노랫소리", "다양한 새 종", "매와 다른 새의 차이점", "새에 관한 재미있는 사실들", "매에 관한 재미있는 사실들")>>에 대해 이야기를 나눈다. <<trauma -3>><<ltrauma>>
 				<</if>>
 			<<case "Gwylan">>
 				<<if $gwylan?.timer?.nobody gte Time.date.timeStamp>>
-					"Oh my," <<he>> says as <<he>> begins to open your locket. "I wonder who..."
+					"어머," <<he>>【은는】 당신의 로켓을 열며 말한다. "누굴까..."
 					<br><br>
-					Sydney closes your locket, and hands it back to you.
+					시드니는 당신의 로켓을 닫고, 당신에게 돌려준다.
 					<br><br>
-					You suppose there's not much to talk about when you have <span class="pink">nobody</span> in your locket.
+					로켓 안에 <span class="pink">아무도</span> 없으니 딱히 할 이야기가 없는 것 같다.
 				<<elseif $hypnosis_traits.devotion gte 4>>
-					"Oh my," <<he>> says as <<he>> begins to open your locket. "I wonder who this i— ow!" <<stress 6>><<gstress>>
+					"어머," <<he>>【은는】 당신의 로켓을 열며 말한다. "이게 누구— 아야!" <<stress 6>><<gstress>>
 					<br><br>
-					Upon opening your locket, Sydney drops it on the floor. You look at the locket as you pick it up, but find nothing out of the ordinary.
+					로켓을 열자마자, 시드니는 그것을 바닥에 떨어뜨린다. 당신은 로켓을 주우며 살펴보지만, 특별한 점은 찾을 수 없다.
 					<br><br>
-					However, you soon realise it's shining.
+					하지만, 곧 그것이 빛나고 있다는 것을 깨닫는다.
 					<br><br>
-					Sydney looks at you as <<he>> rubs <<his>> eyes, clearly wanting to say something more. However, <<he>> decides to leave the issue alone.
+					시드니는 <<his>> 눈을 비비며 당신을 바라본다. 분명 뭔가 더 말하고 싶은 눈치다. 하지만, <<he>>【은는】 그 문제를 그냥 넘기기로 한다.
 					<br><br>
-					To ease the moment, you two instead talk about <<= either("your day", "your classes", "random moments", "homework troubles", "the weather", "something more shallow", "the library", "your plans for the day")>> for a little while.
+					어색한 분위기를 풀기 위해, 두 사람은 대신 잠시 <<= either("당신의 하루", "당신의 수업", "소소한 순간들", "숙제 고민", "날씨", "좀 더 가벼운 것", "도서관", "오늘의 계획")>>에 대해 이야기를 나눈다.
 				<<else>>
-					"Oh my," <<he>> says as <<he>> begins to open your locket. "I wonder who this... Oh. What a shame."
+					"어머," <<he>>【은는】 당신의 로켓을 열며 말한다. "이게 누구... 아. 안타깝네요."
 					<br><br>
-					Sydney shows you the picture inside. You look at it, but find nothing out of the ordinary. It's as blurry as always.
+					시드니는 안에 든 사진을 당신에게 보여준다. 당신은 그것을 보지만, 특별한 점은 찾을 수 없다. 늘 그렇듯 흐릿하다.
 					<br><br>
 					<<if $bus is "schoollibrary">>
-						"It's alright, you can always try taking a photo again. There's some literature about photography here if you need it." Sydney smiles.
+						"괜찮아요, 언제든 다시 사진을 찍어 보면 되죠. 필요하다면 여기 사진술에 관한 책도 좀 있어요." 시드니가 미소 짓는다.
 					<<else>>
-						"It's alright, you can always try taking a photo again," Sydney smiles.
+						"괜찮아요, 언제든 다시 사진을 찍어 보면 되죠," 시드니가 미소 짓는다.
 					<</if>>
 				<</if>>
 			<<default>>
-				"How sweet." <<He>> smiles at the photo. "To have something as sentimental as this photo close to your heart..."
+				"다정하네요." <<He>>【은는】 사진을 보며 미소 짓는다. "이 사진처럼 감상적인 것을 가슴 가까이 간직하다니..."
 		<</switch>>
 		<br><br>
 		<<neckon>>
@@ -4863,9 +4863,9 @@ You nod, and Sydney takes your glasses off and hands you <<hers>>. <<He>> places
 	<</if>>
 
 <<else>> /* Change the subject */
-	"Actually, I'd rather talk about something else."
+	"사실, 다른 이야기를 하고 싶어요."
 	<br><br>
-	Sydney gives you a nod. "Of course."
+	시드니는 고개를 끄덕인다. "물론이죠."
 	<br><br>
 	<<neckon>>
 	<<sydneyOptions>>
@@ -4876,37 +4876,37 @@ You nod, and Sydney takes your glasses off and hands you <<hers>>. <<He>> places
 
 <<if $phase is "proposition">>
 	<<if $speech_attitude is "meek">>
-		"I am looking for someone who wants to be here though... And, I mean, you're someone I'm considering."
+		"하지만 여기 들어오고 싶어 하는 사람을 찾고 있긴 해요... 그러니까, 제 말은, 당신도 고려하고 있는 사람 중 하나예요."
 	<<elseif $speech_attitude is "bratty">>
-		"I've been thinking of putting someone's mug in this pretty thing, and I think you're more than pretty enough to match it. You down?"
+		"이 예쁜 물건에 누군가의 얼굴을 넣을까 생각 중이었는데, 네가 여기 어울릴 만큼 충분히 예쁜 것 같아서. 어때?"
 	<<else>>
-		"But I'm looking for someone to put in it. Are you a potential candidate?"
+		"하지만 안에 넣을 사람을 찾고 있어요. 후보가 되어 주실래요?"
 	<</if>>
 	<<promiscuity1>>
 	<<if $sydneyromance is 1>>
 		<<if _sydneyStatus.includes("pure")>>
-			"I thought there'd be a photo of me already in here," <<he>> says, then chuckles to <<himself>>. "That was pompous of me. Sorry about that."
+			"여기 이미 제 사진이 있을 줄 알았는데," <<he>>【이가】 말하고는, 혼자 웃는다. "제가 건방졌네요. 죄송해요."
 		<<elseif _sydneyStatus.includes("corrupt")>>
-			"There I thought you would put me in your love locket already. How foolish of me," <<he>> says lightheartedly. "I would have put you in a locket, though."
+			"당신의 사랑의 로켓에 저를 이미 넣어 뒀을 줄 알았는데. 제가 어리석었네요," <<he>>【이가】 가볍게 말한다. "저라면 당신을 로켓에 넣었을 텐데요."
 		<<else>>
-			"I thought there'd be a photo of me already in here," <<he>> says. "I shouldn't have assumed. Sorry about that."
+			"여기 이미 제 사진이 있을 줄 알았는데," <<he>>【이가】 말한다. "넘겨짚지 말았어야 했는데. 죄송해요."
 		<</if>>
 	<<else>>
 		<<if _sydneyStatus.includes("pure")>>
-			Sydney smiles shyly. "I'd like that."
+			시드니는 수줍게 미소 짓는다. "그러면 좋겠어요."
 		<<elseif _sydneyStatus.includes("corrupt")>>
-			"Am I?" <<He>> tilts <<his>> head cheekily. "I think you already know the answer."
+			"제가요?" <<He>>【은는】 장난스럽게 <<his>> 고개를 갸웃한다. "답은 이미 알고 계실 텐데요."
 		<<else>>
-			Sydney smiles. "Only if you like."
+			시드니는 미소 짓는다. "당신만 괜찮다면요."
 		<</if>>
 	<</if>>
 <<else>> /* Change the subject */
 	<<if _sydneyStatus.includes("pure")>>
-		"It compliments you well," <<he>> says with a smile.
+		"당신에게 잘 어울리네요," <<he>>【이가】 미소 지으며 말한다.
 	<<elseif _sydneyStatus.includes("corrupt")>>
-		<<He>> chuckles upon seeing it. "I thought there would be a picture of me. It's not too late to put one in," <<he>> says in a sing-songy voice.
+		<<He>>【은는】 그것을 보고 웃는다. "제 사진이 있을 줄 알았는데. 지금이라도 넣는 게 늦진 않았어요," <<he>>【이가】 노래하듯 말한다.
 	<<else>>
-		"It looks good on you," <<he>> says with a smile.
+		"잘 어울려요," <<he>>【이가】 미소 지으며 말한다.
 	<</if>>
 <</if>>
 <br><br>
