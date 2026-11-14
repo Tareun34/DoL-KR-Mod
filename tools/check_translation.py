@@ -85,7 +85,10 @@ def _macro_end(text, i):
                 quote = None
             j += 1
         else:
-            if c in "\"'`":
+            if text.startswith("[[", j):
+                k = text.find("]]", j + 2)
+                j = k + 2 if k >= 0 else n
+            elif c in "\"'`":
                 quote = c
                 j += 1
             elif text.startswith("<<", j):
@@ -135,11 +138,15 @@ def _normalise_macro_body(body):
                 else:
                     j += 1
         else:
+            if body.startswith("[[", j):
+                k = body.find("]]", j + 2)
+                k = n if k < 0 else k + 2
+                out.append(body[j:k])
+                j = k
+                continue
             if c in "\"'`":
                 quote = c
-                out.append(c)
-            else:
-                out.append(c)
+            out.append(c)
             j += 1
     s = "".join(out)
     s = LINK_RE.sub(lambda m: _link_target(m.group(1)), s)

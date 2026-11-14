@@ -59,6 +59,12 @@ class SkeletonTweeTests(unittest.TestCase):
         self.assertNotEqual(ct.skeleton_twee(base, TM), ct.skeleton_twee('<<link [[다음|Bed]]>><<endevent>><</link>>', TM))
         self.assertNotEqual(ct.skeleton_twee(base, TM), ct.skeleton_twee('<<link [[다음 (<<print getTimeString(_timeCalc)>>)|Bed2]]>><<endevent>><</link>>', TM))
 
+    def test_apostrophe_inside_link_does_not_open_a_string(self):
+        text = "<<link [[Women's Toilets (0:01)|Toilets]]>><<endevent>><</link>>\nI'm afraid you'll see.\n<<if $a>>x<</if>>"
+        toks = ct.skeleton_twee(text, TM)
+        self.assertEqual(toks, ['<<link [[Toilets]]>>', '<<endevent>>', '<</link>>', '<<if $a>>', '<</if>>'])
+        self.assertEqual(ct.skeleton_twee(text.replace("I'm afraid you'll see.", "무서워할 거예요."), TM), toks)
+
     def test_variables_in_prose_are_kept(self):
         self.assertNotEqual(ct.skeleton_twee('You have $money coins', TM), ct.skeleton_twee('동전이 있다', TM))
         self.assertEqual(ct.skeleton_twee('You have $money coins', TM), ct.skeleton_twee('$money개의 동전이 있다', TM))
