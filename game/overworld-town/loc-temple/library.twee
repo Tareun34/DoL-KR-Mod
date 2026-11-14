@@ -4,7 +4,7 @@
 	<<set $temple_scriptorium_known to 2>>
 <</if>>
 <<generate1>>
-You are in the temple scriptorium. Tall shelves disappear into the dark above, laden with scrolls. A <<person1>><<person>> pushes a wooden ladder in eerie silence.
+당신은 신전 필사실에 있다. 두루마리를 가득 실은 높은 책장들이 위쪽 어둠 속으로 사라진다. <<person1>><<person>>【이가】 섬뜩한 정적 속에서 나무 사다리를 밀고 있다.
 <br><br>
 <<endevent>>
 <<temple_scriptorium_options>>
@@ -15,7 +15,7 @@ You are in the temple scriptorium. Tall shelves disappear into the dark above, l
 <<effects>>
 
 <<generate1>>
-You sneak through the temple scriptorium, remaining unseen thanks to the dim light. The eerie silence of the <<person1>><<monks_and_nuns>>' movements helps less. Tall shelves disappear into the dark above.
+당신은 신전 필사실을 몰래 지나간다. 어둑한 불빛 덕분에 눈에 띄지 않는다. <<person1>><<monks_and_nuns>>의 움직임이 섬뜩하리만치 조용한 것은 그보다 덜 도움이 된다. 높은 책장들이 위쪽 어둠 속으로 사라진다.
 <br><br>
 <<endevent>>
 <<temple_scriptorium_options>>
@@ -30,28 +30,28 @@ You sneak through the temple scriptorium, remaining unseen thanks to the dim lig
 <</if>>
 
 <<generate1>><<person1>>
-You walk through darkened corridors, peeking into rooms, searching for the scriptorium. You round a corner, and almost bump into a <<monk>>.
+당신은 어두운 복도를 걸으며 방들을 들여다보고, 필사실을 찾는다. 모퉁이를 돌다가 <<monk>>【와과】 부딪칠 뻔한다.
 
 <<if $temple_rank is "initiate">>
-	<<He>> frowns a moment, then smiles at you. "Are you lost, lamb?" <<he>> asks. "There's nothing down this corridor but the back entrance to the scriptorium." <<He>> gestures at the wooden door at the end of the corridor, set into the wall. A thick padlock seals it shut.
+	<<He>>【은는】 잠시 눈살을 찌푸리더니 당신에게 미소 짓는다. "길을 잃었습니까, 어린 양이여?" <<he>>【이가】 묻는다. "이 복도 끝에는 필사실 뒷문밖에 없습니다." <<He>>【은는】 복도 끝 벽에 박힌 나무 문을 가리킨다. 두꺼운 자물쇠가 문을 굳게 잠그고 있다.
 	<br><br>
-	<<He>> ushers you back to the main hall.
+	<<He>>【은는】 당신을 본당으로 데려간다.
 	<br><br>
 <<elseif $temple_rank is "monk" or $temple_rank is "priest">>
-	<<He>> frowns a moment, then nods. "The scriptorium has a front door, you know," <<he>> says, then gestures at a wooden door behind <<him>>, set into the wall. It's sealed with a thick padlock. "That's the back entrance. We don't really need to use it nowadays."
+	<<He>>【은는】 잠시 눈살을 찌푸리더니 고개를 끄덕인다. "필사실에는 정문이 있다는 걸 아시지 않습니까." <<he>>【이가】 말하고는 <<him>> 뒤쪽 벽에 박힌 나무 문을 가리킨다. 두꺼운 자물쇠로 잠겨 있다. "저건 뒷문입니다. 요즘은 딱히 쓸 일이 없지요."
 	<br><br>
-	<<He>> nods again, then passes by.
+	<<He>>【은는】 다시 고개를 끄덕이고는 지나간다.
 	<br><br>
 <<else>>
-	<<He>> frowns at you. "Are you lost?" <<he>> asks. "These parts of the temple are off-limits to those not initiated." <<His>> expression softens. "Ah, are you curious about the inner workings of the temple?"
+	<<He>>【은는】 당신을 보고 눈살을 찌푸린다. "길을 잃었습니까?" <<he>>【이가】 묻는다. "신전의 이쪽 구역은 입문하지 않은 이들에게는 출입 금지입니다." <<His>> 표정이 누그러진다. "아, 신전이 안에서 어떻게 돌아가는지 궁금한 겁니까?"
 	<br><br>
-	<<He>> gestures at a wooden door behind <<him>>, set into the wall. It's sealed by a thick padlock. "That's the scriptorium," <<he>> says. "Even the best preserved documents are ravaged by time, but through painstaking work we can preserve their spirit." <<He>> gestures the way you came. "Come. I'll show you back to the temple proper."
+	<<He>>【은는】 <<him>> 뒤쪽 벽에 박힌 나무 문을 가리킨다. 두꺼운 자물쇠로 잠겨 있다. "저곳이 필사실입니다." <<he>>【이가】 말한다. "아무리 잘 보존된 문서라도 세월에 침식되지만, 고된 작업을 통해 그 정신만은 보존할 수 있지요." <<He>>【은는】 당신이 온 길을 가리킨다. "오십시오. 신전 본관으로 안내해 드리겠습니다."
 	<br><br>
-	<<He>> ushers you back to the main hall.
+	<<He>>【은는】 당신을 본당으로 데려간다.
 	<br><br>
 <</if>>
 
-<<link [[Next|Temple]]>><<endevent>><</link>>
+<<link [[다음|Temple]]>><<endevent>><</link>>
 <br>
 
 :: Temple Scriptorium Lock
@@ -59,90 +59,90 @@ You walk through darkened corridors, peeking into rooms, searching for the scrip
 
 <<set $lock to 600>>
 
-You approach the back door to the scriptorium. It's locked tight.
+당신은 필사실 뒷문으로 다가간다. 단단히 잠겨 있다.
 <br><br>
 
 <<if $temple_rank is "monk" or $temple_rank is "priest">>
-	<span class="teal">Your rank is sufficient to enter the scriptorium legitimately through the cloister, should you wish to.</span>
+	<span class="teal">원한다면 당신의 지위로도 회랑을 통해 정당하게 필사실에 들어갈 수 있다.</span>
 	<br><br>
 <</if>>
 
 <<if currentSkillValue('skulduggery') gte $lock>>
 	<<if pcAreArmsBound("both")>>
-		You think you'd be able to pick the lock, <span class="blue">if your arms weren't bound.</span>
+		<span class="blue">팔이 묶여 있지만 않다면</span> 자물쇠를 딸 수 있을 것 같다.
 		<br><br>
 	<<else>>
 		<<wearProp "lockpick">>
-		<span class="green">The lock looks easy to pick.</span>
+		<span class="green">자물쇠는 따기 쉬워 보인다.</span>
 		<br><br>
-		<<lockicon "pick">><<link [[Break in (0:05)|Temple Scriptorium Sneak]]>><<handheldon>><<pass 5>><<crimeUp 10 "trespassing">><</link>><<crime "trespassing">>
+		<<lockicon "pick">><<link [[침입한다 (0:05)|Temple Scriptorium Sneak]]>><<handheldon>><<pass 5>><<crimeUp 10 "trespassing">><</link>><<crime "trespassing">>
 		<br>
 	<</if>>
 <<else>>
-	<span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>>
+	<span class="red">자물쇠는 당신의 능력으로는 딸 수 없을 것 같다.</span><<skulduggeryrequired>>
 	<br><br>
 <</if>>
 
-<<ind>><<link [[Leave|Temple]]>><</link>>
+<<ind>><<link [[떠난다|Temple]]>><</link>>
 	<br>
 
 :: Temple Scriptorium Altar
 <<temple_effects>><<effects>>
 <<generate1>><<person1>>
-You light a candle, and tiptoe by <<monks_and_nuns>> hunched over tables, scribbling away, oblivious to all around them. Scrolls, and the occasional tome, stack the shelves. Some are bound and chained.
+당신은 초에 불을 붙이고, 책상 위에 웅크린 채 주변은 아랑곳없이 무언가를 끄적이는 <<monks_and_nuns>> 곁을 발끝으로 살금살금 지나간다. 책장에는 두루마리들과 이따금 두꺼운 책들이 쌓여 있다. 몇몇은 제본된 채 사슬로 매여 있다.
 <br><br>
 
-You come to shelves holding wooden drawers. You lift a lit candle from a nearby table, and take care as you open the first drawer. Old pages, bound into different collections. This is the sort of thing you're looking for.
+당신은 나무 서랍이 달린 책장에 이른다. 근처 탁자에서 불 붙은 초를 들어 올리고, 조심스럽게 첫 번째 서랍을 연다. 여러 묶음으로 제본된 낡은 페이지들. 당신이 찾는 종류의 물건이다.
 <br><br>
 
-The ordering system takes some figuring out. You manage it well enough, and narrow your search down to a section of drawers at the far end, each containing pages from more modern works.
+정리 방식을 파악하는 데 시간이 좀 걸린다. 그럭저럭 요령을 익힌 당신은 수색 범위를 맨 끝쪽 서랍들로 좁힌다. 각각 비교적 현대의 저작에서 나온 페이지들이 들어 있다.
 <br><br>
 
-<<link [[Next|Temple Scriptorium Altar 2]]>><</link>>
+<<link [[다음|Temple Scriptorium Altar 2]]>><</link>>
 <br>
 
 :: Temple Scriptorium Altar 2
 <<temple_effects>><<effects>>
 
-You search the final drawers, until you find a video tape tucked between pages. You examine it. 'Dark One 3' is scrawled on the label. The bound pages beside it fall askew. In the candlelight, you can only make out the numbers at the top, but it's enough. <span class="gold">The missing pages.</span>
+당신은 마지막 서랍들을 뒤지다가, 페이지 사이에 끼워진 비디오테이프 하나를 발견한다. 살펴본다. 라벨에 '어둠의 존재 3'이라고 휘갈겨 쓰여 있다. 그 옆에 묶여 있던 페이지들이 비스듬히 흐트러진다. 촛불 아래서는 맨 위의 숫자밖에 알아볼 수 없지만, 그것으로 충분하다. <span class="gold">사라진 페이지들이다.</span>
 <br><br>
 
-They feel about to come apart as you place them on the table. They detail an old and savage ritual. A diagram shows a figure cradling another, knife in hand. The last page is simply a depiction of a burning figure, beneath a prominent sun.
+탁자 위에 올려놓자 금방이라도 바스러질 것만 같다. 오래되고 야만적인 의식에 대해 상세히 적혀 있다. 도해에는 한 인물이 칼을 손에 쥔 채 다른 인물을 품에 안은 모습이 그려져 있다. 마지막 페이지는 그저 커다란 태양 아래 불타는 형상을 그린 그림뿐이다.
 <br><br>
 
-<<link [[Next|Temple Scriptorium Altar Letters]]>><</link>>
+<<link [[다음|Temple Scriptorium Altar Letters]]>><</link>>
 <br>
 
 :: Temple Scriptorium Altar Letters
 <<effects>>
 
-You turn the last of the missing pages, and find smaller, more robust sheets. The script is modern, though the pages have yellowed a little. They're formatted like letters. They look like correspondence between the clergy and the faithful. 
+사라진 페이지의 마지막 장을 넘기자, 더 작고 더 튼튼한 종이들이 나온다. 글씨는 현대의 것이지만 종이는 조금 누렇게 바랬다. 편지 형식으로 되어 있다. 성직자와 신도 사이에 오간 서신처럼 보인다. 
 <br><br>
 
-The topmost letter is addressed from a priest. It gives the recipient advice and supportive words, but a name sticks out in the penultimate paragraph. <span class="red">Kylar.</span>
+맨 위의 편지는 사제가 보낸 것이다. 받는 이에게 조언과 격려의 말을 건네고 있지만, 끝에서 두 번째 문단에서 한 이름이 눈에 띈다. <span class="red">카일라.</span>
 <br>
-<i>"I regret to confirm what you've heard. Kylar will receive all the help <<nnpc_he "Kylar">> needs, but for the time being it would be best if you dissuaded your children from interacting with <<nnpc_him "Kylar">>, for <<nnpc_his "Kylar">> own safety."</i>
+<i>"들으신 바가 사실임을 확인해 드리게 되어 유감입니다. 카일라는 <<nnpc_he "Kylar">>【이가】 필요로 하는 모든 도움을 받게 될 것입니다만, 당분간은 자녀분들이 <<nnpc_him "Kylar">>【와과】 어울리지 않도록 말려 주시는 것이 좋겠습니다. <<nnpc_his "Kylar">> 자신의 안전을 위해서 말입니다."</i>
 <br><br>
 
-You check the other letters. Each implies that Kylar is dangerous, and advises the recipient to keep their children away from <<nnpc_him "Kylar">>.
+당신은 다른 편지들도 확인한다. 하나같이 카일라가 위험하다고 암시하며, 받는 이에게 자녀들을 <<nnpc_him "Kylar">>에게서 떼어 놓으라고 조언한다.
 <br><br>
 
-You take the pages, the letters, and the tape. <span class="gold">Kylar has a device that could play it.</span>
+당신은 페이지들과 편지들, 그리고 테이프를 챙긴다. <span class="gold">카일라에게 이것을 재생할 수 있는 기기가 있다.</span>
 <br><br>
 
-<<link [[Next|Temple Scriptorium Altar 3]]>><<endevent>><</link>>
+<<link [[다음|Temple Scriptorium Altar 3]]>><<endevent>><</link>>
 <br>
 
 :: Temple Scriptorium Altar 3
 <<effects>>
 
-You make your way through the shadowy hall. An arch passes overhead as you enter a corridor formed between two long, tall sets of shelves. The flame of your candle dances as if in a breeze, but you feel no such thing. The phantom wind picks up, and the flame dies, plunging you into darkness.
+당신은 그늘진 홀을 가로질러 나아간다. 길고 높은 책장 두 줄 사이에 난 통로로 들어서자 머리 위로 아치가 지나간다. 촛불이 바람이라도 부는 듯 일렁이지만, 당신은 아무런 바람도 느끼지 못한다. 보이지 않는 바람이 거세지더니 불꽃이 꺼지고, 당신은 어둠에 잠긴다.
 <br><br>
 
-A whip cracks, your ankles are bound, and you fall to the floor. Pages flutter around you.<<gpain>><<gstress>><<pain 4>><<stress 6>>
+채찍이 울리고, 발목이 묶이고, 당신은 바닥에 쓰러진다. 페이지들이 주변에서 팔랑거린다.<<gpain>><<gstress>><<pain 4>><<stress 6>>
 <br><br>
 
-<<link [[Next|Temple Scriptorium Altar 5]]>><</link>>
+<<link [[다음|Temple Scriptorium Altar 5]]>><</link>>
 <br>
 
 :: Temple Scriptorium Altar 5
@@ -162,30 +162,30 @@ A whip cracks, your ankles are bound, and you fall to the floor. Pages flutter a
 	<<saveNPC 1 "bishop_right_hand">><<saveNPC 2 "bishop_left_hand">>
 <</if>>
 
-You twist onto your back to look at your assailant. Three figures stand in front of you, all three cowled.
+당신은 몸을 비틀어 똑바로 누운 채 습격자를 올려다본다. 세 인물이 앞에 서 있다. 셋 모두 두건을 쓰고 있다.
 <br><br>
 
-"Well well," says the one in the middle.
+"이런, 이런." 가운데 있는 이가 말한다.
 <<if $temple_confessor_intro>>
-	It's the bishop, and <<his>> hands.
+	주교와, <<his>> 양팔이라 불리는 두 사제다.
 <</if>>
-<<He>> crouches, and brushes one of the pages with <<his>> fingers.
+<<He>>【은는】 쭈그리고 앉아, 페이지 한 장을 <<his>> 손가락으로 쓸어 본다.
 <<if $temple_rank is "priest" or $temple_rank is "monk">>
-	"Absconding with that which belongs to the temple? I am disappointed, <<sister>>."
+	"신전의 것을 가지고 달아나려 하다니? 실망스럽구나, <<sister>>【아야】."
 <<else>>
-	"A rat sneaks into a place most holy, and tries to abscond with that which isn't <<phers>>."	
+	"쥐새끼 한 마리가 지극히 거룩한 곳에 숨어들어, <<phers>> 것이 아닌 것을 가지고 달아나려 하는구나."	
 <</if>>
 <br>
-"Dangerous."
+"위험하군."
 <br>
-"Naughty."
+"못됐군."
 <br>
-The other figure tuts.
+다른 인물이 혀를 찬다.
 <br><br>
 
-<<link [[Flirt|Temple Scriptorium Altar Flirt]]>><</link>><<promiscuous1>>
+<<link [[추파를 던진다|Temple Scriptorium Altar Flirt]]>><</link>><<promiscuous1>>
 <br>
-<<link [[Remain silent|Temple Scriptorium Altar Silent]]>><</link>>
+<<link [[침묵한다|Temple Scriptorium Altar Silent]]>><</link>>
 <br>
 
 
@@ -197,71 +197,71 @@ The other figure tuts.
 <<seductionskilluptext>>
 <<seductionskilluse>>
 
-You writhe on the ground. "Looks like you have me right where you want me," you purr.
+당신은 바닥에서 몸을 꿈틀거린다. "원하시는 대로 절 손에 넣으신 것 같네요." 당신은 나긋하게 속삭인다.
 <<promiscuity1>>
 
 <<if $seductionrating gte $seductionrequired>>
-	<span class="green">The figures on the left and right watch you with naked lust,</span> until the <<bishop>> snaps both hands at once. The force echoes through the hall, and brings both to their senses. "I expect better of both of you," <<he>> says. "Contrition, later."
+	<span class="green">좌우의 인물들이 노골적인 욕정을 담아 당신을 바라본다.</span> <<bishop>>【이가】 두 손을 동시에 튕겨 소리를 내기 전까지는. 그 소리가 홀에 울려 퍼지며 둘을 제정신으로 돌려놓는다. "둘 다 그보단 나을 줄 알았다만." <<he>>【이가】 말한다. "참회는 나중에."
 	<br><br>
-	The pair look abashed, and a little afraid.
+	두 사람은 겸연쩍은, 그리고 조금 겁먹은 표정이다.
 	<br><br>
 
-	<<link [[Next|Temple Scriptorium Altar Silent]]>><</link>>
+	<<link [[다음|Temple Scriptorium Altar Silent]]>><</link>>
 	<br>
 <<else>>
-	If any are moved by your performance, <span class="red">they hide it well.</span>
+	당신의 연기에 마음이 흔들린 이가 있다 해도, <span class="red">잘도 숨기고 있다.</span>
 	<br><br>
-	"Careful, <<girl>>," the <<bishop>> says. "Or you'll draw worse than us."
+	"조심하거라, <<girl>>【아야】." <<bishop>>【이가】 말한다. "안 그러면 우리보다 더 고약한 것들을 끌어들이게 될 테니."
 	<br><br>
-	<<link [[Next|Temple Scriptorium Altar Silent]]>><</link>>
+	<<link [[다음|Temple Scriptorium Altar Silent]]>><</link>>
 	<br>
 <</if>>
 
 :: Temple Scriptorium Altar Silent
 <<effects>>
 
-The <<bishop>> sighs. "I had hoped my warning would dissuade you," <<he>> says. "I see now I was too gentle. I merely fanned your flames. No matter. It ends here."
+<<bishop>>【이가】 한숨을 쉰다. "내 경고로 단념하길 바랐건만." <<he>>【이가】 말한다. "이제 보니 내가 너무 부드러웠구나. 되레 네 불길에 부채질만 한 셈이야. 상관없다. 여기서 끝이니."
 <br><br>
-<<His>> companions retrieve the fallen pages, and letters. Their movements are swift, and efficient. It only takes a moment.
+<<His>> 동행들이 떨어진 페이지와 편지를 거둬들인다. 움직임이 빠르고 능률적이다. 잠깐이면 충분하다.
 <br><br>
-"Find a better place for them," the <<bishop>> directs. "As for you,
+"저것들은 더 나은 자리에 보관해라." <<bishop>>【이가】 지시한다. "그리고 너,
 <<if $temple_rank is "monk" or $temple_rank is "priest">>
-	<<sister>>, thank you for highlighting this weakness in our security."
+	<<sister>>【아야】, 우리 경비의 허점을 드러내 주어 고맙구나."
 <<else>>
-	<<girl>>, you won't be punished for this lapse on our part."
+	<<girl>>【아야】, 우리 쪽의 실수이니 너를 벌하진 않겠다."
 <</if>>
 <br><br>
 
-All three smile as they turn and walk away. At that moment, you become aware of something pressed into your back. <span class="teal">The video tape, concealed by your body.</span>
+셋 모두 미소를 지으며 돌아서서 걸어간다. 그 순간, 당신은 등에 무언가가 눌려 있음을 깨닫는다. <span class="teal">당신의 몸에 가려진 비디오테이프다.</span>
 <br><br>
 
-<<link [[Flip the bird|Temple Scriptorium Altar Flip]]>><<def 1>><</link>>
+<<link [[가운뎃손가락을 세운다|Temple Scriptorium Altar Flip]]>><<def 1>><</link>>
 <br>
-<<link [[Stay still|Temple Scriptorium Altar Still]]>><</link>>
+<<link [[가만히 있는다|Temple Scriptorium Altar Still]]>><</link>>
 <br>
 
 :: Temple Scriptorium Altar Flip
 <<effects>>
 
-You flip the bird at their backs. The <<bishop>> and <<his>> rightmost companion disappear for a moment, but the leftmost companion pauses a moment, as if sensing your gesture. Then <<person2>><<he>> too disappears.
+당신은 그들의 등 뒤에 대고 가운뎃손가락을 세운다. <<bishop>>【와과】 <<his>> 오른쪽 동행은 이내 사라지지만, 왼쪽 동행은 당신의 손짓을 감지하기라도 한 듯 잠시 멈춰 선다. 그러더니 <<person2>><<he>> 역시 사라진다.
 <br><br>
 
-You climb to your feet. The video tape looks undamaged.
+당신은 몸을 일으킨다. 비디오테이프는 멀쩡해 보인다.
 <br><br>
 
-<<link [[Next|Temple Scriptorium]]>><<endevent>><</link>>
+<<link [[다음|Temple Scriptorium]]>><<endevent>><</link>>
 <br>
 
 :: Temple Scriptorium Altar Still
 <<effects>>
 
-You remain still. The <<bishop>> and <<his>> companions disappear into the dark.
+당신은 가만히 있는다. <<bishop>>【와과】 <<his>> 동행들이 어둠 속으로 사라진다.
 <br><br>
 
-Once alone, you climb to your feet and examine the video tape. It looks undamaged.
+혼자가 되자, 당신은 몸을 일으켜 비디오테이프를 살펴본다. 멀쩡해 보인다.
 <br><br>
 
-<<link [[Next|Temple Scriptorium]]>><<endevent>><</link>>
+<<link [[다음|Temple Scriptorium]]>><<endevent>><</link>>
 <br>
 
 
@@ -269,93 +269,93 @@ Once alone, you climb to your feet and examine the video tape. It looks undamage
 <<temple_effects>><<effects>>
 <<set $temple_calligraphy_difficulty to 100>>
 <<generate1>><<person1>>
-You sit at an empty desk. There's an inkwell here, and a blank parchment.
+당신은 빈 책상에 앉는다. 잉크병과 백지 양피지가 놓여 있다.
 <br><br>
 
-A heavy tome thumps in front of you. "Last week's notes," says a <<person>> dressed as a <<monk>>. "Make a copy. Or as much as you can."
+묵직한 책 한 권이 당신 앞에 쿵 하고 놓인다. "지난주의 기록입니다." <<monk>> 차림의 <<person>>【이가】 말한다. "필사하십시오. 할 수 있는 만큼이라도."
 <br><br>
 <<if $temple_rank isnot "priest" and $temple_rank isnot "monk">>
-	<<He>> pierces you with a suspicious squint before walking away.
+	<<He>>【은는】 미심쩍은 눈초리로 당신을 꿰뚫어 보고는 걸어간다.
 	<br><br>
 <<else>>
-	<<He>> walks away.
+	<<He>>【은는】 걸어간다.
 	<br><br>
 <</if>>
 
 <<set _temple_calligraphy_difficulty_min to Math.clamp(($temple_calligraphy_difficulty - 300), 0, 700)>>
-<<link [[Make a copy (1:00)|Temple Calligraphy 2]]>><<pass 60>><<set $daily.temple_calligraphy to 1>><<endevent>><</link>><<skill_difficulty `currentSkillValue("handskill")` "Hand Skill" _temple_calligraphy_difficulty_min $temple_calligraphy_difficulty>>
+<<link [[필사한다 (1:00)|Temple Calligraphy 2]]>><<pass 60>><<set $daily.temple_calligraphy to 1>><<endevent>><</link>><<skill_difficulty `currentSkillValue("handskill")` "Hand Skill" _temple_calligraphy_difficulty_min $temple_calligraphy_difficulty>>
 <br>
-<<link [[Just leave|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+<<link [[그냥 떠난다|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 <br>
 
 :: Temple Calligraphy
 <<temple_effects>><<effects>>
 
 <<generate1>><<person1>>
-You sit at one of the desks.
+당신은 책상 하나에 앉는다.
 <<if $temple_calligraphy gte 10>>
-	A voiceless <<monk>> climbs a ladder and unchains a scroll from the top shelf. <<He>> carries it down, places it in front of you, and peels off <<his>> gloves as <<he>> walks away.
+	말없는 <<monk>>【이가】 사다리를 올라 맨 위 선반에서 두루마리 하나의 사슬을 푼다. <<He>>【은는】 그것을 들고 내려와 당신 앞에 놓고는, <<his>> 장갑을 벗으며 걸어간다.
 <<else>>
-	A voiceless <<monk>> unfurls a scroll for you to copy, marked where the last calligrapher left off.
+	말없는 <<monk>>【이가】 당신이 필사할 두루마리를 펼쳐 준다. 앞선 서예가가 멈춘 자리에 표시가 되어 있다.
 <</if>>
 <<endevent>>
 
 <<if $temple_calligraphy gte 10>>
-	<span class="red">It looks difficult,</span> the text seeming to change when you look away.
+	<span class="red">어려워 보인다.</span> 눈을 돌릴 때마다 글이 바뀌는 것만 같다.
 	<<set $temple_calligraphy_difficulty to 1000>>
 <<elseif $temple_calligraphy gte 9>>
-	<span class="pink">It looks difficult,</span> with arcane language that wrestles with your intuition.
+	<span class="pink">어려워 보인다.</span> 난해한 언어가 당신의 직관과 씨름한다.
 	<<set $temple_calligraphy_difficulty to 900>>
 <<elseif $temple_calligraphy gte 8>>
-	<span class="pink">It looks complicated.</span> Beautiful art illustrates, but also convolutes your task.
+	<span class="pink">복잡해 보인다.</span> 아름다운 삽화가 글을 꾸며 주지만, 당신의 작업을 뒤얽히게도 한다.
 	<<set $temple_calligraphy_difficulty to 800>>
 <<elseif $temple_calligraphy gte 7>>
-	<span class="purple">It looks complicated,</span> the language dense and unapproachable.
+	<span class="purple">복잡해 보인다.</span> 언어가 빽빽하고 접근하기 어렵다.
 	<<set $temple_calligraphy_difficulty to 700>>
 <<elseif $temple_calligraphy gte 6>>
-	<span class="purple">It looks challenging,</span> being written in a rare dialect.
+	<span class="purple">까다로워 보인다.</span> 희귀한 방언으로 쓰여 있다.
 	<<set $temple_calligraphy_difficulty to 600>>
 <<elseif $temple_calligraphy gte 5>>
-	<span class="blue">It looks challenging.</span> The author spent a lot of time meandering about issues of such little consequence. It'll be a struggle to stay focused.
+	<span class="blue">까다로워 보인다.</span> 저자는 하잘것없는 문제들을 두고 한참을 에둘러 간다. 집중을 유지하기가 힘들 것이다.
 	<<set $temple_calligraphy_difficulty to 500>>
 <<elseif $temple_calligraphy gte 4>>
-	<span class="blue">It looks straightforward,</span> though it would be easier if the author had better handwriting.
+	<span class="blue">단순해 보인다.</span> 저자의 글씨가 더 좋았다면 더 쉬웠겠지만.
 	<<set $temple_calligraphy_difficulty to 400>>
 <<elseif $temple_calligraphy gte 3>>
-	<span class="lblue">It looks straightforward,</span> the language modern and familiar.
+	<span class="lblue">단순해 보인다.</span> 언어가 현대적이고 친숙하다.
 	<<set $temple_calligraphy_difficulty to 300>>
 <<elseif $temple_calligraphy gte 2>>
-	<span class="teal">It looks simple,</span> just a backup that needs yet another backup.
+	<span class="teal">쉬워 보인다.</span> 그저 또 하나의 사본이 필요한 사본일 뿐이다.
 	<<set $temple_calligraphy_difficulty to 200>>
 <<else>>
-	<span class="green">It looks simple,</span> just some recent notes in need of a backup.
+	<span class="green">쉬워 보인다.</span> 그저 사본이 필요한 최근 기록일 뿐이다.
 	<<set $temple_calligraphy_difficulty to 100>>
 <</if>>
 <br><br>
 
-<<link [[Lick the tip of your quill|Temple Calligraphy Lick]]>><<oralskill 5>><</link>><<skill_difficulty `currentSkillValue("oralskill")` "Oral Skill" 1 1000>><<goralskill>>
+<<link [[깃펜 끝을 핥는다|Temple Calligraphy Lick]]>><<oralskill 5>><</link>><<skill_difficulty `currentSkillValue("oralskill")` "Oral Skill" 1 1000>><<goralskill>>
 <br>
 <<set _temple_calligraphy_difficulty_min to Math.clamp(($temple_calligraphy_difficulty - 300), 0, 700)>>
-<<link [[Begin|Temple Calligraphy 2]]>><</link>><<skill_difficulty `currentSkillValue("handskill")` "Hand Skill" _temple_calligraphy_difficulty_min $temple_calligraphy_difficulty>>
+<<link [[시작한다|Temple Calligraphy 2]]>><</link>><<skill_difficulty `currentSkillValue("handskill")` "Hand Skill" _temple_calligraphy_difficulty_min $temple_calligraphy_difficulty>>
 <br>
 
 
 :: Temple Calligraphy Lick
 <<effects>>
 
-You lick the tip of your quill.
+당신은 깃펜 끝을 핥는다.
 
 <<if currentSkillValue("oralskill") gte random(1, 1000)>>
 	<<set $temple_calligraphy_difficulty -= 300>>
 	<<set $temple_calligraphy_difficulty to Math.clamp($temple_calligraphy_difficulty, 0, 1000)>>
-	<span class="green">The ink flows.</span> <span class="green"> This should make scratching away less arduous.| - Difficulty</span>
+	<span class="green">잉크가 흐른다.</span> <span class="green"> 이제 펜을 긁어 대는 일이 덜 고될 것이다.| - 난이도</span>
 	<br><br>
 <<else>>
 	<<if random(1, 3) is 3>>
-		The ink flows free. <span class="red">Too free.</span> The bitterness runs over your tongue, though you manage to avoid spilling any onto the parchment.<<gstress>><<stress 6>>
+		잉크가 거침없이 흐른다. <span class="red">너무 거침없이.</span> 쓴맛이 혀 위로 번지지만, 양피지에 흘리는 것만은 간신히 피한다.<<gstress>><<stress 6>>
 		<br><br>
 	<<else>>
-		<span class="red">You're unable to loosen the ink.</span> You'll have to hold the quill just right.
+		<span class="red">잉크를 풀어내지 못한다.</span> 깃펜을 딱 알맞게 쥐어야 할 것이다.
 		<br><br>
 	<</if>>
 <</if>>
@@ -363,9 +363,9 @@ You lick the tip of your quill.
 <<set _temple_calligraphy_difficulty_min to Math.clamp(($temple_calligraphy_difficulty - 300), 0, 700)>>
 
 <<if $temple_calligraphy gte 11>>
-	<<link [[Begin|Temple Scribe 2]]>><</link>>
+	<<link [[시작한다|Temple Scribe 2]]>><</link>>
 <<else>>
-	<<link [[Begin|Temple Calligraphy 2]]>><</link>>
+	<<link [[시작한다|Temple Calligraphy 2]]>><</link>>
 <</if>>
 <<skill_difficulty `currentSkillValue("handskill")` "Hand Skill" _temple_calligraphy_difficulty_min $temple_calligraphy_difficulty>>
 <br>
@@ -378,221 +378,221 @@ You lick the tip of your quill.
 <<if $temple_calligraphy gte 10>>
 	<<generate1>><<person1>>
 	<<if currentSkillValue("handskill") gte random(_temple_calligraphy_difficulty_min, $temple_calligraphy_difficulty)>>
-		The text looks straightforward enough, if a bit archaic. However, the text seems to shift, or outright change when you look away.
+		글은 조금 고풍스럽긴 해도 꽤 단순해 보인다. 하지만 눈을 돌리면 글이 움직이거나, 아예 바뀌는 것만 같다.
 		<br><br>
-		You try to figure out patterns, but can't pin any down, as if the text were toying with you. You blink, and the word in direct focus hops from one sentence to another, changing the meaning of both.
+		당신은 규칙을 찾아내려 하지만, 마치 글이 당신을 가지고 노는 것처럼 아무것도 잡아낼 수 없다. 눈을 깜빡이자, 똑바로 보고 있던 단어가 한 문장에서 다른 문장으로 뛰어넘어 두 문장의 뜻을 모두 바꿔 놓는다.
 		<br><br>
-		You pause in thought.
+		당신은 잠시 생각에 잠긴다.
 		<br><br>
 
-		<<link [[Ask the text to stay put|Temple Calligraphy Ask]]>><</link>>
+		<<link [[글에게 가만히 있어 달라고 부탁한다|Temple Calligraphy Ask]]>><</link>>
 		<br>
 		<<if $angel gte 6>>
-			<<link [[Smite|Temple Calligraphy Smite]]>><</link>><<angel>>
+			<<link [[천벌을 내린다|Temple Calligraphy Smite]]>><</link>><<angel>>
 			<br>
 		<</if>>
 		<<if $demon gte 6>>
-			<<link [[Defile|Temple Calligraphy Defile]]>><</link>><<demon>>
+			<<link [[더럽힌다|Temple Calligraphy Defile]]>><</link>><<demon>>
 			<br>
 		<</if>>
 		<<if $fallenangel gte 2>>
-			<<link [[Punish|Temple Calligraphy Punish]]>><<pain 4>><<stress 6>><</link>><<fallenangel>><<gpain>><<gstress>>
+			<<link [[벌한다|Temple Calligraphy Punish]]>><<pain 4>><<stress 6>><</link>><<fallenangel>><<gpain>><<gstress>>
 			<br>
 		<</if>>
 		<<if displayDefiantOption(500)>>
-			<<link [[Threaten|Temple Calligraphy Threaten]]>><<def 1>><<wolfDefiant 500>><</link>><<defianttext 500>>
+			<<link [[위협한다|Temple Calligraphy Threaten]]>><<def 1>><<wolfDefiant 500>><</link>><<defianttext 500>>
 			<br>
 		<</if>>
-		<<link [[Give up|Temple Calligraphy Give]]>><</link>>
+		<<link [[포기한다|Temple Calligraphy Give]]>><</link>>
 		<br>
 	<<else>>
-		The text looks straightforward enough, if a bit archaic. However, the text seems to shift, or outright change when you look away. It feels like it's toying with you, even. You blink, and the word in direct focus hops from one sentence to the one beneath, changing the meaning of both.
+		글은 조금 고풍스럽긴 해도 꽤 단순해 보인다. 하지만 눈을 돌리면 글이 움직이거나, 아예 바뀌는 것만 같다. 심지어 당신을 가지고 노는 느낌마저 든다. 눈을 깜빡이자, 똑바로 보고 있던 단어가 한 문장에서 그 아래 문장으로 뛰어넘어 두 문장의 뜻을 모두 바꿔 놓는다.
 		<br><br>
-		You finish, and compare your text to the original. <span class="red">They're nothing alike.</span> You've no idea how to copy a text that won't stay put.
+		당신은 작업을 마치고 당신의 글을 원본과 비교한다. <span class="red">전혀 닮지 않았다.</span> 가만히 있지 않는 글을 어떻게 베껴야 할지 도무지 알 수 없다.
 		<br><br>
-		<<link [[Next|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+		<<link [[다음|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 		<br>
 	<</if>>
 <<elseif $temple_calligraphy gte 9>>
 	<<if currentSkillValue("handskill") gte random(_temple_calligraphy_difficulty_min, $temple_calligraphy_difficulty)>>
-		The writing in front of you is dense and arcane, perhaps meaning a lot to someone. Not to you.
+		눈앞의 글은 빽빽하고 난해하다. 누군가에게는 큰 의미가 있을지 몰라도, 당신에게는 아니다.
 		<br><br>
-		Still, you get to work parsing the text, <span class="green">and it goes well.</span> The meaning doesn't matter. Yet you feel an odd, alluring pull all the same.
+		그래도 당신은 글을 해독하는 작업에 착수하고, <span class="green">순조롭게 진행된다.</span> 의미는 중요하지 않다. 그런데도 기묘하고 매혹적인 이끌림이 느껴진다.
 		<br><br>
 
-		<<link [[Resist|Temple Calligraphy Resist]]>><</link>><<willpowerdifficulty 1 600>>
+		<<link [[저항한다|Temple Calligraphy Resist]]>><</link>><<willpowerdifficulty 1 600>>
 		<br>
-		<<link [[Read|Temple Calligraphy Read]]>><<endevent>><<awareness 1>><<stress 6>><</link>><<gawareness>><<gstress>>
+		<<link [[읽는다|Temple Calligraphy Read]]>><<endevent>><<awareness 1>><<stress 6>><</link>><<gawareness>><<gstress>>
 		<br>
 	<<else>>
-		The writing in front of you is dense and arcane. You struggle to even parse it. You follow the contours of the letters with your quill, trying to just jot the right shapes down. Writing helps you understand what reading failed to. You feel uneasy.<<gstress>><<stress 6>>
+		눈앞의 글은 빽빽하고 난해하다. 해독하는 것조차 버겁다. 당신은 깃펜으로 글자의 윤곽을 따라가며, 그저 올바른 모양만이라도 적어 내려 한다. 읽어서는 이해하지 못한 것을 쓰면서 이해하게 된다. 불안해진다.<<gstress>><<stress 6>>
 		<br><br>
-		You sit back to examine your work. <span class="red">It looks nothing like the original text.</span> It's not even grammatically correct.
+		당신은 뒤로 물러앉아 작업물을 살펴본다. <span class="red">원문과 조금도 닮지 않았다.</span> 문법조차 맞지 않는다.
 		<br><br>
-		No one arrives to disparage you. They trust you to disparage yourself.
+		아무도 당신을 비난하러 오지 않는다. 당신이 스스로를 비난하리라 믿는 것이다.
 		<br><br>
-		<<link [[Next|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+		<<link [[다음|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 		<br>
 	<</if>>
 <<elseif $temple_calligraphy gte 8>>
 	<<generate1>><<person1>>
-	The page is illustrated, with colourful designs surrounding the page, blending with the text at places. "Someone else will handle the imagery," says a <<monk>>. "Your focus is the text itself."
+	페이지에는 삽화가 들어가 있다. 알록달록한 문양이 페이지를 둘러싸고, 군데군데 글과 뒤섞인다. "그림은 다른 사람이 맡을 겁니다." <<monk>>【이가】 말한다. "당신은 글 자체에만 집중하십시오."
 	<br><br>
 	<<if currentSkillValue("handskill") gte random(_temple_calligraphy_difficulty_min, $temple_calligraphy_difficulty)>>
-		You get to work, and copy the text. You manage to discern the illustrations from the writing, and focus on the latter.
+		당신은 작업에 착수해 글을 필사한다. 삽화와 글을 가까스로 구분해 내고, 후자에 집중한다.
 		<br><br>
-		You lean back to admire your handiwork. <span class="green">You think you did a good job.</span> Then adrenaline rushes through you <span class="pink">as a grinning face winks at you from the page.</span> You blink, and it vanishes.<<gcalligraphy>>
+		당신은 뒤로 기대어 솜씨를 감상한다. <span class="green">잘 해낸 것 같다.</span> 그때 <span class="pink">페이지 속에서 씩 웃는 얼굴이 당신에게 윙크하고,</span> 아드레날린이 온몸을 훑고 지나간다. 눈을 깜빡이자 그것은 사라진다.<<gcalligraphy>>
 		<br><br>
-		That's enough for today.
+		오늘은 이만하면 됐다.
 		<br><br>
-		<<link [[Next|Temple Scriptorium]]>><<set $temple_calligraphy to 9>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+		<<link [[다음|Temple Scriptorium]]>><<set $temple_calligraphy to 9>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 		<br>
 	<<else>>
-		You get to work, and try to copy the text. It's unclear just where the text ends and illustrations begin, however, and you find yourself drawing more than writing. You don't even have the right colours.
+		당신은 작업에 착수해 글을 필사하려 한다. 하지만 어디서 글이 끝나고 삽화가 시작되는지 분명치 않아, 어느새 글을 쓰기보다 그림을 그리고 있다. 알맞은 색조차 갖고 있지 않은데.
 		<br><br>
-		<span class="red">The ink smears itself across the parchment,</span> as if in protest. You can try again tomorrow.
+		<span class="red">잉크가 양피지 위로 제멋대로 번진다.</span> 마치 항의라도 하듯. 내일 다시 시도할 수 있다.
 		<br><br>
-		<<link [[Next|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+		<<link [[다음|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 		<br>
 	<</if>>
 <<elseif $temple_calligraphy gte 7>>
 	<<generate1>><<person1>>
 	<<if currentSkillValue("handskill") gte random(_temple_calligraphy_difficulty_min, $temple_calligraphy_difficulty)>>
-		You squint at the text. It tries to draw you in, implanting something in your imagination, but you stick to your task <span class="green">and make a faithful copy.</span>
+		당신은 눈을 가늘게 뜨고 글을 본다. 글은 당신의 상상 속에 무언가를 심어 넣으며 끌어들이려 하지만, 당신은 작업에 전념해 <span class="green">충실한 사본을 만들어 낸다.</span>
 		<br><br>
-		A passing <<monk>> snatches it up as <<he>> passes, slowing <<his>> walk as <<he>> reads. <<He>> turns back to you, seeming surprised. "This is adequate," <<he>> manages before moving on.<<gcalligraphy>>
+		지나가던 <<monk>>【이가】 스쳐 지나가며 그것을 낚아채더니, <<he>>【은는】 읽으면서 <<his>> 걸음을 늦춘다. <<He>>【은는】 놀란 기색으로 당신을 돌아본다. "쓸 만하군요." <<he>>【은는】 간신히 그 말을 내뱉고 지나간다.<<gcalligraphy>>
 		<br><br>
-		<<link [[Next|Temple Scriptorium]]>><<set $temple_calligraphy to 8>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+		<<link [[다음|Temple Scriptorium]]>><<set $temple_calligraphy to 8>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 		<br>
 	<<else>>
-		You squint at the text, and try to copy it. It takes hold of your thoughts, carrying you down strange roads once belonging to someone else. After a time you realise you're supposed to be copying, <span class="red">but there's only an indecipherable scrawl in front of you.</span>
+		당신은 눈을 가늘게 뜨고 글을 보며 필사하려 한다. 글이 당신의 생각을 사로잡고, 한때 다른 누군가의 것이었던 낯선 길로 당신을 끌고 간다. 한참 뒤에야 필사를 해야 한다는 사실을 깨닫지만, <span class="red">눈앞에는 해독할 수 없는 낙서뿐이다.</span>
 		<br><br>
-		A passing <<monk>> snatches your attempt as <<he>> passes, tearing it up without fanfare.
+		지나가던 <<monk>>【이가】 스쳐 지나가며 당신의 결과물을 낚아채고는, 아무 말 없이 찢어 버린다.
 		<br><br>
-		<<link [[Next|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+		<<link [[다음|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 		<br>
 	<</if>>
 <<elseif $temple_calligraphy gte 6>>
 	<<generate1>><<person1>>
 	<<if currentSkillValue("handskill") gte random(_temple_calligraphy_difficulty_min, $temple_calligraphy_difficulty)>>
-		You copy the text. The handwriting is fine, but the wording is strange. It carries the tone of a historian, but describes events that should not be. Regardless, <span class="green">you're able to make an accurate copy.</span>
+		당신은 글을 필사한다. 글씨는 괜찮지만 표현이 이상하다. 역사가의 어조를 띠고 있으면서도, 있어서는 안 될 사건들을 서술한다. 어쨌든 <span class="green">정확한 사본을 만들어 낸다.</span>
 		<br><br>
-		"I'm surprised they'd use such material for training," says a <<monk>>.
+		"이런 자료를 훈련에 쓰다니 놀랍군요." <<monk>>【이가】 말한다.
 		<<if $temple_rank is "priest">>
-			"Even for one as illustrious as yourself, some more practise wouldn't hurt."
+			"당신처럼 명망 높은 분이라도, 연습을 좀 더 하는 게 나쁠 건 없을 텐데요."
 		<<elseif $temple_rank is "monk">>
-			"Not to be rude, <<sister>>, I just think we ramp things up too fast."
+			"무례하게 들릴 생각은 없습니다만, <<sister>>, 저는 그저 우리가 너무 빨리 단계를 올린다고 생각할 뿐입니다."
 		<<elseif $temple_rank is "initiate">>
-			"You've come far for an initiate, and some more time to practise wouldn't have done ill."
+			"견습생치고는 멀리 왔군요. 연습할 시간이 좀 더 있었어도 나쁘지 않았을 텐데요."
 		<<else>>
-			<<He>> squints at you. "I don't recognise you. New initiate? If so you've come a long way fast. More time to practise wouldn't have hurt."
+			<<He>>【은는】 눈을 가늘게 뜨고 당신을 본다. "처음 보는 얼굴이군요. 새 견습생입니까? 그렇다면 빠르게도 멀리 왔군요. 연습할 시간이 더 있었어도 나쁘진 않았을 텐데요."
 		<</if>>
 		<br><br>
-		<<link [[Agree|Temple Calligraphy Agree]]>><<set $temple_calligraphy to 7>><<unset $temple_calligraphy_difficulty>><</link>>
+		<<link [[동의한다|Temple Calligraphy Agree]]>><<set $temple_calligraphy to 7>><<unset $temple_calligraphy_difficulty>><</link>>
 		<br>
-		<<link [[Disagree|Temple Calligraphy Disagree]]>><<set $temple_calligraphy to 7>><<unset $temple_calligraphy_difficulty>><</link>>
+		<<link [[반대한다|Temple Calligraphy Disagree]]>><<set $temple_calligraphy to 7>><<unset $temple_calligraphy_difficulty>><</link>>
 		<br>
-		<<link [[Remain silent|Temple Calligraphy Silent]]>><<set $temple_calligraphy to 7>><<unset $temple_calligraphy_difficulty>><</link>>
+		<<link [[침묵한다|Temple Calligraphy Silent]]>><<set $temple_calligraphy to 7>><<unset $temple_calligraphy_difficulty>><</link>>
 		<br>
 	<<else>>
-		You try to copy the text. The handwriting isn't terrible, and you would normally be able to piece things together, <span class="red">but the wording confounds you.</span> It carries the tone of a historian, but describes events that should not be.<<gawareness>><<gstress>><<awareness 1>><<stress 6>>
+		당신은 글을 필사하려 한다. 글씨는 나쁘지 않고 평소라면 조각들을 꿰맞출 수 있었겠지만, <span class="red">표현이 당신을 혼란에 빠뜨린다.</span> 역사가의 어조를 띠고 있으면서도, 있어서는 안 될 사건들을 서술한다.<<gawareness>><<gstress>><<awareness 1>><<stress 6>>
 		<br><br>
-		A <<monk>> rests <<his>> hand on your shoulder. "Enough for today. Go stand in the sun."
+		<<monk>>【이가】 <<his>> 손을 당신의 어깨에 올린다. "오늘은 여기까지입니다. 가서 햇볕을 쬐십시오."
 		<br><br>
-		<<link [[Next|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+		<<link [[다음|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 		<br>
 	<</if>>
 <<elseif $temple_calligraphy gte 5>>
 	<<generate1>><<person1>>
 	<<if currentSkillValue("handskill") gte random(_temple_calligraphy_difficulty_min, $temple_calligraphy_difficulty)>>
-		You copy the text. The author attempts to lose you in a maze, but you copy each word down, one by one, <span class="green">and manage to make a faithful copy.</span>
+		당신은 글을 필사한다. 저자는 당신을 미로 속에서 헤매게 하려 들지만, 당신은 단어를 하나하나 옮겨 적어 <span class="green">충실한 사본을 만들어 낸다.</span>
 		<br><br>
-		A passing <<monk>> looks surprised and impressed.<<gcalligraphy>>
+		지나가던 <<monk>>【이가】 놀란, 그리고 감탄한 표정을 짓는다.<<gcalligraphy>>
 		<br><br>
-		<<link [[Next|Temple Scriptorium]]>><<set $temple_calligraphy to 6>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+		<<link [[다음|Temple Scriptorium]]>><<set $temple_calligraphy to 6>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 		<br>
 	<<else>>
-		You try to copy the text, despite the author's attempts to lose you in a maze.
+		당신은 당신을 미로 속에서 헤매게 하려는 저자의 시도에도 불구하고 글을 필사하려 한다.
 		<br><br>
-		<span class="red">"You've missed some,"</span> a <<monk>> says from behind you. "There, there, and there." <<He>>'s right. You didn't notice at the time. "Don't worry. That author gets the best of us." <<He>> walks away.
+		<span class="red">"몇 군데 빠뜨렸군요."</span> <<monk>>【이가】 당신 뒤에서 말한다. "저기, 저기, 그리고 저기." <<He>>의 말이 맞다. 그때는 알아채지 못했다. "걱정 마십시오. 그 저자에게는 우리 중 제일가는 이들도 당하니까요." <<He>>【은는】 걸어간다.
 		<br><br>
-		<<link [[Next|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+		<<link [[다음|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 		<br>
 	<</if>>
 <<elseif $temple_calligraphy gte 4>>
 	<<generate1>><<generate2>><<person1>>
 	<<if currentSkillValue("handskill") gte random(_temple_calligraphy_difficulty_min, $temple_calligraphy_difficulty)>>
-		You copy the text, using more legible words to decipher the more mysterious ones.
+		당신은 글을 필사하며, 더 읽기 쉬운 단어들을 단서 삼아 더 알쏭달쏭한 단어들을 해독한다.
 		<br><br>
-		A passing <<monk>> smiles at your work, as if amused by a private joke. <<person2>>"<<His>> handwriting's even worse nowadays," <<he>> says. "If you can believe it. <span class="green">Good work.</span>"<<gcalligraphy>>
+		지나가던 <<monk>>【이가】 당신의 작업물을 보고, 혼자만 아는 농담에 즐거워하듯 미소 짓는다. <<person2>>"<<His>> 글씨는 요즘 더 심해졌지요." <<he>>【이가】 말한다. "믿기 어렵겠지만요. <span class="green">잘했습니다.</span>"<<gcalligraphy>>
 		<br><br>
-		<<person1>><<He>> opens <<his>> mouth to speak further, but another <<monk>> shushes <<him>>.
+		<<person1>><<He>>【은는】 말을 더 이으려 <<his>> 입을 열지만, 다른 <<monk>>【이가】 <<him>>에게 쉿 하고 조용히 하라는 시늉을 한다.
 		<br><br>
-		<<link [[Next|Temple Scriptorium]]>><<set $temple_calligraphy to 5>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+		<<link [[다음|Temple Scriptorium]]>><<set $temple_calligraphy to 5>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 		<br>
 	<<else>>
-		You try to copy the text, turning it around to see if you can read it better from another angle. You find yourself making a lot of guesses. A passing <<monk>> glances at your work, <span class="red">and does not seem impressed.</span>
+		당신은 글을 필사하려 하며, 다른 각도에서 더 잘 읽히는지 보려고 이리저리 돌려 본다. 어느새 추측에 추측을 거듭하고 있다. 지나가던 <<monk>>【이가】 당신의 작업물을 힐끗 보더니, <span class="red">별 감흥이 없는 듯하다.</span>
 		<br><br>
-		You could try again tomorrow.
+		내일 다시 시도할 수 있다.
 		<br><br>
-		<<link [[Next|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+		<<link [[다음|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 		<br>
 	<</if>>
 <<elseif $temple_calligraphy gte 3>>
 	<<generate1>><<person1>>
 	<<if currentSkillValue("handskill") gte random(_temple_calligraphy_difficulty_min, $temple_calligraphy_difficulty)>>
-		You copy the text. It's straightforward enough, if mundane. A <<monk>> reaches over your shoulder, and holds your work close, peering at it.
+		당신은 글을 필사한다. 따분하긴 해도 꽤 단순하다. <<monk>>【이가】 당신의 어깨 너머로 손을 뻗어 작업물을 집어 들고 바짝 들여다본다.
 		<br><br>
-		<span class="green">"I see no fault,"</span> <<he>> says, frowning in disappointment.<<gcalligraphy>>
+		<span class="green">"흠잡을 데가 없군요."</span> <<he>>【이가】 실망한 듯 눈살을 찌푸리며 말한다.<<gcalligraphy>>
 		<br><br>
-		<<link [[Next|Temple Scriptorium]]>><<set $temple_calligraphy to 4>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+		<<link [[다음|Temple Scriptorium]]>><<set $temple_calligraphy to 4>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 		<br>
 	<<else>>
-		You try to copy the text, but it's so mundane you feel your mind wandering. A <<monk>> snaps you out of your thoughts by seizing your parchment, <span class="red">and tearing it up.</span>
+		당신은 글을 필사하려 하지만, 너무 따분한 나머지 정신이 딴 데로 흘러간다. <<monk>>【이가】 당신의 양피지를 낚아채 <span class="red">찢어 버리는 바람에</span> 당신은 상념에서 퍼뜩 깨어난다.
 		<br><br>
-		"Again," <<he>> says. "Tomorrow."
+		"다시." <<he>>【이가】 말한다. "내일."
 		<br><br>
-		<<link [[Next|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+		<<link [[다음|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 		<br>
 	<</if>>
 <<elseif $temple_calligraphy gte 2>>
 	<<generate1>><<person1>>
 	<<if currentSkillValue("handskill") gte random(_temple_calligraphy_difficulty_min, $temple_calligraphy_difficulty)>>
-		You back up the backup. Someone's scrawled on their own additions, <span class="green">but you're able to discern the difference.</span> 
+		당신은 사본의 사본을 만든다. 누군가가 자기 나름의 내용을 덧붙여 휘갈겨 놓았지만, <span class="green">당신은 그 차이를 가려낼 수 있다.</span> 
 		<br><br>
 
-		A <<person>> looks over your shoulder, and nods in approval.<<gcalligraphy>>
+		<<person>>【이가】 당신의 어깨 너머로 들여다보더니, 흡족한 듯 고개를 끄덕인다.<<gcalligraphy>>
 		<br><br>
 
-		<<link [[Next|Temple Scriptorium]]>><<set $temple_calligraphy to 3>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+		<<link [[다음|Temple Scriptorium]]>><<set $temple_calligraphy to 3>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 		<br>
 	<<else>>
-		You try to copy the backup, but someone has complicated the task by adding annotations in the same ink.
+		당신은 사본을 필사하려 하지만, 누군가가 같은 잉크로 주석을 달아 놓은 탓에 작업이 까다로워졌다.
 		<br><br>
-		"No no," says a <<monk>>, almost making you jump. <span class="red">"All wrong."</span> <<He>> snatches the paper, and crunches it in <<his>> fist. "Try again tomorrow."
+		"아니, 아닙니다." <<monk>>【이가】 말해 당신은 펄쩍 뛸 뻔한다. <span class="red">"전부 틀렸습니다."</span> <<He>>【은는】 종이를 낚아채 <<his>> 주먹 안에서 구겨 버린다. "내일 다시 하십시오."
 		<br><br>
-		<<link [[Next|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+		<<link [[다음|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 		<br>
 	<</if>>
 <<else>>
 	<<generate1>><<person1>>
 	<<if currentSkillValue("handskill") gte random(_temple_calligraphy_difficulty_min, $temple_calligraphy_difficulty)>>
-		<span class="green">You copy the notes without issue,</span> making sure to make your handwriting legible.
+		<span class="green">당신은 기록을 무난히 필사한다.</span> 글씨를 알아보기 쉽게 쓰도록 신경 쓴다.
 		<br><br>
-		A <<monk>> gives it a distracted glance, followed by an approving nod.<<gcalligraphy>>
+		<<monk>>【이가】 건성으로 힐끗 보더니, 흡족한 듯 고개를 끄덕인다.<<gcalligraphy>>
 		<br><br>
-		"Return tomorrow," <<he>> says. "It's not safe to do this too often. Not without dedicated years." <<He>> walks away.
+		"내일 다시 오십시오." <<he>>【이가】 말한다. "이 일을 너무 자주 하는 건 안전하지 않습니다. 수년간 정진한 이가 아니고서는." <<He>>【은는】 걸어간다.
 		<br><br>
 		
-		<<link [[Next|Temple Scriptorium]]>><<set $temple_calligraphy to 2>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+		<<link [[다음|Temple Scriptorium]]>><<set $temple_calligraphy to 2>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 		<br>
 	<<else>>
-		You try to copy the notes, but the dense scrawl proves difficult to read, <span class="red">and you make little progress.</span>
+		당신은 기록을 필사하려 하지만, 빽빽하게 휘갈긴 글씨는 읽기 어려워 <span class="red">진척이 거의 없다.</span>
 		<br><br>
-		A <<monk>> observes your work, and shakes <<his>> head. "Disappointing. You can try again tomorrow," <<he>> says. "It's not safe to do this too often. Not without dedicated years." <<He>> walks away.
+		<<monk>>【이가】 당신의 작업물을 살펴보더니 <<his>> 고개를 젓는다. "실망스럽군요. 내일 다시 시도해도 됩니다." <<he>>【이가】 말한다. "이 일을 너무 자주 하는 건 안전하지 않습니다. 수년간 정진한 이가 아니고서는." <<He>>【은는】 걸어간다.
 		<br><br>
 		
-		<<link [[Next|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+		<<link [[다음|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -601,45 +601,45 @@ You lick the tip of your quill.
 <<effects>>
 
 <<if $speech_attitude is "meek">>
-	"It is awful taxing," you say.	
+	"정말 힘들긴 해요." 당신은 말한다.	
 <<elseif $speech_attitude is "bratty">>
-	"I bet others struggle," you say.
+	"다른 사람들도 분명 고생할걸요." 당신은 말한다.
 <<else>>
-	"They do seem to be in a hurry," you say.
+	"확실히 서두르는 것 같긴 하네요." 당신은 말한다.
 <</if>>
 <br><br>
 
-The <<monk>> nods. "Don't think they'll listen to the likes of us though. Set in their ways doesn't describe it." <<He>> gives you a polite nod, then goes on <<his>> way.<<gcalligraphy>>
+<<monk>>【이가】 고개를 끄덕인다. "그래도 우리 같은 사람들 말을 들어 줄 것 같진 않습니다. 고집불통이라는 말로도 모자라지요." <<He>>【은는】 당신에게 정중히 고개를 끄덕여 보이고는 <<his>> 갈 길을 간다.<<gcalligraphy>>
 <br><br>
 
-<<link [[Next|Temple Scriptorium]]>><<endevent>><</link>>
+<<link [[다음|Temple Scriptorium]]>><<endevent>><</link>>
 <br>
 
 :: Temple Calligraphy Disagree
 <<effects>>
 
 <<if $speech_attitude is "meek">>
-	"I'm sure they know what's best," you say.
+	"그분들이 뭐가 최선인지 아시겠죠." 당신은 말한다.
 <<elseif $speech_attitude is "bratty">>
-	"It's going fine for me," you say.
+	"전 잘만 되고 있는데요." 당신은 말한다.
 <<else>>
-	"It's going fine so far," you say.
+	"지금까지는 잘 되고 있어요." 당신은 말한다.
 <</if>>
 <br><br>
 
-The <<monk>> smiles. "If you say so," <<he>> says. "Though the next task they set might change your tune." <<He>> leaves without elaborating.<<gcalligraphy>>
+<<monk>>【이가】 미소 짓는다. "그렇다면야." <<he>>【이가】 말한다. "다음 과제를 받으면 생각이 바뀔지도 모르지만요." <<He>>【은는】 더 설명하지 않고 자리를 뜬다.<<gcalligraphy>>
 <br><br>
 
-<<link [[Next|Temple Scriptorium]]>><<endevent>><</link>>
+<<link [[다음|Temple Scriptorium]]>><<endevent>><</link>>
 <br>
 
 :: Temple Calligraphy Silent
 <<effects>>
 
-You remain silent. "Am I talking too loud?" <<he>> asks. Another <<monk>> gives <<him>> a level look. "Oops." <<He>> walks away.<<gcalligraphy>>
+당신은 침묵한다. "제 목소리가 너무 큽니까?" <<he>>【이가】 묻는다. 다른 <<monk>>【이가】 <<him>>에게 차분한 눈길을 보낸다. "이런." <<He>>【은는】 걸어간다.<<gcalligraphy>>
 <br><br>
 
-<<link [[Next|Temple Scriptorium]]>><<endevent>><</link>>
+<<link [[다음|Temple Scriptorium]]>><<endevent>><</link>>
 <br>
 
 
@@ -647,299 +647,299 @@ You remain silent. "Am I talking too loud?" <<he>> asks. Another <<monk>> gives 
 <<effects>>
 
 <<if $willpowerSuccess>>
-	You resist contemplating the text, or even individual sentences, as a whole, <span class="green">and manage to finish copying without issue.</span>
+	당신은 글 전체는 물론 개별 문장조차 곱씹지 않으려 버티며, <span class="green">무난히 필사를 끝마친다.</span>
 	<br><br>
 
 <<else>>
-	You try to resist the text, but doing so frightens you, as if you were ignoring a raging fire. <span class="red">You satisfy your anxious curiosity.</span>
+	당신은 글에 저항하려 하지만, 그러는 것이 마치 타오르는 불길을 못 본 척하는 것처럼 두렵다. <span class="red">당신은 불안한 호기심을 충족시킨다.</span>
 	<br><br>
 	
-	You read about the destruction of a temple, you assume not this one. The language is poetic. Fire and water wrestled over its fate, until something arrived that frightened them both. It scared the fire away, and coerced the water into subservience. You feel dread build, as if something lurked beneath the words.<<gawareness>><<gstress>><<awareness 1>><<stress 6>>
+	당신은 어느 신전의 파괴에 대해 읽는다. 이 신전은 아니리라 짐작한다. 문체는 시적이다. 불과 물이 그 운명을 두고 씨름하다가, 둘 모두를 겁에 질리게 하는 무언가가 당도했다. 그것은 불을 쫓아내고, 물을 윽박질러 굴종시켰다. 말 아래 무언가가 도사리고 있기라도 한 듯, 두려움이 차오른다.<<gawareness>><<gstress>><<awareness 1>><<stress 6>>
 	<br><br>
-	You finish reading without issue, but the dread remains.
+	당신은 무사히 다 읽지만, 두려움은 남는다.
 <</if>>
 
-No one arrives to assess your work.
+아무도 당신의 작업물을 평가하러 오지 않는다.
 <br><br>
 
-<<link [[Next|Temple Scriptorium]]>><<set $temple_calligraphy to 10>><<unset $temple_calligraphy_difficulty>><</link>>
+<<link [[다음|Temple Scriptorium]]>><<set $temple_calligraphy to 10>><<unset $temple_calligraphy_difficulty>><</link>>
 <br>
 
 :: Temple Calligraphy Read
 <<effects>>
 
-You try to pull away, but the text draws you in, compelling you to read. It's about the destruction of a temple, you assume not this one. The language is poetic. Fire and water wrestled over its fate, until something arrived that frightened them both. It scared the fire away, and coerced the water into subservience. You feel dread build, as if something lurked beneath the words.
+당신은 물러나려 하지만, 글이 당신을 끌어들여 읽도록 몰아간다. 어느 신전의 파괴에 대한 글이다. 이 신전은 아니리라 짐작한다. 문체는 시적이다. 불과 물이 그 운명을 두고 씨름하다가, 둘 모두를 겁에 질리게 하는 무언가가 당도했다. 그것은 불을 쫓아내고, 물을 윽박질러 굴종시켰다. 말 아래 무언가가 도사리고 있기라도 한 듯, 두려움이 차오른다.
 <br><br>
-You finish reading without issue, but the dread remains. No one arrives to assess your work. 
+당신은 무사히 다 읽지만, 두려움은 남는다. 아무도 당신의 작업물을 평가하러 오지 않는다. 
 <br><br>
 
-<<link [[Next|Temple Scriptorium]]>><<set $temple_calligraphy to 10>><<unset $temple_calligraphy_difficulty>><</link>>
+<<link [[다음|Temple Scriptorium]]>><<set $temple_calligraphy to 10>><<unset $temple_calligraphy_difficulty>><</link>>
 <br>
 
 :: Temple Calligraphy Ask
 <<effects>>
 
 <<if $speech_attitude is "meek">>
-	"Please stay put," you write. "I need to copy you."
+	"제발 가만히 있어 줘." 당신은 쓴다. "너를 베껴야 해."
 <<elseif $speech_attitude is "bratty">>
-	"Stay put," you write. "Or you'll be sorry."
+	"가만히 있어." 당신은 쓴다. "안 그러면 후회할 거야."
 <<else>>
-	"Stop changing," you write. "I'm trying to copy you."
+	"그만 바뀌어." 당신은 쓴다. "너를 베끼려는 중이야."
 <</if>>
-Nothing happens. You pull the scroll itself in front of you, dip the quill in the inkwell, and hover it over the changing text.
+아무 일도 일어나지 않는다. 당신은 두루마리 자체를 앞으로 끌어당기고, 깃펜을 잉크병에 적셔, 바뀌는 글 위에 갖다 댄다.
 <br><br>
 
-A <<monk>> looms from the gloom, plucks the quill from your hand, and furls the scroll. "Enough," <<he>> says. "You cannot make a copy. Something is always gained. Something lost. This is the last thing we can teach you. The rest you must learn from experience."
+<<monk>>【이가】 어둠 속에서 불쑥 나타나, 당신의 손에서 깃펜을 빼앗고 두루마리를 만다. "그만하면 됐습니다." <<he>>【이가】 말한다. "사본은 만들 수 없습니다. 언제나 무언가는 더해지고, 무언가는 사라지지요. 이것이 저희가 가르쳐 드릴 수 있는 마지막입니다. 나머지는 경험으로 배우셔야 합니다."
 <br><br>
 
-<<He>> climbs the ladder, puts the scroll in its place, and chains it tight.
+<<He>>【은는】 사다리를 올라 두루마리를 제자리에 놓고, 사슬로 단단히 묶는다.
 <br><br>
 <<earnFeat "Nothing Copied">>
-<span class="gold">You've gained the Temple Calligrapher trait.</span><<ggawareness>><<awareness 5>><<ghandskill>><<handskill 30>>
+<span class="gold">신전 서예 특성을 얻었습니다.</span><<ggawareness>><<awareness 5>><<ghandskill>><<handskill 30>>
 <br><br>
 
-<<link [[Next|Temple Scriptorium]]>><<endevent>><<set $temple_calligraphy to 11>><<unset $temple_calligraphy_difficulty>><</link>>
+<<link [[다음|Temple Scriptorium]]>><<endevent>><<set $temple_calligraphy to 11>><<unset $temple_calligraphy_difficulty>><</link>>
 <br>
 
 :: Temple Calligraphy Smite
 <<effects>>
 
-Your angelic power flows through you, down your arm, and into the quill. The light blazes, and when you write, the ink is gold.
+천사의 힘이 당신을 타고 흘러, 팔을 따라 내려가 깃펜으로 스며든다. 빛이 타오르고, 당신이 글을 쓰자 잉크는 금빛이다.
 <br><br>
-"No more."
+"그만."
 <br><br>
-For a moment, it seems to work. Then the text changes even more than before. Each time you blink, the whole page changes, conjuring disturbing imagery in an angry tone.
-<br><br>
-
-You pull the scroll in front of you, and hold the quill above it. The black ink on the page seems to shrink from the golden light.
+잠시 동안은 효과가 있는 듯하다. 그러더니 글은 전보다 더 심하게 바뀐다. 눈을 깜빡일 때마다 페이지 전체가 바뀌며, 성난 어조로 불온한 심상을 불러일으킨다.
 <br><br>
 
-<<link [[Next|Temple Calligraphy Smite 2]]>><</link>>
+당신은 두루마리를 앞으로 끌어당기고, 그 위에 깃펜을 든다. 페이지의 검은 잉크가 금빛을 피해 움츠러드는 듯하다.
+<br><br>
+
+<<link [[다음|Temple Calligraphy Smite 2]]>><</link>>
 <br>
 
 :: Temple Calligraphy Smite 2
 <<effects>>
 
-A <<monk>> looms from the gloom, plucks the quill from your hand, and furls the scroll. <<He>> faces you, clutching the scroll as if afraid it would take flight.
+<<monk>>【이가】 어둠 속에서 불쑥 나타나, 당신의 손에서 깃펜을 빼앗고 두루마리를 만다. <<He>>【은는】 두루마리가 날아가기라도 할까 두려운 듯 꽉 움켜쥔 채 당신을 마주 본다.
 <br><br>
-"How did you do that?" <<he>> asks, piercing you with <<his>> gaze. Then <<he>> shakes <<his>> head. "It doesn't matter. You cannot make a copy. Something is always gained. Something lost. This is the last thing we can teach you. The rest you must learn from experience."
+"어떻게 한 겁니까?" <<he>>【이가】 <<his>> 시선으로 당신을 꿰뚫으며 묻는다. 그러더니 <<he>>【은는】 <<his>> 고개를 젓는다. "상관없습니다. 사본은 만들 수 없습니다. 언제나 무언가는 더해지고, 무언가는 사라지지요. 이것이 저희가 가르쳐 드릴 수 있는 마지막입니다. 나머지는 경험으로 배우셔야 합니다."
 <br><br>
 
-<<He>> climbs the ladder, puts the scroll in its place, and chains it tight.
+<<He>>【은는】 사다리를 올라 두루마리를 제자리에 놓고, 사슬로 단단히 묶는다.
 <br><br>
 <<earnFeat "Nothing Copied">>
-<span class="gold">You've gained the Temple Calligrapher trait.</span><<ggawareness>><<awareness 5>><<ghandskill>><<handskill 30>>
+<span class="gold">신전 서예 특성을 얻었습니다.</span><<ggawareness>><<awareness 5>><<ghandskill>><<handskill 30>>
 <br><br>
 
-<<link [[Next|Temple Scriptorium]]>><<set $temple_calligraphy to 11>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+<<link [[다음|Temple Scriptorium]]>><<set $temple_calligraphy to 11>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 <br>
 
 :: Temple Calligraphy Defile
 <<effects>>
 
-You throw the quill aside, and lift the whole inkwell.
+당신은 깃펜을 내던지고, 잉크병을 통째로 들어 올린다.
 <br><br>
 
 <<if $speech_attitude is "meek">>
-	"This isn't my first choice," you say. "But I have a task to do."
+	"이러고 싶진 않았어요." 당신은 말한다. "하지만 해야 할 일이 있으니."
 <<elseif $speech_attitude is "bratty">>
-	"This is justified," you say.
+	"이건 정당해." 당신은 말한다.
 <<else>>
-	"I feel this is justified," you say.
+	"이건 정당하다고 생각해." 당신은 말한다.
 <</if>>
-You tip the inkwell, ready to ruin the page. The text shifts as if in response, adopting an apologetic tone.
+당신은 페이지를 망칠 태세로 잉크병을 기울인다. 글이 그에 응답하듯 움직이며, 사과하는 어조를 띤다.
 <br><br>
 
-Before you can read much, a <<monk>> looms from the glooms, plucks the inkwell from your hand, and furls the scroll.
+미처 많이 읽기도 전에, <<monk>>【이가】 어둠 속에서 불쑥 나타나 당신의 손에서 잉크병을 빼앗고 두루마리를 만다.
 <br><br>
 
-"What's gotten into you?" <<he>> asks. "This scroll is priceless. Irreplicable. That was supposed to be the lesson here, that nothing can ever be truly copied, and you almost went and destroyed it."
+"대체 무슨 짓입니까?" <<he>>【이가】 묻는다. "이 두루마리는 값을 매길 수 없는 물건입니다. 복제도 불가능하지요. 그게 여기서 배워야 할 교훈이었습니다. 그 무엇도 진정으로 베낄 수는 없다는 것. 그런데 당신은 하마터면 그걸 파괴할 뻔했습니다."
 <br><br>
 
-<<His>> voice is so loud other <<monks_and_nuns>> look over. <<He>> catches <<himself>> with a blush.
+<<His>> 목소리가 어찌나 큰지 다른 <<monks_and_nuns>>【이가】 돌아본다. <<He>>【은는】 얼굴을 붉히며 <<himself>>【을를】 추스른다.
 <br><br>
 
-<<link [[Apologise|Temple Calligraphy Defile Apologise]]>><</link>>
+<<link [[사과한다|Temple Calligraphy Defile Apologise]]>><</link>>
 <br>
-<<link [[Ask how the page does that|Temple Calligraphy Defile Ask]]>><</link>>
+<<link [[페이지가 어떻게 그러는지 묻는다|Temple Calligraphy Defile Ask]]>><</link>>
 <br>
-<<link [[Remain silent|Temple Calligraphy Defile Silent]]>><</link>>
+<<link [[침묵한다|Temple Calligraphy Defile Silent]]>><</link>>
 <br>
 
 :: Temple Calligraphy Defile Apologise
 <<effects>>
 
 <<if $speech_attitude is "meek">>
-	"I'm so sorry," you say with a bow of your head. "I don't know what came over me."
+	"정말 죄송해요." 당신은 고개를 숙이며 말한다. "제가 왜 그랬는지 모르겠어요."
 <<elseif $speech_attitude is "bratty">>
-	"Sorry," you say. "I didn't mean to threaten a priceless artefact."
+	"미안해요." 당신은 말한다. "값을 매길 수 없는 유물을 위협할 생각은 없었어요."
 <<else>>
-	"I'm sorry," you say. "I almost did a lot of damage."
+	"죄송해요." 당신은 말한다. "하마터면 큰 피해를 입힐 뻔했네요."
 <</if>>
 <br><br>
 
-The <<monk>> calms a little. "No harm done," <<he>> says. "Fortunately. There's more for you to learn, but that's the last we can teach you. You'll need your own experience."
+<<monk>>【이가】 조금 진정한다. "피해는 없었습니다." <<he>>【이가】 말한다. "다행히도요. 당신이 배울 것은 더 있지만, 저희가 가르쳐 드릴 수 있는 건 여기까지입니다. 스스로의 경험이 필요할 겁니다."
 <br><br>
 
-<<He>> climbs the ladder, puts the scroll in its place, and chains it tight.
+<<He>>【은는】 사다리를 올라 두루마리를 제자리에 놓고, 사슬로 단단히 묶는다.
 <br><br>
 
 <<earnFeat "Nothing Copied">>
-<span class="gold">You've gained the Temple Calligrapher trait.</span><<ggawareness>><<awareness 5>><<ghandskill>><<handskill 30>>
+<span class="gold">신전 서예 특성을 얻었습니다.</span><<ggawareness>><<awareness 5>><<ghandskill>><<handskill 30>>
 <br><br>
 
-<<link [[Next|Temple Scriptorium]]>><<set $temple_calligraphy to 11>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+<<link [[다음|Temple Scriptorium]]>><<set $temple_calligraphy to 11>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 <br>
 
 :: Temple Calligraphy Defile Ask
 <<effects>>
 
 <<if $speech_attitude is "meek">>
-	"I'm a little frightened," you say. "How is the text able to change?"
+	"조금 무서워요." 당신은 말한다. "글이 어떻게 바뀔 수 있는 거죠?"
 <<elseif $speech_attitude is "bratty">>
-	"You gonna let me in on the secret?" you ask. "How does the text change?"
+	"비밀을 알려 줄 생각은 없어요?" 당신은 묻는다. "글이 어떻게 바뀌는 거예요?"
 <<else>>
-	"How does the text change?" you ask.
+	"글이 어떻게 바뀌는 거죠?" 당신은 묻는다.
 <</if>>
 <br><br>
 
-"I don't know what you're talking about," <<he>> says. "We've taught you all we can. You'll have to learn the rest through experience."
+"무슨 말씀인지 모르겠군요." <<he>>【이가】 말한다. "저희는 가르칠 수 있는 건 모두 가르쳐 드렸습니다. 나머지는 경험으로 배우셔야 할 겁니다."
 <br><br>
 
-<<He>> climbs the ladder, puts the scroll in its place, and chains it tight.
+<<He>>【은는】 사다리를 올라 두루마리를 제자리에 놓고, 사슬로 단단히 묶는다.
 <br><br>
 <<earnFeat "Nothing Copied">>
-<span class="gold">You've gained the Temple Calligrapher trait.</span><<ggawareness>><<awareness 5>><<ghandskill>><<handskill 30>>
+<span class="gold">신전 서예 특성을 얻었습니다.</span><<ggawareness>><<awareness 5>><<ghandskill>><<handskill 30>>
 <br><br>
 
-<<link [[Next|Temple Scriptorium]]>><<set $temple_calligraphy to 11>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+<<link [[다음|Temple Scriptorium]]>><<set $temple_calligraphy to 11>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 <br>
 
 :: Temple Calligraphy Defile Silent
 <<effects>>
 
-You remain silent. The <<monk>> shakes <<his>> head. "Regardless," <<he>> continues in a lower voice. "We've taught you all we can. You'll learn the rest through experience."
+당신은 침묵한다. <<monk>>【이가】 <<his>> 고개를 젓는다. "어쨌든," <<he>>【이가】 목소리를 낮춰 말을 잇는다. "저희는 가르칠 수 있는 건 모두 가르쳐 드렸습니다. 나머지는 경험으로 배우게 될 겁니다."
 <br><br>
 
-<<He>> climbs the ladder, puts the scroll in its place, and chains it tight.
+<<He>>【은는】 사다리를 올라 두루마리를 제자리에 놓고, 사슬로 단단히 묶는다.
 <br><br>
 <<earnFeat "Nothing Copied">>
-<span class="gold">You've gained the Temple Calligrapher trait.</span><<ggawareness>><<awareness 5>><<ghandskill>><<handskill 30>>
+<span class="gold">신전 서예 특성을 얻었습니다.</span><<ggawareness>><<awareness 5>><<ghandskill>><<handskill 30>>
 <br><br>
 
-<<link [[Next|Temple Scriptorium]]>><<set $temple_calligraphy to 11>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+<<link [[다음|Temple Scriptorium]]>><<set $temple_calligraphy to 11>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 <br>
 
 :: Temple Calligraphy Punish
 <<effects>>
 
 <<if $speech_attitude is "meek">>
-	"Even scrolls are making fun of me," you write. "I deserve it. But, you deserve this too."
+	"두루마리까지 날 놀리네." 당신은 쓴다. "그래도 싸지. 하지만, 너도 이래도 싸."
 <<elseif $speech_attitude is "bratty">>
-	"You're being difficult," you write. "I can be difficult too."
+	"까다롭게 구네." 당신은 쓴다. "나도 까다롭게 굴 수 있어."
 <<else>>
-	"I don't think you're being fair," you write. "That's an imbalance I can fix."
+	"넌 공정하지 않은 것 같아." 당신은 쓴다. "그 불균형은 내가 바로잡을 수 있지."
 <</if>>
-You pull the scroll in front of you, hold the page between both thumbs and forefingers, and move as if to tear. You don't put quite enough pressure on however, holding it in a torturous balance.
+당신은 두루마리를 앞으로 끌어당기고, 양손의 엄지와 검지로 페이지를 쥔 채 찢으려는 듯 움직인다. 하지만 힘을 충분히 주지는 않고, 고문하듯 아슬아슬한 균형을 유지한다.
 <br><br>
 
-You hold the nearer part of the page at an angle, obscuring it somewhat. The text seems to change, and from what you make out, it now carries a pleading tone.
+당신은 페이지의 가까운 쪽을 비스듬히 들어 일부를 가린다. 글이 바뀌는 듯하고, 알아볼 수 있는 한에서는 이제 애원하는 어조를 띠고 있다.
 <br><br>
 
-A <<monk>> looms from the gloom, and furls the scroll.
+<<monk>>【이가】 어둠 속에서 불쑥 나타나 두루마리를 만다.
 <br><br>
 
-"What's gotten into you?" <<he>> asks. "This scroll is priceless. Irreplicable. That was supposed to be the lesson here, that nothing can ever be truly copied, and you almost went and destroyed it."
+"대체 무슨 짓입니까?" <<he>>【이가】 묻는다. "이 두루마리는 값을 매길 수 없는 물건입니다. 복제도 불가능하지요. 그게 여기서 배워야 할 교훈이었습니다. 그 무엇도 진정으로 베낄 수는 없다는 것. 그런데 당신은 하마터면 그걸 파괴할 뻔했습니다."
 <br><br>
 
-<<His>> voice is so loud other <<monks_and_nuns>> look over. <<He>> catches <<himself>> with a blush.
+<<His>> 목소리가 어찌나 큰지 다른 <<monks_and_nuns>>【이가】 돌아본다. <<He>>【은는】 얼굴을 붉히며 <<himself>>【을를】 추스른다.
 <br><br>
 
-<<link [[Apologise|Temple Calligraphy Defile Apologise]]>><</link>>
+<<link [[사과한다|Temple Calligraphy Defile Apologise]]>><</link>>
 <br>
-<<link [[Ask how the page does that|Temple Calligraphy Defile Ask]]>><</link>>
+<<link [[페이지가 어떻게 그러는지 묻는다|Temple Calligraphy Defile Ask]]>><</link>>
 <br>
-<<link [[Remain silent|Temple Calligraphy Defile Silent]]>><</link>>
+<<link [[침묵한다|Temple Calligraphy Defile Silent]]>><</link>>
 <br>
 
 :: Temple Calligraphy Threaten
 <<effects>>
 
-"Stop changing," you write. "Or I'll throw you in a sacred pyre." For a moment, it seems to work. Then the text changes even more than before. Each time you blink, the whole page changes, conjuring disturbing imagery in an angry tone. You pull the scroll itself in front of you, dip the quill in the inkwell, and hover it over the changing text.
+"그만 바뀌어." 당신은 쓴다. "안 그러면 신성한 장작불에 던져 버릴 테니." 잠시 동안은 효과가 있는 듯하다. 그러더니 글은 전보다 더 심하게 바뀐다. 눈을 깜빡일 때마다 페이지 전체가 바뀌며, 성난 어조로 불온한 심상을 불러일으킨다. 당신은 두루마리 자체를 앞으로 끌어당기고, 깃펜을 잉크병에 적셔, 바뀌는 글 위에 갖다 댄다.
 <br><br>
-A <<monk>> looms from the gloom, plucks the quill from your hand, and furls the scroll. "Enough," <<he>> says. "You cannot make a copy. Something is always gained. Something lost. This is the last thing we can teach you. The rest you must learn from experience."
+<<monk>>【이가】 어둠 속에서 불쑥 나타나, 당신의 손에서 깃펜을 빼앗고 두루마리를 만다. "그만하면 됐습니다." <<he>>【이가】 말한다. "사본은 만들 수 없습니다. 언제나 무언가는 더해지고, 무언가는 사라지지요. 이것이 저희가 가르쳐 드릴 수 있는 마지막입니다. 나머지는 경험으로 배우셔야 합니다."
 <br><br>
 
-<<He>> climbs the ladder, puts the scroll in its place, and chains it tight.
+<<He>>【은는】 사다리를 올라 두루마리를 제자리에 놓고, 사슬로 단단히 묶는다.
 <br><br>
 <<earnFeat "Nothing Copied">>
-<span class="gold">You've gained the Temple Calligrapher trait.</span><<ggawareness>><<awareness 5>><<ghandskill>><<handskill 30>>
+<span class="gold">신전 서예 특성을 얻었습니다.</span><<ggawareness>><<awareness 5>><<ghandskill>><<handskill 30>>
 <br><br>
 
-<<link [[Next|Temple Scriptorium]]>><<set $temple_calligraphy to 11>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+<<link [[다음|Temple Scriptorium]]>><<set $temple_calligraphy to 11>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 <br>
 
 
 :: Temple Calligraphy Give
 <<effects>>
 
-You give up, and put the quill down. A <<monk>> arrives to furl the scroll, put it back in its place, and chain it firm.
+당신은 포기하고 깃펜을 내려놓는다. <<monk>>【이가】 와서 두루마리를 말아 제자리에 되돌려 놓고, 사슬로 단단히 묶는다.
 <br><br>
 
-<<link [[Next|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+<<link [[다음|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 <br>
 
 
 :: Temple Scriptorium Pumpkin
 <<effects>>
 <<generate1>><<person1>>
-You unfurl scroll after scroll, searching for information about pumpkin carving. You find nothing. A <<monk>> keeps glancing at you, and occasionally shakes <<his>> head.
+당신은 호박 조각에 관한 정보를 찾아 두루마리를 하나씩 펼쳐 본다. 아무것도 찾지 못한다. <<monk>>【이가】 자꾸 당신을 힐끔거리며, 이따금 <<his>> 고개를 젓는다.
 <br><br>
 
-At last, the <<monk>> rises, commandeers a ladder, and climbs to the very top. <<He>> unchains one of the tomes, climbs down, and dumps it in front of you. "Page 181."
+마침내 <<monk>>【이가】 일어나 사다리 하나를 가져다 맨 꼭대기까지 오른다. <<He>>【은는】 두꺼운 책 한 권의 사슬을 풀고 내려와 당신 앞에 툭 내려놓는다. "181쪽."
 <br><br>
 
-The paper feels wispy between your fingers. It's an account of turnip carving. The writer seems bemused and fascinated by the practice. It's not quite what you're looking for, but you feel like you've learned something all the same.
+손가락 사이에서 종이가 바스락거린다. 순무 조각에 관한 기록이다. 글쓴이는 그 풍습에 어리둥절해하면서도 매료된 듯하다. 당신이 찾던 것과 꼭 들어맞지는 않지만, 그래도 무언가를 배운 기분이다.
 <br><br>
 
 <<if ($pumpkin_carving + ($pumpkin_carving_knowledge?.length * 5)) gte 15 and ($pumpkin_carving + ($pumpkin_carving_knowledge?.length * 5)) lte 19>>
-	<span class="gold">You've gained the Knowledge: Pumpkin Carving trait.</span>
+	<span class="gold">지식: 호박 조각 특성을 얻었습니다.</span>
 <<else>>
-	<span class="gold">You feel like you understand pumpkin carving a lot more.</span>
+	<span class="gold">호박 조각을 훨씬 더 잘 이해하게 된 기분이다.</span>
 <</if>>
 <br><br>
 
-<<link [[Next|Temple Scriptorium]]>><<endevent>><</link>>
+<<link [[다음|Temple Scriptorium]]>><<endevent>><</link>>
 <br>
 
 
 :: Temple Scribe
 <<temple_effects>><<effects>>
 <<generate1>><<person1>>
-You sit at one of the desks.
+당신은 책상 하나에 앉는다.
 <<if $temple_calligraphy gte 10>>
-	A voiceless <<monk>> climbs a ladder and unchains a scroll from the top shelf. <<He>> carries it down, places it in front of you, and peels off <<his>> gloves as <<he>> walks away.
+	말없는 <<monk>>【이가】 사다리를 올라 맨 위 선반에서 두루마리 하나의 사슬을 푼다. <<He>>【은는】 그것을 들고 내려와 당신 앞에 놓고는, <<his>> 장갑을 벗으며 걸어간다.
 <<else>>
-	A voiceless <<monk>> unfurls a scroll for you to copy, marked where the last calligrapher left off.
+	말없는 <<monk>>【이가】 당신이 필사할 두루마리를 펼쳐 준다. 앞선 서예가가 멈춘 자리에 표시가 되어 있다.
 <</if>>
 <<endevent>>
 
 <<rng 3>>
 <<if $rng gte 3>>
-	The text mocks you in particular.
+	글이 유독 당신을 조롱한다.
 <<elseif $rng gte 2>>
-	The text tries to hide in the margins.
+	글이 여백 속으로 숨으려 한다.
 <<else>>
-	The text distracts from itself.
+	글이 스스로에게서 주의를 흩뜨린다.
 <</if>>
 <br><br>
 
 <<set $temple_calligraphy_difficulty to 1000>>
 
-<<link [[Lick the tip of your quill|Temple Calligraphy Lick]]>><<oralskill 5>><</link>><<skill_difficulty `currentSkillValue("oralskill")` "Oral Skill" 1 1000>><<goralskill>>
+<<link [[깃펜 끝을 핥는다|Temple Calligraphy Lick]]>><<oralskill 5>><</link>><<skill_difficulty `currentSkillValue("oralskill")` "Oral Skill" 1 1000>><<goralskill>>
 <br>
 <<set _temple_calligraphy_difficulty_min to Math.clamp(($temple_calligraphy_difficulty - 300), 0, 700)>>
-<<link [[Begin|Temple Scribe 2]]>><</link>><<skill_difficulty `currentSkillValue("handskill")` "Hand Skill" _temple_calligraphy_difficulty_min $temple_calligraphy_difficulty>>
+<<link [[시작한다|Temple Scribe 2]]>><</link>><<skill_difficulty `currentSkillValue("handskill")` "Hand Skill" _temple_calligraphy_difficulty_min $temple_calligraphy_difficulty>>
 <br>
 
 
@@ -948,19 +948,19 @@ You sit at one of the desks.
 <<set _temple_calligraphy_difficulty_min to Math.clamp(($temple_calligraphy_difficulty - 300), 0, 700)>>
 
 <<generate1>><<person1>>
-You copy the text as best you can, despite its tricks.
+당신은 글의 속임수에도 불구하고 최선을 다해 필사한다.
 <<if currentSkillValue("handskill") gte random(_temple_calligraphy_difficulty_min, $temple_calligraphy_difficulty)>>
-	You nail it down, word by word, letter by letter, <span class="green">until it stops squirming.</span><<gawareness>><<awareness 1>>
+	당신은 단어 하나하나, 글자 하나하나를 못 박듯 붙들어, <span class="green">마침내 글이 꿈틀대기를 멈춘다.</span><<gawareness>><<awareness 1>>
 	<br><br>
-	A <<monk>> arrives to retrieve the scroll.
+	<<monk>>【이가】 두루마리를 회수하러 온다.
 	<br><br>
-	<<link [[Next|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+	<<link [[다음|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 	<br>
 <<else>>
-	An hour passes in a blur. You blink, <span class="red">and realise you haven't copied the text at all.</span> You feel a mocking lash against your mind. <<gtrauma>><<gstress>><<trauma 6>><<stress 6>>
+	한 시간이 흐릿하게 지나간다. 눈을 깜빡이고서야 <span class="red">글을 전혀 필사하지 않았음을 깨닫는다.</span> 조롱하는 채찍질이 정신을 후려치는 것 같다. <<gtrauma>><<gstress>><<trauma 6>><<stress 6>>
 	<br><br>
-	A <<monk>> arrives to retrieve the scroll.
+	<<monk>>【이가】 두루마리를 회수하러 온다.
 	<br><br>
-	<<link [[Next|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
+	<<link [[다음|Temple Scriptorium]]>><<unset $temple_calligraphy_difficulty>><<endevent>><</link>>
 	<br>
 <</if>>
