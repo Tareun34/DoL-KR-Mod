@@ -1463,7 +1463,7 @@
 			<<set $leftactiondefault to "rest">><<set $rightactiondefault to "rest">>
 		<<else>>
 			<<brat 30 $lefttarget>><<set $speechSteal to 1>>
-			You rummage inside the <<persons>> <<wallet $lefttarget>>. <<He>> notices and shifts <<his>> valuables away from your hands.
+			당신은 <<persons>> <<wallet $lefttarget>> 안을 뒤적거린다. <<He>>【은는】 알아차리고 자신의 귀중품을 손이 닿지 않는 곳으로 옮긴다.
 		<</if>>
 	<</if>>
 

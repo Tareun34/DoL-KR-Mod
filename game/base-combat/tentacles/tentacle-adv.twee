@@ -792,7 +792,7 @@
 			혼란스러운 형상들이 마음속을 떠다니며, 당신의 생각들을 뒤섞고 뒤집어 놓는다.
 			<<set _tentacle.head to "hypnosis_cover">>
 		<<elseif $rng gte 3 and isBestialityOnForAnyCreature() and ($hypnosis_traits.deviancy is undefined or $hypnosis_traits.deviancy lt 5)>>
-			Unspeakable images fill your mind, luring you someplace alien.
+			형언할 수 없는 형상들이 마음을 채우며, 당신을 낯선 곳으로 유혹한다.
 			<<set _tentacle.head to "hypnosis_deviancy">>
 		<<elseif $rng gte 2>>
 			사디스틱한 형상들이 마음속에 소용돌이치며, 불경한 환희가 뒤따른다.
@@ -1947,7 +1947,7 @@
 
 	<<if $feetaction is "feethit" and $feetactionTarget is _tentacle.id>>
 		<<set $feetaction to 0>><<set $feetactiondefault to "feethit">>
-		You kick _the _tentacle.fullDesc and it reels away from you.
+		당신이 _the _tentacle.fullDesc【을를】 발로 걷어차자 그것은 비틀거리며 멀어진다.
 		<<defiance 2>><<set $speechPlayerHits to 1>><<tentacleadvdisable _tentacle>><<set $attackstat += 1>>
 		<<set _tentacle.tentaclehealth -= 1>><<tentacle_record "damage" 1>>
 		<<if $rng lte (currentSkillValue('physique') / 200)>>
@@ -2367,7 +2367,7 @@
 
 <<widget "tentacle_skin">>
 	<<if ($skin[_args[0]]?.special is "holy" or $skin[_args[1]]?.special is "holy") and !$banishDisable>>
-		The holy symbol on your skin burns with a white light, <span class="pink">searing you,</span> <span class="teal">and _the _tentacle.fullDesc.</span><<pain 8>><<set _tentacle.tentaclehealth -= 12>><<tentacle_record "banish" 12>><<tentacleadvdisable _tentacle>>
+		피부 위의 성스러운 문양이 하얀 빛으로 타오르며, <span class="pink">당신을 지지고,</span> <span class="teal">_the _tentacle.fullDesc까지 태운다.</span><<pain 8>><<set _tentacle.tentaclehealth -= 12>><<tentacle_record "banish" 12>><<tentacleadvdisable _tentacle>>
 		<<set $speechBanish to 1>>
 	<<elseif _tentacle.traits.includes("pain") and _args[0] isnot "pubic">>
 		<<if _args[0].includes("_")>>

@@ -974,9 +974,9 @@
 						<br><br>
 					<</if>>
 				<<elseif $debug and $NPCList[_mancombatcontrol].active isnot "active">>
-					<br>Debug Message:<br>NPC _mancombatcontrol, $NPCList[_mancombatcontrol].fullDescription is not active.<br>
+					<br>디버그 메시지:<br>NPC _mancombatcontrol, $NPCList[_mancombatcontrol].fullDescription【은는】 활성화되어 있지 않습니다.<br>
 				<<elseif $debug and $NPCList[_mancombatcontrol].stance is "defeated">>
-					<br>Debug Message:<br>NPC _mancombatcontrol, $NPCList[_mancombatcontrol].fullDescription is defeated.<br>
+					<br>디버그 메시지:<br>NPC _mancombatcontrol, $NPCList[_mancombatcontrol].fullDescription【은는】 패배했습니다.<br>
 				<</if>>
 			<</for>>
 			<<if $oxygen lt $oxygenmax and $underwater isnot 1 and _strangle is 1>>
@@ -1022,11 +1022,11 @@
 					<<npcincr Sydney purity -2>><<lspurity>><<set $speechHermAroused to 2>>
 				<<elseif $npc[0] is "Kylar" and !$kylarSeen.includes("herm")>>
 					<<set $kylarSeen.pushUnique("herm")>>
-					<span class="purple"><<His>> eyes go wide at the sight of your <<genitals>>. <<His>> breath catches and <<his>> entire body seems to shake.</span>
+					<span class="purple">당신의 <<genitals>>【을를】 보자 <<his>> 눈이 휘둥그레진다. <<He>>【은는】 숨을 들이켜더니 온몸을 부들부들 떨기 시작한다.</span>
 					<<set $enemyarousal += 50>><<set $speechHermAroused to 2>>
 				<<elseif $npc[0] is "Gwylan" and !$gwylanSeen.includes("herm")>>
 					<<set $gwylanSeen.pushUnique("herm")>>
-					<<His>> eyebrows raise upon seeing your <<genitals>>.
+					당신의 <<genitals>>【을를】 보자 <<his>> 눈썹이 치켜 올라간다.
 					<<set $speechHermAroused to 2>>
 				<<elseif $npc[0] is "Avery" and !$averySeen.includes("herm")>>
 					<<set $averySeen.pushUnique("herm")>>
@@ -1085,19 +1085,19 @@
 					<<set $kylarSeen.pushUnique("crossdress")>>
 					<<set _kylar to statusCheck("Kylar")>>
 					<<if playerCanBreedWith("Kylar") or ($player.penisExist and $settings.npcAnalPregnancyEnabled)>>
-						Your <<genitals 1>> was clearly not what <<he>> was expecting. <<if _kylar.gender isnot "h">><span class="purple"><<His>> hands shake as <<he>> looks at you with wide eyes. <<He>> seems thrilled.</span><</if>>
+						당신의 <<genitals 1>>【은는】 분명 <<he>>【이가】 예상했던 것이 아니었다. <<if _kylar.gender isnot "h">><span class="purple"><<He>>【이가】 눈을 크게 뜬 채 당신을 바라보며 손을 부들부들 떤다. 몹시 흥분한 모양이다.</span><</if>>
 						<<set $enemyarousal += 50>><<set $speechCrossdressAroused to 2>>
 					<<else>>
-						<<He>> sees your <<genitals>> and looks aghast. It wasn't what <<he>> was expecting.
+						<<He>>【은는】 당신의 <<genitals>>【을를】 보고 경악한 표정을 짓는다. <<he>>【이가】 예상했던 것이 아니었다.
 						<<set $enemyarousal -= 100>><<set $enemytrust -= 50>><<set $speechCrossdressDisappointed to 2>>
 					<</if>>
 				<<elseif $npc[0] is "Gwylan" and !$gwylanSeen.includes("crossdress")>>
 					<<set $gwylanSeen.pushUnique("crossdress")>>
-					<<He>> scratches <<his>> head upon seeing your <<genitals>>. It wasn't what <<he>> was expecting, but <<he>> doesn't seem to mind.
+					<<He>>【은는】 당신의 <<genitals>>【을를】 보고 머리를 긁적인다. <<he>>【이가】 원하던 것은 아니었지만, 개의치 않는 듯하다.
 					<<set $speechCrossdressAroused to 2>>
 				<<elseif $npc[0] is "Avery" and !$averySeen.includes("crossdress")>>
 					<<set $averySeen.pushUnique("crossdress")>>
-					<<His>> eyes widen in surprise as <<he>> looks down at your <<genitals>>.
+					당신의 <<genitals>>【을를】 내려다보는 <<his>> 눈이 놀라움으로 크게 뜨인다.
 					<<set $speechCrossdressShock to 2>>
 				<</if>>
 			<<elseif $NPCList[0].type is "plant" or $rng lte 30>>

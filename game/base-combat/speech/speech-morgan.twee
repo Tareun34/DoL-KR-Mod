@@ -3,56 +3,56 @@
 	<<set _npc_speech to true>>
 	<<if $possessed>>
 		<<print either(
-			`<<He>> roars. "I won't let you hurt <<phim>>!"`,
-			`<<He>> pleads. "Fight it, <<charles>>! Fight back!"`,
-			`<<He>> spits. "Return to mist!"`,
-			`<<He>> scowls. "Get out of here. Get out of <<phim>>!"`,
-			`<<He>> scowls. "I can see you falling apart."`,
-			`<<He>> hisses. "Don't make me repeat myself."`,
-			`<<He>> screeches incoherently.`,
-			`<<He>> meets your eye and nods reassuringly.`,
-			`<<He>> babbles under <<his>> breath.`,
-			`<<He>> shakes <<his>> head. "You'll fall. You'll fall, and you won't get back up."`
+			`<<He>>【이가】 포효한다. "네가 <<phim>>【을를】 다치게 두지 않겠다!"`,
+			`<<He>>【이가】 애원한다. "이겨내, <<charles>>! 저항하라고!"`,
+			`<<He>>【이가】 침을 뱉듯 말한다. "안개 속으로 돌아가!"`,
+			`<<He>>【이가】 노려본다. "나가. <<phim>>에게서 떨어져!"`,
+			`<<He>>【이가】 노려본다. "네가 무너져가는 게 다 보여."`,
+			`<<He>>【이가】 쉿쉿거린다. "두 번 말하게 하지 마라."`,
+			`<<He>>【이가】 알 수 없는 비명을 지른다.`,
+			`<<He>>【이가】 당신과 눈을 맞추며 안심하라는 듯 고개를 끄덕인다.`,
+			`<<He>>【이가】 <<his>> 입속으로 중얼거린다.`,
+			`<<He>>【이가】 <<his>> 고개를 가로젓는다. "너는 추락할 거다. 추락하고 다시는 일어나지 못해."`
 		)>>
 	<<else>>
 		<<speechPool "Morgan">>
 		<<if $player.virginity.anal is "Morgan" and $speechAnusVirgin>>
 			<<addSpeechLine "virginity">>
-				<<He>> smiles. "<<charles>>, I got to pop your other cherry too! Isn't it wonderful?"
+				<<He>>【이가】 미소 짓는다. "<<charles>>【아야】, 내가 네 다른 처음까지 가져가게 생겼구나! 멋지지 않니?"
 			<</addSpeechLine>>
 		<</if>>
 		<<if $player.virginity.oral is "Morgan" and $speechOralVirgin>>
 			<<addSpeechLine "virginity">>
-				<<He>> smiles. "Did you forget how to do this?"
+				<<He>>【이가】 미소 짓는다. "어떻게 하는지 다 까먹은 거야?"
 			<</addSpeechLine>>
 		<</if>>
 		<<if $player.virginity.kiss is "Morgan" and $speechKissVirgin>>
 			<<addSpeechLine "virginity">>
-				<<He>> smiles. "Don't you remember my taste?"
+				<<He>>【이가】 미소 짓는다. "내 맛도 기억 못하는 거야?"
 			<</addSpeechLine>>
 		<</if>>
 		<<if $speechLINameDrop>>
 			<<addSpeechLine "namedrop">>
 				<<switch _loveInterest>>
 					<<default>>
-						<<He>> snarls. "<<charles>>, you belong to <<mummy>>!"
+						<<He>>【이가】 으르렁거린다. "<<charles>>【아야】, 넌 이 <<mummy>>의 것이란다!"
 				<</switch>>
 			<</addSpeechLine>>
 		<</if>>
 		<<if $speechNoticeSexToy>>
 			<<addSpeechLine "sexToy">>
-				<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "sex toys" : "sex toy")>>
-				<<He>> looks at your $_sexToy and speaks. "<<charles>>, what is that?"
+				<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "섹스 토이들" : "섹스 토이")>>
+				<<He>>【이가】 당신의 $_sexToy【을를】 보고 말한다. "<<charles>>, 저건 뭐야?"
 			<</addSpeechLine>>
 		<</if>>
 		<<if ($speechPenisVirgin is 1 and $player.virginity.penile is "Morgan") or ($speechVaginaVirgin is 1 and $player.virginity.vaginal is "Morgan")>>
 			<<addSpeechLine "virginity">>
-				<<He>> smiles. "This feels like your first time again. How did you do that <<charles>>?"
+				<<He>>【이가】 미소 짓는다. "다시 네 처음이 된 것 같네. 이거 어떻게 한 거야, <<charles>>?"
 			<</addSpeechLine>>
 		<</if>>
 		<<if ($NPCList[_n].vagina is "feet" or $NPCList[_n].penis is "feet") and random(1, 10) is 1 and $settings.footFetishEnabled>>
 			<<addSpeechLine "footjob">>
-				<<He>> moans. "Oh, <<charles>>, your feet...!"
+				<<He>>【이가】 신음을 흘린다. "아, <<charles>>, 네 발...!"
 			<</addSpeechLine>>
 		<</if>>
 		<<speechSay>>

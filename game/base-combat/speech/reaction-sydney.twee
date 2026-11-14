@@ -10,11 +10,11 @@
 	<<run statusCheck("Sydney")>>
 	<<if _sydneyStatus.includes("corrupt")>>
 		<<addSpeechLine "plead">>
-			"I thought... you said lust was a sin..."
+			"분명... 색욕은 죄라고 했잖아..."
 		<</addSpeechLine>>
 	<<else>>
 		<<addSpeechLine "plead">>
-			"I'm sorry, I'll be pure! Please stop!"
+			"미안해, 순결하게 살게! 제발 그만해!"
 		<</addSpeechLine>>
 	<</if>>
 <</widget>>
@@ -23,11 +23,11 @@
 	<<run statusCheck("Sydney")>>
 	<<if _sydneyStatus.includes("corrupt")>>
 		<<addSpeechLine "demand">>
-			"I miss when you were pure. At least you didn't pull shit like this."
+			"네가 순결했을 때가 그립다. 그땐 적어도 이딴 짓은 안 했잖아."
 		<</addSpeechLine>>
 	<<else>>
 		<<addSpeechLine "demand">>
-			"What sort of punishment is this? Get off me!"
+			"이게 무슨 벌이야? 비켜!"
 		<</addSpeechLine>>
 	<</if>>
 <</widget>>
@@ -37,16 +37,16 @@
 	<<if !_sydneyChastity>>
 		<<if _sydneyStatus.includes("corrupt")>>
 			<<addSpeechLine "moan">>
-				"You're the most delicious sin of all."
+				"너야말로 가장 달콤한 죄악이야."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "moan">>
-				"Forever, as one."
+				"영원히, 하나로."
 			<</addSpeechLine>>
 		<</if>>
 	<<else>>
 		<<addSpeechLine "moan">>
-			"You make me so lustful."
+			"네가 날 이렇게 음란하게 만들어."
 		<</addSpeechLine>>
 	<</if>>
 <</widget>>

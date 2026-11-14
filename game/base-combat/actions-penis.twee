@@ -283,7 +283,7 @@
 					<<set $rightarm to 0>>
 				<</if>>
 
-				<span class="lblue">You press your <<penis>> against <<combatpersons>> <<npcVagina $penistarget>>.</span>
+				<span class="lblue">당신은 <<penis>>【을를】 <<combatpersons>>의 <<npcVagina $penistarget>>에 밀착한다.</span>
 				<<if $NPCList[$penistarget].condom?.willUse is true and !$player.condom and $parasite.penis.name is undefined>>
 					<<if playerChastity("penis")>>
 						<<He>>【이가】 당신의 자지에 콘돔을 씌우려 했지만, $worn.genitals.name 위로 잘 들어가지 않는다. <span class="red"><<He>>【이가】 금세 포기한다.</span>
@@ -375,8 +375,8 @@
 				<<sex 30 "genitals" $penistarget>>
 				<<raped>><<penisraped>>
 			<<elseif $player.virginity.penile is true>>
-				<<penis_lube_text>> <span class="pink">you <<peniletext>> thrust your virgin penis into <<combatpersons>> pussy.</span>
-				<span class="red">You feel your foreskin separate from your glans, <<virginitylosttext $NPCList[_n].fullDescription>></span>
+				<<penis_lube_text>> <span class="pink">당신은 <<peniletext>> <<combatpersons>>의 보지에 당신의 동정 자지를 들이박는다.</span>
+				<span class="red">귀두에서 포피가 벗겨지는 것이 느껴지며, <<virginitylosttext $NPCList[_n].fullDescription>></span>
 				<<sex 100 "genitals" $penistarget>><<violence 30>><<bruise penis>><<set $speechPenisVirgin to 1>>
 				<<raped>><<penisraped>>
 			<</if>>
@@ -416,8 +416,8 @@
 				<<sex 30 "genitals" $penistarget>>
 				<<penilestat>><<raped>><<penisraped>>
 			<<elseif $player.virginity.penile is true>>
-				<<penis_lube_text>> <span class="pink">you <<peniletext>> thrust your virgin penis into <<combatpersons>> ass.</span>
-				<span class="red">You feel your foreskin separate from your glans, <<virginitylosttext $NPCList[_n].fullDescription>></span>
+				<<penis_lube_text>> <span class="pink">당신은 <<peniletext>> <<combatpersons>>의 항문에 당신의 동정 자지를 들이박는다.</span>
+				<span class="red">귀두에서 포피가 벗겨지는 것이 느껴지며, <<virginitylosttext $NPCList[_n].fullDescription>></span>
 				<<sex 100 "genitals" $penistarget>><<violence 30>><<bruise penis>><<set $speechPenisVirgin to 1>>
 				<<penilestat>><<raped>><<penisraped>>
 			<</if>>

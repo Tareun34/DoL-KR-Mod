@@ -19,15 +19,15 @@
 <<widget "pc-line-gwylan-plead">>
 	<<if $abomination is 1>>
 		<<addSpeechLine "plead">>
-			"Gwylan, come back! I'm scared!"
+			"그윌런, 돌아와! 무서워!"
 		<</addSpeechLine>>
 	<<elseif $hypnosis_traits.devotion gte 1 or $combat_hypnosis>>
 		<<addSpeechLine "plead">>
-			"Gwylan, please, I can't think straight!"
+			"그윌런, 제발, 생각이 제대로 안 돼!"
 		<</addSpeechLine>>
 	<<else>>
 		<<addSpeechLine "plead">>
-			"Gwylan, please, this doesn't feel right!"
+			"그윌런, 제발, 이건 뭔가 잘못됐어!"
 		<</addSpeechLine>>
 	<</if>>
 <</widget>>
@@ -35,25 +35,25 @@
 <<widget "pc-line-gwylan-demand">>
 	<<if $abomination is 1>>
 		<<addSpeechLine "demand">>
-			"Gwylan, I know you're in there! Take control!"
+			"그윌런, 거기 있는 거 알아! 정신 차려!"
 		<</addSpeechLine>>
 	<<elseif $hypnosis_traits.devotion gte 4 or $combat_hypnosis>>
 		<<addSpeechLine "demand">>
-			"Gwylan, stop! Get out of my head!"
+			"그윌런, 그만해! 내 머릿속에서 나가!"
 		<</addSpeechLine>>
 	<<elseif $gwylanSeen.includes("romance")>>
 		<<addSpeechLine "demand">>
-			"Gwylan, stop this! You promised!"
+			"그윌런, 그만해! 약속했잖아!"
 		<</addSpeechLine>>
 	<<else>>
 		<<addSpeechLine "demand">>
-			"Gwylan, stop this!"
+			"그윌런, 그만해!"
 		<</addSpeechLine>>
 	<</if>>
 <</widget>>
 
 <<widget "pc-line-gwylan-moan">>
 	<<addSpeechLine "moan">>
-		"I think I'm bewitched."
+		"나 홀린 것 같아."
 	<</addSpeechLine>>
 <</widget>>

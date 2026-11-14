@@ -4,50 +4,50 @@
 	<<speechPool "Harper">>
 	<<if $player.virginity.penile is "Harper" and $speechPenisVirgin>>
 		<<addSpeechLine "virginity">>
-			<<He>> smiles. "Hold still. I need to check your blood pressure."
+			<<He>>【이가】 미소 짓는다. "가만히 계십시오. 혈압을 확인해야 합니다."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $player.virginity.vaginal is "Harper" and $speechVaginaVirgin>>
 		<<addSpeechLine "virginity">>
-			<<He>> smiles. "This will only hurt a bit."
+			<<He>>【이가】 미소 짓는다. "조금 따끔할 겁니다."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $player.virginity.anal is "Harper">>
 		<<if $speechAnusVirgin>>
 			<<if $player.sex is "f">>
 				<<addSpeechLine "virginity">>
-					<<He>> smiles. "I'm going to administer a suppository. Please, try to relax."
+					<<He>>【이가】 미소 짓는다. "좌약을 투여하겠습니다. 긴장 푸세요."
 				<</addSpeechLine>>
 			<<else>>
 				<<addSpeechLine "virginity">>
-					<<He>> smiles. "You're overdue for a prostate examination. Please, try to relax."
+					<<He>>【이가】 미소 짓는다. "전립선 검사를 받을 때가 한참 지났군요. 긴장 푸세요."
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
 	<</if>>
 	<<if $player.virginity.oral is "Harper" and $speechOralVirgin>>
 		<<addSpeechLine "virginity">>
-			<<He>> smiles. "Say 'Ahh'..."
+			<<He>>【이가】 미소 짓는다. "'아' 하세요..."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $player.virginity.kiss is "Harper" and $speechKissVirgin>>
 		<<addSpeechLine "virginity">>
-			<<He>> smiles. "How's my bedside manner?"
+			<<He>>【이가】 미소 짓는다. "제 진료 태도는 어떠셨습니까?"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechLINameDrop>>
 		<<switch _loveInterest>>
 			<<case "Gwylan">>
 				<<addSpeechLine "namedrop">>
-					<<He>> speaks. "Interesting. You've a very healthy imagination, to give your hallucination such a name."
+					<<He>>【이가】 말한다. "흥미롭군요. 환각에 그런 이름까지 붙여주다니 상상력이 아주 풍부하십니다."
 				<</addSpeechLine>>
 			<<case "Black Wolf" "Great Hawk">>
 				<<addSpeechLine "namedrop">>
-					<<He>> shakes <<his>> head. "As I've said, such animals do not exist."
+					<<He>>【이가】 고개를 가로젓는다. "말씀드렸다시피, 그런 동물은 존재하지 않습니다."
 				<</addSpeechLine>>
 			<<default>>
 				<<addSpeechLine "namedrop">>
-					<<He>> nods. "Prior attachments. Noted."
+					<<He>>【이가】 끄덕인다. "선행 애착 관계. 기록해 두겠습니다."
 				<</addSpeechLine>>
 		<</switch>>
 	<</if>>

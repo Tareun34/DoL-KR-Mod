@@ -350,7 +350,7 @@
 				<<if $rightarm is "anus">>
 					<<set $rightarm to 0>>
 				<</if>>
-				<span class="lblue">You straddle <<personselect $anusdoubletarget>><<combatperson>> and press <<his>> <<npcPenis $anusdoubletarget>> with your <<bottom>>, joining <<personselect $anustarget>><<combatpersons>> <<npcPenisSimple $anustarget>>.</span>
+				<span class="lblue">당신은 <<personselect $anusdoubletarget>><<combatperson>> 위로 올라타 당신의 <<bottom>>【으로로】 <<his>> <<npcPenis $anusdoubletarget>>【을를】 누르고, <<personselect $anustarget>><<combatpersons>> <<npcPenisSimple $anustarget>> 옆으로 밀어 넣는다.</span>
 				<<if $NPCList[$anusdoubletarget].condom?.willUse is true and $NPCList[$anusdoubletarget].condom.worn is false and !$NPCList[$anusdoubletarget].penisdesc.includes("strap-on")>>
 					<<if $NPCList[$anusdoubletarget].chastity.penis.includes("chastity")>>
 						<<He>>【은는】 콘돔을 끼우려 하지만, <<his>> $NPCList[$anusdoubletarget].chastity.penis 위로 잘 씌워지지 않는 것 같다. <span class="red"><<He>>【은는】 이내 포기해버린다.</span>

@@ -239,7 +239,7 @@
 			<</if>>
 		<<case "penis">>
 			<<set _leftOptions to "penis">>
-			<span @class="($lastOptions.left isnot _leftOptions or _leftGold is true ?'gold':'')"><<selectNpcWithPartInPosition "penis" "leftarm">><<set $lefttarget to $index>>Your left hand is <<if $NPCList[$index]?.chastity.penis.includes("chastity")>>teasing<<else>>holding<</if>> <<personselect $index>><<combatpersons>> $NPCList[$index].penisdesc<<if $NPCList[$index].chastity.penis.includes("chastity")>> through <<his>> $NPCList[$index].chastity.penis<</if>>.</span>
+			<span @class="($lastOptions.left isnot _leftOptions or _leftGold is true ?'gold':'')"><<selectNpcWithPartInPosition "penis" "leftarm">><<set $lefttarget to $index>>당신의 왼손은 <<if $NPCList[$index]?.chastity.penis.includes("chastity")>>희롱하듯 자극하며<<else>>쥔 채<</if>> <<personselect $index>><<combatpersons>>의 $NPCList[$index].penisdesc【을를】<<if $NPCList[$index].chastity.penis.includes("chastity")>> <<his>> $NPCList[$index].chastity.penis 너머로<</if>> 만지고 있다.</span>
 		<<case "grappled">>
 			<<if $orgasmdown gte 1>>
 				<<set _leftOptions to "bothBound">>
