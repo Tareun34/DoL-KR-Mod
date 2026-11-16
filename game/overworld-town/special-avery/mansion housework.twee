@@ -13,7 +13,7 @@
 	<<socialiseicon "angry">><<link [[에이버리의 경고를 무시하고 침실을 청소한다|Mansion Housework]]>><<set $avery_mansion.bedroom_state to "ignored">><</link>>
 <<elseif $avery_mansion.bedroom gte 1 and $avery_mansion.schedule is "sleep" and $avery_mansion.bedroom_state>>
 	<<set _avery_mansion_time_bedroom to _avery_mansion_time + $avery_mansion.bedroom * _avery_housekeeping>>
-	It will take <<printTime _avery_mansion_time_bedroom>> minutes to clean everything, or _avery_mansion_time minutes if you leave the bedroom untouched. Housekeeping skill will speed up indoor work. Tending skill will speed up garden work.
+	침실까지 모두 청소하면 <<printTime _avery_mansion_time_bedroom>> 걸리고, 침실을 건드리지 않으면 _avery_mansion_time분이 걸린다. 가사 스킬은 실내 작업을 빠르게 해준다. 관리 스킬은 정원 일을 빠르게 해준다.
 	<br><br>
 
 	<<socialiseicon "angry">><<link [[에이버리의 경고를 무시하고 전부 청소한다|Mansion Housework]]>><<set $avery_mansion.bedroom_state to "ignored">><</link>>
@@ -21,7 +21,7 @@
 	<<icon "clothes/feather-duster.png">><<link [[침실을 제외하고 모두 청소한다|Mansion Housework]]>><<set $avery_mansion.bedroom_state to "off-limits">><</link>>
 <<else>>
 	<<set _avery_mansion_time_bedroom to _avery_mansion_time + $avery_mansion.bedroom * _avery_housekeeping>>
-	It will take <<printTime _avery_mansion_time_bedroom>> in total to clean everything. Housekeeping skill will speed up indoor work. Tending skill will speed up garden work.
+	모두 청소하는 데 총 <<printTime _avery_mansion_time_bedroom>> 소요된다. 가사 스킬은 실내 작업을 빠르게 해준다. 관리 스킬은 정원 일을 빠르게 해준다.
 	<br><br>
 
 	<<icon "clothes/feather-duster.png">><<link [[청소한다|Mansion Housework]]>><</link>>
@@ -387,24 +387,24 @@
 
 <<if $cat gte 6>>
 	/*Removed the option to get back to work, due to the like of the cream*/
-	You lick the cream off Avery's finger, the sweet taste of cream making you salivate. <<stress -6>><<lstress>>
+	당신은 에이버리의 손가락에 묻은 크림을 핥아낸다. 크림의 달콤한 맛에 입안에 침이 고인다. <<stress -6>><<lstress>>
 	<br><br>
-	Avery, seeming to notice your satisfaction, dips <<his>> finger in the cream again, offering you another taste. 
+	당신이 만족스러워하는 것을 눈치챘는지, 에이버리가 크림에 손가락을 다시 담갔다가 한 번 더 맛보라는 듯 내민다. 
 	<br><br>
 
-	<<link [[Lick|Mansion Housework Cream Lick 2]]>><<npcincr Avery love 1>><</link>><<glove>><<transform cat 1>>
+	<<link [[핥는다|Mansion Housework Cream Lick 2]]>><<npcincr Avery love 1>><</link>><<glove>><<transform cat 1>>
 	<br>
-	<<link [[Suck|Mansion Housework Cream Suck]]>><<npcincr Avery love 1>><</link>><<promiscuous1>><<glove>>
+	<<link [[빤다|Mansion Housework Cream Suck]]>><<npcincr Avery love 1>><</link>><<promiscuous1>><<glove>>
 	<br>
 <<else>>
-	You lick the cream off Avery's finger, curling your tongue as you do. <<He>> dips and holds it out once again, <<his>> face giving nothing away. <<transform cat 1>>
+	당신은 혀를 말아 에이버리의 손가락에 묻은 크림을 핥아낸다. <<He>>【은는】 무표정한 얼굴로 크림에 손가락을 다시 푹 담갔다가 내민다. <<transform cat 1>>
 	<br><br>
 
-	<<link [[Lick|Mansion Housework Cream Lick 2]]>><<npcincr Avery love 1>><</link>><<glove>><<transform cat 1>>
+	<<link [[핥는다|Mansion Housework Cream Lick 2]]>><<npcincr Avery love 1>><</link>><<glove>><<transform cat 1>>
 	<br>
-	<<link [[Suck|Mansion Housework Cream Suck]]>><<npcincr Avery love 1>><</link>><<promiscuous1>><<glove>>
+	<<link [[빤다|Mansion Housework Cream Suck]]>><<npcincr Avery love 1>><</link>><<promiscuous1>><<glove>>
 	<br>
-	<<link [[Make excuses|Mansion Housework Cream Excuse]]>><</link>>
+	<<link [[핑계를 댄다|Mansion Housework Cream Excuse]]>><</link>>
 	<br>
 <</if>>
 
@@ -412,14 +412,14 @@
 <<effects>>
 
 <<if $cat gte 6>>
-	You stick out your tongue carefully and quickly licking up the cream. You are unable to stop yourself from purring with satisfaction as the cream touches your tongue. <<stress -6>><<lstress>>
+	당신은 조심스레 혀를 내밀어 재빨리 크림을 핥아먹는다. 크림이 혀에 닿자 만족스러운 가르랑 소리가 절로 새어 나온다. <<stress -6>><<lstress>>
 	<br><br>
-	"Adorable," Avery purrs. "Aren't you a good kitty?
+	"귀여워라." 에이버리가 가르랑거리듯 말한다. "착한 고양이네요, 그렇죠?
 <<else>>
-	You stick out your tongue, and devour the cream with a succession of quick licks. Avery's smile is satisfied. "Good <<girl>>.
+	당신은 혀를 내밀어 몇 번 날름거리며 남은 크림을 말끔히 핥아낸다. 에이버리의 입가에 만족스러운 미소가 번진다. "착한 아이네, 자기.
 <</if>>
 
-You can get back to work now."
+이제 일하러 가봐요."
 <br><br>
 <<He>>【은는】 아무 말 없이 디저트를 먹으면서도, 당신에게서 시선을 떼지 않는다.
 <br><br>
@@ -430,23 +430,23 @@ You can get back to work now."
 :: Mansion Housework Cream Suck
 <<effects>>
 
-You lead with the tongue, and take the length of Avery's finger into your mouth, half-closing your eyes as you do.
+당신은 눈을 반쯤 내리깐 채, 에이버리의 손가락을 혀로 감싸 쥐며 입안 깊숙이 머금는다.
 <<promiscuity1>>
 
 <<if $cat gte 6>>
-	You're unable to stop yourself as you suck onto Avery's finger. The taste of the cream sends pleasure through your body. <<stress -6>><<lstress>>
+	당신은 참지 못하고 에이버리의 손가락을 빨아댄다. 크림의 맛이 온몸에 쾌감을 퍼뜨린다. <<stress -6>><<lstress>>
 	<br><br>
-	You close your eyes, licking <<his>> finger up and down.
+	당신은 눈을 감고 <<his>> 손가락을 위아래로 핥는다.
 	<<if $speech_attitude is "meek" or $speech_attitude_avery>>
-		You carefully lap up the length of <<his>> finger, sucking on it gently.
+		당신은 <<his>> 손가락을 따라 조심스럽게 핥아 올리며 부드럽게 빤다.
 	<<elseif $speech_attitude is "bratty">>
-		You nibble onto <<his>> finger, hard enough to leave a mark.
+		당신은 자국이 남을 만큼 <<his>> 손가락을 잘근 깨문다.
 	<<else>>
-		You drag your tongue along the length of <<his>> finger, sucking on it.
+		당신은 <<his>> 손가락을 따라 혀를 끌어올리며 빤다.
 	<</if>>
-	You purr involuntarily as you play around with <<his>> finger in your mouth, eager for more cream. <<transform cat 1>>
+	크림을 더 맛보고 싶은 마음에 입안의 <<his>> 손가락을 굴리는 동안, 자기도 모르게 가르랑 소리가 새어 나온다. <<transform cat 1>>
 	<br><br>
-	You open your eyes to look up at <<him>>. <span class="green"><<He>> looks mesmerised.</span> <<gglove>><<npcincr Avery love 1>><<larage>><<npcincr Avery rage -1>> 
+	당신은 눈을 떠 <<him>>【을를】 올려다본다. <span class="green"><<He>>【은는】 넋을 잃고 홀린 듯한 표정이다.</span> <<gglove>><<npcincr Avery love 1>><<larage>><<npcincr Avery rage -1>> 
 	<br><br>
 
 	<<link [[놀린다|Mansion Housework Cream Tease]]>><</link>>
@@ -460,25 +460,25 @@ You lead with the tongue, and take the length of Avery's finger into your mouth,
 	<<seductionskilluse>>
 	
 	<<if $seductionrating gte $seductionrequired>>
-		You fix your eyes on Avery's. <span class="green"><<He>> looks mesmerised.</span>
+		당신은 에이버리의 눈을 똑바로 응시한다. <span class="green"><<He>>【은는】 넋을 잃고 홀린 듯한 표정이다.</span>
 		<<if $speech_attitude is "meek" or $speech_attitude_avery>>
-			You carefully lick up the length of <<his>> finger, sucking on it gently.
+			당신은 <<his>> 손가락을 따라 조심스럽게 핥아 올리며 부드럽게 빤다.
 		<<elseif $speech_attitude is "bratty">>
-			You bite <<his>> finger, hard enough to leave a mark.
+			당신은 자국이 남을 만큼 살짝 힘을 주어 <<his>> 손가락을 깨문다.
 		<<else>>
-			You drag your tongue along the length of <<his>> finger, sucking on it.
+			당신은 <<his>> 손가락을 따라 혀를 끌어올리며 빤다.
 		<</if>>
-		<<He>> remains focused on you as you withdraw.<<gglove>><<npcincr Avery love 1>><<larage>><<npcincr Avery rage -1>><<transform cat 1>>
+		입에서 손가락을 빼낸 뒤에도 <<he>>【은는】 여전히 당신에게 시선을 고정한 채다.<<gglove>><<npcincr Avery love 1>><<larage>><<npcincr Avery rage -1>><<transform cat 1>>
 		<br><br>
 
-		<<link [[Tease|Mansion Housework Cream Tease]]>><</link>>
+		<<link [[놀린다|Mansion Housework Cream Tease]]>><</link>>
 		<br>
-		<<link [[Just return to work|Mansion Housework Cream Return]]>><</link>>
+		<<link [[그냥 일하러 돌아간다|Mansion Housework Cream Return]]>><</link>>
 		<br>
 	<<else>>
-		You feel a thread of drool dribble down your chin, <span class="red">and you know you've spoiled the effect.</span> Avery chuckles. "That'll be all."
+		턱을 타고 침 한 줄기가 흘러내리는 순간, <span class="red">분위기를 망쳐버렸다는 것을 깨닫는다.</span> 에이버리가 헛웃음을 짓는다. "그쯤 해둬요, 자기."
 		<br><br>
-		<<He>> watches you in silence while <<he>> eats <<his>> dessert.
+		<<He>>【은는】 디저트를 먹는 동안 말없이 당신을 지켜본다.
 		<br><br>
 
 		<<endevent>>
@@ -490,19 +490,19 @@ You lead with the tongue, and take the length of Avery's finger into your mouth,
 <<effects>>
 <<if $cat gte 6>>
 	<<if $speech_attitude is "meek" or $speech_attitude_avery>>
-		"If you aren't going to finish it, could I?" you ask. Avery frowns at the dessert in front of <<him>>, as if seeing it for the first time.
+		"안 드실 거면, 제가 먹어도 될까요?" 당신이 묻는다. 에이버리는 마치 처음 보는 것처럼 자기 앞의 디저트를 보고 눈살을 찌푸린다.
 	<<elseif $speech_attitude is "bratty">>
-		"I guess I can see why you like your dessert so much," you say, licking your lips. Avery chuckles, and returns to <<his>> plate.
+		"디저트를 왜 그렇게 좋아하시는지 알 것 같네요." 당신이 입술을 핥으며 말한다. 에이버리는 헛웃음을 짓고는 다시 <<his>> 접시로 돌아간다.
 	<<else>>
-		"Why'd you stop?" you ask. Avery recovers <<his>> senses, and returns to <<his>> dessert.
+		"왜 멈췄어요?" 당신이 묻는다. 에이버리는 정신을 차리고 다시 <<his>> 디저트로 돌아간다.
 	<</if>>
 <<else>>
 	<<if $speech_attitude is "meek" or $speech_attitude_avery>>
-		"Are you going to finish that?" you ask. Avery frowns at the dessert in front of <<him>>, as if seeing it for the first time.
+		"그거 다 드실 건가요?" 당신이 묻는다. 에이버리는 마치 처음 보는 것처럼 자기 앞의 디저트를 보고 눈살을 찌푸린다.
 	<<elseif $speech_attitude is "bratty">>
-		"I'm good aren't I?" you say. Avery chuckles, and returns to <<his>> dessert.
+		"저 잘하죠, 그렇죠?" 당신이 말한다. 에이버리는 씩 웃고는 다시 <<his>> 디저트를 먹기 시작한다.
 	<<else>>
-		"Is something the matter?" you ask. Avery recovers <<his>> senses, and returns to <<his>> dessert.
+		"무슨 문제라도 있어요?" 당신이 묻는다. 에이버리는 정신을 차리고 다시 <<his>> 디저트로 돌아간다.
 	<</if>>
 <</if>>
 <br><br>
