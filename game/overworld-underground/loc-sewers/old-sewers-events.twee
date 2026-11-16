@@ -465,7 +465,7 @@
 <br><br>
 <<beastNEWinit 1 lizard>>
 <<if beastSexEnabledForType("lizard", $monster is 1)>>
-	A <<beasttype>> claws <<bhis>> way from the crate. There's something unusual about <<bhis>> eyes. <<bHe>> takes an instant to regard and measure you, then snakes across the floor, lust on <<bhis>> mind.
+	<<beasttype>> 한 마리가 <<bhis>> 몸을 끌며 상자에서 발톱을 세우고 나온다. <<bhis>> 눈이 어딘가 이상하다. <<bHe>>【은는】 잠시 당신을 살피고 가늠하더니, <<bhis>> 마음속에 욕정을 품고 바닥을 기어온다.
 	<br><br>
 
 	<<link [[다음|Sewers Cult Lizard Rape]]>><<set $molestationstart to 1>><</link>>
@@ -643,7 +643,7 @@
 <br><br>
 
 <<if beastSexEnabledForType("lizard", $monster is 1)>>
-	<<link [[Approach|Sewers Box Lizard Rape]]>><<set $molestationstart to 1>><</link>>
+	<<link [[다가간다|Sewers Box Lizard Rape]]>><<set $molestationstart to 1>><</link>>
 	<br>
 <<else>>
 	<<link [[다가간다|Sewers Box Lizard Rape Finish]]>><<set $phase to 1>><</link>>

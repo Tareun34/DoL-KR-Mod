@@ -3,14 +3,14 @@
 <<set $outside to 0>><<effects>><<shackle_feet>>
 <<generate1>><<generate2>><<generate3>>
 
-The stone walls of the tunnels are broken up by wooden supports. Three <<people>> stand in front of a metal gate ahead of you. A <<person1>><<person>> walks up to you, and forces you to turn, giving no regard for your comfort. <<He>> places metal shackles around your ankles. They shut with a click.
+터널의 돌벽 곳곳을 나무 버팀목이 받치고 있다. 당신 앞쪽의 금속 문 앞에 <<people>> 세 명이 서 있다. <<person1>><<person>> 한 명이 다가오더니 당신이 불편하든 말든 아랑곳없이 억지로 몸을 돌려 세운다. <<He>>【은는】 당신의 발목에 금속 족쇄를 채운다. 족쇄가 찰칵 소리를 내며 잠긴다.
 <br><br>
-"From now on you will do what you're told," <<he>> says as <<he>> tries to pull you through the open gate. "Or we will make you."
+"지금부터 넌 시키는 대로 한다." <<he>>【이가】 열린 문 안으로 당신을 끌고 가려 하며 말한다. "안 그러면 그렇게 만들어 주지."
 
 <br><br>
-<<link [[Follow <<him>>|Mine Intro 2]]>><<set $phase to 0>><</link>>
+<<link [[<<him>>【을를】 따라간다|Mine Intro 2]]>><<set $phase to 0>><</link>>
 <br>
-<<link [[Resist|Mine Intro 2]]>><<set $phase to 1>><</link>>
+<<link [[저항한다|Mine Intro 2]]>><<set $phase to 1>><</link>>
 
 
 
@@ -18,24 +18,24 @@ The stone walls of the tunnels are broken up by wooden supports. Three <<people>
 <<effects>>
 
 <<if $phase is 1>>
-	You pull against <<him>>, trying to break <<his>> grip on you. <<He>> sighs, pulls out a baton, and bashes it against you. You reel backwards. <<pain 15>><<gggpain>>
+	당신은 <<him>>에게서 몸을 빼며 <<his>> 손아귀를 뿌리치려 한다. <<He>>【은는】 한숨을 쉬더니 곤봉을 꺼내 당신을 후려친다. 당신은 뒤로 휘청인다. <<pain 15>><<gggpain>>
 	<br><br>
-	<<He>> pulls you through the gate as the other two guards laugh. You hear it slam and lock behind you.
+	나머지 경비 둘이 웃는 가운데 <<He>>【은는】 당신을 문 안으로 끌고 들어간다. 등 뒤에서 문이 쾅 닫히고 잠기는 소리가 들린다.
 <<else>>
-	You follow <<him>> through the gate, you hear it slam and lock behind you.
+	당신은 <<him>>【을를】 따라 문을 지난다. 등 뒤에서 문이 쾅 닫히고 잠기는 소리가 들린다.
 <</if>>
 <br><br>
 
-"From now on you will be given a job every day," <<he>> says, pulling you through the tunnels. "If you resist, you will be punished. You try to escape, you'll get punished. Trust me, you do not want to be punished."
+"지금부터 넌 매일 일을 배정받는다." <<he>>【이가】 당신을 끌고 터널을 지나며 말한다. "반항하면 벌을 받는다. 도망치려 해도 벌을 받는다. 내 말 믿어, 벌은 받고 싶지 않을 거다."
 
 <<if Time.hour lte 5 or Time.hour gte 21>>
-	<<He>> pulls you to another metal gate, the guard in front of it opens it up. The <<person>> pushes you through. The gate slams and locks behind you.
+	<<He>>【은는】 당신을 또 다른 금속 문으로 끌고 가고, 그 앞의 경비가 문을 열어 준다. <<person>>【이가】 당신을 안으로 떠민다. 등 뒤에서 문이 쾅 닫히고 잠긴다.
 	<br><br>
-	<<link [[Next|Mine Night]]>><</link>>
+	<<link [[다음|Mine Night]]>><</link>>
 <<else>>
-	<<He>> pulls you into a cave with a bunch of other people.
+	<<He>>【은는】 다른 사람들이 잔뜩 모여 있는 동굴 안으로 당신을 끌고 간다.
 	<br><br>
-	<<link [[Next|Mine Job Intro]]>><</link>>
+	<<link [[다음|Mine Job Intro]]>><</link>>
 <</if>>
 <<endevent>>
 
@@ -44,19 +44,19 @@ The stone walls of the tunnels are broken up by wooden supports. Three <<people>
 :: Mine Return
 <<effects>><<set $mine.intro to 1>><<set $outside to 0>>
 
-You approach the metal door leading to the mines. It's covered in police tape. You look around to make sure nobody is watching, then tear it off. You take a deep breath, pull open the door, and walk through. <<stress 2>><<gstress>>
+당신은 광산으로 이어지는 금속 문에 다가간다. 문에는 경찰 통제선 테이프가 둘러져 있다. 아무도 보고 있지 않은지 주위를 살핀 뒤 테이프를 뜯어낸다. 숨을 깊이 들이쉬고, 문을 당겨 열고 안으로 들어간다. <<stress 2>><<gstress>>
 <br><br>
-You're hit by a familiar stale air as you walk down the staircase.
+계단을 내려가자 익숙한 퀴퀴한 공기가 덮쳐 온다.
 <br><br>
 <<endevent>>
-<<link [[Next|Mine]]>><</link>>
+<<link [[다음|Mine]]>><</link>>
 
 
 
 :: Mine
 <<effects>><<set $outside to 0>>
 
-You're in the mines. It's silent.
+당신은 광산에 있다. 고요하다.
 
 <<if isPregnancyEnding()>>
 	<<mine_pregnancy>>
@@ -71,25 +71,25 @@ You're in the mines. It's silent.
 <</if>>
 
 <br><br>
-<<icon "actions/explore.png">><<link [[Explore (0:30)|Mine Explore]]>><<pass 30>><</link>>
+<<icon "actions/explore.png">><<link [[탐험한다 (0:30)|Mine Explore]]>><<pass 30>><</link>>
 <<if $mine.tunnel.intro and !$mine.tunnel.diamond>>
 	<<if $mine.tunnel.collapse lte 10>>
 		<br>
-		<<icon "ruins.png">><<link [[Collapsed Tunnel|Mine Collapse]]>><</link>>
+		<<icon "ruins.png">><<link [[무너진 터널|Mine Collapse]]>><</link>>
 	<<else>>
 		<br>
-		<<icon "ruins.png">><<link [[Flooded Tunnel|Mine Flood]]>><</link>>
+		<<icon "ruins.png">><<link [[물에 잠긴 터널|Mine Flood]]>><</link>>
 	<</if>>
 <</if>>
 <br>
-<<icon "get-out.png">><<link [[Leave|Barb Street]]>><<set $outside to 1>><</link>>
+<<icon "get-out.png">><<link [[떠난다|Barb Street]]>><<set $outside to 1>><</link>>
 
 
 
 :: Mine Explore
 <<effects>>
 
-You explore the winding tunnels. The map you took makes it easy to find your way around.
+당신은 구불구불한 터널을 탐험한다. 챙겨 온 지도 덕분에 길을 찾기가 쉽다.
 
 <<if isPregnancyEnding()>>
 	<<mine_pregnancy>>
@@ -111,79 +111,79 @@ You explore the winding tunnels. The map you took makes it easy to find your way
 <<if dangerEvent(1, 9000)>>
 	<<if $settings.tentaclesEnabled and $hallucinations gte 2>>
 		<<addinlineevent "tentacles">>
-			You explore the dim tunnel, until you step on something soft. You look down and see a tentacle on the ground. It wraps around your leg.
-			As you try to wrestle free, a slew of other tentacles emerge from the darkness.
+			당신은 어둑한 터널을 탐험하다가 뭔가 물컹한 것을 밟는다. 내려다보니 땅바닥에 촉수가 있다. 촉수가 당신의 다리를 휘감는다.
+			당신이 벗어나려고 몸부림치는 사이, 어둠 속에서 다른 촉수들이 우르르 나타난다.
 			<br><br>
-			<<link [[Struggle|Mine Tentacle]]>><<set $molestationstart to 1>><</link>>
+			<<link [[저항한다|Mine Tentacle]]>><<set $molestationstart to 1>><</link>>
 		<</addinlineevent>>
 	<</if>>
 
 	<<if $settings.slimesEnabled and $hallucinations gte 1>>
 		<<addinlineevent "slimes">>
-			As you're exploring a damp tunnel, you feel something wet land on your back. You reach to wipe it off, and find a large slime. You look up to see several more about to fall on you.
+			축축한 터널을 탐험하던 중, 등 위로 뭔가 젖은 것이 떨어지는 느낌이 든다. 닦아내려고 손을 뻗자 커다란 슬라임이 잡힌다. 위를 올려다보니 몇 마리가 더 당신 위로 떨어지려 하고 있다.
 			<br><br>
-			<<link [[Struggle|Mine Slime]]>><<set $molestationstart to 1>><</link>>
+			<<link [[저항한다|Mine Slime]]>><<set $molestationstart to 1>><</link>>
 		<</addinlineevent>>
 	<</if>>
 
 	<<if $settings.lurkersEnabled>>
 		<<addinlineevent "lurkers">>
-			As you're exploring, you see movement in the corner of your eye. You turn to look, but it's gone. As you're about to continue on, camouflaged creatures fly at you from the wall.
+			탐험하던 중 시야 한구석에서 무언가 움직인다. 고개를 돌려 보지만 아무것도 없다. 다시 길을 가려는 순간, 벽에 위장해 있던 생물들이 당신에게 날아든다.
 			<br><br>
-			<<link [[Struggle|Mine Struggle]]>><<set $struggle_start to 1>><</link>>
+			<<link [[저항한다|Mine Struggle]]>><<set $struggle_start to 1>><</link>>
 		<</addinlineevent>>
 	<</if>>
 
 	<<addinlineevent "creature" _relativeWeight>>
 		<<generateStrangeCreature 1>><<person1>>
-		As you're exploring, you come across a dark tunnel. You venture forward, making your way through, until you hear small rocks fall behind you. 
-		You turn to look, but nothing's there. You turn to continue, only to see a shape standing in front of you. It lunges, inhuman arms grabbing your body.
+		탐험하던 중 어두운 터널에 다다른다. 조심조심 앞으로 나아가는데, 등 뒤에서 작은 돌멩이들이 떨어지는 소리가 들린다.
+		돌아보지만 아무것도 없다. 다시 가려고 몸을 돌리자, 앞에 형체 하나가 서 있다. 그것이 달려들고, 사람의 것이 아닌 팔이 당신의 몸을 붙잡는다.
 		<br><br>
-		<<link [[Next|Mine Creature Rape]]>><<set $molestationstart to 1>><</link>>
+		<<link [[다음|Mine Creature Rape]]>><<set $molestationstart to 1>><</link>>
 	<</addinlineevent>>
 <<else>>
 	<<addinlineevent "nothing">>
-		You don't find anything of note.
+		눈에 띄는 것은 아무것도 찾지 못한다.
 		<br><br>
 		<<mine_links>>
 	<</addinlineevent>>
 
 	<<addinlineevent "gem">>
 		<<mine_gem>>
-		You find something shiny embedded in the wall of a tunnel.
+		터널 벽에 반짝이는 무언가가 박혀 있다.
 		<br><br>
-		<<icon "pickaxe.png">><<link [[Attempt to mine it (0:30)|Mine Gem]]>><<pass 30>><<tiredness 10>><<set $phase to _gem>><</link>><<pickaxedifficulty _gem_diff_min _gem_diff_max>><<ggtiredness>>
+		<<icon "pickaxe.png">><<link [[캐내 본다 (0:30)|Mine Gem]]>><<pass 30>><<tiredness 10>><<set $phase to _gem>><</link>><<pickaxedifficulty _gem_diff_min _gem_diff_max>><<ggtiredness>>
 		<br>
 		<<mine_links>>
 	<</addinlineevent>>
 
 	<<addinlineevent "antique">>
 		<<set $phase to either("shovelhandle","lantern","rustypickaxe")>>
-		You find a 
+		당신은
 		<<if $phase is "shovelhandle">>
-			shovel handle
+			삽자루를
 		<<elseif $phase is "rustypickaxe">>
-			rusty pickaxe
+			녹슨 곡괭이를
 		<<else>>
-			$phase
+			$phase【을를】
 		<</if>> 
 		<<print either(
-			"under a rock",
-			"in a pile of rotten wood",
-			"on the ground, you almost tripped on it"
+			"바위 밑에서 발견한다",
+			"썩은 나무 더미 속에서 발견한다",
+			"땅바닥에서 발견한다. 하마터면 걸려 넘어질 뻔했다"
 		)>>.
 		<br><br>
-		<<ind>><<link [[Take it|Mine Antique]]>><</link>>
+		<<ind>><<link [[챙긴다|Mine Antique]]>><</link>>
 		<br>
 		<<mine_links>>
 	<</addinlineevent>>
 
 	<<if !$mine.tunnel.intro>>
 		<<addinlineevent "collapsed">>
-			As you're exploring, you come across a steep decline. It's covered in mud. You step onto it before <span class="red">you slip on the mud and slide down the tunnel.</span> 
-			You reach the bottom and land on hard rock. <<pain 10>><<ggpain>>
+			탐험하던 중 가파른 내리막에 다다른다. 바닥이 진흙으로 덮여 있다. 발을 내딛자마자 <span class="red">진흙에 미끄러져 터널 아래로 쭉 미끄러져 내려간다.</span>
+			바닥에 이르러 단단한 바위 위에 떨어진다. <<pain 10>><<ggpain>>
 			<br><br>
-			<<link [[Recover|Mine Collapse Intro]]>><</link>>
+			<<link [[추스른다|Mine Collapse Intro]]>><</link>>
 		<</addinlineevent>>
 	<</if>>
 <</if>>
@@ -195,15 +195,15 @@ You explore the winding tunnels. The map you took makes it easy to find your way
 :: Mine Gem
 <<effects>><<wearProp "pickaxe">>
 
-You pick up a pickaxe and try to break the object out of the rock wall.
+당신은 곡괭이를 들고 바위벽에서 그 물체를 캐내려 한다.
 <<if $pickaxeSuccess>>
-	<span class="green">You manage to break the object out of the wall without damaging it.</span><<ggpickaxe>>
+	<span class="green">당신은 물체를 망가뜨리지 않고 벽에서 캐내는 데 성공한다.</span><<ggpickaxe>>
 	<br><br>
-	It's <<mine_gem_collect $phase>> You take it with you.
+	그것은 <<mine_gem_collect $phase>> 당신은 그것을 챙긴다.
 	<<prof pickaxe 2>>
 <<else>>
 	<<prof pickaxe 3>>
-	You hit it instead, and <span class="red">it shatters into a bunch of small pieces that scatter all over the ground.</span><<gggpickaxe>>
+	당신은 그만 물체를 직접 내리치고, <span class="red">그것은 산산조각 나 바닥 사방으로 흩어진다.</span><<gggpickaxe>>
 <</if>>
 <br><br>
 <<mine_links>>
@@ -227,7 +227,7 @@ You pick up a pickaxe and try to break the object out of the rock wall.
 <<set _antique_prop to `antique ${_antique}`>>
 <<wearProp _antique_prop>>
 
-You take the _antique with you.
+당신은 _antique【을를】 챙긴다.
 
 <br><br>
 <<mine_links>>
@@ -256,9 +256,9 @@ You take the _antique with you.
 <<actionstentacles>>
 
 <<if $tentacles.active lte ($tentacles.max / 2)>>
-	<span id="next"><<link [[Next|Mine Tentacle Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Mine Tentacle Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Mine Tentacle]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Mine Tentacle]]>><</link>></span><<nexttext>>
 <</if>>
 
 
@@ -266,7 +266,7 @@ You take the _antique with you.
 :: Mine Tentacle Finish
 <<effects>>
 
-The tentacles retreat back into the darkness. <<tearful>> you run until you reach a better-lit tunnel.
+촉수들이 어둠 속으로 물러난다. <<tearful>> 당신은 좀 더 밝은 터널에 이를 때까지 달린다.
 
 <br><br>
 <<clotheson>>
@@ -297,9 +297,9 @@ The tentacles retreat back into the darkness. <<tearful>> you run until you reac
 <<swarmactions>>
 
 <<if $timer lte 0>>
-	<span id="next"><<link [[Next|Mine Slime Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Mine Slime Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Mine Slime]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Mine Slime]]>><</link>></span><<nexttext>>
 <</if>>
 
 
@@ -307,7 +307,7 @@ The tentacles retreat back into the darkness. <<tearful>> you run until you reac
 :: Mine Slime Finish
 <<effects>>
 
-The slimes retreat. <<tearful>> you run until you reach a drier cave.
+슬라임들이 물러난다. <<tearful>> 당신은 좀 더 마른 동굴에 이를 때까지 달린다.
 
 <br><br>
 <<clotheson>>
@@ -319,17 +319,17 @@ The slimes retreat. <<tearful>> you run until you reach a drier cave.
 :: Mine Collapse Intro
 <<effects>><<set $mine.tunnel.intro to 1>><<set $mine.tunnel.collapse to 0>>
 
-You take a look at your surroundings. The tunnel leads to a collapsed section. You try to see what's behind it. You can just barely make out a cave behind it.
+당신은 주변을 둘러본다. 터널은 무너진 구간으로 이어진다. 그 너머에 무엇이 있는지 살펴보니, 뒤쪽으로 동굴 하나가 간신히 보인다.
 
 <br><br>
-<<link [[Next|Mine Collapse]]>><</link>>
+<<link [[다음|Mine Collapse]]>><</link>>
 
 
 
 :: Mine Collapse
 <<effects>>
 
-You're at the collapsed tunnel. 
+당신은 무너진 터널 앞에 있다.
 
 <<if isPregnancyEnding()>>
 	<<mine_pregnancy>>
@@ -340,11 +340,11 @@ You're at the collapsed tunnel.
 <</if>>
 
 <<if $mine.tunnel.collapse lte 3>>
-	<span class="red">An impassable wall of rock stands before you.</span>
+	<span class="red">지나갈 수 없는 바위벽이 앞을 가로막고 있다.</span>
 <<elseif $mine.tunnel.collapse lte 6>>
-	<span class="blue">There's still plenty of rock left.</span>
+	<span class="blue">아직 바위가 잔뜩 남아 있다.</span>
 <<else>>
-	<span class="blue">You can see more tunnel behind the rocks.</span>
+	<span class="blue">바위 너머로 터널이 더 보인다.</span>
 <</if>>
 
 <<if $arousal gte $arousalmax>>
@@ -352,27 +352,27 @@ You're at the collapsed tunnel.
 <</if>>
 
 <br><br>
-<<icon "rubble.png">><<link [[Clear the rocks (1:00)|Mine Clear]]>><<pass 60>><<tiredness 20>><</link>><<gggtiredness>>
+<<icon "rubble.png">><<link [[바위를 치운다 (1:00)|Mine Clear]]>><<pass 60>><<tiredness 20>><</link>><<gggtiredness>>
 <br>
-<<icon "get-out.png">><<link [[Leave|Mine]]>><</link>>
+<<icon "get-out.png">><<link [[떠난다|Mine]]>><</link>>
 
 
 
 :: Mine Clear
 <<effects>>
 
-You work on clearing the rocks out of the tunnel. It's exhausting work, <span class="blue">but you're making progress.</span>
+당신은 터널의 바위를 치우는 작업을 한다. 고된 일이지만, <span class="blue">조금씩 진척이 있다.</span>
 
 <<set $mine.tunnel.collapse += 1>>
 
 <<if $mine.tunnel.collapse lte 4>>
-	<span class="red">An impassable wall of rock stands before you.</span>
+	<span class="red">지나갈 수 없는 바위벽이 앞을 가로막고 있다.</span>
 <<elseif $mine.tunnel.collapse lte 7>>
-	<span class="blue">There's still plenty of rock left.</span>
+	<span class="blue">아직 바위가 잔뜩 남아 있다.</span>
 <<elseif $mine.tunnel.collapse lte 10>>
-	<span class="blue">You can see more tunnel behind the rocks.</span>
+	<span class="blue">바위 너머로 터널이 더 보인다.</span>
 <<else>>
-	<span class="green">There's a big enough gap to go through.</span>
+	<span class="green">지나갈 수 있을 만큼 틈이 넓어졌다.</span>
 <</if>>
 
 <<if isPregnancyEnding()>>
@@ -385,12 +385,12 @@ You work on clearing the rocks out of the tunnel. It's exhausting work, <span cl
 
 <<if $mine.tunnel.collapse lte 10>>
 	<br><br>
-	<<icon "rubble.png">><<link [[Clear the rocks (1:00)|Mine Clear]]>><<pass 60>><<tiredness 20>><</link>><<gggtiredness>>
+	<<icon "rubble.png">><<link [[바위를 치운다 (1:00)|Mine Clear]]>><<pass 60>><<tiredness 20>><</link>><<gggtiredness>>
 	<br>
-	<<icon "get-out.png">><<link [[Leave|Mine]]>><</link>>
+	<<icon "get-out.png">><<link [[떠난다|Mine]]>><</link>>
 <<else>>
 	<br><br>
-	<<link [[Go in|Mine Flood]]>><</link>>
+	<<link [[들어간다|Mine Flood]]>><</link>>
 <</if>>
 
 
@@ -398,7 +398,7 @@ You work on clearing the rocks out of the tunnel. It's exhausting work, <span cl
 :: Mine Flood
 <<effects>>
 
-You follow the tunnel and reach a pool of water. <span class="blue">A section of the tunnel is flooded.</span> It leads even further down.
+터널을 따라가자 물웅덩이가 나온다. <span class="blue">터널 일부가 물에 잠겨 있다.</span> 물길은 더 깊은 아래로 이어진다.
 
 <<if isPregnancyEnding()>>
 	<<mine_pregnancy>>
@@ -413,27 +413,27 @@ You follow the tunnel and reach a pool of water. <span class="blue">A section of
 <</if>>
 
 <br><br>
-<<icon "actions/dive.png">><<link [[Try to swim through|Mine Swim]]>><</link>><<swimmingdifficulty 700 1000>>
+<<icon "actions/dive.png">><<link [[헤엄쳐 지나가 본다|Mine Swim]]>><</link>><<swimmingdifficulty 700 1000>>
 <br>
-<<icon "get-out.png">><<link [[Leave|Mine]]>><</link>>
+<<icon "get-out.png">><<link [[떠난다|Mine]]>><</link>>
 
 
 
 :: Mine Swim
-You enter the water. It's warm.
+당신은 물에 들어간다. 따뜻하다.
 <br><br>
 <<water>><<effects>>
-You take a deep breath before you dive below the surface. You swim down and follow the tunnel.
+숨을 깊이 들이쉬고 수면 아래로 잠수한다. 아래로 헤엄쳐 터널을 따라간다.
 <br><br>
 <<if $swimmingSuccess>>
-	<span class="green">You continue, until you reach an incline and an unflooded section of tunnel.</span>
+	<span class="green">계속 나아가다 보니 오르막과 물에 잠기지 않은 터널 구간이 나온다.</span>
 	<br><br>
-	<<link [[Follow the tunnel|Mine Diamond]]>><</link>>
+	<<link [[터널을 따라간다|Mine Diamond]]>><</link>>
 <<else>>
-	<span class="red">You start to run out of breath.</span> You desperately try to return from where you came, but everything starts to go dark. You feel a cold hand grasp your ankle as everything fades to black.
+	<span class="red">숨이 차오르기 시작한다.</span> 필사적으로 왔던 길로 돌아가려 하지만 눈앞이 점점 어두워진다. 모든 것이 암흑으로 사라져 가는 가운데, 차가운 손이 당신의 발목을 움켜쥐는 것이 느껴진다.
 	<<passout>>
 	<br><br>
-	<<link [[Follow the tunnel|Mine Swim Fail]]>><</link>>
+	<<link [[터널을 따라간다|Mine Swim Fail]]>><</link>>
 <</if>>
 
 
@@ -441,28 +441,28 @@ You take a deep breath before you dive below the surface. You swim down and foll
 :: Mine Swim Fail
 <<effects>>
 
-You awaken with a gasp. You cough up water onto the ground.
+당신은 헉 하고 숨을 들이켜며 깨어난다. 바닥에 물을 토해 낸다.
 <br><br>
-You look around to see that you're back in the entrance of the mines.
+주위를 둘러보니 광산 입구로 돌아와 있다.
 
 <br><br>
-<<link [[Next|Mine]]>><</link>>
+<<link [[다음|Mine]]>><</link>>
 
 
 
 :: Mine Diamond
 <<effects>>
 
-As you walk down the dark tunnel, you notice a trail of torn clothing. The scraps lead to a crack in the tunnel wall, just large enough to fit in. You take a look inside and see something shining in the center of a cave.
+어두운 터널을 걸어 내려가다가 찢어진 옷가지가 줄지어 떨어져 있는 것을 발견한다. 그 조각들은 터널 벽의 틈으로 이어지는데, 딱 몸 하나 들어갈 만한 크기다. 안을 들여다보니 동굴 한가운데에서 무언가가 빛나고 있다.
 <br><br>
-You squeeze through the small gap. You shudder as you step onto the soft ground. You look around and see that the cave is covered with a fleshy substance. <<stress 10>><<ggstress>>
+당신은 좁은 틈으로 몸을 비집고 들어간다. 물컹한 바닥을 밟자 몸서리가 쳐진다. 둘러보니 동굴이 온통 살덩이 같은 물질로 뒤덮여 있다. <<stress 10>><<ggstress>>
 <br><br>
-You approach the center of the cave, wet sounds accompany you. As you get close, you realize it's a <span class="lewd">purple diamond</span> sitting on a pedestal in the center of the cave. As you peer at it, you realize just how beautiful it is. You can't bear to look away.
+질척이는 소리를 들으며 동굴 한가운데로 다가간다. 가까이 가 보니 그것은 동굴 중앙의 받침대 위에 놓인 <span class="lewd">보라색 다이아몬드</span>다. 들여다볼수록 그것이 얼마나 아름다운지 깨닫는다. 도저히 눈을 뗄 수가 없다.
 <br><br>
 <!-- Duplicate links are intentional -->
-<span class="wraith"><<link [[Take it|Mine Diamond Take]]>><</link>></span>
+<span class="wraith"><<link [[가져간다|Mine Diamond Take]]>><</link>></span>
 <br>
-<span class="wraith"><<link [[Take it|Mine Diamond Take]]>><</link>></span>
+<span class="wraith"><<link [[가져간다|Mine Diamond Take]]>><</link>></span>
 
 
 
@@ -472,28 +472,28 @@ You approach the center of the cave, wet sounds accompany you. As you get close,
 <<set $mine.tunnel.diamond to 1>><<museumAntiqueStatus "antiquepurplediamond" "found">>
 <<set $antiquemoney += 5000>>
 
-You reach out to touch the diamond, as your fingers meet the diamond, a warmth fills you.
+당신은 다이아몬드에 손을 뻗는다. 손가락이 다이아몬드에 닿는 순간, 온기가 당신을 가득 채운다.
 <<orgasm>>
-You recover, then reach back through the crack to grab a scrap of clothing. You wrap the diamond in the clothing scrap and lift it off its pedestal.
+정신을 추스른 당신은 틈 밖으로 손을 뻗어 옷 조각 하나를 집는다. 다이아몬드를 옷 조각으로 감싸 받침대에서 들어 올린다.
 <br><br>
-You return through the crack and continue down the tunnel, until you reach a fork. One of them leads to an incline. You follow it, until the silence is cut by <span class="red">a loud roar from behind you.</span> <<stress 20>><<gggstress>>
+틈을 빠져나와 터널을 계속 따라가다 보니 갈림길이 나온다. 그중 하나는 오르막으로 이어진다. 그 길을 따라가는데, <span class="red">등 뒤에서 들려온 커다란 포효</span>가 정적을 깨뜨린다. <<stress 20>><<gggstress>>
 <br><br>
-<<link [[Run|Mine Diamond Escape]]>><</link>>
+<<link [[달린다|Mine Diamond Escape]]>><</link>>
 
 
 
 :: Mine Diamond Escape
 <<effects>>
 
-You run as fast as you can through the tunnel. The incline gets steeper and steeper. <span class="red">Another loud roar echoes from behind. It's louder than the last.</span>
+당신은 터널을 전속력으로 달린다. 오르막은 점점 가팔라진다. <span class="red">또 한 번 커다란 포효가 뒤에서 울려 퍼진다. 아까보다 더 크다.</span>
 <br><br>
-The tunnel levels out. You glimpse light in the tunnel ahead, just as <span class="red">yet another loud roar echoes.</span>
+터널이 평탄해진다. 앞쪽 터널에 빛이 언뜻 보이는 순간, <span class="red">또다시 커다란 포효가 울려 퍼진다.</span>
 <br><br>
-You glance around, and see a large monster on your heels. You scramble away, but it swings its arm into one of the wooden supports. The tunnel rumbles. You rush to the light as it begins to collapse.
+힐끗 돌아보니 거대한 괴물이 바짝 뒤쫓고 있다. 허둥지둥 달아나지만, 괴물이 팔을 휘둘러 나무 버팀목 하나를 후려친다. 터널이 우르릉 울린다. 터널이 무너지기 시작하자 당신은 빛을 향해 내달린다.
 <br><br>
-You make it to a small cave, and drop to the ground, trying to cover yourself. The rumbling stops. You look back to see the tunnel has caved in, as though it never existed to begin with. You look around. <span class="green">You're back at the entrance.</span>
+작은 동굴에 이르자 바닥에 엎드려 몸을 감싼다. 우르릉거림이 멎는다. 돌아보니 터널은 처음부터 없었다는 듯 무너져 막혀 있다. 주위를 둘러본다. <span class="green">입구로 돌아와 있다.</span>
 <br><br>
-<<link [[Next|Mine]]>><<endevent>><</link>>
+<<link [[다음|Mine]]>><<endevent>><</link>>
 
 
 
@@ -519,9 +519,9 @@ You make it to a small cave, and drop to the ground, trying to cover yourself. T
 <<actionsman>>
 
 <<if _combatend>>
-	<span id="next"><<link [[Next|Mine Creature Rape Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Mine Creature Rape Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Mine Creature Rape]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Mine Creature Rape]]>><</link>></span><<nexttext>>
 <</if>>
 
 
@@ -531,12 +531,12 @@ You make it to a small cave, and drop to the ground, trying to cover yourself. T
 
 <<if $enemyarousal gte $enemyarousalmax>>
 	<<ejaculation>>
-	The <<person>> growls and runs into the darkness.
+	<<person>>【은는】 으르렁거리더니 어둠 속으로 달아난다.
 <<elseif $enemyhealth lte 0>>
-	You push the creature off and scramble to your feet. You hear it rush back into the darkness.
+	당신은 그 생물을 밀쳐내고 허둥지둥 일어선다. 그것이 어둠 속으로 황급히 사라지는 소리가 들린다.
 <</if>>
 <br><br>
-<<tearful>> you run until you reach a lit-up tunnel.
+<<tearful>> 당신은 불이 밝혀진 터널에 이를 때까지 달린다.
 <<clotheson>>
 <<endcombat>>
 <<mine_links>>
@@ -563,10 +563,10 @@ You make it to a small cave, and drop to the ground, trying to cover yourself. T
 <<struggle>>
 
 <<if $struggle.done gte $struggle.number>>
-	<span id="next"><<link [[Next|Mine Struggle Finish]]>><</link>></span>
+	<span id="next"><<link [[다음|Mine Struggle Finish]]>><</link>></span>
 	<br>
 <<else>>
-	<span id="next"><<link [[Next|Mine Struggle]]>><</link>></span>
+	<span id="next"><<link [[다음|Mine Struggle]]>><</link>></span>
 	<br>
 <</if>>
 
@@ -575,7 +575,7 @@ You make it to a small cave, and drop to the ground, trying to cover yourself. T
 :: Mine Struggle Finish
 <<effects>>
 
-The creatures disappear into the tunnels. <<tearful>> you stand up and continue on.
+생물들이 터널 속으로 사라진다. <<tearful>> 당신은 일어나 계속 나아간다.
 <br><br>
 <<clotheson>>
 <<endcombat>>

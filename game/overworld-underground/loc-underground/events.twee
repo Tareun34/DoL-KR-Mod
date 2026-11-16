@@ -275,7 +275,7 @@
 <<if $rng gte 51 and beastSexEnabledForType("pig", $monster is 1)>>
 	<<endevent>>
 	<<generateBeastVictim 1 pig>>
-	"Instead of our scheduled show, we have a special treat for you." A metal shutter opens behind you, revealing a gigantic <<beasttype>>.
+	"예정된 쇼 대신, 특별한 볼거리를 준비했습니다." 당신 뒤의 금속 셔터가 열리며 거대한 <<beasttype>>【이가】 모습을 드러낸다.
 	<br><br>
 
 	<<link [[다음|Underground Stage Pig]]>><<set $molestationstart to 1>><</link>>
@@ -480,10 +480,10 @@
 :: Underground Stage Intro
 <<set $outside to 0>><<set $location to "underground">><<effects>>
 <<generateBeastVictim 1 pig>>
-You are led once more to the stage, where the crowd awaits. <<covered>>
+당신은 다시 무대로 이끌려 나간다. 그곳에는 군중이 기다리고 있다. <<covered>>
 
 <<if $rng gte 51 and beastSexEnabledForType("pig", $monster is 1)>>
-	Once there, a metal shutter rattles open behind you, and a gigantic <<beasttype>> steps out. The audience cheers <<bhim>> on.
+	그곳에 도착하자 당신 뒤에서 금속 셔터가 덜컹거리며 열리고, 거대한 <<beasttype>>【이가】 걸어 나온다. 관객들이 <<bhim>>【을를】 응원한다.
 	<br><br>
 
 	<<link [[다음|Underground Stage Pig]]>><<set $molestationstart to 1>><</link>>
@@ -699,8 +699,8 @@ You are led once more to the stage, where the crowd awaits. <<covered>>
 	<<link [[다음|Forest]]>><<set $forest to 1>><</link>>
 <<else>>
 	<<if $rng gte 51 and beastSexEnabledForType("dog", $monster is 1)>><!-- Modified for BeastPeople -->
-		You hear something running through the grass behind you, and <span class="red">feel <<print ($monster is 1 ? "hands" : "paws")>> on your back as you are forced to your knees</span>.
-		The <<beasttype 0>> starts humping<<if $NPCList[0].penis isnot "none">>, you feel <<bhis 0>> penis prodding your <<bottom>><</if>>.
+		뒤쪽 풀숲에서 무언가 달려오는 소리가 들리고, <span class="red">당신은 등에 닿는 <<print ($monster is 1 ? "손" : "발")>>【을를】 느끼며 무릎을 꿇린다</span>.
+		<<beasttype 0>>【이가】 올라타 허리를 흔들기 시작한다<<if $NPCList[0].penis isnot "none">>. <<bhis 0>> 자지가 당신의 <<bottom>>【을를】 찌르는 게 느껴진다<</if>>.
 		<br><br>
 
 		"<<bhe 0>>【이가】 널 좋아하는 것 같군." 따라잡은 <<person>>【이가】 말하는 소리가 들린다. <<He>>【은는】 혼자가 아니었고, 많은 군중이 <<him>>의 뒤를 따르고 있었다.
