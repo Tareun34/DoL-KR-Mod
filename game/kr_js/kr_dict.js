@@ -12,6 +12,14 @@
 window.KR = window.KR || {};
 window.KR.dict = {
     /* 0.5.13.8 병합 후 추가: 번역 커밋이 못 건드린 변수 값(값 목록·가게 키·광산 물품·의상 패턴명 등) */
+    "small gem": "작은 보석",
+    "medium gem": "중간 보석",
+    "large gem": "큰 보석",
+    "small crystal": "작은 수정",
+    "medium crystal": "중간 수정",
+    "large crystal": "큰 수정",
+    "male": "수컷",
+    "female": "암컷",
     "lantern": "랜턴",
     "rusty pickaxe": "녹슨 곡괭이",
     "shovel handle": "삽자루",

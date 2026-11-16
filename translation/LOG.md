@@ -47,7 +47,16 @@ game/overworld-underground/loc-underground/robin.twee:288:【의】
 game/special-fishing/fishing-text.twee:1532:【에게】
 ```
 
-## 코드 측 보정 후보(번역 커밋으로는 못 고치는 것, 1차 뒤 별도 처리)
+## 코드 측 보정(2026-11-16 처리, 커밋 `fix(kr)`)
+
+번역 커밋이 못 건드린 자리들은 1·2·3차가 끝난 뒤 코드 측에서 처리했다.
+
+- **래퍼 적용**(옛 번역과 같은 `window.KR` 변환 함수): 산문의 `$NPCList[].penisdesc`(273곳)·`breastsdesc`, `$_toy`, 왼/오른손, `$loveInterest.primary`, `<<print fullDescription / beastTypes / $carried.neck.photo>>`.
+- **화면번역 사전(kr_dict.js) 추가 50항목**: 광산 물품(랜턴·녹슨 곡괭이·삽자루·보라색 다이아몬드), 보석/수정(크기 조합 포함), 헬리콥터 목적지, 그윌란 의뢰 가게 키(의상·성인용품·골동품·미끼), 밭 종류(흙/물), 방향(왼쪽/오른쪽/가운데), 탈의실 성별, 말 성별, 의상 패턴명, 술, 올빼미 인형.
+- **개별 코드 수정**: 로빈 대화 주제 값 "논의되지 않음"→"undiscussed"(옛 번역 버그), 사이드바 치트 버튼 라벨, 박물관 골동품 관사, 그윌란 의뢰 관사, 거리 이름 `getMapNameKr`, 카페 `<<phaseFoodKR>>`, 전투 조롱 선택지 한글 라벨, 자위 액체 목록 접속사.
+- **남긴 것**: `effect.js` 최면 특성 이름(옛 번역과 동일하게 영어), 낚시 물고기 키(`$fishingHookedFish.type`; 사전에 물고기 이름이 있으면 후처리로 한글화됨), `thug.twee` 615 `$bus.toUpperFirst() Street` 라벨.
+
+### 처리 전 목록(기록용)
 
 - `base-system/widgets.twee` 거리 이름: `<<print _location.toUpperFirst()>> 가` → `getMapNameKr(...)`로 한글 거리명.
 - `base-system/tending.twee` 335: `$_plant.tending.planting_bed` 값(earth/water)이 영어로 찍힘.

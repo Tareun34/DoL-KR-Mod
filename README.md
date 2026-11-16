@@ -20,9 +20,10 @@
 
 ## 영문 0.5.13.8 추종 상태
 
-2026-11-10에 영문 0.5.13.8(태그 `0.5.13.8`)을 파일 단위 3-way 병합으로 받아들였습니다(`docs/specs/2026-11-10-upstream-0.5.13.8-design.md`). 코드·이미지·구조는 영문 0.5.13.8과 같고, 영문이 손대지 않은 자리의 번역은 그대로입니다. 영문이 고친 문장과 새로 추가된 콘텐츠는 **아직 영어**라서 게임은 한영 혼재 상태입니다.
+2026-11-10에 영문 0.5.13.8(태그 `0.5.13.8`)을 파일 단위 3-way 병합으로 받아들였고(`docs/specs/2026-11-10-upstream-0.5.13.8-design.md`), 2026-11-12~16에 번역 2단계(`docs/specs/2026-11-12-translation-stage2-design.md`)를 마쳤습니다. 코드·이미지·구조는 영문 0.5.13.8과 같고, 영문이 손대지 않은 번역은 그대로이며, 영문이 고친 문장(2,547건)과 새 콘텐츠(새 영문 371건, 새 파일 27개: 광산 리워크·부랑배 이벤트·NPC 반응 대사 등)는 번역 에이전트가 옛 번역을 바탕으로 다시 넣었습니다.
 
-- 남은 번역 작업량은 [`translation/STATUS.md`](translation/STATUS.md)에 있습니다. 자리별 기록(옛 한글·옛 영문·새 영문)은 `translation/pending/`에 원본 경로를 따라 JSON으로 들어 있고, 새 영문이 파일에서 사라지면 자동으로 완료로 셉니다. 영문 산문이 없는 기록(변수 이름 변경 등)은 '코드만' 열로 따로 세며 번역 대상이 아닙니다. 완료 판정은 문자열 일치에 기대는 근사치라, 같은 문장이 파일에 여러 번 있으면 완료가 늦게 잡히고 덩어리 안의 코드 한 줄만 바뀌어도 완료로 잡힐 수 있습니다. 2단계(번역)는 별도 설계로 진행하며 이 판정도 거기서 다듬습니다.
+- 번역 작업 기록은 [`translation/LOG.md`](translation/LOG.md)(묶음별 결과·용어 결정·코드 측 보정), 자리별 기록은 `translation/pending/`, 요약은 [`translation/STATUS.md`](translation/STATUS.md)에 있습니다. 완료 판정은 문자열 일치에 기대는 근사치입니다.
+- 번역은 검수 없이 들어갔습니다. 플레이 중 어색한 문장이나 영어로 남은 자리를 발견하면 파일과 문장을 알려 주세요. 개발자 주석·패시지 이름·코드 값은 의도적으로 영어입니다.
 - `dist/`에 남아 있는 `DoL-KR 0.5.12.13 *.html` 네 개는 **보관용**입니다. 영문이 이미지 19개의 경로를 바꿨고 `img/`는 하나뿐이라 옛 빌드는 홍조·스토킹 아이콘 등 일부 이미지가 깨집니다. 0.5.13.8에서 저장한 세이브는 0.5.12.13에서 열리지 않을 수 있습니다.
 - 빌드 검증 기준: 원본 변형과 영문 0.5.13.8 빌드의 패시지 이름 집합이 같습니다(허용 목록 없음, 16,455개). Herm 변형과 원본 변형은 패시지 차이가 없고 스크립트 차이는 `features/herm-ui/features.js` 3줄뿐입니다. 원본과 원격 변형은 `idb` 모듈 교체분만 다릅니다.
 
@@ -83,7 +84,10 @@ python3 -m unittest discover -s tools/test -t .     # 빌드 비교 도구, 스�
 python3 tools/make_remote_format.py --check          # sugarcube-2-remote 가 최신인지
 python3 tools/check_kr_symbols.py check --root . --snapshot translation/kr-symbols.json   # 한글판 전용 정의 유실 점검
 python3 tools/translation_status.py --root . --tag 0.5.13.8 --out translation/STATUS.md  # 번역 상태 갱신
+python3 tools/check_translation.py <파일들>              # 번역 전후 구조(매크로·변수·링크 대상) 동일성 검사
 ```
+
+번역 작업 방식(에이전트 지침, 구조 검사기, 묶음 생성)은 `translation/TRANSLATOR.md`와 `docs/specs/2026-11-12-translation-stage2-design.md`에 있습니다.
 
 다음 영문 버전을 병합할 때(예: 0.5.13.9):
 
