@@ -6,7 +6,7 @@
 	<<else>>
 		<<set _prayPassage to "Temple Pray">>
 	<</if>>
-	<<templeicon "pray">><<link [[Pray for salvation (1:00)|_prayPassage]]>>
+	<<templeicon "pray">><<link [[구원을 위해 기도한다 (1:00)|_prayPassage]]>>
 		<<pass 60>><<set $phase to 2>>
 		<<if $purity gte ((1000 / 7) * 7)>>
 			<<stress -6>><<awareness -2>><<arousal -1200>>
@@ -27,7 +27,7 @@
 	<<lawareness>><<lstress>><<larousal>>
 	<br>
 	<<if insecurityExists("penis_small") and $daily.templePray isnot 1>>
-		<<templeicon "pray">><<link [[Pray for a bigger penis (1:00)|_prayPassage]]>>
+		<<templeicon "pray">><<link [[더 큰 자지를 위해 기도한다 (1:00)|_prayPassage]]>>
 			<<pass 60>><<set $phase to $player.penissize lt 2 ? 4 : 5>><<set $daily.templePray to 1>>
 			<<if $purity gte ((1000 / 7) * 7)>>
 				<<stress 5>><<acceptance "penis_small" 20>>
@@ -49,7 +49,7 @@
 		<br>
 	<</if>>
 	<<if insecurityExists("penis_big") and $daily.templePray isnot 1>>
-		<<templeicon "pray">><<link [[Pray for a smaller penis (1:00)|_prayPassage]]>>
+		<<templeicon "pray">><<link [[더 작은 자지를 위해 기도한다 (1:00)|_prayPassage]]>>
 			<<pass 60>><<set $phase to 6>><<set $daily.templePray to 1>>
 			<<if $purity gte ((1000 / 7) * 7)>>
 				<<stress 5>><<acceptance "penis_big" 20>>
@@ -71,7 +71,7 @@
 		<br>
 	<</if>>
 	<<if insecurityExists("breasts_small") and $daily.templePray isnot 1>>
-		<<templeicon "pray">><<link [[Pray for bigger breasts (1:00)|_prayPassage]]>>
+		<<templeicon "pray">><<link [[더 큰 가슴을 위해 기도한다 (1:00)|_prayPassage]]>>
 			<<pass 60>><<set $phase to !$player.breastsize ? 7 : 8>><<set $daily.templePray to 1>>
 			<<if $purity gte ((1000 / 7) * 7)>>
 				<<stress 5>><<acceptance "breasts_small" 20>>
@@ -93,7 +93,7 @@
 		<br>
 	<</if>>
 	<<if insecurityExists("breasts_big") and $daily.templePray isnot 1>>
-		<<templeicon "pray">><<link [[Pray for smaller breasts (1:00)|_prayPassage]]>>
+		<<templeicon "pray">><<link [[더 작은 가슴을 위해 기도한다 (1:00)|_prayPassage]]>>
 			<<pass 60>><<set $phase to 9>><<set $daily.templePray to 1>>
 			<<if $purity gte ((1000 / 7) * 7)>>
 				<<stress 5>><<acceptance "breasts_big" 20>>
@@ -115,7 +115,7 @@
 		<br>
 	<</if>>
 	<<if insecurityExists("pregnancy") and $daily.templePray isnot 1>>
-		<<set _pregnancyLink to (playerAwareTheyArePregnant() ? "Pray about your pregnant belly (1:00)" : "Pray about your pregnant looking belly (1:00)")>>
+		<<set _pregnancyLink to (playerAwareTheyArePregnant() ? "임신한 배에 대해 기도한다 (1:00)" : "임신한 것처럼 보이는 배에 대해 기도한다 (1:00)")>>
 		<<templeicon "pray">><<link [[_pregnancyLink|_prayPassage]]>>
 			<<pass 60>><<set $phase to 10>><<set $daily.templePray to 1>>
 			<<if $purity gte ((1000 / 7) * 7)>>
@@ -137,7 +137,7 @@
 		<<gstress>><<gacceptance>>
 		<br>
 	<</if>>
-	<<crimeicon "mark">><<link [[Watch (1:00)|_prayPassage]]>>
+	<<crimeicon "mark">><<link [[지켜본다 (1:00)|_prayPassage]]>>
 		<<pass 60>><<set $phase to 3>>
 		<<if $purity gte ((1000 / 7) * 7)>>
 			<<stress 5>><<awareness 2>>
@@ -158,7 +158,7 @@
 	<<gawareness>><<gstress>>
 	<br>
 	<<if !_sydneyPray>>
-		<<refuseicon>><<link [[Stop|Temple]]>><</link>>
+		<<refuseicon>><<link [[멈춘다|Temple]]>><</link>>
 		<br>
 	<</if>>
 <</widget>>
@@ -201,9 +201,9 @@
 		<<monk>>【이가】 방에 들어온다. "청소하러 왔습니다," <<he>>【이가】 말한다.
 
 		<<if $temple_sneak is 1>>
-			<<He>> frowns. "Didn't know anyone was in here. It's a bad idea to pray here so late at night. You can continue in the morning. The incense is running low anyway."
+			<<He>>【은는】 얼굴을 찌푸린다. "여기에 누가 계신 줄은 몰랐습니다. 이렇게 늦은 밤에 기도하는 것은 바람직하지 않습니다. 아침에 계속하시지요. 향도 거의 다 떨어졌습니다."
 		<<else>>
-			"It's a bad idea to pray in here so late at night. You can continue in the morning. The incense is running low anyway."
+			"이렇게 늦은 밤에 여기서 기도하는 건 좋지 않습니다. 아침에 계속할 수 있습니다. 어차피 향도 거의 다 떨어졌고요."
 		<</if>>
 		<br><br>
 
@@ -332,7 +332,7 @@
 	<</addinlineevent>>
 		
 	<<addinlineevent "initiates_stairs">>
-		You see a group of initiates chatting beneath a flight of stairs.
+		계단 아래에서 한 무리의 수습생들이 잡담을 나누고 있는 것이 보인다.
 		<br><br>
 		<<if $temple_rank is undefined or $temple_rank is "prospective">>
 			<<link [[다음|Temple]]>><<endevent>><</link>>
@@ -350,25 +350,25 @@
 	<<if playerBellyVisible() and $settings.pregnancySpeechEnabled>>
 		<<addinlineevent "pregnant">>
 			<<generatey1>><<generate2>>
-			You spot a <<person1>><<person>> taking glances at your belly. <<He>> turns to a <<person2>><<person>>, seemingly <<person1>><<his>> <<person2>><<father>>, and asks, "Is <<pshe>> pregnant?"
+			<<person1>><<person>>【이가】 당신의 배를 힐끗힐끗 보는 것을 포착한다. <<He>>【은는】 <<person1>><<his>> <<person2>><<father>>처럼 보이는 <<person2>><<person>>에게 고개를 돌려 묻는다. "<<pshe>> 임신한 걸까요?"
 			<br><br>
 
 			<<if $templePromised isnot "">>
-				<<He>> replies, saying, "Looks like it. Remember, procreation within wedlock isn't a sin." <<He>> points to your ring. "Perhaps this town has some hope after all."
+				<<He>>【은는】 대답한다. "그런 것 같구나. 명심하렴, 결혼 후 아이를 갖는 것은 죄가 아니란다." <<He>>【은는】 당신의 반지를 가리킨다. "어쩌면 이 마을에도 아직 희망이 있을지 모르겠군."
 				<<ltrauma>><<trauma -6>><<lstress>><<stress -6>>
 			<<else>>
-				<<He>> replies, saying, "Looks like it. No wedding ring,
+				<<He>>【은는】 대답한다. "그런 것 같구나. 결혼 반지가 없지만,
 				<<if $worn.hands.name isnot "naked">>
-					it might just be under <<pher>> <<print $worn.hands.name>> though."
+					단지 <<pher>> <<print $worn.hands.name>> 밑에 가려진 걸 수도 있지."
 				<<else>>
-					though. We should say a prayer for <<phim>>."
+					그러니 <<phim>>【을를】 위해 기도해야겠구나."
 				<</if>>
 				<<gtrauma>><<trauma 6>>
 			<</if>>
 			<br><br>
 			<<endevent>>
 
-			<<link [[Next|Temple]]>><</link>>
+			<<link [[다음|Temple]]>><</link>>
 			<br>
 		<</addinlineevent>>
 	<</if>>
@@ -474,7 +474,7 @@
 	<</addinlineevent>>
 		
 	<<addinlineevent "invasion">>
-		<<generate1>><<person1>><<generate2>> You overhear a <<priest>> talking to a <<person2>><<monk>>.
+		<<generate1>><<person1>><<generate2>> 당신은 <<priest>>【이가】 <<person2>><<monk>>【와과】 나누는 대화를 우연히 엿듣는다.
 		<br><br>
 		<<if $gwylan?.timer.ritual gte Time.date.timeStamp>>
 			"숲이 요 며칠 잠잠하더군요," <<person1>><<priest>>【이가】 말한다. "이번엔 정원이 덩굴에 질식당하지 않고 있습니다."
@@ -517,13 +517,13 @@
 	<<if $temple_quarters lt 40>>
 		<<addinlineevent "mess">>
 			<<generate1>><<person1>><<generate2>>
-			You overhear two initiates.
+			당신은 두 수습생의 대화를 엿듣는다.
 			<br><br>
 
-			"The living quarters are a mess," one says. "It's like the <<person2>><<monks>> in there threw a party overnight. They got mud everywhere somehow too."
+			"숙소가 엉망진창이야," 한 명이 말한다. "마치 안에서 <<person2>><<monks>>【이가】 밤새 파티라도 한 것 같아. 어떻게 했는지는 몰라도 사방에 진흙을 잔뜩 묻혀놨더라고."
 			<br><br>
 
-			"They wouldn't be so messy if they had to clean it up," the other responds. "You'd think they'd take their vows more seriously."
+			"직접 청소해야 했다면 그렇게 더럽히진 않았을 텐데," 다른 한 명이 대답한다. "서약을 좀 더 진지하게 받아들일 거라고 생각했는데 말이야."
 			<br><br>
 			<<if $temple_rank is undefined or $temple_rank is "prospective">>
 			<<else>>
@@ -531,7 +531,7 @@
 			<</if>>
 			<<endevent>>
 
-			<<link [[Next|Temple]]>><</link>>
+			<<link [[다음|Temple]]>><</link>>
 			<br>
 		<</addinlineevent>>
 	<</if>>
@@ -580,7 +580,7 @@
 	<</addinlineevent>>
 		
 	<<addinlineevent>>
-		An overworked initiate rushes by, carrying a bundle of scrolls.
+		과로에 찌든 수습생 하나가 두루마리 다발을 든 채 서둘러 지나간다.
 		<<if random(1, 5) is 5>>
 			<<generateTemple 1>><<person1>>
 			<<He>>【은는】 신도석에 걸려 넘어져 바닥에 두루마리들을 이리저리 쏟아버린다.
@@ -616,34 +616,34 @@
 
 	<<addinlineevent "mines">>
 		<<generate1>><<generate2>>
-		You overhear a <<person1>><<priest>> talking to a <<person2>><<monk>>.
+		당신은 <<person1>><<priest>>【이가】 <<person2>><<monk>>【와과】 나누는 대화를 우연히 엿듣는다.
 		<br><br>
 		<<if $mine?.freed isnot 1>>
 			<<if $town_projects.bridge gte 4>>
-				"Have you noticed that the amount of initiates going missing has gone down recently?" the <<monk>> asks.
+				"요즘 실종되는 수습생 수가 줄어든 것 눈치채셨습니까?" <<monk>>【이가】 묻는다.
 				<br>
-				"Virgo has blessed us and protected them," the <<person1>><<priest>> claims.
+				"비르고께서 우리를 축복하시고 그들을 지켜 주신 게지." <<person1>><<priest>>【이가】 단언한다.
 				<br>
-				"I think it's more so a result of the recent construction of a bridge to the flats," the <<person2>><<monk>> says.
+				"제 생각엔 최근에 플랫으로 가는 다리가 건설된 덕분인 것 같습니다만." <<person2>><<monk>>【이가】 말한다.
 				<br><br>
-				The <<person1>><<priest>> gives <<person2>><<him>> a dirty look.
+				<<person1>><<priest>>【이가】 <<person2>><<him>>【을를】 못마땅하게 노려본다.
 			<<else>>
-				"Have you noticed that the amount of initiates going missing around Barb Street has gone up recently?" the <<monk>> asks.
+				"요즘 바브 가 근처에서 실종되는 수습생 수가 늘어난 것 눈치채셨습니까?" <<monk>>【이가】 묻는다.
 				<br>
-				"Aye, I'm planning on recommending that initiates steer clear of that area," the <<person1>><<priest>> answers.
+				"그래, 수습생들에게 그 근처를 피하라고 권고할 생각이네." <<person1>><<priest>>【이가】 대답한다.
 				<br>
-				"I wonder what happened to them," the <<person2>><<monk>> muses.
+				"그들에게 무슨 일이 생긴 걸까요." <<person2>><<monk>>【이가】 중얼거린다.
 			<</if>>
 		<<else>>
-			"Have you noticed that the cloister has been more active as of late?" the <<monk>> asks.
+			"요즘 회랑이 부쩍 활기를 띤 것 눈치채셨습니까?" <<monk>>【이가】 묻는다.
 			<br>
-			"Well, most of the missing initiates have turned up," the <<person1>><<priest>> says.<<gggrace>><<grace 5>>
+			"음, 실종됐던 수습생 대부분이 돌아왔으니까." <<person1>><<priest>>【이가】 말한다.<<gggrace>><<grace 5>>
 			<br>
-			"Though some are still missing I'm afraid." <<He>> looks sad. "I pray they turn up one day." <<gstress>><<stress 5>>
+			"그래도 아직 몇몇은 행방불명인 것 같네만." <<He>>【은는】 슬퍼 보인다. "언젠가 그들이 돌아오길 기도하고 있네." <<gstress>><<stress 5>>
 		<</if>>
 		<br><br>
 		<<endevent>>
-		<<link [[Next|Temple]]>><</link>>
+		<<link [[다음|Temple]]>><</link>>
 
 	<</addinlineevent>>
 	
@@ -725,7 +725,7 @@
 <<widget "temple_bailey_options">>
 	<<babyRent>>
 	<<if $money gte $rentMoney + ($babyRent or 0)>>
-		<<link [[Pay up|Temple Bailey Pay]]>><</link>>
+		<<link [[돈을 지불한다|Temple Bailey Pay]]>><</link>>
 		<br>
 		<<link [[거부한다|Temple Bailey Refuse]]>><<def 1>><<grace -30>><</link>><<lllgrace>>
 		<br>
@@ -763,25 +763,25 @@
 <<widget "temple_scriptorium_options">>
 	<<if $daily.temple_calligraphy is undefined>>
 		<<if $temple_calligraphy is undefined>>
-			<<templeicon "calligraphy">><<link [[Sit at a desk|Temple Calligraphy Intro]]>><<set $temple_calligraphy to 1>><</link>>
+			<<templeicon "calligraphy">><<link [[책상에 앉는다|Temple Calligraphy Intro]]>><<set $temple_calligraphy to 1>><</link>>
 			<br>
 		<<elseif $temple_calligraphy gte 11>>
-			<<templeicon "calligraphy">><<link [[Practise calligraphy (1:00)|Temple Scribe]]>><<pass 60>><<handskill 5>><<set $daily.temple_calligraphy to 1>><</link>><<ghandskill>>
+			<<templeicon "calligraphy">><<link [[서예를 연습한다 (1:00)|Temple Scribe]]>><<pass 60>><<handskill 5>><<set $daily.temple_calligraphy to 1>><</link>><<ghandskill>>
 			<br>
 		<<else>>
-			<<templeicon "calligraphy">><<link [[Practise calligraphy (1:00)|Temple Calligraphy]]>><<pass 60>><<handskill 5>><<set $daily.temple_calligraphy to 1>><</link>><<ghandskill>>
+			<<templeicon "calligraphy">><<link [[서예를 연습한다 (1:00)|Temple Calligraphy]]>><<pass 60>><<handskill 5>><<set $daily.temple_calligraphy to 1>><</link>><<ghandskill>>
 			<br>
 		<</if>>
 	<<else>>
-		<<ind>><span class="blue">You can only practise calligraphy once a day.</span>
+		<<ind>><span class="blue">서예 연습은 하루에 한 번만 할 수 있다.</span>
 		<br>
 	<</if>>
 	<<if $pumpkin_carving_knowledge and !$pumpkin_carving_knowledge.includes("scriptorium")>>
-		<<icon "pumpkin-carving.png">><<link [[Search for esoteric pumpkin carving knowledge (2:00)|Temple Scriptorium Pumpkin]]>><<pass 120>><<set $pumpkin_carving_knowledge.pushUnique("scriptorium")>><</link>>
+		<<icon "pumpkin-carving.png">><<link [[호박 조각에 관한 비전의 지식을 찾는다 (2:00)|Temple Scriptorium Pumpkin]]>><<pass 120>><<set $pumpkin_carving_knowledge.pushUnique("scriptorium")>><</link>>
 		<br>
 	<</if>>
 	<<if $kylar_altar_research and $kylar_altar_research.includes("library") and !$kylar_altar_research.includes("temple")>>
-		<<templeicon "candle">><<link [[Search for the pages missing from the school library|Temple Scriptorium Altar]]>><<set $kylar_altar_research.pushUnique("temple")>><</link>>
+		<<templeicon "candle">><<link [[학교 도서관에서 사라진 페이지를 찾는다|Temple Scriptorium Altar]]>><<set $kylar_altar_research.pushUnique("temple")>><</link>>
 		<br>
 	<</if>>
 	<br>
@@ -789,12 +789,12 @@
 
 <<widget "temple_scriptorium_leave_options">>
 	<<if $temple_rank is "monk" or $temple_rank is "priest">>
-		<<templeicon "cloister">><<link [[Exit to the cloister|Temple Cloister]]>><</link>>
+		<<templeicon "cloister">><<link [[회랑으로 나간다|Temple Cloister]]>><</link>>
 		<br>
-		<<templeicon>><<link [[Exit to the public hall|Temple]]>><</link>>
+		<<templeicon>><<link [[공용 홀로 나간다|Temple]]>><</link>>
 		<br>
 	<<else>>
-		<<templeicon>><<link [[Leave|Temple]]>><</link>>
+		<<templeicon>><<link [[떠난다|Temple]]>><</link>>
 		<br>
 	<</if>>
 <</widget>>

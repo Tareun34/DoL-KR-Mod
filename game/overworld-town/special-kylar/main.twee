@@ -383,9 +383,9 @@
 
 	카일라는 당신의 허벅지 뒤쪽을 탐욕스럽게 움켜쥔다. 당신의 경련이 멈추자, <<he>>【은는】 당신의 <<genitals>>【으로로】부터 입을 떼고
 	<<if !$player.penisExist>>
-		and smiles, <<his>> face wet with your lewd fluids.
+		당신의 음란한 체액으로 <<his>> 얼굴이 젖은 채로 미소를 짓는다.
 	<<elseif $semen_amount gte 1 and !$player.condom>>
-		and swallows, before opening <<his>> mouth to you. <<He>> swallowed every drop.
+		꿀꺽 삼키더니 <<his>> 입을 벌려 당신에게 보여준다. <<He>>【은는】 한 방울도 남김없이 다 마셔버렸다.
 	<<else>>
 		미소를 짓는다.
 	<</if>>
@@ -1243,9 +1243,9 @@
 <<set $outside to 0>><<set $location to "home">><<effects>>
 
 <<if $kylar.timer.letter is 30>>
-	You check your wardrobe.
+	당신은 옷장을 확인한다.
 <<else>> 
-	Your bedroom door is ajar. You peek through the gap. Nothing seems to be amiss, until you look in your wardrobe.
+	당신 침실 문이 살짝 열려 있다. 틈새로 엿본다. 옷장을 보기 전까지는 아무 문제도 없는 것 같다.
 <</if>>
 
 <<set _stolen to $wardrobe.under_lower.filter(n => n.one_piece != 1 && !n.type.includes("swim")).pluck()>>
@@ -1262,7 +1262,7 @@
 <br><br>
 
 <<endevent>>
-<<link [[Bedroom|Bedroom]]>><</link>>
+<<link [[침실|Bedroom]]>><</link>>
 <br>
 
 :: Kylar Bedroom 2
@@ -1284,11 +1284,11 @@
 <<set $kylarSeen.pushUnique("home")>>
 
 <<if $speech_attitude is "meek">>
-	"Why are you here?" you ask. <<He>> jumps in fright and throws the bedding away. "What are- why were you playing with my stuff?"
+	"왜 여기 있어?" 당신이 묻는다. <<He>>【은는】 깜짝 놀라 이불을 내던진다. "뭐 하는- 왜 내 물건 가지고 장난치고 있었어?"
 <<elseif $speech_attitude is "bratty">>
-	"Kylar!" you shout. <<He>> jumps in fright and throws the bedding away. "Why are you messing with my things?"
+	"카일라!" 당신이 소리친다. <<He>>【은는】 깜짝 놀라 이불을 내던진다. "왜 내 물건에 손대고 있어?"
 <<else>>
-	"Creep," you say. <<He>> jumps in fright and throws the bedding away. "You've been messing with my stuff."
+	"변태," 당신이 말한다. <<He>>【은는】 깜짝 놀라 이불을 내던진다. "내 물건 가지고 장난쳤잖아."
 <</if>>
 <br><br>
 
@@ -1467,7 +1467,7 @@
 			<<gksuspicion>><<npcincr Kylar rage 1>>
 			<br>
 		<<elseif _kinkType is 5 and $bestialitytrait gte 1>>
-			You whisper to Kylar that you find <<if isBestialityOnForAnyCreature()>>beasts<<else>>monsters<</if>> almost as good as people, sometimes better. Their instinct-driven, animalistic mating makes you shiver. Kylar doesn't seem to know what to say.
+			당신은 카일라에게 <<if isBestialityOnForAnyCreature()>>짐승들<<else>>괴물들<</if>>【이가】 사람만큼 좋고, 때로는 더 좋다고 속삭인다. 본능에 끌리는 짐승 같은 교미가 당신을 떨리게 한다. 카일라는 무슨 말을 해야 할지 모르는 듯하다.
 			<<gksuspicion>><<npcincr Kylar rage 1>>
 			<br>
 		<<elseif _kinkType is 4 and $tentacletrait gte 1>>
@@ -1549,7 +1549,7 @@
 			당신은 카일라에게 마을의 모든 강간범들을 증오하지만, 마음 한편으로는 여전히 그들에게 흥분한다고 속삭인다. 어째서인지, 당신의 의지에 반해 당하는 느낌이 예전만큼 무섭지 않다고. <<He>>【은는】 얼굴을 찌푸리며 고개를 돌린다.
 			<br><br>
 		<<elseif _kinkType is 5 and $bestialitytrait gte 1>>
-			You whisper to Kylar that you find <<print (isBestialityOnForAnyCreature() ? "beasts" : "monsters")>> almost as good as people, sometimes better. Their instinct-driven, animalistic mating makes you shiver. <<He>> looks away, wide-eyed.
+			당신은 카일라에게 <<print (isBestialityOnForAnyCreature() ? "짐승들" : "괴물들")>>【이가】 사람만큼 좋고, 때로는 더 좋다고 속삭인다. 본능에 끌리는 짐승 같은 교미가 당신을 떨리게 한다. <<He>>【은는】 눈을 크게 뜨고 시선을 피한다.
 			<br><br>
 		<<elseif _kinkType is 4 and $tentacletrait gte 1>>
 			당신은 카일라에게 촉수 무리에게 습격당해 마음대로 당하는 환상을 꾼 적이 있다고 속삭인다. 꿈틀거리고, 쑤시고, 당신을 감싸고 당신의 모든 구멍을 이용해 그들의 원초적 욕구를 따르게 하는 것을. <<He>>【은는】 얼굴을 붉히며 고개를 돌린다.
@@ -2274,7 +2274,7 @@
 당신은 가까이 다가가 카일라의 귀에 당신의 초대를 속삭인다. <<He>>【은는】 몸을 떤다.
 <<promiscuity2>>
 
-Kylar hugs your arm on the walk over, as if afraid you'll run. The halls are empty, and you reach the bathrooms without anyone noticing you.
+가는 동안 카일라는 당신이 달아날까 두려운 듯 당신의 팔을 끌어안는다. 복도는 비어 있고, 누구에게도 들키지 않은 채 화장실에 도착한다.
 <<if ($backgroundTraits.includes("crossdresser") and isCrossdressing()) or $player.gender is "n">>
 	<<set $kylarBathroomGender to $player.gender_appearance>>
 <<else>>
@@ -2501,7 +2501,7 @@ Kylar hugs your arm on the walk over, as if afraid you'll run. The halls are emp
 <<set _kylarUnderLower to (nullable($daily.kylar.underwear).simpleDesc || "underwear")>>
 
 <<if $speech_attitude is "meek">>
-	"Thank you," you say, holding the _kylarUnderLower【을를】 가슴에 안고 말한다. 당신은 얼굴을 붉힌다. "저기, 음... 이대로 있어줄 수 있어? 내일도, 그리고, 음, 나중에도?"
+	"고마워," 당신은 _kylarUnderLower【을를】 가슴에 안고 말한다. 당신은 얼굴을 붉힌다. "저기, 음... 이대로 있어줄 수 있어? 내일도, 그리고, 음, 나중에도?"
 <<elseif $speech_attitude is "bratty">>
 	"고마워." 당신은 _kylarUnderLower【을를】 들고 말한다. "이제 내일은 입지 마. 앞으로도."
 <<else>>
@@ -2538,42 +2538,42 @@ Kylar hugs your arm on the walk over, as if afraid you'll run. The halls are emp
 	<<set $weekly.kylarLovelocket to 1>>
 	<<if $kylarLocket is "confronted">>
 		<<if _kylarStatus.includes("Rage")>>
-			You chat with Kylar. <<He>> stares at your locket, and gives you a baleful stare. <<npcincr Kylar rage 3>><<ggksuspicion>>
+			당신은 카일라와 이야기를 나눈다. <<He>>【은는】 당신의 로켓을 응시하더니, 당신에게 악의에 찬 눈초리를 보낸다. <<npcincr Kylar rage 3>><<ggksuspicion>>
 		<<elseif _kylarStatus.includes("Love")>>
-			You chat with Kylar. <<He>> stares at your locket, face flushed with emotion. <<He>> looks at you for a long while, before turning away. <<npcincr Kylar love -3>><<lllove>>
+			당신은 카일라와 이야기를 나눈다. <<He>>【은는】 감정에 북받쳐 얼굴을 붉힌 채 당신의 로켓을 응시한다. <<He>>【은는】 한참 동안 당신을 바라보다가, 고개를 돌린다. <<npcincr Kylar love -3>><<lllove>>
 		<<else>>
-			You chat with Kylar. <<He>> struggles to look in your direction for a while. <<npcincr Kylar love -1>><<llove>>
+			당신은 카일라와 이야기를 나눈다. <<He>>【은는】 한동안 당신 쪽을 제대로 보지 못한다. <<npcincr Kylar love -1>><<llove>>
 		<</if>>
 	<<elseif $kylarLocket is "took">>
-		You chat with Kylar. <<He>> says nothing, but there's no misreading the look of unease on <<his>> face as <<he>> eyes your locket. <<stress 6>><<gstress>>
+		당신은 카일라와 이야기를 나눈다. <<He>>【은는】 아무 말도 하지 않지만, 당신의 로켓을 살피는 <<his>> 얼굴에 떠오른 불안한 기색은 잘못 볼 수가 없다. <<stress 6>><<gstress>>
 	<<elseif $kylarLocket>>
 		<<if _kylarStatus.includes("Rage")>>
 			<<if $kylarLocket is "self">>
-				You chat with Kylar. <<His>> eyes flit between you and your locket with devout fervour. <<npcincr Kylar rage -3>><<llksuspicion>>
+				당신은 카일라와 이야기를 나눈다. <<His>> 눈이 경건한 열정을 담고 당신과 당신의 로켓 사이를 오간다. <<npcincr Kylar rage -3>><<llksuspicion>>
 			<<elseif $kylarLocket is "added">>
-				You chat with Kylar. <<He>> keeps casting intense glances at your locket. <<stress 6>><<gstress>>
+				당신은 카일라와 이야기를 나눈다. <<He>>【은는】 당신의 로켓에 계속 강렬한 시선을 던진다. <<stress 6>><<gstress>>
 			<<else>>
-				You chat with Kylar. <<He>> gives your locket a baleful stare. <<npcincr Kylar rage 3>><<ggksuspicion>>
+				당신은 카일라와 이야기를 나눈다. <<He>>【은는】 당신의 로켓에 악의에 찬 눈초리를 보낸다. <<npcincr Kylar rage 3>><<ggksuspicion>>
 			<</if>>
 		<<elseif _kylarStatus.includes("Love")>>
 			<<if $kylarLocket is "self">>
-				You chat with Kylar. <<He>> says nothing as <<he>> steals glances at your locket, but you think you see tears slowly well up. <<npcincr Kylar love 1>><<glove>>
+				당신은 카일라와 이야기를 나눈다. <<He>>【은는】 아무 말 없이 당신의 로켓을 힐끔거리지만, 천천히 눈물이 고이는 것이 보이는 듯하다. <<npcincr Kylar love 1>><<glove>>
 			<<elseif $kylarLocket is "added">>
-				You chat with Kylar. <<He>> keeps casting anxious glances at your locket. <<stress 6>><<gstress>>
+				당신은 카일라와 이야기를 나눈다. <<He>>【은는】 당신의 로켓에 계속 불안한 시선을 던진다. <<stress 6>><<gstress>>
 			<<else>>
-				You chat with Kylar. <<He>> is too intent on staring at your locket to look at you properly. <<npcincr Kylar rage 3>><<ggksuspicion>>
+				당신은 카일라와 이야기를 나눈다. <<He>>【은는】 당신의 로켓을 응시하는 데 정신이 팔려 당신을 제대로 보지 못한다. <<npcincr Kylar rage 3>><<ggksuspicion>>
 			<</if>>
 		<<else>>
-			You chat with Kylar. <<He>> stares at you, <<his>> expression unreadable.
+			당신은 카일라와 이야기를 나눈다. <<He>>【은는】 읽을 수 없는 표정으로 당신을 응시한다.
 		<</if>>
 	<<else>>
 		<<set $kylarSeen.pushUnique("locket")>>
 		<<if _kylarStatus.includes("Rage")>>
-			You chat with Kylar. <<He>> stares at your love locket, silent and unblinking. You're not even sure if <<hes>> breathing.
+			당신은 카일라와 이야기를 나눈다. <<He>>【은는】 눈도 깜빡이지 않고 말없이 당신의 사랑의 로켓을 응시한다. 숨을 쉬고 있는지조차 확실하지 않다.
 		<<elseif _kylarStatus.includes("Love")>>
-			You chat with Kylar. <<He>> reaches forward and tries to open your locket without you noticing, but jumps back once <<he>> notices you staring.
+			당신은 카일라와 이야기를 나눈다. <<He>>【은는】 손을 뻗어 당신 몰래 로켓을 열어 보려 하지만, 당신이 쳐다보고 있다는 걸 알아차리자 화들짝 물러선다.
 		<<else>>
-			You chat with Kylar. <<He>> stares at your love locket, before turning red once <<he>> notices you staring back.
+			당신은 카일라와 이야기를 나눈다. <<He>>【은는】 당신의 사랑의 로켓을 응시하다가, 당신이 마주 보고 있다는 걸 알아차리자 얼굴이 빨개진다.
 		<</if>>
 	<</if>>
 <<elseif _kylarStatus.includes("Love")>>
@@ -3567,7 +3567,7 @@ Kylar hugs your arm on the walk over, as if afraid you'll run. The halls are emp
 	<</if>>
 	<br><br>
 
-	You finish your food. Kylar carries your trays away, then walks in the direction of the <<if _kylarLocation.area is "library">>library<<else>>rear courtyard<</if>>.
+	당신은 음식을 다 먹는다. 카일라는 당신의 식판을 치운 뒤 <<if _kylarLocation.area is "library">>도서관<<else>>뒤쪽 안뜰<</if>> 방향으로 걸어간다.
 	<br><br>
 
 	<<endevent>>
@@ -5134,8 +5134,8 @@ Kylar hugs your arm on the walk over, as if afraid you'll run. The halls are emp
 <<set $kylar_camera to 2>>
 
 <<run Furniture.set('owlplushie', 'owlplushie', {
-	name	: 'owl plushie',
-	nameCap	: 'Owl plushie'
+	name	: '부엉이 인형',
+	nameCap	: '부엉이 인형'
 })>>
 
 <<kylarOptions>>
@@ -5548,7 +5548,7 @@ Kylar hugs your arm on the walk over, as if afraid you'll run. The halls are emp
 	<<ejaculation>>
 	카일라가 당신을 품에 안는다. "아... 고마워, 내 사랑..." 카일라가 꿈꾸듯 중얼거린다. "당신 정말 아름다워..." <<stress -3>><<lstress>><<trauma -3>><<ltrauma>><<npcincr Kylar lust -3>><<llust>>
 	<br><br>
-	<<He>> holds you for a moment, until <<his>> afterglow fades away. "I n-need to go now. Thank you, my love," <<he>> says before turning to leave, <<his>> face still flushed.
+	<<He>>【은는】 <<his>> 여운이 가라앉을 때까지 잠시 당신을 안고 있는다. "나, 나 이제 가봐야 해. 고마워, 내 사랑," <<he>>【이가】 <<his>> 얼굴을 붉힌 채 돌아서서 떠나기 전에 말한다.
 <<elseif $finish is 1 or $alarm is 1>>
 	"내, 내가 뭐 잘못했어, 내 사랑?" 카일라가 당신에게서 몸을 떼며 말한다. "그, 그럼, 나중에 이어서 하자..." <<he>>【이가】 중얼거린다. <<He>>【이가】 당신을 골목에 홀로 남겨두고 떠난다.<<npcincr Kylar love -1>><<llove>><<npcincr Kylar rage 1>><<gksuspicion>>
 <</if>>
@@ -5740,10 +5740,10 @@ Kylar hugs your arm on the walk over, as if afraid you'll run. The halls are emp
 <<set $outside to 0>><<set $location to "home">><<effects>><<wearProp "note">>
 <<npc Kylar>><<person1>>
 
-A letter lies on your bed. Someone must have broken into your room. <<stress 6>><<gstress>>
+침대 위에 편지 한 통이 놓여 있다. 누군가 당신의 방에 침입한 게 분명하다. <<stress 6>><<gstress>>
 <br><br>
 
-Cautiously, you open it. All stiff and crinkled, the letter is written in blood, reeking of metal<<= $settings.watersportsEnabled ? ", piss": "">> and cum.<<= playerIsPregnant() ? " You retch at the smell.": "">> Your breath quickens. <<stress 6>><<gstress>>
+조심스럽게, 당신은 편지를 연다. 온통 뻣뻣하고 쭈글쭈글한 편지는 피로 쓰여 있고, 쇠<<= $settings.watersportsEnabled ? ", 오줌": "">>【와과】 정액 냄새가 진동한다.<<= playerIsPregnant() ? " 당신은 그 냄새에 헛구역질을 한다.": "">> 당신의 숨이 가빠진다. <<stress 6>><<gstress>>
 <br><br>
 
 /* Picking a school LI for the letter. Will prioritize LIs set in the attitudes menu, then LIs that have been unlocked as LIs, then just any one of them as a last resort*/
@@ -5756,66 +5756,66 @@ Cautiously, you open it. All stiff and crinkled, the letter is written in blood,
 
 <blockquote>
 	<em>
-		"Dear <<kylar_pet_name>>,
+		"<<kylar_pet_name>>에게,
 		<br><br>
 
-		I love you.
+		사랑해.
 		<br><br>
 
-		I'm not really good at expressing myself verbally, so I wrote you a love letter. Does it please you, <<kylar_pet_name>>? I hope it does. I know it does. You love me, after all, don't you? I love you, too.
+		난 말로 표현하는 데 서툴러서, 네게 연애편지를 썼어. 마음에 들어, <<kylar_pet_name>>? 그랬으면 좋겠어. 그럴 거라는 거 알아. 넌 날 사랑하니까, 그렇지? 나도 널 사랑해.
 		<br><br>
 
 		/* the grammar here is intentional */
-		You like to visit me in my dreams, don't you, since my dreams are made of only you.<<= !_kylarStatus.includes("Love") ? " In my dreams, you love me back.": "">> Do you dream of me, too? I hope you do.
+		넌 내 꿈에 찾아오는 걸 좋아하지, 그렇지, 내 꿈은 오직 너로만 이루어져 있으니까.<<= !_kylarStatus.includes("Love") ? " 꿈속에서는 너도 날 사랑해 줘.": "">> 너도 내 꿈을 꿔? 그랬으면 좋겠어.
 		<br><br>
 
-		I want you, all of you. I worship at the altar of you. We belong together. You're mine and I'm yours. It's written in the stars, <<kylar_pet_name>>!
+		널 원해, 너의 전부를. 난 너라는 제단에 경배해. 우린 함께할 운명이야. 넌 내 것이고 난 네 것이야. 별들에 그렇게 쓰여 있어, <<kylar_pet_name>>!
 		<br><br>
 
-		I can't even imagine my life without you. You gave it meaning for I am nothing without you.
+		너 없는 내 삶은 상상조차 할 수 없어. 넌 내 삶에 의미를 줬어, 너 없이는 난 아무것도 아니니까.
 		<<if C.npc.Kylar.rage gte 60>>
-			So, why do you keep looking the other way? At <<= _setLI.length gte 1 ? _setLI.pluck() : _unlockedLI.length gte 1 ? _unlockedLI.pluck() : _schoolLI.pluck()>>? Not at me? Can't you see my heart? Is my love not enough? Am I... not enough?
+			그런데, 왜 자꾸 다른 곳을 보는 거야? <<= _setLI.length gte 1 ? _setLI.pluck() : _unlockedLI.length gte 1 ? _unlockedLI.pluck() : _schoolLI.pluck()>>【을를】? 내가 아니라? 내 마음이 안 보여? 내 사랑이 부족해? 내가... 부족한 거야?
 		<</if>>
 		<br><br>
 
-		You should lick the paper. I've infused my bodily fluids on it. It tastes like me, I hope. I want it to permeate into your body, letting my undying love reach your heart. Thinking about it makes me...
+		종이를 핥아 봐. 내 체액을 스며들게 했어. 내 맛이 났으면 좋겠어. 그게 네 몸속으로 스며들어서, 내 영원한 사랑이 네 심장에 닿게 하고 싶어. 생각만 해도 난...
 		<br><br>
 
-		Forever yours,
+		영원히 너의 것,
 		<br>
-		Kylar
+		카일라
 		<br><br>
 
-		<div class="text-clip"><<for _i to 0; _i lt 15; _i++>>loveyoui<</for>></div>
-		<div class="text-clip"><<for _i to 0; _i lt 15; _i++>>youilove<</for>></div>
-		<div class="text-clip"><<for _i to 0; _i lt 15; _i++>>I love you. <</for>></div>
-		<div class="text-clip"><<for _i to 0; _i lt 15; _i++>>you. I love <</for>></div>
-		<div class="text-clip"><<for _i to 0; _i lt 15; _i++>>ILOVEYOU<</for>></div>
-		<div class="text-clip"><<for _i to 0; _i lt 15; _i++>>YOUILOVE<</for>></div>
+		<div class="text-clip"><<for _i to 0; _i lt 15; _i++>>사랑해사랑해<</for>></div>
+		<div class="text-clip"><<for _i to 0; _i lt 15; _i++>>해사랑해사랑<</for>></div>
+		<div class="text-clip"><<for _i to 0; _i lt 15; _i++>>사랑해. <</for>></div>
+		<div class="text-clip"><<for _i to 0; _i lt 15; _i++>>해. 사랑<</for>></div>
+		<div class="text-clip"><<for _i to 0; _i lt 15; _i++>>사랑해사랑해<</for>></div>
+		<div class="text-clip"><<for _i to 0; _i lt 15; _i++>>해사랑해사랑<</for>></div>
 		"
 	</em>
 </blockquote>
 
-Hearing a rustling sound outside, you <<= $speech_attitude is "meek" ? "fearfully" : $speech_attitude is "bratty" ? "quickly" : "tentatively">> look up.
+밖에서 부스럭거리는 소리가 들리자, 당신은 <<= $speech_attitude is "meek" ? "겁에 질려" : $speech_attitude is "bratty" ? "재빨리" : "머뭇거리며">> 고개를 든다.
 <br><br>
 
 <<if $rng lte (C.npc.Kylar.love - 50)/2>>
-	Kylar stares back at you with a crazed smile, panting, <<his>> palms pressed against the window. "I love you," <<he>> mouths
+	카일라가 광기 어린 미소를 띤 채 당신을 마주 보고 있다. <<his>> 손바닥을 창문에 붙이고, 헐떡이고 있다. <<He>>【은는】 "사랑해," 하고 입 모양으로 말하고
 	<<if C.npc.Kylar.lust gte 60>> 
-		and <<= ["kisses", "licks", "draws a heart on"].pluck()>> the glass
+		유리에 <<= ["입을 맞추고", "혀를 대고", "하트를 그리고"].pluck()>>
 	<</if>>
-	before disappearing into the dark.
+	어둠 속으로 사라진다.
 <<else>>
-	No one's there.
+	아무도 없다.
 <</if>>
 <<stress 6>><<gstress>>
 <br><br>
 
-<<link [[Keep the letter|Kylar Bedroom Letter 2]]>><<set $phase to 1>><<npcincr Kylar love 1>><</link>><<glove>>
+<<link [[편지를 간직한다|Kylar Bedroom Letter 2]]>><<set $phase to 1>><<npcincr Kylar love 1>><</link>><<glove>>
 <br>
-<<link [[Lick the letter|Kylar Bedroom Letter 2]]>><<set $phase to 2>><<npcincr Kylar love 3>><<npcincr Kylar lust 3>><</link>><<gglove>><<gglust>>
+<<link [[편지를 핥는다|Kylar Bedroom Letter 2]]>><<set $phase to 2>><<npcincr Kylar love 3>><<npcincr Kylar lust 3>><</link>><<gglove>><<gglust>>
 <br>
-<<link [[Trash the letter|Kylar Bedroom Letter 2]]>><<set $phase to 0>><<npcincr Kylar love -1>><<npcincr Kylar rage 1>><</link>><<llove>><<gksuspicion>>
+<<link [[편지를 버린다|Kylar Bedroom Letter 2]]>><<set $phase to 0>><<npcincr Kylar love -1>><<npcincr Kylar rage 1>><</link>><<llove>><<gksuspicion>>
 <br>
 
 :: Kylar Bedroom Letter 2
@@ -5823,14 +5823,14 @@ Hearing a rustling sound outside, you <<= $speech_attitude is "meek" ? "fearfull
 
 <<if $phase is 1>>
 	<<wearProp "note">>
-	You press the letter to your chest, smiling happily.
+	당신은 편지를 가슴에 꼭 끌어안고, 행복하게 미소 짓는다.
 <<elseif $phase is 2>>
 	<<wearProp "note">>
-	You lick the letter. It tastes metallic and bitter. Just like Kylar. <<arousal 600>><<garousal>>
+	당신은 편지를 핥는다. 쇠 맛이 나고 씁쓸하다. 꼭 카일라처럼. <<arousal 600>><<garousal>>
 <<else>>
-	You look at it with disgust and toss it in the trash.
+	당신은 역겹다는 듯 편지를 바라보고 쓰레기통에 던져 넣는다.
 <</if>>
 <br><br>
 
-<<link [[Next|Kylar Bedroom 1]]>><</link>>
+<<link [[다음|Kylar Bedroom 1]]>><</link>>
 <br>

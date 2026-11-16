@@ -258,31 +258,31 @@
 <<if $rng gte 86 and !$weekly.whitneyMilkToss and !["dungeon", "pillory"].includes(C.npc.Whitney.state) and C.npc.Whitney.init is 1 and !$worn.upper.type.includes("naked") and !waterproofCheck($worn.over_upper) and !waterproofCheck($worn.upper)>>
 	<<set $weekly.whitneyMilkToss to true>>
 	<<npc Whitney>><<person1>>
-	You are socialising on the green when a sharp whistle cuts through the noise from somewhere above.
+	당신이 잔디밭에서 어울리고 있는데, 어딘가 위쪽에서 날카로운 휘파람 소리가 소음을 가른다.
 	<br><br>
 
-	"Heads up, slut!"
+	"위에 조심해, 걸레야!"
 	<br><br>
 
-	You look up. Whitney is leaning over the roof railing, a shit-eating grin plastered across <<his>> face. <<He>> is twirling a carton of strawberry milk between <<his>> fingers.
+	당신은 고개를 든다. 휘트니가 옥상 난간에 몸을 기댄 채, 얄밉게 히죽거리는 웃음을 <<his>> 얼굴 가득 띠고 있다. <<He>>【은는】 손가락 사이로 딸기 우유 팩을 빙글빙글 돌리고 있다.
 	<br><br>
 
-	"You look thirsty." <<He>> eyes your chest with deliberate aim, holding the carton out further. "Catch."
+	"목말라 보이네." <<He>>【은는】 일부러 당신의 가슴을 겨냥하듯 노려보며, 우유 팩을 더 멀리 내민다. "받아."
 	<br><br>
 
-	<<He>> doesn't wait for an answer.
+	<<He>>【은는】 대답을 기다리지 않는다.
 	<br><br>
 
-	<<link [[Try to catch it|Whitney Milk Catch]]>><</link>><<athleticsdifficulty 1 400>>
+	<<link [[받아 본다|Whitney Milk Catch]]>><</link>><<athleticsdifficulty 1 400>>
 	<br>
-	<<link [[Dodge|Whitney Milk Dodge]]>><</link>>
+	<<link [[피한다|Whitney Milk Dodge]]>><</link>>
 	<br>
 	<<if hasSexStat("exhibitionism", 2)>>
-		<<link [[Stand still and flaunt|Whitney Milk Flaunt]]>><</link>><<exhibitionist2>>
+		<<link [[가만히 서서 과시한다|Whitney Milk Flaunt]]>><</link>><<exhibitionist2>>
 		<br>
 	<</if>>
 <<elseif $rng gte 58>>
-	<<generatey1>><<person1>>A <<person>> is trying to climb the tree while <<his>> friends watch. The lowest branch is almost out of reach, but <<he>> manages to grasp it. <<He>> hauls <<himself>> up, reaches for another, then slips and tumbles to the grass below. <<His>> friends laugh.
+	<<generatey1>><<person1>>한 <<person>>【이가】 친구들이 지켜보는 가운데 나무에 오르려 하고 있다. 가장 낮은 나뭇가지가 거의 손에 닿지 않지만, <<he>>【은는】 간신히 붙잡는다. <<He>>【은는】 몸을 끌어올려 다른 가지를 잡으려다 미끄러져 아래 잔디밭으로 굴러떨어진다. <<His>> 친구들이 웃는다.
 	<br><br>
 
 	<<link [[어떻게 하는 건지 보여준다|School Green Climb]]>><<endevent>><</link>><<athleticsdifficulty 600 1000>>
@@ -784,7 +784,7 @@
 			<br><br>
 			<<unbind>>
 			<<if !wearingSchoolOutfit() and !["fifth", "afternoon"].includes($schoolstate)>> /*clothes don't matter for swim and after classes*/
-				"These clothes won't do either." <<He>> pulls some clothing out of a drawer. "Here you go."
+				"이 옷도 안 되겠군." <<He>>【이가】 서랍에서 옷 몇 벌을 꺼낸다. "자, 여기 있다."
 				<br><br>
 			<<else>>
 				<<link [[다음|Hallways]]>><<endevent>><</link>>
@@ -877,7 +877,7 @@
 				<</if>>
 			<</if>>
 		<<elseif !$worn.upper.type.includes("school") and !["fifth", "afternoon"].includes($schoolstate)>>
-			<<He>> hands you a worn-looking school shirt. "You can get changed in the storeroom. I'll have your clothes sent to the pool for you to collect after school." <<He>> turns back to <<his>> computer and leaves you to change.
+			<<He>>【은는】 당신에게 낡아 보이는 교복 셔츠를 건네준다. "창고에서 갈아입어라. 네 옷은 방과 후에 수영장에서 찾아갈 수 있도록 보내두겠다." <<He>>【은는】 다시 <<his>> 컴퓨터로 몸을 돌리고 당신이 옷을 갈아입도록 내버려 둔다.
 			<br><br>
 
 			<<link [[옷을 갈아입고 나간다 (0:01)|Hallways]]>><<schoolspareclothes>><<endevent>><<pass 1>><</link>>
@@ -924,18 +924,18 @@
 <</if>>
 <br><br>
 <<if ($player.gender_appearance is $clothingselector) and !$genderknown.includes("Leighton") and !playerChastity("hidden")>> <!-- Leighton didn't expect this and checks the PC's records for their sex -->
-	<<He>> looks slightly confused for a moment, before turning back to <<his>> computer to look something up. <<He>> skims briefly before
+	<<He>>【은는】 잠시 혼란스러운 표정을 짓더니, 이내 <<his>> 컴퓨터로 돌아가 무언가를 찾아본다. <<He>>【은는】 잠시 훑어보더니,
 		<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>><!-- implication: PC's ambiguous sex is recorded as medical information -->
-			gasping at what <<he>> finds.
+			<<he>>【이가】 찾은 것에 숨을 들이킨다.
 		<<elseif $backgroundTraits.includes("crossdresser") and $settings.nudeGenderPerception !== 0>><!-- deliberately ambiguous implication: PC has been crossdressing for long enough for it to be on file -->
-			smirking at what <<he>> finds.
+			<<he>>【이가】 찾은 것에 히죽 웃는다.
 		<<else>>
 			<<he>>【이가】 찾은 것에 눈썹을 치켜올리고는 무언가를 입력한다.
 		<</if>>
 		<<He>>【은는】 다시 당신을 쳐다보며 말한다. "미안하지만, 이 교복밖에 없구나. 자, 어서 갈아입어라."
 	<<set $genderknown.pushUnique("Leighton")>><<if $player.penisExist and $player.vaginaExist>><<detention -1>><</if>> <!-- Leighton is too surprised to be angry at herm PC right now -->
 <<elseif $player.sex is $clothingselector and $genderknown.includes("Leighton") and $settings.nudeGenderPerception !== 0>>
-	<<He>> looks at you sternly and scoffs. "If you want to dress as a <<print ($clothingselector is "m" ? "girl" : "boy")>>, that's your prerogative, but perhaps you should come dressed like it next time. Now, get dressed."
+	<<He>>【은는】 당신을 엄하게 쳐다보며 비웃는다. "<<print ($clothingselector is "m" ? "여자애" : "남자애")>>처럼 입고 싶다면 그건 네 자유지만, 다음부턴 그렇게 입고 오도록 해라. 자, 어서 갈아입어."
 <<else>>
 	<<He>>【은는】 당신을 엄하게 쳐다본다. "말대꾸하지 마라. 옷을 갈아입으라고 했다. 자, 어서 갈아입어."
 <</if>>
@@ -2027,11 +2027,11 @@
 <br><br>
 <<person2>><<persons>> 얼굴이 분노로 일그러진다. "그건 너무 잔인하잖아." <<he>>【이가】 으르렁거린다. <<him>> 뒤에서, <span class="red"><<person1>>
 <<switch $phase>>
-	<<case 0>> <<person>> has gone pale and seems to be choking on <<his>> sandwich.
-	<<case 1>> <<persons>> smile has faded into a sour expression.
-	<<case 2>> <<person>> is staring intently at the ground, face pale.
-	<<case 3>> <<person>> has a horrified look on <<his>> face.
-	<<case 4>> <<person>> has closed <<his>> eyes and seems to be on the verge of tears.
+	<<case 0>> <<person>>【은는】 창백해져서 <<his>> 샌드위치에 목이 막히는 것 같다.
+	<<case 1>> <<persons>> 미소가 시무룩한 표정으로 바뀌었다.
+	<<case 2>> <<person>>【은는】 창백한 얼굴로 땅을 뚫어지게 쳐다보고 있다.
+	<<case 3>> <<person>>【은는】 <<his>> 얼굴에 겁에 질린 표정을 짓고 있다.
+	<<case 4>> <<person>>【은는】 <<his>> 눈을 감고 눈물을 흘리기 직전인 것 같다.
 <</switch>>
 </span>
 <br><br>
@@ -2579,13 +2579,13 @@
 <<fameexhibitionism 2>>
 <<schoolrep_naked>>
 
-The <<fullGroup>> each stare at your crotch,
+<<fullGroup>>【은는】 저마다 당신의 가랑이를 쳐다본다. 얼굴에는
 <<if !$player.penisExist or !$player.vaginaExist>>
-	disappointment
+	실망감이
 <<else>>
-	astonishment
+	놀라움이
 <</if>>
-on their faces.
+가득하다.
 <br><br>
 <<courtyardrevealresponse>>
 <br><br>
@@ -2602,13 +2602,13 @@ on their faces.
 <<fameexhibitionism 5>>
 <<schoolrep_naked>>
 
-The <<fullGroup>> each stare at your crotch,
+<<fullGroup>>【은는】 저마다 당신의 가랑이를 쳐다본다. 얼굴에는
 <<if !$player.penisExist or !$player.vaginaExist>>
-	disappointment
+	실망감이
 <<else>>
-	astonishment
+	놀라움이
 <</if>>
-on their faces.
+가득하다.
 <br><br>
 <<courtyardrevealresponse>>
 <br><br>
@@ -3110,89 +3110,89 @@ on their faces.
 
 <<if $athleticsSuccess>>
 	<<set $whitneySeen.pushUnique("milkTossCaught")>>
-	You track the carton's arc and snatch it out of the air with a single hand. A few students nearby murmur in surprise, impressed by the reflex.<<status 1>><<gcool>>
+	당신은 우유 팩이 그리는 궤적을 쫓다가 한 손으로 공중에서 낚아챈다. 근처에 있던 학생 몇이 그 반사신경에 감탄하며 놀란 듯 웅성거린다.<<status 1>><<gcool>>
 	<br><br>
 
 	<<if $whitneyromance is 1>>
-		Whitney lets out a short laugh from the roof, leaning <<his>> chin on <<his>> folded arms atop the railing. "Not bad, slut. Didn't think you had it in you." <<He>> jerks <<his>> chin at the carton. "Well? Drink it. I didn't throw it down there for you to stand around looking <<cute>>."
+		휘트니가 옥상에서 짧게 웃음을 터뜨리고는, 난간 위에 포갠 팔에 <<his>> 턱을 괸다. "제법인데, 걸레. 네가 그런 걸 할 줄은 몰랐네." <<He>>【은는】 턱짓으로 우유 팩을 가리킨다. "뭐 해? 마셔. 거기 서서 <<cute>> 보이라고 던져 준 거 아니거든."
 		<br><br>
 
-		You push the straw through and take a long sip. It's cold and aggressively sweet, just like the delinquent leaning over the railing watching you.<<npcincr Whitney love 1>><<glove>><<stress -6>><<lstress>><<trauma -6>><<ltrauma>>
+		당신은 빨대를 꽂고 길게 한 모금 들이켠다. 차갑고 지독하게 달다. 꼭 난간에 기대 당신을 내려다보고 있는 저 불량아처럼.<<npcincr Whitney love 1>><<glove>><<stress -6>><<lstress>><<trauma -6>><<ltrauma>>
 		<br><br>
-		"Now that's more like it." <<He>> gives you a lazy wave before pushing off the railing. "See you around, slut."
+		"그래, 그래야지." <<He>>【은는】 나른하게 손을 흔들어 보이고는 난간에서 몸을 뗀다. "나중에 보자, 걸레."
 		<br><br>
 	<<else>>
-		The grin slips off Whitney's face. <<He>> stares down at you from the railing, something between irritation and disbelief crossing <<his>> face.
+		휘트니의 얼굴에서 히죽거리던 웃음이 사라진다. <<He>>【은는】 난간에서 당신을 내려다본다. 짜증과 어이없음 사이의 무언가가 <<his>> 얼굴을 스친다.
 		<br><br>
 
 		<<if $speech_attitude is "bratty">>
-			You raise the carton in a mock toast, meeting <<his>> souring glare with an unapologetic smirk before deliberately sticking your tongue out at <<him>>.
+			당신은 비꼬듯 건배하는 시늉으로 우유 팩을 들어 올리고, 점점 험악해지는 <<his>> 눈초리를 뻔뻔한 비웃음으로 받아친 뒤 보란 듯이 <<him>>에게 혀를 내민다.
 			<br><br>
 
-			Whitney's scowl deepens, and <<he>> aggressively flips you off from over the railing. "Brat," <<he>> spits. "Stick that tongue out again, you little shit, and see what I shove down your throat later." <<He>> shoots you a sharp glare before pushing off the railing.
+			휘트니는 더욱 인상을 찌푸리더니 난간 너머로 거칠게 가운뎃손가락을 들어 보인다. "버릇없는 년." <<he>>【이가】 내뱉는다. "그 혀 한 번만 더 내밀어 봐, 이 쪼그만 게. 나중에 네 목구멍에 뭘 쑤셔 넣는지 보게 될 테니까." <<He>>【은는】 날카롭게 당신을 노려보고는 난간에서 몸을 뗀다.
 		<<else>>
-			"Tch. Don't get cocky," <<he>> sneers, glaring at your disappointingly dry top. "Would've looked a hell of a lot better dripping all over you. What a waste." <<He>> turns on <<his>> heel and walks off.
+			"쳇. 우쭐대지 마." <<he>>【이가】 비웃으며, 실망스러울 만큼 멀쩡하게 마른 당신의 상의를 노려본다. "온몸에 뚝뚝 흘렀으면 훨씬 보기 좋았을 텐데. 아깝네." <<He>>【은는】 휙 돌아서서 가 버린다.
 		<</if>>
 		<br><br>
 
-		You push the straw through anyway and take a long, unhurried sip. It's cold and aggressively sweet. You earned it.<<stress -6>><<lstress>><<trauma -6>><<ltrauma>>
+		당신은 그래도 빨대를 꽂고, 서두르지 않고 길게 한 모금 들이켠다. 차갑고 지독하게 달다. 이 정도는 받을 자격이 있다.<<stress -6>><<lstress>><<trauma -6>><<ltrauma>>
 		<br><br>
 	<</if>>
 <<else>>
 	<<set $whitneySeen.pushUnique("milkTossMissed")>>
-	You reach out but your timing is off. The carton slips through your fingers and tumbles into your chest, the impact enough to burst the cardboard on contact. Milk soaks through the front of your <<top>> in a cold, spreading bloom.<<wetUpper>>
+	당신은 손을 뻗지만 타이밍이 어긋난다. 우유 팩은 손가락 사이로 빠져나가 당신의 가슴에 떨어지고, 그 충격에 종이 팩이 터져 버린다. 차가운 우유가 번지며 당신의 <<top>> 앞섶을 흠뻑 적신다.<<wetUpper>>
 	<br><br>
 
-	Whitney bursts out laughing. "Nice catch, slut." <<He>> leans over the railing, grinning at the mess. "Don't pout. You look better like that anyway." <<His>> gaze drops to the soaked fabric clinging to your chest, lingering just long enough to make <<his>> point before <<he>> disappears back onto the roof.<<npcincr Whitney lust 1>><<glust>><<arousal 600>><<garousal>>
+	휘트니가 웃음을 터뜨린다. "잘 받네, 걸레." <<He>>【은는】 난간 너머로 몸을 내밀고 엉망이 된 당신을 보며 히죽거린다. "삐지지 마. 어차피 그게 더 보기 좋으니까." <<His>> 시선이 당신의 가슴에 달라붙은 젖은 천으로 내려가, 하려던 말이 충분히 전해질 만큼 머무른 뒤, <<he>>【은는】 다시 옥상 안쪽으로 사라진다.<<npcincr Whitney lust 1>><<glust>><<arousal 600>><<garousal>>
 	<br><br>
 
-	You hunch forward, arms crossed tight over your chest, and push through the crowd. Their laughter trails after you.<<stress 6>><<gstress>><<status -1>><<lcool>>
+	당신은 몸을 웅크리고 두 팔로 가슴을 꼭 가린 채 사람들 사이를 헤치고 나간다. 그들의 웃음소리가 당신 뒤를 따라온다.<<stress 6>><<gstress>><<status -1>><<lcool>>
 	<br><br>
 <</if>>
 
-<<link [[Next|School Rear Courtyard]]>><<endevent>><</link>>
+<<link [[다음|School Rear Courtyard]]>><<endevent>><</link>>
 <br>
 
 
 :: Whitney Milk Dodge
 <<effects>>
 
-You skip to the side, letting the carton hit the grass with a wet thud. The strawberry milk leaks out into the dirt, wasted.
+당신은 옆으로 폴짝 비켜서고, 우유 팩은 철퍽 소리를 내며 잔디에 떨어진다. 딸기 우유가 흙바닥으로 새어 나가 허무하게 버려진다.
 <br><br>
 
-Whitney's expression sours instantly. <<He>> scoffs, pulling back from the railing. "Fine. Waste my money." <<His>> eyes drag over you slowly, calculating. "I'll make it back off you one way or another." <<He>> turns on <<his>> heel and disappears back onto the roof without another word.
+휘트니의 표정이 순식간에 일그러진다. <<He>>【은는】 코웃음을 치며 난간에서 몸을 뺀다. "그래. 내 돈 버려 봐." <<His>> 눈이 무언가 계산하듯 당신을 천천히 훑는다. "어떻게든 너한테서 다시 받아낼 거니까." <<He>>【은는】 휙 돌아서서 더 이상 아무 말 없이 옥상 안쪽으로 사라진다.
 <br><br>
 
-The threat hangs in the air long after <<he>> is gone.<<stress 6>><<gstress>><<npcincr Whitney love -1>><<llove>><<npcincr Whitney dom -1>><<ldom>>
+<<he>>【이가】 사라진 뒤에도 그 협박은 한참 동안 공기 중에 맴돈다.<<stress 6>><<gstress>><<npcincr Whitney love -1>><<llove>><<npcincr Whitney dom -1>><<ldom>>
 <br><br>
 
-<<link [[Next|School Rear Courtyard]]>><<endevent>><</link>>
+<<link [[다음|School Rear Courtyard]]>><<endevent>><</link>>
 <br>
 
 
 :: Whitney Milk Flaunt
 <<effects>>
 
-You don't move a muscle. You watch the carton fall, waiting for the impact. It strikes your chest with a heavy thud, the cardboard bursting and drenching the front of your <<top>> in a sticky, pale pink explosion.<<wetUpper>>
+당신은 꼼짝도 하지 않는다. 우유 팩이 떨어지는 것을 지켜보며 충격을 기다린다. 우유 팩이 둔탁한 소리와 함께 가슴을 때리고, 종이 팩이 터지면서 끈적끈적한 연분홍빛 우유가 당신의 <<top>> 앞섶을 흠뻑 적신다.<<wetUpper>>
 <br><br>
 
-You arch your back, deliberately drawing yourself up as you lock eyes with Whitney. You slowly drag your hands over the soaked fabric, smoothing it tight against your
+당신은 등을 젖혀 일부러 몸을 꼿꼿이 세우고 휘트니와 눈을 맞춘다. 그리고 젖은 천 위로 천천히 손을 쓸어내리며, 천을
 <<if $worn.under_upper.type.includes("naked")>>
-	body until it's little more than a translucent second skin.
+	몸에 바짝 붙여 반투명한 두 번째 피부나 다름없게 만든다.
 <<else>>
-	<<undertop>>.
+	<<undertop>>에 바짝 붙도록 매만진다.
 <</if>>
-You even catch a stray drop of pink from your lower lip with your tongue, never breaking eye contact.
+입술 아래에 맺힌 분홍빛 방울까지 혀로 핥아 올리며, 한순간도 눈을 떼지 않는다.
 <br><br>
 
-"You're practically begging for a public fucking, aren't you?" <<he>> barks down, <<his>> eyes burning into your translucent <<top>>. "Don't tempt me, slut. I might just vault this railing and take you right in the dirt for the whole yard to see."<<npcincr Whitney lust 2>><<gglust>>
+"아주 대놓고 사람들 앞에서 박아 달라고 애원하는구나, 그치?" <<he>>【이가】 위에서 소리친다. <<his>> 눈길이 반투명해진 당신의 <<top>>【을를】 태울 듯 꿰뚫는다. "도발하지 마, 걸레. 이 난간 뛰어넘어서 마당 사람들 다 보는 앞에서 흙바닥에 눕혀 놓고 따먹어 버릴지도 모르니까."<<npcincr Whitney lust 2>><<gglust>>
 <br><br>
 
-Whitney leans farther over the railing before clicking <<his>> tongue and abruptly straightening. <<He>> turns away and disappears back into the building.
+휘트니는 난간 너머로 몸을 더 내밀다가, 혀를 차더니 갑자기 몸을 바로 세운다. <<He>>【은는】 돌아서서 건물 안으로 사라진다.
 <br><br>
 
-You become very aware of the damp fabric clinging to your chest.
+당신은 가슴에 달라붙은 축축한 천이 유난히 신경 쓰인다.
 <br><br>
 
-<<link [[Next|School Rear Courtyard]]>><<endevent>><</link>>
+<<link [[다음|School Rear Courtyard]]>><<endevent>><</link>>
 <br>
