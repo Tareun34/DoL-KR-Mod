@@ -829,7 +829,7 @@
 	<<wakingEffects $sleepHoursTotal>>
 	<<if ["dryheaving","nausea"].includes(_wakingEffect)>>
 		<br>
-		You slept soundly, but now feel a little rough.
+		푹 잤지만, 지금은 몸이 좀 찌뿌둥하다.
 		<br><br>
 	<<elseif $nightmares gte 1 and $controlled is 0>>
 		<<nightmareWake>>
@@ -2331,7 +2331,7 @@
 실망한 당신이 <<him>>에게서 몸을 떼려 하자, <<he>>【이가】 당신을 막아선다.
 <br><br>
 
-"Wait," <<he>> says. You turn back to ask <<him>> what was wrong, but are interrupted by a kiss. <<takeKissVirginity "Eden" `(isLoveInterest("Eden") ? "loveInterest" : "romantic")`>>
+"기다려." <<he>>【이가】 말한다. 무슨 일인지 물어보려 돌아서지만, 입맞춤에 가로막힌다. <<takeKissVirginity "Eden" `(isLoveInterest("Eden") ? "loveInterest" : "romantic")`>>
 <br><br>
 이번 입맞춤은 사뭇 다르게 느껴진다. 에덴이 당신에게 품은 온갖 감정이 고스란히 담겨 있다. 꾸밈없고, 진실하다.
 <br><br>

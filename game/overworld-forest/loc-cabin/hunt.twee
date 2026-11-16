@@ -92,7 +92,7 @@
 		<<set $daily.eden.huntCaught to 1>>
 
 		<<if $rng gte 81 and $settings.voreEnabled and animalSexEnabledForType("snake")>>
-			You round a tree and come face to face with a pair of eyes, hovering just inches from your face. All strength drains from your muscles, and you collapse to the ground. The snake slithers onto the forest floor.
+			나무를 돌자마자 당신의 얼굴 바로 몇 센티미터 앞에서 떠다니는 한 쌍의 눈과 마주친다. 온몸의 힘이 빠져나가고, 당신은 땅바닥에 쓰러진다. 뱀이 숲 바닥으로 스르르 기어 나온다.
 			<<set $trance to 1>>
 			<br><br>
 
@@ -102,7 +102,7 @@
 		<<elseif $rng gte 41>>
 			<<beastNEWinit 1 wolf>>
 			<<if beastSexEnabledForType("wolf", $monster is 1)>>
-				A <<beasttype>> emerges from between the trees, teeth bared.
+				<<beasttype>> 한 마리가 나무 사이에서 이빨을 드러내며 나타난다.
 				<<if $monster is 1>>
 					<<bHis>> 시선이 당신과 마주친다. "쉿, 쉿, 사냥감. <<nnpc_Title "Eden">>【이가】 널 구해주진 못할 거다."
 				<</if>>

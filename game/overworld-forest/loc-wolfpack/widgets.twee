@@ -12,7 +12,7 @@
 			<<link [[놀아준다 (0:20)|Wolf Cave Play Fight]]>><<pass 20>><<stress -4>><</link>><<lstress>>
 			<br>
 			<<if hasSexStat("deviancy", 2) and beastSexEnabledForType("wolf", $monster is 1)>>
-				<<link [[Lewd play|Wolf Cave Lewd Play]]>><<set $sexstart to 1>><</link>><<deviant2>>
+				<<link [[음란한 장난을 친다|Wolf Cave Lewd Play]]>><<set $sexstart to 1>><</link>><<deviant2>>
 				<br>
 			<</if>>
 			<<if $bus is "wolfcave">>
@@ -83,7 +83,7 @@
 			<<addinlineevent "wolf cave blackwolf agitated" 2>>
 				<<if $wolfpackleader is 1>>
 					<<endevent>><<npc "Black Wolf">>
-					The Black Wolf is agitated. <<bHe>> bites and growls at the others, agitating them in turn.
+					검은 늑대가 흥분해 있다. <<bHe>>【은는】 다른 녀석들을 물고 으르렁거리며 덩달아 흥분하게 만든다.
 					<br><br>
 					<<link [[<<bhim>>【을를】 진정시킨다|Wolf Cave Calm]]>><<set $phase to 0>><</link>>
 					<br>
@@ -91,7 +91,7 @@
 					<br>
 				<<else>>
 					<<npc "Black Wolf" 2>><<person1>>
-					One of the larger <<beastsplural>> challenges the Black Wolf. The Black Wolf wins after a brief tussle, but <<person2>><<bhis>> anger is not assuaged. <<bHe>> growls and bites at the other <<beastsplural>>, as if daring any to challenge <<bhim>>.
+					덩치가 큰 <<beastsplural>> 중 하나가 검은 늑대에게 덤빈다. 짧은 몸싸움 끝에 검은 늑대가 이겼지만, <<person2>><<bhis>> 분노는 가라앉지 않는다. <<bHe>>【은는】 누가 또 덤빌 테면 덤벼보라는 듯, 다른 <<beastsplural>>【을를】 향해 으르렁거리며 물어뜯는다.
 					<<endevent>><<npc "Black Wolf">><<person1>>
 					<br><br>
 					<<if $wolfpackpoisoned is 1>>
@@ -122,7 +122,7 @@
 				<<saveNPC 0 wolf_rank_1>>
 				<<saveNPC 1 wolf_rank_2>>
 				<<if beastSexEnabledForType("wolf", $monster is 1)>>
-					<<link [[Favour the low ranking <<beasttype 0>>|Wolf Cave Rank]]>><<set $phase to 0>><</link>><<deviant1>>
+					<<link [[서열이 낮은 <<beasttype 0>>【을를】 편애한다|Wolf Cave Rank]]>><<set $phase to 0>><</link>><<deviant1>>
 					<br>
 					<<link [[서열이 높은 <<beasttype 1>>【을를】 편애한다|Wolf Cave Rank]]>><<set $phase to 1>><</link>><<deviant1>>
 					<br>
@@ -144,7 +144,7 @@
 			<</addinlineevent>>
 			<<addinlineevent "wolf cave howl chorus">>
 				<<npc "Black Wolf" 2>><<person2>>
-				Amidst the group, you notice the Black Wolf standing atop a large rock, surrounded by a larger group of <<wolf_cave_plural>>. <<bHe>> suddenly raises <<bhis>> head and begins howling loudly, yet beautifully. A second <<person1>><<beasttype>> takes notice and joins <<bhis>> pack sibling in hearty bonding.
+				무리 한가운데서, 당신은 거대한 바위 위에서 무수한 <<wolf_cave_plural>>에게 둘러싸인 채 서 있는 검은 늑대를 발견한다. <<bHe>>【은는】 돌연 고개를 치켜들고는 크고도 아름답게 울부짖기 시작한다. <<person1>>다른 <<beasttype>>【이가】 그걸 보고는 뜨거운 유대감을 담아 <<bhis>> 하울링에 동참한다.
 				<br><br>
 				잠시 후, 꽤 많은 무리가 그 뒤를 따라 아름다운 화음을 이뤄 크고 우렁차게 하울링하기 시작한다.
 				<br><br>

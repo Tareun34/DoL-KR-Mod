@@ -1993,7 +1993,7 @@
 
 <<widget "gwylanReunion">>
 	<<set $gwylan.timer.lastSeen to Time.date.timeStamp>>
-	You tell <<him>> about your time <<badEndProse $badEndStats.last()?.source "at">>. <<He>> listens without speaking, stroking your hair as <<he>> does. When you finish, <<he>> kisses your forehead.
+	당신은 <<him>>에게 <<badEndProse $badEndStats.last()?.source "at">> 보냈던 시간에 대해 말해준다. <<He>>【은는】 당신의 머리를 쓰다듬으며 아무 말 없이 듣기만 한다. 이야기가 끝나자, <<he>>【이가】 당신의 이마에 입을 맞춘다.
 	<<switch $badEndStats.last()?.source>>
 		<<case "Underground Farm">>
 			<<if $brownFoxRevealed>>
@@ -2011,7 +2011,7 @@
 				<<set _badEndFollowup to true>>
 			<</if>>
 		<<case "Wolf Cave">>
-			"The wolves are usually so docile, but the black one has been growing more and more bold," <<he>> says. "I'm so sorry that <<if resolveIfNamedBeastIsMonster("blackwolf")>><<nnpc_he "Black Wolf">><<else>>it<</if>> put you through that."
+			"늑대들은 평소엔 참 얌전한데, 그 검은 놈은 점점 대담해지고 있네," <<he>>【이가】 말한다. "<<if resolveIfNamedBeastIsMonster("blackwolf")>><<nnpc_he "Black Wolf">>【이가】 <<else>>그 녀석이<</if>> 널 그렇게 만들다니 정말 유감이야."
 			<<if !$gwylanTalked.includes("loincloth")>>
 				<<set _badEndFollowup to true>>
 			<</if>>
@@ -2177,7 +2177,7 @@
 					"아구, 미안해, 착하지. 이리 와, 몸 말리러 가자. 날 따라와." <<nnpc_He "Gwylan">>【은는】 당신의 손을 잡고, 비를 피해 골목으로 당신을 이끌며 <<nnpc_his "Gwylan">> 몸으로 당신을 가려준다. <<takeHandholdingVirginity "Gwylan" `(V.gwylanSeen.includes("partners") ? "romantic" : "consensual")`>>
 					<br><br>
 
-					You spend a few minutes drying off before moving on.
+					당신은 몇 분간 몸을 말린 후 계속 나아간다.
 					<<dry_full>>
 					<br><br>
 				<</if>>

@@ -113,7 +113,7 @@
 	<<wolfcavestate>>
 <</if>>
 <<if $pound?.progress is 5>>
-	<span class="blue">A dark shape lurks in the trees.</span>
+	<span class="blue">어두운 형체가 나무들 사이에 숨어 있다.</span>
 	<br>
 <</if>>
 <br><br>
@@ -148,10 +148,10 @@
 	<<wolfcaveicon "wolf play">><<link [[놀아준다 (1:00)|Wolf Cave Play]]>><<stress -12>><<pass 1 hour>><</link>><<lstress>>
 	<br>
 	<<if $pound?.progress is 5>>
-		<<wolfcaveicon "black dog">><<link [[Approach the dark shape|Wolf Cave Dog Intro]]>><<set $pound.progress to 6>><<stress 6>><<trauma -6>><<control 25>><</link>><<gstress>><<ggcontrol>><<ltrauma>>
+		<<wolfcaveicon "black dog">><<link [[어두운 형체에 접근한다|Wolf Cave Dog Intro]]>><<set $pound.progress to 6>><<stress 6>><<trauma -6>><<control 25>><</link>><<gstress>><<ggcontrol>><<ltrauma>>
 		<br>
 	<<elseif $pound?.progress is 6 and Time.dayState is "day" and $daily.wolfCaveDog is undefined>>
-		<<wolfcaveicon "black dog">><<link [[Approach the black dog|Wolf Cave Dog]]>><</link>>
+		<<wolfcaveicon "black dog">><<link [[검은 개에게 접근한다|Wolf Cave Dog]]>><</link>>
 		<br>
 	<</if>>
 	<<if $nextPassageCheck is "Wolf Cave Wash">>
@@ -421,7 +421,7 @@
 	<<wakingEffects $sleepHoursTotal>>
 	<<if ["dryheaving","nausea"].includes(_wakingEffect)>>
 		<br>
-		You slept soundly, but now feel a little rough.
+		푹 잤지만, 지금은 몸이 좀 찌뿌둥하다.
 		<br><br>
 	<<elseif $nightmares gte 1 and $controlled is 0>>
 		<<nightmareWake>>

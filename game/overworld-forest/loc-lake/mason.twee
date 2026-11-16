@@ -261,9 +261,9 @@
 
 	<<if $exposed gte 2>>
 		<<if hasSexStat("exhibitionism", 5)>>
-			<<icon "actions/swim.png">><<link [[Sit in the pond|Mason In Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist5>><<set $phase to "in">><</if>>
+			<<icon "actions/swim.png">><<link [[연못에 앉는다|Mason In Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist5>><<set $phase to "in">><</if>>
 			<br>
-			<<icon "actions/perch-get-up.png">><<link [[Sit beside the pond|Mason Beside Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist5>><<set $phase to "beside">><</if>>
+			<<icon "actions/perch-get-up.png">><<link [[연못 옆에 앉는다|Mason Beside Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist5>><<set $phase to "beside">><</if>>
 			<br>
 		<<else>>
 			<<covered>> 이런 차림으로 메이슨에게 당신의 존재를 알릴 수는 없다!
@@ -271,18 +271,18 @@
 		<</if>>
 	<<elseif $exposed gte 1>>
 		<<if hasSexStat("exhibitionism", 3)>>
-			<<icon "actions/swim.png">><<link [[Sit in the pond|Mason In Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist3>><<set $phase to "in">><</if>>
+			<<icon "actions/swim.png">><<link [[연못에 앉는다|Mason In Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist3>><<set $phase to "in">><</if>>
 			<br>
-			<<icon "actions/perch-get-up.png">><<link [[Sit beside the pond|Mason Beside Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist3>><<set $phase to "beside">><</if>>
+			<<icon "actions/perch-get-up.png">><<link [[연못 옆에 앉는다|Mason Beside Pond Naked]]>><</link>><<if $daily.ex.mason isnot 1>><<exhibitionist3>><<set $phase to "beside">><</if>>
 			<br>
 		<<else>>
 			<<covered>> 이런 차림으로 메이슨에게 당신의 존재를 알릴 수는 없다!
 			<br><br>
 		<</if>>
 	<<else>>
-		<<icon "actions/swim.png">><<link [[Sit in the pond|Mason In Pond]]>><<set $phase to "in">><</link>>
+		<<icon "actions/swim.png">><<link [[연못에 앉는다|Mason In Pond]]>><<set $phase to "in">><</link>>
 		<br>
-		<<icon "actions/perch-get-up.png">><<link [[Sit beside the pond|Mason Beside Pond]]>><<set $phase to "beside">><</link>>
+		<<icon "actions/perch-get-up.png">><<link [[연못 옆에 앉는다|Mason Beside Pond]]>><<set $phase to "beside">><</link>>
 		<br>
 	<</if>>
 	<br>
@@ -441,7 +441,7 @@
 	<<water>><<waterbr 2>>
 <</if>>
 
-You chat with Mason.
+당신은 메이슨과 대화한다.
 
 <<if $rng gte 81>>
 	<<He>>【은는】 호수와 그 주변 숲에 대해 이야기한다. <<he>>【이가】 이곳으로 이사 온 큰 이유 중 하나인 것 같다.
@@ -494,7 +494,7 @@ You chat with Mason.
 당신은 별일 없이 다뉴브 가에 도착한다. 메이슨은 당신을 고아원까지 바래다주어야 한다고 고집한 뒤, 손을 흔들어 작별 인사를 한다.
 <br><br>
 
-<<link [[Next|Domus Street]]>><<set $eventskip to 1>><<unset $phase>><<endevent>><</link>>
+<<link [[다음|Domus Street]]>><<set $eventskip to 1>><<unset $phase>><<endevent>><</link>>
 <br>
 
 :: Mason Walk Refuse
@@ -512,7 +512,7 @@ You chat with Mason.
 메이슨은 확신이 없는 듯 보이지만, 고개를 끄덕인다. "정 그렇다면. 조심해." <<He>>【은는】 수건으로 <<himself>> 몸을 닦으며 숲속으로 걸어 들어간다.
 <br><br>
 
-<<link [[Next|Lake Waterfall]]>><<unset $phase>><<endevent>><</link>>
+<<link [[다음|Lake Waterfall]]>><<unset $phase>><<endevent>><</link>>
 <br>
 
 :: Widgets Mason [widget]
@@ -548,7 +548,7 @@ You chat with Mason.
 		<br>
 		<<brothelicon>><<link [[추파를 던진다 (0:30)|Mason Pond Flirt]]>><<pass 30>><<npcincr Mason love -1>><<npcincr Mason lust 1>><</link>><<promiscuous1>><<llove>><<glust>>
 		<br>
-		<<getouticon>><<link [[Leave|Lake Waterfall]]>><<unset $phase>><<endevent>><</link>>
+		<<getouticon>><<link [[떠난다|Lake Waterfall]]>><<unset $phase>><<endevent>><</link>>
 		<br>
 	<</if>>
 <</widget>>

@@ -979,7 +979,7 @@
 		<<beasttype>>【은는】 만족스러운 콧소리를 내며 <<bhis>> <<if $monster is 1>>손<<else>>코<</if>>로 당신을 툭 건드린다. <<bHis>> 꼬리가 다정하게 흔들린다.
 		<br><br>
 		<<if hasSexStat("deviancy", 3) and beastSexEnabledForType("wolf", $monster is 1)>>
-			<<link [[Reward|Wolf Cave Spar Sex]]>><<set $sexstart to 1>><<set $phase to 2>><<sub 1>><</link>><<deviant3>>
+			<<link [[보상을 받는다|Wolf Cave Spar Sex]]>><<set $sexstart to 1>><<set $phase to 2>><<sub 1>><</link>><<deviant3>>
 			<br>
 		<</if>>
 		<<link [[숨을 돌린다 (0:05)|Wolf Cave Clearing]]>><<endevent>><<pass 5>><</link>>
@@ -1179,7 +1179,7 @@
 	<<if $wolfpackleader gte 1>>
 		<br><br>
 		<<if monsterCanAppearForType("wolf")>>
-			You hear <<wolf_cave_plural>> calling out for you to deal with <<bhim>><<if monsterChanceForType("wolf") lt 100>>, alongside whines and growls of encouragement<</if>>.
+			<<wolf_cave_plural>>【이가】 당신에게 <<bhim>>【을를】 처리하라고 외치는 소리가 들린다<<if monsterChanceForType("wolf") lt 100>>. 격려하는 낑낑거림과 으르렁거림도 함께 들린다<</if>>.
 		<<else>>
 			당신은 격려하는 낑낑거림과 으르렁거림을 듣는다.
 		<</if>>
@@ -1220,9 +1220,9 @@
 <br><br>
 
 <<set $bus to "wolfcaveclearing">> /* when event is resolved, player will be deposited in the clearing regardless of where they started */
-<<link [[Try to calm the <<beasttype>>|Wolf Cave Bear Calm]]>><</link>><<tendingdifficulty 600 1200>><br>
+<<link [[<<beasttype>>【을를】 진정시키려 시도한다|Wolf Cave Bear Calm]]>><</link>><<tendingdifficulty 600 1200>><br>
 <<if beastSexEnabledForType("bear", $monster is 1)>>
-	<<link [[Fight|Wolf Cave Bear Fight]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>><br>
+	<<link [[싸운다|Wolf Cave Bear Fight]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>><br>
 <<else>>
 	<<link [[싸운다|Wolf Cave Bear Fight Finish]]>><<set $phase to 1>><</link>><br> /* autoresolve */
 <</if>>
@@ -1256,7 +1256,7 @@
 	<br><br>
 
 	<<if beastSexEnabledForType("bear", $monster is 1)>>
-		<<link [[Fight|Wolf Cave Bear Fight]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>><br>
+		<<link [[싸운다|Wolf Cave Bear Fight]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>><br>
 	<<else>>
 		<<link [[싸운다|Wolf Cave Bear Fight Finish]]>><<set $phase to 1>><</link>><br> /* autoresolve */
 	<</if>>

@@ -1,7 +1,7 @@
 :: Forest Hunter Nod
 <<set $outside to 0>><<set $location to "cabin">><<effects>>
 
-"Good," <<he>> says with a curt nod. Eden ties <<his>> end of the leash around a wooden beam.
+"좋아." <<he>>【이가】 짧게 고개를 끄덕이며 말한다. 에덴은 <<his>> 목줄 끝을 나무 기둥에 묶는다.
 
 <br><br>
 
@@ -11,7 +11,7 @@
 :: Forest Hunter Refuse
 <<set $outside to 0>><<set $location to "cabin">><<effects>>
 
-"You don't mean that," <<he>> says. "It's safer for you here. You'll learn." <<He>> grabs you and bends you over <<his>> lap. "But I can't let you get away with being so insolent."
+"진심이 아닐 텐데." <<he>>【이가】 말한다. "여기 있는 게 너한테 더 안전해. 곧 알게 될 거다." <<He>>【은는】 당신을 붙잡아 <<his>> 무릎 위에 엎드리게 한다. "하지만 네가 이렇게 무례하게 구는 걸 그냥 넘어갈 순 없지."
 <br><br>
 
 <<link [[다음|Forest Hunter Punishment]]>><<set $molestationstart to 1>><</link>>
@@ -61,7 +61,7 @@
 	<br>
 <<elseif $enemyhealth lte 0>>
 
-	"You ungrateful brat," <<he>> says. "Should've left you for the wolves." <<He>> winces and holds <<his>> side. "I need to get something for this."
+	"이 은혜도 모르는 녀석," <<he>>【이가】 말한다. "늑대들한테 버려두고 왔어야 했어." <<He>>【은는】 얼굴을 찡그리며 <<his>> 옆구리를 붙잡는다. "이건 치료해야겠군."
 	<br><br>
 
 	<<tearful>> 당신은 몸을 추스른다.
@@ -96,7 +96,7 @@
 
 <<if $forestleashed is 1>>
 	<<if C.npc.Eden.trust gte 200>>
-		<span class="green">Eden unties the leash from the wooden beam.</span> "You've been a good <<girl>>. Stick to the cabin and the clearing just outside."
+		<span class="green">에덴이 나무 기둥에서 목줄을 푼다.</span> "착한 <<girl>>【이었였】어. 오두막과 바로 바깥 공터에만 있어."
 		<<set $forestleashed to 0>>
 	<<else>>
 		당신은 나무 기둥에 목줄로 단단히 묶여 있어 탈출할 수 없다.
@@ -104,7 +104,7 @@
 	<br><br>
 <<else>>
 	<<if C.npc.Eden.trust lt 100>>
-		<span class="red">Eden ties your leash to a wooden beam.</span> "You've been a bad <<girl>>. You'll have to learn to be good."
+		<span class="red">에덴이 당신의 목줄을 나무 기둥에 묶는다.</span> "나쁜 <<girl>>【이었였】어. 착하게 구는 법을 배워야겠군."
 		<br><br>
 		<<set $forestleashed to 1>>
 	<</if>>
@@ -114,7 +114,7 @@
 	<<if $syndromeeden is undefined>>
 		<<badEndTrackingEnd "Eden" { reason: "edenAccepted" }>>
 		<<set $syndromeeden to 1>><<set C.npc.Eden.lust to 0>><<set $edenshrooms to 0>><<set $edengarden to 0>><<set $edenspring to 0>><<set $wardrobes.edensCabin.unlocked to true>>
-		<span class="red"><i>It's lonely in the woods. Eden just wants company.</i>
+		<span class="red"><i>숲속은 외롭다. 에덴은 그저 곁에 있어 줄 누군가를 원할 뿐이다.</i>
 		<br>
 		"스톡홀름 증후군: 에덴" 특성을 획득했습니다.</span>
 		<br><br>
@@ -129,29 +129,29 @@
 
 <<else>>
 	<<if Time.hour lte 6>>
-		Eden leads you to the bed.
+		에덴이 당신을 침대로 이끈다.
 		<<if $forestleashed is 1>>
 			<<He>>【은는】 당신의 목줄을 침대 머리판의 난간에 감아 꼼짝 못하게 고정한다.
 		<</if>>
-		<<He>> leers at you, a ravenous look in <<his>> eyes. "<<print either("Don't struggle.",
-		"You'll learn to enjoy it too.",
-		"Be good.",
-		"Hold still.",
-		"Let me have this.",
-		"Serve your purpose.",
-		"I'll make you enjoy it.")>>"
+		<<He>>【은는】 <<his>> 눈에 굶주린 빛을 띠고 당신을 음흉하게 쳐다본다. "<<print either("버둥거리지 마.",
+		"너도 곧 즐기게 될 거다.",
+		"얌전히 있어.",
+		"가만히 있어.",
+		"이 정도는 내가 가져도 되잖아.",
+		"네 쓸모를 다해.",
+		"즐기게 만들어 주지.")>>"
 		<br><br>
 
 		<<link [[다음|Cabin Night Rape]]>><<set $molestationstart to 1>><</link>>
 		<br>
 
 	<<elseif Time.hour lte 8>>
-		Eden wraps the leash around a chair as <<he>> prepares breakfast. Shortly after, <<he>> places a plate of berries with some honeycomb on the table to share.
+		에덴은 아침 식사를 준비하는 동안 목줄을 의자에 감아 둔다. 잠시 후, <<he>>【은는】 함께 먹을 베리와 벌집 조각을 담은 접시를 식탁에 올려놓는다.
 		<br><br>
 
-		<<link [[Eat with Eden (2:00)|Forest Cabin Food]]>><<npcincr Eden trust 10>><<sub 1>><<pass 2 hours>><</link>><<gtrust>><<gstockholm>>
+		<<link [[에덴과 함께 먹는다 (2:00)|Forest Cabin Food]]>><<npcincr Eden trust 10>><<sub 1>><<pass 2 hours>><</link>><<gtrust>><<gstockholm>>
 		<br>
-		<<link [[Shove the food away (2:00)|Forest Cabin Spit]]>><<npcincr Eden trust -10>><<def 1>><<pass 2 hours>><</link>><<ltrust>><<lstockholm>>
+		<<link [[음식을 밀어낸다 (2:00)|Forest Cabin Spit]]>><<npcincr Eden trust -10>><<def 1>><<pass 2 hours>><</link>><<ltrust>><<lstockholm>>
 		<br>
 
 	<<elseif Time.hour lte 16>>
@@ -171,7 +171,7 @@
 		<</if>>
 
 	<<elseif Time.hour lte 18>>
-		Eden runs a bath. <<He>> eases <<his>> body into the water, and looks at you expectantly. "Get in and wash me."
+		에덴이 목욕물을 받는다. <<He>>【은는】 물속으로 <<his>> 몸을 담그고는 기대하는 눈빛으로 당신을 쳐다본다. "들어와서 씻겨."
 		<br><br>
 
 		<<link [[씻겨준다 (2:00)|Cabin Bath]]>><<pass 2 hours>><<npcincr Eden trust 10>><<sub 1>><</link>><<gtrust>><<gstockholm>>
@@ -180,35 +180,35 @@
 		<br>
 
 	<<elseif Time.hour lte 20>>
-		Eden wraps your leash around a chair while <<he>> prepares dinner. Shortly after, <<he>> places a plate of meat and mushrooms on the table to share.
+		에덴은 저녁 식사를 준비하는 동안 당신의 목줄을 의자에 감아 둔다. 잠시 후, <<he>>【은는】 함께 먹을 고기와 버섯을 담은 접시를 식탁에 올려놓는다.
 		<br><br>
 
-		<<link [[Eat with Eden (2:00)|Forest Cabin Dinner]]>><<npcincr Eden trust 10>><<sub 1>><<pass 2 hours>><</link>><<gtrust>><<gstockholm>>
+		<<link [[에덴과 함께 먹는다 (2:00)|Forest Cabin Dinner]]>><<npcincr Eden trust 10>><<sub 1>><<pass 2 hours>><</link>><<gtrust>><<gstockholm>>
 		<br>
-		<<link [[Shove the food away (2:00)|Forest Cabin Spit]]>><<npcincr Eden trust -10>><<def 1>><<pass 2 hours>><</link>><<ltrust>><<lstockholm>>
+		<<link [[음식을 밀어낸다 (2:00)|Forest Cabin Spit]]>><<npcincr Eden trust -10>><<def 1>><<pass 2 hours>><</link>><<ltrust>><<lstockholm>>
 		<br>
 
 	<<elseif Time.hour lte 22>>
 		에덴이 자리에 앉아 책을 읽으며 벽난로에 불을 지핀다.
 		<br><br>
 
-		<<link [[Cuddle (2:00)|Cabin Cuddle]]>><<sub 1>><<npcincr Eden trust 20>><<npcincr Eden love 1>><<pass 2 hours>><</link>><<glove>><<gtrust>><<ggstockholm>>
+		<<link [[껴안는다 (2:00)|Cabin Cuddle]]>><<sub 1>><<npcincr Eden trust 20>><<npcincr Eden love 1>><<pass 2 hours>><</link>><<glove>><<gtrust>><<ggstockholm>>
 		<br>
-		<<link [[Catch some sleep (2:00)|Forest Cabin]]>><<def 1>><<tiredness -12>><<tiredness -12>><<pass 2 hours>><<endevent>><</link>><<ltiredness>>
+		<<link [[잠을 좀 잔다 (2:00)|Forest Cabin]]>><<def 1>><<tiredness -12>><<tiredness -12>><<pass 2 hours>><<endevent>><</link>><<ltiredness>>
 		<br>
 
 	<<else>>
-		Eden leads you to the bed.
+		에덴이 당신을 침대로 이끈다.
 		<<if $forestleashed is 1>>
 			<<He>>【은는】 당신의 목줄을 침대 머리판의 난간에 감아 꼼짝 못하게 고정한다.
 		<</if>>
-		<<He>> leers at you, a ravenous look in <<his>> eyes. "<<print either("Don't struggle.",
-		"You'll learn to enjoy it too.",
-		"Be good.",
-		"Hold still.",
-		"Let me have this.",
-		"Serve your purpose.",
-		"I'll make you enjoy it.")>>"
+		<<He>>【은는】 <<his>> 눈에 굶주린 빛을 띠고 당신을 음흉하게 쳐다본다. "<<print either("버둥거리지 마.",
+		"너도 곧 즐기게 될 거다.",
+		"얌전히 있어.",
+		"가만히 있어.",
+		"이 정도는 내가 가져도 되잖아.",
+		"네 쓸모를 다해.",
+		"즐기게 만들어 주지.")>>"
 		<br><br>
 
 		<<link [[다음|Cabin Night Rape]]>><<set $molestationstart to 1>><</link>>
@@ -286,7 +286,7 @@
 당신은 자리에 누워 잠을 청한다.
 <br><br>
 
-You are awoken a while later by Eden's weight shifting the bed. <<He>> yawns and stretches, then looks at you. "Come on. We need to start the day."
+얼마 후, 에덴의 무게에 침대가 출렁여 잠에서 깬다. <<He>>【은는】 하품하며 기지개를 켜더니 당신을 본다. "일어나. 하루를 시작해야지."
 <br><br>
 
 <<link [[다음|Forest Cabin]]>><<endevent>><</link>>
@@ -340,19 +340,19 @@ You are awoken a while later by Eden's weight shifting the bed. <<He>> yawns and
 <<set $outside to 0>><<set $location to "cabin">><<effects>>
 
 <<npc Eden>><<person1>>
-A while later you hear Eden stir. <<He>> yawns and stretches, then looks at you. "Come on. We need to start the day." <<He>> notices your broken leash. <<He>> grabs the remains, and looks at them for a moment. "Well. Seems like you're learning to be a good <<girl>>."
+얼마 후 에덴이 뒤척이는 소리가 들린다. <<He>>【은는】 하품하며 기지개를 켜더니 당신을 본다. "일어나. 하루를 시작해야지." <<He>>【은는】 당신의 끊어진 목줄을 발견한다. <<He>>【은는】 잔해를 집어 들고 잠시 바라본다. "흠. 착한 <<girl>>【이가】 되는 법을 배우고 있나 보군."
 <<npcincr Eden trust 200>>
 <br><br>
 
 <<if C.npc.Eden.trust gte 100>>
-	"I don't think keeping you tied is necessary any more. Stick to the cabin and the clearing just outside."
+	"이제 더는 널 묶어둘 필요가 없을 것 같군. 오두막과 바로 바깥 공터에만 있어."
 
 	<<if $syndromeeden is undefined>>
 		<<badEndTrackingEnd "Eden" { reason: "edenAccepted" }>>
 		<<set $syndromeeden to 1>><<set C.npc.Eden.lust to 0>><<set $edenshrooms to 0>><<set $edengarden to 0>><<set $edenspring to 0>><<set $wardrobes.edensCabin.unlocked to true>>
 		<br><br>
 
-		<span class="red"><i>It's lonely in the woods. Eden just wants company.</i>
+		<span class="red"><i>숲속은 외롭다. 에덴은 그저 곁에 있어 줄 누군가를 원할 뿐이다.</i>
 		<br>
 		"스톡홀름 증후군: 에덴" 특성을 획득했습니다.</span>
 		<br><br>
@@ -373,19 +373,19 @@ A while later you hear Eden stir. <<He>> yawns and stretches, then looks at you.
 :: Forest Cabin Food
 <<set $outside to 0>><<set $location to "cabin">><<effects>><<wearProp `either("blackberry", "strawberry", "wild honeycomb")`>><<canvas-model-override "mouth" "chew">>
 
-You eat the food alongside Eden. <<He>> doesn't start any conversations, and anything you start dies quickly. Eden allows you to have your fill before eating the rest, leaving the plate empty.
+당신은 에덴과 함께 음식을 먹는다. <<He>>【은는】 먼저 말을 꺼내지 않고, 당신이 꺼낸 이야기도 금세 끊긴다. 에덴은 당신이 배불리 먹게 둔 뒤에야 나머지를 먹어 치워 접시를 비운다.
 <br><br>
 
-<<He>> stands when <<he>> finishes, and looks out the window.
+<<He>>【은는】 다 먹고 나서 일어나 창밖을 본다.
 
 <<if Weather.precipitation is "none">>
-	"We have work to do."
+	"할 일이 있어."
 <<elseif Weather.precipitation is "rain">>
-	"Best start before the weather gets worse."
+	"날씨가 더 나빠지기 전에 시작하는 게 좋겠어."
 <<elseif Weather.is("heavyClouds")>>
-	"The weather looks bad. Best start now."
+	"날씨가 안 좋군. 지금 시작하는 게 좋겠어."
 <<elseif Weather.isFreezing>>
-	"It's cold today. Keep warm."
+	"오늘 춥군. 몸 따뜻하게 해."
 <</if>>
 <br><br>
 
@@ -395,19 +395,19 @@ You eat the food alongside Eden. <<He>> doesn't start any conversations, and any
 :: Forest Cabin Dinner
 <<set $outside to 0>><<set $location to "cabin">><<effects>><<wearProp `either("steak", "honeyed pork", "mushroom")`>><<canvas-model-override "mouth" "chew">>
 
-You eat the food alongside Eden. <<He>> doesn't start any conversations, and anything you start dies quickly. Eden allows you to have your fill before eating the rest, leaving the plate empty.
+당신은 에덴과 함께 음식을 먹는다. <<He>>【은는】 먼저 말을 꺼내지 않고, 당신이 꺼낸 이야기도 금세 끊긴다. 에덴은 당신이 배불리 먹게 둔 뒤에야 나머지를 먹어 치워 접시를 비운다.
 <br><br>
 
-<<He>> stands when <<he>> finishes, and heads towards the fireplace.
+<<He>>【은는】 다 먹고 나서 일어나 벽난로 쪽으로 간다.
 <br><br>
 
-<<link [[Next|Forest Cabin]]>><<endevent>><</link>>
+<<link [[다음|Forest Cabin]]>><<endevent>><</link>>
 <br>
 
 :: Forest Cabin Spit
 <<set $outside to 0>><<set $location to "cabin">><<effects>>
 
-You shove the plate away from you. The food spills over Eden and across the floor. <<He>> stands up, already annoyed. "I worked for that." <<He>> grabs you and bends you over <<his>> lap. "You'll learn what it's worth."
+당신은 접시를 밀어낸다. 음식이 에덴에게 쏟아지고 바닥에 흩어진다. <<He>>【은는】 이미 짜증 난 얼굴로 일어선다. "내가 애써서 구한 거야." <<He>>【은는】 당신을 붙잡아 <<his>> 무릎 위에 엎드리게 한다. "그게 얼마나 귀한지 알게 해주지."
 <br><br>
 
 <<link [[다음|Forest Hunter Punishment]]>><<set $molestationstart to 1>><</link>>
@@ -416,7 +416,7 @@ You shove the plate away from you. The food spills over Eden and across the floo
 :: Cabin Cuddle
 <<set $outside to 0>><<set $location to "cabin">><<effects>>
 
-You snuggle up to Eden. <<He>> tenses for a moment, then places an arm around you. <<He>> pulls you uncomfortably tight to <<his>> body.
+당신은 에덴에게 바싹 파고든다. <<He>>【은는】 잠시 몸이 굳더니, 당신에게 팔을 두른다. <<He>>【은는】 불편할 만큼 꽉 당신을 <<his>> 몸에 끌어당긴다.
 <br><br>
 
 <<link [[다음|Forest Cabin]]>><<endevent>><</link>>
@@ -425,7 +425,7 @@ You snuggle up to Eden. <<He>> tenses for a moment, then places an arm around yo
 :: Cabin Bath
 <<set $outside to 0>><<set $location to "cabin">><<effects>><<wearProp "sponge">>
 
-You remove your clothing and get in the bath. Using a sponge, you wash <<his>> back. <<He>> turns to you. "Clean my chest." You continue washing, though it's more embarrassing when you can see <<his>> face.
+당신은 옷을 벗고 욕조에 들어간다. 스펀지를 사용해 <<his>> 등을 씻겨준다. <<He>>【은는】 당신을 돌아본다. "가슴도 닦아." 계속 씻겨주지만, <<his>> 얼굴이 보이자 더 당혹스럽다.
 <<wash>><<garousal>><<arousal 1000>>
 
 <br><br>
@@ -446,7 +446,7 @@ You remove your clothing and get in the bath. Using a sponge, you wash <<his>> b
 들키지 않도록 조심하며 목줄을 나무에 문지른다. 목줄이 얇아지는 듯하다.
 <br><br>
 
-Some time later, Eden pants and stretches while looking at the setting sun. <<He>> unties your leash from the tree, and leads you inside. "I need a bath. Let's go home."
+얼마 후, 에덴은 지는 해를 바라보며 숨을 몰아쉬고 기지개를 켠다. <<He>>【은는】 나무에서 당신의 목줄을 풀고 안으로 데려간다. "목욕해야겠어. 집으로 가자."
 <<if $forestleashedwear gte 1>>
 	<<set $forestleashedwear += 1>>
 <<else>>
@@ -460,7 +460,7 @@ Some time later, Eden pants and stretches while looking at the setting sun. <<He
 :: Forest Cabin Good
 <<set $outside to 0>><<set $location to "cabin">><<effects>>
 
-Some time later, Eden pants and stretches while looking at the setting sun. <<He>> unties your leash from the tree, and leads you inside. "I need a bath. Let's go home."
+얼마 후, 에덴은 지는 해를 바라보며 숨을 몰아쉬고 기지개를 켠다. <<He>>【은는】 나무에서 당신의 목줄을 풀고 안으로 데려간다. "목욕해야겠어. 집으로 가자."
 
 <br><br>
 

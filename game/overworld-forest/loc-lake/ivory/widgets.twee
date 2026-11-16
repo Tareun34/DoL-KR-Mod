@@ -1272,7 +1272,7 @@
 	<<if $arousal gte $arousalmax>>
 		<br><br>
 		<<orgasm>>
-		Your climax is torturous and painful as you writhe against <<him>>. <<His>> assault only grows more intense. You feel weak.
+		당신이 <<him>>에게 맞서 몸부림치자 절정은 고문 같고 고통스럽다. <<His>> 공격은 그저 더 격렬해질 뿐이다. 당신은 몸에 힘이 빠지는 것을 느낀다.
 		<<trauma 30>><<gggtrauma>><<purity -25>><<llpurity>><<physique -8>><<lphysique>><<awareness -20>><<lllawareness>><<gobsession>>
 		<<if $_wraithStress>>
 			<<set $stress to $stressmax>>

@@ -3464,7 +3464,7 @@
 									<<else>>
 										어둠 속에서 <<shopHuntActorName $_edenTarget.id>>【이가】 킥킥 웃는 소리가 들린다.
 									<</if>>
-									"That's another seven years of rotten luck for you."
+									"또 7년 동안 끔찍한 불운을 겪겠네."
 								<<elseif $_edenTargetHit?.health lte 0>>
 									<<switch random(1,4)>>
 										<<case 1>>"넌 파괴하는 것밖에 모르지?"

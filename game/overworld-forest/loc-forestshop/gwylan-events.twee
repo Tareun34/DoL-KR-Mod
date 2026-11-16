@@ -915,25 +915,25 @@
 	<<elseif $gwylanSeen.includes("kylar_parents")>>
 		당신을 납치했던 그 <<nnpc_gendery "Kylar">> 카일라.<br>
 	<</if>>
-	<<if $gwylanSeen.includes("farm_defended")>>The way you defended your farm from Remy, without giving so much as an inch.<br><</if>>
-	<<if $gwylanSeen.includes("tenyclus")>>The gaps in your memory after you played that strange game too much.<br><</if>>
-	<<if $gwylanSeen.includes("christmas_generosity")>>How you were so desperate for money that you resorted to stealing, and yet, when you found someone in more need than you, you left a large sum of money for them instead.<br><</if>>
-	<<if $gwylanTalked.includes("underground_brothel")>>Your escape from sex slavery.<br><</if>>
-	<<if $gwylanTalked.includes("underground_farm")>>The human cattle farm.<br><</if>>
-	<<if $gwylanSeen.includes("eden_known")>>Your time with the hunter, and your efforts to smother <<nnpc_his "Eden">> loneliness.<br><</if>>
-	<<if $gwylanSeen.includes("wolves_known")>>Your integration into the local wolf pack.<br><</if>>
-	<<if $gwylanTalked.includes("bird")>>Your time in the old castle with the hawk.<br><</if>>
-	<<if $gwylanTalked.includes("prison")>>Your confinement in prison.<br><</if>>
-	<<if $gwylanTalked.includes("asylum")>>Your treatments in the asylum.<br><</if>>
-	<<if $gwylanTalked.includes("mine")>>Your slavery in the mines.<br><</if>>
-	<<if $gwylanTalked.includes("temple_confessor")>>The terrible truth told to you by the bishop.<br><</if>>
-	<<if $gwylanTalked.includes("temple_exorcist")>>The way you rescued someone from a dark ritual while working a dance job.<br><</if>>
-	<<if $gwylanTalked.includes("temple_sexy")>>The burdens of the world you've taken on while trying to purge its poisons.<br><</if>>
-	<<if $gwylanTalked.includes("historic")>>The stories and history you've sought out.<br><</if>>
-	<<if $gwylanTalked.includes("hookah")>>The terrible things you've seen, and how you inherited the hookah parlour.<br><</if>>
-	<<if $chef_speech is "bailey">>How you bravely told everyone about what Bailey is doing at the orphanage during the cafe's grand re-opening.<br><</if>>
-	<<if $gwylanTalked.includes("islander")>>Your exile to the island, and everything you've told me about the culture you found there.<br><</if>>
-	<<if $gwylanTalked.includes("fox_mask")>>How you accompanied an Elk to the Rite of Renewal as a Fox.<br><</if>>
+	<<if $gwylanSeen.includes("farm_defended")>>한 치의 물러섬도 없이 레미로부터 농장을 지켜냈던 일.<br><</if>>
+	<<if $gwylanSeen.includes("tenyclus")>>그 이상한 게임을 너무 많이 한 뒤에 생긴 기억의 공백.<br><</if>>
+	<<if $gwylanSeen.includes("christmas_generosity")>>돈이 너무 급해서 도둑질까지 했지만, 정작 자신보다 더 궁핍한 사람을 발견하고는 대신 거액의 돈을 남겨두고 온 일.<br><</if>>
+	<<if $gwylanTalked.includes("underground_brothel")>>성노예 생활에서의 탈출.<br><</if>>
+	<<if $gwylanTalked.includes("underground_farm")>>인간 목장.<br><</if>>
+	<<if $gwylanSeen.includes("eden_known")>>사냥꾼과 함께한 시간, 그리고 <<nnpc_his "Eden">> 외로움을 달래주려 했던 노력.<br><</if>>
+	<<if $gwylanSeen.includes("wolves_known")>>이 지역 늑대 무리에 섞여 들어간 일.<br><</if>>
+	<<if $gwylanTalked.includes("bird")>>매와 함께 오래된 성에서 보낸 시간.<br><</if>>
+	<<if $gwylanTalked.includes("prison")>>교도소에서의 감금 생활.<br><</if>>
+	<<if $gwylanTalked.includes("asylum")>>정신병원에서의 치료.<br><</if>>
+	<<if $gwylanTalked.includes("mine")>>광산에서의 노예 생활.<br><</if>>
+	<<if $gwylanTalked.includes("temple_confessor")>>주교가 당신에게 말해준 끔찍한 진실.<br><</if>>
+	<<if $gwylanTalked.includes("temple_exorcist")>>댄스 일을 하다가 어두운 의식에서 누군가를 구해낸 일.<br><</if>>
+	<<if $gwylanTalked.includes("temple_sexy")>>세상의 독을 정화하려 애쓰면서 짊어지게 된 세상의 짐.<br><</if>>
+	<<if $gwylanTalked.includes("historic")>>당신이 찾아다녔던 이야기와 역사.<br><</if>>
+	<<if $gwylanTalked.includes("hookah")>>당신이 목격한 끔찍한 일들과, 물담배 가게를 물려받게 된 경위.<br><</if>>
+	<<if $chef_speech is "bailey">>카페 재개장 때 베일리가 고아원에서 무슨 짓을 하는지 모두에게 용감하게 폭로했던 일.<br><</if>>
+	<<if $gwylanTalked.includes("islander")>>섬으로의 추방, 그리고 그곳에서 발견한 문화에 대해 내게 말해준 모든 것.<br><</if>>
+	<<if $gwylanTalked.includes("fox_mask")>>여우로서 엘크와 함께 갱신의 의식에 참여했던 일.<br><</if>>
 	<<if $brownFoxRevealed>>
 		<<if $avery_mansion?.heist_suspicion isnot undefined>>
 			우리가 함께 움켜쥔 뼈를 훔쳤던 일.<br>
@@ -1047,7 +1047,7 @@
 				"일찍 시작하는군, 안 그래?"
 				<<if $stress gte ($stressmax / 5) * 3 or $trauma gte ($traumamax / 5) * 2>>
 					<<set $gwylanSeen.pushUnique("bad_day_drinking")>>
-					<<He>> looks concerned. "No judgement, but you should only drink to make a good day better. No offense either, but you look troubled as it is."
+					<<He>>【이가】 걱정스러운 표정을 짓는다. "판단하려는 건 아니지만, 술은 좋은 날을 더 좋게 만들려고 마셔야지. 기분 나쁘게 듣진 마, 지금도 충분히 힘들어 보이거든."
 				<<elseif _gwylanLovePercent gte 40>>
 					<<if npcIsPregnant("Gwylan")>>
 						<<He>>【이가】 입을 삐죽인다. "지금 내 앞에서 술을 마시다니 너무 무례하잖아." <<He>>【은는】 <<his>> <<bellyDescription "Gwylan">>【을를】 부드럽게 문지른다.
@@ -1588,9 +1588,9 @@
 			<<if $player.virginity.kiss === true>>
 				당신은 그런 키스가 어떤 느낌일지 궁금해진다.
 			<<elseif $loveInterest.primary is "Black Wolf">>
-				Your mind drifts to the Black Wolf's <<if resolveIfNamedBeastIsMonster("blackwolf")>>lips on yours<<else>>wet tongue licking your face<</if>>.
+				당신의 마음은 검은 늑대의 <<if resolveIfNamedBeastIsMonster("blackwolf")>>입술이 당신의 입술에 닿았던 것을<<else>>젖은 혀가 당신의 얼굴을 핥았던 것을<</if>> 떠올린다.
 			<<elseif $loveInterest.primary is "Great Hawk">>
-				Your mind drifts to the Great Hawk's <<if resolveIfNamedBeastIsMonster("greathawk")>>lips on yours<<else>>beak gently preening you<</if>>.
+				당신의 마음은 거대 매의 <<if resolveIfNamedBeastIsMonster("greathawk")>>입술이 당신의 입술에 닿았던 것을<<else>>부리가 부드럽게 당신을 다듬어주던 것을<</if>> 떠올린다.
 			<<else>>
 				당신의 마음은 <<= window.KR.gatPersonNameDictKR($loveInterest.primary)>>의 입술이 당신의 입술에 닿았던 것을 떠올린다.
 			<</if>>
@@ -2425,9 +2425,9 @@
 <br><br>
 
 <<if $location is "cafe" and !(between($chef_state, 7, 8) and $chef_rework lte 30)>>
-	<<link [[Next|Ocean Breeze]]>><<endevent>><<unset $cafe_study>><<storeon "cafe_balcony">><</link>>
+	<<link [[다음|Ocean Breeze]]>><<endevent>><<unset $cafe_study>><<storeon "cafe_balcony">><</link>>
 <<elseif $location is "cafe">>
-	<<link [[Next|Cliff Street]]>><<endevent>><<set $eventskip to 1>><<unset $cafe_study>><<storeon "cafe_balcony">><</link>>
+	<<link [[다음|Cliff Street]]>><<endevent>><<set $eventskip to 1>><<unset $cafe_study>><<storeon "cafe_balcony">><</link>>
 <<else>>
 	<<link [[다음|Forest Shop Entrance]]>><<endevent>><</link>>
 <</if>>
