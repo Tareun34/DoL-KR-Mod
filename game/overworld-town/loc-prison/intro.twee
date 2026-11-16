@@ -22,7 +22,7 @@
 <<if $prison_intro_officer>>
 	당신은 두 번째 경찰관, <<person3>><<person>>【을를】 알아본다. <<He>>【은는】 전에 당신을 부두까지 동행한 적이 있다. <<He>>【은는】 백미러를 통해 당신을 보며 씨익 웃는다.
 <<else>>
-	The second officer, a <<person3>><<person>>, watches you through the rearview mirror.
+	두 번째 경찰관인 <<person3>><<person>>【이가】 백미러를 통해 당신을 지켜본다.
 <</if>>
 <br><br>
 

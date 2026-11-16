@@ -2986,7 +2986,7 @@
 	<<wakingEffects $sleepHoursTotal>>
 	<<if ["dryheaving","nausea"].includes(_wakingEffect)>>
 		<br>
-		You slept soundly, but now feel a little rough.
+		푹 잤지만, 지금은 몸이 좀 좋지 않다.
 		<br><br>
 	<<elseif $nightmares gte 1 and $controlled is 0>>
 		<<nightmareWake>>
@@ -3692,9 +3692,9 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 <</if>>
 <br><br>
 
-<<link [[Rub lewdly|Bird Tower Groom Lewd]]>><<npcincr "Great Hawk" love 1>><</link>><<deviant1>><<glove>>
+<<link [[음란하게 문지른다|Bird Tower Groom Lewd]]>><<npcincr "Great Hawk" love 1>><</link>><<deviant1>><<glove>>
 <br>
-<<link [[Stay on the perch|Bird Tower Perch]]>><<endevent>><</link>>
+<<link [[횃대에 머무른다|Bird Tower Perch]]>><<endevent>><</link>>
 <br>
 <<link [[안으로 돌아간다|Bird Tower]]>><<endevent>><</link>>
 <br>
@@ -5812,9 +5812,9 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 
 결국 당신의 마음은
 <<if $remySeen?.includesAny("farm","livestock","manor") or $livestock.intro isnot undefined>>
-	Remy Estate. Knowing the kind of business they do, you're sure they would have something special.
+	레미의 저택으로 향한다. 그들이 어떤 사업을 하는지 알기에, 분명 특별한 무언가를 가지고 있을 거라고 확신한다.
 	<<if $estate?.chaos>>
-		You're no stranger to causing trouble for Remy, but the mere thought of stealing something from the estate with <<your_bird_text>> fills you with adrenaline.
+		당신은 레미에게 문제를 일으키는 것이 낯설지 않지만, <<your_bird_text>>【와과】 함께 저택에서 무언가를 훔친다는 생각만으로도 아드레날린이 솟구친다.
 	<</if>>
 <<else>>
 	저택에 정착한다. 안에서 무슨 일이 일어나는지는 모르지만, 특별한 것을 찾기에는 그곳이 최선의 선택이다.

@@ -96,7 +96,7 @@
 		<br><br>
 	<</if>>
 	<<if $cheatsEnabled is true or $debug>>
-		<<lockicon "unlock">><<link [[Unlock shop|Elk Street]]>><<set $adultshopunlocked to true>><</link>> | <i>Cheat option</i> <!-- Appears even with blind stats enabled. Intentional -->
+		<<lockicon "unlock">><<link [[가게 잠금 해제|Elk Street]]>><<set $adultshopunlocked to true>><</link>> | <i>치트 옵션</i> <!-- Appears even with blind stats enabled. Intentional -->
 		<br>
 	<</if>>
 <</if>>

@@ -37,7 +37,7 @@
 	<br><br>
 
 	<<if beastSexEnabledForType("dog", $monster is 1)>>
-		<<bHe>> licks your face. There's no one else in the room.
+		<<bHe>>【이가】 당신의 얼굴을 핥는다. 방 안에는 아무도 없다.
 		<br><br>
 
 		<<if hasSexStat("deviancy", 2)>>
@@ -884,7 +884,7 @@
 
 당신은 공격을 멈추고, 영상을 업로드한다.
 <<if $rng gte 81>>
-	'Perverted sadist gets just deserts'
+	'변태 가학주의자, 인과응보를 맛보다'
 <<elseif $rng gte 61>>
 	'추잡한 <<personsimple>>, 제 꾀에 제가 넘어가다'
 <<elseif $rng gte 41>>

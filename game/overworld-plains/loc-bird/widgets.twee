@@ -902,7 +902,7 @@
 
 <<widget "your_bird_text">><<silently>>
 	<<if resolveIfNamedBeastIsMonster("greathawk")>>
-		<<set _text_output to "harpy">>
+		<<set _text_output to "하피">>
 	<<else>>
 		<<set _text_output to "hawk">>
 	<</if>>
@@ -1453,7 +1453,7 @@
 			<<flight_distance_check>>
 			<<flight_time_check _returnTime "silent">>
 			<<passout>>
-			<<link [[Next (?:??)|Bird Hunt Passout]]>><<bird_pass _returnTime>><</link>>
+			<<link [[다음 (?:??)|Bird Hunt Passout]]>><<bird_pass _returnTime>><</link>>
 			<br>
 		<</if>>
 	<<elseif $pain gte 90>>
@@ -1683,15 +1683,15 @@
 			<span class="green"><<birdicon $_looted>> $_amount
 			<<switch $_looted>>
 				<<case "tools">>
-					toolbox
+					도구 상자
 				<<case "sticks">>
-					<<pluralise $_amount "stick">>
+					<<pluralise $_amount "나뭇가지">>
 				<<case "leaves">>
-					<<pluralise $_amount "leaf">>
+					<<pluralise $_amount "나뭇잎">>
 				<<case "lurkers">>
-					<<pluralise $_amount "lurker">>
+					<<pluralise $_amount "럴커">>
 				<<case "feathers">>
-					<<pluralise $_amount "feather">>
+					<<pluralise $_amount "깃털">>
 				<<default>>
 					$_looted
 			<</switch>>
@@ -2202,7 +2202,7 @@
 			<</if>>
 			<br>
 			<<if $debug>>
-				<span class="gold">DEBUG:</span> Lurker time remaining
+				<span class="gold">DEBUG:</span> 럴커 남은 시간
 				<br>
 				<<for $_i to 0; $_i lt _lurkersDrying.length; $_i++>>
 					- 럴커 <<print $_i + 1>>:

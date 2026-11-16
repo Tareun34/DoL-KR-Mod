@@ -628,7 +628,7 @@
 		<br><br>
 
 		<<passout>>
-		<<link [[Next (?:??)|Bird Hunt Passout]]>><<bird_pass _returnTime>><</link>>
+		<<link [[다음 (?:??)|Bird Hunt Passout]]>><<bird_pass _returnTime>><</link>>
 		<br>
 	<</if>>
 <<elseif _distanceTotal is 0>>
@@ -1461,7 +1461,7 @@
 	<br>
 <<else>>
 	<<if $settings.lurkersEnabled>>
-		You try to jump aside, <span class="red">but you fail to move in time, and the lurker lands on your face.</span>
+		옆으로 피하려 하지만, <span class="red">제때 움직이지 못해 럴커가 당신의 얼굴에 내려앉는다.</span>
 		<br><br>
 
 		<<link [[다음|Bird Hunt Struggle]]>><<set $struggle_start to 1>><</link>>
@@ -1699,7 +1699,7 @@
 
 		<<flight_hunt_return>>
 	<<else>>
-		A <<beasttype>> pounces!
+		<<beasttype>>【이가】 덮친다!
 		<<if animalSexEnabledForType("fox")>>
 			<br><br>
 
@@ -2152,7 +2152,7 @@
 	<br><br>
 
 	<<if $settings.lurkersEnabled>>
-		The first lurker squirms in your grasp as the second pounces at you!
+		첫 번째 럴커가 당신의 손아귀에서 꿈틀거리는 동안 두 번째 럴커가 당신에게 덤벼든다!
 		<br><br>
 
 		<<link [[다음|Bird Hunt Lurkers Alone Struggle]]>><<set $struggle_start to 1>><</link>>
@@ -2635,10 +2635,10 @@
 				<<if $worn[_random_slot].name isnot "naked">>
 					<<if $bird.upgrades.wardrobe is 1>>
 						<<link [[착용한다|Bird Hunt Shiny Clothes]]>><<set $phase to 1>><<flight_hunt_get "clothing" 1 _random_slot _random_index "wear" "damaged">><</link>>
-						<span class="blue">Your $worn[_random_slot].name will be replaced.</span>
+						<span class="blue">당신의 $worn[_random_slot].name【이가】 교체됩니다.</span>
 					<<else>>
 						<<link [[착용한다|Bird Hunt Shiny Clothes]]>><<set $phase to 1>><<generalRuined _random_slot>><<flight_hunt_get "clothing" 1 _random_slot _random_index "wear" "damaged">><<flight_hunt_get "fabric" 1>><</link>>
-						<span class="blue">Your $worn[_random_slot].name will be scrapped.</span>
+						<span class="blue">당신의 $worn[_random_slot].name【이가】 폐기됩니다.</span>
 					<</if>>
 				<<else>>
 					<<link [[착용한다|Bird Hunt Shiny Clothes]]>><<set $phase to 1>><<flight_hunt_get "clothing" 1 _random_slot _random_index "wear" "damaged">><</link>>
@@ -2894,7 +2894,7 @@
 				<br>
 			<</if>>
 			<<if beastSexEnabledForType("fox", $monster is 1) and hasSexStat("deviancy", 3)>>
-				<<link [[Push over|Bird Hunt Fox Sex]]>><<set $sexstart to 1>><</link>><<deviant3>>
+				<<link [[밀어 넘어뜨린다|Bird Hunt Fox Sex]]>><<set $sexstart to 1>><</link>><<deviant3>>
 				<br>
 			<</if>>
 			<<link [[쓰다듬는다|Bird Hunt Fox Pet]]>><<stress -3>><</link>><<lstress>>
@@ -2947,7 +2947,7 @@
 			<<flight_hunt_return>>
 		<<else>>
 			<<if animalSexEnabledForType("fox")>>
-				You don't have time to flee before <<bhe>> springs forward.
+				<<bhe>>【이가】 앞으로 튀어나오기 전에 도망칠 시간이 없다.
 				<br><br>
 
 				<<link [[다음|Bird Hunt Fox Sex]]>><<set $molestationstart to 1>><</link>>
@@ -3019,7 +3019,7 @@
 <br><br>
 
 <<if beastSexEnabledForType("fox", $monster is 1) and hasSexStat("deviancy", 3)>>
-	<<link [[Reward|Bird Hunt Fox Sex]]>><<set $sexstart to 1>><</link>><<deviant3>>
+	<<link [[보상한다|Bird Hunt Fox Sex]]>><<set $sexstart to 1>><</link>><<deviant3>>
 	<br>
 <</if>>
 <<link [[쓰다듬는다|Bird Hunt Fox Pet]]>><<stress -3>><</link>><<lstress>>
@@ -5062,7 +5062,7 @@
 			<</if>>
 		<<else>>
 			<<if $settings.lurkersEnabled>>
-				As you stand up, you notice movement in the grass near you. You turn to face it, but something leaps on your back and lands on your <<bottom>>.
+				일어서자, 당신은 근처 풀밭에서 움직임을 감지한다. 그쪽으로 몸을 돌리지만, 무언가 등 뒤로 뛰어올라 당신의 <<bottom>> 위에 올라탄다.
 				<br><br>
 
 				<<link [[다음|Bird Hunt Ambush Struggle]]>><<set $struggle_start to 1>><</link>>
@@ -5107,7 +5107,7 @@
 
 <<person2>><<person>>【이가】 가까이 다가오자, 당신은 갑자기 <<his>> 손을 잡고 끌어당긴다.
 <<if $physiqueSuccess>>
-	<span class="green"><<Hes>> unable to pull away.</span> You sidestep the hole, and bring <<him>> right to it. "Don't make this hard for—" <<His>> words are interrupted as <<he>> steps on the trap, causing <<him>> to stumble and fall. You take the opportunity to quickly run away. The <<person1>> doesn't chase you, instead opting to laugh at <<his>> unfortunate friend.
+	<span class="green"><<He>>【은는】 손을 빼내지 못한다.</span> 당신은 구덩이를 비켜서며 <<him>>【을를】 그쪽으로 곧장 끌어당긴다. "괜히 일 어렵게 만들지—" <<he>>【이가】 덫을 밟아 비틀거리며 넘어지는 바람에 말이 끊긴다. 당신은 그 틈을 타 재빨리 달아난다. <<person1>>【은는】 당신을 쫓는 대신, 운 나쁜 친구를 보며 깔깔 웃는다.
 	<br><br>
 
 	당신은 시야에서 벗어난 것을 확인한 후, 날아오른다. 당신은 그들 위를 날며 두 사람이 떠날 때까지 기다렸다가, 다시 기둥 위로 착지한다. 함정이 망가졌으니, 떠나거나 함정 없이 매복을 시도할 수 있다.
@@ -5940,7 +5940,7 @@
 		<<flight_distance_check>>
 		<<flight_time_check _returnTime "silent">>
 		<<passout>>
-		<<link [[Next (?:??)|Bird Hunt Passout]]>><<bird_pass _returnTime>><</link>>
+		<<link [[다음 (?:??)|Bird Hunt Passout]]>><<bird_pass _returnTime>><</link>>
 		<br>
 	<</if>>
 <<elseif $pain gte 90>>

@@ -127,7 +127,7 @@
 		<<elseif $NPCList[_n].pronoun is "f">>
 			<<set $NPCList[0].fullDescription to "stern-looking woman">>
 		<</if>>
-		A police car pulls up besides you. A <<person2>><<person>> steps out first, visibly tense. <<person1>><<Hes>> followed by a <<person>>.
+		경찰차 한 대가 당신 옆에 멈춰 선다. 눈에 띄게 긴장한 <<person2>><<person>>【이가】 먼저 차에서 내린다. 그 뒤를 이어 <<person1>><<Hes>> <<person>>【이가】 내린다.
 		<br>
 		"이 녀석은 우리 부서에도 아주 잘 알려져 있지." <<person1>><<person>>【이가】 말한다. "네가 이 녀석을 신고했을 때 내가 꼭 오겠다고 고집 부리길 잘했군."
 		<br><br>

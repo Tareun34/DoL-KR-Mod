@@ -269,7 +269,7 @@
 
 		<<set $weekly.dorenchocolatebuy to true>>
 		<<npc "Doren" 2>><<person2>>
-		Doren stops by the stall. "Good <<= Time.hour lt 12 ? "morning" : "afternoon">>. I know this is a tall order, but could you make me $dorenhotchocoamount cups of hot chocolate? I'm planning to give them out to the homeless." <<He>> hands Robin £$dorenhotchocoprice.
+		도렌이 가판대에 들른다. "좋은 <<= Time.hour lt 12 ? "아침이야" : "오후네">>. 무리한 부탁인 건 알지만, 핫초코 $dorenhotchocoamount잔만 만들어 줄 수 있을까? 노숙자들한테 좀 나눠줄 생각이거든." <<He>>【은는】 로빈에게 £$dorenhotchocoprice【을를】 건넨다.
 		<br><br>
 		로빈은 <<person1>><<his>> 고개를 저으며, 도렌에게 돈을 돌려준다. "어려운 사람들을 위한 거라면, 제가 공짜로 드릴—"
 		<br><br>
@@ -956,7 +956,7 @@
 	<<elseif $speech_attitude is "bratty">>
 		"로빈. 너도 돈이 쪼들리면서 왜 핫초코를 공짜로 주려는 거야?"
 	<<else>>
-		<<person2>>"<<Hes>> right, Robin. You need the money yourself. That's why you're out here, selling hot chocolate."
+		<<person2>>"선생님 말씀이 맞아, 로빈. 너도 돈이 필요하잖아. 그러니까 여기서 핫초코를 팔고 있는 거고."
 	<</if>>
 	<br><br>
 	당신과 도렌이 한참을 더 설득하자, 로빈은 고개를 끄덕인다.

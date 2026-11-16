@@ -418,7 +418,7 @@
 <<else>>
 	미소 지으며, <<he>>【이가】 당신의 뺨에 키스한다. <<His>> 숨에서 술 냄새가 진동한다. "이건 널 위한 거야." <<He>>【은는】 일어나 땅에 누워있는 당신을 내버려 두고 떠난다.
 	<br><br>
-	You've gained <<printmoney 500>><<money 500 "prostitution">>.
+	당신은 <<printmoney 500>><<money 500 "prostitution">>【을를】 얻었다.
 	<br><br>
 <</if>>
 <<underlowersteal>>
@@ -745,7 +745,7 @@
 <br><br>
 
 <<if $worn.neck.collared>>
-	"Looks like you're already collared," the <<person>> says. "Perfect." They advance on you.
+	"벌써 목줄이 채워져 있네," <<person>>【이가】 말한다. "완벽해." 그들이 당신을 향해 다가온다.
 	<br><br>
 
 	<<link [[다음|Beach Abduction Molestation]]>><<set $molestationstart to 1>><<set $phase to 1>><</link>>

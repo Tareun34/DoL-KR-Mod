@@ -16,7 +16,7 @@
 <<elseif Time.hour gte 18 and Time.hour lt 21>>
 	<!-- Modified for Monster People -->
 	<<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
-		<<livestock_cows "cap">> line up at the edge of their cells as farmhands affix milking machines to their bodies.
+		<<livestock_cows "cap">>【이가】 감옥 가장자리에 줄을 서고, 농장 일꾼들이 그들의 몸에 착유기를 부착한다.
 	<<else>>
 		<<livestock_cows "cap">>【이가】 감옥 가장자리에 줄을 서고, 농장 일꾼들이 그들의 몸에 착유기를 부착한다.
 	<</if>>
@@ -290,20 +290,20 @@
 <<milkvolume 20>><<lactation_pressure 10>><<set $breastgrowthtimer -= 150>>
 <<if !pcAreArmsBound("any")>>
 	<<if !hasSexStat("exhibitionism", 6) or $uncomfortable.nude is true>>
-		"Keep your arms at your side," <<he>> commands. You move your arms, exposing your naked body.
-		<<if $uncomfortable.nude is true>>You look away and close your eyes, unable to take the shame.<</if>>
+		"팔은 옆에 붙여." <<he>>【이가】 명령한다. 당신은 팔을 움직여 알몸을 드러낸다.
+		<<if $uncomfortable.nude is true>>당신은 수치심을 견디지 못하고 고개를 돌려 눈을 감는다.<</if>>
 	<<else>>
-		"Keep your arms at your side," <<he>> commands. You feel a thrill as <<his>> eyes flicker over your body.
+		"팔은 옆에 붙여." <<he>>【이가】 명령한다. <<his>> 시선이 당신의 몸을 훑자 전율이 느껴진다.
 	<</if>>
 <<elseif !pcAreArmsBound("both") and pcAreArmsBound("any")>>
 	<<if !hasSexStat("exhibitionism", 6) or $uncomfortable.nude is true>>
-		"Keep your arm at your side," <<he>> commands. You move your arm, exposing your naked body.
-		<<if $uncomfortable.nude is true>>You look away and close your eyes, unable to take the shame.<</if>>
+		"팔은 옆에 붙여." <<he>>【이가】 명령한다. 당신은 한쪽 팔을 움직여 알몸을 드러낸다.
+		<<if $uncomfortable.nude is true>>당신은 수치심을 견디지 못하고 고개를 돌려 눈을 감는다.<</if>>
 	<<else>>
-		"Keep your arm at your side," <<he>> commands. You feel a thrill as <<his>> eyes flicker over your body.
+		"팔은 옆에 붙여." <<he>>【이가】 명령한다. <<his>> 시선이 당신의 몸을 훑자 전율이 느껴진다.
 	<</if>>
 <<else>>
-	<<if $uncomfortable.nude is true>>You look away and close your eyes, unable to take the shame of your exposure.<</if>>
+	<<if $uncomfortable.nude is true>>당신은 몸이 드러난 수치심을 견디지 못하고 고개를 돌려 눈을 감는다.<</if>>
 <</if>>
 <br><br>
 <<if $phase is 1>>
@@ -947,7 +947,7 @@
 <<effects>>
 <!-- Modified for Monster People -->
 <<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
-	You see the <<livestock_cows>> kneeling up and down the barn, mooing in pleasure, their faces contorted in rapture.
+	당신은 <<livestock_cows>>이 축사 위아래로 무릎을 꿇고 쾌감에 겨워 음메 소리를 내며, 황홀경에 얼굴이 일그러진 것을 본다.
 <<else>>
 <</if>>
 바이브레이터가 계속해서 당신의 몸을 공격하고, 당신은 다시 한번 절정에 다가간다.
@@ -1076,7 +1076,7 @@
 <<effects>>
 <!-- Modified for Monster People -->
 <<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
-	You see the <<livestock_cows>> kneeling up and down the barn, mooing in pleasure, their faces contorted in rapture.
+	당신은 <<livestock_cows>>이 축사 위아래로 무릎을 꿇고 쾌감에 겨워 음메 소리를 내며, 황홀경에 얼굴이 일그러진 것을 본다.
 <<else>>
 <</if>>
 기계가 계속해서 당신의 <<penis>>【을를】 빨아들이며, 당신의 몸을 또 다른 오르가슴으로 몰아넣고, 당신은 다시 한번 절정에 다가간다.
@@ -1199,7 +1199,7 @@
 <<effects>>
 <!-- Modified for Monster People -->
 <<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
-	You see the <<livestock_cows>> kneeling up and down the barn, mooing in pleasure, their faces contorted in rapture.
+	당신은 <<livestock_cows>>이 축사 위아래로 무릎을 꿇고 쾌감에 겨워 음메 소리를 내며, 황홀경에 얼굴이 일그러진 것을 본다.
 <<else>>
 <</if>>
 
@@ -1326,7 +1326,7 @@
 <<effects>>
 <!-- Modified for Monster People -->
 <<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
-	You see the <<livestock_cows>> kneeling up and down the barn, mooing in pleasure, their faces contorted in rapture.
+	당신은 <<livestock_cows>>이 축사 위아래로 무릎을 꿇고 쾌감에 겨워 음메 소리를 내며, 황홀경에 얼굴이 일그러진 것을 본다.
 <<else>>
 <</if>>
 
@@ -1589,7 +1589,7 @@
 	<<endcombat>>
 	<!-- Modified for Monster People -->
 	<<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
-		The farmhands finish attaching the milking machine to the "cows." They kneel at the edge of their cells, tubes attached to their breasts and genitals, looking satisfied and content.
+		농장 인부들이 "소들"에게 착유기를 부착하는 것을 마친다. 그들은 감옥 가장자리에 무릎을 꿇고, 가슴과 성기에 튜브를 연결한 채 만족스럽고 흡족한 표정을 짓고 있다.
 	<<else>>
 		농장 인부들이 소들에게 착유기를 부착하는 것을 마친다.
 	<</if>>
@@ -1609,7 +1609,7 @@
 	<<endcombat>>
 	<!-- Modified for Monster People -->
 	<<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
-		The farmhands finish attaching the milking machine to the "cows." They kneel at the edge of their cells, tubes attached to their breasts and genitals, looking satisfied and content.
+		농장 인부들이 "소들"에게 착유기를 부착하는 것을 마친다. 그들은 감옥 가장자리에 무릎을 꿇고, 가슴과 성기에 튜브를 연결한 채 만족스럽고 흡족한 표정을 짓고 있다.
 	<<else>>
 		농장 인부들이 소들에게 착유기를 부착하는 것을 마친다.
 	<</if>>
@@ -1668,13 +1668,13 @@
 			<<He>>【은는】 당신에게 미소 지으며 감옥 문을 열려다가, <span class="purple">자물쇠가 이미 부서져 있는 것을 발견한다</span>. <<He>>【은는】 잠시 당신을 쳐다본다<<if C.npc.Remy.love is 100>>, <span class="green"><<his>> 고개를 저으며</span>.<<else>> <span class="red"><<his>> 눈을 살짝 찌푸리며</span>.<</if>> "이 자물쇠들은, 믿을 수가 없다니까. 걱정 마, 이건 교체할 거야."<<if C.npc.Remy.love lt 100>><<livestock_obey -10>><<llobey>><</if>>
 			<br><br>
 
-			<<He>> opens your cell door and steps inside, kneeling down next to you. "You've been such a good <<girl>> for me lately. The pride of the farm." <<if $cow gte 6>> The thought makes you feel good.<<stress -4>><<lstress>><</if>>
+			<<He>>【은는】 감옥 문을 열고 안으로 들어와 당신 옆에 무릎을 꿇는다. "요즘 나한테 정말 착한 <<girl>>【이었였】어. 농장의 자랑이야." <<if $cow gte 6>> 그 생각에 기분이 좋아진다.<<stress -4>><<lstress>><</if>>
 			<br><br>
 		<<else>>
 			<<He>>【이가】 당신에게 미소 지으며 감옥 문을 열고 안으로 들어온다. "요즘 나한테 정말 착한 <<girl>>【이었였】어. 농장의 자랑이야." <<if $cow gte 6>> 그 생각에 기분이 좋아진다.<<stress -4>><<lstress>><</if>>
 			<br><br>
 
-			<<He>> kneels down next to you, and reaches out a hand towards your head. <<He>> begins to pet you. <<if $cow gte 6>> The feeling of <<his>> hand against your scalp sends warm shivers down your back.<<arousal 800>><<garousal>><</if>>
+			<<He>>【은는】 당신 옆에 무릎을 꿇고, 당신의 머리를 향해 손을 뻗는다. <<He>>【은는】 당신을 쓰다듬기 시작한다. <<if $cow gte 6>> <<his>> 손이 두피에 닿는 느낌에 따뜻한 전율이 등을 타고 내려온다.<<arousal 800>><<garousal>><</if>>
 			<br><br>
 		<</if>>
 
@@ -2412,7 +2412,7 @@
 <<unset $livestock.escape>>
 <!-- Modified for Monster People -->
 <<if _remyPunishBeast is "horse" and beastSexEnabledForType("horse", $monster is 1)>>
-	"I know what you deserve," <<nnpc_he "Remy">> says, stroking <<nnpc_his "Remy">> <<if $monster is 1>>centaur steed<<else>>horse<</if>> behind the ear. The <<beasttype>> leans into <<bhis>> master's hand. "This <<bboy>> has been good. Your punishment is <<his>> reward."
+	"네가 무슨 꼴을 당해야 마땅한지 알겠지," <<nnpc_he "Remy">>【이가】 <<nnpc_his "Remy">> <<if $monster is 1>>켄타우로스 승용마<<else>>말<</if>>의 귀 뒤를 쓰다듬으며 말한다. <<beasttype>>【이가】 주인의 손길에 몸을 기댄다. "이 <<bboy>>【은는】 말을 아주 잘 들었거든. 네 벌이 얘한테는 상인 셈이지."
 	<br><br>
 	마음을 정한 <<nnpc_he "Remy">>【은는】 <<nnpc_his "Remy">> 탈것에 박차를 가해 더 가까이 다가온다. 농장 인부 두어 명도 재빨리 달려들어 당신의 팔과 다리를 붙잡는다. 그들은 당신을 근처 건초 더미 위로 끌어 올린다.
 	<<if $monster is 1>>
@@ -2444,7 +2444,7 @@
 	<<link [[다음|Livestock Caught Horse Molestation]]>><<set $molestationstart to 1>><</link>>
 	<br>
 <<elseif _remyPunishBeast is "dog" and beastSexEnabledForType("dog", $monster is 1)>>
-	"I know what you deserve," <<nnpc_he "Remy">> says, looking at the barking <<beastsplural>> crouched beside the farmhands. <<nnpc_He "Remy">> settles on one in particular. "That one. <<if $pronoun is "m">>He's<<else>>She's<</if>> a very good <<if $pronoun is "m">>boy<<else>>girl<</if>>. Give <<if $pronoun is "m">>him<<else>>her<</if>> a treat." <<bHis>> tail wags. The <<generate2>><<person2>><<person>> beside the <<person1>><<if $pronoun is "m">>hound<<else>>bitch<</if>> releases <<bhis>> collar, and <<bhe>> bounds towards you.
+	"네가 무슨 꼴을 당해야 마땅한지 알겠지," <<nnpc_he "Remy">>【이가】 농장 인부들 옆에 웅크려 짖어대는 <<beastsplural>>【을를】 보며 말한다. <<nnpc_He "Remy">>【은는】 그중 한 마리를 고른다. "저 녀석으로 하지. <<if $pronoun is "m">>그놈은<<else>>그년은<</if>> 아주 훌륭한 <<if $pronoun is "m">>수캐<<else>>암캐<</if>>거든. <<if $pronoun is "m">>그놈에게<<else>>그년에게<</if>> 상을 줘." <<bHis>> 꼬리가 세차게 흔들린다. <<generate2>><<person2>><<person>>【이가】 <<person1>><<if $pronoun is "m">>사냥개<<else>>암캐<</if>> 옆에서 <<bhis>> 목줄을 풀자, <<bhe>>【은는】 당신을 향해 달려든다.
 	<<clearsinglenpc 1>>
 	<br><br>
 
@@ -3502,7 +3502,7 @@
 		<br><br>
 		<<ind>><<link [[문 흔들기 (1:00)|Livestock Lock Intro]]>><<set $livestock.lock.strength -= 1>><<set $livestock.lock.intro to 1>><</link>><<ggtiredness>>
 		<br>
-		<<getouticon>><<link [[Step back|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><<generate1>><</link>>
+		<<getouticon>><<link [[뒤로 물러선다|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><<generate1>><</link>>
 
 	<<elseif $livestock.lock.strength isnot undefined and $livestock.return is true>>
 		<<unset $livestock.return>>
@@ -3539,7 +3539,7 @@
 			<br><br>
 			<<ind>><<link [[문 흔들기 (1:00)|Livestock Lock Intro]]>><<set $livestock.lock.strength -= 1>><<set $livestock.lock.intro to 1>><</link>><<ggtiredness>>
 			<br>
-			<<getouticon>><<link [[Step back|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><<generate1>><</link>>
+			<<getouticon>><<link [[뒤로 물러선다|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><<generate1>><</link>>
 		<</if>>
 
 	<<else>>
@@ -3549,7 +3549,7 @@
 		<br><br>
 		<<ind>><<link [[문 흔들기 (1:00)|Livestock Lock Intro]]>><<set $livestock.lock.strength -= 1>><<set $livestock.lock.intro to 1>><</link>><<ggtiredness>>
 		<br>
-		<<getouticon>><<link [[Step back|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><<generate1>><</link>>
+		<<getouticon>><<link [[뒤로 물러선다|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><<generate1>><</link>>
 
 	<</if>>
 
@@ -3606,7 +3606,7 @@
 	이번 것은 꽤 달라 보인다. 강철로 만들어졌을 뿐만 아니라, 새것처럼 보인다.
 	맨손으로는 부술 수 없을 것 같다.<<stress 12>><<ggstress>>
 	<br><br>
-	<<getouticon>><<link [[Step back|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><<generate1>><</link>>
+	<<getouticon>><<link [[뒤로 물러선다|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><<generate1>><</link>>
 
 
 <<else>>
@@ -3695,7 +3695,7 @@
 	<<elseif $livestock.lock.quality gte 2 and $livestock.lock.keys isnot true>>
 		당신은 낙담하여 돌아선다. <span class="red">다른 방법을 찾아봐야 할지도 모른다.</span>
 		<br><br>
-		<<link [[Next|Livestock Cell]]>><<endevent>><</link>>
+		<<link [[다음|Livestock Cell]]>><<endevent>><</link>>
 
 	<<elseif $phase is 1>>
 		당신은 밖으로 나가지 않기로 결정한다.
@@ -3703,8 +3703,8 @@
 		<<link [[다음|Livestock Cell]]>><<endevent>><</link>>
 	<<else>>
 		<<person1>>
-		You step back from the gate and lie in your pile of straw, feigning sleep.
-		The <<person>> approaches your cell and looks at you, only to walk past your stall and narcotise the remaining cattle. Soon the barn falls silent.
+		문에서 물러나 짚단 위에 누워 자는 척을 한다.
+		<<person>>【이가】 우리로 다가와 당신을 쳐다보더니, 그대로 지나쳐 나머지 가축들에게 마취제를 투여한다. 곧 외양간에 고요가 찾아온다.
 		<<set _guard_speech to random(1,7)>>
 			<<switch _guard_speech>>
 				<<case 1>>

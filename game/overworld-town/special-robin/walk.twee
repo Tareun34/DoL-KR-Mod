@@ -924,7 +924,7 @@ _popcornIntro
 	로빈은 돗자리를 접으며 얼굴을 찡그린다. <<He>>【은는】 바구니가 나뭇가지 사이로 사라진 지점으로 한 걸음 다가가다 멈춘다. 나무들이 불길해 보인다. "괜찮아." <<he>>【이가】 말한다. "새 바구니를 사면 돼."
 	<br><br>
 	<<if $settings.voreEnabled and animalSexEnabledForType("snake")>>
-		<<link [[Go deeper into the forest to retrieve the basket|Robin Forest Basket]]>><<npcincr Robin love 1>><</link>><<glove>>
+		<<link [[바구니를 되찾으러 숲 깊이 들어간다|Robin Forest Basket]]>><<npcincr Robin love 1>><</link>><<glove>>
 		<br>
 	<</if>>
 	<<link [[바구니를 두고 간다|Robin Forest Basket Leave]]>><</link>>
@@ -1874,7 +1874,7 @@ _popcornIntro
 "온 동네를 뒤져 널 찾고 있었는데, 넌 발정 난 <<bitch>>처럼 굴기 바빠서 눈치도 못 챘군!" <<person2>><<he>>【이가】 고함친다.<<npcincr Eden love -30>><<llllove "Eden">>
 <br><br>
 <<if $speech_attitude is "meek">>
-	"That—그-그건 사실이 아니야." 당신은 설명하려 애쓴다. "로빈과 나는 친구야. 내가 원하는 건 너뿐이라는 거 알잖아."
+	"그—그-그건 사실이 아니야." 당신은 설명하려 애쓴다. "로빈과 나는 친구야. 내가 원하는 건 너뿐이라는 거 알잖아."
 <<elseif $speech_attitude is "bratty">>
 	"난 개가 아니야." 당신은 소리친다. "그리고 난 네 소유물이 아니야, 에덴! 난 내가 원하는 누구와도 키스할 수 있어!"
 <<else>>
@@ -1920,7 +1920,7 @@ _popcornIntro
 <<if $submissive lte 850>>
 	"그건 사실이 아니야." 당신이 말한다.
 <<elseif $submissive gte 1150>>
-	"That—그-그건 사실일 리가 없어." 당신이 말한다.
+	"그—그-그건 사실일 리가 없어." 당신이 말한다.
 <<else>>
 	"그건 거짓말이야." 당신이 말한다.
 <</if>>
@@ -2819,7 +2819,7 @@ _popcornIntro
 이 두 개의 샌드위치를 가져온다. 둘 다 감자칩이 곁들여져 있다. "정말 맛있어 보여," 로빈이 <<him>> 앞의 음식을 감상하며 말한다. "먹기 아까울 정도야."
 <br><br>
 
-<<He>> does eat it, though, not sparing a crumb. It's a nice sandwich, fat with lettuce, tomato, and battered cod.
+그래도 <<He>>【은는】 먹는다. 한 조각도 남기지 않는다. 양상추와 토마토, 튀긴 대구가 두툼하게 든 좋은 샌드위치다.
 <br><br>
 
 로빈은 식사를 마치고 <<his>> 식기를 접시 위에 놓는다.

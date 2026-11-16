@@ -19,15 +19,15 @@
 <<widget "pc-line-gwylan-plead">>
 	<<if $abomination is 1>>
 		<<addSpeechLine "plead">>
-			"그윌런, 돌아와! 무서워!"
+			"그윌란, 돌아와! 무서워!"
 		<</addSpeechLine>>
 	<<elseif $hypnosis_traits.devotion gte 1 or $combat_hypnosis>>
 		<<addSpeechLine "plead">>
-			"그윌런, 제발, 생각이 제대로 안 돼!"
+			"그윌란, 제발, 생각이 제대로 안 돼!"
 		<</addSpeechLine>>
 	<<else>>
 		<<addSpeechLine "plead">>
-			"그윌런, 제발, 이건 뭔가 잘못됐어!"
+			"그윌란, 제발, 이건 뭔가 잘못됐어!"
 		<</addSpeechLine>>
 	<</if>>
 <</widget>>
@@ -35,19 +35,19 @@
 <<widget "pc-line-gwylan-demand">>
 	<<if $abomination is 1>>
 		<<addSpeechLine "demand">>
-			"그윌런, 거기 있는 거 알아! 정신 차려!"
+			"그윌란, 거기 있는 거 알아! 정신 차려!"
 		<</addSpeechLine>>
 	<<elseif $hypnosis_traits.devotion gte 4 or $combat_hypnosis>>
 		<<addSpeechLine "demand">>
-			"그윌런, 그만해! 내 머릿속에서 나가!"
+			"그윌란, 그만해! 내 머릿속에서 나가!"
 		<</addSpeechLine>>
 	<<elseif $gwylanSeen.includes("romance")>>
 		<<addSpeechLine "demand">>
-			"그윌런, 그만해! 약속했잖아!"
+			"그윌란, 그만해! 약속했잖아!"
 		<</addSpeechLine>>
 	<<else>>
 		<<addSpeechLine "demand">>
-			"그윌런, 그만해!"
+			"그윌란, 그만해!"
 		<</addSpeechLine>>
 	<</if>>
 <</widget>>

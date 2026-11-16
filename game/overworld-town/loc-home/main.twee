@@ -5167,7 +5167,7 @@ and !$fromRobinRoom and _robin.cdquest is 2 and _robin.trauma lte 20 and !$daily
 				불만스러운 얼굴로, 카일라는 밖으로 나간다.
 			<<else>>
 				<<set $kylarLocket to "other">><<set $kylarSeen.pushUnique("locketStolen")>><<run $wardrobe.neck.delete(_locket)>>
-				카일라가 당신의 로켓을 열더니, 흐릿한 그윌런의 사진을 보고 재미있다는 듯한 소리를 낸다.
+				카일라가 당신의 로켓을 열더니, 흐릿한 그윌란의 사진을 보고 재미있다는 듯한 소리를 낸다.
 				<br><br>
 
 				"헤헤," 로켓을 살피며 <<he>>【이가】 킥킥거리는 소리가 들린다. "그래서 넌 누구야? <<pShe>>【은는】 널 프레임 안에 담으려는 노력조차 안 했네..."

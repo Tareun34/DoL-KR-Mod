@@ -667,7 +667,7 @@
 	<<generate1>><<generate2>><<person1>>
 	<span class="red">"주인 중 한 명인가?"</span> 뒤에서 <<personssimple>> 목소리가 들린다.
 	<br>
-	You jump. <<covered>>
+	당신은 깜짝 놀란다. <<covered>>
 	<br>
 	"맞아," 다른 목소리가 대답한다. "저런 차림으로 밖에 나오다니, 변태가 틀림없어."
 	<br><br>

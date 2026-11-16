@@ -7,7 +7,7 @@
 	<<beastNEWinit 1 dog>>
 	<<promiscuity3>>
 <<if $headblackmailed is 1 and $rng gte 61 and beastSexEnabledForType("dog", $monster is 1)>><!-- Modified for Monster People -->
-	A tripod camera stands in the corner. Beside it, chained to the wall, sits a <<beasttype 0>>. <<bHe 0>> growls. <<if $monster is 1>><<bHes 0>> completely naked, but doesn't seem to care. "Let me go! I want to have fun too!"<</if>>
+	구석에는 삼각대에 올려진 카메라가 서 있다. 그 옆에는 <<beasttype 0>>【이가】 벽에 사슬로 묶인 채 앉아 있다. <<bHe 0>>【이가】 으르렁댄다. <<if $monster is 1>><<bHes 0>> 완전히 벌거벗었지만 신경 쓰지 않는 듯하다. "날 풀어줘! 나도 즐기고 싶어!"<</if>>
 	<br><br>
 
 	레이튼이 자리에 앉아 사슬을 움켜쥔다. 근처 탁자 위에는 빈 잔과 마개가 열린 와인병이 놓여 있다. "좋아." 교장이 말한다. "준비되면 언제든지 시작하게."

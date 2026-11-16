@@ -147,7 +147,7 @@
 								<<if $skulduggerysuccess>>
 									<<he>>【은는】 당신이 훔친 나머지 귀중품들을 찾지 못한 것 같다. <<stress -6>><<lstress>>
 								<<else>>
-									The prodding continues, and <<his>> eyes suddenly go wide. "Holy shit, <<girl>>, are you hiding the wealth of a small nation in here?" <<He>> adds to the pile until it reaches about knee-length off the ground. <<stress 24>><<gggstress>>
+									검사가 계속되자, <<his>> 눈이 갑자기 휘둥그레진다. "세상에, <<girl>>, 너 지금 작은 나라 하나를 살 정도의 재산을 여기 숨겨둔 거냐?" <<He>>【은는】 땅에서 무릎 높이쯤 다다를 때까지 무더기에 물건을 더해간다. <<stress 24>><<gggstress>>
 									<<set _seizedAmount to 0>><<set $blackmoney to 0>><<unset $mine?.heldGem>>
 								<</if>>
 							<</if>>

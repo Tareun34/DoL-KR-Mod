@@ -351,8 +351,8 @@
 	<br>
 <<else>>
 	<<set $phase to 9>>
-	You try to grasp the light, <span class="red">but the currents push you away.</span>
-	<br> As you regain control, you notice a cave leading away from the pool, lit by a dim blue light. The other light at the bottom is still close, below you.
+	당신은 빛을 잡으려 하지만, <span class="red">해류가 당신을 밀어낸다.</span>
+	<br> 중심을 잡자, 웅덩이에서 이어지는 동굴이 보인다. 희미한 푸른빛이 동굴을 비추고 있다. 바닥에 있는 다른 불빛은 당신 아래쪽 가까이에 있다.
 	<br><br>
 
 	<<swimicon "up">><<link [[위로 헤엄친다|Rocks Up]]>><<set $phase to 0>><</link>>

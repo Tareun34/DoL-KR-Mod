@@ -1837,7 +1837,7 @@
 
 <<effects>>
 <<effectsman>>
-<<alarmstate "With the door shut, no one can hear your cry.">>
+<<alarmstate "문이 닫혀 있어, 아무도 당신의 비명을 들을 수 없다.">>
 <<man>>
 <<stateman>>
 <br><br>
@@ -1873,7 +1873,7 @@
 :: Hallways Exposed Storeroom Slap
 <<effects>>
 
-You slap the grin off the <<person2>><<persons>> face, and shove by. "I'm telling the head you hit me!" <<he>> shouts after you. <<His>> friend laughs, you're not sure at whom.
+당신은 <<person2>><<persons>> 얼굴에서 미소를 지워버리듯 뺨을 때리고 밀치며 지나간다. "네가 나 때렸다고 교장한테 이를 거야!" <<he>>【이가】 당신 뒤에서 소리친다. <<His>> 친구는 웃는다. 누구를 비웃는 건지는 확실하지 않다.
 <br><br>
 
 <<link [[다음|Hallways]]>><<endevent>><<set $eventskip to 1>><</link>>
@@ -3010,7 +3010,7 @@ You slap the grin off the <<person2>><<persons>> face, and shove by. "I'm tellin
 무리를 무시하고 복도를 계속 걸어간다.
 
 <<if dangerEvent() and !$worn.under_lower.type.includes("naked")>>
-	<span class="red">It's no use.</span> A few moments later, the group surrounds you.
+	<span class="red">소용없다.</span> 잠시 후, 무리가 당신을 둘러싼다.
 	<br><br>
 	<<if $phase is 0>>
 		"야, 봐봐! 누가 쓰레기를 버려뒀네." <<person1>><<person>>【이가】 당신을 향해 한 걸음 다가오며 말한다.

@@ -939,7 +939,7 @@
 <<npc Remy>><<person1>>
 <!-- Modified for Monster People -->
 <<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
-	Remy leads you halfway down the barn, past dozens of "cows" in their stalls.
+	레미가 당신을 축사 중간쯤으로 이끈다. 칸막이 안에 있는 수십 명의 "소들"을 지나친다.
 <<else>>
 	레미가 당신을 축사 중간쯤으로 이끈다. 칸막이 안에는 수십 마리의 소들이 있다.
 <</if>>
@@ -1239,7 +1239,7 @@
 <<npc Remy>><<person1>>
 <!-- Modified for Monster People -->
 <<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
-	Remy leads you halfway down the barn, past dozens of "cows" in their stalls.
+	레미가 당신을 축사 중간쯤으로 이끈다. 칸막이 안에 있는 수십 명의 "소들"을 지나친다.
 <<else>>
 	레미가 당신을 축사 중간쯤으로 이끈다. 칸막이 안에는 수십 마리의 소들이 있다.
 <</if>>
@@ -1359,7 +1359,7 @@
 "이 불쌍한 것들이 널 찾느라 몇 시간을 보냈지." 레미가 당신 앞에 쭈그려 앉아 장난스럽게 <<beasttypes>> 머리를 문지르며 말한다. 다른 녀석들은 굶주린 듯 당신 주위를 맴돈다. "널 찾기 위해 이렇게 열심히 일했으니,
 
 <<if beastSexEnabledForType("dog", $monster is 1)>>
-	it's only fair that they get rewarded for such hard work."
+	그 노고에 대한 보상을 받는 게 당연하지 않겠어?"
 	<br><br>
 
 	레미가 일어나 당신에게서 물러서자, <<beasttypes>> <<if $NPCList[0].penis isnot "none">>발기한 자지<<else>>젖은 구멍<</if>>【이가】 선명하게 보인다. 등 뒤에서 <<beastsplural>> 중 하나가 마지못해 냄새를 맡더니 당신 위로 올라탄다.
@@ -1532,7 +1532,7 @@
 <<if $livestock.intro is undefined>>
 	<!-- Modified for Monster People -->
 	<<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
-		Rows of caged cattle line the edge, eating cereal from troughs. It's only as you're pulled closer that you realise they aren't cows, but people with cow ears and tails. They eat from their troughs all the same, their feeding broken only by the occasional moo.
+		우리에 갇힌 가축들이 줄지어 여물통의 곡물을 먹고 있다. 더 가까이 끌려가서야 그것들이 소가 아니라 소의 귀와 꼬리를 단 사람들이라는 사실을 깨닫는다. 그들은 이따금 터져 나오는 음메 소리를 빼면 그저 여물통의 여물을 먹는 데 열중할 뿐이다.
 	<<else>>
 		우리에 갇힌 암소들이 줄지어 여물통의 곡물을 먹고 있다. 이따금 터져 나오는 음메 소리만이 먹이를 먹는 적막을 깰 뿐이다.
 	<</if>>
@@ -1549,7 +1549,7 @@
 <<else>>
 	<!-- Modified for Monster People -->
 	<<if victimsAlwaysMonsterForType("cow") or monsterCanAppearForType("cow")>>
-		Rows of caged cattle line the edge, eating cereal from troughs. It's only as you're pulled closer that you realise they aren't cows, but people with cow ears and tails. They eat from their troughs all the same, their feeding broken only by the occasional moo.
+		우리에 갇힌 가축들이 줄지어 여물통의 곡물을 먹고 있다. 더 가까이 끌려가서야 그것들이 소가 아니라 소의 귀와 꼬리를 단 사람들이라는 사실을 깨닫는다. 그들은 이따금 터져 나오는 음메 소리를 빼면 그저 여물통의 여물을 먹는 데 열중할 뿐이다.
 	<<else>>
 		우리에 갇힌 암소들이 양옆으로 줄지어 서 있다.
 	<</if>>

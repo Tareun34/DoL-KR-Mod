@@ -133,11 +133,11 @@
 
 		<<if $exposed lte 0>>
 			<<if $money gte 2500>>
-				<<animalicon "horse-pick">><<link [[Take riding lesson (£25 1:00)|Riding School Lesson]]>><<set $riding_lesson to 0>><<money -2500 "ridingLessons">><<thighskill _riding>><</link>><<gtiredness>><<gthighskill>>
+				<<animalicon "horse-pick">><<link [[승마 수업 듣기 (£25 1:00)|Riding School Lesson]]>><<set $riding_lesson to 0>><<money -2500 "ridingLessons">><<thighskill _riding>><</link>><<gtiredness>><<gthighskill>>
 				<br>
 			<</if>>
 		<<else>>
-			<<steedicon>><span class="blue">You're too exposed to go to the riding school!</span>
+			<<steedicon>><span class="blue">너무 노출이 심해 승마 학교에 갈 수 없습니다!</span>
 			<br>
 		<</if>>
 
@@ -171,7 +171,7 @@
 		<</if>>
 	<<else>>
 		<<if beastMaleChanceForType("horse") lt random(1, 100)>>
-			Remy assigns you to a mare. You <<thightext>> climb into the saddle.
+			레미가 당신에게 암말 한 마리를 배정해준다. 당신은 <<thightext>> 안장에 오른다.
 			<<set $steed to "mare">>
 		<<else>>
 			레미가 당신에게 종마 한 마리를 배정해준다. 당신은 <<thightext>> 안장에 오른다.
@@ -210,7 +210,7 @@
 
 	<<if dangerEvent()>>
 		<<if $rng gte 81>>
-			Remy leads you to an open field. The steeds are eager to frolic, and become harder to control.
+			레미가 당신을 탁 트인 들판으로 이끈다. 말들은 뛰놀고 싶어 안달이 나서 통제하기가 더 어려워진다.
 			<br><br>
 			<!-- Modified for Monster People -->
 			<<if beastSexEnabledForType("horse", $steed isnot "mare" and $steed isnot "stallion")>>
@@ -571,7 +571,7 @@
 
 <!-- Modified for Monster People -->
 	<<if $settings.analingusReceivingEnabled and beastSexEnabledForType("horse", $steed isnot "mare" and $steed isnot "stallion")>>
-		You push against the wall and wiggle your hips. You're making progress, but then something wet touches your <<bottom>>. It's a tongue.
+		벽을 밀며 엉덩이를 꿈틀거린다. 조금씩 나아가고 있는데, 그때 무언가 축축한 것이 당신의 <<bottom>>에 닿는다. 혀다.
 
 		<<if $steed is "male" or $steed is "female">>
 			"참을 수가 없어." 켄타우로스가 잔해에 막혀 웅얼거리는 목소리로 말한다. "네 피부가 너무 짜."<<gstress>><<garousal>><<stress 6>><<arousal 600 "bottom">>
@@ -1339,9 +1339,9 @@
 	<<endcombat>><<clotheson>>
 
 	<<if $pubfame.detail is "remyBetray">>
-		<<link [[Next|Riding School]]>><<endevent>><</link>>
+		<<link [[다음|Riding School]]>><<endevent>><</link>>
 	<<elseif Time.hour isnot $closinghour>>
-		<<investigateicon>><<link [[Find someone else (0:20)|Riding School Contact]]>><<pass 20>><<endevent>><</link>>
+		<<investigateicon>><<link [[다른 사람 찾기 (0:20)|Riding School Contact]]>><<pass 20>><<endevent>><</link>>
 		<br>
 		<<getouticon>><<link [[일단 포기하기|Riding School]]>><<endevent>><</link>>
 	<<else>>

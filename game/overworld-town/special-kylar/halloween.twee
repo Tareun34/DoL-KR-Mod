@@ -31,7 +31,7 @@
 	<<else>>
 		"해피 할로윈." <<he>>【이가】 말한다. <<he>>【이가】 한껏 흥분한 것 같다. "너한테 보여주고 싶은 게 있어. 이쪽이야."
 		<br><br>
-		<<link [[Go with Kylar (1:00)|Kylar Halloween]]>><<npcincr Kylar love 1>><<pass 60>><</link>><<glove>>
+		<<link [[카일라와 함께 간다 (1:00)|Kylar Halloween]]>><<npcincr Kylar love 1>><<pass 60>><</link>><<glove>>
 		<br>
 		<<link [[거절한다|Kylar Halloween Refuse]]>><<npcincr Kylar love -1>><</link>><<llove>>
 		<br>
@@ -99,7 +99,7 @@
 	<<lowerwear "mummy skirt">>
 <</if>>
 
-<<link [[Go with Kylar (1:00)|Kylar Halloween]]>><<npcincr Kylar love 1>><<pass 60>><</link>><<glove>>
+<<link [[카일라와 함께 간다 (1:00)|Kylar Halloween]]>><<npcincr Kylar love 1>><<pass 60>><</link>><<glove>>
 <br>
 <<link [[거절한다|Kylar Halloween Refuse]]>><<npcincr Kylar love -1>><</link>><<llove>>
 <br>
@@ -131,7 +131,7 @@
 "너-너한테 보여주고 싶은 게 있어." <<he>>【이가】 말한다. "이쪽이야."
 <br><br>
 
-<<link [[Go with Kylar (1:00)|Kylar Halloween]]>><<npcincr Kylar love 1>><<pass 60>><</link>><<glove>>
+<<link [[카일라와 함께 간다 (1:00)|Kylar Halloween]]>><<npcincr Kylar love 1>><<pass 60>><</link>><<glove>>
 <br>
 <<link [[거절한다|Kylar Halloween Refuse]]>><<npcincr Kylar love -1>><</link>><<llove>>
 <br>
@@ -1212,7 +1212,7 @@
 <<pass 15>>
 <<endevent>><<npc Whitney>><<person1>>
 <<if $physiqueSuccess>>
-	You grasp Whitney's arms, <span class="green">and pull <<him>> away from Kylar.</span> Together, you escape down the stairs and through the now-open front doors, into the red moonlight. You run into the forest.<<ldom>><<npcincr Whitney dom -1>><<set $whitneySeen.delete("halloweenWhitneyWon")>><<set $whitneySeen.pushUnique("halloweenKylarWon")>>
+	당신은 휘트니의 팔을 붙잡고, <span class="green"><<him>>【을를】 카일라에게서 떼어낸다.</span> 당신들은 함께 계단을 내려가, 이제 열린 현관문을 지나 붉은 달빛 속으로 탈출한다. 당신은 숲으로 달려 들어간다.<<ldom>><<npcincr Whitney dom -1>><<set $whitneySeen.delete("halloweenWhitneyWon")>><<set $whitneySeen.pushUnique("halloweenKylarWon")>>
 	<br><br>
 	<<endevent>><<npc Kylar>><<person1>>
 	카일라는 나무에 기대 잠시 헐떡이다가, 갑자기 앞으로 달려들어 <<his>> 팔을 당신에게 둘러 안는다. "위험을 감수하면 안 됐어," <<he>>【이가】 말한다.<<glove>><<llksuspicion>><<npcincr Kylar love 1>><<npcincr Kylar rage -5>>
@@ -1239,7 +1239,7 @@
 <<endevent>><<npc Whitney>><<person1>><<wearProp "pepper spray">>
 당신은 카일라의 머리 위로 페퍼 스프레이를 겨누고, 휘트니의 눈에 분사한다. <<He>>【은는】 <<his>> 얼굴을 감싸 쥐며 뒤로 비틀거린다.
 
-Kylar grasps your hand, and together you escape down the stairs and through the now-open front doors, into the red moonlight. <<takeHandholdingVirginity "Kylar" "romantic" null true>> You run into the forest.<<ldom>><<npcincr Whitney dom -1>><<set $whitneySeen.delete("halloweenWhitneyWon")>><<set $whitneySeen.pushUnique("halloweenKylarWon")>>
+카일라는 당신의 손을 붙잡고, 둘은 함께 계단을 내려가 이제 열린 현관문을 지나 붉은 달빛 속으로 탈출한다. <<takeHandholdingVirginity "Kylar" "romantic" null true>> 당신은 숲으로 달려 들어간다.<<ldom>><<npcincr Whitney dom -1>><<set $whitneySeen.delete("halloweenWhitneyWon")>><<set $whitneySeen.pushUnique("halloweenKylarWon")>>
 <br><br>
 <<endevent>><<npc Kylar>><<person1>>
 카일라는 나무에 기대 잠시 헐떡이다가, 갑자기 앞으로 달려들어 <<his>> 팔을 당신에게 둘러 안는다. "위험을 감수하면 안 됐어," <<he>>【이가】 말한다.<<glove>><<llksuspicion>><<npcincr Kylar love 1>><<npcincr Kylar rage -5>>
@@ -1608,7 +1608,7 @@ Kylar grasps your hand, and together you escape down the stairs and through the 
 <<effects>>
 <<pass 15>>
 <<set $whitneySeen.delete("halloweenWhitneyWon")>><<set $whitneySeen.pushUnique("halloweenKylarWon")>>
-Kylar jumps to <<his>> feet, and grasps your arm. You dodge a weak grasp by Whitney, and together escape down the stairs and into the red moonlight.
+카일라는 <<his>> 발로 벌떡 일어나 당신의 팔을 붙잡는다. 당신은 휘트니가 힘없이 뻗은 손을 피하고, 함께 계단을 내려가 붉은 달빛 속으로 탈출한다.
 <br><br>
 
 숲에 도착한 뒤에도 계속 달리다가, 카일라가 나무에 기대 쉬려고 멈춘다. <<His>> 옷과 머리는 엉망이지만, <<hes>> 웃고 있다. "내-내가 이겼어," <<he>>【이가】 말하며 <<his>> 팔을 당신에게 두른다. "넌 전부 내 거야."<<lllksuspicion>><<npcincr Kylar rage -20>>

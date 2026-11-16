@@ -63,7 +63,7 @@
 
 <<if !Time.schoolDay>>
 	<<addinlineevent "nude_school">>
-		<<generatey1>><<person1>>A <<person>> answers the door. <<He>> looks shocked, then grins. "I know you from school," <<he>> says.
+		<<generatey1>><<person1>>한 <<person>>【이가】 문을 연다. <<He>>【은는】 충격을 받았다가, 이내 미소를 짓는다. "학교에서 본 적 있어," <<he>>【이가】 말한다.
 			<<if $player.penisExist and $player.vaginaExist and !playerChastity("hidden") and $settings.nudeGenderPerception !== 0>>
 				<<if $schoolrep.herm gte 3>>
 					"너에 대한 소문이 사실이었나 보네. 정말 창피하겠다, 응?"

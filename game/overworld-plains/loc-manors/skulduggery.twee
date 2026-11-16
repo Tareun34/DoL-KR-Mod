@@ -103,7 +103,7 @@
 	<br><br>
 
 	<<if beastSexEnabledForType("dog", $monster is 1)>>
-		<<link [[Defend yourself|Farmland Manors Dog Sex]]>><<set $molestationstart to 1>><</link>>
+		<<link [[스스로를 방어한다|Farmland Manors Dog Sex]]>><<set $molestationstart to 1>><</link>>
 		<br>
 		<<if hasSexStat("deviancy", 3)>>
 				<<link [[네 발로 엎드린다|Farmland Manors Dog Fours]]>><</link>><<deviant3>>
@@ -834,7 +834,7 @@
 문을 통과한다. 복도는 양팔을 뻗으면 양쪽 벽에 닿을 만큼 좁다.
 <br><br>
 <<generateStrangeCreature 1>><<person1>>
-The walls curve away from you, as you hear a sudden dripping up ahead. A succession of numerous drops, then silence. Then you hear a growl, and footsteps growing louder.
+벽이 당신에게서 멀어지며 휘어지는 가운데, 앞에서 갑자기 물방울 떨어지는 소리가 들린다. 수많은 물방울이 연달아 떨어지더니, 이내 조용해진다. 그러다 으르렁거리는 소리와 함께 발소리가 점점 커진다.
 <br><br>
 
 <<link [[달린다|Farmland Dungeon FL Run]]>><</link>>

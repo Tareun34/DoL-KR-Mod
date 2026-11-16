@@ -40,7 +40,7 @@
 <br><br>
 
 <<if $baileydefeatedchain gte 3 or $baileyRefusedToPay gte 3 or isBaileyLookingForPlayer()>>
-	The thug stops you at the door. "Sorry, <<girl>>. Bailey says you're not allowed to enter until you <span class="red">pay up</span>." You're turned away.
+	폭력배가 문 앞에서 당신을 막는다. "미안, <<girl>>. 베일리가 네가 <span class="red">빚을 갚기</span> 전까지는 들어올 수 없다고 했어." 당신은 쫓겨난다.
 	<br><br>
 
 	<<link [[다음|Orphanage]]>><</link>>

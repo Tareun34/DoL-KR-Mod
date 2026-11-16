@@ -431,7 +431,7 @@
 		<<if ($specialClothesEffects.bimbo.total gte random(100,1000) || $specialClothesEffects.pimp.total gte random(100,1000)) or $arousal gte ($arousalmax / 10) * 9>>
 			<<wetDream>>
 		<<elseif !_wakingEffect>>
-			You sleep soundly.
+			당신은 깊이 잠든다.
 		<</if>>
 		<<if !_sleepinterrupt and (Time.hour gt 21 or Time.hour lt 6) and $bus is "farm_alex_room" or $alex_bed is "player" and !_alexWakeNursery>>
 			<br><br>
@@ -712,7 +712,7 @@
 	<<link [[다음 |Farm Alex Somno Orgasm]]>><</link>>
 <<else>>
 	<<if $phase is 0>>
-		The tension leaves <<his>> body, and <<he>> sighs, apparently having climaxed. <<He>> clings to you, and you smile. <<stress -6>><<lstress>><<npcincr Alex lust -1>><<llust>>
+		<<his>> 몸에서 긴장이 풀리고 한숨이 새어 나온다. 절정에 이른 모양이다. <<He>>【이가】 당신에게 매달리자, 당신은 미소 짓는다. <<stress -6>><<lstress>><<npcincr Alex lust -1>><<llust>>
 	<<else>>
 		<<if $NPCList[0].penis isnot "none">>
 			당신은 <<his>> 자지를 다시 <<his>> 복서 팬티 안으로 집어넣는다.
@@ -966,7 +966,7 @@
 	<<He>>【은는】 당신과 <<his>> 사타구니 사이를 힐끗거린다. "야간 승마 어때?" <<he>>【은는】 히죽거리며 묻는다.
 	<br><br>
 
-	<<link [[Accept|Farm Alex Somno Wake Sex]]>><<set $sexstart to 1>><</link>><<promiscuous1>>
+	<<link [[받아들인다|Farm Alex Somno Wake Sex]]>><<set $sexstart to 1>><</link>><<promiscuous1>>
 	<br>
 	<<link [[거절한다|Farm Alex Somno Wake Reject]]>><</link>>
 <<else>>
@@ -984,7 +984,7 @@
 	<<neutral 1>>
 	<<maninit>>
 
-	You wrap your arms around Alex. <<He>> returns the gesture before ravaging your neck with kisses and love bites. <<arousal 600>><<garousal>>
+	당신은 알렉스를 팔로 감싼다. <<He>>【은는】 당신의 목에 키스와 사랑의 흔적을 남기기 전에 그 제스처에 화답한다. <<arousal 600>><<garousal>>
 	<br><br>
 	<<promiscuity1>>
 	<<set $enemytrust += 100>>
@@ -4482,7 +4482,7 @@
 계속해서 힘을 주자 고통이 견딜 수 없을 만큼 심해진다. 모든 것이 희미해진다.
 <br><br>
 
-<<link [[Next (2:00)|Farm PC Birth 5]]>><<run setPlayerLitterBorn()>><<pass 120>><</link>>
+<<link [[다음 (2:00)|Farm PC Birth 5]]>><<run setPlayerLitterBorn()>><<pass 120>><</link>>
 
 :: Farm PC Birth 5
 <<effects>>
@@ -4928,7 +4928,7 @@
 <<effects>>
 <<loadNPC 1 "alexs_parent1">>
 <<loadNPC 2 "alexs_parent2">>
-<<person2>>"<<Ma>> is kind of busy right now, but he said <<person3>><<father>>'s at the city and that <<he>> agreed to help us, it shouldn't take long," <<person1>><<he>> says looking more excited than before.
+<<person2>>"<<Ma>>【은는】 지금 좀 바쁘신데, <<person3>><<father>>【이가】 시내에 계셔서 우리를 도와주기로 하셨대. 오래 안 걸릴 거야." <<person1>><<he>>【이가】 아까보다 더 들뜬 얼굴로 말한다.
 <br><br>
 
 얼마 기다리지 않아 차 한 대가 다가와 경적을 울린다.
@@ -4960,7 +4960,7 @@
 :: Farm Alex Orphanage Trip 2
 <<effects>>
 
-You soon arrive at the orphanage, where your <<if childrenCountBetweenParents("pc","Alex") gte 2>>children are<<else>>child is<</if>>, Alex looks horrified when <<person1>><<he>> see the state the orphanage is in.
+곧 당신의 <<if childrenCountBetweenParents("pc","Alex") gte 2>>아이들이<<else>>아이가<</if>> 있는 고아원에 도착한다. <<person1>>알렉스는 고아원의 상태를 보고 경악한 표정을 짓는다.
 <br><br>
 
 "네가 가서 <<if childrenCountBetweenParents("pc","Alex") gte 2>>아이들을<<else>>아이를<</if>> 데려와 줄 수 있을까?" 알렉스가 묻는다. "난 저 안에 들어갈 수 있을지 모르겠어."

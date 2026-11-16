@@ -410,7 +410,7 @@
 		당신은 가판대 사이를 돌아다니는 <<person>>【을를】 본다. <<He>>【은는】 무엇을 팔든 상관없이 모든 가판대에 멈춰 서서 주인과 이야기를 나눈다. 마침내 <<he>>【이가】 당신의 가판대에 도착한다.
 		<br><br>
 
-		"Oho," <<he>> says, lifting <span class="green"><<a _produce>></span>.
+		"오호," <<he>>【이가】 <span class="green"><<a _produce>></span>【을를】 들어 올리며 말한다.
 		<<if _isFish>>
 			"이거 아주 좋네요. 직접 잡으신 건가요?"
 			<<set $phase to 1>>

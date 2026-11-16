@@ -1744,7 +1744,7 @@
 
 에이버리는 천천히 움직이기 시작한다. 물론 그렇다고 즐겁지 않다는 뜻은 아니다. <<He>>【은는】 이런 일에 제법 능숙하여, 쳐올릴 때마다 안쪽의 민감한 지점들을 빈틈없이 건드린다. <<arousal 1000 "bottom">><<garousal>>
 <br><br>
-"You feel so good around me," <<he>> says, voice husky. "Look at me, <<pcpetname "Avery">>. I want to watch you fall apart."
+"날 단단히 물고 있는 감각이 아주 기가 막히는군요," <<he>>【이가】 낮게 가라앉은 목소리로 속삭인다. "나를 보세요, <<pcpetname "Avery">>. 당신이 속절없이 무너져 내리는 꼴을 보고 싶습니다."
 <br><br>
 <<if $submissive gte 1500>>
 	<<His>> 은밀한 속삭임과 안을 사정없이 쑤시고 들어오는 자지의 감각이 맞물려 온몸으로 쾌락의 파도가 번져 나가고, 당신의 입술 사이로 <<= $speech_attitude is "meek" ? "음란한 울음이 새어 나온다." : $speech_attitude is "bratty" ? "신음을 억누른 헛숨이 새어 나온다." : "참지 못한 신음이 새어 나온다.">>
@@ -1848,7 +1848,7 @@
 <<elseif $avery_valentines_virginity>>
 	속삭인다. "아. 이런 건 해본 적 없지요, 그렇지 않습니까?" <<He>>【이가】 당신의 안에서 허리를 털자 온몸에 전율이 퍼진다. "음, 정말 기막히군요. 당신의 순결은 참 멋진 선물입니다, <<pcpetname "Avery">>."
 <<elseif $avery_valentines_vow>>
-	murmurs, "Ah, that's right. Your vow of chastity." <<He>> rocks against you, sending shivers through you. "Forgive me for breaking it. I'd forgotten all about it." <<He>> doesn't seem all that apologetic.
+	속삭인다. "아, 맞다. 당신의 그 순결 서약 말이죠." <<He>>【은는】 당신의 안에서 허리를 털어 온몸에 전율을 일으킨다. "그걸 깨뜨리게 만들어서 미안하군요. 까맣게 잊고 있었습니다." <<He>>【은는】 그다지 미안한 기색은 아니다.
 <<else>>
 	당신의 안에서 허리를 털자, 온몸에 전율이 퍼진다.
 <</if>>
@@ -1869,7 +1869,7 @@
 <<avery_injury_check>>
 에이버리는 천천히 시작한다. 물론 그렇다고 즐겁지 않다는 뜻은 아니다. <<Hes>> 이 일에 꽤 능숙해서, 찌를 때마다 당신 안의 여러 민감한 지점을 건드린다. <<arousal 1000 "genitals">><<garousal>>
 <br><br>
-"You feel so good around me," <<he>> says, voice husky. "Look at me, <<pcpetname "Avery">>. I want to watch you fall apart."
+"제 주위를 감싸는 느낌이 아주 좋군요." <<he>>【이가】 낮고 쉰 목소리로 말한다. "저를 보세요, <<pcpetname "Avery">>. 당신이 무너지는 걸 보고 싶습니다."
 <br><br>
 <<if $submissive gte 1500>>
 	<<His>> 말과, <<his>> 자지가 당신 안을 파고드는 육체적 감각이 합쳐져 온몸에 흥분의 파도를 퍼뜨린다. <<= $speech_attitude is "meek" ? "음란한 울음이 새어 나온다" : $speech_attitude is "bratty" ? "새어 나오려던 신음을 억누른 헛숨이 대신 흘러나온다" : "신음이 새어 나온다">>

@@ -153,9 +153,9 @@
 <<else>>
 	<<if $player.penisExist and $player.vaginaExist>>
 		<<if $settings.nudeGenderPerception !== 0>>
-			You part your knees, giving everyone a good look at your <<penis>>. The <<person1>><<person>> gasps when you shift your cock out of the way, revealing the <<pussy>> beneath.
+			당신은 무릎을 벌려 모두에게 당신의 <<penis>>【을를】 잘 보여준다. 당신이 자지를 옆으로 치워 그 아래의 <<pussy>>【을를】 드러내자 <<person1>><<person>>【이가】 숨을 헐떡인다.
 		<<else>>
-			You part your knees, giving everyone a good look at your <<penis>> and <<pussy>>.
+			당신은 무릎을 벌려 모두에게 당신의 <<penis>>【와과】 <<pussy>>【을를】 잘 보여준다.
 		<</if>>
 	<<elseif $player.penisExist>>
 		당신은 무릎을 벌려 모두에게 당신의 <<penis>>【을를】 잘 보여준다.

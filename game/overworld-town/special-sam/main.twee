@@ -397,7 +397,7 @@
 		당신은 공원에 오는 것 외에 스트레스를 풀기 위해 무엇을 하는지 묻는다.
 		<br><br>
 
-		"Ah. You know, I love going to the spa," <<he>> says. "It's one of my favourite ways to unwind, I always get so stiff after work."
+		"아, 나 스파 가는 거 엄청 좋아한단다." <<he>>【이가】 말한다. "내가 가장 즐기는 휴식 방법 중 하나야. 일 끝나고 나면 몸이 항상 뻣뻣하게 굳어버리거든."
 		<br><br>
 
 		<<if $samSeen?.includes("spa")>>
@@ -869,7 +869,7 @@
 
 <<addinlineevent "sam_walk_2" 1>>
 	<<switch Time.season>>
-		<<case "winter">><<= Weather.precipitation is "snow" ? "The pair of you walk around the snowy park." : "It is fairly cold outside, but the walk keeps you warm.">>
+		<<case "winter">><<= Weather.precipitation is "snow" ? "당신과 샘은 눈 덮인 공원을 함께 거닌다." : "바깥은 꽤 춥지만, 걷다 보니 몸이 따뜻해진다.">>
 		<<case "autumn">>나뭇잎이 주황빛으로 물들어가는 것이 눈에 띈다.
 		<<case "spring">>활짝 피기 시작한 꽃들로 시선이 향한다.
 		<<default>>밖이 약간 덥게 느껴지지만, 아직 참기 힘들 정도는 아니다.

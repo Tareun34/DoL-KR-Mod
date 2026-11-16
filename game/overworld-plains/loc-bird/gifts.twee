@@ -38,9 +38,9 @@
 
 <<if $gift is "valentines_chocolate" and $valentines>>
 	<<earnFeat "Be My Valentine">>
-	You hand the Great Hawk the box of Valentines chocolates.
+	당신은 거대 매에게 발렌타인 초콜릿 상자를 건넨다.
 	<<if !resolveIfNamedBeastIsMonster("greathawk")>>
-		<<bHe>> tilts <<bhis>> head, curious, then pecks at it. <<bHe>> soon manages to open the lid, and observes the chocolates within. With care, <<bhe>> lifts each chocolate, and places them aside. Then <<bhe>> adds the box to the nest, tying it in by the ribbon, giving it a place of pride.
+		<<bHe>>【이가】 호기심 어린 듯 고개를 갸웃거리더니 상자를 쪼아본다. <<bHe>>【은는】 곧 뚜껑을 열어젖히고 안에 든 초콜릿들을 살핀다. 조심스레 초콜릿을 하나씩 들어 옆에 치워둔 뒤, 리본을 엮어 상자를 둥지에 묶어 소중한 자리에 둔다.
 	<<else>>
 		<<bHe>>【이가】 호기심 어린 듯 미간을 찌푸린다. "이게 의미가 있는 건가?" <<bhe>>【이가】 묻는다. "용서해라. 인간의 풍습은 잘 모른다." <<bHe>>【은는】 뚜껑을 휙 열어젖힌다. 조심스레 초콜릿을 하나씩 들어 옆에 치워둔 뒤, 리본을 엮어 상자를 둥지에 묶어 소중한 자리에 둔다.
 		<br><br>
@@ -49,7 +49,7 @@
 	<<gglove>><<npcincr "Great Hawk" love 3>>
 <<elseif setup.foodstuff[$gift].food.tags.includes("carnivore")>>
 	<<if !resolveIfNamedBeastIsMonster("greathawk")>>
-		The Great Hawk looks at it with a puzzled expression. "Strange meat," <<bhe>> says. "Humans hunt strange things. I will take though." <<bHe>> bows. "Thank you."
+		거대 매가 어리둥절한 표정으로 그것을 바라본다. "이상한 고기로군." <<bhe>>【이가】 말한다. "인간은 별난 것을 사냥한다. 그래도 받겠다." <<bHe>>【은는】 고개를 숙인다. "고맙다."
 		<br><br>
 		<<bHe>>【은는】 느긋하게 날개를 퍼덕인다. 식사가 마음에 든 모양이다.<<glove>><<npcincr "Great Hawk" love 1>>
 	<<else>>
@@ -62,7 +62,7 @@
 	<<earnFeat "Return the Favour">>
 <<elseif setup.foodstuff[$gift].food.tags.includes("drink")>>
 	<<if !resolveIfNamedBeastIsMonster("greathawk")>>
-		The Great Hawk lifts the drink. "My <<wife>> has strange ideas," <<bhe>> says. "Drink you can carry. Or is it a human thing?" <<bHe>> gives it a sniff, then a sip. <<bHis>> wings unfurl in pleasure.
+		거대 매가 음료를 들어 올린다. "내 <<wife>>【은는】 별난 생각을 하는군." <<bhe>>【이가】 말한다. "들고 다닐 수 있는 음료라니. 아니면 이것도 인간의 것인가?" <<bHe>>【은는】 냄새를 맡아보더니 한 모금 들이켠다. <<bHis>> 날개가 흡족한 듯 펼쳐진다.
 		<br><br>
 		<<bHe>>【은는】 느긋하게 날개를 퍼덕인다. 음료가 마음에 든 모양이다.<<glove>><<npcincr "Great Hawk" love 1>>
 	<<else>>

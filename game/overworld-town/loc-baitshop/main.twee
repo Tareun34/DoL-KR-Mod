@@ -42,7 +42,7 @@
 			<<if !$daily.fishing.baitShopOwnerSpeechIntro>>
 				<<set $daily.fishing.baitShopOwnerSpeechIntro to true>>
 				<br><br>
-				"Looking for gear?" <<he>> asks.
+				"장비 찾으세요?" <<he>>【이가】 묻는다.
 			<</if>>
 		<<else>>
 			당신은 미끼 상점에 있다. 낚시 릴, 낚싯바늘, 그리고 낚싯줄 뭉치가 구석구석을 차지하고 있다. 한 <<person>>【이가】 카운터 뒤에 앉아, <<print either("매듭", "밧줄 뭉치", "낚시 루어", "낚시 찌")>>【을를】 만지작거리고 있다.

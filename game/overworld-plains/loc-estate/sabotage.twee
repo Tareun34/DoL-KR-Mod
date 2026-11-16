@@ -135,10 +135,10 @@
 
 	<<switch _estate_cards_monsters>>
 	<<case "bulls" "cows" "both">>
-		Centaurs watch from some of the stalls.
+		몇몇 마구간 칸에서 켄타우로스들이 지켜보고 있다.
 		<br><br>
 	<<default>>
-		Horses watch from some of the stalls.
+		몇몇 마구간 칸에서 말들이 지켜보고 있다.
 		<br><br>
 	<</switch>>
 

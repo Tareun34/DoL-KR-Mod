@@ -231,9 +231,9 @@
 <!-- Modified for monster people -->
 <<if monsterChanceForType("pig") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType("pig"))>>
 	<<if beastMaleChanceForType("pig") gte 100>>
-		Several pigboys sit in pens.
+		여러 돼지 소년들이 우리 안에 앉아 있다.
 	<<elseif beastMaleChanceForType("pig") gte 1>>
-		Several pigboys and girls sit in pens.
+		여러 돼지 소년 소녀들이 우리 안에 앉아 있다.
 	<<else>>
 		여러 돼지 소녀들이 우리 안에 앉아 있다.
 	<</if>>
@@ -295,18 +295,18 @@
 <!-- Modified for monster people -->
 <<if monsterChanceForType("cow") gte random(1, 100) and ($hallucinations gte 1 or !monsterHallucinationsOnlyForType("cow"))>>
 	<<if beastMaleChanceForType("cow") gte 100>>
-		Inside, a number of bullboys stand on all fours, each with a tube attached to his penis. They moo in pleasure.
+		안에는 여러 황소 소년들이 네 발로 서 있고, 각각의 자지에 튜브가 연결되어 있다. 그들은 쾌감에 음메 소리를 낸다.
 	<<elseif beastMaleChanceForType("cow") lte 0>>
-		Inside, a number of cowgirls stand on all fours, each with two tubes attached to her breasts. They moo in pleasure.
+		안에는 여러 젖소 소녀들이 네 발로 서 있고, 각각의 가슴에 두 개의 튜브가 연결되어 있다. 그들은 쾌감에 음메 소리를 낸다.
 	<<else>>
-		안에는 여러 암소 소녀들과 황소 소년들이 네 발로 서 있고, 각각 착유기에 연결되어 있다. 그들은 쾌감에 음메 소리를 낸다.
+		안에는 여러 젖소 소녀들과 황소 소년들이 네 발로 서 있고, 각각 착유기에 연결되어 있다. 그들은 쾌감에 음메 소리를 낸다.
 	<</if>>
 
 <<else>>
 	<<if beastMaleChanceForType("cow") gte 100>>
-		A number of bulls stand inside, each attached to a milking machine.
+		안에는 여러 황소들이 서 있고, 각각 착유기에 연결되어 있다.
 	<<elseif beastMaleChanceForType("cow") lte 0>>
-		A number of cows stand inside, each attached to a milking machine.
+		안에는 여러 암소들이 서 있고, 각각 착유기에 연결되어 있다.
 	<<else>>
 		안에는 여러 소들이 서 있고, 각각 착유기에 연결되어 있다.
 	<</if>>

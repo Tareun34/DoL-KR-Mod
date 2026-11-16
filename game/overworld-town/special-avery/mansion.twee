@@ -410,7 +410,7 @@
 	<<wakingEffects $sleepHoursTotal>>
 	<<if ["dryheaving","nausea"].includes(_wakingEffect)>>
 		<br>
-		You slept soundly, but now feel a little rough.
+		푹 잤지만, 지금은 몸이 좀 찌뿌둥하다.
 		<br><br>
 	<<elseif $nightmares gte 1 and $controlled is 0>>
 		당신은 <<if _wakingEffect>>꿈에서<<else>>꿈속에서 자신이<</if>> <<if ["haunt", "despair"].includes($wraith.state) and $rng lte 25>>창백하고<<else>>어둡고<</if>> 끔찍한 무언가에게 사냥당하고 있다.
@@ -1308,7 +1308,7 @@
 			<<elseif $averyragerevealed is 1 and C.npc.Avery.rage gte 20>>
 				짜증 난다는 듯 당신을 쏘아본다. "지금은 <<ampm_text>>【이】야. 내 빌어먹을 귀에 대고 떠드는 것보다 더 나은 할 일이 없나?" <<He>>【은는】 무시하는 손짓을 한다. "날 내버려 둬."
 			<<else>>
-				한숨을 쉰다. "지금은 <<ampm_text>>【이】야. <<= $averyragerevealed is 1 ? `than natter on like this` : `with your time`>> 더 잘 쓸 일이 없나?" <<He>>【은는】 눈썹을 치켜 올린다.
+				한숨을 쉰다. "지금은 <<ampm_text>>【이】야. <<= $averyragerevealed is 1 ? `이렇게 수다나 떠는 것보다` : `시간을`>> 더 잘 쓸 일이 없나?" <<He>>【은는】 눈썹을 치켜 올린다.
 			<</if>>
 		<<elseif $avery_mansion.schedule is "breakfast">>
 			<<if $averyragerevealed is 1 and C.npc.Avery.rage gte 60>>
@@ -1610,7 +1610,7 @@
 			<<if $mathschance gte 50>>
 				당신이 아는 선에서 당신의 해결책에 대해 설명하려고 시도한다.
 			<<else>>
-				당신이 아는 선에서 당신의 <<= $mathschance lte 10 ? `theories, though you haven't really gotten started yet` : `solution`>> 최선을 다해 설명한다.
+				당신이 아는 선에서 당신의 <<= $mathschance lte 10 ? `이론을, 아직 제대로 시작도 못 했지만,` : `풀이를`>> 최선을 다해 설명한다.
 			<</if>>
 			에이버리가 적절한 때마다 맞장구를 치고 고개를 끄덕이긴 하지만, 당신은 의심한다
 			<<if $mathschance gte 75>>
@@ -1923,7 +1923,7 @@
 				마천루의 현재 진행 상황에 대해 <<= $averyragerevealed is 1 ? `짜증이 난` : `불만족스러운`>> 것 같다.<<if C.npc.Avery.rage gte 60>> <<He>>【은는】 앞으로 당신이 더 잘하길 기대하겠다고 말한다.<</if>>
 				<br><br>
 			<<else>>
-				seems <<= $averyragerevealed is 1 ? `furious at` : `irritated by`>> the skyscraper's current progress.<<if C.npc.Avery.rage gte 40>> <<He>> informs you <<he>> expects better from you going forward.<</if>> <<npcincr Avery rage 1>><<garage>>
+				마천루의 현재 진행 상황에 대해 <<= $averyragerevealed is 1 ? `분노한` : `짜증이 난`>> 것 같다.<<if C.npc.Avery.rage gte 40>> <<He>>【은는】 앞으로 당신이 더 잘하길 기대하겠다고 말한다.<</if>> <<npcincr Avery rage 1>><<garage>>
 				<br><br>
 			<</if>>
 		<</if>>
@@ -1951,7 +1951,7 @@
 				오션 브리즈 카페의 재개장 날 이야기가 나온다. "레드 카펫을 걸어본 게 그때가 처음이었나?" 에이버리가 묻는다. "흥미롭지 않아? 자네의 옛 보호자가 분위기를 망쳐버린 건 정말 유감이지만 말이야." <<= $averyragerevealed is 1? `<<He>>【은는】 비웃는다` : `<<His>> 미소가 일그러진다`>>. 그때를 떠올리며 말이다. "내가 좀 더 머물 수도 있었지만, 내겐 시간이 그리 많지 않았거든."
 				<br><br>
 			<<else>>
-				"I've seen you on advertisements for the Ocean Breeze Cafe," <<he>> says. "You look <<cute>> all dressed up. You're a <<= $photo?.audienceSize gte 2 ? `professional` : `natural`>> in front of a camera, aren't you?" <<He>> smiles at you. "Have you considered making a career of it?"
+				"오션 브리즈 카페 광고에서 자기를 봤어." <<he>>【이가】 말한다. "한껏 차려입은 모습이 아주 <<cute>>하더군. 자긴 카메라 앞에서도 <<= $photo?.audienceSize gte 2 ? `프로` : `타고난 사람`>> 같아, 그렇지?" <<He>>【이가】 당신에게 미소 짓는다. "아예 직업으로 삼아볼 생각은 없어?"
 				<br><br>
 			<</if>>
 		<<else>>
@@ -3225,7 +3225,7 @@
 		당신은 에이버리의 무릎에 앉지 않는다. <<He>>【은는】 당신에게 <<= C.npc.Avery.rage gte 20 ? `짜증 섞인` : `실망한`>> 시선을 던지지만, 더 밀어붙이지는 않는다.
 	<</if>>
 	<br><br>
-	대화가 자연스럽게 끝나자, 에이버리는 <<= $averyragerevealed is 1 ? `huff` : `curt sigh`>> 당신을 보내준다. 당신이 멀어지자, <<he>>【은는】
+	대화가 자연스럽게 끝나자, 에이버리는 <<= $averyragerevealed is 1 ? `콧방귀를 뀌며` : `짧게 한숨을 쉬며`>> 당신을 보내준다. 당신이 멀어지자, <<he>>【은는】
 	<<if $avery_mansion.schedule is "drink">>
 		<<himself>>에게 술을 한 잔 더 따른다.
 	<<elseif $avery_mansion.schedule is "pool">>

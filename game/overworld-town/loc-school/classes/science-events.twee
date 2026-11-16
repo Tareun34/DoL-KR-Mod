@@ -784,9 +784,9 @@
 			수업은 별일 없이 지나간다.
 			<br><br>
 		<<case 2>>
-			"What's going on here?" Sirris asks, frowning at you and the delinquents.
+			"여기서 무슨 일이니?" 시리스가 당신과 불량 학생들을 보며 눈살을 찌푸리며 묻는다.
 			<br><br>
-			You explain one way. The delinquents explain another.
+			당신은 한 가지 방식으로 설명한다. 불량 학생들은 다른 방식으로 설명한다.
 			<<if $delinquency gte 400>>
 				하지만 시리스는 당신의 불량한 평판 때문에 그것이 속임수라고 생각하며 믿지 않는다.
 				<br><br>

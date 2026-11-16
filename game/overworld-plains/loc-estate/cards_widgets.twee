@@ -1972,7 +1972,7 @@ more suspicion if you actually lose the round. -->
 
 <<widget "cards_oral_options">>
 	<<if $estate.cards.clothesRebuyTerms?.price gt $money>>
-		<span class="blue">You don't have enough money to accept the deal.</span>
+		<span class="blue">거래를 받아들일 돈이 부족합니다.</span>
 		<br><br>
 	<<elseif hasSexStat("promiscuity", 4)>>
 		<<link [[수락한다|Estate Cards Oral]]>><</link>><<promiscuous4>><<goralskill>>
@@ -2128,10 +2128,10 @@ more suspicion if you actually lose the round. -->
 			<<cards_lap_clothes>>
 			<<His>> <<print window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【이가】 당신의 <<bottom>>【을를】 다시 한번 위협한다.
 		<</if>>
-		"Where were we?" <<he>> teases.
+		"우리가 어디까지 했더라?" <<he>>【이가】 짓궂게 묻는다.
 		<<estate_cards_bet>>
 	<<else>>
-		"Where were we?" Wren says.
+		"우리가 어디까지 했더라?" 렌이 말한다.
 		<<estate_cards_bet>>
 	<</if>>
 <</widget>>

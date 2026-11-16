@@ -398,7 +398,7 @@
 	그 <<persons>> 입가에 사악한 미소가 번진다.
 
 	<<if beastSexEnabledForType("horse")>>
-		<<He>> gestures at the <<person1>><<person>> holding the camera, and at one of the riders. The former brings the lens closer, while the latter dismounts.
+		<<He>>【은는】 카메라를 든 <<person1>><<person>>【와과】 기수 중 한 명에게 손짓한다. 전자는 렌즈를 더 가까이 가져오고, 후자는 말에서 내린다.
 		<<endevent>>
 		<<beastNEWinit 1 horse>>
 		<br><br>

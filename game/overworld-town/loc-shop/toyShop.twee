@@ -31,7 +31,7 @@
 
 당신은 장난감 가게에 있다. 바닥부터 천장까지 온갖 종류의 장난감들이 당신 앞에 서 있다. 많은 것들이 상자에 담겨 있고, 다른 것들은 바로 가지고 놀 수 있도록 준비되어 있다.
 <<if $pregnancyStats.humanToysUnlocked>>
-	You can't help but think about your <<if getBornChildren().length gte 2>>children<<else>>child<</if>> when being in here.
+	이곳에 있으니 <<if getBornChildren().length gte 2>>아이들<<else>>아이<</if>> 생각이 절로 난다.
 <</if>>
 <<if random(0,200) gt 199 and Time.dayState isnot "night">>
 	<br><br>

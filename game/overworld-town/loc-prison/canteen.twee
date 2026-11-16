@@ -448,7 +448,7 @@
 
 당신은 <<tattooed_inmate 0>> 옆에 앉는다. 당신들 양옆은 <<his>> 패거리들이 지키고 있다.
 <<if $prison.tattooed gte 80>>
-	<<He>> brags openly about "having" you, stopping passersby and making sure they have a good look.
+	<<He>>【은는】 당신을 "가졌다"고 노골적으로 자랑하며, 지나가는 사람들을 멈춰 세워 당신을 제대로 보게 만든다.
 <<elseif $prison.tattooed gte 20>>
 	<<He>>【은는】 당신을 "가졌다"고 노골적으로 자랑한다.
 <<else>>

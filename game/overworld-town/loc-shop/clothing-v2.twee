@@ -571,7 +571,7 @@
 			<span class="red">귀 슬라임이 _temp_choice.name【을를】 입어보거나 구매하는 것을 거부합니다.</span>
 			<br>
 		<<elseif $earSlime.forcedDressing?.days and _item.gender isnot $earSlime.forcedDressing.type and _item.gender isnot "n" and !_item.type.includesAny("event") and V.hypnosis_traits?.silence isnot 1>>
-			<span class="red">The slime in your ear refuses to allow you to try on or buy the _temp_choice.name as it is only permitting more <<print $earSlime.forcedDressing.type is "f" ? "feminine" : "masculine">> clothing.</span>
+			<span class="red">귀 슬라임이 _temp_choice.name【을를】 입어보거나 구매하는 것을 거부합니다. 좀 더 <<print $earSlime.forcedDressing.type is "f" ? "여성스러운" : "남성스러운">> 옷만 허용하고 있기 때문입니다.</span>
 		<<else>>
 			<<if $earSlime.forcedCommando and $earSlime.forcedCommando gte 0 and !_temp_choice.type.includesAny("naked") and ($clothingShopSlot is "under_lower" or (_temp_choice.outfitPrimary and _temp_choice.outfitPrimary.under_lower)) and V.hypnosis_traits?.silence isnot 1>>
 				<span class="red">귀 슬라임이 적절한 장소가 아니면 _temp_choice.name【을를】 입어보거나 착용하는 것을 거부합니다.</span>
@@ -610,7 +610,7 @@
 					<<if _temp_choice.pattern_options and _temp_choice.pattern_options.length gt 1>>
 						<br>
 						<<if _temp_choice.pattern_options.length gte 15>>
-							<<if _temp_choice.pattern_name>><<= _temp_choice.pattern_name.toUpperFirst()>><<else>>Patterns<</if>>:
+							<<if _temp_choice.pattern_name>><<= _temp_choice.pattern_name.toUpperFirst()>><<else>>패턴<</if>>:
 							<br>
 							<<set _highContrast = $shopDefaults.highContrast ? "colour-name-span-highcontrast" : "colour-name-span">>
 							<div class="colour-options-div no-numberify pattern">
@@ -641,7 +641,7 @@
 							})>>
 						<<else>>
 							<<run _temp_choice.pattern_options.pushUnique("random")>>
-							<<if _temp_choice.pattern_name>><<= _temp_choice.pattern_name.toUpperFirst()>><<else>>Patterns<</if>>:
+							<<if _temp_choice.pattern_name>><<= _temp_choice.pattern_name.toUpperFirst()>><<else>>패턴<</if>>:
 							<<printShopColourOptions "pattern">>
 						<</if>>
 						<br>

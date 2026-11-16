@@ -940,7 +940,7 @@
 "<<He>>【은는】 당신처럼 <<cute>> <<girls>>에게 약하거든요. 그리고 당신도 추가 데이터가 있으면 좋을 거고요." <<person2>><<persons>> 미소가 포식자의 것처럼 변한다.
 <br><br>
 <<if beastSexEnabledForType("dog", $monster is 1)>>
-	<<animalicon "dog">><<link [[Agree to measure <<his>> <<beasttype>> first|Beach Phallus Dog Agree]]>><</link>><<deviant1>>
+	<<animalicon "dog">><<link [[먼저 <<his>> <<beasttype>>【을를】 측정하는 데 동의한다|Beach Phallus Dog Agree]]>><</link>><<deviant1>>
 	<br>
 	<<if hasSexStat("deviancy", 3)>>
 		<<animalicon "dog">><<link [[단순히 측정하는 것 이상을 한다|Beach Phallus Dog Handjob]]>><<set $sexstart to 1>><</link>><<deviant3>>

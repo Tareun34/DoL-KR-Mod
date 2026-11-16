@@ -216,7 +216,7 @@
 당신은 황야를 가로질러 행군하며, 당신을 붙잡은 자들의 음흉한 시선을 견뎌낸다.
 <<set $moor -= 5>><<pass 60>>
 <<if $moor lte 10 or $moor is undefined>>
-	You arrive at a tall fence. Through the bars you see grazing
+	높은 울타리에 도착한다. 창살 너머로 풀을 뜯는
 	<<if monsterCanAppearForType("cow")>>
 		<<if $settings.maleVictimChance is 100>>
 			불보이들이 보인다.
@@ -427,7 +427,7 @@
 
 <<set $phase to "riding">>
 
-<<link [[Protest|Street Van Protest]]>><<def 1>><<stress 6>><<trauma -6>><</link>><<gstress>><<ltrauma>>
+<<link [[항의한다|Street Van Protest]]>><<def 1>><<stress 6>><<trauma -6>><</link>><<gstress>><<ltrauma>>
 <br>
 <<link [[싸운다|Street Van Fight]]>><<def 1>><<set $fightstart to 1>><</link>>
 <br>
@@ -871,7 +871,7 @@
 <<if $rng gte 91>>
 	달고, 걸쭉하다. <<person>>【이가】 씨익 웃는다.
 	<br><br>
-	You pull away as you feel a fell heat build within. The world spins, and you find yourself lying on the earth. Your <<genitals>> <<if $player.penisExist and $player.vaginaExist>>ache, and yearn<<else>>aches, and yearns<</if>>.<<gggarousal>><<arousal 1800>><<drugs 240>>
+	음란한 열기가 속에서 차오르는 것을 느끼며 당신은 몸을 뺀다. 세상이 빙빙 돌고, 정신을 차려보니 당신은 땅바닥에 쓰러져 있다. 당신의 <<genitals>>【이가】 <<if $player.penisExist and $player.vaginaExist>>욱신거리며 갈망한다<<else>>욱신거리며 갈망한다<</if>>.<<gggarousal>><<arousal 1800>><<drugs 240>>
 	<br><br>
 	거친 손이 당신의 어깨를 잡자, 몸에 전율이 흐른다. 당신은 억지로 일으켜 세워진다. "아직 갈 길이 멀어." <<person>>【이가】 말한다. "도착할 때쯤이면 아주 제대로 달아올라 있겠군."
 <<elseif $rng gte 51 and !playerIsPregnant()>>
