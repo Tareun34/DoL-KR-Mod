@@ -13589,7 +13589,7 @@ function initUpper() {
 			gender: "n",
 			warmth: 5,
 			cost: 6000,
-			description: "Made for heavy labour.",
+			description: "고된 노동을 위해 만들어졌습니다.",
 			shop: ["clothing"],
 			sleeve_img: 1,
 			altposition: "none",

@@ -12456,7 +12456,7 @@ function initLower() {
 			gender: "n",
 			warmth: 5,
 			cost: 0,
-			description: "Made for heavy labour.",
+			description: "고된 노동을 위해 만들어졌습니다.",
 			shop: ["clothing"],
 			high_img: 0,
 			back_img: 0,

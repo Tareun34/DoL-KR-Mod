@@ -110,7 +110,7 @@
 			<</if>>
 			<<capture _index>>
 				<<set _outfitname to $_outfit.name + ($_outfit.colors is false ? "" : " [C]")>>
-				<<link [["Wear "+_outfitname+" and climb in bed"|_passage]]>><<if _args[0] is "Robin Bed">><<storeon "Robin's Room">><</if>><<set $wear_outfit to _index>><<saveTempHairStyle>><</link>>
+				<<link [[_outfitname+"【을를】 착용하고 침대에 눕는다."|_passage]]>><<if _args[0] is "Robin Bed">><<storeon "Robin's Room">><</if>><<set $wear_outfit to _index>><<saveTempHairStyle>><</link>>
 			<</capture>>
 			<br>
 		<</for>>
@@ -1182,20 +1182,20 @@
 			</div>
 		<</if>>
 		<div>
-			Demeanour:
+			인상:
 			<<set $_facevariant to "$outfit["+_args[0]+"].facevariant">>
 			<<listbox $_facevariant autoselect>>
-				<<option "Not set" undefined>>
+				<<option "설정 안 됨" undefined>>
 				<<optionsfrom setup.faceVariantOptions[$facestyle]>>
 			<</listbox>>
 		</div>
 		<div>
-			Default expression:
+			기본 표정:
 			<<set $_defaultSidebarMouth to "$outfit["+_args[0]+"].defaultSidebarMouth">>
 			<<listbox $_defaultSidebarMouth autoselect>>
-				<<option "Not set" undefined>>
-				<<option "Smile" "smile">>
-				<<option "Neutral" "neutral">>
+				<<option "설정 안 됨" undefined>>
+				<<option "미소" "smile">>
+				<<option "무표정" "neutral">>
 			<</listbox>>
 		</div>
 
