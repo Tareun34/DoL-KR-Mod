@@ -2078,7 +2078,7 @@ function initFeet() {
 			femininity: 200,
 			warmth: 1,
 			cost: 8000,
-			description: "Every step feels flightless.",
+			description: "걸음마다 날지 못하는 기분이 듭니다.",
 			shop: ["clothing"],
 			accessory: 1,
 			accessory_colour: 0,

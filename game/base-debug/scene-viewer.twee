@@ -1012,7 +1012,7 @@
 				unlocked: $scenePassages.includes("NightmareGwylan")
 			},
 			"NightmareMine":{
-				name:"Nightmare Mine",
+				name:"악몽 광산",
 				startPassage:"Nightmare Mine",
 				passages:["Nightmare Mine", "Nightmare Mine 2", "Nightmare Mine 3", "Nightmare Mine Wake", "Nightmare Mine End"],
 				manualVariableChanges:"<<set $sleephour to 1>><<set $nightmareExit to 'Bed'>>",
@@ -1180,35 +1180,35 @@
 				unlocked: $scenePassages.includes("PrisonScarredInmate")
 			},
 			"AveryPubWinter":{
-				name: "Avery Pub Winter",
+				name: "에이버리 겨울 펍",
 				startPassage: "SV Avery Pub Winter",
 				passages:["SV Avery Pub Winter","Avery Pub Winter Accept","Avery Pub Winter Drink","Avery Pub Winter Sing Intro","Avery Pub Winter Sing","Avery Pub Winter Sing Jolly","Avery Pub Winter Sing Jolly 2","Avery Pub Winter Sing Jolly 3","Avery Pub Winter Sing Sorrowful","Avery Pub Winter Sing Sorrowful 2","Avery Pub Winter Sing Sorrowful 3","Avery Pub Winter Sing Ironic","Avery Pub Winter Sing Ironic 2","Avery Pub Winter Sing Ironic 3","Avery Pub Winter Sing Harpy","Avery Pub Winter Sing Harpy 2","Avery Pub Winter Sing Harpy 3","Avery Pub Winter Sing Fail","Avery Pub Winter Sing Fail 2","Avery Pub Winter Sing Back","Avery Pub Winter Sing Kiss","Avery Pub Winter Sing Leave","Avery Pub Winter Drink Finish","Avery Pub Winter Drink Finish 2","Avery Pub Winter Refuse"],
 				manualVariableChanges:"<<set $location to 'town'>><<run Time.setTime(15,0)>>",
 				unlocked: $scenePassages.includes("Avery Pub Winter")
 			},
 			"AverySpa":{
-				name: "Avery Spa",
+				name: "에이버리 스파",
 				startPassage: "SV Avery Spa",
 				passages: ["SV Avery Spa", "Avery Spa", "Avery Spa Lewd", "Avery Spa 2", "Avery Spa Offer", "Avery Spa Accept", "Avery Spa Oral", "Avery Spa Oral Finish", "Avery Spa Reward", "Avery Spa Reward Finish", "Avery Spa No Reward", "Avery Spa Refuse", "Avery Spa Rape", "Avery Spa Rape Finish", "Avery Spa End Normal", "Avery Spa End Satisfied", "Avery Spa End Awkward", "Avery Spa End Angry"],
 				manualVariableChanges: "<<set $location to 'spa'>><<run Time.setTime(9,0)>>",
 				unlocked: $scenePassages.includes("Avery Spa")
 			},
 			"MansionReturnWalkDog":{
-				name: "Avery Dog Walk",
+				name: "에이버리 개 산책",
 				startPassage: "SV Mansion Return Walk Dog",
 				passages: ["SV Mansion Return Walk Dog", "Mansion Return Walk Dog Bark", "Mansion Return Walk Dog Silent", "Mansion Return Walk Dog Bite", "Mansion Return Walk Dog 2", "Mansion Return Walk Dog Near", "Mansion Return Walk Dog Bid", "Mansion Return Walk Dog Lick", "Mansion Return Walk Dog Shut", "Mansion Return Walk Dog Snap", "Mansion Return Walk Dog Run", "Mansion Return Walk Dog Howl", "Mansion Return Walk Dog Yours", "Mansion Return Walk Dog Okay", "Mansion Return Walk Dog Lick 2", "Mansion Return Walk Dog Wolf Silent", "Mansion Return Walk Dog Growl", "Mansion Return Walk Dog Growl Lick", "Mansion Return Walk Dog Growl Silent", "Mansion Return Walk Dog Growl Attacked", "Mansion Return Walk Dog Rape", "Mansion Return Walk Dog Rape Finish", "Mansion Return Walk Dog Rape Avery", "Mansion Return Walk Dog Rape Silent", "Mansion Return Walk Dog Rape Say", "Mansion Return Walk Dog Rape Help", "Mansion Return Walk Dog Rape Cover", "Mansion Return Walk Dog Rape Free", "Mansion Return Walk Dog Endure", "Mansion Return Walk Dog Stand", "Mansion Return Walk Dog 2 Bark", "Mansion Return Walk Dog 2 Silent", "Mansion Return Walk Dog 2 Bite", "Mansion Return Walk Dog End"],
 				manualVariableChanges:"<<set $location to 'avery_mansion'>><<run Time.setTime(21,0)>>",
 				unlocked: $scenePassages.includes("Mansion Return Walk Dog")
 			},
 			"AverySkyscraperFoundation":{
-				name: "Avery Skyscraper 1",
+				name: "에이버리 마천루 1",
 				startPassage: "SV Skyscraper Foundation",
 				passages: ["SV Skyscraper Foundation", "Skyscraper Foundation Insult", "Skyscraper Foundation Nice", "Skyscraper Foundation Silent", "Skyscraper Foundation 2", "Skyscraper Foundation 3", "Skyscraper Foundation 4", "Skyscraper Foundation Yes", "Skyscraper Foundation No", "Skyscraper Foundation Silent 2", "Skyscraper Foundation Tackle", "Skyscraper Foundation Avery", "Skyscraper Foundation 5", "Skyscraper Foundation Remember", "Skyscraper Foundation Happen", "Skyscraper Foundation Silent 3"],
 				manualVariableChanges: "<<set $location to 'avery_skyscraper'>><<run Time.setTime(21,0)>><<unset $avery_fate>><<set $avery_tower.progress to 25>>",
 				unlocked: $scenePassages.includes("Skyscraper Foundation")
 			},
 			"AverySkyscraperStructure":{
-				name: "Avery Skyscraper 2",
+				name: "에이버리 마천루 2",
 				startPassage: "SV Skyscraper Structure",
 				passages: ["Skyscraper Structure Impressive", "Skyscraper Structure Stupid", "Skyscraper Structure Silent", "Skyscraper Structure 2", "Skyscraper Whitney", "Skyscraper Whitney Sensible", "Skyscraper Whitney Strategic", "Skyscraper Whitney Egg", "Skyscraper Whitney 2", "Skyscraper Whitney 3", "Skyscraper Whitney Jump", "Skyscraper Whitney Jump 2", "Skyscraper Whitney Jump 3", "Skyscraper Whitney Stay", "Skyscraper Whitney Stay 2", "Skyscraper Whitney Stay Whitney", "Skyscraper Whitney Leer", "Skyscraper Whitney Stand", "Skyscraper Whitney Fire", "Skyscraper Whitney Fire Nod", "Skyscraper Whitney Fire Alone", "Skyscraper Whitney Fire Refuse", "Skyscraper Whitney Fire Sex Refuse", "Skyscraper Whitney Fire Sex", "Skyscraper Whitney Fire Sex Finish", "Skyscraper Whitney Fire Sex End", "Skyscraper Whitney Stay Avery", "Skyscraper Structure End"],
 				manualVariableChanges: "<<set $location to 'avery_skyscraper'>><<run Time.setTime(21,0)>><<unset $avery_fate>><<set $avery_tower.progress to 60>>",
@@ -1775,15 +1775,15 @@
 
 :: SV Avery Helicopter
 <<npc Avery>><<person1>>
-As you are about to leave the building, you hear a great uproar. Dozens of students are gathering outside as a helicopter hovers over the school precincts. One of the doors swings open, and a ladder rolls down with loud clanks.
+건물을 막 나서려는데, 엄청난 소란이 들린다. 헬리콥터 한 대가 학교 구내 위를 맴돌자 수십 명의 학생들이 밖으로 모여든다. 문 하나가 활짝 열리더니, 요란하게 덜컹거리며 사다리가 내려온다.
 <br><br>
-You see Avery lean out, beckoning from above. <<He>> says something, but the only thing you can hear over the noise is your name.
+에이버리가 몸을 내밀고 위에서 손짓하는 것이 보인다. <<He>>【이가】 뭐라고 말하지만, 소음 속에서 들리는 것은 당신의 이름뿐이다.
 <br><br>
-You hear murmuring of fellow classmates around you. They seem impressed by the extravagance. <<gcool>><<status 1>>
+주변에서 반 친구들이 수군거리는 소리가 들린다. 다들 그 호화로움에 감탄한 듯하다. <<gcool>><<status 1>>
 <br><br>
-<<link [[Board helicopter (0:20)|Avery Helicopter]]>><<pass 20>><</link>><<glove>><<if $avery_mansion>><<gdom>><</if>>
+<<link [[헬리콥터에 탑승한다 (0:20)|Avery Helicopter]]>><<pass 20>><</link>><<glove>><<if $avery_mansion>><<gdom>><</if>>
 <br>
-<<link [[Walk away|Avery Helicopter Walk]]>><<npcincr Avery love -1>><<npcincr Avery rage 1>><</link>><<garage>><<llove>>
+<<link [[걸어서 자리를 뜬다|Avery Helicopter Walk]]>><<npcincr Avery love -1>><<npcincr Avery rage 1>><</link>><<garage>><<llove>>
 
 :: SV Street Bully Orphanage Go
 휘트니가 베일리를 처음 만났는가: <span id="baileyMeet">아니오</span>
@@ -2003,31 +2003,31 @@ You hear murmuring of fellow classmates around you. They seem impressed by the e
 :: SV Avery Pub Winter
 <<set $outside to 0>><<set $location to "town">><<effects>><<set $bus to "harvest">>
 
-You enter <<his>> car and sit down. It's comfortably warm. After a bit, the two of you arrive on Harvest Street. Avery parks across from the pub and opens the car door for you. "The cafe's hot drinks are good, but there should be more options here," <<he>> says, gesturing for you to follow <<him>> as <<he>> walks towards the pub.
+당신은 <<his>> 차에 들어가 앉는다. 안은 기분 좋게 따뜻하다. 잠시 뒤, 두 사람은 하베스트 가에 도착한다. 에이버리는 펍 맞은편에 차를 세우고, 당신을 위해 차 문을 열어준다. "카페의 따뜻한 음료도 좋지만, 여기에는 선택지가 더 많을 겁니다." <<he>>【은는】 펍으로 걸어가며 따라오라는 듯 손짓한다.
 <br><br>
 
-<<link [[Hold Avery's hand|Avery Pub Winter Accept]]>><<set $endear += 10>><<set $phase to 0>><</link>><<gendear>><<handholdingvirginitywarning>><br>
-<<link [[Follow along|Avery Pub Winter Accept]]>><<set $phase to 1>><</link>><br>
-<<link [[Refuse|Avery Pub Winter Refuse]]>><<npcincr Avery rage 5>><<npcincr Avery love -1>><</link>><<garage>><<llove>>
+<<link [[에이버리의 손을 잡는다|Avery Pub Winter Accept]]>><<set $endear += 10>><<set $phase to 0>><</link>><<gendear>><<handholdingvirginitywarning>><br>
+<<link [[따라간다|Avery Pub Winter Accept]]>><<set $phase to 1>><</link>><br>
+<<link [[거절한다|Avery Pub Winter Refuse]]>><<npcincr Avery rage 5>><<npcincr Avery love -1>><</link>><<garage>><<llove>>
 
 :: SV Mansion Return Walk Dog
 <<npc Avery>><<person1>>
 
 <<if $worn.neck.name is "familiar collar" and $worn.neck.cursed is 1>>
-	Avery pulls on your familiar collar, trying to remove and replace it, but no matter how hard <<he>> tugs, it doesn't give.
+	에이버리가 당신의 사역마 목걸이를 잡아당겨 벗기고 다른 것으로 바꾸려 하지만, 아무리 세게 <<he>>【이가】 잡아당겨도 꼼짝도 하지 않는다.
 	<br><br>
 
 	<<if C.npc.Avery.rage gte random(20, 100) and $averyragerevealed gte 1>>
-		<<He>> gives one last hearty tug, and <span class="blue">freezes as <<his>> hands touch the golden heart</span>. You hear a low buzzing. <span class="red">Avery starts to shake.</span>
+		<<He>>【은는】 마지막으로 힘껏 잡아당기다가, <span class="blue"><<his>> 손이 황금 하트에 닿는 순간 얼어붙는다</span>. 낮은 윙윙거림이 들린다. <span class="red">에이버리가 떨기 시작한다.</span>
 		<br><br>
 
-		<<He>> manages to let go, and gasps. <span class="red"><<His>> eyes are full of rage,</span> but <<he>> backs down, staring at the heart. <<npcincr Avery rage 1>><<npcincr Avery dom -1>><<garage>><<ldom>>
+		<<He>>【은는】 가까스로 손을 떼고 숨을 헐떡인다. <span class="red"><<His>> 눈은 분노로 가득하지만,</span> <<he>>【은는】 하트를 바라보며 물러선다. <<npcincr Avery rage 1>><<npcincr Avery dom -1>><<garage>><<ldom>>
 		<br><br>
 
 		<<endevent>>
 		<<avery_mansion_end_links>>
 	<<else>>
-		<<He>> releases you with a huff. "Pity. I've always wanted a dog. Suppose I'll have to make do, as usual." <<He>> walks away.
+		<<He>>【은는】 콧방귀를 뀌며 당신을 놓아준다. "아쉽군. 난 늘 개를 갖고 싶었거든. 늘 그렇듯 대충 만족해야겠어." <<He>>【은는】 걸어가 버린다.
 		<br><br>
 
 		<<endevent>>
@@ -2035,7 +2035,7 @@ You enter <<his>> car and sit down. It's comfortably warm. After a bit, the two 
 	<</if>>
 <<else>>
 	<<if $exposed gte 2>>
-		Avery watches you remove your clothing, <<his>> expression unreadable. You drop to your knees, and Avery steps forward, collar ready. <<He>> tightens it until it's snug. Then <<he>> tightens it another notch.
+		에이버리는 <<his>> 표정을 읽을 수 없는 얼굴로 당신이 옷을 벗는 것을 지켜본다. 당신이 무릎을 꿇자, 에이버리는 목걸이를 들고 앞으로 다가온다. <<He>>【은는】 목걸이가 딱 맞을 때까지 조인다. 그러고는 <<he>>【이가】 한 칸 더 조인다.
 
 		<<if $phase is 1>>
 			<<exhibitionism5>>
@@ -2043,80 +2043,80 @@ You enter <<his>> car and sit down. It's comfortably warm. After a bit, the two 
 			<br><br>
 		<</if>>
 	<<else>>
-		You drop to your knees. Avery steps forward, collar ready. <<He>> tightens it until it's snug. Then <<he>> tightens it another notch.
+		당신은 무릎을 꿇는다. 에이버리는 목걸이를 들고 앞으로 다가온다. <<He>>【은는】 목걸이가 딱 맞을 때까지 조인다. 그러고는 <<he>>【이가】 한 칸 더 조인다.
 	<</if>>
 	<<undress "avery_dog_walk">>
 	<br><br>
 
-	<<He>> walks in a circle, examining you, while pulling the leash taut between <<his>> hands. <<He>> crouches to attach it.
+	<<He>>【은는】 목줄을 <<his>> 양손 사이로 팽팽히 잡아당긴 채 당신을 살피며 한 바퀴 돈다. <<He>>【은는】 그것을 채우려고 웅크린다.
 	<<leash 24>>
 	<br><br>
 
-	"Who's a good dog?"
+	"누가 착한 강아지일까?"
 	<br><br>
 
-	<<link [[Bark happily|Mansion Return Walk Dog Bark]]>><<set $avery_walk_reaction to "bark">><<attach_leash>><<npcincr Avery dom 1>><</link>><<gdom>>
+	<<link [[기쁘게 짖는다|Mansion Return Walk Dog Bark]]>><<set $avery_walk_reaction to "bark">><<attach_leash>><<npcincr Avery dom 1>><</link>><<gdom>>
 	<br>
-	<<link [[Remain silent|Mansion Return Walk Dog Silent]]>><<set $avery_walk_reaction to "silent">><<attach_leash>><<npcincr Avery dom 1>><</link>><<gdom>>
+	<<link [[침묵한다|Mansion Return Walk Dog Silent]]>><<set $avery_walk_reaction to "silent">><<attach_leash>><<npcincr Avery dom 1>><</link>><<gdom>>
 	<br>
-	<<link [[Bite|Mansion Return Walk Dog Bite]]>><<set $avery_walk_reaction to "bite">><<attach_leash>><<pain 4>><<npcincr Avery love -1>><<npcincr Avery rage 1>><<npcincr Avery dom -1>><</link>><<gpain>><<llove>><<garage>><<ldom>>
+	<<link [[문다|Mansion Return Walk Dog Bite]]>><<set $avery_walk_reaction to "bite">><<attach_leash>><<pain 4>><<npcincr Avery love -1>><<npcincr Avery rage 1>><<npcincr Avery dom -1>><</link>><<gpain>><<llove>><<garage>><<ldom>>
 	<br>
 <</if>>
 
 :: SV Skyscraper Foundation
 <<npc Avery>><<person1>>
 
-You follow Avery to the garage, and climb into the sports car beside <<him>>. <<He>> ignites the engine, and drives onto Danube boulevard.
+당신은 에이버리를 따라 차고로 가서 <<him>>의 옆에 있는 스포츠카에 올라탄다. <<He>>【이가】 시동을 걸고 다뉴브 대로로 차를 몬다.
 <br><br>
 
 <<pass 5>>
-You see the cranes before you arrive, though they don't seem to be in use at the moment. Avery stops close to the site, and you both climb outside.
+도착하기도 전에 크레인이 보인다. 지금은 쓰지 않는 것 같지만. 에이버리는 현장 가까이에 멈추고, 둘 다 밖으로 나온다.
 <<if $avery_tower.effects.includes("temple")>>
-	<<He>> kicks away a temple protestor. The others give you both a wide berth.
+	<<He>>【은는】 신전 시위자 하나를 발로 걷어낸다. 다른 이들은 당신 둘에게서 넓게 물러선다.
 <</if>>
 <br><br>
 
-There's now a rectangular pit where the building will stand. It goes deep, with tunnels leading away at the bottom.
+이제 건물이 들어설 자리에는 직사각형의 구덩이가 있다. 구덩이는 깊고, 바닥에는 터널들이 뻗어 있다.
 <br><br>
 
-"Already impressive, isn't it," Avery says.
+"벌써 인상적이지, 안 그래." 에이버리가 말한다.
 <br><br>
 
-<<link [[Insult it|Skyscraper Foundation Insult]]>><<npcincr Avery rage 1>><<npcincr Avery love -1>><</link>><<garage>><<llove>>
+<<link [[모욕한다|Skyscraper Foundation Insult]]>><<npcincr Avery rage 1>><<npcincr Avery love -1>><</link>><<garage>><<llove>>
 <br>
-<<link [[Say it's very nice|Skyscraper Foundation Nice]]>><<npcincr Avery love 1>><</link>><<glove>>
+<<link [[아주 멋지다고 말한다|Skyscraper Foundation Nice]]>><<npcincr Avery love 1>><</link>><<glove>>
 <br>
-<<link [[Remain silent|Skyscraper Foundation Silent]]>><<npcincr Avery love -1>><</link>><<llove>>
+<<link [[침묵한다|Skyscraper Foundation Silent]]>><<npcincr Avery love -1>><</link>><<llove>>
 
 :: SV Skyscraper Structure
 <<npc Avery>><<person1>>
 
-The journey to Avery's skyscraper isn't long. You see the building looming above the others before you arrive.
+에이버리의 마천루까지 가는 길은 그리 길지 않다. 도착하기 전에 다른 건물들 위로 우뚝 솟은 건물이 보인다.
 
 <<if $avery_tower.effects.includes("temple")>>
-	People from the temple have formed a blockade in front of the car park, arms linked. Avery accelerates as <<he>> approaches, forcing them to jump aside.
+	신전에서 온 사람들이 주차장 앞에서 팔짱을 끼고 바리케이드를 치고 있다. 에이버리는 <<he>>【이가】 다가가자 속도를 높여 그들이 옆으로 뛰어오르게 만든다.
 <</if>>
 <br><br>
 
-Avery climbs out, and walks around the bonnet to open your door.
+에이버리가 차에서 내려 보닛을 돌아 당신의 문을 열어준다.
 <br><br>
 
-"Impressive, isn't it?" Avery says, hands on hips. The building already rises above its neighbours, with exposed steel jutting yet higher.
+"인상적이지, 안 그래?" 에이버리가 허리에 손을 얹고 말한다. 건물은 이미 이웃 건물들 위로 솟아 있고, 노출된 철골은 더 높이 솟아 있다.
 <br><br>
 
 
-<<link [[Say it's impressive|Skyscraper Structure Impressive]]>><<npcincr Avery love 1>><</link>><<glove>>
+<<link [[인상적이라고 말한다|Skyscraper Structure Impressive]]>><<npcincr Avery love 1>><</link>><<glove>>
 <br>
-<<link [[Say it's stupid|Skyscraper Structure Stupid]]>><<npcincr Avery love -1>><</link>><<llove>>
+<<link [[멍청하다고 말한다|Skyscraper Structure Stupid]]>><<npcincr Avery love -1>><</link>><<llove>>
 <br>
-<<link [[Say nothing|Skyscraper Structure Silent]]>><</link>>
+<<link [[아무 말도 하지 않는다|Skyscraper Structure Silent]]>><</link>>
 
 :: SV Avery Spa
 <<npc Avery>><<person1>>
 <<spa_init>>
 
 <<set $endear to 0>>
-It's not long before one enters, wearing a towel around <<his>> <<= $pronoun is "m" ? "waist" : "body">>
+얼마 지나지 않아 누군가 들어온다. <<He>>【은는】 <<= $pronoun is "m" ? "허리" : "몸">>에 수건을 두르고 있다.
 
 <<if $averyragerevealed is 1>>
 	<<set _rageColour to (
@@ -2128,33 +2128,33 @@ It's not long before one enters, wearing a towel around <<his>> <<= $pronoun is 
 <<else>>
 	<<set _rageColour to "green">>
 <</if>>
-<span @class="_rageColour">It's Avery.</span>
+<span @class="_rageColour">에이버리다.</span>
 <br><br>
-<<He>> seems surprised to see you, but <<he>> hides it quickly.
+<<He>>【은는】 당신을 보고 놀란 눈치였지만, 금세 표정을 숨긴다.
 <br><br>
-"Well," <<he>> says, undoing <<his>> towel and setting it aside,
+"글쎄," <<he>>【이가】 수건을 풀어 옆으로 치우며 말한다,
 <<if $averySeen.includes("spa")>>
 	<<if $averyragerevealed is 1 and (C.npc.Avery.rage gte 60 or $averyRejectedSpa)>>
-		"I wonder if you'll obey me this time." <<He>> raises an eyebrow.
+		"이번에는 네가 내 말을 고분고분 들을지 궁금하군." <<He>>【이가】 한쪽 눈썹을 치켜올린다.
 	<<else>>
-		"It's nice to see you again, <<pcpetname "Avery">>. I'm sure you'll take good care of me, won't you?"
+		"다시 만나서 반갑군, <<pcpetname "Avery">>. 날 아주 잘 돌봐줄 거지, 안 그래?"
 	<</if>>
 <<else>>
-	"I can't say I expected to see you
+	"널 볼 줄은 예상치 못했다고 해야겠지,
 	<<if $averyragerevealed is 1 and C.npc.Avery.rage gte 60>>
-		in a position of service, considering your attitude as of late." <<He>> raises an eyebrow.
+		최근의 네 태도를 생각하면, 이렇게 시중드는 자리에서는 말이야." <<He>>【이가】 한쪽 눈썹을 치켜올린다.
 	<<else>>
-		here, <<pcpetname "Avery">>."
+		여기서 말이야, <<pcpetname "Avery">>."
 	<</if>>
 <</if>>
 <br><br>
-<<He>> lies down on the table, folding <<his>> arms underneath <<his>> head.
+<<He>>【은는】 두 팔을 머리 아래로 괸 채 탁자 위에 눕는다.
 <br><br>
-How do you want to behave?
+어떻게 행동할까?
 <br><br>
 
-<<link [[Cute|Avery Spa]]>><<set $spa.behaviour to "cute">><</link>><<note "+ Endearment?" "teal">>
+<<link [[귀엽게|Avery Spa]]>><<set $spa.behaviour to "cute">><</link>><<note "+ 호감?" "teal">>
 <br>
-<<link [[Sophisticated|Avery Spa]]>><<set $spa.behaviour to "sophisticated">><</link>><<note "+ Endearment?" "teal">>
+<<link [[세련되게|Avery Spa]]>><<set $spa.behaviour to "sophisticated">><</link>><<note "+ 호감?" "teal">>
 <br>
-<<link [[Alluring|Avery Spa]]>><<set $spa.behaviour to "alluring">><</link>><<promiscuous1>><<note "+ Endearment?" "teal">>
+<<link [[매혹적으로|Avery Spa]]>><<set $spa.behaviour to "alluring">><</link>><<promiscuous1>><<note "+ 호감?" "teal">>

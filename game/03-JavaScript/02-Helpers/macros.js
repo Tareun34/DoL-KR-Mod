@@ -100,7 +100,7 @@ var General = ((Macro, SexTypes) => {
 		const id = override || getSexesFromRandomGroup();
 		switch (id) {
 			case SexTypes.ALL_FEMALE_PENISES:
-				return `${sperm} and milk`;
+				return `${sperm}【와과】 우유`;
 			case SexTypes.ALL_MALES:
 			case SexTypes.ALL_DICKS:
 				return sperm;

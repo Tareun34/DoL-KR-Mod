@@ -114,15 +114,15 @@ setup.debugMenu.eventList = {
 			widgets: [``],
 		},
 		{
-			link: [`Make Rent Due`, stayOnPassageFn],
+			link: [`집세 납부 기한으로 만들기`, stayOnPassageFn],
 			widgets: [`<<set $rentTime to -1>>`],
 		},
 		{
-			link: [`Max Thug Anger`, stayOnPassageFn],
+			link: [`폭력배의 분노 최대`, stayOnPassageFn],
 			widgets: [`<<set $rentThug to { anger: 5, angerCountdown: 0, traps: [] }>>`],
 		},
 		{
-			link: [`Enemy Trust +++`, stayOnPassageFn],
+			link: [`적 신뢰도 +++`, stayOnPassageFn],
 			widgets: [`<<set $enemytrust += 2000>>`, `<<set $enemyanger -= 1000>>`],
 		},
 		{
@@ -266,7 +266,7 @@ setup.debugMenu.eventList = {
 			text_only: `\n`,
 		},
 		{
-			link: [`Make all beasts male`, stayOnPassageFn],
+			link: [`모든 짐승을 수컷으로`, stayOnPassageFn],
 			widgets: [
 				() => {
 					C.beastSettingTypes.forEach(type => {
@@ -278,7 +278,7 @@ setup.debugMenu.eventList = {
 			],
 		},
 		{
-			link: [`Make all beasts female`, stayOnPassageFn],
+			link: [`모든 짐승을 암컷으로`, stayOnPassageFn],
 			widgets: [
 				() => {
 					C.beastSettingTypes.forEach(type => {
@@ -290,7 +290,7 @@ setup.debugMenu.eventList = {
 			],
 		},
 		{
-			link: [`Make all beasts monster people`, stayOnPassageFn],
+			link: [`모든 짐승을 수인으로`, stayOnPassageFn],
 			widgets: [
 				() => {
 					C.beastSettingTypes.forEach(type => {
@@ -320,11 +320,11 @@ setup.debugMenu.eventList = {
 			widgets: [`<<run Time.timeTravel(new DateTime(Time.year, 12))>>`],
 		},
 		{
-			link: [`Toggle Weather Band Bounds`, stayOnPassageFn],
+			link: [`날씨 구간 경계 토글`, stayOnPassageFn],
 			widgets: [`<<set $debugWeatherBandBounds to !$debugWeatherBandBounds>>`],
 		},
 		{
-			link: [`Sky Testing`, `Sky Testing`],
+			link: [`하늘 테스트`, `Sky Testing`],
 			widgets: [`<<if $passage isnot "Sky Testing">><<set $lastPassage to $passage>><<freezePlayerStats>><</if>>`],
 		},
 		{

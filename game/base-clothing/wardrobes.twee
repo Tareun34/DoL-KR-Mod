@@ -597,7 +597,7 @@
 				<<option "설정하지 않음" undefined>>
 				<<optionsfrom _savedHairStylesKeys>>
 			<</listbox>>
-			<mouse class="tooltip linkBlue">(?)<span>'Not set' will not change your hairstyle when you select the outfit.</span></mouse>
+			<mouse class="tooltip linkBlue">(?)<span>'설정하지 않음'은 세트를 선택할 때 헤어스타일을 변경하지 않습니다.</span></mouse>
 		</div>
 	<<else>>
 		<div>
@@ -605,21 +605,21 @@
 		</div>
 	<</if>>
 	<div>
-		Demeanour:
+		인상:
 		<<listbox "_demeanour" autoselect>>
-			<<option "Not set" undefined>>
+			<<option "설정하지 않음" undefined>>
 			<<optionsfrom setup.faceVariantOptions[$facestyle]>>
 		<</listbox>>
-		<mouse class="tooltip linkBlue">(?)<span>'Not set' will not change your demeanour when you select the outfit.</span></mouse>
+		<mouse class="tooltip linkBlue">(?)<span>'설정하지 않음'은 세트를 선택할 때 인상을 변경하지 않습니다.</span></mouse>
 	</div>
 	<div>
-		Default expression:
+		기본 표정:
 		<<listbox "_defaultSidebarMouth" autoselect>>
-			<<option "Not set" undefined>>
-			<<option "Smile" "smile">>
-			<<option "Neutral" "neutral">>
+			<<option "설정하지 않음" undefined>>
+			<<option "미소" "smile">>
+			<<option "무표정" "neutral">>
 		<</listbox>>
-		<mouse class="tooltip linkBlue">(?)<span>'Not set' will not change your expression when you select the outfit.</span></mouse>
+		<mouse class="tooltip linkBlue">(?)<span>'설정하지 않음'은 세트를 선택할 때 표정을 변경하지 않습니다.</span></mouse>
 	</div>
 	<br>
 	<div class="wardrobe-action">
@@ -847,20 +847,20 @@
 	<<switch _args[0]>>
 		<<case "upper">>
 			<<switch $worn.upper.variable>>
-				<<case "schoolcardigan">><<set _altLink to ["Tie cardigan around waist", "Wear cardigan normally"]>>
-				<<case "brownleather" "blackleather" "leathercropjacket" "winterjacket">><<set _altLink to ["Zip jacket", "Unzip jacket"]>>
-				<<case "waistcoat" "waistcoatlapel" "blazershirt">><<set _altLink to ["Tuck in", "Untuck"]>>
-				<<case "dress" "buttondown" "oversizedbuttondown" "shortsleevebuttonup" "flannel shirt">><<set _altLink to ["Unbutton shirt", "Button up shirt"]>>
-				<<case "catsuit">><<set _altLink to ["Unzip", "Zip"]>>
-				<<case "kimono" "kimonomini">><<set _altLink to ["Loosen", "Tighten"]>>
-				<<case "flowy sleeve top" "milkmaid dress">><<set _altLink to ["Pull sleeves down", "Pull sleeves up"]>>
-				<<case "striped sweater">><<set _altLink to ["Pull up sleeves", "Pull down sleeves"]>>
-				<<case "boilersuit">><<set _altLink to ["Unzip", "Zip"]>>
+				<<case "schoolcardigan">><<set _altLink to ["가디건을 허리에 묶기", "가디건을 정상적으로 입기"]>>
+				<<case "brownleather" "blackleather" "leathercropjacket" "winterjacket">><<set _altLink to ["재킷 지퍼 올리기", "재킷 지퍼 내리기"]>>
+				<<case "waistcoat" "waistcoatlapel" "blazershirt">><<set _altLink to ["넣어 입기", "빼서 입기"]>>
+				<<case "dress" "buttondown" "oversizedbuttondown" "shortsleevebuttonup" "flannel shirt">><<set _altLink to ["셔츠 단추 풀기", "셔츠 단추 채우기"]>>
+				<<case "catsuit">><<set _altLink to ["지퍼 내리기", "지퍼 올리기"]>>
+				<<case "kimono" "kimonomini">><<set _altLink to ["느슨하게 풀기", "단단히 조이기"]>>
+				<<case "flowy sleeve top" "milkmaid dress">><<set _altLink to ["소매 내리기", "소매 올리기"]>>
+				<<case "striped sweater">><<set _altLink to ["소매를 걷어올린다", "소매를 내린다"]>>
+				<<case "boilersuit">><<set _altLink to ["지퍼 내리기", "지퍼 올리기"]>>
 				<<default>><<exit>>
 			<</switch>>
 		<<case "under_upper">>
 			<<switch $worn.under_upper.variable>>
-				<<case "ruffled swimsuit">><<set _altLink to ["Take off cardigan", "Put on cardigan"]>>
+				<<case "ruffled swimsuit">><<set _altLink to ["가디건 벗기", "가디건 입기"]>>
 				<<default>><<exit>>
 			<</switch>>
 		<<case "head">>

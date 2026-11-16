@@ -42,7 +42,7 @@ function initSpecialClothes() {
 		{ name: "reindeer slippers", 			sets: ["christmas"] },
 		{ name: "candy cane", 					sets: ["christmas"] },
 
-		{ name: "rose", 						sets: ["valentines", "flowers"], requirements: () => V.gwylanSeen?.includes("rose_kiss"), hint: "get kissed by a rose" },
+		{ name: "rose", 						sets: ["valentines", "flowers"], requirements: () => V.gwylanSeen?.includes("rose_kiss"), hint: "장미에게 키스를 받기" },
 		{ name: "rose eyepatch", 				sets: ["valentines", "rose_wedding"] },
 		{ name: "rose wedding veil", 			sets: ["valentines", "rose_wedding"] },
 		{ name: "long rose wedding veil", 		sets: ["valentines", "rose_wedding"] },
@@ -399,9 +399,9 @@ function initSpecialClothes() {
 			icon: "clothes/straightjacket.png",
 		},
 		mine: {
-			text: "mining helmet",
+			text: "광부 헬멧",
 			requirements: () => V.mine?.freed,
-			hint: "break the chains that bind",
+			hint: "옭아매는 사슬을 끊기",
 			shop: ["forest"],
 			subsetOf: ["bad_end"],
 			feat: true,

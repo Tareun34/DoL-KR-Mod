@@ -12,7 +12,7 @@ const StartConfig = {
 	enableImages: true,
 	enableLinkNumberify: true,
 	version: "0.5.13.8",
-	versionName: `"Dark History" edition`,
+	versionName: `"Dark History" 에디션`,
 	sneaky: false,
 	socialMediaEnabled: true,
 	sourceLinkEnabled: false,

@@ -171,17 +171,17 @@ function masturbationEffects() {
 	if (otherVariables.additionalEffect.hands === "ballplayeffects" && V.worn.genitals.name !== "chastity parasite") {
 		if (V.arousal >= V.arousalmax * (4 / 5) || (V.earSlime.focus === "impregnation" && V.earSlime.growth >= 100)) {
 			if (genitalsExposed()) {
-				sWikifier('Your <<penis>> bucks eagerly, and <span class="pink">precum leaks from the tip</span>.');
+				sWikifier('당신의 <<penis>>【이가】 간절하게 꿈틀대고, <span class="pink">끝에서 쿠퍼액이 새어 나온다</span>.');
 			} else if (waterproofLower) {
-				sWikifier(`Your <<penis>> bucks eagerly, and <span class="pink">precum is trapped by your ${waterproofLower}.</span>`);
+				sWikifier(`당신의 <<penis>>【이가】 간절하게 꿈틀대고, <span class="pink">쿠퍼액이 ${waterproofLower} 안에 갇힌다.</span>`);
 			} else {
 				sWikifier('당신의 <<penis>>【이가】 간절하게 꿈틀대고, <span class="pink">쿠퍼액이 <<exposedlower>> 사이로 스며 나온다.</span>');
 			}
 		} else if (V.arousal >= V.arousalmax * (3 / 5)) {
 			if (genitalsExposed()) {
-				sWikifier('Your <<penis>> bucks eagerly, and <span class="pink">precum beads at the tip.</span>');
+				sWikifier('당신의 <<penis>>【이가】 간절하게 꿈틀대고, <span class="pink">끝에 쿠퍼액이 맺힌다.</span>');
 			} else if (waterproofLower) {
-				sWikifier(`Your <<penis>> bucks eagerly, and <span class="pink">precum beads in your ${waterproofLower}.</span>`);
+				sWikifier(`당신의 <<penis>>【이가】 간절하게 꿈틀대고, <span class="pink">쿠퍼액이 ${waterproofLower} 안에 맺힌다.</span>`);
 			} else {
 				sWikifier('당신의 <<penis>>【이가】 간절하게 꿈틀대고, <span class="pink">쿠퍼액이 <<exposedlower>>에 어두운 얼룩을 만든다.</span>');
 			}
@@ -209,7 +209,7 @@ function masturbationEffects() {
 					}.</span>`
 				);
 			} else if (waterproofLower) {
-				sWikifier(`Your <<penis "strap-on">> bucks eagerly, and <span class="pink">precum is trapped by your ${waterproofLower}.</span>`);
+				sWikifier(`당신의 <<penis "strap-on">>【이가】 간절하게 꿈틀대고, <span class="pink">쿠퍼액이 ${waterproofLower} 안에 갇힌다.</span>`);
 			} else {
 				sWikifier('당신의 <<penis "strap-on">>【이가】 간절하게 꿈틀대고, <span class="pink">쿠퍼액이 <<exposedlower>> 사이로 스며 나온다.</span>');
 			}
@@ -221,7 +221,7 @@ function masturbationEffects() {
 					}.</span>`
 				);
 			} else if (waterproofLower) {
-				sWikifier(`Your <<penis "strap-on">> bucks eagerly, and <span class="pink">precum beads in your ${waterproofLower}.</span>`);
+				sWikifier(`당신의 <<penis "strap-on">>【이가】 간절하게 꿈틀대고, <span class="pink">쿠퍼액이 ${waterproofLower} 안에 맺힌다.</span>`);
 			} else {
 				sWikifier('당신의 <<penis "strap-on">>【이가】 간절하게 꿈틀대고, <span class="pink">쿠퍼액이 <<exposedlower>>에 어두운 얼룩을 만든다.</span>');
 			}
@@ -2922,7 +2922,7 @@ function possessedMasturbation(span, br) {
 	if (["mpenisstopW", "mbreaststopW", "mvaginastopW"].includes(V.rightaction)) resist += 2;
 
 	if (resist === 0) {
-		fragment.append(span("You let it take you.", "pink"));
+		fragment.append(span("그것에 몸을 맡긴다.", "pink"));
 		sWikifier("<<pain -2>><<stress -12>><<sub 2>><<lpain>><<llstress>><<set V.wraith.will += 30>><br>");
 	} else {
 		wikifier("willpowerdifficulty", 1, Math.floor(1 + V.wraith.will), true);

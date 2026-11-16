@@ -178,7 +178,7 @@
 	"사람들이 당신을 함부로 대하지 못하게 하려는 건가요?" <<he>>【은는】 말한다.
 	<br><br>
 <<elseif $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>
-	"You have both," <<he>> gasps.
+	"둘 다 있네요," <<he>>【이가】 숨을 삼킨다.
 	<<if $fame.exhibitionism gte 1000>>
 		"당신이 내가 계속 듣던 그 노출증 환자군요."
 	<<elseif $fame.exhibitionism gte 400>>

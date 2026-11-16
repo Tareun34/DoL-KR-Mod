@@ -430,13 +430,13 @@
 	<label>초기 태닝: <<numberslider "$characterViewer.skinColour.range" $characterViewer.skinColour.range 0 100 1>></label>
 	<br><br>
 
-	<span class="gold">Body Freckles</span><br>
-	<label>None <<radiobutton "$characterViewer.bodyState.bodyFreckles" "none" autocheck>></label> |
-	<label>Upper body <<radiobutton "$characterViewer.bodyState.bodyFreckles" "upper" autocheck>></label> |
-	<label>Full body <<radiobutton "$characterViewer.bodyState.bodyFreckles" "full" autocheck>></label> |
+	<span class="gold">몸 주근깨</span><br>
+	<label>없음 <<radiobutton "$characterViewer.bodyState.bodyFreckles" "none" autocheck>></label> |
+	<label>상반신 <<radiobutton "$characterViewer.bodyState.bodyFreckles" "upper" autocheck>></label> |
+	<label>전신 <<radiobutton "$characterViewer.bodyState.bodyFreckles" "full" autocheck>></label> |
 	<br><br>
 
-	<span class="gold">Penis Size</span>
+	<span class="gold">자지 크기</span>
 	<br>
 	<<set _keys to Object.keys(_penisSize)>>
 	<<for _i to 0; _i lt _keys.length; _i++>>
