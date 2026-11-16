@@ -2760,71 +2760,71 @@
 <<wearProp "pickaxe">>
 <<upperwear "boiler suit">><<headwear "mining helmet">><<facewear "gas mask">>
 <<feetwear "work boots">><<handswear "work gloves">>
-You wake up to a pressure on your face. Putting your hands to your face, you feel a gas mask. You try to remove it, but it seems like it's fused with your skin. 
+얼굴을 짓누르는 압박감에 당신은 잠에서 깬다. 얼굴에 손을 대 보니 방독면이 만져진다. 벗겨 내려 하지만, 피부에 녹아 붙은 것만 같다. 
 <br><br>
-Looking around, you can barely see anything. The only light emanating from the mining helmet on your head reveals that you're in a cave tunnel held by wooden supports.
+주위를 둘러보지만 거의 아무것도 보이지 않는다. 머리에 쓴 광부 헬멧에서 새어 나오는 유일한 불빛에, 이곳이 나무 버팀목으로 떠받친 동굴 갱도라는 것이 드러난다.
 
 <<if $nightmaresSeen.includes("mine")>>
-	Something's wrong. You know this place. <span class="purple">This can't be real. You have to wake up.</span>
+	뭔가 잘못됐다. 당신은 이곳을 안다. <span class="purple">이건 진짜일 리 없다. 깨어나야 한다.</span>
 	<br><br>
-	<<link [[Wake up|Nightmare Mine Wake]]>><<set $phase to 0>><</link>><<nightmareWakeDifficulty>>
+	<<link [[깨어난다|Nightmare Mine Wake]]>><<set $phase to 0>><</link>><<nightmareWakeDifficulty>>
 <</if>>
 <br><br>
-<<link [[Stand up|Nightmare Mine 2]]>><<set $phase to 1>><</link>>
+<<link [[일어선다|Nightmare Mine 2]]>><<set $phase to 1>><</link>>
 
 
 
 :: Nightmare Mine 2
 <<effects>>
 <<if $phase is 0>>
-	You rush to your feet in panic.
+	당신은 공포에 질려 허둥지둥 일어선다.
 <<else>>
-	You raise yourself off the hard rock.
+	당신은 단단한 바위에서 몸을 일으킨다.
 <</if>>
-<span class="red">A heavy rumbling from all around you threatens to send you back down</span>, but you manage to grab onto the tunnel wall.
+<span class="red">사방에서 육중한 굉음이 울려 퍼지며 당신을 다시 쓰러뜨릴 듯 위협하지만</span>, 당신은 가까스로 갱도 벽을 붙잡는다.
 <br><br>
-The rumbling quickly subsides and you get your footing on the hard ground.
+굉음은 금세 잦아들고, 당신은 단단한 땅에 발을 디딘다.
 <<if $phase is 0>>
-	You can't stay here. You have to get out. You start running as fast as you can down the tunnel, <span class="red">but another rumble knocks you off your feet</span>.<<gpain>>
+	여기 있을 수는 없다. 나가야 한다. 당신은 갱도를 따라 있는 힘껏 달리기 시작하지만, <span class="red">또다시 울린 굉음에 나동그라진다</span>.<<gpain>>
 <<else>>
-	With no other options, you start to walk down the tunnel. You keep walking and walking and walking. You start to wonder if there is an end <span class="red">as another rumble knocks you off your feet</span>. <<gpain>>
+	다른 방도가 없어, 당신은 갱도를 따라 걷기 시작한다. 걷고, 걷고, 또 걷는다. 끝이 있기는 한 걸까 싶어질 무렵 <span class="red">또다시 울린 굉음에 나동그라진다</span>. <<gpain>>
 <</if>>
 <br><br>
-Rocks start falling all around you. You hear the supports start to splinter and crack. You try to get up and run to safety, but a boulder lands on your back and pins you to the ground. <<gggpain>>
+사방에서 돌이 떨어지기 시작한다. 버팀목이 쪼개지고 갈라지는 소리가 들린다. 일어나 안전한 곳으로 달아나려 하지만, 바윗덩이가 등 위로 떨어져 당신을 바닥에 짓눌러 버린다. <<gggpain>>
 <br><br>
-You try to struggle out from under the boulder, <span class="red">but you can't move!</span> You keep trying as rocks keep falling around you. Another boulder falls onto your leg, pinning it to the rock. <<gggpain>>
+바윗덩이 밑에서 빠져나오려 발버둥 치지만, <span class="red">움직일 수가 없다!</span> 주위로 돌이 계속 쏟아지는 가운데 당신은 계속 몸부림친다. 또 다른 바윗덩이가 다리 위로 떨어져 바위에 다리를 짓눌러 고정한다. <<gggpain>>
 <br><br>
-You hear a large snap as a support crumbles in front of you, followed by a wave of rocks covering you. 
+눈앞에서 버팀목이 무너지며 커다랗게 뚝 부러지는 소리가 나고, 뒤이어 쏟아진 돌무더기가 당신을 덮친다. 
 <br><br>
-<<link [[Close your eyes|Nightmare Mine 3]]>><</link>>
+<<link [[눈을 감는다|Nightmare Mine 3]]>><</link>>
 
 
 
 :: Nightmare Mine 3
 <<effects>>
-You close your eyes as hard as you can. The sound of rocks falling and wood cracking fills your ears. <<ggstress>><<ggpain>>
+당신은 있는 힘껏 눈을 질끈 감는다. 돌이 떨어지고 나무가 갈라지는 소리가 귀를 가득 메운다. <<ggstress>><<ggpain>>
 <br><br>
-You find it getting hard to breathe as more rocks crumble on top of you, any attempt to move only increases the weight bearing down on you. The sounds begin to cease and everything goes silent. You open your eyes to reveal a small pocket in front of you, illuminated by your headlamp. You again try your hardest to move, <span class="red">but you're completely stuck</span>.
+더 많은 돌이 위로 무너져 내리면서 숨쉬기가 점점 힘들어진다. 움직이려 할수록 짓누르는 무게만 더해질 뿐이다. 소리가 잦아들더니 모든 것이 고요해진다. 눈을 뜨자 헤드램프 불빛에 비친 작은 빈 공간이 눈앞에 드러난다. 당신은 다시 한번 있는 힘껏 움직여 보지만, <span class="red">완전히 갇혀 버렸다</span>.
 <br><br>
-You yell for help, but no response comes, you yell and yell until your voice gives out. You're alone. Eventually the headlamp on your helmet starts to dim and darkness envelops you.
+도와 달라고 소리치지만 아무 대답도 돌아오지 않는다. 목이 쉴 때까지 소리치고 또 소리친다. 당신은 혼자다. 이윽고 헬멧의 헤드램프가 희미해지기 시작하고, 어둠이 당신을 감싼다.
 <br><br>
-You're stuck, there's no way out. It's so hard to breathe. Feeling starts to vanish from your limbs. Your consciousness starts to slip as you stop breathing.
+꼼짝할 수 없다. 빠져나갈 길은 없다. 숨쉬기가 너무 힘들다. 팔다리에서 감각이 사라지기 시작한다. 숨이 멎으면서 의식이 희미해져 간다.
 <br><br>
-<<link [[No escape|Nightmare Mine End]]>><</link>>
+<<link [[빠져나갈 길은 없다|Nightmare Mine End]]>><</link>>
 
 
 
 :: Nightmare Mine Wake
 <<effects>>
-You have to wake up, you have to get out. You can't stay here. You close your eyes.
+깨어나야 한다. 나가야 한다. 여기 있을 수는 없다. 당신은 눈을 감는다.
 <br><br>
 
 <<if $willpowerSuccess>>
-	<<link [[Wake up, you have to wake up.|Nightmare Mine End]]>><</link>>
+	<<link [[깨어나, 깨어나야 해.|Nightmare Mine End]]>><</link>>
 <<else>>
-	This can't be a dream, this isn't a dream, this is real.
+	이게 꿈일 리 없다. 이건 꿈이 아니다. 이건 현실이다.
 	<br><br>
-	<<link [[Get out|Nightmare Mine 2]]>><</link>>
+	<<link [[빠져나간다|Nightmare Mine 2]]>><</link>>
 <</if>>
 
 
@@ -2837,11 +2837,11 @@ You have to wake up, you have to get out. You can't stay here. You close your ey
 <<nightmareEnd>>
 
 <<if $phase is 0>>
-	You slowly open your eyes, revealing the world around you. <<lstress>><<stress -2>>
+	당신은 천천히 눈을 뜨고, 주위 세상이 눈앞에 펼쳐진다. <<lstress>><<stress -2>>
 <<else>>
-	You open your eyes with a gasp, air filling your lungs. <<ggstress>><<stress 15>>
+	당신은 헉 하고 숨을 들이켜며 눈을 뜬다. 폐 속으로 공기가 밀려든다. <<ggstress>><<stress 15>>
 <</if>>
 <br><br>
-You sigh in relief, it was only a dream.
+당신은 안도의 한숨을 쉰다. 그저 꿈이었다.
 <br><br>
-<<link [[Next|$nightmareExit]]>><<unset $nightmareExit>><<endevent>><</link>>
+<<link [[다음|$nightmareExit]]>><<unset $nightmareExit>><<endevent>><</link>>

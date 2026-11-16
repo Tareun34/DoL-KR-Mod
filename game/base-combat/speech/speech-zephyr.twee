@@ -15,15 +15,15 @@
 			<<switch _loveInterest>>
 				<<case "Gwylan">>
 					<<addSpeechLine "namedrop">>
-						<<He>> speaks. "Hah! How's little seabird doing?"
+						<<He>>【이가】 입을 연다. "하! 우리 꼬마 바닷새는 잘 지내나?"
 					<</addSpeechLine>>
 				<<case "Black Wolf" "Great Hawk">>
 					<<addSpeechLine "namedrop">>
-						<<He>> chortles. "Oh, you're full of tales."
+						<<He>>【이가】 껄껄 웃는다. "허, 너 참 이야깃거리가 많구나."
 					<</addSpeechLine>>
 				<<default>>
 					<<addSpeechLine "namedrop">>
-						<<He>> smirks. "A lover on land or a heart at sea, pick one."
+						<<He>>【이가】 히죽 웃는다. "뭍의 연인이냐, 바다에 바친 마음이냐. 하나만 골라."
 					<</addSpeechLine>>
 			<</switch>>
 		<</if>>

@@ -261,7 +261,7 @@
 		<br>
 
 		<<if !$options.tipdisable and (!$statFreeze or $hc)>>
-			<span class="gold">Tip:</span> <<tips>>
+			<span class="gold">팁:</span> <<tips>>
 			<br><br>
 		<</if>>
 

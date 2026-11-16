@@ -47,11 +47,11 @@
 <</if>>
 /*
 <<if $kylar_altar_research and $kylar_altar_research.includes("tape") and !$kylar_altar_research.includes("pages")>>
-	<<link [[Show Kylar's parents the pages you found at the temple (0:10)|Manor Pages Room]]>><<set $kylar_altar_research.pushUnique("pages")>><<pass 10>><</link>>
+	<<link [[신전에서 찾은 페이지를 카일라의 부모에게 보여준다 (0:10)|Manor Pages Room]]>><<set $kylar_altar_research.pushUnique("pages")>><<pass 10>><</link>>
 	<br>
 <</if>>
  */
-<<getouticon>><<link [[Leave|Manor Hall]]>><</link>>
+<<getouticon>><<link [[떠난다|Manor Hall]]>><</link>>
 <br>
 
 :: Manor Lab
@@ -155,10 +155,10 @@
 <<set _kylar to statusCheck("Kylar")>>
 <<if $kylar_altar_research and $kylar_altar_research.includes("temple") and !$kylar_altar_research.includes("tape")>>
 	<<if _kylar.state isnot "prison" and (Time.hour gte 18 or Time.hour lte 6)>>
-		There's a video player attached to Kylar's computer via arcane means. It could play the tape you found at the temple.
+		카일라의 컴퓨터에 비술적인 방법으로 비디오 플레이어가 연결되어 있다. 신전에서 찾은 테이프를 틀 수 있을 것 같다.
 		<br><br>
 	<<else>>
-		There's a video player attached to Kylar's computer via arcane means. It could play the tape you found at the temple, <span class="blue">but you'll need Kylar around to operate it.</span>
+		카일라의 컴퓨터에 비술적인 방법으로 비디오 플레이어가 연결되어 있다. 신전에서 찾은 테이프를 틀 수 있을 것 같지만, <span class="blue">작동시키려면 카일라가 곁에 있어야 한다.</span>
 		<br><br>
 	<</if>>
 <</if>>
@@ -184,35 +184,35 @@
 
 <<if _kylar.state isnot "prison" and $kylar_altar_research and $kylar_altar_research.includes("temple") and !$kylar_altar_research.includes("tape")>>
 	<<if Time.hour lte 6>>
-		<<ind>><<link [[Ask Kylar to play the video tape you found in the temple (0:30)|Manor Tape Wake]]>><<pass 30>><<set $kylar_altar_research.pushUnique("tape")>><</link>>
+		<<ind>><<link [[신전에서 찾은 비디오테이프를 틀어 달라고 카일라에게 부탁한다 (0:30)|Manor Tape Wake]]>><<pass 30>><<set $kylar_altar_research.pushUnique("tape")>><</link>>
 		<br>
 	<<elseif Time.hour gte 18>>
-		<<ind>><<link [[Ask Kylar to play the video tape you found in the temple (0:30)|Manor Tape Ask]]>><<pass 30>><<set $kylar_altar_research.pushUnique("tape")>><</link>>
+		<<ind>><<link [[신전에서 찾은 비디오테이프를 틀어 달라고 카일라에게 부탁한다 (0:30)|Manor Tape Ask]]>><<pass 30>><<set $kylar_altar_research.pushUnique("tape")>><</link>>
 		<br>
 	<</if>>
 <</if>>
-<<getouticon>><<link [[Leave (0:01)|Manor Hall]]>><<pass 1>><</link>>
+<<getouticon>><<link [[떠난다 (0:01)|Manor Hall]]>><<pass 1>><</link>>
 <br>
 
 :: Manor Tape Wake
 <<effects>>
 
 <<npc Kylar>><<person1>>
-"Kylar," you say. <<His>> eyes open at once.
+"카일라." 당신이 부른다. <<His>> 눈이 곧바로 번쩍 뜨인다.
 
 <<if $speech_attitude is "meek">>
-	"I'm sorry to wake you. Can you play this video?"
+	"깨워서 미-미안해. 이 비디오 좀 틀어 줄 수 있어?"
 <<elseif $speech_attitude is "bratty">>
-	"Play this video for me."
+	"이 비디오 좀 틀어 줘."
 <<else>>
-	"Sorry to wake you. Can you play this video for me?"
+	"깨워서 미안해. 이 비디오 좀 틀어 줄래?"
 <</if>>
 <br><br>
 
-Kylar nods, throws off the covers, and stumbles to <<his>> computer. <<He>> fiddles with the jungle of cables, connecting and reconnecting, then slots the tape into the older player.
+카일라는 고개를 끄덕이고는 이불을 걷어차고 비틀거리며 <<his>> 컴퓨터로 간다. <<He>>【은는】 정글처럼 얽힌 케이블을 만지작거리며 이리저리 꽂았다 뺐다 하더니, 오래된 플레이어에 테이프를 밀어 넣는다.
 <br><br>
 
-<<link [[Next|Manor Tape]]>><</link>>
+<<link [[다음|Manor Tape]]>><</link>>
 <br>
 
 
@@ -220,230 +220,230 @@ Kylar nods, throws off the covers, and stumbles to <<his>> computer. <<He>> fidd
 <<effects>>
 
 <<npc Kylar>><<person1>>
-"Kylar," you say. <<He>> swivels on <<his>> chair to face you.
+"카일라." 당신이 부른다. <<He>>【이가】 의자를 빙글 돌려 당신을 마주 본다.
 <br>
-"What is it, <<kylar_pet_name>>?"
+"무슨 일이야, <<kylar_pet_name>>?"
 <br>
 <<if $speech_attitude is "meek">>
-	"I have a video tape here. If it's no trouble, could you play it for me?"
+	"여기 비디오테이프가 있는데. 귀-귀찮지 않으면, 이것 좀 틀어 줄 수 있어?"
 <<elseif $speech_attitude is "bratty">>
-	"Play this tape for me."
+	"이 테이프 좀 틀어 봐."
 <<else>>
-	"Could you play this video tape for me?"
+	"이 비디오테이프 좀 틀어 줄 수 있어?"
 <</if>>
 <br><br>
 
-Kylar nods, and almost drops the tape as <<he>> takes it. <<He>> needs your help to lift one of the monitors, then <<he>> reaches towards the back of <<his>> desk to fiddle with the jungle of cables, connecting and reconnecting. <<He>> leans to the side, and slots the tape into the old player.
+카일라는 고개를 끄덕이고, 테이프를 받아 들다가 하마터면 떨어뜨릴 뻔한다. <<He>>【은는】 모니터 하나를 들어 올리는 데 당신의 도움을 받은 다음, 책상 뒤쪽으로 손을 뻗어 정글처럼 얽힌 케이블을 만지작거리며 이리저리 꽂았다 뺐다 한다. <<He>>【은는】 몸을 옆으로 기울여 오래된 플레이어에 테이프를 밀어 넣는다.
 <br><br>
 
-<<link [[Next|Manor Tape]]>><</link>>
+<<link [[다음|Manor Tape]]>><</link>>
 <br>
 
 :: Manor Tape
 <<effects>>
 
-The video comes to life. It shows a stage from the point of view of someone in a packed audience. You recognise it as the town hall.
+영상이 재생된다. 꽉 찬 객석에 앉은 누군가의 시점에서 무대를 비추고 있다. 당신은 그곳이 시청이라는 것을 알아본다.
 <br><br>
 
-Kylar looks uneasy, then horrified as several small figures walk onto the stage. One looks particularly nervous. <span class="blue">It's a younger Kylar.</span> <<His>> costume is nice, but <<his>> hair is dishevelled, and <<his>> eyes red.
+몇몇 작은 형체들이 무대 위로 걸어 나오자, 카일라는 불안해 보이다가 이내 겁에 질린다. 그중 하나는 유독 긴장한 모습이다. <span class="blue">어린 시절의 카일라다.</span> <<His>> 의상은 멋지지만, 머리는 헝클어져 있고 눈은 빨갛다.
 <br><br>
 
-The Kylar sat beside you sways. <<He>> sways as if about to faint, then half falls, half stumbles from <<his>> chair. <<He>> scrambles beneath <<his>> bedsheet.<br><br>
+당신 옆에 앉은 카일라가 휘청거린다. <<He>>【은는】 금방이라도 기절할 것처럼 휘청이다가, 반쯤은 넘어지고 반쯤은 비틀거리며 의자에서 내려온다. <<He>>【은는】 허둥지둥 침대 시트 밑으로 기어든다.<br><br>
 
-<<link [[Ask Kylar to watch|Manor Tape Stay]]>><</link>>
+<<link [[카일라에게 같이 보자고 한다|Manor Tape Stay]]>><</link>>
 <br>
-<<link [[Let <<him>> be|Manor Tape Leave]]>><</link>>
+<<link [[<<him>>【을를】 내버려 둔다|Manor Tape Leave]]>><</link>>
 <br>
 
 :: Manor Tape Stay
 <<effects>>
 
 <<if $speech_attitude is "meek">>
-	"Please stay," you say. "I know you don't want to, but it would mean a lot if you watched with me."
+	"제-제발 있어 줘." 당신이 말한다. "보기 싫은 거 알아. 그래도 나랑 같이 봐 주면 정말 고마울 것 같아."
 <<elseif $speech_attitude is "bratty">>
-	"Don't be a wuss," you say. "It's just a video."
+	"겁쟁이처럼 굴지 마." 당신이 말한다. "그냥 비디오일 뿐이잖아."
 <<else>>
-	"I know you don't want to," you say. "But please stay and watch with me."
+	"보기 싫은 거 알아." 당신이 말한다. "그래도 있어 줘. 나랑 같이 보자."
 <</if>>
 <br><br>
 
-You hear a small weep, then Kylar emerges from beneath the covers, and returns to <<his>> chair, and fixes <<his>> eyes on the screen.
+작게 훌쩍이는 소리가 들리더니, 카일라가 이불 밑에서 나와 의자로 돌아가 화면에 눈을 고정한다.
 <br><br>
 
-Back in the video, Kylar lines up with the other figures. They begin speaking rehearsed lines in turn, but something distracts them. You hear murmuring from the front of the audience. One of the figures on stage holds their nose.
+영상 속에서 카일라가 다른 형체들과 함께 줄을 선다. 아이들은 연습한 대사를 차례로 말하기 시작하지만, 무언가가 그들의 주의를 흐트러뜨린다. 객석 앞쪽에서 웅성거리는 소리가 들린다. 무대 위의 한 아이가 코를 막는다.
 <br><br>
 
-<<link [[Next|Manor Tape 2]]>><<set $phase to 1>><</link>>
+<<link [[다음|Manor Tape 2]]>><<set $phase to 1>><</link>>
 <br>
 
 :: Manor Tape Leave
 <<effects>>
 
-Back in the video, Kylar lines up with the other figures. They begin speaking rehearsed lines in turn, but something distracts them. You hear murmuring from the front of the audience. One of the figures on stage holds their nose.
+영상 속에서 카일라가 다른 형체들과 함께 줄을 선다. 아이들은 연습한 대사를 차례로 말하기 시작하지만, 무언가가 그들의 주의를 흐트러뜨린다. 객석 앞쪽에서 웅성거리는 소리가 들린다. 무대 위의 한 아이가 코를 막는다.
 <br><br>
 
-<<link [[Next|Manor Tape 2]]>><<set $phase to 0>><</link>>
+<<link [[다음|Manor Tape 2]]>><<set $phase to 0>><</link>>
 <br>
 
 :: Manor Tape 2
 <<effects>>
 
-It's Kylar's turn to speak. <<His>> voice quivers, full of stops and starts.
+카일라가 말할 차례다. <<His>> 목소리는 떨리고, 자꾸만 끊겼다 이어진다.
 <br><br>
 
-"It's Kylar," shouts a young voice from off-camera. The murmuring intensifies, accompanied by some laughter, and the figures on either side of Kylar step away. More than a couple hold their nose.
+"카일라잖아." 화면 밖에서 어린 목소리가 외친다. 웅성거림이 커지고 웃음소리도 섞여 들리더니, 카일라 양옆에 있던 아이들이 물러선다. 코를 막는 아이가 한둘이 아니다.
 <br><br>
 
-Video-Kylar continues <<his>> lines, but <<he>> quivers, and sniffles, more and more. <<He>> trembles so hard even the grainy film can't hide it.
+영상 속 카일라는 <<his>> 대사를 이어 가지만, 점점 더 심하게 떨며 훌쩍인다. 거친 화질로도 감출 수 없을 만큼 <<He>>【은는】 심하게 떨고 있다.
 <<if $phase is 1>>
-	Beside you, Kylar similarly trembles, tears streaming down <<his>> face. <<He>> releases a strange, keening sound, then hides beneath <<his>> bedsheets again.
+	당신 옆의 카일라도 똑같이 떨고 있다. 얼굴에는 눈물이 줄줄 흐른다. <<He>>【은는】 이상하게 날카로운 울음소리를 내더니, 다시 침대 시트 밑으로 숨어 버린다.
 <<else>>
-	The bedsheets similarly tremble.
+	침대 시트도 똑같이 떨고 있다.
 <</if>>
 <br><br>
 
-<<link [[Continue watching the tape|Manor Tape 3]]>><</link>>
+<<link [[테이프를 계속 본다|Manor Tape 3]]>><</link>>
 <br>
-<<link [[Comfort Kylar first|Manor Tape 2 Comfort]]>><</link>>
+<<link [[먼저 카일라를 달랜다|Manor Tape 2 Comfort]]>><</link>>
 <br>
 
 :: Manor Tape 2 Comfort
 <<effects>>
 
-You rest a hand on Kylar, and speak soothing words, but <<hes>> trapped in a nightmare of <<his>> own.
+당신은 카일라에게 손을 얹고 다정한 말을 건네지만, <<he>>【은는】 <<his>> 악몽에 갇혀 있다.
 <br><br>
 
-You turn back to the tape.
+당신은 다시 테이프로 눈을 돌린다.
 <br><br>
 
-<<link [[Next|Manor Tape 3]]>><</link>>
+<<link [[다음|Manor Tape 3]]>><</link>>
 <br>
 
 :: Manor Tape 3
 <<effects>>
 
-The tape ends, rewinds, and repeats. Kylar and the others walk onto the stage, but this time you notice something else. A hand with a black sleeve emerges from the curtain alongside Kylar. It reaches into <<his>> pocket, then withdraws.
+테이프가 끝나고, 되감기더니, 다시 재생된다. 카일라와 다른 아이들이 무대로 걸어 나오는데, 이번에는 다른 것이 눈에 들어온다. 검은 소매를 걸친 손 하나가 카일라 옆의 커튼 사이로 나온다. 그 손은 <<his>> 주머니에 들어갔다가 다시 빠져나간다.
 <br><br>
 
-You replay the tape again, in case you imagined it. You did not. You watch the rest of the tape. Perhaps there's something else you missed.
+혹시 잘못 본 건 아닐까 싶어 당신은 테이프를 다시 돌려 본다. 잘못 본 게 아니다. 당신은 테이프를 끝까지 지켜본다. 놓친 것이 더 있을지도 모른다.
 <br><br>
 
-<<link [[Next|Manor Tape 4]]>><</link>>
+<<link [[다음|Manor Tape 4]]>><</link>>
 <br>
 
 :: Manor Tape 4
 <<effects>>
 <<earnFeat "Sancta Vexatio">>
-After several more rewinds, you notice a figure moving amongst the audience, wearing black, like certain members of the temple. They lean close to people in the audience, whispering in their ear before moving on.
+몇 번 더 되감아 본 끝에, 당신은 객석 사이를 돌아다니는 한 형체를 발견한다. 신전의 어떤 사람들처럼 검은 옷을 입고 있다. 그 형체는 관객들에게 바싹 다가가 귓가에 무언가를 속삭이고는 다음 사람에게로 옮겨 간다.
 <br><br>
 
-Some don't respond. Others smirk, or frown. The figure leaves frame right after the voice calls Kylar by name.
+어떤 이들은 아무 반응도 없다. 어떤 이들은 히죽 웃거나 얼굴을 찡그린다. 그 형체는 누군가의 목소리가 카일라의 이름을 부르자마자 화면 밖으로 사라진다.
 <br><br>
 
-<<link [[Next|Manor Tape 5]]>><</link>>
+<<link [[다음|Manor Tape 5]]>><</link>>
 <br>
 
 :: Manor Tape 5
 <<effects>>
 
-You feel their presence before you hear them. Kylar's parents stand behind you, watching the screen. They turn towards Kylar, and approach <<his>> shuddering form. Their clawed fingers reach for <<him>>, but hesitate just shy of touching, as if afraid to. Kylar stirs, and they dart from the room without a sound.
+소리가 들리기도 전에 기척이 먼저 느껴진다. 카일라의 부모가 당신 뒤에 서서 화면을 보고 있다. 그들은 카일라 쪽으로 몸을 돌려, 떨고 있는 <<his>> 몸에 다가간다. 갈고리 같은 손가락이 <<him>>에게 뻗어 오지만, 닿기 직전에 마치 두려운 듯 멈칫한다. 카일라가 꿈틀하자, 그들은 소리 없이 방 밖으로 쏜살같이 사라진다.
 <br><br>
-Kylar's face appears beneath the covers, red eyes resting on you. <<He>> holds out a hand.
+이불 밑으로 카일라의 얼굴이 드러나고, 빨간 눈이 당신에게 머문다. <<He>>【이가】 손을 내민다.
 <br><br>
 
-<<link [[Take <<his>> hand|Manor Tape Hand]]>><<npcincr Kylar love 1>><</link>><<glove>>
+<<link [[<<his>> 손을 잡는다|Manor Tape Hand]]>><<npcincr Kylar love 1>><</link>><<glove>>
 <br>
-<<link [[Pull <<him>> into a hug|Manor Tape Hug]]>><<npcincr Kylar love 3>><</link>><<gglove>>
+<<link [[<<him>>【을를】 끌어안는다|Manor Tape Hug]]>><<npcincr Kylar love 3>><</link>><<gglove>>
 <br>
-<<link [[Remain motionless|Manor Tape Motionless]]>><</link>>
+<<link [[가만히 있는다|Manor Tape Motionless]]>><</link>>
 <br>
 
 
 :: Manor Tape Hand
 <<effects>>
 
-You take Kylar's hand. <<He>> squeezes it so tight it starts to feel numb, <<his>> gaze locked with yours as if looking away would end the world.
+당신은 카일라의 손을 잡는다. <<He>>【은는】 감각이 무뎌질 만큼 세게 손을 움켜쥐고, 눈을 돌리면 세상이 끝나기라도 할 것처럼 당신과 시선을 맞춘 채 놓지 않는다.
 <br><br>
 
-<<link [[Ask about what you just saw|Manor Tape Ask 2]]>><</link>>
+<<link [[방금 본 것에 대해 묻는다|Manor Tape Ask 2]]>><</link>>
 <br>
-<<link [[Remain silent|Manor Tape Silent]]>><</link>>
+<<link [[침묵을 지킨다|Manor Tape Silent]]>><</link>>
 <br>
 
 :: Manor Tape Hug
 <<effects>>
 
-You take Kylar's hand, only to pull <<him>> into a hug. <<Hes>> still trembling. Your chest is soon soaked in <<his>> tears.
+당신은 카일라의 손을 잡더니 그대로 <<him>>【을를】 끌어당겨 안는다. <<He>>【은는】 아직도 떨고 있다. 당신의 가슴팍은 금세 <<his>> 눈물로 흠뻑 젖는다.
 <<upperwet 20>>
 <br><br>
 
-<<link [[Ask about what you just saw|Manor Tape Ask 2]]>><</link>>
+<<link [[방금 본 것에 대해 묻는다|Manor Tape Ask 2]]>><</link>>
 <br>
-<<link [[Remain silent|Manor Tape Silent]]>><</link>>
+<<link [[침묵을 지킨다|Manor Tape Silent]]>><</link>>
 <br>
 
 :: Manor Tape Motionless
 <<effects>>
 
-You remain motionless. Kylar withdraws <<his>> hand, and hides <<his>> face again. "Sorry sorry sorry," <<he>> says. "Sorry."
+당신은 가만히 있는다. 카일라는 <<his>> 손을 거두고 다시 얼굴을 숨긴다. "미안 미안 미안해." <<he>>【이가】 말한다. "미안해."
 <br><br>
 
-<<link [[Ask about what you just saw|Manor Tape Ask 2]]>><</link>>
+<<link [[방금 본 것에 대해 묻는다|Manor Tape Ask 2]]>><</link>>
 <br>
-<<link [[Remain silent|Manor Tape Silent]]>><</link>>
+<<link [[침묵을 지킨다|Manor Tape Silent]]>><</link>>
 <br>
 
 :: Manor Tape Ask 2
 <<effects>>
 
 <<if $speech_attitude is "meek">>
-	"I hope I'm not prying," you say. "But can you tell me about that video?"
+	"캐-캐묻는 건 아니었으면 좋겠는데." 당신이 말한다. "그 비디오에 대해 얘기해 줄 수 있어?"
 <<elseif $speech_attitude is "bratty">>
-	"What was that I just witnessed? Looked like it happened a while ago."
+	"방금 내가 본 게 뭐야? 꽤 오래전 일 같던데."
 <<else>>
-	"What happened in the video?" you ask.
+	"비디오 속에서 무슨 일이 있었던 거야?" 당신이 묻는다.
 <</if>>
 <br><br>
 
-Kylar opens <<his>> mouth to speak, but then tenses, tears streaming. "I'm sorry," <<he>> manages.
+카일라는 무언가 말하려 입을 열지만, 이내 몸이 굳고 눈물이 흘러내린다. "미-미안해." <<he>>【이가】 간신히 말한다.
 <br><br>
 
-<<link [[Comfort Kylar (0:20)|Manor Tape Comfort]]>><<npcincr Kylar love 1>><<pass 20>><</link>><<glove>>
+<<link [[카일라를 달랜다 (0:20)|Manor Tape Comfort]]>><<npcincr Kylar love 1>><<pass 20>><</link>><<glove>>
 <br>
-<<link [[Leave|Manor Tape 6]]>><</link>>
+<<link [[떠난다|Manor Tape 6]]>><</link>>
 <br>
 
 :: Manor Tape Silent
 <<effects>>
 
-You remain silent. Kylar sits back, looking even smaller than usual.
+당신은 침묵을 지킨다. 카일라는 의자에 등을 기댄다. 평소보다 더 작아 보인다.
 <br><br>
 
-<<link [[Comfort Kylar (0:20)|Manor Tape Comfort]]>><<npcincr Kylar love 1>><<pass 20>><</link>><<glove>>
+<<link [[카일라를 달랜다 (0:20)|Manor Tape Comfort]]>><<npcincr Kylar love 1>><<pass 20>><</link>><<glove>>
 <br>
-<<link [[Leave|Manor Tape 6]]>><</link>>
+<<link [[떠난다|Manor Tape 6]]>><</link>>
 <br>
 
 
 :: Manor Tape Comfort
 <<effects>>
 
-You stay with Kylar a while. <<He>> leans into you, clinging as if the wind threatened to carry you away. You hold <<him>> until <<his>> shuddering subsides.
+당신은 한동안 카일라의 곁에 머문다. <<He>>【은는】 바람이 당신을 날려 보내기라도 할 것처럼 당신에게 기대어 매달린다. 당신은 <<his>> 떨림이 가라앉을 때까지 <<him>>【을를】 안아 준다.
 <br><br>
 
-"Thank you," <<he>> says after a while, pulling away and regarding you with worshipful eyes. Then, as if having spent every ounce of <<his>> energy, <<he>> collapses into a nap. You tuck <<him>> into bed, and leave the room.
+"고마워." 한참 뒤 <<he>>【이가】 몸을 떼며 말한다. 당신을 바라보는 눈빛에는 숭배가 어려 있다. 그러고는 마지막 기운까지 다 써 버린 것처럼, <<he>>【은는】 쓰러지듯 잠에 빠져든다. 당신은 <<him>>에게 이불을 덮어 주고 방을 나선다.
 <br><br>
 
-<<link [[Next|Manor Tape 6]]>><</link>>
+<<link [[다음|Manor Tape 6]]>><</link>>
 <br>
 
 :: Manor Tape 6
 <<effects>>
 
-Outside, you feel a presence. You look left and right, but see nothing. Then you look up. Two pairs of eyes bore into you. Then vanish.
+밖으로 나오자, 어떤 기척이 느껴진다. 좌우를 둘러보지만 아무것도 보이지 않는다. 그러다 위를 올려다본다. 두 쌍의 눈이 당신을 꿰뚫듯 노려본다. 그러고는 사라진다.
 <br><br>
 
-<<link [[Next|Manor Hall]]>><<endevent>><</link>>
+<<link [[다음|Manor Hall]]>><<endevent>><</link>>
 <br>
 
 

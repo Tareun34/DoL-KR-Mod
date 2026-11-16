@@ -166,7 +166,7 @@ const statChange = (() => {
 	// Overflow-Using Code Section
 
 	function drunk(amount) {
-		if (isNaN(amount)) paramError("drunk", "amount", amount, "Expected a number.");
+		if (isNaN(amount)) paramError("drunk", "amount", amount, "숫자를 입력해야 합니다.");
 		amount = Number(amount);
 		/**
 		 * Modify the effect of drunk on the player, based on their drunk tolerance.
@@ -190,7 +190,7 @@ const statChange = (() => {
 	DefineMacro("drunk", drunk);
 
 	function tiredness(amount, source) {
-		if (isNaN(amount)) paramError("tiredness", "amount", amount, "Expected a number.");
+		if (isNaN(amount)) paramError("tiredness", "amount", amount, "숫자를 입력해야 합니다.");
 		amount = Number(amount);
 
 		// See "game\03-JavaScript\weather\02-main\02-body-temperature.js" for the effects of body temperature on fatigue.
@@ -234,8 +234,8 @@ const statChange = (() => {
 	DefineMacro("tiredness", tiredness);
 
 	function stress(amount, multiplierOverride) {
-		if (isNaN(amount)) paramError("stress", "amount", amount, "Expected a number.");
-		if (multiplierOverride && isNaN(multiplierOverride)) paramError("stress", "multiplierOverride", multiplierOverride, "Expected a number.");
+		if (isNaN(amount)) paramError("stress", "amount", amount, "숫자를 입력해야 합니다.");
+		if (multiplierOverride && isNaN(multiplierOverride)) paramError("stress", "multiplierOverride", multiplierOverride, "숫자를 입력해야 합니다.");
 		amount = Number(amount);
 		multiplierOverride = Number(multiplierOverride);
 		if (amount) {
@@ -260,7 +260,7 @@ const statChange = (() => {
 	DefineMacro("stress", stress);
 
 	function trauma(amount, source) {
-		if (isNaN(amount)) return paramError("trauma", "amount", amount, "Expected a number.");
+		if (isNaN(amount)) return paramError("trauma", "amount", amount, "숫자를 입력해야 합니다.");
 		amount = Number(amount);
 		if (amount) {
 			let traumaMod = 1;
@@ -375,7 +375,7 @@ const statChange = (() => {
 	DefineMacro("updateHallucinations", updateHallucinations);
 
 	function control(amount, combat) {
-		if (isNaN(amount)) paramError("control", "amount", amount, "Expected a number.");
+		if (isNaN(amount)) paramError("control", "amount", amount, "숫자를 입력해야 합니다.");
 		if (V.gamemode === "soft" && !V.possessed) {
 			// everything is a consensual consensual roleplay
 			V.control = V.controlmax;
