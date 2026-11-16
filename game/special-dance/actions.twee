@@ -316,7 +316,7 @@
 			<</if>>
 			<<set $audiencemod to Math.clamp($audiencemod, 1, 10)>>
 			<br>
-			Awe: <<statbarinverted $audiencemod 10>>
+			경외심: <<statbarinverted $audiencemod 10>>
 			<br>
 
 			<<rng>>
@@ -367,7 +367,7 @@
 				<<set $_blockDancingEvents to true>>
 			<<elseif currentSkillValue('danceskill') lt ( ($dance_stage_cum * 50) + random(1,250) )>>
 				<<if currentSkillValue('danceskill') gte ( ($dance_stage_cum * 40) + random(1,100) )>>
-					Your feet slip on the semen-covered stage, <span class="green">but you're able to recover,</span> incorporating the move into the dance.
+					정액으로 뒤덮인 무대에서 발이 미끄러지지만, <span class="green">당신은 균형을 되찾으며,</span> 자연스레 춤 동작의 일부로 만들어 넘긴다.
 					<br><br>
 				<<else>>
 					정액으로 뒤덮인 무대에서 발이 미끄러져, <span class="red">결국 <<bottom>>【으로로】 넘어지고 만다.</span>
@@ -653,7 +653,7 @@
 
 <<widget "dancepull">>
 	<<set $danceevent to "dancepull">>
-	Driven mad with lust, <span class="pink">the <<person>> grasps your leg and tries to pull you off the stage.</span>
+	색욕에 미쳐버린 <span class="pink"><<person>>【이가】 당신의 다리를 붙잡고 무대 밑으로 끌어내리려 든다.</span>
 	<br><br>
 <</widget>>
 
@@ -686,19 +686,19 @@
 
 <<widget "dancerape">>
 	<<set $danceevent to "rape">>
-	Driven wild by their lust, your audience surges toward you, their eyes filled with a primal hunger.
+	색욕에 굶주린 당신의 관객들이 이성을 잃고, 원초적인 갈증으로 번뜩이는 눈빛을 한 채 당신을 향해 몰려든다.
 	<br><br>
 <</widget>>
 
 <<widget "dancefall">>
 	<<set $danceevent to "rape">>
-	Driven wild by your vulnerability, your audience surges toward you, their eyes filled with a primal hunger.
+	무방비한 당신의 모습에 이성을 잃은 관객들이, 원초적인 갈증으로 번뜩이는 눈빛을 한 채 당신을 향해 몰려든다.
 	<br><br>
 <</widget>>
 
 <<widget "dancemolest">>
 	<<set $danceevent to "molest">><<molested>>
-	The <<person>> reaches out and grasps your waist!<<trauma 6>><<stress 6>><<gtrauma>><<gstress>>
+	<<person>>【이가】 손을 뻗어 당신의 허리를 움켜쥔다!<<trauma 6>><<stress 6>><<gtrauma>><<gstress>>
 	<br><br>
 <</widget>>
 
@@ -770,42 +770,42 @@
 <</widget>>
 
 <<widget "dancelonging">>
-	The <<person>> gazes at you with longing.
+	<<person>>【은는】 갈망하는 눈빛으로 당신을 응시한다.
 	<br><br>
 <</widget>>
 
 <<widget "dancenote">>
 	<<set $danceevent to "note">>
-	The <<person>> holds up a banknote.
+	<<person>>【이가】 지폐를 들어 올린다.
 	<br><br>
 <</widget>>
 
 <<widget "dancevip">>
 	<<set $danceevent to "vip">>
-	A <<person>> wearing an expensive <<if $pronoun is "f">>gown<<else>>suit<</if>> grasps your arm and tugs you closer. Security look away. "They won't bother us," <<he>> says. "They know who I am."
+	비싼 <<if $pronoun is "f">>가운을<<else>>정장을<</if>> 입은 <<person>>【이가】 당신의 팔을 움켜잡고는 자기 쪽으로 확 끌어당긴다. 경비원들은 못 본 체 고개를 돌린다. "저놈들이 방해하진 못할 거다." <<he>>【이가】 말한다. "내가 누군지 아니까."
 	<br><br>
 <</widget>>
 
 <<widget "dancedarryl">>
 	<<set $danceevent to "darryl">>
-	You notice Darryl roam between stages, checking in on the dancers. <<nnpc_He "Darryl">> arrives at yours and watches you.
+	당신은 데릴이 무대 사이를 돌아다니며 댄서들을 확인하고 있는 것을 눈치챈다. <<nnpc_He "Darryl">>【이가】 당신 쪽 무대로 다가와서 춤추는 것을 지켜본다.
 	<br><br>
 <</widget>>
 
 <<widget "dancebriar">>
 	<<set $danceevent to "briar">>
-	You notice Briar in the audience, whispering in their ears while watching you.
+	당신은 관객들 틈에 섞여 있는 브라이어를 발견한다. 그녀는 당신을 주시하며 주변 사람들에게 귓속말을 하고 있다.
 	<br><br>
 <</widget>>
 
 <<widget "dancestrippertrouble">>
 	<<set $danceevent to "strippertrouble">>
-	The <<person>> tries to drag another employee off <<if maleChance() gte random(1,100)>>his<<else>>her<</if>> stage.
+	<<person>>【이가】 다른 직원을 <<if maleChance() gte random(1,100)>>그의<<else>>그녀의<</if>> 무대에서 끌어내리려 한다.
 	<br><br>
 <</widget>>
 
 <<widget "dancesalivate">>
-	Some of the audience salivate watching you, but a glance at security quells any violent ambitions.
+	몇몇 관객들은 당신을 보며 군침을 흘리지만, 경비원을 한 번 흘끗 쳐다보는 것만으로 폭력적인 흑심을 누그러뜨린다.
 	<br><br>
 <</widget>>
 
@@ -826,7 +826,7 @@
 	<<else>>
 		"저 위에서 꽤나 귀엽군,"
 	<</if>>
-	says a familiar voice. It's Leighton, raising a stack of bills.
+	친숙한 목소리가 들려온다. 지폐 다발을 들어 올린 채 있는 건 바로 레이튼이다.
 	<br><br>
 <</widget>>
 
@@ -839,7 +839,7 @@
 
 <<widget "danceCorruption">>
 	<<set $danceevent to "corruptionDance">>
-	<span class="lewd">You feel the slime in your head command you to not stop dancing for the crowd.</span> It promises rewards if you comply and threatens consequences if you do not.
+	<span class="lewd">머릿속 슬라임이 군중을 위한 춤을 멈추지 말라고 명령하는 것을 느낀다.</span> 복종하면 포상을 내리겠다 속삭이고, 그러지 않을 경우 치를 대가를 경고하며 당신을 옥죈다.
 	<br><br>
 <</widget>>
 
@@ -847,6 +847,6 @@
 	<<set $danceevent to 0>><<set $audiencearousal -= 5>><<set $audienceexcitement -= 5>>
 	누군가의 손이 몸에 닿는 것이 느껴진다. 그다음엔 다른 손. 그리고 세 번째, 네 번째 손. 당신은 미친 듯이 주변을 둘러보다가, <span class="red">아래에서 무수한 창백한 팔다리가 튀어나와 닿는 대로 당신을 붙잡는 것을 본다.</span> 비명을 지르려 하지만, 그중 하나가 입을 틀어막는다.
 	<br><br>
-	You blink, and they all vanish. You get strange glances. <<stress 12>><<trauma 4>><<ggstress>><<gtrauma>>
+	당신이 눈을 깜박이자, 그들은 모두 사라진다. 기묘한 시선들이 느껴진다. <<stress 12>><<trauma 4>><<ggstress>><<gtrauma>>
 	<br><br>
 <</widget>>

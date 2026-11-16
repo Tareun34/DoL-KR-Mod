@@ -120,7 +120,7 @@
 	휘트니가 당신을 빤히 바라본다. "지금 장난해?" 질문이 아니다. <<npcincr Whitney love -2>><<llove>>
 	<br><br>
 
-	<<nnpc_He "Whitney">> takes the fish from your hand, holds it up, and looks back at you with flat contempt. "Get over here."
+	<<nnpc_He "Whitney">>【이가】 당신의 손에서 물고기를 빼앗아 들고는, 차가운 경멸이 담긴 눈으로 당신을 내려다본다. "이리 와."
 	<br><br>
 
 	<<if hasSexStat("promiscuity", 3)>>
@@ -187,7 +187,7 @@
 	"입 다물어." 휘트니가 귀찮다는 듯 손을 휘저으며, 친구 중 한 명을 향해 턱짓한다. "가서 해라."
 	<br><br>
 
-	The <<person2>><<person>> is already stepping toward you.
+	<<person2>><<person>>【이가】 벌써 당신에게 다가오고 있다.
 	<br><br>
 
 	<<if hasSexStat("promiscuity", 3)>>
@@ -510,7 +510,7 @@
 <</if>>
 <br><br>
 
-Whitney regards you quietly for a moment, then sets down <<nnpc_his "Whitney">> cider. <<nnpc_He "Whitney">> steps closer, holds your gaze for a beat. "Alright." <<nnpc_He "Whitney">> tips <<nnpc_his "Whitney">> chin at <<nnpc_his "Whitney">> friends. "Pack it up." The four of them gather their things with barely a complaint, shooting you curious glances as they head back down the pier.
+휘트니가 말없이 당신을 잠시 바라보다가, <<nnpc_his "Whitney">> 애플 사이다를 내려놓는다. <<nnpc_He "Whitney">>【이가】 한 걸음 다가와 잠시 당신의 시선을 똑바로 마주한다. "됐어." <<nnpc_He "Whitney">>【이가】 <<nnpc_his "Whitney">> 친구들을 향해 <<nnpc_his "Whitney">> 턱을 까딱인다. "철수하자." 네 명은 불평 한마디 없이 짐을 챙겨, 호기심 어린 시선을 던지며 부두 아래쪽으로 걸어간다.
 <br><br>
 
 <<set $daily.fishing.fishingPier.whitney.phase to "finished">>
@@ -702,7 +702,7 @@ Whitney regards you quietly for a moment, then sets down <<nnpc_his "Whitney">> 
 휘트니가 애플 사이다를 내려놓고는 멸시하는 눈빛으로 당신을 바라본다.
 <br><br>
 
-"That's it?" <<nnpc_he "Whitney">> says "God, you're boring, do you not know where the fish are? I can show you." Whitney says this while grabbing you under your arm, and with the help of one of <<nnpc_his "Whitney">> friends, hoists you up to throw you into the ocean!
+"이게 끝이야?" <<nnpc_he "Whitney">>【이가】 말한다. "아 진짜 재미없네, 물고기 있는 데가 어딘지도 몰라? 내가 보여줄게." 휘트니가 그렇게 말하며 당신의 겨드랑이를 움켜잡고, <<nnpc_his "Whitney">> 친구 한 명의 도움을 받아 번쩍 들어 올려 바다에 던져버리려 한다!
 <br><br>
 
 <<link [[발버둥 친다|Fishing Whitney Pier Bet Fail Struggle]]>><<npcincr Whitney dom -1>><</link>><<athleticsdifficulty 300 1300>><<ldom>>
@@ -714,7 +714,7 @@ Whitney regards you quietly for a moment, then sets down <<nnpc_his "Whitney">> 
 :: Fishing Whitney Pier Bet Fail Struggle
 <<effects>>
 <<set $daily.fishing.fishingPier.whitney.phase to "finished">>
-Hands grab at you from three directions. You throw yourself sideways, twisting against the grip on your arm.
+세 방향에서 손들이 달려든다. 당신은 몸을 옆으로 던지며 팔을 붙잡는 손아귀를 비틀어 빼낸다.
 
 <<if $athleticsSuccess>>
 	<span class="green">당신은 악전고투 끝에 뿌리친다.</span> 팔꿈치로 누군가의 갈비뼈를 가격하고 손목을 붙잡힌 채 빠져나와, 녀석들이 다시 다가오기도 전에 부두를 따라 전력 질주한다.

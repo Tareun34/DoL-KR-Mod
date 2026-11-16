@@ -142,7 +142,7 @@
 	<<set $daily.fishing.fishingMoor.fox.phase to "finished">>
 	<br><br>
 
-	<<tearful>> you wonder if all that was worth it for a $fishingHookedFish.type.
+	<<tearful>> 당신은 고작 $fishingHookedFish.type 한 마리를 두고 이렇게까지 할 가치가 있었는지 의문이 든다.
 	<br><br>
 	<<unset $fishingHookedFish>>
 
@@ -166,7 +166,7 @@
 <br><br>
 
 <<if animalSexEnabledForType("fox")>>
-	<<link [[Next|Fishing Moor Fox Molestation]]>><<set $molestationstart to 1>><<set $fishingMoorFoxPhase to 2>><<endevent>><</link>>
+	<<link [[다음|Fishing Moor Fox Molestation]]>><<set $molestationstart to 1>><<set $fishingMoorFoxPhase to 2>><<endevent>><</link>>
 <<else>>
 	당신은 뒤로 물러나며, <<bhe>>【이가】 더 공격하기 전에 허둥지둥 쫓아낸다. 간신히 쫓아내긴 했지만 그 과정에서 발톱에 할퀴고 말았다.<<beastescape>>
 	<<set $daily.fishing.fishingMoor.fox.phase to "finished">><<endevent>>
@@ -202,7 +202,7 @@
 <<effects>>
 <<loadNPC 0 "moor_fishing_fox">>
 <<if animalSexEnabledForType("fox") and dangerEvent()>>
-	As you toss the $fishingHookedFish.type back, the <<beasttype>>'s eyes follow it into the water. <<bHe>> snaps <<bhis>> gaze to you, ears flat. <<bHe>> snarls, then throws <<bhimself>> at you.
+	당신이 $fishingHookedFish.type【을를】 물속으로 던지자, <<beasttype>>의 눈이 그것을 따라 물속으로 향한다. <<bHe>>【은는】 귀를 바짝 눕히며 <<bhis>> 시선을 당신에게 홱 돌린다. <<bHe>>【은는】 으르렁거리더니 <<bhimself>>【을를】 당신에게 내던진다.
 	<<unset $fishingHookedFish>>
 	<br><br>
 

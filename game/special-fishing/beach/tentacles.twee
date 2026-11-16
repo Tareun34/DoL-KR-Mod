@@ -55,7 +55,7 @@
 	촉수가 세차게 당겨지며, <span class="red">당신은 물 쪽으로 거꾸로 끌려간다.</span> 손가락으로 모래를 짓밟아 보지만 발판을 잡을 수가 없다.
 	<<if beachCampfirePartyPresent()>>
 		<<if $rng gte 20>>
-			The teenagers by the fire fall silent, watching in shock. <<generatey1>><<person1>>One of them jumps up and runs toward you. "Hold on!" <<he>> shouts, splashing into the water.
+			모닥불가에 있던 십 대들이 입을 다물고 충격받은 표정으로 쳐다본다. <<generatey1>><<person1>>그중 한 명이 벌떡 일어나 당신을 향해 달려온다. "버텨!" <<he>>【이가】 소리치며 물속으로 뛰어든다.
 			<br><br>
 
 			<<link [[다음|Fishing Beach Tentacle Rescue Attempt]]>><</link>>

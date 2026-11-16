@@ -289,10 +289,10 @@
 		<<set _fishingSeasonFish to weightedRandom(... preferredSeasonFishList(_fishingLocation))>>
 		<<set _fishingSeasonFishBoth to preferredLocationFishList(_fishingLocation).map(([f]) => f).includes(_fishingSeasonFish)>>
 		<<addinlineevent 2>>
-			A <span class="purple"><<if _fishingSeasonFishBoth>>huge<<else>>large<</if>></span> _fishingSeasonFish swims around your line.
+			<span class="purple"><<if _fishingSeasonFishBoth>>엄청 큰<<else>>큰<</if>></span> _fishingSeasonFish【이가】 낚싯줄 주위를 헤엄친다.
 		<</addinlineevent>>
 		<<addinlineevent 2>>
-			You watch a pair of <span class="purple"><<if _fishingSeasonFishBoth>>huge<<else>>large<</if>></span> _fishingSeasonFish swim around each other.<<lstress>><<stress -1>>
+			<span class="purple"><<if _fishingSeasonFishBoth>>엄청 큰<<else>>큰<</if>></span> _fishingSeasonFish 한 쌍이 서로의 주위를 맴돌며 헤엄치는 것을 지켜본다.<<lstress>><<stress -1>>
 		<</addinlineevent>>
 	<</if>>
 
@@ -300,16 +300,16 @@
 		<<set _fishingLocationFish to weightedRandom(... preferredLocationFishList(_fishingLocation))>>
 		<<set _fishingLocationFishBoth to preferredSeasonFishList(_fishingLocation).map(([f]) => f).includes(_fishingLocationFish)>>
 		<<addinlineevent 2>>
-			You see <span class="purple"><<if _fishingLocationFishBoth>>a huge<<else>>a large<</if>></span> _fishingLocationFish break the surface for a moment.<<lstress>><<stress -1>>
+			<span class="purple"><<if _fishingLocationFishBoth>>엄청 큰<<else>>큰<</if>></span> _fishingLocationFish【이가】 잠시 수면 위로 떠오르는 것을 본다.<<lstress>><<stress -1>>
 		<</addinlineevent>>
 		<<addinlineevent 2>>
-			A <span class="purple"><<if _fishingLocationFishBoth>>huge<<else>>large<</if>></span> _fishingLocationFish surfaces nearby.<<lstress>><<stress -1>>
+			<span class="purple"><<if _fishingLocationFishBoth>>엄청 큰<<else>>큰<</if>></span> _fishingLocationFish【이가】 근처에서 수면 위로 떠오른다.<<lstress>><<stress -1>>
 		<</addinlineevent>>
 	<</if>>
 
 	<<if Time.isBloodMoon()>>
 		<<addinlineevent 4>>
-			You watch <span class="purple">large</span> fish chase and eat smaller fish in the red moonlight.
+			붉은 달빛 아래, <span class="purple">큰</span> 물고기들이 작은 물고기들을 쫓아 잡아먹는 것을 지켜본다.
 		<</addinlineevent>>
 	<</if>>
 
@@ -495,7 +495,7 @@
 				거센 바람에 하마터면 발을 헛디딜 뻔한다.
 			<</addinlineevent>>
 			<<addinlineevent 1>>
-				The <<= fishingLocationWaterBodyName(_fishingLocation)>> churns as the
+				<<= fishingLocationWaterBodyName(_fishingLocation)>>【이가】 요동친다.
 				<<if Weather.name is "heavyPrecipitation">>
 					거센 폭우
 				<<else>>
@@ -1026,7 +1026,7 @@
 
 			<<if fameTotal() gte 2000 and $docks.status gte 50>>
 				<<addinlineevent 1>>
-					You wonder if any of the dock workers recognise you from outside work.
+					항만 노동자들 중 밖에서 마주친 적 있는 사람을 알아볼지 궁금해진다.
 				<</addinlineevent>>
 			<</if>>
 		<</if>>
@@ -1269,7 +1269,7 @@
 
 	<<if fameTotal() gte 2000 and Weather.dayState isnot "night" and !Time.isBloodMoon() and ["fishingPier", "fishingBeach"].includes(_fishingLocation)>>
 		<<addinlineevent 1>>
-			You wonder if anyone would recognise you here.
+			이곳에서 누군가 당신을 알아볼지 궁금해진다.
 		<</addinlineevent>>
 	<</if>>
 	<<if $community_service gte 1>>
@@ -1964,7 +1964,7 @@
 	/* Tiredness */
 	<<if $tiredness gte (C.tiredness.max / 5) * 3>>
 		<<addinlineevent 3>>
-			You fight a yawn and keep your line taut.
+			하품을 참으며 낚싯줄을 팽팽하게 유지한다.
 		<</addinlineevent>>
 	<</if>>
 	<<if $tiredness gte (C.tiredness.max / 5) * 3>>
@@ -1974,17 +1974,17 @@
 	<</if>>
 	<<if $tiredness gte (C.tiredness.max / 5) * 3>>
 		<<addinlineevent 1>>
-			You feel your eyelids drooping, but are able to remain awake.
+			눈꺼풀이 무거워지는 것을 느끼지만 겨우 깨어 있는다.
 		<</addinlineevent>>
 	<</if>>
 	<<if $tiredness gte (C.tiredness.max / 5) * 3>>
 		<<addinlineevent 1>>
-			You shift your stance and try to stay awake.
+			자세를 고치며 깨어 있으려 애쓴다.
 		<</addinlineevent>>
 	<</if>>
 	<<if $tiredness gte (C.tiredness.max / 5) * 3>>
 		<<addinlineevent 1>>
-			You blink slowly and force yourself to keep watch.
+			천천히 눈을 깜빡이며 계속 주의를 기울인다.
 		<</addinlineevent>>
 	<</if>>
 	<<if $tiredness gte (C.tiredness.max / 5) * 3>>
@@ -1994,7 +1994,7 @@
 	<</if>>
 	<<if $tiredness gte (C.tiredness.max / 5) * 3>>
 		<<addinlineevent 3>>
-			You think about going to bed, but keep fishing anyway.
+			잠자리에 들 생각을 하면서도 낚시를 계속한다.
 		<</addinlineevent>>
 	<</if>>
 	<<if $tiredness gte (C.tiredness.max / 5) * 4>>

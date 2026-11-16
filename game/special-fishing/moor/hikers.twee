@@ -473,7 +473,7 @@
 <</if>>
 <br><br>
 
-"Does it look like I care?" <<he>> says as <<he>> grabs your arm, pulling you toward <<him>>.
+"내가 신경 쓸 것 같아?" <<he>>【이가】 당신의 팔을 움켜잡고 자기 쪽으로 끌어당기며 말한다.
 <br><br>
 
 <<link [[다음|Fishing Moor Hiker Seduce Molestation]]>><<set $molestationstart to 1>><</link>>

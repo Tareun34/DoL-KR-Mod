@@ -342,11 +342,11 @@ setup.colours = {
 		return `<span class="skinToneSwatch" style="background:${colour}"></span>`;
 	},
 	getSkinToneLabel(tone) {
-		if (tone === "ghost") return "Ghostly Pale";
-		if (!Number.isFinite(tone)) return "N/A";
-		if (tone < 30) return "Light";
-		if (tone < 70) return "Medium";
-		return "Dark";
+		if (tone === "ghost") return "유령처럼 창백함";
+		if (!Number.isFinite(tone)) return "해당 없음";
+		if (tone < 30) return "밝음";
+		if (tone < 70) return "중간";
+		return "어두움";
 	},
 };
 
@@ -727,8 +727,8 @@ setup.colours.hair = [
 	},
 	{
 		variable: "rosegold",
-		name: "rose gold",
-		name_cap: "Rose Gold",
+		name: "로즈골드",
+		name_cap: "로즈골드",
 		csstext: "rosegold",
 		natural: false,
 		dye: true,
@@ -1513,8 +1513,8 @@ setup.colours.clothes = [
 	},
 	{
 		variable: "dusty orange",
-		name: "dusty orange",
-		name_cap: "Dusty orange",
+		name: "탁한 주황",
+		name_cap: "탁한 주황",
 		csstext: "tangerine",
 		canvasfilter: { blend: "#a04500" },
 	},
@@ -1527,8 +1527,8 @@ setup.colours.clothes = [
 	},
 	{
 		variable: "cyan",
-		name: "cyan",
-		name_cap: "Cyan",
+		name: "시안",
+		name_cap: "시안",
 		csstext: "cyan",
 		canvasfilter: { blend: "#00FFFF" },
 	},

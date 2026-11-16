@@ -223,7 +223,7 @@
 		<<generalSend "wardrobe" $clothingItem.slot $clothingItem.item.name $clothingItem.colour>>
 		당신은 <<= $clothingItem.item.name>>【을를】 꾹 짜내고 챙겨 둔다.
 	<<elseif $fishingAmbientOverride is "tossClothing">>
-		You carry the sodden <<= $clothingItem.item.name>> over to a bin and throw <<= $clothingItem.item.word is "n" ? "them" : "it">> away.
+		당신은 흠뻑 젖은 <<= $clothingItem.item.name>>【을를】 들고 쓰레기통으로 가서 <<= $clothingItem.item.word is "n" ? "그것들을" : "그것을">> 버린다.
 	<<elseif $fishingAmbientOverride is "castOut">>
 		당신은 물을 향해 낚싯줄을 던진다.
 	<<else>>

@@ -23,11 +23,11 @@
 
 <<widget "debugFishingMinigameInfo">>
 	<<if V.debug>>
-		(Debug) | Stamina: $fishingMinigame.fishStamina / $fishingMinigame.maxStamina
-		| Distance: $fishingMinigame.fishDistance
-		| ArmFatigue: $fishingMinigame.armFatigue
-		| Escape timer: $fishingMinigame.fishEscapeTimer
-		| Behaviour: $fishingMinigame.behavior
+		(디버그) | 체력: $fishingMinigame.fishStamina / $fishingMinigame.maxStamina
+		| 거리: $fishingMinigame.fishDistance
+		| 팔 피로도: $fishingMinigame.armFatigue
+		| 도망 타이머: $fishingMinigame.fishEscapeTimer
+		| 행동 양식: $fishingMinigame.behavior
 		<br><br>
 	<</if>>
 <</widget>>

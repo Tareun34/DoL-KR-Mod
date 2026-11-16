@@ -29,18 +29,18 @@
 <<widget "importDetailsDisplay">>
 	<<set _importedSettings to _args[0]>>
 	<div class="presetConfirm settingsGrid">
-		<div class="settingsHeader">Imported Settings</div>
+		<div class="settingsHeader">가져온 설정</div>
 
 		<<if $passage is "Start">>
-			<<settingsPreviewGroup "Character" _importedSettings.starting>>
-			<<settingsPreviewGroup "Player" _importedSettings.starting.player>>
+			<<settingsPreviewGroup "캐릭터" _importedSettings.starting>>
+			<<settingsPreviewGroup "플레이어" _importedSettings.starting.player>>
 		<</if>>
 
-		<<settingsPreviewGroup "General" _importedSettings.general>>
-		<<settingsPreviewGroup "Settings" _importedSettings.general.settings>>
-		<<settingsPreviewGroup "Options" _importedSettings.general.options>>
-		<<settingsPreviewGroup "Shop Defaults" _importedSettings.general.shopDefaults>>
-		<<settingsPreviewGroup "Wardrobe Defaults" _importedSettings.general.wardrobeDefaults>>
+		<<settingsPreviewGroup "일반" _importedSettings.general>>
+		<<settingsPreviewGroup "설정" _importedSettings.general.settings>>
+		<<settingsPreviewGroup "옵션" _importedSettings.general.options>>
+		<<settingsPreviewGroup "상점 설정" _importedSettings.general.shopDefaults>>
+		<<settingsPreviewGroup "옷장 설정" _importedSettings.general.wardrobeDefaults>>
 
 		<<for _beastType, _beastSettings range _importedSettings.general.settings.beastSettings>>
 			<<beastSettingsPreview `settingNameFromVarName(_beastType)` _beastSettings>>
