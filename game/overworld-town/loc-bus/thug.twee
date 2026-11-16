@@ -1,24 +1,24 @@
 :: Bus Thug Inspection Leave
 <<effects>><<set $outside to 1>>
 <<if Time.dayState is "night" and $rng gt 33>>
-	You get up and walk to the doors, <span class="red">only to find them closed</span>. You press the "stop" button to indicate you want to get out, only to be ignored.
-	The <<person1>><<person>> hands something to the bus driver and then walks over to you. "This your stop, <<girl>>?" <<he>> asks. You nod. 
+	자리에서 일어나 문으로 걸어가지만, <span class="red">문은 닫혀 있다</span>. 내리겠다는 뜻으로 "하차" 버튼을 눌러 보지만, 무시당할 뿐이다.
+	<<person1>><<person>>【이가】 버스 기사에게 무언가를 건네고는 당신에게 걸어온다. "여기서 내리냐, 꼬맹아?" <<he>>【이가】 묻는다. 당신은 고개를 끄덕인다. 
 	<br><br>
-	<<He>> looks you over, then motions <<his>> friend over. "It's dangerous to be walking around alone this late. We'll escort you to where you're going," <<he>> says.
+	<<He>>【은는】 당신을 훑어보더니 <<his>> 친구에게 이리 오라고 손짓한다. "이렇게 늦은 시간에 혼자 돌아다니는 건 위험하지. 가는 데까지 우리가 바래다줄게." <<he>>【이가】 말한다.
 	<br><br>
-	"Yeah, we wouldn't want anything bad to happen to you," the <<person2>><<person>> says. You doubt they have good intentions, or that they'll take 'no' for an answer.
+	"그래, 너한테 나쁜 일이라도 생기면 안 되잖아." <<person2>><<person>>【이가】 말한다. 그들의 의도가 좋을 리 없고, '싫다'는 대답을 들어줄 것 같지도 않다.
 	<br><br>
-	While you're still thinking, the bus doors suddenly open. The duo push you out before you can react, almost causing you to fall, if not for the <<person>> grabbing you by the arm and keeping you upright.
-	"I'm glad we found you now. You were just on your way home to go pay your dues, right? We'll gladly take you there right now," <<he>> says. There's no doubt about it now. <span class="blue">They must be Bailey's thugs.</span>
+	당신이 아직 생각하는 사이, 버스 문이 갑자기 열린다. 두 사람이 미처 반응할 틈도 없이 당신을 밖으로 밀어내고, <<person>>【이가】 팔을 붙잡아 일으켜 세워 주지 않았다면 넘어질 뻔했다.
+	"지금 찾아서 다행이다. 집에 가서 밀린 돈 내려던 참이었지, 그렇지? 지금 당장 기꺼이 데려다주마." <<he>>【이가】 말한다. 이제 의심의 여지가 없다. <span class="blue">베일리의 부하들이 분명하다.</span>
 	<br><br>
-	The <<person1>><<person>> chuckles. "Oh, and in case our pleasant demeanour made it seem like you have a choice in the matter, you don't."
+	<<person1>><<person>>【이가】 킬킬거린다. "아, 그리고 우리가 상냥하게 굴어서 너한테 선택권이 있는 것처럼 보였다면 말이지, 그런 거 없다."
 	<br><br>
-	<<link [[Resist|Bus Thug Inspection Fight]]>><<set $fightstart to 1>><</link>>
+	<<link [[저항한다|Bus Thug Inspection Fight]]>><<set $fightstart to 1>><</link>>
 	<br>
-	<<link [[Comply|Bus Thug Inspection Comply]]>><<pass 5>><</link>>
+	<<link [[따른다|Bus Thug Inspection Comply]]>><<pass 5>><</link>>
 	<br>
 <<else>>
-	You decide not to risk it and get off early, making sure to distance the bus stop too. They don't follow.
+	위험을 무릅쓰지 않기로 하고 미리 내린 뒤, 버스 정류장에서도 확실히 멀어진다. 그들은 따라오지 않는다.
 	<br><br>
 	<<endevent>>
 	<<destinationbusrandom>>
@@ -26,17 +26,17 @@
 
 :: Bus Thug Inspection Hide
 <<effects>><<saveNPC 0 "rent_thug">><<saveNPC 1 "rent_thug_2">><<endevent>><<generate1>><<person1>>
-You quickly get up and move further back, seeking a discreet seat next to someone. You notice one such spot next to a <<person>> and take it.
+당신은 재빨리 일어나 뒤쪽으로 옮겨, 누군가의 옆자리에 눈에 띄지 않게 앉을 곳을 찾는다. <<person>>의 옆자리가 그런 자리로 보여 그곳에 앉는다.
 <br><br>
-"Well well, didn't expect a cute <<girl>> like you to come sit next to me," <<he>> says. "Be honest, you noticed how hot I am and just had to come over, right?"
+"이게 웬일이래, 너처럼 귀여운 애가 내 옆에 와서 앉을 줄은 몰랐네." <<he>>【이가】 말한다. "솔직히 말해 봐, 내가 얼마나 섹시한지 눈치채고 참을 수가 없어서 온 거지?"
 <br>
-You tell <<him>> you just moved here because you need to hide. "Oh, you wanna play around a little, I gotcha. Well, who are you hiding from then?"
+당신은 <<him>>에게 숨어야 해서 자리를 옮겼을 뿐이라고 말한다. "아, 좀 놀아 보고 싶다는 거구나, 알았어. 그래서, 누구한테서 숨는 건데?"
 <br>
-You point out the suspicious duo as your would-be seekers. "Them huh? Alright, how about we switch seats, hide you even more." You accept and move to the window side.
+당신은 수상한 두 사람을 가리키며 저들이 당신을 찾고 있다고 알린다. "저 사람들? 좋아, 자리 바꾸자. 그럼 더 잘 숨겨지잖아." 당신은 그 제안을 받아들여 창가 쪽으로 옮긴다.
 <br><br>
-Once there, <<he>> puts a hand on your thigh. "This also makes it more discreet for us to have some fun."
+자리를 옮기자, <<he>>【이가】 당신의 허벅지에 손을 얹는다. "이러면 우리가 재미 좀 보기에도 남의 눈에 덜 띄고 말이야."
 <br><br>
-<<link [[Next|Bus Thug Inspection Hide Rape]]>><<set $molestationstart to 1>><</link>>
+<<link [[다음|Bus Thug Inspection Hide Rape]]>><<set $molestationstart to 1>><</link>>
 <br>
 
 :: Bus Thug Inspection Hide Rape
@@ -60,95 +60,95 @@ Once there, <<he>> puts a hand on your thigh. "This also makes it more discreet 
 	<<set $phase++>>
 <</if>>
 <<switch $phase>>
-	<<case 0>><span class="red">The suspicious people are staring right at you.</span>
-	<<case 1>><span class="purple">The suspicious people are looking around.</span>
-	<<case 2>><span class="pink">The suspicious people are coming closer.</span>
-	<<case 3>><span class="blue">The suspicious people went past you.</span>
-	<<case 4>><span class="lblue">The suspicious people didn't notice anything.</span>
-	<<case 5>><span class="teal">The suspicious people are leaving.</span>
-	<<default>><span class="green">The suspicious people have left the bus.</span>
+	<<case 0>><span class="red">수상한 사람들이 당신을 똑바로 쳐다보고 있다.</span>
+	<<case 1>><span class="purple">수상한 사람들이 주위를 둘러보고 있다.</span>
+	<<case 2>><span class="pink">수상한 사람들이 가까이 다가오고 있다.</span>
+	<<case 3>><span class="blue">수상한 사람들이 당신을 지나쳤다.</span>
+	<<case 4>><span class="lblue">수상한 사람들은 아무것도 눈치채지 못했다.</span>
+	<<case 5>><span class="teal">수상한 사람들이 떠나고 있다.</span>
+	<<default>><span class="green">수상한 사람들이 버스에서 내렸다.</span>
 <</switch>>
 <br><br>
 <<actionsman>>
 <<if _combatend>>
-	<span id="next"><<link [[Next|Bus Thug Inspection Hide Rape Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Bus Thug Inspection Hide Rape Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Bus Thug Inspection Hide Rape]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Bus Thug Inspection Hide Rape]]>><</link>></span><<nexttext>>
 <</if>>
 
 :: Bus Thug Inspection Hide Rape Finish
 <<effects>>
 <<if $enemyhealth lte 0 and $phase lt 6>>
 	<<loadNPC 1 "rent_thug">><<loadNPC 2 "rent_thug_2">>
-	You manage to push <<him>> away and slip past. <<He>> tries to grab you one last time, which you counter by punching <<him>> in the face. "Ow, fuck!" <<he>> screams in pain.
+	당신은 가까스로 <<him>>【을를】 밀쳐내고 빠져나간다. <<He>>【은는】 마지막으로 한 번 더 당신을 붙잡으려 하지만, 당신은 <<his>> 얼굴에 주먹을 날려 받아친다. "아야, 씨발!" <<he>>【이가】 고통에 비명을 지른다.
 	<<clotheson>>
-	The suspicious duo come to investigate the noise. You take advantage of the moment and make your escape.
+	수상한 두 사람이 소란을 살피러 온다. 당신은 그 틈을 타 달아난다.
 	<br><br>
-	"What happened here?" the <<person2>><<person>> asks.
+	"무슨 일이야?" <<person2>><<person>>【이가】 묻는다.
 	<br>
-	"That <<bitch>> punched me right in the face," the <<person1>><<person>> responds.
+	"저 <<bitch>>【이가】 내 얼굴에 주먹을 꽂았어." <<person1>><<person>>【이가】 대답한다.
 	<br>
-	"Who?"
+	"누가?"
 	<br>
-	"That <<girl>>," <<he>> says, pointing towards you.
+	"저 <<girl>>【이가】." <<he>>【이가】 당신을 가리키며 말한다.
 	<br>
-	"Hey, that's... get over here, <<girl>>!" the <<person3>><<person>> yells after you. 
+	"어, 저건... 이리 와, 꼬맹아!" <<person3>><<person>>【이가】 당신의 뒤에 대고 소리친다. 
 	<br><br>
-	But it's too late. You're already at the door and exiting the bus. The pair charge after you, but are too far from the door to reach it before it closes and the bus takes off. 
+	하지만 이미 늦었다. 당신은 벌써 문 앞에서 버스를 내리고 있다. 두 사람이 당신을 쫓아 달려오지만, 문에서 너무 멀어 문이 닫히고 버스가 떠나기 전에 닿지 못한다. 
 	<br><br>
-	<<tearful>> you catch your breath at the bus stop. You may have avoided being caught, but they definitely noticed you.<<thuganger 1>><<gthuganger>>
+	<<tearful>> 당신은 버스 정류장에서 숨을 고른다. 잡히는 건 피했을지 몰라도, 그들은 분명 당신을 알아보았다.<<thuganger 1>><<gthuganger>>
 	<br><br>
 	<<endcombat>>
 	<<destinationbusrandom>>
 <<elseif $enemyhealth lte 0 and $phase gte 6>>
-	You fight <<him>> off, making it painfully clear that you're not interested in <<him>>.
+	당신은 <<him>>【을를】 떨쳐내며, <<him>>에게 관심이 없다는 것을 뼈저리게 분명히 한다.
 	<br><br>
-	"Ow, fuck! Shit, you didn't want to play around, I get it! Get away from my seat, you freak," <<he>> says.
+	"아야, 씨발! 젠장, 놀기 싫었구나, 알았다고! 내 자리에서 꺼져, 이 미친 것아." <<he>>【이가】 말한다.
 	<br><br>
-	<<tearful>> you do exactly that and return to your original seat. The rest of the ride is peaceful all the way to your destination.
+	<<tearful>> 당신은 그 말대로 원래 자리로 돌아간다. 목적지까지 남은 길은 평온하다.
 	<<clotheson>>
 	<<endcombat>>
 	<<destination>>
 <<elseif $alarm is 1 and $phase lt 6>>
 	<<loadNPC 1 "rent_thug">><<loadNPC 2 "rent_thug_2">>
-	Your scream attracts the attention of the other passengers, including the suspicious duo. They come over to investigate.
+	당신의 비명에 수상한 두 사람을 포함한 다른 승객들의 이목이 쏠린다. 그들이 무슨 일인지 살피러 온다.
 	<br><br>
-	"Everything okay here?" the <<person2>><<person>> asks. Upon noticing you, a small smile flashes across <<his>> face.
+	"별일 없어?" <<person2>><<person>>【이가】 묻는다. 당신을 알아보자, <<his>> 얼굴에 엷은 미소가 스친다.
 	<br>
-	"We were just-"
+	"우린 그냥-"
 	<br>
-	"I think it's quite clear what you were doing," <<he>> says, interrupting the <<person1>><<person>>. "Let the poor <<girl>> go, or things will get messy."
+	"뭘 하고 있었는지는 아주 잘 알겠는데." <<he>>【이가】 <<person1>><<person>>의 말을 끊으며 말한다. "불쌍한 애 놔줘. 안 그러면 일이 지저분해질 거야."
 	<br><br>
-	<<He>> seems hesitant to do so, but soon relents. You're eager to get away from <<him>>, but you're not sure how safe you'll be with your new saviours.<<stress 6>><<gstress>>
+	<<He>>【은는】 망설이는 듯하지만, 곧 물러선다. <<him>>에게서 벗어나고 싶은 마음이 굴뚝같지만, 새로운 구원자들과 함께 있는 게 얼마나 안전할지는 모르겠다.<<stress 6>><<gstress>>
 	<br><br>
-	"Are you alright? Did that creep do something to you?" the <<person3>><<person>> asks, acting concerned. You assure them you're fine, and that you'd like to be left alone.
+	"괜찮아? 저 변태가 무슨 짓 했어?" <<person3>><<person>>【이가】 걱정하는 척하며 묻는다. 당신은 괜찮다고, 혼자 있고 싶다고 말한다.
 	<br><br>
-	"No, no. We'll escort you home. I insist," <<he>> says, gripping your shoulder.
+	"아니, 아니. 우리가 집까지 바래다줄게. 사양하지 마." <<he>>【이가】 당신의 어깨를 움켜쥐며 말한다.
 	<br>
-	"Maybe you've forgotten, but there's someone at home waiting for you," the <<person2>><<person>> says. <<His>> words confirm your earlier suspicions. <span class="blue">They must be Bailey's thugs</span>.
+	"잊어버렸나 본데, 집에서 널 기다리는 사람이 있잖아." <<person2>><<person>>【이가】 말한다. <<His>> 말이 아까의 의심을 확인시켜 준다. <span class="blue">베일리의 부하들이 분명하다</span>.
 	<br>
-	"You don't have a choice in the matter. Either come with us now, or we call over some guys to help 'convince' you at the next stop." You look around you.
+	"넌 선택권 없어. 지금 우리랑 같이 가든가, 아니면 다음 정류장에서 애들 불러서 널 '설득'하게 하든가." 당신은 주위를 둘러본다.
 	<br><br>
-	No one else seems willing to intervene, neither do you have any way to slip away from them. You have no choice but to comply and exit the bus with them.
+	아무도 끼어들 생각이 없어 보이고, 그들에게서 빠져나갈 방법도 없다. 순순히 따라 그들과 함께 버스에서 내릴 수밖에 없다.
 	<br><br>
 	<<endcombat>><<loadNPC 0 "rent_thug">><<loadNPC 1 "rent_thug_2">>
 	<<fame 2 "rape">>
-	<<link [[Next|Bus Thug Inspection Caught]]>><<set $phase to 0>><</link>>
+	<<link [[다음|Bus Thug Inspection Caught]]>><<set $phase to 0>><</link>>
 	<br>
 <<elseif $alarm is 1 and $phase gte 6>>
-	Your scream attracts the attention of the other passengers. Too much attention for the <<person1>><<person>> to continue.
+	당신의 비명에 다른 승객들의 이목이 쏠린다. <<person1>><<person>>【이가】 계속하기에는 너무 많은 시선이다.
 	<br><br>
-	"What, you actually didn't like this? I thought we were getting along so well," <<he>> says. "Whatever. Go somewhere else, you damn tease."
+	"뭐야, 진짜 싫었던 거야? 우리 꽤 잘 맞는다고 생각했는데." <<he>>【이가】 말한다. "됐어. 딴 데로 가, 이 빌어먹을 내숭쟁이야."
 	<br><br>
-	<<tearful>> you do just that and return to your original seat. The rest of the ride is peaceful all the way to your destination.
+	<<tearful>> 당신은 그 말대로 원래 자리로 돌아간다. 목적지까지 남은 길은 평온하다.
 	<<clotheson>>
 	<<endcombat>>
 	<<fame 2 "rape">>
 	<<destination>>
 <<else>>
-	"That was great. Too bad my stop's coming up. Hopefully I'll see you again." <<He>> gets up and exits the bus. <<tearful>> you look around and don't see the suspicious duo anywhere. At least you avoided them. 
+	"좋았어. 아쉽게도 내 정류장이 다 와 가네. 또 보자고." <<He>>【은는】 일어나 버스에서 내린다. <<tearful>> 당신은 주위를 둘러보지만 수상한 두 사람은 어디에도 보이지 않는다. 적어도 그들은 피했다. 
 	<<clotheson>>
-	The rest of the ride goes by peacefully, and you soon arrive at your stop.
+	남은 길은 평온하게 지나가고, 당신은 곧 정류장에 도착한다.
 	<br><br>
 	<<endcombat>>
 	<<destination>>
@@ -156,34 +156,34 @@ Once there, <<he>> puts a hand on your thigh. "This also makes it more discreet 
 
 :: Bus Thug Inspection Still
 <<effects>>
-You remain seated and still, hoping you are just imagining things. They keep looking over the seats and passengers one by one. Soon enough, they reach where you are seated.
+당신은 그저 기분 탓이기를 바라며 꼼짝 않고 자리에 앉아 있는다. 그들은 좌석과 승객을 하나하나 계속 살핀다. 머지않아 당신이 앉은 자리까지 온다.
 <br><br>
 <<if $rentThug.anger is 1 and $rng lte 30 or $rentThug.anger is 2 and $rng lte 50 or $rentThug.anger is 3 and $rng lte 75>>
-	They stop to observe you. The <<person1>><<person>> whispers something to the <<person2>><<person>>, who then pulls out <<his>> phone.
+	그들은 멈춰 서서 당신을 살핀다. <<person1>><<person>>【이가】 <<person2>><<person>>에게 무언가를 속삭이자, <<he>>【은는】 <<his>> 휴대폰을 꺼낸다.
 	<br>
-	After looking at it, <<he>> speaks. "Yep, that's <<phim>>. Hey <<girl>>, fancy seeing you here," <<he>> says, <span class="red">blocking you into your seat</span>.
+	화면을 들여다보더니 <<he>>【이가】 입을 연다. "그래, <<phim>>【이가】 맞네. 어이 꼬맹아, 여기서 다 보네." <<he>>【이가】 말하며 <span class="red">당신을 자리에 가둬 버린다</span>.
 	<br>
-	"Yes, quite the surprise. You should be home already," the <<person1>><<person>> says. <<He>> leans in and whispers. "The boss doesn't like to be kept waiting."
+	"그래, 이거 참 놀랍네. 넌 진작 집에 가 있어야 하는데." <<person1>><<person>>【이가】 말한다. <<He>>【은는】 몸을 기울여 속삭인다. "보스는 기다리는 걸 싫어하거든."
 	<br><br>
-	<<His>> words confirm your earlier suspicions. <span class="blue">They must be Bailey's thugs.</span>
+	<<His>> 말이 아까의 의심을 확인시켜 준다. <span class="blue">베일리의 부하들이 분명하다.</span>
 	<br><br>
-	<<He>> pulls back. "Well, good news. We can personally escort you there right now ourselves. You just need to come with us," <<he>> says.
+	<<He>>【은는】 몸을 뒤로 뺀다. "자, 좋은 소식이야. 지금 당장 우리가 직접 데려다줄 수 있거든. 그냥 따라오기만 하면 돼." <<he>>【이가】 말한다.
 	<br>
-	The <<person2>><<person>> grins. "Not that you have a choice. Either come with us now, or we call over some guys to help 'convince' you at the next stop," <<he>> says.
+	<<person2>><<person>>【이가】 씩 웃는다. "그렇다고 너한테 선택권이 있는 건 아니고. 지금 우리랑 같이 가든가, 아니면 다음 정류장에서 애들 불러서 널 '설득'하게 하든가." <<he>>【이가】 말한다.
 	<br><br>
-	You look around you. All of the other passengers seem hesitant to interfere, and you have no way to slip past them. In the end, you have no choice but to comply and exit the bus with them.
+	당신은 주위를 둘러본다. 다른 승객들은 하나같이 끼어들기를 망설이고, 그들을 빠져나갈 방법도 없다. 결국 순순히 따라 그들과 함께 버스에서 내릴 수밖에 없다.
 	<br><br>
-	<<link [[Next|Bus Thug Inspection Caught]]>><<set $outside to 1>><<set $phase to 1>><</link>>
+	<<link [[다음|Bus Thug Inspection Caught]]>><<set $outside to 1>><<set $phase to 1>><</link>>
 	<br>
 <<else>>
-	As they eye you up, your pulse quickens. It feels like their gazes are boring into you. You're not sure, but it feels like they are plotting something. The tension keeps growing as the moment seems to linger on forever.
+	그들이 당신을 훑어보자 맥박이 빨라진다. 시선이 당신을 꿰뚫는 것만 같다. 확실하지는 않지만, 무언가를 꾸미고 있는 것 같다. 그 순간이 영원히 이어질 듯 긴장감이 계속 커져 간다.
 	<<if $anxiety gte 2 and !$controlled>>
-		Your mind runs through a thousand negative scenarios, afraid they might all come true.<<severe_anxiety_disorder_text>><<stress 16>><<ggstress>>
+		머릿속에 수천 가지 나쁜 시나리오가 스쳐 지나가고, 그게 전부 현실이 될까 봐 두렵다.<<severe_anxiety_disorder_text>><<stress 16>><<ggstress>>
 	<</if>>
 	<br><br>
-	But in reality, all they do is quickly look you over and <span class="green">wordlessly move past you</span>. You discreetly keep watching them, but all they do is sit down at the back. Having confirmed they have no interest in you, you finally allow yourself to relax.<<stress -4>><<lstress>>
+	하지만 실제로 그들은 당신을 잠깐 훑어보고는 <span class="green">아무 말 없이 지나쳐 간다</span>. 당신은 몰래 그들을 계속 지켜보지만, 그들은 뒤쪽에 가서 앉을 뿐이다. 그들이 당신에게 관심이 없다는 것을 확인하고 나서야, 당신은 마침내 긴장을 푼다.<<stress -4>><<lstress>>
 	<br><br>
-	The rest of the ride goes by peacefully all the way to your destination.
+	목적지까지 남은 길은 평온하게 지나간다.
 	<br><br>
 	<<endevent>>
 	<<destination>>
@@ -191,23 +191,23 @@ You remain seated and still, hoping you are just imagining things. They keep loo
 
 :: Bus Thug Inspection Caught
 <<effects>>
-They lead you out of the bus while making sure to keep you within arm's reach. The <<person1>><<person>> looks around to make sure no one is within earshot before speaking.
+그들은 당신을 손 닿는 거리에 붙잡아 둔 채 버스 밖으로 데리고 나간다. <<person1>><<person>>【은는】 입을 열기 전에 엿듣는 사람이 없는지 주위를 둘러본다.
 <br><br>
 <<if $phase is 0>>
-	"It was real fortunate we found you when we did, who knows what that guy was going to do to you," <<he>> says.
+	"딱 그때 찾아서 정말 운이 좋았지. 그 녀석이 너한테 무슨 짓을 하려 했을지 누가 알아." <<he>>【이가】 말한다.
 	<br>
-	"Though it's nothing compared to what we would do if you try to resist," the <<person2>><<person>> says, gripping your arm tightly.
+	"물론 네가 저항하려 들면 우리가 할 짓에 비하면 아무것도 아니지만." <<person2>><<person>>【이가】 당신의 팔을 꽉 움켜쥐며 말한다.
 <<else>>
-	"How nice of you to cooperate with us. You'll keep being good, won't you? I'd hate to ruin your pretty face," <<he>> says.
+	"협조해 주니 참 고맙네. 계속 착하게 굴 거지? 그 예쁜 얼굴 망가뜨리긴 싫거든." <<he>>【이가】 말한다.
 	<br>
-	"Let's be real, if anyone were to be ruining <<pher>> face, it would be me," the <<person2>><<person>> says, gripping your arm tightly.
+	"솔직히, 누가 <<pher>> 얼굴을 망가뜨린다면 그건 내가 할 거야." <<person2>><<person>>【이가】 당신의 팔을 꽉 움켜쥐며 말한다.
 <</if>>
 <br><br>
-The <<person1>><<person>> smiles wryly. "No need to try to scare <<phim>>. <<pShe>>'ll obviously comply. Won't you?"
+<<person1>><<person>>【이가】 비꼬듯 웃는다. "<<phim>>【을를】 겁줄 필요 없어. <<pShe>>【은는】 당연히 따를 테니까. 안 그래?"
 <br><br>
-<<link [[Comply|Bus Thug Inspection Comply]]>><<pass 5>><</link>>
+<<link [[따른다|Bus Thug Inspection Comply]]>><<pass 5>><</link>>
 <br>
-<<link [[Resist|Bus Thug Inspection Fight]]>><<set $fightstart to 1>><</link>>
+<<link [[저항한다|Bus Thug Inspection Fight]]>><<set $fightstart to 1>><</link>>
 <br>
 
 :: Bus Thug Inspection Fight
@@ -217,7 +217,7 @@ The <<person1>><<person>> smiles wryly. "No need to try to scare <<phim>>. <<pSh
 	<<maninit>>
 	<<set $enemytrust -= 100>>
 	<<npcidlegenitals>>
-	You shake off the <<person2>><<persons>> grip. "Guess you'd rather resist," <<he>> says. "Works for us!" the <<person1>><<person>> says, charging you down.
+	당신은 <<person2>><<persons>> 손아귀를 뿌리친다. "저항하시겠다 이거지." <<he>>【이가】 말한다. "우리야 좋지!" <<person1>><<person>>【이가】 당신에게 달려들며 말한다.
 <</if>>
 <<effects>>
 <<effectsman>>
@@ -226,83 +226,83 @@ The <<person1>><<person>> smiles wryly. "No need to try to scare <<phim>>. <<pSh
 <br><br>
 <<actionsman>>
 <<if _combatend or ($pain gte 100 and $willpowerpain is 0)>>
-	<span id="next"><<link [[Next|Bus Thug Inspection Fight Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Bus Thug Inspection Fight Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Bus Thug Inspection Fight]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Bus Thug Inspection Fight]]>><</link>></span><<nexttext>>
 <</if>>
 
 :: Bus Thug Inspection Fight Finish
 <<effects>>
 <<if $enemyarousal gte $enemyarousalmax>>
-	You take advantage of their distracted state and run away. "Fuuck... You stupid urchin! Get back here!" they yell after you.<<thuganger 1>><<gthuganger>>
+	당신은 그들이 정신을 못 차리는 틈을 타 달아난다. "씨이발... 이 멍청한 거지새끼! 거기 서!" 그들이 당신의 뒤에 대고 소리친다.<<thuganger 1>><<gthuganger>>
 	<br><br>
-	<<tearful>> you regain your composure once you're far away from them.
+	<<tearful>> 그들에게서 멀리 벗어나고 나서야 당신은 마음을 가라앉힌다.
 	<<clotheson>>
 	<<endcombat>>
 	<<destinationbusrandom>>
 <<elseif $enemyhealth lte 0>>
-	You send them both sprawling to the ground, giving you a chance to run away. "You stupid urchin! Get back here!" they yell after you.<<thuganger 1>><<gthuganger>>
+	당신은 두 사람을 모두 바닥에 나뒹굴게 만들고, 그 틈에 달아날 기회를 얻는다. "이 멍청한 거지새끼! 거기 서!" 그들이 당신의 뒤에 대고 소리친다.<<thuganger 1>><<gthuganger>>
 	<br><br>
-	<<tearful>> you regain your composure once you're far away from them.
+	<<tearful>> 그들에게서 멀리 벗어나고 나서야 당신은 마음을 가라앉힌다.
 	<<clotheson>>
 	<<endcombat>>
 	<<destinationbusrandom>>
 <<else>>
 	<<set $outside to 0>>
-	You collapse to the ground, no longer able to resist.
+	당신은 더는 저항하지 못하고 바닥에 쓰러진다.
 	<br><br>
-	"Thanks for livening up our patrol," the <<person2>><<person>> says.
+	"순찰을 재미있게 만들어 줘서 고맙다." <<person2>><<person>>【이가】 말한다.
 	<br>
-	"I would have preferred things go easier, but I'm glad you had fun," <<his>> friend says. "Oh well. Let's bring <<phim>> over to the boss now," <<person1>><<he>> continues, taking out <<his>> phone.
+	"좀 더 순조롭게 갔으면 했지만, 네가 재미있었다니 다행이네." <<his>> 친구가 말한다. "뭐 어쩌겠어. 이제 <<phim>>【을를】 보스한테 데려가자." <<person1>><<he>>【이가】 <<his>> 휴대폰을 꺼내며 말을 잇는다.
 	<br><br>
-	After <<he>> makes a call, a car soon pulls up to you. "Get in," the <<person>> says. <<He>> doesn't wait long for you to comply before forcefully shoving you in the back.
+	<<he>>【이가】 전화를 걸고 나자, 곧 차 한 대가 당신 앞에 선다. "타." <<person>>【이가】 말한다. <<He>>【은는】 당신이 따르기를 오래 기다리지 않고 뒷좌석으로 거칠게 밀어 넣는다.
 	<br><br>
-	"You good to make this delivery by yourself?" <<person2>><<he>> asks.
+	"너 혼자 배달할 수 있겠어?" <<person2>><<he>>【이가】 묻는다.
 	<br>
-	"Yes, you can keep patrolling. <<pShes>> realised that <<pshe>> has no way out of this by now. Haven't you?" the <<person1>><<person>> says condescendingly.
+	"그래, 넌 순찰 계속해. <<pShes>> 이쯤 되면 빠져나갈 길이 없다는 걸 깨달았을 테니까. 안 그래?" <<person1>><<person>>【이가】 깔보듯 말한다.
 	<br><br>
-	With no way out of this situation, all you can do is wait.
+	이 상황에서 빠져나갈 방법이 없으니, 당신이 할 수 있는 건 기다리는 것뿐이다.
 	<br><br>
 	<<saveNPC 0 "rent_thug">><<endcombat>><<loadNPC 0 "rent_thug">>
-	<<link [[Next|Thug Rent]]>><<pass 10>><<set $phase to "unwilling">><</link>>
+	<<link [[다음|Thug Rent]]>><<pass 10>><<set $phase to "unwilling">><</link>>
 	<br>
 <</if>>
 
 :: Bus Thug Inspection Comply
 <<effects>><<set $outside to 0>>
-You agree to let them bring you back. "I knew you'd understand what the right option was," the <<person1>><<person>> says.
-<<He>> pulls out <<his>> phone and makes a call. "You won't even have to walk back, aren't we just so considerate," <<his>> friend jokes.
+당신은 그들이 데려가는 것을 순순히 받아들인다. "뭐가 옳은 선택인지 알 줄 알았지." <<person1>><<person>>【이가】 말한다.
+<<He>>【은는】 <<his>> 휴대폰을 꺼내 전화를 건다. "걸어서 돌아갈 필요도 없다니, 우리 참 배려심 깊지 않냐." <<his>> 친구가 농담한다.
 <br><br>
-After a short wait, a car pulls up. "Get in," the <<person2>><<person>> says, opening the back door. You get in, and are joined by the <<person1>><<person>>.
+잠시 기다리자 차 한 대가 선다. "타." <<person2>><<person>>【이가】 뒷문을 열며 말한다. 당신이 올라타자 <<person1>><<person>>【이가】 따라 탄다.
 <br><br>
-"You won't mind me keeping you company for this ride, right?" You know that's not a question you need to answer.
+"가는 동안 내가 말동무 좀 해 줘도 괜찮지?" 대답할 필요가 없는 질문이라는 걸 당신은 안다.
 <br>
-"I'm going to keep patrolling, you can bring <<phim>> in by yourself," the <<person2>><<person>> says as <<he>> closes the door.
+"난 순찰 계속할게, <<phim>>【은는】 너 혼자 데려가." <<person2>><<person>>【이가】 문을 닫으며 말한다.
 <br><br>
-All you can do now is wait.
+이제 당신이 할 수 있는 건 기다리는 것뿐이다.
 <br><br>
 <<clearsinglenpc 1>>
-<<link [[Next|Thug Rent]]>><<pass 10>><<set $phase to "willing">><</link>>
+<<link [[다음|Thug Rent]]>><<pass 10>><<set $phase to "willing">><</link>>
 <br>
 
 :: Bus Thug Shakedown Leave
 <<effects>>
 <<if random(1,4) lt 4>> 
 	<<saveNPC 0 "rent_thug">><<saveNPC 1 "rent_thug_2">><<endevent>><<generate1>>
-	You decide not to risk it and get off early. As soon as you step out of the bus, a <<person1>><<person>> approaches you.
-	"Hey <<girl>>, I'm a bit lost. Could you give me some directions?" You tell <<him>> you don't have time to help and turn to leave. 
+	위험을 무릅쓰지 않기로 하고 미리 내린다. 버스에서 발을 내딛자마자 <<person1>><<person>>【이가】 다가온다.
+	"저기, 꼬맹아, 내가 길을 좀 잃었는데. 길 좀 알려 줄래?" 당신은 <<him>>에게 도와줄 시간이 없다고 말하고 돌아선다.
 	<br><br>
-	When you do, <<he>> grabs your arms tightly. "Well how about this, I'll give you some directions. You and I are going to go right back to the orphanage, brat."
-	Your suspicions were right. <span class="blue">The people entering the bus were Bailey's thugs, and so is <<he>>.</span>
+	그러자 <<he>>【이가】 당신의 팔을 꽉 붙잡는다. "그럼 이렇게 하자, 내가 길을 알려 주지. 너랑 나랑 곧장 고아원으로 돌아가는 거야, 꼬맹아."
+	당신의 의심이 옳았다. <span class="blue">버스에 탄 사람들은 베일리의 부하들이었고, <<he>> 역시 마찬가지다.</span>
 	<br><br>
-	"Now how about you be a good <<girl>> and stay still until my friends get back. Otherwise, I'm gonna have to get a little violent."
+	"자, 내 친구들이 돌아올 때까지 착하게 가만히 있어라. 안 그러면 좀 험하게 나갈 수밖에 없거든."
 	<br><br>
-	<<link [[Comply|Bus Thug Shakedown Leave Comply]]>><<pass 5>><</link>>
+	<<link [[따른다|Bus Thug Shakedown Leave Comply]]>><<pass 5>><</link>>
 	<br>
-	<<link [[Struggle|Bus Thug Shakedown Leave Fight]]>><<set $fightstart to 1>><</link>>
+	<<link [[발버둥 친다|Bus Thug Shakedown Leave Fight]]>><<set $fightstart to 1>><</link>>
 	<br>
 <<else>>
-	You decide not to risk it and get off early, making sure to distance the bus stop too. They don't follow.
+	위험을 무릅쓰지 않기로 하고 미리 내린 뒤, 버스 정류장에서도 확실히 멀어진다. 그들은 따라오지 않는다.
 	<br><br>
 	<<endevent>>
 	<<destinationbusrandom>>
@@ -310,23 +310,23 @@ All you can do now is wait.
 
 :: Bus Thug Shakedown Leave Comply
 <<effects>><<set $outside to 0>><<loadNPC 1 "rent_thug">><<loadNPC 2 "rent_thug_2">>
-You agree to come quietly. "Really? That's surprising, I thought I'd get to lay into you a bit. Oh well." <<He>> sends a text on <<his>> phone. "They'll be out in a moment, meanwhile I still need to make sure you don't go anywhere."
+당신은 얌전히 가겠다고 한다. "진짜? 의외네, 좀 두들겨 팰 수 있을 줄 알았는데. 뭐 어쩌겠어." <<He>>【은는】 <<his>> 휴대폰으로 문자를 보낸다. "곧 나올 거야, 그동안 네가 아무 데도 못 가게 붙잡고 있어야겠다."
 <br><br>
-True to <<his>> word, <<he>> doesn't relent <<his>> grip on you for even a moment. Soon enough the <<person2>><<person>> and <<person3>><<person>> exit the bus.
+<<his>> 말대로, <<he>>【은는】 한순간도 당신을 붙잡은 손을 늦추지 않는다. 머지않아 <<person2>><<person>>【와과】 <<person3>><<person>>【이가】 버스에서 내린다.
 <br><br>
-"Well look at what we have here, our little runaway," the <<person>> says.
+"이게 누구야, 우리 꼬마 도망자 아니신가." <<person>>【이가】 말한다.
 <br>
-"It's about time we caught up to you," the <<person2>><<person>> says. "Though I didn't think it would be this easy."
+"드디어 잡았네." <<person2>><<person>>【이가】 말한다. "이렇게 쉬울 줄은 몰랐지만."
 <br>
-The <<person1>><<person>> chuckles. "That's what I said too. But hey, this just means we got more time to snag someone else."
+<<person1>><<person>>【이가】 킬킬거린다. "나도 그렇게 말했어. 그래도 뭐, 그만큼 다른 놈 하나 더 낚을 시간이 생긴 거지."
 <br>
-"True that. After seeing this one through, of course," the <<person2>><<person>> says. <<He>> pulls out <<his>> phone and makes a call.
+"그건 그렇지. 물론 이 녀석부터 끝내 놓고." <<person2>><<person>>【이가】 말한다. <<He>>【은는】 <<his>> 휴대폰을 꺼내 전화를 건다.
 <br><br>
-It doesn't take long until a car pulls up near you. "Orphans first," <<he>> says, gesturing you to enter. The <<person1>><<person>> takes the front seat, while the other two join you in the back. "Don't get too comfortable now," the <<person3>><<person>> jokes.
+머지않아 차 한 대가 당신 근처에 선다. "고아 먼저." <<he>>【이가】 타라는 손짓을 하며 말한다. <<person1>><<person>>【은는】 앞좌석에 앉고, 나머지 둘은 당신과 함께 뒷좌석에 탄다. "너무 편하게 있지는 마라." <<person3>><<person>>【이가】 농담한다.
 <br><br>
-They really aren't taking any chances. All you can do now is wait until you arrive at the orphanage.
+그들은 정말 조금의 빈틈도 주지 않는다. 이제 당신이 할 수 있는 건 고아원에 도착할 때까지 기다리는 것뿐이다.
 <br><br>
-<<link [[Next|Thug Rent]]>><<pass 10>><<set $phase to "willing">><</link>>
+<<link [[다음|Thug Rent]]>><<pass 10>><<set $phase to "willing">><</link>>
 <br>
 
 :: Bus Thug Shakedown Leave Fight
@@ -338,7 +338,7 @@ They really aren't taking any chances. All you can do now is wait until you arri
 	<<npcidlegenitals>>
 	<<set $leftarm to "grappled">><<set $rightarm to "grappled">><<set $NPCList[0].lefthand to "arms">><<set $NPCList[0].righthand to "arms">>
 	<<set $phase to 0>>
-	You try to pull your arms out of <<his>> grip, but they don't budge. "Hah, you really thought that would work? But hey, thanks for giving me an excuse to fuck you up now!"
+	<<his>> 손아귀에서 팔을 빼내려 하지만, 꿈쩍도 하지 않는다. "하, 진짜 그게 될 줄 알았냐? 그래도 고맙다, 이제 널 박살 낼 핑계가 생겼으니까!"
 <</if>>
 <<effects>>
 <<effectsman>>
@@ -347,104 +347,104 @@ They really aren't taking any chances. All you can do now is wait until you arri
 <br><br>
 <<actionsman>>
 <<if $phase gte 7 or _combatend or ($pain gte 100 and $willpowerpain is 0)>>
-	<span id="next"><<link [[Next|Bus Thug Shakedown Leave Fight Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Bus Thug Shakedown Leave Fight Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Bus Thug Shakedown Leave Fight]]>><<set $phase++>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Bus Thug Shakedown Leave Fight]]>><<set $phase++>><</link>></span><<nexttext>>
 <</if>>
 
 :: Bus Thug Shakedown Leave Fight Finish
 <<if $phase gte 7>>
 	<<loadNPC 1 "rent_thug">><<loadNPC 2 "rent_thug_2">><<pass 5>>
-	While you're still struggling to fight off the <<person>>, <span class="red">you feel an unexpected kick land on your side</span>. You're sent sprawling to the ground.<<pain 6>><<gpain>>
+	당신이 아직 <<person>>【을를】 떨쳐내려고 애쓰는 사이, <span class="red">예상치 못한 발길질이 옆구리에 꽂힌다</span>. 당신은 바닥에 나뒹군다.<<pain 6>><<gpain>>
 	<br><br>
-	"Look at you, still struggling so hard, even though it's completely pointless." You look up to see the <<person2>><<person>> and <<person3>><<person>> looming over you.
+	"꼴 좀 봐, 아무 소용도 없는데 아직도 그렇게 버둥거리네." 올려다보니 <<person2>><<person>>【와과】 <<person3>><<person>>【이가】 당신 위로 우뚝 서 있다.
 	<br>
-	"So you wanted to resist. How'd that work out for you?" the <<person>> says, delivering another kick to the same spot.<<pain 6>><<gpain>>
+	"그래, 저항하고 싶었다 이거지. 어떻게 됐냐?" <<person>>【이가】 같은 곳에 또 한 번 발길질을 하며 말한다.<<pain 6>><<gpain>>
 	<br>
-	"About time you two showed up, I was starting to think you decided to ride the bus home," the <<person1>><<person>> says.
+	"이제야 나타나냐, 너희 둘 버스 타고 집에 간 줄 알았잖아." <<person1>><<person>>【이가】 말한다.
 	<br>
-	"Oh quit your whining, I'd say we got here at the perfect time," the <<person2>><<person>> says.
+	"아 징징대지 좀 마, 내가 보기엔 딱 좋은 때에 왔구만." <<person2>><<person>>【이가】 말한다.
 	<br><br>
-	"Now you, pitiful little orphan. You've been a real thorn in our side. If we were somewhere more private, I'd gladly beat the shit out of you all day. But since we aren't, let's just get you hauled over to the boss already. You're going to cooperate now, right?" 
+	"자 그럼 너, 한심한 고아 꼬맹이. 넌 진짜 눈엣가시였어. 좀 더 남의 눈 없는 데였으면 하루 종일이라도 기꺼이 개 패듯 팼을 거다. 근데 여긴 아니니까, 그냥 냉큼 보스한테 끌고 가자고. 이제 협조할 거지, 응?" 
 	<br><br>
-	You struggled to fight off just the <<person1>><<person>>, it's unlikely you'd fare any better now that there's two more. It seems the only logical option is to comply. Right when you come to this conclusion, yet another kick strikes you.<<pain 12>><<ggpain>>
+	<<person1>><<person>> 하나 떨쳐내는 것도 힘겨웠는데, 둘이나 더 늘었으니 나아질 리가 없다. 따르는 게 유일하게 합리적인 선택인 것 같다. 당신이 이 결론에 이른 바로 그 순간, 또 한 번 발길질이 날아든다.<<pain 12>><<ggpain>>
 	<br>
-	"I asked you a question, <<bitch>>!" the <<person2>><<person>> yells.
+	"묻잖아, 이 <<bitch>>【아야】!" <<person2>><<person>>【이가】 소리친다.
 	<br>
 	<<if $speech_attitude is "meek">>
-		"Yes, yes! Please, just stop hurting me!"
+		"네, 네! 제발, 그만 때려요!"
 	<<elseif $speech_attitude is "bratty">>
-		"Okay! Yes, I'll comply! You don't have to kick me anymore!"
+		"알았어! 그래, 따를게! 그만 차도 되잖아!"
 	<<else>>
-		"Yes, I'll cooperate! Don't kick me again, please!"
+		"네, 협조할게요! 제발 그만 차요!"
 	<</if>>
-	you cry out.
+	당신은 울부짖는다.
 	<br>
-	"Good. Now stay down there until I say otherwise." <<He>> makes a quick call on <<his>> phone.
+	"좋아. 이제 내가 됐다고 할 때까지 거기 엎드려 있어." <<He>>【은는】 <<his>> 휴대폰으로 짧게 전화를 건다.
 	<br><br>
-	It doesn't take long until a car pulls up near you. "Get in, brat. We'll be watching you, so don't even think of trying anything."
+	머지않아 차 한 대가 당신 근처에 선다. "타, 꼬맹아. 지켜보고 있을 테니까 허튼짓할 생각은 꿈도 꾸지 마."
 	<br><br>
-	All of them join you in the car to make sure you reach your destination safely. Safely, in the sense that you don't end up anywhere else. You clutch your injuries, and wait.
+	그들은 당신이 목적지에 무사히 도착하도록 모두 함께 차에 탄다. 무사히라는 건, 다른 곳으로 새지 않는다는 뜻에서다. 당신은 다친 곳을 부여잡고 기다린다.
 	<br><br>
 	<<saveNPC 0 "rent_thug_3">><<endcombat>><<loadNPC 0 "rent_thug">><<loadNPC 1 "rent_thug_2">><<loadNPC 2 "rent_thug_3">>
-	<<link [[Next|Thug Rent]]>><<pass 10>><<set $phase to "unwilling">><</link>>
+	<<link [[다음|Thug Rent]]>><<pass 10>><<set $phase to "unwilling">><</link>>
 	<br>
 <<elseif $enemyarousal gte $enemyarousalmax>>
-	While <<hes>> distracted by <<his>> orgasm, you slip past <<him>> and run away. "H-how in the... You goddamn piece of shit! You can't avoid us forever!"<<thuganger 1>><<gthuganger>>
+	<<hes>> 절정에 정신이 팔린 사이, 당신은 <<him>>【을를】 빠져나가 달아난다. "어, 어떻게... 이 빌어먹을 쓰레기 같은 게! 우리를 영원히 피할 수는 없어!"<<thuganger 1>><<gthuganger>>
 	<br><br>
-	<<tearful>> you calm yourself once you're far away from the bus.
+	<<tearful>> 버스에서 멀리 벗어나고 나서야 당신은 마음을 진정시킨다.
 	<<clotheson>>
 	<<endcombat>>
 	<<destinationbusrandom>>
 <<elseif $enemyhealth lte 0>>
-	You manage to get <<him>> off of you and shove <<him>> into the side of the bus. "Aurgh! Damn brat!" You seize the opportunity and run away before <<he>> can do anything else. "You goddamn piece of shit! You can't avoid us forever!"<<thuganger 1>><<gthuganger>>
+	당신은 가까스로 <<him>>【을를】 떼어내고 버스 옆면에 처박는다. "으악! 망할 꼬맹이!" <<he>>【이가】 무슨 짓을 더 하기 전에 당신은 기회를 잡아 달아난다. "이 빌어먹을 쓰레기 같은 게! 우리를 영원히 피할 수는 없어!"<<thuganger 1>><<gthuganger>>
 	<br><br>
-	<<tearful>> you calm yourself once you're far away from the bus.
+	<<tearful>> 버스에서 멀리 벗어나고 나서야 당신은 마음을 진정시킨다.
 	<<clotheson>>
 	<<endcombat>>
 	<<destinationbusrandom>>
 <<else>>
 	<<loadNPC 1 "rent_thug">><<loadNPC 2 "rent_thug_2">><<pass 5>>
-	You collapse to the ground, too hurt to keep resisting. "Hah, is that really all the fight you had in you? Honestly, I'm disappointed," the <<person3>><<person>> says.
-	While you're still taking in the shame of defeat, the <<person1>><<person>> and <<person2>><<person>> exit the bus.
+	당신은 너무 다쳐서 더는 저항하지 못하고 바닥에 쓰러진다. "하, 고작 그게 네가 가진 투지 전부냐? 솔직히 실망이다." <<person3>><<person>>【이가】 말한다.
+	당신이 아직 패배의 수치를 곱씹는 사이, <<person1>><<person>>【와과】 <<person2>><<person>>【이가】 버스에서 내린다.
 	<br><br>
-	"Oh, would you look at that. <<pShe>> was here after all. What's wrong, did you trip on your way out?" the <<person1>><<person>> taunts.
+	"이것 좀 봐. <<pShe>>【이가】 역시 여기 있었네. 왜 그래, 내리다가 넘어지기라도 했어?" <<person1>><<person>>【이가】 비아냥댄다.
 	<br>
-	"Looks like you had no trouble subduing <<phim>>," the <<person2>><<person>> says. "Too bad, I was hoping to get the chance to fuck <<phim>> up too."
+	"<<phim>>【을를】 제압하는 데 별 어려움은 없었나 보네." <<person2>><<person>>【이가】 말한다. "아쉽다, 나도 <<phim>>【을를】 좀 박살 낼 기회가 있길 바랐는데."
 	<br>
-	"Who says we can't still get a few hits in?" the <<person1>><<person>> says, approaching you menacingly.
+	"누가 아직 몇 대 더 못 때린대?" <<person1>><<person>>【이가】 위협적으로 다가오며 말한다.
 	<br><br>
-	For a moment you're not sure if <<hes>> serious, but then <<he>> winds up <<his>> feet. You brace just in time before the kick lands, not that it makes it feel much better.<<pain 8>><<gpain>>
+	잠깐 <<hes>> 진심인지 확신이 서지 않지만, 곧 <<he>>【이가】 발을 뒤로 젖힌다. 당신은 발길질이 꽂히기 직전에 간신히 몸을 웅크리지만, 그렇다고 덜 아픈 건 아니다.<<pain 8>><<gpain>>
 	<br><br>
-	"Hey, you know the boss doesn't want them too damaged," the <<person3>><<person>> says.
+	"야, 보스가 너무 망가뜨리지 말랬잖아." <<person3>><<person>>【이가】 말한다.
 	<br>
-	"Easy for you to say, since you got to have all the fun," the <<person1>><<person>> says, though <<he>> does still stop.
+	"너야 재미는 혼자 다 봤으니 그렇게 말하기 쉽지." <<person1>><<person>>【이가】 말하지만, 그래도 멈추기는 한다.
 	<br>
-	"<<Girl>>, you better stay down there until I say otherwise, unless you want even more of a beatdown." <<He>> makes a quick call on <<his>> phone.
+	"<<Girl>>, 더 두들겨 맞고 싶지 않으면 내가 됐다고 할 때까지 거기 엎드려 있는 게 좋을 거다." <<He>>【은는】 <<his>> 휴대폰으로 짧게 전화를 건다.
 	<br><br>
-	It doesn't take long until a car pulls up near you. "Get in, brat. We'll be watching you, so don't even think of trying anything."
+	머지않아 차 한 대가 당신 근처에 선다. "타, 꼬맹아. 지켜보고 있을 테니까 허튼짓할 생각은 꿈도 꾸지 마."
 	<br><br>
-	All of them join you in the car to make sure you reach your destination safely. Safely, in the sense that you don't end up anywhere else. You clutch your injuries, and wait.
+	그들은 당신이 목적지에 무사히 도착하도록 모두 함께 차에 탄다. 무사히라는 건, 다른 곳으로 새지 않는다는 뜻에서다. 당신은 다친 곳을 부여잡고 기다린다.
 	<br><br>
 	<<saveNPC 0 "rent_thug_3">><<endcombat>><<loadNPC 0 "rent_thug">><<loadNPC 1 "rent_thug_2">><<loadNPC 2 "rent_thug_3">>
-	<<link [[Next|Thug Rent]]>><<pass 10>><<set $phase to "unwilling">><</link>>
+	<<link [[다음|Thug Rent]]>><<pass 10>><<set $phase to "unwilling">><</link>>
 	<br>
 <</if>>
 
 :: Bus Thug Shakedown Hide
 <<effects>><<saveNPC 0 "rent_thug">><<saveNPC 1 "rent_thug_2">><<endevent>><<generate1>>
-You quickly get up and move towards the back, seeking a secluded location. But with how crowded the bus is, there are no seats available.
-It's so crowded, in fact, that your original seat has already been taken. You're left standing in the aisle, sticking out like a sore thumb.<<stress 6>><<gstress>>
+당신은 재빨리 일어나 뒤쪽으로 가며 눈에 띄지 않는 자리를 찾는다. 하지만 버스가 워낙 붐벼서 빈자리가 없다.
+얼마나 붐비는지, 원래 앉아 있던 자리마저 벌써 누가 차지했다. 당신은 통로에 덩그러니 서서 눈에 확 띄게 되고 만다.<<stress 6>><<gstress>>
 <br><br>
-Your panic subsides when you finally notice the single unoccupied seat in the back corner of the bus.
-You don't have time to question why it wasn't taken and rush over to it, pushing past some people to get there. You awkwardly shuffle past the <<person1>><<person>> in the seat next to it and sit down. 
+버스 뒤쪽 구석에 빈자리 하나가 드디어 눈에 들어오자 당황이 가라앉는다.
+왜 그 자리가 비어 있는지 따질 틈도 없이 당신은 사람들을 밀치며 그리로 서둘러 간다. 옆자리에 앉은 <<person1>><<person>>【을를】 어색하게 비집고 지나 자리에 앉는다. 
 <br><br>
-<<He>> chuckles. "You really wanted this seat, huh?" You nod without saying anything, trying to keep the conversation short.
-"Hey, don't give me the cold shoulder now <<girl>>." <<He>> places a hand on your thigh. "Then again, you staying quiet is going to make this easier for both of us."
+<<He>>【이가】 킬킬거린다. "이 자리가 어지간히 앉고 싶었나 봐?" 당신은 대화를 짧게 끝내려고 아무 말 없이 고개만 끄덕인다.
+"야, 그렇게 쌀쌀맞게 굴지 마, <<girl>>【아야】." <<He>>【은는】 당신의 허벅지에 손을 얹는다. "하긴, 네가 조용히 있어 주면 우리 둘 다 일이 쉬워지겠지."
 <br><br>
-<<He>> starts rubbing your thigh even more, making you realise there was likely a reason why the seat was left empty.
+<<He>>【이가】 허벅지를 더 문지르기 시작하자, 그 자리가 비어 있던 데는 아마 이유가 있었다는 것을 깨닫는다.
 <br><br>
-<<link [[Next|Bus Thug Shakedown Hide Rape]]>><<set $molestationstart to 1>><</link>>
+<<link [[다음|Bus Thug Shakedown Hide Rape]]>><<set $molestationstart to 1>><</link>>
 <br>
 
 :: Bus Thug Shakedown Hide Rape
@@ -459,61 +459,61 @@ You don't have time to question why it wasn't taken and rush over to it, pushing
 <</if>>
 <<effects>>
 <<effectsman>>
-<<alarmstate "<span class='red'>Your cries are drowned out by the bustling of the crowd, and those nearby ignore you.</span>">>
+<<alarmstate "<span class='red'>당신의 외침은 북적이는 사람들 소리에 묻히고, 근처의 사람들은 당신을 무시한다.</span>">>
 <<man>>
 <<stateman>>
 
 <<set $phase++>>
 <<switch $phase>>
-	<<case 1>><span class="purple">The suspicious people are looking around.</span>
-	<<case 2>><span class="pink">The suspicious people are coming closer.</span>
-	<<case 3>><span class="blue">The suspicious people are blocked by the crowd.</span>
-	<<case 4>><span class="purple">The suspicious people are arguing with the crowd.</span>
-	<<case 5>><span class="lblue">The suspicious people stopped and turned around.</span>
-	<<case 6>><span class="teal">The suspicious people are leaving.</span>
-	<<default>><span class="green">The suspicious people have left the bus.</span>
+	<<case 1>><span class="purple">수상한 사람들이 주위를 둘러보고 있다.</span>
+	<<case 2>><span class="pink">수상한 사람들이 가까이 다가오고 있다.</span>
+	<<case 3>><span class="blue">수상한 사람들이 인파에 가로막혔다.</span>
+	<<case 4>><span class="purple">수상한 사람들이 사람들과 말다툼하고 있다.</span>
+	<<case 5>><span class="lblue">수상한 사람들이 멈춰 서서 돌아섰다.</span>
+	<<case 6>><span class="teal">수상한 사람들이 떠나고 있다.</span>
+	<<default>><span class="green">수상한 사람들이 버스에서 내렸다.</span>
 <</switch>>
 <br><br>
 <<actionsman>>
 <<if _combatend>>
-	<span id="next"><<link [[Next|Bus Thug Shakedown Hide Rape Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Bus Thug Shakedown Hide Rape Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Bus Thug Shakedown Hide Rape]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Bus Thug Shakedown Hide Rape]]>><</link>></span><<nexttext>>
 <</if>>
 
 :: Bus Thug Shakedown Hide Rape Finish
 <<effects>>
 <<if $phase lt 7 and $enemyhealth lte 0>>
-	You manage to land a good punch to <<his>> face, giving <<him>> a bloody nose. "Augh! You stupid <<bitch>>!" <<he>> says, pushing you away. "Fine! Since you clearly don't want to sit here, you can get the hell out!"
+	당신은 <<his>> 얼굴에 제대로 주먹을 한 방 꽂아 코피를 터뜨린다. "으악! 이 멍청한 <<bitch>>!" <<he>>【이가】 당신을 밀쳐내며 말한다. "좋아! 여기 앉기 싫은 게 분명하니까, 썩 꺼져!"
 	<br><br>
-	The other passengers around <<him>> seem to agree, as they assist <<him>> in pushing you right into the aisle. <span class="red">You end up being pushed right in front of the shady duo.</span>
+	<<him>> 주위의 다른 승객들도 같은 생각인 듯, <<him>>【을를】 거들어 당신을 통로로 떠밀어 낸다. <span class="red">당신은 하필 수상한 두 사람 바로 앞으로 밀려나고 만다.</span>
 	<<clotheson>>
 	<<endcombat>><<loadNPC 0 "rent_thug">><<loadNPC 1 "rent_thug_2">>
-	"Well well. Were you not getting along with your new friends?" the <<person1>><<person>> mocks.
+	"이게 누구야. 새 친구들이랑 사이가 안 좋았나 봐?" <<person1>><<person>>【이가】 조롱한다.
 	<br>
-	"Good news, we're here to take you home," the <<person2>><<person>> says. "You're coming with us, right now."
+	"좋은 소식이야, 우리가 집까지 데려다주러 왔거든." <<person2>><<person>>【이가】 말한다. "넌 지금 당장 우리랑 같이 간다."
 	<br><br>
-	<span class="blue">There's no doubt about it, they must be Bailey's thugs.</span>
+	<span class="blue">의심의 여지가 없다. 베일리의 부하들이 분명하다.</span>
 	<br><br>
-	You look around. Nobody here looks willing to help you, some even look happy to be rid of you. Your only option is to exit the bus with them.
+	당신은 주위를 둘러본다. 여기 있는 누구도 당신을 도와줄 것 같지 않고, 몇몇은 당신을 치워 버려서 오히려 기뻐 보인다. 그들과 함께 버스에서 내리는 수밖에 없다.
 	<br><br>
-	<<link [[Next|Bus Thug Shakedown Hide Caught]]>><<set $outside to 1>><</link>>
+	<<link [[다음|Bus Thug Shakedown Hide Caught]]>><<set $outside to 1>><</link>>
 	<br>
 <<elseif $phase gte 7 and $enemyhealth lte 0>>
-	After a long struggle you manage to land a good punch to <<his>> face, giving <<him>> a bloody nose. "Augh! You fucking <<bitch>>!" <<he>> says, pushing you away. "If you're going to be this difficult, then fine! You can get the hell out of here!"
+	한참을 버둥거린 끝에 <<his>> 얼굴에 제대로 주먹을 한 방 꽂아 코피를 터뜨린다. "으악! 이 씨발 <<bitch>>!" <<he>>【이가】 당신을 밀쳐내며 말한다. "이렇게까지 까다롭게 굴 거면, 좋아! 여기서 썩 꺼져!"
 	<br><br>
-	The other passengers around <<him>> seem to agree, as they assist <<him>> in pushing you away, right into the aisle. <span class="green">Thankfully, the shady duo have already left.</span>
+	<<him>> 주위의 다른 승객들도 같은 생각인 듯, <<him>>【을를】 거들어 당신을 통로로 떠밀어 낸다. <span class="green">다행히 수상한 두 사람은 이미 떠나고 없다.</span>
 	<br><br>
-	You notice that the bus has become a bit less crowded, and find a newly emptied seat. <<tearful>> you sit down. The rest of the ride goes by peacefully.
+	버스가 조금 덜 붐비게 된 것을 알아차리고, 막 빈 자리 하나를 찾아낸다. <<tearful>> 당신은 자리에 앉는다. 남은 길은 평온하게 지나간다.
 	<<clotheson>>
 	<<endcombat>>
 	<<destination>>
 <<else>>
-	Upon coming down from <<his>> orgasmic high, <<he>> speaks. "Aaaah, that was good. Alright <<girl>>, you've paid the price. I won't bother ya for the rest of the ride." Regardless of <<his>> promise, you'd rather not stay near <<him>>.
+	절정의 여운에서 깨어나자 <<he>>【이가】 입을 연다. "하아아, 좋았다. 됐어, 꼬맹아, 값은 치렀으니까. 남은 동안은 안 귀찮게 할게." 그 약속과 상관없이, 당신은 <<him>> 곁에 머물고 싶지 않다.
 	<br><br>
-	<<tearful>> you wait until the shady duo are definitely gone. After that, you get up and leave. The <<person>> looks at you, amused. "You'd rather go? Fine," <<he>> says, not trying to stop you.
+	<<tearful>> 당신은 수상한 두 사람이 확실히 사라질 때까지 기다린다. 그런 다음 일어나 자리를 뜬다. <<person>>【이가】 재밌다는 듯 당신을 바라본다. "가겠다고? 그러든가." <<he>>【이가】 당신을 붙잡으려 하지 않고 말한다.
 	<br><br>
-	You notice that the bus has become a bit less crowded, and are able to find another seat. The rest of the ride goes by peacefully.
+	버스가 조금 덜 붐비게 된 것을 알아차리고, 다른 자리를 찾아 앉는다. 남은 길은 평온하게 지나간다.
 	<<clotheson>>
 	<<endcombat>>
 	<<destination>>
@@ -521,17 +521,17 @@ You don't have time to question why it wasn't taken and rush over to it, pushing
 
 :: Bus Thug Shakedown Hide Caught
 <<effects>><<generate3>>
-You're led out of the bus with both the <<person1>><<person>> and <<person2>><<person>> gripping onto your arms. They must really want to make sure you don't get away.
+<<person1>><<person>>【와과】 <<person2>><<person>>【이가】 양쪽에서 당신의 팔을 움켜쥔 채 당신을 버스 밖으로 데리고 나간다. 당신이 도망치지 못하게 단단히 하려는 모양이다.
 <br><br>
-"Oh, so you did find <<phim>>," a <<person3>><<person>> waiting outside says.
+"오, 진짜 <<phim>>【을를】 찾았구나." 밖에서 기다리던 <<person3>><<person>>【이가】 말한다.
 <br>
-"Yeah. <<Bitch>> tried hiding, but didn't like <<pher>> hiding place," the <<person1>><<person>> says. "Hold on to <<phim>> while I make a call."
+"그래. <<Bitch>>【이가】 숨으려고 했는데, 숨을 데가 영 마음에 안 들었나 봐." <<person1>><<person>>【이가】 말한다. "내가 전화하는 동안 <<phim>>【을를】 좀 붙잡고 있어."
 <br><br>
-<span class="purple">They really aren't messing around. You'll have to act now to have any chance at escaping them.</span>
+<span class="purple">그들은 정말 장난이 아니다. 조금이라도 벗어날 가능성이 있으려면 지금 움직여야 한다.</span>
 <br><br>
-<<link [[Resist|Bus Thug Shakedown Hide Fight]]>><<set $fightstart to 1>><</link>>
+<<link [[저항한다|Bus Thug Shakedown Hide Fight]]>><<set $fightstart to 1>><</link>>
 <br>
-<<link [[Stay still|Bus Thug Shakedown Hide Comply]]>><<pass 5>><</link>>
+<<link [[가만히 있는다|Bus Thug Shakedown Hide Comply]]>><<pass 5>><</link>>
 <br>
 
 :: Bus Thug Shakedown Hide Fight
@@ -541,7 +541,7 @@ You're led out of the bus with both the <<person1>><<person>> and <<person2>><<p
 	<<maninit>>
 	<<set $enemytrust -= 100>>
 	<<npcidlegenitals>>
-	Right as the <<person1>><<person>> lets go to exchange positions with the <<person3>><<person>>, you twist your way out of the <<person2>><<persons>> grip and attack. "Fuck- Get <<phim>>!" <<he>> yells as they all rush you down.
+	<<person1>><<person>>【이가】 <<person3>><<person>>【와과】 자리를 바꾸려고 손을 놓는 순간, 당신은 몸을 비틀어 <<person2>><<persons>> 손아귀에서 빠져나와 공격한다. "씨발- <<phim>>【을를】 잡아!" <<he>>【이가】 소리치고, 그들이 한꺼번에 당신에게 달려든다.
 <</if>>
 <<effects>>
 <<effectsman>>
@@ -550,98 +550,98 @@ You're led out of the bus with both the <<person1>><<person>> and <<person2>><<p
 <br><br>
 <<actionsman>>
 <<if _combatend or ($pain gte 100 and $willpowerpain is 0)>>
-	<span id="next"><<link [[Next|Bus Thug Shakedown Hide Fight Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Bus Thug Shakedown Hide Fight Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Bus Thug Shakedown Hide Fight]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Bus Thug Shakedown Hide Fight]]>><</link>></span><<nexttext>>
 <</if>>
 
 :: Bus Thug Shakedown Hide Fight Finish
 <<effects>>
 <<if $enemyarousal gte $enemyarousalmax>>
-	As they shudder in orgasmic bliss, you seize the opportunity and run away. "What just- How dare you, you stupid orphaned <<bitch>>! Get back here!" the <<person1>><<person>> yells after you.<<thuganger 1>><<gthuganger>>
+	그들이 절정의 쾌감에 몸을 떠는 사이, 당신은 기회를 잡아 달아난다. "방금 뭐- 감히, 이 멍청한 고아 <<bitch>>! 거기 서!" <<person1>><<person>>【이가】 당신의 뒤에 대고 소리친다.<<thuganger 1>><<gthuganger>>
 	<br><br>
-	<<tearful>> you run as far from them as your legs will take you. You eventually stop and regain your bearings.
+	<<tearful>> 당신은 다리가 버티는 데까지 그들에게서 멀리 달아난다. 마침내 멈춰 서서 정신을 가다듬는다.
 	<<clotheson>>
 	<<endcombat>>
 	<<destination>>
 <<elseif $enemyhealth lte 0>>
-	You manage to beat them back for long enough to get a chance to run away. "How?! Aurgh, you stupid orphaned <<bitch>>! Get back here!" the <<person1>><<person>> yells after you.<<thuganger 1>><<gthuganger>>
+	당신은 그들을 한동안 물리쳐 달아날 기회를 얻는다. "어떻게?! 으악, 이 멍청한 고아 <<bitch>>! 거기 서!" <<person1>><<person>>【이가】 당신의 뒤에 대고 소리친다.<<thuganger 1>><<gthuganger>>
 	<br><br>
-	<<tearful>> you run as far from them as your legs will take you. You eventually stop and regain your bearings.
+	<<tearful>> 당신은 다리가 버티는 데까지 그들에게서 멀리 달아난다. 마침내 멈춰 서서 정신을 가다듬는다.
 	<<clotheson>>
 	<<endcombat>>
 	<<destination>>
 <<else>>
-	You collapse to the ground, too hurt to keep resisting. "Should have known <<pshe>>'d try something desperate," the <<person2>><<person>> says.
+	당신은 너무 다쳐서 더는 저항하지 못하고 바닥에 쓰러진다. "<<pshe>>【이가】 뭔가 발악할 줄 알았어야 했는데." <<person2>><<person>>【이가】 말한다.
 	<br>
-	"But in the end, it was pointless," the <<person1>><<person>> says. <<He>> grabs your head, forcing you to look up at them. "Wasn't it, brat?" <<He>> doesn't wait for any kind of response before throwing your head back down.
+	"그래 봤자 결국 소용없었지만." <<person1>><<person>>【이가】 말한다. <<He>>【은는】 당신의 머리를 움켜쥐고 억지로 그들을 올려다보게 한다. "안 그래, 꼬맹아?" <<He>>【은는】 어떤 대답도 기다리지 않고 당신의 머리를 도로 내팽개친다.
 	<br><br>
-	"Stay down there until I say otherwise, unless you want us to kick the shit out of you even more." <<He>> makes a quick call on <<his>> phone.
+	"더 죽도록 처맞고 싶지 않으면 내가 됐다고 할 때까지 거기 엎드려 있어." <<He>>【은는】 <<his>> 휴대폰으로 짧게 전화를 건다.
 	<br><br>
-	It doesn't take long until a car pulls up near you. "Get in, brat. We'll be watching you, so don't even think of trying anything."
+	머지않아 차 한 대가 당신 근처에 선다. "타, 꼬맹아. 지켜보고 있을 테니까 허튼짓할 생각은 꿈도 꾸지 마."
 	<br><br>
-	All of them join you in the car to make sure you reach your destination safely. Safely, in the sense that you don't end up anywhere else. All you can do is clutch your injuries, and wait.
+	그들은 당신이 목적지에 무사히 도착하도록 모두 함께 차에 탄다. 무사히라는 건, 다른 곳으로 새지 않는다는 뜻에서다. 당신이 할 수 있는 건 다친 곳을 부여잡고 기다리는 것뿐이다.
 	<br><br>
 	<<saveNPC 2 "rent_thug_3">><<endcombat>><<loadNPC 0 "rent_thug">><<loadNPC 1 "rent_thug_2">><<loadNPC 2 "rent_thug_3">>
-	<<link [[Next|Thug Rent]]>><<set $phase to "unwilling">><</link>>
+	<<link [[다음|Thug Rent]]>><<set $phase to "unwilling">><</link>>
 	<br>
 <</if>>
 
 :: Bus Thug Shakedown Hide Comply
 <<effects>><<set $outside to 0>>
-You make no move to resist. The <<person1>><<person>> pulls out <<his>> phone and makes a call. It doesn't take long until a car pulls up near you.
+당신은 저항하려는 기색을 전혀 보이지 않는다. <<person1>><<person>>【이가】 <<his>> 휴대폰을 꺼내 전화를 건다. 머지않아 차 한 대가 당신 근처에 선다.
 <br><br>
-"Huh, here I thought <<pshe>> would try something," the <<person3>><<person>> says.
+"흠, 난 <<pshe>>【이가】 뭔가 시도할 줄 알았는데." <<person3>><<person>>【이가】 말한다.
 <br>
-"Maybe <<pshe>> realised how the world works while on the bus," the <<person2>><<person>> says sarcastically.
+"버스에 있는 동안 세상 돌아가는 이치를 깨달았나 보지." <<person2>><<person>>【이가】 비꼬듯 말한다.
 <br>
-The <<person1>><<person>> doesn't look amused. "Who cares, at the end of the day all that matters is that we've finally got <<phim>>."
+<<person1>><<person>>【은는】 재밌어하는 기색이 아니다. "알 게 뭐야, 결국 중요한 건 마침내 <<phim>>【을를】 잡았다는 거지."
 <br><br>
-<<He>> looks at you coldly. "Orphans first," <<he>> says, gesturing you to enter. The <<person3>><<person>> takes the front seat, while the other two join you in the back. "Don't get too comfortable now," the <<person2>><<person>> jokes.
+<<He>>【은는】 당신을 차갑게 바라본다. "고아 먼저." <<he>>【이가】 타라는 손짓을 하며 말한다. <<person3>><<person>>【은는】 앞좌석에 앉고, 나머지 둘은 당신과 함께 뒷좌석에 탄다. "너무 편하게 있지는 마라." <<person2>><<person>>【이가】 농담한다.
 <br><br>
-They really aren't taking any chances. All you can do now is wait until you arrive at the orphanage.
+그들은 정말 조금의 빈틈도 주지 않는다. 이제 당신이 할 수 있는 건 고아원에 도착할 때까지 기다리는 것뿐이다.
 <br><br>
-<<link [[Next|Thug Rent]]>><<pass 10>><<set $phase to "willing">><</link>>
+<<link [[다음|Thug Rent]]>><<pass 10>><<set $phase to "willing">><</link>>
 <br>
 
 :: Bus Thug Shakedown Still
 <<effects>>
-You stay in your seat and look out the window, doing your best to act like any other passenger. Out of the corner of your eye, you observe the shady duo coming. When they reach where you are, they stop for a moment. 
+당신은 자리에 앉은 채 창밖을 내다보며, 여느 승객처럼 보이려고 최선을 다한다. 곁눈질로 수상한 두 사람이 다가오는 것이 보인다. 당신이 있는 자리에 이르자, 그들은 잠시 멈춰 선다. 
 <br><br>
-Just as you think they're about to confront you, they move on. It doesn't look like they are interested in you after all. Even after the bus starts moving again, nothing happens.
+그들이 당신에게 따지려나 싶은 바로 그때, 그들은 지나쳐 간다. 결국 당신에게는 관심이 없는 모양이다. 버스가 다시 출발한 뒤에도 아무 일도 일어나지 않는다.
 <br><br>
-You breathe a sigh of relief and enjoy the rest of the ride in peace.<<stress -4>><<lstress>>
+당신은 안도의 한숨을 내쉬고 남은 길을 평온하게 즐긴다.<<stress -4>><<lstress>>
 <br><br>
 <<icon `$bus + ".png"`>><<link [[$bus.toUpperFirst() Street|Bus Thug Shakedown Still Surprise]]>><</link>>
 <br>
 
 :: Bus Thug Shakedown Still Surprise
 <<effects>><<generate3>>
-Once your destination comes up, you get off the bus. You notice that the <<person1>><<person>> and <<person2>><<person>> get off too. <span class="red">They start walking towards you.</span> Your suspicions may have been right after all.<<stress 8>><<gstress>>
+목적지에 다다르자 당신은 버스에서 내린다. <<person1>><<person>>【와과】 <<person2>><<person>>도 함께 내리는 것이 보인다. <span class="red">그들이 당신을 향해 걸어오기 시작한다.</span> 결국 의심이 맞았던 모양이다.<<stress 8>><<gstress>>
 <br><br>
-You turn to run, but bump into a <<person3>><<person>>. "Hey <<girl>>, do I know you from somewhere?" <<he>> says.
+당신은 돌아서서 달아나려 하지만, <<person3>><<person>>【와과】 부딪친다. "어이 꼬맹아, 우리 어디서 본 적 있지 않냐?" <<he>>【이가】 말한다.
 <br>
 <<if $speech_attitude is "meek">>
-	"I-I really don't think so... Please move, I need to go,"
+	"저, 전혀 아닌 것 같은데요... 제발 비켜 주세요, 가 봐야 해서요."
 <<elseif $speech_attitude is "bratty">>
-	"No, I really doubt it. Now get out of the way, I have places to be,"
+	"아니, 그럴 리 없거든. 이제 비켜, 나 갈 데 있어."
 <<else>>
-	"No, probably not. Could you move out of the way please? I need to go now,"
+	"아뇨, 아마 아닐 거예요. 좀 비켜 주실래요? 지금 가 봐야 해서요."
 <</if>>
-you respond, trying to end the conversation as quickly as possible. But <<he>> doesn't allow it.
+당신은 대화를 최대한 빨리 끝내려고 대답한다. 하지만 <<he>>【은는】 그럴 틈을 주지 않는다.
 <br>
-"Really? Because the more I look at you, the more I start to think I do."
+"그래? 근데 보면 볼수록 본 적 있는 것 같단 말이지."
 <br><br>
-<<He>> keeps blocking you from leaving, which gives plenty of time for the shady duo to get to you. "You thought we didn't notice you, brat? Hah! As if," the <<person2>><<person>> says.
+<<He>>【이가】 계속 길을 막아서는 바람에, 수상한 두 사람이 당신에게 다가올 시간이 넉넉히 생긴다. "우리가 널 못 알아본 줄 알았냐, 꼬맹아? 하! 퍽이나." <<person2>><<person>>【이가】 말한다.
 <br><br>
-Turning to confront them, you suddenly feel the <<person3>><<persons>> hand on your shoulder. "You're nowhere near as clever as you think," <<he>> says.
-The realisation finally hits you. <span class="blue">The people entering the bus were Bailey's thugs, and so is <<he>>.</span>
+그들과 맞서려고 돌아서는 순간, 갑자기 <<person3>><<persons>> 손이 당신의 어깨에 얹힌다. "넌 네 생각만큼 영리하지 않아." <<he>>【이가】 말한다.
+그제야 깨달음이 닥쳐온다. <span class="blue">버스에 탄 사람들은 베일리의 부하들이었고, <<he>> 역시 마찬가지다.</span>
 <br><br>
-The <<person1>><<person>> grins. "Now then, stay the fuck still while we arrange you a ride home."
+<<person1>><<person>>【이가】 씩 웃는다. "자 그럼, 우리가 집까지 갈 차 불러 줄 동안 씨발 꼼짝 말고 있어."
 <br><br>
-<<link [[Resist|Bus Thug Shakedown Still Fight]]>><<set $fightstart to 1>><</link>>
+<<link [[저항한다|Bus Thug Shakedown Still Fight]]>><<set $fightstart to 1>><</link>>
 <br>
-<<link [[Comply|Bus Thug Shakedown Still Comply]]>><</link>>
+<<link [[따른다|Bus Thug Shakedown Still Comply]]>><</link>>
 <br>
 
 :: Bus Thug Shakedown Still Fight
@@ -651,7 +651,7 @@ The <<person1>><<person>> grins. "Now then, stay the fuck still while we arrange
 	<<maninit>>
 	<<set $enemytrust -= 100>>
 	<<npcidlegenitals>>
-	You twist free of the <<person3>><<persons>> grasp. "So that's how you want to play it, huh? Good! I've been wanting to punch you in your stupid face for a while now!" They rush you down.
+	당신은 <<person3>><<persons>> 손아귀에서 몸을 비틀어 빠져나온다. "그렇게 나오시겠다 이거지? 좋아! 안 그래도 한동안 네 그 멍청한 낯짝에 주먹 한 방 꽂고 싶었거든!" 그들이 당신에게 달려든다.
 <</if>>
 <<effects>>
 <<effectsman>>
@@ -660,103 +660,103 @@ The <<person1>><<person>> grins. "Now then, stay the fuck still while we arrange
 <br><br>
 <<actionsman>>
 <<if _combatend or ($pain gte 100 and $willpowerpain is 0)>>
-	<span id="next"><<link [[Next|Bus Thug Shakedown Still Fight Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Bus Thug Shakedown Still Fight Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Bus Thug Shakedown Still Fight]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Bus Thug Shakedown Still Fight]]>><</link>></span><<nexttext>>
 <</if>>
 
 :: Bus Thug Shakedown Still Fight Finish
 <<effects>>
 <<if $enemyarousal gte $enemyarousalmax>>
-	As they shudder in orgasmic bliss, you seize the opportunity and run away. "What just- You little <<bitch>>! Get back here!" the <<person1>><<person>> yells after you.<<thuganger 1>><<gthuganger>>
+	그들이 절정의 쾌감에 몸을 떠는 사이, 당신은 기회를 잡아 달아난다. "방금 뭐- 이 조그만 <<bitch>>! 거기 서!" <<person1>><<person>>【이가】 당신의 뒤에 대고 소리친다.<<thuganger 1>><<gthuganger>>
 	<br><br>
-	<<tearful>> you run as far from them as your legs will take you. You eventually stop and regain your bearings.
+	<<tearful>> 당신은 다리가 버티는 데까지 그들에게서 멀리 달아난다. 마침내 멈춰 서서 정신을 가다듬는다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 	<<destination>>
 <<elseif $enemyhealth lte 0>>
-	You manage to fight them off of you and seize the chance to run away. "How the- Aurgh! You stupid orphaned <<bitch>>! Get back here!" the <<person1>><<person>> yells after you.<<thuganger 1>><<gthuganger>>
+	당신은 그들을 떨쳐내고 그 틈에 달아난다. "어떻게- 으악! 이 멍청한 고아 <<bitch>>! 거기 서!" <<person1>><<person>>【이가】 당신의 뒤에 대고 소리친다.<<thuganger 1>><<gthuganger>>
 	<br><br>
-	<<tearful>> you run as far from them as your legs will take you. You eventually stop and regain your bearings.
+	<<tearful>> 당신은 다리가 버티는 데까지 그들에게서 멀리 달아난다. 마침내 멈춰 서서 정신을 가다듬는다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 	<<destination>>
 <<else>>
-	You collapse to the ground, too hurt to keep resisting. "You stupid, stupid <<girl>>. You really thought you stood a chance against us?" the <<person2>><<person>> says.
+	당신은 너무 다쳐서 더는 저항하지 못하고 바닥에 쓰러진다. "멍청한, 정말 멍청한 <<girl>>. 진짜 우리를 상대로 승산이 있다고 생각했냐?" <<person2>><<person>>【이가】 말한다.
 	<br>
-	"You'll have a much easier time once you finally accept how pointless resisting is," the <<person1>><<person>> says condescendingly. 
+	"저항해 봤자 소용없다는 걸 받아들이면 훨씬 편해질 거다." <<person1>><<person>>【이가】 깔보듯 말한다. 
 	<br>
-	"You better stay down there until I say otherwise, unless you want even more of a beatdown." <<He>> makes a quick call on <<his>> phone.
+	"더 두들겨 맞고 싶지 않으면 내가 됐다고 할 때까지 거기 엎드려 있는 게 좋을 거다." <<He>>【은는】 <<his>> 휴대폰으로 짧게 전화를 건다.
 	<br><br>
-	It doesn't take long until a car pulls up near you. "Get in, brat. We'll be watching you, so don't even think of trying anything."
+	머지않아 차 한 대가 당신 근처에 선다. "타, 꼬맹아. 지켜보고 있을 테니까 허튼짓할 생각은 꿈도 꾸지 마."
 	<br><br>
-	All of them join you in the car to make sure you reach your destination safely. Safely in the sense that you don't end up anywhere else. All you can do is clutch your injuries, and wait.
+	그들은 당신이 목적지에 무사히 도착하도록 모두 함께 차에 탄다. 무사히라는 건, 다른 곳으로 새지 않는다는 뜻에서다. 당신이 할 수 있는 건 다친 곳을 부여잡고 기다리는 것뿐이다.
 	<br><br>
 	<<saveNPC 0 "rent_thug">><<saveNPC 1 "rent_thug_2">><<saveNPC 2 "rent_thug_3">><<endcombat>><<loadNPC 0 "rent_thug">><<loadNPC 1 "rent_thug_2">><<loadNPC 2 "rent_thug_3">>
-	<<link [[Next|Thug Rent]]>><<pass 10>><<set $phase to "unwilling">><</link>>
+	<<link [[다음|Thug Rent]]>><<pass 10>><<set $phase to "unwilling">><</link>>
 	<br>
 <</if>>
 
 :: Bus Thug Shakedown Still Comply
 <<effects>>
-You do as <<he>> says and wait. The <<person1>><<person>> pulls out <<his>> phone and makes a call. It doesn't take long until a car pulls up near you.
+당신은 <<he>>【이가】 시키는 대로 기다린다. <<person1>><<person>>【이가】 <<his>> 휴대폰을 꺼내 전화를 건다. 머지않아 차 한 대가 당신 근처에 선다.
 <br><br>
-"Huh, I thought this would be a tougher delivery. Half the fun of those is getting to beat'em up," the <<person3>><<person>> says.
+"흠, 이번 배달은 좀 더 빡셀 줄 알았는데. 이런 일의 재미 절반은 두들겨 패는 거잖아." <<person3>><<person>>【이가】 말한다.
 <br>
-"Just enjoy the other half, getting paid a bit more," the <<person2>><<person>> jokes.
+"나머지 절반이나 즐겨, 돈 좀 더 받는 거." <<person2>><<person>>【이가】 농담한다.
 <br>
-The <<person1>><<person>> doesn't look amused. "Who cares? At the end of the day all that matters is that we've finally got <<phim>>."
+<<person1>><<person>>【은는】 재밌어하는 기색이 아니다. "알 게 뭐야? 결국 중요한 건 마침내 <<phim>>【을를】 잡았다는 거지."
 <br><br>
-<<He>> looks at you coldly. "Orphans first," <<he>> says, gesturing you to enter. The <<person3>><<person>> takes the front seat, while the other two join you in the back. "Don't get too comfortable now," the <<person2>><<person>> jokes.
+<<He>>【은는】 당신을 차갑게 바라본다. "고아 먼저." <<he>>【이가】 타라는 손짓을 하며 말한다. <<person3>><<person>>【은는】 앞좌석에 앉고, 나머지 둘은 당신과 함께 뒷좌석에 탄다. "너무 편하게 있지는 마라." <<person2>><<person>>【이가】 농담한다.
 <br><br>
-They really aren't taking any chances. All you can do now is wait until you arrive at the orphanage.
+그들은 정말 조금의 빈틈도 주지 않는다. 이제 당신이 할 수 있는 건 고아원에 도착할 때까지 기다리는 것뿐이다.
 <br><br>
-<<link [[Next|Thug Rent]]>><<pass 10>><<set $phase to "willing">><</link>>
+<<link [[다음|Thug Rent]]>><<pass 10>><<set $phase to "willing">><</link>>
 <br>
 
 :: Bus Thug Extreme 2
 <<effects>>
 <<if $phase is 0>>
-	You remain in your seat, hoping to be ignored. Unfortunately that doesn't happen. When they get to you, they share a sly, knowing look together. 
+	당신은 무시당하기를 바라며 자리에 그대로 있는다. 안타깝게도 그렇게 되지는 않는다. 당신에게 다다르자, 그들은 다 안다는 듯한 교활한 눈빛을 주고받는다. 
 <<else>>
-	You get up to move towards the back of the bus, which they notice immediately.
-	"Hey <<girl>>! Where do you think you're going now?" the <<person3>><<person>> says, now approaching you. Once close, <<he>> chuckles. "Fellas! Get over here!" <<he>> calls out. Soon enough, they surround you.
+	당신은 버스 뒤쪽으로 가려고 일어나고, 그들은 곧바로 그것을 알아챈다.
+	"어이 꼬맹아! 이제 어딜 가려고?" <<person3>><<person>>【이가】 당신에게 다가오며 말한다. 가까이 오자 <<he>>【이가】 킬킬거린다. "얘들아! 이리 와 봐!" <<he>>【이가】 소리친다. 머지않아 그들이 당신을 에워싼다.
 <</if>>
 <br><br>
-"Well well well, look at who it is," the <<person1>><<person>> says.
+"이거 이거, 누군지 좀 보라고." <<person1>><<person>>【이가】 말한다.
 <br>
-"Just the <<girl>> we've been looking for," the <<person2>><<person>> says.
+"우리가 찾던 바로 그 <<girl>>【이】네." <<person2>><<person>>【이가】 말한다.
 <br><br>
-You tell them they must be mistaken, to which the <<person3>><<person>> scoffs.
-"As if! We've been trying to catch your punk-ass for ages now!" <<he>> says.
-Their words and actions leave little room for uncertainty. <span class="blue">They must be Bailey's thugs.</span>
+당신이 사람을 잘못 본 거라고 말하자, <<person3>><<person>>【이가】 코웃음을 친다.
+"퍽이나! 네 그 양아치 같은 엉덩이 잡으려고 우리가 얼마나 오래 쫓아다녔는데!" <<he>>【이가】 말한다.
+그들의 말과 행동은 의심의 여지를 거의 남기지 않는다. <span class="blue">베일리의 부하들이 분명하다.</span>
 <br><br>
-"You're coming with us, right now," the <<person2>><<person>> says.
+"넌 지금 당장 우리랑 같이 간다." <<person2>><<person>>【이가】 말한다.
 <br>
-"And in case it wasn't clear, you don't have a choice in the matter," the <<person1>><<person>> says.
+"그리고 혹시 몰라서 하는 말인데, 너한테 선택권은 없어." <<person1>><<person>>【이가】 말한다.
 <br><br>
-You consider your situation. All the doors are locked, and it's doubtful that the other passengers would be willing to try to help you escape. Your only option is to comply with their demands, for now.
+당신은 상황을 따져 본다. 문은 전부 잠겨 있고, 다른 승객들이 당신의 탈출을 도우려 나설 것 같지도 않다. 지금으로서는 그들의 요구에 따르는 것이 유일한 선택지다.
 <br><br>
-<<link [[Next|Bus Thug Extreme 3]]>><</link>>
+<<link [[다음|Bus Thug Extreme 3]]>><</link>>
 <br>
 
 :: Bus Thug Extreme 3
 <<set $outside to 1>><<effects>>
-You're led out of the bus with the <<person3>><<person>> and <<person2>><<person>> gripping tightly onto your arms.
+<<person3>><<person>>【와과】 <<person2>><<person>>【이가】 당신의 팔을 꽉 움켜쥔 채 당신을 버스 밖으로 데리고 나간다.
 <br><br>
-"God, you've been such a pain to find. Even making us work overtime," the <<person>> says. "Come on, resist! Give us a reason to beat you to a pulp!" <<he>> taunts.
+"세상에, 너 찾느라 진짜 고생했다. 야근까지 하게 만들고 말이야." <<person>>【이가】 말한다. "자, 저항해 봐! 널 곤죽이 되도록 팰 핑계 좀 줘 보라고!" <<he>>【이가】 도발한다.
 <br>
-"Would you shut up? We're this close to being done with <<phim>>," the <<person3>><<person>> says. 
+"입 좀 다물래? <<phim>>【을를】 다 처리하기 직전이잖아." <<person3>><<person>>【이가】 말한다. 
 <br>
-"Don't start bickering now," the <<person1>><<person>> says. Just keep an eye on <<phim>> while I make the call," <<he>> says.
+"이제 와서 티격태격하지 마." <<person1>><<person>>【이가】 말한다. "내가 전화하는 동안 <<phim>>【을를】 잘 지켜보기나 해." <<he>>【이가】 말한다.
 <br><br>
-They really aren't messing around. You'll have to act now to have any chance at escaping them.
+그들은 정말 장난이 아니다. 조금이라도 벗어날 가능성이 있으려면 지금 움직여야 한다.
 <br><br>
-<<link [[Resist|Bus Thug Extreme Fight]]>><<set $fightstart to 1>><</link>>
+<<link [[저항한다|Bus Thug Extreme Fight]]>><<set $fightstart to 1>><</link>>
 <br>
-<<link [[Stay still|Bus Thug Extreme Comply]]>><<pass 5>><</link>>
+<<link [[가만히 있는다|Bus Thug Extreme Comply]]>><<pass 5>><</link>>
 <br>
 
 :: Bus Thug Extreme Fight
@@ -767,9 +767,9 @@ They really aren't messing around. You'll have to act now to have any chance at 
 	<<set $enemyanger += 200>>
 	<<set $enemytrust -= 100>>
 	<<npcidlegenitals>>
-	You're easily able to twist free of the <<person2>><<persons>> grasp and use your now free arm to punch the <<person3>><<person>>, causing <<him>> to let go of you.
+	당신은 <<person2>><<persons>> 손아귀에서 손쉽게 몸을 비틀어 빠져나오고, 자유로워진 팔로 <<person3>><<person>>에게 주먹을 날려 <<him>>【이가】 당신을 놓게 만든다.
 	<br><br>
-	"What?! You let that happen, you moron!" <<he>> says. "Don't know what you're talking about!" the <<person2>><<person>> responds. Annoyed, the <<person1>><<person>> puts away <<his>> phone and joins the scuffle.
+	"뭐야?! 저걸 놓치냐, 이 멍청아!" <<he>>【이가】 말한다. "무슨 소리야!" <<person2>><<person>>【이가】 맞받아친다. 짜증이 난 <<person1>><<person>>【이가】 <<his>> 휴대폰을 집어넣고 몸싸움에 끼어든다.
 <</if>>
 <<effects>>
 <<effectsman>>
@@ -778,58 +778,58 @@ They really aren't messing around. You'll have to act now to have any chance at 
 <br><br>
 <<actionsman>>
 <<if _combatend or ($pain gte 100 and $willpowerpain is 0)>>
-	<span id="next"><<link [[Next|Bus Thug Extreme Fight Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Bus Thug Extreme Fight Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Bus Thug Extreme Fight]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Bus Thug Extreme Fight]]>><</link>></span><<nexttext>>
 <</if>>
 
 :: Bus Thug Extreme Fight Finish
 <<effects>>
 <<if $enemyarousal gte $enemyarousalmax>>
-	As they shudder in orgasmic bliss, you seize the opportunity and run away. "How did this- Urgh!" the <<person1>><<person>> yells. You turn your head back just long enough to see <<him>> throw a punch at the <<person2>><<person>>.<<thuganger 1>><<gthuganger>>
+	그들이 절정의 쾌감에 몸을 떠는 사이, 당신은 기회를 잡아 달아난다. "이게 어떻게- 으윽!" <<person1>><<person>>【이가】 소리친다. 고개를 돌린 당신의 눈에 <<him>>【이가】 <<person2>><<person>>에게 주먹을 날리는 모습이 잠깐 비친다.<<thuganger 1>><<gthuganger>>
 	<br><br>
-	<<tearful>> you run as far from them as your legs will take you. You eventually stop and regain your bearings.
+	<<tearful>> 당신은 다리가 버티는 데까지 그들에게서 멀리 달아난다. 마침내 멈춰 서서 정신을 가다듬는다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 	<<destination>>
 <<elseif $enemyhealth lte 0>>
-	You manage to fight them off of you long enough to get a chance to run away. "God fucking dammit!" the <<person1>><<person>> yells. You turn your head back just long enough to see <<him>> throw a punch at the <<person2>><<person>>.<<thuganger 1>><<gthuganger>>
+	당신은 그들을 한동안 떨쳐내 달아날 기회를 얻는다. "아 씨발 젠장!" <<person1>><<person>>【이가】 소리친다. 고개를 돌린 당신의 눈에 <<him>>【이가】 <<person2>><<person>>에게 주먹을 날리는 모습이 잠깐 비친다.<<thuganger 1>><<gthuganger>>
 	<br><br>
-	<<tearful>> you run as far from them as your legs will take you. You eventually stop and regain your bearings.
+	<<tearful>> 당신은 다리가 버티는 데까지 그들에게서 멀리 달아난다. 마침내 멈춰 서서 정신을 가다듬는다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 	<<destination>>
 <<else>>
-	You collapse to the ground, too hurt to keep resisting. The <<person2>><<person>> chuckles to <<himself>>.
+	당신은 너무 다쳐서 더는 저항하지 못하고 바닥에 쓰러진다. <<person2>><<person>>【이가】 혼자 킬킬거린다.
 	<br><br>
-	"Wasn't that fun?" <<he>> asks.
+	"재밌지 않았냐?" <<he>>【이가】 묻는다.
 	<br>
-	"No, you dumb musclehead, no the fuck it wasn't," the <<person3>><<person>> responds.
+	"아니, 이 근육 돼지야, 씨발 하나도 안 재밌었거든." <<person3>><<person>>【이가】 대답한다.
 	<br>
-	The <<person1>><<person>> looks irritated. "That was a big waste of time and a completely unnecessary risk, which we'll definitely talk about later. But right now, I need you two numbskulls to focus on completing the job."
+	<<person1>><<person>>【은는】 짜증 난 얼굴이다. "완전 시간 낭비에 쓸데없는 위험이었어. 이건 나중에 꼭 따지고 넘어갈 거다. 근데 지금은, 너희 돌대가리 둘이 일 끝내는 데나 집중해."
 	<br><br>
-	<<He>> turns to address you. "You better stay down there until I say otherwise, unless you want even more of a beatdown." <<He>> makes a quick call on <<his>> phone.
+	<<He>>【은는】 당신 쪽으로 돌아선다. "더 두들겨 맞고 싶지 않으면 내가 됐다고 할 때까지 거기 엎드려 있는 게 좋을 거다." <<He>>【은는】 <<his>> 휴대폰으로 짧게 전화를 건다.
 	<br><br>
-	It doesn't take long until a car pulls up near you. "Get in, brat. We'll be watching you, so don't even think of trying anything."
+	머지않아 차 한 대가 당신 근처에 선다. "타, 꼬맹아. 지켜보고 있을 테니까 허튼짓할 생각은 꿈도 꾸지 마."
 	<br><br>
-	All of them join you in the car to make sure you reach your destination safely. Safely in the sense that you don't end up anywhere else. All you can do is clutch your injuries, and wait.
+	그들은 당신이 목적지에 무사히 도착하도록 모두 함께 차에 탄다. 무사히라는 건, 다른 곳으로 새지 않는다는 뜻에서다. 당신이 할 수 있는 건 다친 곳을 부여잡고 기다리는 것뿐이다.
 	<br><br>
 	<<saveNPC 0 "rent_thug">><<saveNPC 1 "rent_thug_2">><<saveNPC 2 "rent_thug_3">><<endcombat>><<loadNPC 0 "rent_thug">><<loadNPC 1 "rent_thug_2">><<loadNPC 2 "rent_thug_3">>
-	<<link [[Next|Thug Rent]]>><<pass 10>><<set $phase to "unwilling">><</link>>
+	<<link [[다음|Thug Rent]]>><<pass 10>><<set $phase to "unwilling">><</link>>
 	<br>
 <</if>>
 
 :: Bus Thug Extreme Comply
 <<set $outside to 0>><<effects>>
-You make no attempt to escape. The <<person1>><<person>> pulls out <<his>> phone and makes a call. It doesn't take long until a car pulls up near you. The <<person2>><<person>> looks a little dissatisfied, but doesn't say anything. 
+당신은 도망치려는 시도를 전혀 하지 않는다. <<person1>><<person>>【이가】 <<his>> 휴대폰을 꺼내 전화를 건다. 머지않아 차 한 대가 당신 근처에 선다. <<person2>><<person>>【은는】 조금 불만스러워 보이지만, 아무 말도 하지 않는다. 
 <br><br>
-"Good job you two. If this keeps up we might get a bonus," the <<person1>><<person>> says.
+"둘 다 잘했어. 이대로만 가면 보너스 받을지도 모르겠다." <<person1>><<person>>【이가】 말한다.
 <br><br>
-<<He>> looks at you coldly. "Orphans first," <<he>> says, gesturing you to enter. The <<person3>><<person>> takes the front seat, while the other two join you in the back. "Don't get too comfortable now," the <<person2>><<person>> jokes.
+<<He>>【은는】 당신을 차갑게 바라본다. "고아 먼저." <<he>>【이가】 타라는 손짓을 하며 말한다. <<person3>><<person>>【은는】 앞좌석에 앉고, 나머지 둘은 당신과 함께 뒷좌석에 탄다. "너무 편하게 있지는 마라." <<person2>><<person>>【이가】 농담한다.
 <br><br>
-They really aren't taking any chances. All you can do now is wait until you arrive at the orphanage.
+그들은 정말 조금의 빈틈도 주지 않는다. 이제 당신이 할 수 있는 건 고아원에 도착할 때까지 기다리는 것뿐이다.
 <br><br>
-<<link [[Next|Thug Rent]]>><<pass 10>><<set $phase to "willing">><</link>>
+<<link [[다음|Thug Rent]]>><<pass 10>><<set $phase to "willing">><</link>>
 <br>
