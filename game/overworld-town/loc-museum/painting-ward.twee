@@ -2733,18 +2733,18 @@
 <<effects>>
 <<npc Winter>><<person1>>
 
-You search the museum and find <span class="gold">'Bleeding Ward'</span> again.
+박물관을 둘러보다가 다시 <span class="gold">'피 흘리는 병동'</span> 앞에 선다.
 <br><br>
 
-You take in its extravagant display. The reds of the moon seem to churn in the sky as the water glistens below. You think back on Winter's story. Mother goose and the blitz. The children <<= C.npc.Winter.pronoun is "m" ? "she" : "he">> took in. How later Winter met 'Summer', and how Winter was given the painting as a parting gift.
+화려하게 꾸며진 전시를 찬찬히 감상한다. 하늘에서는 붉은 달빛이 소용돌이치는 듯하고, 그 아래로 물결이 반짝인다. 윈터의 이야기를 떠올린다. 마더 거위와 블리츠. <<= C.npc.Winter.pronoun is "m" ? "그녀" : "그">>【이가】 거둔 아이들. 훗날 윈터가 '서머'를 만난 일, 그리고 윈터가 작별 선물로 이 그림을 받은 일까지.
 <br><br>
 
-You also recall how Winter dodged and avoided speaking about what really happened with 'Summer'.
+'서머'와 실제로 무슨 일이 있었는지에 대해서만은 윈터가 말을 돌리며 피했던 것도 기억난다.
 <br><br>
 
-<<link [[Try to joke with Winter|Museum Breeding Ward Joke]]>><</link>>
+<<link [[윈터에게 농담을 던져 본다|Museum Breeding Ward Joke]]>><</link>>
 <br>
-<<link [[Don't|Museum]]>><<endevent>><</link>>
+<<link [[그만둔다|Museum]]>><<endevent>><</link>>
 <br>
 
 :: Museum Breeding Ward Joke
@@ -2762,27 +2762,27 @@ You also recall how Winter dodged and avoided speaking about what really happene
 	<<run _antiqueMuseum.push("a brass pot")>>
 <</if>>
 
-You search the museum for Winter and find <<him>> admiring <<print either(_antiqueMuseum)>>. <<He>> sees you approaching and greets you. "Hello, and what brings you here today?" <<he>> says, turning away from the display.
+박물관에서 윈터를 찾아보니, <<him>>【은는】 <<print either(_antiqueMuseum)>>【을를】 감상하고 있다. <<He>>【은는】 다가오는 당신을 보고 인사를 건넨다. "어서 오게. 오늘은 무슨 일로 왔나?" <<he>>【이가】 전시물에서 몸을 돌리며 말한다.
 <br><br>
 
 <<if $speech_attitude is "meek">>
-	"I was hoping if you weren't busy you could tell me the story of <span class="lewd">'Breeding Ward'</span> again," you say quietly.
+	"혹시 바쁘지 않으시면 <span class="lewd">'씨 흘리는 병동'</span> 이야기를 다시 들려주실 수 있을까 해서요," 당신이 조용히 말한다.
 <<elseif $speech_attitude is "bratty">>
-	"Hey, Winter. Mind telling me about <span class="lewd">'Breeding Ward'</span> again?" You smirk to stop from laughing at your own joke.
+	"저기, 윈터. <span class="lewd">'씨 흘리는 병동'</span> 이야기 다시 해 줄래요?" 자기 농담에 웃음이 터지지 않도록 히죽거리며 참는다.
 <<else>>
-	"Do you have time to tell me the story behind <span class="lewd">'Breeding Ward'</span> again?" you say, smiling at your own joke.
+	"<span class="lewd">'씨 흘리는 병동'</span>에 얽힌 이야기를 다시 들려줄 시간 있어요?" 자기 농담에 미소 지으며 말한다.
 <</if>>
 <br><br>
 
-<<He>> squints and looks at you incredulously. "I believe I misheard you. What did you say?"
+<<He>>【이가】 눈을 가늘게 뜨고 믿기지 않는다는 듯 당신을 바라본다. "내가 잘못 들은 것 같군. 뭐라고 했지?"
 <br><br>
 
-Something in Winter's expression gives you pause. You realise <<he>> may not be as amused as you are.
+윈터의 표정을 보니 왠지 멈칫하게 된다. <<he>>【은는】 당신만큼 재미있어하지 않을지도 모른다는 생각이 든다.
 <br><br>
 
-<<link [[Commit anyway|Museum Breeding Ward Commit]]>><<stress -6>><</link>><<lstress>>
+<<link [[그래도 밀어붙인다|Museum Breeding Ward Commit]]>><<stress -6>><</link>><<lstress>>
 <br>
-<<link [[Don't|Museum Bleeding Ward Story]]>><<endevent>><<set $daily.breedingWard to true>><<set $daily.winterStoryTime to true>><</link>>
+<<link [[그만둔다|Museum Bleeding Ward Story]]>><<endevent>><<set $daily.breedingWard to true>><<set $daily.winterStoryTime to true>><</link>>
 <br>
 
 :: Museum Breeding Ward Commit
@@ -2790,18 +2790,18 @@ Something in Winter's expression gives you pause. You realise <<he>> may not be 
 <<set $breedingWard to true>>
 
 <<if $speech_attitude is "meek">>
-	You take a breath and commit. Raising your voice you answer Winter. "Please tell me about the <span class="lewd">'Breeding W-Ward'</span> again." You stumble over the words, but you feel a sense of pride in having committed to your joke.
+	숨을 한 번 들이쉬고 밀어붙인다. 목소리를 높여 윈터에게 대답한다. "<span class="lewd">'씨 흘리는 벼-병동'</span> 이야기를 다시 들려주세요." 말이 꼬이긴 했지만, 농담을 끝까지 밀어붙였다는 데 뿌듯함이 느껴진다.
 <<elseif $speech_attitude is "bratty">>
-	Winter's reaction pushes you over the edge and you laugh loudly. A <<personsimple>> looks over at your sudden outburst. Winter doesn't look nearly as amused. You make sure to enunciate each syllable this time.
+	윈터의 반응에 결국 참지 못하고 크게 웃음을 터뜨린다. 한 <<personsimple>>【이가】 갑작스러운 웃음소리에 이쪽을 돌아본다. 윈터는 전혀 재미있어 보이지 않는다. 이번에는 한 음절씩 또박또박 발음한다.
 	<br><br>
-	"I said <span class="lewd">'Breeding Ward'</span>. I want to hear the story again, but this time don't skip the steamy details." 
+	"<span class="lewd">'씨 흘리는 병동'</span>이라고 했어요. 그 이야기 다시 듣고 싶은데, 이번엔 야한 부분은 빼먹지 말고요." 
 <<else>>
-	You won't back down. You clear your throat and try to enunciate. "I want you to tell me about <span class="lewd">'Breeding Ward'</span> again." You smile again and turn to Winter for <<his>> reaction.
+	물러설 생각은 없다. 헛기침을 하고 또박또박 발음해 본다. "<span class="lewd">'씨 흘리는 병동'</span> 이야기를 다시 해 주셨으면 해요." 다시 미소를 지으며 윈터를 돌아보고 <<his>> 반응을 살핀다.
 <</if>>
 <br><br>
 
-Winter's face reddens and <<he>> looks at you with a mixture of disappointment and frustration. "I'm too busy for this," <<he>> turns to walk away. "You can come back when you're serious." <<npcincr Winter love -1>><<llove>>
+윈터의 얼굴이 붉어지고, <<he>>【은는】 실망과 짜증이 뒤섞인 눈으로 당신을 바라본다. "이런 일에 쓸 시간은 없다," <<he>>【이가】 돌아서서 걸어간다. "진지해지면 그때 다시 오게." <<npcincr Winter love -1>><<llove>>
 <br><br>
 
-<<link [[Next|Museum]]>><<endevent>><</link>>
+<<link [[다음|Museum]]>><<endevent>><</link>>
 <br>

@@ -247,16 +247,16 @@
 	<<if $worn.neck.name is "love locket" and C.npc.Sydney.love gte 10 and $rng gte 91 and !$daily.sydney.lovelocket and ((_sydney_location is "library" and $location is "school") or (_sydney_location is "temple" and $location is "temple"))>>
 		<<set $daily.sydney.lovelocket to 1>>
 		<<person1>>
-		Sydney's eyes fall on your love locket.
+		시드니의 눈길이 당신의 사랑의 로켓에 머문다.
 		<br><br>
-		"Cute necklace you got there<<if $sydneyromance is 1>>." <<He>> fiddles with it.<<else>>," <<he>> comments.<</if>>
+		"목걸이가 참 예쁘네요<<if $sydneyromance is 1>>." <<He>>【이가】 목걸이를 만지작거린다.<<else>>," <<he>>【이가】 말한다.<</if>>
 		<br><br>
 		<<neckstrip>><<wearProp "love locket" $carried.neck.colour>>
-		<<link [[Thank <<him>>|Sydney Locket]]>><<set $phase to 1>><</link>>
+		<<link [[<<him>>에게 고맙다고 한다|Sydney Locket]]>><<set $phase to 1>><</link>>
 		<br>
-		<<link [[Show <<him>> your love locket|Sydney Locket]]>><<set $phase to 2>><</link>>
+		<<link [[<<him>>에게 사랑의 로켓을 보여준다|Sydney Locket]]>><<set $phase to 2>><</link>>
 		<br>
-		<<link [[Change the subject|Sydney Locket]]>><<set $phase to 3>><</link>>
+		<<link [[화제를 바꾼다|Sydney Locket]]>><<set $phase to 3>><</link>>
 	<<elseif $bus is "schoollibrary" or $location is "school">>
 		<<switch _sydney_location>>
 			<<case "library">>
@@ -290,10 +290,10 @@
 					<</if>>
 					<<sydneyOptionsTalk>>
 					<<if $kylar_altar_sydney_accost>>
-						<<socialiseicon "ask">><<link [[Ask to be taken to the forbidden room|Library Altar Forbidden (0:05)]]>><<pass 5>><<unset $kylar_altar_sydney_accost>><</link>>
+						<<socialiseicon "ask">><<link [[금지된 방으로 데려가 달라고 부탁한다|Library Altar Forbidden (0:05)]]>><<pass 5>><<unset $kylar_altar_sydney_accost>><</link>>
 						<br>
 					<<elseif $kylar_altar_library gte 100>>
-						<<socialiseicon "ask">><<link [[Ask about the forest altar|Library Altar Counter]]>><</link>>
+						<<socialiseicon "ask">><<link [[숲의 제단에 대해 묻는다|Library Altar Counter]]>><</link>>
 						<br>
 					<</if>>
 					<br>

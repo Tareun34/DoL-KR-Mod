@@ -2680,9 +2680,9 @@
 		<<set $objectVersion.animations to 1>>
 		<<if $combatAnimations is false and $sidebarAnimations is false>>
 			<div id="animWarning" @class="'no-numberify '">
-				<span class='teal'>Animations are currently disabled. This may have been caused by a one-time bug. You can re-enable animations immediately, or in the "general" tab of the settings menu.</span> |
-				<<link "Enable all animations">><<addclass #animWarning "hidden">><<set $combatAnimations to true>><<set $sidebarAnimations to true>><</link>> |
-				<<link "Disable this message">><<addclass #animWarning "hidden">><</link>>
+				<span class='teal'>현재 애니메이션이 꺼져 있습니다. 일시적인 버그 때문일 수 있습니다. 지금 바로 다시 켜거나, 설정 메뉴의 "일반" 탭에서 켤 수 있습니다.</span> |
+				<<link "모든 애니메이션 켜기">><<addclass #animWarning "hidden">><<set $combatAnimations to true>><<set $sidebarAnimations to true>><</link>> |
+				<<link "이 메시지 끄기">><<addclass #animWarning "hidden">><</link>>
 			</div>
 		<</if>>
 		<<if $combatAnimations is undefined>>
@@ -6363,12 +6363,12 @@
 	<!-- 0.5.5.5, farm assault fields_damaged -->
 	<<if $farm and $plots.farm and ($fields_damaged is undefined or typeof $fields_damaged is "number")>>
 		<<if $farm_assault>>
-			<span class="orange italic small-description">Due to changes to the way damaged fields are tracked in update 0.5.5.5, we could not accurately determine which fields were damaged during the assault and which were damaged before the assault or left empty.
-			Because of this, the message at the end of this scene will not accurately portray the outcome. This is purely a cosmetic discrepancy; the farm plots themselves have not changed in any way.</span>
+			<span class="orange italic small-description">0.5.5.5 업데이트에서 손상된 밭을 기록하는 방식이 바뀌어, 어떤 밭이 습격 중에 손상되었고 어떤 밭이 습격 전에 손상되었거나 비어 있었는지 정확히 판별할 수 없었습니다.
+			이 때문에 이 장면 끝에 나오는 메시지는 결과를 정확히 나타내지 않습니다. 표시상의 차이일 뿐이며, 농장의 밭 자체는 전혀 바뀌지 않았습니다.</span>
 			<br><br>
 		<<elseif $farm_attacked>>
-			<span class="orange italic small-description">Due to changes to the way damaged fields are tracked in update 0.5.5.5, we could not accurately determine which fields of Alex's farm were damaged during missed assaults and which were damaged before the assault or left empty.
-			Because of this, the message the next time you visit the farm will not accurately portray the outcome. This is purely a cosmetic discrepancy; the farm plots themselves have not changed in any way.</span>
+			<span class="orange italic small-description">0.5.5.5 업데이트에서 손상된 밭을 기록하는 방식이 바뀌어, 알렉스 농장의 어떤 밭이 놓친 습격 중에 손상되었고 어떤 밭이 습격 전에 손상되었거나 비어 있었는지 정확히 판별할 수 없었습니다.
+			이 때문에 다음에 농장을 방문할 때 나오는 메시지는 결과를 정확히 나타내지 않습니다. 표시상의 차이일 뿐이며, 농장의 밭 자체는 전혀 바뀌지 않았습니다.</span>
 			<br><br>
 		<</if>>
 		<<set $fields_damaged to []>>

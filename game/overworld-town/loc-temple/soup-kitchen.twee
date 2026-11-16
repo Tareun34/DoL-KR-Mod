@@ -358,24 +358,24 @@
 			<<npc River>><<person1>>
 			<<switch $soupKitchenTeachRecipe>>
 				<<case "porridge">>
-					River calls you to the kitchen and sets a bag of oats and a bottle of milk on the table beside you.
+					리버가 당신을 주방으로 불러 귀리 한 자루와 우유 한 병을 옆 탁자에 내려놓는다.
 					<br><br>
-					"Start preparing us some porridge <<he>> says before returning to the stove.
+					"죽 좀 만들기 시작해 줘," <<he>>【이가】 그렇게 말하고는 화덕으로 돌아간다.
 				<<case "turnip_soup">>
-					River calls you to the kitchen and sets some turnips, potatoes and onions on the table beside you.
+					리버가 당신을 주방으로 불러 순무와 감자, 양파 몇 개를 옆 탁자에 내려놓는다.
 					<br><br>
-					"Start preparing us some turnip soup <<he>> says before returning to the stove.
+					"순무 수프 좀 만들기 시작해 줘," <<he>>【이가】 그렇게 말하고는 화덕으로 돌아간다.
 				<<case "bread">>
-					River calls you over to the kitchen and sets a large bag of flour, alongside salt and vegetable oil on the table beside you.
+					리버가 당신을 주방으로 불러 커다란 밀가루 한 자루와 함께 소금과 식용유를 옆 탁자에 내려놓는다.
 					<br><br>
-					"Start preparing us some dough," <<he>> says before returning to the stove.
+					"반죽 좀 만들기 시작해 줘," <<he>>【이가】 그렇게 말하고는 화덕으로 돌아간다.
 			<</switch>>
 
 			<br><br>
 			<<if $foodstuff[$soupKitchenTeachRecipe]?.knows_recipe is true>>
-				<<link [[Get to work|Soup Kitchen Prepare Recipe]]>><</link>>
+				<<link [[일을 시작한다|Soup Kitchen Prepare Recipe]]>><</link>>
 			<<else>>
-				<<link [[Say you don't know the recipe|Soup Kitchen Learn Recipe]]>><</link>>
+				<<link [[요리법을 모른다고 말한다|Soup Kitchen Learn Recipe]]>><</link>>
 			<</if>>
 		<</addinlineevent>>
 	<</if>>
@@ -625,7 +625,7 @@
 	<br><br>
 <</if>>
 <<if $debug and !Time.betweenHours(18, 20, 1)>>
-	<<loitericon>><<link [[Wait for the soup kitchen to open (DEBUG)|Soup Kitchen]]>><<passTimeUntil 18 1>><</link>>
+	<<loitericon>><<link [[무료 급식소가 열리기를 기다린다 (DEBUG)|Soup Kitchen]]>><<passTimeUntil 18 1>><</link>>
 	<br>
 <</if>>
 <<getouticon>><<link [[떠난다|Wolf Street]]>><</link>>
@@ -699,32 +699,32 @@
 <<npc River>><<person1>>
 <<switch $soupKitchenTeachRecipe>>
 	<<case "porridge">>
-		You measure out the oats, add the milk, and set the pot over the heat, stirring until it thickens up.
+		귀리를 계량해 넣고 우유를 부은 뒤, 냄비를 불에 올려 걸쭉해질 때까지 젓는다.
 	<<case "turnip_soup">>
-		You chop up the vegetables and get a pot going on the stove, tossing them in once they're ready.
+		채소를 썰고 화덕에 냄비를 올린 다음, 손질이 끝나는 대로 채소를 던져 넣는다.
 	<<case "bread">>
-		You mix together the flour, oil and salt. Once it begins to thicken, you knead until finished. You set your dough aside to rise, then take prepared dough to put in the oven.
+		밀가루와 기름, 소금을 한데 섞는다. 되직해지기 시작하면 다 될 때까지 치댄다. 반죽은 부풀도록 한쪽에 두고, 미리 준비된 반죽을 가져다 오븐에 넣는다.
 <</switch>>
 <br><br>
-River glances over when you're done. <<He>> gives a brief nod. "Good."
+다 끝내자 리버가 힐끗 쳐다본다. <<He>>【이가】 짧게 고개를 끄덕인다. "좋아."
 <br><br>
 
 <<unset $soupKitchenTeachRecipe>>
 <<endevent>>
-<<link [[Next|Soup Kitchen]]>><</link>>
+<<link [[다음|Soup Kitchen]]>><</link>>
 <br>
 
 :: Soup Kitchen Learn Recipe
 
 <<set $outside to 0>><<set $location to "temple">><<effects>>
 <<npc River>><<person1>>
-River steps over to the counter. "Watch how I do it." <<learn_recipe $soupKitchenTeachRecipe>>
+리버가 조리대로 다가온다. "내가 하는 걸 잘 봐." <<learn_recipe $soupKitchenTeachRecipe>>
 <br><br>
 
-<<He>> <<if C.npc.River.love gte 40>>smiles. <<else>>nods. <</if>>"See? Just like that, it's simple enough."
+<<He>>【이가】 <<if C.npc.River.love gte 40>>미소 짓는다. <<else>>고개를 끄덕인다. <</if>>"봤지? 이렇게만 하면 돼. 간단하지."
 <br><br>
 
 <<unset $soupKitchenTeachRecipe>>
 <<endevent>>
-<<link [[Next|Soup Kitchen]]>><</link>>
+<<link [[다음|Soup Kitchen]]>><</link>>
 <br>

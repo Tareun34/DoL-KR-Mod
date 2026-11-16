@@ -191,12 +191,12 @@
 	<<addinlineevent "flats_sneak_11" 1.5>>
 		<<generate1>><<generate2>>
 
-		The flat has several crates and piles of clothing strewn about. A light comes out of a cracked door. You hear two voices behind it. As you look around the room, you see a tiny glint in one of the piles.
+		집 안에는 상자 몇 개와 옷가지 더미가 여기저기 흩어져 있다. 살짝 열린 문틈으로 불빛이 새어 나온다. 그 너머에서 두 사람의 목소리가 들린다. 방 안을 둘러보다가, 옷 더미 하나에서 무언가 작게 반짝이는 것을 발견한다.
 
 		<br><br>
-		<<link [[Take it|Flats Sneak Mine]]>><</link>><<difficulty 30>>
+		<<link [[가져간다|Flats Sneak Mine]]>><</link>><<difficulty 30>>
 		<br>
-		<<link [[Leave|Flats]]>><<endevent>><</link>>
+		<<link [[나간다|Flats]]>><<endevent>><</link>>
 		<br>
 	<</addinlineevent>>
 <</if>>
@@ -746,29 +746,29 @@
 :: Flats Sneak Mine
 <<effects>>
 
-You sneak across the room, trying not to make noise.
+소리를 내지 않으려 애쓰며 살금살금 방을 가로지른다.
 <<if $rng gte 31>>
 	<!-- Fail -->
-	<span class="red">The door swings open, bathing the room in light.</span> "What do we have here?" a <<person1>><<person>> says as <<he>> walks behind you.
+	<span class="red">문이 활짝 열리며 방 안에 빛이 쏟아진다.</span> "이게 뭐야?" <<person1>><<person>>【이가】 당신 뒤로 걸어오며 말한다.
 	<br>
-	"<<pShes>> a perfect candidate," a <<person2>><<person>> says as <<he>> pulls a rag out of <<his>> pocket. The <<person1>><<person>> grabs you from behind as the <<person2>><<person>> presses the rag against your face.
+	"딱 좋은 후보네," <<person2>><<person>>【이가】 <<his>> 주머니에서 천 조각을 꺼내며 말한다. <<person1>><<person>>【이가】 뒤에서 당신을 붙잡자 <<person2>><<person>>【이가】 천 조각을 당신의 얼굴에 들이댄다.
 	<br><br>
-	"I think we'll get more money selling <<pher>>, <<pshe>>'ll end up in the same place anyways," a voice says <span class="red">as the world fades to black.</span>
+	"이건 팔아넘기는 게 돈이 더 될 것 같은데. 어차피 같은 곳으로 가게 될 테니까," 누군가의 목소리가 들리며 <span class="red">세상이 어둠 속으로 사라진다.</span>
 
 	<br><br>
 	<<passout>>
-	<<link [[Next|Flats Auction]]>><<endevent>><</link>>
+	<<link [[다음|Flats Auction]]>><<endevent>><</link>>
 <<else>>
 	<!-- Success -->
-	You reach your hand into the pile and pull out a <span class="green">small gem.</span> It could be worth something.<<set $blackmoney += 400>>
+	옷 더미에 손을 넣어 <span class="green">작은 보석</span>을 꺼낸다. 값이 좀 나갈지도 모른다.<<set $blackmoney += 400>>
 	<<if !$mine>>
 		<<set $foundMineGem to 1>>
 	<<else>>
 		<<set $mine.heldGem to "small gem">>
 	<</if>>
 	<br><br>
-	You don't hesitate to make your way out of the room.
+	망설임 없이 방을 빠져나간다.
 
 	<br><br>
-	<<link [[Leave|Flats]]>><<endevent>><</link>>
+	<<link [[나간다|Flats]]>><<endevent>><</link>>
 <</if>>

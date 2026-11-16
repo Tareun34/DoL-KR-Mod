@@ -93,45 +93,45 @@
 <<elseif $rentThug and isBaileyLookingForPlayer() and $rentThug.anger gt 0 and $rng gte 100 - ($rentThug.anger * 10)>>
 	<<if $rentThug.anger lte 3>>
 		<<generate1>><<generate2>>
-		You notice two shady people entering the bus, a <<person1>><<person>> and a <<person2>><<person>>. They pass over a few empty seats and methodically scan over the other occupants.
+		수상쩍은 두 사람, <<person1>><<person>>【와과】 <<person2>><<person>>【이가】 버스에 올라타는 것이 눈에 띈다. 그들은 빈자리 몇 개를 그냥 지나치더니 다른 승객들을 하나하나 꼼꼼히 훑어본다.
 		<br><br>
-		Remembering that Bailey's thugs are looking for you, a wave of paranoia washes over you.<<stress 4>><<gstress>>
+		베일리의 부하들이 당신을 찾고 있다는 사실이 떠오르자, 피해망상이 파도처럼 밀려든다.<<stress 4>><<gstress>>
 		<br><br>
-		<<link [[Get off|Bus Thug Inspection Leave]]>><</link>>
+		<<link [[내린다|Bus Thug Inspection Leave]]>><</link>>
 		<br>
-		<<link [[Hide behind someone|Bus Thug Inspection Hide]]>><</link>>
+		<<link [[다른 사람 뒤에 숨는다|Bus Thug Inspection Hide]]>><</link>>
 		<br>
-		<<link [[Act inconspicuous|Bus Thug Inspection Still]]>><</link>>
+		<<link [[눈에 띄지 않게 행동한다|Bus Thug Inspection Still]]>><</link>>
 		<br>
 	<<else>>
 		<<if Time.dayState is "night">>
 			<<generate1>><<generateNPC 2 a n n `random(16,19)`>><<generate3>><<set $NPCList[0].traits.push("unforgiving")>> /* person 1 is unforgiving, while person 2 is very strong */
-			As the bus stops once more to pick up more passengers, you notice three suspicious people enter. One of them, a <<person3>><<person>>, slips something to the driver. <span class="red">Suddenly, all the doors close.</span>
-			Some passengers who were trying to get out start yelling at the driver, who ignores them.
+			버스가 승객을 더 태우려고 다시 멈춰 서자, 수상한 세 사람이 올라타는 것이 눈에 띈다. 그중 한 명인 <<person3>><<person>>【이가】 운전사에게 무언가를 슬쩍 건넨다. <span class="red">갑자기 모든 문이 닫힌다.</span>
+			내리려던 승객 몇몇이 운전사에게 소리치기 시작하지만, 운전사는 들은 척도 하지 않는다.
 			<br><br>
-			You're getting a bad feeling about this. You don't know what they're after, but your gut tells you it may be you.<<stress 6>><<gstress>>
+			느낌이 좋지 않다. 그들이 무엇을 노리는지는 모르겠지만, 어쩐지 당신일지도 모른다는 직감이 든다.<<stress 6>><<gstress>>
 			<br><br>
-			Before you do anything, another one of them, a <<person1>><<person>>, claps <<his>> hands loudly to get everyone's attention.
+			당신이 무언가 하기도 전에, 그들 중 또 다른 한 명인 <<person1>><<person>>【이가】 모두의 주목을 끌려고 <<his>> 손뼉을 크게 친다.
 			<br><br>
-			"Ladies and gentlemen! We're sorry for this interruption, but we need to do a quick sweep of the bus. Please remain still until we have concluded our business," <<he>> says.
+			"신사 숙녀 여러분! 방해해서 죄송합니다만, 버스 안을 잠깐 살펴봐야겠습니다. 저희 볼일이 끝날 때까지 가만히 계셔 주시기 바랍니다," <<he>>【이가】 말한다.
 			<br><br>
-			With that said, they begin looking over all the occupants. When someone tries to protest, they are quickly shut down by the threatening gaze of the third person, a <<person2>><<person>>. They are slowly getting closer and closer to you. 
+			그 말과 함께 그들은 승객들을 하나하나 살펴보기 시작한다. 누군가 항의하려 들면, 세 번째 사람인 <<person2>><<person>>의 위협적인 눈빛에 금세 입을 다문다. 그들이 천천히, 점점 당신에게 가까워진다. 
 			<br><br>
-			<<link [[Stay still|Bus Thug Extreme 2]]>><<set $phase to 0>><</link>>
+			<<link [[가만히 있는다|Bus Thug Extreme 2]]>><<set $phase to 0>><</link>>
 			<br>
-			<<link [[Move away|Bus Thug Extreme 2]]>><<set $phase to 1>><</link>>
+			<<link [[자리를 피한다|Bus Thug Extreme 2]]>><<set $phase to 1>><</link>>
 			<br>
 		<<else>>
 			<<generate1>><<generate2>>
-			You notice two shady people entering the bus, a <<person1>><<person>> and a <<person2>><<person>>. The bus is crowded, but rather than looking for a place to sit, they are scanning over the other occupants. 
+			수상쩍은 두 사람, <<person1>><<person>>【와과】 <<person2>><<person>>【이가】 버스에 올라타는 것이 눈에 띈다. 버스는 붐비지만, 그들은 앉을 자리를 찾기는커녕 다른 승객들을 훑어보고 있다. 
 			<br><br>
-			They each pick a side and start to look over all the passengers. Their method is practised, coordinated. Remembering how long you've been avoiding Bailey and <<nnpc_his "Bailey">> thugs, a wave of paranoia washes over you.<<stress 6>><<gstress>>
+			그들은 각자 한쪽씩 맡아 승객들을 전부 살펴보기 시작한다. 손발이 척척 맞는 능숙한 솜씨다. 베일리와 <<nnpc_his "Bailey">> 부하들을 얼마나 오래 피해 다녔는지 떠올리자, 피해망상이 파도처럼 밀려든다.<<stress 6>><<gstress>>
 			<br><br>
-			<<link [[Get off|Bus Thug Shakedown Leave]]>><</link>>
+			<<link [[내린다|Bus Thug Shakedown Leave]]>><</link>>
 			<br>
-			<<link [[Hide behind someone|Bus Thug Shakedown Hide]]>><</link>>
+			<<link [[다른 사람 뒤에 숨는다|Bus Thug Shakedown Hide]]>><</link>>
 			<br>
-			<<link [[Act inconspicuous|Bus Thug Shakedown Still]]>><</link>>
+			<<link [[눈에 띄지 않게 행동한다|Bus Thug Shakedown Still]]>><</link>>
 			<br>
 		<</if>>
 	<</if>>
@@ -573,7 +573,7 @@
 	<<link [[뛰어내린다|Bus Seat Rape Jump]]>><</link>>
 	<br>
 	<<if displayDefiantOption(500)>>
-		<<link [[Punch the driver|Bus Seat Rape Punch]]>><<crimeUp 100 "assault">><<crimeUp 100 "destruction">><<def 3>><<wolfDefiant 500>><</link>><<defianttext 500>><<crimes "assault" "destruction">>
+		<<link [[운전사를 때린다|Bus Seat Rape Punch]]>><<crimeUp 100 "assault">><<crimeUp 100 "destruction">><<def 3>><<wolfDefiant 500>><</link>><<defianttext 500>><<crimes "assault" "destruction">>
 		<br>
 	<</if>>
 <<elseif $enemyarousal gte $enemyarousalmax>>
