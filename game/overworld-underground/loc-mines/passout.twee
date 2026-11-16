@@ -3,14 +3,14 @@
 
 <<if $mine.hope gte 20>>
 	<<generate1>>
-	You wake up with your head lying on something soft. You open your eyes and are met with a <<person1>><<person>> staring down at you. You lift your head from <<his>> lap. <<He>> makes sure you're okay before you stand up.
+	머리가 뭔가 부드러운 것 위에 놓인 채 깨어난다. 눈을 뜨자 <<person1>><<person>>【이가】 당신을 내려다보고 있다. 당신은 <<his>> 무릎에서 머리를 든다. <<He>>【은는】 당신이 일어서기 전에 괜찮은지 살펴 준다.
 <<else>>
-	You wake up with your head lying on the hard rock. You open your eyes to see everybody ignoring you. Your head aches as you stand up. <<pain 5>> <<gpain>>
+	딱딱한 바위에 머리를 누인 채 깨어난다. 눈을 떠 보니 모두가 당신을 본체만체한다. 일어서자 머리가 욱신거린다. <<pain 5>> <<gpain>>
 <</if>>
 
 <br><br>
 <<endevent>>
-<<link [[Next|Mine Night]]>><</link>>
+<<link [[다음|Mine Night]]>><</link>>
 
 
 
@@ -18,17 +18,17 @@
 <<effects>><<generate1>>
 
 <<if random(1,3) is 1>>
-	You wake up to a wave of water hitting you. A <<person1>><<person>> stands over you. "No sleeping on the job," <<he>> says. <<stress 10>><<ggstress>><<trauma 10>><<ggtrauma>>
+	물벼락을 맞고 깨어난다. <<person1>><<person>>【이가】 당신 앞에 버티고 서 있다. "일하다 자빠져 자지 마라." <<he>>【이가】 말한다. <<stress 10>><<ggstress>><<trauma 10>><<ggtrauma>>
 
 	<br><br>
 	<<endevent>>
-	<<link [[Next|Mine Job Mining]]>><</link>>
+	<<link [[다음|Mine Job Mining]]>><</link>>
 <<else>>
 	<<mine_unshackle>>
-	You wake up to a <<person1>><<person>> dragging you across the hard rock. <span class="blue">Your shackles are gone.</span> You try to struggle from <<his>> grasp. <<He>> lets you go and drops on top of you.
+	<<person1>><<person>>【이가】 딱딱한 바위 위로 당신을 질질 끌고 가는 느낌에 깨어난다. <span class="blue">족쇄가 풀려 있다.</span> 당신은 <<his>> 손아귀에서 벗어나려 몸부림친다. <<He>>【은는】 당신을 놓더니 그대로 당신 위에 올라탄다.
 
 	<br><br>
-	<<link [[Next|Mine Job Mining Passout Rape]]>><<set $molestationstart to 1>><</link>>
+	<<link [[다음|Mine Job Mining Passout Rape]]>><<set $molestationstart to 1>><</link>>
 <</if>>
 
 
@@ -52,9 +52,9 @@
 <<actionsman>>
 
 <<if _combatend>>
-	<span id="next"><<link [[Next|Mine Job Mining Passout Rape End]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Mine Job Mining Passout Rape End]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Mine Job Mining Passout Rape]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Mine Job Mining Passout Rape]]>><</link>></span><<nexttext>>
 <</if>>
 
 
@@ -62,20 +62,20 @@
 <<effects>>
 
 <<if $enemyhealth lte 0>>
-	<<tearful>> you knock the <<person>> down, and rush away from <<him>>.
+	<<tearful>> 당신은 <<person>>【을를】 때려눕히고 <<him>>에게서 달아난다.
 	<<clotheson>>
 	<<endcombat>>
-	<<link [[Next|Mine Job Minecarts Escape]]>><</link>>
+	<<link [[다음|Mine Job Minecarts Escape]]>><</link>>
 <<elseif $enemyarousal gte $enemyarousalmax>>
 	<<ejaculation>>
 	<<shackle_feet>>
-	<<He>> convulses in pleasure.
+	<<He>>【은는】 쾌감에 몸을 떤다.
 	<<clotheson>>
 	<br><br>
-	<<tearful>> you are grabbed and dragged back to where you passed out. <<He>> chains you back to the rest of the slaves.
+	<<tearful>> 당신은 붙잡혀 정신을 잃었던 곳으로 끌려간다. <<He>>【은는】 당신을 다시 다른 노예들과 함께 사슬로 묶는다.
 	<br><br>
 	<<endcombat>>
-	<<link [[Next|Mine Job Mining]]>><</link>>
+	<<link [[다음|Mine Job Mining]]>><</link>>
 <</if>>
 
 
@@ -84,24 +84,24 @@
 <<effects>><<generate1>><<person1>>
 
 <<if random(1,3) is 1>>
-	You wake up to a hard smack. <<pain 10>><<gggpain>><<stress 10>><<ggstress>><<trauma 10>><<ggtrauma>>
+	세게 얻어맞고 깨어난다. <<pain 10>><<gggpain>><<stress 10>><<ggstress>><<trauma 10>><<ggtrauma>>
 	<br><br>
-	"Get back to work!" the <<person>> yells.
+	"일이나 해!" <<person>>【이가】 고함친다.
 
 	<br><br>
 	<<endevent>>
-	<<link [[Next|Mine Job Minecarts]]>><</link>>
+	<<link [[다음|Mine Job Minecarts]]>><</link>>
 <<else>>
-	A jostling movement awakens you. You're lying in a metal container. Lights float by overhead.
+	덜컹거리는 흔들림에 잠에서 깬다. 당신은 금속 통 안에 누워 있다. 머리 위로 불빛들이 스쳐 지나간다.
 	<br><br>
 
-	A <<person>> peers at you over the rim. "Just in time," <<he>> says. The container comes to a halt, and <<he>> grasps your shoulders. From this high up, you can see more of your surroundings. You're lying in a mine cart, on a track in some forgotten corner.
+	<<person>>【이가】 가장자리 너머로 당신을 들여다본다. "딱 맞춰 왔군." <<he>>【이가】 말한다. 통이 덜컹 멈춰 서고, <<he>>【은는】 당신의 어깨를 붙잡는다. 이렇게 높은 곳에서는 주변이 더 잘 보인다. 당신은 어느 잊힌 구석의 선로 위, 광차 안에 누워 있다.
 	<br><br>
 
-	<<He>> pulls you from the cart. Taking advantage of your unsteadiness, <<he>> trips you up and pushes <<himself>> atop you.
+	<<He>>【은는】 당신을 광차에서 끌어낸다. 당신이 비틀거리는 틈을 타 <<he>>【은는】 당신의 다리를 걸어 넘어뜨리고는 당신 위에 올라탄다.
 	<br><br>
 	
-	<<link [[Next|Mine Job Minecarts Passout Rape]]>><<set $molestationstart to 1>><</link>>
+	<<link [[다음|Mine Job Minecarts Passout Rape]]>><<set $molestationstart to 1>><</link>>
 <</if>>
 
 
@@ -125,9 +125,9 @@
 <<actionsman>>
 
 <<if _combatend>>
-	<span id="next"><<link [[Next|Mine Job Minecarts Passout Rape End]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Mine Job Minecarts Passout Rape End]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Mine Job Minecarts Passout Rape]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Mine Job Minecarts Passout Rape]]>><</link>></span><<nexttext>>
 <</if>>
 
 
@@ -136,20 +136,20 @@
 <<effects>>
 
 <<if $enemyhealth lte 0>>
-	<<tearful>> you knock <<him>> away, get your bearings, and rush back down the tunnel, still chained to the railing.
+	<<tearful>> 당신은 <<him>>【을를】 밀쳐 내고 정신을 가다듬은 뒤, 여전히 난간에 사슬로 묶인 채 터널을 따라 서둘러 돌아간다.
 	<<clotheson>>
 	<br><br>
 	<<endcombat>>
-	<<link [[Next|Mine Job Minecarts]]>><</link>>
+	<<link [[다음|Mine Job Minecarts]]>><</link>>
 <<elseif $enemyarousal gte $enemyarousalmax>>
 	<<ejaculation>>
-	<<He>> convulses in pleasure, then stands up and leaves.
+	<<He>>【은는】 쾌감에 몸을 떨더니, 일어나서 떠나간다.
 	<<clotheson>>
 	<br><br>
-	<<tearful>> you return to what you were doing.
+	<<tearful>> 당신은 하던 일로 돌아간다.
 	<br><br>
 	<<endcombat>>
-	<<link [[Next|Mine Job Minecarts]]>><</link>>
+	<<link [[다음|Mine Job Minecarts]]>><</link>>
 <</if>>
 
 
@@ -157,11 +157,11 @@
 :: Mine Job Cleaning Passout
 <<effects>><<generate1>>
 
-You awaken to a wave of water hitting you. You're surrounded by cackling guards. "No sleeping on the job," a <<person1>><<person>> says whilst laughing. <<stress 10>><<ggstress>><<trauma 10>><<ggtrauma>>
+물벼락을 맞고 깨어난다. 낄낄거리는 경비원들이 당신을 둘러싸고 있다. "일하다 자빠져 자지 마라." <<person1>><<person>>【이가】 웃으며 말한다. <<stress 10>><<ggstress>><<trauma 10>><<ggtrauma>>
 
 <br><br>
 <<endevent>>
-<<link [[Next|Mine Job Cleaning]]>><</link>>
+<<link [[다음|Mine Job Cleaning]]>><</link>>
 
 
 
@@ -169,9 +169,9 @@ You awaken to a wave of water hitting you. You're surrounded by cackling guards.
 <<effects>>
 
 <<generateStrangeCreature 1>><<person1>>
-You awaken to a growling above you. You open your eyes to see a strange creature cloaked in darkness, standing over you. Inhuman arms grab you.
+위에서 들려오는 으르렁거림에 깨어난다. 눈을 뜨자 어둠에 휩싸인 기묘한 생물이 당신 위에 서 있다. 사람의 것이 아닌 팔이 당신을 붙잡는다.
 <br><br>
-<<link [[Next|Mine Passout Rape]]>><<set $molestationstart to 1>><</link>>
+<<link [[다음|Mine Passout Rape]]>><<set $molestationstart to 1>><</link>>
 
 
 
@@ -196,9 +196,9 @@ You awaken to a growling above you. You open your eyes to see a strange creature
 <<actionsman>>
 
 <<if _combatend>>
-	<span id="next"><<link [[Next|Mine Passout Rape Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Mine Passout Rape Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Mine Passout Rape]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Mine Passout Rape]]>><</link>></span><<nexttext>>
 <</if>>
 
 
@@ -208,14 +208,14 @@ You awaken to a growling above you. You open your eyes to see a strange creature
 
 <<if $enemyarousal gte $enemyarousalmax>>
 	<<ejaculation>>
-	The <<person>> retreats into the darkness.
+	<<person>>【은는】 어둠 속으로 물러난다.
 <<elseif $enemyhealth lte 0>>
-	You're able to knock the creature off you. You hear it rush back into the darkness.
+	당신은 그 생물을 몸 위에서 떨쳐 낸다. 그것이 어둠 속으로 황급히 달아나는 소리가 들린다.
 <</if>>
 <br><br>
-<<tearful>> you climb to your feet and return to the entrance.
+<<tearful>> 당신은 몸을 일으켜 입구로 돌아간다.
 <br><br>
 <<clotheson>>
 <<endcombat>>
 <br><br>
-<<link [[Next|Mine]]>><</link>>
+<<link [[다음|Mine]]>><</link>>

@@ -3,14 +3,14 @@
 	<<set Weather.Temperature.override.outside to $debugSkyTestingTemperature>>
 <</if>>
 
-<span class="gold">Date:</span> <<= Time.monthName>> <<= Time.monthDay>>, <<= Time.year>> <<ampm>>
+<span class="gold">날짜:</span> <<= Time.monthName>> <<= Time.monthDay>>, <<= Time.year>> <<ampm>>
 <br>
-<span class="gold">Weather:</span> <<= Weather.name>> (<<= Weather.precipitation>>), <<= Weather.toSelectedString(Weather.temperature, 1)>>, fog <<= round(Weather.fog, 1)>>
+<span class="gold">날씨:</span> <<= Weather.name>> (<<= Weather.precipitation>>), <<= Weather.toSelectedString(Weather.temperature, 1)>>, 안개 <<= round(Weather.fog, 1)>>
 <br>
-<span class="gold">Blood moon:</span> <<= Weather.bloodMoon ? "yes" : "no">> | <span class="gold">Location image:</span> <<= setup.Locations.get()>>
+<span class="gold">붉은 달:</span> <<= Weather.bloodMoon ? "예" : "아니오">> | <span class="gold">장소 이미지:</span> <<= setup.Locations.get()>>
 <br><br>
 
-<span class="gold">Time</span>
+<span class="gold">시간</span>
 <br>
 <<set _dateMonth to Time.month>>
 <<set _dateDay to Time.monthDay>>
@@ -23,7 +23,7 @@
 <<for _hour to 0; _hour lt 24; _hour++>>
 	<<set _hourOptions[ampm(_hour, 0)] to _hour>>
 <</for>>
-Set date:
+날짜 설정:
 <<listbox "_dateMonth" autoselect>>
 	<<optionsfrom _monthOptions>>
 <</listbox>>
@@ -33,48 +33,48 @@ Set date:
 <<listbox "_dateHour" autoselect>>
 	<<optionsfrom _hourOptions>>
 <</listbox>>
-<<link [[Set date|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, _dateMonth, Math.min(_dateDay, new DateTime(Time.year, _dateMonth).lastDayOfMonth), _dateHour)`>><</link>>
+<<link [[날짜 설정|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, _dateMonth, Math.min(_dateDay, new DateTime(Time.year, _dateMonth).lastDayOfMonth), _dateHour)`>><</link>>
 <br>
-<<link [[-1 hour|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.date).addHours(-1)`>><</link>> |
-<<link [[+1 hour|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.date).addHours(1)`>><</link>> |
-<<link [[Dawn|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, Time.month, Time.monthDay, 6)`>><</link>> |
-<<link [[Noon|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, Time.month, Time.monthDay, 12)`>><</link>> |
-<<link [[Dusk|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, Time.month, Time.monthDay, 19)`>><</link>> |
-<<link [[Night|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, Time.month, Time.monthDay, 21)`>><</link>> |
-<<link [[Midnight|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, Time.month, Time.monthDay, 0)`>><</link>>
+<<link [[-1시간|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.date).addHours(-1)`>><</link>> |
+<<link [[+1시간|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.date).addHours(1)`>><</link>> |
+<<link [[새벽|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, Time.month, Time.monthDay, 6)`>><</link>> |
+<<link [[정오|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, Time.month, Time.monthDay, 12)`>><</link>> |
+<<link [[해 질 녘|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, Time.month, Time.monthDay, 19)`>><</link>> |
+<<link [[밤|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, Time.month, Time.monthDay, 21)`>><</link>> |
+<<link [[자정|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, Time.month, Time.monthDay, 0)`>><</link>>
 <br>
-<<link [[-1 day|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.date).addDays(-1)`>><</link>> |
-<<link [[+1 day|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.date).addDays(1)`>><</link>> |
-<<link [[Spring|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, 3, 1, Time.hour)`>><</link>> |
-<<link [[Summer|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, 6, 1, Time.hour)`>><</link>> |
-<<link [[Autumn|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, 9, 1, Time.hour)`>><</link>> |
-<<link [[Winter|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, 12, 1, Time.hour)`>><</link>> |
-<<link [[Blood moon|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, Time.month, Time.lastDayOfMonth).addDays(1)`>><</link>>
+<<link [[-1일|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.date).addDays(-1)`>><</link>> |
+<<link [[+1일|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.date).addDays(1)`>><</link>> |
+<<link [[봄|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, 3, 1, Time.hour)`>><</link>> |
+<<link [[여름|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, 6, 1, Time.hour)`>><</link>> |
+<<link [[가을|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, 9, 1, Time.hour)`>><</link>> |
+<<link [[겨울|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, 12, 1, Time.hour)`>><</link>> |
+<<link [[붉은 달|Sky Testing]]>><<debugSkyTestingSetDate `new DateTime(Time.year, Time.month, Time.lastDayOfMonth).addDays(1)`>><</link>>
 <br><br>
 
-<span class="gold">Weather</span>
+<span class="gold">날씨</span>
 <br>
 <span id="cheatsWeather"><<cheatsWeather>></span>
 <br>
-<<link [[Rain|Sky Testing]]>><<set $debugSkyTestingTemperature to 10>><</link>> |
-<<link [[Snow|Sky Testing]]>><<set $debugSkyTestingTemperature to -5>><</link>>
+<<link [[비|Sky Testing]]>><<set $debugSkyTestingTemperature to 10>><</link>> |
+<<link [[눈|Sky Testing]]>><<set $debugSkyTestingTemperature to -5>><</link>>
 <br>
-<span class="description">Rain (10°C) and Snow (-5°C) only show when the weather has precipitation</span>
+<span class="description">비(10°C)와 눈(-5°C)은 날씨에 강수가 있을 때만 나타난다</span>
 <br>
-<<link [[Snow on the ground|Sky Testing]]>><<set $weatherObj.snow to setup.WeatherTemperature.snow.maxAccumulation>><</link>> |
-<<link [[No snow on the ground|Sky Testing]]>><<set $weatherObj.snow to 0>><</link>>
+<<link [[땅에 쌓인 눈|Sky Testing]]>><<set $weatherObj.snow to setup.WeatherTemperature.snow.maxAccumulation>><</link>> |
+<<link [[땅에 눈 없음|Sky Testing]]>><<set $weatherObj.snow to 0>><</link>>
 <br>
 <<cheatsFog>>
 <br>
 
-<span class="gold">Effects</span>
+<span class="gold">효과</span>
 <br>
-<<link [[Toggle fireworks|Sky Testing]]>><<set $debugFireworks to !$debugFireworks>><</link>> (<<= $debugFireworks ? "on" : "off">>)
+<<link [[불꽃놀이 전환|Sky Testing]]>><<set $debugFireworks to !$debugFireworks>><</link>> (<<= $debugFireworks ? "켬" : "끔">>)
 <br>
-<<link [[Toggle weather band bounds|Sky Testing]]>><<set $debugWeatherBandBounds to !$debugWeatherBandBounds>><</link>> (<<= $debugWeatherBandBounds ? "on" : "off">>)
+<<link [[날씨 띠 경계 표시 전환|Sky Testing]]>><<set $debugWeatherBandBounds to !$debugWeatherBandBounds>><</link>> (<<= $debugWeatherBandBounds ? "켬" : "끔">>)
 <br><br>
 
-<span class="gold">Location</span>
+<span class="gold">장소</span>
 <br>
 <<listbox "$location" autoselect>>
 	<<optionsfrom Object.keys(setup.LocationImages).filter(name => name !== "banner")>>
@@ -87,7 +87,7 @@ Set date:
 })>>
 <br><br>
 
-<<link [[Leave|$lastPassage]]>>
+<<link [[나간다|$lastPassage]]>>
 	<<unfreezePlayerStats>>
 	<<run Weather.sidebar.initSun()>>
 	<<unset $lastPassage>>

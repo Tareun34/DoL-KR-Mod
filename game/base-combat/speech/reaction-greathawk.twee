@@ -4,18 +4,18 @@
 
 <<widget "pc-line-greathawk-plead">>
 	<<addSpeechLine "plead">>
-		"Y-you're going to take care of me, right?"
+		"나, 날 돌봐 줄 거지, 그렇지?"
 	<</addSpeechLine>>
 <</widget>>
 
 <<widget "pc-line-greathawk-demand">>
 	<<addSpeechLine "demand">>
-		"Stop pecking me!"
+		"그만 쪼아!"
 	<</addSpeechLine>>
 <</widget>>
 
 <<widget "pc-line-greathawk-moan">>
 	<<addSpeechLine "moan">>
-		"You're not a terror. You're all I need."
+		"넌 공포 같은 게 아니야. 내겐 너 하나면 돼."
 	<</addSpeechLine>>
 <</widget>>

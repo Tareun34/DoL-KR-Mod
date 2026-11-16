@@ -1,10 +1,10 @@
 :: Mine Escape
 <<effects>>
 <<generate1>><<generate2>><<generate3>><<generate4>><<generate5>><<generate6>>
-Not wanting to take the risk, you rush off into the tunnels. You run through the winding tunnels, trying to find an exit. 
-As you emerge into a small cave, <span class="red">you realize you've already been here. You're lost!</span>
+위험을 무릅쓰고 싶지 않아, 당신은 터널 속으로 달아난다. 구불구불한 터널을 내달리며 출구를 찾는다. 
+작은 동굴로 나서는 순간, <span class="red">이미 와 본 곳이라는 걸 깨닫는다. 길을 잃었다!</span>
 <br><br>
-<<link [[Next|Mine Escape Maze]]>><</link>>
+<<link [[다음|Mine Escape Maze]]>><</link>>
 
 
 
@@ -23,25 +23,25 @@ As you emerge into a small cave, <span class="red">you realize you've already be
 <</if>>
 
 <<clearnpc>>
-You are in a small cave. Various tunnels branch off.
+당신은 작은 동굴에 있다. 여러 갈래의 터널이 뻗어 나가 있다.
 <<if $mine.setup.dust gt 0 and $mine.maze.proximityCheck()>>
-	You hear a <<= either("wheeze", "cough")>> from one of the tunnels.
+	터널 하나에서 <<= either("쌕쌕거리는", "콜록거리는")>> 소리가 들린다.
 <</if>>
 
 <<if _start_turn and $mine.setup.lantern>>
 	<br><br>
-	You pull out the lantern, its flame flickers
+	랜턴을 꺼내자 불꽃이
 	<<switch $mine.maze.lantern()>>
 		<<case "up">>
-			southwards
+			남쪽으로
 		<<case "down">>
-			northwards
+			북쪽으로
 		<<case "left">>
-			eastwards
+			동쪽으로
 		<<case "right">>
-			westwards
+			서쪽으로
 	<</switch>>
-	before going out.
+	일렁이다 꺼진다.
 <</if>>
 
 <br><br>
@@ -52,22 +52,22 @@ You are in a small cave. Various tunnels branch off.
 
 	<<person1>>
 
-	You look around the cave and notice
+	동굴을 둘러보던 당신은
 	<<if $mine.maze.ActiveGuards.length gte 2>>
-		some <<people>> standing by an entrance. They spot you, and rush you down.
+		입구 옆에 서 있는 <<people>> 몇 명을 발견한다. 그들도 당신을 발견하고 달려든다.
 	<<else>>
-		a <<person>> standing by an entrance. <<He>> notices you, and rushes you down.
+		입구 옆에 서 있는 <<person>>【을를】 발견한다. <<He>>【은는】 당신을 알아채고 달려든다.
 	<</if>>
 	<br><br>
-	<<link [[Next|Mine Escape Maze Fight]]>><<set $fightstart to 1>><</link>>
+	<<link [[다음|Mine Escape Maze Fight]]>><<set $fightstart to 1>><</link>>
 
 	<<exit>>
 <</if>>
 
 <<if $mine.maze.PC.equals($mine.maze.Exit)>>
-	<span class="blue">There's a ladder in the center of the cave, leading to the hole in the ceiling.</span>
+	<span class="blue">동굴 한가운데에 천장 구멍으로 이어지는 사다리가 있다.</span>
 	<br><br>
-	<<link [[Climb the ladder|Mine Escape Victory]]>><<unset $mine.maze>><</link>>
+	<<link [[사다리를 오른다|Mine Escape Victory]]>><<unset $mine.maze>><</link>>
 	<br>
 <</if>>
 
@@ -78,22 +78,22 @@ You are in a small cave. Various tunnels branch off.
 
 <<set _player_dir to $mine.maze.PC.possibleDirections(MineMaze.MAZE_SIZE)>>
 <<if _player_dir.includes("up")>>
-	<<link [[Move North|Mine Escape Maze]]>><<run V.mine.maze.PC.up()>><</link>>
+	<<link [[북쪽으로 간다|Mine Escape Maze]]>><<run V.mine.maze.PC.up()>><</link>>
 	<br>
 <</if>>
 <<if _player_dir.includes("down")>>
-	<<link [[Move South|Mine Escape Maze]]>><<run V.mine.maze.PC.down()>><</link>>
+	<<link [[남쪽으로 간다|Mine Escape Maze]]>><<run V.mine.maze.PC.down()>><</link>>
 	<br>
 <</if>>
 <<if _player_dir.includes("left")>>
-	<<link [[Move West|Mine Escape Maze]]>><<run V.mine.maze.PC.left()>><</link>>
+	<<link [[서쪽으로 간다|Mine Escape Maze]]>><<run V.mine.maze.PC.left()>><</link>>
 	<br>
 <</if>>
 <<if _player_dir.includes("right")>>
-	<<link [[Move East|Mine Escape Maze]]>><<run V.mine.maze.PC.right()>><</link>>
+	<<link [[동쪽으로 간다|Mine Escape Maze]]>><<run V.mine.maze.PC.right()>><</link>>
 	<br>
 <</if>>
-<<link [[Stay where you are|Mine Escape Maze]]>><</link>>
+<<link [[제자리에 머문다|Mine Escape Maze]]>><</link>>
 
 
 
@@ -117,9 +117,9 @@ You are in a small cave. Various tunnels branch off.
 <<actionsman>>
 
 <<if _combatend or ($pain gte 100 and $willpowerpain is 0) or $orgasmdown gte 1 or $worn.feet.type.includes("shackle")>>
-	<span id="next"><<link [[Next|Mine Escape Maze Fight Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Mine Escape Maze Fight Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Mine Escape Maze Fight]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Mine Escape Maze Fight]]>><</link>></span><<nexttext>>
 <</if>>
 
 
@@ -129,32 +129,32 @@ You are in a small cave. Various tunnels branch off.
 
 <<if $orgasmdown gte 1>>
 	<<shackle_feet>>
-	Your spasms make it easy for <<him>> to restrain you. 
+	경련하는 당신의 몸은 손쉽게 제압당한다. 
 <<elseif $worn.feet.type.includes("shackle")>>
-	Your shackles make it impossible for you to escape.
+	족쇄 때문에 도저히 달아날 수가 없다.
 <<elseif $pain gte 100 and $willpowerpain is 0>>
 	<<shackle_feet>>
-	Your body goes limp as you succumb to the pain. 
+	고통에 굴복한 당신의 몸이 축 늘어진다. 
 <<else>>
 	<<if $mine.maze.ActiveGuards.length gte 2>>
-		They fall
+		그들은
 	<<else>>
-		<<He>> falls
+		<<He>>【은는】
 	<</if>>
-	to the ground <<= $enemyarousal gte $enemyarousalmax ? "in bliss" : "in pain">>. You waste no time as you rush into the tunnels.
+	<<= $enemyarousal gte $enemyarousalmax ? "황홀경에 빠져" : "고통에 겨워">> 바닥에 쓰러진다. 당신은 지체 없이 터널 속으로 달려간다.
 	<br><br>
 	<<endcombat>>
-	<<link [[Next|Mine Escape Maze]]>><<run
+	<<link [[다음|Mine Escape Maze]]>><<run
 		V.mine.maze.combatEnd = MineMaze.prototype.combatEnd; 
 		V.mine.maze.combatEnd();
 	>><</link>>
 	<<exit>>
 <</if>>
-<<He>> clamps shackles around your ankles. <<He>> chuckles, pulls you from the ground, and starts walking. 
+<<He>>【은는】 당신의 발목에 족쇄를 채운다. <<He>>【은는】 낄낄거리며 당신을 바닥에서 끌어 일으키고는 걷기 시작한다. 
 <br><br>
-You reach a more populated area, and <<he>><<endcombat>><<generate1>> passes you off to a <<person1>><<person>>. <<He>> drags you down a different tunnel.
+사람이 더 많은 곳에 이르자, <<endcombat>><<generate1>>당신은 <<person1>><<person>>에게 넘겨진다. <<He>>【은는】 당신을 다른 터널로 끌고 간다.
 <br><br>
-<<link [[Next|Mine Punishment]]>><<unset $mine.maze>><</link>>
+<<link [[다음|Mine Punishment]]>><<unset $mine.maze>><</link>>
 
 
 
@@ -162,11 +162,11 @@ You reach a more populated area, and <<he>><<endcombat>><<generate1>> passes you
 <<effects>><<earnFeat "Down Below">>
 <<badEndTrackingEnd "Mines" { reason: "minesEscapedMaze" }>>
 
-You hear shouting behind you. Three guards run your way. You grab onto the wooden ladder, and make it up just before it collapses beneath you.
+뒤에서 고함 소리가 들린다. 경비원 셋이 당신 쪽으로 달려온다. 당신은 나무 사다리를 붙잡고 오르고, 사다리가 발밑에서 무너지기 직전에 간신히 올라선다.
 <br><br>
-You hear shouting below as you rush down the tunnel, stopping when you reach a fork. 
-You catch a whiff of a foul stench from one of them. It makes you queasy. You fight the urge to vomit, then stumble down the other tunnel.
+아래에서 들려오는 고함을 뒤로하고 터널을 달려 내려가다, 갈림길에 이르러 멈춰 선다. 
+그중 한쪽에서 역겨운 악취가 훅 풍겨 온다. 속이 메슥거린다. 당신은 토하고 싶은 충동을 참으며 다른 쪽 터널로 비틀비틀 걸어 들어간다.
 <br><br>
-You reach a steep incline. You climb the pitch black slope, the rock walls give way to cement, and you emerge in the storm drains. <<mine_hope 3>><<ggghope>>
+가파른 비탈에 다다른다. 칠흑같이 어두운 비탈을 기어오르자 바위벽이 시멘트로 바뀌고, 당신은 빗물 배수로로 나온다. <<mine_hope 3>><<ggghope>>
 <br><br>
-<<link [[Next|Residential Drain]]>><<endevent>><<set $eventskip to 1>><</link>>
+<<link [[다음|Residential Drain]]>><<endevent>><<set $eventskip to 1>><</link>>

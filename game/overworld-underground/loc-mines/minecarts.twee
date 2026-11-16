@@ -1,46 +1,46 @@
 :: Mine Job Minecarts Intro
 <<effects>>
 
-The <<person>> grabs a chain and attaches one end to your shackles and the other to the rail. "Move rocks along the tunnel and dump them in the designated areas," <<he>> barks. "Get to work, we'll be watching you."
+<<person>>【은는】 사슬을 집어 들고 한쪽 끝은 당신의 족쇄에, 다른 쪽 끝은 레일에 연결한다. "돌을 터널 따라 옮겨서 지정된 곳에 쏟아 버려." <<he>>【이가】 으르렁거린다. "일 시작해. 우리가 지켜보고 있다."
 <br><br>
 <<endevent>>
-<<link [[Next|Mine Job Minecarts]]>><</link>>
+<<link [[다음|Mine Job Minecarts]]>><</link>>
 
 
 
 :: Mine Job Minecarts
 <<effects>>
 
-You're in a tunnel. The sounds of pickaxes hitting rocks surround you.
+당신은 터널 안에 있다. 곡괭이로 바위를 내리치는 소리가 사방에서 울린다.
 <<if $exposed gte 1>>
-	The guards stare at your <<lewdness>>.
+	경비원들이 당신의 <<lewdness>>【을를】 빤히 쳐다본다.
 <</if>>
 <<if isPregnancyEnding()>>
 	<<generate1>>
-	You clutch your stomach and go to your knees. A <<person1>><<person>> notices you. <<He>> rushes to your side, removing your chains. You slip out of consciousness as <<he>> lifts you.
+	당신은 배를 움켜쥐고 무릎을 꿇는다. <<person1>><<person>>【이가】 당신을 발견한다. <<He>>【은는】 당신 곁으로 달려와 사슬을 풀어 준다. <<he>>【이가】 당신을 들어 올리는 사이, 당신은 의식을 잃는다.
 	<br><br>
-	<<link [[Next|Mine Birth]]>><</link>>
+	<<link [[다음|Mine Birth]]>><</link>>
 <<elseif $stress gte $stressmax>>
-	You've pushed yourself too much.
+	너무 무리했다.
 	<br><br>
 
 	<<passout>>
-	<<link [[Everything fades to black...|Mine Job Minecarts Passout]]>><<endevent>><</link>>
+	<<link [[모든 것이 암흑으로 사라진다...|Mine Job Minecarts Passout]]>><<endevent>><</link>>
 <<elseif Time.hour lte 5 or Time.hour gte 21>>
 	<br><br>
-	<<link [[Next|Mine Job Minecarts End]]>><</link>>
+	<<link [[다음|Mine Job Minecarts End]]>><</link>>
 <<else>>
 	<br><br>
-	<<link [[Focus on moving rocks (1:00)|Mine Job Minecarts Event]]>><<pass 1 hours>><<set $phase to 0>><<tiredness 2>><<physique 3>><</link>><<gtiredness>><<gphysique>>
+	<<link [[돌 나르기에 집중한다 (1:00)|Mine Job Minecarts Event]]>><<pass 1 hours>><<set $phase to 0>><<tiredness 2>><<physique 3>><</link>><<gtiredness>><<gphysique>>
 	<br>
-	<<link [[Pretend to move rocks (1:00)|Mine Job Minecarts Event]]>><<pass 1 hours>><<set $phase to 1>><<stress 2>><</link>><<gstress>>
+	<<link [[돌을 나르는 척한다 (1:00)|Mine Job Minecarts Event]]>><<pass 1 hours>><<set $phase to 1>><<stress 2>><</link>><<gstress>>
 	<<if $mine.favor.minecarts is 1>>
 		<br>
-		<<link [[Ask for a distraction|Mine Job Minecarts Distraction]]>><</link>>
+		<<link [[주의를 끌어 달라고 부탁한다|Mine Job Minecarts Distraction]]>><</link>>
 	<</if>>
 	<<if $mine.favor.job.night is "note" and !$mine.favor.night>>
 		<br>
-		<<link [[Search for the person|Mine Job Minecarts Note]]>><</link>>
+		<<link [[그 사람을 찾는다|Mine Job Minecarts Note]]>><</link>>
 	<</if>>
 <</if>>
 
@@ -49,132 +49,132 @@ You're in a tunnel. The sounds of pickaxes hitting rocks surround you.
 :: Mine Job Minecarts Event
 <<effects>>
 <<if $phase is 0>>
-	You focus on doing the work.
+	당신은 일에 집중한다.
 	<<print either(
-		"You try to move a cart, but it's heavy. You manage to push it and dump it, but your muscles ache and your heart thumps. <<tiredness 15>><<ggtiredness>><<pain 5>><<ggpain>>",
-		"You grab a cart and push it. The wheel keeps getting stuck on the track.",
-		"While pushing a cart, you reach an incline. It takes more effort to get it up. <<tiredness 5>><<gtiredness>>",
-		"You find a cart that's mostly empty.",
-		"You grab a cart and push it. The wheel keeps making an annoying squeaking noise.",
-		"You make your way through an unlit section of tunnels."
+		"광차를 옮기려 하지만 무겁다. 간신히 밀어서 짐을 쏟아 내지만, 근육이 쑤시고 심장이 쿵쾅거린다. <<tiredness 15>><<ggtiredness>><<pain 5>><<ggpain>>",
+		"광차를 붙잡고 민다. 바퀴가 자꾸 선로에 걸린다.",
+		"광차를 밀다가 오르막에 다다른다. 끌어 올리는 데 힘이 더 든다. <<tiredness 5>><<gtiredness>>",
+		"거의 텅 빈 광차를 찾는다.",
+		"광차를 붙잡고 민다. 바퀴가 계속 신경 거슬리게 끽끽거린다.",
+		"불이 꺼진 터널 구간을 지나간다."
 	)>>
 <<else>>
-	You push around empty minecarts. You hope the guards don't notice.
+	당신은 빈 광차를 이리저리 밀고 다닌다. 경비원들이 눈치채지 않기를 바란다.
 <</if>>
 <br><br>
 <<cleareventpool>>
 
 <<addinlineevent "nothing" 1.5>>
-	You go on without interruption.
+	별일 없이 일을 계속한다.
 	<br><br>
-	<<link [[Next|Mine Job Minecarts]]>><<endevent>><</link>>
+	<<link [[다음|Mine Job Minecarts]]>><<endevent>><</link>>
 <</addinlineevent>>
 
 <<addinlineevent "scream" 1.5>>
-	You hear a scream echo through the tunnels. <<stress 7>><<trauma 5>><<ggstress>><<gtrauma>>
+	터널을 타고 비명이 메아리친다. <<stress 7>><<trauma 5>><<ggstress>><<gtrauma>>
 	<br><br>
-	<<link [[Next|Mine Job Minecarts]]>><<endevent>><</link>>
+	<<link [[다음|Mine Job Minecarts]]>><<endevent>><</link>>
 <</addinlineevent>>
 
 <<addinlineevent "explosion" 1.5>>
-	The rumbling of a distant explosion threatens to send you to the ground, but you manage to keep your footing. <<stress 7>><<ggstress>>
+	멀리서 터진 폭발의 진동에 쓰러질 뻔하지만, 간신히 중심을 잡는다. <<stress 7>><<ggstress>>
 	<br><br>
-	<<link [[Next|Mine Job Minecarts]]>><<endevent>><</link>>
+	<<link [[다음|Mine Job Minecarts]]>><<endevent>><</link>>
 <</addinlineevent>>
 
 <<if $mine.favor.minecarts isnot 1 and $mine.distraction.minecarts is undefined>>
 	<<addinlineevent "clothes">>
 		<<generatey1>><<person1>>
-		You see a <<person>>, <span class="blue"><<hes>> nude.</span> <<He>> tries to cover <<himself>>, unsuccessfully.
+		<<person>>【이가】 보인다. <span class="blue">알몸이다.</span> <<He>>【은는】 몸을 가리려 하지만, 소용없다.
 		<br><br>
 		<<if $exposed is 0 and hasSexStat("exhibitionism", 3)>>
-			<<link [[Give <<him>> your clothes|Mine Job Minecarts Clothes]]>><<set $mine.favor.minecarts to 1>><</link>><<exhibitionist3>>
+			<<link [[<<him>>에게 옷을 준다|Mine Job Minecarts Clothes]]>><<set $mine.favor.minecarts to 1>><</link>><<exhibitionist3>>
 			<br>
 		<</if>>
-		<<link [[Ignore <<him>>|Mine Job Minecarts]]>><<endevent>><</link>>
+		<<link [[<<him>> 쪽은 무시한다|Mine Job Minecarts]]>><<endevent>><</link>>
 	<</addinlineevent>>
 <</if>>
 
 <<addinlineevent "rock">>
 	<<generate1>><<generate2>>
-	As you push your cart into a large cave, and find an unshackled <<person1>><<person>> running away from a <<person2>><<person>>. The guard catches up to <<person1>><<him>> and tackles <<him>> to the ground. The <<person2>><<person>> rises, and starts beating the <<person1>><<person>> with <<person2>><<his>> baton.
+	광차를 밀고 커다란 동굴로 들어서자, 족쇄가 풀린 <<person1>><<person>>【이가】 <<person2>><<person>>에게서 달아나고 있다. 경비원은 <<person1>><<him>>【을를】 따라잡아 바닥에 넘어뜨린다. <<person2>><<person>>【은는】 몸을 일으키더니 <<person1>><<person>>【을를】 <<person2>><<his>> 곤봉으로 두들겨 패기 시작한다.
 	<br><br>
-	<<link [[Throw a rock at the guard|Mine Job Minecarts Rock]]>><<mine_hope 1>><</link>><<ghope>>
+	<<link [[경비원에게 돌을 던진다|Mine Job Minecarts Rock]]>><<mine_hope 1>><</link>><<ghope>>
 	<br>
-	<<link [[Ignore|Mine Job Minecarts]]>><<endevent>><<mine_hope -1>><</link>><<lhope>>
+	<<link [[무시한다|Mine Job Minecarts]]>><<endevent>><<mine_hope -1>><</link>><<lhope>>
 <</addinlineevent>>
 
 <<if $mine.setup.weapons isnot 1>>
 	<<addinlineevent "weapons" 0.5>>
 		<<generate1>><<generate2>>
-		You overhear two guards talking. "Why are these still out here?!" a <<person1>><<person>> yells.
+		경비원 둘이 이야기하는 것을 엿듣는다. "이게 왜 아직도 여기 나와 있어?!" <<person1>><<person>>【이가】 고함친다.
 		<br>
-		"Well I–" a <<person2>><<person>> stammers.
+		"그게, 저는–" <<person2>><<person>>【이가】 말을 더듬는다.
 		<br>
-		"Never mind, I don't care, just put them somewhere safe so the trash doesn't get their grubby mitts on them!"
+		"됐어, 알 바 아니고, 저 쓰레기들이 더러운 손 못 대게 안전한 데다 치워 놔!"
 		<br>
-		"I'll get some slaves to help–"
+		"노예 몇 놈 시켜서–"
 		<br>
-		"No! You will do it!"
+		"아니! 네가 해!"
 		<br>
-		"But–"
+		"하지만–"
 		<br>
-		"Just finish it you idiot!" the <<person1>><<person>> screams as <<he>> walks away.
+		"그냥 끝내, 이 멍청아!" <<person1>><<person>>【이가】 걸어가며 악을 쓴다.
 		<br>
-		"Ungrateful cretin." The <<person2>><<person>> notices you listening, "You heard <<person1>><<him>>, just finish it." <<person2>><<He>> points to a black crate, and waves in the direction of a small cave. "Put it in there."
+		"배은망덕한 머저리 같으니." <<person2>><<person>>【이가】 엿듣던 당신을 알아챈다. "<<person1>><<him>>【이가】 하는 말 들었지, 그냥 끝내." <<person2>><<He>>【은는】 검은 상자를 가리키고는 작은 동굴 쪽으로 손짓한다. "저 안에 넣어 둬."
 		<br><br>
-		You lift the heavy crate, and set it down in the cave.
+		당신은 무거운 상자를 들어 올려 동굴 안에 내려놓는다.
 		<br><br>
-		<<link [[Open the crate|Mine Job Minecarts Weapons]]>><</link>>
+		<<link [[상자를 연다|Mine Job Minecarts Weapons]]>><</link>>
 		<br>
-		<<link [[Just leave|Mine Job Minecarts]]>><<endevent>><</link>>
+		<<link [[그냥 떠난다|Mine Job Minecarts]]>><<endevent>><</link>>
 	<</addinlineevent>>
 <</if>>
 
 <<addinlineevent "dust">>
 	<<generate1>><<generate2>><<generate3>><<generate4>>
-	As you're pushing a cart though a large cave, you hear whistles and jeers from a group of guards. You ignore them and continue on, not wanting anything bad to happen. <<stress 7>><<ggstress>><<trauma 7>><<ggtrauma>> 
+	광차를 밀고 커다란 동굴을 지나가는데, 경비원 무리가 휘파람을 불며 야유를 보낸다. 괜한 일이 생기지 않도록 당신은 무시하고 계속 나아간다. <<stress 7>><<ggstress>><<trauma 7>><<ggtrauma>> 
 	<br><br>
 	<<if $rng gte 51>>
-		You soon reach an elevated section of track and pass by a large pile of dust. <span class="blue">You realize the guards are standing right below it.</span>
+		곧 선로가 높아진 구간에 다다라 커다란 먼지 더미 옆을 지나간다. <span class="blue">경비원들이 바로 그 아래에 서 있다는 걸 깨닫는다.</span>
 		<br><br>
-		<<link [[Knock the pile off|Mine Job Minecarts Dust]]>><</link>>
+		<<link [[더미를 걷어차 떨어뜨린다|Mine Job Minecarts Dust]]>><</link>>
 		<br>
-		<<link [[Ignore it|Mine Job Minecarts]]>><<endevent>><</link>>
+		<<link [[무시한다|Mine Job Minecarts]]>><<endevent>><</link>>
 	<<else>>
-		<<link [[Next|Mine Job Minecarts]]>><<endevent>><</link>>
+		<<link [[다음|Mine Job Minecarts]]>><<endevent>><</link>>
 	<</if>>
 <</addinlineevent>>
 
 <<addinlineevent "bomb">>
-	As you're pushing a cart through a large cave, you hear a commotion, and see a guard racing away from one side of the cave to cover. You notice several red objects attached to the cave wall, <span class="red">they're bombs!</span> You dive behind the cart and brace yourself as an explosion shakes the mines. <<pain 10>><<ggpain>>
+	광차를 밀고 커다란 동굴을 지나가는데, 소란스러운 소리가 들리고 경비원 하나가 동굴 한쪽에서 엄폐물 쪽으로 냅다 달아나는 게 보인다. 동굴 벽에 붙은 빨간 물체 여러 개가 눈에 들어온다. <span class="red">폭탄이다!</span> 당신은 광차 뒤로 몸을 던지고, 폭발이 광산을 뒤흔드는 동안 이를 악물고 버틴다. <<pain 10>><<ggpain>>
 	<br><br>
-	Your ears ring while you find your bearings, your hand touches something hot. You look at it, 
+	귀가 멍멍한 채로 정신을 추스르는데, 손에 뭔가 뜨거운 것이 닿는다. 살펴보니, 
 	<<if $science gte 100>>
 		<<if !$mine.bomb.progress>>
 			<<set $mine.bomb.progress to 0>>
 		<</if>>
 		<<set $mine.bomb.parts++>>
-		<span class="green">it's a part of a bomb!</span> You wait for it to cool down and take it with you. | <span class="green">Bomb Part Added</span>
+		<span class="green">폭탄 부품이다!</span> 식기를 기다렸다가 챙겨 간다. | <span class="green">폭탄 부품 추가됨</span>
 	<<else>>
-		<span class="blue">it's a small bit of metal and other things you don't recognise.</span>
+		<span class="blue">작은 쇳조각과 정체 모를 잡동사니다.</span>
 	<</if>>
 	<br><br>
-	You sit behind the cart until your hearing recovers.
+	귀가 다시 들릴 때까지 광차 뒤에 앉아 있는다.
 	<br><br>
-	<<link [[Next|Mine Job Minecarts]]>><<endevent>><</link>>
+	<<link [[다음|Mine Job Minecarts]]>><<endevent>><</link>>
 <</addinlineevent>>
 
 <<addinlineevent "control">>
-	You take a break from pushing a cart to wipe the sweat from your brow and catch your breath. You turn to resume your work, only to see <span class="red">the cart going along the track on its own!</span>
+	광차 밀기를 잠시 멈추고 이마의 땀을 닦으며 숨을 고른다. 다시 일하려고 돌아선 순간, <span class="red">광차가 혼자서 선로를 따라 굴러가고 있다!</span>
 	<br><br>
-	You give chase, but it's moving pretty fast. 
+	뒤쫓아 가지만, 광차는 꽤 빠르게 움직인다. 
 	<br><br>
-	<<link [[Climb in|Mine Job Minecarts Climb]]>><</link>><<athleticsdifficulty 20 40>>
+	<<link [[올라탄다|Mine Job Minecarts Climb]]>><</link>><<athleticsdifficulty 20 40>>
 	<br>
-	<<link [[Stop it|Mine Job Minecarts Stop]]>><</link>><<physiquedifficulty 12000 15000>>
+	<<link [[멈춘다|Mine Job Minecarts Stop]]>><</link>><<physiquedifficulty 12000 15000>>
 	<br>
-	<<link [[Let it go|Mine Job Minecarts Lost]]>><<set $phase to 0>><</link>>
+	<<link [[그냥 보낸다|Mine Job Minecarts Lost]]>><<set $phase to 0>><</link>>
 <</addinlineevent>>
 
 <<runeventpool>>
@@ -184,12 +184,12 @@ You're in a tunnel. The sounds of pickaxes hitting rocks surround you.
 :: Mine Job Minecarts End
 <<effects>><<generate1>><<person1>>
 
-A <<person1>><<person>> walks up to you. "Day's over," <<he>> says. <<He>> grabs you, disconnects you from the rail, then shoves you into a group of slaves.
+<<person1>><<person>>【이가】 당신에게 다가온다. "오늘 일은 끝이다." <<he>>【이가】 말한다. <<He>>【은는】 당신을 붙잡아 레일에서 떼어 내고는 노예 무리 속으로 떠민다.
 <br><br>
-You walk with them until you reach a metal gate leading to a small cave. The group filters through, and when everyone is inside, the guard slams the gate shut.
+당신은 그들과 함께 걸어가다 작은 동굴로 이어지는 금속 철문에 다다른다. 무리가 줄지어 들어가고, 모두 들어가자 경비원이 철문을 쾅 닫는다.
 <br><br>
 <<endevent>>
-<<link [[Next|Mine Night]]>><</link>>
+<<link [[다음|Mine Night]]>><</link>>
 
 
 
@@ -197,18 +197,18 @@ You walk with them until you reach a metal gate leading to a small cave. The gro
 <<effects>>
 <<loadNPC 0 "mine_minecarts">>
 
-You make your way to the <<person1>><<person>>.
+당신은 <<person1>><<person>>에게 다가간다.
 <br><br>
 <<if $speech_attitude is "meek">>
-	"Can you distract the guards for me?" you ask.
+	"경비원들 주의 좀 끌어 줄 수 있어?" 당신이 묻는다.
 <<elseif $speech_attitude is "bratty">>
-	"I need you to distract the guards," you say.
+	"경비원들 주의 좀 끌어 줘." 당신이 말한다.
 <<else>>
-	"I want you to distract the guards," you say.
+	"경비원들 주의를 끌어 줬으면 해." 당신이 말한다.
 <</if>>
-Fear washes over <<his>> face. <<He>> opens <<his>> mouth to speak but looks down at <<his>> legs.
+<<his>> 얼굴에 두려움이 번진다. <<He>>【은는】 뭔가 말하려고 입을 열다가 <<his>> 다리를 내려다본다.
 <br><br>
-"When do you want it done?" <<he>> asks.
+"언제 해 줄까?" <<he>>【이가】 묻는다.
 <br><br>
 <<mine_distract_links "Mine Job Minecarts Distraction Set">>
 
@@ -220,53 +220,53 @@ Fear washes over <<his>> face. <<He>> opens <<his>> mouth to speak but looks dow
 <<if $phase isnot "no">>
 	<<set $mine.distraction.minecarts to $phase>><<unset $mine.favor.minecarts>>
 
-	You tell <<him>> you want the distraction to happen <<mine_distract_time>>.
+	당신은 <<him>>에게 <<mine_distract_time>> 소란을 일으켜 달라고 말한다.
 	<br><br>
-	<<He>> nods and returns to <<his>> work.
+	<<He>>【은는】 고개를 끄덕이고 <<his>> 일로 돌아간다.
 	<<clearNPC "mine_minecarts">>
 <<else>>
-	You tell <<him>> you changed your mind, <<he>> nods before returning to work.
+	당신이 마음이 바뀌었다고 말하자, <<he>>【은는】 고개를 끄덕이고는 다시 일하러 돌아간다.
 <</if>>
 
 <<endevent>>
 <br><br>
-<<link [[Next|Mine Job Minecarts]]>><</link>>
+<<link [[다음|Mine Job Minecarts]]>><</link>>
 
 
 
 :: Mine Job Minecarts Clothes
 <<effects>><<upperstrip>><<lowerstrip>><<saveNPC 0 "mine_minecarts">>
 
-You remove your clothes and toss them to <<him>>. <<He>> looks at you in shock. "Thank you," <<he>> mumbles, and slips the clothes on.
+당신은 옷을 벗어 <<him>>에게 던져 준다. <<He>>【은는】 놀란 얼굴로 당신을 쳐다본다. "고마워." <<he>>【이가】 웅얼거리며 옷을 걸친다.
 <br><br>
-<<exhibitionism3>> You keep working, conscious of your <<lewdness>>.
+<<exhibitionism3>> 당신은 자신의 <<lewdness>>【을를】 의식하며 일을 계속한다.
 <br><br>
 <<endevent>>
-<<link [[Next|Mine Job Minecarts]]>><</link>>
+<<link [[다음|Mine Job Minecarts]]>><</link>>
 
 
 
 :: Mine Job Minecarts Rock
 <<effects>>
 
-You grab a rock <<if $phase is 0>>from the cart<<else>>off the ground<</if>> and throw it at the guard. <<person2>><<He>> grunts in pain and falls, letting the <<person1>><<person>> escape into the tunnels.
+당신은 <<if $phase is 0>>광차에서<<else>>바닥에서<</if>> 돌을 하나 집어 경비원에게 던진다. <<person2>><<He>>【은는】 고통에 신음하며 쓰러지고, 그 틈에 <<person1>><<person>>【은는】 터널 속으로 달아난다.
 <br><br>
-You shove your cart into one of the connected tunnels before the guard can get <<person2>><<his>> bearings. <<stress -5>><<lstress>><<trauma -5>><<ltrauma>>
+<<person2>>경비원이 정신을 차리기 전에 당신은 광차를 연결된 터널 하나로 밀어 넣는다. <<stress -5>><<lstress>><<trauma -5>><<ltrauma>>
 <br><br>
 <<endevent>>
-<<link [[Next|Mine Job Minecarts]]>><</link>>
+<<link [[다음|Mine Job Minecarts]]>><</link>>
 
 
 
 :: Mine Job Minecarts Weapons
 <<effects>>
 
-You open the crate to reveal a number of guns, each secured with a heavy lock, too brutal to pick.
+상자를 열자 총 여러 자루가 모습을 드러낸다. 하나하나 묵직한 자물쇠가 채워져 있어, 따기에는 너무 투박하다.
 <br><br>
 <<set $skulduggerydifficulty to 100>>
-<<link [[Try to sabotage them|Mine Job Minecarts Weapons Sabotage]]>><<skulduggerycheck "silent">><</link>><<skulduggerydifficulty>>
+<<link [[망가뜨려 본다|Mine Job Minecarts Weapons Sabotage]]>><<skulduggerycheck "silent">><</link>><<skulduggerydifficulty>>
 <br>
-<<link [[Close the crate and leave|Mine Job Minecarts]]>><<endevent>><</link>>
+<<link [[상자를 닫고 떠난다|Mine Job Minecarts]]>><<endevent>><</link>>
 
 
 
@@ -274,26 +274,26 @@ You open the crate to reveal a number of guns, each secured with a heavy lock, t
 <<effects>>
 
 <<if $skulduggerysuccess>>
-	<span class="green">You sabotage each gun. Nobody would be able to tell they didn't work just by looking at them.</span>
+	<span class="green">총을 하나하나 망가뜨린다. 겉으로 봐서는 아무도 고장 난 걸 알아채지 못할 것이다.</span>
 	<<set $mine.setup.weapons to 1>>
 <<else>>
-	<span class="red">You can't figure out how to disable them without it being obvious.</span>
+	<span class="red">티 나지 않게 고장 내는 방법을 도무지 모르겠다.</span>
 <</if>>
 <br><br>
-"What's taking so long?" the <<person2>><<person>> yells from outside.
+"뭘 그렇게 꾸물거려?" <<person2>><<person>>【이가】 밖에서 고함친다.
 <br><br>
-<<link [[Leave|Mine Job Minecarts]]>><<endevent>><</link>>
+<<link [[떠난다|Mine Job Minecarts]]>><<endevent>><</link>>
 
 
 
 :: Mine Job Minecarts Dust
 <<effects>><<set $mine.setup.dust to 5>>
 
-You kick as much of the dust onto them as you can, until they're almost buried. Their arms emerge from the pile, followed by their faces. <<stress -3>><<lstress>><<trauma -3>><<ltrauma>>
+먼지를 있는 대로 걷어차 그들 위로 쏟아붓자, 그들이 거의 파묻힌다. 먼지 더미 속에서 팔이 비죽 나오고, 이어서 얼굴이 나온다. <<stress -3>><<lstress>><<trauma -3>><<ltrauma>>
 <br><br>
-They cough and hack. Not wanting to be caught, you make a quick getaway with the cart.
+그들은 콜록콜록 기침을 해 댄다. 붙잡히고 싶지 않아 당신은 광차를 끌고 재빨리 자리를 뜬다.
 <br><br>
-<<link [[Leave|Mine Job Minecarts]]>><<endevent>><</link>>
+<<link [[떠난다|Mine Job Minecarts]]>><<endevent>><</link>>
 
 
 
@@ -301,41 +301,41 @@ They cough and hack. Not wanting to be caught, you make a quick getaway with the
 <<effects>><<generate1>><<person1>>
 
 <<if $phase is 0>>
-	You let the cart go and watch it barrel into the darkness. Not knowing what else to do, you make your way back through the tunnel. 
+	광차를 놓아 버리고, 광차가 어둠 속으로 맹렬히 굴러가는 것을 지켜본다. 달리 어찌할 바를 몰라, 터널을 따라 되돌아간다. 
 <<elseif $phase is 1>>
-	You watch the cart barrel into the darkness. Not knowing what else to do, you stand up and make your way back through the tunnel. 
+	광차가 어둠 속으로 맹렬히 굴러가는 것을 지켜본다. 달리 어찌할 바를 몰라, 일어나서 터널을 따라 되돌아간다. 
 <<else>>
-	You look up and see the cart barrel into the darkness. Not knowing what else to do, you stand up and make your way back through the tunnel. 
+	고개를 들자 광차가 어둠 속으로 맹렬히 굴러가는 것이 보인다. 달리 어찌할 바를 몰라, 일어나서 터널을 따라 되돌아간다. 
 <</if>>
-"Where's that cart you had?" a <<person>> asks.
+"갖고 있던 광차는 어디 갔어?" <<person>>【이가】 묻는다.
 <br><br>
 <<if $speech_attitude is "meek">>
-	"I lost it," you say.
+	"잃어버렸어요." 당신이 말한다.
 <<elseif $speech_attitude is "bratty">>
-	"Somewhere down there," you say as you point down the tunnel. "Go find it."
+	"저 아래 어딘가." 당신이 터널 아래쪽을 가리키며 말한다. "가서 찾아."
 <<else>>
-	"It got away from me," you say.
+	"놓쳐 버렸어요." 당신이 말한다.
 <</if>>
-<<He>> sighs.
+<<He>>【은는】 한숨을 쉰다.
 <br><br>
-You start to walk away, but <<he>> interrupts. "Don't think you're getting away with that unpunished," <<he>> says. <<He>> grabs your neck and disconnects you from the rail before dragging you with <<him>>.
+당신이 걸어가려 하자 <<he>>【이가】 막아선다. "벌 안 받고 넘어갈 생각은 마라." <<he>>【이가】 말한다. <<He>>【은는】 당신의 목덜미를 붙잡아 레일에서 떼어 내고는 당신을 끌고 간다.
 <br><br>
-<<link [[Next|Mine Punishment]]>><</link>>
+<<link [[다음|Mine Punishment]]>><</link>>
 
 
 
 :: Mine Job Minecarts Stop
 <<effects>>
 
-You grab onto the side of the cart and dig your feet into the ground.
+당신은 광차 옆면을 붙잡고 발을 땅에 박아 버틴다.
 <<if $physiqueSuccess>>
-	<span class="green">The cart slows to a stop,</span> but your feet ache from it. <<pain 10>><<ggpain>>
+	<span class="green">광차가 서서히 멈춰 서지만,</span> 발이 욱신거린다. <<pain 10>><<ggpain>>
 	<br><br>
-	<<link [[Next|Mine Job Minecarts]]>><<endevent>><</link>>
+	<<link [[다음|Mine Job Minecarts]]>><<endevent>><</link>>
 <<else>>
-	<span class="red">You lose your grip and fall to the hard ground.</span> <<pain 5>><<gpain>>
+	<span class="red">손이 미끄러져 딱딱한 바닥에 나동그라진다.</span> <<pain 5>><<gpain>>
 	<br><br>
-	<<link [[Next|Mine Job Minecarts Lost]]>><<set $phase to 1>><</link>>
+	<<link [[다음|Mine Job Minecarts Lost]]>><<set $phase to 1>><</link>>
 <</if>>
 
 
@@ -343,17 +343,17 @@ You grab onto the side of the cart and dig your feet into the ground.
 :: Mine Job Minecarts Climb
 <<effects>>
 
-You grab onto the cart and try to climb inside.
+당신은 광차를 붙잡고 안으로 기어오르려 한다.
 <<if $athleticsSuccess>>
-	<span class="green">You manage to pull yourself into it.</span> You grab onto the brake, ready to pull it. <span class="blue">An idea strikes you.</span> You could let the cart continue. If you reach the end of the rail you're attached to, it might break the chain.
+	<span class="green">간신히 광차 안으로 몸을 끌어 올린다.</span> 브레이크를 붙잡고 당길 준비를 한다. <span class="blue">문득 한 가지 생각이 떠오른다.</span> 광차를 계속 달리게 둘 수도 있다. 당신이 묶여 있는 레일의 끝에 다다르면, 사슬이 끊어질지도 모른다.
 	<br><br>
-	<<link [[Let it continue|Mine Job Minecarts Cart Free]]>><</link>>
+	<<link [[계속 달리게 둔다|Mine Job Minecarts Cart Free]]>><</link>>
 	<br>
-	<<link [[Stop it|Mine Job Minecarts Cart Stop]]>><</link>>
+	<<link [[멈춘다|Mine Job Minecarts Cart Stop]]>><</link>>
 <<else>>
-	You are unable to pull yourself into the cart <span class="red">before losing grip and tumbling to the ground.</span> <<pain 5>><<gpain>>
+	광차 안으로 몸을 끌어 올리지 못하고 <span class="red">손을 놓쳐 바닥으로 굴러떨어진다.</span> <<pain 5>><<gpain>>
 	<br><br>
-	<<link [[Next|Mine Job Minecarts Lost]]>><<set $phase to 2>><</link>>
+	<<link [[다음|Mine Job Minecarts Lost]]>><<set $phase to 2>><</link>>
 <</if>>
 
 
@@ -361,20 +361,20 @@ You grab onto the cart and try to climb inside.
 :: Mine Job Minecarts Cart Stop
 <<effects>>
 
-You pull on the brake and the cart comes to a quick stop. With a heavy exhale, you climb out of the cart and continue as normal.
+브레이크를 당기자 광차가 금세 멈춰 선다. 크게 숨을 내쉬고, 광차에서 내려 하던 일을 계속한다.
 <br><br>
-<<link [[Next|Mine Job Minecarts]]>><<endevent>><</link>>
+<<link [[다음|Mine Job Minecarts]]>><<endevent>><</link>>
 
 
 
 :: Mine Job Minecarts Cart Free
 <<effects>><<mine_unshackle>>
 
-You let go of the brake and watch as the cart continues to gain speed. You catch a glimpse of the end of the rail keeping you chained. You steel yourself, until you're yanked out of the cart and onto the hard ground. <<pain 5>><<gpain>>
+브레이크에서 손을 떼고 광차가 점점 속도를 올리는 것을 지켜본다. 당신을 묶어 둔 레일의 끝이 언뜻 눈에 들어온다. 마음을 단단히 먹는 순간, 당신은 광차 밖으로 홱 끌려 나가 딱딱한 바닥에 내동댕이쳐진다. <<pain 5>><<gpain>>
 <br><br>
-You look at your feet, <span class="green">the shackles are broken!</span> You scramble up and rush into the tunnels.
+발을 내려다보니, <span class="green">족쇄가 부서져 있다!</span> 당신은 허둥지둥 일어나 터널 속으로 달려간다.
 <br><br>
-<<link [[Next|Mine Job Minecarts Escape]]>><</link>>
+<<link [[다음|Mine Job Minecarts Escape]]>><</link>>
 
 
 
@@ -382,42 +382,42 @@ You look at your feet, <span class="green">the shackles are broken!</span> You s
 <<effects>>
 <<generate1>><<generate2>>
 <<set $mine.favor.night to 1>>
-You feign doing work as you search. You spot a <<person2>><<person>> mining, <span class="blue"><<he>> has a diamond painted on <<his>> boiler suit.</span> As you approach, you notice a <<person1>><<person>> staring at <<person2>><<him>>.<<person1>>
+일하는 척하며 찾아다닌다. 채굴 중인 <<person2>><<person>>【이가】 눈에 띈다. <span class="blue"><<he>>의 보일러 수트에 다이아몬드 무늬가 그려져 있다.</span> 다가가다 보니, <<person1>><<person>>【이가】 <<person2>><<him>>【을를】 빤히 지켜보고 있다.<<person1>>
 <br><br>
-<<link [[Distract <<him>>|Mine Job Minecarts Note Distract]]>><</link>><<promiscuous1>>
+<<link [[<<him>>의 주의를 돌린다|Mine Job Minecarts Note Distract]]>><</link>><<promiscuous1>>
 <br>
-<<link [[Pull <<his>> pants down|Mine Job Minecarts Note Pull]]>><</link>>
+<<link [[<<his>> 바지를 끌어내린다|Mine Job Minecarts Note Pull]]>><</link>>
 
 
 
 :: Mine Job Minecarts Note Distract
 <<effects>>
 
-You walk up to the <<person1>><<person>>, and whisper into <<his>> ear. "You look stressed. You should take a rest." The <<person>> looks at you. While <<he>>'s distracted, you slip the note to the <<person2>><<person>>. The <<person1>><<person>> shoves you away. "Get back to work," <<he>> yells.
+당신은 <<person1>><<person>>에게 다가가 <<his>> 귀에 속삭인다. "스트레스 받아 보이네요. 좀 쉬셔야겠어요." <<person>>【이가】 당신을 쳐다본다. <<he>>【이가】 한눈파는 사이, 당신은 <<person2>><<person>>에게 쪽지를 슬쩍 건넨다. <<person1>><<person>>【이가】 당신을 밀쳐 낸다. "일이나 해." <<he>>【이가】 고함친다.
 <<promiscuity1>>
 <<endevent>>
-<<link [[Next|Mine Job Minecarts]]>><</link>>
+<<link [[다음|Mine Job Minecarts]]>><</link>>
 
 
 
 :: Mine Job Minecarts Note Pull
 <<effects>>
 
-You grab the <<person1>><<person>>'s bottoms and pull them down, exposing <<him>>. You pass the note to the <<person2>><<person>> while the <<person1>><<person>> is distracted. <<He>> glares at you, grabs you by the neck, and disconnects you from the chain before dragging you through the tunnels.
+당신은 <<person1>><<person>>의 하의를 붙잡아 끌어내려 <<him>>【을를】 드러내 버린다. <<person2>><<person>>에게 쪽지를 건네는 동안 <<person1>><<person>>【은는】 정신이 팔려 있다. <<He>>【은는】 당신을 노려보더니 목덜미를 붙잡고, 당신을 사슬에서 떼어 낸 뒤 터널 속으로 질질 끌고 간다.
 <br><br>
-<<link [[Next|Mine Punishment]]>><</link>>
+<<link [[다음|Mine Punishment]]>><</link>>
 
 
 
 :: Mine Job Minecarts Escape
 <<effects>><<generate1>><<person1>><<mine_distract_check>>
 
-You run through the tunnels, avoiding patrolling guards. You emerge in a tunnel with groups of slaves mining the walls. You notice a watching guard, and duck behind a wall. You peek from your cover to make sure <<he>> didn't notice you. There's a ring of keys on <<his>> belt.
+당신은 순찰하는 경비원들을 피해 터널을 내달린다. 노예 무리가 벽을 캐고 있는 터널로 나온다. 지켜보고 있는 경비원이 눈에 띄어, 벽 뒤로 몸을 숨긴다. 숨은 곳에서 <<he>>【이가】 당신을 알아채지 못했는지 살짝 내다본다. <<his>> 허리띠에 열쇠 꾸러미가 매달려 있다.
 <<if _distraction_count gte 1>>
 	<br><br>
-	<span class="blue">There seems to be less guards than usual.</span>
+	<span class="blue">평소보다 경비원이 적은 것 같다.</span>
 <</if>>
 <br><br>
-<<link [[Run off into the tunnels|Mine Escape]]>><<endevent>><</link>>
+<<link [[터널 속으로 달아난다|Mine Escape]]>><<endevent>><</link>>
 <br>
-<<link [[Attack the guard|Mine Revolt]]>><</link>>
+<<link [[경비원을 공격한다|Mine Revolt]]>><</link>>

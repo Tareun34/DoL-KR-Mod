@@ -4,18 +4,18 @@
 
 <<widget "pc-line-eden-plead">>
 	<<addSpeechLine "plead">>
-		"N...not so rough, Eden..."
+		"너, 너무 거칠게 하지 마, 에덴..."
 	<</addSpeechLine>>
 <</widget>>
 
 <<widget "pc-line-eden-demand">>
 	<<addSpeechLine "demand">>
-		"I'm not your prey today, leave me alone."
+		"오늘은 네 사냥감 아니야, 날 내버려 둬."
 	<</addSpeechLine>>
 <</widget>>
 
 <<widget "pc-line-eden-moan">>
 	<<addSpeechLine "moan">>
-		"I belong to you, and you alone."
+		"난 네 거야, 오직 너만의 거야."
 	<</addSpeechLine>>
 <</widget>>

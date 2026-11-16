@@ -4,18 +4,18 @@
 
 <<widget "pc-line-alex-plead">>
 	<<addSpeechLine "plead">>
-		"Alex, control yourself!"
+		"알렉스, 진정 좀 해!"
 	<</addSpeechLine>>
 <</widget>>
 
 <<widget "pc-line-alex-demand">>
 	<<addSpeechLine "demand">>
-		"Alex, you idiot! Control yourself."
+		"알렉스, 이 바보야! 정신 좀 차려."
 	<</addSpeechLine>>
 <</widget>>
 
 <<widget "pc-line-alex-moan">>
 	<<addSpeechLine "moan">>
-		"I couldn't ask for a better partner."
+		"너보다 나은 짝은 없을 거야."
 	<</addSpeechLine>>
 <</widget>>

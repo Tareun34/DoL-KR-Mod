@@ -4,24 +4,24 @@
 
 <<widget "pc-line-blackwolf-plead">>
 	<<addSpeechLine "plead">>
-		"Gently, please..."
+		"부드럽게, 제발..."
 	<</addSpeechLine>>
 <</widget>>
 
 <<widget "pc-line-blackwolf-demand">>
 	<<addSpeechLine "demand">>
-		"Down. DOWN!"
+		"엎드려. 엎드리라고!"
 	<</addSpeechLine>>
 <</widget>>
 
 <<widget "pc-line-blackwolf-moan">>
 	<<if $wolfpackleader is 1>>
 		<<addSpeechLine "moan">>
-			"Good <<nnpc_gendery "Black Wolf">>. Keep going."
+			"착한 <<nnpc_gendery "Black Wolf">>【이】네. 계속해."
 		<</addSpeechLine>>
 	<<else>>
 		<<addSpeechLine "moan">>
-			"<<print ($settings.pregnancySpeechEnabled ? "Breed" : "Fuck")>> me, alpha!"
+			"<<print ($settings.pregnancySpeechEnabled ? "임신시켜 줘" : "박아 줘")>>, 우두머리!"
 		<</addSpeechLine>>
 	<</if>>
 <</widget>>

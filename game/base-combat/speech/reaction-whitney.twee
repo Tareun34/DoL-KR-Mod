@@ -5,14 +5,14 @@ _args[0] of the mock widget is $mockaction. */
 <<widget "pc-line-whitney-mock">>
 	<<if _args[0] is "looks">>
 		<<addPairedSpeechLine "Whitney" "mock">>
-			<<pcLine>>"I know you can't control your cronies anymore," you spit. "But at least do something about that mug of yours!"
+			<<pcLine>>"이제 네 똘마니들도 못 다루는 거 알아," 당신이 내뱉는다. "그래도 그 낯짝은 좀 어떻게 해 보지 그래!"
 		<<npcLine>>
 			<<if C.npc.Whitney.dom lte 10>>
-				<<He>> stops, then gnashes <<his>> teeth together in rage. "You've got jokes.<<if $audiencepresent gte 1>> The slut's got fucking jokes!<</if>>"
+				<<He>>【이가】 멈칫하더니 분노에 차 <<his>> 이를 간다. "웃기고 있네.<<if $audiencepresent gte 1>> 이 걸레가 씨발 농담을 다 하네!<</if>>"
 			<<elseif C.npc.Whitney.dom gte 15>>
-				<<He>> stops, then grins. "You're one to talk right now, slut. <<if $audiencepresent gte 1>>You guys hearing this shit?<</if>>"
+				<<He>>【이가】 멈칫하더니 씩 웃는다. "지금 네 꼴로 할 소리는 아니지, 걸레야. <<if $audiencepresent gte 1>>너네 이 개소리 들었냐?<</if>>"
 			<<else>>
-				<<He>> stops, then forces a grin. "Hah. You really got me there. Shut up!"
+				<<He>>【이가】 멈칫하더니 억지로 웃는다. "하. 그래, 한 방 먹었다. 닥쳐!"
 			<</if>>
 		<</addPairedSpeechLine>>
 	<</if>>
@@ -21,34 +21,34 @@ _args[0] of the mock widget is $mockaction. */
 
 <<widget "pc-line-whitney-plead">>
 	<<addSpeechLine "plead">>
-		"Please be gentle, Whitney..."
+		"제발 살살 해 줘, 휘트니..."
 	<</addSpeechLine>>
 	<<addSpeechLine "plead">>
-		"Please," you cry. "I'm tired of being your punching bag!"
+		"제발," 당신이 울부짖는다. "네 샌드백 노릇 하는 것도 이제 지쳤어!"
 	<</addSpeechLine>>
 	<<addPairedSpeechLine "Whitney" "plead">>
-		<<pcLine>>"What did I do to make you target me like this?" you sob. "Please stop!"
+		<<pcLine>>"내가 뭘 했다고 이렇게 날 괴롭히는 거야?" 당신이 흐느낀다. "제발 그만해!"
 	<<npcLine>>
 		<<if C.npc.Whitney.dom gte 15>>
-			<<He>> laughs. "Wouldn't you like to know? Know your fucking place!"
+			<<He>>【이가】 웃는다. "궁금하냐? 씨발 네 주제나 알아!"
 		<<elseif C.npc.Whitney.dom lte 10>>
-			<<He>> glares at you. "After all the stunts you've pulled? You're lucky I'm only doing this much to you, whore!"
+			<<He>>【이가】 당신을 노려본다. "그동안 네가 친 사고가 얼만데? 이 정도로 끝나는 걸 다행으로 알아, 창녀야!"
 		<<else>>
-			<<He>> snickers. "Have you tried being a little less fun to bully?"
+			<<He>>【이가】 킥킥댄다. "괴롭히는 맛이 좀 덜하게 굴어 보지 그랬어?"
 		<</if>>
 	<</addPairedSpeechLine>>
 	<<if $loft_whitney gte 6>>
 		<<addPairedSpeechLine "Whitney" "plead">>
-			<<pcLine>>"Why are you still doing this to me? Do you love me or not?"
+			<<pcLine>>"왜 아직도 나한테 이러는 거야? 날 사랑하는 거야, 아니야?"
 		<<npcLine>>
 			<<if $audiencepresent gte 1 and C.npc.Whitney.dom gte 15>>
-				The crowd starts to murmur, prompting Whitney to stop and turn to them. "Does anyone know what the fuck is this slut talking about?"
+				군중이 웅성거리기 시작하자, 휘트니가 멈추고 그들 쪽을 돌아본다. "이 걸레가 씨발 무슨 소리를 하는 건지 아는 사람?"
 			<<elseif $audiencepresent gte 1 and C.npc.Whitney.dom lte 10>>
-				The crowd starts to giggle, prompting Whitney to stop and click <<his>> tongue. "Stop making up shit!"
+				군중이 킥킥대기 시작하자, 휘트니가 멈추고 <<his>> 혀를 찬다. "개소리 지어내지 마!"
 			<<elseif $audiencepresent gte 1>>
-				The crowd starts to murmur, prompting Whitney to stop and scoff. "The slut's talking out of <<pher>> ass."
+				군중이 웅성거리기 시작하자, 휘트니가 멈추고 코웃음을 친다. "이 걸레가 <<pher>> 주둥이로 헛소리를 싸지르네."
 			<<else>>
-				<<He>> stops, face now flushed in anger. "I have no idea what you're talking about. None!"
+				<<He>>【이가】 멈추는데, 얼굴이 분노로 달아올라 있다. "무슨 소린지 하나도 모르겠네. 전혀!"
 			<</if>>
 		<</addPairedSpeechLine>>
 	<</if>>
@@ -57,48 +57,48 @@ _args[0] of the mock widget is $mockaction. */
 <<widget "pc-line-whitney-demand">>
 	<<if C.npc.Whitney.dom gte 15 or C.npc.Whitney.dom lte 10>>
 		<<addPairedSpeechLine "Whitney" "demand">>
-			<<pcLine>>"You can't just fuck me whenever you want, Whitney!"
+			<<pcLine>>"네 맘 내킬 때마다 날 따먹을 수 있는 건 아니야, 휘트니!"
 		<<npcLine>>
 			<<if C.npc.Whitney.dom gte 15>>
-				<<He>> sneers. "Stop making it so easy for me, then!"
+				<<He>>【이가】 비웃는다. "그럼 그렇게 쉽게 굴지를 말든가!"
 			<<else>>
-				<<He>> spits. "I can do whatever the hell I want!"
+				<<He>>【이가】 침을 뱉는다. "내 맘대로 할 거야, 씨발!"
 			<</if>>
 		<</addPairedSpeechLine>>
 	<<else>>
 		<<addSpeechLine "demand">>
-			"You can't just fuck me whenever you want, Whitney!"
+			"네 맘 내킬 때마다 날 따먹을 수 있는 건 아니야, 휘트니!"
 		<</addSpeechLine>>
 	<</if>>
 	<<if C.npc.Whitney.dom gte 15>>
 		<<addPairedSpeechLine "Whitney" "demand">>
-			<<pcLine>>"You're nothing without your little gang!"
+			<<pcLine>>"넌 그 잘난 패거리 없으면 아무것도 아니야!"
 		<<npcLine>>
 			<<if $enemyanger lte 100>>
-				"What the fuck did you just say to me?!"
+				"너 방금 나한테 씨발 뭐라고 했냐?!"
 			<<else>>
-				"Stupid whore. I don't need <<if $audiencepresent gte 1>>these<<else>>those<</if>> pricks to put you in your fucking place!"
+				"멍청한 창녀. 널 네 주제에 맞게 처박는 데 <<if $audiencepresent gte 1>>이<<else>>그<</if>> 새끼들은 필요도 없어!"
 			<</if>>
 		<</addPairedSpeechLine>>
 	<<elseif C.npc.Whitney.dom lte 10>>
 		<<addPairedSpeechLine "Whitney" "demand">>
-			<<pcLine>>"Do you like seeing me send your reputation down the gutter?!"
+			<<pcLine>>"내가 네 평판을 시궁창에 처박는 게 그렇게 좋아?!"
 		<<npcLine>>
 			<<if $enemyanger lte 100>>
-				<<He>> sneers. "Like I'll ever pass up the chance to make you look worse!"
+				<<He>>【이가】 비웃는다. "널 더 우습게 만들 기회를 내가 놓칠 것 같아?!"
 			<<else>>
-				<<He>> glares at you. "You really think you're doing some real damage to me? Think again!"
+				<<He>>【이가】 당신을 노려본다. "네가 나한테 진짜 타격이라도 주고 있다고 생각해? 꿈 깨!"
 			<</if>>
 		<</addPairedSpeechLine>>
 	<</if>>
 	<<if $loft_whitney gte 6>>
 		<<addPairedSpeechLine "Whitney" "demand">>
-			<<pcLine>>"Is hurting the person you said you love worth all this status?!"
+			<<pcLine>>"사랑한다던 사람을 상처 입히면서까지 지킬 만한 체면이야?!"
 		<<npcLine>>
 			<<if $enemyanger lte 100>>
-				<<He>> recoils, only to bounce back with a click of the tongue. "What the fuck are you talking about?!"
+				<<He>>【이가】 움찔하지만, 곧 혀를 차며 맞받아친다. "씨발 무슨 소리를 하는 거야?!"
 			<<else>>
-				<<He>> recoils, only to bounce back with a snarl. "Stop making me out to be some bleeding heart bastard!"
+				<<He>>【이가】 움찔하지만, 곧 으르렁거리며 맞받아친다. "날 무슨 마음 여린 새끼처럼 만들지 마!"
 			<</if>>
 		<</addPairedSpeechLine>>
 	<</if>>
@@ -106,19 +106,19 @@ _args[0] of the mock widget is $mockaction. */
 
 <<widget "pc-line-whitney-forgive">>
 	<<addSpeechLine "forgive">>
-		"Better a perpetrator than a victim, right?" you say. "I understand, and I forgive you."
+		"당하느니 가해자가 되는 게 낫다, 그거지?" 당신이 말한다. "이해해. 그리고 널 용서할게."
 	<</addSpeechLine>>
 	<<if $loft_whitney gte 6>>
 		<<addPairedSpeechLine "Whitney" "forgive">>
-			<<pcLine>>"You can be kind, Whitney," you say. "But I know that'll damn you in this town. I understand, and I forgive you."
+			<<pcLine>>"넌 다정해질 수 있어, 휘트니," 당신이 말한다. "하지만 이 동네에선 그게 네 발목을 잡겠지. 이해해. 그리고 널 용서할게."
 		<<npcLine>>
 			<<if $audiencepresent gte 1>>
-				<<He>> recoils, before trying to save face. "Does anyone have any idea what the fuck <<pshe>>'s talking about?"
+				<<He>>【이가】 움찔하더니, 체면을 지키려 애쓴다. "<<pshe>>【이가】 지금 씨발 무슨 소리 하는 건지 아는 사람 있냐?"
 			<<else>>
 				<<print either(
-					`<<He>> spits. "Kind? Me? You're getting a lot of wrong ideas here."`,
-					`<<He>> glares at you. "You don't know me at all, do you?!"`,
-					`<<He>> recoils. "Shut up!"`
+					`<<He>>【이가】 침을 뱉는다. "다정? 내가? 너 단단히 착각하고 있네."`,
+					`<<He>>【이가】 당신을 노려본다. "넌 날 하나도 모르잖아, 그렇지?!"`,
+					`<<He>>【이가】 움찔한다. "닥쳐!"`
 				)>>
 			<</if>>
 		<</addPairedSpeechLine>>
@@ -127,6 +127,6 @@ _args[0] of the mock widget is $mockaction. */
 
 <<widget "pc-line-whitney-moan">>
 	<<addSpeechLine "moan">>
-		"Use me, Whitney. I'm yours."
+		"날 이용해, 휘트니. 난 네 거야."
 	<</addSpeechLine>>
 <</widget>>

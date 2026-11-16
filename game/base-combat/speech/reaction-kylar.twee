@@ -4,18 +4,18 @@
 
 <<widget "pc-line-kylar-plead">>
 	<<addSpeechLine "plead">>
-		"Kylar... I thought you loved me..."
+		"카일라... 날 사랑하는 줄 알았는데..."
 	<</addSpeechLine>>
 <</widget>>
 
 <<widget "pc-line-kylar-demand">>
 	<<addSpeechLine "demand">>
-		"I'm not in the mood for your shit right now, Kylar."
+		"지금은 네 헛짓거리 받아 줄 기분 아니야, 카일라."
 	<</addSpeechLine>>
 <</widget>>
 
 <<widget "pc-line-kylar-moan">>
 	<<addSpeechLine "moan">>
-		"You're the only one I need, Kylar."
+		"내게 필요한 건 너뿐이야, 카일라."
 	<</addSpeechLine>>
 <</widget>>
