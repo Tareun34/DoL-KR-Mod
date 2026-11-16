@@ -1532,7 +1532,7 @@
 		<br><br>
 		베일리는 짜증스러운 표정을 짓지만, <<he>>【은는】 멈춰 서서 <<his>> 사무실 방향에서 몸을 돌린다.
 		<br><br>
-		Bailey scoffs and crosses <<his>> arms. "You owe me <<printmoney $rentMoney>>."
+		베일리는 코웃음을 치며 팔짱을 낀다. "넌 나한테 <<printmoney $rentMoney>> 빚졌어."
 		<<if $baileydefeatedchain gte 2>>
 			<<He>>【은는】 당신을 노려본다. "이번에도 계속 비협조적으로 나오면 쉽게 넘어가지 않을 거야."
 		<<elseif $baileydefeatedchain is 1>>
@@ -1542,7 +1542,7 @@
 		<</if>>
 		<br><br>
 		<<if $money gte $rentMoney>>
-			"I should be able to,"
+			"마련할 수 있을 거예요,"
 		<<else>>
 			"최선을 다해볼게요,"
 		<</if>>
@@ -2011,27 +2011,27 @@
 <<npc Bailey>>
 <<dancedifficulty 200 800 true>>
 <<if $danceSuccess>>
-<span class="green">You edge carefully out of Bailey's path,</span> keeping close to the wall as <<he>> passes. <<He>> glances at you in passing, saying nothing. <<lstress>><<stress -6>>
+<span class="green">당신은 조심스럽게 베일리가 지나갈 길에서 비켜서서,</span> <<he>>【이가】 지나가는 동안 벽에 바짝 붙어 있는다. <<He>>【은는】 지나가며 당신을 힐끗 볼 뿐, 아무 말도 하지 않는다. <<lstress>><<stress -6>>
 <<else>>
-You try to sidestep, <span class="red">but misjudge which way <<hes>> heading</span>, bumping hard into <<his>> shoulder and stepping squarely on <<his>> foot.
+당신은 옆으로 비켜서려 하지만, <span class="red"><<he>>【이가】 가는 방향을 잘못 읽는 바람에</span> <<his>> 어깨에 세게 부딪히고 <<his>> 발을 정통으로 밟고 만다.
 <br><br>
-<<He>> winces and stumbles back, managing to balance the supplies before using a free hand to roughly yank you aside. "Enough with the games."<<pain 1>><<gpain>>
+<<He>>【은는】 얼굴을 찡그리며 비틀비틀 물러서고, 간신히 식료품의 균형을 잡은 뒤 비어 있는 손으로 당신을 거칠게 옆으로 잡아끈다. "장난은 그만해."<<pain 1>><<gpain>>
 <</if>>
 <br><br>
-<<link [[Next|Orphanage]]>><<endevent>><</link>>
+<<link [[다음|Orphanage]]>><<endevent>><</link>>
 <br>
 
 :: Home Bailey Shove Stand
 <<npc Bailey>>
 <<if $speech_attitude is "meek">>
-You hold your ground, hoping Bailey will go around you.
+당신은 베일리가 돌아서 지나가 주기를 바라며 그 자리에 버티고 선다.
 <<elseif $speech_attitude is "bratty">>
-You stay right where you are, refusing to step aside.
+당신은 비켜서기를 거부하며 그 자리에 그대로 서 있는다.
 <<else>>
-You freeze in place, caught off guard before you can even react.
+미처 반응하기도 전에 허를 찔려 그 자리에 얼어붙는다.
 <</if>>
 <br><br>
-<<He>> doesn't so much as break stride. <<His>> elbow catches you hard as <<he>> passes, shoving you off balance. "Enough with the games."<<pain 1>><<gpain>>
+<<He>>【은는】 걸음을 늦추지조차 않는다. 지나가면서 <<His>> 팔꿈치가 당신을 세게 들이받아 균형을 무너뜨린다. "장난은 그만해."<<pain 1>><<gpain>>
 <br><br>
-<<link [[Next|Orphanage]]>><<endevent>><</link>>
+<<link [[다음|Orphanage]]>><<endevent>><</link>>
 <br>

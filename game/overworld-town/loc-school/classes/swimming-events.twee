@@ -727,35 +727,35 @@
 <</switch>>
 
 <br><br>
-<<link [[Next|Swimming Lesson]]>><<endevent>><</link>>
+<<link [[다음|Swimming Lesson]]>><<endevent>><</link>>
 
 :: Events Swimming Freed
 <<set $outside to 0>><<set $location to "pool">><<schooleffects>><<effects>>
 
-You swim to the side of the pool and turn around. Mason kneels and cuts through your bindings. "There. I hope another student didn't do this to you." <<He>> steps away.
+당신은 수영장 가장자리로 헤엄쳐 가서 몸을 돌린다. 메이슨이 무릎을 꿇고 결박을 끊어 준다. "됐다. 다른 학생이 이런 짓을 한 게 아니면 좋겠구나." <<He>>【은는】 물러선다.
 <br><br>
 
 <<endevent>>
 
-<<link [[Next|Swimming Lesson]]>><</link>>
+<<link [[다음|Swimming Lesson]]>><</link>>
 <br>
 
 :: Events Swimming Freed Refuse
 <<set $outside to 0>><<set $location to "pool">><<schooleffects>><<effects>>
 
 <<if $speech_attitude is "meek">>
-	"N-no," you say. "I should stay tied up."
+	"아, 아니에요." 당신이 말한다. "묶인 채로 있어야 해요."
 <<elseif $speech_attitude is "bratty">>
-	"Did I ask for help?" you say, glaring at the teacher.
+	"누가 도와달래요?" 당신이 선생님을 노려보며 말한다.
 <<else>>
-	"I'm fine. Thanks," you say.
+	"괜찮아요. 감사합니다." 당신이 말한다.
 <</if>>
 <br><br>
 
-Mason looks confused. "If you're sure. I don't think there's a rule forbidding bound <<= pcAreArmsBound("any") ? "arm" : "limb">>s while swimming. Just be careful, okay?"
+메이슨이 어리둥절한 표정을 짓는다. "정 그렇다면야. <<= pcAreArmsBound("any") ? "팔" : "팔다리">>【을를】 묶은 채 수영하면 안 된다는 규칙은 없는 것 같으니까. 그래도 조심해, 알았지?"
 <br><br>
 
 <<endevent>>
 
-<<link [[Next|Swimming Lesson]]>><</link>>
+<<link [[다음|Swimming Lesson]]>><</link>>
 <br>

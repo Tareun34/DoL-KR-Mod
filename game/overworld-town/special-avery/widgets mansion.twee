@@ -1,7 +1,7 @@
 :: Widgets Avery Mansion [widget]
 
 <<widget "avery_mansion_variables_debug">>
-	Rent time: $rentTime<br>
+	렌트 시간: $rentTime<br>
 	/*Avery card gift: <<print $avery_card_gift>><br>*/
 	<<if $avery_mansion>>
 	저택 부재 일수: <<print $avery_mansion.days_absent>><br>
@@ -827,50 +827,50 @@
 	<<if $avery_mansion.kneel is "refuse" and $avery_mansion.jobs.includes("knees")>>
 		<<set $avery_mansion.rage.assess += 1>>
 		<<if $debug>>
-			<i>No kneeling</i><br>
+			<i>무릎 꿇지 않음</i><br>
 		<</if>>
 	<<elseif !$avery_mansion.bow and $avery_mansion.jobs.includes("bow")>>
 		<<set $avery_mansion.rage.assess += 1>>
 		<<if $debug>>
-			<i>No bow</i><br>
+			<i>인사하지 않음</i><br>
 		<</if>>
 	<</if>>
 	<<if $avery_mansion.jobs.includes("meek") and !$speech_attitude_avery and $speech_attitude isnot "meek">>
 		<<set $avery_mansion.rage.assess += 1>>
 		<<if $debug>>
-			<i>Wrong demeanour</i><br>
+			<i>태도 불량</i><br>
 		<</if>>
 	<</if>>
 	<<if $avery_mansion.jobs.includes("maid") and !$worn.upper.type.includes("maid") and !$worn.lower.type.includes("maid") and !$worn.head.type.includes("maid")>>
 		<<set $avery_mansion.rage.assess += 1>>
 		<<set _avery_mansion_maid_failed to true>>
 		<<if $debug>>
-			<i>No maid clothes</i><br>
+			<i>메이드복 안 입음</i><br>
 		<</if>>
 	<</if>>
 	<<if !$avery_mansion.jobs.includes("maid") and $avery_mansion.jobs.includes("formal") and !$worn.upper.type.includes("formal") and !$worn.lower.type.includes("formal")>>
 		<<set $avery_mansion.rage.assess += 1>>
 		<<set _avery_mansion_formal_failed to true>>
 		<<if $debug>>
-			<i>No formal clothes</i><br>
+			<i>정장 안 입음</i><br>
 		<</if>>
 	<</if>>
 	<<if $avery_mansion.jobs.includes("hairstyle") and $hairtype isnot "neat">>
 		<<set $avery_mansion.rage.assess += 1>>
 		<<set $avery_mansion_hairstyle_failed to true>>
 		<<if $debug>>
-			<i>Hair wrong style</i><br>
+			<i>머리 스타일 틀림</i><br>
 		<</if>>
 	<</if>>
 	<<if $avery_mansion.jobs.includes("hairlength") and $hairlength gte 400>>
 		<<set $avery_mansion.rage.assess += 1>>
 		<<set $avery_mansion_hairlength_failed to true>>
 		<<if $debug>>
-			<i>Hair too long</i><br>
+			<i>머리가 너무 김</i><br>
 		<</if>>
 	<</if>>
 	<<if $debug>>
-		<i>Total rage assess:</i> <<print $avery_mansion.rage.assess>>
+		<i>총 분노 평가치:</i> <<print $avery_mansion.rage.assess>>
 		<br>
 	<</if>>
 <</widget>>
@@ -995,7 +995,7 @@
 			<<link [[도망친다|Mansion Chase Run]]>><</link>>
 			<br>
 		<<elseif Time.weekDay isnot 1 and Time.weekDay isnot 7 and Time.hour gt 9>>
-			"Long day," <<he>> says, managing a weak smile.
+			"긴 하루였어." <<he>>【이가】 애써 희미한 미소를 지으며 말한다.
 
 			<<avery_mansion_rage_party "normal">>
 			<<avery_mansion_dom_events>>
@@ -2549,7 +2549,7 @@
 	<br><br>
 
 	<<if $transformationParts.traits.chase isnot "disabled">>
-		Your heart races. <span class="green">The thrill of the chase invigorates you.</span> <<lstress>><<garousal>><<stress -8>><<arousal 200>><<transform fox 1>>
+		심장이 거세게 뛴다. <span class="green">쫓기는 스릴이 당신에게 활력을 불어넣는다.</span> <<lstress>><<garousal>><<stress -8>><<arousal 200>><<transform fox 1>>
 	<</if>>
 	<br><br>
 	
@@ -3132,9 +3132,9 @@
 
 			<<avery_housework_assess>>
 		<<elseif _avery_interrupt is "work">>
-			You hear the front gates rattle open, followed by a car driving through. It enters the garage, and a car door slams.
+			정문이 덜컥거리며 열리는 소리가 들리더니, 차 한 대가 들어온다. 차는 차고 안으로 들어가고, 쾅 하고 차 문 닫히는 소리가 난다.
 			<<if Time.weekDay isnot 1 and Time.weekDay isnot 7>>
-				Avery is home from work.
+				에이버리가 퇴근하고 돌아왔다.
 			<<else>>
 				에이버리가 집에 돌아왔다.
 			<</if>>
@@ -3701,7 +3701,7 @@
 
 			<<if $bus is "avery_garage">>
 				<<if $avery_valentines?.ready and !$avery_valentines.done and Time.monthDay is 14>>
-					<<icon "avery-car.png">><<link [[Valentine's Date|Avery Valentines]]>><<endevent>><</link>>
+					<<icon "avery-car.png">><<link [[발렌타인 데이트|Avery Valentines]]>><<endevent>><</link>>
 					<br><br>
 				<<elseif $avery_mansion.date_ready is true and Time.hour lte 21 and $averydatedone isnot 1>>
 					<<icon "avery-car.png">><<link [[데이트 (1:20)|Avery Date]]>><<endevent>><</link>>

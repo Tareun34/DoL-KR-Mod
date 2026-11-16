@@ -360,22 +360,22 @@
 <<set $outside to 0>><<set $location to "cafe">><<effects>>
 <<set $oceanbreezejob to 1>>
 
-"Splendid!" <<he>> says, grabbing your hand in both of <<his>> own and shaking. "I'm Sam, by the way. Welcome to the team. Come on, let me show you the ropes."
+"훌륭해요!" <<he>>【이가】 당신의 손을 양손으로 잡고 흔들며 말한다. "참, 전 샘이라고 해요. 우리 팀에 온 걸 환영해요. 자, 제가 일하는 요령을 알려 드릴게요."
 <br><br>
 
-Sam shows you around, conversing along the way. "It's your job to bring orders to the customers, ideally quickly. Most of the regulars are used to the wait, but the tourists think this is some chain shop and always want their food faster than we can get it out," <<he>> says with a huff.
+샘은 당신에게 이곳저곳을 보여 주며 이야기를 나눈다. "당신이 할 일은 손님들께 주문한 음식을 가져다드리는 거예요. 되도록 빨리요. 단골분들은 대부분 기다리는 데 익숙하지만, 관광객들은 여기가 무슨 체인점인 줄 알고 늘 우리가 내놓을 수 있는 것보다 빨리 음식을 달라고 하거든요." <<he>>【이가】 한숨을 푹 쉬며 말한다.
 <br><br>
 
-"Oh! Sometimes the mayor visits, make sure to give <<nnpc_him "Quinn">> quality service. <<nnpc_His "Quinn">> business is important. I suppose everyone's is, but... Well, you know what I mean." Sam smiles at you.
+"아! 가끔 시장님이 오시는데, <<nnpc_him "Quinn">>에게는 꼭 좋은 서비스를 해 드려야 해요. <<nnpc_His "Quinn">> 일은 중요하니까요. 뭐, 다들 중요하긴 하지만... 무슨 말인지 알죠?" 샘이 당신에게 미소 짓는다.
 <br><br>
 
-<<He>> leads you behind the counter, towards the cash register. "You might be working the register, Old Betsy. If she gets stuck, just give her a nudge and she'll work perfectly fine."
+<<He>>【은는】 당신을 카운터 뒤 금전등록기 쪽으로 안내한다. "계산대를 맡게 될 수도 있어요. 이 친구는 올드 벳시예요. 가끔 걸리는데, 그럴 땐 살짝 밀어 주기만 하면 멀쩡하게 잘 돌아가요."
 <br><br>
 
-You hear a muffled yell from behind the kitchen door, and it grabs Sam's attention. "Oh, I better go handle that. You'll get the hang of it soon, I promise!"
+주방 문 너머에서 먹먹한 고함 소리가 들려오고, 샘의 주의가 그쪽으로 쏠린다. "앗, 저거 처리하러 가 봐야겠네요. 금방 익숙해질 거예요, 정말이에요!"
 <br><br>
 
-With that, <<he>> leaves.
+그 말을 끝으로 <<he>>【은는】 자리를 뜬다.
 <br><br>
 
 <<link [[다음|Ocean Breeze]]>><<endevent>><</link>>
@@ -1025,7 +1025,7 @@ With that, <<he>> leaves.
 		<!-- Modified for Monster People -->
 		<<beastNEWinit 1 dog>>
 		<<if $rng gte 51 and beastSexEnabledForType("dog", $monster is 1)>>
-			Sam asks you to take some trash to the dumpster beside the cafe. Stood beside the dumpster, however, is a stray <<beasttype>>. It growls as you approach.
+			샘이 카페 옆 쓰레기통에 쓰레기를 버려 달라고 부탁한다. 하지만 쓰레기통 옆에는 떠돌이 <<beasttype>>【이가】 서 있다. 당신이 다가가자 으르렁거린다.
 			<br><br>
 
 			<<link [[상관없이 계속한다|Ocean Breeze Dumpster Dog]]>><<stress 6>><</link>><<gstress>>
@@ -2520,21 +2520,21 @@ With that, <<he>> leaves.
 <<CafeExhibitionismLegsPartNormalTerminate>>
 
 :: Cafe Exhibitionism Legs Part Panty Takeoff
-You carefully put your fork down before making your way to the cafe bathroom.
-With the door safely locked you reach under your clothes and remove your underwear, stopping for a moment to feel the thrill of what you're about to do.
-With your $worn.under_lower.name off you unlatch the door to head back to your plate and the unsuspecting <<person>>.
+조심스럽게 포크를 내려놓고 카페 화장실로 향한다.
+문을 안전하게 잠근 뒤, 옷 속으로 손을 넣어 속옷을 벗는다. 잠시 멈춰 서서 앞으로 할 일에 대한 스릴을 느낀다.
+$worn.under_lower.name【을를】 벗은 채 문을 열고, 당신의 접시와 아무것도 모르는 <<person>>에게로 돌아간다.
 <br><br>
-The <<person>> looks up at you discreetly as you seat yourself,
-and not wanting to ruin the surprise you make sure your skirt hem is safely covering your exposed <<genitals>> as you take your seat.
-You decide to play a little at first, fidgeting with your legs as you slowly savour your $phase.
-You want <<his>> full attention for what you plan next.
+당신이 자리에 앉자 그 <<person>>【은는】 슬쩍 당신을 올려다본다.
+놀라움을 망치고 싶지 않아서, 자리에 앉을 때 치맛단이 드러난 <<genitals>>【을를】 확실히 가리도록 한다.
+처음에는 조금 장난을 치기로 하고, 다리를 꼼지락거리며 $phase【을를】 천천히 음미한다.
+다음에 할 일을 위해서는 <<his>> 관심을 온전히 끌어야 한다.
 <br><br>
-Slowly, you part your knees a little. At first just enough to make <<him>> wonder if <<hes>> seeing things,
-and then as you lean down to help yourself to a particularly tasty looking piece of <<if $phase is "pancakes">>pancake<<else>>crepe<</if>> you part them completely,
-giving <<him>> a complete unobstructed view of your inner thighs and everything in between.
-The <<persons>> eyes visibly widen in shock as <<he>> stares at your bare <<genitals>>, unsure of how to react to your clearly deliberate act of exhibitionism.
+천천히 무릎을 조금 벌린다. 처음에는 <<him>>【이가】 헛것을 본 건 아닌지 갸웃할 만큼만 벌렸다가,
+유난히 맛있어 보이는 <<if $phase is "pancakes">>팬케이크<<else>>크레이프<</if>> 조각을 집으려 몸을 숙이며 무릎을 완전히 벌려,
+<<him>>에게 당신의 허벅지 안쪽과 그 사이의 모든 것을 가리는 것 하나 없이 보여 준다.
+<<persons>> 눈이 충격으로 눈에 띄게 커진다. <<he>>【은는】 당신의 맨 <<genitals>>【을를】 빤히 쳐다보며, 명백히 의도적인 노출 행위에 어떻게 반응해야 할지 모른다.
 <<if isHermOrCrossdresser() and $settings.nudeGenderPerception !== 0>>
-	From the look on <<his>> face it's clear <<he>> was not expecting you to
+	<<his>> 표정을 보니 <<he>>【은는】 당신이
 	<<if $player.penisExist and $player.vaginaExist>>
 		자지와 보지를 둘 다 가지고 있을 줄은 예상하지 못한 게 분명하다.
 	<<else>>

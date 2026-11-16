@@ -36,9 +36,9 @@
 	<</if>>
 <</if>>
 <<if $halloween is 1>>
-	Jack-o'-lanterns, skeletons, and spiders decorate the houses.
+	잭오랜턴, 해골, 거미가 집들을 장식하고 있다.
 	<<if $halloween_domus_pumpkin>>
-		The best jack-o'-lanterns hang from the orphanage, drawing attention from passers-by.
+		가장 멋진 잭오랜턴들이 고아원에 걸려 있어 지나가는 사람들의 눈길을 끈다.
 		<<if Time.dayState is "night">>
 			<<icon "jack-o-lantern-light.png">>
 		<<else>>
@@ -58,7 +58,7 @@
 	<<orgasmstreet>>
 <</if>>
 <<if $tutorial is 0 and !$debug>><<set $tutorial to 1>>
-	<<generate1>><<person1>>As you leave the orphanage you bump into a <<person>> passing by. <<He>> staggers back and looks at you with anger, but <<his>> rage turns to lechery as <<he>> beholds you. "You're the cutest thing I've seen all week! Come 'ere."
+	<<generate1>><<person1>>고아원을 나서다가 지나가던 <<person>>【와과】 부딪친다. <<He>>【은는】 비틀거리며 물러서더니 화난 얼굴로 당신을 쳐다보지만, 당신을 보자 <<his>> 분노는 욕정으로 바뀐다. "이번 주에 본 것 중에 제일 귀엽네! 이리 와."
 	<br><br>
 	<<link [[다음|Tutorial]]>><<set $molestationstart to 1>><<set $tutorialExit to "Domus Street">><</link>>
 <<else>>
@@ -252,7 +252,7 @@
 			<</if>>
 
 			<<if $avery_valentines?.invite and !$avery_valentines.done and Time.monthName is "February" and Time.monthDay is 14 and Time.hour gte 20 and !$avery_mansion>>
-				Avery waits for you by <<nnpc_his "Avery">> car.
+				에이버리가 <<nnpc_his "Avery">> 차 옆에서 당신을 기다리고 있다.
 				<br>
 				<<icon "avery-car.png">><<link [[발렌타인 데이트|Avery Valentines]]>><</link>>
 				<br><br>
@@ -290,10 +290,10 @@
 			<</if>>
 			<<if $halloween and ($pumpkin_carving + ($pumpkin_carving_knowledge?.length * 5)) gte 15 and !$halloween_domus_pumpkin and $exposed lte 0>>
 				<<if $foodstuff.pumpkin.amount gte 7>>
-					<<icon "pumpkin-carving.png">><<link [[Decorate the orphanage exterior with pumpkins (2:00, 7 pumpkins)|Domus Pumpkins]]>><<pass 120>><<hope 3>><<reb 3>><<set $halloween_domus_pumpkin to 1>><<tending_give "pumpkin" -7>><</link>> | <span class="tangerine">Pumpkin Carver</span> <<gghope>><<ggreb>>
+					<<icon "pumpkin-carving.png">><<link [[고아원 바깥을 호박으로 장식한다 (2:00, 호박 7개)|Domus Pumpkins]]>><<pass 120>><<hope 3>><<reb 3>><<set $halloween_domus_pumpkin to 1>><<tending_give "pumpkin" -7>><</link>> | <span class="tangerine">호박 조각</span> <<gghope>><<ggreb>>
 					<br>
 				<<else>>
-					<<ind>><span class="lblue">You could decorate the orphanage exterior with jack-o'-lanterns if you had seven pumpkins.</span> | <span class="tangerine">Knowledge: Pumpkin Carving</span>
+					<<ind>><span class="lblue">호박이 일곱 개 있으면 고아원 바깥을 잭오랜턴으로 장식할 수 있을 것 같다.</span> | <span class="tangerine">지식: 호박 조각</span>
 					<br>
 				<</if>>
 			<</if>>
@@ -373,14 +373,14 @@
 :: Domus Pumpkins
 <<effects>>
 <<pumpkin_prop>>
-You set up a small table outside the orphanage, in clear view of the street. You're not sure how Bailey will feel about your decorations, but you don't think <<nnpc_he "Bailey">> would take them down. Not if you make enough of a show of putting them up.
+당신은 고아원 바깥, 거리에서 잘 보이는 곳에 작은 탁자를 펼친다. 베일리가 이 장식을 어떻게 생각할지는 모르겠지만, <<nnpc_he "Bailey">>【이가】 떼어 버리지는 않을 것 같다. 장식을 다는 모습을 사람들에게 충분히 보여 준다면 말이다.
 <br><br>
 
-You carve seven faces into seven pumpkins, donating the pulp to some culinary-inclined residents, then hang them from around the street-facing part of the orphanage. They look fitting there, hanging from the old building, as if they could be a permanent fixture.
+당신은 호박 일곱 개에 얼굴 일곱 개를 조각하고, 파낸 속은 요리에 관심 있는 아이들에게 나눠 준 뒤, 고아원의 거리 쪽 벽 곳곳에 매단다. 낡은 건물에 매달린 호박들은 원래부터 그 자리에 있었던 것처럼 잘 어울린다.
 <br><br>
 
-Job done, you carry the table back inside. A small crowd has gathered by the time you return, admiring your handiwork.
+일을 마치고 탁자를 안으로 들여놓는다. 다시 나와 보니 작은 무리가 모여 당신의 솜씨에 감탄하고 있다.
 <br><br>
 
-<<link [[Next|Domus Street]]>><<set $eventskip to 1>><</link>>
+<<link [[다음|Domus Street]]>><<set $eventskip to 1>><</link>>
 <br>

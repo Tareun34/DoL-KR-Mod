@@ -325,11 +325,11 @@
 			<br>
 
 		<<case 10>>
-			<<npc Bailey>>Bailey approaches, showing no sign of stepping aside. <<He>> has <<his>> arms full of supplies for the kitchen.
+			<<npc Bailey>>베일리가 비켜설 기색도 없이 다가온다. <<He>>【은는】 부엌에 쓸 식료품을 한가득 안고 있다.
 			<br><br>
-			<<link [[Dodge|Home Bailey Shove Dodge]]>><<endevent>><</link>><<dancedifficulty 200 800>>
+			<<link [[피한다|Home Bailey Shove Dodge]]>><<endevent>><</link>><<dancedifficulty 200 800>>
 			<br>
-			<<link [[Stand still|Home Bailey Shove Stand]]>><<endevent>><</link>>
+			<<link [[가만히 서 있는다|Home Bailey Shove Stand]]>><<endevent>><</link>>
 			<br>
 
 		<<case 11>>
@@ -404,13 +404,13 @@
 		<<case 15>>
 			<<generatey1>><<generatey2>><<generatey3>>
 			<<if $mine?.freed isnot 1>>
-				You overhear two orphans talking.
+				고아 두 명이 이야기하는 것을 엿듣게 된다.
 				<br><br>
-				"I haven't seen <<person3>><<him>> in a while, have you?" a <<person1>><<person>> asks.
+				"요즘 <<person3>><<him>>【을를】 통 못 봤는데, 너는 봤어?" <<person1>><<person>>【이가】 묻는다.
 				<br>
-				"The last I saw, <<person3>><<he>> was heading to look for work at the flats," 
-				a <<person2>><<person>> answers. "But that was weeks ago. I'm worried that <<person3>><<he>>'ll never show up again,<<if !$town_projects.bridge gte 4>> just like the rest of them.<</if>>" 
-				The <<person1>><<person>> looks dejected.
+				"마지막으로 봤을 때 <<person3>><<he>>【은는】 아파트 쪽에 일자리 구하러 간다고 했어." 
+				<<person2>><<person>>【이가】 대답한다. "근데 그게 벌써 몇 주 전이야. <<person3>><<he>>【이가】 다시는 안 나타날까 봐 걱정돼.<<if !$town_projects.bridge gte 4>> 다른 애들처럼 말이야.<</if>>" 
+				<<person1>><<person>>【은는】 풀이 죽은 표정이다.
 				<<if $town_projects.bridge gte 4>>
 					<<llhope>><<hope -3>>
 				<<else>>
@@ -418,21 +418,21 @@
 				<</if>>
 				<<gstress>><<stress 5>><<gtrauma>><<trauma 5>>
 			<<else>>
-				You overhear three orphans talking.
+				고아 세 명이 이야기하는 것을 엿듣게 된다.
 				<br><br>
-				"Tell us about the escape from the mines again!" a <<person1>><<person>> exclaims.
+				"광산에서 탈출한 이야기 또 해줘!" <<person1>><<person>>【이가】 외친다.
 				<br>
-				"I've told you this story several times already," a <<person3>><<person>> says.
+				"그 얘기는 벌써 몇 번이나 했잖아." <<person3>><<person>>【이가】 말한다.
 				<br>
-				"But it gets better every time," a <<person2>><<person>> pleads, <<his>> eyes wide.
+				"그래도 할 때마다 더 재밌어지잖아." <<person2>><<person>>【이가】 눈을 동그랗게 뜨고 조른다.
 				<br>
-				"Fine," the <<person3>><<person>> sighs. "So–"<<gghope>><<hope 3>><<ggreb>><<reb 3>>
+				"알았어." <<person3>><<person>>【이가】 한숨을 쉰다. "그러니까–"<<gghope>><<hope 3>><<ggreb>><<reb 3>>
 				<br><br>
-				You sneak away feeling good about yourself. <<llstress>><<stress -20>><<lltrauma>><<trauma -20>>
+				당신은 뿌듯한 기분으로 살그머니 자리를 뜬다. <<llstress>><<stress -20>><<lltrauma>><<trauma -20>>
 			<</if>>
 			<br><br>
 
-			<<link [[Next|Orphanage]]>><<endevent>><</link>>
+			<<link [[다음|Orphanage]]>><<endevent>><</link>>
 			<br>
 	<</switch>>
 <</widget>>
@@ -950,20 +950,20 @@
 <</widget>>
 
 <<widget "gardenStem">>
-	Something brushes against your leg. You shake it off, assuming it an insect, but it happens again. You look down and see a stem curling around your ankle.
+	무언가가 다리를 스친다. 벌레겠거니 하고 털어내지만, 또다시 스친다. 내려다보니 줄기 하나가 발목을 휘감고 있다.
 	<br><br>
 
-	<<link [[Shake it off|Garden Stem Shake]]>><</link>>
+	<<link [[털어낸다|Garden Stem Shake]]>><</link>>
 	<br>
-	<<link [[Look closer|Garden Stem Look]]>><</link>>
+	<<link [[자세히 본다|Garden Stem Look]]>><</link>>
 	<br>
 <</widget>>
 
 <<widget "gardenScent">>
 	<<hallucinogen 60>>
-	A strange scent rises from the plants as you water. You feel lightheaded. <<ghallucinogens>><<if $backgroundTraits.includes("plantlover")>><<arousal 6>><<garousal>><</if>>
+	물을 주는데 식물들에서 묘한 향기가 피어오른다. 머리가 어질어질하다. <<ghallucinogens>><<if $backgroundTraits.includes("plantlover")>><<arousal 6>><<garousal>><</if>>
 	<br><br>
 
-	<<link [[Next|Garden Flowers]]>><</link>>
+	<<link [[다음|Garden Flowers]]>><</link>>
 	<br>
 <</widget>>

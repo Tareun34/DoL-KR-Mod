@@ -33,11 +33,11 @@
 	<</if>>
 	<<stray_happiness_text>>
 	<<generateBeastVictim 1 dog>>
-	A <<beasttype>> watches you through the bars.
+	<<beasttype>>【이가】 창살 너머로 당신을 지켜본다.
 	<<if !Time.openingHours() and Time.hour isnot $closinghour>>
 		<br>
 		<<if hasSexStat("deviancy", 2) and $pound.sneak is 0 and beastSexEnabledForType("dog", $monster is 1)>>
-			<<prisonicon "cell">><<link [[Tease (0:05)|Pound Tease]]>><<pass 5>><<set $pound.sneak to 1>><<arousal 600>><</link>><<deviant2>><<garousal>>
+			<<prisonicon "cell">><<link [[유혹한다 (0:05)|Pound Tease]]>><<pass 5>><<set $pound.sneak to 1>><<arousal 600>><</link>><<deviant2>><<garousal>>
 			<br>
 		<</if>>
 		<<if $pound.progress is 4>>
@@ -213,7 +213,7 @@
 
 <<endevent>>
 <<generate1>><<generate2>><<generate3>><<generate4>><<generate5>><<generate6>><<person1>>
-The door slams shut behind the police, and the pound staff get to work. A <<person>> retrieves a muzzle from the store room, another a collar and leash. "Get <<person2>><<pher>> clothes off," says a <<person>>. <span class="red">"Dogs don't wear clothes."</span>
+경찰 뒤로 문이 쾅 닫히고, 보호소 직원들이 일을 시작한다. <<person>>【이가】 창고에서 입마개를 가져오고, 다른 한 명은 목줄과 가죽끈을 가져온다. "<<person2>><<pher>> 옷 벗겨." <<person>>【이가】 말한다. <span class="red">"개는 옷을 입지 않으니까."</span>
 <br><br>
 
 그들이 당신을 둘러싼다. 싸워서 빠져나가야 할 것이다. 그들은 수가 많고, 당신의 손은 묶여 있으며, 실패하면 무방비 상태가 될 것이다.
@@ -276,7 +276,7 @@ The door slams shut behind the police, and the pound staff get to work. A <<pers
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
-	<<link [[Next|Pound Free Submit]]>><<set $phase to "caught">><</link>>
+	<<link [[다음|Pound Free Submit]]>><<set $phase to "caught">><</link>>
 	<br>
 <</if>>
 
@@ -316,7 +316,7 @@ The door slams shut behind the police, and the pound staff get to work. A <<pers
 	<<else>>
 		<<badEndTracking "Pound" { reason: "poundSubmitted" }>>
 	<</if>>
-	Hands reach from all around, and rip the clothes from your body. They push you onto your stomach. Someone pushes a boot between your shoulders as they reach down to affix a muzzle around your mouth, and a collar and leash around your neck. They remove the handcuffs, at least.
+	사방에서 손들이 뻗어와 당신의 몸에서 옷을 찢어낸다. 그들은 당신을 엎드리게 한다. 누군가 당신의 어깨 사이를 장화로 짓누른 채 몸을 숙여 입에 입마개를, 목에 목줄과 가죽끈을 채운다. 그래도 수갑은 풀어 준다.
 	<br><br>
 
 	<<generate1>><<person1>>
@@ -431,7 +431,7 @@ The door slams shut behind the police, and the pound staff get to work. A <<pers
 
 <<generateBeastVictim 6 dog>>
 <<if beastSexEnabledForType("dog", $monster is 1)>>
-	"Open the cages!"
+	"우리 열어!"
 	<br><br>
 	<<bind>>
 	직원들이 당신의 팔과 우리 창살 주위로 가죽끈을 묶어 당신을 고정시킨다. 누군가 당신의 <<bottom>>【을를】 때린다. "자, 이 잡종들아. 참을 수 없다는 거 알아."
@@ -447,7 +447,7 @@ The door slams shut behind the police, and the pound staff get to work. A <<pers
 	<<generate1>><<person1>>
 	직원들은 계속해서 당신을 학대한다. 그들은 당신에게 물건 가져오기 놀이를 시키고, 개밥그릇으로 먹게 하는 등 다른 굴욕적인 행동을 시킨다. 마침내, 그들은 가죽끈을 풀고 당신을 우리 중 하나에 밀어 넣고 뒤에서 잠근다. "잘 자." 그들은 웃으며 걸어간다. <<lllpound_status>><<pound_status -30>><<gggtrauma>><<gggstress>><<trauma 18>><<stress 18>><<detach_leash>>
 	<br><br>
-	<<link [[Next|Pound Cage]]>><<endevent>><</link>>
+	<<link [[다음|Pound Cage]]>><<endevent>><</link>>
 	<br>
 <</if>>
 <br><br>
@@ -537,7 +537,7 @@ The door slams shut behind the police, and the pound staff get to work. A <<pers
 	직원들은 계속해서 당신을 학대한다. 그들은 당신에게 물건 가져오기 놀이를 시키고, 개밥그릇으로 먹게 하는 등 다른 굴욕적인 행동을 시킨다. 마침내, 그들은 가죽끈을 풀고 당신을 우리 중 하나에 밀어 넣고 뒤에서 잠근다. "잘 자." <<person>>【이가】 말한다. "네 훈련은 내일부터 시작이야." 직원들은 웃으며 걸어간다.<<detach_leash>>
 	<<pass 60>>
 	<br><br>
-	<<link [[Next|Pound Cage]]>><<endevent>><</link>>
+	<<link [[다음|Pound Cage]]>><<endevent>><</link>>
 	<br>
 <</if>>
 
@@ -861,9 +861,9 @@ The door slams shut behind the police, and the pound staff get to work. A <<pers
 <br><br>
 
 <<if random(1, 2) is 2>>
-	They swarm towards the bowls, ignoring you and the other staff.
+	녀석들은 당신과 다른 직원들은 아랑곳하지 않고 그릇으로 몰려든다.
 	<<generateBeastVictim 2 dog>>
-	An emaciated <<beasttype 0>> tries to push <<bhis 0>> way through, but is too weak. Another <<beasttype 1>> jostles <<bhim 0>> aside. <<bHe 0>> lies down, defeated.
+	수척한 <<beasttype 0>>【이가】 <<bhis 0>> 길을 비집고 들어가려 하지만 힘이 모자란다. 다른 <<beasttype 1>>【이가】 <<bhim 0>>【을를】 밀쳐낸다. <<bHe 0>>【은는】 포기한 듯 바닥에 눕는다.
 	<br><br>
 
 	<<link [[다른 녀석들이 공평하게 행동하게 만든다|Pound Work Feed Soothe]]>><</link>><<tendingdifficulty 1 400>>
@@ -918,8 +918,8 @@ The door slams shut behind the police, and the pound staff get to work. A <<pers
 <<effects>>
 
 <<generateBeastVictim 1 dog>><<wearProp "brush">>
-<<if $slimePoundTask>>You follow the <<= numberOfEarSlime() gte 2 ? "slimes'" : "slime's">> command to do a specific task.<<unset $slimePoundTask>><</if>>
-Brush in hand, you enter one of the cages.
+<<if $slimePoundTask>>당신은 특정 임무를 수행하라는 <<= numberOfEarSlime() gte 2 ? "슬라임들의" : "슬라임의">> 명령을 따른다.<<unset $slimePoundTask>><</if>>
+솔을 손에 들고, 당신은 우리 중 하나로 들어간다.
 <br><br>
 
 <<cleareventpool>>
@@ -951,7 +951,7 @@ Brush in hand, you enter one of the cages.
 	<<link [[더 온순한 동물을 찾아 빗질한다|Pound Work Brush Find]]>><<endevent>><</link>>
 	<br>
 	<<if beastSexEnabledForType("dog", $monster is 1)>>
-		<<link [[Act like a dog to put it at ease|Pound Work Brush Act]]>><</link>><<deviant1>>
+		<<link [[개처럼 행동해서 안심시킨다|Pound Work Brush Act]]>><</link>><<deviant1>>
 		<br>
 	<</if>>
 <</addinlineevent>>
@@ -1060,7 +1060,7 @@ Brush in hand, you enter one of the cages.
 
 <<wearProp "brush">>
 <<generateBeastVictim 1 dog>>
-You find a gentler creature to brush instead. Mostly because <<bhes>> asleep.
+당신은 대신 더 온순한 녀석을 찾아 빗질한다. 무엇보다 <<bhes>>【이가】 잠들어 있기 때문이다.
 <br><br>
 
 <<poundEndEvent>>
@@ -1396,7 +1396,7 @@ You find a gentler creature to brush instead. Mostly because <<bhes>> asleep.
 <<effects>><<wearProp "bucket">>
 
 <<generateBeastVictim 1 dog>>
-<<if $slimePoundTask>>You follow the <<= numberOfEarSlime() gte 2 ? "slimes'" : "slime's">> command to do a specific task.<<unset $slimePoundTask>><</if>>
+<<if $slimePoundTask>>당신은 특정 임무를 수행하라는 <<= numberOfEarSlime() gte 2 ? "슬라임들의" : "슬라임의">> 명령을 따른다.<<unset $slimePoundTask>><</if>>
 
 당신은 양동이를 손에 들고 우리 중 하나로 들어간다.
 
@@ -1428,7 +1428,7 @@ You find a gentler creature to brush instead. Mostly because <<bhes>> asleep.
 	<<link [[달랜다|Pound Work Wash Soothe]]>><</link>><<tendingdifficulty 1 800>>
 	<br>
 	<<if hasSexStat("deviancy", 3) and beastSexEnabledForType("dog", $monster is 1)>>
-		<<link [[Use your hand|Pound Work Wash Hand]]>><</link>><<deviant3>>
+		<<link [[손을 사용한다|Pound Work Wash Hand]]>><</link>><<deviant3>>
 	<</if>>
 <</addinlineevent>>
 
@@ -1441,7 +1441,7 @@ You find a gentler creature to brush instead. Mostly because <<bhes>> asleep.
 	<<link [[진정시킨다|Pound Work Wash Excited]]>><<set $phase to "calm">><</link>><<tendingdifficulty 1 800>>
 	<br>
 	<<if beastSexEnabledForType("dog", $monster is 1)>>
-		<<link [[Force <<bhim>> to stay still|Pound Work Wash Excited]]>><<set $phase to "force">><</link>><<physiquedifficulty 1 $physiquemax>>
+		<<link [[<<bhim>>【을를】 억지로 가만히 있게 한다|Pound Work Wash Excited]]>><<set $phase to "force">><</link>><<physiquedifficulty 1 $physiquemax>>
 	<</if>>
 <</addinlineevent>>
 
@@ -1576,8 +1576,8 @@ You find a gentler creature to brush instead. Mostly because <<bhes>> asleep.
 <<effects>><<wearProp "dog leash">>
 
 <<generateBeastVictim 5 dog>>
-<<if $slimePoundTask>>You follow the <<= numberOfEarSlime() gte 2 ? "slimes'" : "slime's">> command to do a specific task.<<unset $slimePoundTask>><</if>>
-You attach leashes to five <<beastsplural>>. They're eager for the exercise, and don't resist. Tails wagging, they pull you through the front yard and onto the street beyond.
+<<if $slimePoundTask>>당신은 특정 임무를 수행하라는 <<= numberOfEarSlime() gte 2 ? "슬라임들의" : "슬라임의">> 명령을 따른다.<<unset $slimePoundTask>><</if>>
+<<beastsplural>> 다섯 마리에게 목줄을 채운다. 녀석들은 운동하고 싶어 안달이 나서 저항하지 않는다. 꼬리를 흔들며, 녀석들은 당신을 끌고 앞마당을 지나 그 너머의 거리로 나간다.
 <br><br>
 <<link [[통제권을 되찾는다|Pound Work Walk Wrestle]]>><</link>><<physiquedifficulty 1 18000>>
 <br>
@@ -1754,7 +1754,7 @@ You attach leashes to five <<beastsplural>>. They're eager for the exercise, and
 <br><br>
 
 <<if random(1, 2) and beastSexEnabledForType("dog", $monster is 1)>>
-	One <<beasttype 0>> sniffs a strange pink flower.
+	<<beasttype 0>> 한 마리가 이상한 분홍색 꽃 냄새를 맡는다.
 	<<if $tending gte 600>>
 		<span class="green">당신은 그것을 알아본다,</span> <span class="purple">그리고 그것이 위험하다는 것을 안다.</span>
 		<br><br>
@@ -2174,9 +2174,9 @@ You attach leashes to five <<beastsplural>>. They're eager for the exercise, and
 <br><br>
 
 <<if random(1, 2) is 2>>
-	The <<beastsplural>> have a lot of energy, and it's a job to keep them from running off in different directions.
+	<<beastsplural>>【은는】 에너지가 넘쳐서, 제각기 다른 방향으로 달려가지 못하게 붙잡아 두는 것만으로도 일이다.
 	<<if hasSexStat("deviancy", 5) and beastSexEnabledForType("dog", $monster is 1)>>
-		<span class="lewd">A lewd thought strikes you.</span> You're alone out here, well-hidden from view. You know one way you could tire the <<beastsplural>> out.
+		<span class="lewd">음란한 생각이 스쳐 지나간다.</span> 이곳에는 당신 혼자이고, 사람들 눈에도 잘 띄지 않는다. <<beastsplural>>【을를】 지치게 할 방법을 한 가지 알고 있다.
 		<br><br>
 
 		<<link [[유혹한다|Pound Work Walk Sex]]>><<set $sexstart to 1>><</link>><<deviant5>>
@@ -3048,7 +3048,7 @@ You attach leashes to five <<beastsplural>>. They're eager for the exercise, and
 <<link [[쓰다듬는다|Pound Work Brush Clean End]]>><<set $phase to 1>><</link>>
 <br>
 <<if hasSexStat("deviancy", 2) and beastSexEnabledForType("dog", $monster is 1)>>
-	<<link [[Present your backside|Pound Work Brush Clean Sex]]>><<set $sexstart to 1>><</link>><<deviant2>>
+	<<link [[엉덩이를 내민다|Pound Work Brush Clean Sex]]>><<set $sexstart to 1>><</link>><<deviant2>>
 	<br>
 <</if>>
 

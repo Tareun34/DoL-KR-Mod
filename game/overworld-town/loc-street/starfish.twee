@@ -258,34 +258,34 @@
 <</if>>
 <br><br>
 
-<<link [[Next|Starfish Street]]>><<endevent>><</link>>
+<<link [[다음|Starfish Street]]>><<endevent>><</link>>
 
 :: Starfish Musician
 <<effects>>
 
 <<if $phase is 0>>
-	You smile politely and move on, the music fading behind you as the crowd swallows you up.
+	당신은 예의 바르게 미소 짓고 지나간다. 인파에 묻히면서 음악 소리가 등 뒤로 멀어진다.
 <<elseif $phase is 1>>
-	You stop for a moment and let the music wash over you.
+	당신은 잠시 멈춰 서서 음악에 몸을 맡긴다.
 	<br><br>
 
-	The noise of the promenade seems to fall away. You stay until the song ends, then carry on your way. <<stress -6>><<lstress>>
+	산책로의 소음이 사라지는 것만 같다. 당신은 노래가 끝날 때까지 머물다가 다시 가던 길을 간다. <<stress -6>><<lstress>>
 <<elseif $phase is 2>>
-	The tune is familiar enough that you find yourself singing along under your breath.
+	익숙한 곡이라 어느새 당신도 작게 따라 부르고 있다.
 	<br><br>
 
 	<<if $english gte 500>>
-		The <<person>> raises an eyebrow. As the song carries on, you find your footing, <span class="green">matching the melody without much effort.</span> A few tourists slow down to have a listen.
+		<<person>>【이가】 한쪽 눈썹을 치켜올린다. 노래가 이어지면서 당신은 감을 잡고, <span class="green">큰 힘 들이지 않고 멜로디를 맞춰 부른다.</span> 관광객 몇 명이 걸음을 늦추고 귀를 기울인다.
 		<br><br>
 
-		When the song ends, <<he>> gives you a pleased smile.
+		노래가 끝나자 <<he>>【은는】 흡족한 미소를 짓는다.
 		<br><br>
 
-		"Hey, you can actually sing." <<He>> laughs, shaking <<his>> head. "Seriously though, that was lovely. Come back any time." <<stress -8>><<lstress>>
+		"이야, 노래 좀 하는데." <<He>>【은는】 고개를 저으며 웃는다. "아니, 진짜로 좋았어. 언제든 또 와." <<stress -8>><<lstress>>
 	<<else>>
-		<span class="red">You stumble over a few words and lose your place.</span> The <<person>> chuckles but doesn't comment on it.<<stress 2>><<gstress>>
+		<span class="red">가사 몇 군데에서 버벅대다 어디까지 불렀는지 놓치고 만다.</span> <<person>>【은는】 킥킥 웃지만 따로 뭐라 하지는 않는다.<<stress 2>><<gstress>>
 	<</if>>
 <</if>>
 <br><br>
 
-<<link [[Next|Starfish Street]]>><<endevent>><</link>>
+<<link [[다음|Starfish Street]]>><<endevent>><</link>>
