@@ -133,9 +133,9 @@ function printTime(minutes, numbersOnly) {
 	} else {
 		// ex: "5 hours and 29 minutes"
 		const array = [];
-		if (hours) array.push(`${hours} ${hours === 1 ? "hour" : "hours"}`);
-		if (leftoverMinutes) array.push(`${leftoverMinutes} ${leftoverMinutes === 1 ? "minute" : "minutes"}`);
-		return array.join(" and ");
+		if (hours) array.push(`${hours}${hours === 1 ? "시간" : "시간"}`);
+		if (leftoverMinutes) array.push(`${leftoverMinutes}${leftoverMinutes === 1 ? "분" : "분"}`);
+		return array.join(" ");
 	}
 }
 window.printTime = printTime;
