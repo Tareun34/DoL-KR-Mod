@@ -162,6 +162,23 @@ def _normalise_macro_body(body):
     return WS_RE.sub(" ", s).strip()
 
 
+STRING_ARG_RE = re.compile(r'"((?:[^"\\]|\\.)*)"|\'((?:[^\'\\]|\\.)*)\'')
+PASSAGE_ARG_MACROS = {"link", "button", "goto"}
+PURE_STRING_ARGS_RE = re.compile(r'(?:\s*(?:"(?:[^"\\]|\\.)*"|\'(?:[^\'\\]|\\.)*\'))+\s*')
+
+
+def _passage_arg(name, args):
+    """The passage-name string argument of <<link>>/<<button>> (second string) or <<goto>> (first), if any."""
+    if name.lower() not in PASSAGE_ARG_MACROS:
+        return None
+    if not PURE_STRING_ARGS_RE.fullmatch(args.strip()):
+        return None  # labels with links, templates or expressions: handled elsewhere / prose
+    strings = [a if a is not None else b for a, b in STRING_ARG_RE.findall(args)]
+    if name.lower() == "goto":
+        return strings[0] if strings else None
+    return strings[-1] if len(strings) >= 2 else None
+
+
 def _tokens_twee(text, text_macros):
     """[(token, line_no)] for the structural parts of a twee passage file."""
     tokens = []
@@ -182,6 +199,9 @@ def _tokens_twee(text, text_macros):
                     pass  # text macro: prose
                 else:
                     tokens.append(("<<" + _normalise_macro_body(body) + ">>", line))
+                    passage = _passage_arg(name, args)
+                    if passage is not None:
+                        tokens.append(("[[" + passage + "]]", line))
             else:
                 tokens.append(("<<" + _normalise_macro_body(body) + ">>", line))
             line += text.count("\n", i, end)
@@ -231,7 +251,8 @@ def skeleton_twee(text, text_macros):
     return [t for t, _ in _tokens_twee(text, text_macros)]
 
 
-def skeleton_js(text, allowed_props=("counter",)):
+def _blank_js(text):
+    """JS source with comments removed and string/template contents blanked; ${...} expressions are kept (recursively blanked)."""
     out = []
     n = len(text)
     i = 0
@@ -258,15 +279,35 @@ def skeleton_js(text, allowed_props=("counter",)):
                     break
                 if quote != "`" and d == "\n":
                     break
+                if quote == "`" and text.startswith("${", i):
+                    # keep the embedded expression verbatim (it is code), tracking nested braces
+                    depth = 0
+                    k = i
+                    while k < n:
+                        if text[k] == "{":
+                            depth += 1
+                        elif text[k] == "}":
+                            depth -= 1
+                            if depth == 0:
+                                break
+                        k += 1
+                    inner = text[i + 2:k]
+                    out.append("${" + _blank_js(inner) + "}")
+                    i = k + 1
+                    continue
                 i += 1
             out.append(quote)
             i += 1
             continue
         out.append(c)
         i += 1
+    return "".join(out)
+
+
+def skeleton_js(text, allowed_props=("counter",)):
     allowed = re.compile(r"^\s*(?:%s)\s*:\s*(?:\"\"|'')\s*,?\s*$" % "|".join(re.escape(p) for p in allowed_props))
     lines = []
-    for raw in "".join(out).splitlines():
+    for raw in _blank_js(text).splitlines():
         s = re.sub(r"[ \t]+", " ", raw).rstrip()
         if not s.strip() or allowed.match(s):
             continue

@@ -76,6 +76,16 @@ class SkeletonTweeTests(unittest.TestCase):
         self.assertEqual(toks[-2:], ['<<link [[Alley]]>>', '<</link>>'])
         self.assertEqual(ct.skeleton_twee(text.replace("You see blue lights.", "파란 불빛이 보인다."), TM), toks)
 
+    def test_passage_name_string_args_are_structure(self):
+        self.assertEqual(ct.skeleton_twee('<<link "Next" "Shop">>', TM), ct.skeleton_twee('<<link "다음" "Shop">>', TM))
+        self.assertNotEqual(ct.skeleton_twee('<<link "Next" "Shop">>', TM), ct.skeleton_twee('<<link "다음" "가게">>', TM))
+        self.assertEqual(ct.skeleton_twee('<<link "Next">>x<</link>>', TM), ct.skeleton_twee('<<link "다음">>x<</link>>', TM))
+        self.assertNotEqual(ct.skeleton_twee('<<goto "Shop">>', TM), ct.skeleton_twee('<<goto "가게">>', TM))
+        self.assertNotEqual(ct.skeleton_twee('<<button "Go" "Shop">>', TM), ct.skeleton_twee('<<button "가기" "가게">>', TM))
+        # strings inside expressions or templates are prose, not passage names
+        self.assertEqual(ct.skeleton_twee('<<link `$x ? "Ignore" : "Set"`>>', TM), ct.skeleton_twee('<<link `$x ? "무시" : "설정"`>>', TM))
+        self.assertEqual(ct.skeleton_twee('<<link [[Wear "it" and go|Bed]]>>', TM), ct.skeleton_twee('<<link [[그것을 입고 간다|Bed]]>>', TM))
+
     def test_variables_in_prose_are_kept(self):
         self.assertNotEqual(ct.skeleton_twee('You have $money coins', TM), ct.skeleton_twee('동전이 있다', TM))
         self.assertEqual(ct.skeleton_twee('You have $money coins', TM), ct.skeleton_twee('$money개의 동전이 있다', TM))
@@ -86,6 +96,13 @@ class SkeletonJsTests(unittest.TestCase):
         self.assertEqual(ct.skeleton_js('x = "Hello"; // hi\n'), ct.skeleton_js('x = "안녕"; // 안녕\n'))
         self.assertEqual(ct.skeleton_js("y = 'a\\'b'; /* c */ z = `t ${v} u`;"), ct.skeleton_js("y = '가'; z = `티 ${v} 유`;"))
         self.assertNotEqual(ct.skeleton_js('x = 1;'), ct.skeleton_js('x = 2;'))
+
+    def test_template_literal_expressions_are_kept(self):
+        self.assertEqual(ct.skeleton_js("z = `t ${v} u`;"), ct.skeleton_js("z = `티 ${v} 유`;"))
+        self.assertNotEqual(ct.skeleton_js("z = `t ${v} u`;"), ct.skeleton_js("z = `티 ${w} 유`;"))
+        self.assertNotEqual(ct.skeleton_js("z = `t ${v} u`;"), ct.skeleton_js("z = `티 유`;"))
+        self.assertEqual(ct.skeleton_js("z = `a ${f({b: 1})} c`;"), ct.skeleton_js("z = `가 ${f({b: 1})} 다`;"))
+        self.assertEqual(ct.skeleton_js('s = `${n}${n === 1 ? "hour" : "hours"}`;'), ct.skeleton_js('s = `${n}${n === 1 ? "시간" : "시간"}`;'))
 
     def test_js_allows_counter_property_only(self):
         base = 'a: {\n\tname: "apple",\n\tprice: 1,\n},\n'

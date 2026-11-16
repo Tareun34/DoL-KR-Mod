@@ -8,7 +8,7 @@
 
 | 보존 | 예 |
 |---|---|
-| 매크로 이름·인자 구조·순서 | `<<if $rng gte 21 or $novaginal is 1>>`, `<<set $speechSpank to 1>>`, `<<link [[Next\|Forest Cabin]]>>`의 `[[…\|Forest Cabin]]` 대상 |
+| 매크로 이름·인자 구조·순서 | `<<if $rng gte 21 or $novaginal is 1>>`, `<<set $speechSpank to 1>>`, `<<link [[Next\|Forest Cabin]]>>`의 `[[…\|Forest Cabin]]` 대상, `<<link "Next" "Shop">>`·`<<button>>`의 두 번째 문자열과 `<<goto "Shop">>`의 문자열(패시지 이름) |
 | 변수 | `$money`, `_npcId`, `V.settings.x`, `C.npc.Avery.rage` |
 | 값으로 쓰이는 문자열 | `<<set $x to "m">>`, `either("m","f")`, `$worn.lower.name is "naked"`, CSS 클래스(`class="gold"`), 패시지 이름, `id="…"`, `data-…="…"` |
 | HTML 태그와 속성 | `<span class="gold">`, `<br>`, `<<link>>` 안의 `[[대상]]` |
