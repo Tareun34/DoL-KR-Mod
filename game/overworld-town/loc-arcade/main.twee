@@ -1038,7 +1038,7 @@
 		<br><br>
 	<<elseif $worn.genitals.name isnot "naked">>
 		<<if $worn.under_lower.name isnot "naked">>
-			<<He>> then grabs your $worn.under_lower.name and pulls them down too.
+			<<He>>【은는】 이어서 당신의 $worn.under_lower.name【을를】 잡고 그것마저 끌어내린다.
 		<</if>>
 		갑자기 오락실 전체가 당신의 <<print $worn.genitals.name>>【을를】 볼 수 있게 된다. 군중은 숨을 헐떡이고, 이어서 중얼거림과 불안한 웃음소리가 터져 나온다.
 		<br><br>
@@ -1046,7 +1046,7 @@
 		"넌 대체 무슨 변태야?" 상대방의 친구가 소리친다. 당신은 <<him>>【을를】 무시하고 계속 플레이한다.
 		<br><br>
 	<<elseif $worn.under_lower.name isnot "naked">>
-		<<He>> then grabs your $worn.under_lower.name and pulls them down too.
+		<<He>>【은는】 이어서 당신의 $worn.under_lower.name【을를】 잡고 그것마저 끌어내린다.
 		<br><br>
 	<</if>>
 
@@ -1062,7 +1062,7 @@
 		<br><br>
 	<<elseif $worn.genitals.name isnot "naked">>
 		<<if $worn.under_lower.name isnot "naked">>
-			<<He>> then grabs your $worn.under_lower.name and pulls them down too.
+			<<He>>【은는】 이어서 당신의 $worn.under_lower.name【을를】 잡고 그것마저 끌어내린다.
 		<</if>>
 		갑자기 오락실 전체가 당신의 <<print $worn.genitals.name>>【을를】 볼 수 있게 된다. 군중은 숨을 헐떡이고, 이어서 중얼거림과 불안한 웃음소리가 터져 나온다.
 		<br><br>
@@ -1070,7 +1070,7 @@
 		"넌 대체 무슨 변태야?" 상대방의 친구가 소리친다. 당신은 <<him>>【을를】 무시하고 계속 플레이한다.
 		<br><br>
 	<<elseif $worn.under_lower.name isnot "naked">>
-		What's worse, your $worn.under_lower.name comes down too.
+		설상가상으로, 당신의 $worn.under_lower.name도 함께 내려간다.
 		<br><br>
 	<</if>>
 <</if>>
@@ -1110,7 +1110,7 @@
 	<<if $worn.under_lower.type.includes("chastity")>>
 		당신은 너무 기뻐서 모든 사람이 당신의 $worn.genitals.name【을를】 볼 수 있다는 사실을 신경 쓰지 않는다.
 	<<else>>
-		You're so elated that for a few seconds, you forget that your <<bottom>> is exposed to the arcade.
+		당신은 너무 기뻐서 몇 초 동안, 당신의 <<bottom>>【이가】 오락실에 노출되어 있다는 사실을 잊는다.
 	<</if>>
 	<br><br>
 
@@ -1142,7 +1142,7 @@
 	당신은 노출뿐만 아니라 그 이상의 수치심을 느끼며 옷을 고쳐 입는다.<<gstress>><<stress 6>>
 	<br><br>
 
-	<<link [[Next|Arcade]]>><<endevent>><<pass 10>><<clotheson>><</link>>
+	<<link [[다음|Arcade]]>><<endevent>><<pass 10>><<clotheson>><</link>>
 
 <</if>>
 
@@ -1158,7 +1158,7 @@
 잠시 동안 환호와 과시가 이어진 후, 당신은 마침내 옷을 고쳐 입고, 오락실은 정상으로 돌아온다.
 <br><br>
 
-<<link [[Next|Arcade]]>><<endevent>><<pass 10>><<clotheson>><</link>>
+<<link [[다음|Arcade]]>><<endevent>><<pass 10>><<clotheson>><</link>>
 
 :: Arcade Exposure Fix
 <<effects>>
@@ -1166,12 +1166,12 @@
 당신은 재빨리 옷을 고쳐 입고, 마침내 당신의 <<if $worn.under_lower.type.includes("chastity")>>벨트<<else>>엉덩이<</if>>【을를】 가린다. 군중은 계속해서 당신에게 환호와 박수를 보낸다. 당신은 몇 분 동안 그 분위기를 만끽하지만, 이전에 노출되었던 것에 대해 여전히 당혹감을 느낀다. 당신은 얼굴을 붉히며 자리를 뜬다.
 <br><br>
 
-<<link [[Next|Arcade]]>><<endevent>><<pass 10>><<clotheson>><</link>>
+<<link [[다음|Arcade]]>><<endevent>><<pass 10>><<clotheson>><</link>>
 
 :: Arcade Exposure Stop
 <<effects>>
 
-You take your hands off the controls, grab your $worn.lower.name and slap <<his>> hands away. It only takes a split second, but by the time you return to the screen, <span class="red">your health bar is nearly gone.</span> You barely have time to fight back before you're defeated for the second time.
+당신은 조작기에서 손을 떼고, 당신의 $worn.lower.name【을를】 잡고 <<his>> 손을 쳐낸다. 순식간에 일어난 일이지만, 당신이 화면으로 돌아왔을 때 <span class="red">당신의 체력 바는 거의 사라져 있다.</span> 당신은 반격할 시간도 없이 두 번째로 패배한다.
 <br><br>
 
 "하!" <<person1>><<person>>【이가】 소리친다. "네가 있어야 할 애들 풀장에나 있지 그랬어!"
@@ -1180,7 +1180,7 @@ You take your hands off the controls, grab your $worn.lower.name and slap <<his>
 군중이 다시 환호하지만, 이전보다 더 조용하다. 그들 모두 속임수가 있었던 것을 보았다. 좌절한 당신은 자리를 뜬다.<<gstress>><<stress 6>>
 <br><br>
 
-<<link [[Next|Arcade]]>><<endevent>><<pass 10>><</link>>
+<<link [[다음|Arcade]]>><<endevent>><<pass 10>><</link>>
 
 :: Arcade Exposure Ignore
 <<effects>>

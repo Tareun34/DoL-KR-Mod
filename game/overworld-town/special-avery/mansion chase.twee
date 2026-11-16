@@ -207,7 +207,7 @@
 <br><br>
 
 <<if $transformationParts.traits.chase isnot "disabled">>
-	Your heart races. <span class="green">The thrill of the chase invigorates you.</span> <<lstress>><<garousal>><<stress -8>><<arousal 200>><<transform fox 1>>
+	심장이 마구 뛴다. <span class="green">추격전의 스릴이 당신에게 활력을 불어넣는다.</span> <<lstress>><<garousal>><<stress -8>><<arousal 200>><<transform fox 1>>
 <</if>>
 <br><br>
 
@@ -583,7 +583,7 @@
 			<br>
 		<</if>>
 	<<else>>
-		You hear <<his>> footsteps. <<He>> walks into the centre of the room, pauses a moment, <span class="green">then continues on to the next.</span>
+		<<his>> 발소리가 들린다. <<He>>【은는】 방 한가운데로 걸어와 잠시 멈춘 뒤, <span class="green">다음 방으로 계속 간다.</span>
 		<br><br>
 
 		주변이 조용해지자, 몸이 떨리기 시작할 때쯤 냉동고에서 나온다.

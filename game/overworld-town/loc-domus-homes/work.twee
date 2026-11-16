@@ -15,7 +15,7 @@
 	<</if>>
 	<br><br>
 	<<if beastSexEnabledForType("dog", $monster is 1)>>
-		<<link [[Tease|Domus House Tease]]>><<transform cat 2>><</link>><<deviant1>>
+		<<link [[유혹한다|Domus House Tease]]>><<transform cat 2>><</link>><<deviant1>>
 		<br>
 	<</if>>
 	<<link [[무시한다|Domus House Ignore]]>><</link>>
@@ -756,9 +756,9 @@
 
 		<<if !playerChastity() and $worn.under_lower.vagina_exposed is 1>>
 			<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>
-				You don't want people knowing you have both sets of gear, do you?"
+				네가 양쪽 성기를 다 가지고 있다는 걸 사람들이 알길 원하진 않겠지, 안 그래?"
 			<<elseif isCrossdressing() and $settings.nudeGenderPerception !== 0>>
-				You don't want people knowing you like dressing as a <<print ($player.gender_appearance is "m" ? "boy" : "girl")>>, do you?"
+				네가 <<print ($player.gender_appearance is "m" ? "남자애" : "여자애")>>처럼 입는 걸 좋아한다는 걸 사람들이 알길 원하진 않겠지, 안 그래?"
 			<<else>>
 				네 <<genitals>>【을를】 보고 싶어 할 변태들이 많을 거라고 확신해."
 			<</if>>
@@ -1312,7 +1312,7 @@
 <<set $outside to 0>><<set $location to "town">><<effects>>
 
 <<if $rng gte 91 and beastSexEnabledForType("dog", $monster is 1)>>
-	You turn to run, but trip over a hose and fall flat on your face. The <<beasttype>> jumps on top of you.
+	당신은 돌아서서 도망치려 하지만, 호스에 걸려 얼굴을 바닥에 박고 넘어진다. <<beasttype>>【이가】 당신 위로 뛰어오른다.
 	<<if $monster is 1>>
 		"마음이 바뀌었어. 잠시만 같이 있어!"
 	<</if>>
@@ -1688,12 +1688,12 @@
 		<<fameexhibitionism 10 "pic">><<famemodel 2 art>>
 		<<if playerBellyVisible()>><<famepregnancy `Math.ceil(playerBellySize() / 10)`>><</if>>
 	<<else>>
-		While they maintain the pretence that this is life-art, it's quite clear they just enjoy getting a <<girl>>
+		라이프 아트라는 명목을 내세우고는 있지만, 그들은 그저 <<girl>>【이가】
 		<<if $player.sex is "h" and $settings.nudeGenderPerception !== 0>>
-			with such unique genitals
+			그렇게 독특한 성기를 가진 채로
 		<</if>>
-		to expose <<pherself>> in the lewd poses they want to see.
-		Many are not even pretending to paint, but the <<person>> keeps everyone in line and under control.
+		그들이 보고 싶어 하는 음란한 자세로 <<pherself>>【을를】 드러내는 걸 즐길 뿐인 게 뻔하다.
+		많은 사람이 그림을 그리는 척조차 하지 않지만, <<person>>【은는】 모두를 줄 세우고 통제한다.
 		<<if !hasSexStat("exhibitionism", 3)>>
 			이렇게 긴장하지만 않았다면 즐겼을지도 모른다.
 		<<else>>

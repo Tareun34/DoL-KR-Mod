@@ -609,13 +609,13 @@
 	<<link [[현재 옷 입기|Chef Opening Current]]>><</link>>
 	<br>
 	<<if $earSlime.forcedDressing?.type is "m">>
-		<span class="red">The ear slime refuses to allow you to wear the gown.</span>
+		<span class="red">귀 슬라임이 가운을 입는 것을 거부합니다.</span>
 	<<else>>
 		<<link [[가운 입기|Chef Opening Gown]]>><</link>>
 	<</if>>
 	<br>
 	<<if $earSlime.forcedDressing?.type is "f">>
-		<span class="red">The ear slime refuses to allow you to wear the tux.</span>
+		<span class="red">귀 슬라임이 턱시도를 입는 것을 거부합니다.</span>
 	<<else>>
 		<<link [[턱시도 입기|Chef Opening Tuxedo]]>><</link>>
 	<</if>>
@@ -625,13 +625,13 @@
 	"널 위해 의상을 준비했어." <<He>>【은는】 창가 근처의 옷걸이를 가리킨다. 그곳에는 붉은 무도회 가운이 턱시도 셔츠, 재킷, 바지 옆에 걸려 있다.
 	<br><br>
 	<<if $earSlime.forcedDressing?.type is "m">>
-		<span class="red">The ear slime refuses to allow you to wear the gown.</span>
+		<span class="red">귀 슬라임이 가운을 입는 것을 거부합니다.</span>
 	<<else>>
 		<<link [[가운 입기|Chef Opening Gown]]>><</link>>
 	<</if>>
 	<br>
 	<<if $earSlime.forcedDressing?.type is "f">>
-		<span class="red">The ear slime refuses to allow you to wear the tux.</span>
+		<span class="red">귀 슬라임이 턱시도를 입는 것을 거부합니다.</span>
 	<<else>>
 		<<link [[턱시도 입기|Chef Opening Tuxedo]]>><</link>>
 	<</if>>
@@ -1048,7 +1048,7 @@
 			<<trauma -3>><<ltrauma>>
 		<</if>>
 	<<elseif _gwylanLovePercent gte 40>>
-		That same look of pride washes over you as <<he>> smiles at you. <<stress -3>><<lstress>>
+		<<he>>【이가】 당신에게 미소 짓자, 그 자랑스러운 표정이 당신에게도 번진다. <<stress -3>><<lstress>>
 	<<else>>
 		<<He>>【은는】 당신에게 미소 지으며 손을 흔든다.
 	<</if>>
@@ -1263,16 +1263,16 @@
 		당신이 가까이 다가가자 <<He>>【이가】 뺨에 키스한다.
 	<</if>>
 <<elseif _gwylanLovePercent gte 30 and $gwylanTalked.length gte 8>>
-	<<He>> hugs you when you get close.
+	<<He>>【은는】 당신이 가까이 다가가자 안아준다.
 <<else>>
 	<<He>>【은는】 다시 몸을 돌려 1층을 내려다본다.
 <</if>>
 "카메라가 너무 많아. 번쩍이는 플래시도 싫고, 내 사진이 찍히는 것도 싫어."
 당신은 <<him>>【와과】 함께 난간에 기대어, 아래층에서 환심을 사려는 손님들을 지켜본다.
 <<if $gwylanSeen.includes("yearning")>>
-	"I'm glad you remembered me, despite all the attention on you."
+	"이렇게 많은 관심을 받는데도, 날 기억해줘서 기뻐."
 <<elseif _gwylanLovePercent gte 30 and $gwylanTalked.length gte 8>>
-	"I'm glad you still have time for little old me despite being the star of the show."
+	"이 쇼의 주인공인데도 보잘것없는 나를 위해 시간을 내주다니 기쁘네."
 <<else>>
 	"옆에 있어주면 좋지."
 <</if>>

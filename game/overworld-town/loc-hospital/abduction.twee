@@ -30,11 +30,11 @@
 :: Abduction Hospital Corridor
 <<effects>><<set $lock to random(0, 1000)>>
 
-You run down the corridor. As you reach the door you hear a sharp buzz and the sound of grinding metal.
+복도를 달려간다. 문에 다다르자 날카로운 윙 소리와 금속이 갈리는 소리가 들린다.
 <<generateBeastVictim 6 wolf>>
 
 <<if $rng gte 81 or !beastSexEnabledForType("wolf", $monster is 1)>>
-	You pull on the handle, and the door aches open. You dash through and shut it behind you, seeing a number of <<beastsplural>> bounding down the corridor as you do.
+	손잡이를 당기자 문이 삐걱거리며 열린다. 당신은 재빨리 문을 통과하고 닫는다. 그 순간 복도를 달려 내려오는 수많은 <<beastsplural>>【을를】 본다.
 	<br><br>
 
 	<<endevent>>
@@ -68,7 +68,7 @@ You run down the corridor. As you reach the door you hear a sharp buzz and the s
 	<<endevent>>
 	<<commercialquick>>
 <<elseif !beastSexEnabledForType("wolf", $monster is 1)>>
-	Dropping to your hands and knees, you squeeze through the gap. It's a tight fit, but you're able to fit.
+	손과 무릎으로 기어 틈새를 비집고 들어간다. 꽉 끼지만, 당신은 들어갈 수 있다.
 	<br><br>
 	<<set $stripintegrity to 10>><<set $stripobject to "강철 와이어">><<stripobject>>
 	저 앞 천장에서 빛이 새어 들어오는 것이 보인다. 짧은 여정 끝에, 밖으로 통하는 맨홀을 발견한다.

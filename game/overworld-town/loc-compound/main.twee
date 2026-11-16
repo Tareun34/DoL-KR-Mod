@@ -259,7 +259,7 @@
 
 <<set _sale to $phials_held * 100_000>>
 <<money _sale "compoundPhials">>
-<span class="gold">You've made <<printmoney _sale>>.</span>
+<span class="gold"><<printmoney _sale>>【을를】 벌었다.</span>
 <br><br>
 <<world_corruption "soft" $phials_held>>
 <<set $stat_aphrodisiacs_sold += $phials_held>>
@@ -573,7 +573,7 @@
 "자, 됐군." <<he>>【이가】 전선의 다른 쪽 끝을 <<him>> 옆에 있는 기계에 꽂으며 말한다. "이제 <<girl>>, 말해봐, 누구 밑에서 일하지?"
 <br><br>
 <<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>
-	"You should count yourself fortunate," <<he>> adds, glancing at your genitals. "If it were up to me, we'd keep you here for experimentation. Rare to find one with genitals like yours."
+	"운이 좋은 줄 알아." <<he>>【이가】 당신의 성기를 흘끗 보며 덧붙인다. "나한테 달렸다면, 실험을 위해 널 여기 가둬뒀을 거야. 너 같은 성기를 가진 사람은 찾기 드물거든."
 	<br><br>
 <</if>>
 <i>고통이나 흥분도가 최대치에 도달하면, 당신은 <<him>>에게 모든 것을 말하게 될 것이다.</i>
@@ -1289,7 +1289,7 @@
 <br><br>
 
 /*
-<<icon "access-card.png">><<link [[Try the door|Elk Compound Lab Enter]]>><<endevent>><</link>>
+<<icon "access-card.png">><<link [[문을 열어 본다|Elk Compound Lab Enter]]>><<endevent>><</link>>
 <br>
 */
 <<getouticon>><<link [[그냥 떠난다|Elk Compound Station Leave]]>><</link>>

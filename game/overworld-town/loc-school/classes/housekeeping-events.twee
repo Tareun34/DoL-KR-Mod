@@ -319,16 +319,16 @@
 <br><br>
 <<schoolrep_naked>>
 <<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>
-	"What kind of a freak are you?" the <<person1>><<person>> says, as the <<person2>><<person>> covers <<his>> mouth with <<his>> hand. The <<person3>><<person>> looks transfixed.
+	"넌 대체 무슨 괴물이냐?" <<person1>><<person>>【이가】 말하자, <<person2>><<person>>【은는】 <<his>> 손으로 <<his>> 입을 가린다. <<person3>><<person>>【은는】 넋을 잃고 바라본다.
 <<elseif $player.penisExist>>
 	<<if $player.gender_appearance is "f" and $settings.nudeGenderPerception !== 0>>
-		All three laugh. "That wasn't what I was expecting," the <<person1>><<person>> says. "You're some kind of pervert."
+		세 명 모두 웃는다. "내가 기대했던 건 이게 아닌데." <<person1>><<person>>【이가】 말한다. "너 변태구나."
 	<<else>>
 		세 명 모두 당신을 음흉하게 쳐다본다. "좋네." <<person1>><<person>>【이가】 말한다.
 	<</if>>
 <<else>>
 	<<if $player.gender_appearance is "m" and $settings.nudeGenderPerception !== 0>>
-		All three laugh. "That wasn't what I was expecting," the <<person1>><<person>> says. "You're some kind of pervert."
+		세 명 모두 웃는다. "내가 기대했던 건 이게 아닌데." <<person1>><<person>>【이가】 말한다. "너 변태구나."
 	<<else>>
 		세 명 모두 당신을 음흉하게 쳐다본다. "좋네." <<person1>><<person>>【이가】 말한다.
 	<</if>>

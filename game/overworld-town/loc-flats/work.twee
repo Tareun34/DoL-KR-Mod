@@ -87,8 +87,8 @@
 	<<addinlineevent "flats work_6" 1>>
 		플랫 중 한 곳으로 다가가자 안에서 웅얼거리는 말다툼 소리가 들린다.
 		<br><br>
-		Whatever the argument is about, it doesn't sound particularly heated, though you do catch something
-		about tomatoes.
+		무엇 때문에 다투는지 모르겠지만, 그렇게 격앙되어 보이진 않는다. 하지만 무언가 들리긴 한다.
+		토마토에 관한 이야기다.
 		<br><br>
 		<<link [[다음|Flats Tomatoes Begin]]>><</link>>
 		<br>
@@ -276,7 +276,7 @@
 
 <<if (dangerEvent() or $eventforced) and $eventskip is 0>>
 	<<if beastSexEnabledForType("dog", $monster is 1)>>
-		You fill a bin bag with shredded fabric, then drop to the floor to clear beneath the sofa. It's raised above the ground just enough to fit.
+		당신은 쓰레기봉투를 찢어진 천 조각으로 채운 뒤, 소파 밑을 치우기 위해 바닥에 엎드린다. 소파는 몸이 겨우 들어갈 만큼만 바닥에서 떨어져 있다.
 		<br><br>
 		당신이 허리 위까지 파묻혔을 때, 무언가 당신의 은밀한 곳을 쿡 찌르는 것이 느껴진다. <<beasttype>>【이가】 당신에게 올라탄다.
 		<br><br>
@@ -402,7 +402,7 @@
 			"수고비로 조금 더 드릴게요." <<He>>【은는】 당신에게 <<printmoney 3000>><<money 3000 "flatsCleaning">>【을를】 건네준다.
 			<br><br>
 
-			<<tearful>> you leave the flat.
+			<<tearful>> 당신은 아파트를 떠난다.
 			<br><br>
 
 			<<link [[다음|Flats]]>><<pass 60>><<endevent>><</link>>
@@ -693,7 +693,7 @@
 		<br>
 	<</if>>
 	<<if displayDefiantOption(500)>>
-		<<link [[Threaten to take the television|Flats Kitchen Threaten]]>><<stress -6>><<wolfDefiant 500>><</link>><<defianttext 500>><<lstress>>
+		<<link [[텔레비전을 가져가겠다고 위협한다|Flats Kitchen Threaten]]>><<stress -6>><<wolfDefiant 500>><</link>><<defianttext 500>><<lstress>>
 		<br>
 	<<else>>
 		<<insufficientStat "submissive" "소란을 피우기엔">>
@@ -1226,22 +1226,22 @@
 :: Flats Tomatoes Begin
 
 <<generate1>><<generatep2>>
-You're uncertain if your knocking was heard as the voices inside continue unabated.
+안에서 들리는 목소리가 끊이지 않는 것으로 보아 당신의 노크 소리를 듣지 못한 것 같다.
 <br><br>
-Just as you're about to knock again, one of the voices grows louder, and you hear a lock turn.
+다시 노크하려던 찰나, 목소리 중 하나가 커지더니 자물쇠가 돌아가는 소리가 난다.
 <br><br>
-"For the last time, we're not fighting, you bloody–" A <<person1>><<person>> yanks the door open,
-the rest of <<his>> sentence dying on <<his>> lips when <<he>> spots you. "Oh, sorry, you're not
-who I was expecting."
+"마지막으로 말하는데, 우리 안 싸운다고, 이 망할–" <<person1>><<person>>【이가】 문을 벌컥 연다.
+<<he>>【이가】 당신을 발견하자 남은 말이 <<his>> 입술에서 쏙 들어간다. "오, 미안. 내가 생각한
+사람이 아니네."
 <br><br>
-Before <<he>> can say anything else, a <<person2>><<person>> leans around a corner further
-inside the flat and, in a cheerful voice, calls out, "We're not fighting!"
+<<he>>【이가】 다른 말을 꺼내기도 전에, 집 안쪽 모퉁이에서
+<<person2>><<person>>【이가】 몸을 내밀며 밝은 목소리로 외친다. "우리 안 싸워요!"
 <br><br>
-The <<person1>><<person>> rolls <<his>> eyes. "It's not the old hag from next door."
+<<person1>><<person>>【은는】 눈을 굴린다. "옆집 늙은 마녀가 아니야."
 <br>
 "아, 그럼 누군데?" <<person2>><<person>>【이가】 물었다.
 <br><br>
-The <<person1>><<person>> doesn't answer <<his>> partner. "What can I do for you?"
+<<person1>><<person>>【은는】 <<his>> 파트너에게 대답하지 않는다. "무슨 일로 왔지?"
 <br><br>
 
 <<socialiseicon "ask">><<link [[일거리를 묻는다|Flats Tomatoes Ask]]>><</link>>
@@ -1296,9 +1296,9 @@ The <<person1>><<person>> doesn't answer <<his>> partner. "What can I do for you
 <<tending_give "tomato" _tomatoes>>
 당신은 <<foodstufficon "tomato">>
 <<if _tomatoes is 1>>
-	a tomato.
+	토마토 1개를 얻었습니다.
 <<else>>
-	<<number _tomatoes>> tomatoes.
+	토마토 <<number _tomatoes>>개를 얻었습니다.
 <</if>>
 
 <br><br>
@@ -1322,9 +1322,9 @@ The <<person1>><<person>> doesn't answer <<his>> partner. "What can I do for you
 <<tending_give "tomato" _tomatoes>>
 당신은 <<foodstufficon "tomato">>
 <<if _tomatoes is 1>>
-	a tomato.
+	토마토 1개를 얻었습니다.
 <<else>>
-	<<number _tomatoes>> tomatoes.
+	토마토 <<number _tomatoes>>개를 얻었습니다.
 <</if>>
 
 <br><br>

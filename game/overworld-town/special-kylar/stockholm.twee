@@ -86,13 +86,13 @@
 <br><br>
 
 <<if $earSlime.forcedDressing?.type is "m">>
-	<span class="red">The ear slime refuses to allow you to wear the dress.</span>
+	<span class="red">귀 슬라임이 드레스를 입는 것을 허락하지 않는다.</span>
 <<else>>
 	<<link [[드레스를 입는다|Kylar Abduction Stockholm Dress]]>><<undressmid "wardrobe">><<upperwear "gothic gown">><</link>>
 <</if>>
 <br>
 <<if $earSlime.forcedDressing?.type is "f">>
-	<span class="red">The ear slime refuses to allow you to wear the suit.</span>
+	<span class="red">귀 슬라임이 정장을 입는 것을 허락하지 않는다.</span>
 <<else>>
 	<<link [[정장을 입는다|Kylar Abduction Stockholm Dress]]>><<undressmid "wardrobe">><<upperwear "gothic jacket">><<lowerwear "gothic trousers">><</link>>
 <</if>>
@@ -105,13 +105,13 @@
 카일라가 <<his>> 고개를 젓는다. "아니, 아, 안 돼, 넌 그중 하나를 입어야 해. 넌 <i>꼭</i> 입어야 해." <<He>>【은는】 진지하면서도 약간 긴장한 목소리다.
 <br><br>
 <<if $earSlime.forcedDressing?.type is "m">>
-	<span class="red">The ear slime refuses to allow you to wear the dress.</span>
+	<span class="red">귀 슬라임이 드레스를 입는 것을 허락하지 않는다.</span>
 <<else>>
 	<<link [[드레스를 입는다|Kylar Abduction Stockholm Dress]]>><<undressmid "wardrobe">><<upperwear "gothic gown">><</link>>
 <</if>>
 <br>
 <<if $earSlime.forcedDressing?.type is "f">>
-	<span class="red">The ear slime refuses to allow you to wear the suit.</span>
+	<span class="red">귀 슬라임이 정장을 입는 것을 허락하지 않는다.</span>
 <<else>>
 	<<link [[정장을 입는다|Kylar Abduction Stockholm Dress]]>><<undressmid "wardrobe">><<upperwear "gothic jacket">><<lowerwear "gothic trousers">><</link>>
 <</if>>

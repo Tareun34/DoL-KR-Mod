@@ -88,7 +88,7 @@
 <<strip>>
 
 <<if $player.sex is $player.gender_appearance or playerChastity("hidden") or $settings.nudeGenderPerception is 0>>
-	The <<person>> snatches your clothes away. "If you want them back," <<he>> says, "you better do what we say."
+	그 <<person>>【이가】 당신의 옷을 낚아챈다. "옷을 돌려받고 싶으면," <<he>>【이가】 말한다. "시키는 대로 하는 게 좋을 거야."
 	<br><br>
 	다른 <<if $changingRoomGender is "girls">>여학생<<else>>남학생<</if>>【은는】 여러 제안을 외쳐댄다.
 	<<if $worn.neck.collared is 1 and $worn.neck.type.includes("leash")>>
@@ -195,10 +195,10 @@
 		<<He>>【은는】 당신을 방에서 데리고 나간다.
 	<</if>>
 	<<if ($player.sex is "m" and $changingRoomGender is "girls") or ($player.sex is "f" and $changingRoomGender is "boys") and $genderknown.includes("Mason") and $settings.nudeGenderPerception !== 0>>
-		"You shouldn't be in the $changingRoomGender' changing room," <<he>> says once you're alone. "That doesn't make what they did okay, but you need to be more careful in the future."
+		"$changingRoomGender 탈의실에 들어오면 안 되지," 당신만 남겨졌을 때 <<he>>【이가】 말한다. "그렇다고 걔들이 한 짓이 정당화되는 건 아니지만, 앞으론 더 조심해야 해."
 		<<gdelinquency>><<detention 1>>
 	<<elseif $player.penisExist and $player.vaginaExist and $genderknown.includes("Mason") and $settings.nudeGenderPerception !== 0>>
-		<<He>> stops once you're alone, but struggles to look you in the eye. "You need to hide your uniqueness," <<he>> says. "I know that isn't fair, but people can be cruel. Be careful."
+		당신만 남겨지자 <<he>>【은는】 멈춰 서지만, 당신의 눈을 마주치기 힘들어한다. "넌 네 독특함을 숨겨야 해," <<he>>【이가】 말한다. "불공평하다는 거 알지만, 사람들은 잔인할 수 있거든. 조심해."
 	<<elseif ($player.gender_appearance is "m" and $changingRoomGender is "girls") or ($player.gender_appearance is "f" and $changingRoomGender is "boys")>>
 		"<<if $changingRoomGender is "girls">>여학생<<else>>남학생<</if>> 탈의실에 들어오면 안 되지," 당신만 남겨졌을 때 <<he>>【이가】 말한다. "그렇다고 걔들이 한 짓이 정당화되는 건 아니지만, 앞으론 더 조심해야 해."
 		<<gdelinquency>><<detention 1>>
@@ -228,7 +228,7 @@
 <<else>>
 	<<strip>>
 	<<if $player.sex is $player.gender_appearance or playerChastity("hidden") or $settings.nudeGenderPerception is 0>>
-		The <<person>> backs away from you, your clothes in hand. "If you want them back," <<he>> says, "you better do what we say."
+		그 <<person>>【이가】 옷을 손에 든 채 뒷걸음질 친다. "옷을 돌려받고 싶으면," <<he>>【이가】 말한다. "시키는 대로 하는 게 좋을 거야."
 		<br><br>
 		다른 <<if $changingRoomGender is "girls">>여학생<<else>>남학생<</if>>【은는】 여러 제안을 외쳐댄다.
 		<<if $worn.neck.collared is 1 and $worn.neck.type.includes("leash")>>
@@ -411,7 +411,7 @@
 <<gpain>><<pain 10>>
 <br><br>
 <<fameexhibitionism 50 "pic">>
-"Someone else have a go," <<he>> says after a while. Someone does. They aren't as effective, but the <<person>> leans against the lockers and pulls your hair back. <<He>> leans close. "This is what happens to <<if $exposed gte 2 and $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>freaks<<elseif $player.gender_appearance is "f">>girls<<else>>boys<</if>> who come in here," <<he>> says. Another jolt of pain. "Consider yourself lucky I'm so nice. Some wanted much worse." <<He>> glances at your body, and regret darkens <<his>> face. <<He>> stands up. "That's enough. <<pShes>> learnt <<pher>> lesson." <<He>> throws your clothes at you. <<tearful>> you take your clothing and leave the room.
+"다른 사람도 해봐," 한참 뒤 <<he>>【이가】 말한다. 누군가 다가온다. 그들은 이전만큼 세게 때리지는 않지만, 그 <<person>>【은는】 사물함에 기대어 당신의 머리채를 뒤로 잡아당긴다. <<He>>【이가】 가까이 몸을 숙인다. "여기에 들어오는 <<if $exposed gte 2 and $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>괴물들은<<elseif $player.gender_appearance is "f">>계집애들은<<else>>자식들은<</if>> 다 이렇게 되는 거야," <<he>>【이가】 말한다. 또 한 번의 고통이 엄습한다. "내가 이렇게 친절하다는 걸 행운으로 알아. 훨씬 더 심한 짓을 하려던 놈들도 있었거든." <<He>>【은는】 당신의 몸을 훑어보고는, 얼굴에 후회 기색이 스친다. <<He>>【이가】 일어선다. "이 정도면 됐어. <<pShes>> 벌을 다 받았으니까." <<He>>【이가】 당신에게 옷을 던져준다. <<tearful>> 당신은 옷을 챙겨 방을 나간다.
 <br><br>
 <<clothesontowel>>
 <<endcombat>>
@@ -607,7 +607,7 @@
 		"잘못된 과학 실험의 결과물이야," 당신이 말한다.
 	<</if>>
 	<br><br>
-	The $changingRoomGender laugh. "They can't do that," the <<person>> says, looking around <<him>> for support. "Can they?" One of the $changingRoomGender shrugs, and the <<person>> turns back to you. <<He>> throws you your clothes. "It doesn't matter. We're not letting you in here looking like that. It's distracting."
+	$changingRoomGender【은는】 웃음을 터뜨린다. "그런 실험 같은 건 없어," 그 <<person>>【이가】 말하며 동조를 구하듯 <<him>> 주변을 둘러본다. "있어?" $changingRoomGender 중 한 명이 어깨를 으쓱하자, 그 <<person>>【은는】 다시 당신을 돌아본다. <<He>>【은는】 당신에게 옷을 던져준다. "상관없어. 그런 꼴로 여기 들어오게 둘 순 없거든. 신경 쓰이니까."
 	<br><br>
 <</if>>
 

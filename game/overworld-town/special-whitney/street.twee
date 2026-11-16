@@ -194,7 +194,7 @@
 					<br><br>
 
 					<<if displayDefiantOption(500)>>
-						<<link [[Take charge|Street Bully Makeout]]>><<set $phase to 2>><<def 3>><<npcincr Whitney dom -1>><<wolfDefiant 500>><</link>><<defianttext 500>><<promiscuous1>><<ldom>>
+						<<link [[주도한다|Street Bully Makeout]]>><<set $phase to 2>><<def 3>><<npcincr Whitney dom -1>><<wolfDefiant 500>><</link>><<defianttext 500>><<promiscuous1>><<ldom>>
 						<br>
 					<</if>>
 					<<link [[순순히 따른다|Street Bully Makeout]]>><<set $phase to 1>><<sub 1>><<stress 4>><<arousal 1000 "mouth">><<npcincr Whitney dom 1>><</link>><<gstress>><<garousal>><<gdom>>
@@ -2710,9 +2710,9 @@
 				<br><br>
 				<<if $settings.nudeGenderPerception !== 0>>
 					<<if _whitney.penis isnot "none" and _whitney.vagina isnot "none">> /* whitney is also a herm */
-						"Well, well, well." <<He>> sounds pleasantly surprised, but not confused. "Next perv who shows up is in for quite a show."
+						"이런, 이런, 이런." <<He>>【은는】 기분 좋게 놀란 듯하지만, 혼란스러워 보이지는 않는다. "다음에 나타나는 변태는 아주 볼만하겠군."
 					<<else>>
-						"Whatever's going on down here," <<he>> chuckles, "some perv's in for a show."
+						"여기 아래에 무슨 일이 있든," <<he>>【이가】 낄낄거린다. "어떤 변태는 볼만하겠네."
 					<</if>>
 				<</if>>
 			<<elseif $player.penisExist>>
@@ -2735,9 +2735,9 @@
 				이게 비밀이라도 되는 건가?" <<he>>【이가】 비웃는다. "오래가진 못할걸."
 			<</if>>
 		<<else>>
-			"Scared?" <<he>> asks, roughly palming your crotch. "Some perv's gonna see your
+			무서워?" <<he>>【이가】 당신의 가랑이를 거칠게 움켜쥐며 묻는다. "어떤 변태가 네
 			<<set _hermText to ($settings.nudeGenderPerception === 0 ? "junk" : (_whitney.gender is "h" ? "little secret" : "freaky junk"))>>
-			<<print ($player.penisExist ? (!$player.vaginaExist ? "dick" : _hermText) : "cunt")>> and there's nothing you can do about it."
+			<<print ($player.penisExist ? (!$player.vaginaExist ? "자지" : _hermText) : "보지")>>【을를】 보게 될 텐데, 넌 아무것도 못 해."
 		<</if>>
 	<<case 1>>
 		<<He>>【은는】 당신의 허리를 붙잡아 몸을 숙이게 하고, <<bottom>>【을를】 거리 쪽으로 향하게 한다. <<He>>【은는】 _bottom.name의 <<if _bottomIsSkirt>>밑단<<else>>허리춤<</if>>【을를】 손가락으로 움켜쥔다.

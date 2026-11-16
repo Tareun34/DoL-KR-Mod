@@ -1023,7 +1023,7 @@
 <br>
 <<person4>><<person>>【은는】 알아들을 수 없는 말을 내뱉기 시작한다. "거-거기 아무것도 없어요. 제-제 말은, 쟤는... 그러니까, 쟤는 여자..."
 <br>
-"<<pShe>> doesn't have what we're looking for," Leighton finishes. <<person1>><<He>> turns to you. "It appears you weren't needed after all. Go take a seat."
+"<<pShe>>【은는】 우리가 찾는 게 없군." 레이튼이 말을 끝맺는다. <<person1>><<He>>【은는】 당신에게로 돌아선다. "결국 넌 필요 없었던 것 같구나. 가서 앉아라."
 <br><br>
 
 당신은 자리로 돌아가면서 <<person4>><<person>>에게 윙크하며, 시키는 대로 한다. 여전히 얼굴을 붉힌 채, <<he>>【은는】 줄 서 있는 다음 남학생에게로 주의를 돌리지만, 당신은 검사가 끝날 때까지 <<him>>【이가】 호기심 어린 시선으로 당신을 훔쳐보는 것을 포착한다.
@@ -1240,9 +1240,9 @@
 <<fameexhibitionism 50 "pic">>
 <<if setup.clothes.lower[clothesIndex('lower', $worn.lower)].skirt is 1>>
 	<<if $worn.under_lower.name is "naked">>
-		Wasting no time, you climb atop the desk and lift your skirt to your chin.
-		You cock your head. "I'm not wearing panties," you say, trying to sound apologetic.
-		You lean back and spread your legs, giving the whole class a look.
+		시간을 낭비하지 않고, 당신은 책상 위로 올라가 치마를 턱까지 들어 올린다.
+		당신은 고개를 갸웃거린다. "팬티 안 입었는데요." 당신은 미안한 척하며 말한다.
+		당신은 뒤로 기대 다리를 벌려 반 전체가 볼 수 있도록 한다.
 	<<else>>
 		당신은 치마를 들어 올리고 $worn.under_lower.name【을를】 내린 다음, <<if $worn.under_lower.plural>>그것들을<<else>>그것을<</if>> 레이튼에게 건넨다.<<underlowerruined undefined "given">>
 		시간을 낭비하지 않고, 당신은 책상 위로 올라가 다리에서 $worn.lower.name【을를】 벗어 <<if $worn.lower.plural>>그것들을<<else>>그것을<</if>> 한쪽에 둔다.
@@ -1251,9 +1251,9 @@
 	<</if>>
 <<else>>
 	<<if $worn.under_lower.name is "naked">>
-		You cock your head and put one foot on the other. "I'm not wearing panties," you say, sounding apologetic.
-		Nevertheless you pull off your $worn.lower.name and place <<if $worn.lower.plural>>them<<else>>it<</if>> to one side.
-		You then climb atop the desk and spread your legs, giving the whole class a look.
+		당신은 고개를 갸웃거리며 한쪽 발을 다른 쪽 발 위에 올린다. "팬티 안 입었는데요." 당신은 미안한 척하며 말한다.
+		그럼에도 불구하고 당신은 $worn.lower.name【을를】 벗어 <<if $worn.lower.plural>>그것들을<<else>>그것을<</if>> 한쪽에 둔다.
+		그러고 나서 당신은 책상 위로 올라가 다리를 벌려 반 전체가 볼 수 있도록 한다.
 	<<else>>
 		시간을 낭비하지 않고, 당신은 책상 위로 올라가 $worn.lower.name【을를】 벗어 <<if $worn.lower.plural>>그것들을<<else>>그것을<</if>> 한쪽에 둔다.
 		다음은 당신의 $worn.under_lower.name【이】다.
@@ -1427,9 +1427,9 @@
 	<</if>>
 <</if>>
 
-Wasting no time, you climb atop the desk and pull your $worn.lower.name off your legs, placing it to one side. It would only get in the way.
+시간을 낭비하지 않고, 당신은 책상 위로 올라가 다리에서 $worn.lower.name【을를】 벗어 한쪽에 둔다. 방해만 될 뿐이다.
 <<if !$worn.under_lower.name is "naked">>
-	Your $worn.under_lower.name come next. You slip them off, and hand them to Leighton.<<underlowerruined undefined "given">>
+	다음은 $worn.under_lower.name 차례다. 당신은 그것을 벗어 레이튼에게 건넨다.<<underlowerruined undefined "given">>
 <</if>>
 당신은 뒤로 기대 다리를 벌려 반 전체가 볼 수 있게 한다. <<exhibitionism4>>
 

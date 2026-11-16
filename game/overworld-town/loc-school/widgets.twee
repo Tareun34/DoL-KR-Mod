@@ -422,7 +422,7 @@
 			"너에게 특별히 맡길 일이 있단다. 학교 입구 바로 옆 헛간에 이거랑 똑같은 상자가 하나 더 있을 거야. 이리로 좀 가져와 주겠니?"
 			<br><br>
 
-			You walk to the shed, which is unlocked, and find the box just inside. It's really heavy! You can barely lift it, but manage to carry it back into the school.
+			당신은 잠겨 있지 않은 헛간으로 걸어가 안쪽에서 상자를 찾는다. 정말 무겁다! 간신히 들어 올릴 정도지만, 어찌어찌 학교 안으로 다시 들고 들어간다.
 			<<physique 1>>
 			<br><br>
 			<<if $rng gte 21>>
@@ -1591,7 +1591,7 @@
 				<<link [[옷에 손을 닦는다|Whitney Maths Wake]]>><<set $phase to 1>><</link>>
 				<br>
 				<<if displayDefiantOption(500)>>
-					<<link [[Wipe your hand on Whitney's clothes|Whitney Maths Wake]]>><<set $phase to 2>><<wolfDefiant 500>><</link>><<defianttext 500>><<ldom>>
+					<<link [[휘트니의 옷에 손을 닦는다|Whitney Maths Wake]]>><<set $phase to 2>><<wolfDefiant 500>><</link>><<defianttext 500>><<ldom>>
 				<</if>>
 			<</if>>
 		<</addinlineevent>>
@@ -1910,7 +1910,7 @@
 				<br><br>
 
 				<<if beastSexEnabledForType("dog", $monster is 1)>>
-					<<link [[Next|English Outbuilding Molestation]]>><<set $molestationstart to 1>><</link>>
+					<<link [[다음|English Outbuilding Molestation]]>><<set $molestationstart to 1>><</link>>
 					<br>
 				<<else>>
 					당신은 무사히 교실로 달아나는 데 성공하지만, 상처 하나 입지 않은 것은 아니다.<<beastescape>>
@@ -2017,11 +2017,11 @@
 			<br>
 		<<else>>
 			<<npc Doren>><<generates2>><<generates3>>
-			Some delinquents take an interest in you, and sneak gropes and fondles while the teacher isn't looking.
+			몇몇 불량배들이 당신에게 관심을 보이며, 선생님이 보지 않는 틈을 타 몰래 당신을 더듬고 만지작거린다.
 			<<gtrauma>><<gstress>><<trauma 2>><<stress 2>>
 			<br><br>
 
-				<<link [[Call for help|English Molest]]>><<set $phase to 3>><<status -5>><<npcincr Doren dom 1>><</link>><<lcool>><<gdom "Doren">>
+				<<link [[도움을 요청한다|English Molest]]>><<set $phase to 3>><<status -5>><<npcincr Doren dom 1>><</link>><<lcool>><<gdom "Doren">>
 				<br>
 				<<link [[참는다|English Molest]]>><<set $phase to 1>><<stress 4>><<trauma 4>><</link>><<gstress>><<gtrauma>>
 				<br>
@@ -2698,10 +2698,10 @@
 
 	<<elseif $worn.under_lower.type.includes("naked")>>
 		<<if $player.penisExist and $player.vaginaExist and $settings.nudeGenderPerception !== 0>>
-			"<<pShes>> got a dick and a cunt? <<print $schoolrep.herm gte 3 ? "I guess the rumours are true." : "What a freak!">>" A <<person>> snickers. <<He>> nudges <<his>> friend and points at you.
+			"저 자식이랑 보지가 둘 다 있어? <<print $schoolrep.herm gte 3 ? "소문이 사실이었나 보네." : "완전 괴물이잖아!">>" 어떤 <<person>>【이가】 킬킬댄다. <<He>>【은는】 <<his>> 친구를 쿡 찌르며 당신을 가리킨다.
 
 		<<elseif isCrossdressing() and $settings.nudeGenderPerception !== 0>>
-			"Is that a <<genitals 2>>? <<pShes>> actually a
+			"저거 <<genitals 2>> 아니야? <<pShe>>【은는】 사실은
 			<<genderswapPlayer>>
 				<<girl>>잖아!" 어떤 <<person>>【이가】 말한다. "<<print $schoolrep.crossdress gte 3 ? "결국 소문이 사실이었나 보네." : "쟤가 여장남자[남장여자]인 줄은 꿈에도 몰랐어!">>"
 			<<genderswapPlayer>>
@@ -2782,7 +2782,7 @@
 			<br><br>
 
 			<<if $demon gte 6 and $transformationParts.demon.horns isnot "hidden">>
-				<<link [[Answer honestly|History Lesson Horns]]>><</link>>
+				<<link [[솔직하게 대답한다|History Lesson Horns]]>><</link>>
 			<<else>>
 				<<link [[솔직하게 대답한다|History Lesson Ears]]>><</link>>
 			<</if>>
@@ -3312,10 +3312,10 @@
 	<<if random(1, 400) gte $cool>>
 		<<addinlineevent "historySchoolwork">>
 			<<npc Winter>><<person1>>
-			Your eyes snap open. You must have fallen asleep. You casually lift your head and stifle a yawn, pretending nothing happened. Winter is walking between desks and collecting schoolwork.
+			눈이 번쩍 뜨인다. 당신은 잠들었던 게 틀림없다. 아무 일도 없었다는 듯, 당신은 슬며시 고개를 들고 하품을 억누른다. 윈터는 책상 사이를 걸어 다니며 과제물을 걷고 있다.
 			<br><br>
 
-			You look down in dismay at your schoolwork. Someone has scribbled on it. Winter reaches your desk and holds out <<his>> hand. You have no choice but to turn in the edited schoolwork. A few minutes later, <<he>> gives you a disapproving look as <<he>> shuffles through the papers. A <<generates2>><<person2>><<person>> next to you snickers under <<his>> breath. <<ltiredness>><<gstress>><<gtrauma>><<stress 6>><<trauma 6>>
+			당신은 낙담한 채 과제물을 내려다본다. 누군가 당신의 과제물에 낙서를 해두었다. 윈터가 당신 책상 앞에 와서 <<his>> 손을 내민다. 결국 낙서된 과제물을 제출할 수밖에 없다. 몇 분 뒤, 종이를 넘겨보던 <<he>>【은는】 당신을 못마땅하다는 듯이 바라본다. 옆에 있던 한 <<generates2>><<person2>><<person>>【이가】 숨죽여 낄낄거린다. <<ltiredness>><<gstress>><<gtrauma>><<stress 6>><<trauma 6>>
 		<</addinlineevent>>
 	<</if>>
 
@@ -3358,7 +3358,7 @@
 				<br><br>
 				<<if $hairlength gte 500>>
 					<<set $hairtype to either("braid left","braid right","fishtail left","fishtail right","twin braids","twin fishtails")>>
-					You run your hands through your neatly braided hair.
+					당신은 깔끔하게 땋아진 머리를 손으로 쓸어내린다.
 				<<else>>
 					당신은 가지런히 빗질된 머리카락을 손으로 쓸어내린다.
 				<</if>>

@@ -17,7 +17,7 @@
 
 <<person1>><<person>>【이가】 당신을 방에서 밀어내, 다른 흰색 문들이 늘어선 밝은 복도를 따라간다. 고함 소리가 점점 더 커진다.
 <br><br>
-"Going once!" booms a <<person2>><<male>> voice. "Going twice! Sold!" You hear a wail, followed by a heavy thud, then silence.
+"한 번!" <<person2>><<male>> 목소리가 우렁차게 울린다. "두 번! 낙찰!" 비명 소리가 들리고, 이어서 쿵 하는 무거운 소리가 나더니, 정적이 흐른다.
 <br><br>
 <<person1>><<person>>【이가】 당신을 어두운 방으로 밀어 넣는다.
 <br><br>
@@ -85,7 +85,7 @@
 	"<<pshe>>【이가】 예쁜 아이로군요."
 <<else>>
 	<<set $flats_auction += 1>>
-	<<pshes>> a cute one."
+	"<<pshe>>【이가】 귀여운 아이로군요."
 <</if>>
 동의하는 듯한 웅성거림이 답한다.
 <br><br>
@@ -246,9 +246,9 @@
 
 "거의 다 왔어." <<person5>><<person>>【이가】 말한다. "멈춰."
 <br><br>
-You hear a thud, a high-pitched grinding of metal, then the ground shakes.
+쿵 하는 소리, 날카로운 금속 가는 소리가 들리고, 땅이 흔들린다.
 <<if pcAreArmsBound("any") or $worn.feet.type.includes("shackle")>>
-	Someone removes your hood, and your bindings.
+	누군가 당신의 두건과 결박을 풀어준다.
 	<<unbind>>
 <<else>>
 	누군가 당신의 두건을 벗겨준다.
@@ -271,5 +271,5 @@ You hear a thud, a high-pitched grinding of metal, then the ground shakes.
 <br><br>
 <<badEndTracking "Mines" { reason: "minesSold" }>>
 
-<<link [[Next|Mine Intro]]>><<endevent>><<flats_auction_end>><</link>>
+<<link [[다음|Mine Intro]]>><<endevent>><<flats_auction_end>><</link>>
 <br>

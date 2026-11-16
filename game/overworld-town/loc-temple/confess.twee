@@ -3191,7 +3191,7 @@
 		<<set $timer to 0>><<set $sydneyConfession.State to "exposed">>
 		<br><br>
 
-		<<link [[Next|Temple Confess Sydney Sex]]>><<set $speechDisable to 0>><</link>>
+		<<link [[다음|Temple Confess Sydney Sex]]>><<set $speechDisable to 0>><</link>>
 		<br>
 	<<else>>
 		<<set _sydtext to "Sydney">>
@@ -3326,7 +3326,7 @@
 	<</switch>>
 	<br><br>
 
-	<<link [[Next|Temple Confess Sydney Sex]]>><<set $speechDisable to 0>><</link>>
+	<<link [[다음|Temple Confess Sydney Sex]]>><<set $speechDisable to 0>><</link>>
 	<br>
 <<else>>
 	<<set $enemyanger to -10>>
@@ -3357,7 +3357,7 @@
 		<<set $sydneyConfession.Pronoun to ($rng lte maleChance() ? "m" : "f")>>
 		<<set $sydneyConfession.State to "present">>
 		<<set $speechDisable to 1>>
-		<span class="red">The other door opens.</span> You both freeze, and Sydney covers <<his>> mouth.
+		<span class="red">건너편 문이 열린다.</span> 두 사람은 얼어붙고, 시드니는 <<his>> 입을 틀어막는다.
 		<br><br>
 		<<set _sydtext to "Sydney">>
 		<<if _neckused>>
@@ -3427,8 +3427,8 @@
 		<br><br>
 	<<elseif $timer is 2>>
 		<<if $sydneyConfession.Sound gte 3>>
-			<span class="red"><<if $sydneyConfession.Pronoun is "m">>He<<else>>She<</if>> gasps in indignation, realising what you're doing.</span> "Fucking perverts!"
-			<<if $sydneyConfession.Pronoun is "m">>He<<else>>She<</if>> flees the confessional. <<grace -4>><<llgrace>>
+			<span class="red">당신이 무슨 짓을 하고 있는지 깨달은 <<if $sydneyConfession.Pronoun is "m">>그는<<else>>그녀는<</if>> 경악하며 숨을 들이켠다.</span> "망할 변태 새끼들!"
+			<<if $sydneyConfession.Pronoun is "m">>그는<<else>>그녀는<</if>> 고해소를 뛰쳐나간다. <<grace -4>><<llgrace>>
 			<<set $timer to 0>><<set $sydneyConfession.State to "exposed">><<set $speechDisable to 0>>
 		<<else>>
 			고해자가 말을 잇는다.
@@ -3451,8 +3451,8 @@
 	<<elseif $timer is 1>>
 		<<set $timer to 0>>
 		<<if $sydneyConfession.Sound gte 3>>
-			<span class="red"><<if $sydneyConfession.Pronoun is "m">>He<<else>>She<</if>> gasps in indignation, realising what you're doing.</span> "Fucking perverts!"
-			<<if $sydneyConfession.Pronoun is "m">>He<<else>>She<</if>> flees the confessional. <<grace -4>><<llgrace>>
+			<span class="red">당신이 무슨 짓을 하고 있는지 깨달은 <<if $sydneyConfession.Pronoun is "m">>그는<<else>>그녀는<</if>> 경악하며 숨을 들이켠다.</span> "망할 변태 새끼들!"
+			<<if $sydneyConfession.Pronoun is "m">>그는<<else>>그녀는<</if>> 고해소를 뛰쳐나간다. <<grace -4>><<llgrace>>
 			<<set $timer to 0>><<set $sydneyConfession.State to "exposed">><<set $speechDisable to 0>>
 		<<else>>
 			고해자가 말을 잇는다.

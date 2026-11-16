@@ -113,15 +113,15 @@
 
 	<<elseif $averyschoolpickupintro is 1 and ($fame.business gte 400 or C.npc.Avery.love gte 50) and $avery_helicopter.timer lte 0 and Weather.precipitation is "none">>
 		<<set $avery_helicopter.timer to 60>>
-		As you are about to leave the building, you hear a great uproar. Dozens of students are gathering outside as a helicopter hovers over the school precincts. One of the doors swings open, and a ladder rolls down with loud clanks.
+		건물을 막 나서려는데, 엄청난 소란이 들린다. 헬리콥터 한 대가 학교 구내 위를 맴돌자 수십 명의 학생들이 밖으로 모여든다. 문 하나가 활짝 열리더니, 요란하게 덜컹거리며 사다리가 내려온다.
 		<br><br>
-		You see Avery lean out, beckoning from above. <<He>> says something, but the only thing you can hear over the noise is your name.
+		에이버리가 몸을 내밀고 위에서 손짓하는 것이 보인다. <<He>>【이가】 뭐라고 말하지만, 소음 속에서 들리는 것은 당신의 이름뿐이다.
 		<br><br>
-		You hear murmuring of fellow classmates around you. They seem impressed by the extravagance. <<gcool>><<status 1>>
+		주변에서 반 친구들이 수군거리는 소리가 들린다. 다들 그 호화로움에 감탄한 듯하다. <<gcool>><<status 1>>
 		<br><br>
-		<<link [[Board helicopter (0:20)|Avery Helicopter]]>><<pass 20>><</link>><<glove>><<if $avery_mansion>><<gdom>><</if>>
+		<<link [[헬리콥터에 탑승한다 (0:20)|Avery Helicopter]]>><<pass 20>><</link>><<glove>><<if $avery_mansion>><<gdom>><</if>>
 		<br>
-		<<link [[Walk away|Avery Helicopter Walk]]>><<npcincr Avery love -1>><<npcincr Avery rage 1>><</link>><<garage>><<llove>>
+		<<link [[걸어간다|Avery Helicopter Walk]]>><<npcincr Avery love -1>><<npcincr Avery rage 1>><</link>><<garage>><<llove>>
 	<<else>>
 		<<set _robin to statusCheck("Robin")>>
 		<<set $pickupRobinPresent to 0>>

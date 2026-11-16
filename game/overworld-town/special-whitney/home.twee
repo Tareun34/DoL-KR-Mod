@@ -60,7 +60,7 @@
 		발소리가 들리더니 문이 휙 열린다. 휘트니다. <<He>>【은는】 당신을 보자 미소 짓는다.
 		<br><br>
 		<<if whitneyHasFriendsOver()>>
-			"It's my slut," <<he>> shouts over <<his>> shoulder, before looking back at you, and opening the door all the way. "Glad you could join us."
+			"내 걸레 왔네," <<he>>【은는】 어깨너머로 소리친 뒤, 다시 당신을 보고 문을 활짝 연다. "와줘서 좋네."
 			<br><br>
 
 			<<link [[들어간다|Whitney Home Enter Gang]]>><</link>>
@@ -2706,7 +2706,7 @@
 <<if C.npc.Whitney.lust gte 20>>
 	<<He>>【은는】 선택지를 재는 듯 잠시 당신을 살피다가, 어깨를 으쓱한다. "마음 정해지면 어디서 날 찾을지 알잖아." <<He>>【은는】 문을 닫는다.
 <<else>>
-	"Did you get lost?" <<He>> shrugs. "You know where to find me." <<He>> shuts the door.
+	"길 잃었냐?" <<He>>【은는】 어깨를 으쓱한다. "어디서 날 찾을지 알잖아." <<He>>【은는】 문을 닫는다.
 <</if>>
 
 <<link [[다음|Barb Street]]>><<endevent>><</link>>
@@ -3626,9 +3626,9 @@
 		<<whitneyExit>>
 	<</if>>
 /*<<elseif $alarm is 1 and $rescue is 1>>
-	Whitney's head snaps up when <<he>> notices a couple of park goers looking in your direction. "Damn, you've got a set of lungs," Whitney grumbles, fixing <<his>> clothes as <<he>> <<= $phase is 0 ? "climbs" : "crawls">> off of you. "You're in for it next time."
+	공원에 온 사람 몇몇이 이쪽을 쳐다보는 것을 알아채자 휘트니가 고개를 홱 든다. "젠장, 목청 한번 좋네." 휘트니는 투덜거리며 당신에게서 <<= $phase is 0 ? "일어나" : "기어 나와">> <<his>> 옷매무새를 고친다. "다음엔 각오해."
 	<<if $location is "park">>
-		<<He>> picks up <<his>> umbrella and makes <<his>> exit from the park without turning back.
+		<<He>>【은는】 <<his>> 우산을 집어 들고 뒤도 돌아보지 않은 채 공원을 떠난다.
 		<br><br>
 
 		<<clotheson>>
@@ -4072,7 +4072,7 @@
 
 휘트니는 방 반대편을 이리저리 돌아다니며 그물을 맞추기 어렵게 만든다.
 <<if currentSkillValue("handskill") gte random(200, 800)>>
-	Good thing you're not aiming for the net. You hurl the ball at <<his>> face. <span class="green">It hits its mark, bouncing off Whitney's nose.</span><<ldom>><<npcincr Whitney dom -1>>
+	애초에 그물을 겨냥한 게 아니라서 다행이다. 당신은 <<his>> 얼굴을 향해 공을 세게 던진다. <span class="green">공은 목표물에 명중해, 휘트니의 코에 맞고 튕겨 나간다.</span><<ldom>><<npcincr Whitney dom -1>>
 	<br><br>
 
 	휘트니는 다음 두 개의 공을 경계하며 쿠션을 잡아 첫 번째를 막아내고, 그것을 던져 두 번째 공을 튕겨낸다. 쿠션은 당신의 머리 위를 날아가 부엌 조리대를 스치며, 건조대에 있던 프라이팬을 요란하게 바닥으로 떨어뜨린다.
@@ -4509,10 +4509,10 @@
 :: Whitney Home Hang Toys Nod
 <<effects>>
 
-You nod. "Fuck," <<he>> says. "Fuck fuck fuck." <<He>> climbs off of you, letting the toys on <<his>> back fall, and sits on <<his>> bed, looking at the pile of toys all around.
+당신은 고개를 끄덕인다. "씨발," <<he>>【이가】 말한다. "씨발 씨발 씨발." <<He>>【은는】 <<his>> 등에 얹힌 장난감들이 툭툭 떨어지게 내버려 둔 채 당신에게서 떨어져 <<his>> 침대 위에 앉더니, 사방에 널린 인형 더미를 바라본다.
 <br><br>
 
-"You know what?" <<he>> says. "Fuck it. These are mine, and so are you. I have the best collection in the world."
+"그거 아냐?" <<he>>【이가】 말한다. "씨발 알 빠야. 이것들도 내 거고, 너도 내 거야. 난 세상에서 제일 쩌는 컬렉션을 가졌다고."
 <br><br>
 
 <<link [[다음|Whitney Home Hang Toys]]>><</link>>

@@ -333,11 +333,11 @@
 				<<ltrauma>><<lstress>><<trauma -6>><<stress -6>>
 			<</if>>
 		<<else>>
-			Your thoughts turn to Bailey.
+			당신의 생각은 베일리에게로 향한다.
 			<<if $rentTime lte 0>>
 				<<babyRent true>>
 				<<if $money gte $rentMoney + ($babyRent or 0)>>
-					You have enough to pay <<nnpc_him "Bailey">>,
+					당신은 <<nnpc_him "Bailey">>에게 낼 돈이 충분하다,
 					<<if $baileydefeatedchain gte 1>>
 						하지만 굳이 내야 할 필요가 있는지 의문이 든다.
 					<<else>>
@@ -356,7 +356,7 @@
 			<<else>>
 				<<babyRent true>>
 				<<if $money gte $rentMoney + ($babyRent or 0)>>
-					You have enough to pay <<nnpc_him "Bailey">> on <<rentday>>,
+					당신은 <<nnpc_him "Bailey">>에게 <<rentday>>에 낼 돈이 충분하다,
 					<<if $baileydefeatedchain gte 1>>
 						하지만 굳이 내야 할 필요가 있는지 의문이 든다.
 					<<else>>

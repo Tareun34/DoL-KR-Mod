@@ -180,14 +180,14 @@
 	<br><br>
 	<<exposure>>
 	<<if $exposed gte 1>>
-		You close the last cage, and look down at your body.
+		마지막 우리를 닫고 몸을 내려다본다.
 		<<if (!$worn.upper.type.includes("naked") and $upperwetstage gte 3)
 			or (!$worn.lower.type.includes("naked") and $lowerwetstage gte 3)
 			or (!$worn.under_upper.type.includes("naked") and $underupperwetstage gte 3)
 			or (!$worn.under_lower.type.includes("naked") and $underlowerwetstage gte 3)>>
-			<span class="pink">Your clothes are soaking wet and transparent!</span>
+			<span class="pink">당신의 옷이 흠뻑 젖어 속이 다 비친다!</span>
 		<<else>>
-			<<covered>> <span class="pink">You'll be in danger if you're caught like this.</span>
+			<<covered>> <span class="pink">이런 모습으로 들키면 위험해질 것이다.</span>
 		<</if>>
 		<br><br>
 		<<link [[다음|Pound Exposed]]>><<endevent>><</link>>

@@ -14,7 +14,7 @@
 :: Widgets Industrial Alleyways Ex [widget]
 
 <<widget "industrialExposedPipeAttack">>
-	<<generate1>><<person1>>You continue on, your heart pounding in your chest. You peek around the corner to make sure the way forward is safe. Just before you move however, a force impacts your left leg, closely followed by a sharp pain. You see the culprit as you fall to the ground, a <<person>>. <<He>> drops the metal pipe and is on top of you before you can recover.
+	<<generate1>><<person1>>가슴이 요동치는 채로 당신은 계속 나아간다. 당신은 앞으로 가는 길이 안전한지 확인하기 위해 모퉁이 너머를 엿본다. 그러나 당신이 움직이려던 찰나, 왼쪽 다리에 충격이 가해지고 이어서 날카로운 고통이 뒤따른다. 당신은 바닥에 쓰러지며 범인인 <<person>>【을를】 본다. <<He>>【은는】 쇠파이프를 떨어뜨리더니, 당신이 정신을 차리기도 전에 당신 위로 올라탄다.
 	<br><br>
 	<<pain 12>>
 
@@ -22,7 +22,7 @@
 <</widget>>
 
 <<widget "industrialExposedDeadEnd">>
-	You come to a dead end, your path blocked by a brick wall. You hear voices coming from the way you arrived. If you go back that way, you fear your <<lewdness>> will be seen. You notice a small hole at the base of the wall, maybe large enough for you to squeeze through. You could also wait until the threat has passed.
+	당신은 벽돌담으로 가로막힌 막다른 곳에 다다른다. 당신이 왔던 길에서 목소리가 들려온다. 만약 그 길로 돌아간다면, 당신의 <<lewdness>>【이가】 보일까 봐 두렵다. 당신은 담장 바닥 즈음에 당신이 억지로 비집고 들어갈 만한 작은 구멍이 있는 것을 발견한다. 아니면 위협이 지나갈 때까지 기다릴 수도 있다.
 	<br><br>
 
 	<<link [[구멍으로 빠져나간다 (0:01)|Industrial Ex Hole]]>><<pass 1>><</link>>
@@ -32,7 +32,7 @@
 <</widget>>
 
 <<widget "industrialExposedVanBarrel">>
-	You're passing empty barrels lined up against a wall when the front of a van peeks around the corner up ahead.
+	당신이 벽을 따라 늘어선 빈통들을 지나고 있을 때, 앞쪽 모퉁이에서 승합차 한 대가 모습을 드러낸다.
 	<br><br>
 
 	<<link [[통 안에 숨는다 (0:05)|Industrial Ex Barrel]]>><<pass 5>><</link>>
@@ -44,7 +44,7 @@
 :: Widgets Park Ex [widget]
 
 <<widget "parkExposedAmbush">>
-	<<generate1>>You move on, keeping to the bushes as much as you can. As you peek around a tree, a pair of arms wrap round you from behind and force you to the ground.
+	<<generate1>>당신은 계속 이동하며 최대한 덤불에 몸을 숨긴다. 나무 너머를 몰래 엿보고 있을 때, 등 뒤에서 한 쌍의 팔이 당신을 감싸더니 힘으로 바닥에 짓누른다.
 	<br><br>
 
 	<<link [[다음|Park Woman]]>><<set $molestationstart to 1>><</link>>
@@ -74,7 +74,7 @@
 <</widget>>
 
 <<widget "parkExposedBridge">>
-	You come to a bridge over a river. It's quite long, and if someone were to arrive while you crossed there'd be nowhere to hide.
+	당신은 강을 가로지르는 다리에 이른다. 꽤나 긴 다리라서, 당신이 건너는 중에 누군가 오기라도 한다면 숨을 곳이 마땅치 않다.
 	<br><br>
 
 	<<link [[위험을 감수하고 다리를 건넌다|Park Ex Bridge]]>><<stress 6>><</link>><<gstress>>
@@ -85,14 +85,14 @@
 
 :: Widgets Commercial Alleyways Ex [widget]
 <<widget "commercialExposedDoorCollision">>
-	<<generate1>><<person1>>You continue on, your heart pounding in your chest. You are peeking around a corner when the door beside you bursts open. A <<person>> carrying a large box rushes through, colliding with you and knocking you both to the ground. <<He>> recovers first, and seizes you by your hair.
+	<<generate1>><<person1>>가슴이 쿵쾅거리는 가운데 당신은 계속 나아간다. 모퉁이 너머를 몰래 엿보고 있을 때 옆에 있던 문이 벌컥 열린다. 큰 상자를 든 <<person>>【이가】 서둘러 나오다가 당신과 충돌하여, 둘 다 바닥에 넘어지고 만다. <<he>>【이가】 먼저 정신을 차리더니, 당신의 머리채를 움켜쥔다.
 	<br><br>
 
 	<<link [[다음|Molestation Commercial]]>><<set $molestationstart to 1>><<set $eventskip to 1>><</link>>
 <</widget>>
 
 <<widget "commercialExposedMannequin">>
-	You are walking down an alley when you hear people up ahead. You turn back the way you came, but hear people coming from that direction as well. You look around for a way to keep your <<lewdness>> concealed, but there's nothing here except some mannequins lined up against a wall.
+	골목을 걸어가던 중 앞쪽에서 사람들의 소리가 들려온다. 당신은 왔던 길로 되돌아가려 하지만, 그쪽에서도 사람들이 오는 소리가 들린다. 당신의 <<lewdness>>【을를】 숨길 방법을 찾으려 주변을 둘러보지만, 벽에 세워져 있는 마네킹 몇 개 외에는 아무것도 없다.
 	<br><br>
 
 	<<link [[마네킹인 척한다|Commercial Ex Mannequin]]>><</link>>
@@ -108,7 +108,7 @@
 <</widget>>
 
 <<widget "commercialExposedCardboardBox">>
-	You come to the end of an alley. You peek around the corner. The path beyond is overlooked by the upper storey of a restaurant, with several patrons sitting near the edge. None look in your direction, but they're sure to see you if you continue.
+	당신은 골목 끝에 다다른다. 모퉁이 너머를 엿본다. 그 너머의 길은 레스토랑의 위층에서 내려다보이는 곳으로, 가장자리 근처에 여러 명의 손님들이 앉아 있다. 아무도 당신 쪽을 보고 있지 않지만, 계속 나아가면 그들의 눈에 띌 것이 분명하다.
 	<br><br>
 
 	뒤에서 목소리가 들린다. 당신은 골판지 상자 뒤에 숨어보지만, 상자가 너무 작아서 몸을 가려주지 못한다. 당신은 갇혔다.
@@ -127,7 +127,7 @@
 :: Widgets Residential Alleyways [widget]
 
 <<widget "residentialExposedDumpsterAmbush">>
-	<<generate1>>You continue on, your heart pounding in your chest. You hear voices up ahead so you move into a blind alley and duck behind a dumpster. The voices get quieter and you are about to move when the dumpster yawns open! Before you can react, a pair of arms emerge and drag you inside.
+	<<generate1>>당신은 가슴이 두근거리는 채 계속 나아간다. 앞쪽에서 목소리가 들려 막다른 골목으로 들어가 쓰레기통 뒤에 몸을 숨긴다. 목소리가 점점 멀어지고, 막 움직이려는 순간 쓰레기통 뚜껑이 벌컥 열린다! 반응하기도 전에 두 팔이 튀어나와 당신을 안으로 끌고 들어간다.
 	<br><br>
 
 	<<link [[다음|Molestation Residential]]>><<set $molestationstart to 1>><</link>>
@@ -136,7 +136,7 @@
 <<widget "residentialExposedDumpsterDog">>
 	<<beastNEWinit 1 dog>>
 	<<if beastSexEnabledForType("dog", $monster is 1)>>
-		You continue on, your heart pounding in your chest. You hear voices up ahead, so you move into a blind alley and duck behind a dumpster. The voices get louder, you recognise them from school. They stop at the end of the alley, trapping you. As you look around for an escape route you notice a stray <<beasttype>> looking at you from under a discarded newspaper.
+		당신은 가슴이 두근거리는 채 계속 나아간다. 앞쪽에서 목소리가 들려 막다른 골목으로 들어가 쓰레기통 뒤에 몸을 숨긴다. 목소리는 점점 커지고, 당신은 학교에서 들은 목소리라는 것을 알아차린다. 그들은 골목 끝에 멈춰 당신을 가둔다. 빠져나갈 길을 찾으려고 주변을 둘러보다, 버려진 신문지 밑에서 당신을 바라보는 떠돌이 <<beasttype>> 하나를 발견한다.
 		<br><br>
 
 		<<bHe>>【은는】 꼬리를 흔들며 당신에게 다가와 짖기 시작한다. 당신은 그 소리가 주의를 끌지 않기를 바란다.

@@ -115,11 +115,11 @@
 	<<passouthome>>
 <<elseif $exposed gte 1 and Time.hour lt 22 and Time.hour gte 6>>
 	<<exhibitionismgarden>>
-	You can't bear the thought of someone catching you like this. You hasten to your bedroom.
+	이런 모습을 누군가에게 들킬지도 모른다는 생각에 견딜 수 없다. 당신은 서둘러 침실로 향한다.
 	<br><br>
 	<<if $rentTime lte 0>>
 		<<set $bus to "home">>
-		<<link [[Next|Bedroom Bailey]]>><</link>>
+		<<link [[다음|Bedroom Bailey]]>><</link>>
 	<<else>>
 		<<bedroomEntryEvent "forced">>
 	<</if>>
@@ -484,7 +484,7 @@
 <</if>>
 
 <<if $tutorial is 0 and !$debug>>
-	<<generate1>><<person1>><<= $exposed gte 1 ? "Despite being so careful, you" : "You">> bump into a <<person>> passing by. <<He>> staggers back and looks at you with anger, but <<his>> rage turns to lechery as <<he>> beholds you. "You're the cutest thing I've seen all week! Come 'ere."
+	<<generate1>><<person1>><<= $exposed gte 1 ? "그렇게 조심했음에도 불구하고, 당신은" : "당신은">> 지나가던 <<person>>【와과】 부딪힌다. <<He>>【은는】 비틀거리며 뒤로 물러서더니 화난 눈으로 당신을 쳐다보지만, 당신을 보자 <<his>> 분노는 음탕함으로 바뀐다. "이번 주에 본 것 중에 제일 귀엽네! 이리 와."
 	<br><br>
 
 	<<link [[다음|Tutorial]]>><<set $molestationstart to 1>><<set $tutorialExit to "Residential Alleyways">><</link>>
@@ -1087,7 +1087,7 @@
 	<br><br>
 	당신은 긴장을 풀고 평화로운 분위기를 즐기며 거의 꾸벅꾸벅 졸 뻔하다가, 로빈이 경쾌하게 말하는 소리를 듣는다. "다 됐다!"
 	<br><br>
-	You rub your eyes and examine your hair.
+	당신은 눈을 비비고 머리카락을 살펴본다.
 	<<set _target to either("twin fishtails","fishtail left","fishtail right")>>
 	<<if $hairtype isnot _target>>
 		<<set $hairtype to _target>>
