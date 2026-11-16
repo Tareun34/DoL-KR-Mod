@@ -5,47 +5,9 @@
 
 상태: `대기`(아직 안 함) · `진행`(에이전트 실행 중) · `완료`(검사·빌드·커밋 끝) · `되돌림`(검사 2회 실패로 `git checkout`) · `건너뜀`.
 
-## 기존 비허용 조사 마커(이번 작업 범위 밖, 사용자 판단용)
+## 기존 비허용 조사 마커(2026-11-16 전부 정리)
 
-허용 목록 밖 마커는 `trSelectPost`가 빈 문자열을 돌려줘 조사가 화면에서 사라진다. 2026-11-12 기준 `game/`에 다음이 있다(줄 번호는 당시 기준).
-
-```
-game/base-system/pregnancy/children-events.twee:1090:【에게】
-game/overworld-forest/loc-forestshop/gwylan-ritual-sex.twee:4093:【이는】
-game/overworld-forest/loc-forestshop/gwylan-ritual-sex.twee:4110:【이는】
-game/overworld-forest/loc-forestshop/shop-events.twee:1753:【의】
-game/overworld-forest/loc-forestshop/shop-events.twee:1755:【의】
-game/overworld-forest/loc-forestshop/shop-events.twee:1755:【의】
-game/overworld-forest/loc-forestshop/shop-events.twee:1757:【의】
-game/overworld-plains/loc-estate/cards.twee:1921:【에게】
-game/overworld-plains/loc-farm/cottage.twee:3065:【의】
-game/overworld-plains/loc-farm/widgets.twee:3131:【에게】
-game/overworld-plains/loc-farm/woodland.twee:2634:【도】
-game/overworld-town/loc-home/ward.twee:189:【의】
-game/overworld-town/loc-museum/painting-ward.twee:1176:【의】
-game/overworld-town/loc-photography/main.twee:307:【의】
-game/overworld-town/loc-photography/main.twee:309:【의】
-game/overworld-town/loc-school/changing-rooms.twee:1172:【의】
-game/overworld-town/loc-school/inspections.twee:370:【도】
-game/overworld-town/loc-school/inspections.twee:566:【도】
-game/overworld-town/loc-street/events.twee:9791:【의】
-game/overworld-town/special-avery/main.twee:2697:【의】
-game/overworld-town/special-avery/party.twee:1118:【의】
-game/overworld-town/special-robin/main.twee:736:【도】
-game/overworld-town/special-whitney/main.twee:10096:【과와】
-game/overworld-town/special-whitney/main.twee:5859:【에게】
-game/overworld-town/special-whitney/main.twee:5861:【에게】
-game/overworld-town/special-whitney/main.twee:5863:【에게】
-game/overworld-town/special-whitney/main.twee:5865:【에게】
-game/overworld-town/special-whitney/main.twee:8546:【에게】
-game/overworld-town/special-whitney/main.twee:8786:【의】
-game/overworld-town/special-whitney/park.twee:799:【의】
-game/overworld-town/special-whitney/street.twee:2643:【의】
-game/overworld-town/special-whitney/street.twee:2703:【의】
-game/overworld-underground/loc-underground/robin.twee:205:【의】
-game/overworld-underground/loc-underground/robin.twee:288:【의】
-game/special-fishing/fishing-text.twee:1532:【에게】
-```
+허용 목록 밖 마커 34곳을 고쳤다: `<<he>>【의】`류 → `<<his>>`(18), 【에게】→에게(8), 【도】→도(4), 【과와】→【와과】(1), `【은는}` 오타(1), 【이는】→【은는】(2). 지금 `game/`에는 허용 목록 밖 마커가 없다.
 
 ## 코드 측 보정(2026-11-16 처리, 커밋 `fix(kr)`)
 
@@ -54,8 +16,8 @@ game/special-fishing/fishing-text.twee:1532:【에게】
 - **래퍼 적용**(옛 번역과 같은 `window.KR` 변환 함수): 산문의 `$NPCList[].penisdesc`(273곳)·`breastsdesc`, `$_toy`, 왼/오른손, `$loveInterest.primary`, `<<print fullDescription / beastTypes / $carried.neck.photo>>`.
 - **화면번역 사전(kr_dict.js) 추가 50항목**: 광산 물품(랜턴·녹슨 곡괭이·삽자루·보라색 다이아몬드), 보석/수정(크기 조합 포함), 헬리콥터 목적지, 그윌란 의뢰 가게 키(의상·성인용품·골동품·미끼), 밭 종류(흙/물), 방향(왼쪽/오른쪽/가운데), 탈의실 성별, 말 성별, 의상 패턴명, 술, 올빼미 인형.
 - **개별 코드 수정**: 로빈 대화 주제 값 "논의되지 않음"→"undiscussed"(옛 번역 버그), 사이드바 치트 버튼 라벨, 박물관 골동품 관사, 그윌란 의뢰 관사, 거리 이름 `getMapNameKr`, 카페 `<<phaseFoodKR>>`, 전투 조롱 선택지 한글 라벨, 자위 액체 목록 접속사.
-- **남긴 것**: `effect.js` 최면 특성 이름(옛 번역과 동일하게 영어), 낚시 물고기 키(`$fishingHookedFish.type`; 사전에 물고기 이름이 있으면 후처리로 한글화됨), `thug.twee` 615 `$bus.toUpperFirst() Street` 라벨.
-- **검토에서 추가로 발견된 영어 잔여(후속 묶음 후보)**: `04-Variables/hair-styles.twee` 135–142 새 헤어스타일 `name_cap`("Fishtail Left/Right" 등; 사전의 left/right 때문에 반쪽 번역으로 보임), `base-system/bodywriting-objects.twee` 2219 "Water Tables", 1380 "Breeding mare". 긴 키를 사전에 넣거나 해당 줄을 번역하면 해결.
+- **후속 처리(2026-11-16)**: `effect.js` 최면 특성 이름은 `window.KR.lookup(trait)`로 사전 조회, 낚시 물고기 이름은 `setup.foodstuff[키].name`(한글), `thug.twee` 615 거리 라벨은 `getMapNameKr`, 헤어스타일 `name_cap` 2개 번역. bodywriting의 "Water Tables"/"Breeding mare"는 `writing`(키)이고 표시는 `writingKr`가 하므로 문제 없음.
+- (처리됨) 검토에서 추가로 발견된 영어 잔여: `04-Variables/hair-styles.twee` 135–142 새 헤어스타일 `name_cap`("Fishtail Left/Right" 등; 사전의 left/right 때문에 반쪽 번역으로 보임), `base-system/bodywriting-objects.twee` 2219 "Water Tables", 1380 "Breeding mare". 긴 키를 사전에 넣거나 해당 줄을 번역하면 해결.
 
 ### 처리 전 목록(기록용)
 

@@ -612,7 +612,7 @@
 <br><br>
 당신은 안도의 한숨을 내쉬고 남은 길을 평온하게 즐긴다.<<stress -4>><<lstress>>
 <br><br>
-<<icon `$bus + ".png"`>><<link [[$bus.toUpperFirst() Street|Bus Thug Shakedown Still Surprise]]>><</link>>
+<<icon `$bus + ".png"`>><<link [[<<print getMapNameKr($bus.toUpperFirst() + " Street")>>|Bus Thug Shakedown Still Surprise]]>><</link>>
 <br>
 
 :: Bus Thug Shakedown Still Surprise

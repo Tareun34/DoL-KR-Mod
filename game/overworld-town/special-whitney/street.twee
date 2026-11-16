@@ -2640,7 +2640,7 @@
 	제대로 옷을 입었다고 확신한 당신은 밖으로 나가려 하지만, 휘트니가 당신을 붙잡는다. <<He>>【은는】 당신을 가까이 끌어당겨 <<his>> 팔로 당신을 감싸 꼼짝 못하게 한다.
 	<br><br>
 
-	"감당하기 너무 힘들진 않았으면 좋겠네." <<He>>【의】 입이 당신의 입 근처까지 오도록 몸을 기울인다. "우린 이제 시작이니까." 그것이 약속인지 협박인지 당신은 확신할 수 없다.<<npcincr Whitney lust 5>><<glust>>
+	"감당하기 너무 힘들진 않았으면 좋겠네." <<his>> 입이 당신의 입 근처까지 오도록 몸을 기울인다. "우린 이제 시작이니까." 그것이 약속인지 협박인지 당신은 확신할 수 없다.<<npcincr Whitney lust 5>><<glust>>
 	<br><br>
 
 	<<He>>【은는】 당신의 입술을 혀끝으로 톡 건드린 뒤, 당신을 옆으로 밀치고 무리 쪽으로 돌아간다.
@@ -2700,7 +2700,7 @@
 			<<if $worn.genitals.origin is "Whitney">>
 				"내 걸레가 적어도 명령은 잘 따르는군." <<He>>【은는】 킥킥거리며 당신의 $worn.genitals.name【을를】 가볍게 잡아당긴다. "그리고 곧, 더 많은 사람들이 보게 되겠지."
 			<<else>>
-				<<He>>【의】 손이 당신의 $worn.genitals.name에 닿자 비웃는다. "스스로 잠가놨어? 그래 봐야 걸레처럼 보이는 건 덜하지 않아."
+				<<his>> 손이 당신의 $worn.genitals.name에 닿자 비웃는다. "스스로 잠가놨어? 그래 봐야 걸레처럼 보이는 건 덜하지 않아."
 			<</if>>
 		<<elseif isHermOrCrossdresser() and !$genderknown.includes("Whitney") and $settings.nudeGenderPerception !== 0>>
 			<<set $genderknown.pushUnique("Whitney")>>

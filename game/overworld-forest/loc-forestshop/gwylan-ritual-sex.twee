@@ -4090,7 +4090,7 @@
 	<br><br>
 
 	<<if $sexRitual.chaseTrue>>
-		"추격. <span class="forest-green">짝짓기 의식.</span> 그거... 좋았어." 당신은 <<him>>【이가】 시선을 돌릴 줄 알았지만, 대신 <<he>>【이는】 당신을 잠시 갈망하듯 빤히 바라본다.
+		"추격. <span class="forest-green">짝짓기 의식.</span> 그거... 좋았어." 당신은 <<him>>【이가】 시선을 돌릴 줄 알았지만, 대신 <<he>>【은는】 당신을 잠시 갈망하듯 빤히 바라본다.
 	<<elseif $sexRitual.chaseWon>>
 		"<span class="green">네가 우리 술래잡기에서 이겼어.</span> 그래서 숲도 널 동족으로 받아들였지. 꽤 재미있었어."
 	<<elseif $sexRitual.chase>>
@@ -4107,7 +4107,7 @@
 	<<else>>
 		"처음 독기를 들이켰을 때 별로 버텨내지 못했네. 그러려면 강한 의지력이 필요하거든. <span class="blue">하지만 내가 널 황홀경에 빠뜨려 주면 더 쉬워질지도 몰라.</span>"
 	<</if>>
-	<<He>>【이는】 말하면서 주변을 정리하기 시작한다.
+	<<He>>【은는】 말하면서 주변을 정리하기 시작한다.
 	<br><br>
 
 	<<set _purgeCount to $sexRitual.playerOrgasms -2>>

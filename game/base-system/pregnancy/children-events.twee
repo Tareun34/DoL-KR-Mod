@@ -1087,7 +1087,7 @@
 		<</if>>
 	<<case "rollBall">>
 		<<wearProp "chewy ball">>
-		당신이 공을 집어 들자 <<childname>>【은는】 신나게 짖는다. 공을 부드럽게 <<childhim>>【에게】 굴려준다. <<childHe>>【은는】 <<= either("능숙하게 받아내다가", "공을 서투르게 다루다가", "그저 바라보기만 하다가")>> <<if $childRecords[$childSelected.childId].species is "wolf">><<childhis>> 코로<<else>><<childhis>> 작은 <<childhands>>로<</if>> 다시 당신 쪽으로 굴려 보낸다.
+		당신이 공을 집어 들자 <<childname>>【은는】 신나게 짖는다. 공을 부드럽게 <<childhim>>에게 굴려준다. <<childHe>>【은는】 <<= either("능숙하게 받아내다가", "공을 서투르게 다루다가", "그저 바라보기만 하다가")>> <<if $childRecords[$childSelected.childId].species is "wolf">><<childhis>> 코로<<else>><<childhis>> 작은 <<childhands>>로<</if>> 다시 당신 쪽으로 굴려 보낸다.
 		<br><br>
 		당신은 <<childhe>>【이가】 지칠 때까지 잠시 공을 주고받는다. <<childHe>>【은는】 공 주위에 몸을 말고 잠이 든다. 당신은 <<childhis>> 머리를 쓰다듬고 일어선다. <<lstress>><<stress -6>>
 		<<set $childRecords[$childActivityEvent.childid].development.activity to "sleeping">>

@@ -505,7 +505,7 @@ function effects() {
 						break;
 					}
 					default:
-						sWikifier(`<span class="purple">최면 효과 ${trait === "insight" && V.awareness >= 300 ? "무지" : trait.toUpperFirst()}【이가】 사라졌다.</span>`);
+						sWikifier(`<span class="purple">최면 효과 ${trait === "insight" && V.awareness >= 300 ? "무지" : (window.KR.lookup(trait) || trait.toUpperFirst())}【이가】 사라졌다.</span>`);
 						delete V.hypnosis_traits[trait];
 						delete V.hypnosisTimers[trait];
 						break;

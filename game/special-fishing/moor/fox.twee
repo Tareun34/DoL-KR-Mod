@@ -202,7 +202,7 @@
 <<effects>>
 <<loadNPC 0 "moor_fishing_fox">>
 <<if animalSexEnabledForType("fox") and dangerEvent()>>
-	당신이 $fishingHookedFish.type【을를】 물속으로 던지자, <<beasttype>>의 눈이 그것을 따라 물속으로 향한다. <<bHe>>【은는】 귀를 바짝 눕히며 <<bhis>> 시선을 당신에게 홱 돌린다. <<bHe>>【은는】 으르렁거리더니 <<bhimself>>【을를】 당신에게 내던진다.
+	당신이 <<= (setup.foodstuff[$fishingHookedFish.type] || {}).name || $fishingHookedFish.type>>【을를】 물속으로 던지자, <<beasttype>>의 눈이 그것을 따라 물속으로 향한다. <<bHe>>【은는】 귀를 바짝 눕히며 <<bhis>> 시선을 당신에게 홱 돌린다. <<bHe>>【은는】 으르렁거리더니 <<bhimself>>【을를】 당신에게 내던진다.
 	<<unset $fishingHookedFish>>
 	<br><br>
 

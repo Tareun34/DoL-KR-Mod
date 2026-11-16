@@ -2631,7 +2631,7 @@
 <<elseif $enemyhealth lte 0>>
 	<<farm_text pig>>【은는】 겁을 먹고 당신에게서 뒷걸음질 친다.
 	<<if $tempPigTracker.length is 1>>
-		다른 <<farm_text pig $tempPigTracker[0]>>【도】 그 뒤를 따른다.
+		다른 <<farm_text pig $tempPigTracker[0]>>도 그 뒤를 따른다.
 	<<else>>
 		나머지 녀석들도 그 뒤를 따른다.
 	<</if>>

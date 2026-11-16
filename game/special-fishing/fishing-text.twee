@@ -289,7 +289,7 @@
 		<<set _fishingSeasonFish to weightedRandom(... preferredSeasonFishList(_fishingLocation))>>
 		<<set _fishingSeasonFishBoth to preferredLocationFishList(_fishingLocation).map(([f]) => f).includes(_fishingSeasonFish)>>
 		<<addinlineevent 2>>
-			<span class="purple"><<if _fishingSeasonFishBoth>>엄청 큰<<else>>큰<</if>></span> _fishingSeasonFish【이가】 낚싯줄 주위를 헤엄친다.
+			<span class="purple"><<if _fishingSeasonFishBoth>>엄청 큰<<else>>큰<</if>></span> <<= (setup.foodstuff[_fishingSeasonFish] || {}).name || _fishingSeasonFish>>【이가】 낚싯줄 주위를 헤엄친다.
 		<</addinlineevent>>
 		<<addinlineevent 2>>
 			<span class="purple"><<if _fishingSeasonFishBoth>>엄청 큰<<else>>큰<</if>></span> _fishingSeasonFish 한 쌍이 서로의 주위를 맴돌며 헤엄치는 것을 지켜본다.<<lstress>><<stress -1>>
@@ -300,10 +300,10 @@
 		<<set _fishingLocationFish to weightedRandom(... preferredLocationFishList(_fishingLocation))>>
 		<<set _fishingLocationFishBoth to preferredSeasonFishList(_fishingLocation).map(([f]) => f).includes(_fishingLocationFish)>>
 		<<addinlineevent 2>>
-			<span class="purple"><<if _fishingLocationFishBoth>>엄청 큰<<else>>큰<</if>></span> _fishingLocationFish【이가】 잠시 수면 위로 떠오르는 것을 본다.<<lstress>><<stress -1>>
+			<span class="purple"><<if _fishingLocationFishBoth>>엄청 큰<<else>>큰<</if>></span> <<= (setup.foodstuff[_fishingLocationFish] || {}).name || _fishingLocationFish>>【이가】 잠시 수면 위로 떠오르는 것을 본다.<<lstress>><<stress -1>>
 		<</addinlineevent>>
 		<<addinlineevent 2>>
-			<span class="purple"><<if _fishingLocationFishBoth>>엄청 큰<<else>>큰<</if>></span> _fishingLocationFish【이가】 근처에서 수면 위로 떠오른다.<<lstress>><<stress -1>>
+			<span class="purple"><<if _fishingLocationFishBoth>>엄청 큰<<else>>큰<</if>></span> <<= (setup.foodstuff[_fishingLocationFish] || {}).name || _fishingLocationFish>>【이가】 근처에서 수면 위로 떠오른다.<<lstress>><<stress -1>>
 		<</addinlineevent>>
 	<</if>>
 
@@ -1529,7 +1529,7 @@
 	<</if>>
 	<<if $loveInterest.secondary isnot "None" and ($loveInterest.secondary isnot "Whitney" or _whitneyAbsent)>>
 		<<addinlineevent 1>>
-			생각이 <<= (["Black Wolf", "Great Hawk"].includes($loveInterest.secondary) ? "그 " : "") + window.KR.gatPersonNameDictKR($loveInterest.secondary)>>【에게】로 흘러간다.
+			생각이 <<= (["Black Wolf", "Great Hawk"].includes($loveInterest.secondary) ? "그 " : "") + window.KR.gatPersonNameDictKR($loveInterest.secondary)>>에게로 흘러간다.
 		<</addinlineevent>>
 		<<addinlineevent 1>>
 			어느새 <<= (["Black Wolf", "Great Hawk"].includes($loveInterest.secondary) ? "그 " : "") + window.KR.gatPersonNameDictKR($loveInterest.secondary)>>【을를】 생각하고 있는 자신을 발견한다.
