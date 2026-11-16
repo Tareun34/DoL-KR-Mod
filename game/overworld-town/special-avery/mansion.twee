@@ -2789,7 +2789,7 @@
 <<effects>>
 
 <<if $phase is 2>> /* Show */
-	당신은 에이버리에게 사랑의 로켓 안을 보여준다. 안에는 <<= $carried.neck.photo is "Avery" ? `<<him>>` : `<<print $carried.neck.photo>>`>>의 사진이 들어 있다.
+	당신은 에이버리에게 사랑의 로켓 안을 보여준다. 안에는 <<= $carried.neck.photo is "Avery" ? `<<him>>` : `<<print window.KR.gatPersonNameDictKR($carried.neck.photo)>>`>>의 사진이 들어 있다.
 	<br><br>
 	<<if $carried.neck.photo is "Avery">>
 		<<if $averyragerevealed is 1 and C.npc.Avery.rage gte 60>>

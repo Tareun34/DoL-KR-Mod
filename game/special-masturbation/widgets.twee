@@ -96,7 +96,7 @@
 			<<if $masturbation_milk gt 0>><<set $_liquids.push("모유")>><</if>>
 			<<if $masturbation_semen gt 0>><<set $_liquids.push("정액")>><</if>>
 			<<if $masturbation_vaginaFluid gt 0>><<set $_liquids.push("음탕한 체액")>><</if>>
-			<span class="gold">당신은 <<print ($masturbation_fluid).toLocaleString("en-GB", {minimumFractionDigits: 1})>> mL의 <<print $_liquids.formatList({"useOxfordComma":true})>>【을를】 모았다.</span>
+			<span class="gold">당신은 <<print ($masturbation_fluid).toLocaleString("en-GB", {minimumFractionDigits: 1})>> mL의 <<print $_liquids.formatList({"conjunction":"그리고","useOxfordComma":true})>>【을를】 모았다.</span>
 		<<else>>
 			당신은 어떠한 모유나 음탕한 체액도 짜내지 못했다.
 		<</if>>

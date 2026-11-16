@@ -740,7 +740,7 @@
 				밀어붙이며
 			<</if>>
 			<<if playerChastity("penis")>>
-				<<bhis>> $NPCList[_n].penisdesc【을를】 당신의 $worn.genitals.name에 맞댄다.
+				<<bhis>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 $worn.genitals.name에 맞댄다.
 				<<set $worn.genitals.integrity -= 10>><<set $speechChastity to 1>>
 			<<elseif random(0,1) is 1>>
 				<<bhis>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 것에 맞댄다.
@@ -1809,7 +1809,7 @@
 		<<print window.KR.getBeastTypeKr($combatTrain.beastTypes[_next_beast])>>【이가】 한 마리의 다른 <<print window.KR.getBeastTypeKr($combatTrain.beastTypes[_next_next_beast])>>【와과】 함께 <<bhisnext>> 차례를 기다리고 있다.
 	<<elseif $combatTrain.length gte 3>>
 		<br>
-		<<print $combatTrain.beastTypes[_next_beast]>>【이가】 <<bhisnext>> 차례를 기다리고 있고, 다른 <<number $combatTrain.length-1>>마리의 <<if $NPCList[0].monster>>수인들<<else>>짐승들<</if>>도 함께 대기 중이다.
+		<<print window.KR.getBeastTypeKr($combatTrain.beastTypes[_next_beast])>>【이가】 <<bhisnext>> 차례를 기다리고 있고, 다른 <<number $combatTrain.length-1>>마리의 <<if $NPCList[0].monster>>수인들<<else>>짐승들<</if>>도 함께 대기 중이다.
 	<</if>>
 	<<manend>><<set $pullaway to 0>>
 	</div>

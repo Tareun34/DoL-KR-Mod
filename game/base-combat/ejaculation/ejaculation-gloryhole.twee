@@ -1016,7 +1016,7 @@
 			<<elseif $NPCList[0].penis is 0>>
 				<<switch random(1, 3)>>
 					<<case 1 2>>
-						<<He>>【은는】 신음하며 <<his>> $NPCList[0].penisdesc【을를】 문지르고, 구멍을 통해 당신의 얼굴에 정액을 뿜어낸다.
+						<<He>>【은는】 신음하며 <<his>> <<= window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【을를】 문지르고, 구멍을 통해 당신의 얼굴에 정액을 뿜어낸다.
 						<br><br>
 						<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid "face" "goo">>
 					<<case 3>>

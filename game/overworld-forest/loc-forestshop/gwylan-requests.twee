@@ -2877,11 +2877,11 @@
 					<<set $_colour_acc to $_shoppingList[$_i].acc_colour_requirement>>
 					<<set $_word to $_shoppingList[$_i].word>>
 					<<if $_colour isnot "any">>
-						<<set $_firstWord to $_word is "n" ? "a set of" : ["a","e","i","o","u"].some(letter => $_colour.startsWith(letter)) ? "an" : "a">>
+						<<set $_firstWord to "">>
 						<<set $_firstWord += " <span class='" + $_colour + "'>" + $_colour + "</span>">>
-						<<set $_secondWord to $_colour_acc isnot "any" ? " with " + " <span class='" + $_colour_acc + "'>" + $_colour_acc + "</span> details" : "">>
+						<<set $_secondWord to $_colour_acc isnot "any" ? " (<span class='" + $_colour_acc + "'>" + $_colour_acc + "</span> 장식)" : "">>
 					<<else>>
-						<<set $_firstWord to $_word is "n" ? "a set of" : $_word>>
+						<<set $_firstWord to "">>
 						<<set $_secondWord to "">>
 					<</if>>
 					<<set $_theName to "<u>" + $_shoppingList[$_i].name + "</u>">>

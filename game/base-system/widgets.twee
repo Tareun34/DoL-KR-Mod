@@ -5663,9 +5663,9 @@
 
 		<<if !$settings.blindStatsEnabled>>
 			<<if _refreshTrap>>
-				<span class="blue"><i>베일리의 부하들이 이제 <<print _location.toUpperFirst()>> 가에서 당신을 적극적으로 찾고 있다. 당분간 이곳에 돌아오지 않는 편이 좋겠다.</i></span>
+				<span class="blue"><i>베일리의 부하들이 이제 <<print getMapNameKr(_location.toUpperFirst() + " Street")>>에서 당신을 적극적으로 찾고 있다. 당분간 이곳에 돌아오지 않는 편이 좋겠다.</i></span>
 			<<else>>
-				<span class="blue"><i><<print _location.toUpperFirst()>> 가에서 베일리의 부하들에게 목격되었으니, 그들은 당분간 이 근처에서 당신을 찾아다닐 것이다.</i></span>
+				<span class="blue"><i><<print getMapNameKr(_location.toUpperFirst() + " Street")>>에서 베일리의 부하들에게 목격되었으니, 그들은 당분간 이 근처에서 당신을 찾아다닐 것이다.</i></span>
 			<</if>>
 			<br><br>
 		<</if>>

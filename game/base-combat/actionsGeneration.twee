@@ -239,7 +239,7 @@
 			<</if>>
 		<<case "penis">>
 			<<set _leftOptions to "penis">>
-			<span @class="($lastOptions.left isnot _leftOptions or _leftGold is true ?'gold':'')"><<selectNpcWithPartInPosition "penis" "leftarm">><<set $lefttarget to $index>>당신의 왼손은 <<if $NPCList[$index]?.chastity.penis.includes("chastity")>>희롱하듯 자극하며<<else>>쥔 채<</if>> <<personselect $index>><<combatpersons>>의 $NPCList[$index].penisdesc【을를】<<if $NPCList[$index].chastity.penis.includes("chastity")>> <<his>> $NPCList[$index].chastity.penis 너머로<</if>> 만지고 있다.</span>
+			<span @class="($lastOptions.left isnot _leftOptions or _leftGold is true ?'gold':'')"><<selectNpcWithPartInPosition "penis" "leftarm">><<set $lefttarget to $index>>당신의 왼손은 <<if $NPCList[$index]?.chastity.penis.includes("chastity")>>희롱하듯 자극하며<<else>>쥔 채<</if>> <<personselect $index>><<combatpersons>>의 <<= window.KR.getPenisDescKr($NPCList[$index].penisdesc)>>【을를】<<if $NPCList[$index].chastity.penis.includes("chastity")>> <<his>> $NPCList[$index].chastity.penis 너머로<</if>> 만지고 있다.</span>
 		<<case "grappled">>
 			<<if $orgasmdown gte 1>>
 				<<set _leftOptions to "bothBound">>
@@ -1270,17 +1270,17 @@
 		<<case "noupper">><<if !$gloryhole and $gamemode isnot "soft">><<seductiondifficulty>><</if>>
 		<<case "mock">>
 			<<set _mockItems to {
-				ethics: "ethics",
-				looks: "looks",
-				strength: "weak",
-				skill: "skill",
+				"도덕": "ethics",
+				"외모": "looks",
+				"힘": "weak",
+				"기술": "skill",
 			}>>
 
 			<<if $NPCList[$mouthtarget].penis isnot "none">>
-				<<set _mockItems.penis to "penis">>
+				<<set _mockItems["자지"] to "penis">>
 			<</if>>
 			<<if $NPCList[$mouthtarget].vagina isnot "none">>
-				<<set _mockItems.pussy to "vagina">>
+				<<set _mockItems["보지"] to "vagina">>
 			<</if>>
 
 			<<listbox "$mockaction" autoselect>>

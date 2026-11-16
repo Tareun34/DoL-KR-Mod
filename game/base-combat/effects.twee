@@ -5085,7 +5085,7 @@
 								그 창백한 형체는 계속해서 떠다니며 따라온다.
 							<</if>>
 						<<elseif $NPCList[0].type isnot "human">>
-							<<print $NPCList[0].fullDescription>>【이가】 여전히 당신을 쫓아오고 있다.
+							<<print window.KR.getDescriptionKr($NPCList[0].fullDescription)>>【이가】 여전히 당신을 쫓아오고 있다.
 						<<else>>
 							<<print window.KR.getDescriptionKr($NPCList[0].fullDescription)>>【이가】 여전히 당신을 쫓아오고 있다.
 						<</if>>
@@ -5104,7 +5104,7 @@
 							<</if>>
 							발은 땅에 닿지 않지만, 발소리는 여전히 들려온다.
 						<<elseif $NPCList[0].type isnot "human">>
-							당신을 쫓아오는 <<person1>><<beasttype>>【이가】 보인다. <span class="pink"><<print $NPCList[0].fullDescription>>【이】다.</span>
+							당신을 쫓아오는 <<person1>><<beasttype>>【이가】 보인다. <span class="pink"><<print window.KR.getDescriptionKr($NPCList[0].fullDescription)>>【이】다.</span>
 						<<else>>
 							당신을 쫓아오는 <<person1>><<personsimple>>【이가】 보인다. <span class="pink"><<print window.KR.getDescriptionKr($NPCList[0].fullDescription)>>【이】다.</span>
 						<</if>>

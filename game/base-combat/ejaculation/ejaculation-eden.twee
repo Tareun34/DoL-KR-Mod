@@ -766,7 +766,7 @@
 		<<elseif $NPCList[_nn].penis is "mouthimminent">>
 			<<switch random(1, 7)>>
 			<<case 1 2 3>>
-				<<He>>【은는】 당신의 뒷목 머리채를 꽉 쥐고 <<his>> $NPCList[_nn].penisdesc에서 정액을 분출한다.
+				<<He>>【은는】 당신의 뒷목 머리채를 꽉 쥐고 <<his>> <<= window.KR.getPenisDescKr($NPCList[_nn].penisdesc)>>에서 정액을 분출한다.
 			<<case 4 5 6>>
 				<<He>>【은는】 당신의 입술 사이로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_nn].penisdesc)>>【을를】 쑤셔 넣으려 한다. 쾌감을 감당하지 못한 <<he>>【은는】 일찍 사정해 버린다. "젠장," 짜증이 난 듯 <<he>>【이가】 헐떡인다. "내 걸 감싸는 네 입술을 느끼고 싶었는데."
 			<<case 7>>

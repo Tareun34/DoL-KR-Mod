@@ -20,11 +20,11 @@
 <<widget "undergroundRobinTopicRefresh">>
 	<<if Object.entries(V.undergroundbrothel.robinTopics).filter(pair => pair[1] === "undiscussed").length lte 0>>
 		<<set $undergroundbrothel.robinTopics to {
-			"cold": "논의되지 않음",
-			"lonely": "논의되지 않음",
-			"dark": "논의되지 않음",
-			"scared": "논의되지 않음",
-			"touch": "논의되지 않음"
+			"cold": "undiscussed",
+			"lonely": "undiscussed",
+			"dark": "undiscussed",
+			"scared": "undiscussed",
+			"touch": "undiscussed"
 		}>>
 	<</if>>
 <</widget>>

@@ -4701,9 +4701,9 @@
 			<<if $carried.neck.photo is "Sydney">>
 				<<his>> 사진이다.
 			<<elseif $carried.neck.photo is "Black Wolf" or $carried.neck.photo is "Great Hawk">>
-				<<print $carried.neck.photo>>의 사진이다.
+				<<print window.KR.gatPersonNameDictKR($carried.neck.photo)>>의 사진이다.
 			<<else>>
-				<<print $carried.neck.photo>>의 사진이다.
+				<<print window.KR.gatPersonNameDictKR($carried.neck.photo)>>의 사진이다.
 			<</if>>
 		<</if>>
 		<br><br>

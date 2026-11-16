@@ -2755,11 +2755,11 @@
 <<set _antiqueMuseum to []>>
 <<for _antiqueName, _antiqueStatus range $museumAntiques.antiques>>
 	<<if ["talk", "museum", "recovered"].includes(_antiqueStatus) and _antiqueName isnot "antiqueivorynecklace">>
-		<<run _antiqueMuseum.push("the " + _museumAntiqueText[_antiqueName].name.toLowerCase())>>
+		<<run _antiqueMuseum.push(_museumAntiqueText[_antiqueName].name)>>
 	<</if>>
 <</for>>
 <<if _antiqueMuseum.length is 0>>
-	<<run _antiqueMuseum.push("a brass pot")>>
+	<<run _antiqueMuseum.push("놋쇠 냄비")>>
 <</if>>
 
 박물관에서 윈터를 찾아보니, <<him>>【은는】 <<print either(_antiqueMuseum)>>【을를】 감상하고 있다. <<He>>【은는】 다가오는 당신을 보고 인사를 건넨다. "어서 오게. 오늘은 무슨 일로 왔나?" <<he>>【이가】 전시물에서 몸을 돌리며 말한다.

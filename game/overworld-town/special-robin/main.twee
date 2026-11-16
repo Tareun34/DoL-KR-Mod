@@ -934,11 +934,11 @@
 		<<if $carried.neck.photo is "Robin">>
 			<<nnpc_him "Robin">>의 사진이 들어 있다.
 		<<elseif $carried.neck.photo is "Black Wolf" or $carried.neck.photo is "Great Hawk">>
-			<<print $carried.neck.photo>>의 사진이 들어 있다.
+			<<print window.KR.gatPersonNameDictKR($carried.neck.photo)>>의 사진이 들어 있다.
 		<<elseif $carried.neck.photo is "Gwylan" and $gwylan?.timer?.nobody gte Time.date.timeStamp>>
 			누구의 사진도 들어있지 않다.
 		<<else>>
-			<<print $carried.neck.photo>>의 사진이 들어 있다.
+			<<print window.KR.gatPersonNameDictKR($carried.neck.photo)>>의 사진이 들어 있다.
 		<</if>>
 		<br><br>
 		<<switch $carried.neck.photo>>
