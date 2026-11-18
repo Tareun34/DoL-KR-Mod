@@ -250,7 +250,7 @@
 
 <<widget "bedroomEntryEvent">>
 	<<set _forcedBedroomEntry to _args[0] is "forced">>
-	<<set _linkText to _forcedBedroomEntry ? "Next" : "Bedroom (0:01)">>
+	<<set _linkText to _forcedBedroomEntry ? "다음" : "침실 (0:01)">>
 	<<if !_forcedBedroomEntry and Time.hour gte 18 and Time.hour lte 20 and statusCheck("Robin").trauma gte 40 and $robinmissing is 0 and !$robinTraumaVisit>>
 		<<bedicon>><<link _linkText "Robin Trauma Visit">><<set $phase to 0>><<pass 1>><</link>>
 	<<elseif $kylar.timer.home gte 100 and $kylar.home is undefined>>

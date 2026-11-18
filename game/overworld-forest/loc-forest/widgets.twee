@@ -3078,7 +3078,7 @@
 	<</if>>
 <</widget>>
 <<widget "destinationForest" container>>
-	<<set _linkText to _args[0] ?? "Next">>
+	<<set _linkText to _args[0] ?? "다음">>
 	<<if $bus is "fishingForestLake">>
 		<<link [[_linkText|Fishing Forest Lake Wait]]>><<= _contents>><</link>>
 	<<else>>

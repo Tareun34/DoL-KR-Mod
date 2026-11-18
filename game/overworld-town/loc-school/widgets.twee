@@ -3574,7 +3574,7 @@
 
 	<<if ($worn.butt_plug?.name.includes("tail") and $worn.butt_plug.worn) or _tf.foxTail or _tf.wolfTail or _tf.catTail or _tf.cowTail or _tf.birdTail or _tf.demonTail>>
 		<<addinlineevent "swimTF" 1>>
-			<<set _linkText to _tf.catTail ? "Hiss" : _tf.cowTail ? "Whack" : _tf.birdTail ? "Splash" : "Growl">>
+			<<set _linkText to _tf.catTail ? "Hiss" : _tf.cowTail ? "Whack" : _tf.birdTail ? "Splash" : "Growl">><<set _linkLabel to _tf.catTail ? "하악거린다" : _tf.cowTail ? "후려친다" : _tf.birdTail ? "물을 튀긴다" : "으르렁거린다">>
 			<<set _tftail to _tf.foxTail ? "<<fox>>" : _tf.catTail ? "<<cat>>" : _tf.cowTail ? "<<cow>>" : _tf.birdTail ? "<<harpy>>" : _tf.wolfTail ? "<<wolfgirl>>" : "<<demon>>">>
 
 			당신이 수영장 레인을 오가는 동안, <<generates1>><<person1>><<person>>【이가】 당신의 꼬리를 잡고 당기는 바람에 당신은 자신도 모르게 <<= $worn.butt_plug?.name.includes("tail") or _tf.foxTail ? "신음" : "비명">>【을를】 흘린다. <<gstress>><<stress 6>>
@@ -3604,7 +3604,7 @@
 				<br><br>
 
 				<<if $submissive lte 850>>
-					<<link [[_linkText|Events Swimming Tail]]>><<set $phase to _linkText>><</link>><<lstress>><<print _tftail>>
+					<<link [[_linkLabel|Events Swimming Tail]]>><<set $phase to _linkText>><</link>><<lstress>><<print _tftail>>
 					<br>
 				<</if>>
 				<<if _tf.demonTail>>

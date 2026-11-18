@@ -400,7 +400,7 @@
 		<br>
 	<</if>>
 	<<if insecurityExists("pregnancy") and $daily.lakeMeditate isnot 1>>
-		<<set _pregnancyLink to (playerAwareTheyArePregnant() ? "Meditate on your pregnant belly (1:00)" : "Meditate on your pregnant looking belly (1:00)")>>
+		<<set _pregnancyLink to (playerAwareTheyArePregnant() ? "임신한 배를 두고 명상한다 (1:00)" : "임신한 듯 보이는 배를 두고 명상한다 (1:00)")>>
 		<<link [[_pregnancyLink|Lake Meditate]]>><<pass 60>><<set $phase to 10>><<willpower 1>><<set $daily.lakeMeditate to 1>>
 			<<if currentSkillValue('willpower') gte (($willpowermax / 7) * 6)>>
 				<<stress 5>><<acceptance "pregnancy" 20>>

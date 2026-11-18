@@ -314,45 +314,45 @@
 <</widget>>
 
 <<widget "earSlimeCafeLinks">>
-	<<set _linkName to _args[0] or "Next">>
+	<<set _linkName to _args[0] or "Next">><<set _linkLabel to _linkName is "Obey" ? "복종한다" : _linkName is "Next" ? "다음" : _linkName>>
 	<<switch $daily.earSlimeOceanBreezeCafeEat>>
 		<<case "coffee">>
-			<<link [[_linkName|Cafe Coffee]]>>
+			<<link [[_linkLabel|Cafe Coffee]]>>
 				<<set $daily.cafeEaten to 1>><<money -200 "cafe">><<tiredness -4>><<pass 2>>
 				<<if _linkName is "Obey">><<corruption 1>><<pain -4>><<stress -9>><<trauma -12>><<sub 2>><</if>>
 			<</link>><<if _linkName is "Obey">><<gcorruption>><<lpain>><<lltrauma>><<lstress>><</if>><<ltiredness>>
 		<<case "winter ale">>
-			<<link [[_linkName|Cafe Eat]]>>
+			<<link [[_linkLabel|Cafe Eat]]>>
 				<<set $daily.cafeEaten to 1>><<set $phase to "winter ale">><<money -700 "cafe">><<drunk 100>><<pass 10>>
 				<<if _linkName is "Obey">><<corruption 1>><<pain -4>><<stress -12>><<trauma -12>><<sub 2>><</if>>
 			<</link>><<if _linkName is "Obey">><<gcorruption>><<lpain>><<lltrauma>><<lstress>><</if>><<ggdrunk>>
 		<<case "fruity ale">>
-			<<link [[_linkName|Cafe Eat]]>>
+			<<link [[_linkLabel|Cafe Eat]]>>
 				<<set $daily.cafeEaten to 1>><<set $phase to "fruity ale">><<money -700 "cafe">><<drunk 60>><<pass 10>>
 				<<if _linkName is "Obey">><<corruption 1>><<pain -4>><<stress -12>><<trauma -12>><<sub 2>><</if>>
 			<</link>><<if _linkName is "Obey">><<gcorruption>><<lpain>><<lltrauma>><<lstress>><</if>><<gdrunk>>
 		<<case "shandy">>
-			<<link [[_linkName|Cafe Eat]]>>
+			<<link [[_linkLabel|Cafe Eat]]>>
 				<<set $daily.cafeEaten to 1>><<set $phase to "shandy">><<money -700 "cafe">><<drunk 40>><<pass 10>>
 				<<if _linkName is "Obey">><<corruption 1>><<pain -4>><<stress -12>><<trauma -12>><<sub 2>><</if>>
 			<</link>><<if _linkName is "Obey">><<gcorruption>><<lpain>><<lltrauma>><<lstress>><</if>><<gdrunk>>
 		<<case "autumn ale">>
-			<<link [[_linkName|Cafe Eat]]>>
+			<<link [[_linkLabel|Cafe Eat]]>>
 				<<set $daily.cafeEaten to 1>><<set $phase to "autumn ale">><<money -700 "cafe">><<drunk 80>><<pass 10>>
 				<<if _linkName is "Obey">><<corruption 1>><<pain -4>><<stress -12>><<trauma -12>><<sub 2>><</if>>
 			<</link>><<if _linkName is "Obey">><<gcorruption>><<lpain>><<lltrauma>><<lstress>><</if>><<gdrunk>>
 		<<case "fruit salad">>
-			<<link [[_linkName|Cafe Eat]]>>
+			<<link [[_linkLabel|Cafe Eat]]>>
 				<<set $daily.cafeEaten to 1>><<set $phase to "fruit salad">><<money -500 "cafe">><<pass 20>>
 				<<if _linkName is "Obey">><<corruption 1>><<pain -4>><<stress -12>><<trauma -12>><<sub 2>><</if>>
 			<</link>><<if _linkName is "Obey">><<gcorruption>><<lpain>><<lltrauma>><<lstress>><</if>>
 		<<case "pancake">>
-			<<link [[_linkName|Cafe Pancakes]]>>
+			<<link [[_linkLabel|Cafe Pancakes]]>>
 				<<set $daily.cafeEaten to 1>><<set $phase to "pancakes">><<money -1000 "cafe">><<tiredness -6>><<pass 20>>
 				<<if _linkName is "Obey">><<corruption 1>><<pain -4>><<stress -6>><<trauma -12>><<sub 2>><</if>>
 			<</link>><<if _linkName is "Obey">><<gcorruption>><<lpain>><<lltrauma>><<lstress>><</if>><<ltiredness>>
 		<<case "deluxe cream bun">>
-			<<link [[_linkName|Cafe Cream Bun]]>>
+			<<link [[_linkLabel|Cafe Cream Bun]]>>
 				<<set $daily.cafeEaten to 1>><<transform cat 1>><<money -5000 "cafe">><<pass 20>>
 				<<if _linkName is "Obey">><<corruption 1>><<pain -4>><<stress -24>><<trauma -12>><<sub 2>><</if>>
 			<</link>><<if _linkName is "Obey">><<gcorruption>><<lpain>><<lltrauma>><<llstress>><</if>>
