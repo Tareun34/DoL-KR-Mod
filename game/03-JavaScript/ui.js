@@ -328,7 +328,7 @@ $(() => updateCaptionTooltip());
 window.updateCaptionTooltip = updateCaptionTooltip;
 
 function returnTimeFormat() {
-	return V?.options?.dateFormat ?? "en-GB";
+	return V?.options?.dateFormat ?? "zh-CN";
 }
 window.returnTimeFormat = returnTimeFormat;
 

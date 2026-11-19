@@ -4920,7 +4920,7 @@
 	<</if>>
 
 	<<if !$options.dateFormat>>
-		<<set $options.dateFormat to "en-GB">>
+		<<set $options.dateFormat to "zh-CN">>
 	<</if>>
 
 	<!-- Fix for the players being able to access the Nursery while refusing to pay Bailey outside the orphanage -->

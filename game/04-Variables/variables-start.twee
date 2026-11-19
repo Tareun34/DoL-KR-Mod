@@ -81,7 +81,7 @@
 		traitOverlayFormat: "table",
 		debugdisable: "t",
 		theme: _globalThemeDefaults.theme,
-		dateFormat: _globalGeneralDefaults.dateFormat or "en-GB",
+		dateFormat: _globalGeneralDefaults.dateFormat or "zh-CN",
 		passageMaxWidth: _globalThemeDefaults.passageMaxWidth,
 		passageLineHeight: _globalThemeDefaults.passageLineHeight,
 		overlayLineHeight: _globalThemeDefaults.overlayLineHeight,
