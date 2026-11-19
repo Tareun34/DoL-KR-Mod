@@ -1,7 +1,7 @@
 # DoL-KR-Mod
 
 [Degrees of Lewdity](https://vrelnir.blogspot.com/) 한국어 번역판 소스(번역은 0.5.12.13 기준)에 영문 0.5.13.8을 병합하고 두 가지 모드를 더한 저장소입니다.
-한 번의 빌드로 네 가지 HTML을 만들고, 같은 저장소의 세이브 서버로 원격 저장을 운영합니다.
+빌드 스크립트 하나로 네 가지 HTML을 만들 수 있고, 같은 저장소의 세이브 서버로 원격 저장을 운영합니다.
 
 - **Herm NPC**: NPC가 자지와 보지를 모두 가질 수 있게 하는 설정 두 개를 추가합니다.
 - **원격 저장**: 브라우저 대신 세이브 서버에 저장해서 어느 기기에서 열어도 같은 세이브를 씁니다.
@@ -24,17 +24,19 @@
 
 - 번역 작업 기록은 [`translation/LOG.md`](translation/LOG.md)(묶음별 결과·용어 결정·코드 측 보정), 자리별 기록은 `translation/pending/`, 요약은 [`translation/STATUS.md`](translation/STATUS.md)에 있습니다. 완료 판정은 문자열 일치에 기대는 근사치입니다.
 - 번역은 검수 없이 들어갔습니다. 플레이 중 어색한 문장이나 영어로 남은 자리를 발견하면 파일과 문장을 알려 주세요. 개발자 주석·패시지 이름·코드 값은 의도적으로 영어입니다.
-- `dist/`에 남아 있는 `DoL-KR 0.5.12.13 *.html` 네 개는 **보관용**입니다. 영문이 이미지 19개의 경로를 바꿨고 `img/`는 하나뿐이라 옛 빌드는 홍조·스토킹 아이콘 등 일부 이미지가 깨집니다. 0.5.13.8에서 저장한 세이브는 0.5.12.13에서 열리지 않을 수 있습니다.
+- 로컬 세이브 서버의 `dist/`에는 `herm-remote` 변형 하나만 둡니다. 옛 `DoL-KR 0.5.12.13 *.html` 빌드는 저장소 밖(`/home/chan/game/backup/dist-archive/`)에 보관용으로 옮겼습니다. 영문이 이미지 19개의 경로를 바꿨고 `img/`는 하나뿐이라 옛 빌드는 홍조·스토킹 아이콘 등 일부 이미지가 깨집니다. 0.5.13.8에서 저장한 세이브는 0.5.12.13에서 열리지 않을 수 있습니다.
 - 빌드 검증 기준: 원본 변형과 영문 0.5.13.8 빌드의 패시지 이름 집합이 같습니다(허용 목록 없음, 16,455개). Herm 변형과 원본 변형은 패시지 차이가 없고 스크립트 차이는 `features/herm-ui/features.js` 3줄뿐입니다. 원본과 원격 변형은 `idb` 모듈 교체분만 다릅니다.
 
 ## 빌드
 
 ```bash
-./build.sh                         # dist/ 에 네 파일 생성 (버전은 version 파일)
+./build.sh                         # 로컬 배포용 herm-remote 하나만 dist/ 에 생성 (기본, 버전은 version 파일)
+./build.sh all                     # 네 변형 전부
+./build.sh base remote             # 지정한 변형만 (base = 원본)
 FORCE_VERSION=test ./build.sh      # 파일명의 버전 문자열만 바꿀 때
 ```
 
-tweego는 `devTools/tweego/`에 번들된 바이너리를 씁니다(Linux x64/x86, macOS Intel/Apple Silicon, Windows x64/x86). PATH에 `tweego`가 있으면 그것을 우선 씁니다. 네 변형은 `dist/.build/`에 먼저 만들어지고 전부 성공했을 때만 `dist/`로 한꺼번에 교체되므로, 하나라도 실패하면 0이 아닌 코드로 끝나고 기존 `dist/` 파일은 그대로 남습니다.
+tweego는 `devTools/tweego/`에 번들된 바이너리를 씁니다(Linux x64/x86, macOS Intel/Apple Silicon, Windows x64/x86). PATH에 `tweego`가 있으면 그것을 우선 씁니다. 빌드하는 변형은 `dist/.build/`에 먼저 만들어지고 전부 성공했을 때만 `dist/`로 한꺼번에 교체되므로, 하나라도 실패하면 0이 아닌 코드로 끝나고 기존 `dist/` 파일은 그대로 남습니다.
 
 ## 세이브 서버
 

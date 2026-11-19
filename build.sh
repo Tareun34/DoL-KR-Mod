@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
-# DoL-KR-Mod: 네 가지 변형(원본 / remote / herm / herm-remote)을 dist/ 에 빌드한다.
-# 사용: ./build.sh            (버전은 version 파일, FORCE_VERSION 으로 덮어쓰기)
-# 네 변형은 dist/.build/ 에 먼저 만들고, 전부 성공했을 때만 dist/ 로 한꺼번에 옮긴다.
+# DoL-KR-Mod: 변형(원본 / remote / herm / herm-remote)을 dist/ 에 빌드한다.
+# 사용: ./build.sh                 로컬 배포용 herm-remote 하나만 (기본)
+#       ./build.sh all             네 변형 전부 (배포본 묶을 때)
+#       ./build.sh base remote     지정한 변형만 (base = 원본)
+#       버전은 version 파일, FORCE_VERSION 으로 덮어쓰기
+# 변형은 dist/.build/ 에 먼저 만들고, 전부 성공했을 때만 dist/ 로 한꺼번에 옮긴다.
 # 하나라도 실패하면 dist/ 는 손대지 않고 종료 코드 1.
 # 테스트용 환경 변수: BUILD_GAME_DIR (기본 game/), BUILD_BREAK=<변형 접미사> (그 변형을 일부러 실패시킴)
 set -euo pipefail
@@ -54,10 +57,18 @@ build_variant() {
 	fi
 }
 
-build_variant ""            ""                  sugarcube-2
-build_variant "remote"      ""                  sugarcube-2-remote
-build_variant "herm"        "features/herm-ui/" sugarcube-2
-build_variant "herm-remote" "features/herm-ui/" sugarcube-2-remote
+VARIANTS=("$@")
+if [ "${#VARIANTS[@]}" -eq 0 ]; then VARIANTS=(herm-remote); fi
+if [ "${VARIANTS[0]}" = "all" ]; then VARIANTS=(base remote herm herm-remote); fi
+for v in "${VARIANTS[@]}"; do
+	case "$v" in
+		base)        build_variant ""            ""                  sugarcube-2 ;;
+		remote)      build_variant "remote"      ""                  sugarcube-2-remote ;;
+		herm)        build_variant "herm"        "features/herm-ui/" sugarcube-2 ;;
+		herm-remote) build_variant "herm-remote" "features/herm-ui/" sugarcube-2-remote ;;
+		*) echo "unknown variant: $v (base | remote | herm | herm-remote | all)" >&2; exit 2 ;;
+	esac
+done
 
 # 전부 성공: 한꺼번에 교체
 for f in "$STAGE"/*.html; do mv -f "$f" "dist/$(basename "$f")"; done
