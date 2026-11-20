@@ -497,7 +497,7 @@
 	<<if Time.dayState is "night">>
 		<<if $stress gte ($stressmax / 10) * 3>>
 			<<if $pillory.tenant.fruitstock gte 1>>
-				<<link [[과일 던지기 (0:02)|Cliff Street Prisoner]]>><<pass 2>><<set $phase to 0>><<stress -6>><<set $pillory.tenant.fruitstock -= 1>><</link>><<lstress>>
+				<<link [[과일을 던진다 (0:02)|Cliff Street Prisoner]]>><<pass 2>><<set $phase to 0>><<stress -6>><<set $pillory.tenant.fruitstock -= 1>><</link>><<lstress>>
 				<br>
 			<<else>>
 				<span class="red">지금은 던질 과일이 남아있지 않습니다.</span>
@@ -505,11 +505,11 @@
 			<</if>>
 		<</if>>
 		<<if $cat gte 6 and ($pillory.tenant.ass + $pillory.tenant.genital) gte 2>>
-			<<link [[죄수 손질하기 (0:05)|Cliff Street Prisoner]]>><<pass 5>><<set $phase to 1>><</link>>
+			<<link [[죄수를 손질한다 (0:05)|Cliff Street Prisoner]]>><<pass 5>><<set $phase to 1>><</link>>
 			<br>
 		<</if>>
 		<<if $pillory.tenant.lowerexposed gte 2 and $stress gte 4000 and $trauma gte (($traumamax / 5) * 1)>>
-			<<link [[죄수 엉덩이 때리기 (0:05)|Cliff Street Prisoner]]>><<pass 5>><<set $phase to 2>><</link>><<llstress>><<ltrauma>>
+			<<link [[죄수 엉덩이 때린다 (0:05)|Cliff Street Prisoner]]>><<pass 5>><<set $phase to 2>><</link>><<llstress>><<ltrauma>>
 			<br>
 		<</if>>
 		<<if ($pillory.tenant.lowerexposed lte 1 or (($pronoun is "m" and $pillory.tenant.upperexposed lte 1) or ($pronoun is "f" and $pillory.tenant.upperexposed lte 2))) and $stress gte 7000 and $trauma gte (($traumamax / 5) * 2)>>
@@ -527,7 +527,7 @@
 		<</if>>
 		<<if $submissive lte 1000 or $fame.good gte 50 or $stat_police.pillory gte 1 or (($awareness + $purity) gte 1050)>>
 			<<if ($pillory.tenant.lowerexposed + $pillory.tenant.upperexposed) gte 1 and !$daily.exposedPillory>>
-				<<link [[죄수 덮어주기 (0:05)|Cliff Street Prisoner Night Help]]>><<pass 5>><<set $phase to 0>><</link>><<gstress>>
+				<<link [[죄수를 덮어준다 (0:05)|Cliff Street Prisoner Night Help]]>><<pass 5>><<set $phase to 0>><</link>><<gstress>>
 				<br>
 			<</if>>
 			<<if $submissive lte 850 or $fame.good gte 150 or $stat_police.pillory gte 1 or (($awareness + $purity) gte 1400)>>
@@ -536,7 +536,7 @@
 				<<elseif $pillory.tenant.crowd gte 4>><<set $skulduggerydifficulty to 1100>> /* 10% chance of success, even at max skulduggery */
 				<<else>><<set $skulduggerydifficulty to 875>>
 				<</if>>
-				<<link [[죄수 풀어주기 (0:05)|Cliff Street Prisoner Night Help]]>><<pass 5>><<set $phase to 1>><</link>> <<crime "obstruction">><<skulduggerydifficulty>><<dangerousText>>
+				<<link [[죄수를 풀어준다 (0:05)|Cliff Street Prisoner Night Help]]>><<pass 5>><<set $phase to 1>><</link>> <<crime "obstruction">><<skulduggerydifficulty>><<dangerousText>>
 				<br>
 			<<else>>
 				<span class="pink">구출을 시도할 결단력이 부족합니다.</span>
@@ -546,7 +546,7 @@
 	<<else>> /* day */
 		<<if $stress gte ($stressmax / 5) * 2>>
 			<<if $pillory.tenant.fruitstock gte 1>>
-				<<link [[과일 던지기 (0:02)|Cliff Street Prisoner]]>><<pass 2>><<set $phase to 0>><<stress -6>><<set $pillory.tenant.fruitstock -= 1>><</link>><<lstress>>
+				<<link [[과일을 던진다 (0:02)|Cliff Street Prisoner]]>><<pass 2>><<set $phase to 0>><<stress -6>><<set $pillory.tenant.fruitstock -= 1>><</link>><<lstress>>
 				<br>
 			<<else>>
 				<span class="red">지금은 던질 과일이 남아있지 않습니다.</span>
@@ -554,12 +554,12 @@
 			<</if>>
 		<</if>>
 		<<if $pillory.tenant.lowerexposed lte 1 and $pillory.tenant.wedgied isnot 1 and ($stress gte 6000 or $trauma gte (($traumamax / 5) * 2))>>
-			<<link [[팬티 잡아당기기 (0:05)|Cliff Street Prisoner]]>><<set $pillory.tenant.wedgied to 1>><<pass 5>><<set $phase to 4>><<stress -12>><</link>><<llstress>><<ltrauma>>
+			<<link [[팬티를 잡아당긴다 (0:05)|Cliff Street Prisoner]]>><<set $pillory.tenant.wedgied to 1>><<pass 5>><<set $phase to 4>><<stress -12>><</link>><<llstress>><<ltrauma>>
 			<br>
 		<</if>>
 		<<if $submissive lte 1000 or $fame.good gte 50 or $stat_police.pillory gte 1 or (($awareness + $purity) gte 1050)>>
 			<<if ($pillory.tenant.lowerexposed + $pillory.tenant.upperexposed) gte 1>>
-				<<link [[죄수 덮어주기 (0:05)|Cliff Street Prisoner]]>><<pass 5>><<set $phase to 5>><</link>><<gstress>>
+				<<link [[죄수를 덮어준다 (0:05)|Cliff Street Prisoner]]>><<pass 5>><<set $phase to 5>><</link>><<gstress>>
 				<br>
 				<span class="teal">이 시간에는 더 돕기가 꺼려집니다. 밤의 장막을 틈타면 가능할지도 모릅니다.</span>
 				<br><br>

@@ -34,10 +34,10 @@
 	<<elseif $weekly.theft.infirmaryDrugs is "failed">>
 		<span class="purple">캐비닛 자물쇠가 망가졌습니다. 수리될 때까지 침입할 수 없습니다.</span>
 	<<else>>
-		<<schoolicon "infirmary">><<link [[캐비닛 뒤지기|School Infirmary Drugs]]>><</link>>
+		<<schoolicon "infirmary">><<link [[캐비닛을 뒤진다|School Infirmary Drugs]]>><</link>>
 	<</if>>
 	<br>
-	<<getouticon>><<link [[나가기|Hallways]]>><</link>>
+	<<getouticon>><<link [[나간다|Hallways]]>><</link>>
 	<br>
 <</if>>
 
@@ -345,7 +345,7 @@
 	안도의 한숨을 내쉬며, 당신은 눈을 감고 몸을 쉬게 한다.
 	<br><br>
 
-	<<link [[잠자기|School Infirmary Wakeup]]>><</link>>
+	<<link [[잠잔다|School Infirmary Wakeup]]>><</link>>
 	<br>
 <<else>>
 	몸을 일으키려 하지만, 몸이 침대에 붙은 듯 움직이지 않는다. 커튼 너머로 목소리가 들린다.
@@ -367,7 +367,7 @@
 	계속 들으려 하지만, 정신이 희미해지는 것을 느낀다. 당신은 다시 깊은 잠에 빠진다.
 	<br><br>
 
-	<<link [[잠자기|School Infirmary Asylum]]>><</link>>
+	<<link [[잠잔다|School Infirmary Asylum]]>><</link>>
 	<br>
 <</if>>
 

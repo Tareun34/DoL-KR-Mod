@@ -1424,7 +1424,7 @@
 레이튼은 후반부 사진에 등장하는데, 때로는 <<nnpc_him "Darryl">> 함께 포즈를 취하고 있지만, 다른 때에는 더듬고 애무하고 있다. <<nnpc_his "Darryl">> 복장으로 보아, <<nnpc_he "Darryl">> 이곳 학생이었던 것 같다.
 <br><br>
 
-<<link [[플래시 드라이브에 복사하기|Head's Computer Flash]]>><</link>>
+<<link [[플래시 드라이브에 복사한다|Head's Computer Flash]]>><</link>>
 
 :: Head's Computer Flash
 <<set $outside to 0>><<set $location to "school">><<schooleffects>><<effects>>
@@ -1486,7 +1486,7 @@
 	<<skulduggeryuse>>
 
 	<<set $skulduggerydifficulty -= 200>>
-	<<link [[다시 시도하기 (0:30)|Head's Stash 2]]>><<pass 30>><</link>><<skulduggerydifficulty>>
+	<<link [[다시 시도한다 (0:30)|Head's Stash 2]]>><<pass 30>><</link>><<skulduggerydifficulty>>
 	<br>
 	<<link [[포기한다|Head's Office]]>><<endevent>><</link>>
 <</if>>
@@ -1681,10 +1681,10 @@
 	<<eventsschoolstump>>
 <<else>>
 	<<if $schoolstate isnot "late">>
-		<<link [[계속 휴식하기 (0:10)|School Stump]]>><<pass 10>><<stress -1>><<tiredness -1>><</link>><<ltiredness>><<lstress>>
+		<<link [[계속 휴식한다 (0:10)|School Stump]]>><<pass 10>><<stress -1>><<tiredness -1>><</link>><<ltiredness>><<lstress>>
 		<br>
 	<</if>>
-	<<link [[그만두기|School Rear Courtyard]]>><</link>>
+	<<link [[그만둔다|School Rear Courtyard]]>><</link>>
 <</if>>
 
 :: School Stump Ignore
@@ -1696,10 +1696,10 @@
 <<endevent>>
 
 <<if $schoolstate isnot "late">>
-	<<link [[계속 휴식하기 (0:10)|School Stump]]>><<pass 10>><<stress -1>><<tiredness -1>><</link>><<ltiredness>><<lstress>>
+	<<link [[계속 휴식한다 (0:10)|School Stump]]>><<pass 10>><<stress -1>><<tiredness -1>><</link>><<ltiredness>><<lstress>>
 	<br>
 <</if>>
-<<link [[그만두기|School Rear Courtyard]]>><</link>>
+<<link [[그만둔다|School Rear Courtyard]]>><</link>>
 
 :: School Stump Flash
 <<set $outside to 1>><<set $location to "school">><<schooleffects>><<effects>>
@@ -1716,10 +1716,10 @@
 
 <<endevent>>
 <<if $schoolstate isnot "late">>
-	<<link [[계속 휴식하기 (0:10)|School Stump]]>><<pass 10>><<stress -1>><<tiredness -1>><</link>><<ltiredness>><<lstress>>
+	<<link [[계속 휴식한다 (0:10)|School Stump]]>><<pass 10>><<stress -1>><<tiredness -1>><</link>><<ltiredness>><<lstress>>
 	<br>
 <</if>>
-<<link [[그만두기|School Rear Courtyard]]>><</link>>
+<<link [[그만둔다|School Rear Courtyard]]>><</link>>
 
 :: School Stump Genital Flash
 <<set $outside to 1>><<set $location to "school">><<schooleffects>><<effects>>
@@ -1733,10 +1733,10 @@
 <<exhibitionism5>>
 <<endevent>>
 <<if $schoolstate isnot "late">>
-	<<link [[계속 휴식하기 (0:10)|School Stump]]>><<pass 10>><<stress -1>><<tiredness -1>><</link>><<ltiredness>><<lstress>>
+	<<link [[계속 휴식한다 (0:10)|School Stump]]>><<pass 10>><<stress -1>><<tiredness -1>><</link>><<ltiredness>><<lstress>>
 	<br>
 <</if>>
-<<link [[그만두기|School Rear Courtyard]]>><</link>>
+<<link [[그만둔다|School Rear Courtyard]]>><</link>>
 
 :: Bra Strap Quiet
 <<set $outside to 1>><<set $location to "school">><<schooleffects>><<effects>>
@@ -1838,7 +1838,7 @@
 		<<link [[<<him>>【을를】 유혹하기|Courtyard Crush Seduce]]>><</link>><<promiscuous3>>
 		<br>
 	<</if>>
-	<<link [[작별 인사하기|Courtyard Crush Goodbye]]>><</link>>
+	<<link [[작별 인사를 한다|Courtyard Crush Goodbye]]>><</link>>
 	<br>
 <</if>>
 

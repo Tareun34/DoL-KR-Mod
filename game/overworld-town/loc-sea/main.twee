@@ -62,21 +62,21 @@
 		<<eventsseabeach>>
 	<<else>>
 		<<if $exposed lte 0 or Time.dayState is "night">>
-			<<beachicon>><<link [[물 밖으로 나가기 (0:02)|Beach]]>><<pass 2>><</link>>
+			<<beachicon>><<link [[물 밖으로 나간다 (0:02)|Beach]]>><<pass 2>><</link>>
 			<br>
 		<<elseif $exposed is 1 and hasSexStat("exhibitionism", 2)>>
-			<<beachicon>><<link [[물 밖으로 나가기 (0:02)|Beach Exposed]]>><<pass 2>><<set $phase to 1>><</link>><<exhibitionist2>>
+			<<beachicon>><<link [[물 밖으로 나간다 (0:02)|Beach Exposed]]>><<pass 2>><<set $phase to 1>><</link>><<exhibitionist2>>
 			<br>
 		<<elseif $exposed gte 2 and hasSexStat("exhibitionism", 5)>>
-			<<beachicon>><<link [[물 밖으로 나가기 (0:02)|Beach Exposed]]>><<pass 2>><<set $phase to 0>><</link>><<exhibitionist5>>
+			<<beachicon>><<link [[물 밖으로 나간다 (0:02)|Beach Exposed]]>><<pass 2>><<set $phase to 0>><</link>><<exhibitionist5>>
 			<br>
 		<<else>>
 			<<beachicon>><<insufficientStat "exhibitionism" "그렇게 노출된 상태로 물 밖으로 나가기엔">>
 			<br>
 		<</if>>
-		<<swimicon "back">><<link [[수영 연습하기 (0:30)|Sea Beach]]>><<stress -6>><<tiredness 6>><<set $seaswim to 1>><<slimeEventEnd "swimming">><</link>><<gswimming>><<lstress>><<gtiredness>>
+		<<swimicon "back">><<link [[수영을 연습한다 (0:30)|Sea Beach]]>><<stress -6>><<tiredness 6>><<set $seaswim to 1>><<slimeEventEnd "swimming">><</link>><<gswimming>><<lstress>><<gtiredness>>
 		<br>
-		<<swimicon>><<link [[바다로 헤엄쳐 나가기 (0:10)|Sea]]>><<pass 10>><<tiredness 2>><<set $sea to 0>><</link>><<gtiredness>><<swimmingdifficulty 1 100>>
+		<<swimicon>><<link [[바다로 헤엄쳐 나간다 (0:10)|Sea]]>><<pass 10>><<tiredness 2>><<set $sea to 0>><</link>><<gtiredness>><<swimmingdifficulty 1 100>>
 		<br><br>
 		<<searocks>><<swimmingdifficultytext0>>
 		<br>
@@ -126,11 +126,11 @@
 	<<if dangerEvent() and $eventskip is 0>>
 		<<eventssea>>
 	<<else>>
-		<<swimicon "leave">><<link [[바위 위로 올라가기 (0:02)|Rocks]]>><<pass 2>><</link>>
+		<<swimicon "leave">><<link [[바위 위로 올라간다 (0:02)|Rocks]]>><<pass 2>><</link>>
 		<br><br>
-		<<swimicon "back">><<link [[수영 연습하기 (0:30)|Sea Rocks]]>><<stress -6>><<tiredness 6>><<set $seaswim to 1>><<slimeEventEnd "swimming">><</link>><<gswimming>><<lstress>><<gtiredness>>
+		<<swimicon "back">><<link [[수영을 연습한다 (0:30)|Sea Rocks]]>><<stress -6>><<tiredness 6>><<set $seaswim to 1>><<slimeEventEnd "swimming">><</link>><<gswimming>><<lstress>><<gtiredness>>
 		<br>
-		<<swimicon>><<link [[바다로 헤엄쳐 나가기 (0:10)|Sea]]>><<pass 10>><<tiredness 2>><<set $sea to 0>><</link>><<gtiredness>><<swimmingdifficulty 1 100>>
+		<<swimicon>><<link [[바다로 헤엄쳐 나간다 (0:10)|Sea]]>><<pass 10>><<tiredness 2>><<set $sea to 0>><</link>><<gtiredness>><<swimmingdifficulty 1 100>>
 		<br><br>
 		<<seabeach>><<swimmingdifficultytext0>>
 		<br>
@@ -190,21 +190,21 @@
 	or $worn.upper.exposed gte 2 and $underupperwetstage gte 3
 	or $upperwetstage gte 3 and $worn.under_upper.exposed gte 1
 	or $upperwetstage gte 3 and $underupperwetstage gte 3>>
-		<<beachicon "seaweed">><<link [[해초로 윗옷 만들기 (0:20)|Rocks]]>><<pass 20>><<set $phase to 1>><</link>>
+		<<beachicon "seaweed">><<link [[해초로 윗옷을 만든다 (0:20)|Rocks]]>><<pass 20>><<set $phase to 1>><</link>>
 		<br>
 	<</if>>
 	<<if $worn.lower.exposed gte 2 and $worn.under_lower.exposed gte 1
 	or $worn.lower.exposed gte 2 and $underlowerwetstage gte 3
 	or $lowerwetstage gte 3 and $worn.under_lower.exposed gte 1
 	or $lowerwetstage gte 3 and $underlowerwetstage gte 3>>
-		<<beachicon "seaweed">><<link [[해초로 치마 만들기 (0:20)|Rocks]]>><<pass 20>><<set $phase to 2>><</link>>
+		<<beachicon "seaweed">><<link [[해초로 치마를 만든다 (0:20)|Rocks]]>><<pass 20>><<set $phase to 2>><</link>>
 		<br>
 	<</if>>
-	<<swimicon "down">><<link [[물웅덩이로 들어가기 (0:01)|Rocks Pool]]>><<pass 1>><</link>>
+	<<swimicon "down">><<link [[물웅덩이로 들어간다 (0:01)|Rocks Pool]]>><<pass 1>><</link>>
 	<br>
 	<<oxygenrecovery>>
 	<br>
-	<<swimicon>><<link [[바다로 헤엄쳐 가기 (0:02)|Sea Rocks]]>><<pass 2>><</link>>
+	<<swimicon>><<link [[바다로 헤엄쳐 간다 (0:02)|Sea Rocks]]>><<pass 2>><</link>>
 	<br>
 <</if>>
 <<set $eventskip to 0>>
@@ -225,12 +225,12 @@
 <</if>>
 
 <<if $settings.swarmsEnabled and hasSexStat("deviancy", 5) and $daily.rocksPoolInvite isnot 1>>
-	<<icon "invite-fish.png">><<link [[물고기 초대하기 (0:05)|Rocks Swarm Invite]]>><<set $daily.rocksPoolInvite to 1>><<pass 5>><</link>><<deviant5>>
+	<<icon "invite-fish.png">><<link [[물고기를 초대한다 (0:05)|Rocks Swarm Invite]]>><<set $daily.rocksPoolInvite to 1>><<pass 5>><</link>><<deviant5>>
 	<br>
 <</if>>
-<<swimicon "dive">><<link [[잠수하기 (0:01)|Rocks Dive]]>><<set _oxygenRecoveryBlocked to true>><<pass 1>><<set $phase to 0>><</link>>
+<<swimicon "dive">><<link [[잠수한다 (0:01)|Rocks Dive]]>><<set _oxygenRecoveryBlocked to true>><<pass 1>><<set $phase to 0>><</link>>
 <br>
-<<swimicon "leave">><<link [[밖으로 나가기 (0:01)|Rocks]]>><<pass 1>><</link>>
+<<swimicon "leave">><<link [[밖으로 나간다 (0:01)|Rocks]]>><<pass 1>><</link>>
 <br>
 
 :: Rocks Up
@@ -361,7 +361,7 @@
 	<br>
 <</if>>
 
-<<swimicon "back">><<link [[동굴로 헤엄쳐 들어가기|Beach Cave Entrance]]>><</link>>
+<<swimicon "back">><<link [[동굴로 헤엄쳐 들어간다|Beach Cave Entrance]]>><</link>>
 <br>
 
 :: Rocks Swarm Invite
@@ -456,12 +456,12 @@
 		<<if $earSlime.forcedCommando isnot undefined and $worn.under_lower.name isnot "naked" and $hypnosis_traits.silence isnot 1>>
 			<span class="red">귀에 있는 슬라임이 수영복을 입은 채 부두로 올라가는 것을 허락하지 않습니다.</span>
 		<<else>>
-			<<docksicon>><<link [[부두로 올라가기 (0:02)|Mer Street]]>><<pass 2>><</link>>
+			<<docksicon>><<link [[부두로 올라간다 (0:02)|Mer Street]]>><<pass 2>><</link>>
 		<</if>>
 		<br>
 		<<docksicon>><<link [[기둥을 오른다 (0:05)|Sea Docks Climb]]>><<pass 5>><</link>><<athleticsdifficulty 600 1500>>
 		<br>
-		<<swimicon "back">><<link [[수영 연습하기 (0:30)|Sea Docks]]>><<stress -6>><<tiredness 6>><<set $seaswim to 1>><<slimeEventEnd "swimming">><</link>><<gswimming>><<lstress>><<gtiredness>>
+		<<swimicon "back">><<link [[수영을 연습한다 (0:30)|Sea Docks]]>><<stress -6>><<tiredness 6>><<set $seaswim to 1>><<slimeEventEnd "swimming">><</link>><<gswimming>><<lstress>><<gtiredness>>
 		<br>
 		<<swimicon>><<link [[바다로 헤엄쳐 나간다 (0:10)|Sea]]>><<pass 10>><<tiredness 2>><<set $sea to 0>><</link>><<gtiredness>><<swimmingdifficulty 1 100>>
 		<br><br>
@@ -569,9 +569,9 @@
 		<<if $swimmingSuccess>>
 			<span class="green">당신은 성공적으로 조류를 거슬러 헤엄친다.</span>
 			<br><br>
-			<<swimicon "back">><<link [[수영 연습하기 (0:30)|Sea Cliffs]]>><<stress -6>><<tiredness 6>><<set $seaswim to 1>><<slimeEventEnd "swimming">><</link>><<gswimming>><<lstress>><<gtiredness>><<swimmingdifficulty 1 100>>
+			<<swimicon "back">><<link [[수영을 연습한다 (0:30)|Sea Cliffs]]>><<stress -6>><<tiredness 6>><<set $seaswim to 1>><<slimeEventEnd "swimming">><</link>><<gswimming>><<lstress>><<gtiredness>><<swimmingdifficulty 1 100>>
 			<br>
-			<<swimicon>><<link [[바다로 헤엄쳐 나가기 (0:10)|Sea]]>><<pass 10>><<tiredness 2>><<set $sea to 0>><</link>><<gtiredness>><<swimmingdifficulty 1 100>>
+			<<swimicon>><<link [[바다로 헤엄쳐 나간다 (0:10)|Sea]]>><<pass 10>><<tiredness 2>><<set $sea to 0>><</link>><<gtiredness>><<swimmingdifficulty 1 100>>
 			<br><br>
 			<<seadocks>><<swimmingdifficultytext0>>
 			<br>

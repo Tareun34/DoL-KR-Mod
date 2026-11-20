@@ -24,7 +24,7 @@
 
 <<widget "personalUpkeep">>
 	<<set $bathroomExit to $passage>>
-	<<bathroomicon "toothbrush">><<link [[양치하기 (0:05)|Bathroom Brush]]>><<pass 5>><</link>>
+	<<bathroomicon "toothbrush">><<link [[양치한다 (0:05)|Bathroom Brush]]>><<pass 5>><</link>>
 	<br>
 	<<if $settings.pubicHairEnabled and ($pblevel gte 2 or $pbstrip gte 1 or $pblevelballs gte 2)>>
 		<<bathroomicon "shave">><<link [[음모 정리|Shave]]>><</link>>
@@ -39,34 +39,34 @@
 <<widget "shaveOptions">>
 	<br>
 	<<if $pblevel gte 2 or $pbstrip gte 1 or $pblevelballs gte 2>>
-		<<shavestyleicon 'clean'>><<link [[말끔히 면도하기 (0:15)|$passage]]>><<set $phase2 to "pubes">><<pass 15>><<arousal 100>><<set $pblevel to 0>><<set $pbgrowth to 0>><<set $pblevelballs to 0>><<set $pbgrowthballs to 0>><<set $pbstrip to 0>><<set $makeup.pbcolour to 0>><<set $phase to "genitals">><</link>>
+		<<shavestyleicon 'clean'>><<link [[말끔히 면도한다 (0:15)|$passage]]>><<set $phase2 to "pubes">><<pass 15>><<arousal 100>><<set $pblevel to 0>><<set $pbgrowth to 0>><<set $pblevelballs to 0>><<set $pbgrowthballs to 0>><<set $pbstrip to 0>><<set $makeup.pbcolour to 0>><<set $phase to "genitals">><</link>>
 		<br>
 	<</if>>
 	<<if $pblevel gte 5 or $pbstrip gte 2 or ($pbstrip is 1 and $pblevel gte 2)>>
-		<<shavestyleicon 'strip'>><<link [[일자 모양으로 다듬기 (0:15)|$passage]]>><<set $phase2 to "pubes">><<pass 15>><<arousal 100>><<set $pbstripName to "깔끔한 일자 모양">><<set $pblevel to 0>><<set $pbgrowth to 0>><<set $pbstrip to 1>><<set $phase to "strip">><</link>>
+		<<shavestyleicon 'strip'>><<link [[일자 모양으로 다듬는다 (0:15)|$passage]]>><<set $phase2 to "pubes">><<pass 15>><<arousal 100>><<set $pbstripName to "깔끔한 일자 모양">><<set $pblevel to 0>><<set $pbgrowth to 0>><<set $pbstrip to 1>><<set $phase to "strip">><</link>>
 		<br>
 	<</if>>
 	<<if $pblevel gte 5 or $pbstrip gte 3 or ($pbstrip gte 2 and $pblevel gte 2)>>
-		<<shavestyleicon 'heart'>><<link [[하트 모양으로 다듬기 (0:15)|$passage]]>><<set $phase2 to "pubes">><<pass 15>><<arousal 100>><<set $pbstripName to "귀여운 하트 모양">><<set $pblevel to 0>><<set $pbgrowth to 0>><<set $pbstrip to 2>><<set $phase to "strip">><</link>>
+		<<shavestyleicon 'heart'>><<link [[하트 모양으로 다듬는다 (0:15)|$passage]]>><<set $phase2 to "pubes">><<pass 15>><<arousal 100>><<set $pbstripName to "귀여운 하트 모양">><<set $pblevel to 0>><<set $pbgrowth to 0>><<set $pbstrip to 2>><<set $phase to "strip">><</link>>
 		<br>
 	<</if>>
 	<<if $pblevel gte 5 or $pbstrip gte 4 or ($pbstrip gte 3 and $pblevel gte 2)>>
-		<<shavestyleicon 'triangle'>><<link [[삼각형으로 다듬기 (0:15)|$passage]]>><<set $phase2 to "pubes">><<pass 15>><<arousal 100>><<set $pbstripName to "깔끔한 삼각형">><<set $pblevel to 0>><<set $pbgrowth to 0>><<set $pbstrip to 3>><<set $phase to "strip">><</link>>
+		<<shavestyleicon 'triangle'>><<link [[삼각형으로 다듬는다 (0:15)|$passage]]>><<set $phase2 to "pubes">><<pass 15>><<arousal 100>><<set $pbstripName to "깔끔한 삼각형">><<set $pblevel to 0>><<set $pbgrowth to 0>><<set $pbstrip to 3>><<set $phase to "strip">><</link>>
 		<br>
 	<</if>>
 	<<if $player.ballsExist is true>>
 		<<if $pblevel gte 2 or $pbstrip gte 1>>
-			<<shavestyleicon 'clean'>><<link [[치구만 면도하기 (0:10)|$passage]]>><<set $phase2 to "pubes">><<pass 10>><<arousal 50>><<set $pblevel to 0>><<set $pbgrowth to 0>><<set $pbstrip to 0>><<if $pblevelballs is 0>><<set $makeup.pbcolour to 0>><<set $phase to "pubis">><</if>><</link>>
+			<<shavestyleicon 'clean'>><<link [[치구만 면도한다 (0:10)|$passage]]>><<set $phase2 to "pubes">><<pass 10>><<arousal 50>><<set $pblevel to 0>><<set $pbgrowth to 0>><<set $pbstrip to 0>><<if $pblevelballs is 0>><<set $makeup.pbcolour to 0>><<set $phase to "pubis">><</if>><</link>>
 			<br>
 		<</if>>
 		<<if $pblevelballs gte 3>>
-			<<shavestyleicon 'balls'>><<link [[고환만 면도하기 (0:05)|$passage]]>><<set $phase2 to "pubes">><<pass 5>><<arousal 50>><<set $pblevelballs to 0>><<set $pbgrowthballs to 0>><<if $pblevel is 0 and $pbstrip is 0>><<set $makeup.pbcolour to 0>><</if>><<set $phase to "balls">><</link>>
+			<<shavestyleicon 'balls'>><<link [[고환만 면도한다 (0:05)|$passage]]>><<set $phase2 to "pubes">><<pass 5>><<arousal 50>><<set $pblevelballs to 0>><<set $pbgrowthballs to 0>><<if $pblevel is 0 and $pbstrip is 0>><<set $makeup.pbcolour to 0>><</if>><<set $phase to "balls">><</link>>
 			<br>
 		<</if>>
 	<</if>>
 	<<if $pblevel gt 5 or $pblevelballs gt 5>>
 		<<shavestyleicon 'trim'>>
-		<<link [[짧게 다듬기 (0:10)|$passage]]>>
+		<<link [[짧게 다듬는다 (0:10)|$passage]]>>
 			<<set $phase2 to "pubes">><<pass 10>><<arousal 100>>
 			<<if $pblevel gte 5>>
 				<<set $pblevel to 5>><<set $pbgrowth to 7>><<set $pbstrip to 0>>

@@ -282,7 +282,7 @@
 <span class="black"><<his>> 거대하고 음침한 첨탑에서, <<he>>【은는】 투덜거리며 불평했어요.</span>
 <br><br>
 
-<<link [[계속 읽기|Olive Book Full 2]]>><</link>>
+<<link [[계속 읽는다|Olive Book Full 2]]>><</link>>
 <br>
 
 :: Olive Book Full 2
@@ -329,7 +329,7 @@
 <span class="black">그리고 <<he>>【은는】 지체 없이 마을로 돌진했어요.</span>
 <br><br>
 
-<<link [[계속 읽기|Olive Book Full 3]]>><</link>>
+<<link [[계속 읽는다|Olive Book Full 3]]>><</link>>
 <br>
 
 :: Olive Book Full 3
@@ -353,7 +353,7 @@
 클라우스 씨가 할 수 있다면, <<personname>>도 할 수 있었죠!
 <br><br>
 
-<<link [[계속 읽기|Olive Book Full 4]]>><</link>>
+<<link [[계속 읽는다|Olive Book Full 4]]>><</link>>
 <br>
 
 :: Olive Book Full 4
@@ -382,7 +382,7 @@
 <span class="black"><<his>> 어깨에 메고, <<his>> 전리품을 자랑스러워하며!</span>
 <br><br>
 
-<<link [[계속 읽기|Olive Book Full 5]]>><</link>>
+<<link [[계속 읽는다|Olive Book Full 5]]>><</link>>
 <br>
 
 :: Olive Book Full 5
@@ -416,7 +416,7 @@
 <span class="black">금방 다시 가져다줄게, 눈 깜짝할 사이에!"</span>
 <br><br>
 
-<<link [[계속 읽기|Olive Book Full 6]]>><</link>>
+<<link [[계속 읽는다|Olive Book Full 6]]>><</link>>
 <br>
 
 :: Olive Book Full 6
@@ -449,7 +449,7 @@
 <span class="black">마을의 모든 즐거움이, 불명예로 바뀌었죠!</span>
 <br><br>
 
-<<link [[계속 읽기|Olive Book Full 7]]>><</link>>
+<<link [[계속 읽는다|Olive Book Full 7]]>><</link>>
 <br>
 
 :: Olive Book Full 7
@@ -558,7 +558,7 @@
 	<span class="black">깨끗하고 순수한, 모두가 좋아하는 것이죠.</span>
 	<br><br>
 
-	<<link [[계속 읽기|Olive Book Full 8]]>><<set $phase to 0>><</link>>
+	<<link [[계속 읽는다|Olive Book Full 8]]>><<set $phase to 0>><</link>>
 	<br>
 <</if>>
 
@@ -660,7 +660,7 @@
 
 <<silently>><<endcombat>><</silently>>
 
-<<link [[계속 읽기|Olive Book Full 8]]>><<set $phase to 1>><</link>>
+<<link [[계속 읽는다|Olive Book Full 8]]>><<set $phase to 1>><</link>>
 <br>
 
 :: Olive Book Full 8
@@ -697,7 +697,7 @@
 <span class="black">그러자 핀치는 끔찍한 미소를 지었다.</span>
 <br><br>
 
-<<link [[계속 읽기|Olive Book Full 9]]>><</link>>
+<<link [[계속 읽는다|Olive Book Full 9]]>><</link>>
 <br>
 
 :: Olive Book Full 9
@@ -729,7 +729,7 @@
 선물 하나 없이 - 노래를 부르고 있었어요!
 <br><br>
 
-<<link [[계속 읽기|Olive Book Full 10]]>><</link>>
+<<link [[계속 읽는다|Olive Book Full 10]]>><</link>>
 <br>
 
 :: Olive Book Full 10

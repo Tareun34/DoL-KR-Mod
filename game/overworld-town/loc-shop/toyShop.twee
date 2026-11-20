@@ -59,7 +59,7 @@
 		<br><br>
 
 		<<if $exposed lte 0>>
-			<<highicon>><<link [[밖으로 나가기|High Street]]>><</link>>
+			<<highicon>><<link [[밖으로 나간다|High Street]]>><</link>>
 			<br>
 		<<else>>
 			<<ind>><<link [["끝날 때까지 숨어 있는다 (1:00)"|Toy Shop]]>><<pass 1 hour>><</link>>
@@ -85,7 +85,7 @@
 :: Toy Shop Item
 <<dynamic "toyUpdate" "toy-update-container">>
 <br>
-<<getouticon>><<link [[돌아가기|Toy Shop]]>><<run delete $selectedToy>><</link>>
+<<getouticon>><<link [[돌아간다|Toy Shop]]>><<run delete $selectedToy>><</link>>
 <br>
 <<toySelection>>
 <<set $selectedToy to $selectedToy || clone(_toySelection["teddyBear"])>>

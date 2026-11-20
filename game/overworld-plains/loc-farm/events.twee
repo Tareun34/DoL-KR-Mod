@@ -4824,9 +4824,9 @@ _bottom.name에서 멀리 떨어진 곳에 넓은 호를 그리며 곡물을 흩
 	두 사람은 서로를 쳐다보더니, <span class="red">폭소를 터뜨린다.</span> "물론이지, 꼬마야." <<person1>><<person>>【이가】 말한다. "우리 일 끝나면 네 머리카락에서 손 떼줄게." <span class="red">그들의 도끼는 계속해서 경계선을 파고든다.</span><<farm_fence_damage 1>>
 	<br><br>
 
-	<<link [[알렉스 부르기|Farm Axe Alex]]>><<farm_aggro 5>><<npcincr Alex dom 1>><<npcincr Alex love 1>><<farm_fence_damage 1>><</link>><<gaggro>><<gdom "Alex">><<glove>>
+	<<link [[알렉스를 부른다|Farm Axe Alex]]>><<farm_aggro 5>><<npcincr Alex dom 1>><<npcincr Alex love 1>><<farm_fence_damage 1>><</link>><<gaggro>><<gdom "Alex">><<glove>>
 	<br>
-	<<link [[공격하기|Farm Axe Attack]]>><<def 1>><</link>>
+	<<link [[공격한다|Farm Axe Attack]]>><<def 1>><</link>>
 	<br>
 <</if>>
 
@@ -5133,9 +5133,9 @@ _bottom.name에서 멀리 떨어진 곳에 넓은 호를 그리며 곡물을 흩
 "정말 미안해." <<he>>【이가】 <<his>> 손바닥에 <<his>> 얼굴을 묻으며 말한다. "네가 다치게 하고 싶지 않았어."<<npcincr Alex dom -5>><<llldom>>
 <br><br>
 
-<<link [[위로하기|Farm Lorry Comfort]]>><<npcincr Alex love 3>><</link>><<gglove>>
+<<link [[위로한다|Farm Lorry Comfort]]>><<npcincr Alex love 3>><</link>><<gglove>>
 <br>
-<<link [[꾸짖기|Farm Lorry Berate]]>><<npcincr Alex dom -3>><<npcincr Alex love -1>><</link>><<llove>><<lldom>>
+<<link [[꾸짖는다|Farm Lorry Berate]]>><<npcincr Alex dom -3>><<npcincr Alex love -1>><</link>><<llove>><<lldom>>
 <br>
 
 :: Farm Lorry Comfort

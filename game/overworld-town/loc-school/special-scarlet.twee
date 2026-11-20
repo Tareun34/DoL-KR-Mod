@@ -75,7 +75,7 @@ Feb 2019
 	<<if currentSkillValue('english') gte 400>>
 		당신은 천천히 글에 몰입한다.
 		<br><br>
-		<<link [[계속 읽기 (0:20)|ScarletBook3]]>><<pass 20>><<englishskill>><</link>><<genglish>>
+		<<link [[계속 읽는다 (0:20)|ScarletBook3]]>><<pass 20>><<englishskill>><</link>><<genglish>>
 		<br>
 	<<else>>
 		나이 든 외로운 사람들을 위한 로맨스 소설 같다. 흥미롭지 않다.
@@ -115,7 +115,7 @@ Feb 2019
 	<<if currentSkillValue('english') gte 500>>
 		이것은 금지된 사랑 이야기이며, 비록 결말이 좋지는 않지만, 이 책을 읽는 것은 당신에게 이상한 기쁨을 준다.
 		<br><br>
-		<<link [[계속 읽기 (0:20)|ScarletBook4]]>><<pass 20>><<englishskill>><<arousal 1200>><</link>><<genglish>><<ggarousal>>
+		<<link [[계속 읽는다 (0:20)|ScarletBook4]]>><<pass 20>><<englishskill>><<arousal 1200>><</link>><<genglish>><<ggarousal>>
 		<br>
 	<<else>>
 		이야기가 흥미롭다. 나중에 다시 읽어봐야겠다고 생각한다.

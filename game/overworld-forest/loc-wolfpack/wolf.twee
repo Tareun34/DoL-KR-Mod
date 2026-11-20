@@ -115,7 +115,7 @@
 	<<link [[Kiss|Watching the Forest Kiss]]>><<npcincr "Black Wolf" love 1>><</link>><<glove>>
 <</if>>*/
 
-<<link [[낮잠 자기 (3:00)|Watching the Forest Nap]]>><</link>><<ltiredness>>
+<<link [[낮잠을 잔다 (3:00)|Watching the Forest Nap]]>><</link>><<ltiredness>>
 <br>
 <<link [[계속 지켜본다|Watching the Forest Watch]]>><<stress -9>><<trauma -6>><</link>><<lstress>><<ltrauma>>
 <br>

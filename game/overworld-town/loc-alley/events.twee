@@ -302,16 +302,16 @@
 		<<exhibitionismroof>>
 		공원으로 이어지는 산업용 슈트가 있어 도로를 피할 수 있다.
 		<br><br>
-		<<laddericon>><<link [[사다리 내려가기 (0:02)|Industrial Alleyways]]>><<pass 2>><</link>>
+		<<laddericon>><<link [[사다리를 내려간다 (0:02)|Industrial Alleyways]]>><<pass 2>><</link>>
 		<br>
-		<<getouticon "hole">><<link [[슈트로 들어가기 (0:02)|Chute]]>><<pass 2>><</link>>
+		<<getouticon "hole">><<link [[슈트로 들어간다 (0:02)|Chute]]>><<pass 2>><</link>>
 		<br><br>
 	<<else>>
 		공원으로 이어지는 산업용 슈트가 있다.
 		<br><br>
-		<<laddericon>><<link [[사다리 내려가기 (0:02)|Industrial Alleyways]]>><<pass 2>><</link>>
+		<<laddericon>><<link [[사다리를 내려간다 (0:02)|Industrial Alleyways]]>><<pass 2>><</link>>
 		<br>
-		<<getouticon "hole">><<link [[슈트로 들어가기 (0:02)|Chute]]>><<pass 2>><</link>>
+		<<getouticon "hole">><<link [[슈트로 들어간다 (0:02)|Chute]]>><<pass 2>><</link>>
 		<br><br>
 	<</if>>
 <</if>>
@@ -446,19 +446,19 @@
 <<else>>
 	<<if $exposed gte 1>>
 		<<exhibitionismroof>>
-		<<laddericon>><<link [[사다리 내려가기 (0:02)|Commercial Alleyways]]>><<pass 2>><</link>>
+		<<laddericon>><<link [[사다리를 내려간다 (0:02)|Commercial Alleyways]]>><<pass 2>><</link>>
 		<br>
 		<<if $harpy gte 6 or $angel gte 6 or $demon gte 6 or $fallenangel gte 2>>
-			<<glideicon>><<link [[활강하여 내려가기|Commercial Alleyways]]>><<set $eventskip to 1>><</link>><<flight_text>><<noharass>>
+			<<glideicon>><<link [[활강하여 내려간다|Commercial Alleyways]]>><<set $eventskip to 1>><</link>><<flight_text>><<noharass>>
 			<br>
 		<</if>>
 		<<shopicon>><<link [[쇼핑센터 (0:02)|Shopping Centre Top]]>><<pass 2>><</link>>
 		<br><br>
 	<<else>>
-		<<laddericon>><<link [[사다리 내려가기 (0:02)|Commercial Alleyways]]>><<pass 2>><</link>>
+		<<laddericon>><<link [[사다리를 내려간다 (0:02)|Commercial Alleyways]]>><<pass 2>><</link>>
 		<br>
 		<<if $harpy gte 6 or $angel gte 6 or $demon gte 6 or $fallenangel gte 2>>
-			<<glideicon>><<link [[활강하여 내려가기|Commercial Alleyways]]>><<set $eventskip to 1>><</link>><<flight_text>><<noharass>>
+			<<glideicon>><<link [[활강하여 내려간다|Commercial Alleyways]]>><<set $eventskip to 1>><</link>><<flight_text>><<noharass>>
 			<br>
 		<</if>>
 		<<shopicon>><<link [[쇼핑센터 (0:02)|Shopping Centre Top]]>><<pass 2>><</link>>
@@ -760,9 +760,9 @@
 	<<gtrauma>><<gstress>><<trauma 6>><<stress 6>><<fameexhibitionism 1>>
 	<br><br>
 
-	<<link [[도움 요청하기|Residential Kick Help]]>><</link>>
+	<<link [[도움을 요청한다|Residential Kick Help]]>><</link>>
 	<br>
-	<<link [[도망치기|Residential Kick Run]]>><</link>>
+	<<link [[도망친다|Residential Kick Run]]>><</link>>
 	<br>
 <</if>>
 
@@ -844,12 +844,12 @@
 	<<gstress>><<stress 6>>
 	<br><br>
 
-	<<link [[도움 요청하기|Residential Fence Garden Ask]]>><</link>>
+	<<link [[도움을 요청한다|Residential Fence Garden Ask]]>><</link>>
 	<br>
-	<<link [[도망치기|Residential Fence Garden Escape]]>><</link>>
+	<<link [[도망친다|Residential Fence Garden Escape]]>><</link>>
 	<br>
 	<<if $submissive gte 1500>>
-		<<link [[애원하기|Residential Fence Garden Beg]]>><<sub 1>><</link>><<submissivetext>>
+		<<link [[애원한다|Residential Fence Garden Beg]]>><<sub 1>><</link>><<submissivetext>>
 		<br>
 	<</if>>
 <<else>>
@@ -949,16 +949,16 @@
 	<</if>>
 	<br>
 	<<if hasSexStat("promiscuity", 3)>>
-		<<link [[유혹하기|Industrial Ladder Seduce]]>><</link>><<promiscuous2>>
+		<<link [[유혹한다|Industrial Ladder Seduce]]>><</link>><<promiscuous2>>
 	<<else>>
 		<<insufficientStat "promiscuity" "그들을 유혹하기엔">>
 	<</if>>
 	<br>
 	<<if $submissive gte 1500>>
-		<<link [[애원하기|Industrial Ladder Beg]]>><</link>>
+		<<link [[애원한다|Industrial Ladder Beg]]>><</link>>
 		<br>
 	<</if>>
-	<<link [[떠나기|Industrial Alleyways]]>><<endevent>><</link>>
+	<<link [[떠난다|Industrial Alleyways]]>><<endevent>><</link>>
 <<else>>
 	<span class="red">쓸 만한 것을 찾을 수 없다.</span>
 	<br><br>
@@ -967,9 +967,9 @@
 	<<if (dangerEvent() or $eventforced) and $eventskip is 0>>
 		<<eventsstreet>>
 	<<else>>
-		<<link [[계속 찾기|Industrial Ladder]]>><</link>>
+		<<link [[계속 찾는다|Industrial Ladder]]>><</link>>
 		<br>
-		<<link [[포기하기|Industrial Alleyways]]>><</link>>
+		<<link [[포기한다|Industrial Alleyways]]>><</link>>
 	<</if>>
 <</if>>
 
@@ -1016,10 +1016,10 @@
 	<</if>>
 	<br>
 	<<if $submissive gte 1500>>
-		<<link [[애원하기|Industrial Ladder Beg]]>><</link>>
+		<<link [[애원한다|Industrial Ladder Beg]]>><</link>>
 		<br>
 	<</if>>
-	<<link [[떠나기|Industrial Alleyways]]>><<endevent>><</link>>
+	<<link [[떠난다|Industrial Alleyways]]>><<endevent>><</link>>
 <</if>>
 
 :: Industrial Ladder Sex
@@ -1087,10 +1087,10 @@
 	<</if>>
 	<br>
 	<<if $submissive gte 1500>>
-		<<link [[애원하기|Industrial Ladder Beg]]>><</link>>
+		<<link [[애원한다|Industrial Ladder Beg]]>><</link>>
 		<br>
 	<</if>>
-	<<link [[떠나기|Industrial Alleyways]]>><<endcombat>><</link>>
+	<<link [[떠난다|Industrial Alleyways]]>><<endcombat>><</link>>
 <</if>>
 
 :: Industrial Ladder Beg

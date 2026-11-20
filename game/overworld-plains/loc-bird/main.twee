@@ -2049,10 +2049,10 @@
 <<if $bird.rope lt 7>>
 	<<if $bird.materials.fabric gte 1>>
 		<<if $bird.rope is 0>>
-			<<link [[밧줄 만들기 (0:30)|Bird Tower Rope]]>><<set $bird.materials.fabric -= 1>><<set $bird.rope += 1>><<bird_pass 30>><</link>>
+			<<link [[밧줄을 만든다 (0:30)|Bird Tower Rope]]>><<set $bird.materials.fabric -= 1>><<set $bird.rope += 1>><<bird_pass 30>><</link>>
 			<br>
 		<<else>>
-			<<link [[밧줄 만들기 (0:30)|Bird Tower Rope Add]]>><<set $bird.materials.fabric -= 1>><<bird_pass 30>><<set $bird.rope += 1>><</link>>
+			<<link [[밧줄을 만든다 (0:30)|Bird Tower Rope Add]]>><<set $bird.materials.fabric -= 1>><<bird_pass 30>><<set $bird.rope += 1>><</link>>
 			<br>
 		<</if>>
 	<<else>>
@@ -2955,10 +2955,10 @@
 		<</if>>
 	<</if>>
 <<else>>
-	<<skinicon "wash">><<link [[씻기 (0:30)|Bird Tower Bathe]]>><<bird_pass 30>><</link>>
+	<<skinicon "wash">><<link [[씻는다 (0:30)|Bird Tower Bathe]]>><<bird_pass 30>><</link>>
 	<br>
 	<<if $bird.upgrades.pot is 3 and getBirdBurnTime() gt 0>>
-		<<skinicon "masturbate">><<link [[빗물 웅덩이에서 자위하기|Bird Tower Masturbation]]>><<set $masturbationstart to 1>><<strip>><</link>>
+		<<skinicon "masturbate">><<link [[빗물 웅덩이에서 자위한다|Bird Tower Masturbation]]>><<set $masturbationstart to 1>><<strip>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -5354,9 +5354,9 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 
 <<link [[둥지가 얼마나 튼튼한지 시험해 본다|Bird Tower Build Nest Sex Start]]>><</link>><<deviant1>>
 <br>
-<<link [[잠자기|Bird Tower Bed]]>><<endevent>><</link>>
+<<link [[잠잔다|Bird Tower Bed]]>><<endevent>><</link>>
 <br>
-<<link [[일어나기|Bird Tower]]>><<endevent>><</link>>
+<<link [[일어난다|Bird Tower]]>><<endevent>><</link>>
 <br>
 
 :: Bird Tower Build Nest Sex Start
@@ -7391,9 +7391,9 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 <</if>>
 <br>
 <<if $birdEggContext is "huntReturn">>
-	<<link [[계속하기|Bird Tower Great Hawk Egg Laying Hunt Finish]]>><<endBirdEggLaying>><</link>>
+	<<link [[계속한다|Bird Tower Great Hawk Egg Laying Hunt Finish]]>><<endBirdEggLaying>><</link>>
 <<else>>
-	<<link [[계속하기|Bird Tower]]>><<endevent>><<endBirdEggLaying>><</link>>
+	<<link [[계속한다|Bird Tower]]>><<endevent>><<endBirdEggLaying>><</link>>
 <</if>>
 <br>
 
@@ -8166,7 +8166,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 계단을 올라 다락으로 들어가, 장식품들을 내려놓는다. 이제 당신이 일할 차례다.
 <br><br>
 
-<<link [[장식하기 (1:00)|Bird Loft Decor 2]]>><<pass 60>><</link>><<housekeepingdifficulty 400 1000>>
+<<link [[장식한다 (1:00)|Bird Loft Decor 2]]>><<pass 60>><</link>><<housekeepingdifficulty 400 1000>>
 
 :: Bird Loft Decor 2
 <<effects>>

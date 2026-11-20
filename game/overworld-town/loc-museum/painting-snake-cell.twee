@@ -1601,7 +1601,7 @@
 		<br>
 	<</if>>
 <<else>>
-	<<link [[잠자기|Hopeless Cycle Cell Spend Night 2]]>><<set $hc.daily.cellSleep to true>><<hcPrisonerHealth 3>><<endevent>><<pass 5 hours>><<tiredness -60>><</link>>
+	<<link [[잠잔다|Hopeless Cycle Cell Spend Night 2]]>><<set $hc.daily.cellSleep to true>><<hcPrisonerHealth 3>><<endevent>><<pass 5 hours>><<tiredness -60>><</link>>
 	<br>
 <</if>>
 

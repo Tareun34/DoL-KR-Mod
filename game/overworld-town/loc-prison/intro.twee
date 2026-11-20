@@ -281,13 +281,13 @@
 다른 경비원들이 당신 주위에 서서 지켜본다.
 <br><br>
 
-<<link [[옷 벗기|Prison Intro Strip]]>><<trauma 6>><<stress 6>><<prison_guards -1>><</link>><<gtrauma>><<gstress>><<lsuspicion>>
+<<link [[옷을 벗는다|Prison Intro Strip]]>><<trauma 6>><<stress 6>><<prison_guards -1>><</link>><<gtrauma>><<gstress>><<lsuspicion>>
 <br>
 <<if hasSexStat("exhibitionism", 4)>>
-	<<link [[과시하기|Prison Intro Flaunt]]>><<prison_guards 3>><</link>><<exhibitionist4>><<llsuspicion>>
+	<<link [[과시한다|Prison Intro Flaunt]]>><<prison_guards 3>><</link>><<exhibitionist4>><<llsuspicion>>
 	<br>
 <</if>>
-<<link [[거부하기|Prison Intro Refuse]]>><<pain 4>><<prison_guards 1>><</link>><<gpain>><<gsuspicion>>
+<<link [[거부한다|Prison Intro Refuse]]>><<pain 4>><<prison_guards 1>><</link>><<gpain>><<gsuspicion>>
 <br>
 
 :: Prison Intro Boat
@@ -342,9 +342,9 @@
 그들은 당신이 없는 것처럼 당신 앞에서 계속 언쟁을 벌인다.
 <br><br>
 
-<<link [[불평하기|Prison Intro Boat Complain]]>><<pain 4>><<def 1>><<prison_guards 1>><</link>><<gpain>><<gsuspicion>>
+<<link [[불평한다|Prison Intro Boat Complain]]>><<pain 4>><<def 1>><<prison_guards 1>><</link>><<gpain>><<gsuspicion>>
 <br>
-<<link [[침묵 지키기|Prison Intro Boat 2]]>><<stress 6>><<sub 1>><<set $phase to 1>><</link>><<gstress>>
+<<link [[침묵을 지킨다|Prison Intro Boat 2]]>><<stress 6>><<sub 1>><<set $phase to 1>><</link>><<gstress>>
 <br>
 
 :: Prison Intro Boat Complain
@@ -452,11 +452,11 @@
 "이름?" <<he>>【이가】 당신을 보지 않고 묻는다.
 <br><br>
 
-<<link [[이름 말하기|Prison Intro Name]]>><<sub 1>><</link>>
+<<link [[이름을 말한다|Prison Intro Name]]>><<sub 1>><</link>>
 <br>
-<<link [[침 뱉기|Prison Intro Spit]]>><<def 2>><<prison_guards 1>><</link>><<dancedifficulty 1 1000>><<gsuspicion>>
+<<link [[침을 뱉는다|Prison Intro Spit]]>><<def 2>><<prison_guards 1>><</link>><<dancedifficulty 1 1000>><<gsuspicion>>
 <br>
-<<link [[침묵 지키기|Prison Intro Silent]]>><<def 1>><<pain 4>><</link>>
+<<link [[침묵을 지킨다|Prison Intro Silent]]>><<def 1>><<pain 4>><</link>>
 <br>
 
 :: Prison Intro Name
@@ -465,13 +465,13 @@
 당신은 <<person4>><<methodical_guard 3>>에게 당신의 이름을 말한다. <<He>>【이가】 무언가를 휘갈겨 쓴다. "옷 벗어." <<person2>><<anxious_guard 1 cap>>【이가】 <<his>> 입술을 핥는다. "전부 다."<<gstress>><<stress 6>>
 <br><br>
 
-<<link [[옷 벗기|Prison Intro Strip]]>><<trauma 6>><<stress 6>><<prison_guards -1>><</link>><<gtrauma>><<gstress>><<lsuspicion>>
+<<link [[옷을 벗는다|Prison Intro Strip]]>><<trauma 6>><<stress 6>><<prison_guards -1>><</link>><<gtrauma>><<gstress>><<lsuspicion>>
 <br>
 <<if hasSexStat("exhibitionism", 4)>>
-	<<link [[과시하기|Prison Intro Flaunt]]>><<prison_guards 3>><</link>><<exhibitionist4>><<llsuspicion>>
+	<<link [[과시한다|Prison Intro Flaunt]]>><<prison_guards 3>><</link>><<exhibitionist4>><<llsuspicion>>
 	<br>
 <</if>>
-<<link [[거부하기|Prison Intro Refuse]]>><<pain 4>><<prison_guards 1>><</link>><<gpain>><<gsuspicion>>
+<<link [[거부한다|Prison Intro Refuse]]>><<pain 4>><<prison_guards 1>><</link>><<gpain>><<gsuspicion>>
 <br>
 
 :: Prison Intro Spit
@@ -490,13 +490,13 @@
 <<person4>><<methodical_guard 3 cap>>【이가】 손을 흔든다. "상관없어." <<he>>【이가】 무언가를 휘갈겨 쓰며 말한다. "옷 벗어." <<person2>><<anxious_guard 1 cap>>【이가】 <<his>> 입술을 핥는다. "전부 다."<<gstress>><<stress 6>>
 <br><br>
 
-<<link [[옷 벗기|Prison Intro Strip]]>><<trauma 6>><<stress 6>><<prison_guards -1>><</link>><<gtrauma>><<gstress>><<lsuspicion>>
+<<link [[옷을 벗는다|Prison Intro Strip]]>><<trauma 6>><<stress 6>><<prison_guards -1>><</link>><<gtrauma>><<gstress>><<lsuspicion>>
 <br>
 <<if hasSexStat("exhibitionism", 4)>>
-	<<link [[과시하기|Prison Intro Flaunt]]>><<prison_guards 3>><</link>><<exhibitionist4>><<llsuspicion>>
+	<<link [[과시한다|Prison Intro Flaunt]]>><<prison_guards 3>><</link>><<exhibitionist4>><<llsuspicion>>
 	<br>
 <</if>>
-<<link [[거부하기|Prison Intro Refuse]]>><<pain 4>><<prison_guards 1>><</link>><<gpain>><<gsuspicion>>
+<<link [[거부한다|Prison Intro Refuse]]>><<pain 4>><<prison_guards 1>><</link>><<gpain>><<gsuspicion>>
 <br>
 
 :: Prison Intro Silent
@@ -509,13 +509,13 @@
 <<person4>><<methodical_guard 3 cap>>【이가】 <<his>> 손을 흔든다. "상관없어." <<he>>【이가】 무언가를 휘갈겨 쓰며 말한다. "옷 벗어." <<person2>><<anxious_guard 1 cap>>【이가】 <<his>> 입술을 핥는다. "전부 다."<<gstress>><<stress 6>>
 <br><br>
 
-<<link [[옷 벗기 (0:01)|Prison Intro Strip]]>><<pass 1>><<trauma 6>><<stress 6>><<prison_guards 1>><</link>><<gtrauma>><<gstress>><<lsuspicion>>
+<<link [[옷을 벗는다 (0:01)|Prison Intro Strip]]>><<pass 1>><<trauma 6>><<stress 6>><<prison_guards 1>><</link>><<gtrauma>><<gstress>><<lsuspicion>>
 <br>
 <<if hasSexStat("exhibitionism", 4)>>
-	<<link [[과시하기 (0:03)|Prison Intro Flaunt]]>><<prison_guards 3>><<pass 3>><</link>><<exhibitionist4>><<llsuspicion>>
+	<<link [[과시한다 (0:03)|Prison Intro Flaunt]]>><<prison_guards 3>><<pass 3>><</link>><<exhibitionist4>><<llsuspicion>>
 	<br>
 <</if>>
-<<link [[거부하기 (0:01)|Prison Intro Refuse]]>><<pass 1>><<pain 4>><<prison_guards -1>><</link>><<gpain>><<gsuspicion>>
+<<link [[거부한다 (0:01)|Prison Intro Refuse]]>><<pass 1>><<pain 4>><<prison_guards -1>><</link>><<gpain>><<gsuspicion>>
 <br>
 
 :: Prison Intro Strip
@@ -600,9 +600,9 @@
 	<<generate_veteran_guard 2>>
 	<<generate_methodical_guard 3>>
 
-	<<link [[도망치기|Prison Intro Strip Run]]>><<prison_guards 3>><</link>><<ggsuspicion>>
+	<<link [[도망친다|Prison Intro Strip Run]]>><<prison_guards 3>><</link>><<ggsuspicion>>
 	<br>
-	<<link [[협상하기|Prison Intro Strip Bargain]]>><<set $prisonClothesBargain to 1>><<prison_guards -1>><</link>><<lsuspicion>>
+	<<link [[협상한다|Prison Intro Strip Bargain]]>><<set $prisonClothesBargain to 1>><<prison_guards -1>><</link>><<lsuspicion>>
 	<br>
 
 <<elseif $enemyhealth lte 0>>
@@ -615,9 +615,9 @@
 	<<generate_veteran_guard 2>>
 	<<generate_methodical_guard 3>>
 
-	<<link [[도망치기|Prison Intro Strip Run]]>><<prison_guards 3>><</link>><<ggsuspicion>>
+	<<link [[도망친다|Prison Intro Strip Run]]>><<prison_guards 3>><</link>><<ggsuspicion>>
 	<br>
-	<<link [[협상하기|Prison Intro Strip Bargain]]>><<set $prisonClothesBargain to 1>><<prison_guards -1>><</link>><<lsuspicion>>
+	<<link [[협상한다|Prison Intro Strip Bargain]]>><<set $prisonClothesBargain to 1>><<prison_guards -1>><</link>><<lsuspicion>>
 	<br>
 
 <<else>>
@@ -643,9 +643,9 @@
 뒤에서 경보음이 울리는 소리가 들린다.
 <br><br>
 
-<<link [[보트 타기|Prison Intro Strip Boat]]>><</link>>
+<<link [[보트를 탄다|Prison Intro Strip Boat]]>><</link>>
 <br>
-<<link [[수영하기|Prison Intro Strip Swim]]>><</link>>
+<<link [[수영한다|Prison Intro Strip Swim]]>><</link>>
 <br>
 
 :: Prison Intro Strip Boat

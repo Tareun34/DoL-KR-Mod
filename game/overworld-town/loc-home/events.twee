@@ -1731,7 +1731,7 @@
 
 <<link [[<<him>>【을를】 도와주기 (0:10)|Home Valentines Help]]>><<pass 10>><</link>>
 <br>
-<<link [[거절하기|Home Valentines No]]>><</link>>
+<<link [[거절한다|Home Valentines No]]>><</link>>
 <br>
 
 :: Home Valentines No
@@ -1775,11 +1775,11 @@
 	<br><br>
 
 	<<if $robinromance gte 1>>
-		<<link [[고백 전달하기|Home Valentines Robin Romance]]>><</link>>
+		<<link [[고백을 전달한다|Home Valentines Robin Romance]]>><</link>>
 		<br>
-		<<link [[화내기|Home Valentines Get Angry]]>><</link>>
+		<<link [[화낸다|Home Valentines Get Angry]]>><</link>>
 	<<else>>
-		<<link [[고백 전달하기|Home Valentines Robin No Romance]]>><</link>>
+		<<link [[고백을 전달한다|Home Valentines Robin No Romance]]>><</link>>
 	<</if>>
 <<else>>
 	<<generatey2>>
@@ -1789,7 +1789,7 @@
 	"다시 한번 고마워. 정원에서 기다리고 있을게." <<person1>><<he>>【은는】 살짝 얼굴을 붉히며 말한다. "아, 그리고 이게 필요할 거야. 고백의 일부거든." <<He>>【은는】 당신에게 초콜릿 바와 쪽지를 건넨다.
 	<br><br>
 
-	<<link [[고백 전달하기|Home Valentines Search]]>><</link>><<englishdifficulty 1 400>>
+	<<link [[고백을 전달한다|Home Valentines Search]]>><</link>><<englishdifficulty 1 400>>
 <</if>>
 <br>
 
@@ -1838,7 +1838,7 @@
 당신이 가기 전에, 로빈은 초콜릿 바와 쪽지를 당신 손에 다시 쥐여준다. <<He>>【은는】 여전히 미소를 머금은 채 문을 닫는다.
 <br><br>
 
-<<link [[보고하러 가기|Home Valentines Report Back Robin]]>><</link>>
+<<link [[보고하러 간다|Home Valentines Report Back Robin]]>><</link>>
 <br>
 
 :: Home Valentines Robin No Romance
@@ -1860,7 +1860,7 @@
 로빈은 어리둥절한 표정이다. <<He>>【은는】 쪽지를 내려다보며 잠시 대답이 없다. "이건... 예상 밖인데." <<he>>【이가】 마침내 대답한다. "<<person1>><<him>>에게 고맙다고, 그리고 감사하지만 관심 없다고 전해줘. 그리고 <<he>>【이가】 언젠가 <<his>> 마음을 받아줄 사람을 꼭 찾길 바란다고도 전해줘." <<person2>><<He>>【은는】 살짝 미소 지으며 당신에게 선물을 돌려준다. <<He>>【은는】 <<his>> 방으로 돌아가 문을 닫는다.
 <br><br>
 
-<<link [[보고하러 가기|Home Valentines Report Back Robin]]>><</link>>
+<<link [[보고하러 간다|Home Valentines Report Back Robin]]>><</link>>
 <br>
 
 :: Home Valentines Get Angry
@@ -1929,7 +1929,7 @@
 	<<He>>【은는】 혼란스러운 표정으로 당신을 보다가, <<his>> 표정이 동정으로 바뀐다. "아... 저한테 데이트 신청하는 거예요? 이런 말 하긴 싫지만, 당신은 제 타입이 아니에요. 사실, 전 이미 좋아하는 사람이 있어요. 미안해요." 고통스럽게 어색한 침묵이 흐른 후, <<he>>【은는】 마침내 문을 닫는다. <<gstress>><<stress 6>>
 	<br><br>
 
-	<<link [[보고하러 가기|Home Valentines Report Back]]>><</link>>
+	<<link [[보고하러 간다|Home Valentines Report Back]]>><</link>>
 <</if>>
 <br>
 

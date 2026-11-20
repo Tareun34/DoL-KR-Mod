@@ -72,10 +72,10 @@
 			<br><br>
 		<<else>>
 			<<if $prison.schedule isnot "revolt">>
-				<<swimicon "back">><<link [[수영 연습하기 (1:00)|Prison Beach Swim]]>><<pass 60>><<stress -6>><<tiredness 6>><</link>><<gtiredness>><<gswimming>><<lstress>>
+				<<swimicon "back">><<link [[수영을 연습한다 (1:00)|Prison Beach Swim]]>><<pass 60>><<stress -6>><<tiredness 6>><</link>><<gtiredness>><<gswimming>><<lstress>>
 				<br>
 			<</if>>
-			<<swimicon>><<link [[섬에서 헤엄쳐 멀어지기 (0:05)|Prison Beach Escape]]>><<pass 5>><<water>><</link>>
+			<<swimicon>><<link [[섬에서 헤엄쳐 멀어진다 (0:05)|Prison Beach Escape]]>><<pass 5>><<water>><</link>>
 			<br><br>
 		<</if>>
 		<<if $prison.yard_door is 1>>
@@ -156,12 +156,12 @@
 	<</if>>
 
 	<<if $prison.kylar is "active">>
-		<<getinicon>><<link [[혼자 탈출하기 (0:30)|Prison Wren Escape]]>><<prison_end>><<prisoncrimeUp>><<pass 30>><<prison_guards -40>><</link>><<gggcrime>><<gggsuspicion>>
+		<<getinicon>><<link [[혼자 탈출한다 (0:30)|Prison Wren Escape]]>><<prison_end>><<prisoncrimeUp>><<pass 30>><<prison_guards -40>><</link>><<gggcrime>><<gggsuspicion>>
 		<br>
-		<<getinicon>><<link [[카일라와 함께 탈출하기 (0:40)|Prison Kylar Escape]]>><<prison_end>><<prisoncrimeUp "kylar">><<pass 40>><<prison_guards -40>><<npcincr Kylar rage -60>><<npcincr Kylar love 20>><</link>><<gggcrime "obstruction">><<gggsuspicion>><<ggglove>><<lllksuspicion>>
+		<<getinicon>><<link [[카일라와 함께 탈출한다 (0:40)|Prison Kylar Escape]]>><<prison_end>><<prisoncrimeUp "kylar">><<pass 40>><<prison_guards -40>><<npcincr Kylar rage -60>><<npcincr Kylar love 20>><</link>><<gggcrime "obstruction">><<gggsuspicion>><<ggglove>><<lllksuspicion>>
 		<br>
 	<<else>>
-		<<getinicon>><<link [[탈출하기 (0:30)|Prison Wren Escape]]>><<prison_end>><<prisoncrimeUp>><<pass 30>><<prison_guards -40>><</link>><<gggcrime>><<gggsuspicion>>
+		<<getinicon>><<link [[탈출한다 (0:30)|Prison Wren Escape]]>><<prison_end>><<prisoncrimeUp>><<pass 30>><<prison_guards -40>><</link>><<gggcrime>><<gggsuspicion>>
 		<br>
 	<</if>>
 

@@ -307,7 +307,7 @@
 		<br><br>
 		<<unbind>>
 	<<elseif breakableSoftBinding()>>
-		<<undobindingsicon>><<link [[결박 풀기 (0:10)|Farm Bedroom]]>><<set $unbind to 1>><<pass 10>><<unbind>><</link>>
+		<<undobindingsicon>><<link [[결박을 푼다 (0:10)|Farm Bedroom]]>><<set $unbind to 1>><<pass 10>><<unbind>><</link>>
 		<br><br>
 	<</if>>
 	<<if !($earSlime.event and $earSlime.noSleep)>>
@@ -342,7 +342,7 @@
 	<br>
 	<<farmicon "alexbed">><<link [[알렉스의 방 (0:01)|Farm Alex Bedroom]]>><<pass 1>><</link>>
 	<br>
-	<<main_hall_icon>><<link [[아래층으로 내려가기 (0:01)|Farm Cottage]]>><<pass 1>><</link>>
+	<<main_hall_icon>><<link [[아래층으로 내려간다 (0:01)|Farm Cottage]]>><<pass 1>><</link>>
 	<br>
 	<br>
 	<<link [[게임플레이 설정|Farm Settings]]>><</link>>
@@ -879,7 +879,7 @@
 <</if>>
 <br><br>
 
-<<link [[계속하기|Farm Alex Somno Wake 3]]>><</link>>
+<<link [[계속한다|Farm Alex Somno Wake 3]]>><</link>>
 
 :: Farm Alex Somno Wake 3
 <<effects>>
@@ -2492,7 +2492,7 @@
 <<elseif $alex_countdown is undefined>>
 	<<link [[계속 본다 (0:20)|Farm Breakfast TV]]>><<pass 20>><<stress -6>><</link>><<lstress>>
 	<br>
-	<<link [[알렉스 껴안기 (0:40)|Farm Breakfast Cuddle]]>><<npcincr Alex love 1>><<pass 40>><</link>><<glove>>
+	<<link [[알렉스를 껴안는다 (0:40)|Farm Breakfast Cuddle]]>><<npcincr Alex love 1>><<pass 40>><</link>><<glove>>
 	<br>
 	<<link [[그만둔다|Farm Cottage]]>><<endevent>><</link>>
 	<br>
@@ -5140,5 +5140,5 @@
 
 <<kitchenDisplay>>
 
-<<link [[나가기|Farm Cottage]]>><<kitchenExit>><</link>>
+<<link [[나간다|Farm Cottage]]>><<kitchenExit>><</link>>
 <br>

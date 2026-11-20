@@ -1122,7 +1122,7 @@
 	<<physique 1>><<gathletics>><<athletics 1>>
 	<br><br>
 	<<pass 15>>
-	<<link [[발 걸기 (0:30)|Wolf Cave Hunt Outrun]]>><<set $phase to 1>><</link>><<dancedifficulty 600 1200>>
+	<<link [[발을 건다 (0:30)|Wolf Cave Hunt Outrun]]>><<set $phase to 1>><</link>><<dancedifficulty 600 1200>>
 	<br>
 	<<link [[앞질러 달려본다 (0:30)|Wolf Cave Hunt Outrun]]>><<set $phase to 0>><</link>><<athleticsdifficulty 600 1200>>
 <<else>>

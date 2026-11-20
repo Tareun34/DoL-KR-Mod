@@ -325,7 +325,7 @@
 			<<elseif Weather.precipitation isnot "none" or Weather.isOvercast>>
 				<span class="red">날씨가 맑지 않아 저택을 정찰할 수 없습니다.</span>
 			<<else>>
-				<<link [[저택 정찰하기 (2:00)|Bird Hunt Estate Scout]]>><<endevent>><</link>>
+				<<link [[저택을 정찰한다 (2:00)|Bird Hunt Estate Scout]]>><<endevent>><</link>>
 			<</if>>
 			<br>
 		<<elseif $bird.hunts.estate is "ready">>
@@ -685,7 +685,7 @@
 			거대 매의 도움을 받아 그들에게서 물건을 훔칠 수도 있다. 둘이서 그들을 겁줘서 쫓아낼 수도 있다.
 			<br><br>
 
-			<<link [[물건 훔치기 (0:05)|Bird Hunt Tent Steal]]>><<bird_pass 5>><</link>><<crime "thievery">>
+			<<link [[물건을 훔친다 (0:05)|Bird Hunt Tent Steal]]>><<bird_pass 5>><</link>><<crime "thievery">>
 			<br>
 			<<if $remySeen?.includesAny("farm","livestock","manor") or $livestock.intro isnot undefined>>
 				<<link [[겁주고 괴롭힌다 (0:05)|Bird Hunt Tent Sabotage]]>><<bird_pass 5>><</link>>
@@ -695,7 +695,7 @@
 				<br>
 			<</if>>
 			<<if $bird.hunts.loot.lurkers gte 1>>
-				<<link [[머리 위로 럴커 떨어뜨리기 (0:05)|Bird Hunt Tent Lurker Drop]]>><<endevent>><<bird_pass 5>><</link>>
+				<<link [[머리 위로 럴커를 떨어뜨린다 (0:05)|Bird Hunt Tent Lurker Drop]]>><<endevent>><<bird_pass 5>><</link>>
 				<br>
 			<</if>>
 		<<else>>
@@ -703,10 +703,10 @@
 			<br><br>
 
 			<<set $skulduggerydifficulty to 500>>
-			<<link [[몰래 들어가 물건 훔치기 (0:05)|Bird Hunt Tent Steal Alone]]>><<crimeUp 10 "trespassing">><<bird_pass 5>><</link>><<skulduggerydifficulty>><<crimes "thievery" "trespassing">>
+			<<link [[몰래 들어가 물건을 훔친다 (0:05)|Bird Hunt Tent Steal Alone]]>><<crimeUp 10 "trespassing">><<bird_pass 5>><</link>><<skulduggerydifficulty>><<crimes "thievery" "trespassing">>
 			<br>
 			<<if $bird.hunts.loot.lurkers gte 1>>
-				<<link [[머리 위로 럴커 떨어뜨리기 (0:05)|Bird Hunt Tent Lurker Drop]]>><<endevent>><<bird_pass 5>><</link>>
+				<<link [[머리 위로 럴커를 떨어뜨린다 (0:05)|Bird Hunt Tent Lurker Drop]]>><<endevent>><<bird_pass 5>><</link>>
 				<br>
 			<</if>>
 		<</if>>
@@ -785,7 +785,7 @@
 		캠프장의 잔해가 눈에 띈다. 가져갈 만한 것이 남아 있을지도 모른다.
 		<br><br>
 
-		<<link [[지역 수색하기 (0:05)|Bird Hunt Camp]]>><<bird_pass 5>><</link>>
+		<<link [[지역을 수색한다 (0:05)|Bird Hunt Camp]]>><<bird_pass 5>><</link>>
 		<br>
 		<<link [[무시한다|Bird Hunt Ignore]]>><<endevent>><</link>>
 		<br>
@@ -853,7 +853,7 @@
 			두 개의 큰 바위 사이에 묶여 비를 피할 수 있는 큰 파란색 방수포가 눈에 띈다. 주변에는 아무도 없는 것 같다. 당신이 가져갈 수 있을 것이다.
 			<br><br>
 
-			<<link [[방수포 가져가기 (0:05)|Bird Hunt Tarp]]>><<bird_pass 5>><</link>>
+			<<link [[방수포를 가져간다 (0:05)|Bird Hunt Tarp]]>><<bird_pass 5>><</link>>
 			<br>
 			<<link [[무시한다|Bird Hunt Ignore]]>><<endevent>><</link>>
 			<br>
@@ -3541,12 +3541,12 @@
 	고맙게도 다른 사람은 아무도 없다. 뒤질 곳은 많지만, 시간이 얼마나 있을지 알 수 없다.
 	<br><br>
 
-	<<link [[옷 훔치기|Bird Hunt Tent Steal Alone 2]]>><<set $phase to 1>><<crimeUp 10 "thievery">><</link>>
+	<<link [[옷을 훔친다|Bird Hunt Tent Steal Alone 2]]>><<set $phase to 1>><<crimeUp 10 "thievery">><</link>>
 	<br>
-	<<link [[귀중품 훔치기|Bird Hunt Tent Steal Alone 2]]>><<set $phase to 2>><<crimeUp 10 "thievery">><</link>>
+	<<link [[귀중품을 훔친다|Bird Hunt Tent Steal Alone 2]]>><<set $phase to 2>><<crimeUp 10 "thievery">><</link>>
 	<br>
 	<<if $bird.upgrades.tools is 0 and !$bird.hunts.loot.tools>>
-		<<link [[도구 훔치기|Bird Hunt Tent Steal Alone 2]]>><<set $phase to 3>><<crimeUp 10 "thievery">><</link>>
+		<<link [[도구를 훔친다|Bird Hunt Tent Steal Alone 2]]>><<set $phase to 3>><<crimeUp 10 "thievery">><</link>>
 		<br>
 	<</if>>
 <<else>>
@@ -3775,12 +3775,12 @@
 		더 찾아볼 수도 있지만, <<person>>【이가】 언제 돌아올지는 모른다.
 		<br><br>
 
-		<<link [[옷 훔치기|Bird Hunt Tent Steal Alone 2]]>><<set $phase to 1>><</link>><<dangerousText>>
+		<<link [[옷을 훔친다|Bird Hunt Tent Steal Alone 2]]>><<set $phase to 1>><</link>><<dangerousText>>
 		<br>
-		<<link [[귀중품 훔치기|Bird Hunt Tent Steal Alone 2]]>><<set $phase to 2>><</link>><<dangerousText>>
+		<<link [[귀중품을 훔친다|Bird Hunt Tent Steal Alone 2]]>><<set $phase to 2>><</link>><<dangerousText>>
 		<br>
 		<<if $bird.upgrades.tools is 0 and !$bird.hunts.loot.tools>>
-			<<link [[도구 훔치기|Bird Hunt Tent Steal Alone 2]]>><<set $phase to 3>><</link>><<dangerousText>>
+			<<link [[도구를 훔친다|Bird Hunt Tent Steal Alone 2]]>><<set $phase to 3>><</link>><<dangerousText>>
 			<br>
 		<</if>>
 		<<set $skulduggerydifficulty to ($tentLootAmount * 100)>>
@@ -3819,9 +3819,9 @@
 		더 찾아볼 수도 있지만, <<person>>【이가】 언제 돌아올지는 모른다.
 		<br><br>
 
-		<<link [[옷 훔치기|Bird Hunt Tent Steal Alone 2]]>><<set $phase to 1>><</link>><<dangerousText>>
+		<<link [[옷을 훔친다|Bird Hunt Tent Steal Alone 2]]>><<set $phase to 1>><</link>><<dangerousText>>
 		<br>
-		<<link [[귀중품 훔치기|Bird Hunt Tent Steal Alone 2]]>><<set $phase to 2>><</link>><<dangerousText>>
+		<<link [[귀중품을 훔친다|Bird Hunt Tent Steal Alone 2]]>><<set $phase to 2>><</link>><<dangerousText>>
 		<br>
 		<<set $skulduggerydifficulty to ($tentLootAmount * 100)>>
 		<<link [[전리품을 가지고 떠난다|Bird Hunt Tent Steal Alone Leave]]>><</link>>
@@ -4575,13 +4575,13 @@
 	쓰레기를 뒤지는 것은 즐거운 일이 아니지만, 당신의 <<if $monster is 1>><<nnpc_wife "Great Hawk">><<else>>파트너<</if>>【와과】 함께 찾는다면 더 빠를 것이다.
 	<br><br>
 
-	<<link [[뒤지기 (0:05)|Bird Hunt Scavenge]]>><<bird_pass 5>><</link>>
+	<<link [[뒤진다 (0:05)|Bird Hunt Scavenge]]>><<bird_pass 5>><</link>>
 	<br>
 <<else>>
 	쓰레기를 뒤지는 것은 즐거운 일이 아니다.
 	<br><br>
 
-	<<link [[뒤지기 (0:10)|Bird Hunt Scavenge]]>><<bird_pass 10>><</link>>
+	<<link [[뒤진다 (0:10)|Bird Hunt Scavenge]]>><<bird_pass 10>><</link>>
 	<br>
 <</if>>
 
@@ -4752,13 +4752,13 @@
 			<br><br>
 
 			<<if $bird.hunts.duo is true>>
-				<<link [[계속 찾기 (0:05)|Bird Hunt Scavenge]]>><<bird_pass 5>><</link>>
+				<<link [[계속 찾는다 (0:05)|Bird Hunt Scavenge]]>><<bird_pass 5>><</link>>
 				<br>
 			<<else>>
-				<<link [[계속 찾기 (0:10)|Bird Hunt Scavenge]]>><<bird_pass 10>><</link>>
+				<<link [[계속 찾는다 (0:10)|Bird Hunt Scavenge]]>><<bird_pass 10>><</link>>
 				<br>
 			<</if>>
-			<<link [[떠나기|Bird Hunt Scavenge Leave]]>><</link>>
+			<<link [[떠난다|Bird Hunt Scavenge Leave]]>><</link>>
 			<br>
 		<</if>>
 	<</if>>
@@ -7574,29 +7574,29 @@
 		<br>
 	<<else>>
 		<<if !_noForward>>
-			<<caveicon "north">><<link [[앞으로 이동하기|Bird Hunt Silver Sneak]]>><<set $birdSilverHunt.player.action to "forward">><</link>><<note "+ 전진" "green">>
+			<<caveicon "north">><<link [[앞으로 이동한다|Bird Hunt Silver Sneak]]>><<set $birdSilverHunt.player.action to "forward">><</link>><<note "+ 전진" "green">>
 			<br>
 		<<else>>
 			<span class="purple">이 상태로는 앞으로 나아갈 수 없을 것 같다.</span>
 			<br>
 		<</if>>
 		<<if !_onGuard>>
-			<<caveicon "west">><<link [[왼쪽으로 이동하기|Bird Hunt Silver Sneak]]>><<set $birdSilverHunt.player.action to "moveLeft">><</link>>
+			<<caveicon "west">><<link [[왼쪽으로 이동한다|Bird Hunt Silver Sneak]]>><<set $birdSilverHunt.player.action to "moveLeft">><</link>>
 			<br>
 		<</if>>
-		<<caveicon "left">><<link [[왼쪽으로 기어가기|Bird Hunt Silver Sneak]]>><<set $birdSilverHunt.player.action to "crawlLeft">><</link>><<note "은밀하지만 느림" "teal">>
+		<<caveicon "left">><<link [[왼쪽으로 기어간다|Bird Hunt Silver Sneak]]>><<set $birdSilverHunt.player.action to "crawlLeft">><</link>><<note "은밀하지만 느림" "teal">>
 		<br>
 		<<if !_onGuard>>
-			<<caveicon "east">><<link [[오른쪽으로 이동하기|Bird Hunt Silver Sneak]]>><<set $birdSilverHunt.player.action to "moveRight">><</link>>
+			<<caveicon "east">><<link [[오른쪽으로 이동한다|Bird Hunt Silver Sneak]]>><<set $birdSilverHunt.player.action to "moveRight">><</link>>
 			<br>
 		<</if>>
-		<<caveicon "right">><<link [[오른쪽으로 기어가기|Bird Hunt Silver Sneak]]>><<set $birdSilverHunt.player.action to "crawlRight">><</link>><<note "은밀하지만 느림" "teal">>
+		<<caveicon "right">><<link [[오른쪽으로 기어간다|Bird Hunt Silver Sneak]]>><<set $birdSilverHunt.player.action to "crawlRight">><</link>><<note "은밀하지만 느림" "teal">>
 		<br><br>
 
-		<<crimeicon>><<link [[숨기|Bird Hunt Silver Sneak]]>><<set $birdSilverHunt.player.action to "hide">><</link>>
+		<<crimeicon>><<link [[숨는다|Bird Hunt Silver Sneak]]>><<set $birdSilverHunt.player.action to "hide">><</link>>
 		<br>
 		<<if !_onGuard>>
-			<<crimeicon "mark">><<link [[엿보기|Bird Hunt Silver Sneak]]>><<set $birdSilverHunt.player.action to "peek">><</link>>
+			<<crimeicon "mark">><<link [[엿본다|Bird Hunt Silver Sneak]]>><<set $birdSilverHunt.player.action to "peek">><</link>>
 			<br>
 		<<else>>
 			<span class="red">지금은 밖을 엿볼 수 없다.</span>

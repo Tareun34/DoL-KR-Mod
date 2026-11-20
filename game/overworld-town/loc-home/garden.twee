@@ -250,7 +250,7 @@
 
 	<<if !Weather.isOvercast and Time.dayState is "day">>
 		<<set _tanning to Skin.getTanningFactor()>>
-		<<baskicon>><<link [[햇볕 쬐기 (0:10)|Bask]]>><<pass 10>><<set $stress -= 5>><</link>><<lstress>><<tanningGainOutput _tanning.result 10>>
+		<<baskicon>><<link [[햇볕을 쬔다 (0:10)|Bask]]>><<pass 10>><<set $stress -= 5>><</link>><<lstress>><<tanningGainOutput _tanning.result 10>>
 		<br>
 		<</if>>
 
@@ -262,7 +262,7 @@
 	<<if $exposed gte 1>>
 		<<set _ex to ($exposed >= 2 ? (Time.dayState == "night" ? 4 : 5) : (Time.dayState == "night" ? 2 : 3))>>
 		<<if hasSexStat("exhibitionism", _ex)>>
-			<<fenceicon>><<link [[울타리 넘기 (0:05)|Garden Fence]]>><<pass 5>><</link>>
+			<<fenceicon>><<link [[울타리를 넘는다 (0:05)|Garden Fence]]>><<pass 5>><</link>>
 			<<if $daily.ex.fence isnot 1>>
 				<<switch _ex>>
 					<<case 2>>
@@ -278,7 +278,7 @@
 		<</if>>
 		<br>
 	<<else>>
-		<<fenceicon>><<link [[울타리 넘기 (0:01)|Garden Fence]]>><<pass 1>><</link>>
+		<<fenceicon>><<link [[울타리를 넘는다 (0:01)|Garden Fence]]>><<pass 1>><</link>>
 		<br>
 	<</if>>
 
@@ -540,11 +540,11 @@
 		<</if>>
 		<br><br>
 
-		<<link [[안아주기 (0:05)|Garden Robin Hug]]>><<pass 5>><<npcincr Robin love 1>><<npcincr Robin trauma -1>><<trauma -6>><</link>><<ltrauma>><<glove>><<lrtrauma>>
+		<<link [[안아준다 (0:05)|Garden Robin Hug]]>><<pass 5>><<npcincr Robin love 1>><<npcincr Robin trauma -1>><<trauma -6>><</link>><<ltrauma>><<glove>><<lrtrauma>>
 		<br>
 		<<link [["로빈을 도와 물 주기 (" + _time_to_display + ")"|Garden Robin Help]]>><<npcincr Robin love 1>><<trauma -6>><<stress -6>><<pass _time_to_pass>><</link>><<ltrauma>><<lstress>><<glove>>
 		<br>
-		<<link [[그냥 지나가는 길이라고 말하기|Garden Robin Finished]]>><</link>>
+		<<link [[그냥 지나가는 길이라고 말한다|Garden Robin Finished]]>><</link>>
 		<br>
 	<<else>>
 		손을 흔든다.
@@ -562,7 +562,7 @@
 
 		<<link [["로빈을 도와 물 주기 (" + _time_to_display + ")"|Garden Robin Help]]>><<npcincr Robin love 1>><<trauma -6>><<stress -6>><<pass _time_to_pass>><</link>><<ltrauma>><<lstress>><<glove>>
 		<br>
-		<<link [[그냥 지나가는 길이라고 말하기|Garden Robin Finished]]>><</link>>
+		<<link [[그냥 지나가는 길이라고 말한다|Garden Robin Finished]]>><</link>>
 		<br>
 	<</if>>
 <<elseif $phase is 1>>
@@ -583,11 +583,11 @@
 		"실례가 아니었으면 좋겠네," <<he>>【이가】 말한다. <<He>>【은는】 빨개진 눈으로 당신이 물 주는 것을 지켜본다. "밖에서 누가 물 주는 소리가 들려서 너일 거라고 생각했어."
 		<br><br>
 
-		<<link [[안아주기 (0:05)|Garden Robin Hug]]>><<pass 5>><<npcincr Robin love 1>><<npcincr Robin trauma -1>><<trauma -6>><</link>><<ltrauma>><<glove>><<lrtrauma>>
+		<<link [[안아준다 (0:05)|Garden Robin Hug]]>><<pass 5>><<npcincr Robin love 1>><<npcincr Robin trauma -1>><<trauma -6>><</link>><<ltrauma>><<glove>><<lrtrauma>>
 		<br>
-		<<link [[로빈이 돕게 하기 (0:10)|Garden Robin Help]]>><<npcincr Robin love 1>><<trauma -6>><<stress -6>><<pass 10>><</link>><<ltrauma>><<lstress>><<glove>>
+		<<link [[로빈이 돕게 한다 (0:10)|Garden Robin Help]]>><<npcincr Robin love 1>><<trauma -6>><<stress -6>><<pass 10>><</link>><<ltrauma>><<lstress>><<glove>>
 		<br>
-		<<link [[다 끝났다고 말하기|Garden Robin Finished]]>><</link>>
+		<<link [[다 끝났다고 말한다|Garden Robin Finished]]>><</link>>
 		<br>
 	<<else>>
 		풀밭을 스치는 부드러운 발소리가 들린다. 로빈이다.
@@ -596,19 +596,19 @@
 		"네가 여기 있을 줄 알았어," <<he>>【이가】 가까이 다가오며 말한다. "도와줄까?"
 		<br><br>
 
-		<<link [[로빈이 돕게 하기 (0:10)|Garden Robin Help]]>><<npcincr Robin love 1>><<trauma -6>><<stress -6>><<pass 10>><</link>><<ltrauma>><<lstress>><<glove>>
+		<<link [[로빈이 돕게 한다 (0:10)|Garden Robin Help]]>><<npcincr Robin love 1>><<trauma -6>><<stress -6>><<pass 10>><</link>><<ltrauma>><<lstress>><<glove>>
 		<br>
-		<<link [[다 끝났다고 말하기|Garden Robin Finished]]>><</link>>
+		<<link [[다 끝났다고 말한다|Garden Robin Finished]]>><</link>>
 		<br>
 	<</if>>
 <<else>>
 	<<display_plot garden>>
 	<<if !$plants_known.includes("daisy")>>
-		<<foodstufficon "daisy">> <<link [[씨앗 찾기 (0:30)|Garden Flowers Seeds]]>><<set $plants_known.push("daisy")>><<pass 30>><</link>>
+		<<foodstufficon "daisy">> <<link [[씨앗을 찾는다 (0:30)|Garden Flowers Seeds]]>><<set $plants_known.push("daisy")>><<pass 30>><</link>>
 		<br>
 	<</if>>
 	<br>
-	<<getouticon>><<link [[떠나기|Garden]]>><<endevent>><</link>>
+	<<getouticon>><<link [[떠난다|Garden]]>><<endevent>><</link>>
 	<br>
 <</if>>
 

@@ -200,13 +200,13 @@
 <<else>>
 
 	<<if $moor_binding gte 1>>
-		<<link [[결박 풀기 (1:00)|Moor Abduction Tent Loosen]]>><<pass 60>><</link>>
+		<<link [[결박을 푼다 (1:00)|Moor Abduction Tent Loosen]]>><<pass 60>><</link>>
 		<br>
 	<<else>>
 		<<link [[탈출한다|Moor Abduction Escape]]>><</link>>
 		<br>
 	<</if>>
-	<<link [[잠자기|Moor Abduction Sleep]]>><</link>>
+	<<link [[잠잔다|Moor Abduction Sleep]]>><</link>>
 	<br>
 <</if>>
 
@@ -341,7 +341,7 @@
 			불량배들이 무기를 꽉 쥐고 하늘을 쳐다보며 더 가까이 모여든다.
 			<br><br>
 
-			<<link [[비명 지르기 (0:20)|Moor Abduction Bird Screech]]>><<pass 20>><</link>><<harpy>>
+			<<link [[비명을 지른다 (0:20)|Moor Abduction Bird Screech]]>><<pass 20>><</link>><<harpy>>
 			<br>
 			<<link [[기다린다|Moor Abduction Bird Wait]]>><</link>>
 			<br>
@@ -1020,7 +1020,7 @@
 <<if currentSkillValue('skulduggery') gte $lock>>
 	<span class="green">자물쇠는 쉽게 딸 수 있을 것 같다.</span>
 	<br><br>
-	<<link [[우리 열기 (0:20)|Moor Abduction Lock]]>><<pass 20>><<stress 6>><</link>><<gstress>>
+	<<link [[우리를 연다 (0:20)|Moor Abduction Lock]]>><<pass 20>><<stress 6>><</link>><<gstress>>
 	<br>
 <<else>>
 	<span class="blue">자물쇠는 당신의 능력으로는 딸 수 없을 것 같다.</span><<skulduggeryrequired>>

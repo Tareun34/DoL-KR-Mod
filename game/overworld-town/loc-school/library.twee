@@ -297,22 +297,22 @@
 
 		<<projectoptions>>
 		<<if $exposed gte 1>>
-			<<scienceicon>><<link [[과학 공부하기 (0:20)|Library Study Exposed]]>><<pass 20>><<set $phase to 1>><</link>><<gscience>>
+			<<scienceicon>><<link [[과학을 공부한다 (0:20)|Library Study Exposed]]>><<pass 20>><<set $phase to 1>><</link>><<gscience>>
 			<br>
-			<<mathicon>><<link [[수학 공부하기 (0:20)|Library Study Exposed]]>><<pass 20>><<set $phase to 2>><</link>><<gmaths>>
+			<<mathicon>><<link [[수학을 공부한다 (0:20)|Library Study Exposed]]>><<pass 20>><<set $phase to 2>><</link>><<gmaths>>
 			<br>
-			<<englishicon>><<link [[영어 공부하기 (0:20)|Library Study Exposed]]>><<pass 20>><<set $phase to 3>><</link>><<genglish>>
+			<<englishicon>><<link [[영어 공부한다 (0:20)|Library Study Exposed]]>><<pass 20>><<set $phase to 3>><</link>><<genglish>>
 			<br>
-			<<historyicon>><<link [[역사 공부하기 (0:20)|Library Study Exposed]]>><<pass 20>><<set $phase to 4>><</link>><<ghistory>>
+			<<historyicon>><<link [[역사를 공부한다 (0:20)|Library Study Exposed]]>><<pass 20>><<set $phase to 4>><</link>><<ghistory>>
 			<br>
 		<<else>>
-			<<scienceicon>><<link [[과학 공부하기 (0:20)|Library Study]]>><<pass 20>><<set $phase to 1>><</link>><<gscience>>
+			<<scienceicon>><<link [[과학을 공부한다 (0:20)|Library Study]]>><<pass 20>><<set $phase to 1>><</link>><<gscience>>
 			<br>
-			<<mathicon>><<link [[수학 공부하기 (0:20)|Library Study]]>><<pass 20>><<set $phase to 2>><</link>><<gmaths>>
+			<<mathicon>><<link [[수학을 공부한다 (0:20)|Library Study]]>><<pass 20>><<set $phase to 2>><</link>><<gmaths>>
 			<br>
-			<<englishicon>><<link [[영어 공부하기 (0:20)|Library Study]]>><<pass 20>><<set $phase to 3>><</link>><<genglish>>
+			<<englishicon>><<link [[영어 공부한다 (0:20)|Library Study]]>><<pass 20>><<set $phase to 3>><</link>><<genglish>>
 			<br>
-			<<historyicon>><<link [[역사 공부하기 (0:20)|Library Study]]>><<pass 20>><<set $phase to 4>><</link>><<ghistory>>
+			<<historyicon>><<link [[역사를 공부한다 (0:20)|Library Study]]>><<pass 20>><<set $phase to 4>><</link>><<ghistory>>
 			<br>
 		<</if>>
 		/*indev - scarlet book possible to be taken. English 200+ required*/

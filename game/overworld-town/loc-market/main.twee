@@ -103,7 +103,7 @@
 	팔 물건이 없으니, 가판대에 있을 이유가 거의 없다.
 	<br><br>
 	<<if _foodstuffSample isnot undefined>>
-		<<ind>><<link [[새 농산물 진열하기|Stall Rent Return]]>><</link>>
+		<<ind>><<link [[새 농산물을 진열한다|Stall Rent Return]]>><</link>>
 	<</if>>
 	<br>
 	<<connudatusicon>><<link [[떠난다|Connudatus Street]]>><<endevent>><<endstall>><<clotheson>><</link>>
@@ -111,7 +111,7 @@
 <<elseif _inventory_in_stall isnot 1>>
 	진열된 것이 없으니, 가판대에 있을 이유가 거의 없다.
 	<br><br>
-	<<icon "project-maths.png">><<link [[가판대 관리하기|Stall Manage]]>><</link>>
+	<<icon "project-maths.png">><<link [[가판대를 관리한다|Stall Manage]]>><</link>>
 	<br>
 	<<connudatusicon>><<link [[떠난다|Connudatus Street]]>><<endevent>><<endstall>><<clotheson>><</link>>
 	<br>
@@ -153,7 +153,7 @@
 <<if _inventory_in_stall isnot 1>>
 	진열된 것이 없으니, 가판대에 있을 이유가 거의 없다.
 	<br><br>
-	<<icon "project-maths.png">><<link [[가판대 관리하기|Stall Manage]]>><</link>>
+	<<icon "project-maths.png">><<link [[가판대를 관리한다|Stall Manage]]>><</link>>
 	<br>
 	<<connudatusicon>><<link [[떠난다|Connudatus Street]]>><<endevent>><<endstall>><<clotheson>><</link>>
 	<br>

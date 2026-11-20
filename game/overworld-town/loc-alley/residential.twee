@@ -81,10 +81,10 @@
 		주요 장소
 		<br>
 		<<if $exposed gte 1>>
-			<<homeicon>><<link [[집으로 가기 (0:02)|Home Fence]]>><<if $daily.fenceClimb isnot 1>><<set $daily.fenceClimb to 1>><<transform cat 1>><</if>><<pass 2>><</link>>
+			<<homeicon>><<link [[집으로 간다 (0:02)|Home Fence]]>><<if $daily.fenceClimb isnot 1>><<set $daily.fenceClimb to 1>><<transform cat 1>><</if>><<pass 2>><</link>>
 			<br>
 		<<else>>
-			<<homeicon>><<link [[집으로 가기 (0:02)|Garden]]>><<if $daily.fenceClimb isnot 1>><<set $daily.fenceClimb to 1>><<transform cat 1>><</if>><<pass 2>><</link>>
+			<<homeicon>><<link [[집으로 간다 (0:02)|Garden]]>><<if $daily.fenceClimb isnot 1>><<set $daily.fenceClimb to 1>><<transform cat 1>><</if>><<pass 2>><</link>>
 			<br>
 		<</if>>
 		/*<<link [[Scavenge (1:00)|Residential Scavenge]]>><<pass 60>><<housekeeping 100>><</link>><<ghousekeeping 100>>
@@ -93,7 +93,7 @@
 			<<icon "storage-unit.png">><<link [[창고|Mansion Wardrobe]]>><</link>>
 			<br>
 		<<elseif $wardrobe_residential_alleys is 1>>
-			<<icon "storage-unit.png">><<link [[창고 찾기|Residential Mansion Wardrobe Intro]]>><<set $wardrobe_residential_alleys to 2>><</link>>
+			<<icon "storage-unit.png">><<link [[창고 찾는다|Residential Mansion Wardrobe Intro]]>><<set $wardrobe_residential_alleys to 2>><</link>>
 			<br>
 		<</if>>
 		<<if $town_projects.thicket gte 4>>
@@ -101,7 +101,7 @@
 			<br>
 		<</if>>
 		<<if $cat gte 6 and Time.dayState is "night">>
-			<<tficon "cat">><<link [[야옹거리기 (0:30)|Residential Meow]]>><<pass 30>><<stress -3>><</link>><<cat>><<lstress>>
+			<<tficon "cat">><<link [[야옹거린다 (0:30)|Residential Meow]]>><<pass 30>><<stress -3>><</link>><<cat>><<lstress>>
 			<br>
 		<</if>>
 		<<if $drains_rescue_location is "residential">>
@@ -111,12 +111,12 @@
 		<<if Time.dayState isnot "night">>
 			<<if $exposed gte 2>>
 				<<if hasSexStat("exhibitionism", 5)>>
-					<<connudatusicon>><<link [[콘누다투스 가 건너기 (0:05)|Road Ex]]>><</link>><<if $daily.ex.road is undefined>><<exhibitionist5>><</if>>
+					<<connudatusicon>><<link [[콘누다투스 가 건넌다 (0:05)|Road Ex]]>><</link>><<if $daily.ex.road is undefined>><<exhibitionist5>><</if>>
 					<br>
 				<</if>>
 			<<elseif $exposed is 1>>
 				<<if hasSexStat("exhibitionism", 3)>>
-					<<connudatusicon>><<link [[콘누다투스 가 건너기 (0:05)|Road Ex]]>><</link>><<if $daily.ex.road is undefined>><<exhibitionist3>><</if>>
+					<<connudatusicon>><<link [[콘누다투스 가 건넌다 (0:05)|Road Ex]]>><</link>><<if $daily.ex.road is undefined>><<exhibitionist3>><</if>>
 					<br>
 				<</if>>
 			<</if>>
@@ -440,21 +440,21 @@
 	<<if pcAreArmsBound("both")>>
 		<span class="red">양팔이 묶여 있어</span> 블랙베리를 딸 수 없다.
 	<<else>>
-		<<foodstufficon "blackberry">> <<link [[블랙베리 따기 (0:20)|Residential Thicket Blackberries]]>><<pass 20>><<set $daily.thicketBlackberries to 1>><</link>><<tendingdifficulty 1 300>>
+		<<foodstufficon "blackberry">> <<link [[블랙베리를 딴다 (0:20)|Residential Thicket Blackberries]]>><<pass 20>><<set $daily.thicketBlackberries to 1>><</link>><<tendingdifficulty 1 300>>
 	<</if>>
 	<br>
 <</if>>
 <<if $historytrait gte 2>>
 	<<if $thicket_tunnel_intro is 1>>
-		<<foresticon>><<link [[비밀 통로로 숲에 가기 (0:05)|Forest]]>><<pass 5>><<set $forest to 0>><<set $eventskip to 1>><</link>>
+		<<foresticon>><<link [[비밀 통로로 숲에 간다 (0:05)|Forest]]>><<pass 5>><<set $forest to 0>><<set $eventskip to 1>><</link>>
 		<br>
 	<<else>>
-		<<foresticon>><<link [[비밀 통로로 숲에 가기 (0:05)|Residential Thicket Tunnel]]>><<pass 5>><<set $thicket_tunnel_intro to 1>><</link>>
+		<<foresticon>><<link [[비밀 통로로 숲에 간다 (0:05)|Residential Thicket Tunnel]]>><<pass 5>><<set $thicket_tunnel_intro to 1>><</link>>
 		<br>
 	<</if>>
 <</if>>
 <br>
-<<getouticon>><<link [[떠나기 (0:01)|Residential Alleyways]]>><<pass 1>><</link>>
+<<getouticon>><<link [[떠난다 (0:01)|Residential Alleyways]]>><<pass 1>><</link>>
 <br>
 
 :: Residential Thicket Tunnel

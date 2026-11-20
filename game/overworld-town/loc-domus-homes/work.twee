@@ -1108,21 +1108,21 @@
 	<br><br>
 
 	<<set $skulduggerydifficulty to 300>>
-	<<link [[£10 가져가기|Domus Delivery3]]>><<set $phase to 3>><<money 1000>><</link>><<skulduggerydifficulty>>
+	<<link [[£10 가져간다|Domus Delivery3]]>><<set $phase to 3>><<money 1000>><</link>><<skulduggerydifficulty>>
 	<br>
 	<<set $skulduggerydifficulty to 500>>
-	<<link [[£30 가져가기|Domus Delivery3]]>><<set $phase to 4>><<money 3000>><</link>><<skulduggerydifficulty>>
+	<<link [[£30 가져간다|Domus Delivery3]]>><<set $phase to 4>><<money 3000>><</link>><<skulduggerydifficulty>>
 	<br>
 	<<set $skulduggerydifficulty to 700>>
-	<<link [[£100 가져가기|Domus Delivery3]]>><<set $phase to 5>><<money 10000>><</link>><<skulduggerydifficulty>>
+	<<link [[£100 가져간다|Domus Delivery3]]>><<set $phase to 5>><<money 10000>><</link>><<skulduggerydifficulty>>
 	<br>
-	<<link [[아무것도 가져가지 않기|Domus Delivery3]]>><</link>>
+	<<link [[아무것도 가져가지 않는다|Domus Delivery3]]>><</link>>
 	<br>
 <<else>>
 	봉투를 열어 내용물을 확인한다. 외국어로 된 쪽지만 들어있다.
 	<br><br>
 
-	<<link [[계속하기|Domus Delivery3]]>><</link>>
+	<<link [[계속한다|Domus Delivery3]]>><</link>>
 	<br>
 <</if>>
 

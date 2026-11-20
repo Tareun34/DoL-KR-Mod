@@ -167,7 +167,7 @@
 <</if>>
 
 <<if breakableSoftBinding()>>
-	<<undobindingsicon>><<link [[결박 풀기 (0:10)|Brothel Dressing Room]]>><<set $unbind to 1>><<pass 10>><</link>>
+	<<undobindingsicon>><<link [[결박을 푼다 (0:10)|Brothel Dressing Room]]>><<set $unbind to 1>><<pass 10>><</link>>
 	<br><br>
 <</if>>
 
@@ -179,7 +179,7 @@
 		<<condomicon "machine">><span class="gold">당신의 자판기가 팔렸습니다. 브라이어에게 이야기해야 합니다.</span>
 		<br><br>
 	<<elseif $brothelVending.status is "bought">>
-		<<condomicon "machine">> <<link [[자판기 설치하기 (0:30)|Brothel Dressing Room]]>><<set $brothelVending.status to "set">><<set $weekly.brothelVMCollect to true>><<pass 30>><</link>>
+		<<condomicon "machine">> <<link [[자판기를 설치한다 (0:30)|Brothel Dressing Room]]>><<set $brothelVending.status to "set">><<set $weekly.brothelVMCollect to true>><<pass 30>><</link>>
 		<br><br>
 	<<elseif $brothelVending.status is "set">>
 		<<if $brothelVending.products>>
@@ -226,11 +226,11 @@
 			이번 주 수익은 <<print $weekly.brothelVMCollect ? "이미 수금했다" : "아직 수금하지 않았다">>.
 			<br>
 			<<if $brothelVending.products % 2 and $brothelVending.condoms gte 1>>
-				<<condomicon>><<link [[콘돔 구매하기 (£80)|Brothel Vending Machine Buy]]>><<set $phase to 1>><</link>>
+				<<condomicon>><<link [[콘돔을 구매한다 (£80)|Brothel Vending Machine Buy]]>><<set $phase to 1>><</link>>
 				<br>
 			<</if>>
 			<<if $brothelVending.products gte 2 and $brothelVending.lube gte 1>>
-				<<sextoysicon "lube">><<link [[윤활제 구매하기 (£30)|Brothel Vending Machine Buy]]>><<set $phase to 2>><</link>>
+				<<sextoysicon "lube">><<link [[윤활제를 구매한다 (£30)|Brothel Vending Machine Buy]]>><<set $phase to 2>><</link>>
 				<br>
 			<</if>>
 			<br>
@@ -259,11 +259,11 @@
 <<if isPubfameTaskAccepted("briar") and $pubfame.briar.distract isnot 2>>
 	한 댄서가 여행 가방에 옷을 싸는 모습이 보인다.
 	<br>
-	<<getinicon>><<link [[다가가기|Brothel Distraction]]>><</link>>
+	<<getinicon>><<link [[다가간다|Brothel Distraction]]>><</link>>
 	<br><br>
 <</if>>
 
-<<getouticon>><<link [[창관으로 돌아가기 (0:01)|Brothel]]>><<pass 1>><</link>>
+<<getouticon>><<link [[창관으로 돌아간다 (0:01)|Brothel]]>><<pass 1>><</link>>
 <br><br>
 <<link [[게임플레이 설정|Settings]]>><<set $settingsExitPassage to "Brothel Dressing Room">><</link>>
 <br>
@@ -1854,7 +1854,7 @@
 <<else>>
 	<<pregnancyTest "Brothel Bathroom">>
 	<<if hasSexStat("exhibitionism", 3)>>
-		<<bathroomicon "shower">><<link [[샤워하기 (0:15)|Brothel Shower]]>><<strip>><<pass 15>><<stress -1>><<set $hygiene to 0>><</link>><<lstress>>
+		<<bathroomicon "shower">><<link [[샤워한다 (0:15)|Brothel Shower]]>><<strip>><<pass 15>><<stress -1>><<set $hygiene to 0>><</link>><<lstress>>
 		<br><br>
 		<<getouticon>><<link [[창관 (0:01)|Brothel]]>><<pass 1>><</link>>
 		<br>
@@ -1881,10 +1881,10 @@
 당신은 뽀드득 소리가 날 때까지 씻는다.<<wash>><<wearProp "soap">>
 <br><br>
 
-<<skinicon "masturbate">><<link [[자위하기|Brothel Shower Masturbation]]>><<set $masturbationstart to 2>><</link>>
+<<skinicon "masturbate">><<link [[자위한다|Brothel Shower Masturbation]]>><<set $masturbationstart to 2>><</link>>
 <br>
 
-<<getouticon>><<link [[나가기|Brothel Bathroom]]>><<clotheson>><</link>>
+<<getouticon>><<link [[나간다|Brothel Bathroom]]>><<clotheson>><</link>>
 <br>
 
 :: Brothel Raid

@@ -1343,9 +1343,9 @@
 <<gstress>><<stress 6>>
 <br><br>
 
-<<link [[도움 요청하기|Docks Slave Help]]>><</link>>
+<<link [[도움을 요청한다|Docks Slave Help]]>><</link>>
 <br>
-<<link [[위로하고 풀어주기|Docks Slave Untie]]>><</link>>
+<<link [[위로하고 풀어준다|Docks Slave Untie]]>><</link>>
 <br>
 
 :: Docks Slave Help
@@ -1392,9 +1392,9 @@
 <<He>>【은는】 여전히 뺨이 젖은 채로 당신을 쳐다본다. 당신은 <<his>> 손을 잡고 <<him>>【을를】 길 쪽으로 이끈다. <<dockclotheson>> 당신이 지나갈 때 경비원이 지켜보지만, 막지는 않는다.
 <br><br>
 
-<<harvesticon>><<link [[기차역으로 데려가기 (1:00)|Docks Slave Station]]>><<pass 60>><</link>>
+<<harvesticon>><<link [[기차역으로 데려간다 (1:00)|Docks Slave Station]]>><<pass 60>><</link>>
 <br>
-<<foodicon "eat">><<link [[먼저 음식 사주기 (£20)|Docks Slave Cafe]]>><<pass 60>><<famegood 1>><<money -2000 "gift">><</link>>
+<<foodicon "eat">><<link [[먼저 음식을 사준다 (£20)|Docks Slave Cafe]]>><<pass 60>><<famegood 1>><<money -2000 "gift">><</link>>
 <br>
 
 :: Docks Slave Cafe
@@ -1430,20 +1430,20 @@
 <br><br>
 
 <<if $money gte 10000>>
-	<<link [[아무것도 주지 않기|Docks Slave Station 2]]>><<famegood 5>><<set $phase to 0>><</link>>
+	<<link [[아무것도 주지 않는다|Docks Slave Station 2]]>><<famegood 5>><<set $phase to 0>><</link>>
 	<br>
-	<<link [[£100 주기|Docks Slave Station 2]]>><<set $docks.slave.money to 100>><<money -10000 "gift">><<famegood 10>><<set $phase to 1>><</link>>
+	<<link [[£100 준다|Docks Slave Station 2]]>><<set $docks.slave.money to 100>><<money -10000 "gift">><<famegood 10>><<set $phase to 1>><</link>>
 	<br>
 <<else>>
-	<<link [[작별 인사하기|Docks Slave Station 2]]>><<famegood 5>><<set $phase to 0>><</link>>
+	<<link [[작별 인사를 한다|Docks Slave Station 2]]>><<famegood 5>><<set $phase to 0>><</link>>
 	<br>
 <</if>>
 <<if $money gte 30000>>
-	<<link [[£300 주기|Docks Slave Station 2]]>><<set $docks.slave.money to 300>><<money -30000 "gift">><<famegood 30>><<set $phase to 2>><</link>>
+	<<link [[£300 준다|Docks Slave Station 2]]>><<set $docks.slave.money to 300>><<money -30000 "gift">><<famegood 30>><<set $phase to 2>><</link>>
 	<br>
 <</if>>
 <<if $money gte 100000>>
-	<<link [[£1000 주기|Docks Slave Station 2]]>><<set $docks.slave.money to 1000>><<money -100000 "gift">><<famegood 50>><<set $phase to 3>><</link>>
+	<<link [[£1000 준다|Docks Slave Station 2]]>><<set $docks.slave.money to 1000>><<money -100000 "gift">><<famegood 50>><<set $phase to 3>><</link>>
 	<br>
 <</if>>
 
@@ -1490,11 +1490,11 @@
 <<person>>【이가】 일어서서 판자 앞에 자리를 잡자, <<person1>><<person>>【이가】 <<his>> 다트를 회수하러 다가온다. "이봐," <<he>>【이가】 말한다. "<<pShes>> 깨어났어."
 <br><br>
 
-<<link [[모욕하기|Passout Docks 2]]>><<set $phase to 0>><<def 1>><<trauma -6>><</link>><<ltrauma>>
+<<link [[모욕한다|Passout Docks 2]]>><<set $phase to 0>><<def 1>><<trauma -6>><</link>><<ltrauma>>
 <br>
-<<link [[애원하기|Passout Docks 2]]>><<set $phase to 1>><<sub 1>><<stress -6>><</link>><<lstress>>
+<<link [[애원한다|Passout Docks 2]]>><<set $phase to 1>><<sub 1>><<stress -6>><</link>><<lstress>>
 <br>
-<<link [[침묵 지키기|Passout Docks 2]]>><<set $phase to 2>><</link>>
+<<link [[침묵을 지킨다|Passout Docks 2]]>><<set $phase to 2>><</link>>
 <br>
 
 :: Passout Docks 2

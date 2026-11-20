@@ -623,35 +623,35 @@
 		<</if>>
 	<<else>>
 		<br><br>
-		<<choreicon "sweep">><<link [[쓸기 (£5)|Pound Work Sweep]]>><<if !$pound.tasks.includes("sweep")>><<stray_happiness 1>><<set $pound.tasks.push("sweep")>><</if>><<set $pound.money to 5>><</link>><<if !$pound.tasks.includes("sweep")>><<gstray_happiness>><</if>>
+		<<choreicon "sweep">><<link [[쓴다 (£5)|Pound Work Sweep]]>><<if !$pound.tasks.includes("sweep")>><<stray_happiness 1>><<set $pound.tasks.push("sweep")>><</if>><<set $pound.money to 5>><</link>><<if !$pound.tasks.includes("sweep")>><<gstray_happiness>><</if>>
 		<br>
 		<<if $pound.status gte 10>>
-			<<petshopicon "dog food">><<link [[먹이 주기 (£8)|Pound Work Feed]]>><<if !$pound.tasks.includes("feed")>><<stray_happiness 1>><<set $pound.tasks.push("feed")>><</if>><<set $pound.money to 8>><</link>><<if !$pound.tasks.includes("feed")>><<gstray_happiness>><</if>>
+			<<petshopicon "dog food">><<link [[먹이 준다 (£8)|Pound Work Feed]]>><<if !$pound.tasks.includes("feed")>><<stray_happiness 1>><<set $pound.tasks.push("feed")>><</if>><<set $pound.money to 8>><</link>><<if !$pound.tasks.includes("feed")>><<gstray_happiness>><</if>>
 		<<else>>
 			<<petshopicon "dog food">><span class="blue"><<pound_text>>【은는】 당신을 존중하지 않아서, 밥그릇을 들고 있어도 가까이 다가오지 못하게 합니다.</span>
 		<</if>>
 		<br>
 		<<if $pound.status gte 20>>
-			<<petshopicon "brush">><<link [[빗질하기 (£10)|Pound Work Brush]]>><<if !$pound.tasks.includes("brush")>><<stray_happiness 2>><<set $pound.tasks.push("brush")>><</if>><<set $pound.money to 10>><</link>><<if !$pound.tasks.includes("brush")>><<ggstray_happiness>><</if>>
+			<<petshopicon "brush">><<link [[빗질한다 (£10)|Pound Work Brush]]>><<if !$pound.tasks.includes("brush")>><<stray_happiness 2>><<set $pound.tasks.push("brush")>><</if>><<set $pound.money to 10>><</link>><<if !$pound.tasks.includes("brush")>><<ggstray_happiness>><</if>>
 		<<else>>
 			<<petshopicon "brush">><span class="blue"><<pound_text>>【은는】 당신을 존중하지 않아서, 빗을 들고 가까이 다가오지 못하게 합니다.</span>
 		<</if>>
 		<br>
 		<<if $pound.status gte 40>>
-			<<choreicon "wash">><<link [[씻기기 (£12)|Pound Work Wash]]>><<if !$pound.tasks.includes("wash")>><<stray_happiness 2>><<set $pound.tasks.push("wash")>><</if>><<set $pound.money to 12>><</link>><<if !$pound.tasks.includes("wash")>><<ggstray_happiness>><</if>>
+			<<choreicon "wash">><<link [[씻긴다 (£12)|Pound Work Wash]]>><<if !$pound.tasks.includes("wash")>><<stray_happiness 2>><<set $pound.tasks.push("wash")>><</if>><<set $pound.money to 12>><</link>><<if !$pound.tasks.includes("wash")>><<ggstray_happiness>><</if>>
 		<<else>>
 			<<choreicon "wash">><span class="blue"><<pound_text>>【은는】 당신을 존중하지 않아서, 물통을 들고 가까이 다가오지 못하게 합니다.</span>
 		<</if>>
 		<br>
 		<<if $pound.status gte 60>>
-			<<petshopicon "dog leash">><<link [[산책시키기 (£15)|Pound Work Walk]]>><<if !$pound.tasks.includes("walk")>><<stray_happiness 3>><<set $pound.tasks.push("walk")>><</if>><<set $pound.money to 15>><</link>><<if !$pound.tasks.includes("walk")>><<gggstray_happiness>><</if>>
+			<<petshopicon "dog leash">><<link [[산책시킨다 (£15)|Pound Work Walk]]>><<if !$pound.tasks.includes("walk")>><<stray_happiness 3>><<set $pound.tasks.push("walk")>><</if>><<set $pound.money to 15>><</link>><<if !$pound.tasks.includes("walk")>><<gggstray_happiness>><</if>>
 		<<else>>
 			<<petshopicon "dog leash">><span class="blue"><<pound_text>>【은는】 당신을 존중하지 않아서, 목줄을 들고 가까이 다가오지 못하게 합니다.</span>
 		<</if>>
 	<</if>>
 	<br>
 	<<if !$slimePoundTask>>
-		<<getouticon>><<link [[떠나기|Pound]]>><</link>>
+		<<getouticon>><<link [[떠난다|Pound]]>><</link>>
 	<</if>>
 	<br>
 <</if>>
@@ -3020,14 +3020,14 @@
 		<<wearProp "lockpick">>
 		<span class="green">자물쇠는 쉽게 딸 수 있을 것 같다.</span>
 		<br><br>
-		<<lockicon "pick">><<link [[자물쇠 따기 (0:10)|Pound]]>><<pass 10>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
+		<<lockicon "pick">><<link [[자물쇠를 딴다 (0:10)|Pound]]>><<pass 10>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
 		<br>
 	<</if>>
 <<else>>
 	<span class="red">자물쇠는 당신의 실력으로 딸 수 없을 것 같다.</span><<skulduggeryrequired>>
 	<br><br>
 <</if>>
-<<starfishicon>><<link [[떠나기|Starfish Street]]>><</link>>
+<<starfishicon>><<link [[떠난다|Starfish Street]]>><</link>>
 
 :: Pound Work Brush Clean
 <<effects>>

@@ -182,12 +182,12 @@
 		<br>
 		<<if $exposed lte 0>>
 			<<if $scienceproject is "ongoing" and $sciencelichenknown is 1 and $sciencelichenpark is 0>>
-				<<scienceicon "white lichen">><<link [[과학 과제를 위해 이끼 조사하기|Park Lichen]]>><</link>>
+				<<scienceicon "white lichen">><<link [[과학 과제를 위해 이끼를 조사한다|Park Lichen]]>><</link>>
 				<br>
 			<</if>>
 			<<if !$plants_known.includes("tulip")>>
 				<<if $sciencetrait gte 1>>
-					<<foodstufficon "tulip">> <<link [[씨앗 찾기 (0:30)|Park Tulip]]>><<set $plants_known.push("tulip")>><<pass 30>><<tending 6>><</link>><<gtending>>
+					<<foodstufficon "tulip">> <<link [[씨앗을 찾는다 (0:30)|Park Tulip]]>><<set $plants_known.push("tulip")>><<pass 30>><<tending 6>><</link>><<gtending>>
 					<br>
 				<<else>>
 					<span class="blue">과학 스킬이 더 높으면 튤립 씨앗을 수확할 수 있습니다.</span>
@@ -197,7 +197,7 @@
 			<<if pcAreArmsBound("both")>>
 				<span class="red">양팔이 묶여 있어</span> 튤립을 딸 수 없습니다.
 			<<else>>
-				<<foodstufficon "tulip">> <<link [[튤립 따기 (0:20)|Park Tulip Pick]]>><<pass 20>><<crimeUp 20 "petty">><</link>><<tendingdifficulty 1 200>><<crime "petty">>
+				<<foodstufficon "tulip">> <<link [[튤립을 딴다 (0:20)|Park Tulip Pick]]>><<pass 20>><<crimeUp 20 "petty">><</link>><<tendingdifficulty 1 200>><<crime "petty">>
 			<</if>>
 			<br>
 			<<if _robin_location is "park">>
@@ -211,12 +211,12 @@
 					<br>
 					카일라가 분수대에 앉아 가끔 동전을 던지고 있다.
 					<br>
-					<<parkicon "fountain">><<link [[다가가기|Kylar Park]]>><<set $kylar_text_trigger to true>><</link>>
+					<<parkicon "fountain">><<link [[다가간다|Kylar Park]]>><<set $kylar_text_trigger to true>><</link>>
 				<<else>>
 					<br>
 					카일라가 벤치에 앉아 무언가를 스케치하고 있다.
 					<br>
-					<<parkicon>><<link [[다가가기|Kylar Park]]>><<set $kylar_text_trigger to true>><</link>>
+					<<parkicon>><<link [[다가간다|Kylar Park]]>><<set $kylar_text_trigger to true>><</link>>
 				<</if>>
 				<br><br>
 			<</if>>
@@ -224,7 +224,7 @@
 				<br>
 				우산 아래에서 연기가 피어오르는 것이 보인다. 휘트니다. <<nnpc_He "Whitney">>【은는】 공원 분수대 근처 나무 아래에 서 있다.
 				<br>
-				<<parkicon "fountain">><<link [[다가가기|Whitney Park]]>><<set $daily.whitney.textTrigger to true>><<if $daily.whitney.text is undefined>><<set $daily.whitney.text to 0>><<else>><<set $daily.whitney.text += 1>><</if>><</link>>
+				<<parkicon "fountain">><<link [[다가간다|Whitney Park]]>><<set $daily.whitney.textTrigger to true>><<if $daily.whitney.text is undefined>><<set $daily.whitney.text to 0>><<else>><<set $daily.whitney.text += 1>><</if>><</link>>
 				<br><br>
 			<</if>>
 			<<if isInPark("sam") and $Sam_Park_Intro is 1>>
@@ -273,46 +273,46 @@
 			족쇄를 찬 상태로는 달리기를 할 수 없습니다.
 			<br>
 		<<elseif $worn.feet.type.includes("heels") and ($exposed is 0 or Time.dayState is "night")>>
-			<<heelsicon>><<link [[힐 신고 운동하기 (0:30)|Park Exercise Heels]]>><<athletics 3>><<pass 30>><<tiredness 4>><<stress -1>><<slimeEventEnd "running">><</link>><<ggtiredness>><<gathletics>><<lstress>>
+			<<heelsicon>><<link [[힐 신고 운동한다 (0:30)|Park Exercise Heels]]>><<athletics 3>><<pass 30>><<tiredness 4>><<stress -1>><<slimeEventEnd "running">><</link>><<ggtiredness>><<gathletics>><<lstress>>
 			<br>
 		<<else>>
 			<<if Time.dayState is "night">>
 				<<if $exposed gte 2 and hasSexStat("exhibitionism", 3)>>
-					<<runicon>><<link [[달리기 (0:30)|Park Run Exposed]]>><<athletics 4>><<set $phase to 0>><<tiredness 3>><<stress -3>><<slimeEventEnd "running">><</link>><<exhibitionist3>><<gtiredness>><<gathletics>><<lstress>>
+					<<runicon>><<link [[달린다 (0:30)|Park Run Exposed]]>><<athletics 4>><<set $phase to 0>><<tiredness 3>><<stress -3>><<slimeEventEnd "running">><</link>><<exhibitionist3>><<gtiredness>><<gathletics>><<lstress>>
 					<br>
 				<<elseif $exposed is 1>>
-					<<runicon>><<link [[달리기 (0:30)|Park Run Exposed]]>><<athletics 4>><<set $phase to 1>><<tiredness 3>><<stress -3>><<slimeEventEnd "running">><</link>><<exhibitionist1>><<gtiredness>><<gathletics>><<lstress>>
+					<<runicon>><<link [[달린다 (0:30)|Park Run Exposed]]>><<athletics 4>><<set $phase to 1>><<tiredness 3>><<stress -3>><<slimeEventEnd "running">><</link>><<exhibitionist1>><<gtiredness>><<gathletics>><<lstress>>
 					<br>
 				<<elseif $exposed is 0>>
-					<<runicon>><<link [[달리기 (0:30)|Park Run]]>><<athletics 4>><<pass 30>><<tiredness 3>><<stress -3>><<slimeEventEnd "running">><</link>><<gtiredness>><<gathletics>><<lstress>>
+					<<runicon>><<link [[달린다 (0:30)|Park Run]]>><<athletics 4>><<pass 30>><<tiredness 3>><<stress -3>><<slimeEventEnd "running">><</link>><<gtiredness>><<gathletics>><<lstress>>
 					<br>
 				<</if>>
 			<<elseif $exposed is 0>>
-				<<runicon>><<link [[달리기 (0:30)|Park Run]]>><<athletics 4>><<pass 30>><<tiredness 3>><<stress -3>><<slimeEventEnd "running">><</link>><<gtiredness>><<gathletics>><<lstress>>
+				<<runicon>><<link [[달린다 (0:30)|Park Run]]>><<athletics 4>><<pass 30>><<tiredness 3>><<stress -3>><<slimeEventEnd "running">><</link>><<gtiredness>><<gathletics>><<lstress>>
 				<br>
 			<</if>>
 		<</if>>
 		<<if (Weather.precipitation is "none" or $worn.handheld.type.includes("rainproof"))>>
 			<<if $milkshake gte 1 and $exposed lte 0>>
-				<<foodicon "milkshake">><<link [[밀크쉐이크 마시기 (0:10)|Beach Milkshake]]>><<pass 10>><<set $milkshake -= 1>><<stress -5>><</link>><<lstress>>
+				<<foodicon "milkshake">><<link [[밀크쉐이크를 마신다 (0:10)|Beach Milkshake]]>><<pass 10>><<set $milkshake -= 1>><<stress -5>><</link>><<lstress>>
 				<br>
 			<</if>>
 			<<if $popcorn gte 1 and $exposed lte 0>>
-				<<foodicon "popcorn">><<link [[팝콘 먹기 (0:10)|Balloon Consume]]>><<pass 10>><<set $popcorn -= 1>><<wearProp "popcorn">><<trauma -3>><<set $phase to "park">><</link>><<ltrauma>>
+				<<foodicon "popcorn">><<link [[팝콘을 먹는다 (0:10)|Balloon Consume]]>><<pass 10>><<set $popcorn -= 1>><<wearProp "popcorn">><<trauma -3>><<set $phase to "park">><</link>><<ltrauma>>
 				<br>
 			<</if>>
 		<</if>>
 		<<if Time.dayState is "night" and !Weather.isFrozen("fountain") and hasSexStat("exhibitionism", 4) and $daily.ex.fountain is undefined>>
-			<<parkicon "fountain">><<link [[분수대에서 목욕하기 (0:10)|Park Fountain]]>><<set $daily.ex.fountain to 1>><</link>><<exhibitionist4>>
+			<<parkicon "fountain">><<link [[분수대에서 목욕한다 (0:10)|Park Fountain]]>><<set $daily.ex.fountain to 1>><</link>><<exhibitionist4>>
 			<br>
 		<</if>>
 		<<if $exposed gte 1 and Time.dayState isnot "night">>
-			<<icon "crate.png">><<link [[상자에 숨기 (0:10)|Crate Ex]]>><<pass 10>><</link>>
+			<<icon "crate.png">><<link [[상자에 숨는다 (0:10)|Crate Ex]]>><<pass 10>><</link>>
 			<br>
 			<<if $exposed gte 2 and hasSexStat("exhibitionism", 5)>>
-				<<icon "flyover.png">><<link [[고가도로를 건너 공업 지구로 가기 (0:05)|Flyover Ex Naked]]>><</link>><<if $daily.ex.flyover is undefined>><<exhibitionist5>><</if>>
+				<<icon "flyover.png">><<link [[고가도로를 건너 공업 지구로 간다 (0:05)|Flyover Ex Naked]]>><</link>><<if $daily.ex.flyover is undefined>><<exhibitionist5>><</if>>
 			<<elseif $exposed is 1 and hasSexStat("exhibitionism", 3)>>
-				<<icon "flyover.png">><<link [[고가도로를 건너 공업 지구로 가기 (0:05)|Flyover Ex Undies]]>><</link>><<if $daily.ex.flyover is undefined>><<exhibitionist3>><</if>>
+				<<icon "flyover.png">><<link [[고가도로를 건너 공업 지구로 간다 (0:05)|Flyover Ex Undies]]>><</link>><<if $daily.ex.flyover is undefined>><<exhibitionist3>><</if>>
 			<</if>>
 			<br>
 		<<else>>

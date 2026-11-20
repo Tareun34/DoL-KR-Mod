@@ -245,21 +245,21 @@
 		<<museumicon "horse">><<link [[나무 말 시연에 동의한다|Museum Horse Agree]]>><<set $museumhorseintro to 1>><</link>>
 		<br>
 	<<elseif $museumhorseintro is 1 and $museumhorse isnot 1>>
-		<<museumicon "horse">><<link [[나무 말 시연하기 (1:00)|Museum Horse]]>><<pass 60>><<set $museumhorse to 1>><</link>><<gpain>><<exhibitionist1>>
+		<<museumicon "horse">><<link [[나무 말을 시연한다 (1:00)|Museum Horse]]>><<pass 60>><<set $museumhorse to 1>><</link>><<gpain>><<exhibitionist1>>
 		<br>
 	<</if>>
 	<<if $museumfamoushorseintro is 0 and $museumhorse isnot 1>>
 		<<museumicon "horse">><<link [[유료 나무 말 시연에 동의한다|Museum Famous Horse Agree]]>><<set $museumfamoushorseintro to 1>><</link>>
 		<br>
 	<<elseif $museumfamoushorseintro is 1 and $museumhorse isnot 1>>
-		<<museumicon "horse">><<link [[돈을 받고 나무 말 시연하기 (1:30)|Museum Famous Horse]]>><<set $museumhorse to 1>><</link>><<gpain>><<exhibitionist1>>
+		<<museumicon "horse">><<link [[돈을 받고 나무 말을 시연한다 (1:30)|Museum Famous Horse]]>><<set $museumhorse to 1>><</link>><<gpain>><<exhibitionist1>>
 		<br>
 	<</if>>
 	<<if $museumduckintro is 0>>
 		<<museumicon "duck">><<link [[물고문 의자 시연에 동의한다|Museum Duck Agree]]>><<set $museumduckintro to 1>><</link>>
 		<br>
 	<<elseif $museumduckintro is 1 and $museumduck isnot 1>>
-		<<museumicon "duck">><<link [[물고문 의자 시연하기 (1:00)|Museum Duck]]>><<pass 60>><<set $museumduck to 1>><</link>><<exhibitionist1>>
+		<<museumicon "duck">><<link [[물고문 의자를 시연한다 (1:00)|Museum Duck]]>><<pass 60>><<set $museumduck to 1>><</link>><<exhibitionist1>>
 		<br>
 	<</if>>
 	<<if $museumAntiqueJournalHints is undefined>>
@@ -290,13 +290,13 @@
 		<br>
 	<</if>>
 	<<if $antiquemoney gt 0>>
-		<<highicon>><<link [[골동품 판매하기|Museum Sell]]>><<if $museumAntiques.antiques.antiquesilvermask is "found">><<set $phase to 1>><<else>><<set $phase to 0>><</if>><<if $museumAntiques.antiques.antiqueivorynecklace is "found">><<world_corruption "hard" 2>><</if>><<museumdonate>><</link>>
+		<<highicon>><<link [[골동품을 판매한다|Museum Sell]]>><<if $museumAntiques.antiques.antiquesilvermask is "found">><<set $phase to 1>><<else>><<set $phase to 0>><</if>><<if $museumAntiques.antiques.antiqueivorynecklace is "found">><<world_corruption "hard" 2>><</if>><<museumdonate>><</link>>
 		<br>
 	<</if>>
-	<<crimeicon "mark">><<link [[박물관 둘러보기|Museum Look around]]>><</link>>
+	<<crimeicon "mark">><<link [[박물관을 둘러본다|Museum Look around]]>><</link>>
 	<br><br>
 
-	<<oxfordicon>><<link [[떠나기|Oxford Street]]>><</link>>
+	<<oxfordicon>><<link [[떠난다|Oxford Street]]>><</link>>
 	<br>
 
 <</if>>

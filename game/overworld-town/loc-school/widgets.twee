@@ -4117,7 +4117,7 @@
 			빨간 표시창에는 "<span class="red">비어 있음</span>"이라고 적혀 있다.
 		<<else>>
 			<<if $money gte 2000>>
-				<<condomicon "machine">><<link [[콘돔 구매하기 (2개 £20)|Vending Machine Buy]]>><</link>>
+				<<condomicon "machine">><<link [[콘돔을 구매한다 (2개 £20)|Vending Machine Buy]]>><</link>>
 			<<else>>
 				당신은 그것들을 살 돈이 없다.
 			<</if>>

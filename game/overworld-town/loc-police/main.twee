@@ -259,7 +259,7 @@
 	<<if $police_access_card is 0 and ($rng % 3) is 0>>
 		<br><span class="gold">경찰 출입 카드가 책상 위에 놓여 있다.</span> 카드에는 "외부 접속 전용"이라는 메모가 적혀 있다.
 		<br><br>
-		<<icon "access-card.png">><<link [[출입 카드 훔치기|Police Back Office]]>><<set $police_access_card to 1>><</link>>
+		<<icon "access-card.png">><<link [[출입 카드를 훔친다|Police Back Office]]>><<set $police_access_card to 1>><</link>>
 		<br>
 	<<else>>
 	<br>

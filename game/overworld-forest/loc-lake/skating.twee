@@ -45,9 +45,9 @@
 		<<person>>【이가】 스케이트를 타고 지나간다. <<He>>【은는】 지나가면서 한 바퀴 돌고는 윙크한다. 뽐내려는 것이다.
 		<br><br>
 
-		<<link [[도전하기 (0:05)|Lake Skate Challenge]]>><<pass 5>><</link>><<dancedifficulty 200 1000>>
+		<<link [[도전한다 (0:05)|Lake Skate Challenge]]>><<pass 5>><</link>><<dancedifficulty 200 1000>>
 		<br>
-		<<link [[무시하기|Lake Shallows Ice]]>><<endevent>><</link>>
+		<<link [[무시한다|Lake Shallows Ice]]>><<endevent>><</link>>
 		<br>
 
 	<<elseif $rng gte 61>>
@@ -56,16 +56,16 @@
 
 		<<link [[<<him>>【을를】 얼음 위로 데려오기 (0:05)|Lake Skate Flirt]]>><<pass 5>><</link>><<promiscuous1>>
 		<br>
-		<<link [[무시하기|Lake Shallows Ice]]>><<endevent>><</link>>
+		<<link [[무시한다|Lake Shallows Ice]]>><<endevent>><</link>>
 		<br>
 	<<elseif $rng gte 41>>
 		<<generatey1>><<person1>>
 		<<person>>【이가】 당신에게 스케이트를 타고 다가와, 뒤에서 <<his>> 팔로 당신을 감싼다. <<He>>【은는】 당신의 귀를 핥는다.<<gtrauma>><<gstress>><<trauma 6>><<stress 6>>
 		<br><br>
 
-		<<link [[밀치기|Lake Skate Shove]]>><<trauma -6>><<def 1>><</link>><<ltrauma>>
+		<<link [[밀친다|Lake Skate Shove]]>><<trauma -6>><<def 1>><</link>><<ltrauma>>
 		<br>
-		<<link [[참기|Lake Skate Endure]]>><<stress 6>><<arousal 600>><</link>><<gstress>><<garousal>>
+		<<link [[참는다|Lake Skate Endure]]>><<stress 6>><<arousal 600>><</link>><<gstress>><<garousal>>
 		<br>
 	<<elseif $rng gte 21>>
 		<<generatey1>><<person1>>
@@ -74,26 +74,26 @@
 			<<person>>【이가】 비틀거리며 당신에게 스케이트를 타고 다가온다. "ㅈ-저, 당신처럼 스케이트 잘 타는 법 좀 가르쳐줄 수 있을까요?"
 			<br><br>
 
-			<<link [[가르쳐주기 (0:20)|Lake Skate Teach]]>><<trauma -6>><<pass 20>><</link>><<ltrauma>>
+			<<link [[가르쳐준다 (0:20)|Lake Skate Teach]]>><<trauma -6>><<pass 20>><</link>><<ltrauma>>
 			<br>
-			<<link [[거절하기|Lake Skate Refuse]]>><</link>>
+			<<link [[거절한다|Lake Skate Refuse]]>><</link>>
 			<br>
 		<<else>>
 			<<person>>【이가】 당신 앞에서 미끄러지듯 멈춰 선다. "도와줄까?" <<he>>【이가】 묻는다. "내가 몇 가지 요령을 알려줄 수 있는데."
 			<br><br>
 
-			<<link [[받아들이기 (0:20)|Lake Skate Learn]]>><<trauma -6>><<pass 20>><<danceskill 6>><</link>><<gdanceskill>>
+			<<link [[받아들인다 (0:20)|Lake Skate Learn]]>><<trauma -6>><<pass 20>><<danceskill 6>><</link>><<gdanceskill>>
 			<br>
-			<<link [[거절하기|Lake Skate Learn Refuse]]>><</link>>
+			<<link [[거절한다|Lake Skate Learn Refuse]]>><</link>>
 			<br>
 		<</if>>
 	<<else>>
 		<<generatey1>><<person1>><<generatey2>><<generatey3>><<generatey4>>
 		몇몇 불량배들이 <<person>>【을를】 둘러싼다. 그들은 다른 학생들로부터 <<him>>【을를】 밀어내며 고립시키려 한다.
 		<br><br>
-		<<link [[개입하기 (0:05)|Lake Skate Intervene]]>><<def 1>><<famegood 4>><<pass 5>><</link>>
+		<<link [[개입한다 (0:05)|Lake Skate Intervene]]>><<def 1>><<famegood 4>><<pass 5>><</link>>
 		<br>
-		<<link [[무시하기|Lake Shallows Ice]]>><<endevent>><</link>>
+		<<link [[무시한다|Lake Shallows Ice]]>><<endevent>><</link>>
 		<br>
 	<</if>>
 <<else>>

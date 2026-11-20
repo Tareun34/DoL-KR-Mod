@@ -1740,11 +1740,11 @@
 		<<= $farm_work.pig.monster is true ? "당신의 팔을 움켜쥐고는" : "뒷다리로 일어서더니">> 억지로 당신을 바닥에 눕히려 한다.
 		<br><br>
 
-		<<link [[꾸짖기|Farm Pigs Scold]]>><</link>><<tendingdifficulty 1 600>>
+		<<link [[꾸짖는다|Farm Pigs Scold]]>><</link>><<tendingdifficulty 1 600>>
 		<br>
 		<<link [[<<farm_him pig>>【을를】 밀쳐내기|Farm Pigs Shove]]>><</link>><<physiquedifficulty 1 12000>>
 		<br>
-		<<link [[견뎌내기|Farm Pigs Endure]]>><<trauma 6>><<stress 6>><<farm_pigs -1>><</link>><<gtrauma>><<gstress>><<lrespect>>
+		<<link [[견뎌낸다|Farm Pigs Endure]]>><<trauma 6>><<stress 6>><<farm_pigs -1>><</link>><<gtrauma>><<gstress>><<lrespect>>
 		<br>
 		<<if hasSexStat("deviancy", 3)>>
 			<<link [[<<farm_him pig>>【을를】 손으로 도와주기|Farm Pigs Hand]]>><<set $sexstart to 1>><</link>><<deviant3>>

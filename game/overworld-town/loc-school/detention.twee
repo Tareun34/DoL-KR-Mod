@@ -4,7 +4,7 @@
 <<npc Leighton>><<person1>>당신이 떠나려 하자, 레이튼이 당신의 어깨에 팔을 올린다. "잊은 거 없어?" <<He>>【은는】 당신을 다시 학교 쪽으로 돌려세우려 한다.
 <br><br>
 
-<<link [[방과 후 활동하러 가기|School Detention]]>><<endevent>><</link>>
+<<link [[방과 후 활동하러 간다|School Detention]]>><<endevent>><</link>>
 <br>
 <<link [[도망친다|School Leave Run]]>><<detention 6>><</link>><<ggdelinquency>>
 <br>

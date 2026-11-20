@@ -218,7 +218,7 @@
 	당신은 헛기침을 한다. <<He>>【은는】 당신을 쳐다본다. 당신이 뭘 원하는지 잠시 어리둥절해하다가 이내 깨닫는다. "아. 고마워." <<He>>【은는】 다시 먹기 시작한다.
 	<br><br>
 
-	<<link [[머리 쓰다듬어달라고 요청하기|Eden Breakfast 2]]>><<npcincr Eden love 1>><<set $phase to 4>><<trauma -6>><<stress -12>><</link>><<glove>><<ltrauma>><<lstress>>
+	<<link [[머리 쓰다듬어달라고 요청한다|Eden Breakfast 2]]>><<npcincr Eden love 1>><<set $phase to 4>><<trauma -6>><<stress -12>><</link>><<glove>><<ltrauma>><<lstress>>
 	<br>
 	<<link [[대화한다|Eden Breakfast 2]]>><<trauma -6>><<stress -12>><<set $phase to 2>><</link>><<ltrauma>><<lstress>>
 	<br>
@@ -333,7 +333,7 @@
 	<<foodicon "eat">><<link [[새로운 것을 만든다 (0:20)|Eden Breakfast]]>><<pass 20>><<set $phase to 1>><</link>>
 	<br>
 	<<if $edengarden gte 3>>
-		<<foodstufficon "wild_carrot">><<link [[텃밭의 채소 사용하기 (0:20)|Eden Breakfast]]>><<pass 20>><<set $phase to 3>><<npcincr Eden love 3>><</link>><<gglove>>
+		<<foodstufficon "wild_carrot">><<link [[텃밭의 채소를 사용한다 (0:20)|Eden Breakfast]]>><<pass 20>><<set $phase to 3>><<npcincr Eden love 3>><</link>><<gglove>>
 		<br>
 	<</if>>
 	<<if $edenshrooms gte 3>>
@@ -709,7 +709,7 @@
 	<i><<He>>【은는】 오랫동안 섹스를 하지 않을수록 더 음탕해지고 유혹하기 쉬워진다.</i>
 	<br><br>
 
-	<<link [[에덴 씻겨주기|Eden Bath 2]]>><<set $phase to 1>><<npcincr Eden love 1>><</link>><<glove>>
+	<<link [[에덴을 씻겨준다|Eden Bath 2]]>><<set $phase to 1>><<npcincr Eden love 1>><</link>><<glove>>
 	<br>
 	<<link [[몸의 긴장을 푼다|Eden Bath 2]]>><<set $phase to 2>><<stress -12>><</link>><<lstress>>
 	<br>
@@ -849,14 +849,14 @@
 		<br>
 		<<if Time.days % 2 is 0>>
 			<<if $eden_shoot gte 1>>
-				<<edenicon "target">><<link [[사격 연습하기 (0:30)|Eden Shoot]]>><<pass 30>><<stress -3>><</link>><<lstress>>
+				<<edenicon "target">><<link [[사격을 연습한다 (0:30)|Eden Shoot]]>><<pass 30>><<stress -3>><</link>><<lstress>>
 				<br>
 			<<else>>
 				<<edenicon "target">><<link [[사격술을 배우고 싶다고 말한다 (0:05)|Eden Shoot Ask]]>><<pass 5>><</link>>
 				<br>
 			<</if>>
 		<<else>>
-			<<schoolicon "library">><<link [[에덴에게 책을 읽어달라고 부탁하기 (0:30)|Eden Read]]>><<pass 30>><<trauma -3>><<npcincr Eden love 1>><</link>><<glove>><<ltrauma>>
+			<<schoolicon "library">><<link [[에덴에게 책을 읽어달라고 부탁한다 (0:30)|Eden Read]]>><<pass 30>><<trauma -3>><<npcincr Eden love 1>><</link>><<glove>><<ltrauma>>
 			<br>
 		<</if>>
 		<<getouticon>><<link [[일어선다|Cabin Eden Actions]]>><</link>>
@@ -886,14 +886,14 @@
 	<br>
 	<<if Time.days % 2 is 0>>
 		<<if $eden_shoot gte 1>>
-			<<edenicon "target">><<link [[사격 연습하기 (0:30)|Eden Shoot]]>><<pass 30>><<stress -3>><</link>><<lstress>>
+			<<edenicon "target">><<link [[사격을 연습한다 (0:30)|Eden Shoot]]>><<pass 30>><<stress -3>><</link>><<lstress>>
 			<br>
 		<<else>>
-			<<edenicon "target">><<link [[사격하는 법을 배우고 싶다고 말하기 (0:05)|Eden Shoot Ask]]>><<pass 5>><</link>>
+			<<edenicon "target">><<link [[사격하는 법을 배우고 싶다고 말한다 (0:05)|Eden Shoot Ask]]>><<pass 5>><</link>>
 			<br>
 		<</if>>
 	<<else>>
-		<<schoolicon "library">><<link [[에덴에게 책을 읽어달라고 부탁하기 (0:30)|Eden Read]]>><<pass 30>><<trauma -3>><<npcincr Eden love 1>><</link>><<glove>><<ltrauma>>
+		<<schoolicon "library">><<link [[에덴에게 책을 읽어달라고 부탁한다 (0:30)|Eden Read]]>><<pass 30>><<trauma -3>><<npcincr Eden love 1>><</link>><<glove>><<ltrauma>>
 		<br>
 	<</if>>
 	<<getouticon>><<link [[일어선다|Cabin Eden Actions]]>><</link>>
@@ -1064,18 +1064,18 @@
 <br><br>
 
 <<if Time.hour isnot 0>>
-	<<couchicon>><<link [[계속 껴안기 (0:30)|Eden Cuddle]]>><<trauma -3>><<stress -6>><<pass 30>><<npcincr Eden love 1>><</link>><<glove>><<ltrauma>><<lstress>>
+	<<couchicon>><<link [[계속 껴안는다 (0:30)|Eden Cuddle]]>><<trauma -3>><<stress -6>><<pass 30>><<npcincr Eden love 1>><</link>><<glove>><<ltrauma>><<lstress>>
 	<br>
 	<<if Time.days % 2 is 0>>
 		<<if $eden_shoot gte 1>>
-			<<edenicon "target">><<link [[사격 연습하기 (0:30)|Eden Shoot]]>><<pass 30>><<stress -3>><</link>><<lstress>>
+			<<edenicon "target">><<link [[사격을 연습한다 (0:30)|Eden Shoot]]>><<pass 30>><<stress -3>><</link>><<lstress>>
 			<br>
 		<<else>>
-			<<edenicon "target">><<link [[사격하는 법을 배우고 싶다고 말하기 (0:05)|Eden Shoot Ask]]>><<pass 5>><</link>>
+			<<edenicon "target">><<link [[사격하는 법을 배우고 싶다고 말한다 (0:05)|Eden Shoot Ask]]>><<pass 5>><</link>>
 			<br>
 		<</if>>
 	<<else>>
-		<<schoolicon "library">><<link [[에덴에게 책을 읽어달라고 부탁하기 (0:30)|Eden Read]]>><<pass 30>><<trauma -3>><<npcincr Eden love 1>><</link>><<glove>><<ltrauma>>
+		<<schoolicon "library">><<link [[에덴에게 책을 읽어달라고 부탁한다 (0:30)|Eden Read]]>><<pass 30>><<trauma -3>><<npcincr Eden love 1>><</link>><<glove>><<ltrauma>>
 		<br>
 	<</if>>
 	<<getouticon>><<link [[일어선다|Cabin Eden Actions]]>><</link>>
@@ -1204,10 +1204,10 @@
 	<br>
 	<<if Time.days % 2 is 0>>
 		<<if $eden_shoot gte 1>>
-			<<edenicon "target">><<link [[사격 연습하기 (0:30)|Eden Shoot]]>><<pass 30>><<stress -3>><</link>><<lstress>>
+			<<edenicon "target">><<link [[사격을 연습한다 (0:30)|Eden Shoot]]>><<pass 30>><<stress -3>><</link>><<lstress>>
 			<br>
 		<<else>>
-			<<edenicon "target">><<link [[사격하는 법을 배우고 싶다고 말하기 (0:05)|Eden Shoot Ask]]>><<pass 5>><</link>>
+			<<edenicon "target">><<link [[사격하는 법을 배우고 싶다고 말한다 (0:05)|Eden Shoot Ask]]>><<pass 5>><</link>>
 			<br>
 		<</if>>
 	<<else>>
@@ -1335,10 +1335,10 @@
 	<br>
 	<<if Time.days % 2 is 0>>
 		<<if $eden_shoot gte 1>>
-			<<edenicon "target">><<link [[사격 연습하기 (0:30)|Eden Shoot]]>><<pass 30>><<stress -3>><</link>><<lstress>>
+			<<edenicon "target">><<link [[사격을 연습한다 (0:30)|Eden Shoot]]>><<pass 30>><<stress -3>><</link>><<lstress>>
 			<br>
 		<<else>>
-			<<edenicon "target">><<link [[사격하는 법을 배우고 싶다고 말하기 (0:05)|Eden Shoot Ask]]>><<pass 5>><</link>>
+			<<edenicon "target">><<link [[사격하는 법을 배우고 싶다고 말한다 (0:05)|Eden Shoot Ask]]>><<pass 5>><</link>>
 			<br>
 		<</if>>
 	<<else>>
@@ -2488,7 +2488,7 @@
 <</if>>
 <br><br>
 
-<<link [[에덴 유혹하기|Eden Spring Seduce]]>><</link>>
+<<link [[에덴을 유혹한다|Eden Spring Seduce]]>><</link>>
 <br>
 <<link [[그냥 껴안는다 (0:30)|Eden Spring 2]]>><<pass 30>><</link>>
 
@@ -2747,11 +2747,11 @@
 복잡한 장치를 바라본다. <<hes>> 이것에 공을 들인 것이 분명하다.
 <br><br>
 
-<<link [[키스로 고마워하기|Eden Hot Spring Creation Response]]>><<set $phase to "kiss">><</link>><<glove>><<ldom>>
+<<link [[키스로 고마워한다|Eden Hot Spring Creation Response]]>><<set $phase to "kiss">><</link>><<glove>><<ldom>>
 <br>
-<<link [[고마워하기|Eden Hot Spring Creation Response]]>><<set $phase to "thank">><</link>><<glove>><<gdom>>
+<<link [[고마워한다|Eden Hot Spring Creation Response]]>><<set $phase to "thank">><</link>><<glove>><<gdom>>
 <br>
-<<link [[떠나기|Eden Hot Spring Creation Response]]>><<set $phase to "leave">><</link>><<lllove>>
+<<link [[떠난다|Eden Hot Spring Creation Response]]>><<set $phase to "leave">><</link>><<lllove>>
 
 :: Eden Hot Spring Creation Response
 <<if $phase is "leave">>
@@ -2800,7 +2800,7 @@
 	<<He>>【은는】 당신이 총을 만지기 전에 조작법을 설명해준다. 요점은 파악한 것 같다. <<He>>【은는】 총을 건네고, 당신은 표적을 향해 총을 겨눈다. "그렇게 하는 거 아니야." <<he>>【이가】 바로 뒤로 다가오며 말한다. <<His>> 팔이 당신의 어깨를 감싸고, <<he>>【은는】 더 잘 보여주기 위해 <<his>> 손으로 당신의 손을 잡는다. "이렇게 잡아."
 	<br><br>
 
-	<<edenicon "target">><<link [[집중하기|Eden Shoot First Focus]]>><</link>>
+	<<edenicon "target">><<link [[집중한다|Eden Shoot First Focus]]>><</link>>
 	<br>
 	<<ind>><<link [[에덴의 사타구니에 엉덩이를 비빈다|Eden Shoot Rub]]>><<npcincr Eden lust 5>><<arousal 600 "bottom">><</link>><<glust>><<garousal>>
 	<br>
@@ -2808,7 +2808,7 @@
 	에덴의 지시에 따라 밖에서 사격 연습을 한다. <<He>>【은는】 직접 손을 대며 가르치는 방식을 택한다. "그렇게 하는 거 아니야." <<he>>【이가】 바로 뒤로 다가오며 말한다. <<His>> 팔이 당신의 어깨를 감싸고, <<he>>【은는】 더 잘 보여주기 위해 <<his>> 손으로 당신의 손을 잡는다. "이렇게 잡아."
 	<br><br>
 
-	<<edenicon "target">><<link [[집중하기|Eden Shoot Focus]]>><</link>>
+	<<edenicon "target">><<link [[집중한다|Eden Shoot Focus]]>><</link>>
 	<br>
 	<<ind>><<link [[에덴의 사타구니에 엉덩이를 비빈다|Eden Shoot Rub]]>><<npcincr Eden lust 5>><<arousal 600 "bottom">><</link>><<glust>><<garousal>>
 	<br>
@@ -2817,10 +2817,10 @@
 	당신은 에덴의 지시에 따라 밖에서 사격 연습을 한다. 연습이 끝나기 전에 사슴 모양 표적에 새로운 구멍 몇 개가 생긴다.
 	<br><br>
 	<<if Time.hour isnot 0>>
-		<<edenicon "target">><<link [[계속 연습하기 (0:30)|Eden Shoot]]>><<pass 30>><<stress -6>><</link>><<lstress>>
+		<<edenicon "target">><<link [[계속 연습한다 (0:30)|Eden Shoot]]>><<pass 30>><<stress -6>><</link>><<lstress>>
 		<br>
 	<</if>>
-	<<getouticon>><<link [[안으로 들어가기|Eden Cabin]]>><<endevent>><</link>>
+	<<getouticon>><<link [[안으로 들어간다|Eden Cabin]]>><<endevent>><</link>>
 <</if>>
 
 :: Eden Shoot First Focus
@@ -2831,10 +2831,10 @@
 당신은 에덴의 조언을 들으며 계속 연습한다. 많은 것을 배우고, 곧 빗나가는 것보다 맞히는 경우가 더 많아진다.
 <br><br>
 <<if Time.hour isnot 0>>
-	<<edenicon "target">><<link [[계속 연습하기 (0:30)|Eden Shoot]]>><<pass 30>><<stress -6>><</link>><<lstress>>
+	<<edenicon "target">><<link [[계속 연습한다 (0:30)|Eden Shoot]]>><<pass 30>><<stress -6>><</link>><<lstress>>
 	<br>
 <</if>>
-<<getouticon>><<link [[안으로 들어가기|Eden Cabin]]>><<endevent>><</link>>
+<<getouticon>><<link [[안으로 들어간다|Eden Cabin]]>><<endevent>><</link>>
 
 :: Eden Shoot Focus
 <<effects>>
@@ -2849,7 +2849,7 @@
 	<<edenicon "target">><<link [[계속 연습한다 (0:30)|Eden Shoot]]>><<pass 30>><<stress -6>><</link>><<lstress>>
 	<br>
 <</if>>
-<<getouticon>><<link [[안으로 들어가기|Eden Cabin]]>><<endevent>><</link>>
+<<getouticon>><<link [[안으로 들어간다|Eden Cabin]]>><<endevent>><</link>>
 
 :: Eden Shoot Rub
 <<effects>>

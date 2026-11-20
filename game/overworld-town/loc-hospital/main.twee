@@ -7,7 +7,7 @@
 <</if>>
 <br><br>
 
-<<link [[잠자기|Hospital Bed]]>><</link>>
+<<link [[잠잔다|Hospital Bed]]>><</link>>
 <br>
 
 :: Widgets Ambulance [widget]
@@ -41,7 +41,7 @@
 		<<orgasmLocation "hospital">>
 	<</if>>
 
-	<<getinicon>><<link [[병원 안으로 들어가기 (0:01)|Hospital Foyer]]>><<pass 1>><</link>>
+	<<getinicon>><<link [[병원 안으로 들어간다 (0:01)|Hospital Foyer]]>><<pass 1>><</link>>
 	<br>
 	<<entertownicon>><<link [[나이팅게일 가 (0:01)|Nightingale Street]]>><<pass 1>><</link>>
 	<br>
@@ -1026,62 +1026,62 @@
 
 <<if $player.breastsize gte 12>>
 	<<set _breast12 to Math.round(($player.breastsize - 11) * 200000)>>
-	<<procedureicon "breast reduce">><<link [[가슴을 거대하게 만들기|Hospital Breast Reduction 2]]>><<set $phase to 11>><</link>> | <<printmoney _breast12>> <!-- Appears even with blind stats enabled. All are intentional -->
+	<<procedureicon "breast reduce">><<link [[가슴을 거대하게 만든다|Hospital Breast Reduction 2]]>><<set $phase to 11>><</link>> | <<printmoney _breast12>> <!-- Appears even with blind stats enabled. All are intentional -->
 	<br>
 <</if>>
 <<if $player.breastsize gte 11>>
 	<<set _breast11 to Math.round(($player.breastsize - 10) * 200000)>>
-	<<procedureicon "breast reduce">><<link [[가슴을 크게 만들기|Hospital Breast Reduction 2]]>><<set $phase to 10>><</link>> | <<printmoney _breast11>>
+	<<procedureicon "breast reduce">><<link [[가슴을 크게 만든다|Hospital Breast Reduction 2]]>><<set $phase to 10>><</link>> | <<printmoney _breast11>>
 	<br>
 <</if>>
 <<if $player.breastsize gte 10>>
 	<<set _breast10 to Math.round(($player.breastsize - 9) * 200000)>>
-	<<procedureicon "breast reduce">><<link [[가슴을 육중하게 만들기|Hospital Breast Reduction 2]]>><<set $phase to 9>><</link>> | <<printmoney _breast10>>
+	<<procedureicon "breast reduce">><<link [[가슴을 육중하게 만든다|Hospital Breast Reduction 2]]>><<set $phase to 9>><</link>> | <<printmoney _breast10>>
 	<br>
 <</if>>
 <<if $player.breastsize gte 9>>
 	<<set _breast9 to Math.round(($player.breastsize - 8) * 200000)>>
-	<<procedureicon "breast reduce">><<link [[가슴을 풍만하게 만들기|Hospital Breast Reduction 2]]>><<set $phase to 8>><</link>> | <<printmoney _breast9>>
+	<<procedureicon "breast reduce">><<link [[가슴을 풍만하게 만든다|Hospital Breast Reduction 2]]>><<set $phase to 8>><</link>> | <<printmoney _breast9>>
 	<br>
 <</if>>
 <<if $player.breastsize gte 8>>
 	<<set _breast8 to Math.round(($player.breastsize - 7) * 200000)>>
-	<<procedureicon "breast reduce">><<link [[가슴을 크게 만들기|Hospital Breast Reduction 2]]>><<set $phase to 7>><</link>> | <<printmoney _breast8>>
+	<<procedureicon "breast reduce">><<link [[가슴을 크게 만든다|Hospital Breast Reduction 2]]>><<set $phase to 7>><</link>> | <<printmoney _breast8>>
 	<br>
 <</if>>
 <<if $player.breastsize gte 7>>
 	<<set _breast7 to Math.round(($player.breastsize - 6) * 200000)>>
-	<<procedureicon "breast reduce">><<link [[가슴을 풍만하게 만들기|Hospital Breast Reduction 2]]>><<set $phase to 6>><</link>> | <<printmoney _breast7>>
+	<<procedureicon "breast reduce">><<link [[가슴을 풍만하게 만든다|Hospital Breast Reduction 2]]>><<set $phase to 6>><</link>> | <<printmoney _breast7>>
 	<br>
 <</if>>
 <<if $player.breastsize gte 6>>
 	<<set _breast6 to Math.round(($player.breastsize - 5) * 200000)>>
-	<<procedureicon "breast reduce">><<link [[가슴을 적당하게 만들기|Hospital Breast Reduction 2]]>><<set $phase to 5>><</link>> | <<printmoney _breast6>>
+	<<procedureicon "breast reduce">><<link [[가슴을 적당하게 만든다|Hospital Breast Reduction 2]]>><<set $phase to 5>><</link>> | <<printmoney _breast6>>
 	<br>
 <</if>>
 <<if $player.breastsize gte 5>>
 	<<set _breast5 to Math.round(($player.breastsize - 4) * 200000)>>
-	<<procedureicon "breast reduce">><<link [[가슴을 봉긋하게 만들기|Hospital Breast Reduction 2]]>><<set $phase to 4>><</link>> | <<printmoney _breast5>>
+	<<procedureicon "breast reduce">><<link [[가슴을 봉긋하게 만든다|Hospital Breast Reduction 2]]>><<set $phase to 4>><</link>> | <<printmoney _breast5>>
 	<br>
 <</if>>
 <<if $player.breastsize gte 4>>
 	<<set _breast4 to Math.round(($player.breastsize - 3) * 200000)>>
-	<<procedureicon "breast reduce">><<link [[가슴을 작게 만들기|Hospital Breast Reduction 2]]>><<set $phase to 3>><</link>> | <<printmoney _breast4>>
+	<<procedureicon "breast reduce">><<link [[가슴을 작게 만든다|Hospital Breast Reduction 2]]>><<set $phase to 3>><</link>> | <<printmoney _breast4>>
 	<br>
 <</if>>
 <<if $player.breastsize gte 3>>
 	<<set _breast3 to Math.round(($player.breastsize - 2) * 200000)>>
-	<<procedureicon "breast reduce">><<link [[가슴을 아주 작게 만들기|Hospital Breast Reduction 2]]>><<set $phase to 2>><</link>> | <<printmoney _breast3>>
+	<<procedureicon "breast reduce">><<link [[가슴을 아주 작게 만든다|Hospital Breast Reduction 2]]>><<set $phase to 2>><</link>> | <<printmoney _breast3>>
 	<br>
 <</if>>
 <<if $player.breastsize gte 2>>
 	<<set _breast2 to Math.round(($player.breastsize - 1) * 200000)>>
-	<<procedureicon "breast reduce">><<link [[가슴을 몽우리만 남기기|Hospital Breast Reduction 2]]>><<set $phase to 1>><</link>> | <<printmoney _breast2>>
+	<<procedureicon "breast reduce">><<link [[가슴을 몽우리만 남긴다|Hospital Breast Reduction 2]]>><<set $phase to 1>><</link>> | <<printmoney _breast2>>
 	<br>
 <</if>>
 <<if $player.breastsize gte 1>>
 	<<set _breast1 to Math.round(($player.breastsize - 0) * 200000)>>
-	<<procedureicon "breast reduce">><<link [[가슴을 납작하게 만들기|Hospital Breast Reduction 2]]>><<set $phase to 0>><</link>> | <<printmoney _breast1>>
+	<<procedureicon "breast reduce">><<link [[가슴을 납작하게 만든다|Hospital Breast Reduction 2]]>><<set $phase to 0>><</link>> | <<printmoney _breast1>>
 	<br>
 <</if>>
 <br>
@@ -1197,62 +1197,62 @@
 
 <<if $player.breastsize lt 12>>
 	<<set _breast12 to Math.round((12 - $player.breastsize) * 500000)>>
-	<<procedureicon "breast enlarge">><<link [[가슴을 엄청나게 만들기|Hospital Breast Enlargement 2]]>><<set $phase to 12>><</link>> | <<printmoney _breast12>>
+	<<procedureicon "breast enlarge">><<link [[가슴을 엄청나게 만든다|Hospital Breast Enlargement 2]]>><<set $phase to 12>><</link>> | <<printmoney _breast12>>
 	<br>
 <</if>>
 <<if $player.breastsize lt 11>>
 	<<set _breast11 to Math.round((11 - $player.breastsize) * 500000)>>
-	<<procedureicon "breast enlarge">><<link [[가슴을 거대하게 만들기|Hospital Breast Enlargement 2]]>><<set $phase to 11>><</link>> | <<printmoney _breast11>>
+	<<procedureicon "breast enlarge">><<link [[가슴을 거대하게 만든다|Hospital Breast Enlargement 2]]>><<set $phase to 11>><</link>> | <<printmoney _breast11>>
 	<br>
 <</if>>
 <<if $player.breastsize lt 10>>
 	<<set _breast10 to Math.round((10 - $player.breastsize) * 500000)>>
-	<<procedureicon "breast enlarge">><<link [[가슴을 크게 만들기|Hospital Breast Enlargement 2]]>><<set $phase to 10>><</link>> | <<printmoney _breast10>>
+	<<procedureicon "breast enlarge">><<link [[가슴을 크게 만든다|Hospital Breast Enlargement 2]]>><<set $phase to 10>><</link>> | <<printmoney _breast10>>
 	<br>
 <</if>>
 <<if $player.breastsize lt 9>>
 	<<set _breast9 to Math.round((9 - $player.breastsize) * 500000)>>
-	<<procedureicon "breast enlarge">><<link [[가슴을 육중하게 만들기|Hospital Breast Enlargement 2]]>><<set $phase to 9>><</link>> | <<printmoney _breast9>>
+	<<procedureicon "breast enlarge">><<link [[가슴을 육중하게 만든다|Hospital Breast Enlargement 2]]>><<set $phase to 9>><</link>> | <<printmoney _breast9>>
 	<br>
 <</if>>
 <<if $player.breastsize lt 8>>
 	<<set _breast8 to Math.round((8 - $player.breastsize) * 500000)>>
-	<<procedureicon "breast enlarge">><<link [[가슴을 풍만하게 만들기|Hospital Breast Enlargement 2]]>><<set $phase to 8>><</link>> | <<printmoney _breast8>>
+	<<procedureicon "breast enlarge">><<link [[가슴을 풍만하게 만든다|Hospital Breast Enlargement 2]]>><<set $phase to 8>><</link>> | <<printmoney _breast8>>
 	<br>
 <</if>>
 <<if $player.breastsize lt 7>>
 	<<set _breast7 to Math.round((7 - $player.breastsize) * 500000)>>
-	<<procedureicon "breast enlarge">><<link [[가슴을 크게 만들기|Hospital Breast Enlargement 2]]>><<set $phase to 7>><</link>> | <<printmoney _breast7>>
+	<<procedureicon "breast enlarge">><<link [[가슴을 크게 만든다|Hospital Breast Enlargement 2]]>><<set $phase to 7>><</link>> | <<printmoney _breast7>>
 	<br>
 <</if>>
 <<if $player.breastsize lt 6>>
 	<<set _breast6 to Math.round((6 - $player.breastsize) * 500000)>>
-	<<procedureicon "breast enlarge">><<link [[가슴을 풍만하게 만들기|Hospital Breast Enlargement 2]]>><<set $phase to 6>><</link>> | <<printmoney _breast6>>
+	<<procedureicon "breast enlarge">><<link [[가슴을 풍만하게 만든다|Hospital Breast Enlargement 2]]>><<set $phase to 6>><</link>> | <<printmoney _breast6>>
 	<br>
 <</if>>
 <<if $player.breastsize lt 5>>
 	<<set _breast5 to Math.round((5 - $player.breastsize) * 500000)>>
-	<<procedureicon "breast enlarge">><<link [[가슴을 적당하게 만들기|Hospital Breast Enlargement 2]]>><<set $phase to 5>><</link>> | <<printmoney _breast5>>
+	<<procedureicon "breast enlarge">><<link [[가슴을 적당하게 만든다|Hospital Breast Enlargement 2]]>><<set $phase to 5>><</link>> | <<printmoney _breast5>>
 	<br>
 <</if>>
 <<if $player.breastsize lt 4>>
 	<<set _breast4 to Math.round((4 - $player.breastsize) * 500000)>>
-	<<procedureicon "breast enlarge">><<link [[가슴을 봉긋하게 만들기|Hospital Breast Enlargement 2]]>><<set $phase to 4>><</link>> | <<printmoney _breast4>>
+	<<procedureicon "breast enlarge">><<link [[가슴을 봉긋하게 만든다|Hospital Breast Enlargement 2]]>><<set $phase to 4>><</link>> | <<printmoney _breast4>>
 	<br>
 <</if>>
 <<if $player.breastsize lt 3>>
 	<<set _breast3 to Math.round((3 - $player.breastsize) * 500000)>>
-	<<procedureicon "breast enlarge">><<link [[가슴을 작게 만들기|Hospital Breast Enlargement 2]]>><<set $phase to 3>><</link>> | <<printmoney _breast3>>
+	<<procedureicon "breast enlarge">><<link [[가슴을 작게 만든다|Hospital Breast Enlargement 2]]>><<set $phase to 3>><</link>> | <<printmoney _breast3>>
 	<br>
 <</if>>
 <<if $player.breastsize lt 2>>
 	<<set _breast2 to Math.round((2 - $player.breastsize) * 500000)>>
-	<<procedureicon "breast enlarge">><<link [[가슴을 아주 작게 만들기|Hospital Breast Enlargement 2]]>><<set $phase to 2>><</link>> | <<printmoney _breast2>>
+	<<procedureicon "breast enlarge">><<link [[가슴을 아주 작게 만든다|Hospital Breast Enlargement 2]]>><<set $phase to 2>><</link>> | <<printmoney _breast2>>
 	<br>
 <</if>>
 <<if $player.breastsize lt 1>>
 	<<set _breast1 to Math.round((1 - $player.breastsize) * 500000)>>
-	<<procedureicon "breast enlarge">><<link [[가슴을 몽우리만 남기기|Hospital Breast Enlargement 2]]>><<set $phase to 1>><</link>> | <<printmoney _breast1>>
+	<<procedureicon "breast enlarge">><<link [[가슴을 몽우리만 남긴다|Hospital Breast Enlargement 2]]>><<set $phase to 1>><</link>> | <<printmoney _breast1>>
 	<br>
 <</if>>
 <br>

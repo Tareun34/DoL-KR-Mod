@@ -77,18 +77,18 @@
 	<<eventstrash>>
 <<else>>
 
-	<<investigateicon>><<link [[귀중품 찾기 (1:00)|Trash Search]]>><<pass 60>><</link>><<crime "thievery">>
+	<<investigateicon>><<link [[귀중품을 찾는다 (1:00)|Trash Search]]>><<pass 60>><</link>><<crime "thievery">>
 	<br>
 
 	<<if $trash lte 99>>
-		<<getinicon>><<link [[중장비 소리가 나는 쪽으로 가기 (0:10)|Trash]]>><<pass 10>><<set $trash += 10>><</link>>
+		<<getinicon>><<link [[중장비 소리가 나는 쪽으로 간다 (0:10)|Trash]]>><<pass 10>><<set $trash += 10>><</link>>
 		<br>
 	<<elseif $trash gte 100 and $robinmissing is "landfill" and $robinmistknown>>
-		<<getinicon>><<link [[중장비 소리가 나는 쪽으로 가기 (0:10)|Robin Mist Intro]]>><<pass 10>><</link>>
+		<<getinicon>><<link [[중장비 소리가 나는 쪽으로 간다 (0:10)|Robin Mist Intro]]>><<pass 10>><</link>>
 		<br>
 	<</if>>
 	<<if $trash gte 1>>
-		<<getouticon>><<link [[차량 소음이 나는 쪽으로 가기 (0:10)|Trash]]>><<pass 10>><<set $trash -= 10>><</link>>
+		<<getouticon>><<link [[차량 소음이 나는 쪽으로 간다 (0:10)|Trash]]>><<pass 10>><<set $trash -= 10>><</link>>
 		<br>
 	<</if>>
 
@@ -98,10 +98,10 @@
 			<br>
 		<<else>>
 			<<if $trash_key is 1>>
-				<<lockicon "old key">><<link [[열쇠 사용하기 (0:10)|Trash Leave]]>><<pass 10>><<set $trash_unlocked to 1>><</link>>
+				<<lockicon "old key">><<link [[열쇠를 사용한다 (0:10)|Trash Leave]]>><<pass 10>><<set $trash_unlocked to 1>><</link>>
 				<br>
 			<<else>>
-				<<lockicon "gate">><<link [[문 시도해보기 (0:05)|Trash Gate Leave]]>><<pass 5>><</link>>
+				<<lockicon "gate">><<link [[문을 시도해본다 (0:05)|Trash Gate Leave]]>><<pass 5>><</link>>
 				<br>
 			<</if>>
 		<</if>>
@@ -119,7 +119,7 @@
 	자세히 보니 자물쇠가 열려 있다. 누군가 당신이 여기 있기를 원하는 게 틀림없다.
 	<br><br>
 
-	<<getinicon>><<link [[들어가기|Trash]]>><<set $trash to 0>><</link>>
+	<<getinicon>><<link [[들어간다|Trash]]>><<set $trash to 0>><</link>>
 	<br>
 <<else>>
 	<<set $lock to 800>>
@@ -127,7 +127,7 @@
 		<span class="green">당신이 찾은 열쇠에 딱 맞는 것 같다.</span>
 		<br><br>
 
-		<<lockicon "old key">><<link [[열쇠 사용하기 (0:05)|Trash Enter]]>><<set $trash_unlocked to 1>><<pass 5>><</link>>
+		<<lockicon "old key">><<link [[열쇠를 사용한다 (0:05)|Trash Enter]]>><<set $trash_unlocked to 1>><<pass 5>><</link>>
 		<br>
 	<<elseif currentSkillValue('skulduggery') gte $lock>>
 		<<if pcAreArmsBound("both")>>
@@ -137,7 +137,7 @@
 			<<wearProp "lockpick">>
 			<span class="green">자물쇠는 따기 쉬워 보인다.</span>
 			<br><br>
-			<<lockicon "pick">><<link [[자물쇠 따기 (0:05)|Trash Lock Enter]]>><<pass 5>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
+			<<lockicon "pick">><<link [[자물쇠를 딴다 (0:05)|Trash Lock Enter]]>><<pass 5>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
 			<br>
 		<</if>>
 	<<else>>
@@ -148,7 +148,7 @@
 	<</if>>
 <</if>>
 
-<<elkicon>><<link [[떠나기|Elk Street]]>><</link>>
+<<elkicon>><<link [[떠난다|Elk Street]]>><</link>>
 <br>
 
 :: Trash Gate Leave
@@ -167,7 +167,7 @@
 		<span class="green">자물쇠는 쉽게 딸 수 있을 것 같다.</span>
 		<br><br>
 
-		<<lockicon "pick">><<link [[자물쇠 따기 (0:05)|Trash Lock Leave]]>><<pass 5>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
+		<<lockicon "pick">><<link [[자물쇠를 딴다 (0:05)|Trash Lock Leave]]>><<pass 5>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
 		<br>
 	<</if>>
 <<else>>
@@ -175,7 +175,7 @@
 	<br><br>
 <</if>>
 
-<<getouticon>><<link [[떠나기|Trash]]>><</link>>
+<<getouticon>><<link [[떠난다|Trash]]>><</link>>
 
 :: Trash Lock Enter
 <<set $location to "landfill">><<set $outside to 1>><<effects>>

@@ -1794,7 +1794,7 @@
 		<<templeicon "altar">><<link [[미사 참석 (1:00)|Hopeless Cycle Temple]]>><<set $hcAction to "mass">><<pass 60>><<set $hc.daily.massAttended to 1>><<stress -100>><<trauma -50>><</link>><<lllstress>><<llltrauma>>
 		<br>
 	<<else>>
-		<<templeicon "pray">><<link [[기도하기 (1:00)|Hopeless Cycle Temple]]>><<set $hcAction to "pray">><<pass 60>><<stress -2>><<trauma -6>><</link>><<lstress>><<ltrauma>>
+		<<templeicon "pray">><<link [[기도한다 (1:00)|Hopeless Cycle Temple]]>><<set $hcAction to "pray">><<pass 60>><<stress -2>><<trauma -6>><</link>><<lstress>><<ltrauma>>
 		<br>
 	<</if>>
 	<br>
@@ -1948,7 +1948,7 @@
 						<</for>>
 					<</if>>
 				<<else>>
-					<<animalicon "dog">><<link [[개 쓰다듬기 (0:05)|Hopeless Cycle Garden]]>><<set $hc.dogsTimer[_i]++>><<pass 5>><<stress -3>><<set $itemAction to "petTheDog">><</link>><<lstress>>
+					<<animalicon "dog">><<link [[개를 쓰다듬는다 (0:05)|Hopeless Cycle Garden]]>><<set $hc.dogsTimer[_i]++>><<pass 5>><<stress -3>><<set $itemAction to "petTheDog">><</link>><<lstress>>
 					<br>
 				<</if>>
 			<</capture>>
@@ -1959,10 +1959,10 @@
 	<div id="hcItems" class="no-numberify"><<hopelessCycleItemLinks>></div>
 	<b><u>장소:</u></b><br>
 	<<if Time.dayState is "night">>
-		<<lakeicon "campfire">><<link [[장작더미에 접근하기|Hopeless Cycle Pyre]]>><<set $hcAction to "approach">><</link>>
+		<<lakeicon "campfire">><<link [[장작더미에 접근한다|Hopeless Cycle Pyre]]>><<set $hcAction to "approach">><</link>>
 		<br><br>
 	<<else>>
-		<<templeicon "trial">><<link [[석탄 화로에 접근하기|Hopeless Cycle Pyre]]>><<set $hcAction to "approach">><</link>>
+		<<templeicon "trial">><<link [[석탄 화로에 접근한다|Hopeless Cycle Pyre]]>><<set $hcAction to "approach">><</link>>
 		<br><br>
 	<</if>>
 	<<wolficon>><<link [[신전 본당 (0:01)|Hopeless Cycle Temple]]>><<pass 1>><</link>>
@@ -2054,11 +2054,11 @@
 		<br>
 	<</if>>
 
-	<<link [[일 그만하기|Hopeless Cycle Garden]]>><<endevent>><</link>>
+	<<link [[일을 그만한다|Hopeless Cycle Garden]]>><<endevent>><</link>>
 	<br>
 	<<set _loc to hcItemHasFreeHand() ? "held" : "garden">>
 	<<capture _loc>>
-		<<link [[과일 훔치기|Hopeless Cycle Garden]]>><<run hcItemAdd({ type: "food", name: "stolen fruit", location: _loc, origin: "garden", dirty: 0, dirtyOnDrop: true })>><<endevent>><<hcSuspicion 5>><</link>><<hopelessCycleSus 1>>
+		<<link [[과일을 훔친다|Hopeless Cycle Garden]]>><<run hcItemAdd({ type: "food", name: "stolen fruit", location: _loc, origin: "garden", dirty: 0, dirtyOnDrop: true })>><<endevent>><<hcSuspicion 5>><</link>><<hopelessCycleSus 1>>
 		<br>
 	<</capture>>
 <</if>>
@@ -2118,7 +2118,7 @@
 	숯에서 연기가 피어오른다. 당신은 깊은 숨을 들이쉬고 그 위로 발을 내딛는다. 따뜻하다.
 	<br><br>
 
-	<<templeicon "trialcontinue">><<link [[계속하기|Hopeless Cycle Firewalk]]>><<set $hc.firewalk++>><</link>><<gpain>>
+	<<templeicon "trialcontinue">><<link [[계속한다|Hopeless Cycle Firewalk]]>><<set $hc.firewalk++>><</link>><<gpain>>
 	<br>
 <<elseif $hc.firewalk gte 6>>
 	<<unset $fire>>
@@ -2163,10 +2163,10 @@
 	<br><br>
 
 	<<if _success>>
-		<<templeicon "trialcontinue">><<link [[계속하기|Hopeless Cycle Firewalk]]>><<set $hc.firewalk++>><</link>><<gpain>>
+		<<templeicon "trialcontinue">><<link [[계속한다|Hopeless Cycle Firewalk]]>><<set $hc.firewalk++>><</link>><<gpain>>
 		<br>
 	<</if>>
-	<<templeicon "trialbail">><<link [[뛰어내리기|Hopeless Cycle Firewalk Jump]]>><<run delete $hc.firewalk>><</link>>
+	<<templeicon "trialbail">><<link [[뛰어내린다|Hopeless Cycle Firewalk Jump]]>><<run delete $hc.firewalk>><</link>>
 	<br>
 <</if>>
 
@@ -2203,11 +2203,11 @@
 <</if>>
 
 <<if $hcForest lt 25>>
-	<<getinicon>><<link [[숲 속 깊이 들어가기 (0:10)|Hopeless Cycle Forest]]>><<pass 10>><<hcForest "forward">><</link>>
+	<<getinicon>><<link [[숲 속 깊이 들어간다 (0:10)|Hopeless Cycle Forest]]>><<pass 10>><<hcForest "forward">><</link>>
 	<br>
 <</if>>
 <<if $hcForest gt 0>>
-	<<getouticon>><<link [[신전 방향으로 이동하기 (0:10)|Hopeless Cycle Forest]]>><<pass 10>><<hcForest "back">><</link>>
+	<<getouticon>><<link [[신전 방향으로 이동한다 (0:10)|Hopeless Cycle Forest]]>><<pass 10>><<hcForest "back">><</link>>
 	<br>
 <</if>>
 
@@ -2271,7 +2271,7 @@
 <<set _bones to hcItemCanReach("bones")>>
 <<if _bones>>
 	<<capture _bones>>
-		<<hcicon "bones">><<link [[호수에 뼈 던지기|Hopeless Cycle Wraith]]>><<run hcItemRemove(_bones)>><</link>>
+		<<hcicon "bones">><<link [[호수에 뼈를 던진다|Hopeless Cycle Wraith]]>><<run hcItemRemove(_bones)>><</link>>
 		<br><br>
 	<</capture>>
 <</if>>
@@ -2280,7 +2280,7 @@
 	<span class="gold">여기에 양동이가 있다. 신전에서 온 것 같다.</span>
 	<br>
 	<<if hcItemHasFreeHand()>>
-		<<hcicon "bucket">><<link [[가져가기|Hopeless Cycle Lake Bucket]]>><<set $hc.lakeBucket to true>><</link>>
+		<<hcicon "bucket">><<link [[가져간다|Hopeless Cycle Lake Bucket]]>><<set $hc.lakeBucket to true>><</link>>
 		<br>
 	<</if>>
 	<br>
@@ -6112,5 +6112,5 @@
 <br>
 <<icon "alert.png">><<link [[아이템 설정 재실행|Hopeless Cycle Debug]]>><<run hcItemSetup()>><</link>>
 <br><br>
-<<getouticon>><<link [[돌아가기|Hopeless Cycle Dungeon]]>><</link>>
+<<getouticon>><<link [[돌아간다|Hopeless Cycle Dungeon]]>><</link>>
 <br>

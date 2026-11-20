@@ -621,9 +621,9 @@
                당신은 틈을 피해 발걸음을 옮기며, 여정을 계속할 준비를 한다. 지하로 이어지는 통로가 보인다.
 				<br><br>
 
-               <<link [[들어가기 (0:20)|Moor Crack Passage]]>><<set $outside to 0>><<pass 20>><</link>>
+               <<link [[들어간다 (0:20)|Moor Crack Passage]]>><<set $outside to 0>><<pass 20>><</link>>
                <br>
-               <<link [[무시하기|Moor]]>><<set $eventskip to 1>><</link>>
+               <<link [[무시한다|Moor]]>><<set $eventskip to 1>><</link>>
 				<br>
 			<<else>>
 				옆으로 뛰어오르려 했지만, <span class="red">땅이 너무 많이 흔들린다.</span> 당신은 갈라진 틈 속으로 떨어진다.

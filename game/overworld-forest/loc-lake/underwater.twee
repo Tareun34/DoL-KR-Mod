@@ -252,7 +252,7 @@
 		<<orgasmLocation "underwater">>
 	<</if>>
 
-	<<lakeicon "pots">><<link [[항아리 뒤지기|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
+	<<lakeicon "pots">><<link [[항아리를 뒤진다|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
 	<br>
 	<<if $nextPassageCheck is "Lake Ruin">>
 		<<swimicon "up">><span class="nextLink"><<link [[출구를 향해 헤엄친다|Lake Ruin]]>><<wateraction>><</link>><<loxygen>></span>
@@ -540,7 +540,7 @@
 <<if $swimmingSuccess>>
 	<span class="green">발목을 풀고 탈출에 성공한다.</span> 촉수들이 점점 더 필사적으로 당신을 붙잡으려 한다. 다리를 노리고 뻗어오는 촉수 하나를 간신히 피하고, 문을 향해 헤엄쳐 나간다. 촉수들은 방 밖으로 튀어나와 벽 주위를 더듬거리지만, 더 이상 당신을 쫓아오지는 않는다. 그것들은 슬그머니 사라진다.
 	<<clotheson>>
-	<<link [[계속하기|Lake Ruin Deep]]>><</link>><<loxygen>>
+	<<link [[계속한다|Lake Ruin Deep]]>><</link>><<loxygen>>
 	<br>
 <<else>>
 	출입구 쪽으로 헤엄쳐 가려 하지만, <span class="red">몸을 빼낼 수가 없다.</span> 당신의 발목을 옭아맨 촉수들이 당신을 방 중앙으로 끌어당기고, 나머지 촉수들은 사방에서 당신을 에워싼다.
@@ -588,9 +588,9 @@
 <<elseif $arousal gte $arousalmax>>
 	<<orgasmLocation "underwater">>
 
-	<<lakeicon "pots">><<link [[항아리 뒤지기|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
+	<<lakeicon "pots">><<link [[항아리를 뒤진다|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
 	<br>
-	<<swimicon "back">><<link [[출구 쪽으로 헤엄치기|Lake Ruin]]>><<wateraction>><</link>><<loxygen>>
+	<<swimicon "back">><<link [[출구 쪽으로 헤엄친다|Lake Ruin]]>><<wateraction>><</link>><<loxygen>>
 	<br><br>
 	<<plinthroom>>
 <<elseif $foresthunt gte 10>>
@@ -612,7 +612,7 @@
 			<<antiqueicon "ivory-box">><<link [[상자를 가져간다|Lake Ruin Deep]]>><<set $antiquemoney += 10>><<museumAntiqueStatus "antiquebox" "found">><</link>>
 			<br>
 		<</if>>
-		<<lakeicon "pots">><<link [[항아리 뒤지기|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
+		<<lakeicon "pots">><<link [[항아리를 뒤진다|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
 		<br>
 		<<swimicon "up">><<link [[출구 쪽으로 헤엄친다|Lake Ruin]]>><<wateraction>><</link>><<loxygen>>
 		<br><br>
@@ -637,7 +637,7 @@
 			항아리 근처에 머무는 물고기 떼로부터 간신히 헤엄쳐 벗어난다<<if !_fullyNaked>>, 하지만 옷이 더 낡아버렸다<</if>>.
 			<<trauma 12>><<stress 24>><<gtrauma>><<ggstress>>
 			<br><br>
-			<<lakeicon "pots">><<link [[항아리 수색하기|Lake Pots]]>><<pass 1>><<tiredness 1>><<handheldon>><<wateraction>><</link>><<loxygen>>
+			<<lakeicon "pots">><<link [[항아리를 수색한다|Lake Pots]]>><<pass 1>><<tiredness 1>><<handheldon>><<wateraction>><</link>><<loxygen>>
 			<br>
 			<<swimicon "up">><<link [[출구 쪽으로 헤엄친다|Lake Ruin]]>><<wateraction>><<handheldon>><</link>><<loxygen>>
 			<br><br>
@@ -679,13 +679,13 @@
 		<<if $arousal gte $arousalmax>>
 			<<orgasmLocation "underwater">>
 
-			<<lakeicon "pots">><<link [[항아리 수색하기|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
+			<<lakeicon "pots">><<link [[항아리를 수색한다|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
 			<br>
 			<<swimicon "up">><<link [[출구 쪽으로 헤엄친다|Lake Ruin]]>><<wateraction>><</link>><<loxygen>>
 			<br><br>
 			<<plinthroom>>
 		<<else>>
-			<<lakeicon "pots">><<link [[항아리 수색하기|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
+			<<lakeicon "pots">><<link [[항아리를 수색한다|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
 			<br>
 			<<swimicon "up">><<link [[출구 쪽으로 헤엄친다|Lake Ruin]]>><<wateraction>><</link>><<loxygen>>
 			<br><br>
@@ -698,7 +698,7 @@
 			항아리 중 하나에 손을 뻗는다. 부식된 청동 열쇠를 발견했다.
 			<<set $lakeRuin.key to 1>>
 			<br><br>
-			<<lakeicon "pots">><<link [[항아리 수색하기|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
+			<<lakeicon "pots">><<link [[항아리를 수색한다|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
 			<br>
 			<<swimicon "up">><<link [[출구 쪽으로 헤엄친다|Lake Ruin]]>><<wateraction>><</link>><<loxygen>>
 			<br><br>
@@ -721,7 +721,7 @@
 			항아리 중 하나에 손을 뻗는다. 비어 있다.
 		<</if>>
 		<br><br>
-		<<lakeicon "pots">><<link [[항아리 수색하기|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
+		<<lakeicon "pots">><<link [[항아리를 수색한다|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
 		<br>
 		<<swimicon "up">><<link [[출구 쪽으로 헤엄친다|Lake Ruin]]>><<wateraction>><</link>><<loxygen>>
 		<br><br>
@@ -785,7 +785,7 @@
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
-	<<lakeicon "pots">><<link [[항아리 수색하기|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
+	<<lakeicon "pots">><<link [[항아리를 수색한다|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
 	<br>
 	<<swimicon "up">><<link [[출구 쪽으로 헤엄친다|Lake Ruin]]>><<wateraction>><</link>><<loxygen>>
 	<br><br>
@@ -839,7 +839,7 @@
 		<<antiqueicon "chastity">><<link [[착용한다|Lake Gold Chastity Belt]]>><<wateraction>><</link>><<loxygen>>
 		<br>
 	<</if>>
-	<<lakeicon "pots">><<link [[항아리 수색하기|Lake Pots]]>><<pass 1>><<tiredness 1>>
+	<<lakeicon "pots">><<link [[항아리를 수색한다|Lake Pots]]>><<pass 1>><<tiredness 1>>
 	<<if _goldchastity>>
 		<<set $gold_chastity_held to true>>
 		<<set $gold_chastity_count ??= 0>>
@@ -864,7 +864,7 @@
 		<<antiqueicon "ivory-box">><<link [[상자를 가져간다|Lake Ruin Deep]]>><<set $antiquemoney += 10>><<museumAntiqueStatus "antiquebox" "found">><</link>>
 		<br>
 	<</if>>
-	<<lakeicon "pots">><<link [[항아리 뒤지기|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
+	<<lakeicon "pots">><<link [[항아리를 뒤진다|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><</link>><<loxygen>>
 	<br>
 	<<swimicon "up">><<link [[출구 쪽으로 헤엄친다|Lake Ruin]]>><<wateraction>><</link>><<loxygen>>
 <</if>>
@@ -885,7 +885,7 @@
 <<earnFeat "Locked In Gold">>
 <<set $worn.genitals.origin to "Underwater Temple">>
 
-<<lakeicon "pots">><<link [[항아리 수색하기|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><<clotheson>><</link>><<loxygen>>
+<<lakeicon "pots">><<link [[항아리를 수색한다|Lake Pots]]>><<pass 1>><<tiredness 1>><<wateraction>><<clotheson>><</link>><<loxygen>>
 <br>
 <<swimicon "up">><<link [[출구 쪽으로 헤엄친다|Lake Ruin]]>><<wateraction>><<clotheson>><</link>><<loxygen>>
 <br><br>

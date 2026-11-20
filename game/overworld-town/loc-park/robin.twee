@@ -529,7 +529,7 @@
 <</if>>
 <div id="masturbationButtons">
 	<<if $timer lte 0 or $masturbation_fluid gte 500>>
-		<div id="next"><<link [[계속하기|$passage + " Finish"]]>><<set $finish to 1>><</link>><<nexttext>></div>
+		<div id="next"><<link [[계속한다|$passage + " Finish"]]>><<set $finish to 1>><</link>><<nexttext>></div>
 	<<else>>
 		<div id="next"><<link [[계속한다|$passage]]>><</link>><<nexttext>></div>
 	<</if>>

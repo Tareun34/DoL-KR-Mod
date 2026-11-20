@@ -394,9 +394,9 @@
 	<br><br>
 <</if>>
 
-<<link [[풀칠하기|Doren Loft 5]]>><<tiredness 4>><<pass 5>><<set $phase to 1>><</link>>
+<<link [[풀칠한다|Doren Loft 5]]>><<tiredness 4>><<pass 5>><<set $phase to 1>><</link>>
 <br>
-<<link [[나사못 박기|Doren Loft 5]]>><<tiredness 4>><<pass 5>><<set $phase to 2>><</link>>
+<<link [[나사못을 박는다|Doren Loft 5]]>><<tiredness 4>><<pass 5>><<set $phase to 2>><</link>>
 
 :: Doren Loft 5
 <<effects>>
@@ -412,9 +412,9 @@
 <<He>>【은는】 미소를 지으며 당신에게 엄지를 치켜세웠다. "아주 좋아! 거의 다 끝났어. 서랍장 앞판을 만들래, 아니면 목재에 스테인을 칠할래?"
 <br><br>
 
-<<link [[서랍장 앞판 만들기|Doren Loft 6]]>><<tiredness 4>><<pass 30>><<set $phase to 1>><</link>>
+<<link [[서랍장 앞판을 만든다|Doren Loft 6]]>><<tiredness 4>><<pass 30>><<set $phase to 1>><</link>>
 <br>
-<<link [[스테인 칠하기|Doren Loft 6]]>><<tiredness 4>><<pass 30>><<set $phase to 2>><</link>>
+<<link [[스테인을 칠한다|Doren Loft 6]]>><<tiredness 4>><<pass 30>><<set $phase to 2>><</link>>
 
 :: Doren Loft 6
 <<effects>>
@@ -522,9 +522,9 @@
 	<br><br>
 <</if>>
 
-<<link [[청소기 돌리기|Doren Loft 9]]>><<tiredness 4>><<pass 10>><<set $phase to 1>><</link>>
+<<link [[청소기를 돌린다|Doren Loft 9]]>><<tiredness 4>><<pass 10>><<set $phase to 1>><</link>>
 <br>
-<<link [[실리콘 쏘기|Doren Loft 9]]>><<tiredness 4>><<pass 10>><<set $phase to 2>><</link>>
+<<link [[실리콘을 쏜다|Doren Loft 9]]>><<tiredness 4>><<pass 10>><<set $phase to 2>><</link>>
 
 :: Doren Loft 9
 <<effects>>
@@ -565,7 +565,7 @@
 <br>
 <<link [[<<him>>에게 감사 인사하며 포옹하기|Doren Loft Thank]]>><<set $phase to 2>><</link>>
 <br>
-<<link [[조용히 있기|Doren Loft Thank]]>><<set $phase to 0>><</link>>
+<<link [[조용히 있는다|Doren Loft Thank]]>><<set $phase to 0>><</link>>
 
 
 :: Doren Loft Thank

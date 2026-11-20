@@ -99,7 +99,7 @@
 				<span class="blue">문신 아티스트에게 당신의 <<bodypart _active_bodypart>>【을를】 보여줄 수 없다.</span>
 			<<else>>
 				<<capture _active_bodypart _part _deviant _lewd>>
-					| <<link [[문신으로 바꾸기 (£500 1:00)|Tattoo Bodywriting]]>>
+					| <<link [[문신으로 바꾼다 (£500 1:00)|Tattoo Bodywriting]]>>
 						<<pass 60>><<money -50000 "tattoo">><<set $tattoo_bodypart to _active_bodypart>><<set $tattoo_parlour to clone(_part)>>
 						<<if _lewd or _deviant>><<control 50>><<else>><<control 25>><</if>>
 						<<set _part.pen to "tattoo">><<pain 6>>
@@ -120,7 +120,7 @@
 <</for>>
 <br>
 <<if hasSexStat("promiscuity", 3)>>
-	<<link [[문신으로 새길 문장 생각하기|Tattoo Bodywriting Write]]>><</link>>
+	<<link [[문신으로 새길 문장을 생각한다|Tattoo Bodywriting Write]]>><</link>>
 	<br>
 <</if>>
 <<link [[뒤로|Tattoo Parlour]]>><</link>>
@@ -178,7 +178,7 @@
 
 <<link [[시술을 받는다 (£500 1:00)|Tattoo Get]]>><</link>><<gpain>>
 <br>
-<<link [[돌아가기|Tattoo Parlour]]>><<unset $tattoo_bodypart>><<unset $writebodyaction>><</link>>
+<<link [[돌아간다|Tattoo Parlour]]>><<unset $tattoo_bodypart>><<unset $writebodyaction>><</link>>
 
 :: Tattoo Get
 

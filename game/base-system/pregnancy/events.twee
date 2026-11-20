@@ -12,7 +12,7 @@
 <br><br>
 당신은 고개를 젓는다. <<He>>【이가】 문을 열어주자, 당신은 사무실을 나선다. "몸조리 잘하세요." <<he>>【이가】 당신이 지나갈 때 말한다.
 <br><br>
-<<link [[로비로 돌아가기|Hospital Foyer]]>><<endevent>><</link>>
+<<link [[로비로 돌아간다|Hospital Foyer]]>><<endevent>><</link>>
 
 :: Pregnancy Discussion
 <<set $outside to 0>><<set $location to "town">><<effects>>
@@ -57,7 +57,7 @@
 	<br>
 <</if>>
 
-<<link [[로비로 돌아가기|Hospital Foyer]]>><<endevent>><<unset $firstOption>><</link>>
+<<link [[로비로 돌아간다|Hospital Foyer]]>><<endevent>><<unset $firstOption>><</link>>
 
 :: Sell Children
 <<set $outside to 0>><<set $location to "town">><<effects>>
@@ -1872,7 +1872,7 @@
 <br><br> <<bodyliquid "tummy" "goo" -1>>
 <<clotheson>>
 
-<<link [[로비로 돌아가기|Hospital Foyer]]>><<endevent>><</link>>
+<<link [[로비로 돌아간다|Hospital Foyer]]>><<endevent>><</link>>
 
 :: Pregnancy Birth Hospital Alex
 /* Alex drive-home. Branches in from Hospital 5 when Alex is the father; reuses the

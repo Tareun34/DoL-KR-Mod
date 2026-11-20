@@ -15,14 +15,14 @@
 			<span class="gold">책상 옆 업무 게시판에 붙어 있는 메모지가 있습니다. 가능한 한 빨리 <<ampm 08 00>>에서 <<ampm 10 00>> 사이에 <<office_manager>>에게 보고하라고 적혀 있습니다.</span>
 			<br><br>
 		<</if>>
-		<<assignmenticon>><<link [[업무 맡기|Office Assignment Start]]>><</link>>
+		<<assignmenticon>><<link [[업무를 맡는다|Office Assignment Start]]>><</link>>
 		<<if $averySeen?.includes("office") and C.npc.Avery.state isnot "dismissed" and !$avery_injury>>
 			<br>
-			<<icon "project-maths.png">><<link [[에이버리의 개인 비서로 일하기|Avery Office Assistant]]>><</link>>
+			<<icon "project-maths.png">><<link [[에이버리의 개인 비서로 일한다|Avery Office Assistant]]>><</link>>
 		<</if>>
 	<</if>>
 	<br>
-	<<couchicon>><<link [[휴게실에서 휴식하기 (0:10)|Office Agency Break]]>><<stress -3>><<tiredness -3>><<pass 10>><</link>><<ltiredness>><<lstress>>
+	<<couchicon>><<link [[휴게실에서 휴식한다 (0:10)|Office Agency Break]]>><<stress -3>><<tiredness -3>><<pass 10>><</link>><<ltiredness>><<lstress>>
 	<br>
 	<<officeicon>><<link [[$per_npc.manager.name + "의 사무실"|Office Agency Manager]]>><</link>>
 	<br>
@@ -31,7 +31,7 @@
 	임시직 알선소 사무실 문이 잠겨 있다. 문에는 "<<ampm 6>>시에 엽니다."라는 표지판이 붙어 있다.
 <</if>>
 <br><br>
-<<getouticon>><<link [[로비로 돌아가기 (0:01)|Office Lobby]]>><<pass 1>><</link>>
+<<getouticon>><<link [[로비로 돌아간다 (0:01)|Office Lobby]]>><<pass 1>><</link>>
 
 :: Office Agency Streak
 <<location "office_building">><<effects>>
@@ -68,12 +68,12 @@
 		<br><br>
 		<<lockericon>><<link [[탈의실|Office Agency Changing Room]]>><</link>>
 		<br><br>
-		<<getouticon>><<link [[로비로 돌아가기 (0:01)|Office Lobby]]>><<pass 1>><</link>>
+		<<getouticon>><<link [[로비로 돌아간다 (0:01)|Office Lobby]]>><<pass 1>><</link>>
 
 	<</if>>
 <<else>>
 	탈의실로 숨어들기 위해 임시직 알선소 사무실로 달려가 보지만, 문은 굳게 닫혀 있다! 문에는 "<<ampm 6>>시에 엽니다."라는 표지판이 걸려 있다.
-	<<getouticon>><<link [[로비로 돌아가기 (0:01)|Office Lobby]]>><<pass 1>><</link>>
+	<<getouticon>><<link [[로비로 돌아간다 (0:01)|Office Lobby]]>><<pass 1>><</link>>
 <</if>>
 <br><br>
 
@@ -191,14 +191,14 @@
 				<span class="gold">책상 옆 업무 게시판에 메모지가 붙어 있습니다. 가급적 빠른 시일 내에 <<ampm 08 00>>에서 <<ampm 10 00>> 사이에 <<office_manager>>에게 보고하라고 적혀 있습니다.</span>
 				<br><br>
 			<</if>>
-			<<assignmenticon>><<link [[업무 맡기|Office Assignment Start]]>><</link>>
+			<<assignmenticon>><<link [[업무를 맡는다|Office Assignment Start]]>><</link>>
 			<<if $averySeen?.includes("office") and C.npc.Avery.state isnot "dismissed">>
 				<br>
-				<<icon "project-maths.png">><<link [[에이버리의 개인 비서로 일하기|Avery Office Assistant]]>><</link>>
+				<<icon "project-maths.png">><<link [[에이버리의 개인 비서로 일한다|Avery Office Assistant]]>><</link>>
 			<</if>>
 		<</if>>
 		<br>
-		<<couchicon>><<link [[계속 휴식하기 (0:10)|Office Agency Break]]>><<stress -3>><<tiredness -2>><<pass 10>><</link>><<ltiredness>><<lstress>>
+		<<couchicon>><<link [[계속 휴식한다 (0:10)|Office Agency Break]]>><<stress -3>><<tiredness -2>><<pass 10>><</link>><<ltiredness>><<lstress>>
 		<br>
 		<<officeicon>><<link [[$per_npc.manager.name + "의 사무실"|Office Agency Manager]]>><</link>>
 		<br>
@@ -206,7 +206,7 @@
 		경비원이 휴게실로 들어서며 모두 로비로 나가라고 지시한다. 건물이 외부인 출입 통제에 들어간다.
 		<br><br>
 	<</if>>
-	<<getouticon>><<link [[로비로 돌아가기 (0:01)|Office Lobby]]>><<pass 1>><</link>>
+	<<getouticon>><<link [[로비로 돌아간다 (0:01)|Office Lobby]]>><<pass 1>><</link>>
 <</if>>
 
 :: Office Agency Chair Comply

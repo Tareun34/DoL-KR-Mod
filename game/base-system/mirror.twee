@@ -2328,7 +2328,7 @@
 		<span @class="'hair-' + $browsDyeOption.replace(/ /g, '-')">
 			<span class="colour-sample bgcolour-hair colour-hair"></span>
 		</span>
-		<br><<link [[눈썹 염색하기 (0:15)|$passage]]>><<set $mirror_eyebrow_dye to true>><<pass 15>><</link>>
+		<br><<link [[눈썹을 염색한다 (0:15)|$passage]]>><<set $mirror_eyebrow_dye to true>><<pass 15>><</link>>
 	<</if>>
 	</span>
 <</widget>>

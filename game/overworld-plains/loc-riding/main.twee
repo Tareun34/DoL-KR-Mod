@@ -8,7 +8,7 @@
 		<<wearProp "lockpick">>
 		<span class="green">자물쇠는 쉽게 딸 수 있을 것 같다.</span>
 		<br><br>
-		<<lockicon "pick">><<link [[자물쇠 따기 (0:10)|Riding School]]>><<pass 10>><<crimeUp 20 "trespassing">><</link>><<crime "trespassing">>
+		<<lockicon "pick">><<link [[자물쇠를 딴다 (0:10)|Riding School]]>><<pass 10>><<crimeUp 20 "trespassing">><</link>><<crime "trespassing">>
 		<br>
 	<</if>>
 <<else>>
@@ -133,7 +133,7 @@
 
 		<<if $exposed lte 0>>
 			<<if $money gte 2500>>
-				<<animalicon "horse-pick">><<link [[승마 수업 듣기 (£25 1:00)|Riding School Lesson]]>><<set $riding_lesson to 0>><<money -2500 "ridingLessons">><<thighskill _riding>><</link>><<gtiredness>><<gthighskill>>
+				<<animalicon "horse-pick">><<link [[승마 수업을 듣는다 (£25 1:00)|Riding School Lesson]]>><<set $riding_lesson to 0>><<money -2500 "ridingLessons">><<thighskill _riding>><</link>><<gtiredness>><<gthighskill>>
 				<br>
 			<</if>>
 		<<else>>
@@ -142,7 +142,7 @@
 		<</if>>
 
 		<<if isPubfameTaskAccepted("remy")>>
-			<<investigateicon>><<link [[랜드리의 연락책 찾기 (0:20)|Riding School Contact]]>><<pass 20>><</link>>
+			<<investigateicon>><<link [[랜드리의 연락책을 찾는다 (0:20)|Riding School Contact]]>><<pass 20>><</link>>
 			<br>
 		<</if>>
 
@@ -784,9 +784,9 @@
 <br><br>
 
 <<set $skulduggerydifficulty to 300>>
-<<link [[옷 벗기기|Riding School Lesson Strip]]>><</link>><<skulduggerydifficulty>>
+<<link [[옷을 벗긴다|Riding School Lesson Strip]]>><</link>><<skulduggerydifficulty>>
 <br>
-<<link [[밀치기|Riding School Lesson Shove]]>><</link>><<physiquedifficulty 1 12000>>
+<<link [[밀친다|Riding School Lesson Shove]]>><</link>><<physiquedifficulty 1 12000>>
 <br>
 
 :: Riding School Lesson Strip
@@ -1135,9 +1135,9 @@
 	<br><br>
 
 	<<if Time.hour isnot $closinghour>>
-		<<investigateicon>><<link [[다른 사람 찾기 (0:20)|Riding School Contact]]>><<pass 20>><<endevent>><</link>>
+		<<investigateicon>><<link [[다른 사람을 찾는다 (0:20)|Riding School Contact]]>><<pass 20>><<endevent>><</link>>
 		<br>
-		<<getouticon>><<link [[일단 포기하기|Riding School]]>><<endevent>><</link>>
+		<<getouticon>><<link [[일단 포기한다|Riding School]]>><<endevent>><</link>>
 	<<else>>
 		폐장 시간이다. <<steed_type>>들은 마구간으로 몰리고, 손님들은 마당에서 쫓겨난다. <<if $exposed gte 1>>당신은 누군가 당신의 <<lewdness>>【을를】 보기 전에 슬그머니 자리를 뜬다.<</if>>
 		<br><br>
@@ -1157,7 +1157,7 @@
 
 	<<link [[<<him>>【을를】 따라가기|Riding School Contact Follow]]>><</link>>
 	<br>
-	<<link [[떠나기|Riding School Contact Leave]]>><<set $phase to Math.ceil($phase / 2)>><</link>>
+	<<link [[떠난다|Riding School Contact Leave]]>><<set $phase to Math.ceil($phase / 2)>><</link>>
 <</if>>
 
 :: Riding School Contact Leave
@@ -1171,9 +1171,9 @@
 <br><br>
 
 <<if Time.hour isnot $closinghour>>
-	<<investigateicon>><<link [[다른 사람 찾기 (0:20)|Riding School Contact]]>><<pass 20>><<endevent>><</link>>
+	<<investigateicon>><<link [[다른 사람을 찾는다 (0:20)|Riding School Contact]]>><<pass 20>><<endevent>><</link>>
 	<br>
-	<<getouticon>><<link [[일단 포기하기|Riding School]]>><<endevent>><</link>>
+	<<getouticon>><<link [[일단 포기한다|Riding School]]>><<endevent>><</link>>
 <<else>>
 	마감 시간이다. <<steed_type>>들은 마구간으로, 손님들은 밖으로 향하고 있다. <<if $exposed gte 1>>당신은 누군가 당신의 <<lewdness>>【을를】 보기 전에 슬그머니 자리를 뜬다.<</if>>
 	<br><br>
@@ -1285,9 +1285,9 @@
 <<endcombat>>
 
 <<if Time.hour isnot $closinghour>>
-	<<investigateicon>><<link [[다른 사람 찾기 (0:20)|Riding School Contact]]>><<pass 20>><<endevent>><</link>>
+	<<investigateicon>><<link [[다른 사람을 찾는다 (0:20)|Riding School Contact]]>><<pass 20>><<endevent>><</link>>
 	<br>
-	<<getouticon>><<link [[일단 포기하기|Riding School]]>><<endevent>><</link>>
+	<<getouticon>><<link [[일단 포기한다|Riding School]]>><<endevent>><</link>>
 <<else>>
 	마감 시간이다. <<steed_type>>들은 마구간으로, 손님들은 밖으로 향하고 있다. <<if $exposed gte 1>>당신은 누군가 당신의 <<lewdness>>【을를】 보기 전에 슬그머니 자리를 뜬다.<</if>>
 	<br><br>
@@ -1341,9 +1341,9 @@
 	<<if $pubfame.detail is "remyBetray">>
 		<<link [[다음|Riding School]]>><<endevent>><</link>>
 	<<elseif Time.hour isnot $closinghour>>
-		<<investigateicon>><<link [[다른 사람 찾기 (0:20)|Riding School Contact]]>><<pass 20>><<endevent>><</link>>
+		<<investigateicon>><<link [[다른 사람을 찾는다 (0:20)|Riding School Contact]]>><<pass 20>><<endevent>><</link>>
 		<br>
-		<<getouticon>><<link [[일단 포기하기|Riding School]]>><<endevent>><</link>>
+		<<getouticon>><<link [[일단 포기한다|Riding School]]>><<endevent>><</link>>
 	<<else>>
 		폐장 시간이다. <<steed_type>>들은 마구간으로 몰리고, 손님들은 마당에서 쫓겨난다. <<if $exposed gte 1>>당신은 누군가 당신의 <<lewdness>>【을를】 보기 전에 슬그머니 자리를 뜬다.<</if>>
 		<br><br>
@@ -1360,9 +1360,9 @@
 	<<if $pubfame.detail is "remyBetray">>
 		<<link [[다음|Riding School]]>><<endevent>><</link>>
 	<<elseif Time.hour isnot $closinghour>>
-		<<investigateicon>><<link [[다른 사람 찾기 (0:20)|Riding School Contact]]>><<pass 20>><<endevent>><</link>>
+		<<investigateicon>><<link [[다른 사람을 찾는다 (0:20)|Riding School Contact]]>><<pass 20>><<endevent>><</link>>
 		<br>
-		<<getouticon>><<link [[일단 포기하기|Riding School]]>><<endevent>><</link>>
+		<<getouticon>><<link [[일단 포기한다|Riding School]]>><<endevent>><</link>>
 	<<else>>
 		폐장 시간이다. <<steed_type>>들은 마구간으로 몰리고, 손님들은 마당에서 쫓겨난다. <<if $exposed gte 1>>당신은 누군가 당신의 <<lewdness>>【을를】 보기 전에 슬그머니 자리를 뜬다.<</if>>
 		<br><br>

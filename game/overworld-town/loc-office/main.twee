@@ -110,7 +110,7 @@
 <<endcombat>>
 
 <<if $exposed lte 0>>
-	<<link [[로비로 돌아가기|Office Lobby]]>><</link>>
+	<<link [[로비로 돌아간다|Office Lobby]]>><</link>>
 <<else>>
 	<<link [[다음|Office Streak]]>><</link>>
 <</if>>
@@ -124,7 +124,7 @@
 <<endcombat>>
 
 <<if $exposed lte 1>>
-	<<link [[로비로 돌아가기|Office Lobby]]>><</link>>
+	<<link [[로비로 돌아간다|Office Lobby]]>><</link>>
 <<else>>
 	<<link [[다음|Office Streak]]>><</link>>
 <</if>>

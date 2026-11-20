@@ -494,9 +494,9 @@
 <</if>>
 <<if $beastRitual.petplay>>
 	<<if $fox gte 6>>
-		<<link [[깽깽거리기|Gwylan Forest Journey 3]]>><<set $beastRitual.lure to "yip">><</link>>
+		<<link [[깽깽거린다|Gwylan Forest Journey 3]]>><<set $beastRitual.lure to "yip">><</link>>
 	<<else>>
-		<<link [[짖기|Gwylan Forest Journey 3]]>><<set $beastRitual.lure to "bark">><</link>>
+		<<link [[짖는다|Gwylan Forest Journey 3]]>><<set $beastRitual.lure to "bark">><</link>>
 	<</if>>
 	<br>
 <</if>>
@@ -930,7 +930,7 @@
 
 	<<link [[<<him>>【와과】 경주하기 (0:05)|Gwylan Forest Run]]>><<pass 5>><<tiredness 2>><<set $phase to "run">><</link>><<gtiredness>><<athleticsdifficulty $beastRitual.difficultyMin $beastRitual.difficultyMax true>>
 	<br>
-	<<link [[그냥 걷기 (0:10)|Gwylan Forest Run]]>><<stress -1>><<pass 10>><<set $phase to "walk">><</link>><<lstress>>
+	<<link [[그냥 걷는다 (0:10)|Gwylan Forest Run]]>><<stress -1>><<pass 10>><<set $phase to "walk">><</link>><<lstress>>
 	<br>
 <</if>>
 
@@ -1075,7 +1075,7 @@
 
 	<<link [[달린다 (0:05)|Gwylan Forest Run]]>><<pass 5>><<tiredness 2>><<set $phase to "run">><</link>><<gtiredness>><<athleticsdifficulty $beastRitual.difficultyMin $beastRitual.difficultyMax true>>
 	<br>
-	<<link [[그냥 걷기 (0:10)|Gwylan Forest Run]]>><<stress -1>><<pass 10>><<set $phase to "walk">><</link>><<lstress>>
+	<<link [[그냥 걷는다 (0:10)|Gwylan Forest Run]]>><<stress -1>><<pass 10>><<set $phase to "walk">><</link>><<lstress>>
 	<br>
 <</if>>
 
@@ -2812,10 +2812,10 @@
 	<<personsimple>>【이가】 <<his>> 덩굴로 땅에서 천천히 몸을 들어 올려 통 안으로 들어간다. 덩굴들은 따뜻한 물속에서 기쁨에 떨며, 통 가장자리에 일정한 간격으로 매달린다.
 	<br><br>
 
-	<<link [[씻기기|Gwylan Ritual Bait Wash Plant]]>><<tiredness 1>><<set $phase to 1>><</link>><<gtiredness>><<tendingdifficulty _tendingDiffMin _tendingDiffMax>>
+	<<link [[씻긴다|Gwylan Ritual Bait Wash Plant]]>><<tiredness 1>><<set $phase to 1>><</link>><<gtiredness>><<tendingdifficulty _tendingDiffMin _tendingDiffMax>>
 	<br>
 	<<if hasSexStat("deviancy", 3)>>
-		<<link [['정화'를 미리 시작하기|Gwylan Ritual Bait Wash Plant]]>><<set $phase to 2>><</link>><<deviant3>>
+		<<link [['정화'를 미리 시작한다|Gwylan Ritual Bait Wash Plant]]>><<set $phase to 2>><</link>><<deviant3>>
 	<<else>>
 		<<insufficientStat "deviancy" "<<personsimple>>의 '청소'를 앞장서서 하기에는">>
 	<</if>>
@@ -2828,7 +2828,7 @@
 	<<beastsplural>> 모두 통 옆에 앉아 있다가, 한 마리가 뛰어든다. 그윌란은 물이 튀는 것을 막으며 <<nnpc_himself "Gwylan">> 몸을 가리고 킥킥 웃는다. <<nnpc_He "Gwylan">>【이가】 나머지를 통제하려 하지만, 첫 번째를 따라 두 마리가 더 뛰어든다.
 	<br><br>
 
-	<<link [[씻기기|Gwylan Ritual Bait Wash Pack]]>><<tiredness 5>><<set $phase to 1>><</link>><<ggtiredness>><<tendingdifficulty _tendingDiffMin _tendingDiffMax>>
+	<<link [[씻긴다|Gwylan Ritual Bait Wash Pack]]>><<tiredness 5>><<set $phase to 1>><</link>><<ggtiredness>><<tendingdifficulty _tendingDiffMin _tendingDiffMax>>
 	<br>
 	<<if hasSexStat("deviancy", 3)>>
 		<<link [[남은 <<beastsplural>> '정화'를 미리 시작하기|Gwylan Ritual Bait Wash Pack]]>><<set $phase to 2>><</link>><<deviant3>>
@@ -2847,7 +2847,7 @@
 	첫 번째 <<beasttype>>【이가】 물보라를 일으키며 물속으로 뛰어든다. 그윌란은 물이 튀지 않게 <<nnpc_himself "Gwylan">> 몸을 가리며 킥킥 웃는다. 두 번째 녀석도 신이 나서 금세 뒤따른다.
 	<br><br>
 
-	<<link [[씻기기|Gwylan Ritual Bait Wash Beast]]>><<tiredness 1>><<set $phase to 1>><</link>><<gtiredness>><<tendingdifficulty _tendingDiffMin _tendingDiffMax>>
+	<<link [[씻긴다|Gwylan Ritual Bait Wash Beast]]>><<tiredness 1>><<set $phase to 1>><</link>><<gtiredness>><<tendingdifficulty _tendingDiffMin _tendingDiffMax>>
 	<br>
 	<<if hasSexStat("deviancy", 3)>>
 		<<link [[두 번째 <<beasttype>>【을를】 먼저 '씻기기' 시작한다|Gwylan Ritual Bait Wash Beast]]>><<set $phase to 2>><</link>><<deviant3>>
@@ -4687,7 +4687,7 @@
 	뒤로 물러나려 했지만, 미끄러진다. <span class="pink">결국 <<his>> 쥐색 머리카락에 얼굴을 파묻게 된다. <<He>>에게서 황홀한 냄새가 난다. 어쩔 수가 없다. <<him>>【을를】 만져야만 한다.</span>
 	<br><br>
 
-	<<link [[그윌란 씻겨주기|Gwylan Ritual Bait End Wash Help]]>><<arousal 1200>><<npcincr Gwylan lust 1>><</link>><<ggarousal>><<glust>>
+	<<link [[그윌란을 씻겨준다|Gwylan Ritual Bait End Wash Help]]>><<arousal 1200>><<npcincr Gwylan lust 1>><</link>><<ggarousal>><<glust>>
 	<br>
 <<else>>
 	<<if $hypnosis_traits.devotion gte 4>>
@@ -5107,7 +5107,7 @@
 	<<link [[다음|Gwylan Ritual Bait End Wash First Time]]>><<pass 20>><</link>>
 	<br>
 <<else>>
-	<<link [[계속하기|Gwylan Ritual Bait End Wash 3]]>><<pass 20>><</link>>
+	<<link [[계속한다|Gwylan Ritual Bait End Wash 3]]>><<pass 20>><</link>>
 	<br>
 	<<if $beastRitual.collared and $worn.neck.name isnot "familiar collar">>
 		<<link [[그윌란에게 목걸이를 계속 착용하게 해달라고 부탁한다|Gwylan Ritual Bait End Wash 3]]>><<npcincr Gwylan lust 4>><<pass 20>><<set $phase2 to "collar">><</link>><<gglust>>

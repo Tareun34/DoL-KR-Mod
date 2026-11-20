@@ -53,7 +53,7 @@
 탈의실로 다가가자 <<= $NPCList[0].pronoun is "m" ? "남자" : "여자">> 탈의실에 불이 켜져 있는 것을 발견한다. <span class="blue">가까이 다가가자 안에서 어떤 소리가 들려온다.</span> 누군가 방을 사용하고 있는 것 같다.
 <br><br>
 
-<<link [[엿보기|School Night Pool Party Changing Room 2]]>><<set $phase to 1>><</link>>
+<<link [[엿본다|School Night Pool Party Changing Room 2]]>><<set $phase to 1>><</link>>
 <br>
 <<link [[그들이 떠날 때까지 기다린다|School Night Pool Party Changing Room 2]]>><<set $phase to 0>><</link>>
 <br><br>
@@ -388,9 +388,9 @@
 	<<exit>>
 <</if>>
 
-<<socialiseicon>><<link [[다른 무리 찾아보기|School Night Pool Party Socialise]]>><<endevent>><</link>>
+<<socialiseicon>><<link [[다른 무리를 찾아본다|School Night Pool Party Socialise]]>><<endevent>><</link>>
 <br><br>
-<<getouticon>><<link [[대화 그만하기|School Pool]]>><<endevent>><</link>>
+<<getouticon>><<link [[대화를 그만한다|School Pool]]>><<endevent>><</link>>
 <br>
 
 :: School Night Pool Party Around

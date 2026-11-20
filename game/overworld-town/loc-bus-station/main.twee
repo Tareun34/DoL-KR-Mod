@@ -26,14 +26,14 @@
 				<</if>>
 				<<alleyicon>><<link [[공업 지구 골목 (0:02)|Industrial Alleyways]]>><<pass 2>><</link>>
 				<br>
-				<<exiticon "flip">><<link [[정문으로 나가기 (0:02)|Bus Station Front Door]]>><<pass 2>><</link>>
+				<<exiticon "flip">><<link [[정문으로 나간다 (0:02)|Bus Station Front Door]]>><<pass 2>><</link>>
 				<br><br>
 			<</if>>
 		<<else>>
 			<<if dangerEvent(2) and $eventskip is 0>>
 				<<busstationex1>>
 			<<else>>
-				<<exiticon>><<link [[뒷문으로 나가기 (0:02)|Bus Station Back Door]]>><<pass 2>><</link>>
+				<<exiticon>><<link [[뒷문으로 나간다 (0:02)|Bus Station Back Door]]>><<pass 2>><</link>>
 				<br><br>
 			<</if>>
 		<</if>>
@@ -44,10 +44,10 @@
 			<</if>>
 			<<alleyicon>><<link [[공업 지구 골목 (0:02)|Industrial Alleyways]]>><<pass 2>><</link>>
 			<br>
-			<<exiticon "flip">><<link [[정문으로 나가기 (0:02)|Bus Station Front Door]]>><<pass 2>><</link>>
+			<<exiticon "flip">><<link [[정문으로 나간다 (0:02)|Bus Station Front Door]]>><<pass 2>><</link>>
 			<br><br>
 		<<else>>
-			<<exiticon>><<link [[뒷문으로 나가기 (0:02)|Bus Station Back Door]]>><<pass 2>><</link>>
+			<<exiticon>><<link [[뒷문으로 나간다 (0:02)|Bus Station Back Door]]>><<pass 2>><</link>>
 			<br>
 			<<harvesticon>><<link [[하베스트 가 (0:02)|Harvest Street]]>><<pass 2>><</link>>
 			<br><br>
@@ -55,7 +55,7 @@
 		<<if $cheatsEnabled is true>>
 			구석에 밴 한 대가 주차되어 있다. 뒷문은 열려 있고 엔진도 켜져 있지만, 주위에는 아무도 없다.
 			<br><br>
-			<<investigateicon>><<link [[밴 조사하기|Bus Station Livestock]]>><</link>><<dangerousText>> | <i>치트 옵션. 가축 배드 엔딩을 유발합니다.</i> <!-- Appears even with blind stats enabled. Intentional -->
+			<<investigateicon>><<link [[밴을 조사한다|Bus Station Livestock]]>><</link>><<dangerousText>> | <i>치트 옵션. 가축 배드 엔딩을 유발합니다.</i> <!-- Appears even with blind stats enabled. Intentional -->
 			<br><br>
 		<</if>>
 	<</if>>
@@ -103,14 +103,14 @@ A tall blonde girl in a crisp black outfit walks around the bonnet, and slashes 
 		<<wearProp "lockpick">>
 		<span class="green">자물쇠는 쉽게 딸 수 있을 것 같다.</span>
 		<br><br>
-		<<lockicon "pick">><<link [[자물쇠 따기 (0:10)|Harvest Street]]>><<pass 10>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
+		<<lockicon "pick">><<link [[자물쇠를 딴다 (0:10)|Harvest Street]]>><<pass 10>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
 		<br>
 	<</if>>
 <<else>>
 	<span class="red">자물쇠는 당신의 실력으로 딸 수 없을 것 같다.</span><<skulduggeryrequired>>
 	<br><br>
 <</if>>
-<<busstationicon>><<link [[떠나기|Bus Station]]>><</link>>
+<<busstationicon>><<link [[떠난다|Bus Station]]>><</link>>
 <br>
 
 :: Bus Station Back Door
@@ -126,14 +126,14 @@ A tall blonde girl in a crisp black outfit walks around the bonnet, and slashes 
 	<<else>>
 		<span class="green">자물쇠는 쉽게 딸 수 있을 것 같다.</span>
 		<br><br>
-		<<lockicon "pick">><<link [[자물쇠 따기 (0:10)|Industrial Alleyways]]>><<pass 10>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
+		<<lockicon "pick">><<link [[자물쇠를 딴다 (0:10)|Industrial Alleyways]]>><<pass 10>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
 	<</if>>
 	<br>
 <<else>>
 	<span class="red">자물쇠는 당신의 능력으로는 딸 수 없을 것 같다.</span><<skulduggeryrequired>>
 	<br><br>
 <</if>>
-<<busstationicon>><<link [[떠나기|Bus Station]]>><</link>>
+<<busstationicon>><<link [[떠난다|Bus Station]]>><</link>>
 <br>
 
 :: Bus Station Entrance
@@ -148,14 +148,14 @@ A tall blonde girl in a crisp black outfit walks around the bonnet, and slashes 
 	<<else>>
 		<span class="green">자물쇠는 쉽게 딸 수 있을 것 같다.</span>
 		<br><br>
-		<<lockicon "pick">><<link [[자물쇠 따기 (0:10)|Bus Station]]>><<pass 10>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
+		<<lockicon "pick">><<link [[자물쇠를 딴다 (0:10)|Bus Station]]>><<pass 10>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
 	<</if>>
 	<br>
 <<else>>
 	<span class="red">자물쇠는 당신의 능력으로는 딸 수 없을 것 같다.</span><<skulduggeryrequired>>
 	<br><br>
 <</if>>
-<<harvesticon>><<link [[떠나기|Harvest Street]]>><</link>>
+<<harvesticon>><<link [[떠난다|Harvest Street]]>><</link>>
 <br>
 
 :: Bus Station Back Entrance
@@ -171,14 +171,14 @@ A tall blonde girl in a crisp black outfit walks around the bonnet, and slashes 
 		<<wearProp "lockpick">>
 		<span class="green">자물쇠는 쉽게 딸 수 있을 것 같다.</span>
 		<br><br>
-		<<lockicon "pick">><<link [[자물쇠 따기 (0:10)|Bus Station]]>><<pass 10>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
+		<<lockicon "pick">><<link [[자물쇠를 딴다 (0:10)|Bus Station]]>><<pass 10>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
 		<br>
 	<</if>>
 <<else>>
 	<span class="red">자물쇠는 당신의 실력으로 딸 수 없을 것 같다.</span><<skulduggeryrequired>>
 	<br><br>
 <</if>>
-<<alleyicon>><<link [[떠나기|Industrial Alleyways]]>><</link>>
+<<alleyicon>><<link [[떠난다|Industrial Alleyways]]>><</link>>
 <br>
 
 :: Widgets Bus Station Ex [widget]

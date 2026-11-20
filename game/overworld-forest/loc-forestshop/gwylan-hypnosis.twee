@@ -2740,9 +2740,9 @@
 그윌란이 사라진다. 당신은 어두워지는 숲에 홀로 남겨진다.
 <br><br>
 
-<<link [[헤매기|Gwylan Hypnosis Removal Deviancy 3]]>><<set $phase2 to "run">><</link>>
+<<link [[헤맨다|Gwylan Hypnosis Removal Deviancy 3]]>><<set $phase2 to "run">><</link>>
 <br>
-<<link [[웅크리고 숨기|Gwylan Hypnosis Removal Deviancy 3]]>><<set $phase2 to "hide">><</link>>
+<<link [[웅크리고 숨는다|Gwylan Hypnosis Removal Deviancy 3]]>><<set $phase2 to "hide">><</link>>
 <br>
 
 :: Gwylan Hypnosis Removal Deviancy 3

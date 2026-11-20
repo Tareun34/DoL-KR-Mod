@@ -196,14 +196,14 @@
 	<<elseif !$worn.handheld.type.includes("bookbag")>>
 		<span class="blue">책가방 없이는 공부할 수 없다.</span>
 		<br>
-		<<historyicon>><<link [[수업 전에 휴식한다|History Classroom Study]]>><<set $phase to 0>><</link>><<lstress>>
+		<<historyicon>><<link [[수업 시작까지 휴식한다|History Classroom Study]]>><<set $phase to 0>><</link>><<lstress>>
 	<<else>>
-		<<historyicon>><<link [[역사 공부하기|History Classroom Study]]>><<set $phase to 1>><</link>><<gstress>><<ghistory>>
+		<<historyicon>><<link [[역사를 공부한다|History Classroom Study]]>><<set $phase to 1>><</link>><<gstress>><<ghistory>>
 		<br>
-		<<historyicon>><<link [[수업 전에 휴식한다|History Classroom Study]]>><<set $phase to 0>><</link>><<lstress>>
+		<<historyicon>><<link [[수업 시작까지 휴식한다|History Classroom Study]]>><<set $phase to 0>><</link>><<lstress>>
 	<</if>>
 	<br>
-	<<getouticon>><<link [[나가기|Hallways]]>><</link>>
+	<<getouticon>><<link [[나간다|Hallways]]>><</link>>
 	<br>
 <<elseif $schoollesson is 1>>
 	<<lockerClothesAutoEquip>>
@@ -546,7 +546,7 @@
 	다른 학생들이 구경하려고 고개를 돌린다.
 	<br><br>
 
-	<<link [[다른 자리 찾기|History Robin New]]>><</link>>
+	<<link [[다른 자리를 찾는다|History Robin New]]>><</link>>
 	<br>
 	<<if $submissive gte 1500>>
 		<<link [[애원한다|History Robin Beg]]>><<sub 1>><</link>><<submissivetext>>

@@ -1072,7 +1072,7 @@
 <br><br>
 "진정, 진정하세요! 모두 물건을 받을 수 있으니, 질서 있게 줄을 서 주세요!" <<nnpc_He Sirris>>【이가】 열광하는 군중에게 쾌활하게 외친다.
 <br><br>
-<<link [[시리스 돕기 (0:50)|Sirris Shop Assistant 2]]>><<pass 50>><<stress 5>><<tiredness 5>><</link>><<gtiredness>><<gstress>><<glove "Sirris">>
+<<link [[시리스를 돕는다 (0:50)|Sirris Shop Assistant 2]]>><<pass 50>><<stress 5>><<tiredness 5>><</link>><<gtiredness>><<gstress>><<glove "Sirris">>
 <br>
 <<link [[시리스를 군중의 자비에 맡기고 떠난다 (0:01)|Sirris Shop Assistant Leave]]>><<pass 1>><<npcincr Sirris love -1>><</link>><<llove "Sirris">>
 
@@ -1730,9 +1730,9 @@
 		<</if>>
 		<br><br>
 
-		<<link [[장단 맞춰주기|Adult Shop Sydney Cuffed Sex]]>><<set $sexstart to 1>><<npcincr Sydney purity -1>><</link>><<promiscuous1>><<lspurity>>
+		<<link [[장단을 맞춰준다|Adult Shop Sydney Cuffed Sex]]>><<set $sexstart to 1>><<npcincr Sydney purity -1>><</link>><<promiscuous1>><<lspurity>>
 		<br>
-		<<link [[그냥 풀어주기|Adult Shop Sydney Cuffs Free]]>><<set $phase to 1>><<npcincr Sydney purity 1>><</link>><<gspurity>>
+		<<link [[그냥 풀어준다|Adult Shop Sydney Cuffs Free]]>><<set $phase to 1>><<npcincr Sydney purity 1>><</link>><<gspurity>>
 		<br>
 	<<else>>
 		<<His>> 팔이 선반에 연결된 분홍색 털 수갑에 의해 <<him>> 앞에서 묶여 있다.
@@ -1749,9 +1749,9 @@
 		<</if>>
 		<br><br>
 
-		<<link [[놀리기|Adult Shop Sydney Cuffs Tease]]>><<if $sydneyromance isnot 1>><<npcincr Sydney love -1>><</if>><<npcincr Sydney lust 1>><<npcincr Sydney purity -1>><</link>><<if $sydneyromance isnot 1>><<llove>><</if>><<gslust>><<lspurity>>
+		<<link [[놀린다|Adult Shop Sydney Cuffs Tease]]>><<if $sydneyromance isnot 1>><<npcincr Sydney love -1>><</if>><<npcincr Sydney lust 1>><<npcincr Sydney purity -1>><</link>><<if $sydneyromance isnot 1>><<llove>><</if>><<gslust>><<lspurity>>
 		<br>
-		<<link [[풀어주기|Adult Shop Sydney Cuffs Free]]>><<set $phase to 0>><<npcincr Sydney love 1>><</link>><<glove>>
+		<<link [[풀어준다|Adult Shop Sydney Cuffs Free]]>><<set $phase to 0>><<npcincr Sydney love 1>><</link>><<glove>>
 		<br>
 	<</if>>
 <<else>>
@@ -1771,7 +1771,7 @@
 	남은 근무 시간은 별일 없이 지나간다.
 	<<adultShopWage>><<moneyGain _wage>>【을를】 벌었다.<<npcincr Sirris love 1>><<glove "Sirris">>
 	<br><br>
-	<<link [[돌아가기|Adult Shop]]>><<endevent>><</link>>
+	<<link [[돌아간다|Adult Shop]]>><<endevent>><</link>>
 <</if>>
 
 :: Adult Shop Sydney Cuffs Free
@@ -1790,9 +1790,9 @@
 		"어려운 방법으로 하고 싶어요?" <<He>>【은는】 <<his>> 입술을 핥는다. "전 좋아요."
 		<br><br>
 
-		<<link [[굴복하기|Adult Shop Sydney Uncuffed Sex]]>><<set $sexstart to 1>><<npcincr Sydney purity -1>><</link>><<promiscuous1>><<lspurity>>
+		<<link [[굴복한다|Adult Shop Sydney Uncuffed Sex]]>><<set $sexstart to 1>><<npcincr Sydney purity -1>><</link>><<promiscuous1>><<lspurity>>
 		<br>
-		<<link [[저항하기|Adult Shop Sydney Cuffs Struggle]]>><<stress 4>><<npcincr Sydney love -1>><<npcincr Sydney purity 1>><</link>><<gstress>><<llove>><<gspurity>>
+		<<link [[저항한다|Adult Shop Sydney Cuffs Struggle]]>><<stress 4>><<npcincr Sydney love -1>><<npcincr Sydney purity 1>><</link>><<gstress>><<llove>><<gspurity>>
 		<br>
 	<<else>>
 		<<if _sydneyStatus.includes("corrupt")>>
@@ -1854,9 +1854,9 @@
 	"말은 잘하네요. 그걸 실행에 옮기기엔 너무 겁쟁이라는 게 안타깝지만." <<He>>【은는】 당신을 도발하며 <<his>> 엉덩이를 당신 쪽으로 흔든다.
 	<br><br>
 
-	<<link [[굴복하기|Adult Shop Sydney Cuffed Sex]]>><<set $sexstart to 1>><<npcincr Sydney purity -1>><</link>><<promiscuous1>><<lspurity>>
+	<<link [[굴복한다|Adult Shop Sydney Cuffed Sex]]>><<set $sexstart to 1>><<npcincr Sydney purity -1>><</link>><<promiscuous1>><<lspurity>>
 	<br>
-	<<link [[그냥 풀어주기|Adult Shop Sydney Cuffs Free]]>><<set $phase to 1>><<npcincr Sydney purity 1>><</link>><<gspurity>>
+	<<link [[그냥 풀어준다|Adult Shop Sydney Cuffs Free]]>><<set $phase to 1>><<npcincr Sydney purity 1>><</link>><<gspurity>>
 	<br>
 <<else>>
 	<<if $sydneyromance is 1>>
@@ -2307,7 +2307,7 @@
 <br><br>
 <<adultShopWage>><<moneyGain _wage>>【을를】 벌었다.<<npcincr Sirris love 1>><<glove "Sirris">><<npcincr Sydney love 1>><<glove "Sydney">>
 <br><br>
-<<link [[돌아가기|Adult Shop]]>><<endevent>><</link>>
+<<link [[돌아간다|Adult Shop]]>><<endevent>><</link>>
 
 
 :: Adult Shop Sydney Bartering Ignore
@@ -3032,7 +3032,7 @@
 		<br><br>
 		남은 근무 시간은 별일 없이 지나간다. <<adultShopWage>><<moneyGain _wage>>【을를】 벌었다.
 		<br><br>
-		<<link [[돌아가기|Adult Shop]]>><</link>>
+		<<link [[돌아간다|Adult Shop]]>><</link>>
 	<<else>>
 		<<if hasSexStat("promiscuity", 4) and $sydneyromance gte 1>>
 			<span class="lewd">_toy【을를】 보며 킥킥거리는 웃음을 참는다.</span> "정말 그렇죠. 나중에 한번 써보실래요? 괜찮으시다면 제가 도와드릴 수도 있고요."
@@ -3044,7 +3044,7 @@
            <<set $tip += _wage*100>>
 	<<He>>【은는】 당신에게 팁을 남긴다. <<tipreceive "adultShop">>
 			<br><br>
-			<<link [[돌아가기|Adult Shop]]>><</link>>
+			<<link [[돌아간다|Adult Shop]]>><</link>>
 		<<else>>
 			<<person2>>
 			당신은 포장을 보며, <span class="lewd">내용물을 살피며 미소 짓는다.</span> 당신은 시드니의 귀에 속삭인다. "맞아요. 그 용도로 쓰는 거예요."
@@ -3053,7 +3053,7 @@
 			<br><br>
 			남은 근무 시간은 별일 없이 지나간다. <<adultShopWage>><<moneyGain _wage>>【을를】 벌었다.
 			<br><br>
-			<<link [[돌아가기|Adult Shop]]>><</link>>
+			<<link [[돌아간다|Adult Shop]]>><</link>>
 		<</if>>
 	<</if>>
 
@@ -3072,7 +3072,7 @@
 	<br><br>
 	남은 근무 시간은 별일 없이 지나간다. <<adultShopWage>><<moneyGain _wage>>【을를】 벌었다.
 	<br><br>
-	<<link [[돌아가기|Adult Shop]]>><</link>>
+	<<link [[돌아간다|Adult Shop]]>><</link>>
 
 <<else>>
 	<<if $awareness lt 200>>
@@ -3083,7 +3083,7 @@
 		<br><br>
 		남은 근무 시간은 별일 없이 지나간다. <<adultShopWage>><<moneyGain _wage>>【을를】 벌었다.
 		<br><br>
-		<<link [[돌아가기|Adult Shop]]>><</link>>
+		<<link [[돌아간다|Adult Shop]]>><</link>>
 
 	<<else>>
 		당신은 포장을 보며, <span class="lewd">내용물을 살피며 미소 짓는다.</span> 당신은 <<his>> 귀에 속삭인다. "맞아요. 신제품 중 하나이기도 하고요."
@@ -3093,7 +3093,7 @@
 		<br><br>
 		남은 근무 시간은 별일 없이 지나간다. <<adultShopWage>><<moneyGain _wage>>【을를】 벌었다.
 		<br><br>
-		<<link [[돌아가기|Adult Shop]]>><</link>>
+		<<link [[돌아간다|Adult Shop]]>><</link>>
 
 	<</if>>
 

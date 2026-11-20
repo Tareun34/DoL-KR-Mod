@@ -26,26 +26,26 @@
 <</if>>
 <br>
 <<set _chair to Furniture.get('chair')>>
-<<icon "project-maths.png">><<link [[풀이 작업하기 (2:00)|Maths Project Work]]>><<if ($location is "home" and _chair.type.includes("comfy")) or $location is "avery_mansion">><<set $mathschance += 5>><<else>><<set $mathschance += 1>><</if>><<mathsskill 2>><<pass 120>><<stress 12>><</link>><<gstress>><<gmaths>>
+<<icon "project-maths.png">><<link [[풀이 작업한다 (2:00)|Maths Project Work]]>><<if ($location is "home" and _chair.type.includes("comfy")) or $location is "avery_mansion">><<set $mathschance += 5>><<else>><<set $mathschance += 1>><</if>><<mathsskill 2>><<pass 120>><<stress 12>><</link>><<gstress>><<gmaths>>
 <br>
 <<if $mathsstim gte 1 and playerIsPregnant() and playerAwareTheyArePregnant()>>
 	<span class="blue">임신한 것을 알기에 각성제를 복용할 마음이 들지 않는다.</span>
 	<br>
 <<elseif $mathsstim gte 1>>
-	<<pillicon "stimulant">><<link [[각성제 사용하기 (2:00)|Maths Project Stim]]>><<if ($location is "home" and _chair.type.includes("comfy")) or $location is "avery_mansion">><<set $mathschance += 20>><<else>><<set $mathschance += 16>><</if>><<set $mathsstim -= 1>><<set $mathsstimused += 1>><<mathsskill 40>><<pass 120>><</link>><<gggmaths>>
+	<<pillicon "stimulant">><<link [[각성제를 사용한다 (2:00)|Maths Project Stim]]>><<if ($location is "home" and _chair.type.includes("comfy")) or $location is "avery_mansion">><<set $mathschance += 20>><<else>><<set $mathschance += 16>><</if>><<set $mathsstim -= 1>><<set $mathsstimused += 1>><<mathsskill 40>><<pass 120>><</link>><<gggmaths>>
 	<br>
 <</if>>
 <<if $mathsinfo gte 1>>
-	<<investigateicon>><<link [[수학적 통찰력 사용하기 (2:00)|Maths Project Work]]>><<set $mathsinfo -= 1>><<if ($location is "home" and _chair.type.includes("comfy")) or $location is "avery_mansion">><<set $mathschance += 12>><<else>><<set $mathschance += 8>><</if>><<mathsskill 40>><<pass 120>><</link>><<ggmaths>>
+	<<investigateicon>><<link [[수학적 통찰력을 사용한다 (2:00)|Maths Project Work]]>><<set $mathsinfo -= 1>><<if ($location is "home" and _chair.type.includes("comfy")) or $location is "avery_mansion">><<set $mathschance += 12>><<else>><<set $mathschance += 8>><</if>><<mathsskill 40>><<pass 120>><</link>><<ggmaths>>
 	<br>
 <</if>>
 <br>
 <<if $location is "home">>
-	<<getouticon>><<link [[그만두기|Bedroom]]>><</link>>
+	<<getouticon>><<link [[그만둔다|Bedroom]]>><</link>>
 <<elseif $location is "avery_mansion">>
-	<<getouticon>><<link [[그만두기|Mansion Study]]>><</link>>
+	<<getouticon>><<link [[그만둔다|Mansion Study]]>><</link>>
 <<else>>
-	<<getouticon>><<link [[그만두기|School Library]]>><</link>>
+	<<getouticon>><<link [[그만둔다|School Library]]>><</link>>
 <</if>>
 <br>
 
@@ -1534,11 +1534,11 @@
 해답을 제출하거나, 그냥 지켜볼 수 있다. 참여하면 이기든 지든 선생님들이 당신을 더 좋게 생각할 것이다.
 <br><br>
 <<set $mathschance = Math.clamp($mathschance, 0, 100)>>
-<<link [[대회 참가하기 (3:00)|Maths Competition Enter]]>><<pass 3 hours>><<set $mathsproject to "done">><</link>><<note "$mathschance% 확률로 우승" "gold">>
+<<link [[대회를 참가한다 (3:00)|Maths Competition Enter]]>><<pass 3 hours>><<set $mathsproject to "done">><</link>><<note "$mathschance% 확률로 우승" "gold">>
 <br>
-<<link [[지켜보기만 하기 (3:00)|Maths Competition Watch]]>><<set $mathschancestart to $mathschance>><<pass 3 hour>><</link>>
+<<link [[지켜보기만 한다 (3:00)|Maths Competition Watch]]>><<set $mathschancestart to $mathschance>><<pass 3 hour>><</link>>
 <br>
-<<link [[떠나기 (0:05)|Cliff Street]]>><<pass 5>><<endevent>><</link>>
+<<link [[떠난다 (0:05)|Cliff Street]]>><<pass 5>><<endevent>><</link>>
 <br>
 
 :: Maths Competition Watch

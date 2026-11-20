@@ -74,14 +74,14 @@
 
 <div id="masturbationButtons">
 	<<if $timer lte 1>>
-		<div id="next"><<link [[계속하기|Chef Help Masturbation Finish]]>><</link>><<nexttext>></div>
-		<div id="stop"><<link [[그만두기|Chef Help Masturbation Finish]]>><<set $finish to 1>><</link>></div>
+		<div id="next"><<link [[계속한다|Chef Help Masturbation Finish]]>><</link>><<nexttext>></div>
+		<div id="stop"><<link [[그만둔다|Chef Help Masturbation Finish]]>><<set $finish to 1>><</link>></div>
 	<<elseif $masturbation_fluid gte 30>>
-		<div id="next"><<link [[계속하기|Chef Help Masturbation Finish]]>><</link>><<nexttext>></div>
-		<div id="stop"><<link [[그만두기|Chef Help Masturbation Finish]]>><<set $finish to 1>><</link>></div>
+		<div id="next"><<link [[계속한다|Chef Help Masturbation Finish]]>><</link>><<nexttext>></div>
+		<div id="stop"><<link [[그만둔다|Chef Help Masturbation Finish]]>><<set $finish to 1>><</link>></div>
 	<<else>>
-		<div id="next"><<link [[계속하기|Chef Help Masturbation]]>><</link>><<nexttext>></div>
-		<div id="stop"><<link [[그만두기|Chef Help Masturbation Finish]]>><<set $finish to 1>><</link>></div>
+		<div id="next"><<link [[계속한다|Chef Help Masturbation]]>><</link>><<nexttext>></div>
+		<div id="stop"><<link [[그만둔다|Chef Help Masturbation Finish]]>><<set $finish to 1>><</link>></div>
 	<</if>>
 </div>
 <br><br><br><br><br>
@@ -223,9 +223,9 @@
 	<br><br>
 <</if>>
 
-<<link [[음란한 체액으로 크림 만들기|Chef Work 2]]>><<timeTrackingStart "cafeBuns">><<set $chef_job to "special">><</link>>
+<<link [[음란한 체액으로 크림을 만든다|Chef Work 2]]>><<timeTrackingStart "cafeBuns">><<set $chef_job to "special">><</link>>
 <br>
-<<link [[일반 크림 만들기|Chef Work 2]]>><<set $chef_job to "regular">><</link>>
+<<link [[일반 크림을 만든다|Chef Work 2]]>><<set $chef_job to "regular">><</link>>
 <br>
 
 :: Chef Work 2
@@ -606,18 +606,18 @@
 	<<He>>【은는】 창가 근처의 옷걸이를 가리킨다. 그곳에는 턱시도 셔츠, 재킷, 바지 옆에 붉은 무도회 가운이 걸려 있다.
 	<br><br>
 
-	<<link [[현재 옷 입기|Chef Opening Current]]>><</link>>
+	<<link [[현재 옷을 입는다|Chef Opening Current]]>><</link>>
 	<br>
 	<<if $earSlime.forcedDressing?.type is "m">>
 		<span class="red">귀 슬라임이 가운을 입는 것을 거부합니다.</span>
 	<<else>>
-		<<link [[가운 입기|Chef Opening Gown]]>><</link>>
+		<<link [[가운을 입는다|Chef Opening Gown]]>><</link>>
 	<</if>>
 	<br>
 	<<if $earSlime.forcedDressing?.type is "f">>
 		<span class="red">귀 슬라임이 턱시도를 입는 것을 거부합니다.</span>
 	<<else>>
-		<<link [[턱시도 입기|Chef Opening Tuxedo]]>><</link>>
+		<<link [[턱시도 입는다|Chef Opening Tuxedo]]>><</link>>
 	<</if>>
 	<br>
 
@@ -627,13 +627,13 @@
 	<<if $earSlime.forcedDressing?.type is "m">>
 		<span class="red">귀 슬라임이 가운을 입는 것을 거부합니다.</span>
 	<<else>>
-		<<link [[가운 입기|Chef Opening Gown]]>><</link>>
+		<<link [[가운을 입는다|Chef Opening Gown]]>><</link>>
 	<</if>>
 	<br>
 	<<if $earSlime.forcedDressing?.type is "f">>
 		<span class="red">귀 슬라임이 턱시도를 입는 것을 거부합니다.</span>
 	<<else>>
-		<<link [[턱시도 입기|Chef Opening Tuxedo]]>><</link>>
+		<<link [[턱시도 입는다|Chef Opening Tuxedo]]>><</link>>
 	<</if>>
 	<br>
 

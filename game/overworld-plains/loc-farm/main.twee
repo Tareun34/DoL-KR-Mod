@@ -1339,23 +1339,23 @@
 <br><br>
 
 <<if $farm_fight.shelf isnot 1>>
-	<<link [[선반 수색하기|Farm Fight Search Shelf]]>><<set $farm_fight.shelf to 1>><</link>>
+	<<link [[선반을 수색한다|Farm Fight Search Shelf]]>><<set $farm_fight.shelf to 1>><</link>>
 	<br>
 <</if>>
 <<if $farm_fight.toolbox isnot 1>>
-	<<link [[공구함 수색하기|Farm Fight Search Toolbox]]>><<set $farm_fight.toolbox to 1>><</link>>
+	<<link [[공구함을 수색한다|Farm Fight Search Toolbox]]>><<set $farm_fight.toolbox to 1>><</link>>
 	<br>
 <</if>>
 <<if $farm_fight.cupboard isnot 1>>
-	<<link [[찬장 수색하기|Farm Fight Search Cupboard]]>><<set $farm_fight.cupboard to 1>><</link>>
+	<<link [[찬장을 수색한다|Farm Fight Search Cupboard]]>><<set $farm_fight.cupboard to 1>><</link>>
 	<br>
 <</if>>
 <<if $farm_fight.rakes isnot 1>>
-	<<link [[갈퀴 수색하기|Farm Fight Search Rakes]]>><<set $farm_fight.rakes to 1>><</link>>
+	<<link [[갈퀴를 수색한다|Farm Fight Search Rakes]]>><<set $farm_fight.rakes to 1>><</link>>
 	<br>
 <</if>>
 <<if $farm_fight.sheet isnot 1>>
-	<<link [[천으로 덮인 물건 수색하기|Farm Fight Search Sheet]]>><<set $farm_fight.sheet to 1>><</link>>
+	<<link [[천으로 덮인 물건을 수색한다|Farm Fight Search Sheet]]>><<set $farm_fight.sheet to 1>><</link>>
 	<br>
 <</if>>
 
@@ -1777,13 +1777,13 @@
 	<<set _clothed = ![V.worn.upper.name, V.worn.lower.name, V.worn.under_upper.name, V.worn.under_lower.name, V.worn.over_upper.name, V.worn.over_lower.name].every(x => x == 'naked')>>
 	<<bathroomicon "shower">><<link [["샤워하기 " + (_clothed ? " 옷 입은 채로 " : "") + "(0:30)"->Farm Shower]]>><<water>><<pass 30>><<stress -6>><<set $hygiene to 0>><</link>><<lstress>>
 <<else>>
-	<<bathroomicon "shower">><<link [[샤워하기 (0:30)|Farm Shower]]>><<strip>><<pass 30>><<stress -6>><<set $hygiene to 0>><</link>><<lstress>>
+	<<bathroomicon "shower">><<link [[샤워한다 (0:30)|Farm Shower]]>><<strip>><<pass 30>><<stress -6>><<set $hygiene to 0>><</link>><<lstress>>
 <</if>>
 <br>
 <<personalUpkeep>>
 <<pregnancyTest "Farm Shed">>
 <br><br>
-<<getouticon>><<link [[나가기 (0:01)|Farm Work]]>><<endevent>><<pass 1>><</link>>
+<<getouticon>><<link [[나간다 (0:01)|Farm Work]]>><<endevent>><<pass 1>><</link>>
 <br>
 
 :: Farm Shower
@@ -1809,9 +1809,9 @@
 		"미, 미안." <<he>>【이가】 말한다. "네가 여기 있는 줄 몰랐어."
 		<br><br>
 
-		<<link [[소리 지르기|Farm Shower Scream]]>><<npcincr Alex love -1>><<stress -6>><</link>><<llove>><<lstress>>
+		<<link [[소리를 지른다|Farm Shower Scream]]>><<npcincr Alex love -1>><<stress -6>><</link>><<llove>><<lstress>>
 		<br>
-		<<link [[알렉스에게 나가달라고 요청하기|Farm Shower Leave]]>><</link>>
+		<<link [[알렉스에게 나가달라고 요청한다|Farm Shower Leave]]>><</link>>
 		<br>
 		<<if hasSexStat("exhibitionism", 4)>>
 			<<link [[알렉스가 보게 둔다 (0:05)|Farm Shower Watch]]>><<npcincr Alex lust 5>><<pass 5>><</link>><<exhibitionist4>><<glust>>
@@ -1837,9 +1837,9 @@
 		<br>
 	<</if>>
 <<else>>
-	<<skinicon "masturbate">><<link [[자위하기|Farm Shower Masturbation]]>><<set $masturbationstart to 1>><</link>>
+	<<skinicon "masturbate">><<link [[자위한다|Farm Shower Masturbation]]>><<set $masturbationstart to 1>><</link>>
 	<br>
-	<<getouticon>><<link [[나가기|Farm Work]]>><<clotheson>><</link>>
+	<<getouticon>><<link [[나간다|Farm Work]]>><<clotheson>><</link>>
 	<br>
 <</if>>
 
@@ -2015,9 +2015,9 @@
 <<He>>【은는】 당황스러운 갈망으로 쳐다본다.
 <br><br>
 
-<<link [[씻어달라고 초대하기|Farm Shower Invite]]>><<npcincr Alex lust 5>><</link>><<exhibitionist4>><<gglust>>
+<<link [[씻어달라고 초대한다|Farm Shower Invite]]>><<npcincr Alex lust 5>><</link>><<exhibitionist4>><<gglust>>
 <br>
-<<link [[끝내기|Farm Shower Finish]]>><</link>>
+<<link [[끝낸다|Farm Shower Finish]]>><</link>>
 <br>
 
 :: Farm Shower Invite
@@ -2681,7 +2681,7 @@
 <br>
 <<if $farm.stock.truffles gte 1>>
 	<<set _farm_stocked to true>>
-	<<foodstufficon "truffle">><<link [[가져가기|Farm Stock]]>><<set $phase2 to "truffle">><<tending_give truffle $farm.stock.truffles>><<set $farm.stock.truffles to 0>><</link>>
+	<<foodstufficon "truffle">><<link [[가져간다|Farm Stock]]>><<set $phase2 to "truffle">><<tending_give truffle $farm.stock.truffles>><<set $farm.stock.truffles to 0>><</link>>
 	<br>
 <</if>>
 <br>
@@ -2689,7 +2689,7 @@
 <br>
 <<if $farm.stock.eggs gte 1>>
 	<<set _farm_stocked to true>>
-	<<foodstufficon "chicken_egg">><<link [[가져가기|Farm Stock]]>><<set $phase2 to "chicken egg">><<tending_give chicken_egg $farm.stock.eggs>><<set $farm.stock.eggs to 0>><</link>>
+	<<foodstufficon "chicken_egg">><<link [[가져간다|Farm Stock]]>><<set $phase2 to "chicken egg">><<tending_give chicken_egg $farm.stock.eggs>><<set $farm.stock.eggs to 0>><</link>>
 	<br>
 <</if>>
 <br>
@@ -2697,7 +2697,7 @@
 <br>
 <<if $farm.stock.milk gte 1>>
 	<<set _farm_stocked to true>>
-	<<foodstufficon "bottle_of_milk">><<link [[가져가기|Farm Stock]]>><<set $phase2 to "bottle of milk">><<tending_give bottle_of_milk $farm.stock.milk>><<set $farm.stock.milk to 0>><</link>>
+	<<foodstufficon "bottle_of_milk">><<link [[가져간다|Farm Stock]]>><<set $phase2 to "bottle of milk">><<tending_give bottle_of_milk $farm.stock.milk>><<set $farm.stock.milk to 0>><</link>>
 	<br>
 <</if>>
 <br>
@@ -2705,14 +2705,14 @@
 <br>
 <<if $farm.stock.cream gte 1>>
 	<<set _farm_stocked to true>>
-	<<foodstufficon "cream">><<link [[가져가기|Farm Stock]]>><<set $phase2 to "cream">><<tending_give cream $farm.stock.cream>><<set $farm.stock.cream to 0>><</link>>
+	<<foodstufficon "cream">><<link [[가져간다|Farm Stock]]>><<set $phase2 to "cream">><<tending_give cream $farm.stock.cream>><<set $farm.stock.cream to 0>><</link>>
 	<br>
 <</if>>
 <br>
 
 <<if _farm_stocked is true>>
 	<<icon "tending/basket.png">>
-	<<link [[모두 가져가기|Farm Cottage]]>>
+	<<link [[모두 가져간다|Farm Cottage]]>>
 		<<if $farm.stock.truffles gte 1>>
 			<<tending_give truffle $farm.stock.truffles>><<set $farm.stock.truffles to 0>>
 		<</if>>
@@ -2730,7 +2730,7 @@
 	<br>
 <</if>>
 
-<<getouticon>><<link [[떠나기|Farm Cottage]]>><</link>>
+<<getouticon>><<link [[떠난다|Farm Cottage]]>><</link>>
 <br>
 
 :: Farm Stage 11 Confident

@@ -41,11 +41,11 @@
 <</if>>
 <br><br>
 
-<<link [[젊은 거지, 캐스 역할 맡기|English Play Role Select]]>><<set $phase to 1>><</link>>
+<<link [[젊은 거지, 캐스 역할을 맡는다|English Play Role Select]]>><<set $phase to 1>><</link>>
 <br>
-<<link [[부유한 가문의 자제, 테일러 역할 맡기|English Play Role Select]]>><<set $phase to 2>><</link>>
+<<link [[부유한 가문의 자제, 테일러 역할을 맡는다|English Play Role Select]]>><<set $phase to 2>><</link>>
 <br>
-<<link [[그들의 사랑을 반대하는 테일러의 부모, 스털링 역할 맡기|English Play Role Select]]>><<set $phase to 3>><</link>>
+<<link [[그들의 사랑을 반대하는 테일러의 부모, 스털링 역할을 맡는다|English Play Role Select]]>><<set $phase to 3>><</link>>
 <br>
 
 :: English Play Role Select
@@ -118,11 +118,11 @@
 어떤 역할에 신청하시겠습니까?
 <br><br>
 
-<<link [[젊은 거지, 캐스 역할 맡기|English Play Late Role]]>><<set $phase to 1>><</link>>
+<<link [[젊은 거지, 캐스 역할을 맡는다|English Play Late Role]]>><<set $phase to 1>><</link>>
 <br>
-<<link [[부유한 가문의 자제, 테일러 역할 맡기|English Play Late Role]]>><<set $phase to 2>><</link>>
+<<link [[부유한 가문의 자제, 테일러 역할을 맡는다|English Play Late Role]]>><<set $phase to 2>><</link>>
 <br>
-<<link [[그들의 사랑을 반대하는 테일러의 부모, 스털링 역할 맡기|English Play Late Role]]>><<set $phase to 3>><</link>>
+<<link [[그들의 사랑을 반대하는 테일러의 부모, 스털링 역할을 맡는다|English Play Late Role]]>><<set $phase to 3>><</link>>
 <br>
 <<link [[물러선다|English Classroom]]>><<endevent>><<set $eventskip to 1>><</link>>
 <br>
@@ -726,11 +726,11 @@
 		카일라 앞으로 다가선다. "연기 제법인데, 이 괴짜 새끼야. 네놈한테 그런 재주가 있는 줄 누가 알았겠어?" 다른 학생들이 낄낄거린다. "차라리 우리 조로 넘어오는 게 어때?"
 		<br><br>
 
-		<<link [[카일라 놀리기|English Play Rehearse Both Students]]>><<npcincr Kylar love -5>><<npcincr Sydney love -1>><<status 5>><<set $phase2 to 1>><</link>><<gcool>><<lllove "Kylar">><<llove "Sydney">>
+		<<link [[카일라를 놀린다|English Play Rehearse Both Students]]>><<npcincr Kylar love -5>><<npcincr Sydney love -1>><<status 5>><<set $phase2 to 1>><</link>><<gcool>><<lllove "Kylar">><<llove "Sydney">>
 		<br>
-		<<link [[카일라 감싸기|English Play Rehearse Both Students]]>><<status -5>><<npcincr Kylar love 2>><<set $phase2 to 2>><</link>><<lcool>><<glove "Kylar">>
+		<<link [[카일라를 감싼다|English Play Rehearse Both Students]]>><<status -5>><<npcincr Kylar love 2>><<set $phase2 to 2>><</link>><<lcool>><<glove "Kylar">>
 		<br>
-		<<link [[침묵 지키기|English Play Rehearse Both Students]]>><<npcincr Kylar love -1>><<set $phase2 to 3>><</link>><<llove "Kylar">>
+		<<link [[침묵을 지킨다|English Play Rehearse Both Students]]>><<npcincr Kylar love -1>><<set $phase2 to 3>><</link>><<llove "Kylar">>
 		<br>
 
 	<<elseif $phase is 2>>
@@ -756,11 +756,11 @@
 			저런 패배자 놈이랑 어울리고 있어?" <<Hes>> 카일라를 가리킨다. 다른 학생들이 낄낄거린다. "차라리 우리 조로 넘어오는 게 어때?"
 			<br><br>
 
-			<<link [[카일라 놀리기|English Play Rehearse Both Students]]>><<npcincr Kylar love -5>><<npcincr Sydney love -1>><<status 1>><<set $phase2 to 1>><</link>><<gcool>><<lllove "Kylar">><<llove "Sydney">>
+			<<link [[카일라를 놀린다|English Play Rehearse Both Students]]>><<npcincr Kylar love -5>><<npcincr Sydney love -1>><<status 1>><<set $phase2 to 1>><</link>><<gcool>><<lllove "Kylar">><<llove "Sydney">>
 			<br>
-			<<link [[카일라 감싸기|English Play Rehearse Both Students]]>><<status -5>><<npcincr Kylar love 2>><<set $phase2 to 2>><</link>><<lcool>><<glove "Kylar">>
+			<<link [[카일라를 감싼다|English Play Rehearse Both Students]]>><<status -5>><<npcincr Kylar love 2>><<set $phase2 to 2>><</link>><<lcool>><<glove "Kylar">>
 			<br>
-			<<link [[침묵 지키기|English Play Rehearse Both Students]]>><<npcincr Kylar love -1>><<set $phase2 to 3>><</link>><<llove "Kylar">>
+			<<link [[침묵을 지킨다|English Play Rehearse Both Students]]>><<npcincr Kylar love -1>><<set $phase2 to 3>><</link>><<llove "Kylar">>
 			<br>
 
 		<</if>>
@@ -787,9 +787,9 @@
 		"연기 제법인데." <<He>>【이가】 당신의 어깨에 팔을 두른다. "이런 패배자 녀석들이랑 어울려서 뭐 하고 있냐?" <<Hes>> 카일라와 시드니를 가리킨다. 다른 학생들이 낄낄거린다.
 		<br><br>
 
-		<<link [[두 사람 감싸기|English Play Rehearse Both Students]]>><<status -5>><<npcincr Kylar love 2>><<npcincr Sydney love 2>><<set $phase2 to 2>><</link>><<lcool>><<glove "Kylar">><<glove "Sydney">>
+		<<link [[두 사람을 감싼다|English Play Rehearse Both Students]]>><<status -5>><<npcincr Kylar love 2>><<npcincr Sydney love 2>><<set $phase2 to 2>><</link>><<lcool>><<glove "Kylar">><<glove "Sydney">>
 		<br>
-		<<link [[침묵 지키기|English Play Rehearse Both Students]]>><<set $phase2 to 3>><</link>>
+		<<link [[침묵을 지킨다|English Play Rehearse Both Students]]>><<set $phase2 to 3>><</link>>
 		<br>
 	<<else>>
 		"존나 가관인 연기네," <<he>>【이가】 말한다. "뭐 하러 쟤들 시간까지 낭비하고 있냐?" <<He>>【이가】 카일라와 시드니를 가리킨다. "너희 둘 다 이런 패배자 녀석은 버려두고, 그—"
@@ -1285,7 +1285,7 @@
 		<<link [["" + window.KR.gatPersonNameDictKR($englishPlayRoles.Kylar) + " 역을 맡은 학생에게 말 걸기"|English Play Kylar Talk]]>><</link>>
 		<br>
 	<<else>>
-		<<link [[카일라에게 말 걸기|English Play Kylar Talk]]>><</link>>
+		<<link [[카일라에게 말을 건다|English Play Kylar Talk]]>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1294,13 +1294,13 @@
 		<<link [["" + window.KR.gatPersonNameDictKR($englishPlayRoles.Sydney) + " 역을 맡은 학생에게 말 걸기"|English Play Sydney Talk]]>><</link>>
 		<br>
 	<<else>>
-		<<link [[시드니에게 말 걸기|English Play Sydney Talk]]>><</link>>
+		<<link [[시드니에게 말을 건다|English Play Sydney Talk]]>><</link>>
 		<br>
 	<</if>>
 <</if>>
 <br>
 <<if $englishPlayRoles.KylarKnown and $englishPlayRoles.SydneyKnown>>
-	<<link [[공연 준비하기|English Play Prep]]>><</link>>
+	<<link [[공연을 준비한다|English Play Prep]]>><</link>>
 	<br>
 <</if>>
 
@@ -1321,9 +1321,9 @@
 <<He>>【은는】 혼잣말을 중얼거리며 정신없이 서성인다. "내가 왜 이걸 하겠다고 했을까..." <<he>>【이가】 조용히 중얼거린다. "저 많은 사람들이 내가 바보처럼 연기하는 걸 볼 거야, 비웃겠지 그리고—" <<He>>【이가】 당신을 본다. "나 못하겠어."
 <br><br>
 
-<<link [[카일라 안심시키기|English Play Kylar Talk 2]]>><<set $phase to 1>><</link>>
+<<link [[카일라를 안심시킨다|English Play Kylar Talk 2]]>><<set $phase to 1>><</link>>
 <br>
-<<link [[무시하기|English Play Kylar Talk 2]]>><<set $phase to 2>><<npcincr Kylar rage 5>><</link>><<ggksuspicion>>
+<<link [[무시한다|English Play Kylar Talk 2]]>><<set $phase to 2>><<npcincr Kylar rage 5>><</link>><<ggksuspicion>>
 <br>
 
 :: English Play Kylar Talk 2
@@ -1399,9 +1399,9 @@
 <</if>>
 <br><br>
 
-<<link [[시드니 위로하기|English Play Sydney Talk 2]]>><<set $phase to 1>><</link>>
+<<link [[시드니 위로한다|English Play Sydney Talk 2]]>><<set $phase to 1>><</link>>
 <br>
-<<link [[시드니 겁주기|English Play Sydney Talk 2]]>><<set $phase to 2>><</link>>
+<<link [[시드니 겁준다|English Play Sydney Talk 2]]>><<set $phase to 2>><</link>>
 <br>
 
 :: English Play Sydney Talk 2
@@ -2165,11 +2165,11 @@
 			마지막 작별 인사로, 이제 이 장면은 키스로 끝나야 한다. 도렌이 진짜 키스는 필요 없지만, 관객들은 더 호의적으로 반응할 수 있다고 언급했던 것을 기억한다.
 			<br><br>
 
-			<<link [[키스 피하기|English Play Act Three No Kiss]]>><</link>>
+			<<link [[키스를 피한다|English Play Act Three No Kiss]]>><</link>>
 			<br>
-			<<link [[뺨에 키스하기|English Play Act Three Kiss]]>><<set $phase to 1>><</link>>
+			<<link [[뺨에 키스한다|English Play Act Three Kiss]]>><<set $phase to 1>><</link>>
 			<br>
-			<<link [[입술에 키스하기|English Play Act Three Kiss]]>><<set $english_play_kiss to true>><</link>><<kissvirginitywarning>>
+			<<link [[입술에 키스한다|English Play Act Three Kiss]]>><<set $english_play_kiss to true>><</link>><<kissvirginitywarning>>
 			<br>
 		<<else>>
 			당신은 카일라와 함께 마지막 막을 위해 무대에 선다. 이번에는 시드니가 없다. 마지막 대사를 읊는 것은 카일라에게 달렸다.
@@ -2181,11 +2181,11 @@
 			마지막 작별 인사로, 이제 이 장면은 키스로 끝나야 한다. 도렌이 진짜 키스는 필요 없지만, 관객들은 더 호의적으로 반응할 수 있다고 언급했던 것을 기억한다.
 			<br><br>
 
-			<<link [[키스 피하기|English Play Act Three No Kiss]]>><<npcincr Kylar rage 5>><</link>><<ggksuspicion>>
+			<<link [[키스를 피한다|English Play Act Three No Kiss]]>><<npcincr Kylar rage 5>><</link>><<ggksuspicion>>
 			<br>
-			<<link [[카일라의 뺨에 키스하기|English Play Act Three Kiss]]>><<set $phase to 1>><</link>>
+			<<link [[카일라의 뺨에 키스한다|English Play Act Three Kiss]]>><<set $phase to 1>><</link>>
 			<br>
-			<<link [[카일라의 입술에 키스하기|English Play Act Three Kiss]]>><<set $english_play_kiss to true>><<npcincr Kylar rage -5>><</link>><<llksuspicion>><<kissvirginitywarning>>
+			<<link [[카일라의 입술에 키스한다|English Play Act Three Kiss]]>><<set $english_play_kiss to true>><<npcincr Kylar rage -5>><</link>><<llksuspicion>><<kissvirginitywarning>>
 			<br>
 		<</if>>
 	<<case "Taylor">>
@@ -2206,11 +2206,11 @@
 		마지막 작별 인사로, 이제 이 장면은 키스로 끝나야 한다. 도렌이 진짜 키스는 필요 없지만, 관객들은 더 호의적으로 반응할 수 있다고 언급했던 것을 기억한다.
 		<br><br>
 
-		<<link [[키스 피하기|English Play Act Three No Kiss]]>><</link>>
+		<<link [[키스를 피한다|English Play Act Three No Kiss]]>><</link>>
 		<br>
-		<<link [[시드니의 뺨에 키스하기|English Play Act Three Kiss]]>><<npcincr Sydney love 1>><<set $phase to 1>><</link>><<glove "Sydney">>
+		<<link [[시드니의 뺨에 키스한다|English Play Act Three Kiss]]>><<npcincr Sydney love 1>><<set $phase to 1>><</link>><<glove "Sydney">>
 		<br>
-		<<link [[시드니의 입술에 키스하기|English Play Act Three Kiss]]>><<set $english_play_kiss to true>><<npcincr Sydney love 5>><</link>><<gglove "Sydney">>
+		<<link [[시드니의 입술에 키스한다|English Play Act Three Kiss]]>><<set $english_play_kiss to true>><<npcincr Sydney love 5>><</link>><<gglove "Sydney">>
 		<br>
 
 	<<case "Sterling">>
@@ -2225,13 +2225,13 @@
 		<br><br>
 
 		<<if $englishPlayKylarReplace>>
-			<<link [[부추기기|English Play Act Three Kiss]]>><<npcincr Sydney purity -2>><</link>><<lspurity>><<gapproval>>
+			<<link [[부추긴다|English Play Act Three Kiss]]>><<npcincr Sydney purity -2>><</link>><<lspurity>><<gapproval>>
 			<br>
 		<<else>>
-			<<link [[부추기기|English Play Act Three Kiss]]>><<npcincr Kylar love -2>><<npcincr Sydney purity -2>><</link>><<llove "Kylar">><<lspurity>><<gapproval>>
+			<<link [[부추긴다|English Play Act Three Kiss]]>><<npcincr Kylar love -2>><<npcincr Sydney purity -2>><</link>><<llove "Kylar">><<lspurity>><<gapproval>>
 			<br>
 		<</if>>
-		<<link [[아무것도 하지 않기|English Play Act Three No Kiss]]>><</link>><<lapproval>>
+		<<link [[아무것도 하지 않는다|English Play Act Three No Kiss]]>><</link>><<lapproval>>
 		<br>
 <</switch>>
 

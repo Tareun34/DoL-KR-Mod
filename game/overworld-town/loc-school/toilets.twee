@@ -27,7 +27,7 @@
 		<br>
 	<</if>>
 	<<if $brothel_basement_intro is 1 and hasSexStat("promiscuity", 4)>>
-		<<brothelicon "gloryhole">><<link [[대기실에 글로리홀 설치하기|School Gloryhole Start]]>><</link>><<promiscuous4>>
+		<<brothelicon "gloryhole">><<link [[대기실에 글로리홀을 설치한다|School Gloryhole Start]]>><</link>><<promiscuous4>>
 		<br>
 	<</if>>
 	<<if $settings.condomLevel gte 1>>
@@ -35,7 +35,7 @@
 		<br>
 	<</if>>
 	<br>
-	<<getouticon>><<link [[화장실에서 나가기 (0:01)|Hallways]]>><<pass 1>><</link>>
+	<<getouticon>><<link [[화장실에서 나간다 (0:01)|Hallways]]>><<pass 1>><</link>>
 	<br>
 <</if>>
 
@@ -397,28 +397,28 @@
 		<<eventsschooltoilets>>
 	<<else>>
 		<<storeactions "schoolboys">>
-		<<mirroricon "school">><<link [[거울 보기 (0:02)|Simple Mirror]]>><<pass 2>><<set $previousPassage = $passage>><</link>>
+		<<mirroricon "school">><<link [[거울을 본다 (0:02)|Simple Mirror]]>><<pass 2>><<set $previousPassage = $passage>><</link>>
 		<br>
 		<<if setup.bodyliquid.combined("face") gte 1 or $skin.left_cheek.pen is "pen" or $skin.right_cheek.pen is "pen" or $skin.forehead.pen is "pen" or $skin.left_cheek.pen is "mud" or $skin.right_cheek.pen is "mud" or $skin.forehead.pen is "mud" or $skin.left_cheek.pen is "lipstick" or $skin.right_cheek.pen is "lipstick" or $skin.forehead.pen is "lipstick">>
-			<<bathroomicon "sink">><<link [[얼굴 씻기 (0:05)|School Boy's Wash]]>><<pass 5>><</link>>
+			<<bathroomicon "sink">><<link [[얼굴을 씻는다 (0:05)|School Boy's Wash]]>><<pass 5>><</link>>
 			<br>
 		<</if>>
 		<<if setup.bodyliquid.combined("mouth") gte 1>>
-			<<bathroomicon "sink">><<link [[입 헹구기 (0:05)|School Boy's Rinse]]>><<pass 5>><</link>>
+			<<bathroomicon "sink">><<link [[입을 헹군다 (0:05)|School Boy's Rinse]]>><<pass 5>><</link>>
 			<br>
 		<</if>>
-		<<skinicon "masturbate">><<link [[자위하기|School Boy's Toilets Masturbation]]>><<set $masturbationstart to 1>><</link>>
+		<<skinicon "masturbate">><<link [[자위한다|School Boy's Toilets Masturbation]]>><<set $masturbationstart to 1>><</link>>
 		<br>
 		<<pregnancyTest "School Boy's Toilets">>
 		<<storeon "schoolboys" "check">>
 		<<if _store_check isnot 1>>
-			<<getouticon>><<link [[나가기 (0:01)|Hallways]]>><<pass 1>><</link>>
+			<<getouticon>><<link [[나간다 (0:01)|Hallways]]>><<pass 1>><</link>>
 		<<elseif $exposed gte 2 and hasSexStat("exhibitionism", 4)>>
-			<<getouticon>><<link [[몰래 나가기 (0:01)|Hallways Sneak]]>><<pass 1>><<set $phase to 2>><</link>><<exhibitionist4>>
+			<<getouticon>><<link [[몰래 나간다 (0:01)|Hallways Sneak]]>><<pass 1>><<set $phase to 2>><</link>><<exhibitionist4>>
 		<<elseif $exposed is 1 and hasSexStat("exhibitionism", 3)>>
-			<<getouticon>><<link [[몰래 나가기 (0:01)|Hallways Sneak]]>><<pass 1>><<set $phase to 1>><</link>><<exhibitionist3>>
+			<<getouticon>><<link [[몰래 나간다 (0:01)|Hallways Sneak]]>><<pass 1>><<set $phase to 1>><</link>><<exhibitionist3>>
 		<<elseif $exposed lte 0>>
-			<<getouticon>><<link [[나가기 (0:01)|Hallways]]>><<pass 1>><</link>>
+			<<getouticon>><<link [[나간다 (0:01)|Hallways]]>><<pass 1>><</link>>
 		<</if>>
 	<</if>>
 <</if>>
@@ -438,28 +438,28 @@
 		<<eventsschooltoilets>>
 	<<else>>
 		<<storeactions "schoolgirls">>
-		<<mirroricon "school">><<link [[거울 보기 (0:02)|Simple Mirror]]>><<pass 2>><<set $previousPassage = $passage>><</link>>
+		<<mirroricon "school">><<link [[거울을 본다 (0:02)|Simple Mirror]]>><<pass 2>><<set $previousPassage = $passage>><</link>>
 		<br>
 		<<if setup.bodyliquid.combined("face") gte 1 or $skin.left_cheek.pen is "pen" or $skin.right_cheek.pen is "pen" or $skin.forehead.pen is "pen" or $skin.left_cheek.pen is "mud" or $skin.right_cheek.pen is "mud" or $skin.forehead.pen is "mud" or $skin.left_cheek.pen is "lipstick" or $skin.right_cheek.pen is "lipstick" or $skin.forehead.pen is "lipstick">>
-			<<bathroomicon "sink">><<link [[얼굴 씻기 (0:05)|School Girl's Wash]]>><<pass 5>><</link>>
+			<<bathroomicon "sink">><<link [[얼굴을 씻는다 (0:05)|School Girl's Wash]]>><<pass 5>><</link>>
 			<br>
 		<</if>>
 		<<if setup.bodyliquid.combined("mouth") gte 1>>
-			<<bathroomicon "sink">><<link [[입 헹구기 (0:05)|School Girl's Rinse]]>><<pass 5>><</link>>
+			<<bathroomicon "sink">><<link [[입을 헹군다 (0:05)|School Girl's Rinse]]>><<pass 5>><</link>>
 			<br>
 		<</if>>
-		<<skinicon "masturbate">><<link [[자위하기|School Girl's Toilets Masturbation]]>><<set $masturbationstart to 1>><</link>>
+		<<skinicon "masturbate">><<link [[자위한다|School Girl's Toilets Masturbation]]>><<set $masturbationstart to 1>><</link>>
 		<br>
 		<<pregnancyTest "School Girl's Toilets">>
 		<<storeon "schoolgirls" "check">>
 		<<if _store_check isnot 1>>
-			<<getouticon>><<link [[나가기 (0:01)|Hallways]]>><<pass 1>><</link>>
+			<<getouticon>><<link [[나간다 (0:01)|Hallways]]>><<pass 1>><</link>>
 		<<elseif $exposed gte 2 and hasSexStat("exhibitionism", 4)>>
-			<<getouticon>><<link [[몰래 나가기 (0:01)|Hallways Sneak]]>><<pass 1>><<set $phase to 2>><</link>><<exhibitionist4>>
+			<<getouticon>><<link [[몰래 나간다 (0:01)|Hallways Sneak]]>><<pass 1>><<set $phase to 2>><</link>><<exhibitionist4>>
 		<<elseif $exposed is 1 and hasSexStat("exhibitionism", 3)>>
-			<<getouticon>><<link [[몰래 나가기 (0:01)|Hallways Sneak]]>><<pass 1>><<set $phase to 1>><</link>><<exhibitionist3>>
+			<<getouticon>><<link [[몰래 나간다 (0:01)|Hallways Sneak]]>><<pass 1>><<set $phase to 1>><</link>><<exhibitionist3>>
 		<<elseif $exposed lte 0>>
-			<<getouticon>><<link [[나가기 (0:01)|Hallways]]>><<pass 1>><</link>>
+			<<getouticon>><<link [[나간다 (0:01)|Hallways]]>><<pass 1>><</link>>
 		<</if>>
 	<</if>>
 <</if>>
@@ -590,14 +590,14 @@
 		<<wearProp "lockpick">>
 		<span class="green">자물쇠는 쉽게 딸 수 있을 것 같다.</span>
 		<br><br>
-		<<lockicon "pick">><<link [[자물쇠 따기 (0:10)|Vending Machine Sneak]]>><<pass 10>><<crimeUp 1 "petty">><</link>><<crime "petty">>
+		<<lockicon "pick">><<link [[자물쇠를 딴다 (0:10)|Vending Machine Sneak]]>><<pass 10>><<crimeUp 1 "petty">><</link>><<crime "petty">>
 		<br>
 	<</if>>
 <<else>>
 	<span class="red">자물쇠는 당신의 실력으로 딸 수 없을 것 같다.</span><<skulduggeryrequired>>
 	<br>
 <</if>>
-<<condomicon "machine">><<link [[부수기 (0:10)|Vending Machine Smash]]>><<pass 10>><<crimeUp 5 "destruction">><<crimeUp 5 "petty">><</link>><<physiquedifficulty>> <<crimes "destruction" "petty">>
+<<condomicon "machine">><<link [[부순다 (0:10)|Vending Machine Smash]]>><<pass 10>><<crimeUp 5 "destruction">><<crimeUp 5 "petty">><</link>><<physiquedifficulty>> <<crimes "destruction" "petty">>
 <br>
 <<getouticon>><<link [[뒤로|School Toilets]]>><</link>>
 

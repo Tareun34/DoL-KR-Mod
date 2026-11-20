@@ -25,7 +25,7 @@
 		<br><br>
 	<<else>>
 		<<set $skulduggerydifficulty to 100>>
-		<<lockicon "pick">><<link [[사물함 따기 (0:15)|School Lockers Sneak]]>><<handheldon>><<pass 15>><<crimeUp 30 "petty">><<skulduggerycheck "silent">><</link>><<skulduggerydifficulty>><<crime "petty">>
+		<<lockicon "pick">><<link [[사물함을 딴다 (0:15)|School Lockers Sneak]]>><<handheldon>><<pass 15>><<crimeUp 30 "petty">><<skulduggerycheck "silent">><</link>><<skulduggerydifficulty>><<crime "petty">>
 		<br>
 	<</if>>
 <</if>>

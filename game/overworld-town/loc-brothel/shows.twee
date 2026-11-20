@@ -1609,26 +1609,26 @@
 		<<if $exposed gte 1>>
 			<<set _exhibitionist to _fullyNaked ? 5 : 3>>
 			<<if hasSexStat("exhibitionism", _exhibitionist)>>
-				<<link [[결박 자랑하기|Brothel Show Virginity Start]]>><<set $phase to 3>><</link>><<= _fullyNaked ? "<<exhibitionist5>>" : "<<exhibitionist3>>">>
+				<<link [[결박을 자랑한다|Brothel Show Virginity Start]]>><<set $phase to 3>><</link>><<= _fullyNaked ? "<<exhibitionist5>>" : "<<exhibitionist3>>">>
 			<<else>>
 				<<insufficientStat "exhibitionism" "그들에게 나체를 과시하기엔">>
 			<</if>>
 		<<else>>
-			<<link [[결박 자랑하기|Brothel Show Virginity Start]]>><<set $phase to 3>><</link>>
+			<<link [[결박을 자랑한다|Brothel Show Virginity Start]]>><<set $phase to 3>><</link>>
 		<</if>>
 	<<else>>
 		<<if hasSexStat("exhibitionism", 5)>>
 			<<if _fullyNaked>>
-				<<link [[뽐내기|Brothel Show Virginity Start]]>><<set $phase to 1>><</link>><<exhibitionist5>>
+				<<link [[뽐낸다|Brothel Show Virginity Start]]>><<set $phase to 1>><</link>><<exhibitionist5>>
 			<<else>>
-				<<link [[스트립쇼 하기|Brothel Show Virginity Start]]>><<set $phase to 2>><</link>><<exhibitionist5>>
+				<<link [[스트립쇼를 한다|Brothel Show Virginity Start]]>><<set $phase to 2>><</link>><<exhibitionist5>>
 			<</if>>
 		<<else>>
 			<<insufficientStat "exhibitionism" "그들에게 나체를 과시하기엔">>
 		<</if>>
 	<</if>>
 	<br>
-	<<link [[아무것도 안 하기|Brothel Show Virginity Start]]>><<set $phase to 0>><</link>>
+	<<link [[아무것도 안 한다|Brothel Show Virginity Start]]>><<set $phase to 0>><</link>>
 	<br>
 <<else>> /* Change rape show */
 	당신과 브라이어 위로 하얀 조명 하나가 켜지고, 어두운 방의 소음이 잦아든다. 무대 가장자리 너머는 보이지 않지만, 당신을 향한 시선들은 느껴진다.

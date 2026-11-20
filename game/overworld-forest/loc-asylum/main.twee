@@ -92,7 +92,7 @@
 		<<else>>
 			창문으로 수건을 던져 당신의 위치를 알릴 수 있다.
 			<br>
-			<<towelicon>><<link [[수건 던지기|Eden Towel Throw]]>><</link>>
+			<<towelicon>><<link [[수건을 던진다|Eden Towel Throw]]>><</link>>
 			<br>
 		<</if>>
 	<</if>>
@@ -102,12 +102,12 @@
 	<<else>>
 		옷이 들어있는 푹신한 벽장이 벽에서 튀어나와 있다.
 		<br>
-		<<asylumicon "wardrobe">><<link [[열기|Asylum Wardrobe]]>><</link>>
+		<<asylumicon "wardrobe">><<link [[연다|Asylum Wardrobe]]>><</link>>
 		<br>
 	<</if>>
 	<<if $asylumstate isnot "sleep">>
 		<br>
-		<<getouticon>><<link [[나가기|Asylum]]>><</link>>
+		<<getouticon>><<link [[나간다|Asylum]]>><</link>>
 		<br>
 	<</if>>
 	<br>
@@ -139,7 +139,7 @@
 		<<else>>
 			창문으로 수건을 던져 당신의 위치를 알릴 수 있다.
 			<br>
-			<<towelicon>><<link [[수건 던지기|Eden Towel Throw]]>><</link>>
+			<<towelicon>><<link [[수건을 던진다|Eden Towel Throw]]>><</link>>
 			<br>
 		<</if>>
 	<</if>>
@@ -149,12 +149,12 @@
 	<<else>>
 		옷이 들어있는 푹신한 벽장이 벽에서 튀어나와 있다.
 		<br>
-		<<asylumicon "wardrobe">><<link [[열기|Asylum Wardrobe]]>><</link>>
+		<<asylumicon "wardrobe">><<link [[연다|Asylum Wardrobe]]>><</link>>
 		<br>
 	<</if>>
 	<<if $asylumstate isnot "sleep">>
 		<br>
-		<<getouticon>><<link [[나가기|Asylum]]>><</link>>
+		<<getouticon>><<link [[나간다|Asylum]]>><</link>>
 		<br>
 	<</if>>
 	<br>
@@ -186,7 +186,7 @@
 		<<else>>
 			창문으로 수건을 던져 당신의 위치를 알릴 수 있다.
 			<br>
-			<<towelicon>><<link [[수건 던지기|Eden Towel Throw]]>><</link>>
+			<<towelicon>><<link [[수건을 던진다|Eden Towel Throw]]>><</link>>
 			<br>
 		<</if>>
 	<</if>>
@@ -196,24 +196,24 @@
 	<<else>>
 		옷이 들어있는 푹신한 벽장이 벽에서 튀어나와 있다.
 		<br>
-		<<asylumicon "wardrobe">><<link [[열기|Asylum Wardrobe]]>><</link>>
+		<<asylumicon "wardrobe">><<link [[연다|Asylum Wardrobe]]>><</link>>
 		<br>
 	<</if>>
 	<<if Time.weekDay is 1 and $daily.massAttended isnot 1>>
 		<br>
 		<<if $fallenangel gte 2>>
-			<<templeicon "pray">><<link [[기도하기 (1:00)|Asylum Pray Fallen Angel]]>><<purity 63>><<pass 60>><<stress 10>><<set $daily.massAttended to 1>><</link>><<gggpurity>><<gstress>>
+			<<templeicon "pray">><<link [[기도한다 (1:00)|Asylum Pray Fallen Angel]]>><<purity 63>><<pass 60>><<stress 10>><<set $daily.massAttended to 1>><</link>><<gggpurity>><<gstress>>
 		<<elseif $angel gte 6>>
-			<<templeicon "pray">><<link [[기도하기 (1:00)|Asylum Pray Angel]]>><<purity 10>><<pass 60>><<stress -10>><<set $daily.massAttended to 1>><</link>><<gpurity>><<lstress>>
+			<<templeicon "pray">><<link [[기도한다 (1:00)|Asylum Pray Angel]]>><<purity 10>><<pass 60>><<stress -10>><<set $daily.massAttended to 1>><</link>><<gpurity>><<lstress>>
 		<<elseif $demon gte 6>>
-			<<templeicon "pray">><<link [[성찰하기 (1:00)|Asylum Pray Demon]]>><<purity -10>><<pass 60>><<stress 10>><<set $daily.massAttended to 1>><</link>><<lpurity>><<gstress>>
+			<<templeicon "pray">><<link [[성찰한다 (1:00)|Asylum Pray Demon]]>><<purity -10>><<pass 60>><<stress 10>><<set $daily.massAttended to 1>><</link>><<lpurity>><<gstress>>
 		<<else>>
-			<<templeicon "pray">><<link [[기도하기 (1:00)|Asylum Pray]]>><<purity 10>><<pass 60>><<stress -10>><<set $daily.massAttended to 1>><</link>><<gpurity>><<lstress>>
+			<<templeicon "pray">><<link [[기도한다 (1:00)|Asylum Pray]]>><<purity 10>><<pass 60>><<stress -10>><<set $daily.massAttended to 1>><</link>><<gpurity>><<lstress>>
 		<</if>>
 	<</if>>
 	<<if $asylumstate isnot "sleep">>
 		<br>
-		<<getouticon>><<link [[나가기|Asylum]]>><</link>>
+		<<getouticon>><<link [[나간다|Asylum]]>><</link>>
 		<br>
 	<</if>>
 	<br>
@@ -543,11 +543,11 @@
 			<<foodicon "pancakes">><<link [[아침 식사 (1:00)|Asylum Breakfast]]>><<asylumstatus 1>><<awareness -10>><<trauma -3>><<stress -6>><<pass 60>><</link>><<exhibitionist5>><<gcool>><<llawareness>><<ltrauma>><<lstress>>
 			<br>
 		<</if>>
-		<<exerciseicon>><<link [[밖에서 운동하기 (0:30)|Asylum Exercise]]>><<tiredness 3>><<stress -6>><</link>><<exhibitionist5>><<gtiredness>><<lstress>><<gathletics>>
+		<<exerciseicon>><<link [[밖에서 운동한다 (0:30)|Asylum Exercise]]>><<tiredness 3>><<stress -6>><</link>><<exhibitionist5>><<gtiredness>><<lstress>><<gathletics>>
 		<br>
 		<<socialiseicon>><<link [[사교 활동 (0:30)|Asylum Socialise]]>><<asylumstatus 1>><<trauma -3>><<stress -6>><<pass 30>><</link>><<exhibitionist5>><<gcool>><<ltrauma>><<lstress>>
 		<br>
-		<<schoolicon "library">><<link [[공부하기 (0:50)|Asylum Study]]>><<pass 50>><<schoolskill>><</link>><<exhibitionist5>><<gschool>>
+		<<schoolicon "library">><<link [[공부한다 (0:50)|Asylum Study]]>><<pass 50>><<schoolskill>><</link>><<exhibitionist5>><<gschool>>
 		<br>
 		<<gardenicon>><<link [[정원 (0:02)|Asylum Garden]]>><<pass 2>><</link>>
 		<br>
@@ -556,11 +556,11 @@
 			<<foodicon "pancakes">><<link [[아침 식사 (1:00)|Asylum Breakfast]]>><<asylumstatus 1>><<awareness -10>><<trauma -3>><<stress -6>><<pass 60>><</link>><<exhibitionist3>><<gcool>><<llawareness>><<ltrauma>><<lstress>>
 			<br>
 		<</if>>
-		<<exerciseicon>><<link [[밖에서 운동하기 (0:30)|Asylum Exercise]]>><<tiredness 3>><<stress -6>><</link>><<exhibitionist3>><<gtiredness>><<lstress>><<gathletics>>
+		<<exerciseicon>><<link [[밖에서 운동한다 (0:30)|Asylum Exercise]]>><<tiredness 3>><<stress -6>><</link>><<exhibitionist3>><<gtiredness>><<lstress>><<gathletics>>
 		<br>
 		<<socialiseicon>><<link [[사교 활동 (0:30)|Asylum Socialise]]>><<asylumstatus 1>><<trauma -3>><<stress -6>><<pass 30>><</link>><<exhibitionist3>><<gcool>><<ltrauma>><<lstress>>
 		<br>
-		<<schoolicon "library">><<link [[공부하기 (0:50)|Asylum Study]]>><<pass 50>><<schoolskill>><</link>><<exhibitionist3>><<gschool>>
+		<<schoolicon "library">><<link [[공부한다 (0:50)|Asylum Study]]>><<pass 50>><<schoolskill>><</link>><<exhibitionist3>><<gschool>>
 		<br>
 		<<gardenicon>><<link [[정원 (0:02)|Asylum Garden]]>><<pass 2>><</link>>
 		<br>
@@ -569,11 +569,11 @@
 			<<foodicon "pancakes">><<link [[아침 식사 (1:00)|Asylum Breakfast]]>><<asylumstatus 1>><<awareness -10>><<trauma -3>><<stress -6>><<pass 60>><</link>><<gcool>><<llawareness>><<ltrauma>><<lstress>>
 			<br>
 		<</if>>
-		<<exerciseicon>><<link [[밖에서 운동하기 (0:30)|Asylum Exercise]]>><<tiredness 3>><<stress -6>><</link>><<gtiredness>><<lstress>><<gathletics>>
+		<<exerciseicon>><<link [[밖에서 운동한다 (0:30)|Asylum Exercise]]>><<tiredness 3>><<stress -6>><</link>><<gtiredness>><<lstress>><<gathletics>>
 		<br>
 		<<socialiseicon>><<link [[사교 활동 (0:30)|Asylum Socialise]]>><<asylumstatus 1>><<trauma -3>><<stress -6>><<pass 30>><</link>><<gcool>><<ltrauma>><<lstress>>
 		<br>
-		<<schoolicon "library">><<link [[공부하기 (0:50)|Asylum Study]]>><<pass 50>><<schoolskill>><</link>><<gschool>>
+		<<schoolicon "library">><<link [[공부한다 (0:50)|Asylum Study]]>><<pass 50>><<schoolskill>><</link>><<gschool>>
 		<br>
 		<<gardenicon>><<link [[정원 (0:02)|Asylum Garden]]>><<pass 2>><</link>>
 		<br>
@@ -1576,7 +1576,7 @@
 <br><br>
 <<if $asylumkeycard is 1>>
 	<<if !pcAreArmsBound("both")>>
-		<<icon "access-card.png">><<link [[열기|Asylum Open]]>><</link>>
+		<<icon "access-card.png">><<link [[연다|Asylum Open]]>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1975,10 +1975,10 @@
 <<set $outside to 0>><<set $location to "asylum">><<asylumeffects>><<effects>>
 당신은 <<person>>에게 마주 미소 짓는다. <<He>>【이가】 다가와 즐거운 대화를 나눈다.
 <<promiscuity1>>
-<<link [[작별 인사하기|Asylum]]>><<endevent>><</link>>
+<<link [[작별 인사를 한다|Asylum]]>><<endevent>><</link>>
 <br>
 <<if hasSexStat("promiscuity", 2)>>
-	<<link [[유혹하기|Asylum Seduce]]>><</link>><<promiscuous2>>
+	<<link [[유혹한다|Asylum Seduce]]>><</link>><<promiscuous2>>
 	<br>
 <</if>>
 
@@ -2217,7 +2217,7 @@
 <<display_plot asylum>>
 
 <<if !$plants_known.includes("poppy")>>
-	<<foodstufficon "poppy">> <<link [[씨앗 찾기 (0:30)|Asylum Garden Seeds]]>><<set $plants_known.push("poppy")>><<pass 30>><</link>>
+	<<foodstufficon "poppy">> <<link [[씨앗을 찾는다 (0:30)|Asylum Garden Seeds]]>><<set $plants_known.push("poppy")>><<pass 30>><</link>>
 	<br>
 <<elseif $rng % 8 == 0 and $o_long_and_beautiful gte 1 and $o_long_and_beautiful lte 7>>/*1 in 8 chance if in right stage*/
 	<<loadNPC 0 "long_haired">><<person1>>
@@ -2228,7 +2228,7 @@
 <</if>>
 <br><br>
 
-<<getouticon>><<link [[떠나기|Asylum]]>><<endevent>><</link>>
+<<getouticon>><<link [[떠난다|Asylum]]>><<endevent>><</link>>
 <br>
 
 :: Asylum Garden Seeds
@@ -2778,7 +2778,7 @@
 	<br><br>
 <</if>>
 <<endevent>><<unset $ft_event>>
-<<link [[떠나기|Asylum]]>><</link>>
+<<link [[떠난다|Asylum]]>><</link>>
 
 :: Pregnancy Birth Asylum
 <<set $outside to 0>><<set $location to "asylum">><<asylumeffects>><<effects>>

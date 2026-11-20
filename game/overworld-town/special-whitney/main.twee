@@ -3115,9 +3115,9 @@
 			<<else>>
 				<<underlowersteal strip `$whitneyWilling ? "given" : undefined`>>
 			<</if>>
-			<<link [[팬티 착용에 동의하기|Bully Panties 2]]>><<set $whitneypantiescheck to 2>><<set $phase to 0>><</link>> <<if !$settings.blindStatsEnabled>> | <span class="pink">휘트니가 다른 꿍꿍이를 품을지도 모른다</span><</if>>
+			<<link [[팬티 착용에 동의한다|Bully Panties 2]]>><<set $whitneypantiescheck to 2>><<set $phase to 0>><</link>> <<if !$settings.blindStatsEnabled>> | <span class="pink">휘트니가 다른 꿍꿍이를 품을지도 모른다</span><</if>>
 			<br>
-			<<link [[거절하기|Bully Panties 2]]>><<set $phase to 1>><<npcincr Whitney dom -1>><</link>><<ldom>>
+			<<link [[거절한다|Bully Panties 2]]>><<set $phase to 1>><<npcincr Whitney dom -1>><</link>><<ldom>>
 		<<else>>
 			휘트니가 네 $worn.under_lower.name【을를】 찢어버리고는 <<print $worn.under_lower.plural ? "그것들을" : "그것을">> 주머니에 쑤셔 넣는다. "눈여겨보고 있을 테니까, 걸레 년."
 			<br><br>

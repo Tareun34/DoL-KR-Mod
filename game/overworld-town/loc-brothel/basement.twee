@@ -21,7 +21,7 @@
 	계단 옆 표지판에는 <<printmoney $brothel_basement_price>>라고 쓰여 있다.
 	<br><br>
 	<<if hasSexStat("promiscuity", 4)>>
-		<<brothelicon "gloryhole">><<link [[방 차지하기 (0:10)|Brothel Gloryhole]]>><<pass 10>><<set $phase to 1>><</link>><<promiscuous4>>
+		<<brothelicon "gloryhole">><<link [[방을 차지한다 (0:10)|Brothel Gloryhole]]>><<pass 10>><<set $phase to 1>><</link>><<promiscuous4>>
 		<br>
 	<<else>>
 		<<insufficientStat "promiscuity" "글로리홀에서 일하기에는">>
@@ -114,7 +114,7 @@
 
 <</if>>
 
-<<link [[다른 손님 기다리기 (0:10)|Brothel Gloryhole]]>><<pass 10>><</link>>
+<<link [[다른 손님을 기다린다 (0:10)|Brothel Gloryhole]]>><<pass 10>><</link>>
 <br>
 <<link [[나간다|Brothel Basement]]>><</link>>
 <br>

@@ -86,7 +86,7 @@
 		<br>
 		<<link [[15로 변경|$passage]]>><<set $adultshopprogress to 15>><</link>>
 		<br><br>
-		<<link [[가게 개점 돕기|Dilapidated Help]]>><<npc Sirris>><<npc Sydney 2>><<person2>><<set $adultshopprogress += 1>><<set $adultshopcontribution += 1>><<set $adultshophelped to 1>><<pass 60>><<npcincr Sirris love 1>><<npcincr Sydney love 1>><</link>><<glove>>
+		<<link [[가게 개점을 돕는다|Dilapidated Help]]>><<npc Sirris>><<npc Sydney 2>><<person2>><<set $adultshopprogress += 1>><<set $adultshopcontribution += 1>><<set $adultshophelped to 1>><<pass 60>><<npcincr Sirris love 1>><<npcincr Sydney love 1>><</link>><<glove>>
 		<br><br>
 		<<link [[개점 (순결한 시드니)|Adult Shop Opening]]>><<npc Sydney>><<person1>><<endevent>><<set C.npc.Sydney.purity to 100>><<set C.npc.Sydney.corruption to 0>><</link>>
 		<br>

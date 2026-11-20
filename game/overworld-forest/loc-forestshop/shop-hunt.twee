@@ -3735,7 +3735,7 @@
 <<set $location to "forest_shop">><<set $outside to 0>><<effects>>
 <br><br>
 
-<<link [[정원 열쇠 찾기|Forest Shop Hunt Intro]]>><<set $phase to "garden">><</link>><<note "완료!" "green">>
+<<link [[정원 열쇠를 찾는다|Forest Shop Hunt Intro]]>><<set $phase to "garden">><</link>><<note "완료!" "green">>
 <br>
 <<link [[숨바꼭질 게임|Forest Shop Hunt Intro]]>><<npc Gwylan>><<person1>><<set $phase to "game">><</link>><<note "일부 구현됨" "orange">>
 <br>

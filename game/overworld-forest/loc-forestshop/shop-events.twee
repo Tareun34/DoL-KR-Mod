@@ -91,7 +91,7 @@
 				로빈은 의상들을 감상하느라 바쁘다.
 				<br>
 				<<if !$halloween_robin_costume or $halloween_robin_costume is "ghost">>
-					<<socialiseicon>><<link [[로빈에게 말 걸기|Robin Forest Costume Intro]]>><</link>>
+					<<socialiseicon>><<link [[로빈에게 말을 건다|Robin Forest Costume Intro]]>><</link>>
 				<</if>>
 			<<elseif _snoopEvent and _gwylanLovePercent gte 20 and $gwylanSeen.includesAll("intruder", "clothes_intro") and !$gwylanSeen.includes("hat_found")>>
 				<<set $gwylan.timer.eventShopEnd to new DateTime(Time.date).addHours(3).timeStamp>>
@@ -121,7 +121,7 @@
 		<</if>>
 		<br>
 
-		<<icon "clothing-shop.png">><<link [[옷 구경하기|Forest Shop]]>><</link>><br>
+		<<icon "clothing-shop.png">><<link [[옷을 구경한다|Forest Shop]]>><</link>><br>
 
 		<<if $gwylanSeen.includes("lights")>>
 			<<if !$gwylanSeen.includes("sample")>>
@@ -151,23 +151,23 @@
 		<</if>>
 
 		<<if $christmas_gift_robin is undefined and $christmas is 1 and C.npc.Robin.init is 1>>
-			<<if isLoveInterest("Robin")>><<gifticon "love">><<else>><<gifticon "christmas">><</if>><<link [[로빈에게 줄 선물 찾기 (0:10)|Forest Christmas Robin]]>><<pass 10>><</link>>
+			<<if isLoveInterest("Robin")>><<gifticon "love">><<else>><<gifticon "christmas">><</if>><<link [[로빈에게 줄 선물을 찾는다 (0:10)|Forest Christmas Robin]]>><<pass 10>><</link>>
 			<br>
 		<</if>>
 		<<if isPubfameTaskAccepted("gwylan")>>
 			<<if $pubfame.gwylan.snowglobe isnot 1>>
-				<<icon "snowgsnowglobelobe.gif">><<link [[스노 글로브 찾기 (0:20)|Forest Snowglobe]]>><<pass 20>><</link>>
+				<<icon "snowgsnowglobelobe.gif">><<link [[스노 글로브를 찾는다 (0:20)|Forest Snowglobe]]>><<pass 20>><</link>>
 			<<elseif $money gte 2000 and ["shop", "garden"].includes(gwylanSchedule())>>
-				<<icon "snowgsnowglobelobe.gif">><<link [[스노 글로브 구매하기 (£20)|Forest Snowglobe Buy]]>><<money -2000>><</link>>
+				<<icon "snowgsnowglobelobe.gif">><<link [[스노 글로브를 구매한다 (£20)|Forest Snowglobe Buy]]>><<money -2000>><</link>>
 			<</if>>
 			<br>
 		<</if>>
 
 		<br>
 		<<if $robin_in_forest_shop>>
-			<<getouticon>><<link [[로빈과 함께 떠나기 (0:10)|Robin Forest Shop Home]]>><<pass 10>><<endevent>><</link>>
+			<<getouticon>><<link [[로빈과 함께 떠난다 (0:10)|Robin Forest Shop Home]]>><<pass 10>><<endevent>><</link>>
 		<<else>>
-			<<getouticon>><<link [[상점에서 나가기|Forest]]>><<endevent>><<set $eventskip to 1>><<set $forest to 0>><</link>>
+			<<getouticon>><<link [[상점에서 나간다|Forest]]>><<endevent>><<set $eventskip to 1>><<set $forest to 0>><</link>>
 		<</if>>
 		<br>
 
@@ -3361,7 +3361,7 @@ You may run around and play pretend with whomever you so wish, but in the end, y
 
 	<<icon "snowgsnowglobelobe.gif">>
 	<<if $money gte 2000>>
-		<<link [[스노 글로브 구매하기 (£20)|Forest Snowglobe Buy]]>><<money -2000>><<endevent>><</link>>
+		<<link [[스노 글로브를 구매한다 (£20)|Forest Snowglobe Buy]]>><<money -2000>><<endevent>><</link>>
 	<<else>>
 		돈이 부족하다.
 	<</if>>

@@ -66,7 +66,7 @@
 	<i>사람들은 밤에 비명소리를 조사하려 하지 않는다.</i>
 	<br><br>
 
-	<<link [[무릎 꿇기|Flats Events Knees]]>><<sub 1>><</link>>
+	<<link [[무릎을 꿇는다|Flats Events Knees]]>><<sub 1>><</link>>
 	<br>
 	<<link [[싸운다|Flats Events Fight]]>><<def 1>><<set $fightstart to 1>><</link>>
 	<br>

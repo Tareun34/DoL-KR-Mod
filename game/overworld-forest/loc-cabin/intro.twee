@@ -265,7 +265,7 @@
 	에덴은 잠들어 있지만, 목줄이 침대에 단단히 묶여 있어 멀리 움직일 수 없다.
 	<br><br>
 
-	<<link [[잠자기|Cabin Night Sleep]]>><<cabintime>><</link>><<ltiredness>>
+	<<link [[잠잔다|Cabin Night Sleep]]>><<cabintime>><</link>><<ltiredness>>
 	<br>
 	<<link [[목줄을 약하게 만든다|Cabin Night Leash]]>><<cabintime true>><</link>>
 	<br>
@@ -273,7 +273,7 @@
 	에덴은 잠들어 있다. 원한다면 탈출할 수 있다.
 	<br><br>
 
-	<<link [[잠자기|Cabin Night Sleep]]>><<cabintime>><</link>><<ltiredness>>
+	<<link [[잠잔다|Cabin Night Sleep]]>><<cabintime>><</link>><<ltiredness>>
 	<br>
 	<<link [[탈출한다|Cabin Night Escape]]>><<set $stress -= 2000>><</link>>
 	<br>

@@ -188,7 +188,7 @@
 		<</if>>
 
 		<<if $smuggler_location is "forest" and $smuggler_timer is 0 and Time.dayState is "night" and Time.hour gte 18>>
-			<<link [[불꽃에 접근하기|Smuggler Forest]]>><</link>>
+			<<link [[불꽃에 접근한다|Smuggler Forest]]>><</link>>
 			<br><br>
 		<</if>>
 
@@ -285,13 +285,13 @@
 			<<rng>>
 			<!-- Modified for Monster People -->
 			<<if $pubtasksetting is "bear">>
-				<<crimeicon "black box">><<link [[랜드리의 블랙박스 찾기|Forest Bear Box]]>><</link>>
+				<<crimeicon "black box">><<link [[랜드리의 블랙박스를 찾는다|Forest Bear Box]]>><</link>>
 			<<elseif $pubtasksetting is "pair">>
-				<<crimeicon "black box">><<link [[랜드리의 블랙박스 찾기|Forest Box]]>><</link>>
+				<<crimeicon "black box">><<link [[랜드리의 블랙박스를 찾는다|Forest Box]]>><</link>>
 			<<elseif $rng gte 51>>
-				<<crimeicon "black box">><<link [[랜드리의 블랙박스 찾기|Forest Bear Box]]>><</link>>
+				<<crimeicon "black box">><<link [[랜드리의 블랙박스를 찾는다|Forest Bear Box]]>><</link>>
 			<<else>>
-				<<crimeicon "black box">><<link [[랜드리의 블랙박스 찾기|Forest Box]]>><</link>>
+				<<crimeicon "black box">><<link [[랜드리의 블랙박스를 찾는다|Forest Box]]>><</link>>
 			<</if>>
 			<br>
 		<</if>>
@@ -299,7 +299,7 @@
 			<<if $worn.feet.type.includes("heels")>>
 				<span class="red">힐을 신고 개울을 따라가는 것은 불가능합니다.</span>
 			<<else>>
-				<<foresticon "river">><<link [[개울을 따라가기 (0:20)|Forest Brook]]>><<pass 20>><</link>>
+				<<foresticon "river">><<link [[개울을 따라간다 (0:20)|Forest Brook]]>><<pass 20>><</link>>
 			<</if>>
 			<br>
 		<</if>>

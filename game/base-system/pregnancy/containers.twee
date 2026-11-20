@@ -464,7 +464,7 @@
 		<br>
 	<</if>>
 	<<if _container.count gt 0>>
-		<<ind>><<link [[선택한 것을 판매용으로 옮기기|$passage]]>>
+		<<ind>><<link [[선택한 것을 판매용으로 옮긴다|$passage]]>>
 			<<for _i to 0; _i lt _container.maxCount;_i++>>
 				<<if _container.creatures[_i] is undefined>>
 					<<continue>>
@@ -479,5 +479,5 @@
 		<</link>>
 		<br>
 	<</if>>
-	<<getouticon>><<link [[떠나기|_container.leaveLink]]>><</link>>
+	<<getouticon>><<link [[떠난다|_container.leaveLink]]>><</link>>
 <</if>>

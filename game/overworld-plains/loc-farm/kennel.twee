@@ -58,11 +58,11 @@
 		<<animalicon "dog">><<link [[훈련 (1:00)|Farm Kennel Train]]>><<set $farm_kennel to 1>><<pass 60>><</link>>
 		<br>
 	<</if>>
-	<<petshopicon "treat">><<link [[간식 주기|Farm Kennel Treats]]>><</link>>
+	<<petshopicon "treat">><<link [[간식을 준다|Farm Kennel Treats]]>><</link>>
 	<br>
-	<<petshopicon "chew">><<link [[놀아주기|Farm Kennel Play]]>><<set $farm_kennel to 1>><</link>>
+	<<petshopicon "chew">><<link [[놀아준다|Farm Kennel Play]]>><<set $farm_kennel to 1>><</link>>
 	<br>
-	<<getouticon>><<link [[떠나기|Farm Work]]>><<endevent>><</link>>
+	<<getouticon>><<link [[떠난다|Farm Work]]>><<endevent>><</link>>
 	<br>
 
 <</if>>
@@ -116,7 +116,7 @@
 <<widget "kennel_play_options">>
 	<<link [[물어오기 놀이 (1:00)|Farm Kennel Play Fetch]]>><<tiredness 6>><<farm_dogs 3>><</link>><<ggrespect>>
 	<br>
-	<<link [[경주하기 (1:00)|Farm Kennel Play Race]]>><<athletics 6>><<tiredness 6>><<pass 60>><</link>><<gathletics>>
+	<<link [[경주한다 (1:00)|Farm Kennel Play Race]]>><<athletics 6>><<tiredness 6>><<pass 60>><</link>><<gathletics>>
 	<br>
 	<<if beastSexEnabledForType("dog", $farm_work.dog.monster)>>
 		<<if $farm.beasts.dogs gte -5>>
@@ -196,15 +196,15 @@
 	그들은 순종적으로 당신을 바라보며 앉아 있다.
 	<br><br>
 
-	<<link [[안아주기|Farm Kennel Treats Hug]]>><<farm_dogs 1>><</link>><<grespect>>
+	<<link [[안아준다|Farm Kennel Treats Hug]]>><<farm_dogs 1>><</link>><<grespect>>
 	<br>
 	<<if beastSexEnabledForType("dog", $farm_work.dog.monster)>>
 		<<if hasSexStat("deviancy", 2)>>
-			<<link [[유혹하기|Farm Kennel Treats Seduce]]>><</link>><<deviant2>>
+			<<link [[유혹한다|Farm Kennel Treats Seduce]]>><</link>><<deviant2>>
 		<</if>>
 		<br>
 		<<if hasSexStat("deviancy", 3) and $lactating gte 1 and $milk_amount gte 30 and $settings.breastFeedingEnabled>>
-			<<link [[모유 수유하기|Farm Kennel Treats Breastfeed]]>><<farm_dogs 3>><</link>><<deviant3>><<ggrespect>>
+			<<link [[모유 수유한다|Farm Kennel Treats Breastfeed]]>><<farm_dogs 3>><</link>><<deviant3>><<ggrespect>>
 			<br>
 		<</if>>
 	<</if>>

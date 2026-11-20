@@ -1051,9 +1051,9 @@
 
 <div id="masturbationButtons">
 	<<if $arousal gte $arousalmax or $control gte $controlmax>>
-		<div id="next" class="nextWraith"><<link [[계속하기|Lake Ruin Prison Masturbation Finish]]>><</link>><<nexttext>></div>
+		<div id="next" class="nextWraith"><<link [[계속한다|Lake Ruin Prison Masturbation Finish]]>><</link>><<nexttext>></div>
 	<<else>>
-		<div id="next" class="nextWraith"><<link [[계속하기|Lake Ruin Prison Masturbation]]>><</link>><<nexttext>></div>
+		<div id="next" class="nextWraith"><<link [[계속한다|Lake Ruin Prison Masturbation]]>><</link>><<nexttext>></div>
 	<</if>>
 </div>
 <br><br><br><br><br>

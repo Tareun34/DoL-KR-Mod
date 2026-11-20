@@ -58,7 +58,7 @@
 		<br>
 		잠시 숨을 고른다. <<number $officeFloor>>층을 내려가야 하니, 호흡을 잘 가다듬어 두어야 한다.
 		<br><br>
-		<<link [[계단 내려가기|Office Stairwell]]>><</link>>
+		<<link [[계단을 내려간다|Office Stairwell]]>><</link>>
 	<<else>>
 		안전하다고 여겨질 만큼 충분히 나아간 뒤, 몸을 숨기기 위해 걸음을 멈춘다. <<officestreakhide>>
 		<br><br>
@@ -75,7 +75,7 @@
 	누군가 수건이 가득 담긴 카트를 밀며 당신이 숨어 있는 곳을 지나간다. 당신은 재빨리 수건 한 장을 낚아채 아무도 보지 못하게 몸에 두른다. 이제 안전하게 엘리베이터를 탈 수 있다.
 	<br><br>
 	<<towelup>>
-	<<link [[로비로 돌아가기 (0:01)|Office Lobby]]>><<pass 1>><</link>>
+	<<link [[로비로 돌아간다 (0:01)|Office Lobby]]>><<pass 1>><</link>>
 <<else>>
 	몇 분 동안 찾아보았지만 아무것도 찾을 수 없다. 가능한 한 빨리 안전한 곳으로 달려가는 편이 최선이라고 판단한다.
 	<br><br>

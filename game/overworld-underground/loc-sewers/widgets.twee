@@ -252,27 +252,27 @@
 <</widget>>
 
 <<widget "sewerscountdown">>
-	<<ind>><<link [[1 누르기|Sewers Ticking Number]]>><<set $sewerswatchattempt to 1>><</link>>
+	<<ind>><<link [[1을 누른다|Sewers Ticking Number]]>><<set $sewerswatchattempt to 1>><</link>>
 	<br>
-	<<ind>><<link [[2 누르기|Sewers Ticking Number]]>><<set $sewerswatchattempt to 2>><</link>>
+	<<ind>><<link [[2를 누른다|Sewers Ticking Number]]>><<set $sewerswatchattempt to 2>><</link>>
 	<br>
-	<<ind>><<link [[3 누르기|Sewers Ticking Number]]>><<set $sewerswatchattempt to 3>><</link>>
+	<<ind>><<link [[3을 누른다|Sewers Ticking Number]]>><<set $sewerswatchattempt to 3>><</link>>
 	<br>
-	<<ind>><<link [[4 누르기|Sewers Ticking Number]]>><<set $sewerswatchattempt to 4>><</link>>
+	<<ind>><<link [[4를 누른다|Sewers Ticking Number]]>><<set $sewerswatchattempt to 4>><</link>>
 	<br>
-	<<ind>><<link [[5 누르기|Sewers Ticking Number]]>><<set $sewerswatchattempt to 5>><</link>>
+	<<ind>><<link [[5를 누른다|Sewers Ticking Number]]>><<set $sewerswatchattempt to 5>><</link>>
 	<br>
-	<<ind>><<link [[6 누르기|Sewers Ticking Number]]>><<set $sewerswatchattempt to 6>><</link>>
+	<<ind>><<link [[6을 누른다|Sewers Ticking Number]]>><<set $sewerswatchattempt to 6>><</link>>
 	<br>
-	<<ind>><<link [[7 누르기|Sewers Ticking Number]]>><<set $sewerswatchattempt to 7>><</link>>
+	<<ind>><<link [[7을 누른다|Sewers Ticking Number]]>><<set $sewerswatchattempt to 7>><</link>>
 	<br>
-	<<ind>><<link [[8 누르기|Sewers Ticking Number]]>><<set $sewerswatchattempt to 8>><</link>>
+	<<ind>><<link [[8을 누른다|Sewers Ticking Number]]>><<set $sewerswatchattempt to 8>><</link>>
 	<br>
-	<<ind>><<link [[9 누르기|Sewers Ticking Number]]>><<set $sewerswatchattempt to 9>><</link>>
+	<<ind>><<link [[9를 누른다|Sewers Ticking Number]]>><<set $sewerswatchattempt to 9>><</link>>
 	<br>
-	<<ind>><<link [[0 누르기|Sewers Ticking Number]]>><<set $sewerswatchattempt to 0>><</link>>
+	<<ind>><<link [[0을 누른다|Sewers Ticking Number]]>><<set $sewerswatchattempt to 0>><</link>>
 	<br>
-	<<runicon>><<link [[달리기 (0:01)|Sewers Ticking Run]]>><<pass 1>><</link>>
+	<<runicon>><<link [[달린다 (0:01)|Sewers Ticking Run]]>><<pass 1>><</link>>
 	<br>
 <</widget>>
 

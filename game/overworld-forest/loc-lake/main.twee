@@ -161,7 +161,7 @@
 			<</if>>
 			<br>
 			<<set _pondicon to Weather.isFrozen("lake") ? "pond_frozen" : "pond">>
-			<<watericon _pondicon>><<link [[비친 모습 확인하기|Lake Shore Mirror]]>><<preMirror>><</link>>
+			<<watericon _pondicon>><<link [[비친 모습을 확인한다|Lake Shore Mirror]]>><<preMirror>><</link>>
 			<br><br>
 		<</if>>
 
@@ -503,7 +503,7 @@
 <br><br>
 
 <<if $exposed lte 0>>
-	<<busicon>><<link [[버스 기다리기 (0:02)|Bus]]>><<pass 2>><</link>><br>
+	<<busicon>><<link [[버스를 기다린다 (0:02)|Bus]]>><<pass 2>><</link>><br>
 <</if>>
 
 <<lakeicon>><<link [[남쪽 호숫가로|Lake Shore]]>><</link>>
@@ -645,7 +645,7 @@
 <<else>>
 	<<eventlakesafe>>
 	<<lakereturnjourney>>
-	<<lakeicon "meditate">><<link [[명상하기|Lake Meditate]]>><<set $phase to 1>><</link>>
+	<<lakeicon "meditate">><<link [[명상한다|Lake Meditate]]>><<set $phase to 1>><</link>>
 	<br>
 	<<if $nextPassageCheck is "Lake Waterfall">>
 		<<lakeicon>><span class="nextLink"><<link [[호수로.|Lake Waterfall]]>><<pass 10>><</link>></span>
@@ -871,9 +871,9 @@
 <<unset $phase>>
 <br><br>
 
-<<link [[휴식하기 (0:15)|Lake Campsite Warmth]]>><<lakecampfirewarmth>><<pass 15>><</link>><<gwarmth>>
+<<link [[휴식한다 (0:15)|Lake Campsite Warmth]]>><<lakecampfirewarmth>><<pass 15>><</link>><<gwarmth>>
 <br>
-<<link [[떠나기|Lake Campsite]]>><<set $phase to "extinguish">><</link>>
+<<link [[떠난다|Lake Campsite]]>><<set $phase to "extinguish">><</link>>
 
 :: Lake Campsite Warmth
 <<lakecampfirewarmth>><<effects>><<lakeeffects>>
@@ -907,9 +907,9 @@
 <<runeventpool>>
 <br><br>
 
-<<link [[계속 휴식하기 (0:15)|Lake Campsite Warmth]]>><<pass 15>><</link>><<gwarmth>>
+<<link [[계속 휴식한다 (0:15)|Lake Campsite Warmth]]>><<pass 15>><</link>><<gwarmth>>
 <br>
-<<link [[떠나기|Lake Campsite]]>><<set $phase to "extinguish">><</link>>
+<<link [[떠난다|Lake Campsite]]>><<set $phase to "extinguish">><</link>>
 
 :: Lake Shallows
 <<set $outside to 1>><<set $location to "lake">><<set $bus to "lakeshallows">>
@@ -1009,14 +1009,14 @@
 <<elseif dangerEvent(0.5) and $eventskip is 0>>
 	<<eventlakewater>>
 <<else>>
-	<<swimicon "back">><<link [[수영 연습하기 (0:30)|Lake Shallows]]>><<stress -6>><<tiredness 6>><<set $phase to "lakeswim">><<slimeEventEnd "swimming">><</link>><<gswimming>><<lstress>><<gtiredness>>
+	<<swimicon "back">><<link [[수영을 연습한다 (0:30)|Lake Shallows]]>><<stress -6>><<tiredness 6>><<set $phase to "lakeswim">><<slimeEventEnd "swimming">><</link>><<gswimming>><<lstress>><<gtiredness>>
 	<br>
 	<<if ($worn.upper.exposed gte 2 and $worn.under_upper.exposed gte 1
 	or $worn.upper.exposed gte 2 and $underupperwetstage gte 3
 	or $upperwetstage gte 3 and $worn.under_upper.exposed gte 1
 	or $upperwetstage gte 3 and $underupperwetstage gte 3)
 	and !pcAreArmsBound("both")>>
-		<<beachicon "seaweed">><<link [[식물로 상의 만들기 (0:20)|Lake Shallows]]>><<pass 20>><<set $phase to 1>><</link>>
+		<<beachicon "seaweed">><<link [[식물로 상의를 만든다 (0:20)|Lake Shallows]]>><<pass 20>><<set $phase to 1>><</link>>
 		<br>
 	<</if>>
 	<<if ($worn.lower.exposed gte 2 and $worn.under_lower.exposed gte 1
@@ -1024,30 +1024,30 @@
 	or $lowerwetstage gte 3 and $worn.under_lower.exposed gte 1
 	or $lowerwetstage gte 3 and $underlowerwetstage gte 3)
 	and !pcAreArmsBound("both")>>
-		<<beachicon "seaweed">><<link [[식물로 치마 만들기 (0:20)|Lake Shallows]]>><<pass 20>><<set $phase to 2>><</link>>
+		<<beachicon "seaweed">><<link [[식물로 치마를 만든다 (0:20)|Lake Shallows]]>><<pass 20>><<set $phase to 2>><</link>>
 		<br>
 	<</if>>
 	<<if $sciencetrait gte 2 and !$plants_known.includes("lotus")>>
-		<<foodstufficon "lotus">> <<link [[씨앗 찾기 (0:30)|Lake Lotus]]>><<set $plants_known.push("lotus")>><<pass 30>><<tending 6>><</link>><<gtending>>
+		<<foodstufficon "lotus">> <<link [[씨앗을 찾는다 (0:30)|Lake Lotus]]>><<set $plants_known.push("lotus")>><<pass 30>><<tending 6>><</link>><<gtending>>
 		<br>
 	<</if>>
 	<<if $exposed gte 1 and $laketeenspresent is 1>>
 		<br>
 	<<elseif $debug>>
-		<<lakeicon "dock">><<link [[부두로 헤엄쳐 가기 (0:10)|Lake Dock]]>><<pass 10>><</link>>
+		<<lakeicon "dock">><<link [[부두로 헤엄쳐 간다 (0:10)|Lake Dock]]>><<pass 10>><</link>>
 		<br>
 	<</if>>
 	<<if $nextPassageCheck is "Lake Depths">>
 		<<swimicon>><span class="nextLink"><<link [[더 멀리.|Lake Depths]]>><<pass 12>><</link>></span>
 	<<else>>
-		<<swimicon>><<link [[더 멀리 헤엄쳐 나가기 (0:12)|Lake Depths]]>><<pass 12>><</link>>
+		<<swimicon>><<link [[더 멀리 헤엄쳐 나간다 (0:12)|Lake Depths]]>><<pass 12>><</link>>
 	<</if>>
 	<br>
 	<<if $exposed gte 1 and $laketeenspresent is 1>>
 		<<if $exposed gte 2 and hasSexStat("exhibitionism", 5)>>
-			<<lakeicon>><<link [[노출한 채로 물 밖으로 나가기 (0:02)|Lake Shore Exposed]]>><<set $phase to 0>><<pass 2>><</link>><<exhibitionist5>>
+			<<lakeicon>><<link [[노출한 채로 물 밖으로 나간다 (0:02)|Lake Shore Exposed]]>><<set $phase to 0>><<pass 2>><</link>><<exhibitionist5>>
 		<<elseif $exposed gte 1 and hasSexStat("exhibitionism", 4)>>
-			<<lakeicon>><<link [[노출한 채로 물 밖으로 나가기 (0:02)|Lake Shore Exposed]]>><<set $phase to 1>><<pass 2>><</link>><<exhibitionist4>>
+			<<lakeicon>><<link [[노출한 채로 물 밖으로 나간다 (0:02)|Lake Shore Exposed]]>><<set $phase to 1>><<pass 2>><</link>><<exhibitionist4>>
 		<</if>>
 	<<else>>
 		<<lakeicon>><<link [[호숫가 (0:02)|Lake Shore]]>><<pass 2>><</link>>
@@ -1120,16 +1120,16 @@
 	<<eventlakesafe>>
 	<<lakereturnjourney>>
 
-	<<lakeicon "skate">><<link [[아이스 스케이트 타기 (0:30)|Lake Skate]]>><<pass 30>><<tiredness 5>><<danceskill 5>><</link>><<gtiredness>><<gdanceskill>>
+	<<lakeicon "skate">><<link [[아이스 스케이트를 탄다 (0:30)|Lake Skate]]>><<pass 30>><<tiredness 5>><<danceskill 5>><</link>><<gtiredness>><<gdanceskill>>
 	<br>
 	<<if $sciencetrait gte 2 and !$plants_known.includes("lotus")>>
-		<<foodstufficon "lotus">> <<link [[씨앗 찾기 (0:30)|Lake Lotus Ice]]>><<set $plants_known.push("lotus")>><<pass 30>><<tending 6>><</link>><<gtending>>
+		<<foodstufficon "lotus">> <<link [[씨앗을 찾는다 (0:30)|Lake Lotus Ice]]>><<set $plants_known.push("lotus")>><<pass 30>><<tending 6>><</link>><<gtending>>
 		<br>
 	<</if>>
 	<<if $nextPassageCheck is "Lake Depths Ice">>
 		<<ind>><span class="nextLink"><<link [[더 멀리 (0:12)|Lake Depths Ice]]>><<pass 12>><</link>></span>
 	<<else>>
-		<<getinicon>><<link [[더 멀리 걸어가기 (0:12)|Lake Depths Ice]]>><<pass 12>><</link>>
+		<<getinicon>><<link [[더 멀리를 걸어간다 (0:12)|Lake Depths Ice]]>><<pass 12>><</link>>
 	<</if>>
 	<br>
 	<<lakeicon>><<link [[호숫가 (0:02)|Lake Shore]]>><<pass 2>><</link>>
@@ -1250,14 +1250,14 @@
 <<elseif dangerEvent(0.5) and $eventskip is 0>>
 	<<eventlakewater>>
 <<else>>
-	<<swimicon>><<link [[수영 연습하기 (0:30)|Lake Depths]]>><<stress -6>><<tiredness 6>><<set $phase to "lakeswim">><<slimeEventEnd "swimming">><</link>><<gswimming>><<lstress>><<gtiredness>>
+	<<swimicon>><<link [[수영을 연습한다 (0:30)|Lake Depths]]>><<stress -6>><<tiredness 6>><<set $phase to "lakeswim">><<slimeEventEnd "swimming">><</link>><<gswimming>><<lstress>><<gtiredness>>
 	<br>
 	<<if !Time.schoolDay and Weather.precipitation is "rain" and Time.dayState is "day" and $daily.masonSpoken isnot 1 and !$possessed>>
 		<<if $mason_count gte 1>>
-			<<swimicon>><<link [[메이슨에게 헤엄쳐 가기 (0:05)|Lake Mason]]>><<pass 5>><<set $daily.masonSpoken to 1>><</link>>
+			<<swimicon>><<link [[메이슨에게 헤엄쳐 간다 (0:05)|Lake Mason]]>><<pass 5>><<set $daily.masonSpoken to 1>><</link>>
 			<br>
 		<<else>>
-			<<swimicon>><<link [[메이슨에게 헤엄쳐 가기 (0:05)|Lake Mason Intro]]>><<pass 5>><</link>>
+			<<swimicon>><<link [[메이슨에게 헤엄쳐 간다 (0:05)|Lake Mason Intro]]>><<pass 5>><</link>>
 			<br>
 		<</if>>
 	<</if>>
@@ -1266,7 +1266,7 @@
 	or $upperwetstage gte 3 and $worn.under_upper.exposed gte 1
 	or $upperwetstage gte 3 and $underupperwetstage gte 3)
 	and !pcAreArmsBound("both")>>
-		<<beachicon "seaweed">><<link [[식물로 상의 만들기 (0:20)|Lake Depths]]>><<pass 20>><<set $phase to 1>><</link>>
+		<<beachicon "seaweed">><<link [[식물로 상의를 만든다 (0:20)|Lake Depths]]>><<pass 20>><<set $phase to 1>><</link>>
 		<br>
 	<</if>>
 	<<if ($worn.lower.exposed gte 2 and $worn.under_lower.exposed gte 1
@@ -1274,24 +1274,24 @@
 	or $lowerwetstage gte 3 and $worn.under_lower.exposed gte 1
 	or $lowerwetstage gte 3 and $underlowerwetstage gte 3)
 	and !pcAreArmsBound("both")>>
-		<<beachicon "seaweed">><<link [[식물로 하의 만들기 (0:20)|Lake Depths]]>><<pass 20>><<set $phase to 2>><</link>>
+		<<beachicon "seaweed">><<link [[식물로 하의를 만든다 (0:20)|Lake Depths]]>><<pass 20>><<set $phase to 2>><</link>>
 		<br>
 	<</if>>
 	<<if $nextPassageCheck is "Lake Underwater">>
 		<<swimicon "down">><span class="nextLink"><<link [[아래로.|Lake Underwater]]>><<pass 1>><</link>></span>
 	<<else>>
-		<<swimicon "dive">><<link [[잠수하기 (0:01)|Lake Underwater]]>><<set _oxygenRecoveryBlocked to true>><<pass 1>><</link>>
+		<<swimicon "dive">><<link [[잠수한다 (0:01)|Lake Underwater]]>><<set _oxygenRecoveryBlocked to true>><<pass 1>><</link>>
 	<</if>>
 	<br>
 	<<oxygenrecovery 0>>
 	<<icon "lake-rock.png">><<link [[낚시 바위로 헤엄쳐 간다 (0:15)|Lake Fishing Rock]]>><<pass 15>><<set $phase to "rockclimb">><</link>>
 	<br>
-	<<swimicon "back">><<link [[호숫가로 헤엄쳐 가기 (0:12)|Lake Shallows]]>><<pass 12>><</link>>
+	<<swimicon "back">><<link [[호숫가로 헤엄쳐 간다 (0:12)|Lake Shallows]]>><<pass 12>><</link>>
 	<br><br>
 
 	<<if $exposed gte 1 and $laketeenspresent is 1>>
 	<<elseif $debug>>
-		<<lakeicon "dock">><<link [[부두로 헤엄쳐 가기 (0:02)|Lake Dock]]>><<pass 2>><</link>>
+		<<lakeicon "dock">><<link [[부두로 헤엄쳐 간다 (0:02)|Lake Dock]]>><<pass 2>><</link>>
 		<br>
 	<</if>>
 	<<set $eventskip to 0>>
@@ -1346,16 +1346,16 @@
 		<<swimicon "down">><span class="nextLink"><<link [[아래로.|Lake Depths Ice Break]]>><<pass 12>><</link>></span>
 		<br>
 	<<elseif $lake_ice_broken is undefined>>
-		<<swimicon "break">><<link [[얼음 깨기 (0:30)|Lake Ice Break]]>><<pass 30>><<set $lake_ice_broken to 2>><<tiredness 3>><</link>><<gtiredness>>
+		<<swimicon "break">><<link [[얼음을 깬다 (0:30)|Lake Ice Break]]>><<pass 30>><<set $lake_ice_broken to 2>><<tiredness 3>><</link>><<gtiredness>>
 		<br>
 	<<else>>
-		<<swimicon "dive">><<link [[잠수하기 (0:01)|Lake Underwater]]>><<set _oxygenRecoveryBlocked to true>><<pass 1>><</link>>
+		<<swimicon "dive">><<link [[잠수한다 (0:01)|Lake Underwater]]>><<set _oxygenRecoveryBlocked to true>><<pass 1>><</link>>
 		<<swim_check>> <<if _swim_check isnot 1 and !$settings.blindStatsEnabled>> | <span class="purple">수영복을 입고 있지 않습니다!</span> <</if>>
 		<br>
 	<</if>>
 	<<oxygenrecovery 0>>
 
-	<<lakeicon>><<link [[호숫가로 걷기 (0:12)|Lake Shallows Ice]]>><<pass 12>><</link>>
+	<<lakeicon>><<link [[호숫가로 걷는다 (0:12)|Lake Shallows Ice]]>><<pass 12>><</link>>
 	<br><br>
 
 	<<set $eventskip to 0>>
@@ -1399,7 +1399,7 @@
 <</if>>
 <br><br>
 
-<<swimicon>><<link [[수영하러 가기|Lake Depths]]>><</link>>
+<<swimicon>><<link [[수영하러 간다|Lake Depths]]>><</link>>
 <br>
 
 :: Lake Meditate

@@ -77,7 +77,7 @@ __전투 튜토리얼__
 	<i>공격을 받으면 통제력이 손상됩니다. 통제력을 잃을수록 트라우마에 더 취약해집니다.
 	"음란", "노출증", "이상성욕"으로 표시된 행동은 스트레스와 트라우마를 낮춰줍니다. 또한 통제력을 회복시켜 줍니다. 이러한 행동을 충분히 자주 하면 같은 유형의 더 음란한 행동이 해금되지만, 약한 행동의 효과는 떨어집니다. 조심하지 않으면, 뻔뻔하고 터무니없는 행동 없이는 통제된 상태에 도달할 수 없게 될 것입니다.</i>
 	<br><br>
-	<<link [[유혹하기|Tutorial Flirt]]>><<set $spraymax++>><<spray 5>><</link>><<promiscuous1>>
+	<<link [[유혹한다|Tutorial Flirt]]>><<set $spraymax++>><<spray 5>><</link>><<promiscuous1>>
 	<br>
 	<<link [[<<him>>에게 감사하기|Tutorial Thank]]>><<set $spraymax++>><<spray 5>><</link>>
 	<br>
@@ -96,7 +96,7 @@ __전투 튜토리얼__
 	<i>공격을 받으면 통제력이 손상됩니다. 통제력을 잃을수록 트라우마에 더 취약해집니다.
 	"음란", "노출증", "이상성욕"으로 표시된 행동은 스트레스와 트라우마를 낮춰줍니다. 또한 통제력을 회복시켜 줍니다. 이러한 행동을 충분히 자주 하면 같은 유형의 더 음란한 행동이 해금되지만, 약한 행동의 효과는 떨어집니다. 조심하지 않으면, 뻔뻔하고 터무니없는 행동 없이는 통제된 상태에 도달할 수 없게 될 것입니다.</i>
 	<br><br>
-	<<link [[유혹하기|Tutorial Flirt]]>><<set $spraymax++>><<spray 5>><</link>><<promiscuous1>>
+	<<link [[유혹한다|Tutorial Flirt]]>><<set $spraymax++>><<spray 5>><</link>><<promiscuous1>>
 	<br>
 	<<link [[<<him>>에게 감사하기|Tutorial Thank]]>><<set $spraymax++>><<spray 5>><</link>>
 	<br>
@@ -118,7 +118,7 @@ __전투 튜토리얼__
 	<i>공격을 받으면 통제력이 손상됩니다. 통제력을 잃을수록 트라우마에 더 취약해집니다.
 	"음란", "노출증", "이상성욕"으로 표시된 행동은 스트레스와 트라우마를 낮춰줍니다. 또한 통제력을 회복시켜 줍니다. 이러한 행동을 충분히 자주 하면 같은 유형의 더 음란한 행동이 해금되지만, 약한 행동의 효과는 떨어집니다. 조심하지 않으면, 뻔뻔하고 터무니없는 행동 없이는 통제된 상태에 도달할 수 없게 될 것입니다.</i>
 	<br><br>
-	<<link [[유혹하기|Tutorial Flirt]]>><<set $spraymax++>><<spray 5>><</link>><<promiscuous1>>
+	<<link [[유혹한다|Tutorial Flirt]]>><<set $spraymax++>><<spray 5>><</link>><<promiscuous1>>
 	<br>
 	<<link [[<<him>>에게 감사하기|Tutorial Thank]]>><<set $spraymax++>><<spray 5>><</link>>
 	<br>

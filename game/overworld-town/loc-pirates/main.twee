@@ -821,7 +821,7 @@
 	<<else>>
 
 		<<if Time.dayState is "day">>
-			<<link [[어울리기 (1:00)|Pirate Socialise]]>><<pass 60>><<stress -6>><</link>><<lstress>>
+			<<link [[어울린다 (1:00)|Pirate Socialise]]>><<pass 60>><<stress -6>><</link>><<lstress>>
 			<br>
 		<</if>>
 
@@ -898,7 +898,7 @@
 	<<else>>
 
 		<<if Time.dayState is "night">>
-			<<link [[수색하기 (1:00)|Pirate Search]]>><<pass 60>><</link>>
+			<<link [[수색한다 (1:00)|Pirate Search]]>><<pass 60>><</link>>
 			<br>
 		<</if>>
 		<<link [[침대|Pirate Bed]]>><</link>>

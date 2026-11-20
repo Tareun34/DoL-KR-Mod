@@ -115,7 +115,7 @@
 	<span class="blue">관광객들이 밤을 보내기 위해 샬레로 돌아가고 있다.</span>
 	<br>
 <</if>>
-<<getouticon>><<link [[떠나기|Chalets Work End]]>><</link>>
+<<getouticon>><<link [[떠난다|Chalets Work End]]>><</link>>
 <br>
 
 :: Chalets Knock

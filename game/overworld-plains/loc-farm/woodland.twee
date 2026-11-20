@@ -100,14 +100,14 @@
 		<<if pcAreArmsBound("both")>>
 			<span class="red">양팔이 묶여 있어</span>, 알렉스가 삼림지를 돌보는 것을 도울 수 없다.
 		<<else>>
-			<<foresticon>><<link [[알렉스를 도와 삼림지 돌보기 (0:20)|Farm Woodland Tend Alex]]>><<set $farm_work.woodland += 1>><<farm_count 20>><<physique 2>><<pass 20>><<tending 2>><<tiredness 2>><<set $farm_work.tending += 1>><</link>><<gtiredness>><<gtending>>
+			<<foresticon>><<link [[알렉스를 도와 삼림지 돌본다 (0:20)|Farm Woodland Tend Alex]]>><<set $farm_work.woodland += 1>><<farm_count 20>><<physique 2>><<pass 20>><<tending 2>><<tiredness 2>><<set $farm_work.tending += 1>><</link>><<gtiredness>><<gtending>>
 		<</if>>
 		<br>
 	<<elseif $farm_work.woodland lt $farm.woodland>>
 		<<if pcAreArmsBound("both")>>
 			<span class="red">양팔이 묶여 있어</span>, 삼림지를 돌볼 수 없다.
 		<<else>>
-			<<foresticon>><<link [[삼림지 돌보기 (0:20)|Farm Woodland Tend]]>><<set $farm_work.woodland += 1>><<farm_count 20>><<physique 2>><<pass 20>><<tending 2>><<tiredness 2>><<set $farm_work.tending += 1>><</link>><<gtiredness>><<gtending>>
+			<<foresticon>><<link [[삼림지 돌본다 (0:20)|Farm Woodland Tend]]>><<set $farm_work.woodland += 1>><<farm_count 20>><<physique 2>><<pass 20>><<tending 2>><<tiredness 2>><<set $farm_work.tending += 1>><</link>><<gtiredness>><<gtending>>
 		<</if>>
 		<br>
 	<</if>>
@@ -132,14 +132,14 @@
 			<span class="red">양팔이 묶여 있어</span>, 채집할 수 없다.
 		<<else>>
 			<!-- Tiredness applied at the start of every 20 minute segment. -->
-			<<foresticon "bush">><<link [[과일 채집하기 (1:00)|Farm Woodland Forage]]>><<set $farm_work.forage += 1>>
+			<<foresticon "bush">><<link [[과일을 채집한다 (1:00)|Farm Woodland Forage]]>><<set $farm_work.forage += 1>>
 				<<set $tempBasket to [0, 0, 0]>>
 				<<set $tempAttempts to 3>>
 				<<set $tempForageType to "fruit">>
 			<</link>><<gtiredness>>
 			<<if $farm_work.pigs_out is 1 and Time.season is not "winter">>
 				<br>
-				<<animalicon "pig">><<link [[버섯 채집하기 (1:00)|Farm Woodland Forage]]>><<set $farm_work.forage += 1>>
+				<<animalicon "pig">><<link [[버섯을 채집한다 (1:00)|Farm Woodland Forage]]>><<set $farm_work.forage += 1>>
 					<<set $tempBasket to [0, 0, 0]>>
 					<<set $tempAttempts to 3>>
 					<<set $tempForageType to "fungi">>
@@ -148,7 +148,7 @@
 		<</if>>
 		<br>
 	<</if>>
-	<<getouticon>><<link [[떠나기 (0:05)|Farm Work]]>><<pass 5>><</link>>
+	<<getouticon>><<link [[떠난다 (0:05)|Farm Work]]>><<pass 5>><</link>>
 <</if>>
 
 :: Farm Woodland Tend
@@ -465,7 +465,7 @@
 			<<if $farm_work.pigs_fed gte 6>>
 				<<foodstufficon "potato">><span class="blue">돼지들이 너무 배가 불러서 더 이상 감자를 원하지 않습니다.</span>
 			<<elseif $foodstuff["potato"].amount gte _requiredPotatoes>>
-				<<foodstufficon "potato">><<link [[감자로 보상하기 (0:20)|Farm Woodland Forage Reward]]>>
+				<<foodstufficon "potato">><<link [[감자로 보상한다 (0:20)|Farm Woodland Forage Reward]]>>
 					<<set $tempRewardType to "potato">>
 					<<set $tempRewardQuantity to _requiredPotatoes>>
 					<<set $foodstuff["potato"].amount -= _requiredPotatoes>>
@@ -476,7 +476,7 @@
 			<br>
 
 			<<if $foodstuff["wild_carrot"].amount gte _requiredCarrots>>
-				<<foodstufficon "wild_carrot">><<link [[당근으로 보상하기 (0:10)|Farm Woodland Forage Reward]]>>
+				<<foodstufficon "wild_carrot">><<link [[당근으로 보상한다 (0:10)|Farm Woodland Forage Reward]]>>
 					<<set $tempRewardType to "carrot">>
 					<<set $tempRewardQuantity to _requiredCarrots>>
 					<<set $foodstuff["wild_carrot"].amount -= _requiredCarrots>>
@@ -488,19 +488,19 @@
 
 			<<if $foodstuff["apple"].amount gte _requiredApples>>
 				<<if currentSkillValue("housekeeping") gte 400 and $mathstrait gte 3>>
-					<<foodstufficon "apple">><<link [[사과로 보상하기 (0:20)|Farm Woodland Forage Reward]]>>
+					<<foodstufficon "apple">><<link [[사과로 보상한다 (0:20)|Farm Woodland Forage Reward]]>>
 						<<set $tempRewardType to "apple">>
 						<<set $tempRewardQuantity to _requiredApples>>
 						<<set $foodstuff["apple"].amount -= _requiredApples>>
 					<</link>>
 				<<elseif currentSkillValue("housekeeping") gte 400>>
-					<<foodstufficon "apple">><<link [[사과로 보상하기 (0:15)|Farm Woodland Forage Reward]]>>
+					<<foodstufficon "apple">><<link [[사과로 보상한다 (0:15)|Farm Woodland Forage Reward]]>>
 						<<set $tempRewardType to "apple">>
 						<<set $tempRewardQuantity to _requiredApples>>
 						<<set $foodstuff["apple"].amount -= _requiredApples>>
 					<</link>>
 				<<else>>
-					<<foodstufficon "apple">><<link [[사과로 보상하기 (0:10)|Farm Woodland Forage Reward]]>>
+					<<foodstufficon "apple">><<link [[사과로 보상한다 (0:10)|Farm Woodland Forage Reward]]>>
 						<<set $tempRewardType to "apple">>
 						<<set $tempRewardQuantity to _requiredApples>>
 						<<set $foodstuff["apple"].amount -= _requiredApples>>
@@ -512,13 +512,13 @@
 			<br>
 
 			<<if beastSexEnabledForType("pig", $farm_work.pig.monster) and hasSexStat("deviancy", 5)>>
-				<<animalicon "pig">><<link [[당신의 몸으로 보상하기|Farm Woodland Forage Reward]]>>
+				<<animalicon "pig">><<link [[당신의 몸으로 보상한다|Farm Woodland Forage Reward]]>>
 					<<set $tempRewardType to "body">>
 				<</link>><<deviant5>>
 			<</if>>
 			<br>
 
-			<<getouticon>><<link [[아무것도 주지 않기|Farm Woodland Forage Reward]]>>
+			<<getouticon>><<link [[아무것도 주지 않는다|Farm Woodland Forage Reward]]>>
 				<<set $tempRewardType to "nothing">>
 			<</link>><<llrespect>>
 			<br>
@@ -785,15 +785,15 @@
                <</if>>
                <br><br>
 
-               <<link [[꾸짖기|Farm Woodland Pigs Scold]]>>
+               <<link [[꾸짖는다|Farm Woodland Pigs Scold]]>>
                    <<set $tempPosition to "standing">>
                <</link>><<tendingdifficulty 1 1000>>
                <br>
-               <<link [[밀쳐내기|Farm Woodland Pigs Shove]]>>
+               <<link [[밀쳐낸다|Farm Woodland Pigs Shove]]>>
                    <<set $tempPosition to "standing">>
                <</link>><<physiquedifficulty 1 12000>>
                <br>
-               <<link [[견뎌내기|Farm Woodland Pigs Endure]]>><<farm_pigs -1>><<trauma 6>><<stress 6>>
+               <<link [[견뎌낸다|Farm Woodland Pigs Endure]]>><<farm_pigs -1>><<trauma 6>><<stress 6>>
                    <<set $tempPosition to "standing">>
                <</link>><<lrespect>><<gtrauma>><<gstress>>
                <br>
@@ -817,7 +817,7 @@
                <br><br>
 
                <!-- Exact position is "missionary". -->
-               <<link [[꾸짖기|Farm Woodland Pigs Scold]]>>
+               <<link [[꾸짖는다|Farm Woodland Pigs Scold]]>>
                    <<set $tempPosition to "prone">>
                <</link>><<tendingdifficulty 1 1300>>
                <br>
@@ -835,7 +835,7 @@
                <</if>>
            <</if>>
        <<else>>
-           <<link [[계속하기|Farm Woodland Forage]]>><</link>>
+           <<link [[계속한다|Farm Woodland Forage]]>><</link>>
        <</if>>
 
 	<<else>>
@@ -851,14 +851,14 @@
                <span class="red">당신은 두 팔이 묶여 있어서</span>, 꽃을 꺾을 수 없다.
                <br>
            <<else>>
-               <<foodstufficon "strange_flower">><<link [[꺾기|Farm Woodland Strange Harvest]]>><<drugs 60>><</link>><<garousal>>
+               <<foodstufficon "strange_flower">><<link [[꺾는다|Farm Woodland Strange Harvest]]>><<drugs 60>><</link>><<garousal>>
            <</if>>
            <br>
-           <<getouticon>><<link [[무시하기|Farm Woodland Forage]]>><</link>>
+           <<getouticon>><<link [[무시한다|Farm Woodland Forage]]>><</link>>
            <br>
 
        <<else>>
-           <<link [[계속하기|Farm Woodland Forage]]>><</link>>
+           <<link [[계속한다|Farm Woodland Forage]]>><</link>>
            <br>
        <</if>>
 	<</if>>

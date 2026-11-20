@@ -53,7 +53,7 @@
 	<</if>>
 	<br>
 	<<set _exit to $safePassage ? $safePassage : "Bedroom">>
-	<span id="next"><<link [[안전한 곳으로 돌아가기|_exit]]>><<endcombat>><<clotheson>><</link>></span>
+	<span id="next"><<link [[안전한 곳으로 돌아간다|_exit]]>><<endcombat>><<clotheson>><</link>></span>
 <<elseif !_link and !tags().includes("exitCheckBypass")>>
 	/* Does not trigger if the scene has a red link. Those will probably be reported anyway */
 	<br>
@@ -72,7 +72,7 @@
 	<</if>>
 	<br><br><br>
 	<<set _exit to $safePassage ? $safePassage : "Bedroom">>
-	<span id="next"><<link [[안전한 곳으로 돌아가기|_exit]]>><<endcombat>><<clotheson>><</link>></span>
+	<span id="next"><<link [[안전한 곳으로 돌아간다|_exit]]>><<endcombat>><<clotheson>><</link>></span>
 <</if>>
 
 <!-- handle autosaves in the footer, so the description getter don't have to guess what happened in the passage -->

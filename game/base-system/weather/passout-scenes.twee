@@ -1692,9 +1692,9 @@ To get the previous major area passage, use: $safePassage (for links in the last
 
 <br><br>
 
-<<link [[키스하기|Passout Bird Hypothermia Thank]]>><<set $phase to 1>><</link>><<kissvirginitywarning>>
+<<link [[키스한다|Passout Bird Hypothermia Thank]]>><<set $phase to 1>><</link>><<kissvirginitywarning>>
 <br>
-<<link [[감사하기|Passout Bird Hypothermia Thank]]>><<set $phase to 0>><</link>>
+<<link [[감사한다|Passout Bird Hypothermia Thank]]>><<set $phase to 0>><</link>>
 
 :: Passout Bird Hypothermia Thank
 <<effects>>

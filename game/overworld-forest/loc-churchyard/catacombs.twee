@@ -40,7 +40,7 @@
 	<<events_catacombs normal>>
 <<else>>
 	<<if $museumAntiques.antiques.antiqueivorystatuette isnot "found" and $museumAntiques.antiques.antiqueivorystatuette isnot "talk" and $museumAntiques.antiques.antiqueivorystatuette isnot "museum">>
-		<<antiqueicon "ivory-statuette">><<link [[조각상 가져가기|Catacombs Statuette]]>><</link>><<crime "thievery">>
+		<<antiqueicon "ivory-statuette">><<link [[조각상을 가져간다|Catacombs Statuette]]>><</link>><<crime "thievery">>
 		<br>
 	<</if>>
 	<<if pcAreArmsBound("any")>>
@@ -48,10 +48,10 @@
 		<br>
 	<</if>>
 	<<if $catacombs_torch lt 100>>
-		<<caveicon "torch">><<link [[횃불에 불 붙이기|Catacombs Light]]>><</link>><<gtorch>>
+		<<caveicon "torch">><<link [[횃불에 불을 붙인다|Catacombs Light]]>><</link>><<gtorch>>
 		<br>
 	<</if>>
-	<<caveicon "east">><<link [[동쪽으로 걷기 (0:10)|Catacombs Sarcophagi]]>><<pass 10>><<catacombs_torch -5>><</link>><<ltorch>>
+	<<caveicon "east">><<link [[동쪽으로 걷는다 (0:10)|Catacombs Sarcophagi]]>><<pass 10>><<catacombs_torch -5>><</link>><<ltorch>>
 	<br>
 	<<caveicon "west">><<link [[서쪽으로 걷는다 (0:10)|Catacombs Prison]]>><<pass 10>><<catacombs_torch -5>><</link>><<ltorch>>
 	<br><br>
@@ -112,9 +112,9 @@
 <<else>>
 	<<catacombs_plunder "normal">>
 
-	<<caveicon "east">><<link [[동쪽으로 걷기 (0:10)|Catacombs Chasm]]>><<pass 10>><<catacombs_torch -5>><</link>><<ltorch>>
+	<<caveicon "east">><<link [[동쪽으로 걷는다 (0:10)|Catacombs Chasm]]>><<pass 10>><<catacombs_torch -5>><</link>><<ltorch>>
 	<br>
-	<<caveicon "west">><<link [[서쪽으로 걷기 (0:10)|Catacombs]]>><<pass 10>><<catacombs_torch -5>><</link>><<ltorch>><<catacombs_exit_indicator>>
+	<<caveicon "west">><<link [[서쪽으로 걷는다 (0:10)|Catacombs]]>><<pass 10>><<catacombs_torch -5>><</link>><<ltorch>><<catacombs_exit_indicator>>
 	<br>
 <</if>>
 
@@ -136,9 +136,9 @@
 <<else>>
 	<<catacombs_plunder "normal">>
 
-	<<caveicon "east">><<link [[동쪽으로 걷기 (0:10)|Catacombs]]>><<pass 10>><<catacombs_torch -5>><</link>><<ltorch>><<catacombs_exit_indicator>>
+	<<caveicon "east">><<link [[동쪽으로 걷는다 (0:10)|Catacombs]]>><<pass 10>><<catacombs_torch -5>><</link>><<ltorch>><<catacombs_exit_indicator>>
 	<br>
-	<<caveicon "west">><<link [[서쪽으로 걷기 (0:10)|Catacombs Ridge]]>><<pass 10>><<catacombs_torch -5>><</link>><<ltorch>>
+	<<caveicon "west">><<link [[서쪽으로 걷는다 (0:10)|Catacombs Ridge]]>><<pass 10>><<catacombs_torch -5>><</link>><<ltorch>>
 	<br>
 <</if>>
 
@@ -167,13 +167,13 @@
 	<<catacombs_plunder "normal">>
 
 	<<if currentSkillValue('tending') gte 500>>
-		<<mysteryicon>><<link [[달래기|Catacombs Chasm Coax]]>><</link>><<note "관리" "green">>
+		<<mysteryicon>><<link [[달랜다|Catacombs Chasm Coax]]>><</link>><<note "관리" "green">>
 		<br>
 	<<else>>
 		<<mysteryicon>><span class="blue">저 위의 무언가를 달래서 나오게 하기에는 관리 스킬이 부족합니다.</span>
 		<br>
 	<</if>>
-	<<caveicon "west">><<link [[서쪽으로 걷기 (0:10)|Catacombs Sarcophagi]]>><<pass 10>><<catacombs_torch -5>><</link>><<ltorch>><<catacombs_exit_indicator>>
+	<<caveicon "west">><<link [[서쪽으로 걷는다 (0:10)|Catacombs Sarcophagi]]>><<pass 10>><<catacombs_torch -5>><</link>><<ltorch>><<catacombs_exit_indicator>>
 	<br>
 <</if>>
 
@@ -202,9 +202,9 @@
 <</if>>
 <br><br>
 
-<<link [[균열 건너가기 (0:10)|Catacombs Chasm Coax 2]]>><<pass 10>><</link>>
+<<link [[균열을 건너간다 (0:10)|Catacombs Chasm Coax 2]]>><<pass 10>><</link>>
 <br>
-<<link [[머무르기|Catacombs Chasm]]>><<endevent>><<set $eventskip to 1>><</link>>
+<<link [[머무른다|Catacombs Chasm]]>><<endevent>><<set $eventskip to 1>><</link>>
 <br>
 
 :: Catacombs Chasm Coax 2
@@ -467,7 +467,7 @@
 	<<catacombs_plunder "compound">>
 
 	<<if currentSkillValue('tending') gte 500>>
-		<<mysteryicon>><<link [[달래기|Catacombs Bores Coax]]>><</link>><<note "관리" "green">>
+		<<mysteryicon>><<link [[달랜다|Catacombs Bores Coax]]>><</link>><<note "관리" "green">>
 		<br>
 	<<else>>
 		<<mysteryicon>><span class="blue">저 위의 무언가를 달래서 나오게 하기에는 관리 스킬이 부족합니다.</span>

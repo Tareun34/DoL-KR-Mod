@@ -1255,7 +1255,7 @@
 <<He>>【은는】 무릎을 꿇기 시작한다. "네 성기부터 시작할게."
 <br><br>
 
-<<link [[계속하기 (0:03)|Gwylan Ritual Inspect]]>><<pass 3>><</link>>
+<<link [[계속한다 (0:03)|Gwylan Ritual Inspect]]>><<pass 3>><</link>>
 <br>
 
 :: Gwylan Ritual Inspect
@@ -1399,7 +1399,7 @@
 당신의 다리는 뒤처지지 않으려 저절로 움직인다.
 <br><br>
 
-<<link [[계속하기 (0:02)|Gwylan Ritual Wash]]>><<set $phase to 0>><<pass 2>><</link>>
+<<link [[계속한다 (0:02)|Gwylan Ritual Wash]]>><<set $phase to 0>><<pass 2>><</link>>
 <br>
 <<link [[그윌란의 손을 잡는다 (0:02)|Gwylan Ritual Wash]]>><<set $phase to 1>><<pass 2>><<if C.npc.Gwylan.dom lt 10>><<npcincr Gwylan dom 1>><</if>><</link>><<if C.npc.Gwylan.dom lt 10>><<gyearning>><</if>><<handholdingvirginitywarning>>
 <br>
@@ -1459,10 +1459,10 @@
 <</if>>
 <br><br>
 
-<<link [[계속하기 (0:08)|Gwylan Ritual Wash 2]]>><<pass 8>><</link>>
+<<link [[계속한다 (0:08)|Gwylan Ritual Wash 2]]>><<pass 8>><</link>>
 <br>
 <<if $gwylanSeen.includes("vine_bondage") and !$sexRitual.forced>>
-	<<link [[묶어달라고 부탁하기 (0:08)|Gwylan Ritual Wash 2]]>><<set $phase to "bondage">><<pass 8>><</link>>
+	<<link [[묶어달라고 부탁한다 (0:08)|Gwylan Ritual Wash 2]]>><<set $phase to "bondage">><<pass 8>><</link>>
 	<br>
 <</if>>
 

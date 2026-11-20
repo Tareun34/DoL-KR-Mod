@@ -75,7 +75,7 @@
 트랙터가 다시 덜컹거리며 움직인다. 조심스럽게 트레일러로 내려간다. 차량이 빨리 움직이지는 않지만, 지금 떠나면 운전자가 당신을 발견할지도 모른다. 재빨리 움직이지 않는 한 말이다.
 <br><br>
 
-<<link [[달리기|Farmland Exposed Cling Run]]>><</link>><<athleticsdifficulty 1 1000>>
+<<link [[달린다|Farmland Exposed Cling Run]]>><</link>><<athleticsdifficulty 1 1000>>
 <br>
 <<link [[기회를 기다린다|Farmland Exposed Cling Wait]]>><</link>><<difficulty 50>>
 <br>

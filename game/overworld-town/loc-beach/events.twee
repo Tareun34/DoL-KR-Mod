@@ -102,7 +102,7 @@
 	<<socialiseicon>><<link [[추파를 던진다 (0:05)|Beach Day Encounter]]>><<pass 5>><<set $phase to 2>><</link>><<promiscuous1>>
 	<br>
 	<<if between(Time.hour, 7, 19) and !Weather.isOvercast and Weather.temperature gte 10>>
-		<<cosmeticsicon "sunscreen">><<link [[선크림 발라주기 (0:03)|Beach Day Encounter Sunscreen 1]]>><<pass 3>><</link>><<promiscuous1>>
+		<<cosmeticsicon "sunscreen">><<link [[선크림을 발라준다 (0:03)|Beach Day Encounter Sunscreen 1]]>><<pass 3>><</link>><<promiscuous1>>
 		<br>
 	<</if>>
 	<<getouticon>><<destinationBeach "떠난다">><<endevent>><<set $eventskip to 1>><</destinationBeach>>
@@ -185,7 +185,7 @@
 	<<insufficientStat "promiscuity" "더 나아가기엔">>
 <</if>>
 <br>
-<<link [[그만두기|Beach Day Encounter Sunscreen 2]]>><<set $phase to 0>><</link>>
+<<link [[그만둔다|Beach Day Encounter Sunscreen 2]]>><<set $phase to 0>><</link>>
 
 :: Beach Day Encounter Sunscreen 2
 

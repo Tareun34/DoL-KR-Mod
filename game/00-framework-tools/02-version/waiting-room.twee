@@ -13,7 +13,7 @@ Degrees of Lewdity <<print StartConfig.version>><<if StartConfig.versionName>> <
 
 벌써 끝났네요.
 
-<<link [[계속하기|$navigation.stack.last()]]>><<run $navigation.stack.pop()>><</link>>
+<<link [[계속한다|$navigation.stack.last()]]>><<run $navigation.stack.pop()>><</link>>
 
 :: Downgrade Waiting Room
 Degrees of Lewdity <<- StartConfig.version>><<if StartConfig.versionName>> <<print StartConfig.versionName>><</if>>에 다시 오신 것을 환영합니다.

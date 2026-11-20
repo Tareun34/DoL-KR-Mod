@@ -2013,7 +2013,7 @@
 운전기사가 상자를 가져가고, 그 자리에 <<printmoney `_value + 5000`>>【을를】 남긴다.
 <<money `Math.floor(_value + 5000)` "tailor">>
 <br><br>
-<<link [[계속하기|$wardrobeReturnLink]]>>
+<<link [[계속한다|$wardrobeReturnLink]]>>
 	<<unset $wardrobeReturnLink>>
 	<<unset $crateContents>>
 <</link>>
@@ -2256,7 +2256,7 @@
 	운전기사가 상자를 가져간다.
 <</if>>
 <br><br>
-<<link [[계속하기|$wardrobeReturnLink]]>>
+<<link [[계속한다|$wardrobeReturnLink]]>>
 	<<unset $wardrobeReturnLink>>
 	<<unset $crateContents>>
 <</link>>

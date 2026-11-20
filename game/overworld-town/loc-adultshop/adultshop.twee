@@ -13,7 +13,7 @@
 		<br><br>
 
 		<<lockicon "pick">>
-		<<link [[자물쇠 따기 (0:10)|Adult Shop]]>>
+		<<link [[자물쇠를 딴다 (0:10)|Adult Shop]]>>
 			<<pass 10>><<crimeUp 5 "trespassing">>
 			<<if $adultShop.ban gt 0 or crimeSumCurrent() gte 50000 or $adultShop.rng gte $skulduggery>>
 				<<set $adultShop.spotted to true>>
@@ -27,7 +27,7 @@
 	<br><br>
 <</if>>
 
-<<getouticon>><<link [[떠나기|Elk Street]]>><</link>>
+<<getouticon>><<link [[떠난다|Elk Street]]>><</link>>
 <br>
 
 :: Adult Shop
@@ -279,10 +279,10 @@
 		<<socialiseicon>><<link [[시드니에게 다가간다 (0:01)|Adult Shop Approach Sydney]]>><<pass 1>><<endevent>><</link>>
 		<br>
 	<</if>>
-	<<icon "adult-clothing.png">><<link [[의류 둘러보기 (0:01)|Adult Shop Store]]>><<pass 1>><</link>>
+	<<icon "adult-clothing.png">><<link [[의류를 둘러본다 (0:01)|Adult Shop Store]]>><<pass 1>><</link>>
 	<<if $adultshopstate isnot "closed" or $debug>>
 		<br>
-		<<sextoysicon "strap-on">><<link [[장난감 둘러보기 (0:01)|Adult Shop Menu]]>><<pass 1>><</link>>
+		<<sextoysicon "strap-on">><<link [[장난감을 둘러본다 (0:01)|Adult Shop Menu]]>><<pass 1>><</link>>
 	<</if>>
 	<br><br>
 	<<elkicon>><<link [[엘크 가 (0:01)|Elk Street]]>><<pass 1>><<adultShopClear>><</link>>
@@ -312,10 +312,10 @@
 <</if>>
 <<if $brothelVending?.status is "set">>
 	<<if $brothelVending.products gte 2 and !$weekly.brothelVMLube and $brothelVending.lubeToRefill gte 10>>
-		<<sextoysicon "lube">><<link [[창관에 납품할 윤활제 구매하기 (0:10)|Adult Shop Buy Lube in Bulk]]>><<pass 10>><</link>>
+		<<sextoysicon "lube">><<link [[창관에 납품할 윤활제를 구매한다 (0:10)|Adult Shop Buy Lube in Bulk]]>><<pass 10>><</link>>
 		<br>
 	<<elseif $brothelVending.products lt 2>>
-		<<sextoysicon "lube">><<link [[윤활제 대량 구매에 대해 묻기 (0:15)|Adult Shop Buy Lube in Bulk]]>><<pass 15>><</link>>
+		<<sextoysicon "lube">><<link [[윤활제 대량 구매에 대해 묻는다 (0:15)|Adult Shop Buy Lube in Bulk]]>><<pass 15>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -407,15 +407,15 @@
 	<<if $weekly.brothelVMLube>>
 		이번 주에는 이미 자판기에 윤활제를 채워 넣었습니다.
 		<br><br>
-		<<link [[돌아가기|Adult Shop Approach Sirris]]>><</link>>
+		<<link [[돌아간다|Adult Shop Approach Sirris]]>><</link>>
 	<<elseif $brothelVending.lubeToRefill lt 10>>
 		자판기에 윤활제를 채울 필요가 없습니다.
 		<br><br>
-		<<link [[돌아가기|Adult Shop Approach Sirris]]>><</link>>
+		<<link [[돌아간다|Adult Shop Approach Sirris]]>><</link>>
 	<<elseif $money lt 20000>>
 		자판기를 채울 윤활제를 살 돈이 없습니다.
 		<br><br>
-		<<link [[돌아가기|Adult Shop Approach Sirris]]>><</link>>
+		<<link [[돌아간다|Adult Shop Approach Sirris]]>><</link>>
 	<<else>>
 		당신은 시리스에게 윤활제 대량구매를 요청합니다.
 		<br><br>

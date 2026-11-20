@@ -1290,7 +1290,7 @@
 						<br>
 					<<else>>
 						<<if $money gte 200>>
-							<<foodicon "coffee">><<link [[로빈에게 커피 사주기 (£2)|Gwylan Ocean Breeze Robin Buy]]>>
+							<<foodicon "coffee">><<link [[로빈에게 커피를 사준다 (£2)|Gwylan Ocean Breeze Robin Buy]]>>
 								<<if $phase is "coffee">><<npcincr Robin dom 1>><</if>><<npcincr Robin love 1>>
 								<<set $phase to "coffee">><<set $phase2 to 2>><<money -200 "cafe">>
 							<</link>><<glove "Robin">><<if $phase is "coffee">><<gdom "Robin">><</if>>
@@ -1299,28 +1299,28 @@
 						<<if $money gte 700 and !npcIsPregnant("Robin")>>
 							<<if Time.season is "winter">>
 								<<foodicon "winterale">>
-								<<link [[로빈에게 겨울 에일 사주기 (£7)|Gwylan Ocean Breeze Robin Buy]]>>
+								<<link [[로빈에게 겨울 에일을 사준다 (£7)|Gwylan Ocean Breeze Robin Buy]]>>
 									<<if $phase is "winter ale">><<npcincr Robin dom 1>><</if>><<npcincr Robin love 1>>
 									<<set $phase to "winter ale">><<set $phase2 to 2>><<money -700 "cafe">>
 								<</link>><<glove "Robin">><<if $phase is "winter ale">><<gdom "Robin">><</if>>
 								<br>
 							<<elseif Time.season is "spring">>
 								<<foodicon "fruityale">>
-								<<link [[로빈에게 과일 에일 사주기 (£7)|Gwylan Ocean Breeze Robin Buy]]>>
+								<<link [[로빈에게 과일 에일을 사준다 (£7)|Gwylan Ocean Breeze Robin Buy]]>>
 									<<if $phase is "fruity ale">><<npcincr Robin dom 1>><</if>><<npcincr Robin love 1>>
 									<<set $phase to "fruity ale">><<set $phase2 to 2>><<money -700 "cafe">>
 								<</link>><<glove "Robin">><<if $phase is "fruity ale">><<gdom "Robin">><</if>>
 								<br>
 							<<elseif Time.season is "summer">>
 								<<foodicon "shandy">>
-								<<link [[로빈에게 섄디 사주기 (£7)|Gwylan Ocean Breeze Robin Buy]]>>
+								<<link [[로빈에게 섄디를 사준다 (£7)|Gwylan Ocean Breeze Robin Buy]]>>
 									<<if $phase is "shandy">><<npcincr Robin dom 1>><</if>><<npcincr Robin love 1>>
 									<<set $phase to "shandy">><<set $phase2 to 2>><<money -700 "cafe">>
 								<</link>><<glove "Robin">><<if $phase is "shandy">><<gdom "Robin">><</if>>
 								<br>
 							<<else>>
 								<<foodicon "autumnale">>
-								<<link [[로빈에게 가을 에일 사주기 (£7)|Gwylan Ocean Breeze Robin Buy]]>>
+								<<link [[로빈에게 가을 에일을 사준다 (£7)|Gwylan Ocean Breeze Robin Buy]]>>
 									<<if $phase is "autumn ale">><<npcincr Robin dom 1>><</if>><<npcincr Robin love 1>>
 									<<set $phase to "autumn ale">><<set $phase2 to 2>><<money -700 "cafe">>
 								<</link>><<glove "Robin">><<if $phase is "autumn ale">><<gdom "Robin">><</if>>
@@ -1332,7 +1332,7 @@
 						<</if>>
 						<<if $money gte 500>>
 							<<foodicon "fruitsalad">>
-							<<link [[로빈에게 과일 샐러드 사주기 (£5)|Gwylan Ocean Breeze Robin Buy]]>>
+							<<link [[로빈에게 과일 샐러드를 사준다 (£5)|Gwylan Ocean Breeze Robin Buy]]>>
 								<<if $phase is "fruit salad">><<npcincr Robin dom 1>><</if>><<npcincr Robin love 1>>
 								<<set $phase to "fruit salad">><<set $phase2 to 2>><<money -500 "cafe">>
 							<</link>><<glove "Robin">><<if $phase is "fruit salad">><<gdom "Robin">><</if>>
@@ -1340,7 +1340,7 @@
 						<</if>>
 						<<if $money gte 600 and Time.season is "winter">>
 							<<foodicon "gingerbread">>
-							<<link [[로빈에게 진저브레드 사주기 (£6)|Gwylan Ocean Breeze Robin Buy]]>>
+							<<link [[로빈에게 진저브레드를 사준다 (£6)|Gwylan Ocean Breeze Robin Buy]]>>
 								<<if $phase is "gingerbread">><<npcincr Robin dom 1>><</if>><<npcincr Robin love 1>>
 								<<set $phase to "gingerbread">><<set $phase2 to 2>><<money -600 "cafe">>
 							<</link>><<glove "Robin">><<if $phase is "gingerbread">><<gdom "Robin">><</if>>
@@ -1348,13 +1348,13 @@
 						<</if>>
 						<<if $money gte 1000>>
 							<<foodicon "pancakes">>
-							<<link [[로빈에게 팬케이크 사주기 (£10)|Gwylan Ocean Breeze Robin Buy]]>>
+							<<link [[로빈에게 팬케이크를 사준다 (£10)|Gwylan Ocean Breeze Robin Buy]]>>
 								<<if $phase is "pancakes">><<npcincr Robin dom 1>><</if>><<npcincr Robin love 1>>
 								<<set $phase to "pancakes">><<set $phase2 to 2>><<money -1000 "cafe">>
 							<</link>><<glove "Robin">><<if $phase is "pancakes">><<gdom "Robin">><</if>>
 							<br>
 							<<foodicon "crepes">>
-							<<link [[로빈에게 크레이프 사주기 (£10)|Gwylan Ocean Breeze Robin Buy]]>>
+							<<link [[로빈에게 크레이프를 사준다 (£10)|Gwylan Ocean Breeze Robin Buy]]>>
 								<<if $phase is "crepes">><<npcincr Robin dom 1>><</if>><<npcincr Robin love 1>>
 								<<set $phase to "crepes">><<set $phase2 to 2>><<money -1000 "cafe">>
 							<</link>><<glove "Robin">><<if $phase is "crepes">><<gdom "Robin">><</if>>
@@ -1362,7 +1362,7 @@
 						<</if>>
 						<<if $money gte 5000>>
 							<<foodicon "creambun">>
-							<<link [[로빈에게 디럭스 크림빵 사주기 (£50)|Gwylan Ocean Breeze Robin Buy]]>>
+							<<link [[로빈에게 디럭스 크림빵을 사준다 (£50)|Gwylan Ocean Breeze Robin Buy]]>>
 								<<if $phase is "deluxe cream bun">><<npcincr Robin dom 1>><</if>><<npcincr Robin love 2>>
 								<<set $phase to "deluxe cream bun">><<set $phase2 to 2>><<money -5000 "cafe">>
 							<</link>><<gglove "Robin">><<if $phase is "deluxe cream bun">><<gdom "Robin">><</if>>
@@ -2871,14 +2871,14 @@
 
 <<if $location is "cafe" and !(between($chef_state, 7, 8) and $chef_rework lte 30)>>
 	<<if $daily.robin_in_cafe and Time.schoolDay>>
-		<<getouticon>><<link [[밖에서 로빈 만나기 (0:01)|Gwylan Talk Struggles Meet Robin]]>><<pass 1>><<set $phase to 0>><<endevent "phaseless">><<unset $cafe_study>><<storeon "cafe_balcony">><</link>>
+		<<getouticon>><<link [[밖에서 로빈을 만난다 (0:01)|Gwylan Talk Struggles Meet Robin]]>><<pass 1>><<set $phase to 0>><<endevent "phaseless">><<unset $cafe_study>><<storeon "cafe_balcony">><</link>>
 	<<elseif $daily.robin_in_cafe>>
-		<<getouticon>><<link [[안에서 로빈 만나기 (0:01)|Gwylan Talk Struggles Meet Robin]]>><<pass 1>><<set $phase to 1>><<endevent "phaseless">><<unset $cafe_study>><<storeon "cafe_balcony">><</link>>
+		<<getouticon>><<link [[안에서 로빈을 만난다 (0:01)|Gwylan Talk Struggles Meet Robin]]>><<pass 1>><<set $phase to 1>><<endevent "phaseless">><<unset $cafe_study>><<storeon "cafe_balcony">><</link>>
 	<<else>>
-		<<getouticon>><<link [[안으로 돌아가기 (0:01)|Ocean Breeze]]>><<pass 1>><<endevent>><<unset $cafe_study>><<storeon "cafe_balcony">><</link>>
+		<<getouticon>><<link [[안으로 돌아간다 (0:01)|Ocean Breeze]]>><<pass 1>><<endevent>><<unset $cafe_study>><<storeon "cafe_balcony">><</link>>
 	<</if>>
 <<else>>
-	<<getouticon>><<link [[떠나기 (0:01)|Cliff Street]]>><<pass 1>><<endevent>><<set $eventskip to 1>><<unset $cafe_study>><<storeon "cafe_balcony">><</link>>
+	<<getouticon>><<link [[떠난다 (0:01)|Cliff Street]]>><<pass 1>><<endevent>><<set $eventskip to 1>><<unset $cafe_study>><<storeon "cafe_balcony">><</link>>
 <</if>>
 
 :: Gwylan Talk Struggles Meet Robin

@@ -105,15 +105,15 @@
 		<</if>>
 		<<if $phase is 10>>
 			<<set $phase to 0>>
-			<<policeicon>><<link [[경찰서 옆문으로 몰래 들어가기 (0:05)|Police Back Office]]>><<pass 5>><</link>>
+			<<policeicon>><<link [[경찰서 옆문으로 몰래 들어간다 (0:05)|Police Back Office]]>><<pass 5>><</link>>
 			<br>
 		<</if>>
 		<<if $town_projects.bridge gte 4>>
-			<<flatsicon>><<link [[다리를 건너 아파트로 가기 (0:01)|Flats]]>><<pass 1>><</link>>
+			<<flatsicon>><<link [[다리를 건너 아파트로 간다 (0:01)|Flats]]>><<pass 1>><</link>>
 			<br>
 		<</if>>
 		<<if $exposed lte 0>>
-			<<flatsicon>><<link [[운하를 건너 아파트로 가기 (0:01)|Flats Canal]]>><<pass 1>><</link>>
+			<<flatsicon>><<link [[운하를 건너 아파트로 간다 (0:01)|Flats Canal]]>><<pass 1>><</link>>
 			<br>
 		<</if>>
 		<<if $dorenintro gte 1 and $exposed lte 0>>

@@ -1113,7 +1113,7 @@
 		<br>
 	<</if>>
 	<<if $robin_amusements.games.includes("ring")>>
-		<<link [[고리 던지기|Robin Amusements Ring]]>><<money -700 "robin">><<pass 15>><<set $robin_amusements.games.delete("ring")>><</link>>
+		<<link [[고리를 던진다|Robin Amusements Ring]]>><<money -700 "robin">><<pass 15>><<set $robin_amusements.games.delete("ring")>><</link>>
 		<br>
 	<</if>>
 	<<if $robin_amusements.games.includes("slot")>>

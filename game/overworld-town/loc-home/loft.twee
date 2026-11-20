@@ -25,7 +25,7 @@
 <</if>>
 <br>
 <<if $loft_spray isnot 1 and $spray lt $spraymax and $loft_kylar>>
-	<<peppersprayicon>><<link [[후추 스프레이 리필하기|Orphanage Loft Spray]]>><<spray 1>><<set $loft_spray to 1>><</link>><<gspray>>
+	<<peppersprayicon>><<link [[후추 스프레이 리필한다|Orphanage Loft Spray]]>><<spray 1>><<set $loft_spray to 1>><</link>><<gspray>>
 	<br>
 <</if>>
 <<if $loft_river gte 1>>
@@ -93,7 +93,7 @@
 <<allowLewdIngredients>>
 <<kitchenDisplay>>
 
-<<getouticon>><<link [[나가기|Orphanage Loft]]>><<kitchenExit>><</link>>
+<<getouticon>><<link [[나간다|Orphanage Loft]]>><<kitchenExit>><</link>>
 <br>
 
 :: Orphanage Loft Reading Nook
@@ -738,7 +738,7 @@
 <br><br>
 
 <<if $daily.loftcoffee isnot 1>>
-	<<foodicon "coffee">><<link [[커피 한 잔 타기 (0:05)|Orphanage Loft Coffee Pot Drink]]>><<endevent>><<set $daily.loftcoffee to 1>><<pass 5>><<stress -3>><<tiredness -4>><</link>><<lstress>><<ltiredness>>
+	<<foodicon "coffee">><<link [[커피 한 잔을 탄다 (0:05)|Orphanage Loft Coffee Pot Drink]]>><<endevent>><<set $daily.loftcoffee to 1>><<pass 5>><<stress -3>><<tiredness -4>><</link>><<lstress>><<ltiredness>>
 	<br>
 <<else>>
 	<span class="blue">오늘은 이미 충분히 마셨다.</span>

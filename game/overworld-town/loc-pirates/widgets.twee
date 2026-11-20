@@ -65,7 +65,7 @@
         어떤 <<person>>【이가】 당신의 손에 대걸레를 쥐여준다. "가만히 서 있지만 말고. 갑판이나 닦아."
         <br><br>
 
-        <<link [[갑판 닦기 (2:00)|Pirate Swab]]>><<endevent>><<pirate_status 1 "mate">><<pass 120>><<tiredness 6>><</link>><<gtiredness>><<grespect "mate">>
+        <<link [[갑판을 닦는다 (2:00)|Pirate Swab]]>><<endevent>><<pirate_status 1 "mate">><<pass 120>><<tiredness 6>><</link>><<gtiredness>><<grespect "mate">>
         <br>
         <<link [[거절한다|Pirate Work Refuse]]>><<handheldon>><</link>>
         <br>
@@ -85,7 +85,7 @@
         "물이 새는 곳을 막아야 해." <<person>>【이가】 웅덩이를 넘어가며 말한다. "너. 당장 시작해."
         <br><br>
 
-        <<link [[구멍 막기 (2:00)|Pirate Bilge Plug]]>><<pirate_status 1 "mate">><<pass 120>><<tiredness 6>><</link>><<gtiredness>><<grespect "mate">>
+        <<link [[구멍을 막는다 (2:00)|Pirate Bilge Plug]]>><<pirate_status 1 "mate">><<pass 120>><<tiredness 6>><</link>><<gtiredness>><<grespect "mate">>
         <br>
         <<link [[거절한다|Pirate Work Refuse]]>><</link>>
         <br>

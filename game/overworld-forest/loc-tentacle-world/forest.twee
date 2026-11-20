@@ -621,9 +621,9 @@
 	<<elseif $arousal gte 10000 and !$tentacle_forest_lurker.includes("defeated")>>
 		<<tentacle_forest_orgasm_scene>>
 	<<else>>
-		<<link [[달리기 (0:05)|Tentacle Forest Flowers Run]]>><<tentacle_forest_pass 5>><</link>><<willpowerdifficulty 1 1000>><<note "숲 속으로 들어가기" "lblue">>
+		<<link [[달린다 (0:05)|Tentacle Forest Flowers Run]]>><<tentacle_forest_pass 5>><</link>><<willpowerdifficulty 1 1000>><<note "숲 속으로 들어가기" "lblue">>
 		<br>
-		<<link [[노래하며 건너기 (0:05)|Tentacle Forest Flowers Sing]]>><<tentacle_forest_pass 5>><</link>><<tendingdifficulty 1 1000>><<note "숲 속으로 들어가기" "lblue">>
+		<<link [[노래하며 건넌다 (0:05)|Tentacle Forest Flowers Sing]]>><<tentacle_forest_pass 5>><</link>><<tendingdifficulty 1 1000>><<note "숲 속으로 들어가기" "lblue">>
 		<br><br>
 
 		공터 가장자리에는 덩굴들이 매달려 역겨울 정도로 달콤한 넥타르를 떨어뜨리고 있다.
@@ -631,9 +631,9 @@
 			당신은 냄새를 맡고 얼굴을 찌푸린다. 당신이 중독된 넥타르가 아니다. 이것으로는 갈증을 해소할 수 없다.
 		<</if>>
 		<br>
-		<<link [[빨기 (0:15)|Tentacle Forest Oral]]>><<tentacle_forest_pass 15>><</link>><<note "+ 입 스킬?" "blue">>
+		<<link [[빤다 (0:15)|Tentacle Forest Oral]]>><<tentacle_forest_pass 15>><</link>><<note "+ 입 스킬?" "blue">>
 		<br><br>
-		<<link [[도착 지점으로 돌아가기 (0:05)|Tentacle Forest]]>><<tentacle_forest_pass 5>><</link>>
+		<<link [[도착 지점으로 돌아간다 (0:05)|Tentacle Forest]]>><<tentacle_forest_pass 5>><</link>>
 		<br>
 	<</if>>
 <<elseif $town_projects.road gte 4>>
@@ -654,7 +654,7 @@
 		당신은 냄새를 맡고 얼굴을 찌푸린다. 당신이 중독된 넥타르가 아니다. 이것으로는 갈증을 해소할 수 없다.
 	<</if>>
 	<br>
-	<<link [[빨기 (0:15)|Tentacle Forest Oral]]>><<tentacle_forest_pass 15>><</link>><<note "+ 입 스킬?" "blue">>
+	<<link [[빤다 (0:15)|Tentacle Forest Oral]]>><<tentacle_forest_pass 15>><</link>><<note "+ 입 스킬?" "blue">>
 	<br><br>
 	<<link [[돌아간다|Tentacle Forest]]>><</link>>
 	<br>
@@ -789,7 +789,7 @@
 		<br>
 		<<link [[씨름한다 (0:15)|Tentacle Forest Chest]]>><<tentacle_forest_pass 15>><</link>><<note "+ 가슴 스킬?" "blue">>
 		<br><br>
-		<<link [[도착 지점으로 돌아가기 (0:05)|Tentacle Forest]]>><<tentacle_forest_pass 5>><</link>>
+		<<link [[도착 지점으로 돌아간다 (0:05)|Tentacle Forest]]>><<tentacle_forest_pass 5>><</link>>
 		<br>
 	<</if>>
 <<elseif $town_projects.diving gte 4>>
@@ -859,7 +859,7 @@
 		<br>
 		<<link [[앉는다 (0:15)|Tentacle Forest Bottom]]>><<tentacle_forest_pass 15>><</link>><<note "+ 엉덩이 스킬?" "blue">>
 		<br><br>
-		<<link [[도착 지점으로 돌아가기 (0:05)|Tentacle Forest]]>><<tentacle_forest_pass 5>><</link>>
+		<<link [[도착 지점으로 돌아간다 (0:05)|Tentacle Forest]]>><<tentacle_forest_pass 5>><</link>>
 		<br>
 	<</if>>
 <<elseif $town_projects.thicket gte 4>>
@@ -995,15 +995,15 @@
 	<<elseif $arousal gte 10000 and !$tentacle_forest_lurker.includes("defeated")>>
 		<<tentacle_forest_orgasm_scene>>
 	<<else>>
-		<<link [[그네 타기 (0:05)|Tentacle Forest Plants Swing]]>><<tentacle_forest_pass 5>><</link>><<willpowerdifficulty 1 1000>><<note "숲 속으로 들어가기" "lblue">>
+		<<link [[그네를 탄다 (0:05)|Tentacle Forest Plants Swing]]>><<tentacle_forest_pass 5>><</link>><<willpowerdifficulty 1 1000>><<note "숲 속으로 들어가기" "lblue">>
 		<br>
-		<<link [[기어오르기 (0:05)|Tentacle Forest Plants Climb]]>><<tentacle_forest_pass 5>><</link>><<athleticsdifficulty 1 1000>><<note "숲 속으로 들어가기" "lblue">>
+		<<link [[기어오른다 (0:05)|Tentacle Forest Plants Climb]]>><<tentacle_forest_pass 5>><</link>><<athleticsdifficulty 1 1000>><<note "숲 속으로 들어가기" "lblue">>
 		<br><br>
 		비슷하지만 더 키가 큰 촉수들이 당신의 양옆에서 솟아나, 공터 주변의 더 굵은 촉수들 사이를 비집고 올라간다. 촉수들은 땅을 향해 낮게 구부러져 있다.
 		<br>
-		<<link [[기어가기 (0:15)|Tentacle Forest Thighs]]>><<tentacle_forest_pass 15>><</link>><<note "+ 허벅지 스킬?" "blue">>
+		<<link [[기어간다 (0:15)|Tentacle Forest Thighs]]>><<tentacle_forest_pass 15>><</link>><<note "+ 허벅지 스킬?" "blue">>
 		<br><br>
-		<<link [[도착 지점으로 돌아가기 (0:05)|Tentacle Forest]]>><<tentacle_forest_pass 5>><</link>>
+		<<link [[도착 지점으로 돌아간다 (0:05)|Tentacle Forest]]>><<tentacle_forest_pass 5>><</link>>
 		<br>
 	<</if>>
 <<elseif $town_projects.green gte 4>>
@@ -1020,7 +1020,7 @@
 	<br><br>
 	비슷하지만 더 키가 큰 촉수들이 당신의 양옆에서 솟아나, 공터 주변의 더 굵은 촉수들 사이를 비집고 올라간다. 촉수들은 땅을 향해 낮게 구부러져 있다.
 	<br>
-	<<link [[기어가기 (0:15)|Tentacle Forest Thighs]]>><<tentacle_forest_pass 15>><</link>><<note "+ 허벅지 스킬?" "blue">>
+	<<link [[기어간다 (0:15)|Tentacle Forest Thighs]]>><<tentacle_forest_pass 15>><</link>><<note "+ 허벅지 스킬?" "blue">>
 	<br><br>
 	<<link [[돌아간다|Tentacle Forest]]>><</link>>
 	<br>

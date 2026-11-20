@@ -192,7 +192,7 @@
 	<<else>>
 		<<icon "maze-lock.png">>
 	<</if>>
-	<<link [[문 열기|Maze Lock]]>><</link>>
+	<<link [[문을 연다|Maze Lock]]>><</link>>
 	<br>
 <</if>>
 <<mazeIcon "left">><<link [[왼쪽으로 간다 (0:01)|Maze 0]]>><<pass 1>><</link>>
@@ -240,7 +240,7 @@
 문 너머에는 작은 안뜰이 있다. 적어도 지붕이 있었던 흔적은 없다. 구석, 고대 떡갈나무 밑동에 뒤집힌 양동이가 놓여 있다.
 <br><br>
 
-<<antiqueicon "bucket">><<link [[양동이 가져가기|Maze Bucket 2]]>><<set $antiquemoney += 200>><<museumAntiqueStatus "antiquebucket" "found">><<set $weekly.maze.bucket to 1>><</link>>
+<<antiqueicon "bucket">><<link [[양동이 가져간다|Maze Bucket 2]]>><<set $antiquemoney += 200>><<museumAntiqueStatus "antiquebucket" "found">><<set $weekly.maze.bucket to 1>><</link>>
 <br>
 <<mazeIcon "leave-left">><<link [[나가서 입구 왼쪽으로 간다 (0:01)|Maze 0]]>><<pass 1>><</link>>
 <br>
@@ -335,9 +335,9 @@
 바닥이 미끄러워진다. 벽은 얇고 미끈한 점액으로 덮여 있다. 또 다른 갈림길에 다다른다.
 <br><br>
 
-<<mazeIcon "left">><<link [[왼쪽으로 가기 (0:01)|Maze 0 0]]>><<pass 1>><</link>>
+<<mazeIcon "left">><<link [[왼쪽으로 간다 (0:01)|Maze 0 0]]>><<pass 1>><</link>>
 <br>
-<<mazeIcon "right">><<link [[오른쪽으로 가기 (0:01)|Maze 0 1]]>><<pass 1>><</link>>
+<<mazeIcon "right">><<link [[오른쪽으로 간다 (0:01)|Maze 0 1]]>><<pass 1>><</link>>
 <br>
 
 
@@ -352,9 +352,9 @@
 복도가 앞에서 갈라진다.
 <br><br>
 
-<<mazeIcon "left">><<link [[왼쪽으로 가기 (0:01)|Maze 1 0]]>><<pass 1>><</link>>
+<<mazeIcon "left">><<link [[왼쪽으로 간다 (0:01)|Maze 1 0]]>><<pass 1>><</link>>
 <br>
-<<mazeIcon "right">><<link [[오른쪽으로 가기 (0:01)|Maze 1 1]]>><<pass 1>><</link>>
+<<mazeIcon "right">><<link [[오른쪽으로 간다 (0:01)|Maze 1 1]]>><<pass 1>><</link>>
 <br>
 
 :: Maze 0 0
@@ -403,7 +403,7 @@
 			슬라임 한 방울이 앞 바닥에 떨어진다. 고개를 들어보니, 커다란 덩어리가 그 뒤를 따라 떨어진다. 당신은 그것을 피해 복도를 계속 통과한다.
 			<br><br>
 		<</if>>
-		<<mazeIcon "left">><<link [[왼쪽으로 가기 (0:01)|Maze 0 0 0]]>><<pass 1>><</link>>
+		<<mazeIcon "left">><<link [[왼쪽으로 간다 (0:01)|Maze 0 0 0]]>><<pass 1>><</link>>
 		<br>
 		<<mazeIcon "right">><<link [[오른쪽으로 간다 (0:01)|Maze 0 0 1]]>><<pass 1>><</link>>
 		<br>
@@ -448,7 +448,7 @@
 <<endcombat>>
 <<loadNPC 0 "basilisk">>
 
-<<mazeIcon "left">><<link [[왼쪽으로 가기 (0:01)|Maze 0 0 0]]>><<pass 1>><</link>>
+<<mazeIcon "left">><<link [[왼쪽으로 간다 (0:01)|Maze 0 0 0]]>><<pass 1>><</link>>
 <br>
 <<mazeIcon "right">><<link [[오른쪽으로 간다 (0:01)|Maze 0 0 1]]>><<pass 1>><</link>>
 <br>
@@ -465,9 +465,9 @@
 	앞 복도가 어둠으로 가득 차 있다. 천장이 다른 곳보다 상태가 좋아 빛이 들어오지 않는 것일 수도 있지만, 잘 보이지 않아 알 수 없다.
 	<br><br>
 
-	<<link [[조심스럽게 계속하기 (0:30)|Maze 0 1 Care]]>><<pass 30>><</link>>
+	<<link [[조심스럽게 계속한다 (0:30)|Maze 0 1 Care]]>><<pass 30>><</link>>
 	<br>
-	<<link [[서둘러 통과하기 (0:01)|Maze 0 1 Rush]]>><<pass 1>><</link>>
+	<<link [[서둘러 통과한다 (0:01)|Maze 0 1 Rush]]>><<pass 1>><</link>>
 	<br>
 
 <</if>>

@@ -3833,7 +3833,7 @@
 					Basics:
 					<br>
 
-					<<link [[에이버리의 저택 복귀로 건너뛰기|Mansion Enter]]>><<set $avery_mansion.schedule = "work">>
+					<<link [[에이버리의 저택 복귀로 건너뛴다|Mansion Enter]]>><<set $avery_mansion.schedule = "work">>
 					<<debug_avery_skip_to_return>>
 					<</link>><br>
 

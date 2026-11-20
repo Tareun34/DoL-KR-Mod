@@ -790,9 +790,9 @@
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
-   <<link [[들어가기 (0:20)|Moor Crack Passage]]>><<set $outside to 0>><<pass 20>><</link>>
+   <<link [[들어간다 (0:20)|Moor Crack Passage]]>><<set $outside to 0>><<pass 20>><</link>>
    <br>
-   <<link [[무시하기|Moor]]>><<set $eventskip to 1>><</link>>
+   <<link [[무시한다|Moor]]>><<set $eventskip to 1>><</link>>
 	<br>
 <</if>>
 
@@ -2093,11 +2093,11 @@
 		<br><br>
 	<</if>>
 
-		<<link [[달래기|Moor Cats Soothe]]>><</link>><<tendingdifficulty 500 1100>>
+		<<link [[달랜다|Moor Cats Soothe]]>><</link>><<tendingdifficulty 500 1100>>
 		<br>
-		<<link [[싸우기|Moor Cats Rape]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>>
+		<<link [[싸운다|Moor Cats Rape]]>><<set $phase to 0>><<set $molestationstart to 1>><</link>>
 		<br>
-		<<link [[굴복하기|Moor Cats Rape]]>><<set $phase to 1>><<set $molestationstart to 1>><</link>>
+		<<link [[굴복한다|Moor Cats Rape]]>><<set $phase to 1>><<set $molestationstart to 1>><</link>>
 		<br>
 <<elseif $rng gte 51>>
 	뒤에서 발소리가 들린다. 돌아보니, 한 쌍의 <<print either("개암나무색", "노란색", "녹색", "파란색")>> 눈과 마주친다. 더 많은 발소리가 들린다. 당신은 미친 듯이 달려, 간신히 탈출하지만, 상태는 더 나빠졌다.<<beastescape>>
@@ -2410,9 +2410,9 @@
 		<span class="blue"><<beasttype>>【이가】 공중을 가르며 급강하한다.</span> 연못 가장자리에 착지한다. <<bHe>>【은는】 주위를 살피지만, 당신이 숨은 곳은 흘끗 쳐다볼 뿐이다.
 		<br><br>
 
-		<<link [[숨어 있기 (0:01)|Moor Bird Pool 2]]>><<pass 1>><</link>><<swimmingdifficulty 1 500>>
+		<<link [[숨어 있는다 (0:01)|Moor Bird Pool 2]]>><<pass 1>><</link>><<swimmingdifficulty 1 500>>
 		<br>
-		<<link [[밖으로 나가기|Moor Bird Emerge]]>><</link>>
+		<<link [[밖으로 나간다|Moor Bird Emerge]]>><</link>>
 		<br>
 	<<else>>
 		<<beasttype>>【은는】 좌절한 듯한 비명을 지르고, <span class="green">날아가 버린다.</span>
@@ -2445,9 +2445,9 @@
 		<span class="purple"><<beasttype>>【이가】 연못 가장자리로 뛰어오른다.</span> 몇 피트 떨어진 곳에서, 먼 쪽 둑을 응시한다.
 		<br><br>
 
-		<<link [[숨어 있기 (0:01)|Moor Bird Pool 3]]>><<pass 1>><</link>><<swimmingdifficulty 1 700>>
+		<<link [[숨어 있는다 (0:01)|Moor Bird Pool 3]]>><<pass 1>><</link>><<swimmingdifficulty 1 700>>
 		<br>
-		<<link [[밖으로 나가기|Moor Bird Emerge]]>><</link>>
+		<<link [[밖으로 나간다|Moor Bird Emerge]]>><</link>>
 		<br>
 	<<else>>
 		<<bHe>>【은는】 좌절하며 비명을 지르고, 날갯짓을 하더니, <span class="green">날아가 버린다.</span>
@@ -2480,9 +2480,9 @@
 		<span class="purple"><<beasttype>>의 머리가 당신 쪽으로 홱 돌아간다</span>. 당신을 꿰뚫어 보듯 응시하다가, 다른 곳으로 시선을 돌린다. <<bHe>>【은는】 수면 아래를 볼 수 없다.
 		<br><br>
 
-		<<link [[숨어 있기 (0:01)|Moor Bird Pool 4]]>><<pass 1>><</link>><<swimmingdifficulty 1 900>>
+		<<link [[숨어 있는다 (0:01)|Moor Bird Pool 4]]>><<pass 1>><</link>><<swimmingdifficulty 1 900>>
 		<br>
-		<<link [[밖으로 나가기|Moor Bird Emerge]]>><</link>>
+		<<link [[밖으로 나간다|Moor Bird Emerge]]>><</link>>
 		<br>
 	<<else>>
 		<<bHe>>【은는】 좌절하며 비명을 지르고, 날갯짓을 하더니, <span class="green">날아가 버린다.</span>
@@ -2586,7 +2586,7 @@
 	<</if>>
 	<br><br>
 
-	<<link [[안심시키기|Moor Bird Screech Reassure]]>><</link>>
+	<<link [[안심시킨다|Moor Bird Screech Reassure]]>><</link>>
 	<br>
 <<else>>
 	<<if $monster is 1>>
@@ -2597,9 +2597,9 @@
 	<br><br>
 <</if>>
 
-<<link [[둥지로 태워달라고 부탁하기 (0:20)|Moor Bird Screech Nest]]>><<pass 20>><</link>>
+<<link [[둥지로 태워달라고 부탁한다 (0:20)|Moor Bird Screech Nest]]>><<pass 20>><</link>>
 <br>
-<<link [[농장으로 태워달라고 부탁하기 (0:20)|Moor Bird Screech Farmlands]]>><<pass 20>><</link>>
+<<link [[농장으로 태워달라고 부탁한다 (0:20)|Moor Bird Screech Farmlands]]>><<pass 20>><</link>>
 <br>
 <<link [[그냥 손질만 한다 (0:05)|Moor Bird Screech Stroke]]>><<transform bird 1>><<pass 5>><<stress -6>><<trauma -6>><</link>><<ltrauma>><<lstress>>
 <br>
@@ -2645,14 +2645,14 @@
 <br><br>
 
 <<if $phase is 1 or $phase is 2>>
-	<<link [[재확인시키기|Moor Bird Screech Reassure 2]]>><</link>>
+	<<link [[재확인시킨다|Moor Bird Screech Reassure 2]]>><</link>>
 	<br>
 <</if>>
-<<link [[둥지로 태워달라고 부탁하기 (0:20)|Moor Bird Screech Nest]]>><<pass 20>><</link>>
+<<link [[둥지로 태워달라고 부탁한다 (0:20)|Moor Bird Screech Nest]]>><<pass 20>><</link>>
 <br>
-<<link [[농장으로 태워달라고 부탁하기 (0:20)|Moor Bird Screech Farmlands]]>><<pass 20>><</link>>
+<<link [[농장으로 태워달라고 부탁한다 (0:20)|Moor Bird Screech Farmlands]]>><<pass 20>><</link>>
 <br>
-<<link [[그냥 깃 다듬기 (0:05)|Moor Bird Screech Stroke]]>><<transform bird 1>><<pass 5>><<stress -6>><<trauma -6>><</link>><<ltrauma>><<lstress>>
+<<link [[그냥 깃을 다듬는다 (0:05)|Moor Bird Screech Stroke]]>><<transform bird 1>><<pass 5>><<stress -6>><<trauma -6>><</link>><<ltrauma>><<lstress>>
 <br>
 
 :: Moor Bird Screech Reassure 2
@@ -2675,11 +2675,11 @@
 <</if>>
 <br><br>
 
-<<link [[둥지로 태워달라고 부탁하기 (0:20)|Moor Bird Screech Nest]]>><<pass 20>><</link>>
+<<link [[둥지로 태워달라고 부탁한다 (0:20)|Moor Bird Screech Nest]]>><<pass 20>><</link>>
 <br>
-<<link [[농장으로 태워달라고 부탁하기 (0:20)|Moor Bird Screech Farmlands]]>><<pass 20>><</link>>
+<<link [[농장으로 태워달라고 부탁한다 (0:20)|Moor Bird Screech Farmlands]]>><<pass 20>><</link>>
 <br>
-<<link [[그냥 깃 다듬기 (0:05)|Moor Bird Screech Stroke]]>><<transform bird 1>><<pass 5>><<stress -6>><<trauma -6>><</link>><<ltrauma>><<lstress>>
+<<link [[그냥 깃을 다듬는다 (0:05)|Moor Bird Screech Stroke]]>><<transform bird 1>><<pass 5>><<stress -6>><<trauma -6>><</link>><<ltrauma>><<lstress>>
 <br>
 
 :: Moor Bird Screech Nest
@@ -5061,11 +5061,11 @@
 <</if>>
 <br><br>
 
-<<link [[둥지로 태워달라고 부탁하기 (0:20)|Moor Bird Screech Nest]]>><<pass 20>><</link>>
+<<link [[둥지로 태워달라고 부탁한다 (0:20)|Moor Bird Screech Nest]]>><<pass 20>><</link>>
 <br>
-<<link [[농장으로 태워달라고 부탁하기 (0:20)|Moor Bird Screech Farmlands]]>><<pass 20>><</link>>
+<<link [[농장으로 태워달라고 부탁한다 (0:20)|Moor Bird Screech Farmlands]]>><<pass 20>><</link>>
 <br>
-<<link [[깃 다듬기 (0:05)|Moor Bird Screech Stroke]]>><<transform bird 1>><<pass 5>><<stress -6>><<trauma -6>><</link>><<ltrauma>><<lstress>>
+<<link [[깃을 다듬는다 (0:05)|Moor Bird Screech Stroke]]>><<transform bird 1>><<pass 5>><<stress -6>><<trauma -6>><</link>><<ltrauma>><<lstress>>
 <br>
 
 :: Bird Rescue Syndrome Fuss
@@ -5097,11 +5097,11 @@
 <</if>>
 <br><br>
 
-<<link [[둥지로 태워달라고 부탁하기 (0:20)|Moor Bird Screech Nest]]>><<pass 20>><</link>>
+<<link [[둥지로 태워달라고 부탁한다 (0:20)|Moor Bird Screech Nest]]>><<pass 20>><</link>>
 <br>
-<<link [[농장으로 태워달라고 부탁하기 (0:20)|Moor Bird Screech Farmlands]]>><<pass 20>><</link>>
+<<link [[농장으로 태워달라고 부탁한다 (0:20)|Moor Bird Screech Farmlands]]>><<pass 20>><</link>>
 <br>
-<<link [[깃 다듬기 (0:05)|Moor Bird Screech Stroke]]>><<transform bird 1>><<pass 5>><<stress -6>><<trauma -6>><</link>><<ltrauma>><<lstress>>
+<<link [[깃을 다듬는다 (0:05)|Moor Bird Screech Stroke]]>><<transform bird 1>><<pass 5>><<stress -6>><<trauma -6>><</link>><<ltrauma>><<lstress>>
 <br>
 
 :: Bird Rescue Syndrome Reassure
@@ -5123,11 +5123,11 @@
 <</if>>
 <br><br>
 
-<<link [[둥지로 태워달라고 부탁하기 (0:20)|Moor Bird Screech Nest]]>><<pass 20>><</link>>
+<<link [[둥지로 태워달라고 부탁한다 (0:20)|Moor Bird Screech Nest]]>><<pass 20>><</link>>
 <br>
-<<link [[농장으로 태워달라고 부탁하기 (0:20)|Moor Bird Screech Farmlands]]>><<pass 20>><</link>>
+<<link [[농장으로 태워달라고 부탁한다 (0:20)|Moor Bird Screech Farmlands]]>><<pass 20>><</link>>
 <br>
-<<link [[깃 다듬기 (0:05)|Moor Bird Screech Stroke]]>><<transform bird 1>><<pass 5>><<stress -6>><<trauma -6>><</link>><<ltrauma>><<lstress>>
+<<link [[깃을 다듬는다 (0:05)|Moor Bird Screech Stroke]]>><<transform bird 1>><<pass 5>><<stress -6>><<trauma -6>><</link>><<ltrauma>><<lstress>>
 <br>
 
 :: Bird Rescue Syndrome Comfort
@@ -5140,11 +5140,11 @@
 <</if>>
 <br><br>
 
-<<link [[둥지로 태워달라고 부탁하기 (0:20)|Moor Bird Screech Nest]]>><<pass 20>><</link>>
+<<link [[둥지로 태워달라고 부탁한다 (0:20)|Moor Bird Screech Nest]]>><<pass 20>><</link>>
 <br>
-<<link [[농장으로 태워달라고 부탁하기 (0:20)|Moor Bird Screech Farmlands]]>><<pass 20>><</link>>
+<<link [[농장으로 태워달라고 부탁한다 (0:20)|Moor Bird Screech Farmlands]]>><<pass 20>><</link>>
 <br>
-<<link [[깃 다듬기 (0:05)|Moor Bird Screech Stroke]]>><<transform bird 1>><<pass 5>><<stress -6>><<trauma -6>><</link>><<ltrauma>><<lstress>>
+<<link [[깃을 다듬는다 (0:05)|Moor Bird Screech Stroke]]>><<transform bird 1>><<pass 5>><<stress -6>><<trauma -6>><</link>><<ltrauma>><<lstress>>
 <br>
 
 :: Moor Pumpkin

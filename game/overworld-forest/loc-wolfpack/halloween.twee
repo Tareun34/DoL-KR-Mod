@@ -244,9 +244,9 @@
 	<<set _winReason to "Black Dog">>
 <</if>>
 
-<<link [[고집하기|Wolf Halloween 7]]>><<stress 6>><<set $phase to 0>><</link>><<gstress>><<note _winReason "gold">>
+<<link [[고집한다|Wolf Halloween 7]]>><<stress 6>><<set $phase to 0>><</link>><<gstress>><<note _winReason "gold">>
 <br>
-<<link [[물러나기|Wolf Halloween 7]]>><<set $phase to 1>><</link>>
+<<link [[물러난다|Wolf Halloween 7]]>><<set $phase to 1>><</link>>
 
 :: Wolf Halloween 7
 <<effects>>

@@ -1378,10 +1378,10 @@
 	<<exhibitionism3>>
 <</if>>
 
-<<link [[과시하기|Forest Cutter Flaunt]]>><<arousal 600>><<trauma -6>><<stress -12>><</link>><<garousal>><<ltrauma>><<lstress>>
+<<link [[과시한다|Forest Cutter Flaunt]]>><<arousal 600>><<trauma -6>><<stress -12>><</link>><<garousal>><<ltrauma>><<lstress>>
 <br>
 <<if hasSexStat("promiscuity", 2)>>
-	<<link [[유혹하기|Forest Cutter Seduce]]>><</link>><<promiscuous2>>
+	<<link [[유혹한다|Forest Cutter Seduce]]>><</link>><<promiscuous2>>
 	<br>
 <</if>>
 
@@ -1391,10 +1391,10 @@
 <<person>>【이가】 <<his>> 도끼를 나무에 박고 거기에 기댄다. "여긴 어쩐 일이지?" <<he>>【이가】 묻는다.
 <br><br>
 
-<<link [[대화하기 (0:30)|Forest Cutter Chat]]>><<stress -6>><<trauma -3>><<pass 30>><</link>><<ltrauma>><<lstress>>
+<<link [[대화한다 (0:30)|Forest Cutter Chat]]>><<stress -6>><<trauma -3>><<pass 30>><</link>><<ltrauma>><<lstress>>
 <br>
 <<if hasSexStat("promiscuity", 2)>>
-	<<link [[유혹하기|Forest Cutter Seduce]]>><</link>><<promiscuous2>>
+	<<link [[유혹한다|Forest Cutter Seduce]]>><</link>><<promiscuous2>>
 	<br>
 <</if>>
 
@@ -2982,7 +2982,7 @@
 	<br><br>
 <</if>>
 
-<<link [[둥지 수색하기|Forest Nest Search]]>><</link>>
+<<link [[둥지 수색한다|Forest Nest Search]]>><</link>>
 <br>
 <<if $forest_nest.fox is 2 and !$NPCList[0].traits.includesAny("cowardly","clumsy")>>
 	<<link [[여우를 기다린다 (0:20)|Forest Nest Ambushed]]>><</link>><<note "알 감소" "red">>
@@ -3009,7 +3009,7 @@
 	재빨리 세어보니, <span class="blue"><<number $forest_nest.eggs>></span>개의 팔 만한 새 알이 보인다. 하지만 확실히 하려면 하나씩 세어봐야 한다.
 	<br><br>
 
-	<<link [[알 줍기|Forest Nest Search Eggs]]>><</link>><<tendingdifficulty 100 500>>
+	<<link [[알을 줍는다|Forest Nest Search Eggs]]>><</link>><<tendingdifficulty 100 500>>
 	<br>
 	<<link [[여우를 유인해 본다 (0:05)|Forest Nest Bait]]>><<set $forest_nest.eggs -= 3>><<pass 5>><</link>><<note "알 감소" "red">>
 	<br>
@@ -3369,9 +3369,9 @@
 
 	<<skulduggeryuse>>
 
-	<<link [[쓰다듬기|Forest Fox Nest Pet]]>><</link>><<tendingdifficulty _tendingMin _tendingMax>><<llstress>>
+	<<link [[쓰다듬는다|Forest Fox Nest Pet]]>><</link>><<tendingdifficulty _tendingMin _tendingMax>><<llstress>>
 	<br>
-	<<link [[놀래키기|Forest Fox Nest Scare]]>><<trauma -10>><</link>><<lltrauma>>
+	<<link [[놀래킨다|Forest Fox Nest Scare]]>><<trauma -10>><</link>><<lltrauma>>
 	<br>
 <<else>>
 	당신은 절반쯤 갔을 때, <span class="red">나뭇가지를 밟고 만다. 나뭇가지가 큰 소리를 내며 부러진다.</span>
@@ -3390,7 +3390,7 @@
 		<br><br>
 
 		<<if $forest_nest.eggs gte 1>>
-			<<link [[하나 묻기|Forest Nest Bury]]>><<trauma -3>><<transform fox 1>><<set $foodstuff.bird_egg.amount -= 1>><</link>><<ltrauma>><<note "- 알" "red">>
+			<<link [[하나 묻는다|Forest Nest Bury]]>><<trauma -3>><<transform fox 1>><<set $foodstuff.bird_egg.amount -= 1>><</link>><<ltrauma>><<note "- 알" "red">>
 			<br>
 		<</if>>
 		<<link [[떠난다|Forest]]>><<endevent>><<set $eventskip to 1>><<unset $forest_nest>><</link>>
@@ -3450,7 +3450,7 @@
 		<br><br>
 
 		<<if $forest_nest.eggs gte 1>>
-			<<link [[하나 묻기|Forest Nest Bury]]>><<trauma -3>><<transform fox 1>><<set $foodstuff.bird_egg.amount -= 1>><</link>><<ltrauma>><<note "- 알" "red">>
+			<<link [[하나 묻는다|Forest Nest Bury]]>><<trauma -3>><<transform fox 1>><<set $foodstuff.bird_egg.amount -= 1>><</link>><<ltrauma>><<note "- 알" "red">>
 			<br>
 		<</if>>
 		<<link [[떠난다|Forest]]>><<endevent>><<set $eventskip to 1>><<unset $forest_nest>><</link>>
@@ -3465,7 +3465,7 @@
 		<<set $forest_nest.eggs to 0>>
 		<br><br>
 
-		<<link [[쓰다듬기|Forest Fox Nest Pet]]>><<set $phase2 to 1>><</link>><<tendingdifficulty 1 200>><<llstress>>
+		<<link [[쓰다듬는다|Forest Fox Nest Pet]]>><<set $phase2 to 1>><</link>><<tendingdifficulty 1 200>><<llstress>>
 		<br>
 		<<if $fox gte 6 and $monster is 1 and monsterSexEnabledForType("fox")>>
 			<<link [[<<bhim>>【을를】 핥아서 깨끗하게 해주기|Forest Fox Nest Lick]]>><<set $phase2 to 1>><</link>><<deviant1>><<fox>>
@@ -3479,7 +3479,7 @@
 		<br><br>
 
 		<<if $forest_nest.eggs gte 1>>
-			<<link [[하나 묻기|Forest Nest Bury]]>><<trauma -3>><<transform fox 1>><<set $foodstuff.bird_egg.amount -= 1>><</link>><<ltrauma>><<note "- 알" "red">>
+			<<link [[하나 묻는다|Forest Nest Bury]]>><<trauma -3>><<transform fox 1>><<set $foodstuff.bird_egg.amount -= 1>><</link>><<ltrauma>><<note "- 알" "red">>
 			<br>
 		<</if>>
 		<<link [[떠난다|Forest]]>><<endevent>><<set $eventskip to 1>><<unset $forest_nest>><</link>>
@@ -3723,7 +3723,7 @@
 	<br><br>
 
 	<<if $forest_nest.eggs gte 1>>
-		<<link [[하나 묻기|Forest Nest Bury]]>><<trauma -3>><<transform fox 1>><<set $foodstuff.bird_egg.amount -= 1>><</link>><<ltrauma>><<note "- 알" "red">>
+		<<link [[하나 묻는다|Forest Nest Bury]]>><<trauma -3>><<transform fox 1>><<set $foodstuff.bird_egg.amount -= 1>><</link>><<ltrauma>><<note "- 알" "red">>
 		<br>
 	<</if>>
 	<<link [[떠난다|Forest]]>><<endevent>><<set $eventskip to 1>><<unset $forest_nest>><</link>>
@@ -3747,7 +3747,7 @@
 		<br><br>
 
 		<<if $forest_nest.eggs gte 1>>
-			<<link [[하나 묻기|Forest Nest Bury]]>><<trauma -3>><<transform fox 1>><<set $foodstuff.bird_egg.amount -= 1>><</link>><<ltrauma>><<note "- 알" "red">>
+			<<link [[하나 묻는다|Forest Nest Bury]]>><<trauma -3>><<transform fox 1>><<set $foodstuff.bird_egg.amount -= 1>><</link>><<ltrauma>><<note "- 알" "red">>
 			<br>
 		<</if>>
 		<<link [[떠난다|Forest]]>><<endevent>><<set $eventskip to 1>><<unset $forest_nest>><</link>>
@@ -3790,7 +3790,7 @@
 			<br><br>
 
 			<<if $forest_nest.eggs gte 1>>
-				<<link [[하나 묻기|Forest Nest Bury]]>><<trauma -3>><<transform fox 1>><<set $foodstuff.bird_egg.amount -= 1>><</link>><<ltrauma>><<note "- 알" "red">>
+				<<link [[하나 묻는다|Forest Nest Bury]]>><<trauma -3>><<transform fox 1>><<set $foodstuff.bird_egg.amount -= 1>><</link>><<ltrauma>><<note "- 알" "red">>
 				<br>
 			<</if>>
 			<<link [[떠난다|Forest]]>><<endevent>><<set $eventskip to 1>><<unset $forest_nest>><</link>>
@@ -5011,9 +5011,9 @@
 	<br><br>
 	아직 공중에 매달린 채다. 다시 시도하거나 도움을 요청해야 한다.
 	<br><br>
-	<<link [[기어오르기|Forest Bully Climb]]>><</link>>
+	<<link [[기어오른다|Forest Bully Climb]]>><</link>>
 	<br>
-	<<link [[도움 요청하기|Forest Bully Help]]>><</link>>
+	<<link [[도움을 요청한다|Forest Bully Help]]>><</link>>
 
 <<else>>
 	기어오르기 시작했지만, 절반쯤 올라갔을 때 팔이 떨리기 시작하며 손아귀에 힘이 풀렸다. 짧게 추락하다가 $worn.under_lower.name【이가】 몸을 붙잡는다. $worn.under_lower.name의 천이 이전보다 더 팽팽하게 <<print ($player.ballsExist ? "고환을 조여오며" : "음순 사이를 파고들며")>> 새로운 고통의 물결을 일으킨다. <<gpain>><<ggstress>><<pain 25>><<stress 50>>
@@ -5070,9 +5070,9 @@
 		<br><br>
 		여전히 공중에 매달려 있는 당신은 다시 시도하거나 도움을 요청해야 한다.
 		<br><br>
-		<<link [[기어오르기|Forest Bully Climb]]>><</link>>
+		<<link [[기어오른다|Forest Bully Climb]]>><</link>>
 		<br>
-		<<link [[도움 요청하기|Forest Bully Help]]>><</link>>
+		<<link [[도움을 요청한다|Forest Bully Help]]>><</link>>
 	<<else>>
 		고요함은 이따금 당신의 $worn.under_lower.name에서 들려오는 찢어지는 소리에 의해 깨진다. 마침내, 천이 버티지 못하고 당신을 땅으로 떨어뜨린다!
 		<br><br>
@@ -5344,7 +5344,7 @@
 	계속해서 도움을 요청했지만 아무도 오지 않는다. 당신은 혼자서 탈출을 시도할 수밖에 없다.<<gstress>><<stress 4>>
 	<br><br>
 
-	<<link [[탈출 시도하기|Forest Snow Escape]]>><</link>>
+	<<link [[탈출을 시도한다|Forest Snow Escape]]>><</link>>
 <<else>>
 	<<generate1>><<person1>>
 	한 <<person>>【이가】 당신의 목소리를 듣고 달려온다.

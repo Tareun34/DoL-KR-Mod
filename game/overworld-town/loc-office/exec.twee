@@ -356,7 +356,7 @@
 <<clotheson>>
 <<endcombat>>
 
-<<link [[로비로 돌아가기|Office Lobby]]>><</link>>
+<<link [[로비로 돌아간다|Office Lobby]]>><</link>>
 
 :: Office Executive Force Strip Finish
 <<effects>>
@@ -386,7 +386,7 @@
 <<clotheson>>
 <<endcombat>>
 <<if $exposed lte 1>>
-	<<link [[로비로 돌아가기|Office Lobby]]>><</link>>
+	<<link [[로비로 돌아간다|Office Lobby]]>><</link>>
 <<else>>
 	<<link [[다음|Office Streak]]>><</link>>
 <</if>>
@@ -506,7 +506,7 @@
 		<<clotheson>>
 		<<endcombat>>
 		<<if $exposed lte 1>>
-			<<link [[로비로 돌아가기|Office Lobby]]>><</link>>
+			<<link [[로비로 돌아간다|Office Lobby]]>><</link>>
 		<<else>>
 			<<link [[다음|Office Streak]]>><</link>>
 		<</if>>
@@ -537,7 +537,7 @@
 		<</if>>
 		<br><br><<set $officecomplaints += 1>>
 		<<endcombat>>
-		<<link [[로비로 돌아가기|Office Lobby]]>><</link>>
+		<<link [[로비로 돌아간다|Office Lobby]]>><</link>>
 	<</if>>
 
 

@@ -51,22 +51,22 @@
 		<<wolfcaveicon "pupsden">><<link [[새끼들의 굴|Pups Den]]>><</link>>
 		<br>
 	<</if>>
-	<<wolfcaveicon "sleep">><<link [[잠자기|Wolf Cave Bed]]>><</link>>
+	<<wolfcaveicon "sleep">><<link [[잠잔다|Wolf Cave Bed]]>><</link>>
 	<br>
 	<<if $nextPassageCheck is "Wolf Cave Clearing">>
-		<<wolfcaveicon "outside">><span class="nextLink"><<link [[밖으로 나가기|Wolf Cave Clearing]]>><</link>></span>
+		<<wolfcaveicon "outside">><span class="nextLink"><<link [[밖으로 나간다|Wolf Cave Clearing]]>><</link>></span>
 	<<else>>
-		<<wolfcaveicon "outside">><<link [[밖으로 나가기|Wolf Cave Clearing]]>><</link>>
+		<<wolfcaveicon "outside">><<link [[밖으로 나간다|Wolf Cave Clearing]]>><</link>>
 	<</if>>
 	<br><br>
 	<<if $wolfcavedig gte 13>>
-		<<wolfcaveicon "hole">><<link [[구멍으로 내려가기|Forest Wolf Cave Hole]]>><</link>>
+		<<wolfcaveicon "hole">><<link [[구멍으로 내려간다|Forest Wolf Cave Hole]]>><</link>>
 	<<elseif $wolfcavedig gte 12 and $physiquesize lte 12000>>
-		<<wolfcaveicon "hole">><<link [[구멍으로 내려가기|Forest Wolf Cave Hole]]>><</link>><<small_text>>
+		<<wolfcaveicon "hole">><<link [[구멍으로 내려간다|Forest Wolf Cave Hole]]>><</link>><<small_text>>
 	<<elseif $wolfcavedig gte 11 and $physiquesize lte 9000>>
-		<<wolfcaveicon "hole">><<link [[구멍으로 내려가기|Forest Wolf Cave Hole]]>><</link>><<small_text>>
+		<<wolfcaveicon "hole">><<link [[구멍으로 내려간다|Forest Wolf Cave Hole]]>><</link>><<small_text>>
 	<<elseif $wolfcavedig gte 10 and $physiquesize lte 6000>>
-		<<wolfcaveicon "hole">><<link [[구멍으로 내려가기|Forest Wolf Cave Hole]]>><</link>><<small_text>>
+		<<wolfcaveicon "hole">><<link [[구멍으로 내려간다|Forest Wolf Cave Hole]]>><</link>><<small_text>>
 	<<elseif $wolfcavedig gte 1>>
 		<<getouticon "dig">><<link [[동굴 뒤편을 판다 (1:00)|Forest Wolf Cave Dig]]>><<pass 1 hour>><<set $wolfcavedig += 1>><</link>>
 	<<else>>
@@ -260,12 +260,12 @@
 <<bHe>>【이가】 커다란 양치식물 아래에 누워 당신이 다가오는 것을 지켜본다.
 <br><br>
 
-<<ind>><<link [[휴식하기 (0:30)|Wolf Cave Dog Relax]]>><<set $daily.wolfCaveDog to 1>><<pass 30>><<trauma -6>><<stress -6>><</link>><<ltrauma>><<lstress>>
+<<ind>><<link [[휴식한다 (0:30)|Wolf Cave Dog Relax]]>><<set $daily.wolfCaveDog to 1>><<pass 30>><<trauma -6>><<stress -6>><</link>><<ltrauma>><<lstress>>
 <br>
-<<ind>><<link [[새끼들과 놀도록 격려하기|Wolf Cave Dog Play]]>><<set $daily.wolfCaveDog to 1>><</link>>
+<<ind>><<link [[새끼들과 놀도록 격려한다|Wolf Cave Dog Play]]>><<set $daily.wolfCaveDog to 1>><</link>>
 <br><br>
 
-<<getouticon>><<link [[떠나기|Wolf Cave Clearing]]>><<endevent>><</link>>
+<<getouticon>><<link [[떠난다|Wolf Cave Clearing]]>><<endevent>><</link>>
 <br>
 
 :: Wolf Cave Dog Relax
@@ -328,7 +328,7 @@
 
 <br>
 
-<<getouticon>><<link [[떠나기|Wolf Cave Clearing]]>><<endevent>><</link>>
+<<getouticon>><<link [[떠난다|Wolf Cave Clearing]]>><<endevent>><</link>>
 <br>
 
 :: Wolf Cave Returned

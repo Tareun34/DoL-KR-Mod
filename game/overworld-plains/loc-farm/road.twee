@@ -1447,7 +1447,7 @@
 다른 말을 살펴본다. <<horseHairKr $NPCList[0].hair>> 갈기를 가진 <<beasttype>>【이】다.
 <br><br>
 
-<<animalicon "horse-pick">><<link [[다른 말 선택하기 (0:10)|Farm Steed Choose]]>><<endevent>><<pass 10>><</link>>
+<<animalicon "horse-pick">><<link [[다른 말을 선택한다 (0:10)|Farm Steed Choose]]>><<endevent>><<pass 10>><</link>>
 <br>
 <<steedicon>><<link [[안장을 얹는다 (0:10)|Farm Saddle New]]>><<pass 10>><</link>>
 <br>

@@ -48,28 +48,28 @@
 :: Widgets Fishing Forest Lake Minigame [widget]
 <<widget "fishingForestLakeMinigameLinks">>
 	<<if $fishingMinigame.fishAction === "run" or $fishingMinigame.fishAction === "thrash">>
-		<<link [[낚싯줄 감기|Fishing Forest Lake Minigame Loop]]>>
+		<<link [[낚싯줄을 감는다|Fishing Forest Lake Minigame Loop]]>>
 			<<fishingMinigameAthleticsCheck "reel">>
 			<<run fishingMinigameResolveTurn("reel")>>
 		<</link>><<fishingMinigameAthleticsCheck "reel">>
 		<br>
-		<<link [[팽팽하게 버티기|Fishing Forest Lake Minigame Loop]]>>
+		<<link [[팽팽하게 버틴다|Fishing Forest Lake Minigame Loop]]>>
 			<<fishingMinigameAthleticsCheck "hold">>
 			<<run fishingMinigameResolveTurn("hold")>>
 		<</link>><<fishingMinigameAthleticsCheck "hold">>
 	<<else>>
-		<<link [[낚싯줄 감기|Fishing Forest Lake Minigame Loop]]>>
+		<<link [[낚싯줄을 감는다|Fishing Forest Lake Minigame Loop]]>>
 			<<run fishingMinigameResolveTurn("reel")>>
 		<</link>>
 		<br>
-		<<link [[팽팽하게 버티기|Fishing Forest Lake Minigame Loop]]>>
+		<<link [[팽팽하게 버틴다|Fishing Forest Lake Minigame Loop]]>>
 			<<run fishingMinigameResolveTurn("hold")>>
 		<</link>>
 	<</if>>
 	<br>
-	<<link [[줄을 느슨하게 풀기|Fishing Forest Lake Minigame Loop]]>>
+	<<link [[줄을 느슨하게 푼다|Fishing Forest Lake Minigame Loop]]>>
 		<<run fishingMinigameResolveTurn("slack")>>
 	<</link>>
 	<br>
-	<<link [[줄 끊기|Fishing Forest Lake Cut]]>><</link>>
+	<<link [[줄을 끊는다|Fishing Forest Lake Cut]]>><</link>>
 <</widget>>

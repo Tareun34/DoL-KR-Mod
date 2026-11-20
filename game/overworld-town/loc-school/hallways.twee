@@ -119,20 +119,20 @@
 	<<schoolperiod>>
 
 	<<if !["early", "late", "earlynoschool", "latenoschool", "daynoschool"].includes($schoolstate) and $exposed gte 1>>
-		<<schoolicon "courtyard">><<link [[뒤뜰로 몰래 가기 (0:05)|School Rear Courtyard]]>><<pass 5>><</link>>
+		<<schoolicon "courtyard">><<link [[뒤뜰로 몰래 간다 (0:05)|School Rear Courtyard]]>><<pass 5>><</link>>
 		<br>
-		<<swimmingicon>><<link [[수영장으로 몰래 가기 (0:03)|School Pool Entrance]]>><<pass 3>><</link>>
+		<<swimmingicon>><<link [[수영장으로 몰래 간다 (0:03)|School Pool Entrance]]>><<pass 3>><</link>>
 		<br>
-		<<schoolicon "library">><<link [[도서관으로 몰래 가기 (0:05)|School Library]]>><<pass 5>><</link>>
+		<<schoolicon "library">><<link [[도서관으로 몰래 간다 (0:05)|School Library]]>><<pass 5>><</link>>
 		<br>
-		<<bathroomicon "toilet">><<link [[화장실로 몰래 가기 (0:05)|School Toilets]]>><<pass 5>><</link>>
+		<<bathroomicon "toilet">><<link [[화장실로 몰래 간다 (0:05)|School Toilets]]>><<pass 5>><</link>>
 		<br>
 	<<else>>
 		<<if $schoolstate is "afternoon" and $detention gte 1 and $daily.school.detentionAttended isnot 1 and $pillory.tenant.special.name isnot "Leighton">>
-		<<schoolicon "headdesk">><<link [[방과 후 보충 수업 가기|School Detention]]>><</link>>
+		<<schoolicon "headdesk">><<link [[방과 후 보충 수업에 간다|School Detention]]>><</link>>
 		<br>
 			<<if $headdrive gte 1 and $headnodetention isnot 1 and $headmoney isnot 1 and $headphotoshoot isnot 1>>
-			<<schoolicon "headdesk">><<link [[레이튼 협박하기|Head's Office Blackmail]]>><<npc Leighton>><<person1>><<set $phase to 1>><</link>><<crime "coercion">>
+			<<schoolicon "headdesk">><<link [[레이튼을 협박한다|Head's Office Blackmail]]>><<npc Leighton>><<person1>><<set $phase to 1>><</link>><<crime "coercion">>
 			<br>
 			<</if>>
 		<br>

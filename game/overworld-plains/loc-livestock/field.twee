@@ -205,34 +205,34 @@
 
 	<<else>>
 		<<set $daily.earSlimeGrassEating to true>>
-		<<farmicon "grass">><<link [[풀 먹기 (1:00)|Livestock Field Grass]]>><<pass 60>><<livestock_obey 1>><<transform cow 1>><<hunger -400>><</link>><<gobey>><<lhunger>>
+		<<farmicon "grass">><<link [[풀을 먹는다 (1:00)|Livestock Field Grass]]>><<pass 60>><<livestock_obey 1>><<transform cow 1>><<hunger -400>><</link>><<gobey>><<lhunger>>
 		<br>
-		<<exerciseicon>><<link [[운동하기 (1:00)|Livestock Field Exercise]]>><<tiredness 6>><</link>><<gtiredness>><<gathletics>>
+		<<exerciseicon>><<link [[운동한다 (1:00)|Livestock Field Exercise]]>><<tiredness 6>><</link>><<gtiredness>><<gathletics>>
 		<br>
 		<<if !$livestock.seen.includes("fence")>>
-			<<investigateicon>><<link [[울타리 조사하기|Livestock Field Fence]]>><<set $livestock.seen.push("fence")>><</link>>
+			<<investigateicon>><<link [[울타리를 조사한다|Livestock Field Fence]]>><<set $livestock.seen.push("fence")>><</link>>
 			<br>
 		<<elseif $livestock.dig.fence gte 25>>
-			<<getouticon "dig">><<link [[울타리 아래 터널로 접근하기|Livestock Tunnel]]>><</link>>
+			<<getouticon "dig">><<link [[울타리 아래 터널로 접근한다|Livestock Tunnel]]>><</link>>
 			<br>
 		<<elseif $livestock.dig.fence gte 24 and $physiquesize lte 12000>>
-			<<getouticon "dig">><<link [[울타리 아래 터널로 접근하기|Livestock Tunnel]]>><</link>><<small_text>>
+			<<getouticon "dig">><<link [[울타리 아래 터널로 접근한다|Livestock Tunnel]]>><</link>><<small_text>>
 			<br>
 		<<elseif $livestock.dig.fence gte 23 and $physiquesize lte 9000>>
-			<<getouticon "dig">><<link [[울타리 아래 터널로 접근하기|Livestock Tunnel]]>><</link>><<small_text>>
+			<<getouticon "dig">><<link [[울타리 아래 터널로 접근한다|Livestock Tunnel]]>><</link>><<small_text>>
 			<br>
 		<<elseif $livestock.dig.fence gte 22 and $physiquesize lte 6000>>
-			<<getouticon "dig">><<link [[울타리 아래 터널로 접근하기|Livestock Tunnel]]>><</link>><<small_text>>
+			<<getouticon "dig">><<link [[울타리 아래 터널로 접근한다|Livestock Tunnel]]>><</link>><<small_text>>
 			<br>
 		<<else>>
-			<<getouticon "dig">><<link [[울타리 아래 파기 (1:00)|Livestock Field Dig]]>><<tiredness 6>><</link>><<gtiredness>>
+			<<getouticon "dig">><<link [[울타리 아래를 판다 (1:00)|Livestock Field Dig]]>><<tiredness 6>><</link>><<gtiredness>>
 			<br>
 		<</if>>
 		<<if !$livestock.seen.includes("river")>>
-			<<watericon "stream">><<link [[강 조사하기|Livestock Field River Examine]]>><<set $livestock.seen.push("river")>><</link>>
+			<<watericon "stream">><<link [[강을 조사한다|Livestock Field River Examine]]>><<set $livestock.seen.push("river")>><</link>>
 			<br>
 		<<else>>
-			<<watericon "stream">><<link [[강으로 접근하기|Livestock Field River]]>><</link>>
+			<<watericon "stream">><<link [[강으로 접근한다|Livestock Field River]]>><</link>>
 			<br>
 		<</if>>
 		<<if Time.hour gte 12>>
@@ -525,7 +525,7 @@
 	레미가 당신을 찾는 것 같다. <span class="red">나가야 한다.</span>
 	<br><br>
 <<else>>
-	<<mirroricon>><<link [[비친 모습 확인하기|Livestock Field Mirror]]>><<preMirror>><</link>>
+	<<mirroricon>><<link [[비친 모습을 확인한다|Livestock Field Mirror]]>><<preMirror>><</link>>
 	<br><br>
 	<<if !Weather.isFrozen("lake")>>
 		<<skinicon "wash">><<link [[씻는다 (0:15)|Livestock Field Wash]]>><<wash>><<pass 15>><</link>>

@@ -91,10 +91,10 @@
 			<br>
 		<</if>>
 		<<if Time.dayState is "night" and $exposed gte 2 and hasSexStat("exhibitionism", 4) and $daily.ex.high isnot 1>>
-			<<foodicon "sweets">><<link [[주유소 편의점에서 과자 사기 (0:05)|Service Naked]]>><<pass 5>><<set $daily.ex.high to 1>><</link>><<exhibitionist4>>
+			<<foodicon "sweets">><<link [[주유소 편의점에서 과자를 산다 (0:05)|Service Naked]]>><<pass 5>><<set $daily.ex.high to 1>><</link>><<exhibitionist4>>
 			<br>
 		<<elseif Time.dayState is "night" and $exposed gte 1 and hasSexStat("exhibitionism", 2) and $daily.ex.high isnot 1>>
-			<<foodicon "sweets">><<link [[주유소 편의점에서 과자 사기 (0:05)|Service Undies]]>><<pass 5>><<set $daily.ex.high to 1>><</link>><<exhibitionist2>>
+			<<foodicon "sweets">><<link [[주유소 편의점에서 과자를 산다 (0:05)|Service Undies]]>><<pass 5>><<set $daily.ex.high to 1>><</link>><<exhibitionist2>>
 			<br>
 		<</if>>
 		<br>

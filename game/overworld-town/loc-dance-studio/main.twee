@@ -40,17 +40,17 @@
 				<span class="blue">찰리가 다음 주에 또 다른 일거리를 줄 겁니다.</span>
 				<br>
 			<<else>>
-				<<socialiseicon "ask">><<link [[일거리 요청하기|Dance Job Ask]]>><</link>>
+				<<socialiseicon "ask">><<link [[일거리를 요청한다|Dance Job Ask]]>><</link>>
 				<br>
 			<</if>>
 		<</if>>
 		<<if $exposed lt 1>>
 			<<if $money gte 1200>>
 				<<if $danceskill gte 800 and $danceStudio.intro and !$danceStudio.jobOffered>>
-					<<dancestudioicon>><<link [[댄스 레슨 받기 (£12 1:00)|Dancing Lesson Job Intro]]>><</link>><<gtiredness>><<note "+ + 춤 스킬" "green">>
+					<<dancestudioicon>><<link [[댄스 레슨을 받는다 (£12 1:00)|Dancing Lesson Job Intro]]>><</link>><<gtiredness>><<note "+ + 춤 스킬" "green">>
 					<br>
 				<<else>>
-					<<dancestudioicon>><<link [[댄스 레슨 받기 (£12 1:00)|Dancing Lesson]]>><<set $phase to 0>><<money -1200 "danceStudioLessons">><<set $danceStudio.stage to 0>><</link>><<gtiredness>><<note "+ + 춤 스킬" "green">>
+					<<dancestudioicon>><<link [[댄스 레슨을 받는다 (£12 1:00)|Dancing Lesson]]>><<set $phase to 0>><<money -1200 "danceStudioLessons">><<set $danceStudio.stage to 0>><</link>><<gtiredness>><<note "+ + 춤 스킬" "green">>
 					<br>
 				<</if>>
 			<<else>>
@@ -60,20 +60,20 @@
 		<</if>>
 		<<if (Time.weekDay is 3 or Time.weekDay is 5) and $worn.feet.type.includes("heels")>>
 			<<if $money gte 1200 and $exposed lt 1>>
-				<<heelsicon>><<link [[하이힐 레슨 받기 (£12 0:30)|Heel Lesson]]>><<set $phase to 0>><<money -1200 "danceStudioLessons">><<pass 30>><</link>><<ggtiredness>><<gfeetskill>>
+				<<heelsicon>><<link [[하이힐 레슨을 받는다 (£12 0:30)|Heel Lesson]]>><<set $phase to 0>><<money -1200 "danceStudioLessons">><<pass 30>><</link>><<ggtiredness>><<gfeetskill>>
 				<br>
 			<</if>>
 		<<else>>
-			<<heelsicon>><<link [[하이힐 레슨에 대해 문의하기|Heel Lesson Inquiry]]>><</link>>
+			<<heelsicon>><<link [[하이힐 레슨에 대해 문의한다|Heel Lesson Inquiry]]>><</link>>
 			<br>
 		<</if>>
 		<<if (Time.weekDay is 2 or Time.weekDay is 4 or Time.weekDay is 6)>>
 			<<if $money gte 2200>>
-				<<icon "yoga.png">><<link [[요가 레슨 받기 (£22 1:00)|Yoga Classes Change Room]]>><</link>><<gtiredness>><<if !$daily.yogaWillpower>><<gwillpower>><</if>><<llstress>>
+				<<icon "yoga.png">><<link [[요가 레슨을 받는다 (£22 1:00)|Yoga Classes Change Room]]>><</link>><<gtiredness>><<if !$daily.yogaWillpower>><<gwillpower>><</if>><<llstress>>
 			<</if>>
 			<br>
 		<<else>>
-			<<socialiseicon "ask">><<link [[요가 레슨에 대해 문의하기|Yoga Classes Inquire]]>><</link>>
+			<<socialiseicon "ask">><<link [[요가 레슨에 대해 문의한다|Yoga Classes Inquire]]>><</link>>
 			<br>
 		<</if>>
 	<</if>>
@@ -82,7 +82,7 @@
 		<br>
 	<</if>>
 	<<if !Time.openingHours() and Time.hour isnot $closinghour and !$weekly.theft.danceStudio>>
-		<<shopicon "register">><<link [[금전 등록기 살펴보기|Dance Studio Register]]>><</link>>
+		<<shopicon "register">><<link [[금전 등록기를 살펴본다|Dance Studio Register]]>><</link>>
 		<br>
 	<</if>>
 	<br>
@@ -134,7 +134,7 @@
 		<<wearProp "lockpick">>
 		<span class="green">자물쇠는 쉽게 딸 수 있을 것 같다.</span>
 		<br><br>
-		<<lockicon "pick">><<link [[자물쇠 따기 (0:10)|Dance Studio]]>><<pass 10>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
+		<<lockicon "pick">><<link [[자물쇠를 딴다 (0:10)|Dance Studio]]>><<pass 10>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
 		<br>
 	<</if>>
 <<else>>
@@ -661,16 +661,16 @@
 <br><br>
 <<dancingclothes>>
 <<if _store_check is 1 and $exposed is 0>>
-	<<getinicon>><<link [[들어가기|Yoga Classes Enter]]>><</link>>
+	<<getinicon>><<link [[들어간다|Yoga Classes Enter]]>><</link>>
 	<br>
 <</if>>
 <<if hasSexStat("exhibitionism", 5)>>
-	<<getinicon>><<link [[알몸으로 가기|Yoga Classes Enter]]>><<strip>><<set $danceStudio.nudeYoga to 1>><</link>><<exhibitionist5>>
+	<<getinicon>><<link [[알몸으로 간다|Yoga Classes Enter]]>><<strip>><<set $danceStudio.nudeYoga to 1>><</link>><<exhibitionist5>>
 	<br>
 <<else>>
 	<<insufficientStat "exhibitionism" "몸을 드러낸 채 수업을 받기엔">><br>
 <</if>>
-<<getouticon>><<link [[나가기|Dance Studio]]>><</link>>
+<<getouticon>><<link [[나간다|Dance Studio]]>><</link>>
 <br>
 
 :: Yoga Classes Enter
@@ -900,7 +900,7 @@
 	<<feetskill 45>>
 	<span class="gold">발로 쾌감을 주는 능력에 더 자신감이 생긴다.</span>
 	<br><br>
-	<<link [[마무리하기|Heel Lesson Video]]>><</link>>
+	<<link [[마무리한다|Heel Lesson Video]]>><</link>>
 <</if>>
 
 :: Heel Lesson Video
@@ -925,4 +925,4 @@
 <</if>>
 <br><br>
 <<endevent>>
-<<link [[나가기|Dance Studio]]>><</link>>
+<<link [[나간다|Dance Studio]]>><</link>>

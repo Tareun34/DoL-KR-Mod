@@ -239,7 +239,7 @@
 <<if $treasure_map is 1>>
 	<span class="gold">당신이 찾은 보물 지도가 이곳을 가리키고 있다.</span>
 	<br><br>
-	<<getouticon "dig">><<link [[보물 파기 (2:00)|Castle Treasure]]>><<pass 120>><<unset $treasure_map>><<tiredness 6>><</link>><<gtiredness>>
+	<<getouticon "dig">><<link [[보물을 판다 (2:00)|Castle Treasure]]>><<pass 120>><<unset $treasure_map>><<tiredness 6>><</link>><<gtiredness>>
 	<br>
 <</if>>
 <<if $bird?.upgrades?.snare gte 1>>
@@ -253,7 +253,7 @@
 		<span class="purple">비어 있다.</span> <<birdicon "snare">>
 		<br>
 		<<if $bird.materials.junk gte 1>>
-			<<birdicon "junk">><<link [[반짝이는 잡동사니를 미끼로 사용하기 (0:02)|Castle]]>><<set $phase to "junk">><<pass 2>><<set $bird.materials.junk-->><<set $bird.lurkerSnareState to "ready">><</link>>
+			<<birdicon "junk">><<link [[반짝이는 잡동사니를 미끼로 사용한다 (0:02)|Castle]]>><<set $phase to "junk">><<pass 2>><<set $bird.materials.junk-->><<set $bird.lurkerSnareState to "ready">><</link>>
 			<br>
 		<</if>>
 		<<for _valuable, _amount range $bird.materials.valuables>>
@@ -275,7 +275,7 @@
 	<br>
 <</if>>
 <<if $harpy gte 6 and $syndromebird is 1 and $birdFly gte 1 and !$plucked>>
-	<<glideicon>><<link [[가장 높은 탑으로 날아가기 (0:02)|Castle Fly]]>><<bird_pass 2>><</link>><<flight_text>>
+	<<glideicon>><<link [[가장 높은 탑으로 날아간다 (0:02)|Castle Fly]]>><<bird_pass 2>><</link>><<flight_text>>
 	<br>
 <<elseif $syndromebird is 1>>
 	<<npc "Great Hawk">>

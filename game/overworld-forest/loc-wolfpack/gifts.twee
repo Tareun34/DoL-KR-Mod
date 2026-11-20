@@ -6,7 +6,7 @@
 <<food_gift_list>>
 
 <<if _food_gift_found is true>>
-	<<skinicon "give">><<link [[선물 주기 (0:05)|Black Wolf Gifts]]>><<pass 5>><<give_gift "Black Wolf">><</link>>
+	<<skinicon "give">><<link [[선물을 준다 (0:05)|Black Wolf Gifts]]>><<pass 5>><<give_gift "Black Wolf">><</link>>
 	<br>
 <</if>>
 <<refuseicon>><<link [[다시 생각한다|Black Wolf Gifts Reconsider]]>><</link>>

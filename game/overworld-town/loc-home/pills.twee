@@ -24,7 +24,7 @@
 	<<wearProp "pills">>
 <</if>>
 <br><br>
-<<link [[돌아가기|PillCollection]]>><</link>>
+<<link [[돌아간다|PillCollection]]>><</link>>
 
 :: PillCollection
 <<set $outside to 0>><<effects>>

@@ -114,30 +114,30 @@
 					<<He>>【이가】 다른 팔로 <<his>> 식판의 균형을 조심스럽게 잡으며 한 팔로 당신을 껴안고는, 자리를 찾으러 달려간다.
 					<br><br>
 					<<endevent>>
-					<<foodicon "eat">><<link [[로빈과 함께 식사하기 (0:20)|Canteen Lunch Robin]]>><<stress -6>><<trauma -2>><<pass 20>><<set $daily.school.lunchEaten to 1>><<npcincr Robin love 1>><</link>><<glove>><<ltrauma>><<lstress>>
+					<<foodicon "eat">><<link [[로빈과 함께 식사한다 (0:20)|Canteen Lunch Robin]]>><<stress -6>><<trauma -2>><<pass 20>><<set $daily.school.lunchEaten to 1>><<npcincr Robin love 1>><</link>><<glove>><<ltrauma>><<lstress>>
 					<br>
 				<<elseif _robin_location is "school" and C.npc.Robin.init is 1 and $daily.school.lunchEaten isnot 1 and $exposed lte 0>>
 					<<if C.npc.Robin.cdquest is 5 and C.npc.Robin.trauma lte 20>>
 						로빈이 점심을 먹고 있는 것이 보인다. <<npc Robin>><<person1>><<he>>【은는】 약간의 주목을 끈 것 같다.<<endevent>>
 						<br>
-						<<foodicon "eat">><<link [[로빈과 함께 식사하기 (0:20)|Canteen Lunch Robin CD 1]]>><<stress -6>><<trauma -2>><<pass 20>><<set $daily.school.lunchEaten to 1>><<npcincr Robin love 1>><</link>><<glove>><<ltrauma>><<lstress>>
+						<<foodicon "eat">><<link [[로빈과 함께 식사한다 (0:20)|Canteen Lunch Robin CD 1]]>><<stress -6>><<trauma -2>><<pass 20>><<set $daily.school.lunchEaten to 1>><<npcincr Robin love 1>><</link>><<glove>><<ltrauma>><<lstress>>
 						<br>
 					<<else>>
 						<<rng>>
 						<<if $rng gte 96>>
 							<<npc Robin>><<person1>>로빈이 <<his>> 점심을 먹으려는데 한 무리의 불량배들이 <<him>>【을를】 괴롭히는 것이 보인다.<<endevent>>
 							<br>
-							<<ind>><<link [[개입하기 (0:20)|Canteen Lunch Intervene]]>><<set $daily.school.lunchEaten to 1>><<npcincr Robin love 5>><</link>>
+							<<ind>><<link [[개입한다 (0:20)|Canteen Lunch Intervene]]>><<set $daily.school.lunchEaten to 1>><<npcincr Robin love 5>><</link>>
 							<br>
 						<<elseif $rng gte 91 and C.npc.Whitney.dom gte 16 and C.npc.Whitney.state isnot "dungeon">>
 							로빈이 점심을 먹고 있는 것이 보인다.
 							<br>
-							<<foodicon "eat">><<link [[로빈과 함께 식사하기 (0:20)|Canteen Robin Whitney]]>><<stress -6>><<trauma -2>><<pass 20>><<set $daily.school.lunchEaten to 1>><<npcincr Robin love 1>><</link>><<glove>><<ltrauma>><<lstress>>
+							<<foodicon "eat">><<link [[로빈과 함께 식사한다 (0:20)|Canteen Robin Whitney]]>><<stress -6>><<trauma -2>><<pass 20>><<set $daily.school.lunchEaten to 1>><<npcincr Robin love 1>><</link>><<glove>><<ltrauma>><<lstress>>
 							<br>
 						<<else>>
 							로빈이 점심을 먹고 있는 것이 보인다.
 							<br>
-							<<foodicon "eat">><<link [[로빈과 함께 식사하기 (0:20)|Canteen Lunch Robin]]>><<stress -6>><<trauma -2>><<pass 20>><<set $daily.school.lunchEaten to 1>><<npcincr Robin love 1>><</link>><<glove>><<ltrauma>><<lstress>>
+							<<foodicon "eat">><<link [[로빈과 함께 식사한다 (0:20)|Canteen Lunch Robin]]>><<stress -6>><<trauma -2>><<pass 20>><<set $daily.school.lunchEaten to 1>><<npcincr Robin love 1>><</link>><<glove>><<ltrauma>><<lstress>>
 							<br>
 						<</if>>
 					<</if>>
@@ -146,40 +146,40 @@
 				<<if $exposed lte 0 && _kylarLocation.area is "canteen">>
 					카일라가 혼자 앉아 포크로 음식을 찌르고 있다.
 					<br>
-					<<foodicon "eat">><<link [[카일라와 함께 식사하기 (0:20)|Canteen Lunch Kylar]]>><<pass 20>><<set $daily.school.lunchEaten to 1>><<npcincr Kylar love 1>><<npcincr Kylar rage -1>><</link>><<glove>><<lksuspicion>>
+					<<foodicon "eat">><<link [[카일라와 함께 식사한다 (0:20)|Canteen Lunch Kylar]]>><<pass 20>><<set $daily.school.lunchEaten to 1>><<npcincr Kylar love 1>><<npcincr Kylar rage -1>><</link>><<glove>><<lksuspicion>>
 					<br>
 				<</if>>
 				<<if C.npc.Sydney.init is 1 and _sydney_location is "canteen" and $exposed lte 0>>
 					시드니가 책과 서류 더미를 쌓아두고 외딴 구석에 앉아 있다.
 					<br>
-					<<foodicon "eat">><<link [[시드니와 함께 식사하기 (0:15)|Canteen Lunch Sydney]]>><<stress -6>><<trauma -2>><<pass 15>><<set $daily.school.lunchEaten to 1>><<npcincr Sydney love 1>><</link>><<glove>><<lstress>>
+					<<foodicon "eat">><<link [[시드니와 함께 식사한다 (0:15)|Canteen Lunch Sydney]]>><<stress -6>><<trauma -2>><<pass 15>><<set $daily.school.lunchEaten to 1>><<npcincr Sydney love 1>><</link>><<glove>><<lstress>>
 					<br>
 				<</if>>
 				<<if $daily.school.lunchEaten isnot 1 and $exposed lte 0>>
 					<br>
-					<<foodicon "eat">><<link [[점심 먹기 (0:10)|Canteen Lunch]]>><<pass 10>><<stress -6>><<set $daily.school.lunchEaten to 1>><</link>><<lstress>>
+					<<foodicon "eat">><<link [[점심을 먹는다 (0:10)|Canteen Lunch]]>><<pass 10>><<stress -6>><<set $daily.school.lunchEaten to 1>><</link>><<lstress>>
 					<br>
 				<</if>>
 			<</if>>
 		<<elseif $daily.school.canteenApproach isnot 1 and $exposed lte 0>>
-			<<ind>><<link [[학생들에게 다가가기|Canteen Students]]>><</link>>
+			<<ind>><<link [[학생들에게 다가간다|Canteen Students]]>><</link>>
 			<br>
 		<</if>>
 		<<if def $milkshake and $milkshake gt 0 and $exposed lte 0>>
-			<<foodicon "milkshake">><<link [[밀크쉐이크 마시기 (0:10)|Canteen Milkshake]]>><<pass 10>><<set $milkshake -= 1>><<stress -5>><</link>><<lstress>>
+			<<foodicon "milkshake">><<link [[밀크쉐이크를 마신다 (0:10)|Canteen Milkshake]]>><<pass 10>><<set $milkshake -= 1>><<stress -5>><</link>><<lstress>>
 			<br>
 		<</if>>
 	<</if>>
 
 	<<if $exposed gte 1 and $schoolstate is "lunch">>
 		<<if !pcAreArmsBound("both")>>
-			<<link [[쟁반으로 몸을 가리고 떠나려고 시도하기|Canteen Tray]]>><</link>>
+			<<link [[쟁반으로 몸을 가리고 떠나려고 시도한다|Canteen Tray]]>><</link>>
 			<br>
 		<</if>>
-		<<link [[주변이 잠잠해질 때까지 기다리기|Canteen Wait]]>><</link>>
+		<<link [[주변이 잠잠해질 때까지 기다린다|Canteen Wait]]>><</link>>
 		<br>
 	<<else>>
-		<<getouticon>><<link [[식당 떠나기 (0:01)|Hallways]]>><<pass 1>><</link>>
+		<<getouticon>><<link [[식당을 떠난다 (0:01)|Hallways]]>><<pass 1>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -521,10 +521,10 @@
 	당신은 학생들에게 다가간다. <<person1>><<person>>【이가】 당신을 의심스럽게 쳐다본다. "뭘 원해?"
 	<br><br>
 
-	<<link [[추파 던지기|Canteen Students Flirt]]>><</link>><<promiscuous1>>
+	<<link [[추파를 던진다|Canteen Students Flirt]]>><</link>><<promiscuous1>>
 	<br>
 
-	<<link [[떠나기|Canteen]]>><<endevent>><</link>>
+	<<link [[떠난다|Canteen]]>><<endevent>><</link>>
 <<else>>
 	당신은 학생들에게 다가간다. 그들은 당신과 이야기하는 데 관심이 없어 보인다. "꺼져, 이 참견쟁이야." <<person1>><<person>>【이가】 귀찮다는 듯 손짓하며 말한다.
 	<br><br>

@@ -3500,7 +3500,7 @@
 		유일하게 눈길을 끄는 것은 자물쇠다. 다른 모든 감옥 문의 자물쇠처럼, 낡고 녹슬어 보인다.
 		<span class="red"> 어쩌면 충분한 힘을 가하면 부술 수 있을지도 모른다.</span>
 		<br><br>
-		<<ind>><<link [[문 흔들기 (1:00)|Livestock Lock Intro]]>><<set $livestock.lock.strength -= 1>><<set $livestock.lock.intro to 1>><</link>><<ggtiredness>>
+		<<ind>><<link [[문을 흔든다 (1:00)|Livestock Lock Intro]]>><<set $livestock.lock.strength -= 1>><<set $livestock.lock.intro to 1>><</link>><<ggtiredness>>
 		<br>
 		<<getouticon>><<link [[뒤로 물러선다|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><<generate1>><</link>>
 
@@ -3528,7 +3528,7 @@
 			당신은 창살을 잡고 앞뒤로 흔든다. 시간을 낭비하지 않고, 소리를 지른다. 자극받은 가축들은 곧 죽은 사람도 깨울 만큼 시끄러운 소리를 내기 시작한다.
 			<<person>>【이가】 방으로 뛰어 들어와 진정제 총을 꺼내 들고 <<livestock_cows>>을 잠재우기 시작한다.
 			<br><br>
-			<<ind>><<link [[문 흔들기 (1:00)|Livestock Lock Break]]>><<set $livestock.lock.patrol to 80>><<set $livestock.lock.sequence to 1>><</link>><<gtiredness>>
+			<<ind>><<link [[문을 흔든다 (1:00)|Livestock Lock Break]]>><<set $livestock.lock.patrol to 80>><<set $livestock.lock.sequence to 1>><</link>><<gtiredness>>
 			<br>
 			<<getouticon>><<link [[뒤로 물러선다|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><</link>>
 
@@ -3537,7 +3537,7 @@
 			문 자물쇠가 낡고 녹슨 것을 발견한다.
 			<span class="red"> 어쩌면 충분한 힘을 가하면 부술 수 있을지도 모른다.</span>
 			<br><br>
-			<<ind>><<link [[문 흔들기 (1:00)|Livestock Lock Intro]]>><<set $livestock.lock.strength -= 1>><<set $livestock.lock.intro to 1>><</link>><<ggtiredness>>
+			<<ind>><<link [[문을 흔든다 (1:00)|Livestock Lock Intro]]>><<set $livestock.lock.strength -= 1>><<set $livestock.lock.intro to 1>><</link>><<ggtiredness>>
 			<br>
 			<<getouticon>><<link [[뒤로 물러선다|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><<generate1>><</link>>
 		<</if>>
@@ -3547,7 +3547,7 @@
 		문에 다가가니, 낡고 녹슨 자물쇠가 있다.
 		<span class="red"> 어쩌면 충분한 힘을 가하면 부술 수 있을지도 모른다.</span>
 		<br><br>
-		<<ind>><<link [[문 흔들기 (1:00)|Livestock Lock Intro]]>><<set $livestock.lock.strength -= 1>><<set $livestock.lock.intro to 1>><</link>><<ggtiredness>>
+		<<ind>><<link [[문을 흔든다 (1:00)|Livestock Lock Intro]]>><<set $livestock.lock.strength -= 1>><<set $livestock.lock.intro to 1>><</link>><<ggtiredness>>
 		<br>
 		<<getouticon>><<link [[뒤로 물러선다|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><<generate1>><</link>>
 
@@ -3617,7 +3617,7 @@
 	당신은 창살을 잡고 앞뒤로 흔든다. 시간을 낭비하지 않고, 소리를 지른다. 자극받은 가축들은 곧 죽은 사람도 깨울 만큼 시끄러운 소리를 내기 시작한다.
 	<<person1>><<person>>【이가】 진정제 총을 들고 방으로 뛰어 들어온다. <<He>>【은는】 흥분한 <<livestock_cows>>을 잠재우기 시작한다.
 	<br><br>
-	<<ind>><<link [[문 흔들기 (1:00)|Livestock Lock Break]]>><<set $livestock.lock.sequence to 1>><<set $livestock.lock.patrol to 80>><</link>><<gtiredness>>
+	<<ind>><<link [[문을 흔든다 (1:00)|Livestock Lock Break]]>><<set $livestock.lock.sequence to 1>><<set $livestock.lock.patrol to 80>><</link>><<gtiredness>>
 	<br>
 	<<getouticon>><<link [[뒤로 물러선다|Livestock Lock Break]]>><<set $livestock.lock.sequence to 2>><</link>>
 <</if>>

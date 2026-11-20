@@ -218,7 +218,7 @@
 	<<set $worn[_equip[_i]].integrity = clothingData(_equip[_i],$worn[_equip[_i]],'integrity_max')>>
 <</for>>
 
-<<link [[돌아가기|Tailor Shop]]>><<endevent>><</link>>
+<<link [[돌아간다|Tailor Shop]]>><<endevent>><</link>>
 
 :: Fix Lower
 
@@ -232,7 +232,7 @@
 	<<set $worn.under_lower.integrity = getSetupClothing('under_lower', $worn.under_lower)?.integrity_max>>
 <</if>>
 
-<<link [[돌아가기|Tailor Shop]]>><<endevent>><</link>>
+<<link [[돌아간다|Tailor Shop]]>><<endevent>><</link>>
 
 :: Tailor Shop Sneak
 <<set $outside to 0>><<effects>><<set $lock to 0>>
@@ -278,7 +278,7 @@
 	<<link [[재봉틀 구매 - 방에서 옷 수선하기! £1000|Tailor Shop]]>><<money -100000 "tailor">><<set $sewingKit to 1>><<set $sewingBought to 1>><<endevent>><</link>>
 	<br>
 <</if>>
-<<link [[돌아가기|Tailor Shop]]>><<endevent>><</link>>
+<<link [[돌아간다|Tailor Shop]]>><<endevent>><</link>>
 
 :: Tailor Monthly Discard
 "알겠습니다, <<if $player.gender_appearance is "m">>손님<<else>>사모님<</if>>. 상자를 배달해 드리겠습니다. 팔 준비가 되시면 상자를 채워주세요. 단, 어떤 품목도 반품은 안 된다는 점을 명심해 주세요. 수선해서 되팔 수 있는 품목만 취급합니다."
@@ -361,4 +361,4 @@
 <<set makeMissingOutfit($outfitRepair)>>
 <<unset $outfitRepair>>
 
-<<link [[돌아가기|Tailor Shop]]>><<endevent>><</link>>
+<<link [[돌아간다|Tailor Shop]]>><<endevent>><</link>>

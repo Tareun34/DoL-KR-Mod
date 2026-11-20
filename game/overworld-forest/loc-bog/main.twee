@@ -15,12 +15,12 @@
 <br><br>
 
 <<if $harpy gte 6 or $angel gte 6 or $demon gte 6 or $fallenangel gte 2>>
-	<<link [[활강해 내려가기 (0:01)|Bog Intro Glide]]>><<pass 1>><</link>><<flight_text>>
+	<<link [[활강해 내려간다 (0:01)|Bog Intro Glide]]>><<pass 1>><</link>><<flight_text>>
 	<br>
 <</if>>
-<<link [[기어 내려가기 (0:05)|Bog Intro Climb]]>><<pass 5>><</link>><<athleticsdifficulty 200 800>>
+<<link [[기어 내려간다 (0:05)|Bog Intro Climb]]>><<pass 5>><</link>><<athleticsdifficulty 200 800>>
 <br>
-<<link [[물속으로 뛰어들기 (0:01)|Bog Intro Jump]]>><<pass 1>><</link>>
+<<link [[물속으로 뛰어든다 (0:01)|Bog Intro Jump]]>><<pass 1>><</link>>
 <br>
 
 :: Bog Intro Glide
@@ -145,7 +145,7 @@
 		<</if>>
 	<<else>>
 		<<if $bogwater gte 1>>
-			<<link [[몸을 끌어올려 길로 돌아가기|Bog]]>><<set $bogwater to 0>><<set $eventskip to 1>><</link>>
+			<<link [[몸을 끌어올려 길로 돌아간다|Bog]]>><<set $bogwater to 0>><<set $eventskip to 1>><</link>>
 			<br>
 		<<else>>
 			길 따라가기

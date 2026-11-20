@@ -1383,14 +1383,14 @@
 						<span class="blue"><<= $worn.feet.name is "ball and chain" ? "족쇄를 차고는" : "다리가 묶인 채로는">> 달릴 수 없습니다.</span>
 						<br>
 					<<else>>
-						<<prisonicon "run">><<link [[달리기 (0:30)|Prison Yard Run]]>><<endevent>><<tiredness 4>><</link>><<gathletics>><<gphysique>>
+						<<prisonicon "run">><<link [[달린다 (0:30)|Prison Yard Run]]>><<endevent>><<tiredness 4>><</link>><<gathletics>><<gphysique>>
 						<br>
 					<</if>>
 					<<if pcAreArmsBound("any")>>
 						<span class="blue">팔이 묶여 있어서 역기를 들 수 없습니다.</span>
 						<br>
 					<<else>>
-						<<prisonicon "lift">><<link [[역기 들기 (0:30)|Prison Yard Exercise]]>><<endevent>><<tiredness 6>><</link>><<gtiredness>><<ggphysique>>
+						<<prisonicon "lift">><<link [[역기를 든다 (0:30)|Prison Yard Exercise]]>><<endevent>><<tiredness 6>><</link>><<gtiredness>><<ggphysique>>
 						<br>
 					<</if>>
 				<</if>>
@@ -1399,12 +1399,12 @@
 						<span class="blue">재갈 때문에 경비원이나 죄수들에게 말을 걸 수 없습니다.</span>
 						<br>
 					<<else>>
-						<<socialiseicon>><<link [[경비원과 대화하기 (0:30)|Prison Yard Speak]]>><<pass 30>><<prison_rep veteran 1>><<endevent>><</link>><<gperlove "veteran_guard">>
+						<<socialiseicon>><<link [[경비원과 대화한다 (0:30)|Prison Yard Speak]]>><<pass 30>><<prison_rep veteran 1>><<endevent>><</link>><<gperlove "veteran_guard">>
 						<br>
-						<<loveicon>><<link [[죄수들에게 귀엽게 추파 던지기 (0:30)|Prison Yard Flirt]]>><<set $phase to 0>><<pass 30>><<prison_hope 1>><<endevent>><</link>><<promiscuous1>><<ghope>>
+						<<loveicon>><<link [[죄수들에게 귀엽게 추파를 던진다 (0:30)|Prison Yard Flirt]]>><<set $phase to 0>><<pass 30>><<prison_hope 1>><<endevent>><</link>><<promiscuous1>><<ghope>>
 						<br>
 						<<if hasSexStat("promiscuity", 2)>>
-							<<brothelicon>><<link [[죄수들에게 음탕하게 추파 던지기 (0:30)|Prison Yard Flirt]]>><<set $phase to 1>><<pass 30>><<prison_reb 1>><<endevent>><</link>><<promiscuous2>><<greb>>
+							<<brothelicon>><<link [[죄수들에게 음탕하게 추파를 던진다 (0:30)|Prison Yard Flirt]]>><<set $phase to 1>><<pass 30>><<prison_reb 1>><<endevent>><</link>><<promiscuous2>><<greb>>
 							<br>
 						<</if>>
 					<</if>>
@@ -1415,7 +1415,7 @@
 					<span class="teal">렌이 벽에 기대어 있다.</span> 경비원들이 <<him>>【을를】 보더라도, 못 본 척한다.
 					<br>
 
-					<<socialiseicon>><<link [[렌과 대화하기|Prison Wren]]>><<endevent>><</link>>
+					<<socialiseicon>><<link [[렌과 대화한다|Prison Wren]]>><<endevent>><</link>>
 					<br>
 				<</if>>
 				<br>
@@ -1427,23 +1427,23 @@
 				벽이 튀어나와 교도소의 나머지 부분보다 훨씬 높은 탑을 이루고 있다. 바닥에는 금속 문이 있다.
 				<br>
 				<<if $prison.job is "spire" or ($prison.guards gte 80 and $prison.spire_intro is 1)>>
-					<<stairsicon "up" "prison">><<link [[첨탑 오르기 (0:05)|Prison Spire]]>><<tiredness 6>><<pass 5>><</link>><<gtiredness>>
+					<<stairsicon "up" "prison">><<link [[첨탑을 오른다 (0:05)|Prison Spire]]>><<tiredness 6>><<pass 5>><</link>><<gtiredness>>
 					<br>
 					<<if $prison.schedule isnot "revolt">>
 						<<if $prison.rope is 1>>
 							<br>
 							첨탑 바닥에 있는 구멍으로 밧줄을 내릴 수 있다.
 							<br>
-							<span class="clothes-tan"><<icon "clothes/shibari-ropes.png">></span><<link [[밧줄 사용하기|Prison Spire Rope]]>><<endevent>><<set $prison.rope to 2>><</link>>
+							<span class="clothes-tan"><<icon "clothes/shibari-ropes.png">></span><<link [[밧줄을 사용한다|Prison Spire Rope]]>><<endevent>><<set $prison.rope to 2>><</link>>
 							<br>
 						<<elseif $prison.rope is 2>>
-							<<stairsicon "down" "prison">><<link [[첨탑 내려가기 (0:05)|Prison Spire Descend]]>><<tiredness 6>><<pass 5>><</link>><<gtiredness>>
+							<<stairsicon "down" "prison">><<link [[첨탑을 내려간다 (0:05)|Prison Spire Descend]]>><<tiredness 6>><<pass 5>><</link>><<gtiredness>>
 							<br>
 						<<else>>
 							<br>
 							첨탑 바닥에 깊은 구멍이 있다.
 							<br>
-							<<getouticon "hole">><<link [[구멍 안을 들여다보기|Prison Spire Hole]]>><</link>>
+							<<getouticon "hole">><<link [[구멍 안을 들여다본다|Prison Spire Hole]]>><</link>>
 							<br>
 						<</if>>
 					<</if>>
@@ -1455,7 +1455,7 @@
 				눈에 띄지 않는 작은 공간이 있다. 커다란 잠긴 문이 주변 돌과 어우러져 있다.
 				<br>
 				<<if $prison.yard_door is 1>>
-					<<prisonicon "door">><<link [[해변으로 몰래 가기 (0:01)|Prison Beach]]>><<endevent>><<pass 1>><</link>>
+					<<prisonicon "door">><<link [[해변으로 몰래 간다 (0:01)|Prison Beach]]>><<endevent>><<pass 1>><</link>>
 					<br>
 				<<else>>
 					<<prisonicon "door">><<link [[커다란 문|Prison Yard Door]]>><<endevent>><</link>>
@@ -1509,7 +1509,7 @@
 	바닥의 미끄러운 바위에 발이 거의 미끄러질 뻔한다. 어둠 속에 무언가 숨겨져 있다. 하지만 계속 나아가면 돌아오는 길을 찾기 어려울지도 모른다.
 	<br><br>
 
-	<<investigateicon>><<link [[러트 탐험하기|Prison Rut]]>><<set $rut to 0>><<set $rut_entry to "rope">><</link>>
+	<<investigateicon>><<link [[러트를 탐험한다|Prison Rut]]>><<set $rut to 0>><<set $rut_entry to "rope">><</link>>
 	<br>
 <</if>>
 
@@ -1523,7 +1523,7 @@
 <br><br>
 
 <<if $prison.yard_key is 1>>
-	<<lockicon "bronze key">><<link [[열쇠 사용하기|Prison Yard Door Key]]>><<set $prison.yard_door to 1>><</link>>
+	<<lockicon "bronze key">><<link [[열쇠를 사용한다|Prison Yard Door Key]]>><<set $prison.yard_door to 1>><</link>>
 	<br>
 <<else>>
 	<<set $lock to 1000>>
@@ -1539,7 +1539,7 @@
 			<<wearProp "lockpick">>
 			<span class="green">자물쇠는 따기 쉬워 보인다.</span>
 			<br><br>
-			<<lockicon "pick">><<link [[침입하기 (0:05)|Prison Yard Door Pick]]>><<set $prison.yard_door to 1>><<pass 5>><</link>>
+			<<lockicon "pick">><<link [[침입한다 (0:05)|Prison Yard Door Pick]]>><<set $prison.yard_door to 1>><<pass 5>><</link>>
 			<br>
 		<</if>>
 	<<else>>
@@ -1548,7 +1548,7 @@
 	<</if>>
 <</if>>
 
-<<getouticon>><<link [[떠나기|Prison Yard]]>><</link>>
+<<getouticon>><<link [[떠난다|Prison Yard]]>><</link>>
 <br>
 
 :: Prison Yard Door Key
@@ -1685,7 +1685,7 @@
 				<</if>>
 				<br><br>
 				<<if $prison.job is "spire">>
-					<<ind>><<link [[일하기|Prison Spire Work]]>><</link>>
+					<<ind>><<link [[일한다|Prison Spire Work]]>><</link>>
 					<br>
 				<<else>>
 					<span class="blue">당신의 노동은 다른 곳에서 필요합니다.</span>
@@ -1702,7 +1702,7 @@
 					<<glideicon>><<link [[본토로 날아간다|Prison Soar]]>><</link>>
 					<br><br>
 				<</if>>
-				<<getouticon>><<link [[떠나기 (0:05)|Prison Yard]]>><<pass 5>><</link>>
+				<<getouticon>><<link [[떠난다 (0:05)|Prison Yard]]>><<pass 5>><</link>>
 				<br>
 			<</if>>
 		<<else>>
@@ -1712,7 +1712,7 @@
 				<<glideicon>><<link [[본토로 날아간다|Prison Soar]]>><</link>>
 				<br><br>
 			<</if>>
-			<<getouticon>><<link [[떠나기 (0:05)|Prison Yard]]>><<pass 5>><</link>>
+			<<getouticon>><<link [[떠난다 (0:05)|Prison Yard]]>><<pass 5>><</link>>
 			<br>
 		<</if>>
 		<<prison_map spire>>

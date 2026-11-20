@@ -340,7 +340,7 @@
 <<set $blackmoney += 50>>
 <br><br>
 
-<<link [[떠나기|Danube Street]]>><</link>>
+<<link [[떠난다|Danube Street]]>><</link>>
 <br>
 
 :: Danube House Cat
@@ -455,9 +455,9 @@
 <<beasttype 0>>【이가】 진정되자, <<bhis 0>> 목걸이가 반짝이는 것이 눈에 띈다. 자세히 보니 보석이 박혀 있다.
 <br><br>
 
-<<link [[가져가기|Danube House Collar]]>><<crimeUp 100 "thievery">><</link>><<crime "thievery">>
+<<link [[가져간다|Danube House Collar]]>><<crimeUp 100 "thievery">><</link>><<crime "thievery">>
 <br>
-<<link [[떠나기|Danube Street]]>><<endevent>><</link>>
+<<link [[떠난다|Danube Street]]>><<endevent>><</link>>
 <br>
 
 :: Danube House Cat Finish
@@ -481,7 +481,7 @@
 	<<loadNPC 0 danube_cat>>
 	<<clearNPC danube_cat>>
 
-	<<link [[가져가기|Danube House Collar]]>><<crimeUp 100 "thievery">><</link>><<crime "thievery">>
+	<<link [[가져간다|Danube House Collar]]>><<crimeUp 100 "thievery">><</link>><<crime "thievery">>
 	<br>
 	<<link [[떠난다|Danube Street]]>><<endevent>><</link>>
 	<br>
@@ -502,7 +502,7 @@
 	<<loadNPC 0 danube_cat>>
 	<<clearNPC danube_cat>>
 
-	<<link [[가져가기|Danube House Collar]]>><<crimeUp 100 "thievery">><</link>><<crime "thievery">>
+	<<link [[가져간다|Danube House Collar]]>><<crimeUp 100 "thievery">><</link>><<crime "thievery">>
 	<br>
 	<<link [[떠난다|Danube Street]]>><<endevent>><</link>>
 	<br>
@@ -544,7 +544,7 @@
 	<<clotheson>>
 	<<endcombat>>
 
-	<<link [[떠나기|Danube Street]]>><</link>>
+	<<link [[떠난다|Danube Street]]>><</link>>
 	<br>
 
 <</if>>
@@ -589,7 +589,7 @@
 <<set $blackmoney += 30>>
 <br><br>
 
-<<link [[떠나기|Danube Street]]>><<endevent>><</link>>
+<<link [[떠난다|Danube Street]]>><<endevent>><</link>>
 <br>
 
 :: Danube House Sneak Molestation
@@ -666,7 +666,7 @@
 	<br><br>
 	<<set $blackmoney += 30>>
 	<<skulduggeryuse>>
-	<<link [[떠나기|Danube Street]]>><<endevent>><</link>>
+	<<link [[떠난다|Danube Street]]>><<endevent>><</link>>
 	<br>
 <<else>>
 	빼내려 한다. 불행히도, <<he>>【은는】 바로 그 순간 몸을 뒤척인다. 당신이 손을 고쳐 잡으려 할 때, 킁킁거리는 소리가 들리고 아래를 내려다보니 <<he>>【이가】 흐릿한 눈으로 당신을 올려다보고 있다.
@@ -677,7 +677,7 @@
 	<<crimeUp 30 "petty">>
 	<br><br>
 	<<skulduggeryuse>>
-	<<runicon>><<link [[도망치기|Danube Street]]>><<endevent>><</link>>
+	<<runicon>><<link [[도망친다|Danube Street]]>><<endevent>><</link>>
 	<br>
 <</if>>
 
@@ -693,7 +693,7 @@
 		<<wearProp "lockpick">>
 		<span class="green">금고는 쉽게 딸 수 있을 것 같다.</span>
 		<br><br>
-		<<lockicon "pick">><<link [[침입하기 (0:05)|Danube House Safe Open]]>><<pass 5>><<crimeUp 5 "trespassing">><</link>><<crime "thievery">>
+		<<lockicon "pick">><<link [[침입한다 (0:05)|Danube House Safe Open]]>><<pass 5>><<crimeUp 5 "trespassing">><</link>><<crime "thievery">>
 		<br>
 	<</if>>
 <<else>>
@@ -711,14 +711,14 @@
 <<if $rng gte 11>>
 	당신은 성공적으로 금고를 열었고, 안에서 <<moneyGainDisplay 60 true true>>【을를】 발견한다.
 	<br><br>
-	<<link [[가져가기|Danube Street]]>><<money _money_gain "danubeParty">><<crimeUp `_money_gain / 100` "thievery">><</link>><<crime "thievery">>
+	<<link [[가져간다|Danube Street]]>><<money _money_gain "danubeParty">><<crimeUp `_money_gain / 100` "thievery">><</link>><<crime "thievery">>
 	<br>
 	<<link [[떠난다|Danube Street]]>><</link>>
 	<br>
 <<else>>
 	당신은 성공적으로 금고를 열었고, 안에서 비싸 보이는 보석 한 점을 발견한다.
 	<br><br>
-	<<link [[가져가기|Danube Street]]>><<set $blackmoney += 200>><<crimeUp 200 "thievery">><</link>><<crime "thievery">>
+	<<link [[가져간다|Danube Street]]>><<set $blackmoney += 200>><<crimeUp 200 "thievery">><</link>><<crime "thievery">>
 	<br>
 	<<link [[떠난다|Danube Street]]>><</link>>
 	<br>
@@ -748,7 +748,7 @@
 
 <<link [[챙긴다|Danube Street]]>><<set $blackmoney += 10>><<crimeUp 10 "petty">><<endevent>><</link>><<crime "petty">>
 <br>
-<<link [[떠나기|Danube Street]]>><<endevent>><</link>>
+<<link [[떠난다|Danube Street]]>><<endevent>><</link>>
 <br>
 
 <<else>>
@@ -756,9 +756,9 @@
 몇 분이 지나도 <<he>>【은는】 움직일 기미를 보이지 않는다. 당신은 숨을 참는 데 <span class="red">실패한다</span>. 더 이상 버틸 수 없다는 것을 안다.
 <br><br>
 
-<<swimicon "dive">><<link [[배수구로 잠수하기|Danube House Dive]]>><<endevent>><</link>>
+<<swimicon "dive">><<link [[배수구로 잠수한다|Danube House Dive]]>><<endevent>><</link>>
 <br>
-<<swimicon "up">><<link [[숨 쉬러 올라가기|Danube House Sneak 2]]>><</link>>
+<<swimicon "up">><<link [[숨 쉬러 올라간다|Danube House Sneak 2]]>><</link>>
 <br>
 
 <</if>>
@@ -860,7 +860,7 @@
 
 <<link [[<<him>>에게서 훔치기|Danube House S&M Steal]]>><<crimeUp 120 "thievery">><</link>><<crime "thievery">>
 <br>
-<<link [[떠나기|Danube Street]]>><<endevent>><</link>>
+<<link [[떠난다|Danube Street]]>><<endevent>><</link>>
 <br>
 
 :: Danube House S&M Steal
@@ -909,5 +909,5 @@
 	<<lstress>><<stress -1>>
 	<br><br>
 <</if>>
-<<link [[떠나기|Danube Street]]>><<endevent>><</link>>
+<<link [[떠난다|Danube Street]]>><<endevent>><</link>>
 <br>

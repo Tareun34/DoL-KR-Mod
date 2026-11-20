@@ -463,17 +463,17 @@
 	<br><br>
 
 	<<if $phase gte 1>>
-		<<link [[잠자기|Eden Caged]]>><<set $phase to 1>><<cabintime>><<set $edenCaged.days += 1>><</link>><<ltiredness>>
+		<<link [[잠잔다|Eden Caged]]>><<set $phase to 1>><<cabintime>><<set $edenCaged.days += 1>><</link>><<ltiredness>>
 		<br>
 	<<else>>
 		<<if $edenCaged.escape gte 9>>
 			<span class="purple">문은 헐거워졌지만, 에덴이 너무 가까이 있어서 멀리 가지는 못할 것이다.</span> <<he>>【이가】 다른 데 정신이 팔릴 때까지 기다려야 한다.
 			<br>
 		<<else>>
-			<<link [[탈출 시도하기|Eden Caged]]>><<set $phase to 1>><<set $edenCaged.escape += 1>><</link>>
+			<<link [[탈출을 시도한다|Eden Caged]]>><<set $phase to 1>><<set $edenCaged.escape += 1>><</link>>
 		<</if>>
 		<br>
-		<<link [[밤새 잠자기|Eden Caged]]>><<set $phase to 2>><</link>>
+		<<link [[밤새 잠잔다|Eden Caged]]>><<set $phase to 2>><</link>>
 		<br>
 	<</if>>
 <<elseif Time.hour lte 8>>/* breakfast */
@@ -635,7 +635,7 @@
 
 	<<link [[밖에 나가게 해달라고 부탁한다|Eden Caged Evening]]>><<set $phase to 1>><</link>>
 	<br>
-	<<link [[조용히 있기|Eden Caged Evening]]>><<npcincr Eden trust 5>><<set $phase to 0>><</link>><<gtrust>>
+	<<link [[조용히 있는다|Eden Caged Evening]]>><<npcincr Eden trust 5>><<set $phase to 0>><</link>><<gtrust>>
 	<br>
 <<else>>/* bedtime */
 	<<if $phase is 2>>
@@ -665,17 +665,17 @@
 	<br><br>
 
 	<<if $phase gte 1>>
-		<<link [[잠자기|Eden Caged]]>><<set $phase to 1>><<cabintime>><<set $edenCaged.days += 1>><</link>>
+		<<link [[잠잔다|Eden Caged]]>><<set $phase to 1>><<cabintime>><<set $edenCaged.days += 1>><</link>>
 		<br>
 	<<else>>
 		<<if $edenCaged.escape gte 9>>
 			<span class="purple">문은 헐거워졌지만, 에덴이 너무 가까이 있어서 멀리 가지는 못할 것이다.</span> <<he>>【이가】 다른 데 정신이 팔릴 때까지 기다려야 한다.
 			<br>
 		<<else>>
-			<<link [[탈출 시도하기|Eden Caged]]>><<set $phase to 1>><<set $edenCaged.escape += 1>><</link>>
+			<<link [[탈출을 시도한다|Eden Caged]]>><<set $phase to 1>><<set $edenCaged.escape += 1>><</link>>
 		<</if>>
 		<br>
-		<<link [[밤새 잠자기|Eden Caged]]>><<set $phase to 2>><</link>>
+		<<link [[밤새 잠잔다|Eden Caged]]>><<set $phase to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>

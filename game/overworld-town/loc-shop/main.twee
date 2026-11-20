@@ -550,23 +550,23 @@
 				<br>
 			<</if>>
 			<<if $edenfurniture is 2 and !$edencurtains>>
-				<<edenicon "curtains">><<link [[커튼 몇 개 사기 (0:10)|Shop Eden Curtains]]>><<pass 10>><</link>>
+				<<edenicon "curtains">><<link [[커튼 몇 개를 산다 (0:10)|Shop Eden Curtains]]>><<pass 10>><</link>>
 				<br>
 			<</if>>
 			<<if $edenfurniture is 3 and $edenloveseat is 7 and !$edencushions>>
-				<<shopicon "tailor">><<link [[쿠션 재료 사기 (0:10)|Shop Eden Cushions]]>><<pass 10>><</link>>
+				<<shopicon "tailor">><<link [[쿠션 재료를 산다 (0:10)|Shop Eden Cushions]]>><<pass 10>><</link>>
 				<br>
 			<</if>>
 			<<if $valentines_eden is 1 and !$valentines_eden_bought>>
-				<<gifticon "valentine">><<link [[에덴을 위한 발렌타인데이 선물 찾기 (0:10)|Shop Eden Valentines]]>><<pass 10>><</link>>
+				<<gifticon "valentine">><<link [[에덴을 위한 발렌타인데이 선물을 찾는다 (0:10)|Shop Eden Valentines]]>><<pass 10>><</link>>
 				<br>
 			<</if>>
 			<<if $halloween_eden is 1 and !$halloween_eden_bought>>
-				<<foodicon "sweets">><<link [[에덴을 위한 과자 사기 (0:10)|Shop Eden Sweets]]>><<pass 10>><</link>>
+				<<foodicon "sweets">><<link [[에덴을 위한 과자를 산다 (0:10)|Shop Eden Sweets]]>><<pass 10>><</link>>
 				<br>
 			<</if>>
 			<<if $christmas_gift_eden is undefined and $christmas is 1 and $syndromeeden gte 1>>
-				<<if isLoveInterest("Eden")>><<gifticon "love">><<else>><<gifticon "christmas">><</if>><<link [[에덴을 위한 선물 찾기 (0:10)|Shop Eden Gift]]>><<pass 10>><</link>>
+				<<if isLoveInterest("Eden")>><<gifticon "love">><<else>><<gifticon "christmas">><</if>><<link [[에덴을 위한 선물을 찾는다 (0:10)|Shop Eden Gift]]>><<pass 10>><</link>>
 				<br>
 			<</if>>
 			<<if $christmas_gift is undefined and $christmas is 1>>

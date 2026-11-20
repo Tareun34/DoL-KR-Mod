@@ -27,7 +27,7 @@
 <<else>>
 	경비원이 휴게실에 들어와 모두를 로비로 안내한다. 건물이 일반인에게 폐쇄된다.
 	<br><br>
-	<<getouticon>><<link [[로비로 돌아가기 (0:01)|Office Lobby]]>><<pass 1>><</link>>
+	<<getouticon>><<link [[로비로 돌아간다 (0:01)|Office Lobby]]>><<pass 1>><</link>>
 <</if>>
 
 :: Widgets Office Assignment [widget]
@@ -40,7 +40,7 @@
 	<br>
 	<<link [[다음 임무를 기다린다 (0:10)|Office Assignment Start]]>><<pass 10>><</link>>
 	<br>
-	<<link [[로비로 돌아가기 (0:01)|Office Lobby]]>><<pass 1>><</link>>
+	<<link [[로비로 돌아간다 (0:01)|Office Lobby]]>><<pass 1>><</link>>
 <</widget>>
 
 <<widget "completeassignment">>

@@ -116,22 +116,22 @@
 	<<wolfcaveicon "outside">><<link [[탈출 시도|Forest Wolf Cave Escape]]>><</link>>
 	<br><br>
 	<<if $wolfcavedig gte 13>>
-		<<getouticon "hole">><<link [[구멍으로 내려가기|Forest Wolf Cave Hole]]>><</link>>
+		<<getouticon "hole">><<link [[구멍으로 내려간다|Forest Wolf Cave Hole]]>><</link>>
 		<br>
 	<<elseif $wolfcavedig gte 12 and $physiquesize lte 12000>>
-		<<getouticon "hole">><<link [[구멍으로 내려가기|Forest Wolf Cave Hole]]>><</link>><<small_text>>
+		<<getouticon "hole">><<link [[구멍으로 내려간다|Forest Wolf Cave Hole]]>><</link>><<small_text>>
 		<br>
 	<<elseif $wolfcavedig gte 11 and $physiquesize lte 9000>>
-		<<getouticon "hole">><<link [[구멍으로 내려가기|Forest Wolf Cave Hole]]>><</link>><<small_text>>
+		<<getouticon "hole">><<link [[구멍으로 내려간다|Forest Wolf Cave Hole]]>><</link>><<small_text>>
 		<br>
 	<<elseif $wolfcavedig gte 10 and $physiquesize lte 6000>>
-		<<getouticon "hole">><<link [[구멍으로 내려가기|Forest Wolf Cave Hole]]>><</link>><<small_text>>
+		<<getouticon "hole">><<link [[구멍으로 내려간다|Forest Wolf Cave Hole]]>><</link>><<small_text>>
 		<br>
 	<<elseif $wolfcavedig gte 1>>
-		<<getouticon "dig">><<link [[동굴 뒤쪽 파기 (1:00)|Forest Wolf Cave Dig]]>><<pass 1 hour>><<set $wolfcavedig += 1>><</link>>
+		<<getouticon "dig">><<link [[동굴 뒤쪽을 판다 (1:00)|Forest Wolf Cave Dig]]>><<pass 1 hour>><<set $wolfcavedig += 1>><</link>>
 		<br>
 	<<else>>
-		<<investigateicon>><<link [[동굴 뒤쪽 조사하기|Forest Wolf Cave Examine]]>><<set $wolfcavedig to 1>><</link>>
+		<<investigateicon>><<link [[동굴 뒤쪽을 조사한다|Forest Wolf Cave Examine]]>><<set $wolfcavedig to 1>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -283,7 +283,7 @@
 	<<getouticon "hole">><<link [[조사한다|Forest Wolf Cave Hole]]>><</link>><<small_text>>
 	<br>
 <<elseif $wolfcavedig gte 11 and $physiquesize lte 9000>>
-	<<getouticon "hole">><<link [[조사하기|Forest Wolf Cave Hole]]>><</link>><<small_text>>
+	<<getouticon "hole">><<link [[조사한다|Forest Wolf Cave Hole]]>><</link>><<small_text>>
 	<br>
 <<elseif $wolfcavedig gte 10 and $physiquesize lte 6000>>
 	<<getouticon "hole">><<link [[조사한다|Forest Wolf Cave Hole]]>><</link>><<small_text>>

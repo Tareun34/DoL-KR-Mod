@@ -215,25 +215,25 @@
 <br><br>
 
 <<if $money gte 300>>
-	<<link [[막대사탕 구매하기 (£3)|Farmland Event Shop Lollipop]]>><<stress -6>><<money -300>><</link>><<lstress>>
+	<<link [[막대사탕을 구매한다 (£3)|Farmland Event Shop Lollipop]]>><<stress -6>><<money -300>><</link>><<lstress>>
 <<else>>
 	<span class="blue">막대사탕을 살 돈이 부족합니다.</span>
 <</if>>
 <br>
 <<if $money gte 500>>
-	<<link [[민트 사탕 한 통 구매하기 (£5)|Farmland Event Shop Mints]]>><<stress -6>><<money -500>><</link>><<lstress>>
+	<<link [[민트 사탕 한 통을 구매한다 (£5)|Farmland Event Shop Mints]]>><<stress -6>><<money -500>><</link>><<lstress>>
 <<else>>
 	<span class="blue">민트 사탕을 살 돈이 부족합니다.</span>
 <</if>>
 <br>
 <<if $money gte 1000>>
-	<<link [[고급 초콜릿 바 구매하기 (£10)|Farmland Event Shop Chocolate]]>><<stress -6>><<money -1000>><</link>><<lstress>>
+	<<link [[고급 초콜릿 바를 구매한다 (£10)|Farmland Event Shop Chocolate]]>><<stress -6>><<money -1000>><</link>><<lstress>>
 <<else>>
 	<span class="blue">고급 초콜릿을 살 돈이 부족합니다.</span>
 <</if>>
 <br><br>
 
-<<link [[떠나기|Farmland]]>><<endevent>><<set $eventskip to 1>><</link>>
+<<link [[떠난다|Farmland]]>><<endevent>><<set $eventskip to 1>><</link>>
 <br>
 
 :: Farmland Event Shop Lollipop

@@ -705,7 +705,7 @@
 무엇을 요구하겠습니까?
 <br><br>
 
-<<link [[위스키 한 잔 마시기|Estate Cards Whisky]]>><<set $estate.cards.daring += 1>><</link>><<gdaring>>
+<<link [[위스키 한 잔을 마신다|Estate Cards Whisky]]>><<set $estate.cards.daring += 1>><</link>><<gdaring>>
 <br>
 
 <<set _favoursRemaining to 0>>
@@ -713,7 +713,7 @@
 <<if $estate.cards.kiss isnot 1>>
 	<<set _favoursRemaining += 1>>
 	<<if $estate.cards.daring gte 1>>
-		<<link [[동료에게 키스하기|Estate Cards Kiss]]>><<set $estate.cards.daring += 2>><<set $estate.cards.kiss to 1>><<arousal 600 "mouth">><</link>><<ggdaring>><<garousal>>
+		<<link [[동료에게 키스한다|Estate Cards Kiss]]>><<set $estate.cards.daring += 2>><<set $estate.cards.kiss to 1>><<arousal 600 "mouth">><</link>><<ggdaring>><<garousal>>
 		<br>
 	<<else>>
 		<span class="blue">동료에게 키스하기: 더 높은 대담함 필요.</span>
@@ -724,7 +724,7 @@
 <<if $estate.cards.steeds isnot 1>>
 	<<set _favoursRemaining += 1>>
 	<<if $estate.cards.daring gte 3>>
-		<<link [[말들 흥분시키기 (0:10)|Estate Cards Steeds]]>><<pass 10>><<farm_aggro -5>><<set $estate.cards.steeds to 1>><<set $estate.cards.daring -= 1>><</link>><<laggro>><<ldaring>>
+		<<link [[말들을 흥분시킨다 (0:10)|Estate Cards Steeds]]>><<pass 10>><<farm_aggro -5>><<set $estate.cards.steeds to 1>><<set $estate.cards.daring -= 1>><</link>><<laggro>><<ldaring>>
 		<br>
 	<<else>>
 		<span class="blue">말들 흥분시키기: 더 높은 대담함 필요.</span>
@@ -735,7 +735,7 @@
 <<if $estate.cards.rumour isnot 1>>
 	<<set _favoursRemaining += 1>>
 	<<if $estate.cards.daring gte 3>>
-		<<link [[소문 퍼뜨리기 (0:10)|Estate Cards Rumour]]>><<pass 10>><<estate_chaos 10>><<set $estate.cards.rumour to 1>><<set $estate.cards.daring -= 1>><</link>><<gchaos>><<ldaring>>
+		<<link [[소문을 퍼뜨린다 (0:10)|Estate Cards Rumour]]>><<pass 10>><<estate_chaos 10>><<set $estate.cards.rumour to 1>><<set $estate.cards.daring -= 1>><</link>><<gchaos>><<ldaring>>
 		<br>
 	<<else>>
 		<span class="blue">소문 퍼뜨리기: 더 높은 대담함 필요.</span>
@@ -746,7 +746,7 @@
 <<if $estate.cards.wren_top is 1>>
 	<<set _favoursRemaining += 1>>
 	<<if $estate.cards.daring gte 3>>
-		<<link [[상의 벗기|Estate Cards Top]]>><<set $estate.cards.daring += 2>><<set $estate.cards.wren_top to 0>><<arousal 600>><</link>><<ggdaring>><<garousal>>
+		<<link [[상의를 벗는다|Estate Cards Top]]>><<set $estate.cards.daring += 2>><<set $estate.cards.wren_top to 0>><<arousal 600>><</link>><<ggdaring>><<garousal>>
 		<br>
 	<<else>>
 		<span class="blue">상의 벗기: 더 높은 대담함 필요.</span>
@@ -757,7 +757,7 @@
 <<if $estate.cards.weapons isnot 1>>
 	<<set _favoursRemaining += 1>>
 	<<if $estate.cards.daring gte 5>>
-		<<link [[레미의 무기 숨기기 (0:10)|Estate Cards Weapons]]>><<pass 10>><<farm_aggro -5>><<set $estate.cards.weapons to 1>><<set $estate.cards.daring -= 1>><</link>><<laggro>><<ldaring>>
+		<<link [[레미의 무기를 숨긴다 (0:10)|Estate Cards Weapons]]>><<pass 10>><<farm_aggro -5>><<set $estate.cards.weapons to 1>><<set $estate.cards.daring -= 1>><</link>><<laggro>><<ldaring>>
 		<br>
 	<<else>>
 		<span class="blue">레미의 무기 숨기기: 더 높은 대담함 필요.</span>
@@ -769,9 +769,9 @@
 	<<set _favoursRemaining += 1>>
 	<<if $estate.cards.daring gte 5>>
 		<<if C.npc.Wren.pronoun is "f">>
-			<<link [[치마 벗기|Estate Cards Bottoms]]>><<set $estate.cards.daring += 2>><<set $estate.cards.wren_bottoms to 0>><<arousal 600>><</link>><<ggdaring>><<garousal>>
+			<<link [[치마를 벗는다|Estate Cards Bottoms]]>><<set $estate.cards.daring += 2>><<set $estate.cards.wren_bottoms to 0>><<arousal 600>><</link>><<ggdaring>><<garousal>>
 		<<else>>
-			<<link [[바지 벗기|Estate Cards Bottoms]]>><<set $estate.cards.daring += 2>><<set $estate.cards.wren_bottoms to 0>><<arousal 600>><</link>><<ggdaring>><<garousal>>
+			<<link [[바지 벗는다|Estate Cards Bottoms]]>><<set $estate.cards.daring += 2>><<set $estate.cards.wren_bottoms to 0>><<arousal 600>><</link>><<ggdaring>><<garousal>>
 		<</if>>
 		<br>
 	<<else>>
@@ -787,7 +787,7 @@
 <<if $estate.cards.cars isnot 1>>
 	<<set _favoursRemaining += 1>>
 	<<if $estate.cards.daring gte 7>>
-		<<link [[레미의 차 망가뜨리기 (0:10)|Estate Cards Cars]]>><<pass 10>><<farm_aggro -15>><<set $estate.cards.cars to 1>><<set $estate.cards.daring -= 1>><</link>><<llaggro>><<ldaring>>
+		<<link [[레미의 차를 망가뜨린다 (0:10)|Estate Cards Cars]]>><<pass 10>><<farm_aggro -15>><<set $estate.cards.cars to 1>><<set $estate.cards.daring -= 1>><</link>><<llaggro>><<ldaring>>
 		<br>
 	<<else>>
 		<span class="blue">레미의 차 망가뜨리기: 더 높은 대담함 필요.</span>
@@ -798,7 +798,7 @@
 <<if $estate.cards.window isnot 1>>
 	<<set _favoursRemaining += 1>>
 	<<if $estate.cards.daring gte 7>>
-		<<link [[저택 창문 깨기 (0:10)|Estate Cards Window]]>><<pass 10>><<estate_chaos 20>><<set $estate.cards.window to 1>><<set $estate.cards.daring -= 1>><</link>><<ggchaos>><<ldaring>>
+		<<link [[저택 창문을 깬다 (0:10)|Estate Cards Window]]>><<pass 10>><<estate_chaos 20>><<set $estate.cards.window to 1>><<set $estate.cards.daring -= 1>><</link>><<ggchaos>><<ldaring>>
 		<br>
 	<<else>>
 		<span class="blue">저택 창문 깨기: 더 높은 대담함 필요.</span>
@@ -810,9 +810,9 @@
 	<<set _favoursRemaining += 1>>
 	<<if $estate.cards.daring gte 7>>
 		<<if C.npc.Wren.pronoun is "f">>
-			<<link [[브래지어 벗기|Estate Cards Under Top]]>><<set $estate.cards.daring += 2>><<set $estate.cards.wren_under_top to 0>><<arousal 600>><</link>><<ggdaring>><<garousal>>
+			<<link [[브래지어 벗는다|Estate Cards Under Top]]>><<set $estate.cards.daring += 2>><<set $estate.cards.wren_under_top to 0>><<arousal 600>><</link>><<ggdaring>><<garousal>>
 		<<else>>
-			<<link [[조끼 벗기|Estate Cards Under Top]]>><<set $estate.cards.daring += 2>><<set $estate.cards.wren_under_top to 0>><<arousal 600>><</link>><<ggdaring>><<garousal>>
+			<<link [[조끼를 벗는다|Estate Cards Under Top]]>><<set $estate.cards.daring += 2>><<set $estate.cards.wren_under_top to 0>><<arousal 600>><</link>><<ggdaring>><<garousal>>
 		<</if>>
 		<br>
 	<<else>>
@@ -828,7 +828,7 @@
 <<if $estate.cards.cattle isnot 1>>
 	<<set _favoursRemaining += 1>>
 	<<if $estate.cards.daring gte 9>>
-		<<link [[가축 풀어주기 (0:10)|Estate Cards Cattle]]>><<pass 10>><<estate_chaos 20>><<set $estate.cards.cattle to 1>><<set $estate.cards.daring -= 1>><</link>><<ggchaos>><<ldaring>>
+		<<link [[가축을 풀어준다 (0:10)|Estate Cards Cattle]]>><<pass 10>><<estate_chaos 20>><<set $estate.cards.cattle to 1>><<set $estate.cards.daring -= 1>><</link>><<ggchaos>><<ldaring>>
 		<br>
 	<<else>>
 		<span class="blue">가축 풀어주기: 더 높은 대담함 필요.</span>
@@ -840,9 +840,9 @@
 	<<set _favoursRemaining += 1>>
 	<<if $estate.cards.daring gte 9>>
 		<<if C.npc.Wren.pronoun is "f">>
-			<<link [[팬티 벗기|Estate Cards Under Bottoms]]>><<set $estate.cards.daring += 2>><<set $estate.cards.wren_under_bottoms to 0>><<arousal 600>><</link>><<ggdaring>><<garousal>>
+			<<link [[팬티를 벗는다|Estate Cards Under Bottoms]]>><<set $estate.cards.daring += 2>><<set $estate.cards.wren_under_bottoms to 0>><<arousal 600>><</link>><<ggdaring>><<garousal>>
 		<<else>>
-			<<link [[브리프 벗기|Estate Cards Under Bottoms]]>><<set $estate.cards.daring += 2>><<set $estate.cards.wren_under_bottoms to 0>><<arousal 600>><</link>><<ggdaring>><<garousal>>
+			<<link [[브리프를 벗는다|Estate Cards Under Bottoms]]>><<set $estate.cards.daring += 2>><<set $estate.cards.wren_under_bottoms to 0>><<arousal 600>><</link>><<ggdaring>><<garousal>>
 		<</if>>
 		<br>
 	<<else>>
@@ -858,7 +858,7 @@
 <<if $estate.cards.fire isnot 1>>
 	<<set _favoursRemaining += 1>>
 	<<if $estate.cards.daring gte 11>>
-		<<link [[불 지르기 (0:10)|Estate Cards Fire]]>><<pass 10>><<farm_aggro -30>><<estate_chaos 50>><<set $estate.cards.fire to 1>><</link>><<garousal>><<lllaggro>><<gggchaos>>
+		<<link [[불을 지른다 (0:10)|Estate Cards Fire]]>><<pass 10>><<farm_aggro -30>><<estate_chaos 50>><<set $estate.cards.fire to 1>><</link>><<garousal>><<lllaggro>><<gggchaos>>
 		<br>
 	<<elseif _favoursRemaining is 1>>
 		<!-- if this is the very last favour remaining, but daring is low - we let the player know about this option,

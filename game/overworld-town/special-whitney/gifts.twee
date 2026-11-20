@@ -6,10 +6,10 @@
 <<food_gift_list>>
 
 <<if _food_gift_found is true>>
-	<<skinicon "give">><<link [[선물 주기 (0:05)|Whitney Gifts]]>><<pass 5>><<give_gift Whitney>><</link>>
+	<<skinicon "give">><<link [[선물을 준다 (0:05)|Whitney Gifts]]>><<pass 5>><<give_gift Whitney>><</link>>
 	<br>
 <</if>>
-<<refuseicon>><<link [[재고하기|Whitney Gifts Reconsider]]>><</link>>
+<<refuseicon>><<link [[재고한다|Whitney Gifts Reconsider]]>><</link>>
 <br>
 
 :: Whitney Gifts Reconsider
@@ -43,7 +43,7 @@
 	<br><br>
 	<<saveFavoriteFood "Whitney" $gift>>
 	<<earnFeat "The Bully's Tithe">>
-	<<link [[휘트니와 함께 피자 먹기 (0:10)|Whitney Gifts Pizza Eat]]>><<pass 10>><<stress -6>><<npcincr Whitney love 1>><</link>><<lstress>><<glove>>
+	<<link [[휘트니와 함께 피자를 먹는다 (0:10)|Whitney Gifts Pizza Eat]]>><<pass 10>><<stress -6>><<npcincr Whitney love 1>><</link>><<lstress>><<glove>>
 	<br>
 	<<link [[거절한다|Whitney Gifts Pizza Refuse]]>><</link>>
 	<br>

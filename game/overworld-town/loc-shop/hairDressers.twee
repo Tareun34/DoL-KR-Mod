@@ -55,7 +55,7 @@
 		<<if Time.dayState is "night" and Time.hour isnot $closinghour>>
 			<<hairdressericon "gel">><<link [[헤어 젤 한 병을 훔친다|$passage]]>><<crimeUp 8 "petty">><<set $hairgelBottles += 1>><</link>><<crime "petty">> | 보유 중: <span class="gold"><<= $hairgelBottles || 0>></span>
 			<br>
-			<<hairdressericon "hairspray">><<link [[모발 성장제 한 병 훔치기|$passage]]>><<crimeUp 50 "petty">><<set $sexStats.pills.pills["Hair Growth Formula"].owned++>><<set $sexStats.pills.boughtOnce to true>><</link>><<crime "petty">> | 보유: <span class="gold"><<= $sexStats.pills.pills["Hair Growth Formula"].owned>></span>
+			<<hairdressericon "hairspray">><<link [[모발 성장제 한 병을 훔친다|$passage]]>><<crimeUp 50 "petty">><<set $sexStats.pills.pills["Hair Growth Formula"].owned++>><<set $sexStats.pills.boughtOnce to true>><</link>><<crime "petty">> | 보유: <span class="gold"><<= $sexStats.pills.pills["Hair Growth Formula"].owned>></span>
 			<br>
 			<<if !$weekly.theft.hairDressers>>
 				<<shopicon "register">><<link [[금전 등록기를 살펴본다|Hairdressers Register]]>><</link>>

@@ -296,7 +296,7 @@
 	<<He>>【은는】 <<his>> 손바닥에서 이빨을 굴린다. "아직 마음 있어?"
 	<br><br>
 
-	<<link [[포스터 교체하기|Prison Wren Poster]]>><<set $phase to 1>><</link>>
+	<<link [[포스터를 교체한다|Prison Wren Poster]]>><<set $phase to 1>><</link>>
 	<br>
 	<<link [[그만둔다|Prison Wren]]>><<unset $poster_choice>><</link>>
 	<br>

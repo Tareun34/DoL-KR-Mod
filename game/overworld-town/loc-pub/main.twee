@@ -384,7 +384,7 @@
 		<</if>>
 		<<generate1>><<person1>>혼자 앉아 있는 <<person>>【이가】 보인다.
 		<br>
-		<<brothelicon>><<link [[추파 던지기 (0:05)|Pub Flirt]]>><<if !($weekly.theft.pub || $weekly.pubMusic)>><<clearsinglenpc 1>><</if>><<pass 5>><<set $pubdrink to 0>><</link>><<promiscuous1>>
+		<<brothelicon>><<link [[추파를 던진다 (0:05)|Pub Flirt]]>><<if !($weekly.theft.pub || $weekly.pubMusic)>><<clearsinglenpc 1>><</if>><<pass 5>><<set $pubdrink to 0>><</link>><<promiscuous1>>
 		<br>
 		<<investigateicon>><<link [[다른 사람을 찾아본다 (0:01)|Pub]]>><<endevent>><<pass 1>><</link>>
 		<br>

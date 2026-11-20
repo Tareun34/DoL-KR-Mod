@@ -56,7 +56,7 @@
 			<span class="red">두 팔이 모두 묶여 있어</span>, 방을 청소할 수 없다.
 		<<else>>
 			<<choreicon "sweep">>
-			<<link [[방 청소하기 (1:00)|Temple Quarters Clean]]>>
+			<<link [[방을 청소한다 (1:00)|Temple Quarters Clean]]>>
 				<<if currentSkillValue('housekeeping') gte 1500>>
 					<<set $temple_quarters += 9>>
 				<<elseif currentSkillValue('housekeeping') gte 1200>>

@@ -167,14 +167,14 @@
 		<br><br>
 	<</if>>
 
-	<<farmicon "grass">><<link [[건초 먹기 (1:00)|Livestock Barn Hay]]>><<pass 60>><<livestock_obey 1>><<transform cow 1>><<hunger -400>><</link>><<gobey>><<lhunger>>
+	<<farmicon "grass">><<link [[건초를 먹는다 (1:00)|Livestock Barn Hay]]>><<pass 60>><<livestock_obey 1>><<transform cow 1>><<hunger -400>><</link>><<gobey>><<lhunger>>
 	<br>
-	<<exerciseicon>><<link [[운동하기 (1:00)|Livestock Barn Exercise]]>><<pass 60>><<tiredness 6>><</link>><<gtiredness>><<gathletics>>
+	<<exerciseicon>><<link [[운동한다 (1:00)|Livestock Barn Exercise]]>><<pass 60>><<tiredness 6>><</link>><<gtiredness>><<gathletics>>
 	<br>
-	<<heatericon>><<link [[난방기 옆에 눕기 (0:30)|Livestock Barn Heater]]>><</link>><<gwarmth>>
+	<<heatericon>><<link [[난방기 옆에 눕는다 (0:30)|Livestock Barn Heater]]>><</link>><<gwarmth>>
 	<br>
 	<<if !$livestock.seen.includes("corner")>>
-		<<investigateicon>><<link [[구석 조사하기|Livestock Barn Corner]]>><<set $livestock.seen.push("corner")>><</link>>
+		<<investigateicon>><<link [[구석을 조사한다|Livestock Barn Corner]]>><<set $livestock.seen.push("corner")>><</link>>
 	<<elseif $livestock.dig.barn gte 25>>
 		<<getouticon "dig">><<link [[구석 옆 터널로 접근한다|Livestock Barn Dig]]>><</link>>
 	<<elseif $livestock.dig.barn gte 24 and $physiquesize lte 12000>>
@@ -186,7 +186,7 @@
 	<<elseif pcAreArmsBound("both")>>
 		<<ind>><span class="red">팔이 묶여 있는 동안에는 땅을 팔 수 없습니다.</span>
 	<<else>>
-		<<getouticon "dig">><<link [[구석에서 땅 파기 (1:00)|Livestock Barn Dig]]>><</link>>
+		<<getouticon "dig">><<link [[구석에서 땅을 판다 (1:00)|Livestock Barn Dig]]>><</link>>
 	<</if>>
 	<br>
 	/* Commenting this out because it doesn't really provide much of value for the player
@@ -195,10 +195,10 @@
 		<br>
 	<</if>> */
 	<<if !$livestock.seen.includes("trough")>>
-		<<investigateicon>><<link [[물통 조사하기|Livestock Barn Trough Examine]]>><<set $livestock.seen.push("trough")>><</link>>
+		<<investigateicon>><<link [[물통을 조사한다|Livestock Barn Trough Examine]]>><<set $livestock.seen.push("trough")>><</link>>
 		<br>
 	<<else>>
-		<<troughicon>><<link [[물통으로 다가가기|Livestock Barn Trough]]>><</link>>
+		<<troughicon>><<link [[물통으로 다가간다|Livestock Barn Trough]]>><</link>>
 		<br>
 	<</if>>
 	<<if Time.hour gte 12>>
@@ -318,12 +318,12 @@ $livestock.obey lte 10
 <<if $livestock.dig.barn gte 25 or ($livestock.dig.barn gte 24 and $physiquesize lte 12000) or ($livestock.dig.barn gte 23 and $physiquesize lte 9000) or ($livestock.dig.barn gte 22 and $physiquesize lte 6000)>>
 	<<getouticon "hole">><<link [[탈출|Livestock Barn Escape]]>><</link>>
 	<br>
-	<<refuseicon>><<link [[기다리기|Livestock Barn]]>><</link>>
+	<<refuseicon>><<link [[기다린다|Livestock Barn]]>><</link>>
 	<br>
 <<elseif $livestock.dig.barn gte 24 and $physiquesize lte 12000 or ($livestock.dig.barn gte 23 and $physiquesize lte 9000) or ($livestock.dig.barn gte 22 and $physiquesize lte 6000)>>
 	<<getouticon "hole">><<link [[탈출|Livestock Barn Escape]]>><</link>><<small_text>>
 	<br>
-	<<refuseicon>><<link [[기다리기|Livestock Barn]]>><</link>>
+	<<refuseicon>><<link [[기다린다|Livestock Barn]]>><</link>>
 	<br>
 <<else>>
 	<<pass 60>>
@@ -366,20 +366,20 @@ $livestock.obey lte 10
 	레미가 당신을 찾는 것 같다. <span class="red">나가야 한다.</span>
 	<br><br>
 <<else>>
-	<<mirroricon>><<link [[비친 모습 확인하기|Livestock Barn Mirror]]>><<preMirror>><</link>>
+	<<mirroricon>><<link [[비친 모습을 확인한다|Livestock Barn Mirror]]>><<preMirror>><</link>>
 	<br>
 	<<if pcAreArmsBound("both")>>
 		<span class="red">팔이 묶여 있는 동안에는 몸을 씻을 수 없습니다.</span>
 	<<else>>
-		<<skinicon "wash">><<link [[씻기 (0:20)|Livestock Barn Wash]]>><<wash>><<pass 20>><</link>>
+		<<skinicon "wash">><<link [[씻는다 (0:20)|Livestock Barn Wash]]>><<wash>><<pass 20>><</link>>
 	<</if>>
 	<br><br>
 <</if>>
-	<<getouticon>><<link [[떠나기|Livestock Barn]]>><</link>>
+	<<getouticon>><<link [[떠난다|Livestock Barn]]>><</link>>
 
 :: Livestock Barn Mirror
 <<effects>>
-<<link [[물러서기|Livestock Barn Trough]]>><<unset $mirrorMenu>><<unset $bodywritingSet>><</link>>
+<<link [[물러선다|Livestock Barn Trough]]>><<unset $mirrorMenu>><<unset $bodywritingSet>><</link>>
 <br>
 <<mirror "비친 인영">>
 <br><br>
@@ -453,16 +453,16 @@ $livestock.obey lte 10
 <br><br>
 
 <<if $livestock.horse.reputation lt 1 or $livestock.horse.reputation is undefined>>
-	<<link [[친근하게 굴기|Livestock Barn Horse Intro]]>><<set $livestock.horse.reputation to 1>><<set $phase to 1>><</link>>
+	<<link [[친근하게 군다|Livestock Barn Horse Intro]]>><<set $livestock.horse.reputation to 1>><<set $phase to 1>><</link>>
 	<br>
-	<<link [[단호하게 굴기|Livestock Barn Horse Intro]]>><<set $livestock.horse.reputation to 1>><<set $phase to 2>><</link>>
+	<<link [[단호하게 군다|Livestock Barn Horse Intro]]>><<set $livestock.horse.reputation to 1>><<set $phase to 2>><</link>>
 	<br>
-	<<link [[물러서기|Livestock Barn]]>><<endevent>><</link>>
+	<<link [[물러선다|Livestock Barn]]>><<endevent>><</link>>
 	<br>
 <<elseif Time.betweenHours(19, 20)>>
 	레미가 당신을 찾는 것 같다. <span class="red">나가야 한다.</span>
 	<br><br>
-	<<getouticon>><<link [[떠나기|Livestock Barn]]>><<endevent>><</link>>
+	<<getouticon>><<link [[떠난다|Livestock Barn]]>><<endevent>><</link>>
 	<br>
 <<else>>
 	<<rng>> /* I'm not sure this is nessesary, but I think there's a way to loop through these scenes without alterting RNG, so lets stop that */
@@ -479,7 +479,7 @@ $livestock.obey lte 10
 	<<if pcAreArmsBound("both")>>
 		<span class="red">팔이 묶여 있는 동안에는 그들의 머리를 빗어줄 수 없습니다.</span>
 	<<else>>
-		<<petshopicon "brush">><<link [[머리 빗어주기 (1:00)|Livestock Barn Horse Brush]]>><<pass 60>><<tending 6>><<stress -6>><</link>><<gtending>><<lstress>>
+		<<petshopicon "brush">><<link [[머리를 빗어준다 (1:00)|Livestock Barn Horse Brush]]>><<pass 60>><<tending 6>><<stress -6>><</link>><<gtending>><<lstress>>
 	<</if>>
 	<br>
 
@@ -489,11 +489,11 @@ $livestock.obey lte 10
 	<</if>>
 
 	<<if $livestock.food>>
-		<<foodstufficon "apple">><<link [[사과 바구니 건네기|Livestock Barn Horse Apple Seduction]]>><<pass 1>><<trauma -18>><<endevent>><</link>><<lltrauma>>
+		<<foodstufficon "apple">><<link [[사과 바구니 건넨다|Livestock Barn Horse Apple Seduction]]>><<pass 1>><<trauma -18>><<endevent>><</link>><<lltrauma>>
 		<br>
 	<</if>>
 
-	<<getouticon>><<link [[떠나기|Livestock Barn]]>><<endevent>><</link>>
+	<<getouticon>><<link [[떠난다|Livestock Barn]]>><<endevent>><</link>>
 	<br>
 <</if>>
 
