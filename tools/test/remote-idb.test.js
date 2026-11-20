@@ -66,7 +66,7 @@ function harness({ responses = [], fetchImpl, promptAnswers = [], state = {}, ti
              updateSettings, init, getItem, setItem, deleteItem, loadState, saveState, getSaveDetails, getAllSaves, clearAll, apiFetch};`
   );
   const idb = build(V, State, Story, Save, clone, window, localStorage, location, fetch, prompt, { log() {}, warn() {} });
-  return { idb, calls, promptCalls, storage, State, Save };
+  return { idb, calls, promptCalls, storage, State, Save, window };
 }
 
 const ok = (obj) => ({ status: 200, text: JSON.stringify(obj) });
@@ -303,4 +303,9 @@ test('a hung save times out, logs, and lets the next request run', { timeout: 20
   assert.equal(r1, false);
   assert.equal(r2, true);
   assert.equal(h.idb.logCalls.length, 1);
+});
+
+test('storage layer marks the build as remote-save for the game scripts', () => {
+  const h = harness();
+  assert.equal(h.window.DOL_REMOTE_SAVE, true);
 });

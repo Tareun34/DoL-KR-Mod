@@ -31,6 +31,8 @@ function updateSettings(setting, value) {
 updateSettings();
 
 // === section: storage
+// Lets game scripts tell a remote-save build apart (e.g. the footer hides the "export your save" nag).
+window.DOL_REMOTE_SAVE = true;
 const API_BASE = location.origin;
 const TOKEN_KEY = "dol-remote-token";
 // A request that hangs (dead Tailscale peer, flaky wifi) must fail instead of
