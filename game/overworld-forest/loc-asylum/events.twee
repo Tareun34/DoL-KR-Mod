@@ -1724,7 +1724,7 @@
 		<<link [[자위한다|Asylum Masturbation 2]]>><<suspicion -5>><<set $phase to "masturbate">><</link>><<exhibitionist5>><<llsuspicion>>
 		<br>
 	<</if>>
-	<<link [[너무 부끄럽다고 말한다|Asylum Masturbation 2]]>><<suspicion -5>><<stress 3>><<set $phase to "embarrassed">><</link>><<llsuspicion>><<gstress>>
+	<<link [[너무 당황스럽다고 말한다|Asylum Masturbation 2]]>><<suspicion -5>><<stress 3>><<set $phase to "embarrassed">><</link>><<llsuspicion>><<gstress>>
 	<br>
 	<<link [[거부한다|Asylum Masturbation 2]]>><<suspicion 5>><<set $phase to "refuse">><</link>><<ggsuspicion>>
 <</if>>

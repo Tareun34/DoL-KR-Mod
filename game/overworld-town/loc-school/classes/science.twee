@@ -125,7 +125,7 @@
 		<br>
 		<<scienceicon>><<link [[수업 전에 휴식한다|Science Classroom Study]]>><<set $phase to 0>><</link>><<lstress>>
 	<<else>>
-		<<scienceicon>><<link [[과학을 공부한다|Science Classroom Study]]>><<set $phase to 1>><</link>><<gstress>><<gscience>>
+		<<scienceicon>><<link [[과학 공부하기|Science Classroom Study]]>><<set $phase to 1>><</link>><<gstress>><<gscience>>
 		<br>
 		<<scienceicon>><<link [[수업 전에 휴식한다|Science Classroom Study]]>><<set $phase to 0>><</link>><<lstress>>
 	<</if>>

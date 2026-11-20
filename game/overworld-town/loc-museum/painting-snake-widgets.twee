@@ -1666,7 +1666,7 @@
 						<<set $itemActionObject to $_item>>
 					<</link>>
 				<<elseif $bus is "garden" and $_waterInThisContainer?.dirty lte 1>>
-					| <<link [[쏟아 버린다 (0:01)|$passage]]>>
+					| <<link [[쏟아버린다 (0:01)|$passage]]>>
 						<<pass 1>>
 						<<run hcItemRemove($_waterInThisContainer)>>
 						<<set $itemAction to "emptyGarden">>

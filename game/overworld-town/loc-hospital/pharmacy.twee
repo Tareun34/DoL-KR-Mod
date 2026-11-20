@@ -86,7 +86,7 @@
 	피임약:
 	<br>
 	<<if $brothelVending?.status is "set" and $brothelVending.products % 2 and $brothelVending.condomsToRefill gte 10 and $settings.condomLevel gte 1>>
-		<<condomicon>><<link [[창관용 콘돔을 산다 (0:10)|Pharmacy Buy Condoms in Bulk]]>><<unset $phase2>><<pass 10>><</link>>
+		<<condomicon>><<link [[창관용 콘돔 구매 (0:10)|Pharmacy Buy Condoms in Bulk]]>><<unset $phase2>><<pass 10>><</link>>
 		<br>
 	<</if>>
 	<<if $settings.condomLevel gte 1>>

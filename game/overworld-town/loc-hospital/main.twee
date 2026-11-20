@@ -115,7 +115,7 @@
 		<</if>>
 
 		<<if C.npc.Alex.pregnancy.sample is true and playerIsPregnant() and !isPregnancyEnding() and (getPlayerPregnancy().donor is "Alex" or !knowsDonor(getPlayerPregnancy().pregnancyId, "pc"))>>
-			<<procedureicon "paternity">><<link [[친자 확인 검사를 문의한다 (0:10)|Hospital Paternity Test]]>><<pass 10>><</link>>
+			<<procedureicon "paternity">><<link [[친자 확인 검사에 대해 문의한다 (0:10)|Hospital Paternity Test]]>><<pass 10>><</link>>
 			<br><br>
 		<</if>>
 

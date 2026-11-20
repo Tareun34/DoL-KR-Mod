@@ -1933,7 +1933,7 @@
 
 <<generateSleepLinks "Sleep">>
 
-<<link [[그냥 껴안는다 (0:30)|Kylar Orphanage Cuddle]]>><<unset $bedGuest>><<unset $kylarbed>><<set $phase to 1>><</link>>
+<<link [[그냥 껴안고 있는다 (0:30)|Kylar Orphanage Cuddle]]>><<unset $bedGuest>><<unset $kylarbed>><<set $phase to 1>><</link>>
 
 :: Kylar Orphanage Cuddle Kiss
 <<effects>>
