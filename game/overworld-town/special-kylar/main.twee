@@ -1933,7 +1933,7 @@
 
 <<generateSleepLinks "Sleep">>
 
-<<link [[Just cuddle (0:30)|Kylar Orphanage Cuddle]]>><<unset $bedGuest>><<unset $kylarbed>><<set $phase to 1>><</link>>
+<<link [[그냥 껴안는다 (0:30)|Kylar Orphanage Cuddle]]>><<unset $bedGuest>><<unset $kylarbed>><<set $phase to 1>><</link>>
 
 :: Kylar Orphanage Cuddle Kiss
 <<effects>>
@@ -3519,9 +3519,9 @@
 	<<endevent>>
 	<<set $kylarexit to "rage">><<set $phase2 to "basement">>
 
-	<<historyicon>><<link [[Go to your history lesson (0:01)|Canteen Stay]]>><<unset $robinexit>><</link>><br>
+	<<historyicon>><<link [[역사 수업에 간다 (0:01)|Canteen Stay]]>><<unset $robinexit>><</link>><br>
 	<<if _kylarLocation.area is "library">>
-		<<schoolicon "library">><<link [[Follow Kylar to the library (0:02)|Canteen Stay]]>><<unset $robinexit>><</link>><br>
+		<<schoolicon "library">><<link [[카일라를 따라 도서관에 간다 (0:02)|Canteen Stay]]>><<unset $robinexit>><</link>><br>
 	<<else>>
 		<<schoolicon "courtyard">><<link [[카일라를 따라 안뜰에 간다 (0:02)|Canteen Stay]]>><<unset $robinexit>><</link>><br>
 		<<schoolicon "library">><<link [[도서관에 간다 (0:02)|Canteen Stay]]>><<unset $robinexit>><</link>><br>
@@ -3571,9 +3571,9 @@
 	<br><br>
 
 	<<endevent>>
-	<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>
+	<<historyicon>><<link [[역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>
 	<<if _kylarLocation.area is "library">>
-		<<schoolicon "library">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>
+		<<schoolicon "library">><<link [[카일라를 따라 도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>
 	<<else>>
 		<<schoolicon "courtyard">><<link [[카일라를 따라 안뜰에 간다 (0:03)|School Rear Courtyard]]>><<pass 3>><</link>><br>
 		<<schoolicon "library">><<link [[도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>
@@ -3589,9 +3589,9 @@
 	<br><br>
 
 	<<endevent>>
-	<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>
+	<<historyicon>><<link [[역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>
 	<<if _kylarLocation.area is "library">>
-		<<schoolicon "library">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>
+		<<schoolicon "library">><<link [[카일라를 따라 도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>
 	<<else>>
 		<<schoolicon "courtyard">><<link [[카일라를 따라 안뜰에 간다 (0:03)|School Rear Courtyard]]>><<pass 3>><</link>><br>
 		<<schoolicon "library">><<link [[도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>
@@ -3651,9 +3651,9 @@
 다른 학생들은 흥미를 잃는다. 당신은 안도한 카일라 옆에서 음식을 다 먹는다. <<person1>><<He>>【은는】 식사가 끝나자 당신의 식판을 치우고, <<if Weather.precipitation isnot "none">>도서관<<else>>뒤쪽 안뜰<</if>> 방향으로 걸어간다.
 <br><br>
 <<endevent>>
-<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>
+<<historyicon>><<link [[역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>
 <<if _kylarLocation.area is "library">>
-	<<schoolicon "library">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>
+	<<schoolicon "library">><<link [[카일라를 따라 도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>
 <<else>>
 	<<schoolicon "courtyard">><<link [[카일라를 따라 안뜰에 간다 (0:03)|School Rear Courtyard]]>><<pass 3>><</link>><br>
 	<<schoolicon "library">><<link [[도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>
@@ -3764,9 +3764,9 @@
 	<br><br>
 
 	<<endevent>>
-	<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>
+	<<historyicon>><<link [[역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>
 	<<if _kylarLocation.area is "library">>
-		<<schoolicon "library">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>
+		<<schoolicon "library">><<link [[카일라를 따라 도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>
 	<<else>>
 		<<schoolicon "courtyard">><<link [[카일라를 따라 안뜰에 간다 (0:03)|School Rear Courtyard]]>><<pass 3>><</link>><br>
 		<<schoolicon "library">><<link [[도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>
@@ -3789,9 +3789,9 @@
 	<br><br>
 
 	<<endevent>>
-	<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>
+	<<historyicon>><<link [[역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>
 	<<if _kylarLocation.area is "library">>
-		<<schoolicon "library">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>
+		<<schoolicon "library">><<link [[카일라를 따라 도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>
 	<<else>>
 		<<schoolicon "courtyard">><<link [[카일라를 따라 안뜰에 간다 (0:03)|School Rear Courtyard]]>><<pass 3>><</link>><br>
 		<<schoolicon "library">><<link [[도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>
@@ -3827,9 +3827,9 @@
 	휘트니가 떠나자 다른 학생들은 흥미를 잃는다. 당신은 안도한 카일라 옆에서 음식을 다 먹는다. <<He>>【은는】 식사가 끝나면 당신의 식판을 치운 뒤 <<if Weather.precipitation isnot "none">>도서관<<else>>뒤쪽 안뜰<</if>> 방향으로 걸어간다.
 	<br><br>
 
-	<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>
+	<<historyicon>><<link [[역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>
 	<<if _kylarLocation.area is "library">>
-		<<schoolicon "library">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>
+		<<schoolicon "library">><<link [[카일라를 따라 도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>
 	<<else>>
 		<<schoolicon "courtyard">><<link [[카일라를 따라 안뜰에 간다 (0:03)|School Rear Courtyard]]>><<pass 3>><</link>><br>
 		<<schoolicon "library">><<link [[도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>
@@ -3864,9 +3864,9 @@
 	<br><br>
 
 	<<endevent>>
-	<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>
+	<<historyicon>><<link [[역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>
 	<<if _kylarLocation.area is "library">>
-		<<schoolicon "library">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>
+		<<schoolicon "library">><<link [[카일라를 따라 도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>
 	<<else>>
 		<<schoolicon "courtyard">><<link [[카일라를 따라 안뜰에 간다 (0:03)|School Rear Courtyard]]>><<pass 3>><</link>><br>
 		<<schoolicon "library">><<link [[도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>
@@ -3977,9 +3977,9 @@
 <br><br>
 
 <<endevent>>
-<<historyicon>><<link [[Go to your history lesson (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>
+<<historyicon>><<link [[역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<pass 1>><</link>><br>
 <<if _kylarLocation.area is "library">>
-	<<schoolicon "library">><<link [[Follow Kylar to the library (0:02)|School Library]]>><<pass 2>><</link>><br>
+	<<schoolicon "library">><<link [[카일라를 따라 도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>
 <<else>>
 	<<schoolicon "courtyard">><<link [[카일라를 따라 안뜰에 간다 (0:03)|School Rear Courtyard]]>><<pass 3>><</link>><br>
 	<<schoolicon "library">><<link [[도서관에 간다 (0:02)|School Library]]>><<pass 2>><</link>><br>

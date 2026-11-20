@@ -2442,7 +2442,7 @@
 <<loadNPC 0 "danube_cat_0">><<loadNPC 1 "danube_cat_1">><<person1>>
 
 <<if beastSexEnabledForType("cat", $monster is 1) and dangerEvent(0.5,6000)>>
-	<<link [[Next|Danube Catperson Accept 2]]>><<set $danubecathappiness to 0>><</link>>
+	<<link [[다음|Danube Catperson Accept 2]]>><<set $danubecathappiness to 0>><</link>>
 	<br>
 <<else>>
 	<<link [[다음|Danube Catperson Safe]]>><</link>>

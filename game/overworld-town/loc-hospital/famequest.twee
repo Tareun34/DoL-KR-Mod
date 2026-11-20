@@ -156,7 +156,7 @@
 <<actionsman>>
 
 <<if _combatend or $speechSteal is 1>>
-	<span id="next"><<link [[Next|Hospital Keycard Seduce Sex Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Hospital Keycard Seduce Sex Finish]]>><</link>></span><<nexttext>>
 <<else>>
 	<span id="next"><<link [[다음|Hospital Keycard Seduce Sex]]>><</link>></span><<nexttext>>
 <</if>>

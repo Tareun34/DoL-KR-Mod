@@ -8,7 +8,7 @@
 <<passout>>
 
 <<if $bus is "barb" and $mine?.freed isnot 1 and $rng gte 40>>
-	<<link [[Everything fades to black...|Flats Auction]]>><</link>>
+	<<link [[모든 것이 어두워진다...|Flats Auction]]>><</link>>
 	<br>
 <<elseif dangerEvent()>>
 	<<rng>>

@@ -102,7 +102,7 @@
 
 		<<if beastSexEnabledForType("pig", victimsAlwaysMonsterForType("pig") or monsterCanAppearForType("pig"))>>
 			<<if hasSexStat("deviancy", 5)>>
-				<<animalicon "pig">><<link [[Pig|Briar's Office Show 2]]>><<acceptbrothelshow "pig">><</link>> | <span class="green">+</span><<printmoney 150000 "green">><<deviant5>>
+				<<animalicon "pig">><<link [[돼지|Briar's Office Show 2]]>><<acceptbrothelshow "pig">><</link>> | <span class="green">+</span><<printmoney 150000 "green">><<deviant5>>
 				<br>
 			<<else>>
 				<<animalicon "pig">><<insufficientStat "deviancy" "to take up the pig show">>
@@ -146,7 +146,7 @@
 		Suggest a show:
 		<br>
 		<<if hasSexStat("deviancy", 5) and $farm_stage gte 7 and $farm.steed and beastSexEnabledForType("horse", $per_npc.saddled_steed.monster is "monster")>>
-			<<animalicon "horse">><<link [[Horse|Briar's Office Show 2]]>><<acceptbrothelshow "horse">><</link>> | <span class="green">+</span><<printmoney 200000 "green">><<deviant5>>
+			<<animalicon "horse">><<link [[말|Briar's Office Show 2]]>><<acceptbrothelshow "horse">><</link>> | <span class="green">+</span><<printmoney 200000 "green">><<deviant5>>
 			<br>
 		<</if>>
 		<<if $demon gte 6>>

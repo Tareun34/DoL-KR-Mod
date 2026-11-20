@@ -184,7 +184,7 @@
 <br><br>
 
 <<if beastSexEnabledForType("dog", $monster is 1)>>
-	<<link [[Next|Danube Meal Dogs]]>><<set $molestationstart to 1>><</link>>
+	<<link [[다음|Danube Meal Dogs]]>><<set $molestationstart to 1>><</link>>
 	<br>
 <<else>>
 	당신은 크림과 딸기를 흘리며 도망친다. 그들에게서 벗어나는 데 성공했지만, 부상을 피하지는 못했다. <<beastescape>>

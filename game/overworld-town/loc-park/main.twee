@@ -9,7 +9,7 @@
 		<<link [[일어난다|Abduction]]>><<set $molestationstart to 1>><</link>>
 	<<else>>
 		<<if beastSexEnabledForType("dog", $monster is 1)>>
-			<<link [[Wake up|Dog Park]]>><<set $molestationstart to 1>><</link>>
+			<<link [[일어난다|Dog Park]]>><<set $molestationstart to 1>><</link>>
 		<<else>>
 			<<link [[일어난다|Dog Park 2]]>><</link>>
 		<</if>>

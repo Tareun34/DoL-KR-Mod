@@ -189,7 +189,7 @@
 		<br>
 	<<elseif $uncomfortable.prostituting is false>>
 		<<set _desperateaction to 1>>
-		<<link [[Strip|Danube Challenge Strip]]>><<set $phase to 0>><<set $desperateaction to _desperateaction>><</link>><<exhibitionist3>>
+		<<link [[옷을 벗는다|Danube Challenge Strip]]>><<set $phase to 0>><<set $desperateaction to _desperateaction>><</link>><<exhibitionist3>>
 		<br>
 	<<else>>
 		<<insufficientStat "exhibitionism" "이 행동을 하기에는">>
@@ -208,7 +208,7 @@
 		<br>
 	<<elseif $uncomfortable.prostituting is false>>
 		<<set _desperateaction to 1>>
-		<<link [[Strip|Danube Challenge 2]]>><<set $desperateaction to _desperateaction>><</link>><<exhibitionist3>>
+		<<link [[옷을 벗는다|Danube Challenge 2]]>><<set $desperateaction to _desperateaction>><</link>><<exhibitionist3>>
 		<br>
 	<<else>>
 		<<insufficientStat "exhibitionism" "이 행동을 하기에는">>
@@ -245,10 +245,10 @@
 <br><br>
 
 <<if hasSexStat("exhibitionism", 5)>>
-	<<skinicon "masturbate">><<link [[Masturbate|Danube Challenge Masturbate]]>><<set $masturbationstart to 1>><</link>><<exhibitionist5>>
+	<<skinicon "masturbate">><<link [[자위한다|Danube Challenge Masturbate]]>><<set $masturbationstart to 1>><</link>><<exhibitionist5>>
 <<elseif $uncomfortable.prostituting is false>>
 	<<set _desperateaction to 1>>
-	<<skinicon "masturbate">><<link [[Masturbate|Danube Challenge Masturbate]]>><<set $masturbationstart to 1>><<set $desperateaction to _desperateaction>><</link>><<exhibitionist5>>
+	<<skinicon "masturbate">><<link [[자위한다|Danube Challenge Masturbate]]>><<set $masturbationstart to 1>><<set $desperateaction to _desperateaction>><</link>><<exhibitionist5>>
 <<else>>
 	<<skinicon "masturbate">><<link [[자위한다|Danube Challenge Masturbate]]>><<set $masturbationstart to 1>><<trauma 6>><<stress 12>><</link>><<ggtrauma>><<ggstress>>
 <</if>>

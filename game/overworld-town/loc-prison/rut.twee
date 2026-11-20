@@ -66,7 +66,7 @@
 	밧줄은 당신이 떠난 곳에 감겨 있다. 당신은 빛을 향해 올라간다.
 	<br><br>
 
-	<<link [[Next|Prison Yard]]>><<endevent>><<rut_end>><<location "prison">><</link>>
+	<<link [[다음|Prison Yard]]>><<endevent>><<rut_end>><<location "prison">><</link>>
 	<br>
 <<else>>
 	당신이 빠졌던 웅덩이는 여전히 그곳에 있고, 이제 저 멀리 위에 있는 처벌 명판이 보인다.
@@ -181,7 +181,7 @@
 	발소리와 함께 낮은 쉭쉭거리는 소리가 들린다. 이름 모를 생물이 당신 위로 뛰어올라 땅바닥으로 밀어 넘어뜨린다.<<gpain>><<pain 4>>
 	<br><br>
 	<<if isBestialityOnForAnyCreature()>>
-		<<link [[Next|Prison Beast]]>><<set $molestationstart to 1>><</link>>
+		<<link [[다음|Prison Beast]]>><<set $molestationstart to 1>><</link>>
 		<br>
 	<<else>>
 		그것은 나타났을 때처럼 빠르게 사라졌다. 심장이 진정되기까지 한참이 걸린다.

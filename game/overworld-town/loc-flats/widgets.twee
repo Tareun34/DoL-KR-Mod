@@ -98,7 +98,7 @@
 <<passout>>
 
 <<if dangerEvent() and $mine?.freed isnot 1>>
-	<<link [[Next|Flats Auction]]>><</link>>
+	<<link [[다음|Flats Auction]]>><</link>>
 	<br>
 <<else>>
 	<<ambulance>>

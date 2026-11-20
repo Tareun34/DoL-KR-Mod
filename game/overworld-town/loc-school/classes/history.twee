@@ -198,9 +198,9 @@
 		<br>
 		<<historyicon>><<link [[수업 전에 휴식한다|History Classroom Study]]>><<set $phase to 0>><</link>><<lstress>>
 	<<else>>
-		<<historyicon>><<link [[Study history|History Classroom Study]]>><<set $phase to 1>><</link>><<gstress>><<ghistory>>
+		<<historyicon>><<link [[역사를 공부한다|History Classroom Study]]>><<set $phase to 1>><</link>><<gstress>><<ghistory>>
 		<br>
-		<<historyicon>><<link [[Relax before class|History Classroom Study]]>><<set $phase to 0>><</link>><<lstress>>
+		<<historyicon>><<link [[수업 전에 휴식한다|History Classroom Study]]>><<set $phase to 0>><</link>><<lstress>>
 	<</if>>
 	<br>
 	<<getouticon>><<link [[나가기|Hallways]]>><</link>>

@@ -223,15 +223,15 @@
 			<<if $nextPassageCheck is "Lake Shore">>
 				<span class="nextLink"><<lakeicon>><<link [[호수.|Lake Shore]]>><<pass 10>><</link>></span>
 			<<else>>
-				<<lakeicon>><<link [[Lake: Shore (0:10)|Lake Shore]]>><<pass 10>><</link>>
+				<<lakeicon>><<link [[호수: 물가 (0:10)|Lake Shore]]>><<pass 10>><</link>>
 			<</if>>
 		<<elseif $forest lte 40>>
-			<<lakeicon>><<link [[Lake: Waterfall (0:10)|Lake Waterfall]]>><<pass 10>><</link>>
+			<<lakeicon>><<link [[호수: 폭포 (0:10)|Lake Waterfall]]>><<pass 10>><</link>>
 		<<else>>
 			<<if $nextPassageCheck is "Lake Fishing Rock">>
 				<span class="nextLink"><<lakeicon>><<link [[호수.|Lake Fishing Rock]]>><<pass 10>><</link>></span>
 			<<else>>
-				<<lakeicon>><<link [[Lake: Fishing Rock (0:10)|Lake Fishing Rock]]>><<pass 10>><</link>>
+				<<lakeicon>><<link [[호수: 낚시 바위 (0:10)|Lake Fishing Rock]]>><<pass 10>><</link>>
 			<</if>>
 		<</if>>
 		<br><br>
@@ -359,7 +359,7 @@
 <br><br>
 
 <<if beastSexEnabledForType("bear", $monster is 1)>>
-	<<getinicon>><<link [[Enter|Forest Bear Box Molestation]]>><<set $molestationstart to 1>><</link>>
+	<<getinicon>><<link [[들어간다|Forest Bear Box Molestation]]>><<set $molestationstart to 1>><</link>>
 	<br>
 <<else>>
 	<<getinicon>><<link [[들어간다|Forest Bear Box Molestation Finish]]>><<set $phase to 1>><</link>>

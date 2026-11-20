@@ -87,7 +87,7 @@
 			<br>
 		<</if>>
 		<<if Time.dayState is "day" and $exposed is 0 and $photo?.street is "ready">> /* currently unused */
-			<<ind>><<link [[Modelling job (3:00)|Model Silly]]>><</link>><<gtiredness>>
+			<<ind>><<link [[모델 일을 한다 (3:00)|Model Silly]]>><</link>><<gtiredness>>
 			<br>
 		<</if>>
 		<<if Time.dayState is "night" and $exposed gte 2 and hasSexStat("exhibitionism", 4) and $daily.ex.high isnot 1>>

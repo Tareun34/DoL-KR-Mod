@@ -328,11 +328,11 @@
 			<br>
 		<</if>>
 		<<if $kylar_manor_secret gte 3 and $kylar_sleep_abduction gte 1 and !$kylar_altar_research.includes("library") and $kylar_altar_library lt 100>>
-			<<ind>><<link [[Research the forest altar (0:20)|Library Altar Research]]>><<pass 20>><</link>><<skill_difficulty currentSkillValue('history') "History" 1 1000>>
+			<<ind>><<link [[숲 제단을 조사한다 (0:20)|Library Altar Research]]>><<pass 20>><</link>><<skill_difficulty currentSkillValue('history') "History" 1 1000>>
 			<br>
 		<</if>>
 		<<if $pumpkin_carving_knowledge and !$pumpkin_carving_knowledge.includes("library")>>
-			<<icon "pumpkin-carving.png">><<link [[Study pumpkin carving (0:30)|Library Pumpkin]]>><<pass 30>><</link>>
+			<<icon "pumpkin-carving.png">><<link [[호박 조각을 공부한다 (0:30)|Library Pumpkin]]>><<pass 30>><</link>>
 			<br>
 		<</if>>
 	<br>

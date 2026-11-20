@@ -346,7 +346,7 @@
 			<br>
 		<<elseif $uncomfortable.prostituting is false>>
 			<<set _desperateaction to 1>>
-			<<link [[Accept|Spa Oral Start]]>><<set $desperateaction to 1>><</link>><<promiscuous4>>
+			<<link [[수락한다|Spa Oral Start]]>><<set $desperateaction to 1>><</link>><<promiscuous4>>
 			<br>
 		<</if>>
 		<<link [[거절한다|Spa Oral Refuse]]>><</link>>

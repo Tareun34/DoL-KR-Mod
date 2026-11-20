@@ -115,7 +115,7 @@
 		<</if>>
 
 		<<if C.npc.Alex.pregnancy.sample is true and playerIsPregnant() and !isPregnancyEnding() and (getPlayerPregnancy().donor is "Alex" or !knowsDonor(getPlayerPregnancy().pregnancyId, "pc"))>>
-			<<procedureicon "paternity">><<link [[Enquire about a paternity test (0:10)|Hospital Paternity Test]]>><<pass 10>><</link>>
+			<<procedureicon "paternity">><<link [[친자 확인 검사를 문의한다 (0:10)|Hospital Paternity Test]]>><<pass 10>><</link>>
 			<br><br>
 		<</if>>
 
@@ -191,7 +191,7 @@
 
 <<generateBeastVictim 2 wolf>>
 <<if beastSexEnabledForType("wolf", $monster is 1)>>
-	<<link [[Climb down to the water (0:01)|Abduction Hospital Water]]>><<set $molestationstart to 1>><<pass 1>><</link>>
+	<<link [[물가로 내려간다 (0:01)|Abduction Hospital Water]]>><<set $molestationstart to 1>><<pass 1>><</link>>
 	<br>
 <</if>>
 <<link [[복도를 따라간다 (0:01)|Abduction Hospital Corridor]]>><<pass 1>><<endevent>><</link>>
@@ -430,7 +430,7 @@
 		<<link [[기다린다|Hospital Wait]]>><<pass 10>><<endevent>><</link>><<ltiredness>>
 		<br>
 		<<if $rentTime lte 0>>
-			<<link [[Leave now (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
+			<<link [[지금 떠난다 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
 			<br>
 		<<elseif crimeSumCurrent() gte 1000>>
 			<<link [[지금 떠난다 (0:10)|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
@@ -444,7 +444,7 @@
 		<</if>>
 	<<else>>
 		<<if $rentTime lte 0>>
-			<<link [[Next (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
+			<<link [[다음 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
 			<br>
 		<<elseif crimeSumCurrent() gte 1000>>
 			<<link [[다음 (0:10)|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
@@ -472,7 +472,7 @@
 		<<link [[기다린다|Hospital Wait]]>><<pass 10>><<endevent>><</link>><<ltiredness>>
 		<br>
 		<<if $rentTime lte 0>>
-			<<link [[Leave now (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
+			<<link [[지금 떠난다 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
 			<br>
 		<<elseif crimeSumCurrent() gte 1000>>
 			<<link [[지금 떠난다 (0:10)|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
@@ -486,7 +486,7 @@
 		<</if>>
 	<<else>>
 		<<if $rentTime lte 0>>
-			<<link [[Next (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
+			<<link [[다음 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
 			<br>
 		<<elseif crimeSumCurrent() gte 1000>>
 			<<link [[다음 (0:10)|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
@@ -526,7 +526,7 @@
 		<br>
 
 		<<if $rentTime lte 0>>
-			<<link [[Leave now (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
+			<<link [[지금 떠난다 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
 			<br>
 		<<elseif crimeSumCurrent() gte 1000>>
 			<<link [[지금 떠난다 (0:10)|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
@@ -540,7 +540,7 @@
 		<</if>>
 	<<else>>
 		<<if $rentTime lte 0>>
-			<<link [[Next (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
+			<<link [[다음 (0:10)|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
 			<br>
 		<<elseif crimeSumCurrent() gte 1000>>
 			<<link [[다음 (0:10)|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
@@ -886,7 +886,7 @@
 <br><br>
 
 <<if $rentTime lte 0>>
-	<<link [[Next|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
+	<<link [[다음|Hospital Rent]]>><<pass 10>><<endevent>><</link>>
 	<br>
 <<elseif crimeSumCurrent() gte 1000>>
 	<<link [[다음|Hospital Arrest]]>><<pass 10>><<endevent>><</link>>
